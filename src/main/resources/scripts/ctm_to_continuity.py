@@ -1,8 +1,15 @@
-# NOTE:
-# - some .mcmeta contain both animation and ctm; will need to split these
-# - we will not be able to handle custom connect methods, e.g., connect_state
-# - optifine doesn't seem to support 'layer' as a generic property anymore; need to test and ensure that blocks have correct render layer in definitions
-# - the 'orient' property for westeros_pillar replacements needs verification (supposedly, Continuity should use orient=texture by default)
+"""A script for converting a pack from CTM+WesterosCTM format to Optifine/Continuity format.
+
+Notes
+-----
+- some .mcmeta contain both animation and ctm; will need to split these
+- need to verify that tiles are correct after cv2 loading/splitting/saving (getting warning from some textures: "libpng warning: iCCP: known incorrect sRGB profile")
+- we will not be able to handle custom connect methods, e.g., connect_to_state and connect_to_tag
+- optifine doesn't seem to support 'layer' as a generic property anymore; need to test and ensure that blocks have correct render layer in definitions
+- the 'orient' property for westeros_pillar replacements needs verification (supposedly, Continuity should use orient=texture by default)
+- ctm_simple doesn't seem to have an Optifine equivalent (not a big issue since it's not used for anything)
+- westeros_single_cond seems to be used for both biome CTMs and forcing some textures to the CUTOUT_MIPPED layer; these need to be verified
+"""
 
 import os
 import argparse
@@ -10,12 +17,15 @@ import numpy as np
 import json
 import cv2
 
+# Supported extensions
 TILE_EXTS = {'png', 'jpg', 'jpeg'}
 CTM_EXT = 'mcmeta'
 
+# Property values supported by Optifine for validation
 VALID_CONNECT = ['block', 'tile', 'state']
 VALID_LAYER = ['cutout_mipped', 'cutout', 'translucent']
 
+# Directory structure
 SCRIPTS_DIR = 'scripts'
 ASSETS_DIR = 'assets'
 TEXTURES_DIR = 'textures'
@@ -31,29 +41,57 @@ VANILLA_PATHS_FNAME = os.path.join(CALLING_DIR, 'vanillapaths.txt')
 VANILLA_PATHS = []
 WB_FNAME = 'WesterosBlocks.json'
 
-DEBUG_IDX = []
+# Global state
+TEXTURE_PATHS = {}
+CTM_PAIRS = {}
+MODEL_TEXTURES = set()
+CTM_ROOTS = set()
+EXPLORED_CTM = set()
+
+FINISHED_CTM = set()
+ERROR_CTM = set()
+TYPE_STATS = {}
+
+
+# =======================================================
+# CTM -> Optifine format mappings
+# =======================================================
 
 
 METHOD_MAP = {
   'normal': 'fixed',
+  'ctm': 'ctm_compact',
+  'pattern': 'repeat',
+  'westeros_pattern': 'repeat',
   'ctm_vertical': 'vertical',
   'ctm_horizontal': 'horizontal',
   'westeros_vertical': 'vertical',
   'westeros_horizontal': 'horizontal',
   'westeros_v+h': 'vertical+horizontal',
   'westeros_h+v': 'horizontal+vertical',
-  'westeros_pillar': 'vertical'
+  'westeros_pillar': 'vertical',
+  'westeros_ctm_single': 'ctm',
+  'westeros_ctm': 'ctm',
 }
+"""Mapping from CTM+WesterosCTM methods to Optifine/Continuity methods."""
 
 TILE_MAP = {
   'vertical': [(1,1), (1,0), (0,1), (0,0)],
   'horizontal': [(1,0), (0,1), (1,1), (0,0)],
   'horizontal+vertical': [(0,i) for i in range(7)],
-  'vertical+horizontal': [(0,i) for i in range(7)]
+  'vertical+horizontal': [(0,i) for i in range(7)],
+  'ctm_compact': [(0,0), (0,1), (1,0), (1,1)]
 }
+"""Mapping from CTM+WesterosCTM texture formats to Optifine tile lists."""
+
+
+# =======================================================
+# Abstract CTM model
+# =======================================================
 
 
 class CTMRoot:
+  """The root CTM texture and definition associated with a model texture."""
   def __init__(self, name, source):
     self.name = name
     self.source = source,
@@ -68,26 +106,39 @@ class CTMRoot:
   
 
 class CTMProp:
+  """An individual CTM property definition (roughly corresponding to a .properties file in Optifine format)."""
   def __init__(
       self,
       method = None,
       layer = None,
       connect = None,
       tiles = None,
-      method_props = None
+      method_props = None,
+      nested_props = None
   ):
     self.method = method
     self.layer = layer
     self.connect = connect
     self.tiles = tiles if tiles else []
     self.method_props = method_props if method_props else {}
+    self.nested_props = nested_props if nested_props else {}
+
+  def iterate_props(self):
+    ret = [self]
+    for p in self.nested_props.values():
+      ret += p.iterate_props()
+    return ret
 
   def __str__(self):
-    propdict = {k:(v if k != 'tiles' else list(range(len(v)))) for k,v in self.__dict__.items()}
-    return json.dumps(propdict)
+    propdict = {k:(v if k != 'tiles' else list(range(len(v)))) for k,v in self.__dict__.items() if k not in ['nested_props']}
+    ret = json.dumps(propdict)
+    for t,p in self.nested_props.items():
+      ret += f'\n    > {t}: {str(p)}'
+    return ret
   
 
 class CTMDef:
+  """Abstract CTM definition class."""
   def __init__(self, name):
     self.name = name
 
@@ -99,18 +150,20 @@ class CTMDef:
   
 
 class CTMSingleDef(CTMDef):
+  """A single CTM definition with a single properties definition."""
   def __init__(self, name):
     super().__init__(name)
     self.prop = CTMProp()
 
   def iterate_props(self):
-    return [self.prop]
+    return self.prop.iterate_props()
 
   def __str__(self):
     return f'{self.name}:\n  ' + str(self.prop)
   
 
 class CTMCond:
+  """A CTM application condition (either height range or biome list)."""
   def __init__(
       self,
       biomes=set(),
@@ -131,15 +184,18 @@ class CTMCond:
     
 
 class CTMCondDef(CTMDef):
+  """A conditional CTM definition mapping conditions to properties definitions."""
   def __init__(self, name, props=None, default=None):
     super().__init__(name)
     self.props = props if props else {}
     self.default = default
 
   def iterate_props(self):
-    ret = list(self.props.values())
+    ret = []
+    for p in self.props.values():
+      ret += p.iterate_props()
     if self.default:
-      ret.append(self.default)
+      ret += self.default.iterate_props()
     return ret
   
   def get_all_biomes(self):
@@ -155,17 +211,11 @@ class CTMCondDef(CTMDef):
     if self.default:
       strs.append(f'<default>\n  ' + str(self.default))
     return f'{self.name}:\n' + '\n'.join(strs)
+  
 
-
-TEXTURE_PATHS = {}
-CTM_PAIRS = {}
-MODEL_TEXTURES = set()
-CTM_ROOTS = set()
-EXPLORED_CTM = set()
-
-FINISHED_CTM = set()
-ERROR_CTM = set()
-TYPE_STATS = {}
+# =======================================================
+# Conversion helper methods
+# =======================================================
 
 
 def get_method(ctm):
@@ -175,14 +225,23 @@ def get_method(ctm):
 
 def get_connect(ctm, default='state'):
   if 'extra' in ctm:
+    connects = []
     if 'ignore_states' in ctm['extra']:
       if ctm['extra']['ignore_states']:
-        return 'block'
+        connects.append('block')
       else:
-        return 'state'
-    elif 'connect_to_state' in ctm['extra']:
+        connects.append('state')
+    if 'connect_to_state' in ctm['extra']:
       state = ctm['extra']['connect_to_state']
-      return f'state:{state}'
+      connects.append(f'state:{state}')
+    if 'connect_to_tag' in ctm['extra']:
+      tag = ctm['extra']['connect_to_tag']
+      connects.append(f'tag:{tag}')
+    if 'connect_to' in ctm['extra']:
+      lst = str(ctm['extra']['connect_to'])
+      connects.append(f'{lst}')
+    if connects:
+      return ','.join(connects)
     else:
       print(f'** Unhandled extra: {ctm["extra"]}')
   return default
@@ -223,11 +282,25 @@ def get_cond(ctm_cond):
   return CTMCond(biomes=biomes, heights=heights)
 
 
+def validate_tile_len(method, l):
+  if method == 'ctm' and l != 48:
+    return False
+  if method == 'ctm_compact' and l != 5:
+    return False
+  if method in ['horizontal', 'vertical'] and l != 4:
+    return False
+  if method in ['horizontal+vertical', 'vertical+horizontal'] and l != 7:
+    return False
+  return True
+
+
 def validate_ctm(ctm: CTMDef):
   for prop in ctm.iterate_props():
     if prop.connect and prop.connect not in VALID_CONNECT:
       return False
     if prop.layer and prop.layer not in VALID_LAYER:
+      return False
+    if not validate_tile_len(prop.method, len(prop.tiles)):
       return False
   return True
 
@@ -237,6 +310,11 @@ def add_ctm(ctm):
     FINISHED_CTM.add(ctm)
   else:
     ERROR_CTM.add(ctm)
+
+
+# =======================================================
+# .mcmeta -> abstract CTM parser implementations
+# =======================================================
 
 
 def parse_static(root: CTMRoot):
@@ -249,18 +327,65 @@ def parse_static(root: CTMRoot):
 
 
 def parse_ctm_simple(root: CTMRoot):
-  # TODO
   pass
 
 
 def parse_ctm(root: CTMRoot):
-  # TODO
-  pass
+  ctm = CTMSingleDef(root.name)
+  method = get_method(root.ctm)
+  ctm.prop.method = method
+  ctm.prop.layer = get_layer(root.ctm)
+  ctm.prop.connect = get_connect(root.ctm, default='state')
+  texture_ctm = get_texture_path(root.ctm['textures'][0])
+  ctm.prop.tiles = [read_image(root.texture)]
+  ctm.prop.tiles += get_tiles(read_image(texture_ctm), method)
+  add_ctm(ctm)
 
 
 def parse_pattern(root: CTMRoot):
-  # TODO
-  pass
+  ctm = CTMSingleDef(root.name)
+  method = get_method(root.ctm)
+  ctm.prop.method = method
+  ctm.prop.layer = get_layer(root.ctm)
+  ctm.prop.tiles = get_tiles(read_image(root.texture), method)
+  ctm.prop.method_props['width'] = root.ctm['extra']['width']
+  ctm.prop.method_props['height'] = root.ctm['extra']['height']
+  add_ctm(ctm)
+
+
+def parse_pattern_cond(root: CTMRoot):
+  ctm = CTMCondDef(root.name)
+  method = get_method(root.ctm)
+  layer = get_layer(root.ctm)
+
+  texture_cond = get_texture_path(root.ctm['textures'][0])
+  for ctm_cond in root.ctm['extra']['conds']:
+    cond = get_cond(ctm_cond)
+    row, col = ctm_cond['patRow'], ctm_cond['patCol']
+    h, w = ctm_cond['patHeight'], ctm_cond['patWidth']
+    texture_cond_slice = split_slice(read_image(texture_cond), row, col, h, w)
+    tiles = get_tiles(texture_cond_slice, method)
+    ctm.props[cond] = CTMProp(
+      method=method,
+      layer=layer,
+      tiles=tiles,
+      method_props={
+        'width': root.ctm['extra']['condWidth'],
+        'height': root.ctm['extra']['condHeight']
+      }
+    )
+
+  tiles_default = get_tiles(read_image(root.texture), method)
+  ctm.default = CTMProp(
+    method=method,
+    layer=layer,
+    tiles=tiles_default,
+    method_props={
+      'width': root.ctm['extra']['width'],
+      'height': root.ctm['extra']['height']
+    }
+  )
+  add_ctm(ctm)
 
 
 def parse_edges(root: CTMRoot):
@@ -275,7 +400,7 @@ def parse_edges_full(root: CTMRoot):
 
 def parse_ctm_directional(root: CTMRoot):
   ctm = CTMSingleDef(root.name)
-  method = METHOD_MAP[root.ctm['type']]
+  method = get_method(root.ctm)
   ctm.prop.method = method
   ctm.prop.layer = get_layer(root.ctm)
   ctm.prop.connect = get_connect(root.ctm, default='state')
@@ -303,12 +428,110 @@ def parse_ctm_directional_cond(root: CTMRoot):
     
 
 def parse_westeros_pillar(root: CTMRoot):
-  parse_ctm_directional(root) # TODO: verify
+  parse_ctm_directional(root)
 
 
-def parse_westeros_single(root: CTMRoot):
-  # TODO
-  pass
+def parse_westeros_ctm_single(root: CTMRoot):
+  ctm = CTMSingleDef(root.name)
+  method = get_method(root.ctm)
+  ctm.prop.method = method
+  ctm.prop.layer = get_layer(root.ctm)
+  ctm.prop.connect = get_connect(root.ctm, default='state')
+  texture_ctm = get_texture_path(root.ctm['textures'][0])
+  ctm.prop.tiles = get_tiles(read_image(texture_ctm), method)
+  add_ctm(ctm)
+
+
+def parse_westeros_ctm(root: CTMRoot):
+  ctm = CTMSingleDef(root.name)
+  method = get_method(root.ctm)
+  ctm.prop.method = method
+  ctm.prop.layer = get_layer(root.ctm)
+  ctm.prop.connect = get_connect(root.ctm, default='state')
+  ctm.prop.tiles = [read_image(get_texture_path(t)) for t in root.ctm['textures']]
+  if len(ctm.prop.tiles) < 48:
+    if len(ctm.prop.tiles) != 47:
+      print(f'** Too few tiles provided for CTM definition {root.name}')
+      return
+    ctm.prop.tiles.append(read_image(get_texture_path(root.ctm['textures'][0])))
+  add_ctm(ctm)
+
+
+def parse_westeros_ctm_pattern(root: CTMRoot):
+  ctm = CTMSingleDef(root.name)
+  layer = get_layer(root.ctm)
+  connect = get_connect(root.ctm, default='state')
+  texture_ctm = get_texture_path(root.ctm['textures'][0])
+  texture_repeat = get_texture_path(root.ctm['textures'][1])
+
+  ctm.prop.method = 'ctm'
+  ctm.prop.layer = layer
+  ctm.prop.connect = connect
+  ctm.prop.tiles = get_tiles(read_image(texture_ctm), 'ctm')
+  
+  nested_prop = CTMProp()
+  nested_prop.method = 'repeat'
+  nested_prop.layer = layer
+  nested_prop.tiles = get_tiles(read_image(texture_repeat), 'repeat')
+  nested_prop.method_props={
+    'width': root.ctm['extra']['width'],
+    'height': root.ctm['extra']['height']
+  }
+  ctm.prop.nested_props[26] = nested_prop
+  add_ctm(ctm)
+
+
+def parse_westeros_ctm_pattern_cond(root: CTMRoot):
+  ctm = CTMCondDef(root.name)
+  layer = get_layer(root.ctm)
+  connect = get_connect(root.ctm, default='state')
+  texture_ctm = get_texture_path(root.ctm['textures'][0])
+  texture_repeat = get_texture_path(root.ctm['textures'][1])
+  texture_cond = get_texture_path(root.ctm['textures'][2])
+
+  for ctm_cond in root.ctm['extra']['conds']:
+    cond = get_cond(ctm_cond)
+    row_ctm, col_ctm = ctm_cond['ctmRow'], ctm_cond['ctmCol']
+    row_repeat, col_repeat = ctm_cond['patRow'], ctm_cond['patCol']
+    h, w = ctm_cond['patHeight'], ctm_cond['patWidth']
+    texture_cond_slice_ctm = split_slice(read_image(texture_cond), row_ctm, col_ctm, 4, 12)
+    texture_cond_slice_repeat = split_slice(read_image(texture_cond), row_repeat, col_repeat, h, w)
+    cond_prop = CTMProp(
+      method='ctm',
+      layer=layer,
+      connect=connect,
+      tiles=get_tiles(texture_cond_slice_ctm, 'ctm')
+    )
+    cond_nested_prop = CTMProp(
+      method='repeat',
+      layer=layer,
+      tiles=get_tiles(texture_cond_slice_repeat, 'repeat'),
+      method_props={
+        'width': w,
+        'height': h
+      }
+    )
+    cond_prop.nested_props[26] = cond_nested_prop
+    ctm.props[cond] = cond_prop
+
+  default_prop = CTMProp(
+    method='ctm',
+    layer=layer,
+    connect=connect,
+    tiles=get_tiles(read_image(texture_ctm), 'ctm')
+  )
+  default_nested_prop = CTMProp(
+    method='repeat',
+    layer=layer,
+    tiles=get_tiles(read_image(texture_repeat), 'repeat'),
+    method_props={
+      'width': root.ctm['extra']['width'],
+      'height': root.ctm['extra']['height']
+    }
+  )
+  default_prop.nested_props[26] = default_nested_prop
+  ctm.default = default_prop
+  add_ctm(ctm)
 
 
 def parse_westeros_single_cond(root: CTMRoot):
@@ -321,34 +544,9 @@ def parse_westeros_cond(root: CTMRoot):
   pass
 
 
-def parse_westeros_ctm_single(root: CTMRoot):
-  # TODO
-  pass
-
-
-def parse_westeros_ctm(root: CTMRoot):
-  # TODO
-  pass
-
-
-def parse_westeros_pattern(root: CTMRoot):
-  # TODO
-  pass
-
-
-def parse_westeros_pattern_cond(root: CTMRoot):
-  # TODO
-  pass
-
-
-def parse_westeros_ctm_pattern(root: CTMRoot):
-  # TODO
-  pass
-
-
-def parse_westeros_ctm_pattern_cond(root: CTMRoot):
-  # TODO
-  pass
+# =======================================================
+# Top-level parser routing
+# =======================================================
 
 
 PARSE_DISPATCH = {
@@ -368,13 +566,12 @@ PARSE_DISPATCH = {
   'westeros_vertical_cond': parse_ctm_directional_cond,
   'westeros_horizontal_cond': parse_ctm_directional_cond,
   'westeros_pillar': parse_westeros_pillar,
-  'westeros_single': parse_westeros_single,
   'westeros_single_cond': parse_westeros_single_cond,
   'westeros_cond': parse_westeros_cond,
   'westeros_ctm_single': parse_westeros_ctm_single,
   'westeros_ctm': parse_westeros_ctm,
-  'westeros_pattern': parse_westeros_pattern,
-  'westeros_pattern_cond': parse_westeros_pattern_cond,
+  'westeros_pattern': parse_pattern,
+  'westeros_pattern_cond': parse_pattern_cond,
   'westeros_ctm+pattern': parse_westeros_ctm_pattern,
   'westeros_ctm+pattern_cond': parse_westeros_ctm_pattern_cond,
 }
@@ -391,6 +588,11 @@ def parse(root: CTMRoot):
     TYPE_STATS[typ] += 1
   else:
     TYPE_STATS[typ] = 1
+
+
+# =======================================================
+# Utils
+# =======================================================
 
 
 def namespace_to_path(name):
@@ -462,9 +664,28 @@ def split_slice(texture, row, col, h, w):
   return texture[row*32:(row+h)*32, col*32:(col+w)*32, :]
 
 
+def testdisplay(ctm: CTMDef):
+  """Print CTM info and display tiles for debugging."""
+  print(ctm)
+  for prop in ctm.iterate_props():
+    for t in prop.tiles:
+      cv2.imshow("test", t)
+      cv2.waitKey(0)
+
+
 def is_tile(path):
   """Check if a path corresponds to a texture tile."""
   return any([e in path for e in TILE_EXTS]) and CTM_EXT not in path
+
+
+def is_model(path):
+  """Check if a path is a model file."""
+  return path.endswith('.json') and 'textures' in read_json(path)
+
+
+# =======================================================
+# Preprocessing
+# =======================================================
 
 
 def register_texture(path):
@@ -515,11 +736,6 @@ def register_ctm_root(path):
   CTM_ROOTS.add(ctm_def)
 
 
-def is_model(path):
-  """Check if a path is a model file."""
-  return path.endswith('.json') and 'textures' in read_json(path)
-
-
 def register_model_textures(path):
   """Register the texture paths contained within each model."""
   model = read_json(path)
@@ -537,6 +753,11 @@ def traverse(rootdir, cond, func):
       traverse(path, cond, func)
     elif os.path.isfile(path) and cond(path):
       func(path)
+
+
+# =======================================================
+# Execution
+# =======================================================
 
 
 def init(roots):
@@ -582,9 +803,7 @@ def main(roots, verbose=False):
       print(x)
   
   print(f'\nParsing {len(CTM_ROOTS)} CTM roots')
-  for idx, ctm_root in enumerate(CTM_ROOTS):
-    if DEBUG_IDX and idx not in DEBUG_IDX:
-      continue
+  for ctm_root in CTM_ROOTS:
     parse(ctm_root)
 
   print()
