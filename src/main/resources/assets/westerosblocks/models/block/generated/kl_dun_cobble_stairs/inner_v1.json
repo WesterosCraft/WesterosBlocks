@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/inner_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/cobblestone_dark/dun/all",
-    "top": "westerosblocks:block/cobblestone_dark/dun/all",
-    "side": "westerosblocks:block/cobblestone_dark/dun/all",
-    "particle": "westerosblocks:block/cobblestone_dark/dun/all"
-  }
-}

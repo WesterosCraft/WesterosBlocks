@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_side",
-  "textures": {
-    "bottom": "westerosblocks:block/wood/spruce/grapevines",
-    "top": "westerosblocks:block/wood/spruce/grapevines",
-    "side": "westerosblocks:block/wood/spruce/grapevines"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/plaster/rough/white_daub/all1",
-    "top": "westerosblocks:block/plaster/rough/white_daub/all1",
-    "side": "westerosblocks:block/plaster/rough/white_daub/all1",
-    "particle": "westerosblocks:block/plaster/rough/white_daub/all1"
-  }
-}

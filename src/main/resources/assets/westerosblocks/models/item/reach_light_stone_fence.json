@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/reach_brick/side_light",
-    "top": "westerosblocks:block/reach_brick/side_light",
-    "side": "westerosblocks:block/reach_brick/side_light"
-  }
-}

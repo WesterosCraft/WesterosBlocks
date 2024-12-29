@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/wall_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/ore/copper/all1",
-    "top": "westerosblocks:block/ore/copper/all1",
-    "side": "westerosblocks:block/ore/copper/all1"
-  }
-}

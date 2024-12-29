@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side",
-  "textures": {
-    "bottom": "westerosblocks:block/plaster/rough/warm_pink/all2",
-    "top": "westerosblocks:block/plaster/rough/warm_pink/all2",
-    "side": "westerosblocks:block/plaster/rough/warm_pink/all2"
-  }
-}

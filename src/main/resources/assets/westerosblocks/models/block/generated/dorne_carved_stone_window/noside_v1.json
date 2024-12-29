@@ -1,6 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/ctm_pane_noside",
-  "textures": {
-    "side": "westerosblocks:block/pane_block/moorish_stone_window_pane"
-  }
-}

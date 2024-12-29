@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/tinted/wall_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/fieldstone/light_grey/all",
-    "top": "westerosblocks:block/fieldstone/light_grey/all",
-    "side": "westerosblocks:block/fieldstone/light_grey/all"
-  }
-}

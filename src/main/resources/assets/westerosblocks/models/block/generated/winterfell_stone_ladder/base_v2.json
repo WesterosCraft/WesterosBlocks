@@ -1,6 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/ladder",
-  "textures": {
-    "ladder": "westerosblocks:block/winterfell_stone_ladder/side2"
-  }
-}

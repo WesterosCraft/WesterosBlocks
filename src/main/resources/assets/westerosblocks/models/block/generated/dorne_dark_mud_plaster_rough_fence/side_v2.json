@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_side",
-  "textures": {
-    "bottom": "westerosblocks:block/plaster/rough/dark_mud/all2",
-    "top": "westerosblocks:block/plaster/rough/dark_mud/all2",
-    "side": "westerosblocks:block/plaster/rough/dark_mud/all2"
-  }
-}

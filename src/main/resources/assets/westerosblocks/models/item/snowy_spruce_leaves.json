@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/leaves",
-  "textures": {
-    "end": "westerosblocks:block/leaves/spruce/snowy/all",
-    "side": "westerosblocks:block/leaves/spruce/snowy/all",
-    "particle": "westerosblocks:block/leaves/spruce/snowy/all"
-  }
-}

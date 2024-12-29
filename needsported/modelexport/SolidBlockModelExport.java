@@ -29,9 +29,11 @@ public class SolidBlockModelExport extends ModelExport {
         public String parent = "minecraft:block/cube";    // Use 'cube' model for multiple textures
         public Texture textures = new Texture();
     }
+
     public static class Texture {
         public String down, up, north, south, west, east, particle;
     }
+
     public static class OverlayTexture extends Texture {
         public String down_ov, up_ov, north_ov, south_ov, west_ov, east_ov;
     }

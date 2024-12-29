@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_post",
-  "textures": {
-    "bottom": "westerosblocks:block/cobblestone_dark/stormlands/all",
-    "top": "westerosblocks:block/cobblestone_dark/stormlands/all",
-    "side": "westerosblocks:block/cobblestone_dark/stormlands/all"
-  }
-}

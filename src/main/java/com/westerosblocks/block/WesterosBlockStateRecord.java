@@ -156,7 +156,7 @@ public class WesterosBlockStateRecord {
     }
 
     public boolean isCustomModel() {
-        return isCustomModel;
+        return this.isCustomModel;
     }
 
     public boolean equals(WesterosBlockStateRecord other) {

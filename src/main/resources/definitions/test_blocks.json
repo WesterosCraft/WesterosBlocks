@@ -26,24 +26,9 @@
      "textures": [
        "ashlar_engraved/tan/all"
      ]
-   },
-   {
-     "blockName": "test_block_6",
-     "blockType": "stair",
-     "hardness": 3,
-     "stepSound": "wood",
-     "material": "wood",
-     "resistance": 2,
-     "harvestLevel": [{ "tool": "axe", "level": 1 }],
-     "creativeTab": "westeros_test_tab",
-     "label": "Test Stair (unconnect)",
-     "type": "unconnect:false",
-     "textures": [
-       "test_block/d_texture",
-       "test_block/u_texture",
-       "test_block/w_texture"
-     ]
-   },{
+   }
+
+ ,{
      "blockName": "ctm_pillar",
      "blockType": "log",
      "stepSound": "wood",

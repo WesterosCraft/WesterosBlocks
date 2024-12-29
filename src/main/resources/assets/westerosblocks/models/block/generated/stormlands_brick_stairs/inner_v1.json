@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/inner_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/ashlar_quarter/stormlands/all",
-    "top": "westerosblocks:block/ashlar_quarter/stormlands/all",
-    "side": "westerosblocks:block/ashlar_quarter/stormlands/all",
-    "particle": "westerosblocks:block/ashlar_quarter/stormlands/all"
-  }
-}

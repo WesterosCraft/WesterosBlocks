@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/tinted/leaves_overlay_bf2",
-  "textures": {
-    "all": "westerosblocks:block/leaves/oak/all",
-    "overlayend": "westerosblocks:block/transparent",
-    "overlayside": "westerosblocks:block/leaves/overlay/plum2",
-    "particle": "westerosblocks:block/leaves/oak/all"
-  }
-}

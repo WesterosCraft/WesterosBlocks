@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_post",
-  "textures": {
-    "bottom": "westerosblocks:block/ore/iron/all2",
-    "top": "westerosblocks:block/ore/iron/all2",
-    "side": "westerosblocks:block/ore/iron/all2"
-  }
-}

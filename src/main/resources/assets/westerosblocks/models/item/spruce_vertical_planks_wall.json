@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/wall_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/wood/spruce/vertical",
-    "top": "westerosblocks:block/wood/spruce/vertical",
-    "side": "westerosblocks:block/wood/spruce/vertical"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/tinted/outer_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/cobblestone/grey_mossy/all4",
-    "top": "westerosblocks:block/cobblestone/grey_mossy/all4",
-    "side": "westerosblocks:block/cobblestone/grey_mossy/all4",
-    "particle": "westerosblocks:block/cobblestone/grey_mossy/all4"
-  }
-}

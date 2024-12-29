@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side_tall",
-  "textures": {
-    "bottom": "westerosblocks:block/piled_bones/side",
-    "top": "westerosblocks:block/piled_bones/side",
-    "side": "westerosblocks:block/piled_bones/side"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/tinted/leaves_overlay_bf1",
-  "textures": {
-    "all": "westerosblocks:block/leaves/jungle/all",
-    "overlayend": "westerosblocks:block/transparent",
-    "overlayside": "westerosblocks:block/leaves/overlay/orange1",
-    "particle": "westerosblocks:block/leaves/jungle/all"
-  }
-}

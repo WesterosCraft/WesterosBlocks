@@ -39,10 +39,6 @@ public class WesterosBlocks implements ModInitializer {
 
     public static WesterosBlocksJsonLoader.WesterosBlocksConfig customConfig;
     private static WesterosBlockDef[] customBlockDefs;
-
-    public static HashMap<String, Block> customBlocksByName;
-
-    public static Path modConfigPath;
     public static WesterosBlockColorMap[] colorMaps;
     public static WesterosItemMenuOverrides[] menuOverrides;
 
@@ -102,31 +98,5 @@ public class WesterosBlocks implements ModInitializer {
         return expandedBlockDefs.toArray(new WesterosBlockDef[expandedBlockDefs.size()]);
     }
 
-    public static Block findBlockByName(String blkname, String namespace) {
-        Block blk = customBlocksByName.get(blkname);
-        if (blk != null) return blk;
-
-        Identifier id;
-        try {
-            id = Identifier.tryParse(blkname);
-        } catch (InvalidIdentifierException e) {
-            if (namespace != null) {
-                try {
-                    id = Identifier.of(namespace, blkname);
-                } catch (InvalidIdentifierException e2) {
-                    return null;
-                }
-            } else {
-                return null;
-            }
-        }
-
-        if (id.getNamespace().equals(namespace)) {
-            blk = customBlocksByName.get(id.getPath());
-            if (blk != null) return blk;
-        }
-
-        return Registries.BLOCK.get(id);
-    }
 
 }

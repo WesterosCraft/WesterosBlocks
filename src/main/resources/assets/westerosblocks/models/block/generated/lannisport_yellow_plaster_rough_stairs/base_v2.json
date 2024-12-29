@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/plaster/rough/lannisport_yellow/all2",
-    "top": "westerosblocks:block/plaster/rough/lannisport_yellow/all2",
-    "side": "westerosblocks:block/plaster/rough/lannisport_yellow/all2",
-    "particle": "westerosblocks:block/plaster/rough/lannisport_yellow/all2"
-  }
-}

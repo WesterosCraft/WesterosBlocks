@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/tinted/fence_side",
-  "textures": {
-    "bottom": "westerosblocks:block/test_block/d_texture",
-    "top": "westerosblocks:block/test_block/u_texture",
-    "side": "westerosblocks:block/test_block/d_texture"
-  }
-}

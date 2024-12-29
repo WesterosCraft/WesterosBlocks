@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_post",
-  "textures": {
-    "bottom": "westerosblocks:block/ashlar_full/sandstone/all",
-    "top": "westerosblocks:block/ashlar_full/sandstone/all",
-    "side": "westerosblocks:block/ashlar_full/sandstone/all"
-  }
-}

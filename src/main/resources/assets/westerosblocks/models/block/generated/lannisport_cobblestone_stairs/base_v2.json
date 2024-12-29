@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/cobblestone/westerlands/all2",
-    "top": "westerosblocks:block/cobblestone/westerlands/all2",
-    "side": "westerosblocks:block/cobblestone/westerlands/all2",
-    "particle": "westerosblocks:block/cobblestone/westerlands/all2"
-  }
-}

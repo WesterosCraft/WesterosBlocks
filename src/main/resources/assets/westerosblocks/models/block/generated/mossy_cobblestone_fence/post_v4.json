@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/tinted/fence_post",
-  "textures": {
-    "bottom": "westerosblocks:block/cobblestone/grey_mossy/all4",
-    "top": "westerosblocks:block/cobblestone/grey_mossy/all4",
-    "side": "westerosblocks:block/cobblestone/grey_mossy/all4"
-  }
-}

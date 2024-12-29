@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/wall_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/ashlar_third/green_grey/all",
-    "top": "westerosblocks:block/ashlar_third/green_grey/all",
-    "side": "westerosblocks:block/ashlar_third/green_grey/all"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_post",
-  "textures": {
-    "bottom": "westerosblocks:block/metal/bronze/all2",
-    "top": "westerosblocks:block/metal/bronze/all2",
-    "side": "westerosblocks:block/metal/bronze/all2"
-  }
-}

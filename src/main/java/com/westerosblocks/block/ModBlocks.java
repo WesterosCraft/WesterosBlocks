@@ -1,18 +1,15 @@
 package com.westerosblocks.block;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.WesterosBlocksCompatibility;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.InvalidIdentifierException;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -23,6 +20,7 @@ import static com.westerosblocks.WesterosBlocks.crash;
 
 public class ModBlocks {
     public static Block[] customBlocks = new Block[0];
+    public static HashMap<String, Block> customBlocksByName = new HashMap<>();
 
     public static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -38,9 +36,8 @@ public class ModBlocks {
         WesterosBlocks.LOGGER.info("Registering blocks for " + com.westerosblocks.WesterosBlocks.MOD_ID);
         // Construct custom block definitions
         List<Block> blklist = new LinkedList<>();
-        HashMap<String, Block> customBlocksByName = new HashMap<>();
         HashMap<String, Integer> countsByType = new HashMap<>();
-        AtomicInteger blockcount = new AtomicInteger();
+        AtomicInteger blockCount = new AtomicInteger();
 
         for (WesterosBlockDef customBlock : customBlockDefs) {
             if (customBlock == null)
@@ -60,7 +57,7 @@ public class ModBlocks {
                 Integer cnt = countsByType.get(customBlock.blockType);
                 cnt = (cnt == null) ? 1 : (cnt + 1);
                 countsByType.put(customBlock.blockType, cnt);
-                blockcount.getAndIncrement();
+                blockCount.getAndIncrement();
 
             } else {
                 crash("Invalid block definition for " + customBlock.blockName + " - aborted during load()");
@@ -78,7 +75,7 @@ public class ModBlocks {
         for (String type : countsByType.keySet()) {
             WesterosBlocks.LOGGER.info(type + ": " + countsByType.get(type) + " blocks");
         }
-        WesterosBlocks.LOGGER.info("TOTAL: " + blockcount + " blocks");
+        WesterosBlocks.LOGGER.info("TOTAL: " + blockCount + " blocks");
         // TODO
 //        colorMaps = customConfig.colorMaps;
         // TODO
@@ -86,7 +83,35 @@ public class ModBlocks {
         WesterosBlocks.LOGGER.info("WesterosBlocks custom block registration complete.");
     }
 
-    public static Block[] getCustomBlocks() {
-        return customBlocks;
+    public static HashMap<String, Block> getCustomBlocksByName() {
+        return customBlocksByName;
     }
+
+    public static Block findBlockByName(String blkname, String namespace) {
+        Block blk = customBlocksByName.get(blkname);
+        if (blk != null) return blk;
+
+        Identifier id;
+        try {
+            id = Identifier.tryParse(blkname);
+        } catch (InvalidIdentifierException e) {
+            if (namespace != null) {
+                try {
+                    id = Identifier.of(namespace, blkname);
+                } catch (InvalidIdentifierException e2) {
+                    return null;
+                }
+            } else {
+                return null;
+            }
+        }
+
+        if (id.getNamespace().equals(namespace)) {
+            blk = customBlocksByName.get(id.getPath());
+            if (blk != null) return blk;
+        }
+
+        return Registries.BLOCK.get(id);
+    }
+
 }

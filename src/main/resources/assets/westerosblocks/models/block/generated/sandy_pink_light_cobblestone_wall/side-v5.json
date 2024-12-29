@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side",
-  "textures": {
-    "bottom": "westerosblocks:block/cobblestone/sandy_pink/all5",
-    "top": "westerosblocks:block/cobblestone/sandy_pink/all5",
-    "side": "westerosblocks:block/cobblestone/sandy_pink/all5"
-  }
-}

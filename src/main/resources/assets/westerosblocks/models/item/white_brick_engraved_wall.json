@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/wall_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/ashlar_engraved/white/all",
-    "top": "westerosblocks:block/ashlar_engraved/white/all",
-    "side": "westerosblocks:block/ashlar_engraved/white/all"
-  }
-}

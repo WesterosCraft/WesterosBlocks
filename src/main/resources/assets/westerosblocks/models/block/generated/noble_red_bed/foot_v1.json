@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/bed_raised_foot",
-  "textures": {
-    "bedtop": "westerosblocks:block/bed_block/bed_noble_red_1",
-    "bedend": "westerosblocks:block/bed_block/bed_noble_red_5",
-    "bedside": "westerosblocks:block/bed_block/bed_noble_red_3"
-  }
-}

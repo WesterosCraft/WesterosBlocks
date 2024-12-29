@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/inner_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/plaster/rough/casterly_crimson/all2",
-    "top": "westerosblocks:block/plaster/rough/casterly_crimson/all2",
-    "side": "westerosblocks:block/plaster/rough/casterly_crimson/all2",
-    "particle": "westerosblocks:block/plaster/rough/casterly_crimson/all2"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/wall_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/cobblestone/oldtown/all",
-    "top": "westerosblocks:block/cobblestone/oldtown/all",
-    "side": "westerosblocks:block/cobblestone/oldtown/all"
-  }
-}

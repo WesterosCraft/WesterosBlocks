@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_side",
-  "textures": {
-    "bottom": "westerosblocks:block/marble/citadel_green/all",
-    "top": "westerosblocks:block/marble/citadel_green/all",
-    "side": "westerosblocks:block/marble/citadel_green/all"
-  }
-}

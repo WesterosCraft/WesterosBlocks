@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/tinted/template_wall_side",
-  "textures": {
-    "bottom": "westerosblocks:block/rubble/river/all1",
-    "top": "westerosblocks:block/rubble/river/all1",
-    "side": "westerosblocks:block/rubble/river/all1"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/plaster/rough/lannisport_orange/all1",
-    "top": "westerosblocks:block/plaster/rough/lannisport_orange/all1",
-    "side": "westerosblocks:block/plaster/rough/lannisport_orange/all1"
-  }
-}

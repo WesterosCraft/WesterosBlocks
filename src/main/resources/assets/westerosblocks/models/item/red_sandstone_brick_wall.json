@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/wall_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/sandstone_red_wall/top",
-    "top": "westerosblocks:block/sandstone_red_wall/top",
-    "side": "westerosblocks:block/stone_block_0/sandstone_red"
-  }
-}

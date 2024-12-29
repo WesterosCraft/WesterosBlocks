@@ -1,6 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/crop_layer3",
-  "textures": {
-    "crop": "westerosblocks:block/seagrass/side2"
-  }
-}

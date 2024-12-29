@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side",
-  "textures": {
-    "bottom": "westerosblocks:block/cobblestone_dark/reach/all",
-    "top": "westerosblocks:block/cobblestone_dark/reach/all",
-    "side": "westerosblocks:block/cobblestone_dark/reach/all"
-  }
-}

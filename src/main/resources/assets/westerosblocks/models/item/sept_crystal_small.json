@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/crystal/fence_top",
-    "top": "westerosblocks:block/crystal/fence_top",
-    "side": "westerosblocks:block/crystal/fence"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_rh",
-  "textures": {
-    "bottom": "westerosblocks:block/wood/grey/door_bottom",
-    "top": "westerosblocks:block/wood/grey/door_top"
-  }
-}

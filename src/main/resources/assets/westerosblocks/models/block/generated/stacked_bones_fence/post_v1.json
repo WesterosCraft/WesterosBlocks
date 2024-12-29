@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_post",
-  "textures": {
-    "bottom": "westerosblocks:block/stacked_bones/bone_stacked_side",
-    "top": "westerosblocks:block/stacked_bones/bone_stacked_side",
-    "side": "westerosblocks:block/stacked_bones/bone_stacked_side"
-  }
-}

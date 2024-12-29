@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side_tall",
-  "textures": {
-    "bottom": "westerosblocks:block/metal/oxidized_bronze/all2",
-    "top": "westerosblocks:block/metal/oxidized_bronze/all2",
-    "side": "westerosblocks:block/metal/oxidized_bronze/all2"
-  }
-}

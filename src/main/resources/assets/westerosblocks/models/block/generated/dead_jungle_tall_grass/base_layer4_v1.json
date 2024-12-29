@@ -1,6 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/cross_layer4",
-  "textures": {
-    "cross": "westerosblocks:block/dead_jungle_tall_grass/down_side1"
-  }
-}

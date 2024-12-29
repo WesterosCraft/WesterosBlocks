@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_post",
-  "textures": {
-    "bottom": "westerosblocks:block/terrainset/grey_sandstone/random_4x4",
-    "top": "westerosblocks:block/terrainset/grey_sandstone/random_4x4",
-    "side": "westerosblocks:block/terrainset/grey_sandstone/random_4x4"
-  }
-}

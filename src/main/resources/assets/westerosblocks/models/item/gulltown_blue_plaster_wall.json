@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/wall_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/plaster/smooth/gulltown_blue/all",
-    "top": "westerosblocks:block/plaster/smooth/gulltown_blue/all",
-    "side": "westerosblocks:block/plaster/smooth/gulltown_blue/all"
-  }
-}

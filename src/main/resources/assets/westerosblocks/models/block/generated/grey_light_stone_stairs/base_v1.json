@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/ashlar_smooth/grey/all",
-    "top": "westerosblocks:block/ashlar_smooth/grey/all",
-    "side": "westerosblocks:block/ashlar_smooth/grey/all",
-    "particle": "westerosblocks:block/ashlar_smooth/grey/all"
-  }
-}

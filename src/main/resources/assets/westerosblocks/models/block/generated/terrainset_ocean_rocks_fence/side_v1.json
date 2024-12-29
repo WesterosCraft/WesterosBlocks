@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_side",
-  "textures": {
-    "bottom": "westerosblocks:block/terrainset/ocean/default",
-    "top": "westerosblocks:block/terrainset/ocean/default",
-    "side": "westerosblocks:block/terrainset/ocean/default"
-  }
-}

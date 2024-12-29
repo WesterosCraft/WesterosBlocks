@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side_tall",
-  "textures": {
-    "bottom": "westerosblocks:block/marble/harrenhal/all",
-    "top": "westerosblocks:block/marble/harrenhal/all",
-    "side": "westerosblocks:block/marble/harrenhal/all"
-  }
-}

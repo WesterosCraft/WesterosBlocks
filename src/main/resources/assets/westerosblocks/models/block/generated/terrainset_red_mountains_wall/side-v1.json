@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side",
-  "textures": {
-    "bottom": "westerosblocks:block/terrainset/red_mountains/random_4x4",
-    "top": "westerosblocks:block/terrainset/red_mountains/random_4x4",
-    "side": "westerosblocks:block/terrainset/red_mountains/random_4x4"
-  }
-}

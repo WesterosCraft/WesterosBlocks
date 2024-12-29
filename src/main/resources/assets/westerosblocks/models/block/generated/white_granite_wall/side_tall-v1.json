@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side_tall",
-  "textures": {
-    "bottom": "westerosblocks:block/ashlar_third/white/all",
-    "top": "westerosblocks:block/ashlar_third/white/all",
-    "side": "westerosblocks:block/ashlar_third/white/all"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/coral/tube/all",
-    "top": "westerosblocks:block/coral/tube/all",
-    "side": "westerosblocks:block/coral/tube/all",
-    "particle": "westerosblocks:block/coral/tube/all"
-  }
-}
