@@ -2,13 +2,33 @@
 
 Notes
 -----
-- some .mcmeta contain both animation and ctm; will need to split these
-- need to verify that tiles are correct after cv2 loading/splitting/saving (getting warning from some textures: "libpng warning: iCCP: known incorrect sRGB profile")
-- we will not be able to handle custom connect methods, e.g., connect_to_state and connect_to_tag
-- optifine doesn't seem to support 'layer' as a generic property anymore; need to test and ensure that blocks have correct render layer in definitions
-- the 'orient' property for westeros_pillar replacements needs verification (supposedly, Continuity should use orient=texture by default)
-- ctm_simple doesn't seem to have an Optifine equivalent (not a big issue since it's not used for anything)
-- westeros_single_cond seems to be used for both biome CTMs and forcing some textures to the CUTOUT_MIPPED layer; these need to be verified
+Todo:
+- Implement dumping CTMDefs to Continuity .properties format (see pseudocode in main)
+- Test and refine
+
+To debug:
+- CV2 throwing the following error from some textures: "libpng warning: iCCP: known incorrect sRGB profile"
+- Some processed tiles appear to be incorrect when previewed with CV2.imshow
+
+Continuity limitations:
+- Custom connect methods such as `connect_to_state` and `connect_to_tag` are used extensively in our pack; these do not
+  appear to be supported by Continuity, which only has the following connect values: block, tile, or state. The `state`
+  connect type is equivalent to the default CTM connect setting, whereas `block` is equivalent to our `ignore_state` setting.
+  In contrast, `connect_to_state` takes a *particular* state (e.g., type) as an argument and causes blocks to connect if they
+  both contain this state with equivalent values (e.g., =bottom). Unless the devs are willing to implement these custom methods,
+  we will need to create a custom fork of Continuity in order to add support.
+- Continuity doesn't appear to support `layer` as a generic property anymore (though this needs to be confirmed). We use this in
+  many CTMs to force a texture onto a particular render layer, without setting the entire block to that render layer in
+  WesterosBlocks.json. An example of this is the fruit leaf overlay textures, which use `westeros_single_cond` to force the
+  fruit textures to the CUTOUT_MIPPED layer. Continuity does appear to have `overlay_` variants of a few methods that support
+  the `layer` property (seems adequate, though currently unused), but some necessary methods such as `overlay_vertical` are
+  missing (at least from the documentation). Needs experimentation before we try to consider workarounds.
+- Continuity is missing equivalents for a few types of methods that the current CTM supports, particularly `edges`,
+  `edges_full`, and `ctm_simple`. Fortunately, these aren't actually used for any blocks at the moment except for the CTM
+  demo blocks. The effect for the first two might be reproducible using other methods but I'm not immediately sure.
+- Continuity doesn't have an equivalent for `westeros_pillar`, although it seems to have an `orient` property that accomplishes
+  the same thing, and furthermore should already be enabled by default for log-type blocks. So not a limitation per se, just
+  requires testing.
 """
 
 import os
@@ -48,8 +68,9 @@ MODEL_TEXTURES = set()
 CTM_ROOTS = set()
 EXPLORED_CTM = set()
 
-FINISHED_CTM = set()
-ERROR_CTM = set()
+FINISHED_CTM = {}
+ERROR_CTM = {}
+IGNORED_CTM = set()
 TYPE_STATS = {}
 
 
@@ -308,6 +329,10 @@ def get_texture_cond(texture, type, ctm_cond):
     row, col = ctm_cond['patRow'], ctm_cond['patCol']
     h, w = ctm_cond['patHeight'], ctm_cond['patWidth']
     return split_slice(texture, row, col, h, w)
+  elif type == 'random':
+    row, col = ctm_cond['rndRow'], ctm_cond['rndCol']
+    h, w = ctm_cond['rndHeight'], ctm_cond['rndWidth']
+    return split_slice(texture, row, col, h, w)
   elif type == 'westeros_ctm+pattern':
     row_ctm, col_ctm = ctm_cond['ctmRow'], ctm_cond['ctmCol']
     row_pat, col_pat = ctm_cond['patRow'], ctm_cond['patCol']
@@ -323,9 +348,6 @@ def get_texture_cond(texture, type, ctm_cond):
       return None
     if type in ['normal', 'fixed']:
       return split_slice(texture, row, col, 1, 1)
-    elif type == 'random':
-      print(f'** get_texture_cond not implemented for "random"')
-      return None
     elif type == 'ctm':
       print(f'** get_texture_cond not implemented for "ctm"')
       return None
@@ -347,14 +369,14 @@ def get_cond(ctm_cond):
   if not any([x in ctm_cond for x in ['biomeNames', 'yPosMin', 'yPosMax']]):
     return None
   biomes = set()
-  heights = (float('-inf'), float('inf'))
+  heights = [float('-inf'), float('inf')]
   if 'biomeNames' in ctm_cond:
     biomes = ctm_cond['biomeNames']
   if 'yPosMin' in ctm_cond:
     heights[0] = ctm_cond['yPosMin']
   if 'yPosMax' in ctm_cond:
     heights[1] = ctm_cond['yPosMax']
-  return CTMCond(biomes=biomes, heights=heights)
+  return CTMCond(biomes=biomes, heights=tuple(heights))
 
 
 def form_cond_root(type, texture, ctm, ctm_cond):
@@ -378,12 +400,17 @@ def form_cond_root(type, texture, ctm, ctm_cond):
     if 'size' in ctm_cond:
       ctm_new['extra']['size'] = ctm_cond['size']
     elif 'width' in ctm_cond and 'height' in ctm_cond:
-      ctm_new['extra']['size'] = max(ctm_cond['width'], ctm_cond['height'])
+      ctm_new['extra']['size'] = ctm_cond['width'] * ctm_cond['height']
+    elif 'rndWidth' in ctm_cond and 'rndHeight' in ctm_cond:
+      ctm_new['extra']['size'] = ctm_cond['rndWidth'] * ctm_cond['rndHeight']
+    for extra in ['weights', 'rndSameAllSides', 'rndOffY', 'rndOffX']:
+      if extra in ctm_cond:
+        ctm_new['extra'][extra] = ctm_cond[extra]
   elif type in ['ctm_simple']:
-    # TODO
+    # NOTE - unimplemented
     return None
   elif type in ['ctm']:
-    # TODO
+    # NOTE - unimplemented
     return None
   elif type in ['edges']:
     pass
@@ -397,13 +424,13 @@ def form_cond_root(type, texture, ctm, ctm_cond):
                 'westeros_v+h', 'westeros_h+v', 'westeros_pillar']:
     pass
   elif type in ['westeros_ctm']:
-    # TODO
+    # NOTE - unimplemented
     return None
   elif type in ['westeros_ctm+pattern']:
-    # TODO
+    # NOTE - unimplemented
     return None
   elif '_cond' in type:
-    # TODO
+    # NOTE - unimplemented
     return None
   else:
     return None
@@ -447,12 +474,12 @@ def validate_ctm(ctm: CTMDef):
   return True
 
 
-def add_ctm(ctm):
+def add_ctm(root, ctm):
   """Add a CTM to the finished list or error list depending on whether it passes validation."""
   if validate_ctm(ctm):
-    FINISHED_CTM.add(ctm)
+    FINISHED_CTM[root] = ctm
   else:
-    ERROR_CTM.add(ctm)
+    ERROR_CTM[root] = ctm
 
 
 # =======================================================
@@ -465,11 +492,24 @@ def parse_static(root: CTMRoot):
   method = get_method(root.ctm)
   ctm.prop.method = method
   ctm.prop.layer = get_layer(root.ctm)
-  ctm.prop.tiles = get_tiles(read_image(root.texture), method)
+  if method == 'normal':
+    ctm.prop.tiles = [read_image(root.texture)]
+  else:
+    ctm.prop.tiles = get_tiles(read_image(root.texture), method)
+  if 'extra' in root.ctm:
+    if 'weights' in root.ctm['extra']:
+      ctm.prop.method_props['weights'] = root.ctm['extra']['weights']
+    if 'rndSameAllSides' in root.ctm['extra']:
+      ctm.prop.method_props['symmetry'] = 'all'
+    if 'rndOffY' in root.ctm['extra']:
+      ctm.prop.method_props['linked'] = True
+    if 'rndOffX' in root.ctm['extra']:
+      print(f'** rndOffX attribute unsupported; ignoring')
   return ctm
 
 
 def parse_ctm_simple(root: CTMRoot):
+  # NOTE - unsupported
   pass
 
 
@@ -530,12 +570,12 @@ def parse_pattern_cond(root: CTMRoot):
 
 
 def parse_edges(root: CTMRoot):
-  # TODO
+  # NOTE - unsupported
   pass
 
 
 def parse_edges_full(root: CTMRoot):
-  # TODO
+  # NOTE - unsupported
   pass
 
 
@@ -673,6 +713,8 @@ def parse_westeros_ctm_pattern_cond(root: CTMRoot):
 
 
 def parse_westeros_cond(root: CTMRoot):
+  root.ctm['extra']['conds'] = [c for c in root.ctm['extra']['conds'] if 'type' not in c or c['type'] != 'null']
+
   ctm = CTMCondDef(root.name)
   layer = get_layer(root.ctm)
   connect = get_connect(root.ctm, default='state')
@@ -681,8 +723,6 @@ def parse_westeros_cond(root: CTMRoot):
   for ctm_cond in root.ctm['extra']['conds']:
     cond = get_cond(ctm_cond)
     type = ctm_cond['type'].replace('-','_') if 'type' in ctm_cond else 'normal'
-    if type == 'null':
-      continue
     texture = get_texture_cond(read_image(texture_cond), type.replace('_cond', ''), ctm_cond)
     cond_root = form_cond_root(type, texture, root.ctm, ctm_cond)
     if cond_root is None:
@@ -702,21 +742,52 @@ def parse_westeros_cond(root: CTMRoot):
   #   method='fixed',
   #   layer=layer,
   #   connect=connect,
-  #   tiles=get_tiles(read_image(root.texture), 'fixed')
+  #   tiles=[read_image(root.texture)]
   # )
   return ctm
 
 
 def parse_westeros_single_cond(root: CTMRoot):
-  # print(root)
-  # print()
-  # TODO
-  # NOTE: similar to westeros_cond, except conds can be empty if used only to force texture to particular layer,
-  # and each cond uses a slice of the given texture
-  # NOTE: the capability for nested conds exists using the 'source' cond. I think it's only 'westerosnestedcond' test
-  # block that uses this, so we may simply port it manually - in which case add cases with 'source' to the error list.
-  # otherwise, may need to translate row/col in source to an index for nested_props.
-  pass
+  root.ctm['extra']['conds'] = [c for c in root.ctm['extra']['conds'] if 'type' not in c or c['type'] != 'null']
+  
+  layer = get_layer(root.ctm)
+  connect = get_connect(root.ctm, default='state')
+
+  # Sometimes this CTM type is used only to force a fixed texture onto the CUTOUT_MIPPED layer
+  if not root.ctm['extra']['conds']:
+    ctm = CTMSingleDef(root.name)
+    ctm.prop.method = 'fixed'
+    ctm.prop.layer = layer
+    ctm.prop.connect = connect
+    ctm.prop.tiles = [read_image(root.texture)]
+    return ctm
+  
+  ctm = CTMCondDef(root.name)
+
+  for ctm_cond in root.ctm['extra']['conds']:
+    cond = get_cond(ctm_cond)
+    if not cond:
+      print(f'** Unsupported condition: {ctm_cond}')
+      return None
+    type = ctm_cond['type'].replace('-','_') if 'type' in ctm_cond else 'normal'
+    texture = get_texture_cond(read_image(root.texture), type.replace('_cond', ''), ctm_cond)
+    cond_root = form_cond_root(type, texture, root.ctm, ctm_cond)
+    if cond_root is None:
+      print(f'** Conversion of embedded CTM type {type} not implemented yet')
+      return None
+    rec_ctm = parse(cond_root)
+    if rec_ctm is None:
+      print(f'** Embedded CTM type {type} not yet supported')
+      return None
+    add_rec_props(ctm, cond, rec_ctm)
+
+  ctm.default = CTMProp(
+    method='fixed',
+    layer=layer,
+    connect=connect,
+    tiles=[split_slice(read_image(root.texture), 0, 0, 1, 1)]
+  )
+  return ctm
 
 
 # =======================================================
@@ -750,7 +821,7 @@ PARSE_DISPATCH = {
   'westeros_ctm+pattern': parse_westeros_ctm_pattern,
   'westeros_ctm+pattern_cond': parse_westeros_ctm_pattern_cond,
   'westeros_cond': parse_westeros_cond,
-  # 'westeros_single_cond': parse_westeros_single_cond,
+  'westeros_single_cond': parse_westeros_single_cond,
 }
 
 
@@ -769,7 +840,9 @@ def parse_wrapper(root: CTMRoot):
   typ = root.ctm['type']
   ctm = parse(root)
   if ctm is not None:
-    add_ctm(ctm)
+    add_ctm(root, ctm)
+  else:
+    IGNORED_CTM.add(root)
   if typ in TYPE_STATS:
     TYPE_STATS[typ] += 1
   else:
@@ -998,19 +1071,36 @@ def main(roots, verbose=False):
   print()
   print(f'{len(FINISHED_CTM)}/{len(CTM_ROOTS)} CTMs parsed')
   print(f'{len(ERROR_CTM)}/{len(CTM_ROOTS)} CTMs parsed with errors')
-  print(f'{len(CTM_ROOTS)-(len(FINISHED_CTM)+len(ERROR_CTM))}/{len(CTM_ROOTS)} CTMs skipped')
+  print(f'{len(IGNORED_CTM)}/{len(CTM_ROOTS)} CTMs skipped')
 
   if verbose:
     print('\nCTM type stats:')
     for k,v in sorted(TYPE_STATS.items(), key=lambda x: x[1], reverse=True):
       print(f'{k}: {v}')
 
-  # for ctm in FINISHED_CTM:
-  #   print(ctm)
-  #   print()
-
   # TODO: compile and write CTM classes to Continuity format
-
+  #
+  # 1. copy each assets textures directory to the output directory
+  # 2. remove all .png and .mcmeta files referenced in any CTMRoot, except for those that are the source of the root
+  #   - may need to hook into the function for registering the texture paths to add them to a global set
+  #   - NOTE: some .mcmeta files contain both animation and ctm definitions; in this case, keep the .mcmeta file
+  #     but remove the ctm property
+  # 3. for each finished CTMRoot and CTMDef:
+  #   3a. if CTMSingleDef:
+  #     - write each tile to <name>/<idx>.png
+  #     - write CTMProp into <name>.properties file, containing "matchTiles=<source>"
+  #     - note: if nested_props, create additional .properties files with "matchTiles=<idx>"
+  #   3b. if CTMCondDef:
+  #     - write each tile to <name>_{a,b,...,default}/<idx>.png
+  #     - for each CTMCond and CTMProp, write CTMProp into <name>_{a,b,...}.properties
+  #       containing "matchTiles=<source>" and the corresponding condition (e.g., "biomes=...")
+  #     - for the default CTMProp, compute the complement of all other CTMConds
+  #         * for biomes, this is "!biome1 biome2 ...", where the biomes of all conds are included
+  #         * for heights, this is the complement of the interval [-inf, inf] and the other cond
+  #           intervals (if this interval is empty, ignore the default)
+  #     - write the default CTMProp into <name>_default.properties containing "matchTiles=<source>"
+  #       and the condition calculated previously
+  
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
