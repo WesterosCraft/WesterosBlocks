@@ -4,135 +4,97 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockStateRecord;
 import com.westerosblocks.block.custom.WCSolidBlock;
-import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
+import net.minecraft.block.Block;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
 
 public class SolidBlockModelHandler {
     private static final String GENERATED_PATH = "block/generated/";
     private static final String BLOCK_PATH = "block/";
 
     public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
+        WCSolidBlock solidBlock = (currentBlock instanceof WCSolidBlock) ? (WCSolidBlock) currentBlock : null;
         boolean isSymmetrical = currentBlock instanceof WCSolidBlock && ((WCSolidBlock) currentBlock).symmetrical;
         List<BlockStateVariant> variants = new ArrayList<>();
 
-        for (WesterosBlockStateRecord state : blockDefinition.states) {
-            String baseName = state.stateID == null ? "base" : state.stateID;
-            processStateVariants(blockStateModelGenerator, blockDefinition, state, baseName, isSymmetrical, variants);
+//        VariantsBlockStateSupplier stateSupplier = VariantsBlockStateSupplier.create(currentBlock);
+
+
+        // Process each state record
+        for (WesterosBlockStateRecord stateRecord : blockDefinition.states) {
+            String baseName = stateRecord.stateID == null ? "base" : stateRecord.stateID;
+            boolean isTinted = stateRecord.isTinted();
+            boolean hasOverlay = stateRecord.getOverlayTextureByIndex(0) != null;
+
+            // Handle each random texture set
+            for (int setIdx = 0; setIdx < stateRecord.getRandomTextureSetCount(); setIdx++) {
+                WesterosBlockDef.RandomTextureSet textureSet = stateRecord.getRandomTextureSet(setIdx);
+                int rotationCount = stateRecord.rotateRandom ? 4 : 1; // 4 for random, just 1 if not
+
+                for (int i = 0; i < rotationCount; i++) {
+                    // if its symmetrical
+                    if (solidBlock != null && solidBlock.symmetrical) {
+                        String symmetricalModelPath = String.format("%s:block/generated/%s/symmetrical/%s_v%d",
+                                WesterosBlocks.MOD_ID, blockDefinition.blockName, baseName, setIdx + 1);
+
+                        BlockStateVariant variant = BlockStateVariant.create()
+                                .put(VariantSettings.MODEL, Identifier.of(WesterosBlocks.MOD_ID, symmetricalModelPath));
+
+                        if (textureSet.weight != null && textureSet.weight > 0) {
+                            variant.put(VariantSettings.WEIGHT, textureSet.weight);
+                        }
+
+                        if (i > 0) {
+                            variant.put(VariantSettings.Y, VariantSettings.Rotation.values()[i]);
+                        }
+
+                        variants.add(variant);
+
+                    } else {
+                    // do asymmetrical stuff
+                    }
+
+                }
+            }
         }
 
         blockStateModelGenerator.blockStateCollector.accept(
                 VariantsBlockStateSupplier.create(currentBlock, variants.toArray(new BlockStateVariant[0]))
         );
+
+        // Generate models for each state
+//        generateModels(blockStateModelGenerator, currentBlock, blockDefinition);
     }
 
-    private static void processStateVariants(
-            BlockStateModelGenerator blockStateModelGenerator,
-            WesterosBlockDef blockDefinition,
-            WesterosBlockStateRecord state,
-            String baseName,
-            boolean isSymmetrical,
-            List<BlockStateVariant> variants
-    ) {
-        int rotationCount = state.rotateRandom ? 4 : 1;
+    private static TextureMap createTextureMap(String variant, WesterosBlockDef.RandomTextureSet textureSet, boolean hasOverlay, WesterosBlockDef blockDefinition) {
+        TextureMap textureMap;
 
-        for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
-            WesterosBlockDef.RandomTextureSet textureSet = state.getRandomTextureSet(setIdx);
+            textureMap = new TextureMap()
+                    .put(TextureKey.DOWN, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(0)))
+                    .put(TextureKey.UP, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(1)))
+                    .put(TextureKey.NORTH, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(2)))
+                    .put(TextureKey.SOUTH, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(3)))
+                    .put(TextureKey.WEST, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(4)))
+                    .put(TextureKey.EAST, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(5)))
+                    .put(TextureKey.PARTICLE, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(2)));
 
-            if (isSymmetrical) {
-                generateSymmetricalVariants(blockStateModelGenerator, blockDefinition, baseName, rotationCount,
-                        setIdx, textureSet, variants);
-            } else {
-                generateAsymmetricalVariants(blockStateModelGenerator, blockDefinition, baseName, rotationCount,
-                        setIdx, textureSet, variants);
-            }
-        }
-    }
 
-    private static void generateSymmetricalVariants(
-            BlockStateModelGenerator blockStateModelGenerator,
-            WesterosBlockDef blockDefinition,
-            String baseName,
-            int rotationCount,
-            int setIdx,
-            WesterosBlockDef.RandomTextureSet textureSet,
-            List<BlockStateVariant> variants
-    ) {
-        String[] types = {"symmetrical", "asymmetrical"};
-        for (String type : types) {
-            Identifier modelId = createModelIdentifier(blockDefinition.blockName, type, baseName, setIdx);
-            generateVariantsForType(modelId, rotationCount, textureSet, variants);
-
-            // Generate the model
-            TextureMap textureMap = createTextureMap(textureSet);
-            Models.CUBE_ALL.upload(modelId, textureMap, blockStateModelGenerator.modelCollector);
-        }
-    }
-
-    private static void generateAsymmetricalVariants(
-            BlockStateModelGenerator blockStateModelGenerator,
-            WesterosBlockDef blockDefinition,
-            String baseName,
-            int rotationCount,
-            int setIdx,
-            WesterosBlockDef.RandomTextureSet textureSet,
-            List<BlockStateVariant> variants
-    ) {
-        Identifier modelId = createModelIdentifier(blockDefinition.blockName, null, baseName, setIdx);
-        generateVariantsForType(modelId, rotationCount, textureSet, variants);
-
-        // Generate the model
-        TextureMap textureMap = createTextureMap(textureSet);
-        Models.CUBE_ALL.upload(modelId, textureMap, blockStateModelGenerator.modelCollector);
-    }
-
-    private static void generateVariantsForType(
-            Identifier modelId,
-            int rotationCount,
-            WesterosBlockDef.RandomTextureSet textureSet,
-            List<BlockStateVariant> variants
-    ) {
-        for (int rotIdx = 0; rotIdx < rotationCount; rotIdx++) {
-            BlockStateVariant variant = BlockStateVariant.create()
-                    .put(VariantSettings.MODEL, modelId);
-
-            if (rotIdx > 0) {
-                variant.put(VariantSettings.Y, VariantSettings.Rotation.values()[rotIdx]);
-            }
-
-            if (textureSet.weight != null && textureSet.weight > 0) {
-                variant.put(VariantSettings.WEIGHT, textureSet.weight);
-            }
-
-            variants.add(variant);
-        }
-    }
-
-    private static Identifier createModelIdentifier(String blockName, String type, String baseName, int setIdx) {
-        StringBuilder path = new StringBuilder()
-                .append(GENERATED_PATH)
-                .append(blockName)
-                .append('/');
-
-        if (type != null) {
-            path.append(type).append('/');
+        if (hasOverlay) {
+            textureMap
+                    .put(TextureKey.of("down_ov"), blockDefinition.getOverlayTexture(0))
+                    .put(TextureKey.of("up_ov"), blockDefinition.getOverlayTexture( 1))
+                    .put(TextureKey.of("north_ov"), blockDefinition.getOverlayTexture(2))
+                    .put(TextureKey.of("south_ov"), blockDefinition.getOverlayTexture(3))
+                    .put(TextureKey.of("west_ov"), blockDefinition.getOverlayTexture(4))
+                    .put(TextureKey.of("east_ov"), blockDefinition.getOverlayTexture(5));
         }
 
-        path.append(baseName)
-                .append("_v")
-                .append(setIdx + 1);
-
-        return Identifier.of(WesterosBlocks.MOD_ID, path.toString());
-    }
-
-    private static TextureMap createTextureMap(WesterosBlockDef.RandomTextureSet textureSet) {
-        return new TextureMap()
-                .put(TextureKey.ALL, Identifier.of(WesterosBlocks.MOD_ID,
-                        BLOCK_PATH + textureSet.getTextureByIndex(0)));
+        return textureMap;
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {

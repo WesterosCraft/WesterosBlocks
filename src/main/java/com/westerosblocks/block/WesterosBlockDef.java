@@ -20,6 +20,7 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.state.property.Property;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
@@ -83,7 +84,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     public String woodType = null;
 
     private transient Map<String, String> parsedType;
-    private transient boolean hasCollisionBoxes = false;
+    private final transient boolean hasCollisionBoxes = false;
 
     // TODO not sure if we need legacy stuff anymore
 //    public String legacyBlockID = null;
@@ -324,7 +325,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         return null;
     }
 
-    public static enum CuboidRotation {
+    public enum CuboidRotation {
         NONE(0, 0, 0, new int[]{0, 1, 2, 3, 4, 5}, new int[]{0, 0, 0, 0, 0, 0}),
         ROTY90(0, 90, 0, new int[]{0, 1, 4, 5, 3, 2}, new int[]{270, 90, 0, 0, 0, 0}),
         ROTY180(0, 180, 0, new int[]{0, 1, 3, 2, 5, 4}, new int[]{180, 180, 0, 0, 0, 0}),
@@ -453,7 +454,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     // TODO
     private static final Map<String, AbstractBlock.Settings> settingsTable = new HashMap<>();
     private static final Map<String, BlockSoundGroup> stepSoundTable = new HashMap<>();
-//    private static final Map<String, CreativeModeTab> tabTable = new HashMap<>();
+    //    private static final Map<String, CreativeModeTab> tabTable = new HashMap<>();
     private static final Map<String, WesterosBlockFactory> typeTable = new HashMap<String, WesterosBlockFactory>();
     private static final Map<String, ParticleType<?>> particles = new HashMap<String, ParticleType<?>>();
 
@@ -510,7 +511,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         didInit = true;
     }
 
-    private static Map<String, long[]> perfCounts = new HashMap<String, long[]>();
+    private static final Map<String, long[]> perfCounts = new HashMap<String, long[]>();
 
     public Block createBlock() {
         try {
@@ -583,7 +584,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
             Map<String, Integer> lightLevels = new HashMap<>();
             for (WesterosBlockStateRecord sr : this.states) {
                 if (sr.lightValue > 0.0F) {
-                    lightLevels.put(sr.stateID, (int)(16.0 * sr.lightValue));
+                    lightLevels.put(sr.stateID, (int) (16.0 * sr.lightValue));
                 }
             }
             // TODO
@@ -595,7 +596,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         // Handle simple light level
         else if (lightValue > 0.0F || !states.isEmpty() && states.getFirst().lightValue > 0.0F) {
             float lightLevel = Math.max(lightValue, states.isEmpty() ? 0 : states.getFirst().lightValue);
-            settings = settings.luminance((state) -> (int)(16.0 * lightLevel));
+            settings = settings.luminance((state) -> (int) (16.0 * lightLevel));
         }
 
         // Handle transparency/occlusion
@@ -932,6 +933,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     }
 
     // TODO
+
     /**
      * Returns this WesterosBlockDef's default Material
      */
@@ -954,6 +956,32 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
             return BlockSoundGroup.STONE;
         }
         return ss;
+    }
+
+    public String getBlockColorMapResource() {
+        String res = null;
+        String blockColor = colorMult;
+        if (blockColor == null && colorMults != null && !colorMults.isEmpty()) {
+            blockColor = colorMults.getFirst();
+        }
+        if ((blockColor != null) && (!blockColor.startsWith("#"))) {
+            String[] tok = blockColor.split(":");
+            if (tok.length == 1) {
+                if (tok[0].startsWith("textures/"))
+                    tok[0] = tok[0].substring(9);
+                res = WesterosBlocks.MOD_ID + ":" + tok[0];
+            } else {
+                if (tok[1].startsWith("textures/"))
+                    tok[1] = tok[1].substring(9);
+                res = tok[0] + ":" + tok[1];
+            }
+        }
+        return res;
+    }
+
+    public Identifier getOverlayTexture(int index) {
+        return Identifier.of(WesterosBlocks.MOD_ID, "block/" +
+                this.states.getFirst().getOverlayTextureByIndex(index));
     }
 
     // TODO not sure if needed anymore
@@ -1017,7 +1045,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         BlockEntityType<?> regobj;
     }
 
-    private static HashMap<String, BlockEntityRec> te_rec = new HashMap<String, BlockEntityRec>();
+    private static final HashMap<String, BlockEntityRec> te_rec = new HashMap<String, BlockEntityRec>();
 
 //    public static final DeferredRegister<BlockEntityType<?>> TILE_ENTITY_TYPES =
 //            DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, WesterosBlocks.MOD_ID);

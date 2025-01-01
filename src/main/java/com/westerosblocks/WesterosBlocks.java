@@ -8,18 +8,12 @@ import com.westerosblocks.util.AutoDoorRestore;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
-import net.minecraft.block.Block;
-import net.minecraft.registry.Registries;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.InvalidIdentifierException;
 import net.minecraft.util.crash.CrashException;
 import net.minecraft.util.crash.CrashReport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.file.Path;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -80,11 +74,15 @@ public class WesterosBlocks implements ModInitializer {
         return customBlockDefs;
     }
 
+    public static WesterosBlocksJsonLoader.WesterosBlocksConfig getCustomConfig() {
+        return customConfig;
+    }
+
     // Expand block set definitions to obtain the full block definition list
     public static WesterosBlockDef[] getBlockDefs(WesterosBlocksJsonLoader.WesterosBlocksConfig config) {
         WesterosBlockSetDef[] blockSetDefs = config.blockSets;
         WesterosBlockDef[] blockDefs = config.blocks;
-        List<WesterosBlockDef> expandedBlockDefs = new LinkedList<WesterosBlockDef>(Arrays.asList(blockDefs));
+        List<WesterosBlockDef> expandedBlockDefs = new LinkedList<>(Arrays.asList(blockDefs));
 
         if (config.blockSets.length > 0) {
             for (WesterosBlockSetDef blockSetDef : blockSetDefs) {
@@ -95,7 +93,7 @@ public class WesterosBlocks implements ModInitializer {
             }
         }
 
-        return expandedBlockDefs.toArray(new WesterosBlockDef[expandedBlockDefs.size()]);
+        return expandedBlockDefs.toArray(new WesterosBlockDef[0]);
     }
 
 

@@ -3,16 +3,16 @@ package com.westerosblocks.datagen;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.datagen.models.SlabBlockModelHandler;
-import com.westerosblocks.datagen.models.SolidBlockModelHandler;
+import com.westerosblocks.datagen.models.SolidBlockModelHandlerOld;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
+
 import java.util.HashMap;
 
-public class WesterosBlocksModelProvider extends FabricModelProvider {
-    public WesterosBlocksModelProvider(FabricDataOutput output) {
+public class ModModelProvider extends FabricModelProvider {
+    public ModModelProvider(FabricDataOutput output) {
         super(output);
     }
 
@@ -27,12 +27,25 @@ public class WesterosBlocksModelProvider extends FabricModelProvider {
             switch (customBlockDef.blockType) {
 
                 case "solid": {
-                    SolidBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
+                    SolidBlockModelHandlerOld.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-                case "slab": {
-                    SlabBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
-                }
+//                case "stair": {
+//                    StairBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
+//                    break;
+//                }
+//                case "slab": {
+//                    SlabBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
+//                    break;
+//                }
+//                case "fence": {
+//                    FenceBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
+//                    break;
+//                }
+//                case "wall": {
+//                    FenceBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
+//                    break;
+//                }
 //                case "door": {
 //                    blockStateModelGenerator.registerDoor(currentBlock);
 //                    break;
@@ -40,11 +53,6 @@ public class WesterosBlocksModelProvider extends FabricModelProvider {
 //                case "walltorch": {
 //                    blockStateModelGenerator.registerTorch();
 //                }
-//                case "stair":
-//                    BlockStateModelGenerator.BlockTexturePool blk = blockStateModelGenerator.registerCubeAllModelTexturePool(customBlocks.get(customBlockDef.blockName));
-//
-//                    blk.stairs(currentBlock);
-//                    break;
                 default:
                     WesterosBlocks.LOGGER.warn("DATAGEN: Unknown block type: {} for block {}", customBlockDef.blockType, customBlockDef.blockName);
             }
@@ -63,12 +71,25 @@ public class WesterosBlocksModelProvider extends FabricModelProvider {
             switch (customBlockDef.blockType) {
 
                 case "solid": {
-                    SolidBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    SolidBlockModelHandlerOld.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-                case "slab": {
-                    SlabBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-                }
+//                case "stair": {
+//                    StairBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+//                    break;
+//                }
+//                case "slab": {
+//                    SlabBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+//                    break;
+//                }
+//                case "fence": {
+//                    FenceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+//                    break;
+//                }
+//                case "wall": {
+//                    FenceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+//                    break;
+//                }
 //                case "door": {
 //                    blockStateModelGenerator.registerDoor(currentBlock);
 //                    break;
@@ -76,11 +97,6 @@ public class WesterosBlocksModelProvider extends FabricModelProvider {
 //                case "walltorch": {
 //                    blockStateModelGenerator.registerTorch();
 //                }
-//                case "stair":
-//                    BlockStateModelGenerator.BlockTexturePool blk = blockStateModelGenerator.registerCubeAllModelTexturePool(customBlocks.get(customBlockDef.blockName));
-//
-//                    blk.stairs(currentBlock);
-//                    break;
                 default:
                     WesterosBlocks.LOGGER.warn("DATAGEN: Unknown item type: {} for item {}", customBlockDef.blockType, customBlockDef.blockName);
             }
