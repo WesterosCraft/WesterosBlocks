@@ -3,7 +3,7 @@ package com.westerosblocks.datagen;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.datagen.models.SolidBlockModelHandlerOld;
+import com.westerosblocks.datagen.models.SolidBlockModelHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
@@ -21,13 +21,14 @@ public class ModModelProvider extends FabricModelProvider {
         HashMap<String, Block> customBlocks = ModBlocks.getCustomBlocksByName();
         WesterosBlockDef[] customBlockDefs = WesterosBlocks.getCustomBlockDefs();
 
+
         for (WesterosBlockDef customBlockDef : customBlockDefs) {
             if (customBlockDef == null || customBlockDef.isCustomModel()) continue;
             Block currentBlock = customBlocks.get(customBlockDef.blockName);
             switch (customBlockDef.blockType) {
 
                 case "solid": {
-                    SolidBlockModelHandlerOld.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
+                    SolidBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
 //                case "stair": {
@@ -71,7 +72,7 @@ public class ModModelProvider extends FabricModelProvider {
             switch (customBlockDef.blockType) {
 
                 case "solid": {
-                    SolidBlockModelHandlerOld.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    SolidBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
 //                case "stair": {

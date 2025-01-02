@@ -1,5 +1,7 @@
 package com.westerosblocks.block;
 
+import com.westerosblocks.WesterosBlocks;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.shape.VoxelShape;
 import com.westerosblocks.block.WesterosBlockDef.BoundingBox;
 import com.westerosblocks.block.WesterosBlockDef.Cuboid;
@@ -92,9 +94,10 @@ public class WesterosBlockStateRecord {
         return null;
     }
 
-    public String getOverlayTextureByIndex(int idx) {
+    public Identifier getOverlayTextureByIndex(int idx) {
         if (this.overlayTextures != null) {
-            return this.overlayTextures.get(Math.min(idx, this.overlayTextures.size() - 1));
+            String texture = this.overlayTextures.get(Math.min(idx, this.overlayTextures.size() - 1));
+            return texture != null ? Identifier.of(WesterosBlocks.MOD_ID, "block/" + texture) : null;
         }
         return null;
     }

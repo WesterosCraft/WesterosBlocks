@@ -979,10 +979,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         return res;
     }
 
-    public Identifier getOverlayTexture(int index) {
-        return Identifier.of(WesterosBlocks.MOD_ID, "block/" +
-                this.states.getFirst().getOverlayTextureByIndex(index));
-    }
 
     // TODO not sure if needed anymore
 //    public String getLegacyBlockName() {

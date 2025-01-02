@@ -19,11 +19,8 @@ public class SolidBlockModelHandler {
 
     public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
         WCSolidBlock solidBlock = (currentBlock instanceof WCSolidBlock) ? (WCSolidBlock) currentBlock : null;
-        boolean isSymmetrical = currentBlock instanceof WCSolidBlock && ((WCSolidBlock) currentBlock).symmetrical;
+        boolean isSymmetrical = currentBlock instanceof WCSolidBlock && solidBlock.symmetrical;
         List<BlockStateVariant> variants = new ArrayList<>();
-
-//        VariantsBlockStateSupplier stateSupplier = VariantsBlockStateSupplier.create(currentBlock);
-
 
         // Process each state record
         for (WesterosBlockStateRecord stateRecord : blockDefinition.states) {
@@ -34,67 +31,101 @@ public class SolidBlockModelHandler {
             // Handle each random texture set
             for (int setIdx = 0; setIdx < stateRecord.getRandomTextureSetCount(); setIdx++) {
                 WesterosBlockDef.RandomTextureSet textureSet = stateRecord.getRandomTextureSet(setIdx);
-                int rotationCount = stateRecord.rotateRandom ? 4 : 1; // 4 for random, just 1 if not
+                int rotationCount = stateRecord.rotateRandom ? 4 : 1;
 
                 for (int i = 0; i < rotationCount; i++) {
-                    // if its symmetrical
-                    if (solidBlock != null && solidBlock.symmetrical) {
-                        String symmetricalModelPath = String.format("%s:block/generated/%s/symmetrical/%s_v%d",
-                                WesterosBlocks.MOD_ID, blockDefinition.blockName, baseName, setIdx + 1);
+                    String[] paths = isSymmetrical ? new String[]{"symmetrical", "asymmetrical"} : new String[]{""};
+
+                    for (String pathType : paths) {
+                        Identifier modelPath = createModelIdentifier(blockDefinition.blockName, pathType, baseName, setIdx);
 
                         BlockStateVariant variant = BlockStateVariant.create()
-                                .put(VariantSettings.MODEL, Identifier.of(WesterosBlocks.MOD_ID, symmetricalModelPath));
+                                .put(VariantSettings.MODEL, modelPath);
 
                         if (textureSet.weight != null && textureSet.weight > 0) {
                             variant.put(VariantSettings.WEIGHT, textureSet.weight);
                         }
-
                         if (i > 0) {
                             variant.put(VariantSettings.Y, VariantSettings.Rotation.values()[i]);
                         }
-
                         variants.add(variant);
-
-                    } else {
-                    // do asymmetrical stuff
+                        generateSolidModel(blockStateModelGenerator, blockDefinition, modelPath, textureSet, isSymmetrical, isTinted, hasOverlay, stateRecord);
                     }
-
                 }
             }
         }
 
         blockStateModelGenerator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(currentBlock, variants.toArray(new BlockStateVariant[0]))
+                VariantsBlockStateSupplier.create(currentBlock, variants.toArray(value -> variants.toArray(new BlockStateVariant[value])))
         );
-
-        // Generate models for each state
-//        generateModels(blockStateModelGenerator, currentBlock, blockDefinition);
     }
 
-    private static TextureMap createTextureMap(String variant, WesterosBlockDef.RandomTextureSet textureSet, boolean hasOverlay, WesterosBlockDef blockDefinition) {
+    protected static void generateSolidModel(BlockStateModelGenerator blockStateModelGenerator, WesterosBlockDef blockDefinition, Identifier modelPath, WesterosBlockDef.RandomTextureSet textureSet, boolean isSymmetrical, boolean isTinted, boolean hasOverlay, WesterosBlockStateRecord currentRec) {
         TextureMap textureMap;
 
-            textureMap = new TextureMap()
-                    .put(TextureKey.DOWN, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(0)))
-                    .put(TextureKey.UP, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(1)))
-                    .put(TextureKey.NORTH, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(2)))
-                    .put(TextureKey.SOUTH, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(3)))
-                    .put(TextureKey.WEST, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(4)))
-                    .put(TextureKey.EAST, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(5)))
-                    .put(TextureKey.PARTICLE, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(2)));
+        if (isSymmetrical || (textureSet.getTextureCount() > 1) || isTinted) {
+            textureMap = createTextureMap(textureSet, isSymmetrical, hasOverlay, isTinted, blockDefinition, currentRec);
+            if (hasOverlay) {
+                ModModels.ALL_SIDES_WITH_OVERLAY.upload(modelPath, textureMap, blockStateModelGenerator.modelCollector);
+            } else {
+                ModModels.ALL_SIDES.upload(modelPath, textureMap, blockStateModelGenerator.modelCollector);
+            }
+        } else {
+            textureMap = TextureMap.all(Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(0)));
+            Models.CUBE_ALL.upload(modelPath, textureMap, blockStateModelGenerator.modelCollector);
+        }
+    }
 
+    private static TextureMap createTextureMap(WesterosBlockDef.RandomTextureSet ts, boolean isSymmetrical, boolean hasOverlay, boolean isTinted, WesterosBlockDef blockDefinition, WesterosBlockStateRecord currentRec) {
+        TextureMap textureMap = new TextureMap()
+                .put(TextureKey.DOWN, Identifier.of(WesterosBlocks.MOD_ID, "block/" + ts.getTextureByIndex(0)))
+                .put(TextureKey.UP, Identifier.of(WesterosBlocks.MOD_ID, "block/" + ts.getTextureByIndex(1)))
+                .put(TextureKey.NORTH, Identifier.of(WesterosBlocks.MOD_ID, "block/" + ts.getTextureByIndex(2)))
+                .put(TextureKey.SOUTH, Identifier.of(WesterosBlocks.MOD_ID, "block/" + ts.getTextureByIndex(3)))
+                .put(TextureKey.WEST, Identifier.of(WesterosBlocks.MOD_ID, "block/" + (isSymmetrical ? ts.getTextureByIndex(4) : ts.getTextureByIndex(6))))
+                .put(TextureKey.EAST, Identifier.of(WesterosBlocks.MOD_ID, "block/" + (isSymmetrical ? ts.getTextureByIndex(5) : ts.getTextureByIndex(7))))
+                .put(TextureKey.PARTICLE, Identifier.of(WesterosBlocks.MOD_ID, "block/" + ts.getTextureByIndex(2)));
 
         if (hasOverlay) {
-            textureMap
-                    .put(TextureKey.of("down_ov"), blockDefinition.getOverlayTexture(0))
-                    .put(TextureKey.of("up_ov"), blockDefinition.getOverlayTexture( 1))
-                    .put(TextureKey.of("north_ov"), blockDefinition.getOverlayTexture(2))
-                    .put(TextureKey.of("south_ov"), blockDefinition.getOverlayTexture(3))
-                    .put(TextureKey.of("west_ov"), blockDefinition.getOverlayTexture(4))
-                    .put(TextureKey.of("east_ov"), blockDefinition.getOverlayTexture(5));
+            boolean hasAll = currentRec.getOverlayTextureByIndex(1) == null && currentRec.getOverlayTextureByIndex(1) != null;
+            if (hasAll) {
+                Identifier overlayId = currentRec.getOverlayTextureByIndex(0);
+
+                textureMap
+                        .put(TextureKey.of("down_ov"), overlayId)
+                        .put(TextureKey.of("up_ov"), overlayId)
+                        .put(TextureKey.of("north_ov"), overlayId)
+                        .put(TextureKey.of("south_ov"), overlayId)
+                        .put(TextureKey.of("west_ov"), overlayId)
+                        .put(TextureKey.of("east_ov"), overlayId);
+            } else {
+                textureMap
+                        .put(TextureKey.of("down_ov"), currentRec.getOverlayTextureByIndex(0))
+                        .put(TextureKey.of("up_ov"), currentRec.getOverlayTextureByIndex(1))
+                        .put(TextureKey.of("north_ov"), currentRec.getOverlayTextureByIndex(2))
+                        .put(TextureKey.of("south_ov"), currentRec.getOverlayTextureByIndex(3))
+                        .put(TextureKey.of("west_ov"), currentRec.getOverlayTextureByIndex(4))
+                        .put(TextureKey.of("east_ov"), currentRec.getOverlayTextureByIndex(5));
+            }
         }
 
         return textureMap;
+    }
+
+    private static Identifier createModelIdentifier(String blockName, String type, String baseName, int setIdx) {
+        StringBuilder path = new StringBuilder()
+                .append(GENERATED_PATH)
+                .append(blockName);
+
+        if (type != null) {
+            path.append(type).append('/');
+        }
+
+        path.append(baseName)
+                .append("_v")
+                .append(setIdx + 1);
+
+        return Identifier.of(WesterosBlocks.MOD_ID, path.toString());
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
