@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.data.client.Model;
 import net.minecraft.data.client.TextureKey;
 import net.minecraft.util.Identifier;
@@ -8,33 +9,49 @@ import net.minecraft.util.Identifier;
 import java.util.Optional;
 
 public class ModModels {
-    private static final String GENERATED_PATH = "block/generated/";
+    private static final String GENERATED_PATH = "block/";
 
-    public static final Model ALL_SIDES = block("cube_all",
-            TextureKey.DOWN,
-            TextureKey.UP,
-            TextureKey.NORTH,
-            TextureKey.SOUTH,
-            TextureKey.WEST,
-            TextureKey.EAST,
-            TextureKey.PARTICLE);
+    public static Model getAllSides(String parent) {
+        return null;
+    }
 
-    public static final Model ALL_SIDES_WITH_OVERLAY = block("untinted/cube_overlay",
-            TextureKey.DOWN,
-            TextureKey.UP,
-            TextureKey.NORTH,
-            TextureKey.SOUTH,
-            TextureKey.WEST,
-            TextureKey.EAST,
-            TextureKey.PARTICLE,
-            TextureKey.of("down_ov"),
-            TextureKey.of("up_ov"),
-            TextureKey.of("north_ov"),
-            TextureKey.of("south_ov"),
-            TextureKey.of("west_ov"),
-            TextureKey.of("east_ov"));
+    public static Model getAllSides(String parent, String namespace) {
+        return block(parent,
+                namespace,
+                TextureKey.DOWN,
+                TextureKey.UP,
+                TextureKey.NORTH,
+                TextureKey.SOUTH,
+                TextureKey.WEST,
+                TextureKey.EAST,
+                TextureKey.PARTICLE);
+    }
+
+    public static Model getAllSidesWithOverlay(String parent) {
+        return block(parent,
+                TextureKey.DOWN,
+                TextureKey.UP,
+                TextureKey.NORTH,
+                TextureKey.SOUTH,
+                TextureKey.WEST,
+                TextureKey.EAST,
+                TextureKey.PARTICLE,
+                ModTextureKey.DOWN_OVERLAY,
+                ModTextureKey.UP_OVERLAY,
+                ModTextureKey.NORTH_OVERLAY,
+                ModTextureKey.SOUTH_OVERLAY,
+                ModTextureKey.WEST_OVERLAY,
+                ModTextureKey.EAST_OVERLAY);
+    }
+
+    public static final Model ALL_SIDES = getAllSides("cube_all");
+    public static final Model ALL_SIDES_WITH_OVERLAY = getAllSidesWithOverlay("untinted/cube_overlay");
+
+    private static Model block(String parent, String namespace, TextureKey... requiredTextureKeys) {
+        return new Model(Optional.of(Identifier.of(namespace != null ? namespace : WesterosBlocks.MOD_ID, GENERATED_PATH + parent)), Optional.empty(), requiredTextureKeys);
+    }
 
     private static Model block(String parent, TextureKey... requiredTextureKeys) {
-        return new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, GENERATED_PATH + parent )), Optional.empty(), requiredTextureKeys);
+        return new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, GENERATED_PATH + parent)), Optional.empty(), requiredTextureKeys);
     }
 }

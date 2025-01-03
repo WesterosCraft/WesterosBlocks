@@ -87,20 +87,19 @@ public class WesterosBlockStateRecord {
     }
 
     public String getTextureByIndex(int idx) {
-        RandomTextureSet set = getRandomTextureSet(0);
-        if (set != null) {
-            return set.getTextureByIndex(idx);
-        }
-        return null;
-    }
+		RandomTextureSet set = getRandomTextureSet(0);
+		if (set != null) {
+			return set.getTextureByIndex(idx);
+		}
+		return null;
+	}
 
-    public Identifier getOverlayTextureByIndex(int idx) {
-        if (this.overlayTextures != null) {
-            String texture = this.overlayTextures.get(Math.min(idx, this.overlayTextures.size() - 1));
-            return texture != null ? Identifier.of(WesterosBlocks.MOD_ID, "block/" + texture) : null;
-        }
-        return null;
-    }
+	public String getOverlayTextureByIndex(int idx) {
+		if (this.overlayTextures != null) {
+			return this.overlayTextures.get(Math.min(idx,this.overlayTextures.size()-1));
+		}
+		return null;
+	}
 
     // Get number of random texture sets
     public int getRandomTextureSetCount() {

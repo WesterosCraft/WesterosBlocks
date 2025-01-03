@@ -4,6 +4,7 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockStateRecord;
 import net.minecraft.block.Block;
+import net.minecraft.block.enums.SlabType;
 import net.minecraft.data.client.*;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
@@ -69,9 +70,9 @@ public class SlabBlockModelHandler {
         blockStateModelGenerator.blockStateCollector.accept(
                 VariantsBlockStateSupplier.create(currentBlock)
                         .coordinate(BlockStateVariantMap.create(Properties.SLAB_TYPE)
-                                .register(net.minecraft.block.enums.SlabType.BOTTOM, bottomVariants)
-                                .register(net.minecraft.block.enums.SlabType.TOP, topVariants)
-                                .register(net.minecraft.block.enums.SlabType.DOUBLE, doubleVariants))
+                                .register(SlabType.BOTTOM, bottomVariants)
+                                .register(SlabType.TOP, topVariants)
+                                .register(SlabType.DOUBLE, doubleVariants))
         );
     }
 

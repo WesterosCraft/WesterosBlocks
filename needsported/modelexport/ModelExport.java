@@ -462,49 +462,49 @@ public abstract class ModelExport {
         		}
         	}
         }
-        private void addState(WhenRec rec, Apply a, String cond) {
-        	States matchst = null;
-        	WhenRec wr = rec;
-        	// Add condition to whenrec
-        	if (cond != null) {
-        		if (rec != null) {
-        			wr = new WhenRec(rec, cond);
-        		}
-        		else {
-        			wr = new WhenRec();
-        			wr.state = cond;
-        		}
-        	}
-        	for (States st : multipart) {
-        		if (((st.when == null) && (wr == null)) ||
-        			((st.when != null) && (wr != null) && st.when.equals(wr))) {
-        			matchst = st;
-        			break;
-        		}
-        	}
-        	// Add new rec, if needed
-        	if (matchst == null) {
-        		matchst = new States();
-        		matchst.when = wr;
-        		multipart.add(matchst);
-        	}
-        	// Now add our apply
-        	matchst.apply.add(a);
-        }
-        
-        public void addStates(WhenRec rec, Apply a, Set<String> stateIDs) {
-        	if (multipart == null) {
-        		multipart = new ArrayList<States>();
-        	}
-        	if (stateIDs == null) {
-        		addState(rec, a, null);
-        	}
-        	else {
-        		for (String cond : stateIDs) {
-            		addState(rec, a, cond);
-        		}
-        	}
-        }
+//        private void addState(WhenRec rec, Apply a, String cond) {
+//        	States matchst = null;
+//        	WhenRec wr = rec;
+//        	// Add condition to whenrec
+//        	if (cond != null) {
+//        		if (rec != null) {
+//        			wr = new WhenRec(rec, cond);
+//        		}
+//        		else {
+//        			wr = new WhenRec();
+//        			wr.state = cond;
+//        		}
+//        	}
+//        	for (States st : multipart) {
+//        		if (((st.when == null) && (wr == null)) ||
+//        			((st.when != null) && (wr != null) && st.when.equals(wr))) {
+//        			matchst = st;
+//        			break;
+//        		}
+//        	}
+//        	// Add new rec, if needed
+//        	if (matchst == null) {
+//        		matchst = new States();
+//        		matchst.when = wr;
+//        		multipart.add(matchst);
+//        	}
+//        	// Now add our apply
+//        	matchst.apply.add(a);
+//        }
+//
+//        public void addStates(WhenRec rec, Apply a, Set<String> stateIDs) {
+//        	if (multipart == null) {
+//        		multipart = new ArrayList<States>();
+//        	}
+//        	if (stateIDs == null) {
+//        		addState(rec, a, null);
+//        	}
+//        	else {
+//        		for (String cond : stateIDs) {
+//            		addState(rec, a, cond);
+//        		}
+//        	}
+//        }
     }
     public static interface VarOrVarList {};
     

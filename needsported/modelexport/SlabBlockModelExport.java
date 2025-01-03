@@ -19,6 +19,7 @@ public class SlabBlockModelExport extends ModelExport {
     public static class ModelObjectCube {
         public String parent;
         public Texture textures = new Texture();
+
         public ModelObjectCube(boolean ambientocclusion, boolean tinted, boolean overlay) {
             if (ambientocclusion) {
                 if (tinted) {
@@ -86,9 +87,11 @@ public class SlabBlockModelExport extends ModelExport {
             }
         }
     }
+
     public static class TextureSlab {
         public String bottom, top, side, particle;
     }
+
     public static class ModelObject {
     	public String parent;
     }

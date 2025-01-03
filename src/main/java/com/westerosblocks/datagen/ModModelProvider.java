@@ -3,13 +3,19 @@ package com.westerosblocks.datagen;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.datagen.models.SlabBlockModelHandler;
 import com.westerosblocks.datagen.models.SolidBlockModelHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -35,10 +41,10 @@ public class ModModelProvider extends FabricModelProvider {
 //                    StairBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
 //                    break;
 //                }
-//                case "slab": {
-//                    SlabBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
-//                    break;
-//                }
+                case "slab": {
+                    SlabBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
 //                case "fence": {
 //                    FenceBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
 //                    break;
@@ -79,10 +85,10 @@ public class ModModelProvider extends FabricModelProvider {
 //                    StairBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
 //                    break;
 //                }
-//                case "slab": {
-//                    SlabBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-//                    break;
-//                }
+                case "slab": {
+                    SlabBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
 //                case "fence": {
 //                    FenceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
 //                    break;
