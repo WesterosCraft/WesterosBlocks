@@ -157,8 +157,6 @@ public class SolidBlockModelHandler extends ModelExport {
                 .put(TextureKey.PARTICLE, createBlockIdentifier(ts.getTextureByIndex(2)));
     }
 
-
-
     private static Identifier createModelIdentifier(String blockName, String type, String baseName, int setIdx) {
         StringBuilder path = new StringBuilder()
                 .append(GENERATED_PATH)

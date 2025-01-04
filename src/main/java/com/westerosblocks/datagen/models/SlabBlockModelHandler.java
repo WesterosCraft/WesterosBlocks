@@ -3,6 +3,8 @@ package com.westerosblocks.datagen.models;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockStateRecord;
+import com.westerosblocks.datagen.ModTextureKey;
+import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.SlabType;
 import net.minecraft.data.client.*;
@@ -11,22 +13,22 @@ import net.minecraft.util.Identifier;
 
 import java.util.*;
 
-public class SlabBlockModelHandler {
+public class SlabBlockModelHandler extends ModelExport {
     private static final String GENERATED_PATH = "block/generated/";
 
     private static String getParentPath(boolean isOccluded, boolean isTinted, boolean hasOverlay, String type) {
         String basePath;
         if (isOccluded) {
             if (isTinted) {
-                basePath = "block/tinted/";
+                basePath = "tinted/";
             } else {
-                basePath = "block/untinted/";
+                basePath = "untinted/";
             }
         } else {
             if (isTinted) {
-                basePath = "block/tintednoocclusion/";
+                basePath = "tintednoocclusion/";
             } else {
-                basePath = "block/noocclusion/";
+                basePath = "noocclusion/";
             }
         }
 
@@ -45,28 +47,31 @@ public class SlabBlockModelHandler {
         List<BlockStateVariant> doubleVariants = new ArrayList<>();
 
         boolean isOccluded = (blockDefinition.ambientOcclusion != null) ? blockDefinition.ambientOcclusion : true;
+        boolean hasMultipleStates = blockDefinition.states.size() > 1;
 
         for (WesterosBlockStateRecord state : blockDefinition.states) {
-            String baseName = state.stateID == null ? "base" : state.stateID;
+            // Only include /base/ in path if there are multiple states
+            String baseName = hasMultipleStates ?
+                    (state.stateID == null ? "base" : state.stateID) : "";
+
             boolean isTinted = state.isTinted();
             boolean hasOverlay = state.getOverlayTextureByIndex(0) != null;
 
             for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
                 WesterosBlockDef.RandomTextureSet textureSet = state.getRandomTextureSet(setIdx);
-                String baseModelPath = Objects.equals(baseName, "base") ?
+                String baseModelPath = baseName.isEmpty() ?
                         String.format("%s%s", GENERATED_PATH, blockDefinition.blockName) :
                         String.format("%s%s/%s", GENERATED_PATH, blockDefinition.blockName, baseName);
 
-                // Generates models for bottom, top, and double variants
-                generateVariantModels(blockStateModelGenerator, baseModelPath, setIdx, textureSet,
-                        isOccluded, isTinted, hasOverlay, blockDefinition);
+                generateVariantModels(blockStateModelGenerator, baseModelPath, setIdx, textureSet, state,
+                        isOccluded, isTinted, hasOverlay);
 
                 addVariantToList(bottomVariants, baseModelPath + "/bottom_v" + (setIdx + 1), textureSet.weight);
                 addVariantToList(topVariants, baseModelPath + "/top_v" + (setIdx + 1), textureSet.weight);
                 addVariantToList(doubleVariants, baseModelPath + "/double_v" + (setIdx + 1), textureSet.weight);
             }
         }
-        // generates blockstates
+
         blockStateModelGenerator.blockStateCollector.accept(
                 VariantsBlockStateSupplier.create(currentBlock)
                         .coordinate(BlockStateVariantMap.create(Properties.SLAB_TYPE)
@@ -76,36 +81,35 @@ public class SlabBlockModelHandler {
         );
     }
 
+
     private static void generateVariantModels(
             BlockStateModelGenerator blockStateModelGenerator,
             String baseModelPath,
             int setIdx,
             WesterosBlockDef.RandomTextureSet textureSet,
+            WesterosBlockStateRecord currentRec,
             boolean isOccluded,
             boolean isTinted,
-            boolean hasOverlay,
-            WesterosBlockDef blockDefinition
+            boolean hasOverlay
     ) {
+        // Remove this adjustment since baseModelPath is already correct from the caller
         String[] variants = {"bottom", "top", "double"};
         for (String variant : variants) {
             Identifier modelId = Identifier.of(WesterosBlocks.MOD_ID,
                     baseModelPath + "/" + variant + "_v" + (setIdx + 1));
-            TextureMap textureMap = createTextureMap(variant, textureSet, hasOverlay, blockDefinition);
+            TextureMap textureMap = createTextureMap(textureSet, currentRec, hasOverlay);
             String parentPath = getParentPath(isOccluded, isTinted, hasOverlay, variant);
 
-            switch (variant) {
-                case "bottom", "top" -> {
-                    Model slabModel = new Model(
-                            Optional.of(Identifier.of(WesterosBlocks.MOD_ID, parentPath)),
-                            Optional.empty(),
-                            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.WEST, TextureKey.EAST
-                    );
-                    slabModel.upload(modelId, textureMap, blockStateModelGenerator.modelCollector);
-                }
-                default -> Models.CUBE_ALL.upload(modelId, textureMap, blockStateModelGenerator.modelCollector);
+            Model model;
+            if (hasOverlay) {
+                model = ModModels.getAllSidesWithOverlay(parentPath);
+            } else {
+                model = ModModels.getAllSides(parentPath, WesterosBlocks.MOD_ID);
             }
+            model.upload(modelId, textureMap, blockStateModelGenerator.modelCollector);
         }
     }
+
 
     private static void addVariantToList(List<BlockStateVariant> variants, String modelPath, Integer weight) {
         BlockStateVariant variant = BlockStateVariant.create()
@@ -116,44 +120,42 @@ public class SlabBlockModelHandler {
         variants.add(variant);
     }
 
-    private static TextureMap createTextureMap(String variant, WesterosBlockDef.RandomTextureSet textureSet, boolean hasOverlay, WesterosBlockDef blockDefinition) {
-        TextureMap textureMap;
-        if (variant.equals("double")) {
-            textureMap = new TextureMap()
-                    .put(TextureKey.ALL, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(0)));
+    private static TextureMap createTextureMap(WesterosBlockDef.RandomTextureSet ts, WesterosBlockStateRecord currentRec, boolean hasOverlay) {
+        if (hasOverlay) {
+            return createOverlayTextureMap(ts, currentRec);
         } else {
-            textureMap = new TextureMap()
-                    .put(TextureKey.DOWN, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(0)))
-                    .put(TextureKey.UP, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(1)))
-                    .put(TextureKey.NORTH, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(2)))
-                    .put(TextureKey.SOUTH, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(3)))
-                    .put(TextureKey.WEST, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(4)))
-                    .put(TextureKey.EAST, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(5)))
-                    .put(TextureKey.PARTICLE, Identifier.of(WesterosBlocks.MOD_ID, "block/" + textureSet.getTextureByIndex(2)));
+            return createCustomTextureMap(ts);
         }
 
-        // todo: replace with currentRec pattern from solid block handler
-//        if (hasOverlay) {
-//            textureMap
-//                    .put(TextureKey.of("down_ov"), blockDefinition.getOverlayTexture(0))
-//                    .put(TextureKey.of("up_ov"), blockDefinition.getOverlayTexture( 1))
-//                    .put(TextureKey.of("north_ov"), blockDefinition.getOverlayTexture(2))
-//                    .put(TextureKey.of("south_ov"), blockDefinition.getOverlayTexture(3))
-//                    .put(TextureKey.of("west_ov"), blockDefinition.getOverlayTexture(4))
-//                    .put(TextureKey.of("east_ov"), blockDefinition.getOverlayTexture(5));
-//        }
+    }
 
-        return textureMap;
+    private static TextureMap createOverlayTextureMap(WesterosBlockDef.RandomTextureSet ts, WesterosBlockStateRecord currentRec) {
+        TextureMap map = createCustomTextureMap(ts);
+
+        return map.put(ModTextureKey.DOWN_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(0)))
+                .put(ModTextureKey.UP_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(1)))
+                .put(ModTextureKey.NORTH_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(2)))
+                .put(ModTextureKey.SOUTH_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(3)))
+                .put(ModTextureKey.WEST_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(4)))
+                .put(ModTextureKey.EAST_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(5)));
+    }
+
+    private static TextureMap createCustomTextureMap(WesterosBlockDef.RandomTextureSet ts) {
+        return new TextureMap()
+                .put(TextureKey.DOWN, createBlockIdentifier(ts.getTextureByIndex(0)))
+                .put(TextureKey.UP, createBlockIdentifier(ts.getTextureByIndex(1)))
+                .put(TextureKey.NORTH, createBlockIdentifier(ts.getTextureByIndex(2)))
+                .put(TextureKey.SOUTH, createBlockIdentifier(ts.getTextureByIndex(3)))
+                .put(TextureKey.WEST, createBlockIdentifier(ts.getTextureByIndex(4)))
+                .put(TextureKey.EAST, createBlockIdentifier(ts.getTextureByIndex(5)))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(ts.getTextureByIndex(2)));
     }
 
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
-        WesterosBlockStateRecord firstState = blockDefinition.states.getFirst();
-        String baseName = firstState.stateID == null ? "base" : firstState.stateID;
-
-        String path = baseName.equals("base") ?
-                String.format("%s%s/bottom_v1", GENERATED_PATH, blockDefinition.blockName) :
-                String.format("%s%s/%s/bottom_v1", GENERATED_PATH, blockDefinition.blockName, baseName);
+        boolean hasMultipleStates = blockDefinition.states.size() > 1;
+        String basePath = hasMultipleStates ? "/base" : "";
+        String path = String.format("%s%s%s/bottom_v1", GENERATED_PATH, blockDefinition.blockName, basePath);
 
         itemModelGenerator.register(
                 currentBlock.asItem(),
