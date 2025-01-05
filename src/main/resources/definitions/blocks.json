@@ -1,4 +1,5 @@
 {
+  "$schema": "../blocks-schema.json",
   "blocks": [
     {
       "blockName": "grey_keystone",

@@ -3,6 +3,7 @@ package com.westerosblocks.datagen.models;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.data.client.Model;
+import net.minecraft.data.client.Models;
 import net.minecraft.data.client.TextureKey;
 import net.minecraft.util.Identifier;
 
@@ -44,8 +45,27 @@ public class ModModels {
                 ModTextureKey.EAST_OVERLAY);
     }
 
-    public static final Model ALL_SIDES = getAllSides("cube_all");
-    public static final Model ALL_SIDES_WITH_OVERLAY = getAllSidesWithOverlay("untinted/cube_overlay");
+
+    public static Model getStairWithOverlay(String parent) {
+        return block(parent,
+                TextureKey.BOTTOM,
+                TextureKey.TOP,
+                TextureKey.SIDE,
+                TextureKey.PARTICLE,
+                ModTextureKey.BOTTOM_OVERLAY,
+                ModTextureKey.TOP_OVERLAY,
+                ModTextureKey.SIDE_OVERLAY
+        );
+    }
+
+    public static Model getStair(String parent) {
+        return block(parent,
+                TextureKey.BOTTOM,
+                TextureKey.TOP,
+                TextureKey.SIDE,
+                TextureKey.PARTICLE
+                );
+    }
 
     private static Model block(String parent, String namespace, TextureKey... requiredTextureKeys) {
         return new Model(Optional.of(Identifier.of(namespace != null ? namespace : WesterosBlocks.MOD_ID, GENERATED_PATH + parent)), Optional.empty(), requiredTextureKeys);
