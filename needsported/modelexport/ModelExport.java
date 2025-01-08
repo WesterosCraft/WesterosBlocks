@@ -416,7 +416,7 @@ public abstract class ModelExport {
     // Template objects for Gson export of block state
     public static class StateObject {
       public Map<String, VarOrVarList> variants;
-    	public List<States> multipart;
+      public List<States> multipart;
         
         public void addVariant(String cond, Variant v, Set<String> stateIDs) {
         	if (variants == null) {
@@ -425,8 +425,7 @@ public abstract class ModelExport {
         	ArrayList<String> conds = new ArrayList<String>();
         	if (stateIDs == null) {
         		conds.add(cond);
-        	}
-        	else {
+        	} else {
         		for (String cval : stateIDs) {
         			conds.add(cond + ((cond.length() > 0) ? "," : "") + "state=" + cval);
         		}

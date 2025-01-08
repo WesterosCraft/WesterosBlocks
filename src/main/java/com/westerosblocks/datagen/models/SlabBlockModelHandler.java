@@ -81,7 +81,6 @@ public class SlabBlockModelHandler extends ModelExport {
         );
     }
 
-
     private static void generateVariantModels(
             BlockStateModelGenerator blockStateModelGenerator,
             String baseModelPath,

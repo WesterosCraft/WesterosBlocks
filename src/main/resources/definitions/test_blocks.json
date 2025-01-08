@@ -489,6 +489,131 @@
        "bed_block/bed_night_watch_4",
        "bed_block/bed_night_watch_5"
      ]
+   },
+   {
+     "blockName": "open_crate",
+     "blockType": "solid",
+     "hardness": 2,
+     "stepSound": "wood",
+     "material": "wood",
+     "resistance": 5,
+     "creativeTab": "westeros_decor_tab",
+     "label": "Open Crate",
+     "randomTextures": [
+       {
+         "textures": [
+           "crate_block/side_bot1",
+           "crate_block/crate_top_empty",
+           "crate_block/side_bot1"
+         ]
+       },
+       {
+         "textures": [
+           "crate_block/side_bot2",
+           "crate_block/crate_top_empty",
+           "crate_block/side_bot2"
+         ]
+       },
+       {
+         "textures": [
+           "crate_block/side_bot3",
+           "crate_block/crate_top_empty",
+           "crate_block/side_bot3"
+         ]
+       }
+     ]
+   },
+   {
+     "blockName": "turnip_crate",
+     "blockType": "solid",
+     "hardness": 2,
+     "stepSound": "wood",
+     "material": "wood",
+     "resistance": 5,
+     "creativeTab": "westeros_food_blocks_tab",
+     "label": "Turnip Crate",
+     "randomTextures": [
+       {
+         "textures": [
+           "crate_block/side_bot1",
+           "crate_block/crate_top_turnip",
+           "crate_block/side_bot1"
+         ]
+       },
+       {
+         "textures": [
+           "crate_block/side_bot2",
+           "crate_block/crate_top_turnip",
+           "crate_block/side_bot2"
+         ]
+       },
+       {
+         "textures": [
+           "crate_block/side_bot3",
+           "crate_block/crate_top_turnip",
+           "crate_block/side_bot3"
+         ]
+       }
+     ]
+   },{
+     "blockName": "silver_tin_crate",
+     "blockType": "solid",
+     "hardness": 2,
+     "stepSound": "wood",
+     "material": "wood",
+     "resistance": 5,
+     "creativeTab": "westeros_decor_tab",
+     "label": "Silver Tin Crate",
+     "textures": [
+       "crate_block/crate_side_crossbar_right",
+       "crate_block/crate_top_tin",
+       "crate_block/crate_side_crossbar_crossed"
+     ]
+   },{
+     "blockName": "coloured_sept_window",
+     "blockType": "solid",
+     "creativeTab": "westeros_windows_glass_tab",
+     "nonOpaque": true,
+     "alphaRender": true,
+     "hardness": 2,
+     "stepSound": "stone",
+     "material": "rock",
+     "resistance": 10,
+     "lightOpacity": 0,
+     "label": "Coloured Sept Window",
+     "textures": [
+       "glass/sept/all"
+     ],
+     "collisionBoxes": [
+       {
+         "xMin": 0,
+         "xMax": 1,
+         "yMin": 0,
+         "yMax": 1,
+         "zMin": 0,
+         "zMax": 1
+       }
+     ]
+   },{
+     "blockName": "timber_oak_brown_lefthatch",
+     "blockType": "solid",
+     "hardness": 2,
+     "stepSound": "wood",
+     "material": "wood",
+     "resistance": 5,
+     "creativeTab": "westeros_timber_frame_tab",
+     "label": "Timber Oak Brown Lefthatch",
+     "type": "connectstate:true,symmetrical:true,toggleOnUse",
+     "states": [
+       {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
+       {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
+       {"textures": [ "plaster/smooth/dark_mud/all", "wood/oak/all", "plaster/smooth/dark_mud/all" ]},
+       {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
+       {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
+     ],
+     "overlayTextures": [ "timber/oak/bottom", "transparent",
+       "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch",
+       "timber/oak/righthatch" ]
    }
  ]
 }

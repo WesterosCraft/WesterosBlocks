@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/transparent",
+    "east": "westerosblocks:block/timber/white/window_frame_mullion",
+    "north": "westerosblocks:block/timber/white/window_frame_mullion",
+    "particle": "westerosblocks:block/timber/white/window_frame_mullion",
+    "south": "westerosblocks:block/timber/white/window_frame_mullion",
+    "up": "westerosblocks:block/transparent",
+    "west": "westerosblocks:block/timber/white/window_frame_mullion"
+  }
+}

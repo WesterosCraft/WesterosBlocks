@@ -147,8 +147,8 @@ public class StairBlockModelHandler extends ModelExport {
         String parentPath = getParentPath(isOccluded, isTinted, hasOverlay, modelType);
 
         Model model = hasOverlay ?
-                ModModels.getStairWithOverlay(parentPath) :
-                ModModels.getStair(parentPath);
+                ModModels.getBottomTopSideWithOverlay(parentPath) :
+                ModModels.getBottomTopSide(parentPath);
 
         model.upload(modelId, textureMap, generator.modelCollector);
     }

@@ -12,5 +12,13 @@ public class ModTextureKey {
     public static final TextureKey SIDE_OVERLAY = TextureKey.of("side_ov");
     public static final TextureKey BOTTOM_OVERLAY = TextureKey.of("bottom_ov");
     public static final TextureKey TOP_OVERLAY = TextureKey.of("top_ov");
+    public static final TextureKey WALL_OVERLAY = TextureKey.of("wall_ov");
 
+    // For Cuboid block generation
+    public static final TextureKey TEXTURE_0 = TextureKey.of("txt0");
+    public static final TextureKey TEXTURE_1 = TextureKey.of("txt1");
+    public static final TextureKey TEXTURE_2 = TextureKey.of("txt2");
+    public static final TextureKey TEXTURE_3 = TextureKey.of("txt3");
+    public static final TextureKey TEXTURE_4 = TextureKey.of("txt4");
+    public static final TextureKey TEXTURE_5 = TextureKey.of("txt5");
 }

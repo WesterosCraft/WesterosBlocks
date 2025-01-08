@@ -139,14 +139,17 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
     }
 
     @Override
-    public boolean canConnect(BlockState state, boolean checkattach, Direction dir) {
+    public boolean canConnect(BlockState state, boolean neighborIsFullSquare, Direction dir) {
         Block block = state.getBlock();
-        boolean flag = this.isSameFence(state) && ((!state.contains(UNCONNECT)) || (!state.get(UNCONNECT)));
-        boolean flag1 = block instanceof FenceGateBlock && canFenceGateConnect(state, dir);
-        return
-                // TODO
-//                !isExceptionForConnection(state) &&
-                        checkattach || flag || flag1;
+        // Check if it's the same type of fence
+        boolean bl = this.isSameFence(state) &&
+                (!state.contains(UNCONNECT) || !state.get(UNCONNECT));
+        // Check if it's a compatible fence gate
+        boolean bl2 = block instanceof FenceGateBlock &&
+                FenceGateBlock.canWallConnect(state, dir);
+
+        // Match vanilla fence logic more closely
+        return !Block.cannotConnect(state) && neighborIsFullSquare || bl || bl2;
     }
 
     // Helper method to check if a fence gate can connect in a direction

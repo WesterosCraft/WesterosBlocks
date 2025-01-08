@@ -12,10 +12,6 @@ import java.util.Optional;
 public class ModModels {
     private static final String GENERATED_PATH = "block/";
 
-    public static Model getAllSides(String parent) {
-        return null;
-    }
-
     public static Model getAllSides(String parent, String namespace) {
         return block(parent,
                 namespace,
@@ -46,7 +42,7 @@ public class ModModels {
     }
 
 
-    public static Model getStairWithOverlay(String parent) {
+    public static Model getBottomTopSideWithOverlay(String parent) {
         return block(parent,
                 TextureKey.BOTTOM,
                 TextureKey.TOP,
@@ -58,13 +54,24 @@ public class ModModels {
         );
     }
 
-    public static Model getStair(String parent) {
+    public static Model getBottomTopSide(String parent) {
         return block(parent,
                 TextureKey.BOTTOM,
                 TextureKey.TOP,
                 TextureKey.SIDE,
                 TextureKey.PARTICLE
-                );
+        );
+    }
+
+    public static Model createCuboidModel(String parent) {
+        return block(parent,
+                TextureKey.PARTICLE,
+                ModTextureKey.TEXTURE_0,
+                ModTextureKey.TEXTURE_1,
+                ModTextureKey.TEXTURE_2,
+                ModTextureKey.TEXTURE_3,
+                ModTextureKey.TEXTURE_4,
+                ModTextureKey.TEXTURE_5);
     }
 
     private static Model block(String parent, String namespace, TextureKey... requiredTextureKeys) {

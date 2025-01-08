@@ -16,6 +16,7 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.IntProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
@@ -31,20 +32,20 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
-public class WCWallBlock extends Block implements Waterloggable, WesterosBlockLifecycle {
+public class WCWallBlock extends WallBlock implements Waterloggable, WesterosBlockLifecycle {
 
-    public static final BooleanProperty UP = BooleanProperty.of("up");
-    public static final EnumProperty<WallShape> EAST_WALL = EnumProperty.of("east_wall", WallShape.class);
-    public static final EnumProperty<WallShape> NORTH_WALL = EnumProperty.of("north_wall", WallShape.class);
-    public static final EnumProperty<WallShape> SOUTH_WALL = EnumProperty.of("south_wall", WallShape.class);
-    public static final EnumProperty<WallShape> WEST_WALL = EnumProperty.of("west_wall", WallShape.class);
-    public static final BooleanProperty WATERLOGGED = BooleanProperty.of("waterlogged");
+    public static final BooleanProperty UP = Properties.UP;
+    public static  EnumProperty<WallShape> EAST_WALL = Properties.EAST_WALL_SHAPE;
+    public static  EnumProperty<WallShape> NORTH_WALL = Properties.NORTH_WALL_SHAPE;
+    public static  EnumProperty<WallShape> SOUTH_WALL = Properties.SOUTH_WALL_SHAPE;
+    public static  EnumProperty<WallShape> WEST_WALL = Properties.WEST_WALL_SHAPE;
+    public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    private static final VoxelShape POST_TEST = VoxelShapes.cuboid(7.0D, 0.0D, 7.0D, 9.0D, 16.0D, 9.0D);
-    private static final VoxelShape NORTH_TEST = VoxelShapes.cuboid(7.0D, 0.0D, 0.0D, 9.0D, 16.0D, 9.0D);
-    private static final VoxelShape SOUTH_TEST = VoxelShapes.cuboid(7.0D, 0.0D, 7.0D, 9.0D, 16.0D, 16.0D);
-    private static final VoxelShape WEST_TEST = VoxelShapes.cuboid(0.0D, 0.0D, 7.0D, 9.0D, 16.0D, 9.0D);
-    private static final VoxelShape EAST_TEST = VoxelShapes.cuboid(7.0D, 0.0D, 7.0D, 16.0D, 16.0D, 9.0D);
+    private static final VoxelShape POST_TEST = Block.createCuboidShape(7.0D, 0.0D, 7.0D, 9.0D, 16.0D, 9.0D);
+    private static final VoxelShape NORTH_TEST = Block.createCuboidShape(7.0D, 0.0D, 0.0D, 9.0D, 16.0D, 9.0D);
+    private static final VoxelShape SOUTH_TEST = Block.createCuboidShape(7.0D, 0.0D, 7.0D, 9.0D, 16.0D, 16.0D);
+    private static final VoxelShape WEST_TEST = Block.createCuboidShape(0.0D, 0.0D, 7.0D, 9.0D, 16.0D, 9.0D);
+    private static final VoxelShape EAST_TEST = Block.createCuboidShape(7.0D, 0.0D, 7.0D, 16.0D, 16.0D, 9.0D);
 
     private final WesterosBlockDef def;
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
@@ -126,13 +127,13 @@ public class WCWallBlock extends Block implements Waterloggable, WesterosBlockLi
         }
 
         String height = def.getTypeValue("size", "normal");
-        float wheight;
+        float wallHeight;
         if (height.equals("short")) {
             wallSize = WallSize.SHORT;
-            wheight = 13;
+            wallHeight = 13;
         } else {
             wallSize = WallSize.NORMAL;
-            wheight = 16;
+            wallHeight = 16;
         }
         unconnect = doUnconnect;
         connectstate = doConnectstate;
@@ -160,12 +161,12 @@ public class WCWallBlock extends Block implements Waterloggable, WesterosBlockLi
         this.ourCollisionShapeByIndex = ourCollisionShapeByIndexShared;
         if (height.equals("short")) {
             if (ourShapeByIndexSharedShort == null) {
-                ourShapeByIndexSharedShort = makeShapes(4.0F, 3.0F, 16.0F, 0.0F, wheight, 16.0F);
+                ourShapeByIndexSharedShort = makeShapes(4.0F, 3.0F, 16.0F, 0.0F, wallHeight, 16.0F);
             }
             this.ourShapeByIndex = ourShapeByIndexSharedShort;
         } else {
             if (ourShapeByIndexSharedNormal == null) {
-                ourShapeByIndexSharedNormal = makeShapes(4.0F, 3.0F, 16.0F, 0.0F, wheight, 16.0F);
+                ourShapeByIndexSharedNormal = makeShapes(4.0F, 3.0F, 16.0F, 0.0F, wallHeight, 16.0F);
             }
             this.ourShapeByIndex = ourShapeByIndexSharedNormal;
         }
@@ -238,22 +239,22 @@ public class WCWallBlock extends Block implements Waterloggable, WesterosBlockLi
         float f1 = 8.0F + minX;
         float f2 = 8.0F - minY;
         float f3 = 8.0F + minY;
-        VoxelShape voxelshape = VoxelShapes.cuboid(f, 0.0D, f, f1, minZ, f1);
-        VoxelShape voxelshape1 = VoxelShapes.cuboid(f2, maxX, 0.0D, f3, maxY,
+        VoxelShape voxelshape = createCuboidShape(f, 0.0D, f, f1, minZ, f1);
+        VoxelShape voxelshape1 = createCuboidShape(f2, maxX, 0.0D, f3, maxY,
                 f3);
-        VoxelShape voxelshape2 = VoxelShapes.cuboid(f2, maxX, f2, f3, maxY,
+        VoxelShape voxelshape2 = createCuboidShape(f2, maxX, f2, f3, maxY,
                 16.0D);
-        VoxelShape voxelshape3 = VoxelShapes.cuboid(0.0D, maxX, f2, f3, maxY,
+        VoxelShape voxelshape3 = createCuboidShape(0.0D, maxX, f2, f3, maxY,
                 f3);
-        VoxelShape voxelshape4 = VoxelShapes.cuboid(f2, maxX, f2, 16.0D, maxY,
+        VoxelShape voxelshape4 = createCuboidShape(f2, maxX, f2, 16.0D, maxY,
                 f3);
-        VoxelShape voxelshape5 = VoxelShapes.cuboid(f2, maxX, 0.0D, f3, maxZ,
+        VoxelShape voxelshape5 = createCuboidShape(f2, maxX, 0.0D, f3, maxZ,
                 f3);
-        VoxelShape voxelshape6 = VoxelShapes.cuboid(f2, maxX, f2, f3, maxZ,
+        VoxelShape voxelshape6 = createCuboidShape(f2, maxX, f2, f3, maxZ,
                 16.0D);
-        VoxelShape voxelshape7 = VoxelShapes.cuboid(0.0D, maxX, f2, f3, maxZ,
+        VoxelShape voxelshape7 = createCuboidShape(0.0D, maxX, f2, f3, maxZ,
                 f3);
-        VoxelShape voxelshape8 = VoxelShapes.cuboid(f2, maxX, f2, 16.0D, maxZ,
+        VoxelShape voxelshape8 = createCuboidShape(f2, maxX, f2, 16.0D, maxZ,
                 f3);
         VoxelShape[] map = new VoxelShape[2 * 3 * 3 * 3 * 3];
 
@@ -278,11 +279,6 @@ public class WCWallBlock extends Block implements Waterloggable, WesterosBlockLi
             }
         }
         return map;
-    }
-
-    @Override
-    protected boolean canPathfindThrough(BlockState state, NavigationType type) {
-        return false;
     }
 
     private boolean connectsTo(BlockState blockState, boolean p_58022_, Direction direction) {

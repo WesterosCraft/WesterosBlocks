@@ -12,6 +12,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockStateRecord;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 
+import net.minecraft.data.client.MultipartBlockStateSupplier;
 import net.minecraft.world.level.block.Block;
 
 public class WallBlockModelExport extends ModelExport {
