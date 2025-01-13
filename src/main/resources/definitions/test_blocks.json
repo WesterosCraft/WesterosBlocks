@@ -1,619 +1,185 @@
 {
- "blocks": [ {
-   "blockName": "grey_keystone",
-   "blockType": "solid",
-   "hardness": 3,
-   "stepSound": "stone",
-   "material": "rock",
-   "resistance": 10,
-   "creativeTab": "westeros_panelling_carvings_tab",
-   "label": "Grey Keystone",
-   "colorMult": "textures/colormap/smallstonebrick",
-   "textures": [
-     "stone_block/keystone_grey"
-   ]
- },
-
-   {
-     "blockName": "vivid_sandstone_engraved",
-     "blockType": "solid",
-     "hardness": 5,
-     "stepSound": "stone",
-     "material": "rock",
-     "resistance": 10,
-     "creativeTab": "westeros_panelling_carvings_tab",
-     "label": "Ashlar Engraved Tan",
-     "textures": [
-       "ashlar_engraved/tan/all"
-     ]
-   }
-
- ,{
-     "blockName": "ctm_pillar",
-     "blockType": "log",
-     "stepSound": "wood",
-     "material": "cloth",
-     "creativeTab": "westeros_test_tab",
-     "label": "Pillar CTM",
-     "textures": [
-       "ctm/pillar_end",
-       "ctm/pillar_end",
-       "ctm/pillar"
-     ]
-   },{
-     "blockName": "yellow_wildflowers",
-     "blockType": "plant",
-     "type": "layerSensitive",
-     "material": "plants",
-     "creativeTab": "westeros_flowers_tab",
-     "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
-     "label": "Yellow Wildflowers",
-     "textures": [
-       "flowers/yellow_wildflowers"
-     ]
-   },{
-     "blockName": "candle_altar",
-     "blockType": "crop",
-     "stepSound": "powder",
-     "material": "wood",
-     "creativeTab": "westeros_lighting_tab",
-     "label": "Candle Altar",
-     "type": "toggleOnUse",
-     "boundingBox": {"xMin": 0.125, "xMax": 0.875, "yMin": 0, "yMax": 1, "zMin": 0.125, "zMax": 0.875},
-     "states": [
-       {
-         "stateID": "lit",
-         "lightValue": 0.625,
-         "randomTextures": [
-           {"textures": ["lighting/candle_altar/lit1"]},
-           {"textures": ["lighting/candle_altar/lit2"]},
-           {"textures": ["lighting/candle_altar/lit3"]}
-         ]
-       },
-       {
-         "stateID": "unlit",
-         "lightValue": 0.0,
-         "randomTextures": [
-           {"textures": ["lighting/candle_altar/unlit1"]},
-           {"textures": ["lighting/candle_altar/unlit2"]},
-           {"textures": ["lighting/candle_altar/unlit3"]}
-         ]
-       }
-     ]
-   },{
-     "blockName": "stool",
-     "blockType": "slab",
-     "hardness": 2,
-     "stepSound": "wood",
-     "material": "wood",
-     "resistance": 2,
-     "harvestLevel": [{ "tool": "shovel", "level": 1 }],
-     "creativeTab": "westeros_furniture_tab",
-     "label": "Stool",
-     "lightOpacity": 0,
-     "nonOpaque": true,
-     "textures": [
-       "seat/bottom",
-       "seat/top",
-       "seat/side"
-     ]
-   },{
-     "blockName": "sept_crystal_medium",
-     "blockType": "wall",
-     "hardness": 1.5,
-     "stepSound": "stone",
-     "nonOpaque": true,
-     "alphaRender": true,
-     "material": "rock",
-     "resistance": 10,
-     "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
-     "creativeTab": "westeros_decor_tab",
-     "type": "unconnect:false",
-     "label": "Sept Crystal Medium",
-     "textures": [
-       "crystal/wall_top",
-       "crystal/wall_top",
-       "crystal/wall"
-     ]
-   },{
-     "blockName": "sept_crystal_small",
-     "blockType": "fence",
-     "hardness": 5,
-     "stepSound": "stone",
-     "nonOpaque": true,
-     "alphaRender": true,
-     "material": "wood",
-     "resistance": 10,
-     "creativeTab": "westeros_decor_tab",
-     "type": "unconnect:false",
-     "label": "Sept Crystal Small",
-     "textures": [
-       "crystal/fence_top",
-       "crystal/fence_top",
-       "crystal/fence"
-     ]
-   },{
-     "blockName": "alyssas_tears_mist_one",
-     "blockType": "web",
-     "stepSound": "cloth",
-     "nonOpaque": true,
-     "alphaRender": true,
-     "material": "web",
-     "creativeTab": "westeros_water_air_tab",
-     "label": "Alyssas Tears Mist One",
-     "textures": [
-       "alyssas_tears_mist/mist1"
-     ],
-     "type": "no-in-web"
-   },{
-     "blockName": "candle",
-     "blockType": "torch",
-     "stepSound": "powder",
-     "material": "wood",
-     "creativeTab": "westeros_lighting_tab",
-     "lightValue": 0.625,
-     "label": "Candle",
-     "type": "allow-unsupported",
-     "textures": [
-       "lighting/candle"
-     ]
-   },{
-     "blockName": "coral_brain_fan",
-     "blockType": "fan",
-     "stepSound": "stone",
-     "material": "rock",
-     "creativeTab": "westeros_water_air_tab",
-     "label": "Brain Coral Fan",
-     "type": "allow-unsupported",
-     "randomTextures": [
-       {"textures": ["coral/brain/fan1"]},
-       {"textures": ["coral/brain/fan2"]}
-     ]
-   },{
-     "blockName": "vine_jasmine",
-     "blockType": "ladder",
-     "stepSound": "ladder",
-     "material": "iron",
-     "creativeTab": "westeros_foliage_tab",
-     "label": "Vine Jasmine (Do Not Use)",
-     "randomTextures": [
-       {"textures": ["jasmine_vines/side1"]},
-       {"textures": ["jasmine_vines/side2"]},
-       {"textures": ["jasmine_vines/side3"]},
-       {"textures": ["jasmine_vines/side4"]},
-       {"textures": ["jasmine_vines/side5"]}
-     ],
-     "type": "allow-unsupported"
-   },
-   {
-     "blockName": "unlit_candle",
-     "blockType": "cuboid",
-     "nonOpaque": true,
-     "hardness": 5,
-     "stepSound": "powder",
-     "material": "wood",
-     "resistance": 2,
-     "harvestLevel": [{ "tool": "axe", "level": 1 }],
-     "creativeTab": "westeros_lighting_tab",
-     "label": "Unlit Candle Solid",
-     "textures": [
-       "lighting/candle_unlit_bottom",
-       "lighting/candle_unlit_top",
-       "lighting/candle_unlit_side",
-       "transparent"
-     ],
-     "cuboids": [
-       {"xMin": 0.375, "xMax": 0.625, "yMin": 0, "yMax": 0.53125, "zMin": 0.375, "zMax": 0.625, "sideTextures": [0, 1, 2, 2, 2, 2]},
-       {"xMin": 0.46875, "xMax": 0.53125, "yMin": 0.53125, "yMax": 0.625, "zMin": 0.46875, "zMax": 0.53125, "sideTextures": [3, 1, 2, 2, 2, 2]}
-     ]
-   },{
-     "blockName": "flat_wheel",
-     "blockType": "cuboid-nsew",
-     "hardness": 5,
-     "stepSound": "wood",
-     "material": "wood",
-     "resistance": 5,
-     "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
-     "creativeTab": "westeros_misc_tab",
-     "label": "Flat Wheel",
-     "textures": [
-       "transparent"
-     ],
-     "boundingBox": {"xMin": 0.92, "xMax": 0.97, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1},
-     "isCustomModel": true
-   },{
-     "blockName": "test_block_3",
-     "blockType": "cuboid-16way",
-     "hardness": 3,
-     "stepSound": "wood",
-     "material": "wood",
-     "resistance": 2,
-     "harvestLevel": [{ "tool": "axe", "level": 1 }],
-     "creativeTab": "westeros_test_tab",
-     "label": "Test Block 16-way",
-     "textures": [
-       "test_block/d_texture",
-       "test_block/u_texture",
-       "test_block/w_texture",
-       "test_block/e_texture",
-       "test_block/s_texture",
-       "test_block/n_texture"
-     ],
-     "boundingBox": {"xMin": 0.0625, "xMax": 0.9375, "yMin": 0.0625, "yMax": 0.9375, "zMin": 0.0625, "zMax": 0.9375}
-   },{
-     "blockName": "firewood_directional_slab",
-     "blockType": "cuboid-ne",
-     "hardness": 2,
-     "stepSound": "wood",
-     "material": "wood",
-     "resistance": 2,
-     "harvestLevel": [{ "tool": "axe", "level": 1 }],
-     "creativeTab": "westeros_decor_tab",
-     "label": "Firewood Directional Slab",
-     "textures": [
-       "firewood/rotated",
-       "firewood/rotated",
-       "firewood/rotated",
-       "firewood/rotated",
-       "firewood/top",
-       "firewood/top"
-     ],
-     "boundingBox": {"xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.5, "zMin": 0, "zMax": 1}
-   },{
-     "blockName": "wagon_wheel__axle",
-     "blockType": "cuboid-nsewud",
-     "hardness": 3,
-     "stepSound": "wood",
-     "material": "wood",
-     "resistance": 2,
-     "harvestLevel": [{ "tool": "axe", "level": 1 }],
-     "creativeTab": "westeros_misc_tab",
-     "label": "Wagon Wheel & Axle",
-     "textures": [
-       "cuboid_nsewud_block/axle",
-       "cuboid_nsewud_block/rim",
-       "cuboid_nsewud_block/rim_top",
-       "cuboid_nsewud_block/spoke"
-     ],
-     "cuboids": [
-       {
-         "xMin": 0,
-         "xMax": 1,
-         "yMin": 0.3755,
-         "yMax": 0.6245,
-         "zMin": 0.3755,
-         "zMax": 0.6245,
-         "sideTextures": [0, 0, 0, 0, 3, 3]
-       },
-       {
-         "zMin": 0,
-         "zMax": 0.09375,
-         "yMin": 0.0875,
-         "yMax": 0.9125,
-         "xMin": 0.03125,
-         "xMax": 0.1875,
-         "sideTextures": [2, 2, 2, 1, 1, 1]
-       },
-       {
-         "zMin": 0.90625,
-         "zMax": 1,
-         "yMin": 0.0875,
-         "yMax": 0.9125,
-         "xMin": 0.03125,
-         "xMax": 0.1875,
-         "sideTextures": [2, 2, 1, 2, 1, 1]
-       },
-       {
-         "zMin": 0.0875,
-         "zMax": 0.9125,
-         "yMin": 0,
-         "yMax": 0.09375,
-         "xMin": 0.03125,
-         "xMax": 0.1875,
-         "sideTextures": [2, 1, 1, 1, 1, 1]
-       },
-       {
-         "zMin": 0.0875,
-         "zMax": 0.9125,
-         "yMin": 0.90625,
-         "yMax": 1,
-         "xMin": 0.03125,
-         "xMax": 0.1875,
-         "sideTextures": [1, 2, 1, 1, 1, 1]
-       },
-       {
-         "zMin": 0.4375,
-         "zMax": 0.5625,
-         "yMin": 0.0875,
-         "yMax": 0.9125,
-         "xMin": 0.06375,
-         "xMax": 0.1575,
-         "sideTextures": [3, 3, 3, 3, 3, 3]
-       },
-       {
-         "yMin": 0.4375,
-         "yMax": 0.5625,
-         "zMin": 0.0875,
-         "zMax": 0.9125,
-         "xMin": 0.06375,
-         "xMax": 0.1575,
-         "sideTextures": [3, 3, 3, 3, 3, 3]
-       }
-     ]
-   },{
-     "blockName": "black_wool_banner",
-     "blockType": "cuboid-nsew-stack",
-     "hardness": 1,
-     "stepSound": "wood",
-     "material": "wood",
-     "resistance": 1,
-     "harvestLevel": [{ "tool": "sword", "level": 1 }],
-     "creativeTab": "westeros_banners_tab",
-     "type": "no-break-under,allowHalfBreak",
-     "label": "Black Wool Banner",
-     "itemTextureIndex": 2,
-     "stack": [
-       {
-         "textures": [
-           "transparent",
-           "transparent",
-           "transparent",
-           "transparent",
-           "banner/solid/black_wool/bottom",
-           "banner/solid/black_wool/bottom"
-         ],
-         "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-       },
-       {
-         "textures": [
-           "transparent",
-           "transparent",
-           "transparent",
-           "transparent",
-           "banner/solid/black_wool/top",
-           "banner/solid/black_wool/top"
-         ],
-         "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-       }
-     ]
-   },{
-     "blockName": "safe_fire",
-     "blockType": "fire",
-     "creativeTab": "westeros_lighting_tab",
-     "lightValue": 1,
-     "label": "Safe Fire",
-     "material": "fire",
-     "textures": [
-       "safe_fire/fire_layer_0",
-       "safe_fire/fire_layer_1"
-     ]
-   },{
-     "blockName": "snowy_spruce_leaves",
-     "blockType": "leaves",
-     "stepSound": "grass",
-     "material": "leaves",
-     "type": "no-decay,better-foliage",
-     "creativeTab": "westeros_foliage_tab",
-     "label": "Snowy Spruce Leaves",
-     "rotateRandom": true,
-     "textures": [
-       "leaves/spruce/snowy/all"
-     ]
-   },{
-     "blockName": "iron_bars",
-     "blockType": "pane",
-     "hardness": 5,
-     "stepSound": "metal",
-     "material": "iron",
-     "resistance": 10,
-     "type": "bars-model,unconnect:false",
-     "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
-     "creativeTab": "westeros_metal_tab",
-     "label": "Iron Bars",
-     "textures": [
-       "bars_iron_block/iron_bars",
-       "transparent"
-     ]
-   },{
-     "blockName": "grain_basket_slab",
-     "blockType": "slab",
-     "hardness": 2,
-     "stepSound": "cloth",
-     "material": "sand",
-     "resistance": 2,
-     "harvestLevel": [{ "tool": "shovel", "level": 1 }],
-     "creativeTab": "westeros_food_blocks_tab",
-     "label": "Grain Basket Slab",
-     "textures": [
-       "crate_block/basket_bottom",
-       "crate_block/basket_grain",
-       "crate_block/basket_side_slab"
-     ]
-   },{
-     "blockName": "brazier",
-     "blockType": "beacon",
-     "hardness": 5,
-     "stepSound": "metal",
-     "material": "iron",
-     "resistance": 10,
-     "lightValue": 0.875,
-     "creativeTab": "westeros_lighting_tab",
-     "label": "Lit Brazier",
-     "textures": [
-       "lighting/brazier/lit_ash_bottom",
-       "lighting/brazier/transparent",
-       "lighting/brazier/side",
-       "lighting/brazier/side",
-       "lighting/brazier/side",
-       "lighting/brazier/side",
-       "lighting/brazier/ash_glowing",
-       "lighting/brazier/ash_glowing",
-       "lighting/brazier/ash_glowing",
-       "lighting/brazier/ash_glowing",
-       "lighting/brazier/ash_glowing",
-       "lighting/brazier/ash_glowing",
-       "lighting/brazier/transparent",
-       "lighting/brazier/transparent",
-       "lighting/brazier/fire",
-       "lighting/brazier/fire",
-       "lighting/brazier/fire",
-       "lighting/brazier/fire"
-     ]
-   },{
-     "blockName": "falling_water_block_one",
-     "blockType": "vines",
-     "stepSound": "cloth",
-     "nonOpaque": true,
-     "alphaRender": true,
-     "material": "cloth",
-     "creativeTab": "westeros_water_air_tab",
-     "label": "Falling Water Block One",
-     "textures": [
-       "alyssas_tears_mist/mist1",
-       "alyssas_tears_mist/mist1"
-     ],
-     "type": "allow-unsupported,no-climb"
-   },{
-     "blockName": "nights_watch_bed",
-     "material": "cloth",
-     "blockType": "bed",
-     "creativeTab": "westeros_furniture_tab",
-     "label": "Nights Watch Bed",
-     "type": "shape:normal",
-     "itemTexture": "bed_block/bed_night_watch_1",
-     "textures": [
-       "bed_block/bed_night_watch_0",
-       "bed_block/bed_night_watch_1",
-       "bed_block/bed_night_watch_2",
-       "bed_block/bed_night_watch_3",
-       "bed_block/bed_night_watch_4",
-       "bed_block/bed_night_watch_5"
-     ]
-   },
-   {
-     "blockName": "open_crate",
-     "blockType": "solid",
-     "hardness": 2,
-     "stepSound": "wood",
-     "material": "wood",
-     "resistance": 5,
-     "creativeTab": "westeros_decor_tab",
-     "label": "Open Crate",
-     "randomTextures": [
-       {
-         "textures": [
-           "crate_block/side_bot1",
-           "crate_block/crate_top_empty",
-           "crate_block/side_bot1"
-         ]
-       },
-       {
-         "textures": [
-           "crate_block/side_bot2",
-           "crate_block/crate_top_empty",
-           "crate_block/side_bot2"
-         ]
-       },
-       {
-         "textures": [
-           "crate_block/side_bot3",
-           "crate_block/crate_top_empty",
-           "crate_block/side_bot3"
-         ]
-       }
-     ]
-   },
-   {
-     "blockName": "turnip_crate",
-     "blockType": "solid",
-     "hardness": 2,
-     "stepSound": "wood",
-     "material": "wood",
-     "resistance": 5,
-     "creativeTab": "westeros_food_blocks_tab",
-     "label": "Turnip Crate",
-     "randomTextures": [
-       {
-         "textures": [
-           "crate_block/side_bot1",
-           "crate_block/crate_top_turnip",
-           "crate_block/side_bot1"
-         ]
-       },
-       {
-         "textures": [
-           "crate_block/side_bot2",
-           "crate_block/crate_top_turnip",
-           "crate_block/side_bot2"
-         ]
-       },
-       {
-         "textures": [
-           "crate_block/side_bot3",
-           "crate_block/crate_top_turnip",
-           "crate_block/side_bot3"
-         ]
-       }
-     ]
-   },{
-     "blockName": "silver_tin_crate",
-     "blockType": "solid",
-     "hardness": 2,
-     "stepSound": "wood",
-     "material": "wood",
-     "resistance": 5,
-     "creativeTab": "westeros_decor_tab",
-     "label": "Silver Tin Crate",
-     "textures": [
-       "crate_block/crate_side_crossbar_right",
-       "crate_block/crate_top_tin",
-       "crate_block/crate_side_crossbar_crossed"
-     ]
-   },{
-     "blockName": "coloured_sept_window",
-     "blockType": "solid",
-     "creativeTab": "westeros_windows_glass_tab",
-     "nonOpaque": true,
-     "alphaRender": true,
-     "hardness": 2,
-     "stepSound": "stone",
-     "material": "rock",
-     "resistance": 10,
-     "lightOpacity": 0,
-     "label": "Coloured Sept Window",
-     "textures": [
-       "glass/sept/all"
-     ],
-     "collisionBoxes": [
-       {
-         "xMin": 0,
-         "xMax": 1,
-         "yMin": 0,
-         "yMax": 1,
-         "zMin": 0,
-         "zMax": 1
-       }
-     ]
-   },{
-     "blockName": "timber_oak_brown_lefthatch",
-     "blockType": "solid",
-     "hardness": 2,
-     "stepSound": "wood",
-     "material": "wood",
-     "resistance": 5,
-     "creativeTab": "westeros_timber_frame_tab",
-     "label": "Timber Oak Brown Lefthatch",
-     "type": "connectstate:true,symmetrical:true,toggleOnUse",
-     "states": [
-       {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
-       {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
-       {"textures": [ "plaster/smooth/dark_mud/all", "wood/oak/all", "plaster/smooth/dark_mud/all" ]},
-       {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
-       {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
-     ],
-     "overlayTextures": [ "timber/oak/bottom", "transparent",
-       "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch",
-       "timber/oak/righthatch" ]
-   }
- ]
+  "blocks": [
+    {
+      "blockName": "grey_keystone",
+      "blockType": "solid",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "westeros_panelling_carvings_tab",
+      "label": "Grey Keystone",
+      "colorMult": "textures/colormap/smallstonebrick",
+      "textures": [
+        "stone_block/keystone_grey"
+      ]
+    },
+    {
+      "blockName": "vivid_sandstone_engraved",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "westeros_panelling_carvings_tab",
+      "label": "Ashlar Engraved Tan",
+      "textures": [
+        "ashlar_engraved/tan/all"
+      ]
+    },
+    {
+      "blockName": "turnip_crate",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "westeros_food_blocks_tab",
+      "label": "Turnip Crate",
+      "randomTextures": [
+        {
+          "textures": [
+            "crate_block/side_bot1",
+            "crate_block/crate_top_turnip",
+            "crate_block/side_bot1"
+          ]
+        },
+        {
+          "textures": [
+            "crate_block/side_bot2",
+            "crate_block/crate_top_turnip",
+            "crate_block/side_bot2"
+          ]
+        },
+        {
+          "textures": [
+            "crate_block/side_bot3",
+            "crate_block/crate_top_turnip",
+            "crate_block/side_bot3"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "silver_tin_crate",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "westeros_decor_tab",
+      "label": "Silver Tin Crate",
+      "textures": [
+        "crate_block/crate_side_crossbar_right",
+        "crate_block/crate_top_tin",
+        "crate_block/crate_side_crossbar_crossed"
+      ]
+    },
+    {
+      "blockName": "coloured_sept_window",
+      "blockType": "solid",
+      "creativeTab": "westeros_windows_glass_tab",
+      "nonOpaque": true,
+      "alphaRender": true,
+      "hardness": 2,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "lightOpacity": 0,
+      "label": "Coloured Sept Window",
+      "textures": [
+        "glass/sept/all"
+      ],
+      "collisionBoxes": [
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }
+      ]
+    },
+    {
+      "blockName": "timber_oak_brown_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "westeros_timber_frame_tab",
+      "label": "Timber Oak Brown Lefthatch",
+      "type": "connectstate:true,symmetrical:true,toggleOnUse",
+      "states": [
+        {
+          "textures": [
+            "plaster/smooth/brown_daub/all",
+            "wood/oak/all",
+            "plaster/smooth/brown_daub/all"
+          ]
+        },
+        {
+          "textures": [
+            "plaster/smooth/arbor_brown/all",
+            "wood/oak/all",
+            "plaster/smooth/arbor_brown/all"
+          ]
+        },
+        {
+          "textures": [
+            "plaster/smooth/dark_mud/all",
+            "wood/oak/all",
+            "plaster/smooth/dark_mud/all"
+          ]
+        },
+        {
+          "textures": [
+            "plaster/rough/brown_daub/all1",
+            "wood/oak/all",
+            "plaster/rough/brown_daub/all1"
+          ]
+        },
+        {
+          "textures": [
+            "plaster/wattle/brown_daub/all",
+            "wood/oak/all",
+            "plaster/wattle/brown_daub/all"
+          ]
+        }
+      ],
+      "overlayTextures": [
+        "timber/oak/bottom",
+        "transparent",
+        "timber/oak/lefthatch",
+        "timber/oak/lefthatch",
+        "timber/oak/lefthatch",
+        "timber/oak/lefthatch",
+        "timber/oak/righthatch"
+      ]
+    },
+    {
+      "blockName": "test_block_symmetrical",
+      "blockType": "solid",
+      "hardness": 3,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "axe", "level": 1 }],
+      "creativeTab": "westeros_test_tab",
+      "type": "symmetrical:true",
+      "label": "Test Block (symmetrical)",
+      "textures": [
+        "test_block/solid",
+        "test_block/solid",
+        "test_block/left",
+        "test_block/left",
+        "test_block/left",
+        "test_block/left",
+        "test_block/right",
+        "test_block/right"
+      ],
+      "boundingBox": {"xMin": 0, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+    }
+  ]
 }

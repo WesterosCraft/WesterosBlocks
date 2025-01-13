@@ -75,6 +75,7 @@ public class SolidBlockModelExport extends ModelExport {
     		boolean justBase = sr.stateID == null;
     		Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
     		String fname = justBase ? "base" : sr.stateID;
+
 	      // Loop over the random sets we've got
 	      for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 					WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setidx);
@@ -163,7 +164,7 @@ public class SolidBlockModelExport extends ModelExport {
 			for (int idx = 0; idx < def.states.size(); idx++) {
 				WesterosBlockStateRecord rec = def.states.get(idx);
 				boolean isTinted = rec.isTinted();
-        boolean isOverlay = rec.getOverlayTextureByIndex(0) != null;
+        		boolean isOverlay = rec.getOverlayTextureByIndex(0) != null;
 				String id = (rec.stateID == null) ? "base" : rec.stateID;
 				// Loop over the random sets we've got
 				for (int setidx = 0; setidx < rec.getRandomTextureSetCount(); setidx++) {

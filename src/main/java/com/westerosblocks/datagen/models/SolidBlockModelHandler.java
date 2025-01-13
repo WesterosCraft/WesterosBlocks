@@ -1,117 +1,171 @@
 package com.westerosblocks.datagen.models;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockStateRecord;
 import com.westerosblocks.block.custom.WCSolidBlock;
 import com.westerosblocks.datagen.ModTextureKey;
 import com.westerosblocks.datagen.ModelExport;
-import net.minecraft.data.client.*;
-import net.minecraft.state.property.Property;
-import net.minecraft.util.Identifier;
 import net.minecraft.block.Block;
+import net.minecraft.data.client.*;
+import net.minecraft.util.Identifier;
 
 import java.util.*;
 
 public class SolidBlockModelHandler extends ModelExport {
-    public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
-        final WCSolidBlock solidBlock = (WCSolidBlock) currentBlock;
-        boolean isSymmetrical = solidBlock.symmetrical;
+    protected static String getModelName(WesterosBlockDef def, String ext, int setidx) {
+        return def.blockName + "/" + ext + ("_v" + (setidx + 1));
+    }
 
-        // Handle single-state blocks
-        if (blockDefinition.states.size() <= 1) {
-            WesterosBlockStateRecord stateRecord = blockDefinition.states.getFirst();
-            List<BlockStateVariant> variants = new ArrayList<>();
-            String baseName = stateRecord.stateID == null ? "base" : stateRecord.stateID;
+    protected static String getModelName(WesterosBlockDef def, String ext, int setidx, Boolean symmetrical) {
+        String dir = symmetrical ? "symmetrical" : "asymmetrical";
+        return def.blockName + "/" + dir + "/" + ext + ("_v" + (setidx + 1));
+    }
 
-            generateVariantsForState(blockStateModelGenerator, blockDefinition, stateRecord,
-                    baseName, isSymmetrical, variants);
+    public static Identifier modelFileName(WesterosBlockDef def, String ext, int setidx, Boolean isCustom) {
+        Identifier id =  Identifier.of(WesterosBlocks.MOD_ID, getModelName(def, ext, setidx));
+        return id.withPrefixedPath(GENERATED_PATH);
+    }
 
-            blockStateModelGenerator.blockStateCollector.accept(
-                    VariantsBlockStateSupplier.create(currentBlock, variants.toArray(new BlockStateVariant[0]))
-            );
+    public static Identifier modelFileName(WesterosBlockDef def, String ext, int setidx, Boolean isCustom, Boolean symmetrical) {
+        Identifier id = Identifier.of(WesterosBlocks.MOD_ID, getModelName(def, ext, setidx, symmetrical));
+        return id.withPrefixedPath(GENERATED_PATH);
+    }
+
+    public static void generateBlockStateAndModels(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+        WCSolidBlock solidBlock = (block instanceof WCSolidBlock) ? (WCSolidBlock) block : null;
+        boolean isSymmertrical = solidBlock != null && solidBlock.symmetrical;
+        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+
+        for (WesterosBlockStateRecord sr : def.states) {
+            boolean justBase = sr.stateID == null;
+            Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
+            String fname = justBase ? "base" : sr.stateID;
+            boolean isTinted = sr.isTinted();
+            boolean hasOverlay = sr.getOverlayTextureByIndex(0) != null;
+
+            for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
+                WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+                int rotationCount = sr.rotateRandom ? 4 : 1;    // 4 for random, just 1 if not
+
+                for (int rotIdx = 0; rotIdx < rotationCount; rotIdx++) {
+                    if (isSymmertrical) {
+                        BlockStateVariant varSymmetrical = BlockStateVariant.create();
+                        Identifier symId = modelFileName(def, fname, setIdx, sr.isCustomModel(), true);
+                        varSymmetrical.put(VariantSettings.MODEL, symId);
+                        if (set.weight != null) { varSymmetrical.put(VariantSettings.WEIGHT, set.weight); }
+                        if (rotIdx > 0) { varSymmetrical.put(VariantSettings.Y, getRotation(90 * rotIdx)); }
+                        addVariant("symmetrical=true", varSymmetrical, stateIDs, variants);
+
+                        BlockStateVariant varAsymmetrical = BlockStateVariant.create();
+                        Identifier asymId = modelFileName(def, fname, setIdx, sr.isCustomModel(), false);
+                        varAsymmetrical.put(VariantSettings.MODEL, modelFileName(def, fname, setIdx, sr.isCustomModel(), false));
+                        if (set.weight != null) { varAsymmetrical.put(VariantSettings.WEIGHT, set.weight); }
+                        if (rotIdx > 0) { varAsymmetrical.put(VariantSettings.Y, getRotation(90 * rotIdx)); }
+                        addVariant("symmetrical=false", varAsymmetrical, stateIDs, variants);
+
+                        generateSolidModel(generator, symId, true,
+                                isTinted, hasOverlay, sr, setIdx);
+                        generateSolidModel(generator, asymId, false,
+                                isTinted, hasOverlay, sr, setIdx);
+                    } else {
+                        BlockStateVariant variant = BlockStateVariant.create();
+                        Identifier id = modelFileName(def, fname, setIdx, sr.isCustomModel());
+                        variant.put(VariantSettings.MODEL, modelFileName(def, fname, setIdx, sr.isCustomModel()));
+                        if (set.weight != null) {
+                            variant.put(VariantSettings.WEIGHT, set.weight);
+                        }
+                        if (rotIdx > 0) {
+                            variant.put(VariantSettings.Y, getRotation(90 * rotIdx));
+                        }
+                        addVariant("", variant, stateIDs, variants);
+
+                        generateSolidModel(generator, id, false, isTinted, hasOverlay, sr, setIdx);
+                    }
+                }
+            }
+        }
+
+        if (variants.isEmpty()) {
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block));
             return;
         }
 
-        Property<String> stateProperty = (Property<String>) currentBlock.getStateManager().getProperties().iterator().next();
-        BlockStateVariantMap.SingleProperty<String> variantMap = BlockStateVariantMap.create(stateProperty);
+        if (variants.size() == 1 && variants.containsKey("")) {
+            List<BlockStateVariant> variantList = variants.get("");
+            if (variantList.size() == 1) {
+                generator.blockStateCollector.accept(
+                        VariantsBlockStateSupplier.create(block, variantList.get(0))
+                );
+            } else {
+                generator.blockStateCollector.accept(
+                        VariantsBlockStateSupplier.create(block,
+                                variantList.toArray(new BlockStateVariant[0]))
+                );
+            }
+            return;
+        }
 
-        for (WesterosBlockStateRecord stateRecord : blockDefinition.states) {
-            boolean justBase = stateRecord.stateID == null;
-            Set<String> stateIDs = justBase ? null : Collections.singleton(stateRecord.stateID);
-            String baseName = justBase ? "base" : stateRecord.stateID;
-            boolean isTinted = stateRecord.isTinted();
-            boolean hasOverlay = stateRecord.getOverlayTextureByIndex(0) != null;
-            List<BlockStateVariant> stateVariants = new ArrayList<>();
+        // Create custom BlockStateSupplier for multiple variants
+        BlockStateSupplier supplier = new BlockStateSupplier() {
+            @Override
+            public JsonElement get() {
+                JsonObject variantsJson = new JsonObject();
 
-            for (int setIdx = 0; setIdx < stateRecord.getRandomTextureSetCount(); setIdx++) {
-                WesterosBlockDef.RandomTextureSet textureSet = stateRecord.getRandomTextureSet(setIdx);
-                int cnt = stateRecord.rotateRandom ? 4 : 1;    // 4 for random, just 1 if not
-
-                for (int i = 0; i < cnt; i++) {
-                    if (isSymmetrical) {
-                        Identifier smodelPath = createModelIdentifier(blockDefinition.blockName, "symmetrical", baseName, setIdx);
-                        BlockStateVariant svariant = createVariant(smodelPath, textureSet.weight, i);
-                        Identifier amodelPath = createModelIdentifier(blockDefinition.blockName, "asymmetrical", baseName, setIdx);
-                        BlockStateVariant avariant = createVariant(amodelPath, textureSet.weight, i);
-
-                        stateVariants.add(svariant);
-                        stateVariants.add(avariant);
-
-                        generateSolidModel(blockStateModelGenerator, smodelPath, true,
-                                isTinted, hasOverlay, stateRecord, setIdx);
-                        generateSolidModel(blockStateModelGenerator, amodelPath, true,
-                                isTinted, hasOverlay, stateRecord, setIdx);
-
-                    } else {
-                        Identifier modelPath = createModelIdentifier(blockDefinition.blockName, null, baseName, setIdx);
-                        BlockStateVariant variant = createVariant(modelPath, textureSet.weight, i);
-                        stateVariants.add(variant);
-
-                        generateSolidModel(blockStateModelGenerator, modelPath, false,
-                                isTinted, hasOverlay, stateRecord, setIdx);
+                for (Map.Entry<String, List<BlockStateVariant>> entry : variants.entrySet()) {
+                    if (!entry.getValue().isEmpty()) {
+                        variantsJson.add(entry.getKey(), BlockStateVariant.toJson(entry.getValue()));
                     }
-
                 }
+
+                JsonObject json = new JsonObject();
+                json.add("variants", variantsJson);
+                return json;
             }
 
-            if (!stateVariants.isEmpty()) {
-                if (stateVariants.size() == 1) {
-                    variantMap.register(baseName, stateVariants.getFirst());
-                } else {
-                    variantMap.register(baseName, stateVariants);
-                }
+            @Override
+            public Block getBlock() {
+                return block;
             }
-        }
+        };
 
-        blockStateModelGenerator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(currentBlock).coordinate(variantMap)
-        );
+        generator.blockStateCollector.accept(supplier);
     }
 
-    private static void generateVariantsForState(BlockStateModelGenerator generator,
-                                                 WesterosBlockDef blockDef, WesterosBlockStateRecord stateRecord,
-                                                 String baseName, boolean isSymmetrical, List<BlockStateVariant> variants) {
+    //        // Create a multipart supplier for multiple variants
+//        MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
+//
+//        for (Map.Entry<String, List<BlockStateVariant>> entry : variants.entrySet()) {
+//            String condition = entry.getKey();
+//            List<BlockStateVariant> variantList = entry.getValue();
+//
+//            When.PropertyCondition propertyCondition = When.create();
+//            String[] properties = condition.split(",");
+//            for (String property : properties) {
+//                if (!property.isEmpty()) {
+//                    String[] parts = property.split("=");
+//                    if (parts.length == 2) {
+//                        Property<?> prop = block.getStateManager().getProperty(parts[0]);
+//                        if (prop != null) {
+//                            // Get the matching value for this property's type
+//                            Optional<?> value = prop.parse(parts[1]);
+//                            if (value.isPresent()) {
+//                                setPropertyValue(propertyCondition, prop, value.get());
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//
+//            supplier.with(propertyCondition, variantList);
+//        }
 
-        boolean isTinted = stateRecord.isTinted();
-        boolean hasOverlay = stateRecord.getOverlayTextureByIndex(0) != null;
-
-        for (int setIdx = 0; setIdx < stateRecord.getRandomTextureSetCount(); setIdx++) {
-            WesterosBlockDef.RandomTextureSet textureSet = stateRecord.getRandomTextureSet(setIdx);
-            int rotationCount = stateRecord.rotateRandom ? 4 : 1;
-            String[] paths = isSymmetrical ? new String[]{"symmetrical", "asymmetrical"} : new String[]{""};
-
-            for (int rotIdx = 0; rotIdx < rotationCount; rotIdx++) {
-                for (String pathType : paths) {
-                    Identifier modelPath = createModelIdentifier(blockDef.blockName, pathType, baseName, setIdx);
-                    BlockStateVariant var = createVariant(modelPath, textureSet.weight, rotIdx);
-                    variants.add(var);
-                    generateSolidModel(generator, modelPath, isSymmetrical,
-                            isTinted, hasOverlay, stateRecord, setIdx);
-                }
-            }
-        }
-    }
+//    @SuppressWarnings("unchecked")
+//    private static <T extends Comparable<T>> void setPropertyValue(When.PropertyCondition condition, Property<?> property, Object value) {
+//        condition.set((Property<T>) property, (T) value);
+//    }
 
     protected static void generateSolidModel(BlockStateModelGenerator generator,
                                              Identifier modelPath, boolean isSymmetrical,
@@ -123,7 +177,7 @@ public class SolidBlockModelHandler extends ModelExport {
             String parentPath = isTinted ? "tinted/cube_overlay" : "untinted/cube_overlay";
             ModModels.getAllSidesWithOverlay(parentPath)
                     .upload(modelPath, textureMap, generator.modelCollector);
-        } else if (currentRec.getTextureCount() > 1 || isTinted) {
+        } else if (set.getTextureCount() > 1 || isTinted) {
             String parentPath = isTinted ? "tinted/cube" : "cube";
             String namespace = isTinted ? WesterosBlocks.MOD_ID : "minecraft";
             ModModels.getAllSides(parentPath, namespace)
@@ -134,6 +188,23 @@ public class SolidBlockModelHandler extends ModelExport {
         }
     }
 
+    public static void addVariant(String condition, BlockStateVariant variant, Set<String> stateIDs, Map<String, List<BlockStateVariant>> variants) {
+        List<String> conditions = new ArrayList<>();
+
+        if (stateIDs == null) {
+            conditions.add(condition);
+        } else {
+            for (String stateVal : stateIDs) {
+                String fullCondition = condition + ((!condition.isEmpty()) ? "," : "") + "state=" + stateVal;
+                conditions.add(fullCondition);
+            }
+        }
+
+        for (String conditionValue : conditions) {
+            List<BlockStateVariant> existingVariants = variants.computeIfAbsent(conditionValue, k -> new ArrayList<>());
+            existingVariants.add(variant);
+        }
+    }
 
     private static TextureMap createTextureMap(WesterosBlockDef.RandomTextureSet ts, boolean isSymmetrical, boolean hasOverlay, boolean isTinted, WesterosBlockStateRecord currentRec) {
         if (hasOverlay) {
@@ -141,8 +212,8 @@ public class SolidBlockModelHandler extends ModelExport {
         } else if (currentRec.getTextureCount() > 1 || isTinted) {
             return createCustomTextureMap(ts, isSymmetrical);
         } else {
-          return new TextureMap()
-                .put(TextureKey.ALL, createBlockIdentifier(ts.getTextureByIndex(0)));
+            return new TextureMap()
+                    .put(TextureKey.ALL, createBlockIdentifier(ts.getTextureByIndex(0)));
         }
     }
 
@@ -166,23 +237,6 @@ public class SolidBlockModelHandler extends ModelExport {
                 .put(TextureKey.WEST, createBlockIdentifier(ts.getTextureByIndex(isSymmetrical ? 4 : 6)))
                 .put(TextureKey.EAST, createBlockIdentifier(ts.getTextureByIndex(isSymmetrical ? 5 : 7)))
                 .put(TextureKey.PARTICLE, createBlockIdentifier(ts.getTextureByIndex(2)));
-    }
-
-    private static Identifier createModelIdentifier(String blockName, String type, String baseName, int setIdx) {
-        StringBuilder path = new StringBuilder()
-                .append(GENERATED_PATH)
-                .append(blockName)
-                .append('/');
-
-        if (type != null && !type.isEmpty()) {
-            path.append(type).append('/');
-        }
-
-        path.append(baseName)
-                .append("_v")
-                .append(setIdx + 1);
-
-        return Identifier.of(WesterosBlocks.MOD_ID, path.toString());
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {

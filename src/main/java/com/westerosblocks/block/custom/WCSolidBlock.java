@@ -30,12 +30,12 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
     public static final IntProperty CONNECTSTATE = IntProperty.of("connectstate", 0, 3);
     protected static IntProperty tempCONNECTSTATE;
     public final boolean connectstate;
-    public static final BooleanProperty SYMMETRICAL = BooleanProperty.of("symmetrical");
+    public static BooleanProperty SYMMETRICAL = BooleanProperty.of("symmetrical");
     protected static BooleanProperty tempSYMMETRICAL;
     public final boolean symmetrical;
     public final Boolean symmetricalDef;
     protected static WesterosBlockDef.StateProperty tempSTATE;
-    protected WesterosBlockDef.StateProperty STATE;
+    public static WesterosBlockDef.StateProperty STATE;
     protected boolean toggleOnUse = false;
 
     public static class Factory extends WesterosBlockFactory {
@@ -136,6 +136,9 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
         }
         if (STATE != null) {
             builder.add(STATE);
+        }
+        if (symmetrical) {
+            builder.add(SYMMETRICAL);
         }
         super.appendProperties(builder);
     }
