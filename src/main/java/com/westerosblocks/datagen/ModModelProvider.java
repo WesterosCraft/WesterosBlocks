@@ -36,10 +36,10 @@ public class ModModelProvider extends FabricModelProvider {
 //                    StairBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
 //                    break;
 //                }
-//                case "slab": {
-//                    SlabBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
-//                    break;
-//                }
+                case "slab": {
+                    SlabBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
 //                case "fence": {
 //                    FenceBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
 //                    break;
@@ -66,7 +66,6 @@ public class ModModelProvider extends FabricModelProvider {
 
     }
 
-
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         HashMap<String, Block> customBlocks = ModBlocks.getCustomBlocksByName();
         WesterosBlockDef[] customBlockDefs = WesterosBlocks.getCustomBlockDefs();
@@ -84,10 +83,10 @@ public class ModModelProvider extends FabricModelProvider {
 ////                    StairBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
 ////                    break;
 ////                }
-////                case "slab": {
-////                    SlabBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-////                    break;
-////                }
+                case "slab": {
+                    SlabBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
 ////                case "fence": {
 ////                    FenceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
 ////                    break;

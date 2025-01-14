@@ -74,12 +74,8 @@ public class SolidBlockModelHandler extends ModelExport {
                         BlockStateVariant variant = BlockStateVariant.create();
                         Identifier id = modelFileName(def, fname, setIdx, sr.isCustomModel());
                         variant.put(VariantSettings.MODEL, modelFileName(def, fname, setIdx, sr.isCustomModel()));
-                        if (set.weight != null) {
-                            variant.put(VariantSettings.WEIGHT, set.weight);
-                        }
-                        if (rotIdx > 0) {
-                            variant.put(VariantSettings.Y, getRotation(90 * rotIdx));
-                        }
+                        if (set.weight != null) { variant.put(VariantSettings.WEIGHT, set.weight); }
+                        if (rotIdx > 0) { variant.put(VariantSettings.Y, getRotation(90 * rotIdx)); }
                         addVariant("", variant, stateIDs, variants);
 
                         generateSolidModel(generator, id, false, isTinted, hasOverlay, sr, setIdx);

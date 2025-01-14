@@ -41,7 +41,6 @@ public class ModModels {
                 ModTextureKey.EAST_OVERLAY);
     }
 
-
     public static Model getBottomTopSideWithOverlay(String parent) {
         return block(parent,
                 TextureKey.BOTTOM,
