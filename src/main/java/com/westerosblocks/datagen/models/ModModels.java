@@ -1,7 +1,6 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
 import net.minecraft.data.client.TextureKey;
@@ -12,7 +11,7 @@ import java.util.Optional;
 public class ModModels {
     private static final String GENERATED_PATH = "block/";
 
-    public static Model getAllSides(String parent, String namespace) {
+    static Model getAllSides(String parent, String namespace) {
         return block(parent,
                 namespace,
                 TextureKey.DOWN,

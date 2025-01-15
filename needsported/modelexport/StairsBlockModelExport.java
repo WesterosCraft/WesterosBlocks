@@ -198,7 +198,6 @@ public class StairsBlockModelExport extends ModelExport {
 
 	protected void doStairModel(boolean isOccluded, boolean isTinted, boolean isOverlay, int setidx, WesterosBlockStateRecord sr, int sridx, String cond) throws IOException {
 		WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setidx);
-
         // Textures
         String downtxt = null;
         String uptxt = null;

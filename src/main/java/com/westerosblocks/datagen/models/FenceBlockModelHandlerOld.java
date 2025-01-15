@@ -3,11 +3,10 @@
 //import com.westerosblocks.WesterosBlocks;
 //import com.westerosblocks.block.WesterosBlockDef;
 //import com.westerosblocks.block.WesterosBlockStateRecord;
-//import com.westerosblocks.block.custom.WCWallBlock;
+//import com.westerosblocks.block.custom.WCFenceBlock;
 //import com.westerosblocks.datagen.models.ModTextureKey;
 //import com.westerosblocks.datagen.ModelExportOld;
 //import net.minecraft.block.Block;
-//import net.minecraft.block.enums.WallShape;
 //import net.minecraft.data.client.*;
 //import net.minecraft.state.property.Properties;
 //import net.minecraft.util.Identifier;
@@ -16,13 +15,14 @@
 //import java.util.List;
 //import java.util.Optional;
 //
-//public class WallBlockModelHandler extends ModelExportOld {
+//public class FenceBlockModelHandler extends ModelExportOld {
 //    private static final String GENERATED_PATH = "block/generated/";
 //
 //    public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator, Block block, WesterosBlockDef blockDefinition) {
-//        boolean isShortWall = block instanceof WCWallBlock && ((WCWallBlock) block).wallSize == WCWallBlock.WallSize.SHORT;
+//        boolean isUnconnected = block instanceof WCFenceBlock && ((WCFenceBlock) block).unconnect;
 //        boolean hasMultipleStates = blockDefinition.states.size() > 1;
 //
+//        // Generate models for each state
 //        for (WesterosBlockStateRecord state : blockDefinition.states) {
 //            String baseName = hasMultipleStates ? (state.stateID == null ? "base" : state.stateID) : "";
 //            boolean isTinted = state.isTinted();
@@ -33,38 +33,31 @@
 //                WesterosBlockDef.RandomTextureSet textureSet = state.getRandomTextureSet(setIdx);
 //
 //                // Generate post model
-//                generateWallModel(blockStateModelGenerator, blockDefinition, state,
-//                        baseName, setIdx, "post", textureSet, isOccluded, isTinted, hasOverlay, isShortWall);
+//                generateFenceModel(blockStateModelGenerator, blockDefinition, state,
+//                        baseName, setIdx, "post", textureSet, isOccluded, isTinted, hasOverlay);
 //
 //                // Generate side model
-//                generateWallModel(blockStateModelGenerator, blockDefinition, state,
-//                        baseName, setIdx, "side", textureSet, isOccluded, isTinted, hasOverlay, isShortWall);
-//
-//                // Generate tall side model
-//                generateWallModel(blockStateModelGenerator, blockDefinition, state,
-//                        baseName, setIdx, "side_tall", textureSet, isOccluded, isTinted, hasOverlay, isShortWall);
+//                generateFenceModel(blockStateModelGenerator, blockDefinition, state,
+//                        baseName, setIdx, "side", textureSet, isOccluded, isTinted, hasOverlay);
 //            }
 //        }
 //
 //        // Create multipart blockstate
 //        MultipartBlockStateSupplier stateSupplier = MultipartBlockStateSupplier.create(block);
 //
-//        // Add post component when up is true
-//        stateSupplier.with(
-//                When.create().set(Properties.UP, true),
-//                createWallBlockPostVariants(blockDefinition)
-//        );
+//        // Add center post - always present
+//        stateSupplier.with(createFencePostVariants(blockDefinition));
 //
-//        // Add side components for each direction
-//        addWallSides(stateSupplier, blockDefinition, "north", Properties.NORTH_WALL_SHAPE);
-//        addWallSides(stateSupplier, blockDefinition, "east", Properties.EAST_WALL_SHAPE, 90);
-//        addWallSides(stateSupplier, blockDefinition, "south", Properties.SOUTH_WALL_SHAPE, 180);
-//        addWallSides(stateSupplier, blockDefinition, "west", Properties.WEST_WALL_SHAPE, 270);
+//        // Add side connections
+//        addFenceSide(stateSupplier, blockDefinition, Properties.NORTH, 0);
+//        addFenceSide(stateSupplier, blockDefinition, Properties.EAST, 90);
+//        addFenceSide(stateSupplier, blockDefinition, Properties.SOUTH, 180);
+//        addFenceSide(stateSupplier, blockDefinition, Properties.WEST, 270);
 //
 //        blockStateModelGenerator.blockStateCollector.accept(stateSupplier);
 //    }
 //
-//    private static void generateWallModel(
+//    private static void generateFenceModel(
 //            BlockStateModelGenerator generator,
 //            WesterosBlockDef blockDef,
 //            WesterosBlockStateRecord state,
@@ -74,8 +67,7 @@
 //            WesterosBlockDef.RandomTextureSet textureSet,
 //            boolean isOccluded,
 //            boolean isTinted,
-//            boolean hasOverlay,
-//            boolean isShortWall) {
+//            boolean hasOverlay) {
 //
 //        String baseModelPath = baseName.isEmpty() ?
 //                String.format("%s%s", GENERATED_PATH, blockDef.blockName) :
@@ -85,7 +77,7 @@
 //                baseModelPath + "/" + modelType + "_v" + (setIdx + 1));
 //
 //        TextureMap textureMap = createTextureMap(textureSet, state, hasOverlay);
-//        String parentPath = getParentPath(isOccluded, isTinted, hasOverlay, modelType, isShortWall);
+//        String parentPath = getParentPath(isOccluded, isTinted, hasOverlay, modelType);
 //
 //        Model model = hasOverlay ?
 //                ModModels.getBottomTopSideWithOverlay(parentPath) :
@@ -94,50 +86,32 @@
 //        model.upload(modelId, textureMap, generator.modelCollector);
 //    }
 //
-//    private static String getParentPath(boolean isOccluded, boolean isTinted, boolean hasOverlay, String modelType, boolean isShortWall) {
+//    private static String getParentPath(boolean isOccluded, boolean isTinted, boolean hasOverlay, String modelType) {
 //        String basePath = isOccluded ?
 //                (isTinted ? "tinted/" : "untinted/") :
 //                (isTinted ? "tintednoocclusion/" : "noocclusion/");
 //
-//        String wallType = switch (modelType) {
-//            case "post" -> "template_wall_post";
-//            case "side" -> "template_wall_side" + (isShortWall ? "_2" : "");
-//            case "side_tall" -> "template_wall_side_tall";
-//            default -> throw new IllegalArgumentException("Invalid wall model type: " + modelType);
+//        String fenceType = switch (modelType) {
+//            case "post" -> "fence_post";
+//            case "side" -> "fence_side";
+//            default -> throw new IllegalArgumentException("Invalid fence model type: " + modelType);
 //        };
 //
-//        return basePath + wallType + (hasOverlay ? "_overlay" : "");
+//        return basePath + fenceType + (hasOverlay ? "_overlay" : "");
 //    }
 //
-//    private static void addWallSides(
+//    private static void addFenceSide(
 //            MultipartBlockStateSupplier stateSupplier,
 //            WesterosBlockDef blockDef,
-//            String direction,
-//            net.minecraft.state.property.EnumProperty<WallShape> property,
+//            net.minecraft.state.property.BooleanProperty property,
 //            int rotation) {
 //
-//        // Add low wall variants
-//        stateSupplier.with(
-//                When.create().set(property, WallShape.LOW),
-//                createWallBlockSideVariants(blockDef, "side", rotation, true)
-//        );
-//
-//        // Add tall wall variants
-//        stateSupplier.with(
-//                When.create().set(property, WallShape.TALL),
-//                createWallBlockSideVariants(blockDef, "side_tall", rotation, true)
-//        );
+//        // Create variants list and wrap it
+//        List<BlockStateVariant> variants = createFenceSideVariants(blockDef, rotation, true);
+//        stateSupplier.with(When.create().set(property, true), variants);
 //    }
 //
-//    private static void addWallSides(
-//            MultipartBlockStateSupplier stateSupplier,
-//            WesterosBlockDef blockDef,
-//            String direction,
-//            net.minecraft.state.property.EnumProperty<WallShape> property) {
-//        addWallSides(stateSupplier, blockDef, direction, property, 0);
-//    }
-//
-//    private static List<BlockStateVariant> createWallBlockPostVariants(WesterosBlockDef blockDef) {
+//    private static List<BlockStateVariant> createFencePostVariants(WesterosBlockDef blockDef) {
 //        List<BlockStateVariant> variants = new ArrayList<>();
 //
 //        for (WesterosBlockStateRecord state : blockDef.states) {
@@ -161,9 +135,8 @@
 //        return variants;
 //    }
 //
-//    private static List<BlockStateVariant> createWallBlockSideVariants(
+//    private static List<BlockStateVariant> createFenceSideVariants(
 //            WesterosBlockDef blockDef,
-//            String modelType,
 //            int rotation,
 //            boolean uvlock) {
 //        List<BlockStateVariant> variants = new ArrayList<>();
@@ -176,7 +149,7 @@
 //
 //                BlockStateVariant variant = BlockStateVariant.create()
 //                        .put(VariantSettings.MODEL, Identifier.of(WesterosBlocks.MOD_ID,
-//                                GENERATED_PATH + blockDef.blockName + "/" + baseName + modelType + "_v" + (setIdx + 1)));
+//                                GENERATED_PATH + blockDef.blockName + "/" + baseName + "side_v" + (setIdx + 1)));
 //
 //                if (rotation != 0) {
 //                    variant.put(VariantSettings.Y, VariantSettings.Rotation.valueOf("R" + rotation));
@@ -209,8 +182,8 @@
 //        TextureMap map = createCustomTextureMap(ts);
 //        return map
 //                .put(ModTextureKey.BOTTOM_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(0)))
-//                .put(ModTextureKey.TOP_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(0)))
-//                .put(ModTextureKey.SIDE_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(0)));
+//                .put(ModTextureKey.TOP_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(1)))
+//                .put(ModTextureKey.SIDE_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(2)));
 //    }
 //
 //    private static TextureMap createCustomTextureMap(WesterosBlockDef.RandomTextureSet ts) {
@@ -232,7 +205,7 @@
 //                .put(TextureKey.SIDE, createBlockIdentifier(firstSet.getTextureByIndex(2)));
 //
 //        Model model = new Model(
-//                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + (isTinted ? "tinted" : "untinted") + "/wall_inventory")),
+//                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + (isTinted ? "tinted" : "untinted") + "/fence_inventory")),
 //                Optional.empty(),
 //                TextureKey.BOTTOM,
 //                TextureKey.TOP,

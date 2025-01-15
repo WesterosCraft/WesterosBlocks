@@ -1,12 +1,9 @@
 package com.westerosblocks.datagen.models;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockStateRecord;
 import com.westerosblocks.block.custom.WCSlabBlock;
-import com.westerosblocks.datagen.ModTextureKey;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -15,7 +12,6 @@ import net.minecraft.util.Identifier;
 import java.util.*;
 
 public class SlabBlockModelHandler extends ModelExport {
-
     private static String getParentPath(boolean isOccluded, boolean isTinted, boolean hasOverlay, String type) {
         String basePath;
         if (isOccluded) {
@@ -75,23 +71,28 @@ public class SlabBlockModelHandler extends ModelExport {
                 BlockStateVariant topVariant = BlockStateVariant.create();
                 Identifier topId = getModelName(def.blockName, "top", setIdx, sr.stateID);
                 topVariant.put(VariantSettings.MODEL, topId);
-                if (set.weight != null) { topVariant.put(VariantSettings.WEIGHT, set.weight); }
+                if (set.weight != null) {
+                    topVariant.put(VariantSettings.WEIGHT, set.weight);
+                }
                 addVariant("type=top", topVariant, stateIDs, variants);
 
                 // Do bottom half slab
                 BlockStateVariant bottomVariant = BlockStateVariant.create();
                 Identifier bottomId = getModelName(def.blockName, "bottom", setIdx, sr.stateID);
                 bottomVariant.put(VariantSettings.MODEL, bottomId);
-                if (set.weight != null) { bottomVariant.put(VariantSettings.WEIGHT, set.weight); }
+                if (set.weight != null) {
+                    bottomVariant.put(VariantSettings.WEIGHT, set.weight);
+                }
                 addVariant("type=bottom", bottomVariant, stateIDs, variants);
 
                 // Do full slab
                 BlockStateVariant doubleVariant = BlockStateVariant.create();
                 Identifier doubleId = getModelName(def.blockName, "double", setIdx, sr.stateID);
                 doubleVariant.put(VariantSettings.MODEL, doubleId);
-                if (set.weight != null) { doubleVariant.put(VariantSettings.WEIGHT, set.weight); }
+                if (set.weight != null) {
+                    doubleVariant.put(VariantSettings.WEIGHT, set.weight);
+                }
                 addVariant("type=double", doubleVariant, stateIDs, variants);
-
 
                 // Make models
                 String[] types = {"bottom", "top", "double"};
@@ -117,68 +118,7 @@ public class SlabBlockModelHandler extends ModelExport {
             }
         }
 
-        if (variants.isEmpty()) {
-            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block));
-            return;
-        }
-
-        if (variants.size() == 1 && variants.containsKey("")) {
-            List<BlockStateVariant> variantList = variants.get("");
-            if (variantList.size() == 1) {
-                generator.blockStateCollector.accept(
-                        VariantsBlockStateSupplier.create(block, variantList.get(0))
-                );
-            } else {
-                generator.blockStateCollector.accept(
-                        VariantsBlockStateSupplier.create(block,
-                                variantList.toArray(new BlockStateVariant[0]))
-                );
-            }
-            return;
-        }
-
-        // Create custom BlockStateSupplier for multiple variants
-        BlockStateSupplier supplier = new BlockStateSupplier() {
-            @Override
-            public JsonElement get() {
-                JsonObject variantsJson = new JsonObject();
-
-                for (Map.Entry<String, List<BlockStateVariant>> entry : variants.entrySet()) {
-                    if (!entry.getValue().isEmpty()) {
-                        variantsJson.add(entry.getKey(), BlockStateVariant.toJson(entry.getValue()));
-                    }
-                }
-
-                JsonObject json = new JsonObject();
-                json.add("variants", variantsJson);
-                return json;
-            }
-
-            @Override
-            public Block getBlock() {
-                return block;
-            }
-        };
-
-        generator.blockStateCollector.accept(supplier);
-    }
-
-    public static void addVariant(String condition, BlockStateVariant variant, Set<String> stateIDs, Map<String, List<BlockStateVariant>> variants) {
-        List<String> conditions = new ArrayList<>();
-
-        if (stateIDs == null) {
-            conditions.add(condition);
-        } else {
-            for (String stateVal : stateIDs) {
-                String fullCondition = condition + ((!condition.isEmpty()) ? "," : "") + "state=" + stateVal;
-                conditions.add(fullCondition);
-            }
-        }
-
-        for (String conditionValue : conditions) {
-            List<BlockStateVariant> existingVariants = variants.computeIfAbsent(conditionValue, k -> new ArrayList<>());
-            existingVariants.add(variant);
-        }
+        generateBlockStateFiles(generator, block, variants);
     }
 
     private static TextureMap createTextureMap(WesterosBlockDef.RandomTextureSet ts, WesterosBlockStateRecord currentRec, boolean hasOverlay) {

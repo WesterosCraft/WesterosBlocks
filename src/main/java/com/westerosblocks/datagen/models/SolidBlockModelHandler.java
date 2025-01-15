@@ -1,12 +1,9 @@
 package com.westerosblocks.datagen.models;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockStateRecord;
 import com.westerosblocks.block.custom.WCSolidBlock;
-import com.westerosblocks.datagen.ModTextureKey;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -34,7 +31,7 @@ public class SolidBlockModelHandler extends ModelExport {
         return id.withPrefixedPath(GENERATED_PATH);
     }
 
-    public static void generateBlockStateAndModels(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public static void generateBlockStateModels(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
         WCSolidBlock solidBlock = (block instanceof WCSolidBlock) ? (WCSolidBlock) block : null;
         boolean isSymmertrical = solidBlock != null && solidBlock.symmetrical;
         final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
@@ -84,84 +81,8 @@ public class SolidBlockModelHandler extends ModelExport {
             }
         }
 
-        if (variants.isEmpty()) {
-            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block));
-            return;
-        }
-
-        if (variants.size() == 1 && variants.containsKey("")) {
-            List<BlockStateVariant> variantList = variants.get("");
-            if (variantList.size() == 1) {
-                generator.blockStateCollector.accept(
-                        VariantsBlockStateSupplier.create(block, variantList.get(0))
-                );
-            } else {
-                generator.blockStateCollector.accept(
-                        VariantsBlockStateSupplier.create(block,
-                                variantList.toArray(new BlockStateVariant[0]))
-                );
-            }
-            return;
-        }
-
-        // Create custom BlockStateSupplier for multiple variants
-        BlockStateSupplier supplier = new BlockStateSupplier() {
-            @Override
-            public JsonElement get() {
-                JsonObject variantsJson = new JsonObject();
-
-                for (Map.Entry<String, List<BlockStateVariant>> entry : variants.entrySet()) {
-                    if (!entry.getValue().isEmpty()) {
-                        variantsJson.add(entry.getKey(), BlockStateVariant.toJson(entry.getValue()));
-                    }
-                }
-
-                JsonObject json = new JsonObject();
-                json.add("variants", variantsJson);
-                return json;
-            }
-
-            @Override
-            public Block getBlock() {
-                return block;
-            }
-        };
-
-        generator.blockStateCollector.accept(supplier);
+        generateBlockStateFiles(generator, block, variants);
     }
-
-    //        // Create a multipart supplier for multiple variants
-//        MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
-//
-//        for (Map.Entry<String, List<BlockStateVariant>> entry : variants.entrySet()) {
-//            String condition = entry.getKey();
-//            List<BlockStateVariant> variantList = entry.getValue();
-//
-//            When.PropertyCondition propertyCondition = When.create();
-//            String[] properties = condition.split(",");
-//            for (String property : properties) {
-//                if (!property.isEmpty()) {
-//                    String[] parts = property.split("=");
-//                    if (parts.length == 2) {
-//                        Property<?> prop = block.getStateManager().getProperty(parts[0]);
-//                        if (prop != null) {
-//                            // Get the matching value for this property's type
-//                            Optional<?> value = prop.parse(parts[1]);
-//                            if (value.isPresent()) {
-//                                setPropertyValue(propertyCondition, prop, value.get());
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//
-//            supplier.with(propertyCondition, variantList);
-//        }
-
-//    @SuppressWarnings("unchecked")
-//    private static <T extends Comparable<T>> void setPropertyValue(When.PropertyCondition condition, Property<?> property, Object value) {
-//        condition.set((Property<T>) property, (T) value);
-//    }
 
     protected static void generateSolidModel(BlockStateModelGenerator generator,
                                              Identifier modelPath, boolean isSymmetrical,
@@ -181,24 +102,6 @@ public class SolidBlockModelHandler extends ModelExport {
         } else {
             TextureMap textureMapAll = TextureMap.all(Identifier.of("minecraft", "block/cube"));
             Models.CUBE_ALL.upload(modelPath, textureMapAll, generator.modelCollector);
-        }
-    }
-
-    public static void addVariant(String condition, BlockStateVariant variant, Set<String> stateIDs, Map<String, List<BlockStateVariant>> variants) {
-        List<String> conditions = new ArrayList<>();
-
-        if (stateIDs == null) {
-            conditions.add(condition);
-        } else {
-            for (String stateVal : stateIDs) {
-                String fullCondition = condition + ((!condition.isEmpty()) ? "," : "") + "state=" + stateVal;
-                conditions.add(fullCondition);
-            }
-        }
-
-        for (String conditionValue : conditions) {
-            List<BlockStateVariant> existingVariants = variants.computeIfAbsent(conditionValue, k -> new ArrayList<>());
-            existingVariants.add(variant);
         }
     }
 

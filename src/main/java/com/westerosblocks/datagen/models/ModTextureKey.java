@@ -1,4 +1,4 @@
-package com.westerosblocks.datagen;
+package com.westerosblocks.datagen.models;
 
 import net.minecraft.data.client.TextureKey;
 

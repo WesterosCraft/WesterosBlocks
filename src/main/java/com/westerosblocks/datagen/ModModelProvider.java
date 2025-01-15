@@ -22,20 +22,19 @@ public class ModModelProvider extends FabricModelProvider {
         HashMap<String, Block> customBlocks = ModBlocks.getCustomBlocksByName();
         WesterosBlockDef[] customBlockDefs = WesterosBlocks.getCustomBlockDefs();
 
-
         for (WesterosBlockDef customBlockDef : customBlockDefs) {
             if (customBlockDef == null || customBlockDef.isCustomModel()) continue;
             Block currentBlock = customBlocks.get(customBlockDef.blockName);
-            switch (customBlockDef.blockType) {
 
+            switch (customBlockDef.blockType) {
                 case "solid": {
-                    SolidBlockModelHandler.generateBlockStateAndModels(blockStateModelGenerator, currentBlock, customBlockDef);
+                    SolidBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-//                case "stair": {
-//                    StairBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
-//                    break;
-//                }
+                case "stair": {
+                    StairBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
                 case "slab": {
                     SlabBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
                     break;
@@ -79,10 +78,10 @@ public class ModModelProvider extends FabricModelProvider {
                     SolidBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-////                case "stair": {
-////                    StairBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-////                    break;
-////                }
+                case "stair": {
+                    StairBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
                 case "slab": {
                     SlabBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;

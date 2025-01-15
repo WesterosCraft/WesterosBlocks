@@ -1,13 +1,11 @@
 package com.westerosblocks.datagen;
 
-import com.google.common.collect.Maps;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
-import org.spongepowered.include.com.google.common.collect.Lists;
 import java.util.*;
 
 public class ModelExport {
@@ -26,172 +24,69 @@ public class ModelExport {
         };
     }
 
-    /**
-     * Represents a block state definition that can contain either variants or multipart states.
-     */
-    public static class StateObject {
-        private final Map<String, List<BlockStateVariant>> variants;
-        private final List<States> multipart;
-        private static Block block = null;
+    public static void addVariant(String condition, BlockStateVariant variant, Set<String> stateIDs, Map<String, List<BlockStateVariant>> variants) {
+        List<String> conditions = new ArrayList<>();
 
-        public StateObject(Block block) {
-            this.variants = Maps.newHashMap();
-            this.multipart = Lists.newArrayList();
-            this.block = block;
+        if (stateIDs == null) {
+            conditions.add(condition);
+        } else {
+            for (String stateVal : stateIDs) {
+                String fullCondition = condition + ((!condition.isEmpty()) ? "," : "") + "state=" + stateVal;
+                conditions.add(fullCondition);
+            }
         }
 
-        /**
-         * Adds a variant to the state object with an optional condition.
-         */
-        public void addVariant(String condition, BlockStateVariant variant, Set<String> stateIDs) {
-            if (stateIDs == null) {
-                addSingleVariant(condition, variant);
+        for (String conditionValue : conditions) {
+            List<BlockStateVariant> existingVariants = variants.computeIfAbsent(conditionValue, k -> new ArrayList<>());
+            existingVariants.add(variant);
+        }
+    }
+
+
+    public static void generateBlockStateFiles(BlockStateModelGenerator generator, Block block, Map<String, List<BlockStateVariant>> variants) {
+        if (variants.isEmpty()) {
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block));
+            return;
+        }
+
+        if (variants.size() == 1 && variants.containsKey("")) {
+            List<BlockStateVariant> variantList = variants.get("");
+            if (variantList.size() == 1) {
+                generator.blockStateCollector.accept(
+                        VariantsBlockStateSupplier.create(block, variantList.getFirst())
+                );
             } else {
-                for (String stateVal : stateIDs) {
-                    String fullCondition = condition + ((!condition.isEmpty()) ? "," : "") + "state=" + stateVal;
-                    addSingleVariant(fullCondition, variant);
-                }
+                generator.blockStateCollector.accept(
+                        VariantsBlockStateSupplier.create(block,
+                                variantList.toArray(new BlockStateVariant[0]))
+                );
             }
+            return;
         }
 
-        private void addSingleVariant(String condition, BlockStateVariant variant) {
-            List<BlockStateVariant> variantList = variants.computeIfAbsent(condition, k -> Lists.newArrayList());
-            variantList.add(variant);
-        }
+        // Create custom BlockStateSupplier for multiple variants
+        BlockStateSupplier supplier = new BlockStateSupplier() {
+            @Override
+            public JsonElement get() {
+                JsonObject variantsJson = new JsonObject();
 
-        /**
-         * Adds multipart states to the state object.
-         */
-        public void addStates(States states, Set<String> stateIDs) {
-            if (stateIDs == null) {
-                multipart.add(states);
-            } else {
-                for (String stateVal : stateIDs) {
-                    States newStates = new States(states, stateVal);
-                    multipart.add(newStates);
-                }
-            }
-        }
-
-        /**
-         * States class for multipart state definitions
-         */
-        public static class States {
-            public final List<Apply> apply;
-            public final When when;
-
-            public States() {
-                this.apply = Lists.newArrayList();
-                this.when = null;
-            }
-
-            public States(States original, String condition) {
-                this.apply = original.apply;
-                if (original.when != null) {
-                    this.when = parseCondition(condition);
-                } else {
-                    this.when = parseCondition(condition);
-                }
-            }
-        }
-
-        /**
-         * Apply class for defining model applications in multipart states
-         */
-        public static class Apply {
-            public final BlockStateVariant variant;
-
-            public Apply(BlockStateVariant variant) {
-                this.variant = variant;
-            }
-        }
-
-        /**
-         * Helper class for parsing property conditions
-         */
-        private static When.PropertyCondition parseCondition(String condition) {
-            When.PropertyCondition propertyCondition = When.create();
-            if (!condition.isEmpty()) {
-                String[] parts = condition.split(",");
-                for (String part : parts) {
-                    String[] keyValue = part.split("=");
-                    if (keyValue.length == 2) {
-                        String propertyName = keyValue[0].trim();
-                        String value = keyValue[1].trim();
-
-                        // Handle common property types
-                        switch (propertyName) {
-//                            case "facing":
-//                                propertyCondition.set(Properties.HORIZONTAL_FACING, value);
-//                                break;
-                            case "symmetrical":
-                                BooleanProperty SYMMETRICAL = (BooleanProperty) block.getStateManager().getProperty("symmetrical");
-                                propertyCondition.set(SYMMETRICAL, value.equals("true"));
-                                break;
-                            case "state":
-                                // Handle custom state properties if needed
-                                break;
-                        }
+                for (Map.Entry<String, List<BlockStateVariant>> entry : variants.entrySet()) {
+                    if (!entry.getValue().isEmpty()) {
+                        variantsJson.add(entry.getKey(), BlockStateVariant.toJson(entry.getValue()));
                     }
                 }
+
+                JsonObject json = new JsonObject();
+                json.add("variants", variantsJson);
+                return json;
             }
-            return propertyCondition;
-        }
 
-        /**
-         * Converts the state object to a BlockStateSupplier
-         */
-        public BlockStateSupplier toBlockStateSupplier(Block block) {
-            if (!multipart.isEmpty()) {
-                MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
-                for (States state : multipart) {
-                    if (state.when != null) {
-                        supplier.with(state.when, state.apply.stream()
-                                .map(apply -> apply.variant)
-                                .toList());
-                    } else {
-                        supplier.with(state.apply.stream()
-                                .map(apply -> apply.variant)
-                                .toList());
-                    }
-                }
-                return supplier;
-            } else {
-                if (variants.size() == 1 && variants.containsKey("")) {
-                    // Single variant case
-                    List<BlockStateVariant> variantList = variants.get("");
-                    if (variantList.size() == 1) {
-                        return VariantsBlockStateSupplier.create(block, variantList.get(0));
-                    } else {
-                        return VariantsBlockStateSupplier.create(block, variantList.toArray(new BlockStateVariant[0]));
-                    }
-                } else {
-                    // Multiple variants case
-                    VariantsBlockStateSupplier supplier = VariantsBlockStateSupplier.create(block);
-                    // We need to create appropriate BlockStateVariantMaps for each property
-                    // This is a simplified example - you'll need to expand based on your needs
-                    for (Map.Entry<String, List<BlockStateVariant>> entry : variants.entrySet()) {
-                        if (entry.getValue().size() == 1) {
-                            supplier.coordinate(createVariantMap(parseCondition(entry.getKey()), entry.getValue().get(0)));
-                        } else {
-                            supplier.coordinate(createVariantMap(parseCondition(entry.getKey()), entry.getValue()));
-                        }
-                    }
-                    return supplier;
-                }
+            @Override
+            public Block getBlock() {
+                return block;
             }
-        }
+        };
 
-        private BlockStateVariantMap createVariantMap(When.PropertyCondition condition, BlockStateVariant variant) {
-            // This is a simplified implementation - you'll need to expand based on your needs
-            return BlockStateVariantMap.create(Properties.FACING)
-                    .register(direction -> variant);
-        }
-
-        private BlockStateVariantMap createVariantMap(When.PropertyCondition condition, List<BlockStateVariant> variants) {
-            // This is a simplified implementation - you'll need to expand based on your needs
-            return BlockStateVariantMap.create(Properties.FACING)
-                    .register(direction -> variants.getFirst());
-        }
+        generator.blockStateCollector.accept(supplier);
     }
 }

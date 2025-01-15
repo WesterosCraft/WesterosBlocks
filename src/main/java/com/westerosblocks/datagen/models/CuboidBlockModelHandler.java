@@ -4,7 +4,7 @@
 //import com.westerosblocks.block.WesterosBlockDef;
 //import com.westerosblocks.block.WesterosBlockStateRecord;
 //import com.westerosblocks.block.custom.WCCuboidBlock;
-//import com.westerosblocks.datagen.ModTextureKey;
+//import com.westerosblocks.datagen.models.ModTextureKey;
 //import com.westerosblocks.datagen.ModelExportOld;
 //import net.minecraft.block.Block;
 //import net.minecraft.data.client.*;
