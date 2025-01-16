@@ -21,4 +21,7 @@ public class ModTextureKey {
     public static final TextureKey TEXTURE_3 = TextureKey.of("txt3");
     public static final TextureKey TEXTURE_4 = TextureKey.of("txt4");
     public static final TextureKey TEXTURE_5 = TextureKey.of("txt5");
+
+    // For latter block generation
+    public static final TextureKey LADDER = TextureKey.of("ladder");
 }

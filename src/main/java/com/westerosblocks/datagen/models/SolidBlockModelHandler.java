@@ -12,6 +12,17 @@ import net.minecraft.util.Identifier;
 import java.util.*;
 
 public class SolidBlockModelHandler extends ModelExport {
+    private final BlockStateModelGenerator generator;
+    private final Block block;
+    private final WesterosBlockDef def;
+
+    public SolidBlockModelHandler(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+        super(block, def);
+        this.generator = generator;
+        this.block = block;
+        this.def = def;
+    }
+
     protected static String getModelName(WesterosBlockDef def, String ext, int setidx) {
         return def.blockName + "/" + ext + ("_v" + (setidx + 1));
     }
@@ -31,7 +42,7 @@ public class SolidBlockModelHandler extends ModelExport {
         return id.withPrefixedPath(GENERATED_PATH);
     }
 
-    public static void generateBlockStateModels(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public void generateBlockStateModels() {
         WCSolidBlock solidBlock = (block instanceof WCSolidBlock) ? (WCSolidBlock) block : null;
         boolean isSymmertrical = solidBlock != null && solidBlock.symmetrical;
         final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
@@ -92,12 +103,12 @@ public class SolidBlockModelHandler extends ModelExport {
 
         if (hasOverlay) {
             String parentPath = isTinted ? "tinted/cube_overlay" : "untinted/cube_overlay";
-            ModModels.getAllSidesWithOverlay(parentPath)
+            ModModels.createAllSidesWithOverlay(parentPath)
                     .upload(modelPath, textureMap, generator.modelCollector);
         } else if (set.getTextureCount() > 1 || isTinted) {
             String parentPath = isTinted ? "tinted/cube" : "cube";
             String namespace = isTinted ? WesterosBlocks.MOD_ID : "minecraft";
-            ModModels.getAllSides(parentPath, namespace)
+            ModModels.createAllSides(parentPath, namespace)
                     .upload(modelPath, textureMap, generator.modelCollector);
         } else {
             TextureMap textureMapAll = TextureMap.all(Identifier.of("minecraft", "block/cube"));

@@ -3,7 +3,6 @@ package com.westerosblocks.datagen;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.custom.WCSolidBlock;
 import com.westerosblocks.datagen.models.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -23,26 +22,32 @@ public class ModModelProvider extends FabricModelProvider {
         WesterosBlockDef[] customBlockDefs = WesterosBlocks.getCustomBlockDefs();
 
         for (WesterosBlockDef customBlockDef : customBlockDefs) {
-            if (customBlockDef == null || customBlockDef.isCustomModel()) continue;
-            Block currentBlock = customBlocks.get(customBlockDef.blockName);
+            if (customBlockDef == null) continue;
+            Block currentBlock = customBlocks.get(customBlockDef.getBlockName());
 
             switch (customBlockDef.blockType) {
                 case "solid": {
-                    SolidBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
+                    new SolidBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "stair": {
-                    StairBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
+                    new StairBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "slab": {
-                    SlabBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
+                    new SlabBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
 //                case "fence": {
-//                    FenceBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
+//                    new FenceBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
 //                    break;
 //                }
+                case "ladder":
+                    new LadderBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                case "cuboid-16way":
+                    new Cuboid16WayBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
 //                case "wall": {
 //                    WallBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
 //                    break;
@@ -70,8 +75,8 @@ public class ModModelProvider extends FabricModelProvider {
         WesterosBlockDef[] customBlockDefs = WesterosBlocks.getCustomBlockDefs();
 
         for (WesterosBlockDef customBlockDef : customBlockDefs) {
-            if (customBlockDef == null || customBlockDef.isCustomModel()) continue;
-            Block currentBlock = customBlocks.get(customBlockDef.blockName);
+            if (customBlockDef == null) continue;
+            Block currentBlock = customBlocks.get(customBlockDef.getBlockName());
             switch (customBlockDef.blockType) {
 
                 case "solid": {
@@ -86,6 +91,9 @@ public class ModModelProvider extends FabricModelProvider {
                     SlabBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
+                case "ladder":
+                    LadderBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
 ////                case "fence": {
 ////                    FenceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
 ////                    break;

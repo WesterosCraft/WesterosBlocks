@@ -12,10 +12,20 @@ import net.minecraft.util.Identifier;
 import java.util.*;
 
 public class StairBlockModelHandler extends ModelExport {
+    private final BlockStateModelGenerator generator;
+    private final Block block;
+    private final WesterosBlockDef def;
 
-    protected static String getModelName(String ext, int setidx, String name) {
-        return name + "/" + ext + ("_v" + (setidx + 1));
+    public StairBlockModelHandler(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+        super(block, def);
+        this.generator = generator;
+        this.block = block;
+        this.def = def;
     }
+
+//    protected static String getModelName(String ext, int setidx, String name) {
+//        return name + "/" + ext + ("_v" + (setidx + 1));
+//    }
 
     protected static String getModelName(String ext, int setidx, String cond, String name) {
         if (cond == null)
@@ -55,7 +65,7 @@ public class StairBlockModelHandler extends ModelExport {
         return basePath + (hasOverlay ? modelType + "_stairs_overlay" : modelType + "_stairs");
     }
 
-    public static void generateBlockStateModels(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public void generateBlockStateModels() {
         WCStairBlock stairBlock = (block instanceof WCStairBlock) ? (WCStairBlock) block : null;
         boolean isUvLocked = !(block instanceof WCStairBlock) || !stairBlock.no_uvlock;
         final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
@@ -164,9 +174,9 @@ public class StairBlockModelHandler extends ModelExport {
 
                     Model model;
                     if (hasOverlay) {
-                        model = ModModels.getBottomTopSideWithOverlay(parentPath);
+                        model = ModModels.createBottomTopSideWithOverlay(parentPath);
                     } else {
-                        model = ModModels.getBottomTopSide(parentPath);
+                        model = ModModels.createBottomTopSide(parentPath);
                     }
                     model.upload(modelId, textureMap, generator.modelCollector);
                 }

@@ -12,6 +12,17 @@ import net.minecraft.util.Identifier;
 import java.util.*;
 
 public class SlabBlockModelHandler extends ModelExport {
+    private final BlockStateModelGenerator generator;
+    private final Block block;
+    private final WesterosBlockDef def;
+
+    public SlabBlockModelHandler(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+        super(block, def);
+        this.generator = generator;
+        this.block = block;
+        this.def = def;
+    }
+
     private static String getParentPath(boolean isOccluded, boolean isTinted, boolean hasOverlay, String type) {
         String basePath;
         if (isOccluded) {
@@ -51,7 +62,7 @@ public class SlabBlockModelHandler extends ModelExport {
         return id.withPrefixedPath(GENERATED_PATH);
     }
 
-    public static void generateBlockStateModels(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public void generateBlockStateModels() {
         WCSlabBlock slabBlock = (block instanceof WCSlabBlock) ? (WCSlabBlock) block : null;
         final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
 
@@ -109,9 +120,9 @@ public class SlabBlockModelHandler extends ModelExport {
 
                     Model model;
                     if (hasOverlay) {
-                        model = ModModels.getAllSidesWithOverlay(parentPath);
+                        model = ModModels.createAllSidesWithOverlay(parentPath);
                     } else {
-                        model = ModModels.getAllSides(parentPath, namespace);
+                        model = ModModels.createAllSides(parentPath, namespace);
                     }
                     model.upload(modelId, textureMap, generator.modelCollector);
                 }

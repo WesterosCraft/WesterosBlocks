@@ -3,13 +3,24 @@ package com.westerosblocks.datagen;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.block.WesterosBlockDef;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
+
+import java.io.File;
 import java.util.*;
 
 public class ModelExport {
     public static final String GENERATED_PATH = "block/generated/";
+    public static final String CUSTOM_PATH = "block/custom/";
+    protected final Block block;
+    protected static WesterosBlockDef def;
+
+    public ModelExport(Block block, WesterosBlockDef def) {
+        this.block = block;
+        this.def = def;
+    }
 
     public static Identifier createBlockIdentifier(String texturePath) {
         return Identifier.of(WesterosBlocks.MOD_ID, "block/" + texturePath);
@@ -88,5 +99,15 @@ public class ModelExport {
         };
 
         generator.blockStateCollector.accept(supplier);
+    }
+
+    protected static String getModelName(String ext, int setidx) {
+        return def.blockName + "/" + ext + ("_v" + (setidx+1));
+    }
+
+    protected static String getModelName(String ext, int setidx, String cond) {
+        if (cond == null)
+            return getModelName(ext, setidx);
+        return def.blockName + "/" + cond + "/" + ext + ("_v" + (setidx+1));
     }
 }
