@@ -3,14 +3,15 @@ package com.westerosblocks.datagen.models;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.data.client.BlockStateModelGenerator;
+import net.minecraft.data.client.ItemModelGenerator;
 
-public class WallBlockModelHandler extends ModelExport {
+public class CuboidNSEWStackBlockModelHandler extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
     private final WesterosBlockDef def;
 
-    public WallBlockModelHandler(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public CuboidNSEWStackBlockModelHandler(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -21,7 +22,7 @@ public class WallBlockModelHandler extends ModelExport {
 
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
 
     }
 }

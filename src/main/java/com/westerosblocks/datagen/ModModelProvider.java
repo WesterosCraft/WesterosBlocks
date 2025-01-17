@@ -32,32 +32,49 @@ public class ModModelProvider extends FabricModelProvider {
                     new SolidBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
+                case "sound": {
+                    new SoundBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
                 case "stair": {
                     new StairBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
-                case "slab": {
-                    new SlabBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-//                case "fence": {
-//                    new FenceBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-//                    break;
-//                }
-                case "ladder": {
-                    new LadderBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "cuboid-16way": {
-                    new Cuboid16WayBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                case "leaves": {
+                    new LeavesBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "log": {
                     new LogBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
-                case "rail": {
-                    new RailBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                case "plant":
+                case "web": {
+                    new CrossBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "pane": {
+                    new PaneBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "crop": {
+                    new CropBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "door": {
+                    new DoorBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "slab": {
+                    new SlabBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "fence": {
+                    new FenceBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "wall": {
+                    new WallBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "trapdoor": {
@@ -68,28 +85,78 @@ public class ModModelProvider extends FabricModelProvider {
                     new TorchBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
-                case "leaves": {
-                    new LeavesBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                case "fan": {
+                    new FanBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
                 }
-                // TODO waiting on block to be done
-//                case "flowerpot": {
-//                    new FlowerPotModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-//                }
-//                case "wall": {
-//                    WallBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
-//                    break;
-//                }
-//                case "cuboid": {
-//                    CuboidBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
-//                    break;
-//                }
-//                case "door": {
-//                    blockStateModelGenerator.registerDoor(currentBlock);
-//                    break;
-//                }
-//                case "walltorch": {
-//                    blockStateModelGenerator.registerTorch();
-//                }
+                case "ladder": {
+                    new LadderBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "fire": {
+                    new FireBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "bed": {
+                    new BedBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "cuboid":
+                case "beacon": {
+                    new CuboidBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "cuboid-ne": {
+                    new CuboidNEBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "cuboid-nsew": {
+                    new CuboidNSEWBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "cuboid-16way": {
+                    new Cuboid16WayBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "cuboid-nsew-stack": {
+                    new CuboidNSEWStackBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "cuboid-nsewud": {
+                    new CuboidNSEWUDBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "layer": {
+                    new LayerBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "rail": {
+                    new RailBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "halfdoor": {
+                    new HalfDoorBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "cake": {
+                    new CakeBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "furnace": {
+                    new FurnaceBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "vines": {
+                    new VinesBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "flowerpot": {
+                    new FlowerPotModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                }
+                case "fencegate": {
+                    new FenceGateBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
                 default:
                     WesterosBlocks.LOGGER.warn("DATAGEN: Unknown block type: {} for block {}", customBlockDef.blockType, customBlockDef.blockName);
             }
@@ -142,6 +209,10 @@ public class ModModelProvider extends FabricModelProvider {
                 }
                 case "leaves": {
                     LeavesBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
+                case "crop": {
+                    CropBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 // TODO waiting on block to be done
