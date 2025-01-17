@@ -60,6 +60,10 @@ public class ModModelProvider extends FabricModelProvider {
                     new RailBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
+                case "trapdoor": {
+                    new TrapDoorBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
 //                case "wall": {
 //                    WallBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
 //                    break;
@@ -116,6 +120,9 @@ public class ModModelProvider extends FabricModelProvider {
                 case "rail": {
                     RailBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
+                }
+                case "trapdoor": {
+                    TrapDoorBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                 }
 ////                case "fence": {
 ////                    FenceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);

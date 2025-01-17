@@ -698,6 +698,34 @@
         "rail_block/net_large_turned"
       ],
       "type": "allow-unsupported"
+    },
+    {
+      "blockName": "sewer_manhole",
+      "blockType": "trapdoor",
+      "hardness": 2,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 5,
+      "creativeTab": "westeros_decor_tab",
+      "type": "locked:false",
+      "label": "Generic Sewer Manhole",
+      "textures": [
+        "trapdoor_block/manhole"
+      ]
+    },
+    {
+      "blockName": "kings_landing_sewer_manhole",
+      "blockType": "trapdoor",
+      "hardness": 2,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 5,
+      "creativeTab": "westeros_decor_tab",
+      "type": "locked:false",
+      "label": "King's Landing Sewer Manhole",
+      "textures": [
+        "trapdoor_block/kings_landing_manhole"
+      ]
     }
   ]
 }
