@@ -41,6 +41,406 @@
       ]
     },
     {
+      "blockName": "crop_peas",
+      "blockType": "crop",
+      "hardness": 5,
+      "stepSound": "grass",
+      "material": "plants",
+      "resistance": 4,
+      "type": "toggleOnUse,layerSensitive",
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "westeros_crops_herbs_tab",
+      "label": "Peas",
+      "states": [
+        {
+          "stateID": "age0",
+          "textures": [
+            "peas/peas_stage_0"
+          ]
+        },
+        {
+          "stateID": "age1",
+          "textures": [
+            "peas/peas_stage_1"
+          ]
+        },
+        {
+          "stateID": "age2",
+          "textures": [
+            "peas/peas_stage_2"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "grass",
+      "blockType": "plant",
+      "type": "layerSensitive",
+      "stepSound": "grass",
+      "material": "plants",
+      "creativeTab": "westeros_grasses_shrubs_tab",
+      "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+      },
+      "label": "Grass",
+      "colorMult": "textures/colormap/grass",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/fern/fern1"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "minecraft:block/fern/fern2"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "minecraft:block/fern/fern3"
+          ],
+          "weight": 15
+        },
+        {
+          "textures": [
+            "minecraft:block/fern/fern4"
+          ],
+          "weight": 10
+        },
+        {
+          "textures": [
+            "minecraft:block/fern/fern5"
+          ],
+          "weight": 10
+        },
+        {
+          "textures": [
+            "minecraft:block/fern/fern6"
+          ],
+          "weight": 15
+        },
+        {
+          "textures": [
+            "minecraft:block/fern/fern7"
+          ],
+          "weight": 25
+        },
+        {
+          "textures": [
+            "minecraft:block/fern/fern8"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "blockName": "cobweb",
+      "blockType": "web",
+      "stepSound": "cloth",
+      "material": "web",
+      "creativeTab": "westeros_decor_tab",
+      "label": "Cobweb",
+      "type": "toggleOnUse,no-in-web",
+      "states": [
+        {
+          "stateID": "random",
+          "randomTextures": [
+            {
+              "textures": [
+                "cobweb/side1"
+              ]
+            },
+            {
+              "textures": [
+                "cobweb/side2"
+              ]
+            },
+            {
+              "textures": [
+                "cobweb/side3"
+              ]
+            },
+            {
+              "textures": [
+                "cobweb/side4"
+              ]
+            },
+            {
+              "textures": [
+                "cobweb/side5"
+              ]
+            },
+            {
+              "textures": [
+                "cobweb/side6"
+              ]
+            },
+            {
+              "textures": [
+                "cobweb/side7"
+              ]
+            },
+            {
+              "textures": [
+                "cobweb/side8"
+              ]
+            }
+          ]
+        },
+        {
+          "stateID": "cobweb1",
+          "textures": [
+            "cobweb/side1"
+          ]
+        },
+        {
+          "stateID": "cobweb2",
+          "textures": [
+            "cobweb/side2"
+          ]
+        },
+        {
+          "stateID": "cobweb3",
+          "textures": [
+            "cobweb/side3"
+          ]
+        },
+        {
+          "stateID": "cobweb4",
+          "textures": [
+            "cobweb/side4"
+          ]
+        },
+        {
+          "stateID": "cobweb5",
+          "textures": [
+            "cobweb/side5"
+          ]
+        },
+        {
+          "stateID": "cobweb6",
+          "textures": [
+            "cobweb/side6"
+          ]
+        },
+        {
+          "stateID": "cobweb7",
+          "textures": [
+            "cobweb/side7"
+          ]
+        },
+        {
+          "stateID": "cobweb8",
+          "textures": [
+            "cobweb/side8"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "smoke",
+      "blockType": "web",
+      "stepSound": "cloth",
+      "material": "web",
+      "creativeTab": "westeros_water_air_tab",
+      "label": "Smoke",
+      "type": "toggleOnUse,no-in-web",
+      "states": [
+        {
+          "stateID": "random",
+          "randomTextures": [
+            {
+              "textures": [
+                "smoke/smoke1"
+              ]
+            },
+            {
+              "textures": [
+                "smoke/smoke2"
+              ]
+            },
+            {
+              "textures": [
+                "smoke/smoke3"
+              ]
+            },
+            {
+              "textures": [
+                "smoke/smoke4"
+              ]
+            },
+            {
+              "textures": [
+                "smoke/smoke5"
+              ]
+            },
+            {
+              "textures": [
+                "smoke/smoke6"
+              ]
+            },
+            {
+              "textures": [
+                "smoke/smoke7"
+              ]
+            }
+          ]
+        },
+        {
+          "stateID": "smoke1",
+          "textures": [
+            "smoke/smoke1"
+          ]
+        },
+        {
+          "stateID": "smoke2",
+          "textures": [
+            "smoke/smoke2"
+          ]
+        },
+        {
+          "stateID": "smoke3",
+          "textures": [
+            "smoke/smoke3"
+          ]
+        },
+        {
+          "stateID": "smoke4",
+          "textures": [
+            "smoke/smoke4"
+          ]
+        },
+        {
+          "stateID": "smoke5",
+          "textures": [
+            "smoke/smoke5"
+          ]
+        },
+        {
+          "stateID": "smoke6",
+          "textures": [
+            "smoke/smoke6"
+          ]
+        },
+        {
+          "stateID": "smoke7",
+          "textures": [
+            "smoke/smoke7"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "vertical_rope",
+      "blockType": "web",
+      "stepSound": "cloth",
+      "material": "web",
+      "creativeTab": "westeros_cloth_fibers_tab",
+      "label": "Vertical Rope",
+      "textures": [
+        "web_block/rope_vertical"
+      ],
+      "type": "no-in-web"
+    },
+    {
+      "blockName": "rope_block_harness",
+      "blockType": "web",
+      "stepSound": "cloth",
+      "material": "web",
+      "creativeTab": "westeros_cloth_fibers_tab",
+      "label": "Rope Block Harness",
+      "textures": [
+        "web_block/rope_blockharness"
+      ],
+      "type": "no-in-web"
+    },
+    {
+      "blockName": "green_spiny_herb",
+      "blockType": "plant",
+      "type": "layerSensitive",
+      "material": "plants",
+      "creativeTab": "westeros_grasses_shrubs_tab",
+      "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+      },
+      "label": "Green Spiny Herb",
+      "randomTextures": [
+        {
+          "textures": [
+            "flowers/green_spiny_herb1"
+          ]
+        },
+        {
+          "textures": [
+            "flowers/green_spiny_herb2"
+          ]
+        },
+        {
+          "textures": [
+            "flowers/green_spiny_herb3"
+          ]
+        },
+        {
+          "textures": [
+            "flowers/green_spiny_herb4"
+          ]
+        },
+        {
+          "textures": [
+            "flowers/green_spiny_herb5"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "seagrass",
+      "blockType": "crop",
+      "stepSound": "grass",
+      "material": "plants",
+      "creativeTab": "westeros_water_air_tab",
+      "label": "Seagrass",
+      "randomTextures": [
+        {
+          "textures": [
+            "seagrass/side1"
+          ]
+        },
+        {
+          "textures": [
+            "seagrass/side2"
+          ]
+        },
+        {
+          "textures": [
+            "seagrass/side3"
+          ]
+        },
+        {
+          "textures": [
+            "seagrass/side4"
+          ]
+        }
+      ],
+      "type": "layerSensitive"
+    },
+    {
       "blockName": "candle_altar",
       "blockType": "crop",
       "stepSound": "powder",

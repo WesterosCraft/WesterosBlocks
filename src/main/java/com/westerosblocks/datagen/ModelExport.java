@@ -8,7 +8,6 @@ import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 
-import java.io.File;
 import java.util.*;
 
 public class ModelExport {
@@ -25,6 +24,17 @@ public class ModelExport {
     }
 
     public static Identifier createBlockIdentifier(String texturePath) {
+        // If the texture path includes a namespace
+        if (texturePath.contains(":")) {
+            String namespace = texturePath.substring(0, texturePath.indexOf(':'));
+            String path = texturePath.substring(texturePath.indexOf(':') + 1);
+            // If it's not a minecraft texture, prepend block/
+            if (!namespace.equals("minecraft")) {
+                path = "block/" + path;
+            }
+            return Identifier.of(namespace, path);
+        }
+        // No namespace, use mod ID and prepend block/
         return Identifier.of(WesterosBlocks.MOD_ID, "block/" + texturePath);
     }
 
