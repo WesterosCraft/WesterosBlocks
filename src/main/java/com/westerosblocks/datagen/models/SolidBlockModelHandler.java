@@ -17,7 +17,7 @@ public class SolidBlockModelHandler extends ModelExport {
     private final WesterosBlockDef def;
 
     public SolidBlockModelHandler(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
-        super(block, def);
+        super(generator, block, def);
         this.generator = generator;
         this.block = block;
         this.def = def;

@@ -16,10 +16,12 @@ public class ModelExport {
     public static final String CUSTOM_PATH = "block/custom/";
     protected final Block block;
     protected static WesterosBlockDef def;
+    protected static BlockStateModelGenerator generator;
 
-    public ModelExport(Block block, WesterosBlockDef def) {
+    public ModelExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
         this.block = block;
         this.def = def;
+        this.generator = generator;
     }
 
     public static Identifier createBlockIdentifier(String texturePath) {

@@ -20,7 +20,7 @@ public class Cuboid16WayBlockModelHandler extends ModelExport {
     private static final String modRot[] = {"", "_rotn22", "_rotn45", "_rot22"};
 
     public Cuboid16WayBlockModelHandler(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
-        super(block, def);
+        super(generator, block, def);
         this.generator = generator;
         this.block = block;
         this.def = def;

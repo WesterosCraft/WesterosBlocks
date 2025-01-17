@@ -300,6 +300,40 @@
       "isCustomModel": true
     },
     {
+      "blockName": "sand_skeleton",
+      "blockType": "sand",
+      "hardness": 0.5,
+      "stepSound": "sand",
+      "material": "sand",
+      "creativeTab": "westeros_sand_gravel_tab",
+      "label": "Sand Skeleton",
+      "colorMult": "textures/colormap/sand",
+      "textures": [
+        "sand_block/sand_skeleton"
+      ]
+    },
+    {
+      "blockName": "grain_basket_slab",
+      "blockType": "slab",
+      "hardness": 2,
+      "stepSound": "cloth",
+      "material": "sand",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "shovel",
+          "level": 1
+        }
+      ],
+      "creativeTab": "westeros_food_blocks_tab",
+      "label": "Grain Basket Slab",
+      "textures": [
+        "crate_block/basket_bottom",
+        "crate_block/basket_grain",
+        "crate_block/basket_side_slab"
+      ]
+    },
+    {
       "blockName": "iron_rungs_broken",
       "blockType": "ladder",
       "stepSound": "ladder",
@@ -316,6 +350,63 @@
       ],
       "type": "allow-unsupported",
       "isCustomModel": true
+    },
+    {
+      "blockName": "mossy_oak_log",
+      "blockType": "log",
+      "stepSound": "wood",
+      "material": "wood",
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "westeros_logs_tab",
+      "label": "Mossy Oak Log",
+      "textures": [
+        "bark/oak/mossy/bottom",
+        "bark/oak/mossy/top",
+        "bark/oak/mossy/side"
+      ]
+    },
+    {
+      "blockName": "oak_log_rope",
+      "blockType": "log",
+      "stepSound": "wood",
+      "material": "wood",
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "westeros_logs_tab",
+      "label": "Oak Log Rope",
+      "textures": [
+        "bark/oak/top",
+        "bark/oak/top",
+        "bark/oak/rope"
+      ]
+    },
+    {
+      "blockName": "oak_log_chain",
+      "blockType": "log",
+      "stepSound": "wood",
+      "material": "wood",
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "westeros_logs_tab",
+      "label": "Oak Log Chain",
+      "textures": [
+        "bark/oak/top",
+        "bark/oak/top",
+        "bark/oak/chain"
+      ]
     },
     {
       "blockName": "rope_ladder",

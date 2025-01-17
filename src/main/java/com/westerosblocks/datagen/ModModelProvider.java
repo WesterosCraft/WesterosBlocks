@@ -26,6 +26,8 @@ public class ModModelProvider extends FabricModelProvider {
             Block currentBlock = customBlocks.get(customBlockDef.getBlockName());
 
             switch (customBlockDef.blockType) {
+                case "soulsand":
+                case "sand":
                 case "solid": {
                     new SolidBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
@@ -47,6 +49,9 @@ public class ModModelProvider extends FabricModelProvider {
                     break;
                 case "cuboid-16way":
                     new Cuboid16WayBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                case "log":
+                    new LogBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
 //                case "wall": {
 //                    WallBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
@@ -70,6 +75,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     }
 
+    @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         HashMap<String, Block> customBlocks = ModBlocks.getCustomBlocksByName();
         WesterosBlockDef[] customBlockDefs = WesterosBlocks.getCustomBlockDefs();
@@ -78,7 +84,8 @@ public class ModModelProvider extends FabricModelProvider {
             if (customBlockDef == null) continue;
             Block currentBlock = customBlocks.get(customBlockDef.getBlockName());
             switch (customBlockDef.blockType) {
-
+                case "soulsand":
+                case "sand":
                 case "solid": {
                     SolidBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
@@ -94,6 +101,8 @@ public class ModModelProvider extends FabricModelProvider {
                 case "ladder":
                     LadderBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
+                case "log":
+                    LogBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
 ////                case "fence": {
 ////                    FenceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
 ////                    break;
