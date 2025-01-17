@@ -17,7 +17,7 @@ public class Cuboid16WayBlockModelHandler extends ModelExport {
     private final Block block;
     private final WesterosBlockDef def;
 
-    private static final String modRot[] = {"", "_rotn22", "_rotn45", "_rot22"};
+    private static final String[] modRot = {"", "_rotn22", "_rotn45", "_rot22"};
 
     public Cuboid16WayBlockModelHandler(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
         super(generator, block, def);

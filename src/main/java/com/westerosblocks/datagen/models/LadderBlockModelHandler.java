@@ -18,6 +18,8 @@ public class LadderBlockModelHandler extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
     private final WesterosBlockDef def;
+    static final String[] FACES = {"north", "south", "east", "west"};
+    static final int[] Y_ROTATIONS = {0, 180, 90, 270};
 
     public LadderBlockModelHandler(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
         super(generator, block, def);
@@ -29,9 +31,6 @@ public class LadderBlockModelHandler extends ModelExport {
     public static Identifier modelFileName(int setidx, boolean isCustomModel) {
         return Identifier.of(WesterosBlocks.MOD_ID, getModelName("base", setidx)).withPrefixedPath(isCustomModel ? CUSTOM_PATH : GENERATED_PATH);
     }
-
-    static final String[] faces = {"north", "south", "east", "west"};
-    static final int[] y = {0, 180, 90, 270};
 
     public void generateBlockStateModels() {
         final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
@@ -54,10 +53,10 @@ public class LadderBlockModelHandler extends ModelExport {
                 if (set.weight != null) {
                     variant.put(VariantSettings.WEIGHT, set.weight);
                 }
-                if (y[faceIdx] > 0) {
-                    variant.put(VariantSettings.Y, getRotation(y[faceIdx]));
+                if (Y_ROTATIONS[faceIdx] > 0) {
+                    variant.put(VariantSettings.Y, getRotation(Y_ROTATIONS[faceIdx]));
                 }
-                addVariant("facing=" + faces[faceIdx], variant, null, variants);
+                addVariant("facing=" + FACES[faceIdx], variant, null, variants);
             }
         }
 

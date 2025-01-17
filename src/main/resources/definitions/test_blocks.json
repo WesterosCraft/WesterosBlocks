@@ -674,6 +674,30 @@
         "zMin": 0,
         "zMax": 1
       }
+    },
+    {
+      "blockName": "horizontal_rope",
+      "blockType": "rail",
+      "material": "cloth",
+      "creativeTab": "westeros_cloth_fibers_tab",
+      "label": "Horizontal Rope",
+      "textures": [
+        "rail_block/rope",
+        "rail_block/rope_turned"
+      ],
+      "type": "allow-unsupported"
+    },
+    {
+      "blockName": "horizontal_net",
+      "blockType": "rail",
+      "material": "cloth",
+      "creativeTab": "westeros_cloth_fibers_tab",
+      "label": "Horizontal Net",
+      "textures": [
+        "rail_block/net_large",
+        "rail_block/net_large_turned"
+      ],
+      "type": "allow-unsupported"
     }
   ]
 }

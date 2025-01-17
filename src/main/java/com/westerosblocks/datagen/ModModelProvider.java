@@ -44,15 +44,22 @@ public class ModModelProvider extends FabricModelProvider {
 //                    new FenceBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
 //                    break;
 //                }
-                case "ladder":
+                case "ladder": {
                     new LadderBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
-                case "cuboid-16way":
+                }
+                case "cuboid-16way": {
                     new Cuboid16WayBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
-                case "log":
+                }
+                case "log": {
                     new LogBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
+                }
+                case "rail": {
+                    new RailBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
 //                case "wall": {
 //                    WallBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
 //                    break;
@@ -98,11 +105,18 @@ public class ModModelProvider extends FabricModelProvider {
                     SlabBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-                case "ladder":
+                case "ladder": {
                     LadderBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
-                case "log":
+                }
+                case "log": {
                     LogBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
+                case "rail": {
+                    RailBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
 ////                case "fence": {
 ////                    FenceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
 ////                    break;
