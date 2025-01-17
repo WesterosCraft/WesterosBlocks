@@ -726,6 +726,64 @@
       "textures": [
         "trapdoor_block/kings_landing_manhole"
       ]
+    },
+    {
+      "blockName": "snowy_weirwood_leaves",
+      "blockType": "leaves",
+      "stepSound": "grass",
+      "material": "leaves",
+      "type": "no-decay,better-foliage",
+      "creativeTab": "westeros_foliage_tab",
+      "label": "Snowy Weirwood Leaves",
+      "rotateRandom": true,
+      "textures": [
+        "leaves/weirwood/snowy/all"
+      ]
+    },
+    {
+      "blockName": "apple_fruit_leaves",
+      "blockType": "leaves",
+      "stepSound": "grass",
+      "material": "leaves",
+      "creativeTab": "westeros_foliage_tab",
+      "type": "no-decay,better-foliage,overlay",
+      "label": "Apple Fruit Leaves",
+      "colorMult": "textures/colormap/birch",
+      "rotateRandom": true,
+      "randomTextures": [
+        {
+          "textures": [
+            "leaves/birch/all",
+            "transparent",
+            "leaves/overlay/apple0"
+          ],
+          "weight": 10
+        },
+        {
+          "textures": [
+            "leaves/birch/all",
+            "transparent",
+            "leaves/overlay/apple1"
+          ],
+          "weight": 10
+        },
+        {
+          "textures": [
+            "leaves/birch/all",
+            "transparent",
+            "leaves/overlay/apple2"
+          ],
+          "weight": 10
+        },
+        {
+          "textures": [
+            "leaves/birch/all",
+            "transparent",
+            "leaves/overlay/apple3"
+          ],
+          "weight": 2
+        }
+      ]
     }
   ]
 }

@@ -67,6 +67,15 @@ public class ModModels {
         );
     }
 
+    public static Model createBetterFoliageModel(String parent) {
+        return block(parent,
+                TextureKey.PARTICLE,
+                TextureKey.ALL,
+                ModTextureKey.LEAVES_OVERLAY_END,
+                ModTextureKey.LEAVES_OVERLAY_SIDE
+        );
+    }
+
     public static Model createCuboidModel(String parent) {
         return block(parent,
                 TextureKey.PARTICLE,

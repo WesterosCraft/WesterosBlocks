@@ -19,7 +19,7 @@
 //    private static final String GENERATED_PATH = "block/generated/";
 //
 //    public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator, Block block, WesterosBlockDef blockDefinition) {
-//        boolean isUnconnected = block instanceof WCFenceBlock && ((WCFenceBlock) block).unconnect;
+//        boolean isUnconnected = block instanceof WCFenceBlock && ((WCFfenceBlock) block).unconnect;
 //        boolean hasMultipleStates = blockDefinition.states.size() > 1;
 //
 //        // Generate models for each state

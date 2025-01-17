@@ -64,6 +64,17 @@ public class ModModelProvider extends FabricModelProvider {
                     new TrapDoorBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
+                case "torch": {
+                    new TorchBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
+                }
+                case "leaves": {
+                    new LeavesBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                }
+                // TODO waiting on block to be done
+//                case "flowerpot": {
+//                    new FlowerPotModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+//                }
 //                case "wall": {
 //                    WallBlockModelHandler.generateBlockStateModels(blockStateModelGenerator, currentBlock, customBlockDef);
 //                    break;
@@ -123,7 +134,20 @@ public class ModModelProvider extends FabricModelProvider {
                 }
                 case "trapdoor": {
                     TrapDoorBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
                 }
+                case "torch": {
+                    TorchBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
+                case "leaves": {
+                    LeavesBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
+                // TODO waiting on block to be done
+//                case "flowerpot": {
+//                    FlowerPotModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+//                }
 ////                case "fence": {
 ////                    FenceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
 ////                    break;

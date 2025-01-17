@@ -14,7 +14,6 @@ public class ModTextureKey {
     public static final TextureKey TOP_OVERLAY = TextureKey.of("top_ov");
     public static final TextureKey WALL_OVERLAY = TextureKey.of("wall_ov");
 
-    // For Cuboid block generation
     public static final TextureKey TEXTURE_0 = TextureKey.of("txt0");
     public static final TextureKey TEXTURE_1 = TextureKey.of("txt1");
     public static final TextureKey TEXTURE_2 = TextureKey.of("txt2");
@@ -22,6 +21,10 @@ public class ModTextureKey {
     public static final TextureKey TEXTURE_4 = TextureKey.of("txt4");
     public static final TextureKey TEXTURE_5 = TextureKey.of("txt5");
 
-    // For latter block generation
     public static final TextureKey LADDER = TextureKey.of("ladder");
+
+    public static final TextureKey FLOWER_POT = TextureKey.of("flowerpot");
+
+    public static final TextureKey LEAVES_OVERLAY_END = TextureKey.of("overlayend");
+    public static final TextureKey LEAVES_OVERLAY_SIDE = TextureKey.of("overlayside");
 }
