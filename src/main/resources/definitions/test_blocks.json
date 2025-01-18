@@ -114,6 +114,41 @@
       "type": "allow-unsupported,no-climb,has-down"
     },
     {
+      "blockName": "nights_watch_bed",
+      "material": "cloth",
+      "blockType": "bed",
+      "creativeTab": "westeros_furniture_tab",
+      "label": "Nights Watch Bed",
+      "type": "shape:normal",
+      "itemTexture": "bed_block/bed_night_watch_1",
+      "textures": [
+        "bed_block/bed_night_watch_0",
+        "bed_block/bed_night_watch_1",
+        "bed_block/bed_night_watch_2",
+        "bed_block/bed_night_watch_3",
+        "bed_block/bed_night_watch_4",
+        "bed_block/bed_night_watch_5"
+      ]
+    },
+    {
+      "blockName": "northern_bed",
+      "stepSound": "wood",
+      "material": "cloth",
+      "blockType": "bed",
+      "creativeTab": "westeros_furniture_tab",
+      "label": "Northern Bed",
+      "type": "shape:normal",
+      "itemTexture": "bed_block/bed_north_1",
+      "textures": [
+        "bed_block/bed_north_0",
+        "bed_block/bed_north_1",
+        "bed_block/bed_north_2",
+        "bed_block/bed_north_3",
+        "bed_block/bed_north_4",
+        "bed_block/bed_north_5"
+      ]
+    },
+    {
       "blockName": "falling_water_block_one",
       "blockType": "vines",
       "stepSound": "cloth",

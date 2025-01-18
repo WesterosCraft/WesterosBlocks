@@ -1,18 +1,13 @@
 package com.westerosblocks.datagen.models;
 
-import com.google.common.collect.ImmutableList;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
-import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Direction;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Optional;
 
 public class VinesBlockModelHandler extends ModelExport {
@@ -33,14 +28,12 @@ public class VinesBlockModelHandler extends ModelExport {
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
             WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
 
-            // Generate block models if not custom
             if (!def.isCustomModel()) {
                 generateVineModels(generator, set, setIdx);
             }
 
             int rotationCount = def.rotateRandom ? 4 : 1;
             for (int rotIdx = 0; rotIdx < rotationCount; rotIdx++) {
-                // Handle each direction separately to create proper multipart states
                 // SOUTH
                 When.PropertyCondition southCondition = When.create().set(Properties.SOUTH, true);
                 BlockStateVariant southVariant = createVariant(set, setIdx, 0, false, 0);

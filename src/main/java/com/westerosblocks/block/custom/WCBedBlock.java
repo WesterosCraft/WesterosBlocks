@@ -65,11 +65,11 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
     public static final EnumProperty<BedPart> PART = Properties.BED_PART;
     public static final BooleanProperty OCCUPIED = Properties.OCCUPIED;
     protected static final int HEIGHT = 9;
-    protected static final VoxelShape BASE = Block.createCuboidShape(0.0D, 3.0D, 0.0D, 16.0D, 9.0D, 16.0D);
-    protected static final VoxelShape LEG_NORTH_WEST = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 3.0D, 3.0D, 3.0D);
-    protected static final VoxelShape LEG_SOUTH_WEST = Block.createCuboidShape(0.0D, 0.0D, 13.0D, 3.0D, 3.0D, 16.0D);
-    protected static final VoxelShape LEG_NORTH_EAST = Block.createCuboidShape(13.0D, 0.0D, 0.0D, 16.0D, 3.0D, 3.0D);
-    protected static final VoxelShape LEG_SOUTH_EAST = Block.createCuboidShape(13.0D, 0.0D, 13.0D, 16.0D, 3.0D, 16.0D);
+    protected static final VoxelShape BASE = createCuboidShape(0.0D, 3.0D, 0.0D, 16.0D, 9.0D, 16.0D);
+    protected static final VoxelShape LEG_NORTH_WEST = createCuboidShape(0.0D, 0.0D, 0.0D, 3.0D, 3.0D, 3.0D);
+    protected static final VoxelShape LEG_SOUTH_WEST = createCuboidShape(0.0D, 0.0D, 13.0D, 3.0D, 3.0D, 16.0D);
+    protected static final VoxelShape LEG_NORTH_EAST = createCuboidShape(13.0D, 0.0D, 0.0D, 16.0D, 3.0D, 3.0D);
+    protected static final VoxelShape LEG_SOUTH_EAST = createCuboidShape(13.0D, 0.0D, 13.0D, 16.0D, 3.0D, 16.0D);
     protected static final VoxelShape NORTH_SHAPE = VoxelShapes.union(BASE, LEG_NORTH_WEST, LEG_NORTH_EAST);
     protected static final VoxelShape SOUTH_SHAPE = VoxelShapes.union(BASE, LEG_SOUTH_WEST, LEG_SOUTH_EAST);
     protected static final VoxelShape WEST_SHAPE = VoxelShapes.union(BASE, LEG_NORTH_WEST, LEG_SOUTH_WEST);

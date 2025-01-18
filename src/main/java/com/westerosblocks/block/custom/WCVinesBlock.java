@@ -42,12 +42,12 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
     private boolean no_climb = false;
     public boolean has_down = false;
     public static final BooleanProperty DOWN = Properties.DOWN;
-    private static final VoxelShape UP_AABB = VoxelShapes.cuboid(0.0, 0.9375, 0.0, 1.0, 1.0, 1.0);  // 15/16 to 16/16
-    private static final VoxelShape DOWN_AABB = VoxelShapes.cuboid(0.0, 0.0, 0.0, 1.0, 0.0625, 1.0); // 0 to 1/16
-    private static final VoxelShape WEST_AABB = VoxelShapes.cuboid(0.0, 0.0, 0.0, 0.0625, 1.0, 1.0); // 0 to 1/16 width
-    private static final VoxelShape EAST_AABB = VoxelShapes.cuboid(0.9375, 0.0, 0.0, 1.0, 1.0, 1.0); // 15/16 to 16/16 width
-    private static final VoxelShape NORTH_AABB = VoxelShapes.cuboid(0.0, 0.0, 0.0, 1.0, 1.0, 0.0625); // 0 to 1/16 depth
-    private static final VoxelShape SOUTH_AABB = VoxelShapes.cuboid(0.0, 0.0, 0.9375, 1.0, 1.0, 1.0); // 15/16 to 16/16 depth
+    private static final VoxelShape UP_AABB = Block.createCuboidShape(0.0D, 15.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    private static final VoxelShape DOWN_AABB = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
+    private static final VoxelShape WEST_AABB = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 1.0D, 16.0D, 16.0D);
+    private static final VoxelShape EAST_AABB = Block.createCuboidShape(15.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    private static final VoxelShape NORTH_AABB = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 1.0D);
+    private static final VoxelShape SOUTH_AABB = Block.createCuboidShape(0.0D, 0.0D, 15.0D, 16.0D, 16.0D, 16.0D);
     private final Map<BlockState, VoxelShape> shapesCache;
 
     public static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION = createDirectionPropertyMap();

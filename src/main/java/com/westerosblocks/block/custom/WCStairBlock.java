@@ -75,16 +75,16 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
     public static final EnumProperty<StairShape> SHAPE = Properties.STAIR_SHAPE;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    protected static final VoxelShape BOTTOM_AABB = VoxelShapes.cuboid(0.0, 0.0, 0.0, 16.0, 8.0, 16.0);
-    protected static final VoxelShape TOP_AABB = VoxelShapes.cuboid(0.0, 8.0, 0.0, 16.0, 16.0, 16.0);
-    protected static final VoxelShape OCTET_NNN = VoxelShapes.cuboid(0.0, 0.0, 0.0, 8.0, 8.0, 8.0);
-    protected static final VoxelShape OCTET_NNP = VoxelShapes.cuboid(0.0, 0.0, 8.0, 8.0, 8.0, 16.0);
-    protected static final VoxelShape OCTET_NPN = VoxelShapes.cuboid(0.0, 8.0, 0.0, 8.0, 16.0, 8.0);
-    protected static final VoxelShape OCTET_NPP = VoxelShapes.cuboid(0.0, 8.0, 8.0, 8.0, 16.0, 16.0);
-    protected static final VoxelShape OCTET_PNN = VoxelShapes.cuboid(8.0, 0.0, 0.0, 16.0, 8.0, 8.0);
-    protected static final VoxelShape OCTET_PNP = VoxelShapes.cuboid(8.0, 0.0, 8.0, 16.0, 8.0, 16.0);
-    protected static final VoxelShape OCTET_PPN = VoxelShapes.cuboid(8.0, 8.0, 0.0, 16.0, 16.0, 8.0);
-    protected static final VoxelShape OCTET_PPP = VoxelShapes.cuboid(8.0, 8.0, 8.0, 16.0, 16.0, 16.0);
+    protected static final VoxelShape BOTTOM_AABB = createCuboidShape(0.0, 0.0, 0.0, 16.0, 8.0, 16.0);
+    protected static final VoxelShape TOP_AABB = createCuboidShape(0.0, 8.0, 0.0, 16.0, 16.0, 16.0);
+    protected static final VoxelShape OCTET_NNN = createCuboidShape(0.0, 0.0, 0.0, 8.0, 8.0, 8.0);
+    protected static final VoxelShape OCTET_NNP = createCuboidShape(0.0, 0.0, 8.0, 8.0, 8.0, 16.0);
+    protected static final VoxelShape OCTET_NPN = createCuboidShape(0.0, 8.0, 0.0, 8.0, 16.0, 8.0);
+    protected static final VoxelShape OCTET_NPP = createCuboidShape(0.0, 8.0, 8.0, 8.0, 16.0, 16.0);
+    protected static final VoxelShape OCTET_PNN = createCuboidShape(8.0, 0.0, 0.0, 16.0, 8.0, 8.0);
+    protected static final VoxelShape OCTET_PNP = createCuboidShape(8.0, 0.0, 8.0, 16.0, 8.0, 16.0);
+    protected static final VoxelShape OCTET_PPN = createCuboidShape(8.0, 8.0, 0.0, 16.0, 16.0, 8.0);
+    protected static final VoxelShape OCTET_PPP = createCuboidShape(8.0, 8.0, 8.0, 16.0, 16.0, 16.0);
 
     private final WesterosBlockDef def;
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");

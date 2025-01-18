@@ -228,6 +228,10 @@ public class ModModelProvider extends FabricModelProvider {
                     VinesBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
+                case "bed": {
+                    BedBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
                 // TODO waiting on block to be done
 //                case "flowerpot": {
 //                    FlowerPotModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);

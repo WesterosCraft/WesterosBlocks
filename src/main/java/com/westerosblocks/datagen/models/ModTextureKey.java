@@ -30,4 +30,10 @@ public class ModTextureKey {
 
     public static final TextureKey VINES = TextureKey.of("vines");
 
+    public static final TextureKey BED_TOP = TextureKey.of("bedtop");
+    public static final TextureKey BED_END = TextureKey.of("bedend");
+    public static final TextureKey BED_SIDE = TextureKey.of("bedside");
+    public static final TextureKey BED_TOP2 = TextureKey.of("bedtop2");
+    public static final TextureKey BED_END2 = TextureKey.of("bedend2");
+    public static final TextureKey BED_SIDE2 = TextureKey.of("bedside2");
 }

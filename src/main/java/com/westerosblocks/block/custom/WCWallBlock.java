@@ -32,7 +32,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
-public class WCWallBlock extends WallBlock implements Waterloggable, WesterosBlockLifecycle {
+public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
 
     public static final BooleanProperty UP = Properties.UP;
     public static  EnumProperty<WallShape> EAST_WALL = Properties.EAST_WALL_SHAPE;
