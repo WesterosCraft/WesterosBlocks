@@ -56,7 +56,8 @@ public class TrapDoorBlockModelHandler extends ModelExport {
     }
 
     public void generateBlockStateModels() {
-        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (ModelEntry entry : MODEL_ENTRIES) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
@@ -74,7 +75,7 @@ public class TrapDoorBlockModelHandler extends ModelExport {
                     variant.put(VariantSettings.Y, getRotation(entry.yRotation));
                 }
 
-                addVariant(entry.condition, variant, null, variants);
+                blockStateBuilder.addVariant(entry.condition, variant, null, variants);
             }
         }
 

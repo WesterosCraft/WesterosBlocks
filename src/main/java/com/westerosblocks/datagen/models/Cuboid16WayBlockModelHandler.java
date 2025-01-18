@@ -34,7 +34,8 @@ public class Cuboid16WayBlockModelHandler extends ModelExport {
     }
 
     public void generateBlockStateModels() {
-        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (WesterosBlockStateRecord stateRecord : def.states) {
             boolean justBase = stateRecord.stateID == null;
@@ -54,7 +55,7 @@ public class Cuboid16WayBlockModelHandler extends ModelExport {
                     if (rot > 0) {
                         variant.put(VariantSettings.Y, getRotation(rot));
                     }
-                    addVariant("rotation=" + rotation, variant, stateIDs, variants);
+                    blockStateBuilder.addVariant("rotation=" + rotation, variant, stateIDs, variants);
 
                     // make model
                 }

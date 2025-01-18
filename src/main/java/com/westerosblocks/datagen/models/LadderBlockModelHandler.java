@@ -33,7 +33,8 @@ public class LadderBlockModelHandler extends ModelExport {
     }
 
     public void generateBlockStateModels() {
-        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         if (!def.isCustomModel()) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
@@ -56,7 +57,7 @@ public class LadderBlockModelHandler extends ModelExport {
                 if (Y_ROTATIONS[faceIdx] > 0) {
                     variant.put(VariantSettings.Y, getRotation(Y_ROTATIONS[faceIdx]));
                 }
-                addVariant("facing=" + FACES[faceIdx], variant, null, variants);
+                blockStateBuilder.addVariant("facing=" + FACES[faceIdx], variant, null, variants);
             }
         }
 

@@ -28,13 +28,14 @@ public class FenceGateBlockModelHandler extends ModelExport {
     }
 
     public void generateBlockStateModels() {
-        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (int f = 0; f < FACINGS.length; f++) {
-            generateVariantsForState(variants, "facing=" + FACINGS[f] + ",in_wall=false,open=false", "gate", FACING_ROTATIONS[f]);
-            generateVariantsForState(variants, "facing=" + FACINGS[f] + ",in_wall=false,open=true", "gate_open", FACING_ROTATIONS[f]);
-            generateVariantsForState(variants, "facing=" + FACINGS[f] + ",in_wall=true,open=false", "gate_wall", FACING_ROTATIONS[f]);
-            generateVariantsForState(variants, "facing=" + FACINGS[f] + ",in_wall=true,open=true", "gate_wall_open", FACING_ROTATIONS[f]);
+            generateVariantsForState(blockStateBuilder, variants, "facing=" + FACINGS[f] + ",in_wall=false,open=false", "gate", FACING_ROTATIONS[f]);
+            generateVariantsForState(blockStateBuilder, variants, "facing=" + FACINGS[f] + ",in_wall=false,open=true", "gate_open", FACING_ROTATIONS[f]);
+            generateVariantsForState(blockStateBuilder, variants, "facing=" + FACINGS[f] + ",in_wall=true,open=false", "gate_wall", FACING_ROTATIONS[f]);
+            generateVariantsForState(blockStateBuilder, variants, "facing=" + FACINGS[f] + ",in_wall=true,open=true", "gate_wall_open", FACING_ROTATIONS[f]);
         }
 
         generateBlockStateFiles(generator, block, variants);
@@ -47,7 +48,7 @@ public class FenceGateBlockModelHandler extends ModelExport {
         }
     }
 
-    private void generateVariantsForState(Map<String, List<BlockStateVariant>> variants, String condition, String modelType, int yRotation) {
+    private void generateVariantsForState(BlockStateBuilder blockStateBuilder, Map<String, List<BlockStateVariant>> variants, String condition, String modelType, int yRotation) {
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
             WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
 
@@ -65,7 +66,7 @@ public class FenceGateBlockModelHandler extends ModelExport {
 
             variant.put(VariantSettings.UVLOCK, true);
 
-            addVariant(condition, variant, null, variants);
+            blockStateBuilder.addVariant(condition, variant, null, variants);
         }
     }
 

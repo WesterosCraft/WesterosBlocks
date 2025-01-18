@@ -64,7 +64,8 @@ public class SlabBlockModelHandler extends ModelExport {
 
     public void generateBlockStateModels() {
         WCSlabBlock slabBlock = (block instanceof WCSlabBlock) ? (WCSlabBlock) block : null;
-        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (WesterosBlockStateRecord sr : def.states) {
             boolean justBase = sr.stateID == null;
@@ -85,7 +86,7 @@ public class SlabBlockModelHandler extends ModelExport {
                 if (set.weight != null) {
                     topVariant.put(VariantSettings.WEIGHT, set.weight);
                 }
-                addVariant("type=top", topVariant, stateIDs, variants);
+                blockStateBuilder.addVariant("type=top", topVariant, stateIDs, variants);
 
                 // Do bottom half slab
                 BlockStateVariant bottomVariant = BlockStateVariant.create();
@@ -94,7 +95,7 @@ public class SlabBlockModelHandler extends ModelExport {
                 if (set.weight != null) {
                     bottomVariant.put(VariantSettings.WEIGHT, set.weight);
                 }
-                addVariant("type=bottom", bottomVariant, stateIDs, variants);
+                blockStateBuilder.addVariant("type=bottom", bottomVariant, stateIDs, variants);
 
                 // Do full slab
                 BlockStateVariant doubleVariant = BlockStateVariant.create();
@@ -103,7 +104,7 @@ public class SlabBlockModelHandler extends ModelExport {
                 if (set.weight != null) {
                     doubleVariant.put(VariantSettings.WEIGHT, set.weight);
                 }
-                addVariant("type=double", doubleVariant, stateIDs, variants);
+                blockStateBuilder.addVariant("type=double", doubleVariant, stateIDs, variants);
 
                 // Make models
                 String[] types = {"bottom", "top", "double"};

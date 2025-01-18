@@ -45,7 +45,8 @@ public class SolidBlockModelHandler extends ModelExport {
     public void generateBlockStateModels() {
         WCSolidBlock solidBlock = (block instanceof WCSolidBlock) ? (WCSolidBlock) block : null;
         boolean isSymmertrical = solidBlock != null && solidBlock.symmetrical;
-        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (WesterosBlockStateRecord sr : def.states) {
             boolean justBase = sr.stateID == null;
@@ -65,14 +66,14 @@ public class SolidBlockModelHandler extends ModelExport {
                         varSymmetrical.put(VariantSettings.MODEL, symId);
                         if (set.weight != null) { varSymmetrical.put(VariantSettings.WEIGHT, set.weight); }
                         if (rotIdx > 0) { varSymmetrical.put(VariantSettings.Y, getRotation(90 * rotIdx)); }
-                        addVariant("symmetrical=true", varSymmetrical, stateIDs, variants);
+                        blockStateBuilder.addVariant("symmetrical=true", varSymmetrical, stateIDs, variants);
 
                         BlockStateVariant varAsymmetrical = BlockStateVariant.create();
                         Identifier asymId = modelFileName(def, fname, setIdx, sr.isCustomModel(), false);
                         varAsymmetrical.put(VariantSettings.MODEL, modelFileName(def, fname, setIdx, sr.isCustomModel(), false));
                         if (set.weight != null) { varAsymmetrical.put(VariantSettings.WEIGHT, set.weight); }
                         if (rotIdx > 0) { varAsymmetrical.put(VariantSettings.Y, getRotation(90 * rotIdx)); }
-                        addVariant("symmetrical=false", varAsymmetrical, stateIDs, variants);
+                        blockStateBuilder.addVariant("symmetrical=false", varAsymmetrical, stateIDs, variants);
 
                         generateSolidModel(generator, symId, true,
                                 isTinted, hasOverlay, sr, setIdx);
@@ -84,7 +85,7 @@ public class SolidBlockModelHandler extends ModelExport {
                         variant.put(VariantSettings.MODEL, modelFileName(def, fname, setIdx, sr.isCustomModel()));
                         if (set.weight != null) { variant.put(VariantSettings.WEIGHT, set.weight); }
                         if (rotIdx > 0) { variant.put(VariantSettings.Y, getRotation(90 * rotIdx)); }
-                        addVariant("", variant, stateIDs, variants);
+                        blockStateBuilder.addVariant("", variant, stateIDs, variants);
 
                         generateSolidModel(generator, id, false, isTinted, hasOverlay, sr, setIdx);
                     }

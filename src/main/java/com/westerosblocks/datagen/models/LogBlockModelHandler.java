@@ -30,7 +30,8 @@ public class LogBlockModelHandler extends ModelExport {
     private static final String[] models = {"x", "y", "z"};
 
     public void generateBlockStateModels() {
-        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (int i = 0; i < states.length; i++) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
@@ -49,7 +50,7 @@ public class LogBlockModelHandler extends ModelExport {
                 if (yrot[i] != 0) {
                     variant.put(VariantSettings.Y, getRotation(yrot[i]));
                 }
-                addVariant(states[i], variant, null, variants);
+                blockStateBuilder.addVariant(states[i], variant, null, variants);
             }
         }
 

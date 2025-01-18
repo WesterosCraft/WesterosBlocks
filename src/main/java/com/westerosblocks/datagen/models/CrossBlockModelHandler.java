@@ -34,7 +34,8 @@ public class CrossBlockModelHandler extends ModelExport {
 
     public void generateBlockStateModels() {
         String[] conditions = layerSensitive ? LAYER_CONDITIONS : new String[]{""};
-        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
         int rotationCount = def.rotateRandom ? 4 : 1;
 
         for (int layer = 0; layer < conditions.length; layer++) {
@@ -61,7 +62,7 @@ public class CrossBlockModelHandler extends ModelExport {
                             variant.put(VariantSettings.Y, getRotation(90 * rotIdx));
                         }
                         Set<String> stateIDs = currentRec.stateID == null ? null : Collections.singleton(currentRec.stateID);
-                        addVariant(layerCondition, variant, stateIDs, variants);
+                        blockStateBuilder.addVariant(layerCondition, variant, stateIDs, variants);
                     }
                 }
 

@@ -46,7 +46,8 @@ public class RailBlockModelHandler extends ModelExport {
     }
 
     public void generateBlockStateModels() {
-        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (int i = 0; i < SHAPES.length; i++) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
@@ -64,7 +65,7 @@ public class RailBlockModelHandler extends ModelExport {
                     variant.put(VariantSettings.Y, getRotation(ROTATIONS[i]));
                 }
 
-                addVariant(SHAPES[i], variant, null, variants);
+                blockStateBuilder.addVariant(SHAPES[i], variant, null, variants);
             }
         }
 

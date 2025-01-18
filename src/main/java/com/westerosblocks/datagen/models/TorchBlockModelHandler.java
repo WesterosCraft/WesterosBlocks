@@ -50,7 +50,8 @@ public class TorchBlockModelHandler extends ModelExport {
     }
 
     private void generateStandingTorchBlockState() {
-        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
             WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
@@ -63,14 +64,15 @@ public class TorchBlockModelHandler extends ModelExport {
                 standingVariant.put(VariantSettings.WEIGHT, set.weight);
             }
 
-            addVariant("", standingVariant, null, variants);
+            blockStateBuilder.addVariant("", standingVariant, null, variants);
         }
 
         generateBlockStateFiles(generator, block, variants);
     }
 
     private void generateWallTorchBlockState() {
-        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (int i = 0; i < FACING_DIRECTIONS.length; i++) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
@@ -85,7 +87,7 @@ public class TorchBlockModelHandler extends ModelExport {
                 }
 
                 variant.put(VariantSettings.Y, getRotation(ROTATIONS[i]));
-                addVariant(FACING_DIRECTIONS[i], variant, null, variants);
+                blockStateBuilder.addVariant(FACING_DIRECTIONS[i], variant, null, variants);
             }
         }
 

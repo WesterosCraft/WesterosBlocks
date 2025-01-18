@@ -31,7 +31,8 @@ public class CropBlockModelHandler extends ModelExport {
     }
 
     public void generateBlockStateModels() {
-        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
         int rotationCount = def.rotateRandom ? 4 : 1;
 
         String[] conditions = layerSensitive ? LAYER_CONDITIONS : new String[]{""};
@@ -65,7 +66,7 @@ public class CropBlockModelHandler extends ModelExport {
 
                         Set<String> stateIDs = rec.stateID == null ?
                                 null : Collections.singleton(rec.stateID);
-                        addVariant(layerCondition, variant, stateIDs, variants);
+                        blockStateBuilder.addVariant(layerCondition, variant, stateIDs, variants);
                     }
                 }
 

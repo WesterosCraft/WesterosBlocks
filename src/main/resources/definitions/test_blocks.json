@@ -78,6 +78,57 @@
       ]
     },
     {
+      "blockName": "thin_jungle_log",
+      "blockType": "wall",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "westeros_logs_tab",
+      "type": "unconnect:false",
+      "label": "Thin Jungle Log",
+      "textures": [
+        "bark/jungle/wall_top",
+        "bark/jungle/wall_top",
+        "bark/jungle/side"
+      ]
+    },
+    {
+      "blockName": "dappled_moss",
+      "blockType": "vines",
+      "stepSound": "grass",
+      "material": "plants",
+      "creativeTab": "westeros_foliage_tab",
+      "label": "Dappled Moss",
+      "colorMult": "textures/colormap/moss_dappled",
+      "textures": [
+        "dappled_moss/dappled",
+        "dappled_moss/dappled"
+      ],
+      "type": "allow-unsupported,no-climb,has-down"
+    },
+    {
+      "blockName": "falling_water_block_one",
+      "blockType": "vines",
+      "stepSound": "cloth",
+      "nonOpaque": true,
+      "alphaRender": true,
+      "material": "cloth",
+      "creativeTab": "westeros_water_air_tab",
+      "label": "Falling Water Block One",
+      "textures": [
+        "alyssas_tears_mist/mist1",
+        "alyssas_tears_mist/mist1"
+      ],
+      "type": "allow-unsupported,no-climb"
+    },
+    {
       "blockName": "locked_oak_bark_fence_gate",
       "blockType": "fencegate",
       "hardness": 2,

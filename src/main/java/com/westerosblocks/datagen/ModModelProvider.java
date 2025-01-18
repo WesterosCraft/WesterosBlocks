@@ -224,6 +224,10 @@ public class ModModelProvider extends FabricModelProvider {
                     FenceGateBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
+                case "vines": {
+                    VinesBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
                 // TODO waiting on block to be done
 //                case "flowerpot": {
 //                    FlowerPotModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
@@ -232,10 +236,10 @@ public class ModModelProvider extends FabricModelProvider {
 ////                    FenceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
 ////                    break;
 ////                }
-////                case "wall": {
-////                    WallBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-////                    break;
-////                }
+                case "wall": {
+                    WallBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
 ////                case "cuboid": {
 ////                    CuboidBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
 ////                    break;

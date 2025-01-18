@@ -27,4 +27,7 @@ public class ModTextureKey {
 
     public static final TextureKey LEAVES_OVERLAY_END = TextureKey.of("overlayend");
     public static final TextureKey LEAVES_OVERLAY_SIDE = TextureKey.of("overlayside");
+
+    public static final TextureKey VINES = TextureKey.of("vines");
+
 }

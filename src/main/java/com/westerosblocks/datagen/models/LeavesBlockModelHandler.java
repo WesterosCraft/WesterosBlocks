@@ -25,22 +25,23 @@ public class LeavesBlockModelHandler extends ModelExport {
     public void generateBlockStateModels() {
         WCLeavesBlock leavesBlock = (block instanceof WCLeavesBlock) ? (WCLeavesBlock) block : null;
         boolean isBetterFoliage = leavesBlock != null && leavesBlock.betterfoliage;
-        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
             WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
             int rotationCount = def.rotateRandom ? 4 : 1;
 
             if (isBetterFoliage) {
-                addLeafVariants(variants, set, rotationCount, "bf1", setIdx);
-                addLeafVariants(variants, set, rotationCount, "bf2", setIdx);
-                addLeafVariants(variants, set, rotationCount, "bf3", setIdx);
+                addLeafVariants(blockStateBuilder, variants, set, rotationCount, "bf1", setIdx);
+                addLeafVariants(blockStateBuilder, variants, set, rotationCount, "bf2", setIdx);
+                addLeafVariants(blockStateBuilder, variants, set, rotationCount, "bf3", setIdx);
 
                 generateLeafModel(generator, "bf1", set, setIdx, true, true);
                 generateLeafModel(generator, "bf2", set, setIdx, true, true);
                 generateLeafModel(generator, "bf3", set, setIdx, true, true);
             } else {
-                addLeafVariants(variants, set, rotationCount, "base", setIdx);
+                addLeafVariants(blockStateBuilder, variants, set, rotationCount, "base", setIdx);
                 generateLeafModel(generator, "base", set, setIdx, false, false);
             }
 
@@ -49,7 +50,7 @@ public class LeavesBlockModelHandler extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void addLeafVariants(Map<String, List<BlockStateVariant>> variants, WesterosBlockDef.RandomTextureSet set,
+    private void addLeafVariants(BlockStateBuilder blockStateBuilder, Map<String, List<BlockStateVariant>> variants, WesterosBlockDef.RandomTextureSet set,
                                  int rotationCount, String ext, int setIdx) {
         for (int i = 0; i < rotationCount; i++) {
             BlockStateVariant variant = BlockStateVariant.create();
@@ -61,7 +62,7 @@ public class LeavesBlockModelHandler extends ModelExport {
             if (i > 0) {
                 variant.put(VariantSettings.Y, getRotation(90 * i));
             }
-            addVariant("", variant, null, variants);
+            blockStateBuilder.addVariant("", variant, null, variants);
         }
     }
 

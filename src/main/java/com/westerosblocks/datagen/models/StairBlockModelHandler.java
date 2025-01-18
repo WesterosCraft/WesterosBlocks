@@ -68,53 +68,54 @@ public class StairBlockModelHandler extends ModelExport {
     public void generateBlockStateModels() {
         WCStairBlock stairBlock = (block instanceof WCStairBlock) ? (WCStairBlock) block : null;
         boolean isUvLocked = !(block instanceof WCStairBlock) || !stairBlock.no_uvlock;
-        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (WesterosBlockStateRecord sr : def.states) {
             boolean isTinted = sr.isTinted();
             boolean hasOverlay = sr.getOverlayTextureByIndex(0) != null;
             boolean isOccluded = (def.ambientOcclusion != null) ? def.ambientOcclusion : true;
 
-            buildVariantList(variants, sr, "facing=east,half=bottom,shape=straight", "base", 0, 0, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=west,half=bottom,shape=straight", "base", 0, 180, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=south,half=bottom,shape=straight", "base", 0, 90, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=north,half=bottom,shape=straight", "base", 0, 270, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=east,half=bottom,shape=outer_right", "outer", 0, 0, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=west,half=bottom,shape=outer_right", "outer", 0, 180, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=south,half=bottom,shape=outer_right", "outer", 0, 90, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=north,half=bottom,shape=outer_right", "outer", 0, 270, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=east,half=bottom,shape=outer_left", "outer", 0, 270, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=west,half=bottom,shape=outer_left", "outer", 0, 90, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=south,half=bottom,shape=outer_left", "outer", 0, 0, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=north,half=bottom,shape=outer_left", "outer", 0, 180, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=east,half=bottom,shape=inner_right", "inner", 0, 0, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=west,half=bottom,shape=inner_right", "inner", 0, 180, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=south,half=bottom,shape=inner_right", "inner", 0, 90, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=north,half=bottom,shape=inner_right", "inner", 0, 270, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=east,half=bottom,shape=inner_left", "inner", 0, 270, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=west,half=bottom,shape=inner_left", "inner", 0, 90, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=south,half=bottom,shape=inner_left", "inner", 0, 0, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=north,half=bottom,shape=inner_left", "inner", 0, 180, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=east,half=top,shape=straight", "base", 180, 0, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=west,half=top,shape=straight", "base", 180, 180, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=south,half=top,shape=straight", "base", 180, 90, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=north,half=top,shape=straight", "base", 180, 270, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=east,half=top,shape=outer_right", "outer", 180, 90, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=west,half=top,shape=outer_right", "outer", 180, 270, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=south,half=top,shape=outer_right", "outer", 180, 180, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=north,half=top,shape=outer_right", "outer", 180, 0, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=east,half=top,shape=outer_left", "outer", 180, 0, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=west,half=top,shape=outer_left", "outer", 180, 180, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=south,half=top,shape=outer_left", "outer", 180, 90, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=north,half=top,shape=outer_left", "outer", 180, 270, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=east,half=top,shape=inner_right", "inner", 180, 90, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=west,half=top,shape=inner_right", "inner", 180, 270, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=south,half=top,shape=inner_right", "inner", 180, 180, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=north,half=top,shape=inner_right", "inner", 180, 0, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=east,half=top,shape=inner_left", "inner", 180, 0, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=west,half=top,shape=inner_left", "inner", 180, 180, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=south,half=top,shape=inner_left", "inner", 180, 90, isUvLocked, def);
-            buildVariantList(variants, sr, "facing=north,half=top,shape=inner_left", "inner", 180, 270, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=bottom,shape=straight", "base", 0, 0, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=bottom,shape=straight", "base", 0, 180, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=bottom,shape=straight", "base", 0, 90, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=bottom,shape=straight", "base", 0, 270, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=bottom,shape=outer_right", "outer", 0, 0, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=bottom,shape=outer_right", "outer", 0, 180, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=bottom,shape=outer_right", "outer", 0, 90, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=bottom,shape=outer_right", "outer", 0, 270, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=bottom,shape=outer_left", "outer", 0, 270, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=bottom,shape=outer_left", "outer", 0, 90, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=bottom,shape=outer_left", "outer", 0, 0, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=bottom,shape=outer_left", "outer", 0, 180, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=bottom,shape=inner_right", "inner", 0, 0, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=bottom,shape=inner_right", "inner", 0, 180, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=bottom,shape=inner_right", "inner", 0, 90, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=bottom,shape=inner_right", "inner", 0, 270, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=bottom,shape=inner_left", "inner", 0, 270, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=bottom,shape=inner_left", "inner", 0, 90, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=bottom,shape=inner_left", "inner", 0, 0, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=bottom,shape=inner_left", "inner", 0, 180, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=top,shape=straight", "base", 180, 0, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=top,shape=straight", "base", 180, 180, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=top,shape=straight", "base", 180, 90, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=top,shape=straight", "base", 180, 270, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=top,shape=outer_right", "outer", 180, 90, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=top,shape=outer_right", "outer", 180, 270, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=top,shape=outer_right", "outer", 180, 180, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=top,shape=outer_right", "outer", 180, 0, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=top,shape=outer_left", "outer", 180, 0, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=top,shape=outer_left", "outer", 180, 180, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=top,shape=outer_left", "outer", 180, 90, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=top,shape=outer_left", "outer", 180, 270, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=top,shape=inner_right", "inner", 180, 90, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=top,shape=inner_right", "inner", 180, 270, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=top,shape=inner_right", "inner", 180, 180, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=top,shape=inner_right", "inner", 180, 0, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=top,shape=inner_left", "inner", 180, 0, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=top,shape=inner_left", "inner", 180, 180, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=top,shape=inner_left", "inner", 180, 90, isUvLocked, def);
+            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=top,shape=inner_left", "inner", 180, 270, isUvLocked, def);
 
             doStairModels(generator, sr, def.getBlockName(), isOccluded, isTinted, hasOverlay);
         }
@@ -122,7 +123,7 @@ public class StairBlockModelHandler extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private static void buildVariantList(Map<String, List<BlockStateVariant>> variants, WesterosBlockStateRecord sr, String cond, String ext, int xrot,
+    private static void buildVariantList(BlockStateBuilder blockStateBuilder, Map<String, List<BlockStateVariant>> variants, WesterosBlockStateRecord sr, String cond, String ext, int xrot,
                                          int yrot, boolean isUvLocked, WesterosBlockDef def) {
         boolean justBase = sr.stateID == null;
         Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
@@ -153,7 +154,7 @@ public class StairBlockModelHandler extends ModelExport {
                 var.put(VariantSettings.UVLOCK, true);
             }
 
-            addVariant(cond, var, stateIDs, variants);
+            blockStateBuilder.addVariant(cond, var, stateIDs, variants);
         }
     }
 

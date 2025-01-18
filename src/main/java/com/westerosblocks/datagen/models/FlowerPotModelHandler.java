@@ -4,7 +4,6 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
-import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 
@@ -26,7 +25,8 @@ public class FlowerPotModelHandler extends ModelExport {
     }
 
     public void generateBlockStateModels() {
-        final Map<String, List<BlockStateVariant>> variants = new HashMap<>();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
             WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
@@ -36,16 +36,13 @@ public class FlowerPotModelHandler extends ModelExport {
                 BlockStateVariant variant = BlockStateVariant.create();
                 Identifier modelId = getModelId("base", setIdx);
                 variant.put(VariantSettings.MODEL, modelId);
-
                 if (set.weight != null) {
                     variant.put(VariantSettings.WEIGHT, set.weight);
                 }
-
                 if (rotIdx > 0) {
                     variant.put(VariantSettings.Y, getRotation(90 * rotIdx));
                 }
-
-                addVariant("", variant, null, variants);
+                blockStateBuilder.addVariant("", variant, null, variants);
             }
         }
 

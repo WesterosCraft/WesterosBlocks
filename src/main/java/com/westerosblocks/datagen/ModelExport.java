@@ -47,21 +47,42 @@ public class ModelExport {
         };
     }
 
-    public static void addVariant(String condition, BlockStateVariant variant, Set<String> stateIDs, Map<String, List<BlockStateVariant>> variants) {
-        List<String> conditions = new ArrayList<>();
 
-        if (stateIDs == null) {
-            conditions.add(condition);
-        } else {
-            for (String stateVal : stateIDs) {
-                String fullCondition = condition + ((!condition.isEmpty()) ? "," : "") + "state=" + stateVal;
-                conditions.add(fullCondition);
+    public static class BlockStateBuilder {
+        private MultipartBlockStateSupplier multipartSupplier;
+        private final Block block;
+        private final Map<String, List<BlockStateVariant>> variants;
+
+        public BlockStateBuilder(Block block) {
+            this.block = block;
+            this.variants = new HashMap<>();
+            this.multipartSupplier = MultipartBlockStateSupplier.create(block);
+        }
+
+        public void addVariant(String condition, BlockStateVariant variant, Set<String> stateIDs, Map<String, List<BlockStateVariant>> variants) {
+            List<String> conditions = new ArrayList<>();
+
+            if (stateIDs == null) {
+                conditions.add(condition);
+            } else {
+                for (String stateVal : stateIDs) {
+                    String fullCondition = condition + ((!condition.isEmpty()) ? "," : "") + "state=" + stateVal;
+                    conditions.add(fullCondition);
+                }
+            }
+
+            for (String conditionValue : conditions) {
+                List<BlockStateVariant> existingVariants = variants.computeIfAbsent(conditionValue, k -> new ArrayList<>());
+                existingVariants.add(variant);
             }
         }
 
-        for (String conditionValue : conditions) {
-            List<BlockStateVariant> existingVariants = variants.computeIfAbsent(conditionValue, k -> new ArrayList<>());
-            existingVariants.add(variant);
+        public MultipartBlockStateSupplier getMultipartSupplier() {
+            return multipartSupplier;
+        }
+
+        public Map<String, List<BlockStateVariant>> getVariants() {
+            return variants;
         }
     }
 
@@ -87,6 +108,7 @@ public class ModelExport {
             return;
         }
 
+        // TODO determine if we need this
         // Create custom BlockStateSupplier for multiple variants
         BlockStateSupplier supplier = new BlockStateSupplier() {
             @Override
@@ -114,12 +136,12 @@ public class ModelExport {
     }
 
     protected static String getModelName(String ext, int setidx) {
-        return def.blockName + "/" + ext + ("_v" + (setidx+1));
+        return def.blockName + "/" + ext + ("_v" + (setidx + 1));
     }
 
     protected static String getModelName(String ext, int setidx, String cond) {
         if (cond == null)
             return getModelName(ext, setidx);
-        return def.blockName + "/" + cond + "/" + ext + ("_v" + (setidx+1));
+        return def.blockName + "/" + cond + "/" + ext + ("_v" + (setidx + 1));
     }
 }
