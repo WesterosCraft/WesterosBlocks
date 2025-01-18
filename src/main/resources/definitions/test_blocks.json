@@ -114,6 +114,36 @@
       "type": "allow-unsupported,no-climb,has-down"
     },
     {
+      "blockName": "spruce_door",
+      "blockType": "door",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "westeros_wood_planks_tab",
+      "label": "Spruce Door",
+      "textures": [
+        "wood/spruce/door_top",
+        "wood/spruce/door_bottom"
+      ],
+      "type": "allow-unsupported"
+    },
+    {
+      "blockName": "locked_dark_northern_wood_door",
+      "blockType": "door",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "westeros_wood_planks_tab",
+      "type": "locked:true,allow-unsupported",
+      "label": "Locked Dark Northern Wood Door",
+      "textures": [
+        "wood/northern/door_locked_top",
+        "wood/northern/door_locked_bottom"
+      ]
+    },
+    {
       "blockName": "nights_watch_bed",
       "material": "cloth",
       "blockType": "bed",
