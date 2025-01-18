@@ -32,7 +32,6 @@ public class CrossBlockModelHandler extends ModelExport {
         }
     }
 
-
     public void generateBlockStateModels() {
         String[] conditions = layerSensitive ? LAYER_CONDITIONS : new String[]{""};
         final Map<String, List<BlockStateVariant>> variants = new HashMap<>();

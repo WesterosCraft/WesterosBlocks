@@ -220,6 +220,10 @@ public class ModModelProvider extends FabricModelProvider {
                     CrossBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
+                case "fencegate": {
+                    FenceGateBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
                 // TODO waiting on block to be done
 //                case "flowerpot": {
 //                    FlowerPotModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
