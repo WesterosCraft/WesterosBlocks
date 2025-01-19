@@ -141,6 +141,65 @@
       ]
     },
     {
+      "blockName": "vertical_net",
+      "blockType": "pane",
+      "hardness": 1,
+      "stepSound": "glass",
+      "material": "glass",
+      "resistance": 3,
+      "creativeTab": "westeros_cloth_fibers_tab",
+      "type": "legacy-model,unconnect:false",
+      "label": "Vertical Net",
+      "randomTextures": [
+        {
+          "textures": [
+            "vertical_net/vertical_net1"
+          ]
+        },
+        {
+          "textures": [
+            "vertical_net/vertical_net2"
+          ]
+        },
+        {
+          "textures": [
+            "vertical_net/vertical_net3"
+          ]
+        },
+        {
+          "textures": [
+            "vertical_net/vertical_net4"
+          ]
+        },
+        {
+          "textures": [
+            "vertical_net/vertical_net5"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "iron_bars",
+      "blockType": "pane",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "type": "bars-model,unconnect:false",
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "westeros_metal_tab",
+      "label": "Iron Bars",
+      "textures": [
+        "bars_iron_block/iron_bars",
+        "transparent"
+      ]
+    },
+    {
       "blockName": "coral_brain_fan",
       "blockType": "fan",
       "stepSound": "stone",

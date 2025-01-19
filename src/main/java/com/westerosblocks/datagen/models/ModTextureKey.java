@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import net.minecraft.data.client.TextureKey;
+import org.w3c.dom.Text;
 
 public class ModTextureKey {
     public static final TextureKey DOWN_OVERLAY = TextureKey.of("down_ov");
@@ -36,4 +37,6 @@ public class ModTextureKey {
     public static final TextureKey BED_TOP2 = TextureKey.of("bedtop2");
     public static final TextureKey BED_END2 = TextureKey.of("bedend2");
     public static final TextureKey BED_SIDE2 = TextureKey.of("bedside2");
+
+    public static final TextureKey CAP = TextureKey.of("cap");
 }
