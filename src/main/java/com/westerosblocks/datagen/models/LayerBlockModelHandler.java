@@ -1,13 +1,10 @@
 package com.westerosblocks.datagen.models;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.custom.WCLayerBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
-import net.minecraft.client.gui.Element;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 
@@ -62,93 +59,10 @@ public class LayerBlockModelHandler extends ModelExport {
         boolean isTinted = def.isTinted();
         float yMax = (16.0f / layerBlock.layerCount) * layer;  // Calculate height based on layer number
 
-        // Create custom model that supports elements
-        Model layerModel = new Model(
-                Optional.empty(),
-                Optional.empty(),
-                TextureKey.PARTICLE,
-                ModTextureKey.TEXTURE_0,
-                ModTextureKey.TEXTURE_1,
-                ModTextureKey.TEXTURE_2,
-                ModTextureKey.TEXTURE_3,
-                ModTextureKey.TEXTURE_4,
-                ModTextureKey.TEXTURE_5) {
-            @Override
-            public JsonObject createJson(Identifier id, Map<TextureKey, Identifier> textures) {
-                JsonObject json = super.createJson(id, textures);
-
-                // Add elements array
-                JsonArray elements = new JsonArray();
-                JsonObject element = new JsonObject();
-
-                // From coordinates (always start at 0)
-                JsonArray from = new JsonArray();
-                from.add(0);
-                from.add(0);
-                from.add(0);
-                element.add("from", from);
-
-                // To coordinates (height varies by layer)
-                JsonArray to = new JsonArray();
-                to.add(16);
-                to.add(yMax);  // Variable height based on layer
-                to.add(16);
-                element.add("to", to);
-
-                // Add faces
-                JsonObject faces = new JsonObject();
-
-                // Down face
-                faces.add("down", createFace(0, 0, 16, 16, "#txt0", "down", isTinted));
-
-                // Up face
-                faces.add("up", createFace(0, 0, 16, 16, "#txt1", yMax >= 16 ? "up" : null, isTinted));
-
-                // Side faces - UV coordinates are adjusted for height
-                faces.add("north", createFace(0, 16 - yMax, 16, 16, "#txt2", "north", isTinted));
-                faces.add("south", createFace(0, 16 - yMax, 16, 16, "#txt3", "south", isTinted));
-                faces.add("west", createFace(0, 16 - yMax, 16, 16, "#txt4", "west", isTinted));
-                faces.add("east", createFace(0, 16 - yMax, 16, 16, "#txt5", "east", isTinted));
-
-                element.add("faces", faces);
-                elements.add(element);
-                json.add("elements", elements);
-
-                return json;
-            }
-        };
-
+        Model layerModel = ModModels.wcLayerModel(yMax, isTinted);
         TextureMap textureMap = ModTextureMap.customTxtN(set);
 
         layerModel.upload(getModelId(layer, setIdx), textureMap, generator.modelCollector);
-    }
-
-    private JsonObject createFace(float uMin, float vMin, float uMax, float vMax,
-                                  String texture, String cullface, boolean tinted) {
-        JsonObject face = new JsonObject();
-
-        // UV coordinates
-        JsonArray uv = new JsonArray();
-        uv.add(uMin);
-        uv.add(vMin);
-        uv.add(uMax);
-        uv.add(vMax);
-        face.add("uv", uv);
-
-        // Texture reference
-        face.addProperty("texture", texture);
-
-        // Cullface if specified
-        if (cullface != null) {
-            face.addProperty("cullface", cullface);
-        }
-
-        // Tint index if tinted
-        if (tinted) {
-            face.addProperty("tintindex", 0);
-        }
-
-        return face;
     }
 
     private Identifier getModelId(int layer, int setIdx) {
