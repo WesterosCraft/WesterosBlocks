@@ -17,4 +17,15 @@ public class ModTextureMap extends TextureMap {
                 .put(TextureKey.EAST, createBlockIdentifier(ts.getTextureByIndex(5)))
                 .put(TextureKey.PARTICLE, createBlockIdentifier(ts.getTextureByIndex(2)));
     }
+
+    public static TextureMap customTxtN(WesterosBlockDef.RandomTextureSet ts) {
+        return new TextureMap()
+                .put(ModTextureKey.TEXTURE_0, createBlockIdentifier(ts.getTextureByIndex(0)))
+                .put(ModTextureKey.TEXTURE_1, createBlockIdentifier(ts.getTextureByIndex(1)))
+                .put(ModTextureKey.TEXTURE_2, createBlockIdentifier(ts.getTextureByIndex(2)))
+                .put(ModTextureKey.TEXTURE_3, createBlockIdentifier(ts.getTextureByIndex(3)))
+                .put(ModTextureKey.TEXTURE_4, createBlockIdentifier(ts.getTextureByIndex(4)))
+                .put(ModTextureKey.TEXTURE_5, createBlockIdentifier(ts.getTextureByIndex(5)))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(ts.getTextureByIndex(0)));
+    }
 }

@@ -31,14 +31,14 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
 	public boolean softLayer = false;
 
 	public static final VoxelShape[] SHAPE_BY_LAYER = new VoxelShape[]{VoxelShapes.empty(),
-			VoxelShapes.cuboid(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D),
-			VoxelShapes.cuboid(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D),
-			VoxelShapes.cuboid(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D),
-			VoxelShapes.cuboid(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D),
-			VoxelShapes.cuboid(0.0D, 0.0D, 0.0D, 16.0D, 10.0D, 16.0D),
-			VoxelShapes.cuboid(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D),
-			VoxelShapes.cuboid(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D),
-			VoxelShapes.cuboid(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
+			Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D),
+			Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D),
+			Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D),
+			Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D),
+			Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 10.0D, 16.0D),
+			Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D),
+			Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D),
+			Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
 
 	private WesterosBlockDef def;
 

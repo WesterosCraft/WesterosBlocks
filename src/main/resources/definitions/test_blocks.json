@@ -129,6 +129,39 @@
       "type": "allow-unsupported"
     },
     {
+      "blockName": "safe_fire",
+      "blockType": "fire",
+      "creativeTab": "westeros_lighting_tab",
+      "lightValue": 1,
+      "label": "Safe Fire",
+      "material": "fire",
+      "textures": [
+        "safe_fire/fire_layer_0",
+        "safe_fire/fire_layer_1"
+      ]
+    },
+    {
+      "blockName": "coral_brain_fan",
+      "blockType": "fan",
+      "stepSound": "stone",
+      "material": "rock",
+      "creativeTab": "westeros_water_air_tab",
+      "label": "Brain Coral Fan",
+      "type": "allow-unsupported",
+      "randomTextures": [
+        {
+          "textures": [
+            "coral/brain/fan1"
+          ]
+        },
+        {
+          "textures": [
+            "coral/brain/fan2"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "locked_dark_northern_wood_door",
       "blockType": "door",
       "hardness": 2,

@@ -86,7 +86,6 @@ public class ModelExport {
         }
     }
 
-
     public static void generateBlockStateFiles(BlockStateModelGenerator generator, Block block, Map<String, List<BlockStateVariant>> variants) {
         if (variants.isEmpty()) {
             generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block));

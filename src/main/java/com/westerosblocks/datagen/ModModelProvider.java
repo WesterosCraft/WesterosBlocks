@@ -236,6 +236,18 @@ public class ModModelProvider extends FabricModelProvider {
                     DoorBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
+                case "fan": {
+                    FanBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
+                case "fire": {
+                    FireBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
+                case "layer": {
+                    LayerBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
                 // TODO waiting on block to be done
 //                case "flowerpot": {
 //                    FlowerPotModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
