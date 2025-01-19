@@ -256,10 +256,10 @@ public class ModModelProvider extends FabricModelProvider {
 //                case "flowerpot": {
 //                    FlowerPotModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
 //                }
-////                case "fence": {
-////                    FenceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-////                    break;
-////                }
+                case "fence": {
+                    FenceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
                 case "wall": {
                     WallBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
