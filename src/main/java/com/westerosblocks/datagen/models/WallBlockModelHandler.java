@@ -8,7 +8,6 @@ import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.WallShape;
 import net.minecraft.data.client.*;
-import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 

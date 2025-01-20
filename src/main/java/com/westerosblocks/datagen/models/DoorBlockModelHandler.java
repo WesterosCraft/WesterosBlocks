@@ -4,15 +4,9 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
-import net.minecraft.block.DoorBlock;
-import net.minecraft.block.enums.DoorHinge;
-import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.data.client.*;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Direction;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -121,7 +115,6 @@ public class DoorBlockModelHandler extends ModelExport {
                 .put(TextureKey.TOP, createBlockIdentifier(set.getTextureByIndex(0)))
                 .put(TextureKey.BOTTOM, createBlockIdentifier(set.getTextureByIndex(1)));
 
-        // Models to generate based on Minecraft 1.21.1 door models
         // Each entry is {model extension, parent model} pairs
         String[][] variants = {
                 {"bottom_left", "door_bottom_left"},

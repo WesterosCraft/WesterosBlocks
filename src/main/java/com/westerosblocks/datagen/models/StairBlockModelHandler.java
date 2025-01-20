@@ -15,197 +15,169 @@ public class StairBlockModelHandler extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
     private final WesterosBlockDef def;
+    private final WCStairBlock stairBlock;
+    private final boolean isOccluded;
 
     public StairBlockModelHandler(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
         this.def = def;
-    }
-
-//    protected static String getModelName(String ext, int setidx, String name) {
-//        return name + "/" + ext + ("_v" + (setidx + 1));
-//    }
-
-    protected static String getModelName(String ext, int setidx, String cond, String name) {
-        if (cond == null)
-            return getModelName(ext, setidx, name);
-        return name + "/" + cond + "/" + ext + ("_v" + (setidx + 1));
-    }
-
-    public static String modelFileName(String ext, int setidx, String name) {
-        return modelFileName(ext, setidx, name, null);
-    }
-
-    public static String modelFileName(String ext, int setidx, String name, Boolean isCustomModel) {
-        if (isCustomModel != null && isCustomModel)
-            return WesterosBlocks.MOD_ID + ":block/custom/" + getModelName(ext, setidx, name);
-        else
-            return WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(ext, setidx, name);
-    }
-
-    public static String modelFileName(WesterosBlockStateRecord sr, String ext, int setidx, String cond, String blockName) {
-        if (sr.isCustomModel())
-            return WesterosBlocks.MOD_ID + ":block/custom/" + getModelName(ext, setidx, cond, blockName);
-        else
-            return WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(ext, setidx, cond, blockName);
-    }
-
-    private static String getParentPath(boolean isOccluded, boolean isTinted, boolean hasOverlay, String modelType) {
-        String basePath;
-        if (isOccluded) {
-            basePath = isTinted ? "tinted/" : "untinted/";
-        } else {
-            basePath = isTinted ? "tintednoocclusion/" : "noocclusion/";
-        }
-
-        if (modelType.equals("base")) {
-            return basePath + (hasOverlay ? "stairs_overlay" : "stairs");
-        }
-        return basePath + (hasOverlay ? modelType + "_stairs_overlay" : modelType + "_stairs");
+        this.stairBlock = (WCStairBlock) block;
+        this.isOccluded = (def.ambientOcclusion != null) ? def.ambientOcclusion : true;
     }
 
     public void generateBlockStateModels() {
-        WCStairBlock stairBlock = (block instanceof WCStairBlock) ? (WCStairBlock) block : null;
-        boolean isUvLocked = !(block instanceof WCStairBlock) || !stairBlock.no_uvlock;
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
+        // Generate models first if not custom
+        if (!def.isCustomModel()) {
+            for (WesterosBlockStateRecord sr : def.states) {
+                for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
+                    generateStairModels(generator, sr, setIdx);
+                }
+            }
+        }
+
+        // Generate all the variants for each state
         for (WesterosBlockStateRecord sr : def.states) {
-            boolean isTinted = sr.isTinted();
-            boolean hasOverlay = sr.getOverlayTextureByIndex(0) != null;
-            boolean isOccluded = (def.ambientOcclusion != null) ? def.ambientOcclusion : true;
-
-            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=bottom,shape=straight", "base", 0, 0, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=bottom,shape=straight", "base", 0, 180, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=bottom,shape=straight", "base", 0, 90, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=bottom,shape=straight", "base", 0, 270, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=bottom,shape=outer_right", "outer", 0, 0, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=bottom,shape=outer_right", "outer", 0, 180, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=bottom,shape=outer_right", "outer", 0, 90, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=bottom,shape=outer_right", "outer", 0, 270, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=bottom,shape=outer_left", "outer", 0, 270, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=bottom,shape=outer_left", "outer", 0, 90, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=bottom,shape=outer_left", "outer", 0, 0, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=bottom,shape=outer_left", "outer", 0, 180, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=bottom,shape=inner_right", "inner", 0, 0, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=bottom,shape=inner_right", "inner", 0, 180, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=bottom,shape=inner_right", "inner", 0, 90, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=bottom,shape=inner_right", "inner", 0, 270, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=bottom,shape=inner_left", "inner", 0, 270, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=bottom,shape=inner_left", "inner", 0, 90, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=bottom,shape=inner_left", "inner", 0, 0, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=bottom,shape=inner_left", "inner", 0, 180, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=top,shape=straight", "base", 180, 0, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=top,shape=straight", "base", 180, 180, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=top,shape=straight", "base", 180, 90, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=top,shape=straight", "base", 180, 270, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=top,shape=outer_right", "outer", 180, 90, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=top,shape=outer_right", "outer", 180, 270, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=top,shape=outer_right", "outer", 180, 180, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=top,shape=outer_right", "outer", 180, 0, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=top,shape=outer_left", "outer", 180, 0, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=top,shape=outer_left", "outer", 180, 180, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=top,shape=outer_left", "outer", 180, 90, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=top,shape=outer_left", "outer", 180, 270, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=top,shape=inner_right", "inner", 180, 90, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=top,shape=inner_right", "inner", 180, 270, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=top,shape=inner_right", "inner", 180, 180, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=top,shape=inner_right", "inner", 180, 0, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=east,half=top,shape=inner_left", "inner", 180, 0, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=west,half=top,shape=inner_left", "inner", 180, 180, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=south,half=top,shape=inner_left", "inner", 180, 90, isUvLocked, def);
-            buildVariantList(blockStateBuilder, variants, sr, "facing=north,half=top,shape=inner_left", "inner", 180, 270, isUvLocked, def);
-
-            doStairModels(generator, sr, def.getBlockName(), isOccluded, isTinted, hasOverlay);
+            // Bottom half variants
+            generateDirectionalVariants(blockStateBuilder, sr, "bottom", variants);
+            // Top half variants
+            generateDirectionalVariants(blockStateBuilder, sr, "top", variants);
         }
 
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private static void buildVariantList(BlockStateBuilder blockStateBuilder, Map<String, List<BlockStateVariant>> variants, WesterosBlockStateRecord sr, String cond, String ext, int xrot,
-                                         int yrot, boolean isUvLocked, WesterosBlockDef def) {
-        boolean justBase = sr.stateID == null;
-        Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
+    private void generateDirectionalVariants(BlockStateBuilder builder, WesterosBlockStateRecord sr,
+                                             String half, Map<String, List<BlockStateVariant>> variants) {
+        int xRot = half.equals("top") ? 180 : 0;
 
-        // Loop over the random sets we've got
+        // East facing variants
+        addVariant(builder, sr, String.format("facing=east,half=%s,shape=straight", half), "base", xRot, 0, variants);
+        addVariant(builder, sr, String.format("facing=east,half=%s,shape=outer_right", half), "outer", xRot, half.equals("top") ? 90 : 0, variants);
+        addVariant(builder, sr, String.format("facing=east,half=%s,shape=outer_left", half), "outer", xRot, half.equals("top") ? 0 : 270, variants);
+        addVariant(builder, sr, String.format("facing=east,half=%s,shape=inner_right", half), "inner", xRot, half.equals("top") ? 90 : 0, variants);
+        addVariant(builder, sr, String.format("facing=east,half=%s,shape=inner_left", half), "inner", xRot, half.equals("top") ? 0 : 270, variants);
+
+        // West facing variants
+        addVariant(builder, sr, String.format("facing=west,half=%s,shape=straight", half), "base", xRot, 180, variants);
+        addVariant(builder, sr, String.format("facing=west,half=%s,shape=outer_right", half), "outer", xRot, half.equals("top") ? 270 : 180, variants);
+        addVariant(builder, sr, String.format("facing=west,half=%s,shape=outer_left", half), "outer", xRot, half.equals("top") ? 180 : 90, variants);
+        addVariant(builder, sr, String.format("facing=west,half=%s,shape=inner_right", half), "inner", xRot, half.equals("top") ? 270 : 180, variants);
+        addVariant(builder, sr, String.format("facing=west,half=%s,shape=inner_left", half), "inner", xRot, half.equals("top") ? 180 : 90, variants);
+
+        // South facing variants
+        addVariant(builder, sr, String.format("facing=south,half=%s,shape=straight", half), "base", xRot, 90, variants);
+        addVariant(builder, sr, String.format("facing=south,half=%s,shape=outer_right", half), "outer", xRot, half.equals("top") ? 180 : 90, variants);
+        addVariant(builder, sr, String.format("facing=south,half=%s,shape=outer_left", half), "outer", xRot, half.equals("top") ? 90 : 0, variants);
+        addVariant(builder, sr, String.format("facing=south,half=%s,shape=inner_right", half), "inner", xRot, half.equals("top") ? 180 : 90, variants);
+        addVariant(builder, sr, String.format("facing=south,half=%s,shape=inner_left", half), "inner", xRot, half.equals("top") ? 90 : 0, variants);
+
+        // North facing variants
+        addVariant(builder, sr, String.format("facing=north,half=%s,shape=straight", half), "base", xRot, 270, variants);
+        addVariant(builder, sr, String.format("facing=north,half=%s,shape=outer_right", half), "outer", xRot, half.equals("top") ? 0 : 270, variants);
+        addVariant(builder, sr, String.format("facing=north,half=%s,shape=outer_left", half), "outer", xRot, half.equals("top") ? 270 : 180, variants);
+        addVariant(builder, sr, String.format("facing=north,half=%s,shape=inner_right", half), "inner", xRot, half.equals("top") ? 0 : 270, variants);
+        addVariant(builder, sr, String.format("facing=north,half=%s,shape=inner_left", half), "inner", xRot, half.equals("top") ? 270 : 180, variants);
+    }
+
+    private void addVariant(BlockStateBuilder builder, WesterosBlockStateRecord sr,
+                            String condition, String modelType, int xRot, int yRot,
+                            Map<String, List<BlockStateVariant>> variants) {
+        Set<String> stateIDs = sr.stateID == null ? null : Collections.singleton(sr.stateID);
+
         for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
             WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
-            // build variant
-            BlockStateVariant var = BlockStateVariant.create();
-            String varId = (justBase) ? modelFileName(ext, setIdx, def.blockName)
-                    : modelFileName(sr, ext, setIdx, sr.stateID, def.blockName);
+            BlockStateVariant variant = BlockStateVariant.create();
+            Identifier modelId = getModelId(modelType, setIdx, sr.stateID);
+            variant.put(VariantSettings.MODEL, modelId);
 
-            var.put(VariantSettings.MODEL, Identifier.of(varId));
             if (set.weight != null) {
-                var.put(VariantSettings.WEIGHT, set.weight);
+                variant.put(VariantSettings.WEIGHT, set.weight);
+            }
+            if (xRot != 0) {
+                variant.put(VariantSettings.X, getRotation(xRot));
+            }
+            if (yRot != 0) {
+                variant.put(VariantSettings.Y, getRotation(yRot));
+            }
+            if (!stairBlock.no_uvlock && (xRot != 0 || yRot != 0)) {
+                variant.put(VariantSettings.UVLOCK, true);
             }
 
-            if (xrot != 0) {
-                var.put(VariantSettings.X, getRotation(xrot));
-            }
-
-            if (yrot != 0) {
-                var.put(VariantSettings.Y, getRotation(yrot));
-            }
-
-            if (isUvLocked && ((xrot != 0) || (yrot != 0))) {
-                var.put(VariantSettings.UVLOCK, true);
-            }
-
-            blockStateBuilder.addVariant(cond, var, stateIDs, variants);
+            builder.addVariant(condition, variant, stateIDs, variants);
         }
     }
 
-    protected static void doStairModels(BlockStateModelGenerator generator, WesterosBlockStateRecord currentRec, String blockName, boolean isOccluded, boolean isTinted, boolean hasOverlay) {
-        if (!currentRec.isCustomModel()) {
-            String basePath = currentRec.stateID == null ? blockName :
-                    blockName + "/" + currentRec.stateID;
+    private void generateStairModels(BlockStateModelGenerator generator,
+                                     WesterosBlockStateRecord sr, int setIdx) {
+        boolean isTinted = sr.isTinted();
+        boolean hasOverlay = sr.getOverlayTextureByIndex(0) != null;
 
-            for (int setIdx = 0; setIdx < currentRec.getRandomTextureSetCount(); setIdx++) {
-                WesterosBlockDef.RandomTextureSet set = currentRec.getRandomTextureSet(setIdx);
-                String[] types = {"base", "outer", "inner"};
+        // Create texture maps
+        TextureMap textureMap = new TextureMap()
+                .put(TextureKey.BOTTOM, createBlockIdentifier(sr.getRandomTextureSet(setIdx).getTextureByIndex(0)))
+                .put(TextureKey.TOP, createBlockIdentifier(sr.getRandomTextureSet(setIdx).getTextureByIndex(1)))
+                .put(TextureKey.SIDE, createBlockIdentifier(sr.getRandomTextureSet(setIdx).getTextureByIndex(2)));
 
-                for (String type : types) {
-                    TextureMap textureMap = createTextureMap(set, currentRec, hasOverlay);
-                    Identifier modelId = Identifier.of(WesterosBlocks.MOD_ID,
-                            GENERATED_PATH + basePath + "/" + type + "_v" + (setIdx + 1));
-                    String parentPath = getParentPath(isOccluded, isTinted, hasOverlay, type);
-
-                    Model model;
-                    if (hasOverlay) {
-                        model = ModModels.createBottomTopSideWithOverlay(parentPath);
-                    } else {
-                        model = ModModels.createBottomTopSide(parentPath);
-                    }
-                    model.upload(modelId, textureMap, generator.modelCollector);
-                }
-            }
-        }
-    }
-
-    private static TextureMap createTextureMap(WesterosBlockDef.RandomTextureSet ts, WesterosBlockStateRecord currentRec, boolean hasOverlay) {
+        // Only add overlay textures if we have them
         if (hasOverlay) {
-            return createOverlayTextureMap(ts, currentRec);
-        } else {
-            return createCustomTextureMap(ts);
+            textureMap = textureMap
+                    .put(ModTextureKey.BOTTOM_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(0)))
+                    .put(ModTextureKey.TOP_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(1)))
+                    .put(ModTextureKey.SIDE_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(2)));
         }
+
+        // Generate base stair model
+        generateModelVariant(generator, "base", sr, setIdx, textureMap, isTinted, hasOverlay);
+        // Generate outer stair model
+        generateModelVariant(generator, "outer", sr, setIdx, textureMap, isTinted, hasOverlay);
+        // Generate inner stair model
+        generateModelVariant(generator, "inner", sr, setIdx, textureMap, isTinted, hasOverlay);
     }
 
-    private static TextureMap createOverlayTextureMap(WesterosBlockDef.RandomTextureSet ts, WesterosBlockStateRecord currentRec) {
-        TextureMap map = createCustomTextureMap(ts);
-        return map.put(ModTextureKey.BOTTOM_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(0)))
-                .put(ModTextureKey.TOP_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(1)))
-                .put(ModTextureKey.SIDE_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(2)));
+    private void generateModelVariant(BlockStateModelGenerator generator, String variant,
+                                      WesterosBlockStateRecord sr, int setIdx,
+                                      TextureMap textureMap, boolean isTinted, boolean hasOverlay) {
+        String baseParent = String.format("block/%s/%sstairs%s",
+                isOccluded ? (isTinted ? "tinted" : "untinted") : (isTinted ? "tintednoocclusion" : "noocclusion"),
+                variant.equals("base") ? "" : variant + "_",
+                hasOverlay ? "_overlay" : "");
+
+        TextureKey[] textureKeys;
+        if (hasOverlay) {
+            textureKeys = new TextureKey[]{
+                    TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
+                    ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY
+            };
+        } else {
+            textureKeys = new TextureKey[]{
+                    TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE
+            };
+        }
+
+        // Create model with appropriate texture keys
+        Model model = new Model(
+                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, baseParent)),
+                Optional.empty(),
+                textureKeys
+        );
+
+        Identifier modelId = getModelId(variant, setIdx, sr.stateID);
+        model.upload(modelId, textureMap, generator.modelCollector);
     }
 
-    private static TextureMap createCustomTextureMap(WesterosBlockDef.RandomTextureSet ts) {
-        return new TextureMap()
-                .put(TextureKey.BOTTOM, createBlockIdentifier(ts.getTextureByIndex(0)))
-                .put(TextureKey.TOP, createBlockIdentifier(ts.getTextureByIndex(1)))
-                .put(TextureKey.SIDE, createBlockIdentifier(ts.getTextureByIndex(2)))
-                .put(TextureKey.PARTICLE, createBlockIdentifier(ts.getTextureByIndex(2)));
+    private Identifier getModelId(String variant, int setIdx, String stateId) {
+        String path = stateId == null ?
+                String.format("%s/%s_v%d", def.blockName, variant, setIdx + 1) :
+                String.format("%s/%s/%s_v%d", def.blockName, stateId, variant, setIdx + 1);
+
+        return Identifier.of(WesterosBlocks.MOD_ID,
+                (def.isCustomModel() ? "block/custom/" : "block/generated/") + path);
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
@@ -217,5 +189,13 @@ public class StairBlockModelHandler extends ModelExport {
                 block.asItem(),
                 new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, path)), Optional.empty())
         );
+
+
+        if (blockDefinition.isTinted()) {
+            String tintResource = blockDefinition.getBlockColorMapResource();
+            if (tintResource != null) {
+                // TODO: Handle tinting registration
+            }
+        }
     }
 }

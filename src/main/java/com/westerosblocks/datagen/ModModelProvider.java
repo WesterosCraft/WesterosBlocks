@@ -161,7 +161,6 @@ public class ModModelProvider extends FabricModelProvider {
                     WesterosBlocks.LOGGER.warn("DATAGEN: Unknown block type: {} for block {}", customBlockDef.blockType, customBlockDef.blockName);
             }
         }
-
     }
 
     @Override
@@ -252,6 +251,10 @@ public class ModModelProvider extends FabricModelProvider {
                     PaneBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
+                case "halfdoor": {
+                    HalfDoorBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
                 // TODO waiting on block to be done
 //                case "flowerpot": {
 //                    FlowerPotModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
@@ -264,10 +267,10 @@ public class ModModelProvider extends FabricModelProvider {
                     WallBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-////                case "cuboid": {
-////                    CuboidBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-////                    break;
-////                }
+                case "cuboid": {
+                    CuboidBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
                 default:
                     WesterosBlocks.LOGGER.warn("DATAGEN: Unknown item type: {} for item {}", customBlockDef.blockType, customBlockDef.blockName);
             }

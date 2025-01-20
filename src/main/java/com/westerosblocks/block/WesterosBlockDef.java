@@ -878,7 +878,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         typeTable.put("cake", new WCCakeBlock.Factory());
         typeTable.put("bed", new WCBedBlock.Factory());
         typeTable.put("sand", new WCSandBlock.Factory());
-//        typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
+        typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
 //        typeTable.put("furnace", new WCFurnaceBlock.Factory());
 //        typeTable.put("sound", new WCSoundBlock.Factory());
         typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());

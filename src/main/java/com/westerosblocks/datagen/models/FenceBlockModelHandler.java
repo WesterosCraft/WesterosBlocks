@@ -72,10 +72,8 @@ public class FenceBlockModelHandler extends ModelExport {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
                     WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
-                    // Create variant
                     BlockStateVariant variant = BlockStateVariant.create();
                     variant.put(VariantSettings.MODEL, getModelId(part.modelExt(), setIdx, sr.stateID));
-
                     if (set.weight != null) {
                         variant.put(VariantSettings.WEIGHT, set.weight);
                     }
