@@ -25,7 +25,7 @@ public class ModelExport {
 
     public static Identifier createBlockIdentifier(String texturePath) {
         // If the texture path includes a namespace
-        if (texturePath.contains(":")) {
+        if (texturePath != null && texturePath.contains(":")) {
             String namespace = texturePath.substring(0, texturePath.indexOf(':'));
             String path = texturePath.substring(texturePath.indexOf(':') + 1);
             // If it's not a minecraft texture, prepend block/
@@ -46,7 +46,6 @@ public class ModelExport {
             default -> VariantSettings.Rotation.R0;
         };
     }
-
 
     public static class BlockStateBuilder {
         private MultipartBlockStateSupplier multipartSupplier;
@@ -132,6 +131,13 @@ public class ModelExport {
         };
 
         generator.blockStateCollector.accept(supplier);
+    }
+
+    public boolean isTransparentTexture(String txt) {
+        if (txt != null) {
+            return txt.equals("transparent");
+        }
+        return false;
     }
 
     protected static String getModelName(String ext, int setidx) {

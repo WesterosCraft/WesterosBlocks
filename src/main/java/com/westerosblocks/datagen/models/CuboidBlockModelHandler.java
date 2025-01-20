@@ -69,7 +69,7 @@ public class CuboidBlockModelHandler extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateCuboidModels(BlockStateModelGenerator generator,
+    public void generateCuboidModels(BlockStateModelGenerator generator,
                                       WesterosBlockStateRecord sr,
                                       int setIdx) {
         WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
@@ -314,7 +314,7 @@ public class CuboidBlockModelHandler extends ModelExport {
         };
     }
 
-    private TextureMap createCuboidTextureMap(WesterosBlockDef.RandomTextureSet set) {
+    public TextureMap createCuboidTextureMap(WesterosBlockDef.RandomTextureSet set) {
         TextureMap textureMap = new TextureMap();
 
         // Add required texture keys for all faces
@@ -329,7 +329,7 @@ public class CuboidBlockModelHandler extends ModelExport {
         return textureMap;
     }
 
-    private TextureKey modTextureKeyForIndex(int index) {
+    public TextureKey modTextureKeyForIndex(int index) {
         return switch (index) {
             case 0 -> ModTextureKey.TEXTURE_0;
             case 1 -> ModTextureKey.TEXTURE_1;
@@ -341,7 +341,7 @@ public class CuboidBlockModelHandler extends ModelExport {
         };
     }
 
-    private Identifier getModelId(String variant, int setIdx, boolean isCustom) {
+    public Identifier getModelId(String variant, int setIdx, boolean isCustom) {
         return Identifier.of(WesterosBlocks.MOD_ID,
                 String.format("%s%s/%s_v%d",
                         isCustom ? CUSTOM_PATH : GENERATED_PATH,

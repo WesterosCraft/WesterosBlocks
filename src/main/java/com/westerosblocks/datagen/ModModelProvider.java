@@ -255,6 +255,10 @@ public class ModModelProvider extends FabricModelProvider {
                     HalfDoorBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
+                case "cuboid-16way": {
+                    Cuboid16WayBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
                 // TODO waiting on block to be done
 //                case "flowerpot": {
 //                    FlowerPotModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
@@ -269,6 +273,18 @@ public class ModModelProvider extends FabricModelProvider {
                 }
                 case "cuboid": {
                     CuboidBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
+                case "cuboid-ne": {
+                    CuboidNEBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
+                case "cuboid-nsew": {
+                    CuboidNSEWBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
+                case "cuboid-nsew-stack": {
+                    CuboidNSEWStackBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 default:

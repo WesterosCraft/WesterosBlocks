@@ -198,7 +198,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
         VoxelShape vs = VoxelShapes.empty();
         if (cl != null) {
             for (WesterosBlockDef.Cuboid c : cl) {
-                vs = VoxelShapes.union(vs, VoxelShapes.cuboid(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax));
+                vs = VoxelShapes.union(vs, Block.createCuboidShape(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax));
             }
         }
         return vs;
