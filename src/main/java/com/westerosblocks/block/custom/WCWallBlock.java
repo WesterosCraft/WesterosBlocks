@@ -35,10 +35,10 @@ import org.jetbrains.annotations.Nullable;
 public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
 
     public static final BooleanProperty UP = Properties.UP;
-    public static  EnumProperty<WallShape> EAST_WALL = Properties.EAST_WALL_SHAPE;
-    public static  EnumProperty<WallShape> NORTH_WALL = Properties.NORTH_WALL_SHAPE;
-    public static  EnumProperty<WallShape> SOUTH_WALL = Properties.SOUTH_WALL_SHAPE;
-    public static  EnumProperty<WallShape> WEST_WALL = Properties.WEST_WALL_SHAPE;
+    public static EnumProperty<WallShape> EAST_WALL = Properties.EAST_WALL_SHAPE;
+    public static EnumProperty<WallShape> NORTH_WALL = Properties.NORTH_WALL_SHAPE;
+    public static EnumProperty<WallShape> SOUTH_WALL = Properties.SOUTH_WALL_SHAPE;
+    public static EnumProperty<WallShape> WEST_WALL = Properties.WEST_WALL_SHAPE;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     private static final VoxelShape POST_TEST = Block.createCuboidShape(7.0D, 0.0D, 7.0D, 9.0D, 16.0D, 9.0D);
@@ -112,7 +112,7 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
     }
 
     protected WCWallBlock(AbstractBlock.Settings settings, WesterosBlockDef def, boolean doUnconnect, boolean doConnectstate) {
-        super(settings);
+        super(settings); // Call parent WallBlock constructor
         this.def = def;
 
         String t = def.getType();
@@ -137,13 +137,16 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
         }
         unconnect = doUnconnect;
         connectstate = doConnectstate;
-        BlockState defbs = getDefaultState()
-                .with(UP, Boolean.TRUE)
+
+        // Initialize default state
+        BlockState defbs = super.getDefaultState() // Use super to get base WallBlock state
+                .with(UP, Boolean.valueOf(true))
                 .with(NORTH_WALL, WallShape.NONE)
                 .with(EAST_WALL, WallShape.NONE)
                 .with(SOUTH_WALL, WallShape.NONE)
                 .with(WEST_WALL, WallShape.NONE)
-                .with(WATERLOGGED, Boolean.FALSE);
+                .with(WATERLOGGED, Boolean.valueOf(false));
+
         if (unconnect) {
             defbs = defbs.with(UNCONNECT, Boolean.FALSE);
         }
@@ -153,12 +156,14 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
         if (STATE != null) {
             defbs = defbs.with(STATE, STATE.defValue);
         }
-        setDefaultState(defbs);
+        this.setDefaultState(defbs);
 
+        // Initialize shape arrays
         if (ourCollisionShapeByIndexShared == null) {
             ourCollisionShapeByIndexShared = makeShapes(4.0F, 3.0F, 24.0F, 0.0F, 24.0F, 24.0F);
         }
         this.ourCollisionShapeByIndex = ourCollisionShapeByIndexShared;
+
         if (height.equals("short")) {
             if (ourShapeByIndexSharedShort == null) {
                 ourShapeByIndexSharedShort = makeShapes(4.0F, 3.0F, 16.0F, 0.0F, wallHeight, 16.0F);
@@ -186,17 +191,22 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
     }
 
     @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        if (unconnect && state.get(UNCONNECT)) {
+            return this.ourCollisionShapeByIndex[getStateIndex(state)];
+        }
+        VoxelShape parentShape = super.getCollisionShape(state, world, pos, context);
+        return parentShape != null ? parentShape : VoxelShapes.fullCube();
+    }
+
+    @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return this.ourShapeByIndex[getStateIndex(state)];
     }
 
     @Override
-    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return this.ourCollisionShapeByIndex[getStateIndex(state)];
-    }
-
-    @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        super.appendProperties(builder);
         if (tempUNCONNECT != null) {
             builder.add(tempUNCONNECT);
             tempUNCONNECT = null;
@@ -212,7 +222,6 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
         if (STATE != null) {
             builder.add(STATE);
         }
-        builder.add(UP, NORTH_WALL, EAST_WALL, WEST_WALL, SOUTH_WALL, WATERLOGGED);
     }
 
     private static VoxelShape applyWallShape(VoxelShape voxelShape, WallShape wallShape, VoxelShape p_58036_,

@@ -7,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -36,16 +35,7 @@ public class TrapDoorBlockModelHandler extends ModelExport {
             new ModelEntry("facing=west,half=top,open=true", "open", 270)
     };
 
-    private static class ModelEntry {
-        final String condition;
-        final String modelType;
-        final int yRotation;
-
-        ModelEntry(String condition, String modelType, int yRotation) {
-            this.condition = condition;
-            this.modelType = modelType;
-            this.yRotation = yRotation;
-        }
+    private record ModelEntry(String condition, String modelType, int yRotation) {
     }
 
     public TrapDoorBlockModelHandler(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {

@@ -29,12 +29,10 @@ public class CuboidNSEWBlockModelHandler extends CuboidBlockModelHandler {
         this.def = def;
     }
 
-    @Override
     public void generateBlockStateModels() {
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
-        // First generate the base models if not custom
         for (WesterosBlockStateRecord sr : def.states) {
             if (!sr.isCustomModel()) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
@@ -43,13 +41,11 @@ public class CuboidNSEWBlockModelHandler extends CuboidBlockModelHandler {
             }
         }
 
-        // Now generate the blockstate variants
         for (WesterosBlockStateRecord sr : def.states) {
             boolean justBase = sr.stateID == null;
             Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
             String baseName = justBase ? "base" : sr.stateID;
 
-            // Generate variants for each direction
             for (int dirIndex = 0; dirIndex < FACING_DIRECTIONS.length; dirIndex++) {
                 // For each texture set
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {

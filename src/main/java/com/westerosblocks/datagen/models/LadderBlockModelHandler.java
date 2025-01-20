@@ -7,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -72,11 +71,7 @@ public class LadderBlockModelHandler extends ModelExport {
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
-
-        String path = String.format("%s%s/%s",
-                blockDefinition.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH,
-                blockDefinition.getBlockName(),
-                "base_v1");
+        String path = String.format("%s%s/%s", blockDefinition.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH, blockDefinition.getBlockName(), "base_v1");
 
         itemModelGenerator.register(
                 currentBlock.asItem(),

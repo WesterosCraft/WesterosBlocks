@@ -7,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;

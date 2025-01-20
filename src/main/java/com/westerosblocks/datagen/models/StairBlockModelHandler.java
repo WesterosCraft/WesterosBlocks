@@ -31,7 +31,6 @@ public class StairBlockModelHandler extends ModelExport {
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
-        // Generate models first if not custom
         if (!def.isCustomModel()) {
             for (WesterosBlockStateRecord sr : def.states) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
@@ -42,17 +41,14 @@ public class StairBlockModelHandler extends ModelExport {
 
         // Generate all the variants for each state
         for (WesterosBlockStateRecord sr : def.states) {
-            // Bottom half variants
             generateDirectionalVariants(blockStateBuilder, sr, "bottom", variants);
-            // Top half variants
             generateDirectionalVariants(blockStateBuilder, sr, "top", variants);
         }
 
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateDirectionalVariants(BlockStateBuilder builder, WesterosBlockStateRecord sr,
-                                             String half, Map<String, List<BlockStateVariant>> variants) {
+    private void generateDirectionalVariants(BlockStateBuilder builder, WesterosBlockStateRecord sr, String half, Map<String, List<BlockStateVariant>> variants) {
         int xRot = half.equals("top") ? 180 : 0;
 
         // East facing variants
@@ -118,13 +114,11 @@ public class StairBlockModelHandler extends ModelExport {
         boolean isTinted = sr.isTinted();
         boolean hasOverlay = sr.getOverlayTextureByIndex(0) != null;
 
-        // Create texture maps
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.BOTTOM, createBlockIdentifier(sr.getRandomTextureSet(setIdx).getTextureByIndex(0)))
                 .put(TextureKey.TOP, createBlockIdentifier(sr.getRandomTextureSet(setIdx).getTextureByIndex(1)))
                 .put(TextureKey.SIDE, createBlockIdentifier(sr.getRandomTextureSet(setIdx).getTextureByIndex(2)));
 
-        // Only add overlay textures if we have them
         if (hasOverlay) {
             textureMap = textureMap
                     .put(ModTextureKey.BOTTOM_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(0)))
@@ -160,7 +154,6 @@ public class StairBlockModelHandler extends ModelExport {
             };
         }
 
-        // Create model with appropriate texture keys
         Model model = new Model(
                 Optional.of(Identifier.of(WesterosBlocks.MOD_ID, baseParent)),
                 Optional.empty(),

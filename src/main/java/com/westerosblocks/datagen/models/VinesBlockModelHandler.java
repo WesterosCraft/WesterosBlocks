@@ -88,12 +88,9 @@ public class VinesBlockModelHandler extends ModelExport {
         return variant;
     }
 
-    private void generateVineModels(BlockStateModelGenerator generator,
-                                    WesterosBlockDef.RandomTextureSet set,
-                                    int setIdx) {
-        // Generate base vine model
-        TextureMap baseTextureMap = new TextureMap()
-                .put(ModTextureKey.VINES, createBlockIdentifier(set.getTextureByIndex(0)));
+    private void generateVineModels(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set, int setIdx) {
+        // base vine model
+        TextureMap baseTextureMap = new TextureMap().put(ModTextureKey.VINES, createBlockIdentifier(set.getTextureByIndex(0)));
         Identifier baseModelId = getModelId("base", setIdx);
         Model baseModel = new Model(
                 Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/vines/vine_1")),
@@ -102,9 +99,8 @@ public class VinesBlockModelHandler extends ModelExport {
         );
         baseModel.upload(baseModelId, baseTextureMap, generator.modelCollector);
 
-        // Generate top vine model
-        TextureMap topTextureMap = new TextureMap()
-                .put(ModTextureKey.VINES, createBlockIdentifier(set.getTextureByIndex(1)));
+        // top vine model
+        TextureMap topTextureMap = new TextureMap().put(ModTextureKey.VINES, createBlockIdentifier(set.getTextureByIndex(1)));
         Identifier topModelId = getModelId("top", setIdx);
         Model topModel = new Model(
                 Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/vines/vine_u")),
@@ -116,18 +112,12 @@ public class VinesBlockModelHandler extends ModelExport {
 
     private Identifier getModelId(String type, int setIdx) {
         return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/%s_v%d",
-                        def.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH,
-                        def.getBlockName(),
-                        type,
-                        setIdx + 1
+                String.format("%s%s/%s_v%d", def.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH, def.getBlockName(), type, setIdx + 1
                 )
         );
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator,
-                                          Block block,
-                                          WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
         WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.states.getFirst().getRandomTextureSet(0);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
 

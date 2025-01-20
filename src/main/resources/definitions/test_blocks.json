@@ -1879,6 +1879,38 @@
       "type": "allow-unsupported"
     },
     {
+      "blockName": "rope_pulley",
+      "blockType": "cuboid-nsewud",
+      "hardness": 3,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "westeros_misc_tab",
+      "label": "Rope Pulley",
+      "textures": [
+        "pulley/rope/top_bottom",
+        "pulley/rope/top_bottom",
+        "pulley/rope/side",
+        "pulley/rope/side",
+        "pulley/rope/front",
+        "pulley/rope/front"
+      ],
+      "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+      }
+    },
+    {
       "blockName": "sewer_manhole",
       "blockType": "trapdoor",
       "hardness": 2,

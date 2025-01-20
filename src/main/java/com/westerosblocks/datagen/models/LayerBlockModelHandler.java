@@ -30,7 +30,6 @@ public class LayerBlockModelHandler extends ModelExport {
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
-        // Generate variants for each layer
         for (int layer = 0; layer < layerBlock.layerCount; layer++) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
                 WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
@@ -52,10 +51,7 @@ public class LayerBlockModelHandler extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateLayerModel(BlockStateModelGenerator generator,
-                                    int layer,
-                                    WesterosBlockDef.RandomTextureSet set,
-                                    int setIdx) {
+    private void generateLayerModel(BlockStateModelGenerator generator, int layer, WesterosBlockDef.RandomTextureSet set, int setIdx) {
         boolean isTinted = def.isTinted();
         float yMax = (16.0f / layerBlock.layerCount) * layer;  // Calculate height based on layer number
 
@@ -67,17 +63,11 @@ public class LayerBlockModelHandler extends ModelExport {
 
     private Identifier getModelId(int layer, int setIdx) {
         return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/layer%d_v%d",
-                        GENERATED_PATH,
-                        def.getBlockName(),
-                        layer,
-                        setIdx + 1));
+                String.format("%s%s/layer%d_v%d", GENERATED_PATH, def.getBlockName(), layer, setIdx + 1));
     }
 
     // TODO need to figure out a diff model for in-game GUI
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator,
-                                          Block currentBlock,
-                                          WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
         String path = String.format("%s%s/layer1_v1", GENERATED_PATH, blockDefinition.blockName);
 
         itemModelGenerator.register(

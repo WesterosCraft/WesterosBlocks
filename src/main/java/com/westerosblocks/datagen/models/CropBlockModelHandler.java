@@ -79,8 +79,7 @@ public class CropBlockModelHandler extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateCropModels(BlockStateModelGenerator generator,
-                                    WesterosBlockStateRecord rec, String id, int layer) {
+    private void generateCropModels(BlockStateModelGenerator generator, WesterosBlockStateRecord rec, String id, int layer) {
         boolean isTinted = rec.isTinted();
 
         for (int setIdx = 0; setIdx < rec.getRandomTextureSetCount(); setIdx++) {

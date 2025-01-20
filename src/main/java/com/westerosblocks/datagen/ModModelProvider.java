@@ -287,6 +287,14 @@ public class ModModelProvider extends FabricModelProvider {
                     CuboidNSEWStackBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
+                case "cuboid-nsewud": {
+                    CuboidNSEWUDBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
+                case "cake": {
+                    CakeBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
                 default:
                     WesterosBlocks.LOGGER.warn("DATAGEN: Unknown item type: {} for item {}", customBlockDef.blockType, customBlockDef.blockName);
             }

@@ -74,29 +74,35 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
             for (String tok : toks) {
                 if (tok.equals("toggleOnUse")) {
                     toggleOnUse = true;
-                    break;
                 }
             }
         }
         int cnt = def.states.size();
+        // Properly initialize the arrays with correct typing
         this.cuboid_by_facing = new List[cnt * modelsPerState];
         SHAPE_BY_INDEX = new VoxelShape[cnt * modelsPerState];
+
+        // Initialize each state's shapes
         for (int i = 0; i < cnt; i++) {
             cuboid_by_facing[i * modelsPerState] = def.states.get(i).getCuboidList();
             for (int j = 1; j < modelsPerState; j++) {
-                cuboid_by_facing[i * modelsPerState + j] = new ArrayList<WesterosBlockDef.Cuboid>();
+                cuboid_by_facing[i * modelsPerState + j] = new ArrayList<>();
             }
             SHAPE_BY_INDEX[i * modelsPerState] = getBoundingBoxFromCuboidList(cuboid_by_facing[i * modelsPerState]);
         }
+
+        // Initialize support shapes
         SUPPORT_BY_INDEX = new VoxelShape[cnt];
         for (int i = 0; i < cnt; i++) {
             SUPPORT_BY_INDEX[i] = def.states.get(i).makeSupportBoxShape(null);
         }
-        BlockState defbs = this.getDefaultState().with(WATERLOGGED, Boolean.FALSE);
+
+        // Set default state
+        BlockState defbs = this.getDefaultState().with(WATERLOGGED, false);
         if (STATE != null) {
             defbs = defbs.with(STATE, STATE.defValue);
         }
-        setDefaultState(defbs);
+        this.setDefaultState(defbs);
     }
 
     @Override
@@ -136,8 +142,9 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     @Override
     public VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
         int idx = 0;
-        if (STATE != null)
+        if (STATE != null) {
             idx = STATE.getIndex(state.get(STATE));
+        }
         return SUPPORT_BY_INDEX[idx];
     }
 
@@ -181,24 +188,24 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
-                                 BlockHitResult hit) {
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         Hand hand = player.getActiveHand();
         if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
             state = state.cycle(this.STATE);
-            world.setBlockState(pos, state, 10);
+            world.setBlockState(pos, state, Block.NOTIFY_ALL);
             world.syncWorldEvent(player, 1006, pos, 0);
             return ActionResult.success(world.isClient);
-        } else {
-            return ActionResult.PASS;
         }
+        return ActionResult.PASS;
     }
 
     protected VoxelShape getBoundingBoxFromCuboidList(List<WesterosBlockDef.Cuboid> cl) {
         VoxelShape vs = VoxelShapes.empty();
         if (cl != null) {
             for (WesterosBlockDef.Cuboid c : cl) {
-                vs = VoxelShapes.union(vs, Block.createCuboidShape(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax));
+                vs = VoxelShapes.union(vs, Block.createCuboidShape(
+                        c.xMin * 16.0, c.yMin * 16.0, c.zMin * 16.0,
+                        c.xMax * 16.0, c.yMax * 16.0, c.zMax * 16.0));
             }
         }
         return vs;

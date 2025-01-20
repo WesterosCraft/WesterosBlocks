@@ -1,15 +1,41 @@
 package com.westerosblocks.datagen.models;
 
+import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.datagen.ModelExport;
+import com.westerosblocks.block.WesterosBlockStateRecord;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.*;
+import net.minecraft.util.Identifier;
 
-public class CuboidNSEWUDBlockModelHandler extends ModelExport {
+import java.util.*;
+
+public class CuboidNSEWUDBlockModelHandler extends CuboidBlockModelHandler {
     private final BlockStateModelGenerator generator;
     private final Block block;
     private final WesterosBlockDef def;
+
+    private static final String[] FACING_DIRECTIONS = {
+            "north", "east", "south", "west", "up", "down"
+    };
+
+    private static final class RotationData {
+        final int x;
+        final int y;
+
+        RotationData(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
+    private static final Map<String, RotationData> ROTATIONS = Map.of(
+            "north", new RotationData(0, 0),
+            "east", new RotationData(0, 90),
+            "south", new RotationData(0, 180),
+            "west", new RotationData(0, 270),
+            "up", new RotationData(270, 0),
+            "down", new RotationData(90, 0)
+    );
 
     public CuboidNSEWUDBlockModelHandler(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
         super(generator, block, def);
@@ -18,11 +44,74 @@ public class CuboidNSEWUDBlockModelHandler extends ModelExport {
         this.def = def;
     }
 
+    @Override
     public void generateBlockStateModels() {
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
+        // For each state definition
+        for (WesterosBlockStateRecord sr : def.states) {
+            boolean justBase = sr.stateID == null;
+            Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
+            String baseName = justBase ? "base" : sr.stateID;
+
+            // Generate the models if not custom
+            if (!sr.isCustomModel()) {
+                for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
+                    generateCuboidModels(generator, sr, setIdx);
+                }
+            }
+
+            // For each facing direction
+            for (String facing : FACING_DIRECTIONS) {
+                // For each texture set
+                for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
+                    WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+
+                    BlockStateVariant variant = BlockStateVariant.create();
+                    Identifier modelId = getModelId(baseName, setIdx, sr.isCustomModel());
+                    variant.put(VariantSettings.MODEL, modelId);
+
+                    if (set.weight != null) {
+                        variant.put(VariantSettings.WEIGHT, set.weight);
+                    }
+
+                    // Apply rotations
+                    RotationData rotation = ROTATIONS.get(facing);
+                    if (rotation.x != 0) {
+                        variant.put(VariantSettings.X, getRotation(rotation.x));
+                    }
+
+                    int yRot = (rotation.y + sr.rotYOffset) % 360;
+                    if (yRot > 0) {
+                        variant.put(VariantSettings.Y, getRotation(yRot));
+                    }
+
+                    blockStateBuilder.addVariant("facing=" + facing, variant, stateIDs, variants);
+                }
+            }
+        }
+
+        generateBlockStateFiles(generator, block, variants);
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
+        WesterosBlockStateRecord firstState = blockDefinition.states.getFirst();
+        String baseName = firstState.stateID == null ? "base" : firstState.stateID;
+        String pathPrefix = firstState.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH;
+        String path = String.format("%s%s/%s_v1", pathPrefix, blockDefinition.getBlockName(), baseName);
 
+        itemModelGenerator.register(
+                block.asItem(),
+                new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, path)),
+                        Optional.empty())
+        );
+
+        if (blockDefinition.isTinted()) {
+            String tintResource = blockDefinition.getBlockColorMapResource();
+            if (tintResource != null) {
+                // TODO: Handle tinting registration if needed
+            }
+        }
     }
 }

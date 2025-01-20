@@ -39,25 +39,19 @@ public class Cuboid16WayBlockModelHandler extends CuboidBlockModelHandler {
 
             // For each direction (16-way rotation)
             for (int rotation = 0; rotation < 16; rotation++) {
-                // Loop over the random texture sets
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
                     WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
                     BlockStateVariant variant = BlockStateVariant.create();
-                    Identifier modelId = getModelId(baseName + ROTATION_MODIFIERS[rotation % 4],
-                            setIdx, sr.isCustomModel());
+                    Identifier modelId = getModelId(baseName + ROTATION_MODIFIERS[rotation % 4], setIdx, sr.isCustomModel());
                     variant.put(VariantSettings.MODEL, modelId);
-
                     if (set.weight != null) {
                         variant.put(VariantSettings.WEIGHT, set.weight);
                     }
-
-                    // Calculate rotation
                     int rot = (90 * (((rotation + 1) % 16) / 4) + sr.rotYOffset) % 360;
                     if (rot > 0) {
                         variant.put(VariantSettings.Y, getRotation(rot));
                     }
-
                     blockStateBuilder.addVariant("rotation=" + rotation, variant, stateIDs, variants);
                 }
             }
@@ -98,9 +92,7 @@ public class Cuboid16WayBlockModelHandler extends CuboidBlockModelHandler {
                         setIdx + 1));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator,
-                                          Block block,
-                                          WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
         WesterosBlockStateRecord firstState = blockDefinition.states.getFirst();
         String baseName = firstState.stateID == null ? "base" : firstState.stateID;
 

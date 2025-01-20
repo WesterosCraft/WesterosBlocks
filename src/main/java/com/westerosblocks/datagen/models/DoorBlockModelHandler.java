@@ -152,9 +152,7 @@ public class DoorBlockModelHandler extends ModelExport {
     }
 
     // TODO the door model is ugly af i think we need item textures
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator,
-                                          Block block,
-                                          WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
         WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
 

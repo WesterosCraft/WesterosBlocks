@@ -65,13 +65,11 @@ public class FanBlockModelHandler extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateFanModels(BlockStateModelGenerator generator,
-                                   WesterosBlockDef.RandomTextureSet set,
-                                   int setIdx) {
+    private void generateFanModels(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set, int setIdx) {
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.FAN, createBlockIdentifier(set.getTextureByIndex(0)));
 
-        // Generate floor fan model
+        // floor fan model
         Identifier floorModelId = getModelId("base", setIdx);
         String floorParentPath = def.isTinted() ? "tinted/fan" : "untinted/fan";
         Model floorModel = new Model(
@@ -81,7 +79,7 @@ public class FanBlockModelHandler extends ModelExport {
         );
         floorModel.upload(floorModelId, textureMap, generator.modelCollector);
 
-        // Generate wall fan model
+        // wall fan model
         Identifier wallModelId = getModelId("wall", setIdx);
         String wallParentPath = def.isTinted() ? "tinted/wall_fan" : "untinted/wall_fan";
         Model wallModel = new Model(
@@ -89,6 +87,7 @@ public class FanBlockModelHandler extends ModelExport {
                 Optional.empty(),
                 TextureKey.FAN
         );
+
         wallModel.upload(wallModelId, textureMap, generator.modelCollector);
     }
 
@@ -102,9 +101,7 @@ public class FanBlockModelHandler extends ModelExport {
                         setIdx + 1));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator,
-                                          Block currentBlock,
-                                          WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
         WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
 

@@ -17,7 +17,6 @@ public class WallBlockModelHandler extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
     private final WesterosBlockDef def;
-    private final WCWallBlock wallBlock;
 
     private static final ModelPart[] PARTS = {
             // Post
@@ -45,7 +44,6 @@ public class WallBlockModelHandler extends ModelExport {
         this.generator = generator;
         this.block = block;
         this.def = def;
-        this.wallBlock = (block instanceof WCWallBlock) ? (WCWallBlock) block : null;
     }
 
 
@@ -63,12 +61,10 @@ public class WallBlockModelHandler extends ModelExport {
                 }
             }
 
-            // Generate variants for each wall part
             for (ModelPart part : PARTS) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
                     WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
-                    // Create variant for this part
                     BlockStateVariant variant = BlockStateVariant.create();
                     Identifier modelId = getModelId(part.modExt(), setIdx, sr);
                     variant.put(VariantSettings.MODEL, modelId);
@@ -83,10 +79,8 @@ public class WallBlockModelHandler extends ModelExport {
                         variant.put(VariantSettings.Y, getRotation(part.y()));
                     }
 
-                    // Create base condition
                     When.PropertyCondition baseCondition = part.condition();
 
-                    // Handle state IDs if present
                     if (stateIDs != null) {
                         for (String stateID : stateIDs) {
                             When.PropertyCondition stateCondition = When.create();
@@ -97,21 +91,18 @@ public class WallBlockModelHandler extends ModelExport {
                                 );
                             }
 
-                            // Add to supplier with combined conditions
                             stateSupplier.with(
                                     When.allOf(baseCondition, stateCondition),
                                     variant
                             );
                         }
                     } else {
-                        // Add to supplier with just base condition
                         stateSupplier.with(baseCondition, variant);
                     }
                 }
             }
         }
 
-        // Register the multipart state supplier
         generator.blockStateCollector.accept(stateSupplier);
     }
 

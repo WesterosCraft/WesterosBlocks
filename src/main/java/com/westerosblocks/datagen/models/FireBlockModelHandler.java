@@ -22,10 +22,8 @@ public class FireBlockModelHandler extends ModelExport {
     }
 
     public void generateBlockStateModels() {
-        // Create multipart block state supplier
         MultipartBlockStateSupplier stateSupplier = MultipartBlockStateSupplier.create(block);
 
-        // Generate models first if not custom
         if (!def.isCustomModel()) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
                 WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
@@ -36,7 +34,6 @@ public class FireBlockModelHandler extends ModelExport {
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
             WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
 
-            // Base case - no connections
             When baseCase = When.create()
                     .set(Properties.NORTH, false)
                     .set(Properties.SOUTH, false)
@@ -44,18 +41,15 @@ public class FireBlockModelHandler extends ModelExport {
                     .set(Properties.WEST, false)
                     .set(Properties.UP, false);
 
-            // Add floor models
             stateSupplier.with(baseCase,
                     BlockStateVariant.create().put(VariantSettings.MODEL, getModelId("floor0", setIdx)),
                     BlockStateVariant.create().put(VariantSettings.MODEL, getModelId("floor1", setIdx)));
 
-            // Add side models for each direction
             addDirectionalFireVariants(stateSupplier, setIdx, "north", 0);
             addDirectionalFireVariants(stateSupplier, setIdx, "east", 90);
             addDirectionalFireVariants(stateSupplier, setIdx, "south", 180);
             addDirectionalFireVariants(stateSupplier, setIdx, "west", 270);
 
-            // Add up models
             When upCase = When.create().set(Properties.UP, true);
             stateSupplier.with(upCase,
                     BlockStateVariant.create().put(VariantSettings.MODEL, getModelId("up0", setIdx)),
@@ -96,9 +90,7 @@ public class FireBlockModelHandler extends ModelExport {
                         rotationVariant));
     }
 
-    private void generateFireModels(BlockStateModelGenerator generator,
-                                    WesterosBlockDef.RandomTextureSet set,
-                                    int setIdx) {
+    private void generateFireModels(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set, int setIdx) {
         String texture0 = set.getTextureByIndex(0);
         String texture1 = set.getTextureByIndex(1);
 
@@ -139,9 +131,7 @@ public class FireBlockModelHandler extends ModelExport {
                         setIdx + 1));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator,
-                                          Block currentBlock,
-                                          WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
         WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
 

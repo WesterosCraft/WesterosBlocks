@@ -49,10 +49,8 @@ public class FenceBlockModelHandler extends ModelExport {
     }
 
     public void generateBlockStateModels() {
-        // Create multipart block state supplier
         MultipartBlockStateSupplier stateSupplier = MultipartBlockStateSupplier.create(block);
 
-        // Generate models first if not custom - do this ONCE before generating blockstates
         if (!def.isCustomModel()) {
             for (WesterosBlockStateRecord sr : def.states) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
@@ -61,14 +59,11 @@ public class FenceBlockModelHandler extends ModelExport {
             }
         }
 
-        // Generate variants for each state record
         for (WesterosBlockStateRecord sr : def.states) {
             boolean justBase = sr.stateID == null;
             Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
 
-            // Process each component of the fence
             for (ModelRec part : PARTS) {
-                // Generate variants for each texture set
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
                     WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
@@ -84,10 +79,8 @@ public class FenceBlockModelHandler extends ModelExport {
                         variant.put(VariantSettings.Y, getRotation(part.yRot()));
                     }
 
-                    // Create when condition if needed
                     When when = null;
-                    if (part.north() != null || part.south() != null ||
-                            part.east() != null || part.west() != null) {
+                    if (part.north() != null || part.south() != null || part.east() != null || part.west() != null) {
                         When.PropertyCondition condition = When.create();
                         if (part.north() != null) condition.set(Properties.NORTH, Boolean.parseBoolean(part.north()));
                         if (part.south() != null) condition.set(Properties.SOUTH, Boolean.parseBoolean(part.south()));
@@ -170,9 +163,7 @@ public class FenceBlockModelHandler extends ModelExport {
         return Identifier.of(WesterosBlocks.MOD_ID, GENERATED_PATH + path);
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator,
-                                          Block block,
-                                          WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
         WesterosBlockStateRecord firstState = blockDefinition.states.getFirst();
         WesterosBlockDef.RandomTextureSet firstSet = firstState.getRandomTextureSet(0);
         boolean isTinted = firstState.isTinted();
