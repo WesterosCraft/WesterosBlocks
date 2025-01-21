@@ -7,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -63,10 +62,10 @@ public class FlowerPotModelHandler extends ModelExport {
                 .put(TextureKey.PLANT, createBlockIdentifier(set.getTextureByIndex(2)))
                 .put(TextureKey.PARTICLE, createBlockIdentifier(set.getTextureByIndex(1)));
 
-        String parentPath = def.isTinted() ? "tinted/flower_pot" : "untinted/flower_pot";
+        String parentPath = def.isTinted() ? "tinted/flower_pot_cross" : "untinted/flower_pot_cross";
 
         Identifier modelId = getModelId("base", setIdx);
-        Model model = new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parentPath)), Optional.empty());
+        Model model = new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parentPath)), Optional.empty(), TextureKey.DIRT, ModTextureKey.FLOWER_POT, TextureKey.PLANT, TextureKey.PARTICLE);
         model.upload(modelId, textureMap, generator.modelCollector);
     }
 
