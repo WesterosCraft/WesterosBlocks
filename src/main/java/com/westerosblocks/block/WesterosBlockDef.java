@@ -884,7 +884,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
         typeTable.put("beacon", new WCBeaconBlock.Factory());
         typeTable.put("vines", new WCVinesBlock.Factory());
-//        typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
+        typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
         typeTable.put("fencegate", new WCFenceGateBlock.Factory());
 
         // Standard color multipliers

@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
@@ -25,8 +26,9 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 
-public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
+public class WCPlantBlock extends PlantBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -58,15 +60,15 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
     public boolean layerSensitive = false;
 
     public static final VoxelShape[] SHAPE_BY_LAYER = new VoxelShape[]{
-        VoxelShapes.empty(),
-        VoxelShapes.cuboid(0.0D, -14.0D, 0.0D, 16.0D, 2.0D, 16.0D),
-        VoxelShapes.cuboid(0.0D, -12.0D, 0.0D, 16.0D, 4.0D, 16.0D),
-        VoxelShapes.cuboid(0.0D, -10.0D, 0.0D, 16.0D, 6.0D, 16.0D),
-        VoxelShapes.cuboid(0.0D, -8.0D, 0.0D, 16.0D, 8.0D, 16.0D),
-        VoxelShapes.cuboid(0.0D, -6.0D, 0.0D, 16.0D, 10.0D, 16.0D),
-        VoxelShapes.cuboid(0.0D, -4.0D, 0.0D, 16.0D, 12.0D, 16.0D),
-        VoxelShapes.cuboid(0.0D, -2.0D, 0.0D, 16.0D, 14.0D, 16.0D),
-        VoxelShapes.cuboid(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)
+            VoxelShapes.empty(),
+            Block.createCuboidShape(0.0D, -14.0D, 0.0D, 16.0D, 2.0D, 16.0D),
+            Block.createCuboidShape(0.0D, -12.0D, 0.0D, 16.0D, 4.0D, 16.0D),
+            Block.createCuboidShape(0.0D, -10.0D, 0.0D, 16.0D, 6.0D, 16.0D),
+            Block.createCuboidShape(0.0D, -8.0D, 0.0D, 16.0D, 8.0D, 16.0D),
+            Block.createCuboidShape(0.0D, -6.0D, 0.0D, 16.0D, 10.0D, 16.0D),
+            Block.createCuboidShape(0.0D, -4.0D, 0.0D, 16.0D, 12.0D, 16.0D),
+            Block.createCuboidShape(0.0D, -2.0D, 0.0D, 16.0D, 14.0D, 16.0D),
+            Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)
     };
 
     protected WCPlantBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
@@ -78,18 +80,17 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
             for (String tok : toks) {
                 if (tok.equals("toggleOnUse")) {
                     toggleOnUse = true;
-                    break;
                 }
             }
         }
-        BlockState defbs = this.getDefaultState().with(WATERLOGGED, Boolean.FALSE);
+        BlockState defbs = this.getDefaultState().with(WATERLOGGED, false);
         if (STATE != null) {
             defbs = defbs.with(STATE, STATE.defValue);
         }
         if (LAYERS != null) {
             defbs = defbs.with(LAYERS, 8);
         }
-        setDefaultState(defbs);
+        this.setDefaultState(defbs);
     }
 
     @Override
@@ -103,27 +104,26 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
         if (bs == null) return null;
         FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
         bs = bs.with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
-
         if (STATE != null) {
             bs = bs.with(STATE, STATE.defValue);
         }
-
         if (LAYERS != null) {
             BlockState below = ctx.getWorld().getBlockState(ctx.getBlockPos().offset(Direction.DOWN));
-            if ((below != null) && (below.contains(Properties.LAYERS))) {
+            if (below.contains(Properties.LAYERS)) {
                 Block blk = below.getBlock();
-                Integer layer = below.get(Properties.LAYERS);
+                int layer = below.get(Properties.LAYERS);
                 // See if soft layer
-                if ((blk instanceof SnowBlock) || ((blk instanceof WCLayerBlock) && ((WCLayerBlock) blk).softLayer)) {
-                    layer = (layer > 2) ? Integer.valueOf(layer - 2) : Integer.valueOf(1);
+                if ((blk instanceof SnowBlock) || ((blk instanceof WCLayerBlock) && ((WCLayerBlock)blk).softLayer)) {
+                    layer = (layer > 2) ? layer - 2 : 1;
                 }
                 bs = bs.with(LAYERS, layer);
-            } else if ((below != null) && (below.getBlock() instanceof SlabBlock)) {
-                SlabType slabtype = below.get(Properties.SLAB_TYPE);
-                if (slabtype == SlabType.BOTTOM) bs = bs.with(LAYERS, 4);
+            }
+            else if (below.getBlock() instanceof SlabBlock) {
+                if (below.get(Properties.SLAB_TYPE) == SlabType.BOTTOM) {
+                    bs = bs.with(LAYERS, 4);
+                }
             }
         }
-
         return bs;
     }
 
@@ -133,15 +133,18 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    protected boolean canPathfindThrough(BlockState state, NavigationType type) {
-        return switch (type) {
-            case LAND -> false;
-            case WATER -> state.getFluidState().isIn(FluidTags.WATER);
-            case AIR -> false;
-            default -> false;
-        };
+    protected MapCodec<? extends PlantBlock> getCodec() {
+        return null;
     }
 
+    @Override
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
+                                                WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+        if (state.get(WATERLOGGED)) {
+            world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+        }
+        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+    }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
@@ -163,41 +166,24 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
-                                 BlockHitResult hit) {
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         Hand hand = player.getActiveHand();
         if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
             state = state.cycle(this.STATE);
-            world.setBlockState(pos, state, 10);
+            world.setBlockState(pos, state, Block.NOTIFY_ALL);
             world.syncWorldEvent(player, 1006, pos, 0);
             return ActionResult.success(world.isClient);
-        } else {
-            return ActionResult.PASS;
         }
+        return ActionResult.PASS;
     }
-
-//     TODO: not sure if required anymore
-//	@Override
-//	public BlockState getPlant(BlockGetter world, BlockPos pos) {
-//		BlockState state = world.getBlockState(pos);
-//      	if (state.getBlock() != this) return defaultBlockState();
-//      	return state;
-//	}
 
     @Override
-    protected boolean isTransparent(BlockState state, BlockView world, BlockPos pos) {
-        return state.getFluidState().isEmpty();
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        if (LAYERS != null) {
+            return SHAPE_BY_LAYER[state.get(LAYERS)];
+        }
+        return VoxelShapes.fullCube();
     }
-
-    // TODO shape is big
-//    @Override
-//    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-//        if (LAYERS != null) {
-//            return SHAPE_BY_LAYER[state.get(LAYERS)];
-//        } else {
-//            return VoxelShapes.fullCube();
-//        }
-//    }
 
     private static final String[] TAGS = {"flowers"};
 
@@ -205,5 +191,4 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
     public String[] getBlockTags() {
         return TAGS;
     }
-
 }

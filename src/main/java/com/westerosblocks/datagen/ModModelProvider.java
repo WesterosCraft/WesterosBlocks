@@ -152,6 +152,7 @@ public class ModModelProvider extends FabricModelProvider {
                 }
                 case "flowerpot": {
                     new FlowerPotModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    break;
                 }
                 case "fencegate": {
                     new FenceGateBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
@@ -260,9 +261,10 @@ public class ModModelProvider extends FabricModelProvider {
                     break;
                 }
                 // TODO waiting on block to be done
-//                case "flowerpot": {
-//                    FlowerPotModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-//                }
+                case "flowerpot": {
+                    FlowerPotModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
                 case "fence": {
                     FenceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;

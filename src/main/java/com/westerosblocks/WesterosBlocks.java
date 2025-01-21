@@ -95,6 +95,4 @@ public class WesterosBlocks implements ModInitializer {
 
         return expandedBlockDefs.toArray(new WesterosBlockDef[0]);
     }
-
-
 }

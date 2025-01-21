@@ -1911,6 +1911,31 @@
       }
     },
     {
+      "blockName": "yellow_wildflowers",
+      "blockType": "plant",
+      "type": "layerSensitive",
+      "material": "plants",
+      "creativeTab": "westeros_flowers_tab",
+      "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
+      "label": "Yellow Wildflowers",
+      "textures": [
+        "flowers/yellow_wildflowers"
+      ]
+    },
+    {
+      "blockName": "potted_yellow_wildflowers",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "westeros_flowers_tab",
+      "label": "Potted Yellow Wildflowers",
+      "type": "plant-id:yellow_wildflowers",
+      "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/yellow_wildflowers"
+      ]
+    },
+    {
       "blockName": "sewer_manhole",
       "blockType": "trapdoor",
       "hardness": 2,
