@@ -109,7 +109,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
         if (STATE != null) {
             defbs = defbs.with(STATE, STATE.defValue);
         }
-        setDefaultState(defbs);
+        this.setDefaultState(defbs);
     }
 
     protected WCSolidBlock(AbstractBlock.Settings props, WesterosBlockDef def, boolean doConnectstate) {
@@ -186,15 +186,14 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         BlockState bs = super.getPlacementState(ctx);
-        if (STATE != null && bs != null) {
+        if (STATE != null && bs != null && bs.contains(STATE)) {
             bs = bs.with(STATE, STATE.defValue);
         }
         return bs;
     }
 
     @Override
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
-                                 BlockHitResult hit) {
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         Hand hand = player.getActiveHand();
         if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
             state = state.cycle(this.STATE);

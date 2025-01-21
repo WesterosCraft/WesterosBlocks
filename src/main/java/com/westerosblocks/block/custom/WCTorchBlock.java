@@ -20,15 +20,15 @@ public class WCTorchBlock extends TorchBlock implements WesterosBlockLifecycle {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
             AbstractBlock.Settings floorBlockSettings = def.makeBlockSettings().noCollision().breakInstantly();
-        	Block floorblock = new WCTorchBlock(floorBlockSettings, def);
+            Block floorblock = new WCTorchBlock(floorBlockSettings, def);
 
             AbstractBlock.Settings wallBlockSettings = def.makeBlockSettings().noCollision().breakInstantly().dropsLike(floorblock);
-            //TODO
-//        	Block wallblock = new WCWallTorchBlock(wallBlockSettings, def);
+            Block wallblock = new WCWallTorchBlock(wallBlockSettings, def);
 
             def.registerRenderType(ModBlocks.registerBlock(def.blockName, floorblock), false, false);
-//        	def.registerRenderType(ModBlocks.registerBlock(def.blockName, wallblock), false, false);
-        	return floorblock;
+            def.registerRenderType(ModBlocks.registerBlock(def.blockName + "_wall", wallblock), false, false);
+
+            return floorblock;
         }
     }
     

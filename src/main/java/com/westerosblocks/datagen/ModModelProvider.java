@@ -260,7 +260,6 @@ public class ModModelProvider extends FabricModelProvider {
                     Cuboid16WayBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-                // TODO waiting on block to be done
                 case "flowerpot": {
                     FlowerPotModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
@@ -295,6 +294,14 @@ public class ModModelProvider extends FabricModelProvider {
                 }
                 case "cake": {
                     CakeBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
+                case "furnace": {
+                    FurnaceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
+                case "sound": {
+                    SoundBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 default:

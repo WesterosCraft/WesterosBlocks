@@ -556,25 +556,25 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         return block;
     }
 
-    public AbstractBlock.Settings makeBlockSettings() {
-        // First get base settings from material
-        AbstractBlock.Settings settings = material != null
-                ? WesterosBlockSettings.get(material)  // Get base settings from our material system
-                : AbstractBlock.Settings.create(); // Fallback if no material
+    public AbstractBlock.Settings makeBlockSettings() { return applyCustomProperties(null); }
 
-        // Apply custom properties that override material defaults
-        return applyCustomProperties(settings);
-    }
+    private AbstractBlock.Settings applyCustomProperties(Block block) {
+        AbstractBlock.Settings settings;
 
-    private AbstractBlock.Settings applyCustomProperties(AbstractBlock.Settings settings) {
-        // Handle hardness and resistance
+        // Create new settings if no block provided, otherwise copy from block
+        if (block == null) {
+            settings = AbstractBlock.Settings.create(); // Create new settings
+        } else {
+            settings = AbstractBlock.Settings.copy(block);
+        }
+
+        // Rest of the settings application remains the same
         if (hardness >= 0.0F) {
             settings = resistance >= 0.0
                     ? settings.strength(hardness, resistance)
                     : settings.strength(hardness);
         }
 
-        // Handle custom sounds
         if (stepSound != null) {
             settings = settings.sounds(getSoundType());
         }
@@ -587,11 +587,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
                     lightLevels.put(sr.stateID, (int) (16.0 * sr.lightValue));
                 }
             }
-            // TODO
-//            if (!lightLevels.isEmpty()) {
-//                settings = settings.luminance((state) ->
-//                        lightLevels.getOrDefault(state.get(this.stateProp), 0));
-//            }
+            // TODO: Handle state-dependent light levels
         }
         // Handle simple light level
         else if (lightValue > 0.0F || !states.isEmpty() && states.getFirst().lightValue > 0.0F) {
@@ -609,11 +605,11 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     }
 
     public AbstractBlock.Settings makeAndCopyProperties(Block sourceBlock) {
-        AbstractBlock.Settings settings = sourceBlock != null
-                ? AbstractBlock.Settings.copy(sourceBlock)
-                : makeBlockSettings();
+//        AbstractBlock.Settings settings = sourceBlock != null
+//                ? AbstractBlock.Settings.copy(sourceBlock)
+//                : makeBlockSettings();
 
-        return applyCustomProperties(settings);
+        return applyCustomProperties(sourceBlock);
     }
 
     private static boolean never(BlockState state, BlockView world, BlockPos pos) {
@@ -880,7 +876,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         typeTable.put("sand", new WCSandBlock.Factory());
         typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
 //        typeTable.put("furnace", new WCFurnaceBlock.Factory());
-//        typeTable.put("sound", new WCSoundBlock.Factory());
+        typeTable.put("sound", new WCSoundBlock.Factory());
         typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
         typeTable.put("beacon", new WCBeaconBlock.Factory());
         typeTable.put("vines", new WCVinesBlock.Factory());
