@@ -29,7 +29,6 @@ public class FanBlockModelHandler extends ModelExport {
     }
 
     public void generateBlockStateModels() {
-        // Generate multipart blockstate that combines floor and wall variants
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 

@@ -3,7 +3,6 @@ package com.westerosblocks.datagen.models;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockStateRecord;
-import com.westerosblocks.block.custom.WCWallBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.WallShape;
@@ -118,19 +117,7 @@ public class WallBlockModelHandler extends ModelExport {
 
     private void generateWallModelVariant(String variant, WesterosBlockDef.RandomTextureSet set,
                                           WesterosBlockStateRecord sr, int setIdx, boolean isTinted, boolean hasOverlay) {
-
-        TextureMap textureMap = new TextureMap()
-                .put(TextureKey.BOTTOM, createBlockIdentifier(set.getTextureByIndex(0)))
-                .put(TextureKey.TOP, createBlockIdentifier(set.getTextureByIndex(1)))
-                .put(TextureKey.SIDE, createBlockIdentifier(set.getTextureByIndex(2)))
-                .put(TextureKey.PARTICLE, createBlockIdentifier(set.getTextureByIndex(2)));
-
-        if (hasOverlay) {
-            textureMap.put(ModTextureKey.BOTTOM_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(0)))
-                    .put(ModTextureKey.TOP_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(1)))
-                    .put(ModTextureKey.SIDE_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(2)));
-        }
-
+        TextureMap textureMap = ModTextureMap.bottomTopSide(set, sr, null);
         String parentPath = getParentPath(variant, isTinted, hasOverlay);
         Identifier modelId = getModelId(variant, setIdx, sr);
 

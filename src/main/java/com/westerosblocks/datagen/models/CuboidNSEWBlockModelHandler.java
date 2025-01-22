@@ -79,9 +79,7 @@ public class CuboidNSEWBlockModelHandler extends CuboidBlockModelHandler {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator,
-                                          Block block,
-                                          WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
         WesterosBlockStateRecord firstState = blockDefinition.states.getFirst();
         String baseName = firstState.stateID == null ? "base" : firstState.stateID;
         String pathPrefix = firstState.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH;

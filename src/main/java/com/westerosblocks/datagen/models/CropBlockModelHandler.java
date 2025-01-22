@@ -87,13 +87,11 @@ public class CropBlockModelHandler extends ModelExport {
 
             TextureMap textureMap = new TextureMap()
                     .put(TextureKey.CROP, createBlockIdentifier(set.getTextureByIndex(0)));
-
             Identifier modelId = getModelId(id, setIdx, false);
             String parentPath = isTinted ? "tinted/crop" : "untinted/crop";
             if (layer > 0) {
                 parentPath += "_layer" + layer;
             }
-
             Model model = new Model(
                     Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parentPath)),
                     Optional.empty(),

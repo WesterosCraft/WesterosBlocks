@@ -135,18 +135,8 @@ public class FenceBlockModelHandler extends ModelExport {
         }
 
         Identifier modelId = getModelId(variant, setIdx, sr.stateID);
-        Model model = new Model(
-                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parent)),
-                Optional.empty(),
-                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE
-        );
-
-        Model overlayModel = new Model(
-                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parent)),
-                Optional.empty(),
-                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-                ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY
-        );
+        Model model = ModModels.BOTTOM_TOP_SIDE(parent);
+        Model overlayModel = ModModels.BOTTOM_TOP_SIDE_OVERLAY(parent);
 
         if (hasOverlay) {
             overlayModel.upload(modelId, textures, generator.modelCollector);

@@ -54,9 +54,8 @@ public class LayerBlockModelHandler extends ModelExport {
     private void generateLayerModel(BlockStateModelGenerator generator, int layer, WesterosBlockDef.RandomTextureSet set, int setIdx) {
         boolean isTinted = def.isTinted();
         float yMax = (16.0f / layerBlock.layerCount) * layer;  // Calculate height based on layer number
-
-        Model layerModel = ModModels.wcLayerModel(yMax, isTinted);
-        TextureMap textureMap = ModTextureMap.customTxtN(set);
+        Model layerModel = ModModels.WC_LAYER(yMax, isTinted);
+        TextureMap textureMap = ModTextureMap.txtN(set);
 
         layerModel.upload(getModelId(layer, setIdx), textureMap, generator.modelCollector);
     }
@@ -69,12 +68,7 @@ public class LayerBlockModelHandler extends ModelExport {
     // TODO need to figure out a diff model for in-game GUI
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
         String path = String.format("%s%s/layer1_v1", GENERATED_PATH, blockDefinition.blockName);
-
-        itemModelGenerator.register(
-                currentBlock.asItem(),
-                new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, path)),
-                        Optional.empty())
-        );
+        itemModelGenerator.register(currentBlock.asItem(), new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, path)), Optional.empty()));
 
         if (blockDefinition.isTinted()) {
             String tintResource = blockDefinition.getBlockColorMapResource();

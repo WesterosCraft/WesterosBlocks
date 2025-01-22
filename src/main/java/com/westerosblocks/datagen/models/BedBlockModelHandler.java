@@ -16,14 +16,14 @@ public class BedBlockModelHandler extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
     private final WesterosBlockDef def;
-    private static WCBedBlock bblk;
+    private static WCBedBlock bedBlock;
 
     public BedBlockModelHandler(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
         this.def = def;
-        bblk = (WCBedBlock) block;
+        bedBlock = (WCBedBlock) block;
     }
 
     private record ModelRec(String cond, String ext, int y) {
@@ -75,19 +75,12 @@ public class BedBlockModelHandler extends ModelExport {
 
     private void generateBedPartModel(BlockStateModelGenerator generator, Identifier modelId, TextureMap textureMap, boolean isHead) {
         String parentPath = getBedParentPath(isHead);
-        Model model = new Model(
-                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, parentPath)),
-                Optional.empty(),
-                ModTextureKey.BED_TOP,
-                ModTextureKey.BED_END,
-                ModTextureKey.BED_SIDE,
-                TextureKey.PARTICLE
-        );
+        Model model = ModModels.BED_PART(parentPath);
         model.upload(modelId, textureMap, generator.modelCollector);
     }
 
     private String getBedParentPath(boolean isHead) {
-        String bedType = switch (bblk.bedType) {
+        String bedType = switch (bedBlock.bedType) {
             case RAISED -> "bed_raised";
             case HAMMOCK -> "bed_hammock";
             default -> "bed";
@@ -101,33 +94,12 @@ public class BedBlockModelHandler extends ModelExport {
     }
 
     private static TextureMap createCustomTextureMap(WesterosBlockDef def, boolean head) {
-        return new TextureMap()
-                .put(ModTextureKey.BED_TOP, createBlockIdentifier(def.getTextureByIndex(head ? 0 : 1)))
-                .put(ModTextureKey.BED_END, createBlockIdentifier(def.getTextureByIndex(head ? 4 : 5)))
-                .put(ModTextureKey.BED_SIDE, createBlockIdentifier(def.getTextureByIndex(head ? 2 : 3)))
-                .put(TextureKey.PARTICLE, createBlockIdentifier(def.getTextureByIndex(0)));
+        return ModTextureMap.bed(def, head);
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
-        TextureMap textureMap = new TextureMap()
-                .put(ModTextureKey.BED_TOP, createBlockIdentifier(blockDefinition.getTextureByIndex(0)))
-                .put(ModTextureKey.BED_END, createBlockIdentifier(blockDefinition.getTextureByIndex(4)))
-                .put(ModTextureKey.BED_SIDE, createBlockIdentifier(blockDefinition.getTextureByIndex(2)))
-                .put(ModTextureKey.BED_TOP2, createBlockIdentifier(blockDefinition.getTextureByIndex(1)))
-                .put(ModTextureKey.BED_END2, createBlockIdentifier(blockDefinition.getTextureByIndex(5)))
-                .put(ModTextureKey.BED_SIDE2, createBlockIdentifier(blockDefinition.getTextureByIndex(3)));
-
-        // Create a custom model with the proper parent and textures
-        Model bedItemModel = new Model(
-                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "item/untinted/bed_item")),
-                Optional.empty(),
-                ModTextureKey.BED_TOP,
-                ModTextureKey.BED_END,
-                ModTextureKey.BED_SIDE,
-                ModTextureKey.BED_TOP2,
-                ModTextureKey.BED_END2,
-                ModTextureKey.BED_SIDE2
-        );
+        TextureMap textureMap = ModTextureMap.bed2(blockDefinition);
+        Model bedItemModel = ModModels.BED_ITEM("untinted/bed_item");
 
         bedItemModel.upload(
                 ModelIds.getItemModelId(currentBlock.asItem()),

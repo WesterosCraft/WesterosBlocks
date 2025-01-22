@@ -83,26 +83,9 @@ public class TrapDoorBlockModelHandler extends ModelExport {
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.TEXTURE, createBlockIdentifier(set.getTextureByIndex(0)));
 
-        // Generate bottom model
-        Models.TEMPLATE_TRAPDOOR_BOTTOM.upload(
-                getModelId("bottom", setIdx),
-                textureMap,
-                generator.modelCollector
-        );
-
-        // Generate top model
-        Models.TEMPLATE_TRAPDOOR_TOP.upload(
-                getModelId("top", setIdx),
-                textureMap,
-                generator.modelCollector
-        );
-
-        // Generate open model
-        Models.TEMPLATE_TRAPDOOR_OPEN.upload(
-                getModelId("open", setIdx),
-                textureMap,
-                generator.modelCollector
-        );
+        Models.TEMPLATE_TRAPDOOR_BOTTOM.upload(getModelId("bottom", setIdx), textureMap, generator.modelCollector);
+        Models.TEMPLATE_TRAPDOOR_TOP.upload(getModelId("top", setIdx), textureMap, generator.modelCollector);
+        Models.TEMPLATE_TRAPDOOR_OPEN.upload(getModelId("open", setIdx), textureMap, generator.modelCollector);
     }
 
     private Identifier getModelId(String type, int setIdx) {

@@ -79,7 +79,7 @@ public class Cuboid16WayBlockModelHandler extends CuboidBlockModelHandler {
     private void generateRotatedModel(String modelName, TextureMap textureMap,
                                       WesterosBlockStateRecord sr, int setIdx, float rotation) {
         Identifier modelId = getModelId(modelName, setIdx, false);
-        ModModels.createRotatedCuboidModel("cuboid_16way", rotation)
+        ModModels.ROTATED_CUBOID("cuboid_16way", rotation)
                 .upload(modelId, textureMap, generator.modelCollector);
     }
 

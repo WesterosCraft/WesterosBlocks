@@ -28,7 +28,6 @@ public class CuboidNEBlockModelHandler extends CuboidBlockModelHandler {
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
-        // Generate base models for each state if not custom
         for (WesterosBlockStateRecord sr : def.states) {
             if (!sr.isCustomModel()) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
@@ -37,7 +36,6 @@ public class CuboidNEBlockModelHandler extends CuboidBlockModelHandler {
             }
         }
 
-        // Generate variants for each state
         for (WesterosBlockStateRecord sr : def.states) {
             boolean justBase = sr.stateID == null;
             Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
@@ -77,9 +75,7 @@ public class CuboidNEBlockModelHandler extends CuboidBlockModelHandler {
     }
 
     // TODO item model could use some work
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator,
-                                          Block block,
-                                          WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
         WesterosBlockStateRecord firstState = blockDefinition.states.getFirst();
         String baseName = firstState.stateID == null ? "base" : firstState.stateID;
         String pathPrefix = firstState.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH;

@@ -116,14 +116,14 @@ public class SlabBlockModelHandler extends ModelExport {
                     String namespace = type.equals("double") && !isTinted && !hasOverlay && isOccluded ? "minecraft" : WesterosBlocks.MOD_ID;
                     Identifier modelId = Identifier.of(WesterosBlocks.MOD_ID,
                             baseModelPath + "/" + type + "_v" + (setIdx + 1));
-                    TextureMap textureMap = createTextureMap(set, sr, hasOverlay);
+                    TextureMap textureMap = ModTextureMap.frontTopSides(set, sr, hasOverlay, null);
                     String parentPath = getParentPath(isOccluded, isTinted, hasOverlay, type);
 
                     Model model;
                     if (hasOverlay) {
-                        model = ModModels.createAllSidesWithOverlay(parentPath);
+                        model = ModModels.ALL_SIDES_OVERLAY(parentPath);
                     } else {
-                        model = ModModels.createAllSides(parentPath, namespace);
+                        model = ModModels.ALL_SIDES(parentPath, namespace);
                     }
                     model.upload(modelId, textureMap, generator.modelCollector);
                 }
@@ -131,36 +131,6 @@ public class SlabBlockModelHandler extends ModelExport {
         }
 
         generateBlockStateFiles(generator, block, variants);
-    }
-
-    private static TextureMap createTextureMap(WesterosBlockDef.RandomTextureSet ts, WesterosBlockStateRecord currentRec, boolean hasOverlay) {
-        if (hasOverlay) {
-            return createOverlayTextureMap(ts, currentRec);
-        } else {
-            return createCustomTextureMap(ts);
-        }
-    }
-
-    private static TextureMap createOverlayTextureMap(WesterosBlockDef.RandomTextureSet ts, WesterosBlockStateRecord currentRec) {
-        TextureMap map = createCustomTextureMap(ts);
-
-        return map.put(ModTextureKey.DOWN_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(0)))
-                .put(ModTextureKey.UP_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(1)))
-                .put(ModTextureKey.NORTH_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(2)))
-                .put(ModTextureKey.SOUTH_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(3)))
-                .put(ModTextureKey.WEST_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(4)))
-                .put(ModTextureKey.EAST_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(5)));
-    }
-
-    private static TextureMap createCustomTextureMap(WesterosBlockDef.RandomTextureSet ts) {
-        return new TextureMap()
-                .put(TextureKey.DOWN, createBlockIdentifier(ts.getTextureByIndex(0)))
-                .put(TextureKey.UP, createBlockIdentifier(ts.getTextureByIndex(1)))
-                .put(TextureKey.NORTH, createBlockIdentifier(ts.getTextureByIndex(2)))
-                .put(TextureKey.SOUTH, createBlockIdentifier(ts.getTextureByIndex(3)))
-                .put(TextureKey.WEST, createBlockIdentifier(ts.getTextureByIndex(4)))
-                .put(TextureKey.EAST, createBlockIdentifier(ts.getTextureByIndex(5)))
-                .put(TextureKey.PARTICLE, createBlockIdentifier(ts.getTextureByIndex(2)));
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {

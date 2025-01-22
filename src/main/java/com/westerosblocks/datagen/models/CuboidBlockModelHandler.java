@@ -69,9 +69,7 @@ public class CuboidBlockModelHandler extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    public void generateCuboidModels(BlockStateModelGenerator generator,
-                                      WesterosBlockStateRecord sr,
-                                      int setIdx) {
+    public void generateCuboidModels(BlockStateModelGenerator generator, WesterosBlockStateRecord sr, int setIdx) {
         WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
         boolean isTinted = sr.isTinted();
         TextureMap textureMap = createCuboidTextureMap(set);

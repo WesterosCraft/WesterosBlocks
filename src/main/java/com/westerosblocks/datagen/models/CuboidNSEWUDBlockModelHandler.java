@@ -18,14 +18,7 @@ public class CuboidNSEWUDBlockModelHandler extends CuboidBlockModelHandler {
             "north", "east", "south", "west", "up", "down"
     };
 
-    private static final class RotationData {
-        final int x;
-        final int y;
-
-        RotationData(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
+    private record RotationData(int x, int y) {
     }
 
     private static final Map<String, RotationData> ROTATIONS = Map.of(
@@ -49,39 +42,31 @@ public class CuboidNSEWUDBlockModelHandler extends CuboidBlockModelHandler {
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
-        // For each state definition
         for (WesterosBlockStateRecord sr : def.states) {
             boolean justBase = sr.stateID == null;
             Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
             String baseName = justBase ? "base" : sr.stateID;
 
-            // Generate the models if not custom
             if (!sr.isCustomModel()) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
                     generateCuboidModels(generator, sr, setIdx);
                 }
             }
 
-            // For each facing direction
             for (String facing : FACING_DIRECTIONS) {
-                // For each texture set
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
                     WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
                     BlockStateVariant variant = BlockStateVariant.create();
                     Identifier modelId = getModelId(baseName, setIdx, sr.isCustomModel());
                     variant.put(VariantSettings.MODEL, modelId);
-
                     if (set.weight != null) {
                         variant.put(VariantSettings.WEIGHT, set.weight);
                     }
-
-                    // Apply rotations
                     RotationData rotation = ROTATIONS.get(facing);
                     if (rotation.x != 0) {
                         variant.put(VariantSettings.X, getRotation(rotation.x));
                     }
-
                     int yRot = (rotation.y + sr.rotYOffset) % 360;
                     if (yRot > 0) {
                         variant.put(VariantSettings.Y, getRotation(yRot));

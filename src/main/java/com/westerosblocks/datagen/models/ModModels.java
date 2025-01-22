@@ -11,10 +11,9 @@ import net.minecraft.util.Identifier;
 import java.util.Map;
 import java.util.Optional;
 
-public class ModModels {
-    private static final String GENERATED_PATH = "block/";
+public class ModModels extends Models {
 
-    static Model createAllSides(String parent, String namespace) {
+    public static Model ALL_SIDES(String parent, String namespace) {
         return block(parent,
                 namespace,
                 TextureKey.DOWN,
@@ -26,7 +25,7 @@ public class ModModels {
                 TextureKey.PARTICLE);
     }
 
-    public static Model createAllSidesWithOverlay(String parent) {
+    public static Model ALL_SIDES_OVERLAY(String parent) {
         return block(parent,
                 TextureKey.DOWN,
                 TextureKey.UP,
@@ -43,7 +42,7 @@ public class ModModels {
                 ModTextureKey.EAST_OVERLAY);
     }
 
-    public static Model createBottomTopSideWithOverlay(String parent) {
+    public static Model BOTTOM_TOP_SIDE_OVERLAY(String parent) {
         return block(parent,
                 TextureKey.BOTTOM,
                 TextureKey.TOP,
@@ -55,7 +54,7 @@ public class ModModels {
         );
     }
 
-    public static Model createBottomTopSide(String parent) {
+    public static Model BOTTOM_TOP_SIDE(String parent) {
         return block(parent,
                 TextureKey.BOTTOM,
                 TextureKey.TOP,
@@ -64,13 +63,13 @@ public class ModModels {
         );
     }
 
-    public static Model createLadderModel(String parent) {
+    public static Model WC_LADDER(String parent) {
         return block(parent,
                 ModTextureKey.LADDER
         );
     }
 
-    public static Model createBetterFoliageModel(String parent) {
+    public static Model BETTER_FOLIAGE(String parent) {
         return block(parent,
                 TextureKey.PARTICLE,
                 TextureKey.ALL,
@@ -79,7 +78,7 @@ public class ModModels {
         );
     }
 
-    public static Model createCuboidModel(String parent) {
+    public static Model CUBOID(String parent) {
         return block(parent,
                 TextureKey.PARTICLE,
                 ModTextureKey.TEXTURE_0,
@@ -90,7 +89,7 @@ public class ModModels {
                 ModTextureKey.TEXTURE_5);
     }
 
-    public static Model createRotatedCuboidModel(String parent, float rotation) {
+    public static Model ROTATED_CUBOID(String parent, float rotation) {
         return new Model(Optional.of(Identifier.ofVanilla("block/block")),
                 Optional.empty(),
                 TextureKey.PARTICLE,
@@ -239,7 +238,7 @@ public class ModModels {
         };
     }
 
-    public static Model wcLayerModel(float yMax, boolean isTinted) {
+    public static Model WC_LAYER(float yMax, boolean isTinted) {
         return new Model(
                 Optional.empty(),
                 Optional.empty(),
@@ -324,11 +323,203 @@ public class ModModels {
         };
     }
 
+    public static Model CUBOID_NSEW_STACK() {
+        return new Model(
+                Optional.of(Identifier.ofVanilla("block/block")),
+                Optional.empty(),
+                ModTextureKey.TEXTURE_4,
+                ModTextureKey.TEXTURE_5,
+                TextureKey.PARTICLE
+        ) {
+            @Override
+            public JsonObject createJson(Identifier id, Map<TextureKey, Identifier> textures) {
+                JsonObject json = super.createJson(id, textures);
+
+                // Add display settings
+                JsonObject display = new JsonObject();
+                JsonArray rotation = new JsonArray();
+                rotation.add(0);
+                rotation.add(90);
+                rotation.add(0);
+                display.add("rotation", rotation);
+
+                JsonArray translation = new JsonArray();
+                translation.add(0);
+                translation.add(0);
+                translation.add(0);
+                display.add("translation", translation);
+
+                JsonArray scale = new JsonArray();
+                scale.add(0.5);
+                scale.add(0.5);
+                scale.add(0.5);
+                display.add("scale", scale);
+
+                json.add("display", display);
+
+                // Add elements array
+                JsonArray elements = new JsonArray();
+                JsonObject element = new JsonObject();
+
+                JsonArray from = new JsonArray();
+                from.add(15.5);
+                from.add(0.0);
+                from.add(0.0);
+                element.add("from", from);
+
+                JsonArray to = new JsonArray();
+                to.add(16.0);
+                to.add(16.0);
+                to.add(16.0);
+                element.add("to", to);
+
+                // Add faces
+                JsonObject faces = new JsonObject();
+
+                // East face
+                JsonObject eastFace = new JsonObject();
+                JsonArray eastUV = new JsonArray();
+                eastUV.add(0.0);
+                eastUV.add(0.0);
+                eastUV.add(16.0);
+                eastUV.add(16.0);
+                eastFace.add("uv", eastUV);
+                eastFace.addProperty("texture", "#txt5");
+                eastFace.addProperty("cullface", "east");
+                faces.add("east", eastFace);
+
+                // West face
+                JsonObject westFace = new JsonObject();
+                JsonArray westUV = new JsonArray();
+                westUV.add(0.0);
+                westUV.add(0.0);
+                westUV.add(16.0);
+                westUV.add(16.0);
+                westFace.add("uv", westUV);
+                westFace.addProperty("texture", "#txt4");
+                faces.add("west", westFace);
+
+                element.add("faces", faces);
+                elements.add(element);
+                json.add("elements", elements);
+
+                return json;
+            }
+        };
+    }
+
+    public static Model BED_PART(String parent) {
+        return block(parent,
+                ModTextureKey.BED_TOP,
+                ModTextureKey.BED_END,
+                ModTextureKey.BED_SIDE,
+                TextureKey.PARTICLE
+        );
+    }
+
+    public static Model BED_ITEM(String parent) {
+        return item(parent,
+                ModTextureKey.BED_TOP,
+                ModTextureKey.BED_END,
+                ModTextureKey.BED_SIDE,
+                ModTextureKey.BED_TOP2,
+                ModTextureKey.BED_END2,
+                ModTextureKey.BED_SIDE2);
+    }
+
+    public static Model CAKE(int bites) {
+        return new Model(
+                Optional.of(Identifier.ofVanilla("block/thin_block")),
+                Optional.empty(),
+                TextureKey.PARTICLE,
+                TextureKey.BOTTOM,
+                TextureKey.TOP,
+                TextureKey.SIDE,
+                ModTextureKey.INSIDE
+        ) {
+            @Override
+            public JsonObject createJson(Identifier id, Map<TextureKey, Identifier> textures) {
+                JsonObject json = super.createJson(id, textures);
+
+                // Create elements array
+                JsonArray elements = new JsonArray();
+                JsonObject element = new JsonObject();
+
+                // Set dimensions based on bite state
+                int xMin = 1 + (2 * bites);
+                JsonArray from = new JsonArray();
+                from.add(xMin);
+                from.add(0);
+                from.add(1);
+                element.add("from", from);
+
+                JsonArray to = new JsonArray();
+                to.add(15);
+                to.add(8);
+                to.add(15);
+                element.add("to", to);
+
+                // Add faces
+                JsonObject faces = new JsonObject();
+
+                // Bottom face
+                JsonObject bottomFace = new JsonObject();
+                bottomFace.addProperty("texture", "#bottom");
+                bottomFace.addProperty("cullface", "down");
+                faces.add("down", bottomFace);
+
+                // Top face
+                JsonObject topFace = new JsonObject();
+                topFace.addProperty("texture", "#top");
+                faces.add("up", topFace);
+
+                // Side faces
+                JsonObject northFace = new JsonObject();
+                northFace.addProperty("texture", "#side");
+                faces.add("north", northFace);
+
+                JsonObject southFace = new JsonObject();
+                southFace.addProperty("texture", "#side");
+                faces.add("south", southFace);
+
+                // West face (shows inside texture when bitten)
+                JsonObject westFace = new JsonObject();
+                westFace.addProperty("texture", bites == 0 ? "#side" : "#inside");
+                faces.add("west", westFace);
+
+                // East face
+                JsonObject eastFace = new JsonObject();
+                eastFace.addProperty("texture", "#side");
+                faces.add("east", eastFace);
+
+                element.add("faces", faces);
+                elements.add(element);
+                json.add("elements", elements);
+
+                return json;
+            }
+        };
+    }
+
+    public static Model LEAVES_OVERLAY(String parent){
+        return block(parent,
+                TextureKey.END,
+                TextureKey.SIDE,
+                ModTextureKey.LEAVES_OVERLAY_END,
+                ModTextureKey.LEAVES_OVERLAY_SIDE,
+                TextureKey.PARTICLE
+        );
+    }
+
     private static Model block(String parent, String namespace, TextureKey... requiredTextureKeys) {
-        return new Model(Optional.of(Identifier.of(namespace != null ? namespace : WesterosBlocks.MOD_ID, GENERATED_PATH + parent)), Optional.empty(), requiredTextureKeys);
+        return new Model(Optional.of(Identifier.of(namespace != null ? namespace : WesterosBlocks.MOD_ID, "block/" + parent)), Optional.empty(), requiredTextureKeys);
+    }
+
+    private static Model item(String parent, TextureKey... requiredTextureKeys) {
+        return new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "item/" + parent)), Optional.empty(), requiredTextureKeys);
     }
 
     private static Model block(String parent, TextureKey... requiredTextureKeys) {
-        return new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, GENERATED_PATH + parent)), Optional.empty(), requiredTextureKeys);
+        return new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parent)), Optional.empty(), requiredTextureKeys);
     }
 }

@@ -34,7 +34,9 @@ public class StairBlockModelHandler extends ModelExport {
         if (!def.isCustomModel()) {
             for (WesterosBlockStateRecord sr : def.states) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
-                    generateStairModels(generator, sr, setIdx);
+                    WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+
+                    generateStairModels(generator, sr, set, setIdx);
                 }
             }
         }
@@ -80,9 +82,7 @@ public class StairBlockModelHandler extends ModelExport {
         addVariant(builder, sr, String.format("facing=north,half=%s,shape=inner_left", half), "inner", xRot, half.equals("top") ? 270 : 180, variants);
     }
 
-    private void addVariant(BlockStateBuilder builder, WesterosBlockStateRecord sr,
-                            String condition, String modelType, int xRot, int yRot,
-                            Map<String, List<BlockStateVariant>> variants) {
+    private void addVariant(BlockStateBuilder builder, WesterosBlockStateRecord sr, String condition, String modelType, int xRot, int yRot, Map<String, List<BlockStateVariant>> variants) {
         Set<String> stateIDs = sr.stateID == null ? null : Collections.singleton(sr.stateID);
 
         for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
@@ -109,34 +109,17 @@ public class StairBlockModelHandler extends ModelExport {
         }
     }
 
-    private void generateStairModels(BlockStateModelGenerator generator,
-                                     WesterosBlockStateRecord sr, int setIdx) {
+    private void generateStairModels(BlockStateModelGenerator generator, WesterosBlockStateRecord sr, WesterosBlockDef.RandomTextureSet set, int setIdx) {
         boolean isTinted = sr.isTinted();
         boolean hasOverlay = sr.getOverlayTextureByIndex(0) != null;
+        TextureMap textureMap = ModTextureMap.bottomTopSide(set, sr, hasOverlay);
 
-        TextureMap textureMap = new TextureMap()
-                .put(TextureKey.BOTTOM, createBlockIdentifier(sr.getRandomTextureSet(setIdx).getTextureByIndex(0)))
-                .put(TextureKey.TOP, createBlockIdentifier(sr.getRandomTextureSet(setIdx).getTextureByIndex(1)))
-                .put(TextureKey.SIDE, createBlockIdentifier(sr.getRandomTextureSet(setIdx).getTextureByIndex(2)));
-
-        if (hasOverlay) {
-            textureMap = textureMap
-                    .put(ModTextureKey.BOTTOM_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(0)))
-                    .put(ModTextureKey.TOP_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(1)))
-                    .put(ModTextureKey.SIDE_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(2)));
-        }
-
-        // Generate base stair model
         generateModelVariant(generator, "base", sr, setIdx, textureMap, isTinted, hasOverlay);
-        // Generate outer stair model
         generateModelVariant(generator, "outer", sr, setIdx, textureMap, isTinted, hasOverlay);
-        // Generate inner stair model
         generateModelVariant(generator, "inner", sr, setIdx, textureMap, isTinted, hasOverlay);
     }
 
-    private void generateModelVariant(BlockStateModelGenerator generator, String variant,
-                                      WesterosBlockStateRecord sr, int setIdx,
-                                      TextureMap textureMap, boolean isTinted, boolean hasOverlay) {
+    private void generateModelVariant(BlockStateModelGenerator generator, String variant, WesterosBlockStateRecord sr, int setIdx, TextureMap textureMap, boolean isTinted, boolean hasOverlay) {
         String baseParent = String.format("block/%s/%sstairs%s",
                 isOccluded ? (isTinted ? "tinted" : "untinted") : (isTinted ? "tintednoocclusion" : "noocclusion"),
                 variant.equals("base") ? "" : variant + "_",

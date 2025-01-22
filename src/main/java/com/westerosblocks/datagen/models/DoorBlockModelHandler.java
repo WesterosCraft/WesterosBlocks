@@ -11,6 +11,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+//    bottom → door_bottom
+//    bottom_rh → door_bottom_right
+//    bottom_open → door_bottom_open
+//    bottom_right_open → door_bottom_right_open
+//    top → door_top
+//    top_rh → door_top_right
+//    top_open → door_top_open
+//    top_right_open → door_top_right_open
 
 public class DoorBlockModelHandler extends ModelExport {
     private final BlockStateModelGenerator generator;
@@ -25,15 +33,6 @@ public class DoorBlockModelHandler extends ModelExport {
             cond = c; ext = e; this.y = y;
         }
     };
-
-//    bottom → door_bottom
-//    bottom_rh → door_bottom_right
-//    bottom_open → door_bottom_open
-//    bottom_right_open → door_bottom_right_open
-//    top → door_top
-//    top_rh → door_top_right
-//    top_open → door_top_open
-//    top_right_open → door_top_right_open
 
     private static final ModelRec[] MODELS = {
             // EAST facing

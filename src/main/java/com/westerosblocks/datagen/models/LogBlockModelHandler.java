@@ -7,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -67,12 +66,12 @@ public class LogBlockModelHandler extends ModelExport {
     }
 
     public void generateLogModel(BlockStateModelGenerator generator, String type, WesterosBlockDef.RandomTextureSet set, boolean isTinted, int setIdx, String modelSuffix) {
-        TextureMap textureMap = ModTextureMap.customFrontTopSide(set);
+        TextureMap textureMap = ModTextureMap.frontTopSides(set, null, null, null);
         Identifier modelId = Identifier.of(WesterosBlocks.MOD_ID,
                 String.format("%s%s/%s_v%s", GENERATED_PATH, def.blockName, modelSuffix, setIdx + 1));
 
         String parentPath = getParentPath(isTinted, type);
-        Model model = ModModels.createAllSides(parentPath, null);
+        Model model = ModModels.ALL_SIDES(parentPath, null);
         model.upload(modelId, textureMap, generator.modelCollector);
     }
 

@@ -127,10 +127,7 @@ public class PaneBlockModelHandler extends ModelExport {
         }
     }
 
-    private void generatePaneModel(BlockStateModelGenerator generator,
-                                   String variant,
-                                   WesterosBlockDef.RandomTextureSet set,
-                                   String parent) {
+    private void generatePaneModel(BlockStateModelGenerator generator, String variant, WesterosBlockDef.RandomTextureSet set, String parent) {
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.SIDE, createBlockIdentifier(set.getTextureByIndex(0)))
                 .put(ModTextureKey.CAP, createBlockIdentifier(set.getTextureByIndex(1)));
@@ -164,9 +161,7 @@ public class PaneBlockModelHandler extends ModelExport {
         };
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator,
-                                          Block block,
-                                          WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
         WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
 

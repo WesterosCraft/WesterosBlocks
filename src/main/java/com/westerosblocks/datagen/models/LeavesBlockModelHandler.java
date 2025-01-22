@@ -66,15 +66,12 @@ public class LeavesBlockModelHandler extends ModelExport {
         }
     }
 
-    private void generateLeafModel(BlockStateModelGenerator generator, String type,
-                                   WesterosBlockDef.RandomTextureSet set, int setIdx,
-                                   boolean isBetterFoliage, boolean hasOverlay) {
-
-        TextureMap textureMap = createTextureMap(set, hasOverlay);
+    private void generateLeafModel(BlockStateModelGenerator generator, String type, WesterosBlockDef.RandomTextureSet set, int setIdx, boolean isBetterFoliage, boolean hasOverlay) {
+        TextureMap textureMap = ModTextureMap.leaves(set, hasOverlay);
         String parentPath = createParentPath(isBetterFoliage, def.isTinted(), hasOverlay, type, setIdx);
         Identifier modelId = getModelId(type, setIdx);
 
-        Model model = isBetterFoliage ? ModModels.createBetterFoliageModel(parentPath) : Models.LEAVES;
+        Model model = isBetterFoliage ? ModModels.BETTER_FOLIAGE(parentPath) : Models.LEAVES;
         model.upload(modelId, textureMap, generator.modelCollector);
     }
 
@@ -85,29 +82,6 @@ public class LeavesBlockModelHandler extends ModelExport {
         return basePath + modelType + (isBetterFoliage ? "_" + type : "");
     }
 
-    private static TextureMap createTextureMap(WesterosBlockDef.RandomTextureSet ts, boolean hasOverlay) {
-        if (hasOverlay) {
-            return createOverlayTextureMap(ts);
-        } else {
-            return createCustomTextureMap(ts);
-        }
-    }
-
-    private static TextureMap createOverlayTextureMap(WesterosBlockDef.RandomTextureSet ts) {
-        TextureMap map = createCustomTextureMap(ts);
-
-        return map.put(ModTextureKey.LEAVES_OVERLAY_END, createBlockIdentifier(ts.getTextureByIndex(1)))
-                .put(ModTextureKey.LEAVES_OVERLAY_SIDE, createBlockIdentifier(ts.getTextureByIndex(2)))
-                .put(TextureKey.ALL, createBlockIdentifier(ts.getTextureByIndex(0)));
-    }
-
-    private static TextureMap createCustomTextureMap(WesterosBlockDef.RandomTextureSet ts) {
-        return new TextureMap()
-                .put(TextureKey.END, createBlockIdentifier(ts.getTextureByIndex(0)))
-                .put(TextureKey.SIDE, createBlockIdentifier(ts.getTextureByIndex(1)))
-                .put(TextureKey.PARTICLE, createBlockIdentifier(ts.getTextureByIndex(0)));
-    }
-
     private Identifier getModelId(String modelType, int setIdx) {
         return Identifier.of(WesterosBlocks.MOD_ID,
                 String.format("%s%s/%s-v%d", GENERATED_PATH, def.getBlockName(), modelType, setIdx + 1));
@@ -115,23 +89,8 @@ public class LeavesBlockModelHandler extends ModelExport {
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
         WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
-
-        TextureMap textureMap = new TextureMap()
-                .put(TextureKey.END, createBlockIdentifier(firstSet.getTextureByIndex(0)))
-                .put(TextureKey.SIDE, createBlockIdentifier("transparent"))
-                .put(ModTextureKey.LEAVES_OVERLAY_END, createBlockIdentifier(firstSet.getTextureByIndex(2)))
-                .put(ModTextureKey.LEAVES_OVERLAY_SIDE, createBlockIdentifier(firstSet.getTextureByIndex(2)))
-                .put(TextureKey.PARTICLE, createBlockIdentifier("transparent"));
-
-        Model model = new Model(
-                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/tinted/leaves_overlay")),
-                Optional.empty(),
-                TextureKey.END,
-                TextureKey.SIDE,
-                ModTextureKey.LEAVES_OVERLAY_END,
-                ModTextureKey.LEAVES_OVERLAY_SIDE,
-                TextureKey.PARTICLE
-        );
+        TextureMap textureMap = ModTextureMap.leaves(firstSet, true);
+        Model model = ModModels.LEAVES_OVERLAY("tinted/leaves_overlay");
 
         model.upload(ModelIds.getItemModelId(currentBlock.asItem()), textureMap, itemModelGenerator.writer);
     }

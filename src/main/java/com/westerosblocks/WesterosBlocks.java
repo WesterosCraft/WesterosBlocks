@@ -27,8 +27,8 @@ public class WesterosBlocks implements ModInitializer {
             "/definitions/block_tags.json",
             "/definitions/menu_overrides.json",
             "/definitions/block_sets.json",
-            "/definitions/test_blocks.json"
-//            "/definitions/blocks.json"
+//            "/definitions/test_blocks.json"
+            "/definitions/blocks.json"
     );
 
     public static WesterosBlocksJsonLoader.WesterosBlocksConfig customConfig;

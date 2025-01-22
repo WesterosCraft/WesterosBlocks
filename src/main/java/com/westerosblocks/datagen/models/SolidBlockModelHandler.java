@@ -33,7 +33,7 @@ public class SolidBlockModelHandler extends ModelExport {
     }
 
     public static Identifier modelFileName(WesterosBlockDef def, String ext, int setidx, Boolean isCustom) {
-        Identifier id =  Identifier.of(WesterosBlocks.MOD_ID, getModelName(def, ext, setidx));
+        Identifier id = Identifier.of(WesterosBlocks.MOD_ID, getModelName(def, ext, setidx));
         return id.withPrefixedPath(GENERATED_PATH);
     }
 
@@ -64,15 +64,23 @@ public class SolidBlockModelHandler extends ModelExport {
                         BlockStateVariant varSymmetrical = BlockStateVariant.create();
                         Identifier symId = modelFileName(def, fname, setIdx, sr.isCustomModel(), true);
                         varSymmetrical.put(VariantSettings.MODEL, symId);
-                        if (set.weight != null) { varSymmetrical.put(VariantSettings.WEIGHT, set.weight); }
-                        if (rotIdx > 0) { varSymmetrical.put(VariantSettings.Y, getRotation(90 * rotIdx)); }
+                        if (set.weight != null) {
+                            varSymmetrical.put(VariantSettings.WEIGHT, set.weight);
+                        }
+                        if (rotIdx > 0) {
+                            varSymmetrical.put(VariantSettings.Y, getRotation(90 * rotIdx));
+                        }
                         blockStateBuilder.addVariant("symmetrical=true", varSymmetrical, stateIDs, variants);
 
                         BlockStateVariant varAsymmetrical = BlockStateVariant.create();
                         Identifier asymId = modelFileName(def, fname, setIdx, sr.isCustomModel(), false);
                         varAsymmetrical.put(VariantSettings.MODEL, modelFileName(def, fname, setIdx, sr.isCustomModel(), false));
-                        if (set.weight != null) { varAsymmetrical.put(VariantSettings.WEIGHT, set.weight); }
-                        if (rotIdx > 0) { varAsymmetrical.put(VariantSettings.Y, getRotation(90 * rotIdx)); }
+                        if (set.weight != null) {
+                            varAsymmetrical.put(VariantSettings.WEIGHT, set.weight);
+                        }
+                        if (rotIdx > 0) {
+                            varAsymmetrical.put(VariantSettings.Y, getRotation(90 * rotIdx));
+                        }
                         blockStateBuilder.addVariant("symmetrical=false", varAsymmetrical, stateIDs, variants);
 
                         generateSolidModel(generator, symId, true,
@@ -83,8 +91,12 @@ public class SolidBlockModelHandler extends ModelExport {
                         BlockStateVariant variant = BlockStateVariant.create();
                         Identifier id = modelFileName(def, fname, setIdx, sr.isCustomModel());
                         variant.put(VariantSettings.MODEL, modelFileName(def, fname, setIdx, sr.isCustomModel()));
-                        if (set.weight != null) { variant.put(VariantSettings.WEIGHT, set.weight); }
-                        if (rotIdx > 0) { variant.put(VariantSettings.Y, getRotation(90 * rotIdx)); }
+                        if (set.weight != null) {
+                            variant.put(VariantSettings.WEIGHT, set.weight);
+                        }
+                        if (rotIdx > 0) {
+                            variant.put(VariantSettings.Y, getRotation(90 * rotIdx));
+                        }
                         blockStateBuilder.addVariant("", variant, stateIDs, variants);
 
                         generateSolidModel(generator, id, false, isTinted, hasOverlay, sr, setIdx);
@@ -96,58 +108,33 @@ public class SolidBlockModelHandler extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    protected static void generateSolidModel(BlockStateModelGenerator generator,
-                                             Identifier modelPath, boolean isSymmetrical,
-                                             boolean isTinted, boolean hasOverlay, WesterosBlockStateRecord currentRec, int setIdx) {
+    protected static void generateSolidModel(BlockStateModelGenerator generator, Identifier modelPath, boolean isSymmetrical, boolean isTinted, boolean hasOverlay, WesterosBlockStateRecord currentRec, int setIdx) {
         WesterosBlockDef.RandomTextureSet set = currentRec.getRandomTextureSet(setIdx);
         TextureMap textureMap = createTextureMap(set, isSymmetrical, hasOverlay, isTinted, currentRec);
 
         if (hasOverlay) {
             String parentPath = isTinted ? "tinted/cube_overlay" : "untinted/cube_overlay";
-            ModModels.createAllSidesWithOverlay(parentPath)
+            ModModels.ALL_SIDES_OVERLAY(parentPath)
                     .upload(modelPath, textureMap, generator.modelCollector);
         } else if (set.getTextureCount() > 1 || isTinted) {
             String parentPath = isTinted ? "tinted/cube" : "cube";
             String namespace = isTinted ? WesterosBlocks.MOD_ID : "minecraft";
-            ModModels.createAllSides(parentPath, namespace)
+            ModModels.ALL_SIDES(parentPath, namespace)
                     .upload(modelPath, textureMap, generator.modelCollector);
         } else {
-            TextureMap textureMapAll = TextureMap.all(Identifier.of("minecraft", "block/cube"));
+            TextureMap textureMapAll = TextureMap.all(Identifier.ofVanilla("block/cube"));
             Models.CUBE_ALL.upload(modelPath, textureMapAll, generator.modelCollector);
         }
     }
 
     private static TextureMap createTextureMap(WesterosBlockDef.RandomTextureSet ts, boolean isSymmetrical, boolean hasOverlay, boolean isTinted, WesterosBlockStateRecord currentRec) {
         if (hasOverlay) {
-            return createOverlayTextureMap(ts, isSymmetrical, currentRec);
+            return ModTextureMap.frontTopSides(ts, currentRec, true, isSymmetrical);
         } else if (currentRec.getTextureCount() > 1 || isTinted) {
-            return createCustomTextureMap(ts, isSymmetrical);
+            return ModTextureMap.frontTopSides(ts, null, false, isSymmetrical);
         } else {
-            return new TextureMap()
-                    .put(TextureKey.ALL, createBlockIdentifier(ts.getTextureByIndex(0)));
+            return new TextureMap().put(TextureKey.ALL, createBlockIdentifier(ts.getTextureByIndex(0)));
         }
-    }
-
-    private static TextureMap createOverlayTextureMap(WesterosBlockDef.RandomTextureSet ts, boolean isSymmetrical, WesterosBlockStateRecord currentRec) {
-        TextureMap map = createCustomTextureMap(ts, isSymmetrical);
-
-        return map.put(ModTextureKey.DOWN_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(0)))
-                .put(ModTextureKey.UP_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(1)))
-                .put(ModTextureKey.NORTH_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(2)))
-                .put(ModTextureKey.SOUTH_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(3)))
-                .put(ModTextureKey.WEST_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(4)))
-                .put(ModTextureKey.EAST_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(5)));
-    }
-
-    private static TextureMap createCustomTextureMap(WesterosBlockDef.RandomTextureSet ts, boolean isSymmetrical) {
-        return new TextureMap()
-                .put(TextureKey.DOWN, createBlockIdentifier(ts.getTextureByIndex(0)))
-                .put(TextureKey.UP, createBlockIdentifier(ts.getTextureByIndex(1)))
-                .put(TextureKey.NORTH, createBlockIdentifier(ts.getTextureByIndex(2)))
-                .put(TextureKey.SOUTH, createBlockIdentifier(ts.getTextureByIndex(3)))
-                .put(TextureKey.WEST, createBlockIdentifier(ts.getTextureByIndex(isSymmetrical ? 4 : 6)))
-                .put(TextureKey.EAST, createBlockIdentifier(ts.getTextureByIndex(isSymmetrical ? 5 : 7)))
-                .put(TextureKey.PARTICLE, createBlockIdentifier(ts.getTextureByIndex(2)));
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {

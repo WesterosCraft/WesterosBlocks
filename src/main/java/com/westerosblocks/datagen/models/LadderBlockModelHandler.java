@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import static com.westerosblocks.datagen.models.ModModels.createLadderModel;
+import static com.westerosblocks.datagen.models.ModModels.WC_LADDER;
 
 public class LadderBlockModelHandler extends ModelExport {
     private final BlockStateModelGenerator generator;
@@ -66,7 +66,7 @@ public class LadderBlockModelHandler extends ModelExport {
     protected static void generateLadderModel(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set, Identifier modelId) {
         TextureMap textureMap = new TextureMap().put(ModTextureKey.LADDER, createBlockIdentifier(set.getTextureByIndex(0)));
         Identifier parentId = Identifier.of(WesterosBlocks.MOD_ID, "untinted/ladder");
-        Model model = createLadderModel(parentId.getPath());
+        Model model = WC_LADDER(parentId.getPath());
         model.upload(modelId, textureMap, generator.modelCollector);
     }
 

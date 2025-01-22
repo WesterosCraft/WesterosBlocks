@@ -45,9 +45,7 @@ public class SoundBlockModelHandler extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateSoundBlockModel(BlockStateModelGenerator generator,
-                                         WesterosBlockDef.RandomTextureSet set,
-                                         int setIdx) {
+    private void generateSoundBlockModel(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set, int setIdx) {
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.ALL, createBlockIdentifier(set.getTextureByIndex(0)));
 
