@@ -102,18 +102,11 @@ public class FurnaceBlockModelHandler extends ModelExport {
 
     private Identifier getModelId(String variant, boolean isCustom) {
         return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/%s_v1",
-                        isCustom ? CUSTOM_PATH : GENERATED_PATH,
-                        def.getBlockName(),
-                        variant));
+                String.format("%s%s/%s_v1", isCustom ? CUSTOM_PATH : GENERATED_PATH, def.getBlockName(), variant));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator,
-                                          Block block,
-                                          WesterosBlockDef blockDefinition) {
-        String path = String.format("%s%s/base_v1",
-                GENERATED_PATH,
-                blockDefinition.getBlockName());
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
+        String path = String.format("%s%s/base_v1", blockDefinition.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH, blockDefinition.getBlockName());
 
         itemModelGenerator.register(
                 block.asItem(),

@@ -89,7 +89,7 @@ public class CrossBlockModelHandler extends ModelExport {
             }
 
             Model model = new Model(
-                    Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parentPath)),
+                    Optional.of(WesterosBlocks.id("block/" + parentPath)),
                     Optional.empty(),
                     TextureKey.CROSS
             );
@@ -98,23 +98,14 @@ public class CrossBlockModelHandler extends ModelExport {
     }
 
     private Identifier getModelId(String id, int setIdx, boolean isCustom) {
-        String path = String.format("%s%s/%s_v%d",
-                isCustom ? CUSTOM_PATH : GENERATED_PATH,
-                def.blockName,
-                id,
-                setIdx + 1
-        );
-        return Identifier.of(WesterosBlocks.MOD_ID, path);
+        String path = String.format("%s%s/%s_v%d", isCustom ? CUSTOM_PATH : GENERATED_PATH, def.blockName, id, setIdx + 1);
+        return WesterosBlocks.id(path);
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
         WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.states.getFirst().getRandomTextureSet(0);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
 
-        Models.GENERATED.upload(
-                ModelIds.getItemModelId(currentBlock.asItem()),
-                textureMap,
-                itemModelGenerator.writer
-        );
+        Models.GENERATED.upload(ModelIds.getItemModelId(currentBlock.asItem()), textureMap, itemModelGenerator.writer);
     }
 }

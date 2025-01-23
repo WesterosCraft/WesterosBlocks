@@ -225,7 +225,7 @@ public class CuboidBlockModelHandler extends ModelExport {
                 faceObj.add("uv", uv);
 
                 // Get correct texture key
-                TextureKey textureKey = modTextureKeyForIndex(sidetxt[index]);
+//                TextureKey textureKey = modTextureKeyForIndex(sidetxt[index]);
 
                 // Add texture reference
                 faceObj.addProperty("texture", "#txt" + sidetxt[index]);
@@ -340,8 +340,7 @@ public class CuboidBlockModelHandler extends ModelExport {
     }
 
     public Identifier getModelId(String variant, int setIdx, boolean isCustom) {
-        return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/%s_v%d",
+        return WesterosBlocks.id(String.format("%s%s/%s_v%d",
                         isCustom ? CUSTOM_PATH : GENERATED_PATH,
                         def.getBlockName(),
                         variant,
@@ -360,7 +359,7 @@ public class CuboidBlockModelHandler extends ModelExport {
 
         itemModelGenerator.register(
                 block.asItem(),
-                new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, path)),
+                new Model(Optional.of(WesterosBlocks.id(path)),
                         Optional.empty())
         );
 

@@ -429,7 +429,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
     public Map<String, String> getMappedType() {
         if (parsedType == null) {
-            parsedType = new HashMap<String, String>();
+            parsedType = new HashMap<>();
             String[] toks = type.split(",");
             for (String tok : toks) {
                 String[] flds = tok.split(":");
@@ -511,7 +511,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         didInit = true;
     }
 
-    private static final Map<String, long[]> perfCounts = new HashMap<String, long[]>();
+    private static final Map<String, long[]> perfCounts = new HashMap<>();
 
     public Block createBlock() {
         try {
@@ -875,7 +875,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         typeTable.put("bed", new WCBedBlock.Factory());
         typeTable.put("sand", new WCSandBlock.Factory());
         typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
-//        typeTable.put("furnace", new WCFurnaceBlock.Factory());
+        typeTable.put("furnace", new WCFurnaceBlock.Factory());
         typeTable.put("sound", new WCSoundBlock.Factory());
         typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
         typeTable.put("beacon", new WCBeaconBlock.Factory());
@@ -1035,30 +1035,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     private static class BlockEntityRec {
         ArrayList<Block> blocks = new ArrayList<Block>();
         BlockEntityType<?> regobj;
-    }
-
-    private static final HashMap<String, BlockEntityRec> te_rec = new HashMap<String, BlockEntityRec>();
-
-//    public static final DeferredRegister<BlockEntityType<?>> TILE_ENTITY_TYPES =
-//            DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, WesterosBlocks.MOD_ID);
-
-//    public static <T extends BlockEntity> void registerBlockEntity(String name, BlockEntityType.BlockEntitySupplier<T> BlockEntitySupplier, Block blk) {
-//        BlockEntityRec rec = (BlockEntityRec) te_rec.get(name);
-//        if (rec == null) {
-//            rec = new BlockEntityRec();
-//            te_rec.put(name, rec);
-//            final BlockEntityRec frec = rec;
-//            // TODO
-////			rec.regobj = TILE_ENTITY_TYPES.register(name, () -> BlockEntityType.Builder.of(BlockEntitySupplier, frec.blocks.toArray(new Block[frec.blocks.size()])).build(null));
-//        }
-//        rec.blocks.add(blk);
-//    }
-
-    public static BlockEntityType<?> getBlockEntityType(String name) {
-        BlockEntityRec rec = te_rec.get(name);
-        if (rec != null)
-            return rec.regobj;
-        return null;
     }
 
     public void registerBlockSoundEvents(List<String> soundList) {

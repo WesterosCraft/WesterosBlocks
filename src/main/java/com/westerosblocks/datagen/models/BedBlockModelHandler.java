@@ -89,8 +89,7 @@ public class BedBlockModelHandler extends ModelExport {
     }
 
     private static Identifier modelFileName(String blockName, ModelRec rec) {
-        return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/%s", GENERATED_PATH, blockName, rec.ext));
+        return WesterosBlocks.id(String.format("%s%s/%s", GENERATED_PATH, blockName, rec.ext));
     }
 
     private static TextureMap createCustomTextureMap(WesterosBlockDef def, boolean head) {

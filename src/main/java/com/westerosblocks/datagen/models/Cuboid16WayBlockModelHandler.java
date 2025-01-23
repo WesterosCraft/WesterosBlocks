@@ -84,12 +84,7 @@ public class Cuboid16WayBlockModelHandler extends CuboidBlockModelHandler {
     }
 
     public Identifier getModelId(String variant, int setIdx, boolean isCustom) {
-        return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/%s_v%d",
-                        isCustom ? CUSTOM_PATH : GENERATED_PATH,
-                        def.getBlockName(),
-                        variant,
-                        setIdx + 1));
+        return WesterosBlocks.id(String.format("%s%s/%s_v%d", isCustom ? CUSTOM_PATH : GENERATED_PATH, def.getBlockName(), variant, setIdx + 1));
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
@@ -103,7 +98,7 @@ public class Cuboid16WayBlockModelHandler extends CuboidBlockModelHandler {
 
         itemModelGenerator.register(
                 block.asItem(),
-                new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, path)),
+                new Model(Optional.of(WesterosBlocks.id(path)),
                         Optional.empty())
         );
 

@@ -35,7 +35,7 @@ public class ModelExport {
             return Identifier.of(namespace, path);
         }
         // No namespace, use mod ID and prepend block/
-        return Identifier.of(WesterosBlocks.MOD_ID, "block/" + texturePath);
+        return WesterosBlocks.id("block/" + texturePath);
     }
 
     public static VariantSettings.Rotation getRotation(int degrees) {

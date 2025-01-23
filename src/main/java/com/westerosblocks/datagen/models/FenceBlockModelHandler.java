@@ -126,7 +126,8 @@ public class FenceBlockModelHandler extends ModelExport {
         TextureMap textures = new TextureMap()
                 .put(TextureKey.BOTTOM, createBlockIdentifier(set.getTextureByIndex(0)))
                 .put(TextureKey.TOP, createBlockIdentifier(set.getTextureByIndex(1)))
-                .put(TextureKey.SIDE, createBlockIdentifier(set.getTextureByIndex(2)));
+                .put(TextureKey.SIDE, createBlockIdentifier(set.getTextureByIndex(2)))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(set.getTextureByIndex(2)));
 
         if (hasOverlay) {
             textures.put(ModTextureKey.BOTTOM_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(0)))

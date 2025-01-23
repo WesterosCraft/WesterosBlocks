@@ -272,6 +272,7 @@ public class ModModelProvider extends FabricModelProvider {
                     WallBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
+                case "beacon":
                 case "cuboid": {
                     CuboidBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;

@@ -72,7 +72,7 @@ public class FanBlockModelHandler extends ModelExport {
         Identifier floorModelId = getModelId("base", setIdx);
         String floorParentPath = def.isTinted() ? "tinted/fan" : "untinted/fan";
         Model floorModel = new Model(
-                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + floorParentPath)),
+                Optional.of(WesterosBlocks.id("block/" + floorParentPath)),
                 Optional.empty(),
                 TextureKey.FAN
         );
@@ -82,7 +82,7 @@ public class FanBlockModelHandler extends ModelExport {
         Identifier wallModelId = getModelId("wall", setIdx);
         String wallParentPath = def.isTinted() ? "tinted/wall_fan" : "untinted/wall_fan";
         Model wallModel = new Model(
-                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + wallParentPath)),
+                Optional.of(WesterosBlocks.id("block/" + wallParentPath)),
                 Optional.empty(),
                 TextureKey.FAN
         );
@@ -92,8 +92,7 @@ public class FanBlockModelHandler extends ModelExport {
 
     private Identifier getModelId(String type, int setIdx) {
         String baseName = type.equals("wall") ? "wall_" + def.blockName : def.blockName;
-        return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/%s_v%d",
+        return WesterosBlocks.id(String.format("%s%s/%s_v%d",
                         GENERATED_PATH,
                         baseName,
                         type,
@@ -104,10 +103,6 @@ public class FanBlockModelHandler extends ModelExport {
         WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
 
-        Models.GENERATED.upload(
-                ModelIds.getItemModelId(currentBlock.asItem()),
-                textureMap,
-                itemModelGenerator.writer
-        );
+        Models.GENERATED.upload(ModelIds.getItemModelId(currentBlock.asItem()), textureMap, itemModelGenerator.writer);
     }
 }

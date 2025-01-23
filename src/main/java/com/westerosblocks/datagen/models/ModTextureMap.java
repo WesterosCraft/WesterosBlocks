@@ -15,11 +15,11 @@ public class ModTextureMap extends TextureMap {
                 .put(TextureKey.UP, createBlockIdentifier(ts.getTextureByIndex(1)))
                 .put(TextureKey.NORTH, createBlockIdentifier(ts.getTextureByIndex(2)))
                 .put(TextureKey.SOUTH, createBlockIdentifier(ts.getTextureByIndex(3)))
-                .put(TextureKey.WEST, createBlockIdentifier(ts.getTextureByIndex(isSymmetrical ? 4 : 6)))
-                .put(TextureKey.EAST, createBlockIdentifier(ts.getTextureByIndex(isSymmetrical ? 5 : 7)))
+                .put(TextureKey.WEST, createBlockIdentifier(ts.getTextureByIndex(isSymmetrical != null && isSymmetrical ? 4 : 6)))
+                .put(TextureKey.EAST, createBlockIdentifier(ts.getTextureByIndex(isSymmetrical != null && isSymmetrical ? 5 : 7)))
                 .put(TextureKey.PARTICLE, createBlockIdentifier(ts.getTextureByIndex(2)));
 
-        if (hasOverlay && currentRec != null) {
+        if (hasOverlay != null && hasOverlay && currentRec != null) {
             tMap.put(ModTextureKey.DOWN_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(0)))
                     .put(ModTextureKey.UP_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(1)))
                     .put(ModTextureKey.NORTH_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(2)))
@@ -74,7 +74,7 @@ public class ModTextureMap extends TextureMap {
                 .put(TextureKey.SIDE, createBlockIdentifier(set.getTextureByIndex(1)))
                 .put(TextureKey.PARTICLE, createBlockIdentifier(set.getTextureByIndex(0)));
 
-        if (hasOverlay) {
+        if (hasOverlay != null && hasOverlay) {
             textureMap
                     .put(ModTextureKey.LEAVES_OVERLAY_END, createBlockIdentifier(set.getTextureByIndex(1)))
                     .put(ModTextureKey.LEAVES_OVERLAY_SIDE, createBlockIdentifier(set.getTextureByIndex(2)))
@@ -91,7 +91,7 @@ public class ModTextureMap extends TextureMap {
                 .put(TextureKey.SIDE, createBlockIdentifier(set.getTextureByIndex(2)))
                 .put(TextureKey.PARTICLE, createBlockIdentifier(set.getTextureByIndex(2)));
 
-        if (hasOverlay) {
+        if (hasOverlay != null && hasOverlay) {
             tMap
                     .put(ModTextureKey.BOTTOM_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(0)))
                     .put(ModTextureKey.TOP_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(1)))

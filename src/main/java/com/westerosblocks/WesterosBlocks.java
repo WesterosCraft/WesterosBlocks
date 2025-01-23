@@ -1,6 +1,7 @@
 package com.westerosblocks;
 
 import com.westerosblocks.block.*;
+import com.westerosblocks.entity.ModEntities;
 import com.westerosblocks.item.WesterosBlocksItems;
 import com.westerosblocks.item.WesterosItemMenuOverrides;
 import com.westerosblocks.sound.ModSounds;
@@ -8,6 +9,7 @@ import com.westerosblocks.util.AutoDoorRestore;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.crash.CrashException;
 import net.minecraft.util.crash.CrashReport;
 import org.slf4j.Logger;
@@ -48,13 +50,13 @@ public class WesterosBlocks implements ModInitializer {
             LOGGER.error("WesterosBlocks.json failed sanity check");
             return;
         }
+
         WesterosCreativeModeTabs.registerCreativeModeTabs();
         WesterosBlocksItems.registerModItems();
         ModBlocks.registerModBlocks(customBlockDefs);
-
         ColorHandlers.registerColorProviders();
         ModSounds.registerSounds(customBlockDefs);
-
+        ModEntities.registerModEntities();
 
         ServerLifecycleEvents.SERVER_STOPPING.register(server -> {
             // Handle any pending door restores (force immediate)
@@ -76,6 +78,10 @@ public class WesterosBlocks implements ModInitializer {
 
     public static WesterosBlocksJsonLoader.WesterosBlocksConfig getCustomConfig() {
         return customConfig;
+    }
+
+    public static Identifier id(String path) {
+        return Identifier.of(MOD_ID, path);
     }
 
     // Expand block set definitions to obtain the full block definition list
