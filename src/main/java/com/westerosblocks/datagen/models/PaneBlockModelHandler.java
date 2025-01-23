@@ -134,7 +134,7 @@ public class PaneBlockModelHandler extends ModelExport {
 
         Identifier modelId = getModelId(variant, 0);
         Model model = new Model(
-                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parent)),
+                Optional.of(WesterosBlocks.id("block/" + parent)),
                 Optional.empty(),
                 TextureKey.SIDE,
                 ModTextureKey.CAP
@@ -144,8 +144,7 @@ public class PaneBlockModelHandler extends ModelExport {
     }
 
     private Identifier getModelId(String variant, int setIdx) {
-        return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/%s_v%d",
+        return WesterosBlocks.id(String.format("%s%s/%s_v%d",
                         GENERATED_PATH,
                         def.getBlockName(),
                         variant,

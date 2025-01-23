@@ -98,7 +98,7 @@ public class TrapDoorBlockModelHandler extends ModelExport {
 
         itemModelGenerator.register(
                 block.asItem(),
-                new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, path)), Optional.empty())
+                new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())
         );
     }
 }

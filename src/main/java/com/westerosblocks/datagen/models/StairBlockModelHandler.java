@@ -138,7 +138,7 @@ public class StairBlockModelHandler extends ModelExport {
         }
 
         Model model = new Model(
-                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, baseParent)),
+                Optional.of(WesterosBlocks.id(baseParent)),
                 Optional.empty(),
                 textureKeys
         );
@@ -152,8 +152,7 @@ public class StairBlockModelHandler extends ModelExport {
                 String.format("%s/%s_v%d", def.blockName, variant, setIdx + 1) :
                 String.format("%s/%s/%s_v%d", def.blockName, stateId, variant, setIdx + 1);
 
-        return Identifier.of(WesterosBlocks.MOD_ID,
-                (def.isCustomModel() ? "block/custom/" : "block/generated/") + path);
+        return WesterosBlocks.id((def.isCustomModel() ? "block/custom/" : "block/generated/") + path);
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
@@ -163,7 +162,7 @@ public class StairBlockModelHandler extends ModelExport {
 
         itemModelGenerator.register(
                 block.asItem(),
-                new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, path)), Optional.empty())
+                new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())
         );
 
 

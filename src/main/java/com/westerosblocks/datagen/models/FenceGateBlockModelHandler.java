@@ -89,7 +89,7 @@ public class FenceGateBlockModelHandler extends ModelExport {
             String parentPath = basePath + "/" + type[1];
 
             Model model = new Model(
-                    Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parentPath)),
+                    Optional.of(WesterosBlocks.id("block/" + parentPath)),
                     Optional.empty(),
                     TextureKey.TEXTURE
             );
@@ -98,8 +98,7 @@ public class FenceGateBlockModelHandler extends ModelExport {
     }
 
     private Identifier getModelId(String type, int setIdx) {
-        return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/%s_v%d",
+        return WesterosBlocks.id(String.format("%s%s/%s_v%d",
                         GENERATED_PATH,
                         def.getBlockName(),
                         type,
@@ -118,7 +117,7 @@ public class FenceGateBlockModelHandler extends ModelExport {
         String parentPath = String.format("block/%s/template_fence_gate", basePath);
 
         Identifier modelId = ModelIds.getItemModelId(currentBlock.asItem());
-        Identifier parentId = Identifier.of(WesterosBlocks.MOD_ID, parentPath);
+        Identifier parentId = WesterosBlocks.id(parentPath);
 
         Model model = new Model(Optional.of(parentId), Optional.empty(), TextureKey.TEXTURE);
         model.upload(modelId, textureMap, itemModelGenerator.writer);

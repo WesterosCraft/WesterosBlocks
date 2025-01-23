@@ -2,6 +2,7 @@ package com.westerosblocks.block.custom;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
+import com.mojang.serialization.MapCodec;
 import com.sun.jdi.Mirror;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -29,39 +30,40 @@ import net.minecraft.world.WorldView;
 
 import java.util.Map;
 
-public class WCWallFanBlock extends Block implements WesterosBlockLifecycle {
-
+public class WCWallFanBlock extends Block implements Waterloggable, WesterosBlockLifecycle {
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     private final WesterosBlockDef def;
-    private boolean allow_unsupported = false;
+    private final boolean allowUnsupported;
 
-    private static final Map<Direction, VoxelShape> SHAPES = Maps.newEnumMap(
-            ImmutableMap.of(Direction.NORTH,
-                    VoxelShapes.cuboid(0.0, 4.0, 5.0, 16.0, 12.0, 16.0),
-                    Direction.SOUTH,
-                    VoxelShapes.cuboid(0.0, 4.0, 0.0, 16.0, 12.0, 11.0),
-                    Direction.WEST,
-                    VoxelShapes.cuboid(5.0, 4.0, 0.0, 16.0, 12.0, 16.0),
-                    Direction.EAST,
-                    VoxelShapes.cuboid(0.0, 4.0, 0.0, 11.0, 12.0, 16.0)));
+    private static final Map<Direction, VoxelShape> SHAPES = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.createCuboidShape(0.0, 4.0, 5.0, 16.0, 12.0, 16.0),
+            Direction.SOUTH, Block.createCuboidShape(0.0, 4.0, 0.0, 16.0, 12.0, 11.0),
+            Direction.WEST, Block.createCuboidShape(5.0, 4.0, 0.0, 16.0, 12.0, 16.0),
+            Direction.EAST, Block.createCuboidShape(0.0, 4.0, 0.0, 11.0, 12.0, 16.0)
+    ));
 
     protected WCWallFanBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
         super(settings);
         this.def = def;
-        String t = def.getType();
-        if (t != null) {
-            String[] toks = t.split(",");
-            for (String tok : toks) {
-                if (tok.equals("allow-unsupported")) {
-                    allow_unsupported = true;
+
+        boolean allowUnsupported = false;
+        String type = def.getType();
+        if (type != null) {
+            String[] tokens = type.split(",");
+            for (String token : tokens) {
+                if (token.equals("allow-unsupported")) {
+                    allowUnsupported = true;
                     break;
                 }
             }
         }
-        BlockState defbs = this.getDefaultState().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false));
-        setDefaultState(defbs);
+        this.allowUnsupported = allowUnsupported;
+
+        setDefaultState(getStateManager().getDefaultState()
+                .with(FACING, Direction.NORTH)
+                .with(WATERLOGGED, false));
     }
 
     @Override
@@ -71,19 +73,19 @@ public class WCWallFanBlock extends Block implements WesterosBlockLifecycle {
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        // Get waterlogging state
-        BlockState bs = super.getPlacementState(ctx);
-        if (bs == null) return null;
-        FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
-        bs = bs.with(WATERLOGGED, Boolean.valueOf(fluidstate.isIn(FluidTags.WATER)));
-        // Get direction state
-        Direction[] directionArray;
+        BlockState state = getDefaultState();
+        FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
         World world = ctx.getWorld();
-        BlockPos blockPos = ctx.getBlockPos();
-        for (Direction direction : directionArray = ctx.getPlacementDirections()) {
-            if (!direction.getAxis().isHorizontal() || !(bs = bs.with(FACING, direction.getOpposite())).canPlaceAt(world, blockPos))
-                continue;
-            return bs;
+        BlockPos pos = ctx.getBlockPos();
+
+        for (Direction direction : ctx.getPlacementDirections()) {
+            if (direction.getAxis().isHorizontal()) {
+                Direction opposite = direction.getOpposite();
+                state = state.with(FACING, opposite);
+                if (state.canPlaceAt(world, pos)) {
+                    return state.with(WATERLOGGED, fluidState.isIn(FluidTags.WATER));
+                }
+            }
         }
         return null;
     }
@@ -94,16 +96,6 @@ public class WCWallFanBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    protected boolean canPathfindThrough(BlockState state, NavigationType type) {
-        return switch (type) {
-            case LAND -> false;
-            case WATER -> state.getFluidState().isIn(FluidTags.WATER);
-            case AIR -> false;
-            default -> false;
-        };
-    }
-
-    @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING, WATERLOGGED);
     }
@@ -111,24 +103,28 @@ public class WCWallFanBlock extends Block implements WesterosBlockLifecycle {
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
                                                 WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        if (direction.getOpposite() == state.get(FACING) && !state.canPlaceAt(world, pos)) {
+        if (direction.getOpposite() == state.get(FACING) && !canPlaceAt(state, world, pos)) {
             return Blocks.AIR.getDefaultState();
         }
+
+        if (state.get(WATERLOGGED)) {
+            world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+        }
+
         return state;
     }
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        if (this.allow_unsupported) return true;
+        if (allowUnsupported) return true;
         Direction direction = state.get(FACING);
-        BlockPos blockPos2 = pos.offset(direction.getOpposite());
-        BlockState blockState2 = world.getBlockState(blockPos2);
-        return blockState2.isSideSolidFullSquare(world, blockPos2, direction);
+        BlockPos attachPos = pos.offset(direction.getOpposite());
+        return world.getBlockState(attachPos).isSideSolidFullSquare(world, attachPos, direction);
     }
 
     @Override
-    protected boolean isTransparent(BlockState state, BlockView world, BlockPos pos) {
-        return state.getFluidState().isEmpty();
+    public boolean isTransparent(BlockState state, BlockView world, BlockPos pos) {
+        return !state.getFluidState().isEmpty() || state.get(WATERLOGGED);
     }
 
     @Override
@@ -137,13 +133,23 @@ public class WCWallFanBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    protected BlockState rotate(BlockState blockState, BlockRotation rotation) {
-        return blockState.with(FACING, rotation.rotate(blockState.get(FACING)));
+    public BlockState rotate(BlockState state, BlockRotation rotation) {
+        return state.with(FACING, rotation.rotate(state.get(FACING)));
     }
 
     @Override
-    protected BlockState mirror(BlockState blockState, BlockMirror mirror) {
-        return blockState.rotate(mirror.getRotation(blockState.get(FACING)));
+    public BlockState mirror(BlockState state, BlockMirror mirror) {
+        return state.rotate(mirror.getRotation(state.get(FACING)));
+    }
+
+    @Override
+    protected boolean canPathfindThrough(BlockState state, NavigationType type) {
+        return switch (type) {
+            case LAND -> false;
+            case WATER -> state.getFluidState().isIn(FluidTags.WATER);
+            case AIR -> false;
+            default -> false;
+        };
     }
 
     private static final String[] TAGS = {"fans"};

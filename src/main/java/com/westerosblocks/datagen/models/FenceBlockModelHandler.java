@@ -151,7 +151,7 @@ public class FenceBlockModelHandler extends ModelExport {
                 String.format("%s/%s_v%d", def.blockName, variant, setIdx + 1) :
                 String.format("%s/%s/%s_v%d", def.blockName, stateId, variant, setIdx + 1);
 
-        return Identifier.of(WesterosBlocks.MOD_ID, GENERATED_PATH + path);
+        return WesterosBlocks.id(GENERATED_PATH + path);
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
@@ -167,7 +167,7 @@ public class FenceBlockModelHandler extends ModelExport {
                 .put(TextureKey.SIDE, createBlockIdentifier(firstSet.getTextureByIndex(2)));
 
         Model model = new Model(
-                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, parent)),
+                Optional.of(WesterosBlocks.id(parent)),
                 Optional.empty(),
                 TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE
         );

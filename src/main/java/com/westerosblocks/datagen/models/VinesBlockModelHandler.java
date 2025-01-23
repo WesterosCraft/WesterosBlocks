@@ -93,7 +93,7 @@ public class VinesBlockModelHandler extends ModelExport {
         TextureMap baseTextureMap = new TextureMap().put(ModTextureKey.VINES, createBlockIdentifier(set.getTextureByIndex(0)));
         Identifier baseModelId = getModelId("base", setIdx);
         Model baseModel = new Model(
-                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/vines/vine_1")),
+                Optional.of(WesterosBlocks.id("block/vines/vine_1")),
                 Optional.empty(),
                 ModTextureKey.VINES
         );
@@ -103,7 +103,7 @@ public class VinesBlockModelHandler extends ModelExport {
         TextureMap topTextureMap = new TextureMap().put(ModTextureKey.VINES, createBlockIdentifier(set.getTextureByIndex(1)));
         Identifier topModelId = getModelId("top", setIdx);
         Model topModel = new Model(
-                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/vines/vine_u")),
+                Optional.of(WesterosBlocks.id("block/vines/vine_u")),
                 Optional.empty(),
                 ModTextureKey.VINES
         );
@@ -111,9 +111,7 @@ public class VinesBlockModelHandler extends ModelExport {
     }
 
     private Identifier getModelId(String type, int setIdx) {
-        return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/%s_v%d", def.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH, def.getBlockName(), type, setIdx + 1
-                )
+        return WesterosBlocks.id(String.format("%s%s/%s_v%d", def.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH, def.getBlockName(), type, setIdx + 1)
         );
     }
 
@@ -121,10 +119,6 @@ public class VinesBlockModelHandler extends ModelExport {
         WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.states.getFirst().getRandomTextureSet(0);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
 
-        Models.GENERATED.upload(
-                ModelIds.getItemModelId(block.asItem()),
-                textureMap,
-                itemModelGenerator.writer
-        );
+        Models.GENERATED.upload(ModelIds.getItemModelId(block.asItem()), textureMap, itemModelGenerator.writer);
     }
 }

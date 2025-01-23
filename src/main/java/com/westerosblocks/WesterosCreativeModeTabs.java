@@ -66,7 +66,7 @@ public class WesterosCreativeModeTabs {
     }
 
     private static RegistryKey<ItemGroup> registerTab(String tabName, String title, String iconItem) {
-        Identifier tabId = Identifier.of(WesterosBlocks.MOD_ID, tabName);
+        Identifier tabId = WesterosBlocks.id(tabName);
         RegistryKey<ItemGroup> key = RegistryKey.of(RegistryKeys.ITEM_GROUP, tabId);
 
 
@@ -76,7 +76,7 @@ public class WesterosCreativeModeTabs {
                 .entries((context, entries) -> {
                     for (WesterosBlockDef def : WesterosBlocks.getCustomBlockDefs()) {
                         if (def != null && def.creativeTab.equals(tabName)) {
-                            entries.add(Registries.ITEM.get(Identifier.of(WesterosBlocks.MOD_ID, def.blockName)));
+                            entries.add(Registries.ITEM.get(WesterosBlocks.id(def.blockName)));
                         }
                     }
                 })

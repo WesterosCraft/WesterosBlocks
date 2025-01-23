@@ -56,7 +56,7 @@ public class WallBlockModelHandler extends ModelExport {
             // Generate models if not a custom model
             if (!sr.isCustomModel()) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
-                    generateWallModels(generator, sr, setIdx);
+                    generateWallModels(sr, setIdx);
                 }
             }
 
@@ -105,7 +105,7 @@ public class WallBlockModelHandler extends ModelExport {
         generator.blockStateCollector.accept(stateSupplier);
     }
 
-    private void generateWallModels(BlockStateModelGenerator generator, WesterosBlockStateRecord sr, int setIdx) {
+    private void generateWallModels(WesterosBlockStateRecord sr, int setIdx) {
         boolean isTinted = sr.isTinted();
         boolean hasOverlay = sr.getOverlayTextureByIndex(0) != null;
         WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
@@ -122,7 +122,7 @@ public class WallBlockModelHandler extends ModelExport {
         Identifier modelId = getModelId(variant, setIdx, sr);
 
         Model model = new Model(
-                Optional.of(Identifier.of(WesterosBlocks.MOD_ID, parentPath)),
+                Optional.of(WesterosBlocks.id(parentPath)),
                 Optional.empty(),
                 TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE
         );
@@ -138,16 +138,11 @@ public class WallBlockModelHandler extends ModelExport {
     }
 
     private Identifier getModelId(String variant, int setIdx, WesterosBlockStateRecord sr) {
-        String path = String.format("%s%s/%s-v%d",
-                GENERATED_PATH,
-                def.getBlockName(),
-                variant,
-                setIdx + 1
-        );
+        String path = String.format("%s%s/%s-v%d", GENERATED_PATH, def.getBlockName(), variant, setIdx + 1);
         if (sr.stateID != null) {
             path = path + "/" + sr.stateID;
         }
-        return Identifier.of(WesterosBlocks.MOD_ID, path);
+        return WesterosBlocks.id(path);
     }
 
     private record ModelPart(
@@ -174,10 +169,7 @@ public class WallBlockModelHandler extends ModelExport {
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.WALL, createBlockIdentifier(firstSet.getTextureByIndex(0)));
 
-        Models.WALL_INVENTORY.upload(
-                ModelIds.getItemModelId(block.asItem()),
-                textureMap,
-                itemModelGenerator.writer
+        Models.WALL_INVENTORY.upload(ModelIds.getItemModelId(block.asItem()), textureMap, itemModelGenerator.writer
         );
     }
 }

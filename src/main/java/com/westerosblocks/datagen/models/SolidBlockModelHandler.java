@@ -33,12 +33,12 @@ public class SolidBlockModelHandler extends ModelExport {
     }
 
     public static Identifier modelFileName(WesterosBlockDef def, String ext, int setidx, Boolean isCustom) {
-        Identifier id = Identifier.of(WesterosBlocks.MOD_ID, getModelName(def, ext, setidx));
+        Identifier id = WesterosBlocks.id(getModelName(def, ext, setidx));
         return id.withPrefixedPath(GENERATED_PATH);
     }
 
     public static Identifier modelFileName(WesterosBlockDef def, String ext, int setidx, Boolean isCustom, Boolean symmetrical) {
-        Identifier id = Identifier.of(WesterosBlocks.MOD_ID, getModelName(def, ext, setidx, symmetrical));
+        Identifier id = WesterosBlocks.id(getModelName(def, ext, setidx, symmetrical));
         return id.withPrefixedPath(GENERATED_PATH);
     }
 
@@ -122,7 +122,7 @@ public class SolidBlockModelHandler extends ModelExport {
             ModModels.ALL_SIDES(parentPath, namespace)
                     .upload(modelPath, textureMap, generator.modelCollector);
         } else {
-            TextureMap textureMapAll = TextureMap.all(Identifier.ofVanilla("block/cube"));
+            TextureMap textureMapAll = TextureMap.all(createBlockIdentifier(set.getTextureByIndex(0)));
             Models.CUBE_ALL.upload(modelPath, textureMapAll, generator.modelCollector);
         }
     }
@@ -151,7 +151,7 @@ public class SolidBlockModelHandler extends ModelExport {
 
         itemModelGenerator.register(
                 currentBlock.asItem(),
-                new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, path)), Optional.empty())
+                new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())
         );
     }
 }

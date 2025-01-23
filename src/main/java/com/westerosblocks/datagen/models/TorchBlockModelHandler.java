@@ -104,7 +104,7 @@ public class TorchBlockModelHandler extends ModelExport {
             // Generate only wall torch model for wall variants
             Identifier wallModelId = getModelId("wall", setIdx);
             Model wallTorchModel = new Model(
-                    Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/untinted/template_torch_wall")),
+                    Optional.of(WesterosBlocks.id("block/untinted/template_torch_wall")),
                     Optional.empty(),
                     TextureKey.TORCH
             );
@@ -113,7 +113,7 @@ public class TorchBlockModelHandler extends ModelExport {
             // Generate standing torch model for regular variants
             Identifier torchModelId = getModelId("base", setIdx);
             Model torchModel = new Model(
-                    Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/untinted/template_torch")),
+                    Optional.of(WesterosBlocks.id("block/untinted/template_torch")),
                     Optional.empty(),
                     TextureKey.TORCH
             );
@@ -126,7 +126,7 @@ public class TorchBlockModelHandler extends ModelExport {
                 def.blockName :
                 (type.equals("wall") ? "wall_" + def.blockName : def.blockName);
 
-        return Identifier.of(WesterosBlocks.MOD_ID,
+        return WesterosBlocks.id(
                 String.format("%s%s/%s_v%d",
                         GENERATED_PATH,
                         baseName,
@@ -134,9 +134,7 @@ public class TorchBlockModelHandler extends ModelExport {
                         setIdx + 1));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator,
-                                          Block currentBlock,
-                                          WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
         // Only generate item model for non-wall torch variants
         if (!blockDefinition.blockName.startsWith("wall_")) {
             WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
@@ -144,7 +142,7 @@ public class TorchBlockModelHandler extends ModelExport {
 
             Models.GENERATED.upload(
                     ModelIds.getItemModelId(currentBlock.asItem()),
-                    TextureMap.layer0(Identifier.of(WesterosBlocks.MOD_ID, texturePath)),
+                    TextureMap.layer0(WesterosBlocks.id(texturePath)),
                     itemModelGenerator.writer
             );
         }

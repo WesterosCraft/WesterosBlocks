@@ -24,11 +24,11 @@ public class ModBlocks {
 
     public static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(WesterosBlocks.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, WesterosBlocks.id(name), block);
     }
 
     private static void registerBlockItem(String name, Block block) {
-        Registry.register(Registries.ITEM, Identifier.of(WesterosBlocks.MOD_ID, name),
+        Registry.register(Registries.ITEM, WesterosBlocks.id(name),
                 new BlockItem(block, new Item.Settings()));
     }
 

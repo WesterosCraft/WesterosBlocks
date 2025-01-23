@@ -28,7 +28,7 @@ public class LadderBlockModelHandler extends ModelExport {
     }
 
     public static Identifier modelFileName(int setidx, boolean isCustomModel) {
-        return Identifier.of(WesterosBlocks.MOD_ID, getModelName("base", setidx)).withPrefixedPath(isCustomModel ? CUSTOM_PATH : GENERATED_PATH);
+        return WesterosBlocks.id(getModelName("base", setidx)).withPrefixedPath(isCustomModel ? CUSTOM_PATH : GENERATED_PATH);
     }
 
     public void generateBlockStateModels() {
@@ -65,7 +65,7 @@ public class LadderBlockModelHandler extends ModelExport {
 
     protected static void generateLadderModel(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set, Identifier modelId) {
         TextureMap textureMap = new TextureMap().put(ModTextureKey.LADDER, createBlockIdentifier(set.getTextureByIndex(0)));
-        Identifier parentId = Identifier.of(WesterosBlocks.MOD_ID, "untinted/ladder");
+        Identifier parentId = WesterosBlocks.id("untinted/ladder");
         Model model = WC_LADDER(parentId.getPath());
         model.upload(modelId, textureMap, generator.modelCollector);
     }
@@ -75,7 +75,7 @@ public class LadderBlockModelHandler extends ModelExport {
 
         itemModelGenerator.register(
                 currentBlock.asItem(),
-                new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, path)), Optional.empty())
+                new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())
         );
     }
 }

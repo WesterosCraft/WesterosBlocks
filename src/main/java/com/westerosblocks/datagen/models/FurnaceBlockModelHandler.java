@@ -110,7 +110,7 @@ public class FurnaceBlockModelHandler extends ModelExport {
 
         itemModelGenerator.register(
                 block.asItem(),
-                new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, path)),
+                new Model(Optional.of(WesterosBlocks.id(path)),
                         Optional.empty())
         );
 

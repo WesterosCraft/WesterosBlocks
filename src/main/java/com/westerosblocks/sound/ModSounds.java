@@ -12,7 +12,7 @@ import java.util.HashMap;
 public class ModSounds {
 
     public static void registerSoundEvent(String name) {
-        Identifier id = Identifier.of(WesterosBlocks.MOD_ID, name);
+        Identifier id = WesterosBlocks.id(name);
         Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
 

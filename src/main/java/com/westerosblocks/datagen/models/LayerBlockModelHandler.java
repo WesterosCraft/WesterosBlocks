@@ -61,14 +61,18 @@ public class LayerBlockModelHandler extends ModelExport {
     }
 
     private Identifier getModelId(int layer, int setIdx) {
-        return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/layer%d_v%d", GENERATED_PATH, def.getBlockName(), layer, setIdx + 1));
+        return WesterosBlocks.id(
+                String.format("%s%s/layer%d_v%d",
+                GENERATED_PATH,
+                def.getBlockName(),
+                layer,
+                setIdx + 1));
     }
 
     // TODO need to figure out a diff model for in-game GUI
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
         String path = String.format("%s%s/layer1_v1", GENERATED_PATH, blockDefinition.blockName);
-        itemModelGenerator.register(currentBlock.asItem(), new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, path)), Optional.empty()));
+        itemModelGenerator.register(currentBlock.asItem(), new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty()));
 
         if (blockDefinition.isTinted()) {
             String tintResource = blockDefinition.getBlockColorMapResource();

@@ -49,7 +49,7 @@ public class SlabBlockModelHandler extends ModelExport {
     }
 
     protected static Identifier getModelName(String blockName, String ext, int setidx) {
-        Identifier id = Identifier.of(WesterosBlocks.MOD_ID, blockName + "/" + ext + ("_v" + (setidx + 1)));
+        Identifier id = WesterosBlocks.id(blockName + "/" + ext + ("_v" + (setidx + 1)));
         return id.withPrefixedPath(GENERATED_PATH);
     }
 
@@ -57,7 +57,7 @@ public class SlabBlockModelHandler extends ModelExport {
         if (cond == null) {
             return getModelName(blockName, ext, setidx);
         }
-        Identifier id = Identifier.of(WesterosBlocks.MOD_ID, blockName + "/" + cond + "/" + ext + ("_v" + (setidx + 1)));
+        Identifier id = WesterosBlocks.id(blockName + "/" + cond + "/" + ext + ("_v" + (setidx + 1)));
 
         return id.withPrefixedPath(GENERATED_PATH);
     }
@@ -140,7 +140,7 @@ public class SlabBlockModelHandler extends ModelExport {
 
         itemModelGenerator.register(
                 currentBlock.asItem(),
-                new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, path)), Optional.empty())
+                new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())
         );
     }
 }

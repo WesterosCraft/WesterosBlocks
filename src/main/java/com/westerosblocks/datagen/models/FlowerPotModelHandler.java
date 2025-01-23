@@ -65,20 +65,24 @@ public class FlowerPotModelHandler extends ModelExport {
         String parentPath = def.isTinted() ? "tinted/flower_pot_cross" : "untinted/flower_pot_cross";
 
         Identifier modelId = getModelId("base", setIdx);
-        Model model = new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parentPath)), Optional.empty(), TextureKey.DIRT, ModTextureKey.FLOWER_POT, TextureKey.PLANT, TextureKey.PARTICLE);
+        Model model = new Model(Optional.of(WesterosBlocks.id("block/" + parentPath)),
+                Optional.empty(),
+                TextureKey.DIRT,
+                ModTextureKey.FLOWER_POT,
+                TextureKey.PLANT,
+                TextureKey.PARTICLE);
         model.upload(modelId, textureMap, generator.modelCollector);
     }
 
     private Identifier getModelId(String type, int setIdx) {
-        return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/%s_v%d", GENERATED_PATH, def.getBlockName(), type, setIdx + 1));
+        return WesterosBlocks.id(String.format("%s%s/%s_v%d", GENERATED_PATH, def.getBlockName(), type, setIdx + 1));
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
         String path = String.format("%s%s/base_v1", GENERATED_PATH, blockDefinition.blockName);
         itemModelGenerator.register(
                 currentBlock.asItem(),
-                new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, path)), Optional.empty())
+                new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())
         );
     }
 }

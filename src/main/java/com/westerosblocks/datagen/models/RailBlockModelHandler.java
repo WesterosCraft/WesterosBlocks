@@ -110,7 +110,7 @@ public class RailBlockModelHandler extends ModelExport {
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
         WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         String texturePath = String.format("block/%s",  firstSet.getTextureByIndex(0));
-        Identifier textureId = Identifier.of(WesterosBlocks.MOD_ID, texturePath);
+        Identifier textureId = WesterosBlocks.id(texturePath);
 
         Models.GENERATED.upload(
                 ModelIds.getItemModelId(currentBlock.asItem()),

@@ -37,7 +37,7 @@ public class LogBlockModelHandler extends ModelExport {
                 WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
 
                 BlockStateVariant variant = BlockStateVariant.create();
-                Identifier symId = Identifier.of(WesterosBlocks.MOD_ID, GENERATED_PATH + getModelName(models[i], setIdx));
+                Identifier symId = WesterosBlocks.id(GENERATED_PATH + getModelName(models[i], setIdx));
                 variant.put(VariantSettings.MODEL, symId);
                 if (set.weight != null) {
                     variant.put(VariantSettings.WEIGHT, set.weight);
@@ -90,7 +90,7 @@ public class LogBlockModelHandler extends ModelExport {
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
         itemModelGenerator.register(
                 currentBlock.asItem(),
-                new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, GENERATED_PATH + blockDefinition.blockName + "/" + models[1] + "_v1")), Optional.empty())
+                new Model(Optional.of(WesterosBlocks.id(GENERATED_PATH + blockDefinition.blockName + "/" + models[1] + "_v1")), Optional.empty())
         );
     }
 }

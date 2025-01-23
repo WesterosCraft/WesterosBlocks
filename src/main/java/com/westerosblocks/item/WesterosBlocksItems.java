@@ -12,7 +12,7 @@ public class WesterosBlocksItems {
 //    public static final Item TEST_ITEM = registerItem("test_item", new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, Identifier.of(WesterosBlocks.MOD_ID, name), item);
+        return Registry.register(Registries.ITEM, WesterosBlocks.id(name), item);
     }
 
     public static void registerModItems() {
