@@ -1,7 +1,9 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.custom.WCWallTorchBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -29,23 +31,15 @@ public class TorchBlockModelHandler extends ModelExport {
     }
 
     public void generateBlockStateModels() {
-        // Check if this is a wall torch variant
-        boolean isWallTorch = def.blockName.startsWith("wall_");
-
-        // Generate models for the appropriate torch type
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
             WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
             if (!def.isCustomModel()) {
-                generateTorchModels(generator, set, setIdx, isWallTorch);
+                generateTorchModels(generator, set, setIdx);
             }
         }
 
-        // Generate blockstate file based on torch type
-        if (isWallTorch) {
-            generateWallTorchBlockState();
-        } else {
-            generateStandingTorchBlockState();
-        }
+        generateWallTorchBlockState();
+        generateStandingTorchBlockState();
     }
 
     private void generateStandingTorchBlockState() {
@@ -70,7 +64,8 @@ public class TorchBlockModelHandler extends ModelExport {
     }
 
     private void generateWallTorchBlockState() {
-        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        WCWallTorchBlock wallBlock = (WCWallTorchBlock) ModBlocks.getCustomBlocksByName().get("wall_" + def.blockName);
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(wallBlock);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (int i = 0; i < FACING_DIRECTIONS.length; i++) {
@@ -90,46 +85,35 @@ public class TorchBlockModelHandler extends ModelExport {
             }
         }
 
-        generateBlockStateFiles(generator, block, variants);
+        generateBlockStateFiles(generator, wallBlock, variants);
     }
 
-    private void generateTorchModels(BlockStateModelGenerator generator,
-                                     WesterosBlockDef.RandomTextureSet set,
-                                     int setIdx,
-                                     boolean isWallTorch) {
+    private void generateTorchModels(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set, int setIdx) {
         TextureMap torchTextureMap = new TextureMap()
                 .put(TextureKey.TORCH, createBlockIdentifier(set.getTextureByIndex(0)));
+        // wall torch model
+        Identifier wallModelId = getModelId("wall", setIdx);
+        Model wallTorchModel = new Model(
+                Optional.of(WesterosBlocks.id("block/untinted/template_torch_wall")),
+                Optional.empty(),
+                TextureKey.TORCH
+        );
+        wallTorchModel.upload(wallModelId, torchTextureMap, generator.modelCollector);
+        // standing torch model
+        Identifier torchModelId = getModelId("base", setIdx);
+        Model torchModel = new Model(
+                Optional.of(WesterosBlocks.id("block/untinted/template_torch")),
+                Optional.empty(),
+                TextureKey.TORCH
+        );
+        torchModel.upload(torchModelId, torchTextureMap, generator.modelCollector);
 
-        if (isWallTorch) {
-            // Generate only wall torch model for wall variants
-            Identifier wallModelId = getModelId("wall", setIdx);
-            Model wallTorchModel = new Model(
-                    Optional.of(WesterosBlocks.id("block/untinted/template_torch_wall")),
-                    Optional.empty(),
-                    TextureKey.TORCH
-            );
-            wallTorchModel.upload(wallModelId, torchTextureMap, generator.modelCollector);
-        } else {
-            // Generate standing torch model for regular variants
-            Identifier torchModelId = getModelId("base", setIdx);
-            Model torchModel = new Model(
-                    Optional.of(WesterosBlocks.id("block/untinted/template_torch")),
-                    Optional.empty(),
-                    TextureKey.TORCH
-            );
-            torchModel.upload(torchModelId, torchTextureMap, generator.modelCollector);
-        }
     }
 
     private Identifier getModelId(String type, int setIdx) {
-        String baseName = def.blockName.startsWith("wall_") ?
-                def.blockName :
-                (type.equals("wall") ? "wall_" + def.blockName : def.blockName);
-
-        return WesterosBlocks.id(
-                String.format("%s%s/%s_v%d",
+        return WesterosBlocks.id(String.format("%s%s/%s_v%d",
                         GENERATED_PATH,
-                        baseName,
+                        def.blockName,
                         type,
                         setIdx + 1));
     }

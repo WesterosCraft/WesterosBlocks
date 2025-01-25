@@ -24,45 +24,16 @@ public class FanBlockModelHandler extends ModelExport {
         this.def = def;
     }
 
-    private Block getWallBlock() {
-        String wallBlockName = def.blockName + "_wall";
-        return ModBlocks.getCustomBlocksByName().get(wallBlockName);
-    }
-
     public void generateBlockStateModels() {
-        // Floor fan blockstates
-        BlockStateBuilder floorBuilder = new BlockStateBuilder(block);
-        Map<String, List<BlockStateVariant>> floorVariants = floorBuilder.getVariants();
+        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
+        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
-        // Wall fan blockstates
-        BlockStateBuilder wallBuilder = new BlockStateBuilder(getWallBlock());
-        Map<String, List<BlockStateVariant>> wallVariants = wallBuilder.getVariants();
+        // Add single floor variant
+        BlockStateVariant floorVariant = BlockStateVariant.create()
+                .put(VariantSettings.MODEL, getModelId(def.blockName, "base", 1));
+        blockStateBuilder.addVariant("", floorVariant, null, variants);
 
-        for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-            WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-
-            // Floor variant
-            BlockStateVariant floorVariant = BlockStateVariant.create()
-                    .put(VariantSettings.MODEL, getModelId(def.blockName, "base", setIdx));
-            if (set.weight != null) {
-                floorVariant.put(VariantSettings.WEIGHT, set.weight);
-            }
-            floorBuilder.addVariant("", floorVariant, null, floorVariants);
-
-            // Wall variants
-            addWallVariants(wallBuilder, wallVariants, set, setIdx);
-
-            if (!def.isCustomModel()) {
-                generateFanModels(generator, set, setIdx);
-            }
-        }
-
-        generateBlockStateFiles(generator, block, floorVariants);
-        generateBlockStateFiles(generator, getWallBlock(), wallVariants);
-    }
-
-    private void addWallVariants(BlockStateBuilder builder, Map<String, List<BlockStateVariant>> variants,
-                                 WesterosBlockDef.RandomTextureSet set, int setIdx) {
+        // Add single wall variant for each direction
         Map<String, Integer> directionRotations = Map.of(
                 "east", 90,
                 "south", 180,
@@ -72,13 +43,18 @@ public class FanBlockModelHandler extends ModelExport {
 
         directionRotations.forEach((direction, rotation) -> {
             BlockStateVariant variant = BlockStateVariant.create()
-                    .put(VariantSettings.MODEL, getModelId(def.blockName, "wall", setIdx))
+                    .put(VariantSettings.MODEL, getModelId(def.blockName, "wall", 0))
                     .put(VariantSettings.Y, getRotation(rotation));
-            if (set.weight != null) {
-                variant.put(VariantSettings.WEIGHT, set.weight);
-            }
-            builder.addVariant("facing=" + direction, variant, null, variants);
+            blockStateBuilder.addVariant("facing=" + direction, variant, null, variants);
         });
+
+        if (!def.isCustomModel()) {
+            for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
+                generateFanModels(generator, def.getRandomTextureSet(setIdx), setIdx);
+            }
+        }
+
+        generateBlockStateFiles(generator, block, variants);
     }
 
     private void generateFanModels(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set, int setIdx) {
@@ -86,7 +62,7 @@ public class FanBlockModelHandler extends ModelExport {
                 .put(TextureKey.FAN, createBlockIdentifier(set.getTextureByIndex(0)));
         String basePath = def.isTinted() ? "tinted" : "untinted";
 
-        // Generate floor model
+        // floor model
         Model floorModel = new Model(
                 Optional.of(WesterosBlocks.id("block/" + basePath + "/fan")),
                 Optional.empty(),
@@ -94,7 +70,7 @@ public class FanBlockModelHandler extends ModelExport {
         );
         floorModel.upload(getModelId(def.blockName, "base", setIdx), textureMap, generator.modelCollector);
 
-        // Generate wall model
+        // wall model
         Model wallModel = new Model(
                 Optional.of(WesterosBlocks.id("block/" + basePath + "/wall_fan")),
                 Optional.empty(),
@@ -115,10 +91,10 @@ public class FanBlockModelHandler extends ModelExport {
         WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         String basePath = blockDefinition.isTinted() ? "tinted" : "untinted";
 
-        // Generate model for main fan item
+        // main fan item
         generateSingleItemModel(itemModelGenerator, block, firstSet, basePath);
 
-        // Generate model for wall fan item
+        // wall fan item
         String wallBlockName = blockDefinition.blockName + "_wall";
         Block wallBlock = ModBlocks.getCustomBlocksByName().get(wallBlockName);
         if (wallBlock != null) {

@@ -20,7 +20,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class WCFanBlock extends WCFanParentBlock implements WesterosBlockLifecycle {
+public class WCFanBlock extends Block implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
