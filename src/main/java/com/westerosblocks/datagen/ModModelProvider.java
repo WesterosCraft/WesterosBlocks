@@ -29,133 +29,133 @@ public class ModModelProvider extends FabricModelProvider {
                 case "soulsand":
                 case "sand":
                 case "solid": {
-                    new SolidBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new SolidBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "sound": {
-                    new SoundBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new SoundBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "stair": {
-                    new StairBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new StairBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "leaves": {
-                    new LeavesBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new LeavesBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "log": {
-                    new LogBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new LogBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "plant":
                 case "web": {
-                    new CrossBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new CrossBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "pane": {
-                    new PaneBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new PaneBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "crop": {
-                    new CropBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new CropBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "door": {
-                    new DoorBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new DoorBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "slab": {
-                    new SlabBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new SlabBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "fence": {
-                    new FenceBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new FenceBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "wall": {
-                    new WallBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new WallBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "trapdoor": {
-                    new TrapDoorBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new TrapDoorBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "torch": {
-                    new TorchBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new TorchBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "fan": {
-                    new FanBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new FanBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "ladder": {
-                    new LadderBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new LadderBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "fire": {
-                    new FireBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new FireBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "bed": {
-                    new BedBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new BedBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "cuboid":
                 case "beacon": {
-                    new CuboidBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new CuboidBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "cuboid-ne": {
-                    new CuboidNEBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new CuboidNEBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "cuboid-nsew": {
-                    new CuboidNSEWBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new CuboidNSEWBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "cuboid-16way": {
-                    new Cuboid16WayBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new Cuboid16WayBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "cuboid-nsew-stack": {
-                    new CuboidNSEWStackBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new CuboidNSEWStackBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "cuboid-nsewud": {
-                    new CuboidNSEWUDBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new CuboidNSEWUDBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "layer": {
-                    new LayerBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new LayerBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "rail": {
-                    new RailBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new RailBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "halfdoor": {
-                    new HalfDoorBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new HalfDoorBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "cake": {
-                    new CakeBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new CakeBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "furnace": {
-                    new FurnaceBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new FurnaceBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "vines": {
-                    new VinesBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new VinesBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "flowerpot": {
-                    new FlowerPotModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new FlowerPotExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 case "fencegate": {
-                    new FenceGateBlockModelHandler(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+                    new FenceGateBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
                     break;
                 }
                 default:
@@ -176,133 +176,133 @@ public class ModModelProvider extends FabricModelProvider {
                 case "soulsand":
                 case "sand":
                 case "solid": {
-                    SolidBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    SolidBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "stair": {
-                    StairBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    StairBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "slab": {
-                    SlabBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    SlabBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "ladder": {
-                    LadderBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    LadderBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "log": {
-                    LogBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    LogBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "rail": {
-                    RailBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    RailBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "trapdoor": {
-                    TrapDoorBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    TrapDoorBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "torch": {
-                    TorchBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    TorchBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "leaves": {
-                    LeavesBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    LeavesBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "crop": {
-                    CropBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    CropBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "plant":
                 case "web": {
-                    CrossBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    CrossBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "fencegate": {
-                    FenceGateBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    FenceGateBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "vines": {
-                    VinesBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    VinesBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "bed": {
-                    BedBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    BedBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "door": {
-                    DoorBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    DoorBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "fan": {
-                    FanBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    FanBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "fire": {
-                    FireBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    FireBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "layer": {
-                    LayerBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    LayerBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "pane": {
-                    PaneBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    PaneBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "halfdoor": {
-                    HalfDoorBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    HalfDoorBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "cuboid-16way": {
-                    Cuboid16WayBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    Cuboid16WayBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "flowerpot": {
-                    FlowerPotModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    FlowerPotExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "fence": {
-                    FenceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    FenceBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "wall": {
-                    WallBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    WallBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "beacon":
                 case "cuboid": {
-                    CuboidBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    CuboidBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "cuboid-ne": {
-                    CuboidNEBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    CuboidNEBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "cuboid-nsew": {
-                    CuboidNSEWBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    CuboidNSEWBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "cuboid-nsew-stack": {
-                    CuboidNSEWStackBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    CuboidNSEWStackBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "cuboid-nsewud": {
-                    CuboidNSEWUDBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    CuboidNSEWUDBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "cake": {
-                    CakeBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    CakeBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "furnace": {
-                    FurnaceBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    FurnaceBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 case "sound": {
-                    SoundBlockModelHandler.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    SoundBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 default:
