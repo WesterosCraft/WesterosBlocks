@@ -34,7 +34,6 @@ public class ModBlocks {
 
     public static void registerModBlocks(WesterosBlockDef[] customBlockDefs) {
         WesterosBlocks.LOGGER.info("Registering blocks for " + com.westerosblocks.WesterosBlocks.MOD_ID);
-        // Construct custom block definitions
         List<Block> blklist = new LinkedList<>();
         HashMap<String, Integer> countsByType = new HashMap<>();
         AtomicInteger blockCount = new AtomicInteger();
@@ -67,11 +66,12 @@ public class ModBlocks {
 
         customBlocks = blklist.toArray(new Block[0]);
         WesterosBlockDef.dumpBlockPerf();
+        // TODO
         // Dump information for external mods
 //        WesterosBlocksCompatibility.dumpBlockSets(customConfig.blockSets, modConfigPath);
 //        WesterosBlocksCompatibility.dumpWorldPainterConfig(customBlocks, modConfigPath);
         // Brag on block type counts
-        WesterosBlocks.LOGGER.info("Count of custom blocks by type:");
+        WesterosBlocks.LOGGER.info("Count of custom Westeros blocks by type:");
         for (String type : countsByType.keySet()) {
             WesterosBlocks.LOGGER.info(type + ": " + countsByType.get(type) + " blocks");
         }
