@@ -57,8 +57,7 @@ public class WCDoorBlock extends DoorBlock implements WesterosBlockLifecycle {
     }
 
     @Override
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
-                                 BlockHitResult hit) {
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (this.locked) {
             return ActionResult.PASS;
         } else {

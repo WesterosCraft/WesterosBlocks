@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
@@ -19,8 +20,7 @@ public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLif
 
     private static SimpleParticleType getParticle(String typeStr) {
         if (typeStr != null && typeStr.contains("no-particle")) {
-            // TODO needs to not return anything
-            return ParticleTypes.SMOKE;
+            return null;
         }
         return ParticleTypes.FLAME;
     }
@@ -54,8 +54,7 @@ public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLif
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-    	if (this.allow_unsupported) return true;
-        return super.canPlaceAt(state, world, pos);
+        return this.allow_unsupported || super.canPlaceAt(state, world, pos);
     }
 
     private static String[] TAGS = { "wall_post_override" };

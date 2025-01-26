@@ -51,12 +51,14 @@ public class WesterosBlocks implements ModInitializer {
             return;
         }
 
+        ModConfig.register();
         WesterosCreativeModeTabs.registerCreativeModeTabs();
         WesterosBlocksItems.registerModItems();
         ModBlocks.registerModBlocks(customBlockDefs);
         ColorHandlers.registerColorProviders();
         ModSounds.registerSounds(customBlockDefs);
         ModEntities.registerModEntities();
+
 
         ServerLifecycleEvents.SERVER_STOPPING.register(server -> {
             // Handle any pending door restores (force immediate)

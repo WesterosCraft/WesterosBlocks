@@ -51,8 +51,7 @@ public class WCFenceGateBlock extends FenceGateBlock implements WesterosBlockLif
     }
 
     @Override
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
-                                 BlockHitResult hit) {
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (this.locked) {
             Hand hand = player.getActiveHand();
             if (player.isCreative() && player.getStackInHand(hand).isEmpty()) {

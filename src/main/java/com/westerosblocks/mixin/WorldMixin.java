@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class WorldMixin {
     @Inject(method = "getSeaLevel()I", at = @At("TAIL"), cancellable = true)
     private void doGetSeaLevel(CallbackInfoReturnable<Integer> cir) {
-        int seaLevelOverride = ModConfig.get().seaLevelOverride;
+        int seaLevelOverride = ModConfig.INSTANCE.seaLevelOverride;
 
         if (seaLevelOverride != 0) {
             cir.setReturnValue(seaLevelOverride);

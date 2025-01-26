@@ -92,21 +92,19 @@ public class HalfDoorBlockExport extends ModelExport {
 
         // Generate models for each door variant
         String[][] variants = {
-                {"bottom_left", "door_bottom_left"},
-                {"bottom_right", "door_bottom_right"},
-                {"bottom_left_open", "door_bottom_left_open"},
-                {"bottom_right_open", "door_bottom_right_open"}
+                {"bottom_left", "half_door_left"},
+                {"bottom_right", "half_door_right"},
+                {"bottom_left_open", "half_door_left_open"},
+                {"bottom_right_open", "half_door_right_open"}
         };
-
-
 
         for (String[] variant : variants) {
             String modelName = variant[0];
-            String parentPath = "block/" + variant[1];
+            String parentPath = "block/untinted/" + variant[1];
 
             Identifier modelId = getModelId(modelName, false);
             Model doorModel = new Model(
-                    Optional.of(Identifier.ofVanilla(parentPath)),
+                    Optional.of(Identifier.of(WesterosBlocks.MOD_ID, parentPath)),
                     Optional.empty(),
                     TextureKey.TOP,
                     TextureKey.BOTTOM

@@ -3,6 +3,8 @@ package com.westerosblocks.datagen.models;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.custom.WCTorchBlock;
 import com.westerosblocks.block.custom.WCWallTorchBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
@@ -111,16 +113,11 @@ public class TorchBlockExport extends ModelExport {
     }
 
     private Identifier getModelId(String type, int setIdx) {
-        return WesterosBlocks.id(String.format("%s%s/%s_v%d",
-                        GENERATED_PATH,
-                        def.blockName,
-                        type,
-                        setIdx + 1));
+        return WesterosBlocks.id(String.format("%s%s/%s_v%d", GENERATED_PATH, def.blockName, type, setIdx + 1));
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
-        // Only generate item model for non-wall torch variants
-        if (!blockDefinition.blockName.startsWith("wall_")) {
+        if (currentBlock instanceof WCTorchBlock) {
             WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
             String texturePath = String.format("block/%s", firstSet.getTextureByIndex(0));
 
@@ -130,5 +127,6 @@ public class TorchBlockExport extends ModelExport {
                     itemModelGenerator.writer
             );
         }
+
     }
 }

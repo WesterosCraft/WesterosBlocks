@@ -56,7 +56,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 // Add vanilla tags
                 for (String tag : wcBlock.getBlockTags()) {
                     TagKey<Block> tagKey = TagKey.of(RegistryKey.ofRegistry(Identifier.of("blocks")),
-                            Identifier.of("minecraft", tag.toLowerCase()));
+                            Identifier.ofVanilla(tag.toLowerCase()));
                     getOrCreateTagBuilder(tagKey).add(block);
                 }
 
