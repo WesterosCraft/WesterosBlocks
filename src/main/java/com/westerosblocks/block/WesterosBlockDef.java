@@ -15,6 +15,7 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.sound.Sound;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
@@ -24,6 +25,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockRenderView;
 import net.minecraft.world.BlockView;
 
 import java.util.*;
@@ -98,6 +100,14 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         } else {
             return bs1.getBlock() == bs2.getBlock();
         }
+    }
+
+    public int getBlockColor(BlockState state, BlockRenderView world, BlockPos pos, int tintIndex) {
+        return 0xFFFFFF;
+    }
+
+    public int getItemColor(ItemStack stack, int tintIndex) {
+        return 0xFFFFFF;
     }
 
     public static class HarvestLevel {
@@ -1031,6 +1041,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 //        }
 //        return null;
 //    }
+
 
     private static class BlockEntityRec {
         ArrayList<Block> blocks = new ArrayList<Block>();

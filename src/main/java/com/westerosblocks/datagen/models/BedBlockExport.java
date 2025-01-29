@@ -84,7 +84,7 @@ public class BedBlockExport extends ModelExport {
             case HAMMOCK -> "bed_hammock";
             default -> "bed";
         };
-        return "block/untinted/" + bedType + (isHead ? "_head" : "_foot");
+        return "untinted/" + bedType + (isHead ? "_head" : "_foot");
     }
 
     private static Identifier modelFileName(String blockName, ModelRec rec) {

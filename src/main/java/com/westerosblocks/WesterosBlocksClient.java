@@ -25,13 +25,13 @@ public class WesterosBlocksClient implements ClientModInitializer {
 
         @Override
         public void reload(ResourceManager manager) {
-            ColorHandlers.reloadColorHandler(manager);
+//            ColorHandlers.reloadColorHandler(manager);
             WesterosBlocks.LOGGER.info("Handling resource reload completed");
         }
     }
 
     private static void initRenderRegistry() {
         ResourceManager resourceManager = MinecraftClient.getInstance().getResourceManager();
-        ColorHandlers.reloadColorHandler(resourceManager);
+//        ColorHandlers.reloadColorHandler(resourceManager);
     }
 }

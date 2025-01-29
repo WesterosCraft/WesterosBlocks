@@ -28,12 +28,14 @@ public class FanBlockExport extends ModelExport {
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
-        // Add single floor variant
-        BlockStateVariant floorVariant = BlockStateVariant.create()
-                .put(VariantSettings.MODEL, getModelId(def.blockName, "base", 1));
-        blockStateBuilder.addVariant("", floorVariant, null, variants);
+        // Add floor variants with waterlogged states but no facing
+        for (boolean waterlogged : new boolean[]{true, false}) {
+            BlockStateVariant floorVariant = BlockStateVariant.create()
+                    .put(VariantSettings.MODEL, getModelId(def.blockName, "base", 1));
+            blockStateBuilder.addVariant("waterlogged=" + waterlogged, floorVariant, null, variants);
+        }
 
-        // Add single wall variant for each direction
+        // For wall variants, handle both facing and waterlogged states
         Map<String, Integer> directionRotations = Map.of(
                 "east", 90,
                 "south", 180,
@@ -41,17 +43,33 @@ public class FanBlockExport extends ModelExport {
                 "north", 0
         );
 
-        directionRotations.forEach((direction, rotation) -> {
-            BlockStateVariant variant = BlockStateVariant.create()
-                    .put(VariantSettings.MODEL, getModelId(def.blockName, "wall", 0))
-                    .put(VariantSettings.Y, getRotation(rotation));
-            blockStateBuilder.addVariant("facing=" + direction, variant, null, variants);
-        });
-
+        // Generate model variants if not using custom models
         if (!def.isCustomModel()) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
                 generateFanModels(generator, def.getRandomTextureSet(setIdx), setIdx);
             }
+        }
+
+        // For wall variants, we need a different block instance
+        String wallBlockName = def.blockName + "_wall";
+        Block wallBlock = ModBlocks.getCustomBlocksByName().get(wallBlockName);
+        if (wallBlock != null) {
+            BlockStateBuilder wallStateBuilder = new BlockStateBuilder(wallBlock);
+            final Map<String, List<BlockStateVariant>> wallVariants = wallStateBuilder.getVariants();
+
+            directionRotations.forEach((direction, rotation) -> {
+                // Generate variants for both waterlogged states
+                for (boolean waterlogged : new boolean[]{true, false}) {
+                    BlockStateVariant variant = BlockStateVariant.create()
+                            .put(VariantSettings.MODEL, getModelId(def.blockName, "wall", 0))
+                            .put(VariantSettings.Y, getRotation(rotation));
+
+                    String condition = String.format("facing=%s,waterlogged=%s", direction, waterlogged);
+                    wallStateBuilder.addVariant(condition, variant, null, wallVariants);
+                }
+            });
+
+            generateBlockStateFiles(generator, wallBlock, wallVariants);
         }
 
         generateBlockStateFiles(generator, block, variants);
@@ -78,6 +96,7 @@ public class FanBlockExport extends ModelExport {
         );
         wallModel.upload(getModelId(def.blockName, "wall", setIdx), textureMap, generator.modelCollector);
     }
+
 
     private Identifier getModelId(String blockName, String variant, int setIdx) {
         return WesterosBlocks.id(String.format("%s%s/%s_v%d",

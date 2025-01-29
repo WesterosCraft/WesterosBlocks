@@ -25,9 +25,10 @@ public class WCFanBlock extends Block implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-            AbstractBlock.Settings settings = def.makeBlockSettings().noCollision().breakInstantly();
-            Block fanBlock = new WCFanBlock(settings, def);
-            Block wallFanBlock = new WCWallFanBlock(settings, def);
+            AbstractBlock.Settings fanSettings = def.makeBlockSettings().noCollision().breakInstantly();
+            Block fanBlock = new WCFanBlock(fanSettings, def);
+            AbstractBlock.Settings wallFanSettings = def.makeBlockSettings().noCollision().breakInstantly().dropsLike(fanBlock);
+            Block wallFanBlock = new WCWallFanBlock(wallFanSettings, def);
 
             def.registerRenderType(ModBlocks.registerBlock(def.blockName + "_wall", wallFanBlock), false, false);
             ModBlocks.getCustomBlocksByName().put(def.blockName + "_wall", wallFanBlock);

@@ -22,16 +22,6 @@ public class ModBlocks {
     public static Block[] customBlocks = new Block[0];
     public static HashMap<String, Block> customBlocksByName = new HashMap<>();
 
-    public static Block registerBlock(String name, Block block) {
-        registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, WesterosBlocks.id(name), block);
-    }
-
-    private static void registerBlockItem(String name, Block block) {
-        Registry.register(Registries.ITEM, WesterosBlocks.id(name),
-                new BlockItem(block, new Item.Settings()));
-    }
-
     public static void registerModBlocks(WesterosBlockDef[] customBlockDefs) {
         WesterosBlocks.LOGGER.info("Registering blocks for " + com.westerosblocks.WesterosBlocks.MOD_ID);
         List<Block> blklist = new LinkedList<>();
@@ -81,6 +71,16 @@ public class ModBlocks {
         // TODO
 //        menuOverrides = customConfig.menuOverrides;
         WesterosBlocks.LOGGER.info("WesterosBlocks custom block registration complete.");
+    }
+
+    public static Block registerBlock(String name, Block block) {
+        registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, WesterosBlocks.id(name), block);
+    }
+
+    private static void registerBlockItem(String name, Block block) {
+        Registry.register(Registries.ITEM, WesterosBlocks.id(name),
+                new BlockItem(block, new Item.Settings()));
     }
 
     public static HashMap<String, Block> getCustomBlocksByName() {

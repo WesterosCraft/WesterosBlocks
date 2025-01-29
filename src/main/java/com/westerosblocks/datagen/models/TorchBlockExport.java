@@ -116,17 +116,30 @@ public class TorchBlockExport extends ModelExport {
         return WesterosBlocks.id(String.format("%s%s/%s_v%d", GENERATED_PATH, def.blockName, type, setIdx + 1));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
-        if (currentBlock instanceof WCTorchBlock) {
-            WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
-            String texturePath = String.format("block/%s", firstSet.getTextureByIndex(0));
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
+        WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
+        String basePath = blockDefinition.isTinted() ? "tinted" : "untinted";
 
-            Models.GENERATED.upload(
-                    ModelIds.getItemModelId(currentBlock.asItem()),
-                    TextureMap.layer0(WesterosBlocks.id(texturePath)),
-                    itemModelGenerator.writer
-            );
+        // main torch item
+        generateSingleItemModel(itemModelGenerator, block, firstSet, basePath);
+
+        // wall torch item
+        String wallBlockName = "wall_" + blockDefinition.blockName;
+        Block wallBlock = ModBlocks.getCustomBlocksByName().get(wallBlockName);
+        if (wallBlock != null) {
+            generateSingleItemModel(itemModelGenerator, wallBlock, firstSet, basePath);
         }
+    }
+
+    private static void generateSingleItemModel(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef.RandomTextureSet set, String basePath) {
+        TextureMap textureMap = new TextureMap()
+                .put(TextureKey.LAYER0, createBlockIdentifier(set.getTextureByIndex(0)));
+
+        Models.GENERATED.upload(
+                ModelIds.getItemModelId(block.asItem()),
+                textureMap,
+                itemModelGenerator.writer
+        );
 
     }
 }

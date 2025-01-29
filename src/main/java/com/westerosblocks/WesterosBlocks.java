@@ -2,7 +2,7 @@ package com.westerosblocks;
 
 import com.westerosblocks.block.*;
 import com.westerosblocks.entity.ModEntities;
-import com.westerosblocks.item.WesterosBlocksItems;
+import com.westerosblocks.item.ModItems;
 import com.westerosblocks.item.WesterosItemMenuOverrides;
 import com.westerosblocks.sound.ModSounds;
 import com.westerosblocks.util.AutoDoorRestore;
@@ -35,7 +35,7 @@ public class WesterosBlocks implements ModInitializer {
 
     public static WesterosBlocksJsonLoader.WesterosBlocksConfig customConfig;
     private static WesterosBlockDef[] customBlockDefs;
-    public static WesterosBlockColorMap[] colorMaps;
+
     public static WesterosItemMenuOverrides[] menuOverrides;
 
     @Override
@@ -53,9 +53,9 @@ public class WesterosBlocks implements ModInitializer {
 
         ModConfig.register();
         WesterosCreativeModeTabs.registerCreativeModeTabs();
-        WesterosBlocksItems.registerModItems();
         ModBlocks.registerModBlocks(customBlockDefs);
-        ColorHandlers.registerColorProviders();
+        ModItems.registerModItems();
+//        ColorHandlers.registerColorHandlers();
         ModSounds.registerSounds(customBlockDefs);
         ModEntities.registerModEntities();
 

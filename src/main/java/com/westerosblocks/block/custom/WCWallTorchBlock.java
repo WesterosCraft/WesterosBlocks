@@ -48,6 +48,13 @@ public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLif
     }
 
     @Override
+    public String getTranslationKey() {
+        // TODO
+//        return this.asItem().getTranslationKey();
+        return "";
+    }
+
+    @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         if (!this.no_particle) super.randomDisplayTick(state, world, pos, random);
     }
