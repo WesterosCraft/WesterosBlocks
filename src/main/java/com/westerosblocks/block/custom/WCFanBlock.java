@@ -17,19 +17,24 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
 public class WCFanBlock extends Block implements WesterosBlockLifecycle {
-
+    private final Block wallBlock;
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
             AbstractBlock.Settings fanSettings = def.makeBlockSettings().noCollision().breakInstantly();
-            Block fanBlock = new WCFanBlock(fanSettings, def);
-            AbstractBlock.Settings wallFanSettings = def.makeBlockSettings().noCollision().breakInstantly().dropsLike(fanBlock);
-            Block wallFanBlock = new WCWallFanBlock(wallFanSettings, def);
+            AbstractBlock.Settings wallFanSettings = def.makeBlockSettings().noCollision().breakInstantly();
 
+            // Create wall fan block first
+            Block wallFanBlock = new WCWallFanBlock(wallFanSettings, def);
+            // Create floor fan block with reference to wall variant
+            Block fanBlock = new WCFanBlock(fanSettings, def, wallFanBlock);
+
+            // Register both blocks
             def.registerRenderType(ModBlocks.registerBlock(def.blockName + "_wall", wallFanBlock), false, false);
             ModBlocks.getCustomBlocksByName().put(def.blockName + "_wall", wallFanBlock);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, fanBlock), false, false);
@@ -41,10 +46,10 @@ public class WCFanBlock extends Block implements WesterosBlockLifecycle {
     private final boolean allowUnsupported;
     private static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 4.0, 14.0);
 
-    protected WCFanBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCFanBlock(AbstractBlock.Settings settings, WesterosBlockDef def, Block wallFanBlock) {
         super(settings);
         this.def = def;
-
+        this.wallBlock = wallFanBlock;
         boolean allowUnsupported = false;
         String type = def.getType();
         if (type != null) {
@@ -69,9 +74,27 @@ public class WCFanBlock extends Block implements WesterosBlockLifecycle {
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
+        BlockState state = getDefaultState();
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
-        return getDefaultState()
-                .with(WATERLOGGED, fluidState.isIn(FluidTags.WATER));
+        World world = ctx.getWorld();
+        BlockPos pos = ctx.getBlockPos();
+
+        // Check for wall placement first
+        for (Direction direction : ctx.getPlacementDirections()) {
+            if (direction.getAxis().isHorizontal()) {
+                Direction opposite = direction.getOpposite();
+                // Check if we can place on the wall
+                BlockPos attachPos = pos.offset(opposite);
+                if (world.getBlockState(attachPos).isSideSolidFullSquare(world, attachPos, direction)) {
+                    return this.wallBlock.getDefaultState()
+                            .with(WCWallFanBlock.FACING, direction)
+                            .with(WCWallFanBlock.WATERLOGGED, fluidState.isIn(FluidTags.WATER));
+                }
+            }
+        }
+
+        // If not on wall, place normal floor fan
+        return state.with(WATERLOGGED, fluidState.isIn(FluidTags.WATER));
     }
 
     @Override
