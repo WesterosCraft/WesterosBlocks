@@ -25,7 +25,10 @@ public class SlabBlockExport extends ModelExport {
 
     private static String getParentPath(boolean isOccluded, boolean isTinted, boolean hasOverlay, String type) {
         String basePath;
-        if (isOccluded) {
+
+        if (type.equals("double") && !isTinted && !hasOverlay && isOccluded) {
+            basePath = "";
+        } else if (isOccluded) {
             if (isTinted) {
                 basePath = "tinted/";
             } else {
@@ -43,7 +46,7 @@ public class SlabBlockExport extends ModelExport {
         return switch (type) {
             case "bottom" -> basePath + (hasOverlay ? "half_slab_overlay" : "half_slab");
             case "top" -> basePath + (hasOverlay ? "upper_slab_overlay" : "upper_slab");
-            case "double" -> (isTinted ? basePath : "") + (hasOverlay ? "cube_overlay" : "cube");
+            case "double" -> basePath + (hasOverlay ? "cube_overlay" : "cube");
             default -> "block/cube_all";
         };
     }
@@ -63,7 +66,6 @@ public class SlabBlockExport extends ModelExport {
     }
 
     public void generateBlockStateModels() {
-        WCSlabBlock slabBlock = (block instanceof WCSlabBlock) ? (WCSlabBlock) block : null;
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 

@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
-    WesterosBlocksJsonLoader.WesterosBlocksConfig config = WesterosBlocks.getCustomConfig();
+    WesterosBlocksJsonLoader.WesterosBlocksConfig config = WesterosBlocksJsonLoader.getCustomConfig();
 
     public ModBlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);

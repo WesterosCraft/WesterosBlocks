@@ -4,9 +4,7 @@ import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
 import net.minecraft.block.enums.BlockHalf;
 import net.minecraft.block.enums.StairShape;
 import net.minecraft.entity.ai.pathing.NavigationType;
@@ -24,7 +22,6 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.block.Block;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -75,16 +72,16 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
     public static final EnumProperty<StairShape> SHAPE = Properties.STAIR_SHAPE;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    protected static final VoxelShape BOTTOM_AABB = createCuboidShape(0.0, 0.0, 0.0, 16.0, 8.0, 16.0);
-    protected static final VoxelShape TOP_AABB = createCuboidShape(0.0, 8.0, 0.0, 16.0, 16.0, 16.0);
-    protected static final VoxelShape OCTET_NNN = createCuboidShape(0.0, 0.0, 0.0, 8.0, 8.0, 8.0);
-    protected static final VoxelShape OCTET_NNP = createCuboidShape(0.0, 0.0, 8.0, 8.0, 8.0, 16.0);
-    protected static final VoxelShape OCTET_NPN = createCuboidShape(0.0, 8.0, 0.0, 8.0, 16.0, 8.0);
-    protected static final VoxelShape OCTET_NPP = createCuboidShape(0.0, 8.0, 8.0, 8.0, 16.0, 16.0);
-    protected static final VoxelShape OCTET_PNN = createCuboidShape(8.0, 0.0, 0.0, 16.0, 8.0, 8.0);
-    protected static final VoxelShape OCTET_PNP = createCuboidShape(8.0, 0.0, 8.0, 16.0, 8.0, 16.0);
-    protected static final VoxelShape OCTET_PPN = createCuboidShape(8.0, 8.0, 0.0, 16.0, 16.0, 8.0);
-    protected static final VoxelShape OCTET_PPP = createCuboidShape(8.0, 8.0, 8.0, 16.0, 16.0, 16.0);
+    protected static final VoxelShape TOP_SHAPE = Block.createCuboidShape(0.0, 8.0, 0.0, 16.0, 16.0, 16.0);
+    protected static final VoxelShape BOTTOM_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 8.0, 16.0);
+    protected static final VoxelShape BOTTOM_NORTH_WEST_CORNER_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 8.0, 8.0, 8.0);
+    protected static final VoxelShape BOTTOM_SOUTH_WEST_CORNER_SHAPE = Block.createCuboidShape(0.0, 0.0, 8.0, 8.0, 8.0, 16.0);
+    protected static final VoxelShape TOP_NORTH_WEST_CORNER_SHAPE = Block.createCuboidShape(0.0, 8.0, 0.0, 8.0, 16.0, 8.0);
+    protected static final VoxelShape TOP_SOUTH_WEST_CORNER_SHAPE = Block.createCuboidShape(0.0, 8.0, 8.0, 8.0, 16.0, 16.0);
+    protected static final VoxelShape BOTTOM_NORTH_EAST_CORNER_SHAPE = Block.createCuboidShape(8.0, 0.0, 0.0, 16.0, 8.0, 8.0);
+    protected static final VoxelShape BOTTOM_SOUTH_EAST_CORNER_SHAPE = Block.createCuboidShape(8.0, 0.0, 8.0, 16.0, 8.0, 16.0);
+    protected static final VoxelShape TOP_NORTH_EAST_CORNER_SHAPE = Block.createCuboidShape(8.0, 8.0, 0.0, 16.0, 16.0, 8.0);
+    protected static final VoxelShape TOP_SOUTH_EAST_CORNER_SHAPE = Block.createCuboidShape(8.0, 8.0, 8.0, 16.0, 16.0, 16.0);
 
     private final WesterosBlockDef def;
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
@@ -102,9 +99,9 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
 
     public final boolean no_uvlock;
 
-    protected static final VoxelShape[] TOP_SHAPES = makeShapes(TOP_AABB, OCTET_NNN, OCTET_PNN, OCTET_NNP, OCTET_PNP);
-    protected static final VoxelShape[] BOTTOM_SHAPES = makeShapes(BOTTOM_AABB, OCTET_NPN, OCTET_PPN, OCTET_NPP, OCTET_PPP);
-    private static final int[] SHAPE_BY_STATE = new int[]{12, 5, 3, 10, 14, 13, 7, 11, 13, 7, 11, 14, 8, 4, 1, 2, 4, 1, 2, 8};
+    protected static final VoxelShape[] TOP_SHAPES = composeShapes(TOP_SHAPE, BOTTOM_NORTH_WEST_CORNER_SHAPE, BOTTOM_NORTH_EAST_CORNER_SHAPE, BOTTOM_SOUTH_WEST_CORNER_SHAPE, BOTTOM_SOUTH_EAST_CORNER_SHAPE);
+    protected static final VoxelShape[] BOTTOM_SHAPES = composeShapes(BOTTOM_SHAPE, TOP_NORTH_WEST_CORNER_SHAPE, TOP_NORTH_EAST_CORNER_SHAPE, TOP_SOUTH_WEST_CORNER_SHAPE, TOP_SOUTH_EAST_CORNER_SHAPE);
+    private static final int[] SHAPE_INDICES = new int[]{12, 5, 3, 10, 14, 13, 7, 11, 13, 7, 11, 14, 8, 4, 1, 2, 4, 1, 2, 8};
 
     protected WCStairBlock(AbstractBlock.Settings settings, WesterosBlockDef def, boolean doUnconnect, boolean doConnectstate) {
         super(settings);
@@ -144,18 +141,6 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
         setDefaultState(defbs);
     }
 
-    protected WCStairBlock(AbstractBlock.Settings settings, WesterosBlockDef def, boolean doUnconnect) {
-        this(settings, def, doUnconnect, false);
-    }
-
-    protected WCStairBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
-        this(settings, def, false, false);
-    }
-
-    private int getShapeIndex(BlockState blockState) {
-        return blockState.get(SHAPE).ordinal() * 4 + blockState.get(FACING).getHorizontal();
-    }
-
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         if (tempUNCONNECT != null) {
@@ -190,42 +175,42 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
         return blockState.with(SHAPE, getStairShape(blockState, ctx.getWorld(), blockPos));
     }
 
-    private static VoxelShape[] makeShapes(VoxelShape voxelShape, VoxelShape voxelShape2, VoxelShape voxelShape3, VoxelShape voxelShape4, VoxelShape voxelShape5) {
-        return IntStream.range(0, 16).mapToObj(n -> makeStairShape(n, voxelShape, voxelShape2, voxelShape3, voxelShape4, voxelShape5)).toArray(VoxelShape[]::new);
+    protected static VoxelShape[] composeShapes(VoxelShape base, VoxelShape northWest, VoxelShape northEast, VoxelShape southWest, VoxelShape southEast) {
+        return IntStream.range(0, 16)
+                .mapToObj(i -> composeShape(i, base, northWest, northEast, southWest, southEast))
+                .toArray(VoxelShape[]::new);
     }
 
-    private static VoxelShape makeStairShape(int n, VoxelShape voxelShape, VoxelShape voxelShape2, VoxelShape voxelShape3, VoxelShape voxelShape4, VoxelShape voxelShape5) {
-        VoxelShape voxelShape6 = voxelShape;
-        if ((n & 1) != 0) {
-            voxelShape6 = VoxelShapes.union(voxelShape6, voxelShape2);
-        }
-        if ((n & 2) != 0) {
-            voxelShape6 = VoxelShapes.union(voxelShape6, voxelShape3);
-        }
-        if ((n & 4) != 0) {
-            voxelShape6 = VoxelShapes.union(voxelShape6, voxelShape4);
-        }
-        if ((n & 8) != 0) {
-            voxelShape6 = VoxelShapes.union(voxelShape6, voxelShape5);
-        }
-        return voxelShape6;
+    @Override
+    protected boolean hasSidedTransparency(BlockState state) {
+        return true;
     }
 
+    private static VoxelShape composeShape(int i, VoxelShape base, VoxelShape northWest, VoxelShape northEast, VoxelShape southWest, VoxelShape southEast) {
+        VoxelShape shape = base;
+        if ((i & 1) != 0) shape = VoxelShapes.union(shape, northWest);
+        if ((i & 2) != 0) shape = VoxelShapes.union(shape, northEast);
+        if ((i & 4) != 0) shape = VoxelShapes.union(shape, southWest);
+        if ((i & 8) != 0) shape = VoxelShapes.union(shape, southEast);
+        return shape;
+    }
 
     @Override
     public boolean isTransparent(BlockState state, BlockView world, BlockPos pos) {
         return false;
     }
 
-    // TODO, current implementation is a giant box lol
-//    @Override
-//    public VoxelShape getOutlineShape(BlockState blockState, BlockView world, BlockPos pos, ShapeContext context) {
-//        return (blockState.get(HALF) == BlockHalf.TOP ? TOP_SHAPES : BOTTOM_SHAPES)[SHAPE_BY_STATE[this.getShapeIndex(blockState)]];
-//    }
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return (state.get(HALF) == BlockHalf.TOP ? TOP_SHAPES : BOTTOM_SHAPES)[SHAPE_INDICES[getShapeIndexIndex(state)]];
+    }
+
+    private int getShapeIndexIndex(BlockState state) {
+        return state.get(SHAPE).ordinal() * 4 + state.get(FACING).getHorizontal();
+    }
 
     @Override
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
-                                                WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (unconnect && state.get(UNCONNECT)) {
             if (state.get(WATERLOGGED)) {
                 world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
@@ -244,14 +229,14 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
     private static StairShape getStairShape(BlockState blockState, WorldAccess world, BlockPos blockPos) {
         Direction direction;
         Direction facing = blockState.get(FACING);
-        BlockState neighborState = world.getBlockState(blockPos.offset(facing));  // relative -> offset
+        BlockState neighborState = world.getBlockState(blockPos.offset(facing));
 
         if (isStairs(neighborState)
                 && blockState.get(HALF) == neighborState.get(HALF)) {
             Direction neighborFacing = neighborState.get(FACING);
             if (neighborFacing.getAxis() != facing.getAxis()
                     && canTakeShape(blockState, world, blockPos, neighborFacing.getOpposite())) {
-                if (neighborFacing == facing.rotateCounterclockwise(Direction.Axis.Y)) {  // getCounterClockWise -> rotateCounterclockwise
+                if (neighborFacing == facing.rotateCounterclockwise(Direction.Axis.Y)) {
                     return StairShape.OUTER_LEFT;
                 }
                 return StairShape.OUTER_RIGHT;
@@ -259,11 +244,9 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
         }
 
         BlockState oppositeState = world.getBlockState(blockPos.offset(facing.getOpposite()));
-        if (isStairs(oppositeState)
-                && blockState.get(HALF) == oppositeState.get(HALF)) {  // StateHolder removed, direct BlockState usage
+        if (isStairs(oppositeState) && blockState.get(HALF) == oppositeState.get(HALF)) {
             direction = oppositeState.get(FACING);
-            if (direction.getAxis() != facing.getAxis()
-                    && canTakeShape(blockState, world, blockPos, direction)) {
+            if (direction.getAxis() != facing.getAxis() && canTakeShape(blockState, world, blockPos, direction)) {
                 if (direction == facing.rotateCounterclockwise(Direction.Axis.Y)) {
                     return StairShape.INNER_LEFT;
                 }

@@ -16,7 +16,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.westerosblocks.block.WesterosBlockLifecycle;
 import com.westerosblocks.block.WesterosBlockSetDef;
+import net.minecraft.block.Block;
 
+// TODO figure out a good way to do the script stuff here
 // Contains methods for generating config files and other artifacts
 // needed for compatibility with external mods
 public class WesterosBlocksCompatibility {
@@ -102,7 +104,7 @@ public class WesterosBlocksCompatibility {
         }
     }
 
-    // TODO
+    // TODO make this work
     /*
      * Dump a CustomBlocks config file for WorldPainter
      * https://www.worldpainter.net/trac/wiki/CustomBlocks
@@ -142,8 +144,7 @@ public class WesterosBlocksCompatibility {
 //            File file = new File(path.toFile(), WORLDPAINTER_PATH);
 //            writeCSV(data, WORLDPAINTER_COLS, file);
 //        } catch (IOException e) {
-//            WesterosBlocks.log.error("Could not write "+WORLDPAINTER_PATH);
-//            return;
+//            WesterosBlocks.LOGGER.error("Could not write " + WORLDPAINTER_PATH);
 //        }
 //    }
 

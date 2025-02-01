@@ -101,12 +101,5 @@ public class Cuboid16WayBlockExport extends CuboidBlockExport {
                 new Model(Optional.of(WesterosBlocks.id(path)),
                         Optional.empty())
         );
-
-        if (blockDefinition.isTinted()) {
-            String tintResource = blockDefinition.getBlockColorMapResource();
-            if (tintResource != null) {
-                // TODO: Register tinting override
-            }
-        }
     }
 }

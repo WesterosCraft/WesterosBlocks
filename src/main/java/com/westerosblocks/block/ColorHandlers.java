@@ -1,645 +1,187 @@
 package com.westerosblocks.block;
 
-import com.westerosblocks.WesterosBlocks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.client.color.block.BlockColorProvider;
-import net.minecraft.client.color.block.BlockColors;
-import net.minecraft.client.color.item.ItemColorProvider;
 import net.minecraft.client.color.world.BiomeColors;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.resource.ResourceManager;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.BlockRenderView;
-import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.biome.ColorResolver;
-import org.jetbrains.annotations.Nullable;
+import net.minecraft.world.biome.FoliageColors;
+import net.minecraft.world.biome.GrassColors;
 
 import java.util.*;
 
+@Environment(EnvType.CLIENT)
 public class ColorHandlers {
-//    private static final Map<String, ColorMultHandler> colorMultTable = new HashMap<>();
-//    public static WesterosBlockColorMap[] colorMaps;
-//
-//    static {
-//        colorMaps = WesterosBlocks.getCustomConfig().colorMaps;
-//        colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));
-////        colorMultTable.put("water", new WaterColorMultHandler());
-////        colorMultTable.put("foliage", new FoliageColorMultHandler());
-////        colorMultTable.put("grass", new GrassColorMultHandler());
-////        colorMultTable.put("pine", new PineColorMultHandler());
-////        colorMultTable.put("birch", new BirchColorMultHandler());
-////        colorMultTable.put("basic", new BasicColorMultHandler());
-//        colorMultTable.put("lily", new FixedColorMultHandler(2129968));
-//
-//    }
-//
-//    public static void registerColorHandlers() {
-//        // Register block color handlers
-//        for (Block block : ModBlocks.customBlocks) {
-//            if (block instanceof WesterosBlockLifecycle) {
-//                WesterosBlockDef def = ((WesterosBlockLifecycle) block).getWBDefinition();
-//                if (def != null) {
-//                    ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) ->
-//                                    def.getBlockColor(state, world, pos, tintIndex),
-//                            block);
-//                }
-//            }
-//        }
-//
-//        // Register item color handlers
-//        for (Block block : ModBlocks.customBlocks) {
-//            if (block instanceof WesterosBlockLifecycle) {
-//                WesterosBlockDef def = ((WesterosBlockLifecycle) block).getWBDefinition();
-//                if (def != null) {
-//                    Item item = Registries.ITEM.get(WesterosBlocks.id(def.blockName));
-//                    if (item != null) {
-//                        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
-//                            return def.getItemColor(stack, tintIndex);
-//                        }, item);
-//                    }
-//                }
-//            }
-//        }
-//
-//        // Handle custom color maps
-//        if (colorMaps != null) {
-//            for (WesterosBlockColorMap map : colorMaps) {
-//                for (String blockName : map.blockNames) {
-//                    Block block = ModBlocks.findBlockByName(blockName, "minecraft");
-//                    if (block != null) {
-//                        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
-//                            return map.colorMult;
-//                        }, block);
-//
-//                        Item item = Registries.ITEM.get(Identifier.tryParse(blockName));
-//                        if (item != null) {
-//                            ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
-//                                return map.colorMult;
-//                            }, item);
-//                        }
-//                    }
-//                }
-//            }
-//        }
+    private static final Map<String, int[]> CUSTOM_COLOR_MAPS = new HashMap<>();
+    public static WesterosBlockColorMap[] colorMaps;
+
+    public static void registerColorProviders() {
+        registerBlockColors();
+        registerItemColors();
     }
 
-//    public interface ColorMultHandler extends BlockColorProvider, ItemColorProvider {
-//        int getColor(BlockState state, BlockRenderView world, BlockPos pos, int tintIndex);
-//
-//        int getColor(Biome biome, double x, double z);
-//
-//        int getItemColor(ItemStack stack, int tintIndex);
-//    }
+    private static void registerBlockColors() {
+        // Register custom blocks
+        for (Block block : ModBlocks.customBlocks) {
+            if (block instanceof WesterosBlockLifecycle) {
+                WesterosBlockDef def = ((WesterosBlockLifecycle) block).getWBDefinition();
+                if (def != null) {
+                    String colorMapResource = def.getBlockColorMapResource();
+                    if (colorMapResource != null) {
+                        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
+                            if (view == null || pos == null) return -1;
+                            return getColor(colorMapResource, view, pos);
+                        }, block);
+                    }
+                }
+            }
+        }
 
-//    public static ColorMultHandler getColorHandler(String hnd, String blockName) {
-//        String hndid = hnd.toLowerCase();
-//        ColorMultHandler cmh = colorMultTable.get(hndid);
-//        if (cmh == null) {
-//            // See if color code
-//            if ((hndid.length() == 7) && (hndid.charAt(0) == '#')) {
-//                try {
-//                    cmh = new FixedColorMultHandler(Integer.parseInt(hndid.substring(1), 16));
-//                    colorMultTable.put(hndid, cmh);
-//                } catch (NumberFormatException nfx) {
-//                    // Handle exception if needed
-//                }
-//            }
-//            // See if resource
-//            else {
-//                int idx = hnd.indexOf(':');
-//                if (idx < 0) {
-//                    hnd = WesterosBlocks.MOD_ID + ":" + hnd;
-//                    hndid = hnd.toLowerCase();
-//                }
-//                cmh = colorMultTable.get(hndid);
-//                if (cmh == null) {
-//                    cmh = new CustomColorMultHandler(hnd, blockName);
-//                    colorMultTable.put(hndid, cmh);
-//                }
-//            }
-//        }
-//        return cmh;
-//    }
+        // Register vanilla blocks
+        if (colorMaps != null) {
+            for (WesterosBlockColorMap map : colorMaps) {
+                for (String blockName : map.blockNames) {
+                    Block block = ModBlocks.findBlockByName(blockName, "minecraft");
+                    if (block != null) {
+                        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
+                            if (view == null || pos == null) return -1;
+                            return getColor(map.colorMult, view, pos);
+                        }, block);
+                    }
+                }
+            }
+        }
+    }
 
-//    public static ColorMultHandler getStateColorHandler(WesterosBlockStateRecord rec, String blockName) {
-//        if (rec.colorMults != null) {
-//            return getColorHandler(rec.colorMults, blockName);
-//        } else {
-//            return getColorHandler(rec.colorMult, blockName);
-//        }
-//    }
+    private static void registerItemColors() {
+        // Register custom items
+        for (Block block : ModBlocks.customBlocks) {
+            if (block instanceof WesterosBlockLifecycle) {
+                WesterosBlockDef def = ((WesterosBlockLifecycle) block).getWBDefinition();
+                if (def != null) {
+                    String colorMapResource = def.getBlockColorMapResource();
+                    if (colorMapResource != null) {
+                        ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
+                                getDefaultColor(colorMapResource), block.asItem());
+                    }
+                }
+            }
+        }
 
-//    public static class CustomColorMultHandler implements ColorResolver, ColorMultHandler {
-//
-//        @Override
-//        public int getColor(BlockState state, BlockRenderView world, BlockPos pos, int tintIndex) {
-//            return 0;
-//        }
-//
-//        @Override
-//        public int getColor(Biome biome, double x, double z) {
-//            return 0;
-//        }
-//
-//        @Override
-//        public int getItemColor(ItemStack stack, int tintIndex) {
-//            return 0;
-//        }
-//
-//        @Override
-//        public int getColor(ItemStack stack, int tintIndex) {
-//            return 0;
-//        }
-//    }
-//
-//    public static class FixedColorMultHandler implements ColorMultHandler {
-//        protected int fixedMult;
-//
-//        FixedColorMultHandler(int mult) {
-//            fixedMult = mult;
-//        }
-//
-//        @Override
-//        public int getColor(BlockState state, BlockRenderView world, BlockPos pos, int tintIndex) {
-//            return fixedMult;
-//        }
-//
-//        @Override
-//        public int getColor(Biome biome, double x, double z) {
-//            return fixedMult;
-//        }
-//
-//        @Override
-//        public int getItemColor(ItemStack stack, int tintIndex) {
-//            return fixedMult;
-//        }
-//
-//        @Override
-//        public int getColor(ItemStack stack, int tintIndex) {
-//            return 0;
-//        }
-//    }
-//
-////    public static class FoliageColorMultHandler extends ColorMultHandler {
-////        FoliageColorMultHandler() {
-////        }
-////
-////        @Override
-////        @Environment(EnvType.CLIENT)
-////        public int getColor(BlockState state, @Nullable BlockRenderView world, @Nullable BlockPos pos, int tintIndex) {
-////            if (world != null && pos != null)
-////                return BiomeColors.getFoliageColor(world, pos);
-////            else
-////                return 0x48B518; // Default green foliage color in Minecraft
-////        }
-////
-////        @Override
-////        public int getColor(Biome biome, double x, double z) {
-////            return biome.getFoliageColor();
-////        }
-////    }
-////
-////    public static class GrassColorMultHandler extends ColorMultHandler {
-////        GrassColorMultHandler() {
-////        }
-////
-////        @Override
-////        @Environment(EnvType.CLIENT)
-////        public int getColor(BlockState state, @Nullable BlockRenderView world, @Nullable BlockPos pos, int tintIndex) {
-////            if (world != null && pos != null)
-////                return BiomeColors.getGrassColor(world, pos);
-////            else
-////                return GrassColor.get(0.5D, 1.0D);
-////        }
-////
-////        @Override
-////        public int getColor(Biome biome, double x, double z) {
-////            return biome.getGrassColorAt(x, z);
-////        }
-////    }
-////
-////    public static class WaterColorMultHandler extends ColorMultHandler {
-////        WaterColorMultHandler() {
-////        }
-////
-////        @Override
-////        @Environment(EnvType.CLIENT)
-////        public int getColor(BlockState state, @Nullable BlockRenderView world, @Nullable BlockPos pos, int tintIndex) {
-////            if (world != null && pos != null)
-////                return BiomeColors.getWaterColor(world, pos);
-////            else
-////                return 0xFF000000;
-////        }
-////
-////        @Override
-////        public int getColor(Biome biome, double x, double z) {
-////            return biome.getWaterColor();
-////        }
-////    }
-////
-////    public static class PineColorMultHandler extends ColorMultHandler {
-////        @Override
-////        @Environment(EnvType.CLIENT)
-////        public int getColor(BlockState state, @Nullable BlockRenderView world, @Nullable BlockPos pos, int tintIndex) {
-////            return -10380959;
-////        }
-////
-////        @Override
-////        public int getColor(Biome biome, double x, double z) {
-////            return -10380959;
-////        }
-////    }
-////
-////    public static class BirchColorMultHandler extends ColorMultHandler {
-////        @Override
-////        @Environment(EnvType.CLIENT)
-////        public int getColor(BlockState state, @Nullable BlockRenderView world, @Nullable BlockPos pos, int tintIndex) {
-////            return -8345771;
-////        }
-////
-////        @Override
-////        public int getColor(Biome biome, double x, double z) {
-////            return -8345771;
-////        }
-////    }
-////
-////    public static class BasicColorMultHandler extends ColorMultHandler {
-////        @Override
-////        @Environment(EnvType.CLIENT)
-////        public int getColor(BlockState state, @Nullable BlockRenderView world, @Nullable BlockPos pos, int tintIndex) {
-////            return -12012264;
-////        }
-////
-////        @Override
-////        public int getColor(Biome biome, double x, double z) {
-////            return -12012264;
-////        }
-////    }
-//
-//    // TODO lots of fixes needed here
-////    public static class CustomColorMultHandler extends ColorMultHandler implements ColorResolver {
-////        private final List<int[]> colorBuffers;
-////        private final List<String> rnames;
-////        private boolean brokenCustomRenderer = false;
-////
-////        CustomColorMultHandler(String rname, String blockName) {
-////            this(Collections.singletonList(rname), blockName);
-////        }
-////
-////        CustomColorMultHandler(List<String> rnames, String blockName) {
-////            super();
-////            this.colorBuffers = new ArrayList<int[]>();
-////            this.rnames = rnames;
-////            for (String rname : rnames) {
-////                colorBuffers.add(new int[65536]);
-////            }
-////        }
-////
-////        public int calculateColor(World world, BlockPos pos, int txtindx) {
-////            int red = 0;
-////            int green = 0;
-////            int blue = 0;
-////
-////            for (int xx = -1; xx <= 1; ++xx) {
-////                for (int zz = -1; zz <= 1; ++zz) {
-////                    BlockPos bp = pos.offset(xx, 0, zz);
-////                    Biome biome = world.getBiome(bp).value();
-////                    int mult = getColor(biome.getTemperature(), biome.getModifiedClimateSettings().downfall(), txtindx);
-////                    red += (mult & 0xFF0000) >> 16;
-////                    green += (mult & 0x00FF00) >> 8;
-////                    blue += (mult & 0x0000FF);
-////                }
-////            }
-////            return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
-////        }
-////
-////        @Override
-////        @Environment(EnvType.CLIENT)
-////        public int getColor(BlockState state, @Nullable BlockRenderView world, @Nullable BlockPos pos, int tintIndex) {
-////            if ((world != null) && (pos != null)) {
-////                LevelReader rdr = null;
-////
-////                if (world instanceof RenderChunkRegion) {
-////                    // TODO: idk if using Minecraft.getInstance is correct
-//////					rdr = ((RenderChunkRegion)world).level;
-////                    rdr = Minecraft.getInstance().level;
-////                } else if (world instanceof LevelReader) {
-////                    rdr = (LevelReader) world;
-////                }
-////                if (rdr != null) {
-////                    return calculateColor(rdr, pos, txtindx);
-////                }
-////                // Workaround to attempt to support custom renderers such as Optifine or Embeddium
-////                else {
-////                    if (!brokenCustomRenderer) {
-////                        // First try to access non-thread-safe level reader from minecraft client instance...
-////                        try {
-////                            rdr = Minecraft.getInstance().level;
-////                            return calculateColor(rdr, pos, txtindx);
-////                        } catch (Exception x) {
-////                            // If fails, try to use color resolver method...
-////                            try {
-////                                return world.getBlockTint(pos, this);
-////                            } catch (Exception y) {
-////                                // If both fail, biome colors will be broken, but should not explode.
-////                                brokenCustomRenderer = true;
-////                            }
-////                        }
-////                    }
-////                }
-////            }
-////            return getColor(null, 0.5D, 1.0D, txtindx);
-////        }
-////
-////        private int getColor(double tmp, double hum, int txtindx) {
-////            tmp = MathHelper.clamp(tmp, 0.0F, 1.0F);
-////            hum = MathHelper.clamp(hum, 0.0F, 1.0F);
-////            hum *= tmp;
-////            int i = (int) ((1.0D - tmp) * 255.0D);
-////            int j = (int) ((1.0D - hum) * 255.0D);
-////            return colorBuffers.get(txtindx)[j << 8 | i];
-////        }
-////
-////        @Override
-////        public int getColor(Biome biome, double x, double z) {
-////            return getColor(biome, x, z, 0);
-////        }
-////
-////        public int getColor(Biome biome, double x, double z, int txtindx) {
-////            float hum = 1.0F;
-////            float tmp = 0.5F;
-////            if (biome != null) {
-////                hum = biome.getModifiedClimateSettings().downfall();
-////                tmp = biome.getBaseTemperature();
-////            }
-////            tmp = MathHelper.clamp(tmp, 0.0F, 1.0F);
-////            hum = MathHelper.clamp(hum, 0.0F, 1.0F);
-////            hum *= tmp;
-////            int i = (int) ((1.0D - tmp) * 255.0D);
-////            int j = (int) ((1.0D - hum) * 255.0D);
-////            return colorBuffers.get(txtindx)[j << 8 | i];
-////        }
-////
-////        @Environment(EnvType.CLIENT)
-////        public void loadColorMaps(ResourceManager resMgr) {
-////            int txtindx = 0;
-////            for (String resName : rnames) {
-////                if (resName.indexOf(':') < 0)
-////                    resName = WesterosBlocks.MOD_ID + ":" + resName;
-////                if (resName.endsWith(".png") == false)
-////                    resName += ".png";
-////                try {
-////
-////                    colorBuffers.set(txtindx, LegacyStuffWrapper.getPixels(resMgr, ResourceLocation.parse(resName)));
-////                    WesterosBlocks.LOGGER.debug(String.format("Loaded color resource '%s'", resName));
-////                } catch (Exception e) {
-////                    WesterosBlocks.LOGGER.error(String.format("Invalid color resource '%s'", resName), e);
-////                    Arrays.fill(colorBuffers.get(txtindx), 0xFFFFFF);
-////                }
-////                txtindx++;
-////            }
-////        }
-////    }
-//
-//    // TODO not sure if needed
-//    // Force reload of color handlers
-//    public static void reloadColorHandler(ResourceManager pResourceManager) {
-//        Set<String> hndids = new HashSet<String>(colorMultTable.keySet());
-//        for (String hndid : hndids) {
-//            ColorMultHandler prev = colorMultTable.get(hndid);
-//            // Only reload those from resources
-//            // TODO
-////            if (prev instanceof CustomColorMultHandler) {
-////                ((CustomColorMultHandler) prev).loadColorMaps(pResourceManager);
-////            }
-//        }
-//    }
+        // Register vanilla items
+        if (colorMaps != null) {
+            for (WesterosBlockColorMap map : colorMaps) {
+                for (String blockName : map.blockNames) {
+                    Block block = ModBlocks.findBlockByName(blockName, "minecraft");
+                    if (block != null) {
+                        ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
+                                getDefaultColor(map.colorMult), block.asItem());
+                    }
+                }
+            }
+        }
+    }
 
-//    public static ColorMultHandler getColorHandler(String hnd, String blockName) {
-//        String hndid = hnd.toLowerCase();
-//        ColorMultHandler cmh = colorMultTable.get(hndid);
-//        if (cmh == null) {
-//            // See if color code
-//            if ((hndid.length() == 7) && (hndid.charAt(0) == '#')) {
-//                try {
-//                    cmh = new FixedColorMultHandler(Integer.parseInt(hndid.substring(1), 16));
-//                    colorMultTable.put(hndid, cmh);
-//                } catch (NumberFormatException nfx) {
-//                }
-//            }
-//            // See if resource
-//            else {
-//                int idx = hnd.indexOf(':');
-//                if (idx < 0) {
-//                    hnd = WesterosBlocks.MOD_ID + ":" + hnd;
-//                    hndid = hnd.toLowerCase();
-//                }
-//                cmh = colorMultTable.get(hndid);
-//                if (cmh == null) {
-//                    cmh = new CustomColorMultHandler(hnd, blockName);
-//                    colorMultTable.put(hndid, cmh);
-//                }
-//            }
-//        }
-//
-//        return cmh;
-//    }
-//
-//    public static ColorMultHandler getColorHandler(List<String> hnd, String blockName) {
-//        String hndid = String.join("_", hnd).toLowerCase();
-//        ColorMultHandler cmh = colorMultTable.get(hndid);
-//        if (cmh == null) {
-//            for (int i = 0; i < hnd.size(); i++) {
-//                int idx = hnd.get(i).indexOf(':');
-//                if (idx < 0) {
-//                    hnd.set(i, WesterosBlocks.MOD_ID + ":" + hnd.get(i));
-//                }
-//            }
-//            hndid = String.join("_", hnd).toLowerCase();
-//            cmh = colorMultTable.get(hndid);
-//            if (cmh == null) {
-//                cmh = new CustomColorMultHandler(hnd, blockName);
-//                colorMultTable.put(hndid, cmh);
-//            }
-//        }
-//
-//        return cmh;
-//    }
+    private static int getColor(String colorMap, BlockRenderView view, BlockPos pos) {
+        if (colorMap.startsWith("#")) {
+            return Integer.parseInt(colorMap.substring(1), 16);
+        }
 
-//    public static ColorMultHandler getStateColorHandler(WesterosBlockStateRecord rec, String blockName) {
-//        if (rec.colorMults != null) {
-//            return getColorHandler(rec.colorMults, blockName);
-//        } else {
-//            return getColorHandler(rec.colorMult, blockName);
-//        }
-//    }
+        return switch (getColorType(colorMap)) {
+            case GRASS -> BiomeColors.getGrassColor(view, pos);
+            case FOLIAGE -> BiomeColors.getFoliageColor(view, pos);
+            case WATER -> BiomeColors.getWaterColor(view, pos);
+            case PINE -> 0xff618961;
+            case BIRCH -> 0xff80a755;
+            case BASIC -> 0xff48b518;
+            default -> loadCustomColor(colorMap, view, pos);
+        };
+    }
 
-//    public String getBlockColorMapResource() {
-//        String res = null;
-//        String blockColor = colorMult;
-//        if (blockColor == null && colorMults != null && colorMults.size() >= 1) {
-//            blockColor = colorMults.get(0);
-//        }
-//        if ((blockColor != null) && (blockColor.startsWith("#") == false)) {
-//            String tok[] = blockColor.split(":");
-//            if (tok.length == 1) {
-//                if (tok[0].startsWith("textures/"))
-//                    tok[0] = tok[0].substring(9);
-//                res = WesterosBlocks.MOD_ID + ":" + tok[0];
-//            } else {
-//                if (tok[1].startsWith("textures/"))
-//                    tok[1] = tok[1].substring(9);
-//                res = tok[0] + ":" + tok[1];
-//            }
-//        }
-//        return res;
-//    }
+    private static int getDefaultColor(String colorMap) {
+        if (colorMap.startsWith("#")) {
+            return Integer.parseInt(colorMap.substring(1), 16);
+        }
 
-    // Handle registration of tint handling and other client rendering
-//    @Environment(EnvType.CLIENT)
-//    public void registerBlockColorHandler(Block blk, RegisterColorHandlersEvent.Block event) {
-//        if (this.isTinted()) {
-//            if (this.stateProp != null) {
-//                final Map<String, ColorMultHandler> cmmap = new HashMap<String, ColorMultHandler>();
-//                for (WesterosBlockStateRecord rec : this.states) {
-//                    ColorMultHandler handler = getStateColorHandler(rec, this.blockName);
-//                    cmmap.put(rec.stateID, handler);
-//                }
-//                event.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) ->
-//                        cmmap.get(state.getValue(this.stateProp)).getColor(state, world, pos, txtindx), blk);
-//                final ColorMultHandler itemHandler = cmmap.get(this.states.get(0).stateID);
-//            } else {
-//                ColorMultHandler handler = getStateColorHandler(this, this.blockName);
-//
-//                event.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> handler
-//                        .getColor(state, world, pos, txtindx), blk);
-//            }
-//        }
-//    }
+        return switch (getColorType(colorMap)) {
+            case GRASS -> GrassColors.getColor(0.5, 1.0);
+            case FOLIAGE -> FoliageColors.getDefaultColor();
+            case WATER -> 0x3F76E4;
+            case PINE -> 0xff618961;
+            case BIRCH -> 0xff80a755;
+            case BASIC -> 0xff48b518;
+            default -> loadCustomDefaultColor(colorMap);
+        };
+    }
 
-    // Handle registration of tint handling and other client rendering
-//    @Environment(EnvType.CLIENT)
-//    public static void registerVanillaBlockColorHandler(String blockName, Block blk, String colorMult, RegisterColorHandlersEvent.Block event) {
-//        ColorMultHandler handler = getColorHandler(colorMult, blockName);
-//        event.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> handler
-//                .getColor(state, world, pos, txtindx), blk);
-//        // If water shader, override global one too
-//        if (blockName.equals("minecraft:water") && (handler instanceof CustomColorMultHandler)) {
-//            final CustomColorMultHandler cchandler = (CustomColorMultHandler) handler;    // crappy java lambda limitation workaround
-//            // TODO: biome modifiers maybe
-////			BiomeColors.WATER_COLOR_RESOLVER = (Biome b, double tmp, double hum) -> cchandler.getColor(b, tmp, hum);
-//        }
-//    }
+    private static ColorType getColorType(String colorMap) {
+        if (colorMap.contains("grass")) return ColorType.GRASS;
+        if (colorMap.contains("foliage")) return ColorType.FOLIAGE;
+        if (colorMap.contains("water")) return ColorType.WATER;
+        if (colorMap.contains("pine")) return ColorType.PINE;
+        if (colorMap.contains("birch")) return ColorType.BIRCH;
+        if (colorMap.contains("basic")) return ColorType.BASIC;
+        return ColorType.CUSTOM;
+    }
 
-    // Handle registration of tint handling and other client rendering
-//    @Environment(EnvType.CLIENT)
-//    public void registerItemColorHandler(Block blk, RegisterColorHandlersEvent.Item event) {
-//        if (this.isTinted()) {
-//            if (this.stateProp != null) {
-//                final Map<String, ColorMultHandler> cmmap = new HashMap<String, ColorMultHandler>();
-//                for (WesterosBlockStateRecord rec : this.states) {
-//                    ColorMultHandler handler = getStateColorHandler(rec, this.blockName);
-//                    cmmap.put(rec.stateID, handler);
-//                }
-//                final ColorMultHandler itemHandler = cmmap.get(this.states.get(0).stateID);
-//                event.register((ItemStack stack, int tintIndex) -> itemHandler.getItemColor(stack, tintIndex), blk);
-//            } else {
-//                ColorMultHandler handler = getStateColorHandler(this, this.blockName);
-//                event.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
-//            }
-//        }
-//    }
+    private enum ColorType {
+        GRASS,
+        FOLIAGE,
+        WATER,
+        PINE,
+        BIRCH,
+        BASIC,
+        CUSTOM
+    }
 
-    // Handle registration of tint handling and other client rendering
-//    @Environment(EnvType.CLIENT)
-//    public static void registerVanillaItemColorHandler(String blockName, Block blk, String colorMult, RegisterColorHandlersEvent.Item event) {
-//        ColorMultHandler handler = getColorHandler(colorMult, blockName);
-//        event.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
-//    }
+    private static String extractResourcePath(String colorMap) {
+        if (colorMap.startsWith("textures/colormap/")) {
+            return colorMap.substring("textures/colormap/".length());
+        }
+        return colorMap;
+    }
 
-//    public static void registerColorProviders() {
-    // Register item colors
-//        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
-//            Block block = Block.getBlockFromItem(stack.getItem());
-//            if (block instanceof WesterosBlockLifecycle) {
-//                WesterosBlockDef def = ((WesterosBlockLifecycle) block).getWBDefinition();
-//                if (def != null) {
-//                    return def.getItemColor(stack, tintIndex);
-//                }
-//            }
-//            return -1;
-//        }, WesterosBlocks.customBlocks.toArray(new Block[0]));
-//
-//        // Register custom color maps for items
-//        if (WesterosBlocks.colorMaps != null) {
-//            WesterosBlocks.log.info("Initializing " + WesterosBlocks.colorMaps.length + " custom color maps");
-//            for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
-//                for (String bn : map.blockNames) {
-//                    Block blk = WesterosBlocks.findBlockByName(bn, MOD_ID);
-//                    if (blk != null) {
-//                        ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
-//                                map.colorMult, blk);
-//                    }
-//                }
-//            }
-//        }
-//
-//        // Register block colors
-//        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
-//            Block block = state.getBlock();
-//            if (block instanceof WesterosBlockLifecycle) {
-//                WesterosBlockDef def = ((WesterosBlockLifecycle) block).getWBDefinition();
-//                if (def != null) {
-//                    return def.getBlockColor(state, world, pos, tintIndex);
-//                }
-//            }
-//            return -1;
-//        }, WesterosBlocks.customBlocks.toArray(new Block[0]));
-//
-//        // Register custom color maps for blocks
-//        if (WesterosBlocks.colorMaps != null) {
-//            for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
-//                for (String bn : map.blockNames) {
-//                    Block blk = WesterosBlocks.findBlockByName(bn, "minecraft");
-//                    if (blk != null) {
-//                        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) ->
-//                                map.colorMult, blk);
-//                    }
-//                }
-//            }
-//        }
-//    }
+    private static int loadCustomColor(String colorMap, BlockRenderView view, BlockPos pos) {
+        if (view == null || pos == null) return -1;
 
-//    public static class GrassColor {
-//        private static int[] pixels = new int[65536];
-//
-//        public GrassColor() {
-//        }
-//
-//        public static void init(int[] grassBuffer) {
-//            pixels = grassBuffer;
-//        }
-//
-//        public static int get(double temperature, double humidity) {
-//            humidity *= temperature;
-//            int i = (int) ((1.0 - temperature) * 255.0);
-//            int j = (int) ((1.0 - humidity) * 255.0);
-//            int k = j << 8 | i;
-//            return k >= pixels.length ? -65281 : pixels[k];
-//        }
-//
-//        public static int getDefaultColor() {
-//            return get(0.5, 1.0);
-//        }
-//    }
-//}
+        String resourcePath = extractResourcePath(colorMap);
+        int[] colors = CUSTOM_COLOR_MAPS.get(resourcePath);
+        if (colors == null) return -1;
+
+        // Use a ColorResolver to get temperature and downfall from biome
+        return view.getColor(pos, (biome, x, z) -> {
+            float temperature = MathHelper.clamp(biome.getTemperature(), 0.0f, 1.0f);
+            // uses temperature and downfall internally
+            int defaultColor = biome.getGrassColorAt(x, z);
+            float downfall = ((defaultColor >> 8) & 0xFF) / 255.0f;
+
+            // Convert to color map coordinates
+            int i = (int) ((1.0 - temperature) * 255.0);
+            int j = (int) ((1.0 - downfall) * 255.0);
+
+            // Ensure we stay within bounds
+            i = MathHelper.clamp(i, 0, 255);
+            j = MathHelper.clamp(j, 0, 255);
+
+            return colors[j * 256 + i];
+        });
+    }
+
+    private static int loadCustomDefaultColor(String colorMap) {
+        String resourcePath = extractResourcePath(colorMap);
+        int[] colors = CUSTOM_COLOR_MAPS.get(resourcePath);
+        if (colors == null) return -1;
+
+        // For default color, use middle temperature and downfall values
+        float temperature = 0.5f;
+        float downfall = 0.5f;
+
+        int i = (int) ((1.0 - temperature) * 255.0);
+        int j = (int) ((1.0 - downfall) * 255.0);
+
+        return colors[j * 256 + i];
+    }
+}

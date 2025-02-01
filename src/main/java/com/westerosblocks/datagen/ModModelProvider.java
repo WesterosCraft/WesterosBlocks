@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.WesterosBlocksJsonLoader;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.datagen.models.*;
@@ -19,7 +20,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         HashMap<String, Block> customBlocks = ModBlocks.getCustomBlocksByName();
-        WesterosBlockDef[] customBlockDefs = WesterosBlocks.getCustomBlockDefs();
+        WesterosBlockDef[] customBlockDefs = WesterosBlocksJsonLoader.getCustomBlockDefs();
 
         for (WesterosBlockDef customBlockDef : customBlockDefs) {
             if (customBlockDef == null) continue;
@@ -167,7 +168,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         HashMap<String, Block> customBlocks = ModBlocks.getCustomBlocksByName();
-        WesterosBlockDef[] customBlockDefs = WesterosBlocks.getCustomBlockDefs();
+        WesterosBlockDef[] customBlockDefs = WesterosBlocksJsonLoader.getCustomBlockDefs();
 
         for (WesterosBlockDef customBlockDef : customBlockDefs) {
             if (customBlockDef == null) continue;

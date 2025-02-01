@@ -15,16 +15,18 @@ public class WesterosBlocksClient implements ClientModInitializer {
     public void onInitializeClient() {
         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new WesterosResourceReloadListener());
         initRenderRegistry();
+        ColorHandlers.registerColorProviders();
     }
 
     private static class WesterosResourceReloadListener implements SimpleSynchronousResourceReloadListener {
         @Override
         public Identifier getFabricId() {
-            return Identifier.of("westerosblocks", "resource_reload_listener");
+            return Identifier.of(WesterosBlocks.MOD_ID, "resource_reload_listener");
         }
 
         @Override
         public void reload(ResourceManager manager) {
+            // TODO see if this works the same way
 //            ColorHandlers.reloadColorHandler(manager);
             WesterosBlocks.LOGGER.info("Handling resource reload completed");
         }

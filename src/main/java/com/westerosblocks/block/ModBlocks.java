@@ -1,6 +1,7 @@
 package com.westerosblocks.block;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.WesterosBlocksJsonLoader;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
@@ -10,19 +11,20 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.InvalidIdentifierException;
+import net.minecraft.util.crash.CrashException;
+import net.minecraft.util.crash.CrashReport;
 
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static com.westerosblocks.WesterosBlocks.crash;
-
 public class ModBlocks {
     public static Block[] customBlocks = new Block[0];
     public static HashMap<String, Block> customBlocksByName = new HashMap<>();
+    public static WesterosBlockDef[] customBlockDefs = WesterosBlocksJsonLoader.getCustomBlockDefs();
 
-    public static void registerModBlocks(WesterosBlockDef[] customBlockDefs) {
+    public static void registerModBlocks() {
         WesterosBlocks.LOGGER.info("Registering blocks for " + com.westerosblocks.WesterosBlocks.MOD_ID);
         List<Block> blklist = new LinkedList<>();
         HashMap<String, Integer> countsByType = new HashMap<>();
@@ -61,16 +63,10 @@ public class ModBlocks {
 //        WesterosBlocksCompatibility.dumpBlockSets(customConfig.blockSets, modConfigPath);
 //        WesterosBlocksCompatibility.dumpWorldPainterConfig(customBlocks, modConfigPath);
         // Brag on block type counts
-        WesterosBlocks.LOGGER.info("Count of custom Westeros blocks by type:");
-        for (String type : countsByType.keySet()) {
-            WesterosBlocks.LOGGER.info(type + ": " + countsByType.get(type) + " blocks");
-        }
-        WesterosBlocks.LOGGER.info("TOTAL: " + blockCount + " blocks");
-        // TODO
-//        colorMaps = customConfig.colorMaps;
+
+        WesterosBlocks.LOGGER.info("TOTAL: " + blockCount + " custom blocks");
         // TODO
 //        menuOverrides = customConfig.menuOverrides;
-        WesterosBlocks.LOGGER.info("WesterosBlocks custom block registration complete.");
     }
 
     public static Block registerBlock(String name, Block block) {
@@ -106,12 +102,20 @@ public class ModBlocks {
             }
         }
 
-        if (id.getNamespace().equals(namespace)) {
+        if (id != null && id.getNamespace().equals(namespace)) {
             blk = customBlocksByName.get(id.getPath());
             if (blk != null) return blk;
         }
 
         return Registries.BLOCK.get(id);
+    }
+
+    public static void crash(Exception x, String msg) {
+        throw new CrashException(new CrashReport(msg, x));
+    }
+
+    public static void crash(String msg) {
+        crash(new Exception(), msg);
     }
 
 }

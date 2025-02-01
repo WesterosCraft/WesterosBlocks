@@ -73,12 +73,5 @@ public class LayerBlockExport extends ModelExport {
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
         String path = String.format("%s%s/layer1_v1", GENERATED_PATH, blockDefinition.blockName);
         itemModelGenerator.register(currentBlock.asItem(), new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty()));
-
-        if (blockDefinition.isTinted()) {
-            String tintResource = blockDefinition.getBlockColorMapResource();
-            if (tintResource != null) {
-                // TODO: Handle tinting registration for items
-            }
-        }
     }
 }

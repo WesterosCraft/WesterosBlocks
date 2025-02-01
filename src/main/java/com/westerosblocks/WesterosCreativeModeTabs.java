@@ -74,7 +74,7 @@ public class WesterosCreativeModeTabs {
                 .icon(() -> new ItemStack(Registries.ITEM.get(Identifier.of(WesterosBlocks.MOD_ID, iconItem))))
                 .displayName(Text.literal(title))
                 .entries((context, entries) -> {
-                    for (WesterosBlockDef def : WesterosBlocks.getCustomBlockDefs()) {
+                    for (WesterosBlockDef def : WesterosBlocksJsonLoader.getCustomBlockDefs()) {
                         if (def != null && def.creativeTab.equals(tabName)) {
                             entries.add(Registries.ITEM.get(WesterosBlocks.id(def.blockName)));
                         }

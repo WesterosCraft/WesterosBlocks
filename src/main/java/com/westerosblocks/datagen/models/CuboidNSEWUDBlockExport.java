@@ -91,12 +91,5 @@ public class CuboidNSEWUDBlockExport extends CuboidBlockExport {
                 new Model(Optional.of(WesterosBlocks.id(path)),
                         Optional.empty())
         );
-
-        if (blockDefinition.isTinted()) {
-            String tintResource = blockDefinition.getBlockColorMapResource();
-            if (tintResource != null) {
-                // TODO: Handle tinting registration if needed
-            }
-        }
     }
 }

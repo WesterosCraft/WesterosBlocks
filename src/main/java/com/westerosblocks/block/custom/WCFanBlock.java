@@ -29,14 +29,12 @@ public class WCFanBlock extends Block implements WesterosBlockLifecycle {
             AbstractBlock.Settings fanSettings = def.makeBlockSettings().noCollision().breakInstantly();
             AbstractBlock.Settings wallFanSettings = def.makeBlockSettings().noCollision().breakInstantly();
 
-            // Create wall fan block first
             Block wallFanBlock = new WCWallFanBlock(wallFanSettings, def);
-            // Create floor fan block with reference to wall variant
             Block fanBlock = new WCFanBlock(fanSettings, def, wallFanBlock);
 
-            // Register both blocks
             def.registerRenderType(ModBlocks.registerBlock(def.blockName + "_wall", wallFanBlock), false, false);
             ModBlocks.getCustomBlocksByName().put(def.blockName + "_wall", wallFanBlock);
+
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, fanBlock), false, false);
         }
     }

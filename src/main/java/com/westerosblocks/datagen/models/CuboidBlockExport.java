@@ -75,18 +75,21 @@ public class CuboidBlockExport extends ModelExport {
         TextureMap textureMap = createCuboidTextureMap(set);
 
         Identifier modelId = getModelId(sr.stateID == null ? "base" : sr.stateID, setIdx, false);
-        createCuboidModel(sr, isTinted).upload(modelId, textureMap, generator.modelCollector);
+        createCuboidModel(sr, isTinted, set.getTextureCount()).upload(modelId, textureMap, generator.modelCollector);
     }
 
-    private Model createCuboidModel(WesterosBlockStateRecord sr, boolean isTinted) {
-        return new Model(Optional.empty(), Optional.empty(),
-                TextureKey.PARTICLE,
-                ModTextureKey.TEXTURE_0,
-                ModTextureKey.TEXTURE_1,
-                ModTextureKey.TEXTURE_2,
-                ModTextureKey.TEXTURE_3,
-                ModTextureKey.TEXTURE_4,
-                ModTextureKey.TEXTURE_5) {
+    private Model createCuboidModel(WesterosBlockStateRecord sr, boolean isTinted, int textureCount) {
+        // Ensure we have at least 6 texture keys for the standard faces
+        int requiredTextures = Math.max(6, textureCount);
+
+        List<TextureKey> textureKeys = new ArrayList<>();
+        textureKeys.add(TextureKey.PARTICLE);
+
+        for (int i = 0; i < requiredTextures; i++) {
+            textureKeys.add(modTextureKeyForIndex(i));
+        }
+
+        return new Model(Optional.empty(), Optional.empty(), textureKeys.toArray(new TextureKey[0])) {
             @Override
             public JsonObject createJson(Identifier id, Map<TextureKey, Identifier> textures) {
                 JsonObject json = super.createJson(id, textures);
@@ -314,20 +317,25 @@ public class CuboidBlockExport extends ModelExport {
 
     public TextureMap createCuboidTextureMap(WesterosBlockDef.RandomTextureSet set) {
         TextureMap textureMap = new TextureMap();
+        int textureCount = set.getTextureCount();
 
-        // Add required texture keys for all faces
-        for (int i = 0; i < 6; i++) {
-            String texture = set.getTextureByIndex(i);
+        // For blocks with single texture, we need to map it to all 6 sides
+        int requiredTextures = Math.max(6, textureCount);
+
+        for (int i = 0; i < requiredTextures; i++) {
+            String texture = i < textureCount ?
+                    set.getTextureByIndex(i) :
+                    set.getTextureByIndex(0);
+
             textureMap.put(modTextureKeyForIndex(i), createBlockIdentifier(texture));
         }
 
-        // Add particle texture
         textureMap.put(TextureKey.PARTICLE, createBlockIdentifier(set.getTextureByIndex(0)));
-
         return textureMap;
     }
 
     public TextureKey modTextureKeyForIndex(int index) {
+//        return ModTextureKey.getTextureNKey(index);
         return switch (index) {
             case 0 -> ModTextureKey.TEXTURE_0;
             case 1 -> ModTextureKey.TEXTURE_1;
@@ -335,16 +343,28 @@ public class CuboidBlockExport extends ModelExport {
             case 3 -> ModTextureKey.TEXTURE_3;
             case 4 -> ModTextureKey.TEXTURE_4;
             case 5 -> ModTextureKey.TEXTURE_5;
+            case 6 -> ModTextureKey.TEXTURE_6;
+            case 7 -> ModTextureKey.TEXTURE_7;
+            case 8 -> ModTextureKey.TEXTURE_8;
+            case 9 -> ModTextureKey.TEXTURE_9;
+            case 10 -> ModTextureKey.TEXTURE_10;
+            case 11 -> ModTextureKey.TEXTURE_11;
+            case 12 -> ModTextureKey.TEXTURE_12;
+            case 13 -> ModTextureKey.TEXTURE_13;
+            case 14 -> ModTextureKey.TEXTURE_14;
+            case 15 -> ModTextureKey.TEXTURE_15;
+            case 16 -> ModTextureKey.TEXTURE_16;
+            case 17 -> ModTextureKey.TEXTURE_17;
             default -> throw new IllegalArgumentException("Invalid texture index: " + index);
         };
     }
 
     public Identifier getModelId(String variant, int setIdx, boolean isCustom) {
         return WesterosBlocks.id(String.format("%s%s/%s_v%d",
-                        isCustom ? CUSTOM_PATH : GENERATED_PATH,
-                        def.getBlockName(),
-                        variant,
-                        setIdx + 1));
+                isCustom ? CUSTOM_PATH : GENERATED_PATH,
+                def.getBlockName(),
+                variant,
+                setIdx + 1));
     }
 
     private boolean isTransparent(String texture) {
@@ -359,17 +379,7 @@ public class CuboidBlockExport extends ModelExport {
 
         itemModelGenerator.register(
                 block.asItem(),
-                new Model(Optional.of(WesterosBlocks.id(path)),
-                        Optional.empty())
+                new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())
         );
-
-        if (blockDefinition.isTinted()) {
-            String tintResource = blockDefinition.getBlockColorMapResource();
-            if (tintResource != null) {
-                // TODO: Handle tinting registration
-            }
-        }
     }
-
-
 }

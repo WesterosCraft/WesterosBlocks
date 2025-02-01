@@ -152,25 +152,17 @@ public class StairBlockExport extends ModelExport {
                 String.format("%s/%s_v%d", def.blockName, variant, setIdx + 1) :
                 String.format("%s/%s/%s_v%d", def.blockName, stateId, variant, setIdx + 1);
 
-        return WesterosBlocks.id((def.isCustomModel() ? "block/custom/" : "block/generated/") + path);
+        return WesterosBlocks.id((def.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH) + path);
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
         boolean hasMultipleStates = blockDefinition.states.size() > 1;
         String basePath = hasMultipleStates ? "/base" : "";
-        String path = String.format("%s%s%s/base_v1", GENERATED_PATH, blockDefinition.blockName, basePath);
+        String path = String.format("%s%s%s/base_v1", blockDefinition.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH, blockDefinition.blockName, basePath);
 
         itemModelGenerator.register(
                 block.asItem(),
                 new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())
         );
-
-
-        if (blockDefinition.isTinted()) {
-            String tintResource = blockDefinition.getBlockColorMapResource();
-            if (tintResource != null) {
-                // TODO: Handle tinting registration
-            }
-        }
     }
 }

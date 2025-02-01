@@ -173,12 +173,5 @@ public class FenceBlockExport extends ModelExport {
         );
 
         model.upload(ModelIds.getItemModelId(block.asItem()), textures, itemModelGenerator.writer);
-
-        if (isTinted) {
-            String tintResource = blockDefinition.getBlockColorMapResource();
-            if (tintResource != null) {
-                // TODO: Handle tinting registration
-            }
-        }
     }
 }

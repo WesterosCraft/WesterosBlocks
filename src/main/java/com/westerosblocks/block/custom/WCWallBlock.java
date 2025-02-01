@@ -436,12 +436,6 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
         return blockState.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(blockState);
     }
 
-    // TODO
-//    @Override
-//    public boolean propagatesSkylightDown(BlockState state, BlockView world, BlockPos pos) {
-//        return !state.get(Properties.WATERLOGGED);
-//    }
-
     @Override
     protected BlockState rotate(BlockState state, BlockRotation rotation) {
         return switch (rotation) {

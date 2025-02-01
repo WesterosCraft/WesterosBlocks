@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.WesterosBlocksJsonLoader;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -13,7 +14,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModLanguageProvider extends FabricLanguageProvider {
     HashMap<String, Block> customBlocks = ModBlocks.getCustomBlocksByName();
-    WesterosBlockDef[] customBlockDefs = WesterosBlocks.getCustomBlockDefs();
+    WesterosBlockDef[] customBlockDefs = WesterosBlocksJsonLoader.getCustomBlockDefs();
 
     public ModLanguageProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
         super(dataOutput, "en_us", registryLookup);

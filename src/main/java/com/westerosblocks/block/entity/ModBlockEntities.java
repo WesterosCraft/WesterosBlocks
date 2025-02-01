@@ -1,9 +1,10 @@
-package com.westerosblocks.entity;
+package com.westerosblocks.block.entity;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.WesterosBlocksJsonLoader;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.entity.custom.WCFurnaceBlockEntity;
+import com.westerosblocks.block.entity.custom.WCFurnaceBlockEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
@@ -13,12 +14,12 @@ import net.minecraft.registry.Registry;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ModEntities {
+public class ModBlockEntities {
     public static HashMap<String, BlockEntityType<?>> customEntitiesByName = new HashMap<>();
 
     static {
         HashMap<String, Block> customBlocks = ModBlocks.getCustomBlocksByName();
-        WesterosBlockDef[] customBlockDefs = WesterosBlocks.getCustomBlockDefs();
+        WesterosBlockDef[] customBlockDefs = WesterosBlocksJsonLoader.getCustomBlockDefs();
 
         Map<String, Block> furnaceBlocks = new HashMap<>();
 

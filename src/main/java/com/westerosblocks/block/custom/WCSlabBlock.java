@@ -28,7 +28,6 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockLifecycle {
 			if (state != null) {
 				tempSTATE = state;
 			}
-            // Process types
             String t = def.getType();
 			boolean doConnectstate = false;
 			if (t != null) {
@@ -115,8 +114,7 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockLifecycle {
 	}
 
 	@Override
-	protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
-								 BlockHitResult hit) {
+	protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
 		Hand hand = player.getActiveHand();
 		if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
 			state = state.cycle(this.STATE);

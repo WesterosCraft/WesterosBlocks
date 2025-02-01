@@ -7,13 +7,14 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 
 
-// TODO: Example of how to use the config
+// this is the Cloth Config API. Example of how to use the config:
 // boolean snowInTaiga = ModConfig.get().snowInTaiga;
 
 @Config(name = WesterosBlocks.MOD_ID)
 public class ModConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip(count = 1)
     @ConfigEntry.Category("general")
+    // TODO find where this was used
     public boolean snowInTaiga = false;
 
     @ConfigEntry.Gui.Tooltip(count = 1)
@@ -35,6 +36,7 @@ public class ModConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip(count = 1)
     @ConfigEntry.Category("doors")
+    // TODO find where this was used
     public boolean doorNoConnect = false;
 
     @ConfigEntry.Gui.Tooltip(count = 1)

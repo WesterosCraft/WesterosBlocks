@@ -1,7 +1,7 @@
-package com.westerosblocks.entity.custom;
+package com.westerosblocks.block.entity.custom;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.entity.ModEntities;
+import com.westerosblocks.block.entity.ModBlockEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -15,7 +15,7 @@ public class WCFurnaceBlockEntity extends AbstractFurnaceBlockEntity {
     private final String furnaceType;
 
     public WCFurnaceBlockEntity(BlockPos pos, BlockState state, String furnaceType) {
-        super(ModEntities.getBlockEntityType(furnaceType), pos, state, RecipeType.SMELTING);
+        super(ModBlockEntities.getBlockEntityType(furnaceType), pos, state, RecipeType.SMELTING);
         this.furnaceType = furnaceType;
     }
 

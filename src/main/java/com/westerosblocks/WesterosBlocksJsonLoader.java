@@ -11,11 +11,30 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 
+// TODO maybe figure out a different name idk
 // Top level container for WesterosBlocks.json parsed data
 public class WesterosBlocksJsonLoader {
+    public static WesterosBlocksJsonLoader.WesterosBlocksConfig customConfig;
+    private static WesterosBlockDef[] customBlockDefs;
+
+
+    public static void initialize(List<String> configFiles) {
+        customConfig = WesterosBlocksJsonLoader.getBlockConfig(configFiles);
+        customBlockDefs = getBlockDefs(customConfig);
+        WesterosBlocks.LOGGER.info("Loaded {} block definitions", customBlockDefs.length);
+
+        if (!sanityCheck(customBlockDefs)) {
+            WesterosBlocks.LOGGER.error("WesterosBlocks.json failed sanity check");
+            return;
+        }
+
+    }
+
     public static class WesterosBlocksConfig {
         public WesterosBlockSetDef[] blockSets;
         public WesterosBlockDef[] blocks;
@@ -140,5 +159,31 @@ public class WesterosBlocksJsonLoader {
         }
         WesterosBlocks.LOGGER.info("WesterosBlocks.json passed sanity check");
         return true;
+    }
+
+    // Expand block set definitions to obtain the full block definition list
+    public static WesterosBlockDef[] getBlockDefs(WesterosBlocksConfig config) {
+        WesterosBlockSetDef[] blockSetDefs = config.blockSets;
+        WesterosBlockDef[] blockDefs = config.blocks;
+        List<WesterosBlockDef> expandedBlockDefs = new LinkedList<>(Arrays.asList(blockDefs));
+
+        if (config.blockSets.length > 0) {
+            for (WesterosBlockSetDef blockSetDef : blockSetDefs) {
+                if (blockSetDef == null)
+                    continue;
+                List<WesterosBlockDef> variantBlockDefs = blockSetDef.generateBlockDefs();
+                expandedBlockDefs.addAll(variantBlockDefs);
+            }
+        }
+
+        return expandedBlockDefs.toArray(new WesterosBlockDef[0]);
+    }
+
+    public static WesterosBlockDef[] getCustomBlockDefs() {
+        return customBlockDefs;
+    }
+
+    public static WesterosBlocksConfig getCustomConfig() {
+        return customConfig;
     }
 }

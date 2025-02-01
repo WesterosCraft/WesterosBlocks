@@ -146,9 +146,6 @@ public class SolidBlockExport extends ModelExport {
                 String.format("%s%s/symmetrical/%s_v1", GENERATED_PATH, blockDefinition.blockName, baseName) :
                 String.format("%s%s/%s_v1", GENERATED_PATH, blockDefinition.blockName, baseName);
 
-        // TODO
-//        blockDefinition.getBlockColorMapResource();
-
         itemModelGenerator.register(
                 currentBlock.asItem(),
                 new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())

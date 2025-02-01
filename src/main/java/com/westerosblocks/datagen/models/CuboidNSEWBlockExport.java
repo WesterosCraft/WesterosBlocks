@@ -65,7 +65,6 @@ public class CuboidNSEWBlockExport extends CuboidBlockExport {
                         variant.put(VariantSettings.Y, getRotation(rotation));
                     }
 
-                    // Add variant to builder
                     blockStateBuilder.addVariant(
                             "facing=" + FACING_DIRECTIONS[dirIndex],
                             variant,
@@ -90,12 +89,5 @@ public class CuboidNSEWBlockExport extends CuboidBlockExport {
                 new Model(Optional.of(WesterosBlocks.id(path)),
                         Optional.empty())
         );
-
-        if (blockDefinition.isTinted()) {
-            String tintResource = blockDefinition.getBlockColorMapResource();
-            if (tintResource != null) {
-                // TODO: Handle tinting registration
-            }
-        }
     }
 }

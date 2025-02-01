@@ -121,21 +121,14 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
         // Get number of base textures
         public int getTextureCount() {
-            if (textures != null) {
-                return textures.size();
-            }
-            return 0;
+            return textures != null ? textures.size() : 0;
         }
 
-        public String getTextureByIndex(int idx) {
-            int cnt = getTextureCount();
-            if (cnt > 0) {
-                if (idx >= cnt) {
-                    idx = cnt - 1;
-                }
-                return textures.get(idx);
+        public String getTextureByIndex(int index) {
+            if (textures == null || textures.isEmpty()) {
+                return null;
             }
-            return null;
+            return textures.get(index % textures.size());
         }
     }
 
@@ -547,11 +540,21 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     }
 
     public static void dumpBlockPerf() {
-        WesterosBlocks.LOGGER.info("Block create perf");
-        for (String blktype : perfCounts.keySet()) {
-            long[] pc = perfCounts.get(blktype);
-            WesterosBlocks.LOGGER.info(String.format("type %s: %d count, %d total ms, %d ms/call", blktype, pc[0], pc[1], pc[1] / pc[0]));
-        }
+        WesterosBlocks.LOGGER.info("Block Creation Performance Statistics:");
+        WesterosBlocks.LOGGER.info(String.format("%-20s %-10s %-15s %-15s", "Block Type", "Count", "Total (ms)", "Avg (ms)"));
+        WesterosBlocks.LOGGER.info("-".repeat(60));
+
+        perfCounts.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .forEach(entry -> {
+                    String blockType = entry.getKey();
+                    long count = entry.getValue()[0];
+                    long totalMs = entry.getValue()[1];
+                    double avgMs = count > 0 ? (double)totalMs / count : 0;
+
+                    WesterosBlocks.LOGGER.info(String.format("%-20s %-10d %-15d %-15.2f",
+                            blockType, count, totalMs, avgMs));
+                });
     }
 
     @Environment(EnvType.CLIENT)
@@ -566,7 +569,9 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         return block;
     }
 
-    public AbstractBlock.Settings makeBlockSettings() { return applyCustomProperties(null); }
+    public AbstractBlock.Settings makeBlockSettings() {
+        return applyCustomProperties(null);
+    }
 
     private AbstractBlock.Settings applyCustomProperties(Block block) {
         AbstractBlock.Settings settings;
@@ -625,21 +630,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     private static boolean never(BlockState state, BlockView world, BlockPos pos) {
         return false;
     }
-
-    // TODO not sure if needed
-//    public CreativeModeTab getCreativeTab() {
-//        CreativeModeTab ct = tabTable.get(creativeTab);
-//        if (ct == null) {
-//            WesterosBlocks.log.warn(String.format("Invalid tab name '%s' in block '%s'", creativeTab, blockName));
-//            // TODO
-////			ct = WesterosBlocksCreativeTab.tabWesterosMisc;
-//        }
-//        return ct;
-//    }
-//
-//    public static void addCreativeTab(String name, CreativeModeTab tab) {
-//        tabTable.put(name, tab);
-//    }
 
     // Get customized collision box for default solid block
     public VoxelShape makeCollisionBoxShape() {
@@ -939,10 +929,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     }
 
     // TODO
-
-    /**
-     * Returns this WesterosBlockDef's default Material
-     */
     public AbstractBlock.Settings getMaterialSettings() {
         if (material == null) {
             WesterosBlocks.LOGGER.warn(String.format("No material specified in block '%s', using stone", blockName));
@@ -952,9 +938,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         return WesterosBlockSettings.get(material);
     }
 
-    /**
-     * Returns this WesterosBlockDef's default SoundType
-     */
     public BlockSoundGroup getSoundType() {
         BlockSoundGroup ss = stepSoundTable.get(stepSound);
         if (ss == null) {
@@ -983,69 +966,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
             }
         }
         return res;
-    }
-
-
-    // TODO not sure if needed anymore
-//    public String getLegacyBlockName() {
-//        if (legacyBlockID == null) return null;
-//        String v = legacyBlockID;
-//        int sqoff = v.indexOf('[');
-//        if (sqoff >= 0) {
-//            v = v.substring(0, sqoff);
-//        }
-//        String[] tok = v.split(":");
-//        if ((tok.length > 2) || (tok[0].equals("minecraft"))) {
-//            return tok[0] + ":" + tok[1];
-//        }
-//        return "westerosblocks:" + tok[0];
-//    }
-
-    // TODO not sure if needed anymore
-//    public Map<String, String> getLegacyBlockMap() {
-//        if (legacyBlockID == null) return null;
-//        Map<String, String> mval = new HashMap<String, String>();
-//        if (legacyBlockID.indexOf('[') >= 0) {
-//            String p = legacyBlockID;
-//            int st = p.indexOf('[');
-//            int en = p.indexOf(']');
-//            p = p.substring(st + 1, en);
-//            String[] ptoks = p.split(",");    // Split at commas, if any
-//            for (String pair : ptoks) {
-//                String[] av = pair.split("=");
-//                if (av.length > 1) {
-//                    mval.put(av[0], av[1]);
-//                } else {
-//                    mval.put("variant", av[0]);
-//                }
-//            }
-//            return mval;
-//        }
-//        String[] tok = legacyBlockID.split(":");
-//        if ((tok.length == 2) && tok[0].equals("minecraft")) return null;
-//        if (tok.length >= 2) {
-//            String v = tok[tok.length - 1];
-//            if (v.indexOf('=') < 0) {
-//                if (!v.equals("default")) {
-//                    mval.put("variant", v);
-//                }
-//            } else {
-//                String[] stok = v.split(",");
-//                for (String sv : stok) {
-//                    String[] vtok = sv.split("=");
-//                    if (vtok.length > 1)
-//                        mval.put(vtok[0], vtok[1]);
-//                }
-//            }
-//            return mval;
-//        }
-//        return null;
-//    }
-
-
-    private static class BlockEntityRec {
-        ArrayList<Block> blocks = new ArrayList<Block>();
-        BlockEntityType<?> regobj;
     }
 
     public void registerBlockSoundEvents(List<String> soundList) {
