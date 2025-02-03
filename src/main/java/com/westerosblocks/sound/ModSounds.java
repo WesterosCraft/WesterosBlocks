@@ -9,42 +9,40 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class ModSounds {
+    private static HashMap<String, SoundEvent> REGISTERED_SOUNDS = new HashMap<>();
     public static WesterosBlockDef[] customBlockDefs = WesterosBlocksJsonLoader.getCustomBlockDefs();
 
     public static void registerSoundEvent(String name) {
-        Identifier id = WesterosBlocks.id(name);
-        Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
+        SoundEvent event = REGISTERED_SOUNDS.get(name);
+        if (event == null) {
+            Identifier id = WesterosBlocks.id(name);
+            SoundEvent soundEvent = SoundEvent.of(id);
+            SoundEvent registered = Registry.register(Registries.SOUND_EVENT, id, soundEvent);
+            REGISTERED_SOUNDS.put(name, registered);
+        }
     }
 
     public static void registerSounds() {
         for (WesterosBlockDef customBlockDef : customBlockDefs) {
-            if (customBlockDef == null)
-                continue;
-            // Register sound events
-            customBlockDef.registerBlockSoundEvents(customBlockDef.soundList);
+            if (customBlockDef == null) continue;
+            registerBlockSoundEvents(customBlockDef.soundList);
         }
         WesterosBlocks.LOGGER.info("Registering Mod Sounds for " + WesterosBlocks.MOD_ID);
     }
 
-    private static HashMap<String, SoundEvent> registered_sounds = new HashMap<>();
-
-//    public static SoundEvent registerSound(String soundName, RegisterEvent.RegisterHelper<SoundEvent> helper) {
-//        SoundEvent event = registered_sounds.get(soundName);
-//        if (event == null) {
-//            ResourceLocation location = ResourceLocation.fromNamespaceAndPath(MOD_ID, soundName);
-//            event = SoundEvent.createVariableRangeEvent(location);
-//
-////            SOUND_EVENTS.register(soundName, () -> finalEvent);
-//            helper.register(location, event);
-//            registered_sounds.put(soundName, event);
-//        }
-//        return event;
-//    }
+    public static void registerBlockSoundEvents(List<String> soundList) {
+        if (soundList != null) {
+            for (String snd : soundList) {
+                ModSounds.registerSoundEvent(snd);
+            }
+        }
+    }
 
     public static SoundEvent getRegisteredSound(String soundName) {
-        return registered_sounds.get(soundName);
+        return REGISTERED_SOUNDS.get(soundName);
     }
 
 }

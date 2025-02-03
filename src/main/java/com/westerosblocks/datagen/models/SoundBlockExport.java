@@ -27,7 +27,6 @@ public class SoundBlockExport extends ModelExport {
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
-        // If not custom model, generate model first
         if (!def.isCustomModel()) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
                 WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
@@ -35,7 +34,6 @@ public class SoundBlockExport extends ModelExport {
             }
         }
 
-        // Generate single variant with empty condition
         BlockStateVariant variant = BlockStateVariant.create();
         Identifier modelId = getModelId("base", 0, def.isCustomModel());
         variant.put(VariantSettings.MODEL, modelId);
@@ -51,7 +49,7 @@ public class SoundBlockExport extends ModelExport {
 
         Identifier modelId = getModelId("base", setIdx, false);
         Model model = new Model(
-                Optional.of(Identifier.ofVanilla("block/cube_all")), // Use vanilla cube_all parent
+                Optional.of(Identifier.ofVanilla("block/cube_all")),
                 Optional.empty(),
                 TextureKey.ALL
         );

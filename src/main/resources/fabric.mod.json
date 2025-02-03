@@ -5,13 +5,13 @@
 	"name": "WesterosBlocks",
 	"description": "A custom block mod for the WesterosCraft project.",
 	"authors": [
-		"Me!"
+		"mikeprimm", "Emoticone11", "geeberry"
 	],
 	"contact": {
 		"homepage": "https://westeroscraft.com/",
 		"sources": "https://github.com/WesterosCraft/WesterosBlocksFabric"
 	},
-	"license": "CC0-1.0",
+	"license": "Apache Public License v2",
 	"icon": "assets/westerosblocks/icon.png",
 	"environment": "*",
 	"entrypoints": {

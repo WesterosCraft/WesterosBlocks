@@ -80,7 +80,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     public String connectBy = "block";
     // Shape for normal cuboid (box)
     public static final String SHAPE_BOX = "box";
-    // Shape for crossed squares (plant-style) (texture is index 0 in list)
+    // TODO Shape for crossed squares (plant-style) (texture is index 0 in list)
     public static final String SHAPE_CROSSED = "crossed";
     // TODO wood type for wood blocks like fencegate. see WoodTypeUtil class
     public String woodType = null;
@@ -968,11 +968,5 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         return res;
     }
 
-    public void registerBlockSoundEvents(List<String> soundList) {
-        if (soundList != null) {
-            for (String snd : soundList) {
-                ModSounds.registerSoundEvent(snd);
-            }
-        }
-    }
+
 }

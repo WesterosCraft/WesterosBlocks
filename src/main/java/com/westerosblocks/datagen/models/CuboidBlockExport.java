@@ -323,10 +323,7 @@ public class CuboidBlockExport extends ModelExport {
         int requiredTextures = Math.max(6, textureCount);
 
         for (int i = 0; i < requiredTextures; i++) {
-            String texture = i < textureCount ?
-                    set.getTextureByIndex(i) :
-                    set.getTextureByIndex(0);
-
+            String texture = i < textureCount ? set.getTextureByIndex(i) : set.getTextureByIndex(textureCount - 1);
             textureMap.put(modTextureKeyForIndex(i), createBlockIdentifier(texture));
         }
 

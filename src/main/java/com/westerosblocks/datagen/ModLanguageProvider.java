@@ -1,6 +1,5 @@
 package com.westerosblocks.datagen;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosBlocksJsonLoader;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;

@@ -130,7 +130,6 @@ public class WCSoundBlock extends WCSolidBlock {
         BlockState state = super.getPlacementState(ctx);
         if (state == null) return null;
 
-        // Add our properties to the parent state
         state = state.with(POWERED, false);
         if (INDEX != null) {
             state = state.with(INDEX, 1);
@@ -145,7 +144,7 @@ public class WCSoundBlock extends WCSolidBlock {
         }
 
         if (INDEX != null) {
-            // Rotate through available sounds
+            // rotate through available sounds
             int index = (state.get(INDEX) + 1) % def.soundList.size();
             world.setBlockState(pos, state.with(INDEX, index), Block.NOTIFY_ALL);
         }
@@ -172,8 +171,7 @@ public class WCSoundBlock extends WCSolidBlock {
         SoundEvent sound = ModSounds.getRegisteredSound(soundId);
 
         if (sound != null) {
-            float pitch = (float) Math.pow(2.0D, (double) (-12) / 12.0D);
-            world.playSound(null, pos, sound, SoundCategory.RECORDS, 3.0F, pitch);
+            world.playSound(null, pos, sound, SoundCategory.RECORDS, 3.0F, 1.0F);
         }
     }
 
@@ -188,7 +186,6 @@ public class WCSoundBlock extends WCSolidBlock {
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (playbackPeriod <= 0) return;
 
-        // Check if within allowed time window
         long timeOfDay = world.getTimeOfDay() % 24000;
         if (timeOfDay < 0) timeOfDay += 24000;
 
@@ -207,6 +204,20 @@ public class WCSoundBlock extends WCSolidBlock {
 
         scheduleNextTick(world, pos);
     }
+
+    // TODO make it so the sound cancels playin when block is broken
+//    @Override
+//    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+//        // Stop the sound when the block is broken
+//        if (!world.isClient) {
+//            // Play a "stop" sound or cancel the sound logic here
+//            world.playSound(null, pos, ModSounds.STOP_SOUND_EVENT, SoundCategory.RECORDS, 0.0F, 1.0F);
+//        }
+//
+//        // Call the super method to handle default block-breaking behavior
+//        super.onBreak(world, pos, state, player);
+//        return state;
+//    }
 
     private static final String[] TAGS = {};
 
