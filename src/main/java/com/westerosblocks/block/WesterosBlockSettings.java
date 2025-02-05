@@ -2,6 +2,7 @@ package com.westerosblocks.block;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.MapColor;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.sound.BlockSoundGroup;
 
 import java.util.HashMap;
@@ -11,9 +12,8 @@ public class WesterosBlockSettings {
     private static final Map<String, AbstractBlock.Settings> BASE_SETTINGS = new HashMap<>();
 
     static {
-        // Rock/Stone base settings
         BASE_SETTINGS.put("rock", AbstractBlock.Settings.create()
-                .strength(1.5F)  // Default strength
+                .strength(1.5F)
                 .requiresTool()
                 .sounds(BlockSoundGroup.STONE)
                 .mapColor(MapColor.LIGHT_GRAY));
@@ -82,6 +82,86 @@ public class WesterosBlockSettings {
                 .sounds(BlockSoundGroup.SNOW)
                 .mapColor(MapColor.WHITE));
 
+        BASE_SETTINGS.put("plants", AbstractBlock.Settings.create()
+                .noCollision()
+                .breakInstantly()
+                .sounds(BlockSoundGroup.GRASS)
+                .nonOpaque());
+
+        BASE_SETTINGS.put("vine", AbstractBlock.Settings.create()
+                .noCollision()
+                .ticksRandomly()
+                .strength(0.2F)
+                .sounds(BlockSoundGroup.GRASS)
+                .nonOpaque());
+
+        BASE_SETTINGS.put("sponge", AbstractBlock.Settings.create()
+                .strength(0.6F)
+                .sounds(BlockSoundGroup.GRASS));
+
+        BASE_SETTINGS.put("cloth", AbstractBlock.Settings.create()
+                .strength(0.8F)
+                .sounds(BlockSoundGroup.WOOL)
+                .burnable());
+
+        BASE_SETTINGS.put("fire", AbstractBlock.Settings.create()
+                .noCollision()
+                .breakInstantly()
+                .luminance(state -> 15)
+                .sounds(BlockSoundGroup.WOOL));
+
+        BASE_SETTINGS.put("sand", AbstractBlock.Settings.create()
+                .strength(0.5F)
+                .sounds(BlockSoundGroup.SAND)
+                .mapColor(MapColor.PALE_YELLOW));
+
+        BASE_SETTINGS.put("tnt", AbstractBlock.Settings.create()
+                .breakInstantly()
+                .sounds(BlockSoundGroup.GRASS)
+                .burnable());
+
+        BASE_SETTINGS.put("coral", AbstractBlock.Settings.create()
+                .strength(1.5F)
+                .requiresTool()
+                .sounds(BlockSoundGroup.STONE));
+
+        BASE_SETTINGS.put("cactus", AbstractBlock.Settings.create()
+                .strength(0.4F)
+                .sounds(BlockSoundGroup.WOOL)
+                .nonOpaque());
+
+        BASE_SETTINGS.put("clay", AbstractBlock.Settings.create()
+                .strength(0.6F)
+                .sounds(BlockSoundGroup.GRAVEL)
+                .mapColor(MapColor.LIGHT_BLUE));
+
+        BASE_SETTINGS.put("portal", AbstractBlock.Settings.create()
+                .noCollision()
+                .strength(-1.0F)
+                .sounds(BlockSoundGroup.GLASS)
+                .luminance(state -> 11));
+
+        BASE_SETTINGS.put("cake", AbstractBlock.Settings.create()
+                .strength(0.5F)
+                .sounds(BlockSoundGroup.WOOL)
+                .nonOpaque());
+
+        BASE_SETTINGS.put("web", AbstractBlock.Settings.create()
+                .noCollision()
+                .requiresTool()
+                .strength(4.0F)
+                .nonOpaque());
+
+        BASE_SETTINGS.put("piston", AbstractBlock.Settings.create()
+                .strength(1.5F)
+                .sounds(BlockSoundGroup.STONE)
+                .pistonBehavior(PistonBehavior.BLOCK));
+
+        BASE_SETTINGS.put("decoration", AbstractBlock.Settings.create()
+                .noCollision()
+                .strength(0.0F)
+                .sounds(BlockSoundGroup.STONE)
+                .nonOpaque());
     }
 
     public static AbstractBlock.Settings get(String material) {

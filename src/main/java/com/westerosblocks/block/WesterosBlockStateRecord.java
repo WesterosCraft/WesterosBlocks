@@ -47,8 +47,8 @@ public class WesterosBlockStateRecord {
     public void doStateRecordInit() {
         // If just base textures, generate equivalent random textures (simpler logic for blocks that support them
         if (this.randomTextures == null) {
-            if (this.textures == null) this.textures = new ArrayList<String>();    // Always have at least array;
-            this.randomTextures = new ArrayList<RandomTextureSet>();
+            if (this.textures == null) this.textures = new ArrayList<>(); // Always have at least array;
+            this.randomTextures = new ArrayList<>();
             RandomTextureSet set = new RandomTextureSet();
             set.textures = textures;
             this.randomTextures.add(set);
@@ -122,12 +122,6 @@ public class WesterosBlockStateRecord {
 
     public List<Cuboid> getCuboidList() {
         return cuboids;
-    }
-
-    public List<BoundingBox> getCollisionBoxList() {
-        if (this.collisionBoxes != null)
-            return this.collisionBoxes;
-        return Collections.emptyList();
     }
 
     // Get number of base textures

@@ -26,9 +26,6 @@ public class WesterosBlocks implements ModInitializer {
 //            "/definitions/test_blocks.json"
     );
 
-    // TODO need to figure otu menuoverrides
-    // public static WesterosItemMenuOverrides[] menuOverrides;
-
     @Override
     public void onInitialize() {
         WesterosBlocksJsonLoader.initialize(configFiles);
@@ -39,7 +36,6 @@ public class WesterosBlocks implements ModInitializer {
         ModItems.registerModItems();
         ModSounds.registerSounds();
         ModBlockEntities.registerModEntities();
-//        ColorHandlers.registerColorProviders();
 
         ServerLifecycleEvents.SERVER_STOPPING.register(server -> {
             // handles any pending door restores (force immediate)

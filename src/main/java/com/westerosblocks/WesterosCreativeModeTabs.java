@@ -69,7 +69,6 @@ public class WesterosCreativeModeTabs {
         Identifier tabId = WesterosBlocks.id(tabName);
         RegistryKey<ItemGroup> key = RegistryKey.of(RegistryKeys.ITEM_GROUP, tabId);
 
-
         ItemGroup group = FabricItemGroup.builder()
                 .icon(() -> new ItemStack(Registries.ITEM.get(Identifier.of(WesterosBlocks.MOD_ID, iconItem))))
                 .displayName(Text.literal(title))
@@ -87,7 +86,6 @@ public class WesterosCreativeModeTabs {
         return key;
     }
 
-    // Call this in your mod initializer
     public static void registerCreativeModeTabs() {
         registerTabs();
     }

@@ -454,8 +454,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         return getTypeValue(key, "");
     }
 
-    // TODO
-    private static final Map<String, AbstractBlock.Settings> settingsTable = new HashMap<>();
     private static final Map<String, BlockSoundGroup> stepSoundTable = new HashMap<>();
     //    private static final Map<String, CreativeModeTab> tabTable = new HashMap<>();
     private static final Map<String, WesterosBlockFactory> typeTable = new HashMap<String, WesterosBlockFactory>();
@@ -576,14 +574,12 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     private AbstractBlock.Settings applyCustomProperties(Block block) {
         AbstractBlock.Settings settings;
 
-        // Create new settings if no block provided, otherwise copy from block
         if (block == null) {
-            settings = AbstractBlock.Settings.create(); // Create new settings
+            settings = AbstractBlock.Settings.create();
         } else {
             settings = AbstractBlock.Settings.copy(block);
         }
 
-        // Rest of the settings application remains the same
         if (hardness >= 0.0F) {
             settings = resistance >= 0.0
                     ? settings.strength(hardness, resistance)
@@ -612,19 +608,10 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
         // Handle transparency/occlusion
         if ((!ambientOcclusion) || (nonOpaque)) {
-            settings = settings.nonOpaque()
-                    .blockVision(WesterosBlockDef::never);
+            settings = settings.nonOpaque().blockVision(WesterosBlockDef::never);
         }
 
         return settings;
-    }
-
-    public AbstractBlock.Settings makeAndCopyProperties(Block sourceBlock) {
-//        AbstractBlock.Settings settings = sourceBlock != null
-//                ? AbstractBlock.Settings.copy(sourceBlock)
-//                : makeBlockSettings();
-
-        return applyCustomProperties(sourceBlock);
     }
 
     private static boolean never(BlockState state, BlockView world, BlockPos pos) {
@@ -721,104 +708,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     }
 
     public static void initialize() {
-        settingsTable.put("air", AbstractBlock.Settings.create()
-                .noCollision()
-                .dropsNothing()
-                .air());
-
-        settingsTable.put("grass", AbstractBlock.Settings.create()
-                .strength(0.6F)
-                .sounds(BlockSoundGroup.GRASS)
-                .mapColor(MapColor.GREEN));
-
-        settingsTable.put("ground", AbstractBlock.Settings.create()
-                .strength(0.5F)
-                .sounds(BlockSoundGroup.GRAVEL)
-                .mapColor(MapColor.DIRT_BROWN));
-
-        settingsTable.put("wood", AbstractBlock.Settings.create()
-                .strength(2.0F)
-                .sounds(BlockSoundGroup.WOOD)
-                .burnable()
-                .mapColor(MapColor.OAK_TAN));
-
-        settingsTable.put("rock", AbstractBlock.Settings.create()
-                .strength(1.5F)
-                .requiresTool()
-                .sounds(BlockSoundGroup.STONE));
-
-        settingsTable.put("iron", AbstractBlock.Settings.create()
-                .strength(5.0F)
-                .requiresTool()
-                .sounds(BlockSoundGroup.METAL)
-                .mapColor(MapColor.IRON_GRAY));
-
-        settingsTable.put("water", AbstractBlock.Settings.create()
-                .noCollision()
-                .dropsNothing()
-                .liquid());
-
-        settingsTable.put("lava", AbstractBlock.Settings.create()
-                .noCollision()
-                .dropsNothing()
-                .liquid()
-                .luminance(state -> 15));
-
-        settingsTable.put("leaves", AbstractBlock.Settings.create()
-                .strength(0.2F)
-                .sounds(BlockSoundGroup.GRASS)
-                .nonOpaque()
-                .burnable()
-                .ticksRandomly()
-                .suffocates((state, world, pos) -> false)
-                .blockVision((state, world, pos) -> false));
-
-        settingsTable.put("glass", AbstractBlock.Settings.create()
-                .strength(0.3F)
-                .sounds(BlockSoundGroup.GLASS)
-                .nonOpaque()
-                .allowsSpawning((state, world, pos, type) -> false));
-
-        settingsTable.put("ice", AbstractBlock.Settings.create()
-                .strength(0.5F)
-                .slipperiness(0.98F)
-                .sounds(BlockSoundGroup.GLASS)
-                .nonOpaque());
-
-        settingsTable.put("snow", AbstractBlock.Settings.create()
-                .strength(0.1F)
-                .sounds(BlockSoundGroup.SNOW)
-                .mapColor(MapColor.WHITE));
-//        materialTable.put("air", AuxMaterial.AIR);
-//        materialTable.put("grass", AuxMaterial.GRASS);
-//        materialTable.put("ground", AuxMaterial.DIRT);
-//        materialTable.put("wood", AuxMaterial.WOOD);
-//        materialTable.put("rock", AuxMaterial.STONE);
-//        materialTable.put("iron", AuxMaterial.METAL);
-//        materialTable.put("anvil", AuxMaterial.METAL);
-//        materialTable.put("water", AuxMaterial.WATER);
-//        materialTable.put("lava", AuxMaterial.LAVA);
-//        materialTable.put("leaves", AuxMaterial.LEAVES);
-//        materialTable.put("plants", AuxMaterial.PLANT);
-//        materialTable.put("vine", AuxMaterial.PLANT);
-//        materialTable.put("sponge", AuxMaterial.SPONGE);
-//        materialTable.put("cloth", AuxMaterial.CLOTH_DECORATION);
-//        materialTable.put("fire", AuxMaterial.FIRE);
-//        materialTable.put("sand", AuxMaterial.SAND);
-//        materialTable.put("glass", AuxMaterial.GLASS);
-//        materialTable.put("tnt", AuxMaterial.EXPLOSIVE);
-//        materialTable.put("coral", AuxMaterial.STONE);
-//        materialTable.put("ice", AuxMaterial.ICE);
-//        materialTable.put("snow", AuxMaterial.SNOW);
-//        materialTable.put("craftedSnow", AuxMaterial.SNOW);
-//        materialTable.put("cactus", AuxMaterial.CACTUS);
-//        materialTable.put("clay", AuxMaterial.CLAY);
-//        materialTable.put("portal", AuxMaterial.PORTAL);
-//        materialTable.put("cake", AuxMaterial.CAKE);
-//        materialTable.put("web", AuxMaterial.WEB);
-//        materialTable.put("piston", AuxMaterial.PISTON);
-//        materialTable.put("decoration", AuxMaterial.DECORATION);
-
         stepSoundTable.put("powder", BlockSoundGroup.SAND);
         stepSoundTable.put("wood", BlockSoundGroup.WOOD);
         stepSoundTable.put("gravel", BlockSoundGroup.GRAVEL);
@@ -926,16 +815,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         particles.put("heart", ParticleTypes.HEART);
         particles.put("angryVillager", ParticleTypes.ANGRY_VILLAGER);
         particles.put("happyVillager", ParticleTypes.HAPPY_VILLAGER);
-    }
-
-    // TODO
-    public AbstractBlock.Settings getMaterialSettings() {
-        if (material == null) {
-            WesterosBlocks.LOGGER.warn(String.format("No material specified in block '%s', using stone", blockName));
-            return WesterosBlockSettings.get("rock");
-        }
-
-        return WesterosBlockSettings.get(material);
     }
 
     public BlockSoundGroup getSoundType() {

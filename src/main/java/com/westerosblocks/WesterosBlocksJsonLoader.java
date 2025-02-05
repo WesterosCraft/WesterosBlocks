@@ -16,7 +16,6 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
-// TODO maybe figure out a different name idk
 // Top level container for WesterosBlocks.json parsed data
 public class WesterosBlocksJsonLoader {
     public static WesterosBlocksJsonLoader.WesterosBlocksConfig customConfig;
@@ -38,7 +37,6 @@ public class WesterosBlocksJsonLoader {
     public static class WesterosBlocksConfig {
         public WesterosBlockSetDef[] blockSets;
         public WesterosBlockDef[] blocks;
-        public WesterosBlockColorMap[] colorMaps;
         public WesterosItemMenuOverrides[] menuOverrides;
         public WesterosBlockTags[] blockTags;
     }

@@ -141,14 +141,8 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
     @Override
     public boolean canConnect(BlockState state, boolean neighborIsFullSquare, Direction dir) {
         Block block = state.getBlock();
-        // Check if it's the same type of fence
-        boolean bl = this.isSameFence(state) &&
-                (!state.contains(UNCONNECT) || !state.get(UNCONNECT));
-        // Check if it's a compatible fence gate
-        boolean bl2 = block instanceof FenceGateBlock &&
-                FenceGateBlock.canWallConnect(state, dir);
-
-        // Match vanilla fence logic more closely
+        boolean bl = this.isSameFence(state) && (!state.contains(UNCONNECT) || !state.get(UNCONNECT));
+        boolean bl2 = block instanceof FenceGateBlock && FenceGateBlock.canWallConnect(state, dir);
         return !Block.cannotConnect(state) && neighborIsFullSquare || bl || bl2;
     }
 
@@ -163,8 +157,7 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
     }
 
     @Override
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
-                                 BlockHitResult hit) {
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         Hand hand = player.getActiveHand();
         if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
             state = state.cycle(this.STATE);
@@ -176,12 +169,11 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
         }
     }
 
-
     private static final String[] TAGS = {"fences"};
     private static final String[] TAGS2 = {"fences", "wooden_fences"};
 
     @Override
     public String[] getBlockTags() {
-        return def.getMaterialSettings() == WesterosBlockSettings.get("wood") ? TAGS2 : TAGS;
+        return WesterosBlockSettings.get(def.material) == WesterosBlockSettings.get("wood") ? TAGS2 : TAGS;
     }
 }
