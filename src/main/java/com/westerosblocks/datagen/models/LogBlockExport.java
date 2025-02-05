@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -14,9 +14,9 @@ import java.util.Optional;
 public class LogBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
-    public LogBlockExport(BlockStateModelGenerator generator, Block currentBlock, WesterosBlockDef customBlockDef) {
+    public LogBlockExport(BlockStateModelGenerator generator, Block currentBlock, ModBlock customBlockDef) {
         super(generator, currentBlock, customBlockDef);
         this.generator = generator;
         this.block = currentBlock;
@@ -34,7 +34,7 @@ public class LogBlockExport extends ModelExport {
 
         for (int i = 0; i < states.length; i++) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
 
                 BlockStateVariant variant = BlockStateVariant.create();
                 Identifier symId = WesterosBlocks.id(GENERATED_PATH + getModelName(models[i], setIdx));
@@ -56,7 +56,7 @@ public class LogBlockExport extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
 
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-            WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+            ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
             // make models
             String[] types = {"cube_log_horizontal", "cube_log", "cube_log_horizontal"};
             for (int i = 0; i < models.length; i++) {
@@ -65,7 +65,7 @@ public class LogBlockExport extends ModelExport {
         }
     }
 
-    public void generateLogModel(BlockStateModelGenerator generator, String type, WesterosBlockDef.RandomTextureSet set, boolean isTinted, int setIdx, String modelSuffix) {
+    public void generateLogModel(BlockStateModelGenerator generator, String type, ModBlock.RandomTextureSet set, boolean isTinted, int setIdx, String modelSuffix) {
         TextureMap textureMap = ModTextureMap.frontTopSides(set, null, null, null);
         Identifier modelId = Identifier.of(WesterosBlocks.MOD_ID,
                 String.format("%s%s/%s_v%s", GENERATED_PATH, def.blockName, modelSuffix, setIdx + 1));
@@ -87,7 +87,7 @@ public class LogBlockExport extends ModelExport {
     }
 
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
         itemModelGenerator.register(
                 currentBlock.asItem(),
                 new Model(Optional.of(WesterosBlocks.id(GENERATED_PATH + blockDefinition.blockName + "/" + models[1] + "_v1")), Optional.empty())

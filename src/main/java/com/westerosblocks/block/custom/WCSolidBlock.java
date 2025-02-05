@@ -1,9 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -23,8 +23,8 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
-    protected WesterosBlockDef def;
+public class WCSolidBlock extends Block implements ModBlockLifecycle {
+    protected ModBlock def;
     protected VoxelShape collisionbox;
     protected VoxelShape supportbox;
     public static final IntProperty CONNECTSTATE = IntProperty.of("connectstate", 0, 3);
@@ -34,15 +34,15 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
     protected static BooleanProperty tempSYMMETRICAL;
     public final boolean symmetrical;
     public final Boolean symmetricalDef;
-    protected static WesterosBlockDef.StateProperty tempSTATE;
-    public static WesterosBlockDef.StateProperty STATE;
+    protected static ModBlock.StateProperty tempSTATE;
+    public static ModBlock.StateProperty STATE;
     protected boolean toggleOnUse = false;
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings();
-            WesterosBlockDef.StateProperty state = def.buildStateProperty();
+            ModBlock.StateProperty state = def.buildStateProperty();
             if (state != null) {
                 tempSTATE = state;
             }
@@ -74,7 +74,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
         }
     }
 
-    protected WCSolidBlock(AbstractBlock.Settings props, WesterosBlockDef def, boolean doConnectstate, Boolean doSymmetrical) {
+    protected WCSolidBlock(AbstractBlock.Settings props, ModBlock def, boolean doConnectstate, Boolean doSymmetrical) {
         super(props);
         this.def = def;
 
@@ -112,11 +112,11 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
         this.setDefaultState(defbs);
     }
 
-    protected WCSolidBlock(AbstractBlock.Settings props, WesterosBlockDef def, boolean doConnectstate) {
+    protected WCSolidBlock(AbstractBlock.Settings props, ModBlock def, boolean doConnectstate) {
         this(props, def, doConnectstate, null);
     }
 
-    protected WCSolidBlock(AbstractBlock.Settings props, WesterosBlockDef def) {
+    protected WCSolidBlock(AbstractBlock.Settings props, ModBlock def) {
         this(props, def, false, null);
     }
 
@@ -208,7 +208,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
     private static final String[] TAGS = {};
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

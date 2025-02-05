@@ -1,9 +1,9 @@
 package com.westerosblocks.datagen;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.WesterosBlocksJsonLoader;
+import com.westerosblocks.WesterosBlocksDefLoader;
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.datagen.models.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -20,9 +20,9 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         HashMap<String, Block> customBlocks = ModBlocks.getCustomBlocksByName();
-        WesterosBlockDef[] customBlockDefs = WesterosBlocksJsonLoader.getCustomBlockDefs();
+        ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
 
-        for (WesterosBlockDef customBlockDef : customBlockDefs) {
+        for (ModBlock customBlockDef : customBlockDefs) {
             if (customBlockDef == null) continue;
             Block currentBlock = customBlocks.get(customBlockDef.getBlockName());
 
@@ -168,9 +168,9 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         HashMap<String, Block> customBlocks = ModBlocks.getCustomBlocksByName();
-        WesterosBlockDef[] customBlockDefs = WesterosBlocksJsonLoader.getCustomBlockDefs();
+        ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
 
-        for (WesterosBlockDef customBlockDef : customBlockDefs) {
+        for (ModBlock customBlockDef : customBlockDefs) {
             if (customBlockDef == null) continue;
             Block currentBlock = customBlocks.get(customBlockDef.getBlockName());
             switch (customBlockDef.blockType) {

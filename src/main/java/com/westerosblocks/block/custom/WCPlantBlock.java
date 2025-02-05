@@ -2,12 +2,11 @@ package com.westerosblocks.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.SlabType;
-import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -28,19 +27,19 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
-public class WCPlantBlock extends PlantBlock implements WesterosBlockLifecycle {
+public class WCPlantBlock extends PlantBlock implements ModBlockLifecycle {
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings().noCollision().breakInstantly();
             // See if we have a state property
-            WesterosBlockDef.StateProperty state = def.buildStateProperty();
+            ModBlock.StateProperty state = def.buildStateProperty();
             if (state != null) {
                 tempSTATE = state;
             }
             String t = def.getType();
-            if ((t != null) && (t.contains(WesterosBlockDef.LAYER_SENSITIVE))) {
+            if ((t != null) && (t.contains(ModBlock.LAYER_SENSITIVE))) {
                 tempLAYERS = Properties.LAYERS;
             }
             Block blk = new WCPlantBlock(settings, def);
@@ -51,10 +50,10 @@ public class WCPlantBlock extends PlantBlock implements WesterosBlockLifecycle {
     // Support waterlogged on these blocks
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    private final WesterosBlockDef def;
-    protected static WesterosBlockDef.StateProperty tempSTATE;
+    private final ModBlock def;
+    protected static ModBlock.StateProperty tempSTATE;
     protected static IntProperty tempLAYERS;
-    protected WesterosBlockDef.StateProperty STATE;
+    protected ModBlock.StateProperty STATE;
     protected IntProperty LAYERS;
     protected boolean toggleOnUse = false;
     public boolean layerSensitive = false;
@@ -71,7 +70,7 @@ public class WCPlantBlock extends PlantBlock implements WesterosBlockLifecycle {
             Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)
     };
 
-    protected WCPlantBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCPlantBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
         this.def = def;
         String t = def.getType();
@@ -94,7 +93,7 @@ public class WCPlantBlock extends PlantBlock implements WesterosBlockLifecycle {
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

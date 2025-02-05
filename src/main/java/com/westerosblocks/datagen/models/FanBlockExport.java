@@ -2,7 +2,7 @@ package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -15,9 +15,9 @@ import java.util.Optional;
 public class FanBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
-    public FanBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public FanBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -75,7 +75,7 @@ public class FanBlockExport extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateFanModels(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set, int setIdx) {
+    private void generateFanModels(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, int setIdx) {
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.FAN, createBlockIdentifier(set.getTextureByIndex(0)));
         String basePath = def.isTinted() ? "tinted" : "untinted";
@@ -106,8 +106,8 @@ public class FanBlockExport extends ModelExport {
                 setIdx + 1));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
-        WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
+        ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         String basePath = blockDefinition.isTinted() ? "tinted" : "untinted";
 
         // main fan item
@@ -121,7 +121,7 @@ public class FanBlockExport extends ModelExport {
         }
     }
 
-    private static void generateSingleItemModel(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef.RandomTextureSet set, String basePath) {
+    private static void generateSingleItemModel(ItemModelGenerator itemModelGenerator, Block block, ModBlock.RandomTextureSet set, String basePath) {
         Model itemModel = new Model(
                 Optional.of(WesterosBlocks.id("block/" + basePath + "/fan")),
                 Optional.empty(),

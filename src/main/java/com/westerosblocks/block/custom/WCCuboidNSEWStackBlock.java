@@ -24,11 +24,11 @@ import net.minecraft.world.WorldView;
 
 import java.util.ArrayList;
 
-public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlockLifecycle {
+public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements ModBlockLifecycle {
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
         	def.nonOpaque = true;
             AbstractBlock.Settings settings = def.makeBlockSettings();
             Block blk = new WCCuboidNSEWStackBlock(settings, def);
@@ -43,7 +43,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     public final boolean allowHalfBreak;
     // Index = FACING + 4*TOP
 
-    protected WCCuboidNSEWStackBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCCuboidNSEWStackBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings, def, 8);
         String t = def.getType();
         boolean brk = false;
@@ -59,13 +59,13 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
         this.allowHalfBreak = brk;
         
         for (int i = 0; i < 2; i++) {
-        	WesterosBlockStateRecord se = def.getStackElementByIndex(i);
-            for (WesterosBlockDef.Cuboid c : se.cuboids) {
+        	ModBlockStateRecord se = def.getStackElementByIndex(i);
+            for (ModBlock.Cuboid c : se.cuboids) {
     			cuboid_by_facing[4*i] = new ArrayList<>();	// Use clean, since parent uses cuboid not stack
                 cuboid_by_facing[4*i].add(c);
-                cuboid_by_facing[4*i + 1].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY90));
-                cuboid_by_facing[4*i + 2].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY180));
-                cuboid_by_facing[4*i + 3].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY270));
+                cuboid_by_facing[4*i + 1].add(c.rotateCuboid(ModBlock.CuboidRotation.ROTY90));
+                cuboid_by_facing[4*i + 2].add(c.rotateCuboid(ModBlock.CuboidRotation.ROTY180));
+                cuboid_by_facing[4*i + 3].add(c.rotateCuboid(ModBlock.CuboidRotation.ROTY270));
             }        	
         }
         for (int j = 0; j < cuboid_by_facing.length; j++) {

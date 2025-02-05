@@ -1,16 +1,13 @@
 package com.westerosblocks.block;
 
 // Used to define the interfaces for properly priming one of our custom block definitions
-// must also have constructor with WesterosBlockDef as parameter
+// must also have constructor with WesterosBlock as parameter
 
-import com.mojang.serialization.MapCodec;
-import net.minecraft.state.property.Properties;
-
-public interface WesterosBlockLifecycle {
+public interface ModBlockLifecycle {
     /**
      * Get definition for block
      */
-    WesterosBlockDef getWBDefinition();
+    ModBlock getWBDefinition();
 
     /**
      * Get block tags for block

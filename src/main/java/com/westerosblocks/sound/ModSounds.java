@@ -1,8 +1,8 @@
 package com.westerosblocks.sound;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.WesterosBlocksJsonLoader;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.WesterosBlocksDefLoader;
+import com.westerosblocks.block.ModBlock;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ModSounds {
     private static HashMap<String, SoundEvent> REGISTERED_SOUNDS = new HashMap<>();
-    public static WesterosBlockDef[] customBlockDefs = WesterosBlocksJsonLoader.getCustomBlockDefs();
+    public static ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
 
     public static void registerSoundEvent(String name) {
         SoundEvent event = REGISTERED_SOUNDS.get(name);
@@ -26,7 +26,7 @@ public class ModSounds {
     }
 
     public static void registerSounds() {
-        for (WesterosBlockDef customBlockDef : customBlockDefs) {
+        for (ModBlock customBlockDef : customBlockDefs) {
             if (customBlockDef == null) continue;
             registerBlockSoundEvents(customBlockDef.soundList);
         }

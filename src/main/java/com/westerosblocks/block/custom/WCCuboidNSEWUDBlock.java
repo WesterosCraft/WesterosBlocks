@@ -1,9 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -17,15 +17,15 @@ import net.minecraft.util.math.Direction;
 
 import java.util.List;
 
-public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockLifecycle {
+public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements ModBlockLifecycle {
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             def.nonOpaque = true;
             AbstractBlock.Settings settings = def.makeBlockSettings();
             // See if we have a state property
-            WesterosBlockDef.StateProperty state = def.buildStateProperty();
+            ModBlock.StateProperty state = def.buildStateProperty();
             if (state != null) {
                 tempSTATE = state;
             }
@@ -36,19 +36,19 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
 
     public static final DirectionProperty FACING = DirectionProperty.of("facing", Direction.EAST, Direction.SOUTH, Direction.WEST, Direction.NORTH, Direction.DOWN, Direction.UP);
 
-    protected WCCuboidNSEWUDBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCCuboidNSEWUDBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings, def, 6);
 
         int stateCount = def.states.size();
         for (int stateIdx = 0; stateIdx < stateCount; stateIdx++) {
             int baseOffset = stateIdx * this.modelsPerState;
 
-            for (WesterosBlockDef.Cuboid cuboid : cuboid_by_facing[baseOffset]) {
-                cuboid_by_facing[baseOffset + 1].add(cuboid.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY90));
-                cuboid_by_facing[baseOffset + 2].add(cuboid.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY180));
-                cuboid_by_facing[baseOffset + 3].add(cuboid.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY270));
-                cuboid_by_facing[baseOffset + 4].add(cuboid.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTZ90));
-                cuboid_by_facing[baseOffset + 5].add(cuboid.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTZ270));
+            for (ModBlock.Cuboid cuboid : cuboid_by_facing[baseOffset]) {
+                cuboid_by_facing[baseOffset + 1].add(cuboid.rotateCuboid(ModBlock.CuboidRotation.ROTY90));
+                cuboid_by_facing[baseOffset + 2].add(cuboid.rotateCuboid(ModBlock.CuboidRotation.ROTY180));
+                cuboid_by_facing[baseOffset + 3].add(cuboid.rotateCuboid(ModBlock.CuboidRotation.ROTY270));
+                cuboid_by_facing[baseOffset + 4].add(cuboid.rotateCuboid(ModBlock.CuboidRotation.ROTZ90));
+                cuboid_by_facing[baseOffset + 5].add(cuboid.rotateCuboid(ModBlock.CuboidRotation.ROTZ270));
             }
         }
 
@@ -74,7 +74,7 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
     }
 
     @Override
-    public List<WesterosBlockDef.Cuboid> getModelCuboids(int stateIdx) {
+    public List<ModBlock.Cuboid> getModelCuboids(int stateIdx) {
         return cuboid_by_facing[modelsPerState * stateIdx + 3];
     }
 

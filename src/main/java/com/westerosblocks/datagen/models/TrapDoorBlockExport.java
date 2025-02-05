@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -14,7 +14,7 @@ import java.util.Optional;
 public class TrapDoorBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
     private static final ModelEntry[] MODEL_ENTRIES = {
             new ModelEntry("facing=north,half=bottom,open=false", "bottom", 0),
@@ -38,7 +38,7 @@ public class TrapDoorBlockExport extends ModelExport {
     private record ModelEntry(String condition, String modelType, int yRotation) {
     }
 
-    public TrapDoorBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public TrapDoorBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -51,7 +51,7 @@ public class TrapDoorBlockExport extends ModelExport {
 
         for (ModelEntry entry : MODEL_ENTRIES) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
 
                 BlockStateVariant variant = BlockStateVariant.create();
                 Identifier modelId = getModelId(entry.modelType, setIdx);
@@ -73,13 +73,13 @@ public class TrapDoorBlockExport extends ModelExport {
 
 
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-            WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+            ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
             generateTrapdoorModels(generator, set, setIdx);
         }
 
     }
 
-    private void generateTrapdoorModels(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set, int setIdx) {
+    private void generateTrapdoorModels(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, int setIdx) {
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.TEXTURE, createBlockIdentifier(set.getTextureByIndex(0)));
 
@@ -93,7 +93,7 @@ public class TrapDoorBlockExport extends ModelExport {
                 String.format("%s%s/%s_v%d", GENERATED_PATH, def.getBlockName(), type, setIdx + 1));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
         String path = String.format("%s%s/bottom_v1", GENERATED_PATH, blockDefinition.blockName);
 
         itemModelGenerator.register(

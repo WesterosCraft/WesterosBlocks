@@ -1,9 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import com.westerosblocks.util.WoodTypeUtil;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -16,20 +16,20 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class WCFenceGateBlock extends FenceGateBlock implements WesterosBlockLifecycle {
-    public static class Factory extends WesterosBlockFactory {
+public class WCFenceGateBlock extends FenceGateBlock implements ModBlockLifecycle {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings();
             Block blk = new WCFenceGateBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
 
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     private boolean locked = false;
 
-    protected WCFenceGateBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCFenceGateBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(WoodTypeUtil.getWoodType(def.getWoodType()), settings);
         this.def = def;
         String type = def.getType();
@@ -46,7 +46,7 @@ public class WCFenceGateBlock extends FenceGateBlock implements WesterosBlockLif
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

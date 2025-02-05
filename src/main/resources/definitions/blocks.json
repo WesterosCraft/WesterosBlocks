@@ -16149,6 +16149,7 @@
       "creativeTab": "westeros_lighting_tab",
       "lightValue": 1,
       "label": "Wildfire",
+      "particle": "wildfire",
       "material": "fire",
       "textures": [
         "wildfire/wildfire_layer_0",

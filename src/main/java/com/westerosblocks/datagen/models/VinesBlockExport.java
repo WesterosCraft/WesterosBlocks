@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -13,9 +13,9 @@ import java.util.Optional;
 public class VinesBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
-    public VinesBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public VinesBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -26,7 +26,7 @@ public class VinesBlockExport extends ModelExport {
         MultipartBlockStateSupplier stateSupplier = MultipartBlockStateSupplier.create(block);
 
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-            WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+            ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
 
             if (!def.isCustomModel()) {
                 generateVineModels(generator, set, setIdx);
@@ -69,7 +69,7 @@ public class VinesBlockExport extends ModelExport {
         generator.blockStateCollector.accept(stateSupplier);
     }
 
-    private BlockStateVariant createVariant(WesterosBlockDef.RandomTextureSet set, int setIdx, int yRotation, boolean isVertical, int xRotation) {
+    private BlockStateVariant createVariant(ModBlock.RandomTextureSet set, int setIdx, int yRotation, boolean isVertical, int xRotation) {
         BlockStateVariant variant = BlockStateVariant.create()
                 .put(VariantSettings.MODEL, getModelId(isVertical ? "top" : "base", setIdx));
 
@@ -88,7 +88,7 @@ public class VinesBlockExport extends ModelExport {
         return variant;
     }
 
-    private void generateVineModels(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set, int setIdx) {
+    private void generateVineModels(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, int setIdx) {
         // base vine model
         TextureMap baseTextureMap = new TextureMap().put(ModTextureKey.VINES, createBlockIdentifier(set.getTextureByIndex(0)));
         Identifier baseModelId = getModelId("base", setIdx);
@@ -115,8 +115,8 @@ public class VinesBlockExport extends ModelExport {
         );
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
-        WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.states.getFirst().getRandomTextureSet(0);
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
+        ModBlock.RandomTextureSet firstSet = blockDefinition.states.getFirst().getRandomTextureSet(0);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
 
         Models.GENERATED.upload(ModelIds.getItemModelId(block.asItem()), textureMap, itemModelGenerator.writer);

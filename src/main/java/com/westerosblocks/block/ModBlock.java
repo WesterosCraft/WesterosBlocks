@@ -5,23 +5,16 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.custom.*;
-import com.westerosblocks.sound.ModSounds;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.sound.Sound;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.state.property.Property;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
@@ -31,7 +24,7 @@ import net.minecraft.world.BlockView;
 import java.util.*;
 
 // Our block configuration data that's populated using GSON, sourced from blocks.json
-public class WesterosBlockDef extends WesterosBlockStateRecord {
+public class ModBlock extends ModBlockStateRecord {
     private static final float DEF_FLOAT = -999.0F;
     public static final int DEF_INT = -999;
     public static final String LAYER_SENSITIVE = "layerSensitive";
@@ -74,8 +67,8 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     // List of custom sound names or sound IDs (for 'sound' blocks)
     public List<String> soundList = null;
     // List of elements for a stack, first is bottom-most (for *-stack)
-    public List<WesterosBlockStateRecord> stack = null;
-    public List<WesterosBlockStateRecord> states = null;
+    public List<ModBlockStateRecord> stack = null;
+    public List<ModBlockStateRecord> states = null;
     private StateProperty stateProp = null;
     public String connectBy = "block";
     // Shape for normal cuboid (box)
@@ -84,6 +77,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     public static final String SHAPE_CROSSED = "crossed";
     // TODO wood type for wood blocks like fencegate. see WoodTypeUtil class
     public String woodType = null;
+    public String particle;
 
     private transient Map<String, String> parsedType;
     private final transient boolean hasCollisionBoxes = false;
@@ -318,7 +312,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         return this.woodType;
     }
 
-    public WesterosBlockStateRecord getStackElementByIndex(int idx) {
+    public ModBlockStateRecord getStackElementByIndex(int idx) {
         if ((stack != null) && (!stack.isEmpty())) {
             if (idx >= stack.size()) {
                 idx = stack.size() - 1;
@@ -421,15 +415,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         }
     }
 
-    public static class Particle {
-        public float x = 0.5F, y = 0.5F, z = 0.5F; // Default position of effect
-        public float vx = 0.0F, vy = 0.0F, vz = 0.0F; // Default velocity of effect
-        public float xrand = 0.0F, yrand = 0.0F, zrand = 0.0F; // Default random position of effect (-rand to +rand)
-        public float vxrand = 0.0F, vyrand = 0.0F, vzrand = 0.0F; // Default random velocity of effect (-rand to +rand)
-        public float chance = 1.0F;
-        public String particle;
-    }
-
     public Map<String, String> getMappedType() {
         if (parsedType == null) {
             parsedType = new HashMap<>();
@@ -456,7 +441,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
     private static final Map<String, BlockSoundGroup> stepSoundTable = new HashMap<>();
     //    private static final Map<String, CreativeModeTab> tabTable = new HashMap<>();
-    private static final Map<String, WesterosBlockFactory> typeTable = new HashMap<String, WesterosBlockFactory>();
+    private static final Map<String, ModBlockFactory> typeTable = new HashMap<String, ModBlockFactory>();
     private static final Map<String, ParticleType<?>> particles = new HashMap<String, ParticleType<?>>();
 
     private transient boolean didInit = false;
@@ -475,7 +460,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         if (this.overlayTextures != null) {
             this.nonOpaque = true;
         }
-        for (WesterosBlockStateRecord rec : this.states) {
+        for (ModBlockStateRecord rec : this.states) {
             // if states array, allow attributes to be inherited from base def if not specified
             if (rec.boundingBox == null) rec.boundingBox = this.boundingBox;
             if (rec.cuboids == null) rec.cuboids = this.cuboids;
@@ -495,14 +480,14 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         }
         // If stacks, process these too
         if (this.stack != null) {
-            for (WesterosBlockStateRecord se : this.stack) {
+            for (ModBlockStateRecord se : this.stack) {
                 se.doStateRecordInit();
             }
         }
         if (this.states.size() > 1) {
             ArrayList<String> ids = new ArrayList<String>();
             for (int i = 0; i < states.size(); i++) {
-                WesterosBlockStateRecord rec = states.get(i);
+                ModBlockStateRecord rec = states.get(i);
                 if (rec.stateID == null) rec.stateID = String.format("state%d", i);
                 ids.add(rec.stateID);
             }
@@ -522,7 +507,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
             throw x;
         }
         long[] pc = perfCounts.computeIfAbsent(blockType, k -> new long[2]);
-        WesterosBlockFactory bf = typeTable.get(blockType);
+        ModBlockFactory bf = typeTable.get(blockType);
 
         if (bf == null) {
             WesterosBlocks.LOGGER.error(String.format("Invalid blockType '%s' in block '%s'", blockType, blockName));
@@ -593,7 +578,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         // Handle light levels - state-dependent
         if (this.stateProp != null) {
             Map<String, Integer> lightLevels = new HashMap<>();
-            for (WesterosBlockStateRecord sr : this.states) {
+            for (ModBlockStateRecord sr : this.states) {
                 if (sr.lightValue > 0.0F) {
                     lightLevels.put(sr.stateID, (int) (16.0 * sr.lightValue));
                 }
@@ -608,10 +593,41 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
         // Handle transparency/occlusion
         if ((!ambientOcclusion) || (nonOpaque)) {
-            settings = settings.nonOpaque().blockVision(WesterosBlockDef::never);
+            settings = settings.nonOpaque().blockVision(ModBlock::never);
         }
 
         return settings;
+    }
+
+    public static Map<String, String> parseTypeParameters(String type) {
+        Map<String, String> params = new HashMap<>();
+        for (String token : type.split(",")) {
+            String[] parts = token.split(":");
+            if (parts.length == 2) {
+                params.put(parts[0].trim(), parts[1].trim());
+            }
+        }
+        return params;
+    }
+
+    /**
+     * Parses block type string into parameters and flags
+     */
+    public static Map<String, String> parseBlockParameters(String typeString) {
+        Map<String, String> params = new HashMap<>();
+        if (typeString != null) {
+            for (String token : typeString.split(",")) {
+                token = token.trim();
+                if (token.contains(":")) {
+                    String[] parts = token.split(":", 2);
+                    params.put(parts[0].trim(), parts[1].trim());
+                } else {
+                    // For flags without values, store them with an empty string value
+                    params.put(token, "");
+                }
+            }
+        }
+        return params;
     }
 
     private static boolean never(BlockState state, BlockView world, BlockPos pos) {
@@ -640,17 +656,17 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
     // Return true if defs strictly subsumes validation (i.e., it preserves every block name, as well as
     // every state-related attribute for each block); otherwise false.
-    public static boolean compareBlockDefs(WesterosBlockDef[] defs, WesterosBlockDef[] validation) {
-        Map<String, WesterosBlockDef> defmap = defsToMap(defs);
+    public static boolean compareBlockDefs(ModBlock[] defs, ModBlock[] validation) {
+        Map<String, ModBlock> defmap = defsToMap(defs);
         boolean error = false;
-        for (WesterosBlockDef val : validation) {
+        for (ModBlock val : validation) {
             if (!defmap.containsKey(val.blockName)) {
                 WesterosBlocks.LOGGER.warn(String.format("validation: blockName '%s' missing", val.blockName));
                 error = true;
                 continue;
             }
 
-            WesterosBlockDef def = defmap.get(val.blockName);
+            ModBlock def = defmap.get(val.blockName);
             if (!def.blockType.equals(val.blockType)) {
                 // allow for solid subtypes to be recast
                 if (!def.blockType.matches("solid|sand|soulsand") && !def.blockType.matches("solid|sand|soulsand")) {
@@ -699,9 +715,9 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         return !error;
     }
 
-    public static Map<String, WesterosBlockDef> defsToMap(WesterosBlockDef[] defs) {
-        Map<String, WesterosBlockDef> map = new HashMap<String, WesterosBlockDef>();
-        for (WesterosBlockDef def : defs) {
+    public static Map<String, ModBlock> defsToMap(ModBlock[] defs) {
+        Map<String, ModBlock> map = new HashMap<String, ModBlock>();
+        for (ModBlock def : defs) {
             map.put(def.blockName, def);
         }
         return map;
@@ -771,50 +787,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         typeTable.put("vines", new WCVinesBlock.Factory());
         typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
         typeTable.put("fencegate", new WCFenceGateBlock.Factory());
-
-        // Standard color multipliers
-//        colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));
-//        colorMultTable.put("water", new WaterColorMultHandler());
-//        colorMultTable.put("foliage", new FoliageColorMultHandler());
-//        colorMultTable.put("grass", new GrassColorMultHandler());
-//        colorMultTable.put("pine", new PineColorMultHandler());
-//        colorMultTable.put("birch", new BirchColorMultHandler());
-//        colorMultTable.put("basic", new BasicColorMultHandler());
-//        colorMultTable.put("lily", new FixedColorMultHandler(2129968));
-
-        // Valid particle values
-        particles.put("hugeexplosion", ParticleTypes.EXPLOSION);
-        particles.put("largeexplode", ParticleTypes.EXPLOSION);
-        particles.put("fireworksSpark", ParticleTypes.FIREWORK);
-        particles.put("bubble", ParticleTypes.BUBBLE);
-        particles.put("suspended", ParticleTypes.UNDERWATER);
-        particles.put("depthsuspend", ParticleTypes.UNDERWATER);
-        //particles.put("townaura", ParticleTypes.BARRIER);
-        particles.put("crit", ParticleTypes.CRIT);
-        particles.put("magicCrit", ParticleTypes.CRIT);
-        particles.put("smoke", ParticleTypes.SMOKE);
-        particles.put("mobSpell", ParticleTypes.ENCHANT);
-        particles.put("mobSpellAmbient", ParticleTypes.ENCHANT);
-        particles.put("spell", ParticleTypes.ENCHANT);
-        particles.put("instantSpell", ParticleTypes.INSTANT_EFFECT);
-        particles.put("witchMagic", ParticleTypes.WITCH);
-        particles.put("note", ParticleTypes.NOTE);
-        particles.put("portal", ParticleTypes.PORTAL);
-        particles.put("enchantmenttable", ParticleTypes.POOF);
-        particles.put("explode", ParticleTypes.EXPLOSION);
-        particles.put("flame", ParticleTypes.FLAME);
-        particles.put("lava", ParticleTypes.LAVA);
-        particles.put("splash", ParticleTypes.SPLASH);
-        particles.put("largesmoke", ParticleTypes.LARGE_SMOKE);
-        particles.put("cloud", ParticleTypes.CLOUD);
-        particles.put("snowballpoof", ParticleTypes.POOF);
-        particles.put("dripWater", ParticleTypes.DRIPPING_WATER);
-        particles.put("dripLava", ParticleTypes.DRIPPING_LAVA);
-        particles.put("snowshovel", ParticleTypes.ITEM_SNOWBALL);
-        particles.put("slime", ParticleTypes.ITEM_SLIME);
-        particles.put("heart", ParticleTypes.HEART);
-        particles.put("angryVillager", ParticleTypes.ANGRY_VILLAGER);
-        particles.put("happyVillager", ParticleTypes.HAPPY_VILLAGER);
     }
 
     public BlockSoundGroup getSoundType() {

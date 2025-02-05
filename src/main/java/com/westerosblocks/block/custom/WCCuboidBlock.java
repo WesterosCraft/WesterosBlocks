@@ -1,9 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -31,15 +31,15 @@ import net.minecraft.world.WorldAccess;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
+public class WCCuboidBlock extends Block implements ModBlockLifecycle {
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             def.nonOpaque = true;
             AbstractBlock.Settings settings = def.makeBlockSettings();
             // See if we have a state property
-            WesterosBlockDef.StateProperty state = def.buildStateProperty();
+            ModBlock.StateProperty state = def.buildStateProperty();
             if (state != null) {
                 tempSTATE = state;
             }
@@ -52,18 +52,18 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     // Support waterlogged on these blocks
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    protected static WesterosBlockDef.StateProperty tempSTATE;
-    protected WesterosBlockDef.StateProperty STATE;
+    protected static ModBlock.StateProperty tempSTATE;
+    protected ModBlock.StateProperty STATE;
     protected boolean toggleOnUse = false;
     protected int modelsPerState;
 
-    protected WesterosBlockDef def;
+    protected ModBlock def;
 
     protected VoxelShape[] SHAPE_BY_INDEX;
     protected VoxelShape[] SUPPORT_BY_INDEX;
-    protected List<WesterosBlockDef.Cuboid>[] cuboid_by_facing;
+    protected List<ModBlock.Cuboid>[] cuboid_by_facing;
 
-    protected WCCuboidBlock(AbstractBlock.Settings settings, WesterosBlockDef def, int modelsPerState) {
+    protected WCCuboidBlock(AbstractBlock.Settings settings, ModBlock def, int modelsPerState) {
         super(settings);
         this.def = def;
         this.modelsPerState = modelsPerState;
@@ -106,7 +106,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 
@@ -199,10 +199,10 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
         return ActionResult.PASS;
     }
 
-    protected VoxelShape getBoundingBoxFromCuboidList(List<WesterosBlockDef.Cuboid> cl) {
+    protected VoxelShape getBoundingBoxFromCuboidList(List<ModBlock.Cuboid> cl) {
         VoxelShape vs = VoxelShapes.empty();
         if (cl != null) {
-            for (WesterosBlockDef.Cuboid c : cl) {
+            for (ModBlock.Cuboid c : cl) {
                 vs = VoxelShapes.union(vs, Block.createCuboidShape(
                         c.xMin * 16.0, c.yMin * 16.0, c.zMin * 16.0,
                         c.xMax * 16.0, c.yMax * 16.0, c.zMax * 16.0));
@@ -211,7 +211,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
         return vs;
     }
 
-    public List<WesterosBlockDef.Cuboid> getModelCuboids(int stateIdx) {
+    public List<ModBlock.Cuboid> getModelCuboids(int stateIdx) {
         return cuboid_by_facing[modelsPerState * stateIdx];
     }
 

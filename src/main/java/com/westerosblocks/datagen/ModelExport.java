@@ -3,7 +3,7 @@ package com.westerosblocks.datagen;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
@@ -14,10 +14,10 @@ public class ModelExport {
     public static final String GENERATED_PATH = "block/generated/";
     public static final String CUSTOM_PATH = "block/custom/";
     protected final Block block;
-    protected static WesterosBlockDef def;
+    protected static ModBlock def;
     protected static BlockStateModelGenerator generator;
 
-    public ModelExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public ModelExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         this.block = block;
         this.def = def;
         this.generator = generator;

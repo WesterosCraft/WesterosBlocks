@@ -2,9 +2,7 @@ package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockLifecycle;
-import com.westerosblocks.block.custom.WCTorchBlock;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.custom.WCWallTorchBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
@@ -18,14 +16,14 @@ import java.util.Optional;
 public class TorchBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
     private static final String[] FACING_DIRECTIONS = {
             "facing=east", "facing=south", "facing=west", "facing=north"
     };
     private static final int[] ROTATIONS = {0, 90, 180, 270};
 
-    public TorchBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public TorchBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -34,7 +32,7 @@ public class TorchBlockExport extends ModelExport {
 
     public void generateBlockStateModels() {
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-            WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+            ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
             if (!def.isCustomModel()) {
                 generateTorchModels(generator, set, setIdx);
             }
@@ -49,7 +47,7 @@ public class TorchBlockExport extends ModelExport {
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-            WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+            ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
 
             BlockStateVariant standingVariant = BlockStateVariant.create();
             Identifier standingModelId = getModelId("base", setIdx);
@@ -72,7 +70,7 @@ public class TorchBlockExport extends ModelExport {
 
         for (int i = 0; i < FACING_DIRECTIONS.length; i++) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
 
                 BlockStateVariant variant = BlockStateVariant.create();
                 Identifier modelId = getModelId("wall", setIdx);
@@ -90,7 +88,7 @@ public class TorchBlockExport extends ModelExport {
         generateBlockStateFiles(generator, wallBlock, variants);
     }
 
-    private void generateTorchModels(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set, int setIdx) {
+    private void generateTorchModels(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, int setIdx) {
         TextureMap torchTextureMap = new TextureMap()
                 .put(TextureKey.TORCH, createBlockIdentifier(set.getTextureByIndex(0)));
         // wall torch model
@@ -116,8 +114,8 @@ public class TorchBlockExport extends ModelExport {
         return WesterosBlocks.id(String.format("%s%s/%s_v%d", GENERATED_PATH, def.blockName, type, setIdx + 1));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
-        WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
+        ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         String basePath = blockDefinition.isTinted() ? "tinted" : "untinted";
 
         // main torch item
@@ -131,7 +129,7 @@ public class TorchBlockExport extends ModelExport {
         }
     }
 
-    private static void generateSingleItemModel(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef.RandomTextureSet set, String basePath) {
+    private static void generateSingleItemModel(ItemModelGenerator itemModelGenerator, Block block, ModBlock.RandomTextureSet set, String basePath) {
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.LAYER0, createBlockIdentifier(set.getTextureByIndex(0)));
 

@@ -1,9 +1,9 @@
 package com.westerosblocks.block.entity;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.WesterosBlocksJsonLoader;
+import com.westerosblocks.WesterosBlocksDefLoader;
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.entity.custom.WCFurnaceBlockEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntity;
@@ -19,11 +19,11 @@ public class ModBlockEntities {
 
     static {
         HashMap<String, Block> customBlocks = ModBlocks.getCustomBlocksByName();
-        WesterosBlockDef[] customBlockDefs = WesterosBlocksJsonLoader.getCustomBlockDefs();
+        ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
 
         Map<String, Block> furnaceBlocks = new HashMap<>();
 
-        for (WesterosBlockDef customBlockDef : customBlockDefs) {
+        for (ModBlock customBlockDef : customBlockDefs) {
             // if we get another block entity custom block in the future besides furnace we can turn this into a switch statement or somethin
             if (customBlockDef == null || !customBlockDef.blockType.equals("furnace")) continue;
 

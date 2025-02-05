@@ -1,8 +1,8 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockStateRecord;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockStateRecord;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
@@ -12,7 +12,7 @@ import java.util.*;
 public class CuboidNSEWUDBlockExport extends CuboidBlockExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
     private static final String[] FACING_DIRECTIONS = {
             "north", "east", "south", "west", "up", "down"
@@ -30,7 +30,7 @@ public class CuboidNSEWUDBlockExport extends CuboidBlockExport {
             "down", new RotationData(90, 0)
     );
 
-    public CuboidNSEWUDBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public CuboidNSEWUDBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -42,7 +42,7 @@ public class CuboidNSEWUDBlockExport extends CuboidBlockExport {
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
-        for (WesterosBlockStateRecord sr : def.states) {
+        for (ModBlockStateRecord sr : def.states) {
             boolean justBase = sr.stateID == null;
             Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
             String baseName = justBase ? "base" : sr.stateID;
@@ -55,7 +55,7 @@ public class CuboidNSEWUDBlockExport extends CuboidBlockExport {
 
             for (String facing : FACING_DIRECTIONS) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
-                    WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+                    ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
                     BlockStateVariant variant = BlockStateVariant.create();
                     Identifier modelId = getModelId(baseName, setIdx, sr.isCustomModel());
@@ -80,8 +80,8 @@ public class CuboidNSEWUDBlockExport extends CuboidBlockExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
-        WesterosBlockStateRecord firstState = blockDefinition.states.getFirst();
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
+        ModBlockStateRecord firstState = blockDefinition.states.getFirst();
         String baseName = firstState.stateID == null ? "base" : firstState.stateID;
         String pathPrefix = firstState.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH;
         String path = String.format("%s%s/%s_v1", pathPrefix, blockDefinition.getBlockName(), baseName);

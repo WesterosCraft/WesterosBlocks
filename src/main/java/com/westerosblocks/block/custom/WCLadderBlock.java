@@ -1,10 +1,9 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -15,11 +14,11 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldView;
 
-public class WCLadderBlock extends LadderBlock implements WesterosBlockLifecycle {
+public class WCLadderBlock extends LadderBlock implements ModBlockLifecycle {
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings().nonOpaque();
 
             Block blk = new WCLadderBlock(settings, def);
@@ -27,11 +26,11 @@ public class WCLadderBlock extends LadderBlock implements WesterosBlockLifecycle
         }
     }
 
-    private WesterosBlockDef def;
+    private ModBlock def;
     private boolean allow_unsupported;
     private boolean no_climb;
 
-    protected WCLadderBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCLadderBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
         this.def = def;
         String t = def.getType();
@@ -48,7 +47,7 @@ public class WCLadderBlock extends LadderBlock implements WesterosBlockLifecycle
         }
     }
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

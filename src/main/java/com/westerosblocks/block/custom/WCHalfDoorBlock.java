@@ -3,7 +3,6 @@ package com.westerosblocks.block.custom;
 import com.westerosblocks.block.*;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.DoorHinge;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.sound.SoundCategory;
@@ -16,7 +15,6 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
-import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -27,12 +25,11 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
-import org.jetbrains.annotations.Nullable;
 
-public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
-    public static class Factory extends WesterosBlockFactory {
+public class WCHalfDoorBlock extends Block implements ModBlockLifecycle {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             def.nonOpaque = true;
             AbstractBlock.Settings settings = def.makeBlockSettings();
             Block blk = new WCHalfDoorBlock(settings, def);
@@ -50,11 +47,11 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
     protected static final VoxelShape EAST_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 3.0, 16.0, 16.0);
     protected static final VoxelShape WEST_SHAPE = Block.createCuboidShape(13.0, 0.0, 0.0, 16.0, 16.0, 16.0);
 
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     private final boolean locked;
     private final boolean allowUnsupported;
 
-    protected WCHalfDoorBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCHalfDoorBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
         this.def = def;
 
@@ -85,7 +82,7 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

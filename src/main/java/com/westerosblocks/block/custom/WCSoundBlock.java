@@ -2,8 +2,8 @@ package com.westerosblocks.block.custom;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
 import com.westerosblocks.sound.ModSounds;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -25,9 +25,9 @@ import net.minecraft.world.World;
 import net.minecraft.world.tick.TickPriority;
 
 public class WCSoundBlock extends WCSolidBlock {
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
 
             if ((def.soundList == null) || (def.soundList.isEmpty())) {
                 WesterosBlocks.LOGGER.error("Non-empty soundList required for '{}'", def.blockName);
@@ -52,7 +52,7 @@ public class WCSoundBlock extends WCSolidBlock {
     public final int startTime; // In ticks (0-24000)
     public final int endTime; // In ticks (0-24000)
 
-    protected WCSoundBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCSoundBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings, def);
         // Process type attributes
         int period = 0;

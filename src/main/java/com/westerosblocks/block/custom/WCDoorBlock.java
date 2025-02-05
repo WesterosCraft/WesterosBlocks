@@ -1,9 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import com.westerosblocks.util.BlockSetTypeUtil;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -17,26 +17,30 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-public class WCDoorBlock extends DoorBlock implements WesterosBlockLifecycle {
+import java.util.Map;
 
-    public static class Factory extends WesterosBlockFactory {
+public class WCDoorBlock extends DoorBlock implements ModBlockLifecycle {
+
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings();
             Block blk = new WCDoorBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
 
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     private boolean locked = false;
     private boolean allow_unsupported = false;
 
-    protected WCDoorBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCDoorBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(BlockSetTypeUtil.getBlockSetType(settings, def), settings);
         this.def = def;
         String type = def.getType();
         if (type != null) {
+            Map<String, String> params = ModBlock.parseTypeParameters(type);
+
             String[] toks = type.split(",");
             for (String tok : toks) {
                 if (tok.equals("allow-unsupported")) {
@@ -52,7 +56,7 @@ public class WCDoorBlock extends DoorBlock implements WesterosBlockLifecycle {
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

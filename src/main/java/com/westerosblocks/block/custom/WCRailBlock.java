@@ -1,9 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -12,11 +12,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-public class WCRailBlock extends RailBlock implements WesterosBlockLifecycle {
+public class WCRailBlock extends RailBlock implements ModBlockLifecycle {
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings().nonOpaque().noCollision();
 
             Block blk = new WCRailBlock(settings, def);
@@ -24,10 +24,10 @@ public class WCRailBlock extends RailBlock implements WesterosBlockLifecycle {
         }
     }
 
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     private boolean allow_unsupported = false;
 
-    protected WCRailBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCRailBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
         this.def = def;
         String t = def.getType();
@@ -44,7 +44,7 @@ public class WCRailBlock extends RailBlock implements WesterosBlockLifecycle {
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

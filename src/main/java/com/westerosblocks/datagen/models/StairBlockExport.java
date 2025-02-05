@@ -1,8 +1,8 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockStateRecord;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockStateRecord;
 import com.westerosblocks.block.custom.WCStairBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
@@ -14,11 +14,11 @@ import java.util.*;
 public class StairBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     private final WCStairBlock stairBlock;
     private final boolean isOccluded;
 
-    public StairBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public StairBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -32,9 +32,9 @@ public class StairBlockExport extends ModelExport {
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         if (!def.isCustomModel()) {
-            for (WesterosBlockStateRecord sr : def.states) {
+            for (ModBlockStateRecord sr : def.states) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
-                    WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+                    ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
                     generateStairModels(generator, sr, set, setIdx);
                 }
@@ -42,7 +42,7 @@ public class StairBlockExport extends ModelExport {
         }
 
         // Generate all the variants for each state
-        for (WesterosBlockStateRecord sr : def.states) {
+        for (ModBlockStateRecord sr : def.states) {
             generateDirectionalVariants(blockStateBuilder, sr, "bottom", variants);
             generateDirectionalVariants(blockStateBuilder, sr, "top", variants);
         }
@@ -50,7 +50,7 @@ public class StairBlockExport extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateDirectionalVariants(BlockStateBuilder builder, WesterosBlockStateRecord sr, String half, Map<String, List<BlockStateVariant>> variants) {
+    private void generateDirectionalVariants(BlockStateBuilder builder, ModBlockStateRecord sr, String half, Map<String, List<BlockStateVariant>> variants) {
         int xRot = half.equals("top") ? 180 : 0;
 
         // East facing variants
@@ -82,11 +82,11 @@ public class StairBlockExport extends ModelExport {
         addVariant(builder, sr, String.format("facing=north,half=%s,shape=inner_left", half), "inner", xRot, half.equals("top") ? 270 : 180, variants);
     }
 
-    private void addVariant(BlockStateBuilder builder, WesterosBlockStateRecord sr, String condition, String modelType, int xRot, int yRot, Map<String, List<BlockStateVariant>> variants) {
+    private void addVariant(BlockStateBuilder builder, ModBlockStateRecord sr, String condition, String modelType, int xRot, int yRot, Map<String, List<BlockStateVariant>> variants) {
         Set<String> stateIDs = sr.stateID == null ? null : Collections.singleton(sr.stateID);
 
         for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
-            WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+            ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
             BlockStateVariant variant = BlockStateVariant.create();
             Identifier modelId = getModelId(modelType, setIdx, sr.stateID);
@@ -109,7 +109,7 @@ public class StairBlockExport extends ModelExport {
         }
     }
 
-    private void generateStairModels(BlockStateModelGenerator generator, WesterosBlockStateRecord sr, WesterosBlockDef.RandomTextureSet set, int setIdx) {
+    private void generateStairModels(BlockStateModelGenerator generator, ModBlockStateRecord sr, ModBlock.RandomTextureSet set, int setIdx) {
         boolean isTinted = sr.isTinted();
         boolean hasOverlay = sr.getOverlayTextureByIndex(0) != null;
         TextureMap textureMap = ModTextureMap.bottomTopSide(set, sr, hasOverlay);
@@ -119,7 +119,7 @@ public class StairBlockExport extends ModelExport {
         generateModelVariant(generator, "inner", sr, setIdx, textureMap, isTinted, hasOverlay);
     }
 
-    private void generateModelVariant(BlockStateModelGenerator generator, String variant, WesterosBlockStateRecord sr, int setIdx, TextureMap textureMap, boolean isTinted, boolean hasOverlay) {
+    private void generateModelVariant(BlockStateModelGenerator generator, String variant, ModBlockStateRecord sr, int setIdx, TextureMap textureMap, boolean isTinted, boolean hasOverlay) {
         String baseParent = String.format("block/%s/%sstairs%s",
                 isOccluded ? (isTinted ? "tinted" : "untinted") : (isTinted ? "tintednoocclusion" : "noocclusion"),
                 variant.equals("base") ? "" : variant + "_",
@@ -155,7 +155,7 @@ public class StairBlockExport extends ModelExport {
         return WesterosBlocks.id((def.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH) + path);
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
         boolean hasMultipleStates = blockDefinition.states.size() > 1;
         String basePath = hasMultipleStates ? "/base" : "";
         String path = String.format("%s%s%s/base_v1", blockDefinition.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH, blockDefinition.blockName, basePath);

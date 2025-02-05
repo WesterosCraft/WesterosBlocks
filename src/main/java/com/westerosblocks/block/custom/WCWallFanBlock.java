@@ -2,12 +2,9 @@ package com.westerosblocks.block.custom;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
-import com.mojang.serialization.MapCodec;
-import com.sun.jdi.Mirror;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.*;
-import net.minecraft.data.client.VariantSettings.Rotation;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -22,7 +19,6 @@ import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
@@ -30,11 +26,11 @@ import net.minecraft.world.WorldView;
 
 import java.util.Map;
 
-public class WCWallFanBlock extends Block implements Waterloggable, WesterosBlockLifecycle {
+public class WCWallFanBlock extends Block implements Waterloggable, ModBlockLifecycle {
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     private final boolean allowUnsupported;
 
     private static final Map<Direction, VoxelShape> SHAPES = Maps.newEnumMap(ImmutableMap.of(
@@ -44,7 +40,7 @@ public class WCWallFanBlock extends Block implements Waterloggable, WesterosBloc
             Direction.EAST, Block.createCuboidShape(0.0, 4.0, 0.0, 11.0, 12.0, 16.0)
     ));
 
-    protected WCWallFanBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCWallFanBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
         this.def = def;
 
@@ -67,7 +63,7 @@ public class WCWallFanBlock extends Block implements Waterloggable, WesterosBloc
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

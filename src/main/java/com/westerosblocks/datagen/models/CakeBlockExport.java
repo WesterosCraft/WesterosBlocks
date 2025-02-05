@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -14,9 +14,9 @@ import java.util.Optional;
 public class CakeBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
-    public CakeBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public CakeBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -61,7 +61,7 @@ public class CakeBlockExport extends ModelExport {
         return WesterosBlocks.id(String.format("%s%s/%s_v%d", isCustom ? CUSTOM_PATH : GENERATED_PATH, def.getBlockName(), variant, setIdx + 1));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
         String path = String.format("%s%s/uneaten_v1", GENERATED_PATH, blockDefinition.getBlockName());
 
         itemModelGenerator.register(

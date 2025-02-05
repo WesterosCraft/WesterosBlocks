@@ -1,8 +1,8 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockStateRecord;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockStateRecord;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -16,7 +16,7 @@ import java.util.Set;
 public class FenceBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     private final boolean isTinted;
     private final boolean hasOverlay;
 
@@ -37,13 +37,13 @@ public class FenceBlockExport extends ModelExport {
                             Integer yRot) {
     }
 
-    public FenceBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public FenceBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
         this.def = def;
 
-        WesterosBlockStateRecord firstState = def.states.getFirst();
+        ModBlockStateRecord firstState = def.states.getFirst();
         this.isTinted = firstState.isTinted();
         this.hasOverlay = firstState.getOverlayTextureByIndex(0) != null;
     }
@@ -52,20 +52,20 @@ public class FenceBlockExport extends ModelExport {
         MultipartBlockStateSupplier stateSupplier = MultipartBlockStateSupplier.create(block);
 
         if (!def.isCustomModel()) {
-            for (WesterosBlockStateRecord sr : def.states) {
+            for (ModBlockStateRecord sr : def.states) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
                     generateFenceModels(generator, sr, setIdx);
                 }
             }
         }
 
-        for (WesterosBlockStateRecord sr : def.states) {
+        for (ModBlockStateRecord sr : def.states) {
             boolean justBase = sr.stateID == null;
             Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
 
             for (ModelRec part : PARTS) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
-                    WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+                    ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
                     BlockStateVariant variant = BlockStateVariant.create();
                     variant.put(VariantSettings.MODEL, getModelId(part.modelExt(), setIdx, sr.stateID));
@@ -102,8 +102,8 @@ public class FenceBlockExport extends ModelExport {
         generator.blockStateCollector.accept(stateSupplier);
     }
 
-    private void generateFenceModels(BlockStateModelGenerator generator, WesterosBlockStateRecord sr, int setIdx) {
-        WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+    private void generateFenceModels(BlockStateModelGenerator generator, ModBlockStateRecord sr, int setIdx) {
+        ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
         generateFenceModel(generator, "post", set, sr, setIdx, "untinted/fence_post");
         generateFenceModel(generator, "side", set, sr, setIdx, "untinted/fence_side");
@@ -111,8 +111,8 @@ public class FenceBlockExport extends ModelExport {
 
     private void generateFenceModel(BlockStateModelGenerator generator,
                                     String variant,
-                                    WesterosBlockDef.RandomTextureSet set,
-                                    WesterosBlockStateRecord sr,
+                                    ModBlock.RandomTextureSet set,
+                                    ModBlockStateRecord sr,
                                     int setIdx,
                                     String baseParent) {
         String parent = baseParent;
@@ -154,9 +154,9 @@ public class FenceBlockExport extends ModelExport {
         return WesterosBlocks.id(GENERATED_PATH + path);
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
-        WesterosBlockStateRecord firstState = blockDefinition.states.getFirst();
-        WesterosBlockDef.RandomTextureSet firstSet = firstState.getRandomTextureSet(0);
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
+        ModBlockStateRecord firstState = blockDefinition.states.getFirst();
+        ModBlock.RandomTextureSet firstSet = firstState.getRandomTextureSet(0);
         boolean isTinted = firstState.isTinted();
 
         String parent = "block/" + (isTinted ? "tinted" : "untinted") + "/fence_inventory";

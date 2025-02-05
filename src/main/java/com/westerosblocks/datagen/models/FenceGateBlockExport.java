@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -14,12 +14,12 @@ import java.util.Optional;
 public class FenceGateBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
     private static final String[] FACINGS = {"east", "north", "south", "west"};
     private static final int[] FACING_ROTATIONS = {270, 180, 0, 90};
 
-    public FenceGateBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public FenceGateBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -41,7 +41,7 @@ public class FenceGateBlockExport extends ModelExport {
 
         if (!def.isCustomModel()) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
                 generateFenceGateModels(generator, set, setIdx);
             }
         }
@@ -49,7 +49,7 @@ public class FenceGateBlockExport extends ModelExport {
 
     private void generateVariantsForState(BlockStateBuilder blockStateBuilder, Map<String, List<BlockStateVariant>> variants, String condition, String modelType, int yRotation) {
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-            WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+            ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
 
             BlockStateVariant variant = BlockStateVariant.create();
             Identifier modelId = getModelId(modelType, setIdx);
@@ -69,7 +69,7 @@ public class FenceGateBlockExport extends ModelExport {
         }
     }
 
-    private void generateFenceGateModels(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set, int setIdx) {
+    private void generateFenceGateModels(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, int setIdx) {
         boolean isTinted = def.isTinted();
         String basePath = isTinted ? "tinted" : "untinted";
 
@@ -106,8 +106,8 @@ public class FenceGateBlockExport extends ModelExport {
                 ));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
-        WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.states.getFirst().getRandomTextureSet(0);
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
+        ModBlock.RandomTextureSet firstSet = blockDefinition.states.getFirst().getRandomTextureSet(0);
         boolean isTinted = blockDefinition.isTinted();
         String basePath = isTinted ? "tinted" : "untinted";
 

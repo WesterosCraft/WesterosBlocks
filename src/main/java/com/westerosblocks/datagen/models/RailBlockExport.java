@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -12,7 +12,7 @@ import java.util.*;
 public class RailBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
     private static final String[] SHAPES = {
             "shape=north_south", "shape=east_west",
@@ -38,7 +38,7 @@ public class RailBlockExport extends ModelExport {
             180, 270
     };
 
-    public RailBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public RailBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -51,7 +51,7 @@ public class RailBlockExport extends ModelExport {
 
         for (int i = 0; i < SHAPES.length; i++) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
 
                 BlockStateVariant variant = BlockStateVariant.create();
                 Identifier modelId = getModelId(MODEL_TYPES[i], setIdx);
@@ -73,7 +73,7 @@ public class RailBlockExport extends ModelExport {
 
         if (!def.isCustomModel()) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
 
                 Set<String> generatedModels = new HashSet<>();
 
@@ -86,7 +86,7 @@ public class RailBlockExport extends ModelExport {
         }
     }
 
-    private void generateRailModel(BlockStateModelGenerator generator, String type, WesterosBlockDef.RandomTextureSet set, int setIdx) {
+    private void generateRailModel(BlockStateModelGenerator generator, String type, ModBlock.RandomTextureSet set, int setIdx) {
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.RAIL, createBlockIdentifier(type.equals("curved") ? set.getTextureByIndex(1) : set.getTextureByIndex(0)));
 
@@ -107,8 +107,8 @@ public class RailBlockExport extends ModelExport {
                 String.format("%s%s/%s_v%d", GENERATED_PATH, def.getBlockName(), type, setIdx + 1));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
-        WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
+        ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         String texturePath = String.format("block/%s",  firstSet.getTextureByIndex(0));
         Identifier textureId = WesterosBlocks.id(texturePath);
 

@@ -1,9 +1,8 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockStateRecord;
-import com.westerosblocks.block.custom.WCSlabBlock;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockStateRecord;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -14,9 +13,9 @@ import java.util.*;
 public class SlabBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
-    public SlabBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public SlabBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -69,7 +68,7 @@ public class SlabBlockExport extends ModelExport {
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
-        for (WesterosBlockStateRecord sr : def.states) {
+        for (ModBlockStateRecord sr : def.states) {
             boolean justBase = sr.stateID == null;
             Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
             String baseName = def.states.size() > 1 ? (sr.stateID == null ? "base" : sr.stateID) : "";
@@ -79,7 +78,7 @@ public class SlabBlockExport extends ModelExport {
 
 
             for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
-                WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+                ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
                 // Do state for top half block
                 BlockStateVariant topVariant = BlockStateVariant.create();
@@ -135,7 +134,7 @@ public class SlabBlockExport extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
         boolean hasMultipleStates = blockDefinition.states.size() > 1;
         String basePath = hasMultipleStates ? "/base" : "";
         String path = String.format("%s%s%s/bottom_v1", GENERATED_PATH, blockDefinition.blockName, basePath);

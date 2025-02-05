@@ -1,11 +1,9 @@
 package com.westerosblocks.block;
 
-import com.westerosblocks.WesterosBlocks;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.shape.VoxelShape;
-import com.westerosblocks.block.WesterosBlockDef.BoundingBox;
-import com.westerosblocks.block.WesterosBlockDef.Cuboid;
-import com.westerosblocks.block.WesterosBlockDef.RandomTextureSet;
+import com.westerosblocks.block.ModBlock.BoundingBox;
+import com.westerosblocks.block.ModBlock.Cuboid;
+import com.westerosblocks.block.ModBlock.RandomTextureSet;
 import net.minecraft.util.shape.VoxelShapes;
 
 import java.util.ArrayList;
@@ -13,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 
-public class WesterosBlockStateRecord {
+public class ModBlockStateRecord {
     // If not defined, value is "stateN"
     public String stateID = null;
     // Bounding box
@@ -155,7 +153,7 @@ public class WesterosBlockStateRecord {
         return this.isCustomModel;
     }
 
-    public boolean equals(WesterosBlockStateRecord other) {
+    public boolean equals(ModBlockStateRecord other) {
         if (this.stateID == null) {
             return (other.stateID == null);
         }

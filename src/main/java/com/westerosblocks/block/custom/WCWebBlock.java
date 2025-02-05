@@ -1,9 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.SlabType;
 import net.minecraft.entity.Entity;
@@ -23,30 +23,29 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
-public class WCWebBlock extends Block implements WesterosBlockLifecycle {
-    private WesterosBlockDef def;
-    protected static WesterosBlockDef.StateProperty tempSTATE;
+public class WCWebBlock extends Block implements ModBlockLifecycle {
+    private ModBlock def;
+    protected static ModBlock.StateProperty tempSTATE;
     protected static IntProperty tempLAYERS;
-    protected WesterosBlockDef.StateProperty STATE;
+    protected ModBlock.StateProperty STATE;
     protected IntProperty LAYERS;
     protected boolean toggleOnUse = false;
     private boolean noInWeb = false;
     public boolean layerSensitive = false;
     public static final BooleanProperty WATERLOGGED = BooleanProperty.of("waterlogged");
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings().noCollision();
 
-        	WesterosBlockDef.StateProperty state = def.buildStateProperty();
+        	ModBlock.StateProperty state = def.buildStateProperty();
         	if (state != null) {
         		tempSTATE = state;
         	}
             String t = def.getType();
-            if ((t != null) && (t.contains(WesterosBlockDef.LAYER_SENSITIVE))) {
+            if ((t != null) && (t.contains(ModBlock.LAYER_SENSITIVE))) {
             	tempLAYERS = Properties.LAYERS;
             }
 
@@ -55,7 +54,7 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle {
         }
     }
 
-    protected WCWebBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCWebBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
         this.def = def;
         String t = def.getType();
@@ -90,7 +89,7 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

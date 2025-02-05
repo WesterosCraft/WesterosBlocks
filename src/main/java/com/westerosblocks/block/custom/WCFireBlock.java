@@ -1,11 +1,16 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
+import com.westerosblocks.particle.ModParticleEffect;
+import com.westerosblocks.particle.WesterosParticleSystem;
 import net.minecraft.block.*;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
@@ -15,27 +20,23 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class WCFireBlock extends FireBlock implements WesterosBlockLifecycle {
-    public static class Factory extends WesterosBlockFactory {
+import java.util.Map;
+
+public class WCFireBlock extends FireBlock implements ModBlockLifecycle {
+    private ModBlock def;
+
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings().noCollision().breakInstantly(); //.randomTicks();
             Block blk = new WCFireBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
-    private WesterosBlockDef def;
 
-    protected WCFireBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCFireBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
         this.def = def;
-        this.setDefaultState(this.stateManager.getDefaultState()
-                .with(AGE, 0)
-                .with(NORTH, false)
-                .with(EAST, false)
-                .with(SOUTH, false)
-                .with(WEST, false)
-                .with(UP, false));
     }
 
     // prevents fire from being replaced by other fire blocks
@@ -49,10 +50,30 @@ public class WCFireBlock extends FireBlock implements WesterosBlockLifecycle {
         return true;
     }
 
-    // prevents vanilla fire spread mechanics. might wanna control via type prop at some point
+    // prevents vanilla fire spread mechanics. might wanna control via prop type at some point or just let it spread and let anti-grief mods handle it
     @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        //noop to prevent spread
+        //no-op to prevent spread
+    }
+
+    @Override
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        if (random.nextInt(24) == 0) {
+            world.playSound(
+                    pos.getX() + 0.5,
+                    pos.getY() + 0.5,
+                    pos.getZ() + 0.5,
+                    SoundEvents.BLOCK_FIRE_AMBIENT,
+                    SoundCategory.BLOCKS,
+                    1.0F + random.nextFloat(),
+                    random.nextFloat() * 0.7F + 0.3F,
+                    false
+            );
+        }
+
+        if (def.particle != null) {
+            WesterosParticleSystem.spawnFireParticles(world, pos, random, def.particle);
+        }
     }
 
     @Override
@@ -73,13 +94,15 @@ public class WCFireBlock extends FireBlock implements WesterosBlockLifecycle {
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
-    private static final String[] TAGS = { "fire" };
+
+    private static final String[] TAGS = {"fire"};
+
     @Override
     public String[] getBlockTags() {
-    	return TAGS;
-    }    
+        return TAGS;
+    }
 
 }

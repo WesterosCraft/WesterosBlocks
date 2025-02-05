@@ -1,8 +1,7 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.WallTorchBlock;
@@ -13,8 +12,8 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLifecycle {
-    private WesterosBlockDef def;
+public class WCWallTorchBlock extends WallTorchBlock implements ModBlockLifecycle {
+    private ModBlock def;
     private boolean allow_unsupported = false;
     private boolean no_particle = false;
 
@@ -25,7 +24,7 @@ public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLif
         return ParticleTypes.FLAME;
     }
 
-    protected WCWallTorchBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCWallTorchBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(WCWallTorchBlock.getParticle(def.getType()), settings);
         this.def = def;
         String t = def.getType();
@@ -43,7 +42,7 @@ public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLif
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

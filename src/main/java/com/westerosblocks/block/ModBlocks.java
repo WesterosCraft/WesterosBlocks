@@ -1,7 +1,7 @@
 package com.westerosblocks.block;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.WesterosBlocksJsonLoader;
+import com.westerosblocks.WesterosBlocksDefLoader;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
@@ -17,12 +17,13 @@ import net.minecraft.util.crash.CrashReport;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ModBlocks {
     public static Block[] customBlocks = new Block[0];
     public static HashMap<String, Block> customBlocksByName = new HashMap<>();
-    public static WesterosBlockDef[] customBlockDefs = WesterosBlocksJsonLoader.getCustomBlockDefs();
+    public static ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
 
     public static void registerModBlocks() {
         WesterosBlocks.LOGGER.info("Registering blocks for " + com.westerosblocks.WesterosBlocks.MOD_ID);
@@ -30,7 +31,7 @@ public class ModBlocks {
         HashMap<String, Integer> countsByType = new HashMap<>();
         AtomicInteger blockCount = new AtomicInteger();
 
-        for (WesterosBlockDef customBlock : customBlockDefs) {
+        for (ModBlock customBlock : customBlockDefs) {
             if (customBlock == null)
                 continue;
 
@@ -57,7 +58,7 @@ public class ModBlocks {
         }
 
         customBlocks = blklist.toArray(new Block[0]);
-        WesterosBlockDef.dumpBlockPerf();
+        ModBlock.dumpBlockPerf();
         // TODO
         // Dump information for external mods
 //        WesterosBlocksCompatibility.dumpBlockSets(customConfig.blockSets, modConfigPath);
@@ -118,4 +119,23 @@ public class ModBlocks {
         crash(new Exception(), msg);
     }
 
+    /**
+     * Parses block type string into parameters and flags
+     */
+    public static Map<String, String> parseBlockParameters(String typeString) {
+        Map<String, String> params = new HashMap<>();
+        if (typeString != null) {
+            for (String token : typeString.split(",")) {
+                token = token.trim();
+                if (token.contains(":")) {
+                    String[] parts = token.split(":", 2);
+                    params.put(parts[0].trim(), parts[1].trim());
+                } else {
+                    // For flags without values, store them with an empty string value
+                    params.put(token, "");
+                }
+            }
+        }
+        return params;
+    }
 }

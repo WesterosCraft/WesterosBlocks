@@ -3,8 +3,8 @@ package com.westerosblocks.datagen.models;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockStateRecord;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockStateRecord;
 import com.westerosblocks.block.custom.WCCuboidBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
@@ -16,13 +16,13 @@ import java.util.*;
 public class CuboidBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     private final WCCuboidBlock cuboidBlock;
 
     private static final int[] STANDARD_TEXTURE_INDICES = {0, 1, 2, 3, 4, 5};
     private static final boolean[] NO_TINT_ALL = {false, false, false, false, false, false};
 
-    public CuboidBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public CuboidBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -34,13 +34,13 @@ public class CuboidBlockExport extends ModelExport {
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
-        for (WesterosBlockStateRecord sr : def.states) {
+        for (ModBlockStateRecord sr : def.states) {
             boolean justBase = sr.stateID == null;
             Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
             String baseName = justBase ? "base" : sr.stateID;
 
             for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
-                WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+                ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
                 int rotationCount = sr.rotateRandom ? 4 : 1;
 
                 if (!sr.isCustomModel()) {
@@ -69,8 +69,8 @@ public class CuboidBlockExport extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    public void generateCuboidModels(BlockStateModelGenerator generator, WesterosBlockStateRecord sr, int setIdx) {
-        WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+    public void generateCuboidModels(BlockStateModelGenerator generator, ModBlockStateRecord sr, int setIdx) {
+        ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
         boolean isTinted = sr.isTinted();
         TextureMap textureMap = createCuboidTextureMap(set);
 
@@ -78,7 +78,7 @@ public class CuboidBlockExport extends ModelExport {
         createCuboidModel(sr, isTinted, set.getTextureCount()).upload(modelId, textureMap, generator.modelCollector);
     }
 
-    private Model createCuboidModel(WesterosBlockStateRecord sr, boolean isTinted, int textureCount) {
+    private Model createCuboidModel(ModBlockStateRecord sr, boolean isTinted, int textureCount) {
         // Ensure we have at least 6 texture keys for the standard faces
         int requiredTextures = Math.max(6, textureCount);
 
@@ -166,7 +166,7 @@ public class CuboidBlockExport extends ModelExport {
                 // Add elements array
                 JsonArray elements = new JsonArray();
 
-                for (WesterosBlockDef.Cuboid cuboid : cuboidBlock.getModelCuboids(def.states.indexOf(sr))) {
+                for (ModBlock.Cuboid cuboid : cuboidBlock.getModelCuboids(def.states.indexOf(sr))) {
                     JsonObject element = new JsonObject();
 
                     // From coordinates
@@ -200,7 +200,7 @@ public class CuboidBlockExport extends ModelExport {
                 return json;
             }
 
-            private void addFaces(JsonObject faces, WesterosBlockDef.Cuboid cuboid,
+            private void addFaces(JsonObject faces, ModBlock.Cuboid cuboid,
                                   boolean isTinted, Map<TextureKey, Identifier> textures) {
                 int[] sidetxt = cuboid.sideTextures != null ? cuboid.sideTextures : STANDARD_TEXTURE_INDICES;
                 boolean[] noTint = cuboid.noTint != null ? cuboid.noTint : NO_TINT_ALL;
@@ -217,7 +217,7 @@ public class CuboidBlockExport extends ModelExport {
             }
 
             private void addFace(JsonObject faces, String face, int index,
-                                 WesterosBlockDef.Cuboid cuboid, int[] sidetxt,
+                                 ModBlock.Cuboid cuboid, int[] sidetxt,
                                  boolean[] noTint, int[] siderot, boolean isTinted,
                                  Map<TextureKey, Identifier> textures) {
                 JsonObject faceObj = new JsonObject();
@@ -261,7 +261,7 @@ public class CuboidBlockExport extends ModelExport {
         return v;
     }
 
-    private void calculateUVs(String face, WesterosBlockDef.Cuboid cuboid, JsonArray uv) {
+    private void calculateUVs(String face, ModBlock.Cuboid cuboid, JsonArray uv) {
         // Calculate UV coordinates based on face and cuboid dimensions
         switch (face) {
             case "down" -> {
@@ -303,7 +303,7 @@ public class CuboidBlockExport extends ModelExport {
         }
     }
 
-    private String getCullface(String face, WesterosBlockDef.Cuboid cuboid) {
+    private String getCullface(String face, ModBlock.Cuboid cuboid) {
         return switch (face) {
             case "down" -> cuboid.yMin <= 0 ? "down" : null;
             case "up" -> cuboid.yMax >= 16 ? "up" : null;
@@ -315,7 +315,7 @@ public class CuboidBlockExport extends ModelExport {
         };
     }
 
-    public TextureMap createCuboidTextureMap(WesterosBlockDef.RandomTextureSet set) {
+    public TextureMap createCuboidTextureMap(ModBlock.RandomTextureSet set) {
         TextureMap textureMap = new TextureMap();
         int textureCount = set.getTextureCount();
 
@@ -368,8 +368,8 @@ public class CuboidBlockExport extends ModelExport {
         return texture.equals("transparent");
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
-        WesterosBlockStateRecord firstState = blockDefinition.states.getFirst();
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
+        ModBlockStateRecord firstState = blockDefinition.states.getFirst();
         String baseName = firstState.stateID == null ? "base" : firstState.stateID;
         String pathPrefix = firstState.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH;
         String path = String.format("%s%s/%s_v1", pathPrefix, blockDefinition.getBlockName(), baseName);

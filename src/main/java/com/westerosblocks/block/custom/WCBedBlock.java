@@ -2,18 +2,15 @@ package com.westerosblocks.block.custom;
 
 import com.llamalad7.mixinextras.lib.apache.commons.ArrayUtils;
 import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.BedPart;
-import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
@@ -37,8 +34,7 @@ import net.minecraft.world.WorldView;
 import java.util.List;
 import java.util.Optional;
 
-public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLifecycle {
-    // The codec field is still needed but implemented differently
+public class WCBedBlock extends HorizontalFacingBlock implements ModBlockLifecycle {
     public static final MapCodec<WCBedBlock> CODEC = createCodec(WCBedBlock::create);
 
     @Override
@@ -48,12 +44,12 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
 
     // TODO: not sure if best way to create this?
     private static WCBedBlock create(AbstractBlock.Settings settings) {
-        return new WCBedBlock(settings, null);  // You might want to handle the WesterosBlockDef differently
+        return new WCBedBlock(settings, null);
     }
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             def.nonOpaque = true;
             AbstractBlock.Settings settings = def.makeBlockSettings().nonOpaque();
             Block blk = new WCBedBlock(settings, def);
@@ -64,7 +60,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
 
     public static final EnumProperty<BedPart> PART = Properties.BED_PART;
     public static final BooleanProperty OCCUPIED = Properties.OCCUPIED;
-    protected static final int HEIGHT = 9;
+//    protected static final int HEIGHT = 9;
     protected static final VoxelShape BASE = createCuboidShape(0.0D, 3.0D, 0.0D, 16.0D, 9.0D, 16.0D);
     protected static final VoxelShape LEG_NORTH_WEST = createCuboidShape(0.0D, 0.0D, 0.0D, 3.0D, 3.0D, 3.0D);
     protected static final VoxelShape LEG_SOUTH_WEST = createCuboidShape(0.0D, 0.0D, 13.0D, 3.0D, 3.0D, 16.0D);
@@ -76,7 +72,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
     protected static final VoxelShape EAST_SHAPE = VoxelShapes.union(BASE, LEG_NORTH_EAST, LEG_SOUTH_EAST);
     private final DyeColor color;
 
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
     public enum BedType {
         NORMAL, RAISED, HAMMOCK
@@ -84,7 +80,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
 
     public final BedType bedType;
 
-    protected WCBedBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCBedBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
         this.color = DyeColor.RED;
         this.def = def;
@@ -101,7 +97,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 
@@ -261,11 +257,6 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
         return p_49558_.get(PART) == BedPart.HEAD ? direction.getOpposite() : direction;
     }
 
-    public static DoubleBlockProperties.Type getBlockType(BlockState p_49560_) {
-        BedPart bedpart = p_49560_.get(PART);
-        return bedpart == BedPart.HEAD ? DoubleBlockProperties.Type.FIRST : DoubleBlockProperties.Type.SECOND;
-    }
-
     private static boolean isBunkBed(BlockView world, BlockPos pos) {
         return world.getBlockState(pos.down()).getBlock() instanceof BedBlock;
     }
@@ -333,10 +324,6 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
         return Optional.empty();
     }
 
-    public PistonBehavior getPistonBehavior(BlockState state) {
-        return PistonBehavior.DESTROY;
-    }
-
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING, PART, OCCUPIED);
@@ -359,10 +346,6 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
     public long getRenderingSeed(BlockState state, BlockPos pos) {
         BlockPos blockpos = pos.offset(state.get(FACING), state.get(PART) == BedPart.HEAD ? 0 : 1);
         return MathHelper.hashCode(blockpos.getX(), pos.getY(), blockpos.getZ());
-    }
-
-    public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
-        return false;
     }
 
     private static int[][] getBedStandUpOffsets(Direction dir1, Direction dir2) {

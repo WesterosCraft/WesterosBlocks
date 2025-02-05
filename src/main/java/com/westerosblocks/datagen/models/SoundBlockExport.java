@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -14,9 +14,9 @@ import java.util.Optional;
 public class SoundBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
-    public SoundBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public SoundBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -29,7 +29,7 @@ public class SoundBlockExport extends ModelExport {
 
         if (!def.isCustomModel()) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
                 generateSoundBlockModel(generator, set, setIdx);
             }
         }
@@ -43,7 +43,7 @@ public class SoundBlockExport extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateSoundBlockModel(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set, int setIdx) {
+    private void generateSoundBlockModel(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, int setIdx) {
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.ALL, createBlockIdentifier(set.getTextureByIndex(0)));
 
@@ -67,8 +67,8 @@ public class SoundBlockExport extends ModelExport {
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator,
                                           Block block,
-                                          WesterosBlockDef blockDefinition) {
-        WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
+                                          ModBlock blockDefinition) {
+        ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
 
         Models.GENERATED.upload(

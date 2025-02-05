@@ -1,9 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -18,11 +18,11 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-public class WCTorchBlock extends TorchBlock implements WesterosBlockLifecycle {
+public class WCTorchBlock extends TorchBlock implements ModBlockLifecycle {
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings floorBlockSettings = def.makeBlockSettings().noCollision().breakInstantly();
             AbstractBlock.Settings wallBlockSettings = def.makeBlockSettings().noCollision().breakInstantly();
             Block wallTorch = new WCWallTorchBlock(wallBlockSettings, def);
@@ -34,7 +34,7 @@ public class WCTorchBlock extends TorchBlock implements WesterosBlockLifecycle {
         }
     }
     
-    private WesterosBlockDef def;
+    private ModBlock def;
     private boolean allow_unsupported = false;
     private boolean no_particle = false;
 
@@ -48,7 +48,7 @@ public class WCTorchBlock extends TorchBlock implements WesterosBlockLifecycle {
     }
 
     private final Block wallBlock;
-    protected WCTorchBlock(AbstractBlock.Settings settings, WesterosBlockDef def, Block wallTorch) {
+    protected WCTorchBlock(AbstractBlock.Settings settings, ModBlock def, Block wallTorch) {
         super(WCTorchBlock.getParticle(def.getType()), settings);
         this.def = def;
         this.wallBlock = wallTorch;
@@ -90,7 +90,7 @@ public class WCTorchBlock extends TorchBlock implements WesterosBlockLifecycle {
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

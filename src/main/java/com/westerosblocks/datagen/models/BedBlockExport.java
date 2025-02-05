@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.custom.WCBedBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
@@ -14,10 +14,10 @@ import java.util.Map;
 public class BedBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     private static WCBedBlock bedBlock;
 
-    public BedBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public BedBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -91,11 +91,11 @@ public class BedBlockExport extends ModelExport {
         return WesterosBlocks.id(String.format("%s%s/%s", GENERATED_PATH, blockName, rec.ext));
     }
 
-    private static TextureMap createCustomTextureMap(WesterosBlockDef def, boolean head) {
+    private static TextureMap createCustomTextureMap(ModBlock def, boolean head) {
         return ModTextureMap.bed(def, head);
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
         TextureMap textureMap = ModTextureMap.bed2(blockDefinition);
         Model bedItemModel = ModModels.BED_ITEM("untinted/bed_item");
 

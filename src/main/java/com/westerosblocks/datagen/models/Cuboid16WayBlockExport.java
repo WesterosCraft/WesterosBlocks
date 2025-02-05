@@ -1,8 +1,8 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockStateRecord;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockStateRecord;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
@@ -12,7 +12,7 @@ import java.util.*;
 public class Cuboid16WayBlockExport extends CuboidBlockExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
     private static final String[] ROTATION_MODIFIERS = {
             "",          // 0 degrees
@@ -21,7 +21,7 @@ public class Cuboid16WayBlockExport extends CuboidBlockExport {
             "_rot22"     // 22.5 degrees
     };
 
-    public Cuboid16WayBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public Cuboid16WayBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -32,7 +32,7 @@ public class Cuboid16WayBlockExport extends CuboidBlockExport {
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
-        for (WesterosBlockStateRecord sr : def.states) {
+        for (ModBlockStateRecord sr : def.states) {
             boolean justBase = sr.stateID == null;
             Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
             String baseName = justBase ? "base" : sr.stateID;
@@ -40,7 +40,7 @@ public class Cuboid16WayBlockExport extends CuboidBlockExport {
             // For each direction (16-way rotation)
             for (int rotation = 0; rotation < 16; rotation++) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
-                    WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+                    ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
                     BlockStateVariant variant = BlockStateVariant.create();
                     Identifier modelId = getModelId(baseName + ROTATION_MODIFIERS[rotation % 4], setIdx, sr.isCustomModel());
@@ -66,8 +66,8 @@ public class Cuboid16WayBlockExport extends CuboidBlockExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateCuboidModels(BlockStateModelGenerator generator, WesterosBlockStateRecord sr, int setIdx, String baseName) {
-        WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+    private void generateCuboidModels(BlockStateModelGenerator generator, ModBlockStateRecord sr, int setIdx, String baseName) {
+        ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
         TextureMap textureMap = createCuboidTextureMap(set);
 
         generateRotatedModel(baseName + ROTATION_MODIFIERS[0], textureMap, sr, setIdx, 0f);    // Normal
@@ -77,7 +77,7 @@ public class Cuboid16WayBlockExport extends CuboidBlockExport {
     }
 
     private void generateRotatedModel(String modelName, TextureMap textureMap,
-                                      WesterosBlockStateRecord sr, int setIdx, float rotation) {
+                                      ModBlockStateRecord sr, int setIdx, float rotation) {
         Identifier modelId = getModelId(modelName, setIdx, false);
         ModModels.ROTATED_CUBOID("cuboid_16way", rotation)
                 .upload(modelId, textureMap, generator.modelCollector);
@@ -87,8 +87,8 @@ public class Cuboid16WayBlockExport extends CuboidBlockExport {
         return WesterosBlocks.id(String.format("%s%s/%s_v%d", isCustom ? CUSTOM_PATH : GENERATED_PATH, def.getBlockName(), variant, setIdx + 1));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
-        WesterosBlockStateRecord firstState = blockDefinition.states.getFirst();
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
+        ModBlockStateRecord firstState = blockDefinition.states.getFirst();
         String baseName = firstState.stateID == null ? "base" : firstState.stateID;
 
         String path = String.format("%s%s/%s_v1",

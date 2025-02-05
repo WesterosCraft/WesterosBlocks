@@ -1,9 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
@@ -21,11 +21,11 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class WCFanBlock extends Block implements WesterosBlockLifecycle {
+public class WCFanBlock extends Block implements ModBlockLifecycle {
     private final Block wallBlock;
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings fanSettings = def.makeBlockSettings().noCollision().breakInstantly();
             AbstractBlock.Settings wallFanSettings = def.makeBlockSettings().noCollision().breakInstantly();
 
@@ -40,11 +40,11 @@ public class WCFanBlock extends Block implements WesterosBlockLifecycle {
     }
 
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     private final boolean allowUnsupported;
     private static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 4.0, 14.0);
 
-    protected WCFanBlock(AbstractBlock.Settings settings, WesterosBlockDef def, Block wallFanBlock) {
+    protected WCFanBlock(AbstractBlock.Settings settings, ModBlock def, Block wallFanBlock) {
         super(settings);
         this.def = def;
         this.wallBlock = wallFanBlock;
@@ -66,7 +66,7 @@ public class WCFanBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

@@ -1,8 +1,8 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockStateRecord;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockStateRecord;
 import com.westerosblocks.block.custom.WCSolidBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
@@ -14,30 +14,30 @@ import java.util.*;
 public class SolidBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
-    public SolidBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public SolidBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
         this.def = def;
     }
 
-    protected static String getModelName(WesterosBlockDef def, String ext, int setidx) {
+    protected static String getModelName(ModBlock def, String ext, int setidx) {
         return def.blockName + "/" + ext + ("_v" + (setidx + 1));
     }
 
-    protected static String getModelName(WesterosBlockDef def, String ext, int setidx, Boolean symmetrical) {
+    protected static String getModelName(ModBlock def, String ext, int setidx, Boolean symmetrical) {
         String dir = symmetrical ? "symmetrical" : "asymmetrical";
         return def.blockName + "/" + dir + "/" + ext + ("_v" + (setidx + 1));
     }
 
-    public static Identifier modelFileName(WesterosBlockDef def, String ext, int setidx, Boolean isCustom) {
+    public static Identifier modelFileName(ModBlock def, String ext, int setidx, Boolean isCustom) {
         Identifier id = WesterosBlocks.id(getModelName(def, ext, setidx));
         return id.withPrefixedPath(GENERATED_PATH);
     }
 
-    public static Identifier modelFileName(WesterosBlockDef def, String ext, int setidx, Boolean isCustom, Boolean symmetrical) {
+    public static Identifier modelFileName(ModBlock def, String ext, int setidx, Boolean isCustom, Boolean symmetrical) {
         Identifier id = WesterosBlocks.id(getModelName(def, ext, setidx, symmetrical));
         return id.withPrefixedPath(GENERATED_PATH);
     }
@@ -48,7 +48,7 @@ public class SolidBlockExport extends ModelExport {
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
-        for (WesterosBlockStateRecord sr : def.states) {
+        for (ModBlockStateRecord sr : def.states) {
             boolean justBase = sr.stateID == null;
             Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
             String fname = justBase ? "base" : sr.stateID;
@@ -56,7 +56,7 @@ public class SolidBlockExport extends ModelExport {
             boolean hasOverlay = sr.getOverlayTextureByIndex(0) != null;
 
             for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
-                WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+                ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
                 int rotationCount = sr.rotateRandom ? 4 : 1;    // 4 for random, just 1 if not
 
                 for (int rotIdx = 0; rotIdx < rotationCount; rotIdx++) {
@@ -108,8 +108,8 @@ public class SolidBlockExport extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    protected static void generateSolidModel(BlockStateModelGenerator generator, Identifier modelPath, boolean isSymmetrical, boolean isTinted, boolean hasOverlay, WesterosBlockStateRecord currentRec, int setIdx) {
-        WesterosBlockDef.RandomTextureSet set = currentRec.getRandomTextureSet(setIdx);
+    protected static void generateSolidModel(BlockStateModelGenerator generator, Identifier modelPath, boolean isSymmetrical, boolean isTinted, boolean hasOverlay, ModBlockStateRecord currentRec, int setIdx) {
+        ModBlock.RandomTextureSet set = currentRec.getRandomTextureSet(setIdx);
         TextureMap textureMap = createTextureMap(set, isSymmetrical, hasOverlay, isTinted, currentRec);
 
         if (hasOverlay) {
@@ -127,7 +127,7 @@ public class SolidBlockExport extends ModelExport {
         }
     }
 
-    private static TextureMap createTextureMap(WesterosBlockDef.RandomTextureSet ts, boolean isSymmetrical, boolean hasOverlay, boolean isTinted, WesterosBlockStateRecord currentRec) {
+    private static TextureMap createTextureMap(ModBlock.RandomTextureSet ts, boolean isSymmetrical, boolean hasOverlay, boolean isTinted, ModBlockStateRecord currentRec) {
         if (hasOverlay) {
             return ModTextureMap.frontTopSides(ts, currentRec, true, isSymmetrical);
         } else if (currentRec.getTextureCount() > 1 || isTinted) {
@@ -137,8 +137,8 @@ public class SolidBlockExport extends ModelExport {
         }
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
-        WesterosBlockStateRecord firstState = blockDefinition.states.getFirst();
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
+        ModBlockStateRecord firstState = blockDefinition.states.getFirst();
         String baseName = firstState.stateID == null ? "base" : firstState.stateID;
         boolean isSymmetrical = currentBlock instanceof WCSolidBlock && ((WCSolidBlock) currentBlock).symmetrical;
 

@@ -1,9 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -18,14 +18,14 @@ import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.MathHelper;
 import org.jetbrains.annotations.Nullable;
 
-public class WCCuboid16WayBlock extends WCCuboidBlock implements WesterosBlockLifecycle {
-    public static class Factory extends WesterosBlockFactory {
+public class WCCuboid16WayBlock extends WCCuboidBlock implements ModBlockLifecycle {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             def.nonOpaque = true;
             AbstractBlock.Settings settings = def.makeBlockSettings();
             // See if we have a state property
-            WesterosBlockDef.StateProperty state = def.buildStateProperty();
+            ModBlock.StateProperty state = def.buildStateProperty();
             if (state != null) {
                 tempSTATE = state;
             }
@@ -37,13 +37,13 @@ public class WCCuboid16WayBlock extends WCCuboidBlock implements WesterosBlockLi
     private static final int ROTATIONS = 16;
     public static final IntProperty ROTATION = Properties.ROTATION;
 
-    private static final WesterosBlockDef.CuboidRotation[] shape_rotations = {
-            WesterosBlockDef.CuboidRotation.NONE,
-            WesterosBlockDef.CuboidRotation.ROTY90,
-            WesterosBlockDef.CuboidRotation.ROTY180,
-            WesterosBlockDef.CuboidRotation.ROTY270 };
+    private static final ModBlock.CuboidRotation[] shape_rotations = {
+            ModBlock.CuboidRotation.NONE,
+            ModBlock.CuboidRotation.ROTY90,
+            ModBlock.CuboidRotation.ROTY180,
+            ModBlock.CuboidRotation.ROTY270 };
 
-    protected WCCuboid16WayBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCCuboid16WayBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings, def, ROTATIONS);
 
         // Build rotations - one set for each state, if needed
@@ -51,7 +51,7 @@ public class WCCuboid16WayBlock extends WCCuboidBlock implements WesterosBlockLi
         for (int stidx = 0; stidx < stcnt; stidx++) {
             int idx = ROTATIONS * stidx;
             for (int i = 1; i < ROTATIONS; i++) {
-                for (WesterosBlockDef.Cuboid c : cuboid_by_facing[idx]) {
+                for (ModBlock.Cuboid c : cuboid_by_facing[idx]) {
                     cuboid_by_facing[idx+i].add(c.rotateCuboid(shape_rotations[i / 4]));
                 }
             }

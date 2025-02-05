@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -14,9 +14,9 @@ import java.util.Optional;
 public class FlowerPotExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
-    public FlowerPotExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public FlowerPotExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -28,7 +28,7 @@ public class FlowerPotExport extends ModelExport {
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-            WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+            ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
             int rotationCount = def.rotateRandom ? 4 : 1;
 
             for (int rotIdx = 0; rotIdx < rotationCount; rotIdx++) {
@@ -49,13 +49,13 @@ public class FlowerPotExport extends ModelExport {
 
         if (!def.isCustomModel()) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
                 generateFlowerPotModel(generator, set, setIdx);
             }
         }
     }
 
-    private void generateFlowerPotModel(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set, int setIdx) {
+    private void generateFlowerPotModel(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, int setIdx) {
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.DIRT, createBlockIdentifier(set.getTextureByIndex(0)))
                 .put(ModTextureKey.FLOWER_POT, createBlockIdentifier(set.getTextureByIndex(1)))
@@ -78,7 +78,7 @@ public class FlowerPotExport extends ModelExport {
         return WesterosBlocks.id(String.format("%s%s/%s_v%d", GENERATED_PATH, def.getBlockName(), type, setIdx + 1));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
         String path = String.format("%s%s/base_v1", GENERATED_PATH, blockDefinition.blockName);
         itemModelGenerator.register(
                 currentBlock.asItem(),

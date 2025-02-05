@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.models;
 
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockStateRecord;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockStateRecord;
 import net.minecraft.data.client.TextureKey;
 import net.minecraft.data.client.TextureMap;
 
@@ -9,7 +9,7 @@ import static com.westerosblocks.datagen.ModelExport.createBlockIdentifier;
 
 public class ModTextureMap extends TextureMap {
 
-    public static TextureMap frontTopSides(WesterosBlockDef.RandomTextureSet ts, WesterosBlockStateRecord currentRec, Boolean hasOverlay, Boolean isSymmetrical) {
+    public static TextureMap frontTopSides(ModBlock.RandomTextureSet ts, ModBlockStateRecord currentRec, Boolean hasOverlay, Boolean isSymmetrical) {
         TextureMap tMap = new TextureMap()
                 .put(TextureKey.DOWN, createBlockIdentifier(ts.getTextureByIndex(0)))
                 .put(TextureKey.UP, createBlockIdentifier(ts.getTextureByIndex(1)))
@@ -30,7 +30,7 @@ public class ModTextureMap extends TextureMap {
         return tMap;
     }
 
-    public static TextureMap txtN(WesterosBlockDef.RandomTextureSet ts) {
+    public static TextureMap txtN(ModBlock.RandomTextureSet ts) {
         return new TextureMap()
                 .put(ModTextureKey.TEXTURE_0, createBlockIdentifier(ts.getTextureByIndex(0)))
                 .put(ModTextureKey.TEXTURE_1, createBlockIdentifier(ts.getTextureByIndex(1)))
@@ -41,7 +41,7 @@ public class ModTextureMap extends TextureMap {
                 .put(TextureKey.PARTICLE, createBlockIdentifier(ts.getTextureByIndex(0)));
     }
 
-    public static TextureMap bed(WesterosBlockDef def, boolean head) {
+    public static TextureMap bed(ModBlock def, boolean head) {
         return new TextureMap()
                 .put(ModTextureKey.BED_TOP, createBlockIdentifier(def.getTextureByIndex(head ? 0 : 1)))
                 .put(ModTextureKey.BED_END, createBlockIdentifier(def.getTextureByIndex(head ? 4 : 5)))
@@ -49,7 +49,7 @@ public class ModTextureMap extends TextureMap {
                 .put(TextureKey.PARTICLE, createBlockIdentifier(def.getTextureByIndex(0)));
     }
 
-    public static TextureMap bed2(WesterosBlockDef def) {
+    public static TextureMap bed2(ModBlock def) {
         return new TextureMap()
                 .put(ModTextureKey.BED_TOP, createBlockIdentifier(def.getTextureByIndex(0)))
                 .put(ModTextureKey.BED_TOP2, createBlockIdentifier(def.getTextureByIndex(1)))
@@ -59,7 +59,7 @@ public class ModTextureMap extends TextureMap {
                 .put(ModTextureKey.BED_END2, createBlockIdentifier(def.getTextureByIndex(5)));
     }
 
-    public static TextureMap cake(WesterosBlockDef def) {
+    public static TextureMap cake(ModBlock def) {
         return new TextureMap()
                 .put(TextureKey.BOTTOM, createBlockIdentifier(def.getTextureByIndex(0)))
                 .put(TextureKey.TOP, createBlockIdentifier(def.getTextureByIndex(1)))
@@ -68,7 +68,7 @@ public class ModTextureMap extends TextureMap {
                 .put(TextureKey.PARTICLE, createBlockIdentifier(def.getTextureByIndex(2))); // Side texture for particle
     }
 
-    public static TextureMap leaves(WesterosBlockDef.RandomTextureSet set, Boolean hasOverlay) {
+    public static TextureMap leaves(ModBlock.RandomTextureSet set, Boolean hasOverlay) {
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.END, createBlockIdentifier(set.getTextureByIndex(0)))
                 .put(TextureKey.SIDE, createBlockIdentifier(set.getTextureByIndex(1)))
@@ -84,7 +84,7 @@ public class ModTextureMap extends TextureMap {
         return textureMap;
     }
 
-    public static TextureMap bottomTopSide(WesterosBlockDef.RandomTextureSet set, WesterosBlockStateRecord sr, Boolean hasOverlay) {
+    public static TextureMap bottomTopSide(ModBlock.RandomTextureSet set, ModBlockStateRecord sr, Boolean hasOverlay) {
         TextureMap tMap = new TextureMap()
                 .put(TextureKey.BOTTOM, createBlockIdentifier(set.getTextureByIndex(0)))
                 .put(TextureKey.TOP, createBlockIdentifier(set.getTextureByIndex(1)))

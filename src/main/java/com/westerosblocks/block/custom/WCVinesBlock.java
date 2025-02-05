@@ -1,9 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
@@ -27,17 +27,17 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
-    public static class Factory extends WesterosBlockFactory {
+public class WCVinesBlock extends VineBlock implements ModBlockLifecycle {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings().nonOpaque();
             Block blk = new WCVinesBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
 
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     private boolean allow_unsupported = false;
     private boolean no_climb = false;
     public boolean has_down = false;
@@ -53,7 +53,7 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
     public static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION = createDirectionPropertyMap();
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    protected WCVinesBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCVinesBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
         this.def = def;
         String t = def.getType();
@@ -86,7 +86,7 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

@@ -1,17 +1,17 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.PillarBlock;
 
-public class WCLogBlock extends PillarBlock implements WesterosBlockLifecycle {
-    public static class Factory extends WesterosBlockFactory {
+public class WCLogBlock extends PillarBlock implements ModBlockLifecycle {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings();
 
             Block blk = new WCLogBlock(settings, def);
@@ -19,15 +19,15 @@ public class WCLogBlock extends PillarBlock implements WesterosBlockLifecycle {
         }
     }
 
-    protected WesterosBlockDef def;
+    protected ModBlock def;
 
-    protected WCLogBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCLogBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
         this.def = def;
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

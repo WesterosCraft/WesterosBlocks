@@ -1,8 +1,8 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockStateRecord;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockStateRecord;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.WallShape;
@@ -15,7 +15,7 @@ import java.util.*;
 public class WallBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
     private static final ModelPart[] PARTS = {
             // Post
@@ -38,7 +38,7 @@ public class WallBlockExport extends ModelExport {
             ModelPart.of("side_tall", null, null, null, null, "tall", true, 270)
     };
 
-    public WallBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public WallBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -49,7 +49,7 @@ public class WallBlockExport extends ModelExport {
     public void generateBlockStateModels() {
         MultipartBlockStateSupplier stateSupplier = MultipartBlockStateSupplier.create(block);
 
-        for (WesterosBlockStateRecord sr : def.states) {
+        for (ModBlockStateRecord sr : def.states) {
             boolean justBase = sr.stateID == null;
             Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
 
@@ -62,7 +62,7 @@ public class WallBlockExport extends ModelExport {
 
             for (ModelPart part : PARTS) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
-                    WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+                    ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
                     BlockStateVariant variant = BlockStateVariant.create();
                     Identifier modelId = getModelId(part.modExt(), setIdx, sr);
@@ -85,7 +85,7 @@ public class WallBlockExport extends ModelExport {
                             When.PropertyCondition stateCondition = When.create();
                             if (block.getStateManager().getProperty("state") != null) {
                                 stateCondition.set(
-                                        (WesterosBlockDef.StateProperty) block.getStateManager().getProperty("state"),
+                                        (ModBlock.StateProperty) block.getStateManager().getProperty("state"),
                                         stateID
                                 );
                             }
@@ -105,18 +105,18 @@ public class WallBlockExport extends ModelExport {
         generator.blockStateCollector.accept(stateSupplier);
     }
 
-    private void generateWallModels(WesterosBlockStateRecord sr, int setIdx) {
+    private void generateWallModels(ModBlockStateRecord sr, int setIdx) {
         boolean isTinted = sr.isTinted();
         boolean hasOverlay = sr.getOverlayTextureByIndex(0) != null;
-        WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
+        ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
         generateWallModelVariant("post", set, sr, setIdx, isTinted, hasOverlay);
         generateWallModelVariant("side", set, sr, setIdx, isTinted, hasOverlay);
         generateWallModelVariant("side_tall", set, sr, setIdx, isTinted, hasOverlay);
     }
 
-    private void generateWallModelVariant(String variant, WesterosBlockDef.RandomTextureSet set,
-                                          WesterosBlockStateRecord sr, int setIdx, boolean isTinted, boolean hasOverlay) {
+    private void generateWallModelVariant(String variant, ModBlock.RandomTextureSet set,
+                                          ModBlockStateRecord sr, int setIdx, boolean isTinted, boolean hasOverlay) {
         TextureMap textureMap = ModTextureMap.bottomTopSide(set, sr, null);
         String parentPath = getParentPath(variant, isTinted, hasOverlay);
         Identifier modelId = getModelId(variant, setIdx, sr);
@@ -137,7 +137,7 @@ public class WallBlockExport extends ModelExport {
         return "block/" + basePath + modelName;
     }
 
-    private Identifier getModelId(String variant, int setIdx, WesterosBlockStateRecord sr) {
+    private Identifier getModelId(String variant, int setIdx, ModBlockStateRecord sr) {
         String path = String.format("%s%s/%s-v%d", GENERATED_PATH, def.getBlockName(), variant, setIdx + 1);
         if (sr.stateID != null) {
             path = path + "/" + sr.stateID;
@@ -162,9 +162,9 @@ public class WallBlockExport extends ModelExport {
         }
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
-        WesterosBlockStateRecord firstState = blockDefinition.states.getFirst();
-        WesterosBlockDef.RandomTextureSet firstSet = firstState.getRandomTextureSet(0);
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
+        ModBlockStateRecord firstState = blockDefinition.states.getFirst();
+        ModBlock.RandomTextureSet firstSet = firstState.getRandomTextureSet(0);
 
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.WALL, createBlockIdentifier(firstSet.getTextureByIndex(0)));

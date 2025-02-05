@@ -1,9 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -24,7 +24,7 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 
-public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
+public class WCLayerBlock extends Block implements ModBlockLifecycle {
 	public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 	public static final IntProperty LAYERS = Properties.LAYERS;
 	public final int layerCount = 8;
@@ -40,11 +40,11 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
 			Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D),
 			Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
 
-	private WesterosBlockDef def;
+	private ModBlock def;
 
-	public static class Factory extends WesterosBlockFactory {
+	public static class Factory extends ModBlockFactory {
 		@Override
-		public Block buildBlockClass(WesterosBlockDef def) {
+		public Block buildBlockClass(ModBlock def) {
 			AbstractBlock.Settings settings = def.makeBlockSettings();
 			settings = settings.blockVision((state, level, pos) -> state.get(LAYERS) >= 8);
 			Block blk = new WCLayerBlock(settings, def);
@@ -53,7 +53,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
 		}
 	}
 
-	protected WCLayerBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+	protected WCLayerBlock(AbstractBlock.Settings settings, ModBlock def) {
 		super(settings);
 		this.def = def;
 		String t = def.getType();
@@ -86,7 +86,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
 	}
 
 	@Override
-	public WesterosBlockDef getWBDefinition() {
+	public ModBlock getWBDefinition() {
 		return def;
 	}
 

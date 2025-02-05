@@ -1,6 +1,6 @@
 package com.westerosblocks;
 
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -73,7 +73,7 @@ public class WesterosCreativeModeTabs {
                 .icon(() -> new ItemStack(Registries.ITEM.get(Identifier.of(WesterosBlocks.MOD_ID, iconItem))))
                 .displayName(Text.literal(title))
                 .entries((context, entries) -> {
-                    for (WesterosBlockDef def : WesterosBlocksJsonLoader.getCustomBlockDefs()) {
+                    for (ModBlock def : WesterosBlocksDefLoader.getCustomBlockDefs()) {
                         if (def != null && def.creativeTab.equals(tabName)) {
                             entries.add(Registries.ITEM.get(WesterosBlocks.id(def.blockName)));
                         }

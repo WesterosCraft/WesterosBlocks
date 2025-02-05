@@ -1,12 +1,11 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.WallShape;
-import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -32,7 +31,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
-public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
+public class WCWallBlock extends WallBlock implements ModBlockLifecycle {
 
     public static final BooleanProperty UP = Properties.UP;
     public static EnumProperty<WallShape> EAST_WALL = Properties.EAST_WALL_SHAPE;
@@ -47,7 +46,7 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
     private static final VoxelShape WEST_TEST = Block.createCuboidShape(0.0D, 0.0D, 7.0D, 9.0D, 16.0D, 9.0D);
     private static final VoxelShape EAST_TEST = Block.createCuboidShape(7.0D, 0.0D, 7.0D, 16.0D, 16.0D, 9.0D);
 
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
     protected static BooleanProperty tempUNCONNECT;
     public final boolean unconnect;
@@ -56,8 +55,8 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
     protected static IntProperty tempCONNECTSTATE;
     public final boolean connectstate;
 
-    protected static WesterosBlockDef.StateProperty tempSTATE;
-    protected WesterosBlockDef.StateProperty STATE;
+    protected static ModBlock.StateProperty tempSTATE;
+    protected ModBlock.StateProperty STATE;
 
     protected boolean toggleOnUse = false;
 
@@ -75,12 +74,12 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
 
     public final WallSize wallSize; // "normal", or "short"
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings();
             // See if we have a state property
-            WesterosBlockDef.StateProperty state = def.buildStateProperty();
+            ModBlock.StateProperty state = def.buildStateProperty();
             if (state != null) {
                 tempSTATE = state;
             }
@@ -111,7 +110,7 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
         }
     }
 
-    protected WCWallBlock(AbstractBlock.Settings settings, WesterosBlockDef def, boolean doUnconnect, boolean doConnectstate) {
+    protected WCWallBlock(AbstractBlock.Settings settings, ModBlock def, boolean doUnconnect, boolean doConnectstate) {
         super(settings); // Call parent WallBlock constructor
         this.def = def;
 
@@ -177,16 +176,16 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
         }
     }
 
-    protected WCWallBlock(AbstractBlock.Settings settings, WesterosBlockDef def, boolean doUnconnect) {
+    protected WCWallBlock(AbstractBlock.Settings settings, ModBlock def, boolean doUnconnect) {
         this(settings, def, doUnconnect, false);
     }
 
-    protected WCWallBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCWallBlock(AbstractBlock.Settings settings, ModBlock def) {
         this(settings, def, false, false);
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

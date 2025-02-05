@@ -2,9 +2,9 @@ package com.westerosblocks.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import com.westerosblocks.block.entity.custom.WCFurnaceBlockEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -22,10 +22,10 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
-public class WCFurnaceBlock extends AbstractFurnaceBlock implements WesterosBlockLifecycle {
-    public static class Factory extends WesterosBlockFactory {
+public class WCFurnaceBlock extends AbstractFurnaceBlock implements ModBlockLifecycle {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             boolean alwaysOn = def.getTypeValue("always-on").equals("true");
             AbstractBlock.Settings settings = def.makeBlockSettings()
                     .luminance(state -> (alwaysOn || state.get(Properties.LIT)) ?
@@ -37,10 +37,10 @@ public class WCFurnaceBlock extends AbstractFurnaceBlock implements WesterosBloc
         }
     }
 
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     private final boolean alwaysOn;
 
-    protected WCFurnaceBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCFurnaceBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
         this.def = def;
         this.alwaysOn = def.getTypeValue("always-on").equals("true");
@@ -50,7 +50,7 @@ public class WCFurnaceBlock extends AbstractFurnaceBlock implements WesterosBloc
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

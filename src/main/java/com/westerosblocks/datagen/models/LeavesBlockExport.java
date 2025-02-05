@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.custom.WCLeavesBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
@@ -13,9 +13,9 @@ import java.util.*;
 public class LeavesBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
-    public LeavesBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public LeavesBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -29,7 +29,7 @@ public class LeavesBlockExport extends ModelExport {
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-            WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+            ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
             int rotationCount = def.rotateRandom ? 4 : 1;
 
             if (isBetterFoliage) {
@@ -50,7 +50,7 @@ public class LeavesBlockExport extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void addLeafVariants(BlockStateBuilder blockStateBuilder, Map<String, List<BlockStateVariant>> variants, WesterosBlockDef.RandomTextureSet set,
+    private void addLeafVariants(BlockStateBuilder blockStateBuilder, Map<String, List<BlockStateVariant>> variants, ModBlock.RandomTextureSet set,
                                  int rotationCount, String ext, int setIdx) {
         for (int i = 0; i < rotationCount; i++) {
             BlockStateVariant variant = BlockStateVariant.create();
@@ -66,7 +66,7 @@ public class LeavesBlockExport extends ModelExport {
         }
     }
 
-    private void generateLeafModel(BlockStateModelGenerator generator, String type, WesterosBlockDef.RandomTextureSet set, int setIdx, boolean isBetterFoliage, boolean hasOverlay) {
+    private void generateLeafModel(BlockStateModelGenerator generator, String type, ModBlock.RandomTextureSet set, int setIdx, boolean isBetterFoliage, boolean hasOverlay) {
         TextureMap textureMap = ModTextureMap.leaves(set, hasOverlay);
         String parentPath = createParentPath(isBetterFoliage, def.isTinted(), hasOverlay, type, setIdx);
         Identifier modelId = getModelId(type, setIdx);
@@ -87,8 +87,8 @@ public class LeavesBlockExport extends ModelExport {
                 String.format("%s%s/%s-v%d", GENERATED_PATH, def.getBlockName(), modelType, setIdx + 1));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
-        WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
+        ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         TextureMap textureMap = ModTextureMap.leaves(firstSet, true);
         Model model = ModModels.LEAVES_OVERLAY("tinted/leaves_overlay");
 

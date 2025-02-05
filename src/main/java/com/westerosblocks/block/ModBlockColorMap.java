@@ -1,6 +1,6 @@
 package com.westerosblocks.block;
 
-public class WesterosBlockColorMap {
+public class ModBlockColorMap {
     public String[] blockNames;
     public String colorMult;
 }

@@ -1,8 +1,5 @@
 package com.westerosblocks.util;
 
-import com.westerosblocks.block.WesterosBlockDef;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.BlockSetType;
 import net.minecraft.block.WoodType;
 
 public class WoodTypeUtil  {

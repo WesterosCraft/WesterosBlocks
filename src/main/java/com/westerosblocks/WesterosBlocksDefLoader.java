@@ -1,10 +1,9 @@
 package com.westerosblocks;
 
 import com.google.gson.*;
-import com.westerosblocks.block.WesterosBlockColorMap;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockSetDef;
-import com.westerosblocks.block.WesterosBlockTags;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockSetDef;
+import com.westerosblocks.block.ModBlockTags;
 import com.westerosblocks.item.WesterosItemMenuOverrides;
 
 import java.io.BufferedReader;
@@ -16,14 +15,14 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
-// Top level container for WesterosBlocks.json parsed data
-public class WesterosBlocksJsonLoader {
-    public static WesterosBlocksJsonLoader.WesterosBlocksConfig customConfig;
-    private static WesterosBlockDef[] customBlockDefs;
+// load definitions from resources/definitions parsed data
+public class WesterosBlocksDefLoader {
+    public static WesterosBlocksDefLoader.WesterosBlocksConfig customConfig;
+    private static ModBlock[] customBlockDefs;
 
 
     public static void initialize(List<String> configFiles) {
-        customConfig = WesterosBlocksJsonLoader.getBlockConfig(configFiles);
+        customConfig = WesterosBlocksDefLoader.getBlockConfig(configFiles);
         customBlockDefs = getBlockDefs(customConfig);
         WesterosBlocks.LOGGER.info("Loaded {} block definitions", customBlockDefs.length);
 
@@ -35,10 +34,10 @@ public class WesterosBlocksJsonLoader {
     }
 
     public static class WesterosBlocksConfig {
-        public WesterosBlockSetDef[] blockSets;
-        public WesterosBlockDef[] blocks;
+        public ModBlockSetDef[] blockSets;
+        public ModBlock[] blocks;
         public WesterosItemMenuOverrides[] menuOverrides;
-        public WesterosBlockTags[] blockTags;
+        public ModBlockTags[] blockTags;
     }
 
     public static class BlockConfigNotFoundException extends Exception {
@@ -140,10 +139,10 @@ public class WesterosBlocksJsonLoader {
         return combinedConfig;
     }
 
-    public static boolean sanityCheck(WesterosBlockDef[] defs) {
+    public static boolean sanityCheck(ModBlock[] defs) {
         HashSet<String> names = new HashSet<String>();
         // Make sure block IDs and names are unique
-        for (WesterosBlockDef def : defs) {
+        for (ModBlock def : defs) {
             if (def == null)
                 continue;
             if (def.blockName == null) {
@@ -160,24 +159,24 @@ public class WesterosBlocksJsonLoader {
     }
 
     // Expand block set definitions to obtain the full block definition list
-    public static WesterosBlockDef[] getBlockDefs(WesterosBlocksConfig config) {
-        WesterosBlockSetDef[] blockSetDefs = config.blockSets;
-        WesterosBlockDef[] blockDefs = config.blocks;
-        List<WesterosBlockDef> expandedBlockDefs = new LinkedList<>(Arrays.asList(blockDefs));
+    public static ModBlock[] getBlockDefs(WesterosBlocksConfig config) {
+        ModBlockSetDef[] blockSetDefs = config.blockSets;
+        ModBlock[] blockDefs = config.blocks;
+        List<ModBlock> expandedBlockDefs = new LinkedList<>(Arrays.asList(blockDefs));
 
         if (config.blockSets.length > 0) {
-            for (WesterosBlockSetDef blockSetDef : blockSetDefs) {
+            for (ModBlockSetDef blockSetDef : blockSetDefs) {
                 if (blockSetDef == null)
                     continue;
-                List<WesterosBlockDef> variantBlockDefs = blockSetDef.generateBlockDefs();
+                List<ModBlock> variantBlockDefs = blockSetDef.generateBlockDefs();
                 expandedBlockDefs.addAll(variantBlockDefs);
             }
         }
 
-        return expandedBlockDefs.toArray(new WesterosBlockDef[0]);
+        return expandedBlockDefs.toArray(new ModBlock[0]);
     }
 
-    public static WesterosBlockDef[] getCustomBlockDefs() {
+    public static ModBlock[] getCustomBlockDefs() {
         return customBlockDefs;
     }
 

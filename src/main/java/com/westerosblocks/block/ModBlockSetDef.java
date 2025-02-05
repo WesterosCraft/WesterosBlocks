@@ -2,7 +2,7 @@ package com.westerosblocks.block;
 
 import java.util.*;
 
-public class WesterosBlockSetDef {
+public class ModBlockSetDef {
     private static final float DEF_FLOAT = -999.0F;
     public static final int DEF_INT = -999;
 
@@ -22,7 +22,7 @@ public class WesterosBlockSetDef {
     // leaves, plants, vine, sponge, etc)
     public float resistance = DEF_FLOAT; // Explosion resistance
     public int lightOpacity = DEF_INT; // Light opacity
-    public List<WesterosBlockDef.HarvestLevel> harvestLevel = null; // List of harvest levels
+    public List<ModBlock.HarvestLevel> harvestLevel = null; // List of harvest levels
     public int fireSpreadSpeed = 0; // Fire spread speed
     public int flamability = 0; // Flamability
     public String creativeTab = null; // Creative tab for items
@@ -37,7 +37,7 @@ public class WesterosBlockSetDef {
     public boolean nonOpaque = false; // If true, does not block visibility of shared faces (solid blocks) and doesn't allow torches
 
     public Map<String, List<String>> altTextures = null; // Allows idiosyncratic textures for particular variants
-    public Map<String, List<WesterosBlockDef.RandomTextureSet>> altRandomTextures = null;    // Allows idiosyncratic randomTextures for particular variants
+    public Map<String, List<ModBlock.RandomTextureSet>> altRandomTextures = null;    // Allows idiosyncratic randomTextures for particular variants
     public Map<String, List<String>> altOverlayTextures = null; // Allows idiosyncratic overlayTextures for particular variants
 
     public Map<String, String> textures = null; // Map of textures to use for each variant (for single texture set)
@@ -119,7 +119,7 @@ public class WesterosBlockSetDef {
         public String colorMult = "#FFFFFF";
 
         public Map<String, List<String>> altTextures = null;
-        public Map<String, List<WesterosBlockDef.RandomTextureSet>> altRandomTextures = null;
+        public Map<String, List<ModBlock.RandomTextureSet>> altRandomTextures = null;
         public Map<String, List<String>> altOverlayTextures = null;
 
         public Map<String, String> textures = null;
@@ -127,8 +127,8 @@ public class WesterosBlockSetDef {
         public Map<String, String> overlayTextures = null;
     }
 
-    public List<WesterosBlockDef> generateBlockDefs() {
-        List<WesterosBlockDef> blockDefs = new LinkedList<>();
+    public List<ModBlock> generateBlockDefs() {
+        List<ModBlock> blockDefs = new LinkedList<>();
 
         this.types = preprocessVariantMap(this.types);
         this.altCustomTags = preprocessVariantMap(this.altCustomTags);
@@ -136,13 +136,13 @@ public class WesterosBlockSetDef {
         this.altRandomTextures = preprocessVariantMap(this.altRandomTextures);
         this.altOverlayTextures = preprocessVariantMap(this.altOverlayTextures);
 
-        for (String variant : WesterosBlockSetDef.SUPPORTED_VARIANTS) {
+        for (String variant : ModBlockSetDef.SUPPORTED_VARIANTS) {
             if (this.variants != null && !variants.contains(variant))
                 continue;
-            else if (this.variants == null && !WesterosBlockSetDef.DEFAULT_VARIANTS.contains(variant))
+            else if (this.variants == null && !ModBlockSetDef.DEFAULT_VARIANTS.contains(variant))
                 continue;
 
-            WesterosBlockDef variantDef = new WesterosBlockDef();
+            ModBlock variantDef = new ModBlock();
 
             // Automatically derive name for variant (or use alt name if provided)
             String suffix = (variant.equals("solid")) ? "" : variant;
@@ -158,14 +158,14 @@ public class WesterosBlockSetDef {
             if (this.altLabels != null && this.altLabels.containsKey(variant)) {
                 variantDef.label = this.altLabels.get(variant);
             } else if (this.baseLabel != null) {
-                String suffix_label = (suffix.isEmpty()) ? "" : WesterosBlockSetDef.generateLabel(suffix);
+                String suffix_label = (suffix.isEmpty()) ? "" : ModBlockSetDef.generateLabel(suffix);
                 variantDef.label = this.baseLabel + " " + suffix_label;
             } else {
-                variantDef.label = WesterosBlockSetDef.generateLabel(variantDef.blockName);
+                variantDef.label = ModBlockSetDef.generateLabel(variantDef.blockName);
             }
 
             // Set blocktype for variant
-            String blockType = WesterosBlockSetDef.VARIANT_TYPES.get(variant);
+            String blockType = ModBlockSetDef.VARIANT_TYPES.get(variant);
             if (blockType == null)
                 blockType = variant;
             variantDef.blockType = blockType;
@@ -211,59 +211,59 @@ public class WesterosBlockSetDef {
 
             // Process blocktypes with special attributes
             if (variant.equals("hopper")) {
-                WesterosBlockDef.Cuboid[] cuboids = {
-                        new WesterosBlockDef.Cuboid(0.3755f, 0f, 0.3755f, 0.6245f, 0.275f, 0.6245f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new WesterosBlockDef.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new WesterosBlockDef.Cuboid(0f, 0.625f, 0f, 1f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
+                ModBlock.Cuboid[] cuboids = {
+                        new ModBlock.Cuboid(0.3755f, 0f, 0.3755f, 0.6245f, 0.275f, 0.6245f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new ModBlock.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new ModBlock.Cuboid(0f, 0.625f, 0f, 1f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
             } else if (variant.equals("tip")) {
-                WesterosBlockDef.Cuboid[] cuboids = {
-                        new WesterosBlockDef.Cuboid(0.3755f, 0.625f, 0.3755f, 0.6245f, 1f, 0.6245f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new WesterosBlockDef.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 0.275f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
+                ModBlock.Cuboid[] cuboids = {
+                        new ModBlock.Cuboid(0.3755f, 0.625f, 0.3755f, 0.6245f, 1f, 0.6245f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new ModBlock.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new ModBlock.Cuboid(0f, 0f, 0f, 1f, 0.275f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
             } else if (variant.equals("carpet")) {
-                WesterosBlockDef.Cuboid[] cuboids = {
-                        new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 0.0625f, 1f, new int[]{0, 0, 0, 0, 0, 0})
+                ModBlock.Cuboid[] cuboids = {
+                        new ModBlock.Cuboid(0f, 0f, 0f, 1f, 0.0625f, 1f, new int[]{0, 0, 0, 0, 0, 0})
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
             } else if (variant.equals("half_door")) {
-                variantDef.boundingBox = new WesterosBlockDef.BoundingBox(0f, 0f, 0f, 0.1875f, 1f, 1f);
+                variantDef.boundingBox = new ModBlock.BoundingBox(0f, 0f, 0f, 0.1875f, 1f, 1f);
             } else if (variant.equals("hollow_hopper")) {
-                WesterosBlockDef.Cuboid[] cuboids = {
-                        new WesterosBlockDef.Cuboid(0.3755f, 0.16f, 0.3755f, 0.6245f, 0.275f, 0.6245f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new WesterosBlockDef.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new WesterosBlockDef.Cuboid(0f, 0.625f, 0f, 1f, 0.65f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new WesterosBlockDef.Cuboid(0f, 0.625f, 0f, 0.125f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new WesterosBlockDef.Cuboid(0.875f, 0.625f, 0f, 1f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new WesterosBlockDef.Cuboid(0f, 0.625f, 0f, 1f, 1f, 0.125f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new WesterosBlockDef.Cuboid(0f, 0.625f, 0.875f, 1f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
+                ModBlock.Cuboid[] cuboids = {
+                        new ModBlock.Cuboid(0.3755f, 0.16f, 0.3755f, 0.6245f, 0.275f, 0.6245f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new ModBlock.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new ModBlock.Cuboid(0f, 0.625f, 0f, 1f, 0.65f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new ModBlock.Cuboid(0f, 0.625f, 0f, 0.125f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new ModBlock.Cuboid(0.875f, 0.625f, 0f, 1f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new ModBlock.Cuboid(0f, 0.625f, 0f, 1f, 1f, 0.125f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new ModBlock.Cuboid(0f, 0.625f, 0.875f, 1f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
             } else if (variant.equals("directional")) {
-                WesterosBlockDef.Cuboid[] cuboids = {
-                        new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 1f, 1f)
+                ModBlock.Cuboid[] cuboids = {
+                        new ModBlock.Cuboid(0f, 0f, 0f, 1f, 1f, 1f)
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
             } else if (variant.equals("path")) {
-                WesterosBlockDef.Cuboid[] cuboids = {
-                        new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 0.9375f, 1f, new int[]{0, 0, 0, 0, 0, 0})
+                ModBlock.Cuboid[] cuboids = {
+                        new ModBlock.Cuboid(0f, 0f, 0f, 1f, 0.9375f, 1f, new int[]{0, 0, 0, 0, 0, 0})
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
             } else if (variant.contains("arrow_slit") || variant.contains("window_frame")) {
                 variantDef.nonOpaque = true;
                 variantDef.lightOpacity = 0;
-                WesterosBlockDef.BoundingBox[] collisionBoxes = {
-                        new WesterosBlockDef.BoundingBox(0f, 0f, 0f, 0.2f, 1f, 0.2f),
-                        new WesterosBlockDef.BoundingBox(0.8f, 0f, 0f, 1f, 1f, 0.2f),
-                        new WesterosBlockDef.BoundingBox(0f, 0f, 0.8f, 0.2f, 1f, 1f),
-                        new WesterosBlockDef.BoundingBox(0.8f, 0f, 0.8f, 1f, 1f, 1f)
+                ModBlock.BoundingBox[] collisionBoxes = {
+                        new ModBlock.BoundingBox(0f, 0f, 0f, 0.2f, 1f, 0.2f),
+                        new ModBlock.BoundingBox(0.8f, 0f, 0f, 1f, 1f, 0.2f),
+                        new ModBlock.BoundingBox(0f, 0f, 0.8f, 0.2f, 1f, 1f),
+                        new ModBlock.BoundingBox(0.8f, 0f, 0.8f, 1f, 1f, 1f)
                 };
                 variantDef.collisionBoxes = Arrays.asList(collisionBoxes);
-                WesterosBlockDef.BoundingBox[] supportBoxes = {
-                        new WesterosBlockDef.BoundingBox(0f, 0f, 0f, 1f, 1f, 1f)
+                ModBlock.BoundingBox[] supportBoxes = {
+                        new ModBlock.BoundingBox(0f, 0f, 0f, 1f, 1f, 1f)
                 };
                 variantDef.supportBoxes = Arrays.asList(supportBoxes);
             }
@@ -275,10 +275,10 @@ public class WesterosBlockSetDef {
 
             // If block set has multistate, create list of states for each variant
             if (this.states != null) {
-                List<WesterosBlockStateRecord> states = new ArrayList<>();
+                List<ModBlockStateRecord> states = new ArrayList<>();
                 for (StateRecord sr : this.states) {
                     if (sr.excludeVariants == null || !sr.excludeVariants.contains(variant)) {
-                        WesterosBlockStateRecord newsr = new WesterosBlockStateRecord();
+                        ModBlockStateRecord newsr = new ModBlockStateRecord();
                         newsr.stateID = sr.stateID;
                         newsr.lightValue = sr.lightValue;
                         newsr.colorMult = sr.colorMult;
@@ -309,8 +309,8 @@ public class WesterosBlockSetDef {
             return getTexturesForVariant(preprocessTextureMap(textures), variant);
     }
 
-    public static List<WesterosBlockDef.RandomTextureSet> pickVariantRandomTextures(List<RandomTextureMap> randomTextures,
-                                                                                    Map<String, List<WesterosBlockDef.RandomTextureSet>> altRandomTextures, String variant) {
+    public static List<ModBlock.RandomTextureSet> pickVariantRandomTextures(List<RandomTextureMap> randomTextures,
+                                                                            Map<String, List<ModBlock.RandomTextureSet>> altRandomTextures, String variant) {
         if (altRandomTextures != null && altRandomTextures.containsKey(variant))
             return altRandomTextures.get(variant);
         else
@@ -405,21 +405,21 @@ public class WesterosBlockSetDef {
 
         List<String> textureList = new LinkedList<>();
 
-        for (String texture : WesterosBlockSetDef.VARIANT_TEXTURES.get(variant)) {
+        for (String texture : ModBlockSetDef.VARIANT_TEXTURES.get(variant)) {
             if (textureMap.containsKey(texture)) textureList.add(textureMap.get(texture));
         }
 
         return (!textureList.isEmpty()) ? textureList : null;
     }
 
-    public static List<WesterosBlockDef.RandomTextureSet> getRandomTexturesForVariant(List<RandomTextureMap> randomTextureMaps, String variant) {
+    public static List<ModBlock.RandomTextureSet> getRandomTexturesForVariant(List<RandomTextureMap> randomTextureMaps, String variant) {
         if (randomTextureMaps == null)
             return null;
 
-        List<WesterosBlockDef.RandomTextureSet> randomTextures = new LinkedList<>();
+        List<ModBlock.RandomTextureSet> randomTextures = new LinkedList<>();
 
         for (RandomTextureMap randomTextureMap : randomTextureMaps) {
-            WesterosBlockDef.RandomTextureSet randomTextureSet = new WesterosBlockDef.RandomTextureSet();
+            ModBlock.RandomTextureSet randomTextureSet = new ModBlock.RandomTextureSet();
             randomTextureSet.textures = getTexturesForVariant(randomTextureMap.textures, variant);
             randomTextureSet.weight = randomTextureMap.weight;
             if (randomTextureSet.textures != null && !randomTextureSet.textures.isEmpty())

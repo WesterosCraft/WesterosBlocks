@@ -1,9 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -18,13 +18,13 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class WCSlabBlock extends SlabBlock implements WesterosBlockLifecycle {
-    public static class Factory extends WesterosBlockFactory {
+public class WCSlabBlock extends SlabBlock implements ModBlockLifecycle {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
 			AbstractBlock.Settings settings = def.makeBlockSettings();
 			// See if we have a state property
-			WesterosBlockDef.StateProperty state = def.buildStateProperty();
+			ModBlock.StateProperty state = def.buildStateProperty();
 			if (state != null) {
 				tempSTATE = state;
 			}
@@ -46,18 +46,18 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockLifecycle {
 			return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
-    protected WesterosBlockDef def;
+    protected ModBlock def;
 
 	public static final IntProperty CONNECTSTATE = IntProperty.of("connectstate", 0, 3);
 	protected static IntProperty tempCONNECTSTATE;
     public final boolean connectstate;
 
-	protected static WesterosBlockDef.StateProperty tempSTATE;
-	protected WesterosBlockDef.StateProperty STATE;
+	protected static ModBlock.StateProperty tempSTATE;
+	protected ModBlock.StateProperty STATE;
 
 	protected boolean toggleOnUse = false;
 
-    protected WCSlabBlock(AbstractBlock.Settings settings, WesterosBlockDef def, boolean doConnectstate) {
+    protected WCSlabBlock(AbstractBlock.Settings settings, ModBlock def, boolean doConnectstate) {
         super(settings);
         this.def = def;
 
@@ -83,12 +83,12 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockLifecycle {
 		this.setDefaultState(defbs);
     }
 
-    protected WCSlabBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCSlabBlock(AbstractBlock.Settings settings, ModBlock def) {
 		this(settings, def, false);
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

@@ -16,14 +16,14 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
-public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
+public class WCFenceBlock extends FenceBlock implements ModBlockLifecycle {
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings();
             // See if we have a state property
-            WesterosBlockDef.StateProperty state = def.buildStateProperty();
+            ModBlock.StateProperty state = def.buildStateProperty();
             if (state != null) {
                 tempSTATE = state;
             }
@@ -52,14 +52,14 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
     public final boolean unconnect;
     public final Boolean unconnectDef;
 
-    protected static WesterosBlockDef.StateProperty tempSTATE;
-    protected WesterosBlockDef.StateProperty STATE;
+    protected static ModBlock.StateProperty tempSTATE;
+    protected ModBlock.StateProperty STATE;
 
     protected boolean toggleOnUse = false;
 
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
-    protected WCFenceBlock(AbstractBlock.Settings settings, WesterosBlockDef def, Boolean doUnconnect) {
+    protected WCFenceBlock(AbstractBlock.Settings settings, ModBlock def, Boolean doUnconnect) {
         super(settings);
         this.def = def;
 
@@ -92,7 +92,7 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 
@@ -174,6 +174,6 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
 
     @Override
     public String[] getBlockTags() {
-        return WesterosBlockSettings.get(def.material) == WesterosBlockSettings.get("wood") ? TAGS2 : TAGS;
+        return ModBlockSettings.get(def.material) == ModBlockSettings.get("wood") ? TAGS2 : TAGS;
     }
 }

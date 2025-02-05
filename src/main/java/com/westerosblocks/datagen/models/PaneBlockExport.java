@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.custom.WCPaneBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
@@ -15,12 +15,12 @@ import java.util.Optional;
 public class PaneBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     private final boolean legacyModel;
     private final boolean barsModel;
     private final WCPaneBlock paneBlock;
 
-    public PaneBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public PaneBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -110,7 +110,7 @@ public class PaneBlockExport extends ModelExport {
     }
 
     private void generatePaneModels(BlockStateModelGenerator generator) {
-        WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(0);
+        ModBlock.RandomTextureSet set = def.getRandomTextureSet(0);
 
         if (!barsModel) {
             // Generate post model
@@ -127,7 +127,7 @@ public class PaneBlockExport extends ModelExport {
         }
     }
 
-    private void generatePaneModel(BlockStateModelGenerator generator, String variant, WesterosBlockDef.RandomTextureSet set, String parent) {
+    private void generatePaneModel(BlockStateModelGenerator generator, String variant, ModBlock.RandomTextureSet set, String parent) {
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.SIDE, createBlockIdentifier(set.getTextureByIndex(0)))
                 .put(ModTextureKey.CAP, createBlockIdentifier(set.getTextureByIndex(1)));
@@ -160,8 +160,8 @@ public class PaneBlockExport extends ModelExport {
         };
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
-        WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
+        ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
 
         Models.GENERATED.upload(

@@ -1,9 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -15,15 +15,15 @@ import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.Direction;
 
-public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifecycle {
+public class WCCuboidNEBlock extends WCCuboidBlock implements ModBlockLifecycle {
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             def.nonOpaque = true;
             AbstractBlock.Settings settings = def.makeBlockSettings();
             // See if we have a state property
-            WesterosBlockDef.StateProperty state = def.buildStateProperty();
+            ModBlock.StateProperty state = def.buildStateProperty();
             if (state != null) {
                 tempSTATE = state;
             }
@@ -34,13 +34,13 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
 
     public static final DirectionProperty FACING = DirectionProperty.of("facing", Direction.EAST, Direction.NORTH);
 
-    protected WCCuboidNEBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCCuboidNEBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings, def, 2);
 
         int stcnt = def.states.size();
         for (int stidx = 0; stidx < stcnt; stidx++) {
-            for (WesterosBlockDef.Cuboid c : cuboid_by_facing[2 * stidx]) {
-                cuboid_by_facing[2 * stidx + 1].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY90));
+            for (ModBlock.Cuboid c : cuboid_by_facing[2 * stidx]) {
+                cuboid_by_facing[2 * stidx + 1].add(c.rotateCuboid(ModBlock.CuboidRotation.ROTY90));
             }
         }
         for (int i = 0; i < cuboid_by_facing.length; i++) {

@@ -1,39 +1,45 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.state.property.Properties;
 
-public class WCCropBlock extends WCPlantBlock implements WesterosBlockLifecycle {
-    public static class Factory extends WesterosBlockFactory {
+import java.util.Map;
+
+public class WCCropBlock extends WCPlantBlock implements ModBlockLifecycle {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
-        	// See if we have a state property
-        	WesterosBlockDef.StateProperty state = def.buildStateProperty();
-        	if (state != null) {
-        		tempSTATE = state;
-        	}        	
-            String t = def.getType();
-            if ((t != null) && (t.contains(WesterosBlockDef.LAYER_SENSITIVE))) {
-            	tempLAYERS = Properties.LAYERS;
+        public Block buildBlockClass(ModBlock def) {
+            // See if we have a state property
+            ModBlock.StateProperty state = def.buildStateProperty();
+            if (state != null) {
+                tempSTATE = state;
             }
+            Map<String, String> params = ModBlocks.parseBlockParameters(def.getType());
+
+            if (params.containsKey(ModBlock.LAYER_SENSITIVE)) {
+                tempLAYERS = Properties.LAYERS;
+            }
+
             AbstractBlock.Settings settings = def.makeBlockSettings().noCollision().breakInstantly();
             Block blk = new WCCropBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
 
-    protected WCCropBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCCropBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings, def);
     }
-    private static String[] TAGS = { "crops" };
+
+    private static String[] TAGS = {"crops"};
+
     @Override
     public String[] getBlockTags() {
-    	return TAGS;
+        return TAGS;
     }
 
 }

@@ -1,5 +1,9 @@
-package com.westerosblocks.block;
+package com.westerosblocks;
 
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockColorMap;
+import com.westerosblocks.block.ModBlockLifecycle;
+import com.westerosblocks.block.ModBlocks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
@@ -16,7 +20,7 @@ import java.util.*;
 @Environment(EnvType.CLIENT)
 public class ColorHandlers {
     private static final Map<String, int[]> CUSTOM_COLOR_MAPS = new HashMap<>();
-    public static WesterosBlockColorMap[] colorMaps;
+    public static ModBlockColorMap[] colorMaps;
 
     public static void registerColorProviders() {
         registerBlockColors();
@@ -26,8 +30,8 @@ public class ColorHandlers {
     private static void registerBlockColors() {
         // Register custom blocks
         for (Block block : ModBlocks.customBlocks) {
-            if (block instanceof WesterosBlockLifecycle) {
-                WesterosBlockDef def = ((WesterosBlockLifecycle) block).getWBDefinition();
+            if (block instanceof ModBlockLifecycle) {
+                ModBlock def = ((ModBlockLifecycle) block).getWBDefinition();
                 if (def != null) {
                     String colorMapResource = def.getBlockColorMapResource();
                     if (colorMapResource != null) {
@@ -42,7 +46,7 @@ public class ColorHandlers {
 
         // Register vanilla blocks
         if (colorMaps != null) {
-            for (WesterosBlockColorMap map : colorMaps) {
+            for (ModBlockColorMap map : colorMaps) {
                 for (String blockName : map.blockNames) {
                     Block block = ModBlocks.findBlockByName(blockName, "minecraft");
                     if (block != null) {
@@ -59,8 +63,8 @@ public class ColorHandlers {
     private static void registerItemColors() {
         // Register custom items
         for (Block block : ModBlocks.customBlocks) {
-            if (block instanceof WesterosBlockLifecycle) {
-                WesterosBlockDef def = ((WesterosBlockLifecycle) block).getWBDefinition();
+            if (block instanceof ModBlockLifecycle) {
+                ModBlock def = ((ModBlockLifecycle) block).getWBDefinition();
                 if (def != null) {
                     String colorMapResource = def.getBlockColorMapResource();
                     if (colorMapResource != null) {
@@ -73,7 +77,7 @@ public class ColorHandlers {
 
         // Register vanilla items
         if (colorMaps != null) {
-            for (WesterosBlockColorMap map : colorMaps) {
+            for (ModBlockColorMap map : colorMaps) {
                 for (String blockName : map.blockNames) {
                     Block block = ModBlocks.findBlockByName(blockName, "minecraft");
                     if (block != null) {

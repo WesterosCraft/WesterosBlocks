@@ -6,17 +6,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.westerosblocks.block.WesterosBlockDef;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.westerosblocks.block.WesterosBlockLifecycle;
-import com.westerosblocks.block.WesterosBlockSetDef;
-import net.minecraft.block.Block;
+import com.westerosblocks.block.ModBlockSetDef;
 
 // TODO figure out a good way to do the script stuff here
 // Contains methods for generating config files and other artifacts
@@ -54,22 +49,22 @@ public class WesterosBlocksCompatibility {
     /*
      * Dump information about block sets for external tools
      */
-    public static void dumpBlockSets(WesterosBlockSetDef[] blockSets, Path path) {
+    public static void dumpBlockSets(ModBlockSetDef[] blockSets, Path path) {
         FileWriter fos = null;
         try {
             // Create output file format
             BlockSetFile bsf = new BlockSetFile();
-            for (WesterosBlockSetDef blockSet : blockSets) {
+            for (ModBlockSetDef blockSet : blockSets) {
                 BlockSetFileSetDef bsf_set = new BlockSetFileSetDef();
                 bsf_set.id = WesterosBlocks.MOD_ID + ":" + blockSet.baseBlockName;
                 if (blockSet.baseLabel != null) {
                     bsf_set.altname = blockSet.baseLabel.replaceAll(" ", "_").toLowerCase();
                 }
                 // The following is duplicated from generateBlockDefs and can perhaps be refactored
-                for (String variant : WesterosBlockSetDef.SUPPORTED_VARIANTS) {
+                for (String variant : ModBlockSetDef.SUPPORTED_VARIANTS) {
                     if (blockSet.variants != null && !blockSet.variants.contains(variant))
                         continue;
-                    else if (blockSet.variants == null && !WesterosBlockSetDef.DEFAULT_VARIANTS.contains(variant))
+                    else if (blockSet.variants == null && !ModBlockSetDef.DEFAULT_VARIANTS.contains(variant))
                         continue;
                     BlockSetFileDef bsf_def = new BlockSetFileDef();
                     String suffix = (variant.equals("solid")) ? "" : variant;

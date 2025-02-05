@@ -1,10 +1,9 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -16,11 +15,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 
-public class WCPaneBlock extends PaneBlock implements WesterosBlockLifecycle {
+public class WCPaneBlock extends PaneBlock implements ModBlockLifecycle {
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings().nonOpaque();
             String t = def.getType();
             boolean doUnconnect = false;
@@ -43,12 +42,12 @@ public class WCPaneBlock extends PaneBlock implements WesterosBlockLifecycle {
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
     protected static BooleanProperty tempUNCONNECT;
 
-    private WesterosBlockDef def;
+    private ModBlock def;
     private boolean legacy_model;
     private boolean bars_model;
     public final boolean unconnect;
 
-    protected WCPaneBlock(AbstractBlock.Settings settings, WesterosBlockDef def, boolean doUnconnect) {
+    protected WCPaneBlock(AbstractBlock.Settings settings, ModBlock def, boolean doUnconnect) {
         super(settings);
         this.def = def;
         this.unconnect = doUnconnect;
@@ -111,7 +110,7 @@ public class WCPaneBlock extends PaneBlock implements WesterosBlockLifecycle {
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
     

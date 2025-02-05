@@ -1,8 +1,8 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockStateRecord;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockStateRecord;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -13,7 +13,7 @@ import java.util.*;
 public class CropBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     private final boolean layerSensitive;
 
     private static final String[] LAYER_CONDITIONS = {
@@ -21,7 +21,7 @@ public class CropBlockExport extends ModelExport {
             "layers=4", "layers=5", "layers=6", "layers=7"
     };
 
-    public CropBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public CropBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -42,7 +42,7 @@ public class CropBlockExport extends ModelExport {
             String layerCondition = conditions[layer];
 
             for (int stateIdx = 0; stateIdx < def.states.size(); stateIdx++) {
-                WesterosBlockStateRecord rec = def.states.get(stateIdx);
+                ModBlockStateRecord rec = def.states.get(stateIdx);
 
                 String id = rec.stateID == null ? "base" : rec.stateID;
                 if (layer > 0) {
@@ -50,7 +50,7 @@ public class CropBlockExport extends ModelExport {
                 }
 
                 for (int setIdx = 0; setIdx < rec.getRandomTextureSetCount(); setIdx++) {
-                    WesterosBlockDef.RandomTextureSet set = rec.getRandomTextureSet(setIdx);
+                    ModBlock.RandomTextureSet set = rec.getRandomTextureSet(setIdx);
 
                     for (int rot = 0; rot < rotationCount; rot++) {
                         BlockStateVariant variant = BlockStateVariant.create();
@@ -79,11 +79,11 @@ public class CropBlockExport extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateCropModels(BlockStateModelGenerator generator, WesterosBlockStateRecord rec, String id, int layer) {
+    private void generateCropModels(BlockStateModelGenerator generator, ModBlockStateRecord rec, String id, int layer) {
         boolean isTinted = rec.isTinted();
 
         for (int setIdx = 0; setIdx < rec.getRandomTextureSetCount(); setIdx++) {
-            WesterosBlockDef.RandomTextureSet set = rec.getRandomTextureSet(setIdx);
+            ModBlock.RandomTextureSet set = rec.getRandomTextureSet(setIdx);
 
             TextureMap textureMap = new TextureMap()
                     .put(TextureKey.CROP, createBlockIdentifier(set.getTextureByIndex(0)));
@@ -106,8 +106,8 @@ public class CropBlockExport extends ModelExport {
         return WesterosBlocks.id(path);
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
-        WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.states.getFirst().getRandomTextureSet(0);
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
+        ModBlock.RandomTextureSet firstSet = blockDefinition.states.getFirst().getRandomTextureSet(0);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
 
         Models.GENERATED.upload(ModelIds.getItemModelId(currentBlock.asItem()), textureMap, itemModelGenerator.writer);

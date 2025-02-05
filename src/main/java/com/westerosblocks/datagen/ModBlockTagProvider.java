@@ -1,11 +1,11 @@
 package com.westerosblocks.datagen;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.WesterosBlocksJsonLoader;
+import com.westerosblocks.WesterosBlocksDefLoader;
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockLifecycle;
-import com.westerosblocks.block.WesterosBlockTags;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockLifecycle;
+import com.westerosblocks.block.ModBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
-    WesterosBlocksJsonLoader.WesterosBlocksConfig config = WesterosBlocksJsonLoader.getCustomConfig();
+    WesterosBlocksDefLoader.WesterosBlocksConfig config = WesterosBlocksDefLoader.getCustomConfig();
 
     public ModBlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
@@ -31,7 +31,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         Map<String, FabricTagBuilder> tagBuilders = new HashMap<>();
 
         if (config.blockTags != null) {
-            for (WesterosBlockTags tag : config.blockTags) {
+            for (ModBlockTags tag : config.blockTags) {
                 String tagId = tag.customTag.toLowerCase();
                 TagKey<Block> tagKey = TagKey.of(RegistryKey.ofRegistry(Identifier.of("blocks")),
                         Identifier.of(WesterosBlocks.MOD_ID, tagId));
@@ -49,9 +49,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         // Handle tags from blocks
         for (Map.Entry<String, Block> entry : ModBlocks.customBlocksByName.entrySet()) {
             Block block = entry.getValue();
-            if (block instanceof WesterosBlockLifecycle) {
-                WesterosBlockLifecycle wcBlock = (WesterosBlockLifecycle) block;
-                WesterosBlockDef def = wcBlock.getWBDefinition();
+            if (block instanceof ModBlockLifecycle) {
+                ModBlockLifecycle wcBlock = (ModBlockLifecycle) block;
+                ModBlock def = wcBlock.getWBDefinition();
 
                 // Add vanilla tags
                 for (String tag : wcBlock.getBlockTags()) {

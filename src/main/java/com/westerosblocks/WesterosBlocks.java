@@ -3,6 +3,7 @@ package com.westerosblocks;
 import com.westerosblocks.block.*;
 import com.westerosblocks.block.entity.ModBlockEntities;
 import com.westerosblocks.item.ModItems;
+import com.westerosblocks.particle.ModParticles;
 import com.westerosblocks.sound.ModSounds;
 import com.westerosblocks.util.AutoDoorRestore;
 import net.fabricmc.api.ModInitializer;
@@ -28,13 +29,14 @@ public class WesterosBlocks implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        WesterosBlocksJsonLoader.initialize(configFiles);
-        WesterosBlockDef.initialize();
+        WesterosBlocksDefLoader.initialize(configFiles);
+        ModBlock.initialize();
         ModConfig.register();
         WesterosCreativeModeTabs.registerCreativeModeTabs();
         ModBlocks.registerModBlocks();
         ModItems.registerModItems();
         ModSounds.registerSounds();
+        ModParticles.init();
         ModBlockEntities.registerModEntities();
 
         ServerLifecycleEvents.SERVER_STOPPING.register(server -> {

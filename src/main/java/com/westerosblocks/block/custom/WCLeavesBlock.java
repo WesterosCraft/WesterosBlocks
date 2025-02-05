@@ -1,23 +1,23 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.LeavesBlock;
 
-public class WCLeavesBlock extends LeavesBlock implements WesterosBlockLifecycle {
-    protected WesterosBlockDef def;
+public class WCLeavesBlock extends LeavesBlock implements ModBlockLifecycle {
+    protected ModBlock def;
     private final boolean nodecay;
     public final boolean betterfoliage;
     public final boolean overlay;
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
-            if (def.lightOpacity == WesterosBlockDef.DEF_INT) {
+        public Block buildBlockClass(ModBlock def) {
+            if (def.lightOpacity == ModBlock.DEF_INT) {
                 def.lightOpacity = 1;
             }
             AbstractBlock.Settings settings = def.makeBlockSettings().nonOpaque().suffocates((state, world, pos) -> false).blockVision((state, reader, pos) -> false);
@@ -26,7 +26,7 @@ public class WCLeavesBlock extends LeavesBlock implements WesterosBlockLifecycle
         }
     }
 
-    protected WCLeavesBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCLeavesBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
         this.def = def;
         String typ = def.getType();
@@ -37,7 +37,7 @@ public class WCLeavesBlock extends LeavesBlock implements WesterosBlockLifecycle
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

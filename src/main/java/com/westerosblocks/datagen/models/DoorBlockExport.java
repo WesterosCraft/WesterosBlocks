@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -23,7 +23,7 @@ import java.util.Optional;
 public class DoorBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
     private static class ModelRec {
         String cond;
@@ -76,7 +76,7 @@ public class DoorBlockExport extends ModelExport {
             new ModelRec("facing=north,half=upper,hinge=right,open=true", "top_right_open", 180)
     };
 
-    public DoorBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public DoorBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -86,7 +86,7 @@ public class DoorBlockExport extends ModelExport {
     public void generateBlockStateModels() {
         if (!def.isCustomModel()) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
                 generateDoorModels(generator, set);
             }
         }
@@ -109,7 +109,7 @@ public class DoorBlockExport extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateDoorModels(BlockStateModelGenerator generator, WesterosBlockDef.RandomTextureSet set) {
+    private void generateDoorModels(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set) {
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.TOP, createBlockIdentifier(set.getTextureByIndex(0)))
                 .put(TextureKey.BOTTOM, createBlockIdentifier(set.getTextureByIndex(1)));
@@ -151,8 +151,8 @@ public class DoorBlockExport extends ModelExport {
     }
 
     // TODO the door model is ugly af i think we need item textures
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
-        WesterosBlockDef.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
+        ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
 
         Models.GENERATED.upload(

@@ -1,9 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.BlockHalf;
 import net.minecraft.block.enums.StairShape;
@@ -29,14 +29,14 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.stream.IntStream;
 
-public class WCStairBlock extends Block implements WesterosBlockLifecycle {
+public class WCStairBlock extends Block implements ModBlockLifecycle {
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings();
             // See if we have a state property
-            WesterosBlockDef.StateProperty state = def.buildStateProperty();
+            ModBlock.StateProperty state = def.buildStateProperty();
             if (state != null) {
                 tempSTATE = state;
             }
@@ -83,7 +83,7 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
     protected static final VoxelShape TOP_NORTH_EAST_CORNER_SHAPE = Block.createCuboidShape(8.0, 8.0, 0.0, 16.0, 16.0, 8.0);
     protected static final VoxelShape TOP_SOUTH_EAST_CORNER_SHAPE = Block.createCuboidShape(8.0, 8.0, 8.0, 16.0, 16.0, 16.0);
 
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
     protected static BooleanProperty tempUNCONNECT;
     public final boolean unconnect;
@@ -92,8 +92,8 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
     protected static IntProperty tempCONNECTSTATE;
     public final boolean connectstate;
 
-    protected static WesterosBlockDef.StateProperty tempSTATE;
-    protected WesterosBlockDef.StateProperty STATE;
+    protected static ModBlock.StateProperty tempSTATE;
+    protected ModBlock.StateProperty STATE;
 
     protected boolean toggleOnUse = false;
 
@@ -103,7 +103,7 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
     protected static final VoxelShape[] BOTTOM_SHAPES = composeShapes(BOTTOM_SHAPE, TOP_NORTH_WEST_CORNER_SHAPE, TOP_NORTH_EAST_CORNER_SHAPE, TOP_SOUTH_WEST_CORNER_SHAPE, TOP_SOUTH_EAST_CORNER_SHAPE);
     private static final int[] SHAPE_INDICES = new int[]{12, 5, 3, 10, 14, 13, 7, 11, 13, 7, 11, 14, 8, 4, 1, 2, 4, 1, 2, 8};
 
-    protected WCStairBlock(AbstractBlock.Settings settings, WesterosBlockDef def, boolean doUnconnect, boolean doConnectstate) {
+    protected WCStairBlock(AbstractBlock.Settings settings, ModBlock def, boolean doUnconnect, boolean doConnectstate) {
         super(settings);
         this.def = def;
 
@@ -357,7 +357,7 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

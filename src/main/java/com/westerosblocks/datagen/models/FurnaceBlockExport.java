@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -14,7 +14,7 @@ import java.util.Optional;
 public class FurnaceBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
     private static class ModelRec {
         String cond;
@@ -36,7 +36,7 @@ public class FurnaceBlockExport extends ModelExport {
             new ModelRec("facing=east,lit=false", "base", 90)
     };
 
-    public FurnaceBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public FurnaceBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -69,7 +69,7 @@ public class FurnaceBlockExport extends ModelExport {
     }
 
     private void generateFurnaceModels(BlockStateModelGenerator generator) {
-        WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(0);
+        ModBlock.RandomTextureSet set = def.getRandomTextureSet(0);
         boolean isTinted = def.isTinted();
         String parentPath = "block/" + (isTinted ? "tinted/orientable" : "orientable");
 
@@ -105,7 +105,7 @@ public class FurnaceBlockExport extends ModelExport {
                 String.format("%s%s/%s_v1", isCustom ? CUSTOM_PATH : GENERATED_PATH, def.getBlockName(), variant));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
         String path = String.format("%s%s/base_v1", blockDefinition.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH, blockDefinition.getBlockName());
 
         itemModelGenerator.register(

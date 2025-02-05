@@ -2,18 +2,16 @@ package com.westerosblocks.block.custom;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.*;
-import net.minecraft.registry.Registries;
-import net.minecraft.util.Identifier;
 
-public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLifecycle {
+public class WCFlowerPotBlock extends FlowerPotBlock implements ModBlockLifecycle {
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
             Block content = Blocks.AIR;
             String emptyPotID = "minecraft:flower_pot";
             String plantBlockID = null;
@@ -61,15 +59,15 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
         }
     }
 
-    protected final WesterosBlockDef def;
+    protected final ModBlock def;
 
-    protected WCFlowerPotBlock(Block content, AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCFlowerPotBlock(Block content, AbstractBlock.Settings settings, ModBlock def) {
         super(content, settings);
         this.def = def;
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
 

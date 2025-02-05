@@ -1,8 +1,8 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockStateRecord;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockStateRecord;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
@@ -14,9 +14,9 @@ import java.util.Optional;
 public class CuboidNSEWStackBlockExport extends CuboidBlockExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
 
-    public CuboidNSEWStackBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public CuboidNSEWStackBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -30,13 +30,13 @@ public class CuboidNSEWStackBlockExport extends CuboidBlockExport {
 
         if (!def.isCustomModel()) {
             // Bottom element models
-            WesterosBlockStateRecord bottomElement = def.getStackElementByIndex(0);
+            ModBlockStateRecord bottomElement = def.getStackElementByIndex(0);
             for (int setIdx = 0; setIdx < bottomElement.getRandomTextureSetCount(); setIdx++) {
                 generateStackElementModel(generator, bottomElement, setIdx, "base");
             }
 
             // Top element models
-            WesterosBlockStateRecord topElement = def.getStackElementByIndex(1);
+            ModBlockStateRecord topElement = def.getStackElementByIndex(1);
             for (int setIdx = 0; setIdx < topElement.getRandomTextureSetCount(); setIdx++) {
                 generateStackElementModel(generator, topElement, setIdx, "top");
             }
@@ -48,8 +48,8 @@ public class CuboidNSEWStackBlockExport extends CuboidBlockExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateStackElementModel(BlockStateModelGenerator generator, WesterosBlockStateRecord element, int setIdx, String modelType) {
-        WesterosBlockDef.RandomTextureSet set = element.getRandomTextureSet(setIdx);
+    private void generateStackElementModel(BlockStateModelGenerator generator, ModBlockStateRecord element, int setIdx, String modelType) {
+        ModBlock.RandomTextureSet set = element.getRandomTextureSet(setIdx);
 
         // TODO i think this needs to do all textures but filter out transparent ones?
         TextureMap textureMap = new TextureMap()
@@ -61,7 +61,7 @@ public class CuboidNSEWStackBlockExport extends CuboidBlockExport {
         cuboidNSEWStackModel.upload(getModelId(modelType, setIdx, element.isCustomModel()), textureMap, generator.modelCollector);
     }
 
-    private void addHalfVariants(BlockStateBuilder builder, WesterosBlockStateRecord element, String modelType, String half, Map<String, List<BlockStateVariant>> variants) {
+    private void addHalfVariants(BlockStateBuilder builder, ModBlockStateRecord element, String modelType, String half, Map<String, List<BlockStateVariant>> variants) {
         String[] directions = {"north", "east", "south", "west"};
         int[] rotations = {270, 0, 90, 180};
 
@@ -90,7 +90,7 @@ public class CuboidNSEWStackBlockExport extends CuboidBlockExport {
                         setIdx + 1));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
         String path = String.format("%s%s/base_v1", GENERATED_PATH, blockDefinition.blockName);
 
         itemModelGenerator.register(

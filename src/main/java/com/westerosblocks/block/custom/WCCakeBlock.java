@@ -1,18 +1,18 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockFactory;
+import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.CakeBlock;
 
-public class WCCakeBlock extends CakeBlock implements WesterosBlockLifecycle {
+public class WCCakeBlock extends CakeBlock implements ModBlockLifecycle {
 
-    public static class Factory extends WesterosBlockFactory {
+    public static class Factory extends ModBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(ModBlock def) {
         	def.nonOpaque = true;
             AbstractBlock.Settings settings = def.makeBlockSettings();
             Block blk = new WCCakeBlock(settings, def);
@@ -20,14 +20,14 @@ public class WCCakeBlock extends CakeBlock implements WesterosBlockLifecycle {
         }
     }
 
-    private WesterosBlockDef def;
+    private ModBlock def;
 
-    protected WCCakeBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
+    protected WCCakeBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
         this.def = def;
     }
     @Override
-    public WesterosBlockDef getWBDefinition() {
+    public ModBlock getWBDefinition() {
         return def;
     }
     private static String[] TAGS = { };

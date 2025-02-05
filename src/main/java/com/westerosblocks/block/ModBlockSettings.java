@@ -8,7 +8,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import java.util.HashMap;
 import java.util.Map;
 
-public class WesterosBlockSettings {
+public class ModBlockSettings {
     private static final Map<String, AbstractBlock.Settings> BASE_SETTINGS = new HashMap<>();
 
     static {

@@ -1,7 +1,9 @@
 package com.westerosblocks;
 
-import com.westerosblocks.block.ColorHandlers;
+import com.westerosblocks.particle.ModParticles;
+import com.westerosblocks.particle.custom.WildfireParticle;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
 import net.minecraft.client.MinecraftClient;
@@ -17,6 +19,7 @@ public class WesterosBlocksClient implements ClientModInitializer {
                 .registerReloadListener(new WesterosResourceReloadListener());
         initRenderRegistry();
         ColorHandlers.registerColorProviders();
+        ModParticles.registerParticles();
     }
 
     private static class WesterosResourceReloadListener implements SimpleSynchronousResourceReloadListener {

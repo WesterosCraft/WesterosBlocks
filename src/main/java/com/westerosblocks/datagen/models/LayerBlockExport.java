@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.WesterosBlockDef;
+import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.custom.WCLayerBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
@@ -15,10 +15,10 @@ import java.util.Optional;
 public class LayerBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final WesterosBlockDef def;
+    private final ModBlock def;
     private final WCLayerBlock layerBlock;
 
-    public LayerBlockExport(BlockStateModelGenerator generator, Block block, WesterosBlockDef def) {
+    public LayerBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -32,7 +32,7 @@ public class LayerBlockExport extends ModelExport {
 
         for (int layer = 0; layer < layerBlock.layerCount; layer++) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setIdx);
+                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
 
                 BlockStateVariant variant = BlockStateVariant.create();
                 Identifier modelId = getModelId(layer + 1, setIdx);
@@ -51,7 +51,7 @@ public class LayerBlockExport extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateLayerModel(BlockStateModelGenerator generator, int layer, WesterosBlockDef.RandomTextureSet set, int setIdx) {
+    private void generateLayerModel(BlockStateModelGenerator generator, int layer, ModBlock.RandomTextureSet set, int setIdx) {
         boolean isTinted = def.isTinted();
         float yMax = (16.0f / layerBlock.layerCount) * layer;  // Calculate height based on layer number
         Model layerModel = ModModels.WC_LAYER(yMax, isTinted);
@@ -70,7 +70,7 @@ public class LayerBlockExport extends ModelExport {
     }
 
     // TODO need to figure out a diff model for in-game GUI
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, WesterosBlockDef blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
         String path = String.format("%s%s/layer1_v1", GENERATED_PATH, blockDefinition.blockName);
         itemModelGenerator.register(currentBlock.asItem(), new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty()));
     }
