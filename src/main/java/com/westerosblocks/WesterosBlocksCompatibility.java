@@ -95,13 +95,12 @@ public class WesterosBlocksCompatibility {
                 try {
                     fos.close();
                 } catch (IOException e) {
-                    return;
+                    WesterosBlocks.LOGGER.warn("error closing file writer");
                 }
             }
         }
     }
 
-    // TODO make this work
     /*
      * Dump a CustomBlocks config file for WorldPainter
      * https://www.worldpainter.net/trac/wiki/CustomBlocks
@@ -169,7 +168,7 @@ public class WesterosBlocksCompatibility {
 
     public static void writeCSV(List<Map<String, Object>> data, String[] columns, File file)
             throws IOException {
-        String out = String.join(",", columns) + "\n";
+        StringBuilder out = new StringBuilder(String.join(",", columns) + "\n");
 
         for (Map<String, Object> d : data) {
             ArrayList<String> row = new ArrayList<String>();
@@ -186,11 +185,11 @@ public class WesterosBlocksCompatibility {
                     row.add("");
                 }
             }
-            out += String.join(",", row) + "\n";
+            out.append(String.join(",", row)).append("\n");
         }
 
         BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-        writer.write(out);
+        writer.write(out.toString());
         writer.close();
     }
 }

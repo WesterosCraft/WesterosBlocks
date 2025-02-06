@@ -16,7 +16,6 @@ import java.nio.file.Paths;
 import java.util.*;
 
 // load definitions from resources/definitions parsed data
-// load definitions from resources/definitions parsed data
 public class WesterosBlocksDefLoader {
     public static WesterosBlocksDefLoader.WesterosBlocksConfig customConfig;
     private static ModBlock[] customBlockDefs;

@@ -19,8 +19,8 @@ public class ModelExport {
 
     public ModelExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         this.block = block;
-        this.def = def;
-        this.generator = generator;
+        ModelExport.def = def;
+        ModelExport.generator = generator;
     }
 
     public static Identifier createBlockIdentifier(String texturePath) {
@@ -48,12 +48,10 @@ public class ModelExport {
     }
 
     public static class BlockStateBuilder {
-        private MultipartBlockStateSupplier multipartSupplier;
-        private final Block block;
+        private final MultipartBlockStateSupplier multipartSupplier;
         private final Map<String, List<BlockStateVariant>> variants;
 
         public BlockStateBuilder(Block block) {
-            this.block = block;
             this.variants = new HashMap<>();
             this.multipartSupplier = MultipartBlockStateSupplier.create(block);
         }
@@ -106,7 +104,6 @@ public class ModelExport {
             return;
         }
 
-        // TODO determine if we need this
         // Create custom BlockStateSupplier for multiple variants
         BlockStateSupplier supplier = new BlockStateSupplier() {
             @Override
@@ -142,11 +139,5 @@ public class ModelExport {
 
     protected static String getModelName(String ext, int setidx) {
         return def.blockName + "/" + ext + ("_v" + (setidx + 1));
-    }
-
-    protected static String getModelName(String ext, int setidx, String cond) {
-        if (cond == null)
-            return getModelName(ext, setidx);
-        return def.blockName + "/" + cond + "/" + ext + ("_v" + (setidx + 1));
     }
 }

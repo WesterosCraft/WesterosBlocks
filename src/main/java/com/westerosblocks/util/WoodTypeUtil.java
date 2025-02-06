@@ -3,14 +3,10 @@ package com.westerosblocks.util;
 import net.minecraft.block.WoodType;
 
 public class WoodTypeUtil  {
-
     /**
      * Gets the WoodType for a block based on its definition and settings.
      * This method can be used by any block that needs to determine its wood type,
      * such as fence gates, doors, etc.
-     *
-     * @param woodtype The Westeros block definition
-     * @return The appropriate WoodType, defaults to OAK if not specified
      */
     public static WoodType getWoodType(String woodtype) {
         if (woodtype != null) {

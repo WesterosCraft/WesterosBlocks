@@ -4,6 +4,7 @@ import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.ModBlockFactory;
 import com.westerosblocks.block.ModBlockLifecycle;
+import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -40,15 +41,13 @@ public class WCTorchBlock extends TorchBlock implements ModBlockLifecycle {
         }
     }
 
-    private ModBlock def;
+    private final ModBlock def;
     private boolean allow_unsupported = false;
     private boolean no_particle = false;
 
     private static SimpleParticleType getParticle(String typeStr) {
         if (typeStr != null && typeStr.contains("no-particle")) {
-            //TODO
-            return ParticleTypes.SMOKE;
-//            return new SimpleParticleType(false);
+            return FabricParticleTypes.simple(false);
         }
         return ParticleTypes.FLAME;
     }
@@ -77,7 +76,6 @@ public class WCTorchBlock extends TorchBlock implements ModBlockLifecycle {
         BlockState state = super.getPlacementState(ctx);
         World world = ctx.getWorld();
         BlockPos pos = ctx.getBlockPos();
-        FluidState fluidState = world.getFluidState(pos);
 
         // Check for wall placement first
         for (Direction direction : ctx.getPlacementDirections()) {
