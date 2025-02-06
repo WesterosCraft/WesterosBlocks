@@ -1,0 +1,36 @@
+{
+    "baseBlockName": "pebbles_wet_red_mountains",
+    "variants": [
+        "solid",
+        "layer"
+    ],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_sand_gravel_tab",
+    "baseLabel": "Pebbles Wet Red Mountains",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "pebble/red_mountains/wet1"
+            }
+        },
+        {
+            "textures": {
+                "all": "pebble/red_mountains/wet2"
+            }
+        },
+        {
+            "textures": {
+                "all": "pebble/red_mountains/wet3"
+            }
+        }
+    ]
+}

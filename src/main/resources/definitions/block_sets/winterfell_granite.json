@@ -1,0 +1,33 @@
+{
+    "baseBlockName": "winterfell_granite",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "arrow_slit",
+        "arrow_slit_window",
+        "arrow_slit_ornate"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_medium_ashlar_tab",
+    "baseLabel": "Medium Ashlar Dark Grey",
+    "textures": {
+        "all": "ashlar_third/dark_grey/all",
+        "arrow-slit": "ashlar_third/dark_grey/arrow_slit",
+        "arrow-slit-window": "ashlar_third/dark_grey/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_third/dark_grey/arrow_slit_ornate"
+    }
+}

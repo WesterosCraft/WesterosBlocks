@@ -1,0 +1,61 @@
+{
+    "baseBlockName": "yellow_wood",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "fence_gate",
+        "window_frame",
+        "window_frame_mullion"
+    ],
+    "altNames": {
+        "fence_gate": "locked_yellow_wood_fence_gate",
+        "window_frame": "yellow_timber_window_frame",
+        "window_frame_mullion": "yellow_timber_window_frame_mullion"
+    },
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "types": {
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "Yellow Wood",
+    "altCustomTags": {
+        "solid": [
+            "wood-ctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "plank-ctm"
+        ]
+    },
+    "textures": {
+        "all": "wood/yellow/all",
+        "window-frame": "timber/yellow/window_frame",
+        "window-frame-mullion": "timber/yellow/window_frame_mullion"
+    },
+    "altTextures": {
+        "solid": [
+            "wood/yellow/all",
+            "wood/yellow/all",
+            "wood/yellow/woodctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "wood/yellow/all",
+            "wood/yellow/all",
+            "wood/yellow/plankctm"
+        ]
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "baseBlockName": "black_slate",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "types": {
+        "stairs": "unconnect:false,no-uvlock"
+    },
+    "baseLabel": "Black Slate",
+    "textures": {
+        "all": "slate/black/all"
+    },
+    "altTextures": {
+        "stairs": [
+            "slate/black/rotated",
+            "slate/black/rotated",
+            "slate/black/all"
+        ]
+    },
+    "altRandomTextures": {
+        "slab": [
+            {
+                "textures": [
+                    "slate/black/all",
+                    "slate/black/directional1",
+                    "slate/black/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/black/all",
+                    "slate/black/directional2",
+                    "slate/black/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/black/all",
+                    "slate/black/directional3",
+                    "slate/black/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/black/all",
+                    "slate/black/directional4",
+                    "slate/black/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/black/all",
+                    "slate/black/directional5",
+                    "slate/black/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/black/all",
+                    "slate/black/directional6",
+                    "slate/black/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/black/all",
+                    "slate/black/directional7",
+                    "slate/black/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/black/all",
+                    "slate/black/directional8",
+                    "slate/black/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/black/all",
+                    "slate/black/directional9",
+                    "slate/black/all"
+                ]
+            }
+        ]
+    }
+}

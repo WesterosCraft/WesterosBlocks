@@ -1,0 +1,32 @@
+{
+    "baseBlockName": "terrainset_brown_granite_alt",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "fence_gate"
+    ],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 2
+        }
+    ],
+    "creativeTab": "westeros_terrain_sets_tab",
+    "types": {
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Brown Granite Alt",
+    "textures": {
+        "all": "terrainset/brown_granite_alt/random_4x4"
+    }
+}

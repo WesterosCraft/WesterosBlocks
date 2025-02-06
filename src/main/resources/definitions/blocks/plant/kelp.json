@@ -1,0 +1,21 @@
+{
+    "blockName": "kelp",
+    "blockType": "plant",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Kelp",
+    "randomTextures": [
+        {
+            "textures": [
+                "kelp/side1"
+            ]
+        },
+        {
+            "textures": [
+                "kelp/side2"
+            ]
+        }
+    ],
+    "type": "layerSensitive"
+}

@@ -1,0 +1,12 @@
+{
+    "blockName": "butterfly_yellow",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_misc_tab",
+    "label": "Western Yellow Butterfly",
+    "textures": [
+        "web_block/bug_butterfly_yellow"
+    ],
+    "type": "no-in-web"
+}

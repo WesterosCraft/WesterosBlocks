@@ -1,0 +1,13 @@
+{
+    "blockName": "candle",
+    "blockType": "torch",
+    "stepSound": "powder",
+    "material": "wood",
+    "creativeTab": "westeros_lighting_tab",
+    "lightValue": 0.625,
+    "label": "Candle",
+    "type": "allow-unsupported",
+    "textures": [
+        "lighting/candle"
+    ]
+}

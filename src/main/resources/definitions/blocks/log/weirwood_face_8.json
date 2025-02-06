@@ -1,0 +1,19 @@
+{
+    "blockName": "weirwood_face_8",
+    "blockType": "log",
+    "stepSound": "wood",
+    "material": "wood",
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Weirwood Face 8",
+    "textures": [
+        "bark/weirwood/face_8",
+        "bark/weirwood/face_8",
+        "bark/weirwood/side"
+    ]
+}

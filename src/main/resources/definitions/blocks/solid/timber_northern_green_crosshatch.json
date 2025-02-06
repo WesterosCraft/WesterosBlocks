@@ -1,0 +1,53 @@
+{
+    "blockName": "timber_northern_green_crosshatch",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Northern Green Crosshatch",
+    "type": "connectstate:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "plaster/smooth/gulltown_green/all",
+                "wood/northern/all",
+                "plaster/smooth/gulltown_green/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/green/all",
+                "wood/northern/all",
+                "plaster/smooth/green/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/highgarden_green/all",
+                "wood/northern/all",
+                "plaster/smooth/highgarden_green/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/rough/gulltown_green/all1",
+                "wood/northern/all",
+                "plaster/rough/gulltown_green/all1"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/wattle/gulltown_green/all",
+                "wood/northern/all",
+                "plaster/wattle/gulltown_green/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/northern/bottom",
+        "transparent",
+        "timber/northern/crosshatch"
+    ]
+}

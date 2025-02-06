@@ -1,0 +1,39 @@
+{
+    "blockName": "blue_chicory",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_flowers_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "Blue Chicory",
+    "randomTextures": [
+        {
+            "textures": [
+                "flowers/blue_chicory/side1"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/blue_chicory/side2"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/blue_chicory/side3"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/blue_chicory/side4"
+            ]
+        }
+    ]
+}

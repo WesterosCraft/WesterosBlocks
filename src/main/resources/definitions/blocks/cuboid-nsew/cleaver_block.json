@@ -1,0 +1,33 @@
+{
+    "blockName": "cleaver_block",
+    "blockType": "cuboid-nsew",
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_tool_blocks_tab",
+    "label": "Cleaver Block",
+    "textures": [
+        "transparent",
+        "transparent",
+        "cuboid_block/cleaver_left",
+        "cuboid_block/cleaver_right",
+        "transparent",
+        "transparent"
+    ],
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.499,
+        "zMax": 0.5
+    },
+    "itemTextureIndex": 4
+}

@@ -1,0 +1,33 @@
+{
+    "baseBlockName": "unused_brown_brick",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "arrow_slit",
+        "arrow_slit_window",
+        "arrow_slit_ornate"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_quarter_ashlar_tab",
+    "baseLabel": "Quarter Rounded Ashlar Light Brown",
+    "textures": {
+        "all": "ashlar_quarter_rounded/light_brown/all",
+        "arrow-slit": "ashlar_quarter_rounded/light_brown/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter_rounded/light_brown/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter_rounded/light_brown/arrow_slit_ornate"
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "baseBlockName": "pebbles_wet_river_rocks",
+    "variants": [
+        "solid",
+        "layer"
+    ],
+    "altNames": {
+        "layer": "pebbles_wet_river_layer"
+    },
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_sand_gravel_tab",
+    "baseLabel": "Pebbles Wet River Rocks",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "pebble/river/wet1"
+            }
+        },
+        {
+            "textures": {
+                "all": "pebble/river/wet2"
+            }
+        },
+        {
+            "textures": {
+                "all": "pebble/river/wet3"
+            }
+        }
+    ]
+}

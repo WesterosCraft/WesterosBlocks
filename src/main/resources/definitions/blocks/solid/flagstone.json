@@ -1,0 +1,13 @@
+{
+    "blockName": "flagstone",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "ground",
+    "resistance": 2,
+    "creativeTab": "westeros_cobblestone_tab",
+    "label": "Flagstone",
+    "textures": [
+        "stone_block/flagstone"
+    ]
+}

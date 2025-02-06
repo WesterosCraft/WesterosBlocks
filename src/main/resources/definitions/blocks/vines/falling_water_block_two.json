@@ -1,0 +1,15 @@
+{
+    "blockName": "falling_water_block_two",
+    "blockType": "vines",
+    "stepSound": "cloth",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "material": "cloth",
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Falling Water Block Two",
+    "textures": [
+        "alyssas_tears_mist/mist2",
+        "alyssas_tears_mist/mist2"
+    ],
+    "type": "allow-unsupported,no-climb"
+}

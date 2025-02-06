@@ -1,0 +1,45 @@
+{
+    "blockName": "pink_rose_bush",
+    "blockType": "leaves",
+    "stepSound": "grass",
+    "material": "leaves",
+    "type": "no-decay,better-foliage,overlay",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Pink Rose Bush",
+    "colorMult": "textures/colormap/foliageoak",
+    "rotateRandom": true,
+    "randomTextures": [
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/pink_rose0"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/pink_rose1"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/pink_rose2"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/pink_rose3"
+            ],
+            "weight": 2
+        }
+    ]
+}

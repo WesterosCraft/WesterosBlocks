@@ -1,0 +1,26 @@
+{
+    "blockName": "sept_crystal_large",
+    "blockType": "solid",
+    "creativeTab": "westeros_windows_glass_tab",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "lightOpacity": 0,
+    "label": "Sept Crystal Large",
+    "textures": [
+        "crystal/all"
+    ],
+    "collisionBoxes": [
+        {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0,
+            "zMax": 1
+        }
+    ]
+}

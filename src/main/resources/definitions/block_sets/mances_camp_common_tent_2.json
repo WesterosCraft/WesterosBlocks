@@ -1,0 +1,45 @@
+{
+    "baseBlockName": "mances_camp_common_tent_2",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "directional"
+    ],
+    "altNames": {
+        "directional": "mances_camp_common_tent_2",
+        "solid": "mances_camp_common_tent_block_2",
+        "stairs": "mances_camp_common_tent_stairs",
+        "slab": "mances_camp_common_tent_slab",
+        "wall": "mances_camp_common_tent_wall"
+    },
+    "hardness": 2,
+    "stepSound": "cloth",
+    "material": "wood",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "baseLabel": "Mance's Camp Common Tent 2",
+    "altLabels": {
+        "directional": "Mance's Camp Common Tent 2 Directional"
+    },
+    "textures": {
+        "all": "mances_camp_common_tent/outside2"
+    },
+    "altTextures": {
+        "directional": [
+            "mances_camp_common_tent/inside",
+            "mances_camp_common_tent/outside2",
+            "mances_camp_common_tent/outside2",
+            "mances_camp_common_tent/outside2",
+            "mances_camp_common_tent/outside2",
+            "mances_camp_common_tent/inside"
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "blockName": "dragon_carving",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 5,
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Dragon Carving",
+    "randomTextures": [
+        {
+            "textures": [
+                "dragon_carving/side1"
+            ]
+        },
+        {
+            "textures": [
+                "dragon_carving/side2"
+            ]
+        },
+        {
+            "textures": [
+                "dragon_carving/side3"
+            ]
+        }
+    ]
+}

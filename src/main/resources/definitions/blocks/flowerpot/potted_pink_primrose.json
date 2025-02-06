@@ -1,0 +1,24 @@
+{
+    "blockName": "potted_pink_primrose",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Pink Primrose",
+    "type": "plant-id:pink_primrose",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/pink_primrose1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/pink_primrose2"
+            ]
+        }
+    ]
+}

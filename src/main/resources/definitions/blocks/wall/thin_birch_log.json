@@ -1,0 +1,22 @@
+{
+    "blockName": "thin_birch_log",
+    "blockType": "wall",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "type": "unconnect:false",
+    "label": "Thin Birch Log",
+    "textures": [
+        "bark/birch/wall_top",
+        "bark/birch/wall_top",
+        "bark/birch/side"
+    ]
+}

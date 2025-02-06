@@ -1,0 +1,13 @@
+{
+    "blockName": "potted_white_lilyofthevalley",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted White Lily-of-the-valley",
+    "type": "plant-id:white_lilyofthevalley",
+    "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/white_lily_valley1"
+    ]
+}

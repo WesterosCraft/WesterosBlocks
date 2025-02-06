@@ -1,0 +1,31 @@
+{
+    "blockName": "dead_fowl",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Dead Fowl",
+    "randomTextures": [
+        {
+            "textures": [
+                "dead_fowl/fowl"
+            ]
+        },
+        {
+            "textures": [
+                "dead_fowl/fowl2"
+            ]
+        },
+        {
+            "textures": [
+                "dead_fowl/gooseplains"
+            ]
+        },
+        {
+            "textures": [
+                "dead_fowl/gooseplains2"
+            ]
+        }
+    ],
+    "type": "no-in-web"
+}

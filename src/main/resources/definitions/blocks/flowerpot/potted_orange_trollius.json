@@ -1,0 +1,24 @@
+{
+    "blockName": "potted_orange_trollius",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Orange Trollius",
+    "type": "plant-id:orange_trollius",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/orange_trollius1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/orange_trollius2"
+            ]
+        }
+    ]
+}

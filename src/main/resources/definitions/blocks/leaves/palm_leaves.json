@@ -1,0 +1,14 @@
+{
+    "blockName": "palm_leaves",
+    "blockType": "leaves",
+    "stepSound": "grass",
+    "material": "leaves",
+    "type": "no-decay,better-foliage",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Palm Leaves",
+    "colorMult": "textures/colormap/foliagepalm",
+    "rotateRandom": true,
+    "textures": [
+        "leaves/palm/all"
+    ]
+}

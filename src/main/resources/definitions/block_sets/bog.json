@@ -1,0 +1,186 @@
+{
+    "baseBlockName": "bog",
+    "variants": [
+        "solid",
+        "slab"
+    ],
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_grass_dirt_tab",
+    "baseLabel": "Bog",
+    "connectTo": "material",
+    "randomTextures": [
+        {
+            "textures": {
+                "bottom": "bog/mud",
+                "top": "bog/bog1",
+                "sides": "bog/bog_side"
+            },
+            "weight": 6
+        },
+        {
+            "textures": {
+                "bottom": "bog/mud",
+                "top": "bog/bog2",
+                "sides": "bog/bog_side"
+            },
+            "weight": 3
+        },
+        {
+            "textures": {
+                "bottom": "bog/mud",
+                "top": "bog/bog3",
+                "sides": "bog/bog_side"
+            },
+            "weight": 3
+        },
+        {
+            "textures": {
+                "bottom": "bog/mud",
+                "top": "bog/bog4",
+                "sides": "bog/bog_side"
+            },
+            "weight": 3
+        },
+        {
+            "textures": {
+                "bottom": "bog/mud",
+                "top": "bog/bog5",
+                "sides": "bog/bog_side"
+            },
+            "weight": 3
+        },
+        {
+            "textures": {
+                "bottom": "bog/mud",
+                "top": "bog/bog6",
+                "sides": "bog/bog_side"
+            },
+            "weight": 3
+        },
+        {
+            "textures": {
+                "bottom": "bog/mud",
+                "top": "bog/bog7",
+                "sides": "bog/bog_side"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "bottom": "bog/mud",
+                "top": "bog/bog8",
+                "sides": "bog/bog_side"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "bottom": "bog/mud",
+                "top": "bog/bog9",
+                "sides": "bog/bog_side"
+            },
+            "weight": 2
+        },
+        {
+            "textures": {
+                "bottom": "bog/mud",
+                "top": "bog/bog10",
+                "sides": "bog/bog_side"
+            },
+            "weight": 2
+        }
+    ],
+    "altRandomTextures": {
+        "slab": [
+            {
+                "textures": [
+                    "bog/mud",
+                    "bog/bog1",
+                    "bog/bog_slab_side"
+                ],
+                "weight": 6
+            },
+            {
+                "textures": [
+                    "bog/mud",
+                    "bog/bog2",
+                    "bog/bog_slab_side"
+                ],
+                "weight": 3
+            },
+            {
+                "textures": [
+                    "bog/mud",
+                    "bog/bog3",
+                    "bog/bog_slab_side"
+                ],
+                "weight": 3
+            },
+            {
+                "textures": [
+                    "bog/mud",
+                    "bog/bog4",
+                    "bog/bog_slab_side"
+                ],
+                "weight": 3
+            },
+            {
+                "textures": [
+                    "bog/mud",
+                    "bog/bog5",
+                    "bog/bog_slab_side"
+                ],
+                "weight": 3
+            },
+            {
+                "textures": [
+                    "bog/mud",
+                    "bog/bog6",
+                    "bog/bog_slab_side"
+                ],
+                "weight": 3
+            },
+            {
+                "textures": [
+                    "bog/mud",
+                    "bog/bog7",
+                    "bog/bog_slab_side"
+                ],
+                "weight": 1
+            },
+            {
+                "textures": [
+                    "bog/mud",
+                    "bog/bog8",
+                    "bog/bog_slab_side"
+                ],
+                "weight": 1
+            },
+            {
+                "textures": [
+                    "bog/mud",
+                    "bog/bog9",
+                    "bog/bog_slab_side"
+                ],
+                "weight": 2
+            },
+            {
+                "textures": [
+                    "bog/mud",
+                    "bog/bog10",
+                    "bog/bog_slab_side"
+                ],
+                "weight": 2
+            }
+        ]
+    }
+}

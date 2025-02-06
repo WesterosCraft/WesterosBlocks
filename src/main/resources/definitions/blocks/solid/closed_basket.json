@@ -1,0 +1,15 @@
+{
+    "blockName": "closed_basket",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "cloth",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_decor_tab",
+    "label": "Closed Basket",
+    "textures": [
+        "crate_block/basket_bottom",
+        "crate_block/basket_top_closed",
+        "crate_block/basket_side"
+    ]
+}

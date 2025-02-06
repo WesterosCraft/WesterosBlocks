@@ -1,0 +1,12 @@
+{
+    "blockName": "butterfly_orange",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_misc_tab",
+    "label": "Southern Orange Butterfly",
+    "textures": [
+        "web_block/bug_butterfly_orange"
+    ],
+    "type": "no-in-web"
+}

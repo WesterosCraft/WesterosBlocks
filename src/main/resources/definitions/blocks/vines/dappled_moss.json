@@ -1,0 +1,14 @@
+{
+    "blockName": "dappled_moss",
+    "blockType": "vines",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Dappled Moss",
+    "colorMult": "textures/colormap/moss_dappled",
+    "textures": [
+        "dappled_moss/dappled",
+        "dappled_moss/dappled"
+    ],
+    "type": "allow-unsupported,no-climb,has-down"
+}

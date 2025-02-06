@@ -1,0 +1,18 @@
+{
+    "blockName": "straw_bed",
+    "stepSound": "plant",
+    "material": "cloth",
+    "blockType": "bed",
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Straw Bed",
+    "type": "shape:normal",
+    "itemTexture": "bed_block/bed_straw_1",
+    "textures": [
+        "bed_block/bed_straw_0",
+        "bed_block/bed_straw_1",
+        "bed_block/bed_straw_2",
+        "bed_block/bed_straw_3",
+        "bed_block/bed_straw_4",
+        "bed_block/bed_straw_5"
+    ]
+}

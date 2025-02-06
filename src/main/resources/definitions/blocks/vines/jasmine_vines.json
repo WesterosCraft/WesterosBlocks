@@ -1,0 +1,41 @@
+{
+    "blockName": "jasmine_vines",
+    "blockType": "vines",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Jasmine Vines",
+    "randomTextures": [
+        {
+            "textures": [
+                "jasmine_vines/side1",
+                "jasmine_vines/side1"
+            ]
+        },
+        {
+            "textures": [
+                "jasmine_vines/side2",
+                "jasmine_vines/side2"
+            ]
+        },
+        {
+            "textures": [
+                "jasmine_vines/side3",
+                "jasmine_vines/side3"
+            ]
+        },
+        {
+            "textures": [
+                "jasmine_vines/side4",
+                "jasmine_vines/side4"
+            ]
+        },
+        {
+            "textures": [
+                "jasmine_vines/side5",
+                "jasmine_vines/side5"
+            ]
+        }
+    ],
+    "type": "allow-unsupported,no-climb,has-down"
+}

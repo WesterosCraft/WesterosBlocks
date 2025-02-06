@@ -1,0 +1,21 @@
+{
+    "blockName": "iron_bars",
+    "blockType": "pane",
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 10,
+    "type": "bars-model,unconnect:false",
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_metal_tab",
+    "label": "Iron Bars",
+    "textures": [
+        "bars_iron_block/iron_bars",
+        "transparent"
+    ]
+}

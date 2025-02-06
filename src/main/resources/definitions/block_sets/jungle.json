@@ -1,0 +1,66 @@
+{
+    "baseBlockName": "jungle",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "fence_gate",
+        "cover",
+        "hollow_hopper",
+        "window_frame",
+        "window_frame_mullion"
+    ],
+    "altNames": {
+        "solid": "jungle_planks",
+        "fence_gate": "locked_jungle_fence_gate",
+        "hollow_hopper": "hollow_jungle_hopper",
+        "window_frame": "jungle_timber_window_frame",
+        "window_frame_mullion": "jungle_timber_window_frame_mullion"
+    },
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "types": {
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "Jungle Wood",
+    "altCustomTags": {
+        "solid": [
+            "wood-ctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "plank-ctm"
+        ]
+    },
+    "textures": {
+        "all": "wood/jungle/all",
+        "cover": "wood/jungle/cover",
+        "window-frame": "timber/jungle/window_frame",
+        "window-frame-mullion": "timber/jungle/window_frame_mullion"
+    },
+    "altTextures": {
+        "solid": [
+            "wood/jungle/all",
+            "wood/jungle/all",
+            "wood/jungle/woodctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "wood/jungle/all",
+            "wood/jungle/all",
+            "wood/jungle/plankctm"
+        ]
+    }
+}

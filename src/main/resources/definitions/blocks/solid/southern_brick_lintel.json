@@ -1,0 +1,15 @@
+{
+    "blockName": "southern_brick_lintel",
+    "blockType": "solid",
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_brick_tab",
+    "label": "Southern Brick Lintel",
+    "textures": [
+        "brick/southern/all1",
+        "brick/southern/all1",
+        "brick/southern/lintel"
+    ]
+}

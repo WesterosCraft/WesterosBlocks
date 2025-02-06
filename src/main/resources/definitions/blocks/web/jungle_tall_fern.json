@@ -1,0 +1,13 @@
+{
+    "blockName": "jungle_tall_fern",
+    "blockType": "web",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Jungle Tall Fern",
+    "textures": [
+        "jungle_tall_fern/side"
+    ],
+    "colorMult": "textures/colormap/grass",
+    "type": "no-in-web,layerSensitive"
+}

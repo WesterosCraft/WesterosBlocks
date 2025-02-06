@@ -1,0 +1,24 @@
+{
+    "blockName": "hemp_short",
+    "blockType": "cuboid",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_crops_herbs_tab",
+    "label": "Hemp Short",
+    "isCustomModel": true,
+    "rotateRandom": true,
+    "randomTextures": [
+        {},
+        {},
+        {},
+        {}
+    ],
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+    }
+}

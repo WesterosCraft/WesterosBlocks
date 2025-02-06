@@ -1,0 +1,12 @@
+{
+    "blockName": "chain_block_harness",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_metal_tab",
+    "label": "Chain Block Harness",
+    "textures": [
+        "web_block/chain_blockharness"
+    ],
+    "type": "no-in-web"
+}

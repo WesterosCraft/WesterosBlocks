@@ -1,0 +1,20 @@
+{
+    "blockName": "piled_bones_wall",
+    "blockType": "wall",
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "type": "unconnect:false",
+    "label": "Piled Bones Wall",
+    "textures": [
+        "piled_bones/side"
+    ]
+}

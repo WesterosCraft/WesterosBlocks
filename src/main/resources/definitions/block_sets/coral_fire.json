@@ -1,0 +1,28 @@
+{
+    "baseBlockName": "coral_fire",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence"
+    ],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 2
+        }
+    ],
+    "creativeTab": "westeros_water_air_tab",
+    "types": {
+        "fence": "unconnect:true"
+    },
+    "baseLabel": "Fire Coral",
+    "textures": {
+        "all": "coral/fire/all"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "blockName": "savanna_tall_grass",
+    "blockType": "web",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Savanna Tall Grass",
+    "textures": [
+        "savanna_tall_grass/savanna_tall_grass"
+    ],
+    "colorMult": "textures/colormap/grass",
+    "type": "no-in-web,layerSensitive"
+}

@@ -1,0 +1,42 @@
+{
+    "baseBlockName": "redorange_slate",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "types": {
+        "stairs": "unconnect:false,no-uvlock"
+    },
+    "baseLabel": "Red-Orange Slate",
+    "textures": {
+        "all": "slate/redorange/all"
+    },
+    "altTextures": {
+        "slab": [
+            "slate/redorange/all",
+            "slate/redorange/directional",
+            "slate/redorange/all"
+        ],
+        "stairs": [
+            "slate/redorange/rotated",
+            "slate/redorange/rotated",
+            "slate/redorange/all"
+        ]
+    }
+}

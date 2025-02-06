@@ -1,0 +1,32 @@
+{
+    "blockName": "cabbage",
+    "blockType": "cuboid-16way",
+    "hardness": 3,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_crops_herbs_tab",
+    "label": "Cabbage",
+    "textures": [
+        "cabbage/down",
+        "cabbage/up",
+        "cabbage/west",
+        "cabbage/east",
+        "cabbage/south",
+        "cabbage/north"
+    ],
+    "boundingBox": {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0,
+        "yMax": 0.5,
+        "zMin": 0.25,
+        "zMax": 0.75
+    }
+}

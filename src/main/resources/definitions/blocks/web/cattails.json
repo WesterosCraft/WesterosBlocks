@@ -1,0 +1,52 @@
+{
+    "blockName": "cattails",
+    "blockType": "web",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Cattails",
+    "randomTextures": [
+        {
+            "textures": [
+                "cattails/side1"
+            ]
+        },
+        {
+            "textures": [
+                "cattails/side2"
+            ]
+        },
+        {
+            "textures": [
+                "cattails/side3"
+            ]
+        },
+        {
+            "textures": [
+                "cattails/side4"
+            ]
+        },
+        {
+            "textures": [
+                "cattails/side5"
+            ]
+        },
+        {
+            "textures": [
+                "cattails/side6"
+            ]
+        },
+        {
+            "textures": [
+                "cattails/side7"
+            ]
+        },
+        {
+            "textures": [
+                "cattails/side8"
+            ]
+        }
+    ],
+    "colorMult": "textures/colormap/reed",
+    "type": "no-in-web,layerSensitive"
+}

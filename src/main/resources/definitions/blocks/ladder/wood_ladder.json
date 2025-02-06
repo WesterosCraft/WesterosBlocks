@@ -1,0 +1,13 @@
+{
+    "blockName": "wood_ladder",
+    "blockType": "ladder",
+    "stepSound": "ladder",
+    "material": "iron",
+    "creativeTab": "westeros_wood_planks_tab",
+    "label": "Wood Ladder",
+    "textures": [
+        "wood_ladder/side"
+    ],
+    "type": "allow-unsupported",
+    "isCustomModel": true
+}

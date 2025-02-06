@@ -1,0 +1,29 @@
+{
+    "blockName": "dreadfort_skeleton_sconce_left",
+    "blockType": "cuboid-nsew",
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Dreadfort Skeleton Sconce Left",
+    "textures": [
+        "cuboid_block/skeleton_hand_base",
+        "cuboid_block/skeleton_hand"
+    ],
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+    },
+    "isCustomModel": true
+}

@@ -1,0 +1,16 @@
+{
+    "blockName": "southern_brick_arch",
+    "blockType": "solid",
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_brick_tab",
+    "label": "Southern Brick Arch",
+    "type": "connectstate:true",
+    "textures": [
+        "brick/southern/all1",
+        "brick/southern/all1",
+        "brick/southern/arch"
+    ]
+}

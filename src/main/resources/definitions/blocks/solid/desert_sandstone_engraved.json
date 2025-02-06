@@ -1,0 +1,13 @@
+{
+    "blockName": "desert_sandstone_engraved",
+    "blockType": "solid",
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ashlar Engraved Sandstone",
+    "textures": [
+        "ashlar_engraved/sandstone/all"
+    ]
+}

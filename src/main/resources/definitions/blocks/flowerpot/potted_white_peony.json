@@ -1,0 +1,13 @@
+{
+    "blockName": "potted_white_peony",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted White Peony",
+    "type": "plant-id:white_peony",
+    "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/white_peony1"
+    ]
+}

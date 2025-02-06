@@ -1,0 +1,19 @@
+{
+    "blockName": "jenny_of_oldstones",
+    "blockType": "sound",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "ground",
+    "resistance": 2,
+    "creativeTab": "westeros_sounds_tab",
+    "label": "Jenny of Oldstones",
+    "textures": [
+        "sound_block/sound_int"
+    ],
+    "soundList": [
+        "jenny_of_oldstones"
+    ],
+    "type": "period:420,random-add:120,start-time:0,end-time:2400"
+}

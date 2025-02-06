@@ -1,0 +1,42 @@
+{
+    "baseBlockName": "scorched_earth",
+    "variants": [
+        "solid",
+        "slab",
+        "layer"
+    ],
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_grass_dirt_tab",
+    "baseLabel": "Scorched Earth",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "scorched_earth/all1"
+            }
+        },
+        {
+            "textures": {
+                "all": "scorched_earth/all2"
+            }
+        },
+        {
+            "textures": {
+                "all": "scorched_earth/all3"
+            }
+        },
+        {
+            "textures": {
+                "all": "scorched_earth/all4"
+            }
+        }
+    ]
+}

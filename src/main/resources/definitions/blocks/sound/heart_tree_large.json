@@ -1,0 +1,19 @@
+{
+    "blockName": "heart_tree_large",
+    "blockType": "sound",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "ground",
+    "resistance": 2,
+    "creativeTab": "westeros_sounds_tab",
+    "label": "Heart Tree Large",
+    "textures": [
+        "sound_block/sound_ext"
+    ],
+    "soundList": [
+        "heart_tree_large"
+    ],
+    "type": "period:57,random-add:0,start-time:0,end-time:2400"
+}

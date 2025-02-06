@@ -1,0 +1,13 @@
+{
+    "blockName": "potted_blue_bells",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Blue Bells",
+    "type": "plant-id:blue_bells",
+    "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/blue_bells"
+    ]
+}

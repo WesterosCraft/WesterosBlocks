@@ -1,0 +1,21 @@
+{
+    "blockName": "stacked_bones_stairs",
+    "blockType": "stair",
+    "stepSound": "stone",
+    "material": "rock",
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "type": "unconnect:false,no-uvlock",
+    "label": "Stacked Bones Stairs",
+    "isCustomModel": true,
+    "textures": [
+        "stacked_bones/bone_stacked_front",
+        "stacked_bones/bone_stacked_front",
+        "stacked_bones/bone_stacked_rotated"
+    ]
+}

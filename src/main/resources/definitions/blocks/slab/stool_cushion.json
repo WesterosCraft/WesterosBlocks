@@ -1,0 +1,23 @@
+{
+    "blockName": "stool_cushion",
+    "blockType": "slab",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Stool Cushion",
+    "lightOpacity": 0,
+    "nonOpaque": true,
+    "textures": [
+        "seat/bottom",
+        "seat/top_cushion",
+        "seat/side_cushion"
+    ]
+}

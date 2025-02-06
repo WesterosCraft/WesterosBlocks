@@ -1,0 +1,82 @@
+{
+    "baseBlockName": "grassy_dirt",
+    "variants": [
+        "solid",
+        "slab",
+        "path"
+    ],
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_grass_dirt_tab",
+    "baseLabel": "Grassy Dirt",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "dirt_forest/top_bot1"
+            },
+            "weight": 100
+        },
+        {
+            "textures": {
+                "all": "dirt_forest/top_bot2"
+            },
+            "weight": 33
+        },
+        {
+            "textures": {
+                "all": "dirt_forest/top_bot3"
+            },
+            "weight": 45
+        },
+        {
+            "textures": {
+                "all": "dirt_forest/top_bot4"
+            },
+            "weight": 140
+        },
+        {
+            "textures": {
+                "all": "dirt_forest/top_bot5"
+            },
+            "weight": 193
+        },
+        {
+            "textures": {
+                "all": "dirt_forest/top_bot6"
+            },
+            "weight": 77
+        },
+        {
+            "textures": {
+                "all": "dirt_forest/top_bot7"
+            },
+            "weight": 77
+        },
+        {
+            "textures": {
+                "all": "dirt_forest/top_bot8"
+            },
+            "weight": 45
+        },
+        {
+            "textures": {
+                "all": "dirt_forest/top_bot9"
+            },
+            "weight": 77
+        },
+        {
+            "textures": {
+                "all": "dirt_forest/top_bot10"
+            },
+            "weight": 77
+        }
+    ]
+}

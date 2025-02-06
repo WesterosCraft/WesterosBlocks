@@ -1,0 +1,56 @@
+{
+    "blockName": "dirty_white_wool_banner",
+    "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 1,
+    "harvestLevel": [
+        {
+            "tool": "sword",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_banners_tab",
+    "type": "no-break-under,allowHalfBreak",
+    "label": "Dirty White Wool Banner",
+    "itemTextureIndex": 2,
+    "stack": [
+        {
+            "textures": [
+                "transparent",
+                "transparent",
+                "transparent",
+                "transparent",
+                "banner/solid/dirty_white_wool/bottom",
+                "banner/solid/dirty_white_wool/bottom"
+            ],
+            "boundingBox": {
+                "xMin": 0.96875,
+                "xMax": 1,
+                "yMin": 0,
+                "yMax": 1,
+                "zMin": 0,
+                "zMax": 1
+            }
+        },
+        {
+            "textures": [
+                "transparent",
+                "transparent",
+                "transparent",
+                "transparent",
+                "banner/solid/dirty_white_wool/top",
+                "banner/solid/dirty_white_wool/top"
+            ],
+            "boundingBox": {
+                "xMin": 0.96875,
+                "xMax": 1,
+                "yMin": 0,
+                "yMax": 1,
+                "zMin": 0,
+                "zMax": 1
+            }
+        }
+    ]
+}

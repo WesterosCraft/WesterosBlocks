@@ -1,0 +1,39 @@
+{
+    "blockName": "blue_hyacinth",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_flowers_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "Blue Hyacinth",
+    "randomTextures": [
+        {
+            "textures": [
+                "flowers/blue_hyacinth1"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/blue_hyacinth2"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/blue_hyacinth3"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/blue_hyacinth4"
+            ]
+        }
+    ]
+}

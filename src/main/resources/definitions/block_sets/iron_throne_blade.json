@@ -1,0 +1,28 @@
+{
+    "baseBlockName": "iron_throne_blade",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence"
+    ],
+    "altNames": {
+        "solid": "iron_throne_blade_block"
+    },
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_metal_tab",
+    "baseLabel": "Iron Throne Blade",
+    "textures": {
+        "all": "metal/molten_blades/all"
+    }
+}

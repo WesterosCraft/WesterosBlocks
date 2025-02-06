@@ -1,0 +1,32 @@
+{
+    "blockName": "table",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "lightOpacity": 0,
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Table",
+    "textures": [
+        "table/bottom",
+        "table/top",
+        "table/side"
+    ],
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+    },
+    "itemTextureIndex": 2
+}

@@ -1,0 +1,13 @@
+{
+    "blockName": "jungle_tall_grass",
+    "blockType": "web",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Jungle Tall Grass",
+    "textures": [
+        "jungle_tall_grass/down_side1"
+    ],
+    "colorMult": "textures/colormap/grass",
+    "type": "no-in-web,layerSensitive"
+}

@@ -1,0 +1,23 @@
+{
+    "baseBlockName": "grassy_sand",
+    "variants": [
+        "solid",
+        "slab",
+        "layer"
+    ],
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_sand_gravel_tab",
+    "baseLabel": "Grassy Sand",
+    "textures": {
+        "all": "grassy_sand/side"
+    }
+}

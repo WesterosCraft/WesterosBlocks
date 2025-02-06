@@ -1,0 +1,34 @@
+{
+    "blockName": "sword_rack",
+    "blockType": "cuboid-ne",
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Sword Rack",
+    "lightOpacity": 0,
+    "textures": [
+        "cuboid_block/rack_bottom",
+        "cuboid_block/rack_top",
+        "cuboid_block/rack_rest",
+        "cuboid_block/rack_rest",
+        "cuboid_block/rack_bottom",
+        "cuboid_block/rack_bottom"
+    ],
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55
+    },
+    "itemTextureIndex": 2
+}

@@ -1,0 +1,32 @@
+{
+    "blockName": "light_wattle_fence_short",
+    "blockType": "cuboid-nsew",
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "label": "Light Wattle Fence Short",
+    "textures": [
+        "transparent",
+        "transparent",
+        "wattle_fence_light/fence_wattle_light_short",
+        "wattle_fence_light/fence_wattle_light_short",
+        "wattle_fence_light/fence_wattle_light_short",
+        "wattle_fence_light/fence_wattle_light_short"
+    ],
+    "boundingBox": {
+        "xMin": 0.01,
+        "xMax": 0.07,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0,
+        "zMax": 1
+    }
+}

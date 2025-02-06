@@ -1,0 +1,19 @@
+{
+    "blockName": "piled_bones_slab",
+    "blockType": "slab",
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 2
+        }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "label": "Piled Bones Slab",
+    "textures": [
+        "piled_bones/side"
+    ]
+}

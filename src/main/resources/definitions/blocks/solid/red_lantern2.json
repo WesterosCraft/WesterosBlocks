@@ -1,0 +1,16 @@
+{
+    "blockName": "red_lantern2",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_lighting_tab",
+    "label": "Large Red Lantern",
+    "lightValue": 0.55,
+    "textures": [
+        "lighting/lantern_red_bottom",
+        "lighting/lantern_red_top",
+        "lighting/lantern_red_side"
+    ]
+}

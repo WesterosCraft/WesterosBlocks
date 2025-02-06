@@ -1,0 +1,14 @@
+{
+    "blockName": "dorne_red_window_shutters",
+    "blockType": "halfdoor",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Dorne Red Window Shutters",
+    "type": "allow-unsupported",
+    "textures": [
+        "shutter_block/shutters_dorne"
+    ]
+}

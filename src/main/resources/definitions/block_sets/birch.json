@@ -1,0 +1,66 @@
+{
+    "baseBlockName": "birch",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "fence_gate",
+        "cover",
+        "hollow_hopper",
+        "window_frame",
+        "window_frame_mullion"
+    ],
+    "altNames": {
+        "solid": "birch_planks",
+        "fence_gate": "locked_birch_fence_gate",
+        "hollow_hopper": "hollow_birch_hopper",
+        "window_frame": "birch_timber_window_frame",
+        "window_frame_mullion": "birch_timber_window_frame_mullion"
+    },
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "types": {
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "Birch Wood",
+    "altCustomTags": {
+        "solid": [
+            "wood-ctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "plank-ctm"
+        ]
+    },
+    "textures": {
+        "all": "wood/birch/all",
+        "cover": "wood/birch/cover",
+        "window-frame": "timber/birch/window_frame",
+        "window-frame-mullion": "timber/birch/window_frame_mullion"
+    },
+    "altTextures": {
+        "solid": [
+            "wood/birch/all",
+            "wood/birch/all",
+            "wood/birch/woodctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "wood/birch/all",
+            "wood/birch/all",
+            "wood/birch/plankctm"
+        ]
+    }
+}

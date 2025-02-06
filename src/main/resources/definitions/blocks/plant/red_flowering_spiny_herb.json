@@ -1,0 +1,20 @@
+{
+    "blockName": "red_flowering_spiny_herb",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_flowers_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "Red Flowering Spiny Herb",
+    "textures": [
+        "flowers/red_flowering_spiny_herb1"
+    ]
+}

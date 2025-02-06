@@ -1,0 +1,14 @@
+{
+    "blockName": "piled_bones_stairs",
+    "blockType": "stair",
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_misc_tab",
+    "type": "unconnect:false",
+    "label": "Piled Bones Stairs",
+    "textures": [
+        "piled_bones/side"
+    ]
+}

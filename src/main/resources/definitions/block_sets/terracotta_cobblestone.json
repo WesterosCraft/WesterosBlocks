@@ -1,0 +1,56 @@
+{
+    "baseBlockName": "terracotta_cobblestone",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_cobblestone_tab",
+    "baseLabel": "Cobblestone Terracotta",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "cobblestone/terracotta/all1"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/terracotta/all2"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/terracotta/all3"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/terracotta/all4"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/terracotta/all5"
+            },
+            "weight": 20
+        }
+    ]
+}

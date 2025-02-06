@@ -1,0 +1,15 @@
+{
+    "blockName": "broken_cabinet",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Broken Cabinet",
+    "textures": [
+        "cabinet/top_bottom",
+        "cabinet/top_bottom",
+        "bench_block/cabinet_broken"
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "blockName": "cobweb",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_decor_tab",
+    "label": "Cobweb",
+    "type": "toggleOnUse,no-in-web",
+    "states": [
+        {
+            "stateID": "random",
+            "randomTextures": [
+                {
+                    "textures": [
+                        "cobweb/side1"
+                    ]
+                },
+                {
+                    "textures": [
+                        "cobweb/side2"
+                    ]
+                },
+                {
+                    "textures": [
+                        "cobweb/side3"
+                    ]
+                },
+                {
+                    "textures": [
+                        "cobweb/side4"
+                    ]
+                },
+                {
+                    "textures": [
+                        "cobweb/side5"
+                    ]
+                },
+                {
+                    "textures": [
+                        "cobweb/side6"
+                    ]
+                },
+                {
+                    "textures": [
+                        "cobweb/side7"
+                    ]
+                },
+                {
+                    "textures": [
+                        "cobweb/side8"
+                    ]
+                }
+            ]
+        },
+        {
+            "stateID": "cobweb1",
+            "textures": [
+                "cobweb/side1"
+            ]
+        },
+        {
+            "stateID": "cobweb2",
+            "textures": [
+                "cobweb/side2"
+            ]
+        },
+        {
+            "stateID": "cobweb3",
+            "textures": [
+                "cobweb/side3"
+            ]
+        },
+        {
+            "stateID": "cobweb4",
+            "textures": [
+                "cobweb/side4"
+            ]
+        },
+        {
+            "stateID": "cobweb5",
+            "textures": [
+                "cobweb/side5"
+            ]
+        },
+        {
+            "stateID": "cobweb6",
+            "textures": [
+                "cobweb/side6"
+            ]
+        },
+        {
+            "stateID": "cobweb7",
+            "textures": [
+                "cobweb/side7"
+            ]
+        },
+        {
+            "stateID": "cobweb8",
+            "textures": [
+                "cobweb/side8"
+            ]
+        }
+    ]
+}

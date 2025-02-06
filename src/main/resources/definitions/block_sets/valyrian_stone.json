@@ -1,0 +1,66 @@
+{
+    "baseBlockName": "valyrian_stone",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_cobblestone_tab",
+    "baseLabel": "Valyrian Stone",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "stone_valyrian/all1"
+            }
+        },
+        {
+            "textures": {
+                "all": "stone_valyrian/all2"
+            }
+        },
+        {
+            "textures": {
+                "all": "stone_valyrian/all3"
+            }
+        },
+        {
+            "textures": {
+                "all": "stone_valyrian/all4"
+            }
+        },
+        {
+            "textures": {
+                "all": "stone_valyrian/all5"
+            }
+        },
+        {
+            "textures": {
+                "all": "stone_valyrian/all6"
+            }
+        },
+        {
+            "textures": {
+                "all": "stone_valyrian/all7"
+            }
+        },
+        {
+            "textures": {
+                "all": "stone_valyrian/all8"
+            }
+        }
+    ]
+}

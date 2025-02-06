@@ -1,0 +1,20 @@
+{
+    "blockName": "unused_brown_plaster",
+    "blockType": "solid",
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_marble_plaster_tab",
+    "label": "Smooth Brown Brick Keystone Brownish White Plaster",
+    "textures": [
+        "ashlar_quarter_rounded/light_brown/all",
+        "ashlar_quarter_rounded/light_brown/all",
+        "plaster/smooth/brown_white/all"
+    ],
+    "overlayTextures": [
+        "transparent",
+        "transparent",
+        "plaster_keystone/ashlar_quarter_rounded_light_brown/side"
+    ]
+}

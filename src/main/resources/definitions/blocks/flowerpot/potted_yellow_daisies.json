@@ -1,0 +1,24 @@
+{
+    "blockName": "potted_yellow_daisies",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Yellow Daisies",
+    "type": "plant-id:yellow_daisies",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/yellow_daisies1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/yellow_daisies2"
+            ]
+        }
+    ]
+}

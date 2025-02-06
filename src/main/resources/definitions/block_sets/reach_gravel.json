@@ -1,0 +1,121 @@
+{
+    "baseBlockName": "reach_gravel",
+    "variants": [
+        "solid",
+        "slab",
+        "path"
+    ],
+    "altNames": {
+        "path": "path_reach_gravel"
+    },
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_grass_dirt_tab",
+    "baseLabel": "Reach Gravel",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "reach_gravel/side1"
+            },
+            "weight": 10
+        },
+        {
+            "textures": {
+                "all": "reach_gravel/side2"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "reach_gravel/side3"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "reach_gravel/side4"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "reach_gravel/side5"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "reach_gravel/side6"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "reach_gravel/side7"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "reach_gravel/side8"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "reach_gravel/side9"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "reach_gravel/side10"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "reach_gravel/side11"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "reach_gravel/side12"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "reach_gravel/side13"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "reach_gravel/side14"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "reach_gravel/side15"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "reach_gravel/side16"
+            },
+            "weight": 1
+        }
+    ]
+}

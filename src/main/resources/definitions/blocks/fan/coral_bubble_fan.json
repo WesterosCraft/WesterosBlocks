@@ -1,0 +1,21 @@
+{
+    "blockName": "coral_bubble_fan",
+    "blockType": "fan",
+    "stepSound": "stone",
+    "material": "rock",
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Bubble Coral Fan",
+    "type": "allow-unsupported",
+    "randomTextures": [
+        {
+            "textures": [
+                "coral/bubble/fan1"
+            ]
+        },
+        {
+            "textures": [
+                "coral/bubble/fan2"
+            ]
+        }
+    ]
+}

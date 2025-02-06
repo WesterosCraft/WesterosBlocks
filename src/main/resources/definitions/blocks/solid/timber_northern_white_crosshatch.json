@@ -1,0 +1,53 @@
+{
+    "blockName": "timber_northern_white_crosshatch",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Northern White Crosshatch",
+    "type": "connectstate:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "plaster/smooth/white_daub/all",
+                "wood/northern/all",
+                "plaster/smooth/white_daub/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/brown_white/all",
+                "wood/northern/all",
+                "plaster/smooth/brown_white/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/pale_white/all",
+                "wood/northern/all",
+                "plaster/smooth/pale_white/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/rough/white_daub/all1",
+                "wood/northern/all",
+                "plaster/rough/white_daub/all1"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/wattle/white_daub_dark/all",
+                "wood/northern/all",
+                "plaster/wattle/white_daub_dark/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/northern/bottom",
+        "transparent",
+        "timber/northern/crosshatch"
+    ]
+}

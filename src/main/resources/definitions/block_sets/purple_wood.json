@@ -1,0 +1,61 @@
+{
+    "baseBlockName": "purple_wood",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "fence_gate",
+        "window_frame",
+        "window_frame_mullion"
+    ],
+    "altNames": {
+        "fence_gate": "locked_purple_wood_fence_gate",
+        "window_frame": "purple_timber_window_frame",
+        "window_frame_mullion": "purple_timber_window_frame_mullion"
+    },
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "types": {
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "Purple Wood",
+    "altCustomTags": {
+        "solid": [
+            "wood-ctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "plank-ctm"
+        ]
+    },
+    "textures": {
+        "all": "wood/purple/all",
+        "window-frame": "timber/purple/window_frame",
+        "window-frame-mullion": "timber/purple/window_frame_mullion"
+    },
+    "altTextures": {
+        "solid": [
+            "wood/purple/all",
+            "wood/purple/all",
+            "wood/purple/woodctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "wood/purple/all",
+            "wood/purple/all",
+            "wood/purple/plankctm"
+        ]
+    }
+}

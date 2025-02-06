@@ -1,0 +1,104 @@
+{
+    "baseBlockName": "brown_slate",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "types": {
+        "stairs": "unconnect:false,no-uvlock"
+    },
+    "baseLabel": "Brown Slate",
+    "textures": {
+        "all": "slate/brown/all"
+    },
+    "altTextures": {
+        "stairs": [
+            "slate/brown/rotated",
+            "slate/brown/rotated",
+            "slate/brown/all"
+        ]
+    },
+    "altRandomTextures": {
+        "slab": [
+            {
+                "textures": [
+                    "slate/brown/all",
+                    "slate/brown/directional1",
+                    "slate/brown/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/brown/all",
+                    "slate/brown/directional2",
+                    "slate/brown/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/brown/all",
+                    "slate/brown/directional3",
+                    "slate/brown/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/brown/all",
+                    "slate/brown/directional4",
+                    "slate/brown/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/brown/all",
+                    "slate/brown/directional5",
+                    "slate/brown/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/brown/all",
+                    "slate/brown/directional6",
+                    "slate/brown/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/brown/all",
+                    "slate/brown/directional7",
+                    "slate/brown/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/brown/all",
+                    "slate/brown/directional8",
+                    "slate/brown/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/brown/all",
+                    "slate/brown/directional9",
+                    "slate/brown/all"
+                ]
+            }
+        ]
+    }
+}

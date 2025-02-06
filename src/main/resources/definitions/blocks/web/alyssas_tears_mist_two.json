@@ -1,0 +1,15 @@
+{
+    "blockName": "alyssas_tears_mist_two",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "material": "web",
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Alyssas Tears Mist Two",
+    "textures": [
+        "alyssas_tears_mist/mist2"
+    ],
+    "connectTo": "material",
+    "type": "no-in-web"
+}

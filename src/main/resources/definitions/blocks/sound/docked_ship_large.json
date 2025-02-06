@@ -1,0 +1,19 @@
+{
+    "blockName": "docked_ship_large",
+    "blockType": "sound",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "ground",
+    "resistance": 2,
+    "creativeTab": "westeros_sounds_tab",
+    "label": "Docked Ship Large",
+    "textures": [
+        "sound_block/sound_ext"
+    ],
+    "soundList": [
+        "docked_ship_large"
+    ],
+    "type": "period:6,random-add:2,start-time:0,end-time:2400"
+}

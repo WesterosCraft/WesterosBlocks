@@ -1,0 +1,19 @@
+{
+    "blockName": "blacksmith_large",
+    "blockType": "sound",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "ground",
+    "resistance": 2,
+    "creativeTab": "westeros_sounds_tab",
+    "label": "Blacksmith Large",
+    "textures": [
+        "sound_block/sound_int"
+    ],
+    "soundList": [
+        "blacksmith_large"
+    ],
+    "type": "period:5,random-add:0,start-time:0,end-time:2400"
+}

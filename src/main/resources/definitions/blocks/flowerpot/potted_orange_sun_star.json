@@ -1,0 +1,24 @@
+{
+    "blockName": "potted_orange_sun_star",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Orange Sun Star",
+    "type": "plant-id:orange_sun_star",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/orange_sun_star1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/orange_sun_star2"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "baseBlockName": "green_wool",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "customTags": [
+        "wool-ctm"
+    ],
+    "altCustomTags": {
+        "solid": [
+            "wool-block-ctm"
+        ]
+    },
+    "baseLabel": "Green Wool",
+    "textures": {
+        "all": "wool/green/all"
+    },
+    "altTextures": {
+        "solid": [
+            "wool/green/block"
+        ],
+        "carpet": [
+            "wool/green/noctm"
+        ]
+    }
+}

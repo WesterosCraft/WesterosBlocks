@@ -1,0 +1,36 @@
+{
+    "baseBlockName": "pebbles_wet_stormlands",
+    "variants": [
+        "solid",
+        "layer"
+    ],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_sand_gravel_tab",
+    "baseLabel": "Pebbles Wet Stormlands",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "pebble/stormlands/wet1"
+            }
+        },
+        {
+            "textures": {
+                "all": "pebble/stormlands/wet2"
+            }
+        },
+        {
+            "textures": {
+                "all": "pebble/stormlands/wet3"
+            }
+        }
+    ]
+}

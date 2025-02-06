@@ -1,0 +1,22 @@
+{
+    "baseBlockName": "wet_sand_stones",
+    "variants": [
+        "solid",
+        "layer"
+    ],
+    "hardness": 0.5,
+    "stepSound": "sand",
+    "material": "sand",
+    "resistance": 1,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_sand_gravel_tab",
+    "baseLabel": "Wet Sand Stones",
+    "textures": {
+        "all": "sand_block/sand_wet_stones"
+    }
+}

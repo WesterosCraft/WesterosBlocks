@@ -1,0 +1,19 @@
+{
+    "blockName": "portcullis_4_sec",
+    "blockType": "sound",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "ground",
+    "resistance": 2,
+    "creativeTab": "westeros_sounds_tab",
+    "label": "Portcullis 4 Sec",
+    "textures": [
+        "sound_block/sound_trig"
+    ],
+    "soundList": [
+        "portcullis_4sec"
+    ],
+    "type": "period:0,random-add:0,start-time:0,end-time:0"
+}

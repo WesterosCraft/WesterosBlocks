@@ -1,0 +1,28 @@
+{
+    "blockName": "flat_wheel",
+    "blockType": "cuboid-nsew",
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "label": "Flat Wheel",
+    "textures": [
+        "transparent"
+    ],
+    "boundingBox": {
+        "xMin": 0.92,
+        "xMax": 0.97,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+    },
+    "isCustomModel": true
+}

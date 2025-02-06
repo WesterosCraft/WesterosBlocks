@@ -1,0 +1,14 @@
+{
+    "blockName": "always_active_sandstone_furnace",
+    "blockType": "furnace",
+    "nonOpaque": true,
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 10,
+    "lightValue": 0.875,
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Always Active Ashlar Furnace Light Brown",
+    "type": "always-on:true",
+    "isCustomModel": true
+}

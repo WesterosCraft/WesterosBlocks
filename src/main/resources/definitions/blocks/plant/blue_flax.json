@@ -1,0 +1,38 @@
+{
+    "blockName": "blue_flax",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "Blue Flax",
+    "randomTextures": [
+        {
+            "textures": [
+                "flowers/blue_flax1"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/blue_flax2"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/blue_flax3"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/blue_flax4"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "blockName": "pomegranate_fruit_leaves",
+    "blockType": "leaves",
+    "stepSound": "grass",
+    "material": "leaves",
+    "type": "no-decay,better-foliage,overlay",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Pomegranate Fruit Leaves",
+    "colorMult": "textures/colormap/birch",
+    "rotateRandom": true,
+    "randomTextures": [
+        {
+            "textures": [
+                "leaves/birch/all",
+                "transparent",
+                "leaves/overlay/pomegranate0"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/birch/all",
+                "transparent",
+                "leaves/overlay/pomegranate1"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/birch/all",
+                "transparent",
+                "leaves/overlay/pomegranate2"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/birch/all",
+                "transparent",
+                "leaves/overlay/pomegranate3"
+            ],
+            "weight": 2
+        }
+    ]
+}

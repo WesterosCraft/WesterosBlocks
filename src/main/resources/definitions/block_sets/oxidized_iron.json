@@ -1,0 +1,44 @@
+{
+    "baseBlockName": "oxidized_iron",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "altNames": {
+        "solid": "oxidized_iron_block"
+    },
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_metal_tab",
+    "baseLabel": "Oxidized Iron",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "metal/oxidized_iron/all1"
+            }
+        },
+        {
+            "textures": {
+                "all": "metal/oxidized_iron/all2"
+            }
+        },
+        {
+            "textures": {
+                "all": "metal/oxidized_iron/all3"
+            }
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "blockName": "jungle_log_rope",
+    "blockType": "log",
+    "stepSound": "wood",
+    "material": "wood",
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Jungle Log Rope",
+    "textures": [
+        "bark/jungle/top",
+        "bark/jungle/top",
+        "bark/jungle/rope"
+    ]
+}

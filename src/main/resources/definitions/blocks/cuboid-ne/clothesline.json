@@ -1,0 +1,97 @@
+{
+    "blockName": "clothesline",
+    "blockType": "cuboid-ne",
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "lightOpacity": 0,
+    "itemTextureIndex": 2,
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "label": "Clothesline",
+    "type": "toggleOnUse",
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.499,
+        "zMax": 0.5
+    },
+    "states": [
+        {
+            "stateID": "random",
+            "randomTextures": [
+                {
+                    "textures": [
+                        "transparent",
+                        "transparent",
+                        "clothesline/laundry_pants_towel",
+                        "clothesline/laundry_pants_towel",
+                        "transparent",
+                        "transparent"
+                    ]
+                },
+                {
+                    "textures": [
+                        "transparent",
+                        "transparent",
+                        "clothesline/laundry_sheet_white",
+                        "clothesline/laundry_sheet_white",
+                        "transparent",
+                        "transparent"
+                    ]
+                },
+                {
+                    "textures": [
+                        "transparent",
+                        "transparent",
+                        "clothesline/laundry_shirt_towel",
+                        "clothesline/laundry_shirt_towel",
+                        "transparent",
+                        "transparent"
+                    ]
+                }
+            ]
+        },
+        {
+            "stateID": "clothes1",
+            "textures": [
+                "transparent",
+                "transparent",
+                "clothesline/laundry_pants_towel",
+                "clothesline/laundry_pants_towel",
+                "transparent",
+                "transparent"
+            ]
+        },
+        {
+            "stateID": "clothes2",
+            "textures": [
+                "transparent",
+                "transparent",
+                "clothesline/laundry_sheet_white",
+                "clothesline/laundry_sheet_white",
+                "transparent",
+                "transparent"
+            ]
+        },
+        {
+            "stateID": "clothes3",
+            "textures": [
+                "transparent",
+                "transparent",
+                "clothesline/laundry_shirt_towel",
+                "clothesline/laundry_shirt_towel",
+                "transparent",
+                "transparent"
+            ]
+        }
+    ]
+}

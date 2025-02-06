@@ -1,0 +1,19 @@
+{
+    "blockName": "windmill_small",
+    "blockType": "sound",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "ground",
+    "resistance": 2,
+    "creativeTab": "westeros_sounds_tab",
+    "label": "Windmill Small",
+    "textures": [
+        "sound_block/sound_int"
+    ],
+    "soundList": [
+        "windmill_small"
+    ],
+    "type": "period:32.7,random-add:0,start-time:0,end-time:2400"
+}

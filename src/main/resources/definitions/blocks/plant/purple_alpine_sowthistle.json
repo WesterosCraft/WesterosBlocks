@@ -1,0 +1,39 @@
+{
+    "blockName": "purple_alpine_sowthistle",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_flowers_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "Purple Alpine Sow-thistle",
+    "randomTextures": [
+        {
+            "textures": [
+                "flowers/purple_alpine_sowthistle/side1"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/purple_alpine_sowthistle/side2"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/purple_alpine_sowthistle/side3"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/purple_alpine_sowthistle/side4"
+            ]
+        }
+    ]
+}

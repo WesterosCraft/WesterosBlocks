@@ -1,0 +1,14 @@
+{
+    "blockName": "green_lannisport_window_shutters",
+    "blockType": "halfdoor",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Green Lannisport Window Shutters",
+    "type": "allow-unsupported",
+    "textures": [
+        "shutter_block/shutters_lannisport"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "blockName": "bushel_of_herbs",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Bushel of Herbs",
+    "textures": [
+        "web_block/food_herbs"
+    ],
+    "type": "no-in-web"
+}

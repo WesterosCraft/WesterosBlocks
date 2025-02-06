@@ -1,0 +1,40 @@
+{
+    "blockName": "reach_oak_wood_panelling_wall",
+    "blockType": "wall",
+    "hardness": 1.5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "type": "unconnect:false",
+    "label": "Reach Oak Wood Panelling Wall",
+    "randomTextures": [
+        {
+            "textures": [
+                "wood/oak/panelling/top_bottom",
+                "wood/oak/panelling/top_bottom",
+                "wood/oak/panelling/side1"
+            ]
+        },
+        {
+            "textures": [
+                "wood/oak/panelling/top_bottom",
+                "wood/oak/panelling/top_bottom",
+                "wood/oak/panelling/side2"
+            ]
+        },
+        {
+            "textures": [
+                "wood/oak/panelling/top_bottom",
+                "wood/oak/panelling/top_bottom",
+                "wood/oak/panelling/side3"
+            ]
+        }
+    ]
+}

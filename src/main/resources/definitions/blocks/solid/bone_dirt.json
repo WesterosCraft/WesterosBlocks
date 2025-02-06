@@ -1,0 +1,13 @@
+{
+    "blockName": "bone_dirt",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "creativeTab": "westeros_grass_dirt_tab",
+    "label": "Bone Dirt",
+    "textures": [
+        "dirt/bone"
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "baseBlockName": "black_wood",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "fence_gate",
+        "window_frame",
+        "window_frame_mullion"
+    ],
+    "altNames": {
+        "fence_gate": "locked_black_wood_fence_gate",
+        "window_frame": "black_timber_window_frame",
+        "window_frame_mullion": "black_timber_window_frame_mullion"
+    },
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "types": {
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "Black Wood",
+    "altCustomTags": {
+        "solid": [
+            "wood-ctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "plank-ctm"
+        ]
+    },
+    "textures": {
+        "all": "wood/black/all",
+        "window-frame": "timber/black/window_frame",
+        "window-frame-mullion": "timber/black/window_frame_mullion"
+    },
+    "altTextures": {
+        "solid": [
+            "wood/black/all",
+            "wood/black/all",
+            "wood/black/woodctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "wood/black/all",
+            "wood/black/all",
+            "wood/black/plankctm"
+        ]
+    }
+}

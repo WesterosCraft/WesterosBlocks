@@ -1,0 +1,13 @@
+{
+    "blockName": "dornish_mud_furnace",
+    "blockType": "furnace",
+    "nonOpaque": true,
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "lightValue": 0.875,
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Dornish Mud Furnace",
+    "isCustomModel": true
+}

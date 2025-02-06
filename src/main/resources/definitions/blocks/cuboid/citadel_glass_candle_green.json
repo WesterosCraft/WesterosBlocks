@@ -1,0 +1,59 @@
+{
+    "blockName": "citadel_glass_candle_green",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 2,
+    "lightValue": 0.2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_lighting_tab",
+    "label": "Citadel Glass Candle Green",
+    "textures": [
+        "candle_glass/green_bottom",
+        "candle_glass/green_top",
+        "candle_glass/green_side",
+        "transparent"
+    ],
+    "cuboids": [
+        {
+            "xMin": 0.40625,
+            "xMax": 0.59375,
+            "yMin": 0,
+            "yMax": 0.875,
+            "zMin": 0.40625,
+            "zMax": 0.59375,
+            "sideTextures": [
+                0,
+                1,
+                2,
+                2,
+                2,
+                2
+            ]
+        },
+        {
+            "xMin": 0.46875,
+            "xMax": 0.53125,
+            "yMin": 0.875,
+            "yMax": 0.96875,
+            "zMin": 0.46875,
+            "zMax": 0.53125,
+            "sideTextures": [
+                3,
+                1,
+                2,
+                2,
+                2,
+                2
+            ]
+        }
+    ]
+}

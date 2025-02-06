@@ -1,0 +1,31 @@
+{
+    "baseBlockName": "dark_red_sandstone_polished",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_polished_stone_tab",
+    "customTags": [
+        "polished-stone-ctm"
+    ],
+    "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+    },
+    "baseLabel": "Polished Stone Dark Red",
+    "textures": {
+        "all": "ashlar_full/dark_red/all"
+    }
+}

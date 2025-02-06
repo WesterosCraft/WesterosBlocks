@@ -1,0 +1,57 @@
+{
+    "blockName": "timber_northern_umber_lefthatch",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Northern Umber Lefthatch",
+    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "plaster/smooth/umber/all",
+                "wood/northern/all",
+                "plaster/smooth/umber/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/light_umber/all",
+                "wood/northern/all",
+                "plaster/smooth/light_umber/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/red/all",
+                "wood/northern/all",
+                "plaster/smooth/red/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/rough/umber/all1",
+                "wood/northern/all",
+                "plaster/rough/umber/all1"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/wattle/umber/all",
+                "wood/northern/all",
+                "plaster/wattle/umber/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/northern/bottom",
+        "transparent",
+        "timber/northern/lefthatch",
+        "timber/northern/lefthatch",
+        "timber/northern/lefthatch",
+        "timber/northern/lefthatch",
+        "timber/northern/righthatch"
+    ]
+}

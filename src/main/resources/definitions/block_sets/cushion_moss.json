@@ -1,0 +1,37 @@
+{
+    "baseBlockName": "cushion_moss",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall"
+    ],
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "plants",
+    "resistance": 5,
+    "creativeTab": "westeros_foliage_tab",
+    "baseLabel": "Cushion Moss",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "moss_cushion/all1"
+            }
+        },
+        {
+            "textures": {
+                "all": "moss_cushion/all2"
+            }
+        },
+        {
+            "textures": {
+                "all": "moss_cushion/all3"
+            }
+        },
+        {
+            "textures": {
+                "all": "moss_cushion/all4"
+            }
+        }
+    ]
+}

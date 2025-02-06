@@ -1,0 +1,32 @@
+{
+    "baseBlockName": "terrainset_mountains_of_the_moon",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "fence_gate"
+    ],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 2
+        }
+    ],
+    "creativeTab": "westeros_terrain_sets_tab",
+    "types": {
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Mountains of the Moon",
+    "textures": {
+        "all": "terrainset/vale/random_6x6"
+    }
+}

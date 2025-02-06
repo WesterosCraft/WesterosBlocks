@@ -1,0 +1,43 @@
+{
+    "blockName": "crop_carrots",
+    "blockType": "crop",
+    "hardness": 5,
+    "stepSound": "grass",
+    "material": "plants",
+    "resistance": 4,
+    "type": "toggleOnUse,layerSensitive",
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_crops_herbs_tab",
+    "label": "Carrots",
+    "states": [
+        {
+            "stateID": "age0",
+            "textures": [
+                "carrots/carrots_stage_0"
+            ]
+        },
+        {
+            "stateID": "age1",
+            "textures": [
+                "carrots/carrots_stage_1"
+            ]
+        },
+        {
+            "stateID": "age2",
+            "textures": [
+                "carrots/carrots_stage_2"
+            ]
+        },
+        {
+            "stateID": "age3",
+            "textures": [
+                "carrots/carrots_stage_3"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "blockName": "potted_red_flowering_spiny_herb",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Red Flowering Spiny Herb",
+    "type": "plant-id:red_flowering_spiny_herb",
+    "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/red_flowering_spiny_herb1"
+    ]
+}

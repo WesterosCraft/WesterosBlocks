@@ -1,0 +1,75 @@
+{
+    "baseBlockName": "snowy_thatch_light_fur",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet",
+        "directional"
+    ],
+    "altNames": {
+        "directional": "snowy_thatch_light_fur2",
+        "wall": "snowy_thatch_light_wall"
+    },
+    "hardness": 2,
+    "stepSound": "plant",
+    "material": "wood",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Snowy Thatch Light Fur",
+    "altLabels": {
+        "directional": "Snowy Thatch Light Fur Directional"
+    },
+    "textures": {
+        "all": "thatch/snowy_light/top"
+    },
+    "altTextures": {
+        "slab": [
+            "thatch/snowy_light/bottom",
+            "thatch/snowy_light/top",
+            "thatch/snowy_light/side_half"
+        ],
+        "directional": [
+            "thatch/snowy_light/bottom",
+            "thatch/snowy_light/top",
+            "thatch/snowy_light/side1",
+            "thatch/snowy_light/side1",
+            "thatch/snowy_light/side1",
+            "thatch/snowy_light/bottom"
+        ]
+    },
+    "altRandomTextures": {
+        "solid,stairs": [
+            {
+                "textures": [
+                    "thatch/snowy_light/bottom",
+                    "thatch/snowy_light/top",
+                    "thatch/snowy_light/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "thatch/snowy_light/bottom",
+                    "thatch/snowy_light/top",
+                    "thatch/snowy_light/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "thatch/snowy_light/bottom",
+                    "thatch/snowy_light/top",
+                    "thatch/snowy_light/side3"
+                ]
+            }
+        ]
+    }
+}

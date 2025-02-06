@@ -1,0 +1,14 @@
+{
+    "blockName": "reinforced_oak_fence",
+    "blockType": "fence",
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "wood",
+    "resistance": 10,
+    "creativeTab": "westeros_wood_planks_tab",
+    "type": "unconnect:false",
+    "label": "Reinforced Oak Fence",
+    "textures": [
+        "wood/oak/reinforced"
+    ]
+}

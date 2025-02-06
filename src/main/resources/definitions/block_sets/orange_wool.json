@@ -1,0 +1,43 @@
+{
+    "baseBlockName": "orange_wool",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "customTags": [
+        "wool-ctm"
+    ],
+    "altCustomTags": {
+        "solid": [
+            "wool-block-ctm"
+        ]
+    },
+    "baseLabel": "Orange Wool",
+    "textures": {
+        "all": "wool/orange/all"
+    },
+    "altTextures": {
+        "solid": [
+            "wool/orange/block"
+        ],
+        "carpet": [
+            "wool/orange/noctm"
+        ]
+    }
+}

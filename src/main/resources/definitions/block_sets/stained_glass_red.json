@@ -1,0 +1,37 @@
+{
+    "baseBlockName": "stained_glass_red",
+    "variants": [
+        "solid",
+        "pane"
+    ],
+    "altNames": {
+        "pane": "stained_glass_pane_red"
+    },
+    "hardness": 1,
+    "stepSound": "glass",
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "lightOpacity": 0,
+    "creativeTab": "westeros_windows_glass_tab",
+    "types": {
+        "pane": "legacy-model,unconnect:false"
+    },
+    "baseLabel": "Stained Glass Red",
+    "textures": {
+        "all": "glass/red/all"
+    },
+    "altTextures": {
+        "pane": [
+            "glass/red/all",
+            "glass/pane_top"
+        ]
+    }
+}

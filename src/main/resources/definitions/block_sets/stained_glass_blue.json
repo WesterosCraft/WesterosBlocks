@@ -1,0 +1,37 @@
+{
+    "baseBlockName": "stained_glass_blue",
+    "variants": [
+        "solid",
+        "pane"
+    ],
+    "altNames": {
+        "pane": "stained_glass_pane_blue"
+    },
+    "hardness": 1,
+    "stepSound": "glass",
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "lightOpacity": 0,
+    "creativeTab": "westeros_windows_glass_tab",
+    "types": {
+        "pane": "legacy-model,unconnect:false"
+    },
+    "baseLabel": "Stained Glass Blue",
+    "textures": {
+        "all": "glass/blue/all"
+    },
+    "altTextures": {
+        "pane": [
+            "glass/blue/all",
+            "glass/pane_top"
+        ]
+    }
+}

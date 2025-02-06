@@ -1,0 +1,15 @@
+{
+    "blockName": "white_grape_crate",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "White Grape Crate",
+    "textures": [
+        "crate_block/crate_side_crossbar_right",
+        "crate_block/crate_top_grape_white",
+        "crate_block/crate_side_crossbar_crossed"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "blockName": "wildfire",
+    "blockType": "fire",
+    "creativeTab": "westeros_lighting_tab",
+    "lightValue": 1,
+    "label": "Wildfire",
+    "particle": "wildfire",
+    "material": "fire",
+    "tooltips": [
+        "Very hot fire",
+        "no fr its \u00c2\u00a72hot\u00c2\u00a7r"
+    ],
+    "textures": [
+        "wildfire/wildfire_layer_0",
+        "wildfire/wildfire_layer_1"
+    ]
+}

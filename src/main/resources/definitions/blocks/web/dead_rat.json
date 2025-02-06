@@ -1,0 +1,46 @@
+{
+    "blockName": "dead_rat",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Dead Rat",
+    "randomTextures": [
+        {
+            "textures": [
+                "dead_rat/rat1"
+            ]
+        },
+        {
+            "textures": [
+                "dead_rat/rat2"
+            ]
+        },
+        {
+            "textures": [
+                "dead_rat/rat3"
+            ]
+        },
+        {
+            "textures": [
+                "dead_rat/rat4"
+            ]
+        },
+        {
+            "textures": [
+                "dead_rat/rat5"
+            ]
+        },
+        {
+            "textures": [
+                "dead_rat/rat6"
+            ]
+        },
+        {
+            "textures": [
+                "dead_rat/rat7"
+            ]
+        }
+    ],
+    "type": "no-in-web"
+}

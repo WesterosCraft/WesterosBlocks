@@ -1,0 +1,85 @@
+{
+    "baseBlockName": "dorne_dusty_dirt",
+    "variants": [
+        "solid",
+        "slab",
+        "path"
+    ],
+    "altNames": {
+        "path": "path_dorne_dusty_dirt"
+    },
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_grass_dirt_tab",
+    "baseLabel": "Dorne Dusty Dirt",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "dorne_dusty_dirt/side1"
+            },
+            "weight": 100
+        },
+        {
+            "textures": {
+                "all": "dorne_dusty_dirt/side2"
+            },
+            "weight": 100
+        },
+        {
+            "textures": {
+                "all": "dorne_dusty_dirt/side3"
+            },
+            "weight": 20
+        },
+        {
+            "textures": {
+                "all": "dorne_dusty_dirt/side4"
+            },
+            "weight": 100
+        },
+        {
+            "textures": {
+                "all": "dorne_dusty_dirt/side5"
+            },
+            "weight": 100
+        },
+        {
+            "textures": {
+                "all": "dorne_dusty_dirt/side6"
+            },
+            "weight": 153
+        },
+        {
+            "textures": {
+                "all": "dorne_dusty_dirt/side7"
+            },
+            "weight": 77
+        },
+        {
+            "textures": {
+                "all": "dorne_dusty_dirt/side8"
+            },
+            "weight": 20
+        },
+        {
+            "textures": {
+                "all": "dorne_dusty_dirt/side9"
+            },
+            "weight": 77
+        },
+        {
+            "textures": {
+                "all": "dorne_dusty_dirt/side10"
+            },
+            "weight": 77
+        }
+    ]
+}

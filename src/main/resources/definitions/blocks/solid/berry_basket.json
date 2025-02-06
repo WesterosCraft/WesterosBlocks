@@ -1,0 +1,15 @@
+{
+    "blockName": "berry_basket",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "cloth",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Berry Basket",
+    "textures": [
+        "crate_block/basket_bottom",
+        "crate_block/basket_berry",
+        "crate_block/basket_side"
+    ]
+}

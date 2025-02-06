@@ -1,0 +1,93 @@
+{
+    "blockName": "smoke",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Smoke",
+    "type": "toggleOnUse,no-in-web",
+    "states": [
+        {
+            "stateID": "random",
+            "randomTextures": [
+                {
+                    "textures": [
+                        "smoke/smoke1"
+                    ]
+                },
+                {
+                    "textures": [
+                        "smoke/smoke2"
+                    ]
+                },
+                {
+                    "textures": [
+                        "smoke/smoke3"
+                    ]
+                },
+                {
+                    "textures": [
+                        "smoke/smoke4"
+                    ]
+                },
+                {
+                    "textures": [
+                        "smoke/smoke5"
+                    ]
+                },
+                {
+                    "textures": [
+                        "smoke/smoke6"
+                    ]
+                },
+                {
+                    "textures": [
+                        "smoke/smoke7"
+                    ]
+                }
+            ]
+        },
+        {
+            "stateID": "smoke1",
+            "textures": [
+                "smoke/smoke1"
+            ]
+        },
+        {
+            "stateID": "smoke2",
+            "textures": [
+                "smoke/smoke2"
+            ]
+        },
+        {
+            "stateID": "smoke3",
+            "textures": [
+                "smoke/smoke3"
+            ]
+        },
+        {
+            "stateID": "smoke4",
+            "textures": [
+                "smoke/smoke4"
+            ]
+        },
+        {
+            "stateID": "smoke5",
+            "textures": [
+                "smoke/smoke5"
+            ]
+        },
+        {
+            "stateID": "smoke6",
+            "textures": [
+                "smoke/smoke6"
+            ]
+        },
+        {
+            "stateID": "smoke7",
+            "textures": [
+                "smoke/smoke7"
+            ]
+        }
+    ]
+}

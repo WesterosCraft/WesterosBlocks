@@ -1,0 +1,15 @@
+{
+    "blockName": "sourleaf_crate",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Sourleaf Crate",
+    "textures": [
+        "crate_block/crate_side_crossbar_right",
+        "crate_block/crate_sourleaf",
+        "crate_block/crate_side_crossbar_crossed"
+    ]
+}

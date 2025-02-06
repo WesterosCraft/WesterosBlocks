@@ -1,0 +1,37 @@
+{
+    "baseBlockName": "pebbles_wet_eastern_islands",
+    "variants": [
+        "solid",
+        "layer"
+    ],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_sand_gravel_tab",
+    "baseLabel": "Pebbles Wet Eastern Islands",
+    "colorMult": "textures/colormap/easternisland",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "pebble/eastern_islands/wet1"
+            }
+        },
+        {
+            "textures": {
+                "all": "pebble/eastern_islands/wet2"
+            }
+        },
+        {
+            "textures": {
+                "all": "pebble/eastern_islands/wet3"
+            }
+        }
+    ]
+}

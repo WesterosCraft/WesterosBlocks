@@ -1,0 +1,27 @@
+{
+    "baseBlockName": "starry_sept_marble",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 2
+        }
+    ],
+    "creativeTab": "westeros_marble_plaster_tab",
+    "baseLabel": "Starry Sept Marble",
+    "textures": {
+        "all": "marble/starry_sept/all"
+    }
+}

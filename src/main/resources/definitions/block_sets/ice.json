@@ -1,0 +1,27 @@
+{
+    "baseBlockName": "ice",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence"
+    ],
+    "hardness": 2,
+    "stepSound": "glass",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_water_air_tab",
+    "baseLabel": "Ice",
+    "textures": {
+        "all": "ice/ice"
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "blockName": "ocean_road_marker",
+    "blockType": "cuboid-nsew",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "label": "Ocean Road Marker",
+    "textures": [
+        "transparent",
+        "transparent",
+        "transparent",
+        "transparent",
+        "road_marker_block/ocean_road",
+        "road_marker_block/ocean_road"
+    ],
+    "boundingBox": {
+        "xMin": 0.961,
+        "xMax": 0.97,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+    }
+}

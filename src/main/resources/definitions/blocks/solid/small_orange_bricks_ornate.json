@@ -1,0 +1,13 @@
+{
+    "blockName": "small_orange_bricks_ornate",
+    "blockType": "solid",
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Orange Brick Ornate",
+    "textures": [
+        "brick/orange/ornate/top_bottom"
+    ]
+}

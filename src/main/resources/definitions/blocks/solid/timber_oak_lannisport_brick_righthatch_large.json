@@ -1,0 +1,43 @@
+{
+    "blockName": "timber_oak_lannisport_brick_righthatch_large",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Oak Fieldstone Westerlands Righthatch Large",
+    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "fieldstone/westerlands/all",
+                "wood/oak/all",
+                "fieldstone/westerlands/all"
+            ]
+        },
+        {
+            "textures": [
+                "ashlar_smooth/westerlands/all_cutout",
+                "wood/oak/all",
+                "ashlar_smooth/westerlands/all_cutout"
+            ]
+        },
+        {
+            "textures": [
+                "ashlar_quarter_rounded/westerlands/all",
+                "wood/oak/all",
+                "ashlar_quarter_rounded/westerlands/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/oak/bottom",
+        "transparent",
+        "timber/oak/righthatch_large",
+        "timber/oak/righthatch_large",
+        "timber/oak/righthatch_large",
+        "timber/oak/righthatch_large",
+        "timber/oak/lefthatch_large"
+    ]
+}

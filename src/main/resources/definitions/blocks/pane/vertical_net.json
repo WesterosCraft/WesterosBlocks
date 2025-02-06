@@ -1,0 +1,38 @@
+{
+    "blockName": "vertical_net",
+    "blockType": "pane",
+    "hardness": 1,
+    "stepSound": "glass",
+    "material": "glass",
+    "resistance": 3,
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "type": "legacy-model,unconnect:false",
+    "label": "Vertical Net",
+    "randomTextures": [
+        {
+            "textures": [
+                "vertical_net/vertical_net1"
+            ]
+        },
+        {
+            "textures": [
+                "vertical_net/vertical_net2"
+            ]
+        },
+        {
+            "textures": [
+                "vertical_net/vertical_net3"
+            ]
+        },
+        {
+            "textures": [
+                "vertical_net/vertical_net4"
+            ]
+        },
+        {
+            "textures": [
+                "vertical_net/vertical_net5"
+            ]
+        }
+    ]
+}

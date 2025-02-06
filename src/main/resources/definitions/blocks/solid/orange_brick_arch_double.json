@@ -1,0 +1,16 @@
+{
+    "blockName": "orange_brick_arch_double",
+    "blockType": "solid",
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_brick_tab",
+    "label": "Orange Brick Arch Double",
+    "type": "connectstate:true",
+    "textures": [
+        "brick/orange/all1",
+        "brick/orange/all1",
+        "brick/orange/arch_double"
+    ]
+}

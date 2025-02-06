@@ -1,0 +1,20 @@
+{
+    "blockName": "workshop_utility_block",
+    "blockType": "solid",
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_utility_tab",
+    "lightValue": 0,
+    "label": "'Workshop' Utility Block",
+    "textures": [
+        "utility_block/workshop"
+    ]
+}

@@ -1,0 +1,111 @@
+{
+    "blockName": "coins",
+    "blockType": "cuboid-ne",
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "itemTextureIndex": 1,
+    "creativeTab": "westeros_decor_tab",
+    "label": "Coins",
+    "type": "toggleOnUse",
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0.03,
+        "yMax": 0.039,
+        "zMin": 0,
+        "zMax": 1
+    },
+    "states": [
+        {
+            "stateID": "random",
+            "randomTextures": [
+                {
+                    "textures": [
+                        "transparent",
+                        "coins/top1"
+                    ]
+                },
+                {
+                    "textures": [
+                        "transparent",
+                        "coins/top2"
+                    ]
+                },
+                {
+                    "textures": [
+                        "transparent",
+                        "coins/top3"
+                    ]
+                },
+                {
+                    "textures": [
+                        "transparent",
+                        "coins/top4"
+                    ]
+                },
+                {
+                    "textures": [
+                        "transparent",
+                        "coins/top5"
+                    ]
+                },
+                {
+                    "textures": [
+                        "transparent",
+                        "coins/top6"
+                    ]
+                }
+            ]
+        },
+        {
+            "stateID": "coins1",
+            "textures": [
+                "transparent",
+                "coins/top1"
+            ]
+        },
+        {
+            "stateID": "coins2",
+            "textures": [
+                "transparent",
+                "coins/top2"
+            ]
+        },
+        {
+            "stateID": "coins3",
+            "textures": [
+                "transparent",
+                "coins/top3"
+            ]
+        },
+        {
+            "stateID": "coins4",
+            "textures": [
+                "transparent",
+                "coins/top4"
+            ]
+        },
+        {
+            "stateID": "coins5",
+            "textures": [
+                "transparent",
+                "coins/top5"
+            ]
+        },
+        {
+            "stateID": "coins6",
+            "textures": [
+                "transparent",
+                "coins/top6"
+            ]
+        }
+    ]
+}

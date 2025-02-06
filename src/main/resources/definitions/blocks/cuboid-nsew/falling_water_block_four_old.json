@@ -1,0 +1,34 @@
+{
+    "blockName": "falling_water_block_four_old",
+    "blockType": "cuboid-nsew",
+    "hardness": 5,
+    "stepSound": "cloth",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "material": "web",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Falling Water Block Four (Old)",
+    "textures": [
+        "transparent",
+        "transparent",
+        "transparent",
+        "transparent",
+        "alyssas_tears_mist/mist4",
+        "alyssas_tears_mist/mist4"
+    ],
+    "boundingBox": {
+        "xMin": 0.92,
+        "xMax": 0.97,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+    }
+}

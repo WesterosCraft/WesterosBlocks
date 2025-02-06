@@ -1,0 +1,19 @@
+{
+    "blockName": "stables_large",
+    "blockType": "sound",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "ground",
+    "resistance": 2,
+    "creativeTab": "westeros_sounds_tab",
+    "label": "Stables Large",
+    "textures": [
+        "sound_block/sound_int"
+    ],
+    "soundList": [
+        "stables_large"
+    ],
+    "type": "period:7,random-add:2,start-time:0,end-time:2400"
+}

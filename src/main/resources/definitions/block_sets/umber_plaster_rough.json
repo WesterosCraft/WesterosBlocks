@@ -1,0 +1,36 @@
+{
+    "baseBlockName": "umber_plaster_rough",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_marble_plaster_tab",
+    "baseLabel": "Umber Plaster Rough",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "plaster/rough/umber/all1"
+            }
+        },
+        {
+            "textures": {
+                "all": "plaster/rough/umber/all2"
+            }
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "baseBlockName": "highgarden_pink_veined_marble",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 2
+        }
+    ],
+    "creativeTab": "westeros_marble_plaster_tab",
+    "baseLabel": "Highgarden Pink Veined Marble",
+    "textures": {
+        "all": "marble/highgarden_pink_veined/all"
+    }
+}

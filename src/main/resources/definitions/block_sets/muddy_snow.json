@@ -1,0 +1,28 @@
+{
+    "baseBlockName": "muddy_snow",
+    "variants": [
+        "solid",
+        "slab"
+    ],
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "craftedSnow",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_grass_dirt_tab",
+    "baseLabel": "Muddy Snow",
+    "ambientOcclusion": false,
+    "textures": {
+        "bottom": "muddy_snow/top_bottom",
+        "top": "muddy_snow/top_bottom",
+        "west": "muddy_snow/north_south",
+        "east": "muddy_snow/north_south",
+        "south": "muddy_snow/east_west",
+        "north": "muddy_snow/east_west"
+    }
+}

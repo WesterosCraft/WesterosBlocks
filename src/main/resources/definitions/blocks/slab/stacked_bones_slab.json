@@ -1,0 +1,21 @@
+{
+    "blockName": "stacked_bones_slab",
+    "blockType": "slab",
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 2
+        }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "label": "Stacked Bones Slab",
+    "textures": [
+        "stacked_bones/bone_stacked_side",
+        "stacked_bones/bone_stacked_side",
+        "stacked_bones/bone_stacked_front"
+    ]
+}

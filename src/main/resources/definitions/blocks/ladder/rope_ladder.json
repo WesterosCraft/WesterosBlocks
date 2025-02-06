@@ -1,0 +1,12 @@
+{
+    "blockName": "rope_ladder",
+    "blockType": "ladder",
+    "stepSound": "ladder",
+    "material": "iron",
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "label": "Rope Ladder",
+    "textures": [
+        "rope_ladder/side"
+    ],
+    "type": "allow-unsupported"
+}

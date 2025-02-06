@@ -1,0 +1,32 @@
+{
+    "baseBlockName": "birch_vertical_planks",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "half_door"
+    ],
+    "altNames": {
+        "half_door": "birch_half_door"
+    },
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "baseLabel": "Birch Vertical Planks",
+    "textures": {
+        "all": "wood/birch/vertical"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "blockName": "cheval_de_frise",
+    "blockType": "cuboid-ne",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Cheval de Frise",
+    "textures": [
+        "transparent"
+    ],
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+    },
+    "isCustomModel": true
+}

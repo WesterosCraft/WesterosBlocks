@@ -1,0 +1,33 @@
+{
+    "baseBlockName": "dorne_dull_terracotta",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "arrow_slit",
+        "arrow_slit_window",
+        "arrow_slit_ornate"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_medium_ashlar_tab",
+    "baseLabel": "Medium Ashlar Dull Terracotta",
+    "textures": {
+        "all": "ashlar_third/dull_terracotta/all",
+        "arrow-slit": "ashlar_third/dull_terracotta/arrow_slit",
+        "arrow-slit-window": "ashlar_third/dull_terracotta/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_third/dull_terracotta/arrow_slit_ornate"
+    }
+}

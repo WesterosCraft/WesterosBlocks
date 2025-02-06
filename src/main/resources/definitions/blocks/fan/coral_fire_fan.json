@@ -1,0 +1,21 @@
+{
+    "blockName": "coral_fire_fan",
+    "blockType": "fan",
+    "stepSound": "stone",
+    "material": "rock",
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Fire Coral Fan",
+    "type": "allow-unsupported",
+    "randomTextures": [
+        {
+            "textures": [
+                "coral/fire/fan1"
+            ]
+        },
+        {
+            "textures": [
+                "coral/fire/fan2"
+            ]
+        }
+    ]
+}

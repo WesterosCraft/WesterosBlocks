@@ -1,0 +1,19 @@
+{
+    "blockName": "warning_bells_large",
+    "blockType": "sound",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "ground",
+    "resistance": 2,
+    "creativeTab": "westeros_sounds_tab",
+    "label": "Warning Bells Large",
+    "textures": [
+        "sound_block/sound_trig"
+    ],
+    "soundList": [
+        "warning_bells_large"
+    ],
+    "type": "period:0,random-add:0,start-time:0,end-time:0"
+}

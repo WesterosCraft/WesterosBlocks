@@ -1,0 +1,13 @@
+{
+    "blockName": "yellow_stained_clay",
+    "blockType": "solid",
+    "hardness": 5,
+    "stepSound": "grass",
+    "material": "clay",
+    "resistance": 5,
+    "creativeTab": "westeros_sand_gravel_tab",
+    "label": "Yellow Stained Clay",
+    "textures": [
+        "clay/yellow_stained_clay"
+    ]
+}

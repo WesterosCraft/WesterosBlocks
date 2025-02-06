@@ -1,0 +1,15 @@
+{
+    "blockName": "jungle_door",
+    "blockType": "door",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_wood_planks_tab",
+    "label": "Jungle Door",
+    "textures": [
+        "wood/jungle/door_top",
+        "wood/jungle/door_bottom"
+    ],
+    "type": "allow-unsupported"
+}

@@ -1,0 +1,32 @@
+{
+    "blockName": "chain_pulley",
+    "blockType": "cuboid-nsewud",
+    "hardness": 3,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "label": "Chain Pulley",
+    "textures": [
+        "pulley/chain/top_bottom",
+        "pulley/chain/top_bottom",
+        "pulley/chain/side",
+        "pulley/chain/side",
+        "pulley/chain/front",
+        "pulley/chain/front"
+    ],
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+    }
+}

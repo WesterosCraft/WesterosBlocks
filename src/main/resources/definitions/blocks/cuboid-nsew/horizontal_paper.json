@@ -1,0 +1,128 @@
+{
+    "blockName": "horizontal_paper",
+    "blockType": "cuboid-nsew",
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Horizontal Paper",
+    "type": "toggleOnUse",
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0.03,
+        "yMax": 0.039,
+        "zMin": 0,
+        "zMax": 1
+    },
+    "states": [
+        {
+            "stateID": "random",
+            "randomTextures": [
+                {
+                    "textures": [
+                        "paper/bottom1",
+                        "paper/paperwork1",
+                        "transparent"
+                    ],
+                    "weight": 20
+                },
+                {
+                    "textures": [
+                        "paper/bottom2",
+                        "paper/paperwork2",
+                        "transparent"
+                    ],
+                    "weight": 10
+                },
+                {
+                    "textures": [
+                        "paper/bottom3",
+                        "paper/paperwork3",
+                        "transparent"
+                    ],
+                    "weight": 10
+                },
+                {
+                    "textures": [
+                        "paper/bottom4",
+                        "paper/paperwork4",
+                        "transparent"
+                    ],
+                    "weight": 20
+                },
+                {
+                    "textures": [
+                        "paper/bottom5",
+                        "paper/paperwork5",
+                        "transparent"
+                    ],
+                    "weight": 15
+                },
+                {
+                    "textures": [
+                        "paper/bottom6",
+                        "paper/paperwork6",
+                        "transparent"
+                    ],
+                    "weight": 25
+                }
+            ]
+        },
+        {
+            "stateID": "paperwork1",
+            "textures": [
+                "paper/bottom1",
+                "paper/paperwork1",
+                "transparent"
+            ]
+        },
+        {
+            "stateID": "paperwork2",
+            "textures": [
+                "paper/bottom2",
+                "paper/paperwork2",
+                "transparent"
+            ]
+        },
+        {
+            "stateID": "paperwork3",
+            "textures": [
+                "paper/bottom3",
+                "paper/paperwork3",
+                "transparent"
+            ]
+        },
+        {
+            "stateID": "paperwork4",
+            "textures": [
+                "paper/bottom4",
+                "paper/paperwork4",
+                "transparent"
+            ]
+        },
+        {
+            "stateID": "paperwork5",
+            "textures": [
+                "paper/bottom5",
+                "paper/paperwork5",
+                "transparent"
+            ]
+        },
+        {
+            "stateID": "paperwork6",
+            "textures": [
+                "paper/bottom6",
+                "paper/paperwork6",
+                "transparent"
+            ]
+        }
+    ]
+}

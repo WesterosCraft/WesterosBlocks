@@ -1,0 +1,55 @@
+{
+    "blockName": "duckweed",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Duckweed",
+    "randomTextures": [
+        {
+            "textures": [
+                "duckweed/top_bottom1",
+                "duckweed/top_bottom1",
+                "transparent"
+            ]
+        },
+        {
+            "textures": [
+                "duckweed/top_bottom2",
+                "duckweed/top_bottom2",
+                "transparent"
+            ]
+        },
+        {
+            "textures": [
+                "duckweed/top_bottom3",
+                "duckweed/top_bottom3",
+                "transparent"
+            ]
+        },
+        {
+            "textures": [
+                "duckweed/top_bottom4",
+                "duckweed/top_bottom4",
+                "transparent"
+            ]
+        }
+    ],
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0.02,
+        "yMax": 0.029,
+        "zMin": 0,
+        "zMax": 1
+    }
+}

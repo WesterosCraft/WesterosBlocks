@@ -1,0 +1,15 @@
+{
+    "blockName": "purple_grape_basket",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "cloth",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Purple Grape Basket",
+    "textures": [
+        "crate_block/basket_bottom",
+        "crate_block/basket_grape_purple",
+        "crate_block/basket_side"
+    ]
+}

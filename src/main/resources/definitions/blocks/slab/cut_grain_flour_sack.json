@@ -1,0 +1,23 @@
+{
+    "blockName": "cut_grain_flour_sack",
+    "blockType": "slab",
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "craftedSnow",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Cut Grain Flour Sack",
+    "textures": [
+        "grain_sack/all",
+        "grain_sack/cut",
+        "grain_sack/front",
+        "grain_sack/front",
+        "grain_sack/side"
+    ]
+}

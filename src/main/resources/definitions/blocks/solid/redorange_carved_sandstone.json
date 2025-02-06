@@ -1,0 +1,13 @@
+{
+    "blockName": "redorange_carved_sandstone",
+    "blockType": "solid",
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Red/Orange Carved Sandstone",
+    "textures": [
+        "redorange_carved_sandstone/side"
+    ]
+}

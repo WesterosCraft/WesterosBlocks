@@ -1,0 +1,33 @@
+{
+    "blockName": "crate2",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_decor_tab",
+    "label": "Crate Two",
+    "randomTextures": [
+        {
+            "textures": [
+                "crate_block/side_bot1",
+                "crate_block/crate_side_crossbar_left",
+                "crate_block/side_bot1"
+            ]
+        },
+        {
+            "textures": [
+                "crate_block/side_bot2",
+                "crate_block/crate_side_crossbar_left",
+                "crate_block/side_bot2"
+            ]
+        },
+        {
+            "textures": [
+                "crate_block/side_bot3",
+                "crate_block/crate_side_crossbar_left",
+                "crate_block/side_bot3"
+            ]
+        }
+    ]
+}

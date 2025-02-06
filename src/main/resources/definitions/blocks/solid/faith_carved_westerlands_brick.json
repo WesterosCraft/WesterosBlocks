@@ -1,0 +1,13 @@
+{
+    "blockName": "faith_carved_westerlands_brick",
+    "blockType": "solid",
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 5,
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ashlar Faith Carved Westerlands",
+    "textures": [
+        "ashlar_quarter/westerlands/faith_carved"
+    ]
+}

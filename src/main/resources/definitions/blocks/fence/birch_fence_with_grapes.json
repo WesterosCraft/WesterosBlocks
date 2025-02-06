@@ -1,0 +1,14 @@
+{
+    "blockName": "birch_fence_with_grapes",
+    "blockType": "fence",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_wood_planks_tab",
+    "type": "unconnect:false",
+    "label": "Birch Fence with Grapes",
+    "textures": [
+        "wood/birch/grapevines"
+    ]
+}

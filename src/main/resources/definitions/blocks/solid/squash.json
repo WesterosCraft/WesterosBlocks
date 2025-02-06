@@ -1,0 +1,15 @@
+{
+    "blockName": "squash",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Squash",
+    "textures": [
+        "squash/top",
+        "squash/top",
+        "squash/side"
+    ]
+}

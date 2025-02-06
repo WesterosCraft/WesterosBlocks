@@ -1,0 +1,15 @@
+{
+    "blockName": "mirror_block",
+    "blockType": "solid",
+    "hardness": 3,
+    "stepSound": "wood",
+    "material": "glass",
+    "resistance": 10,
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Mirror Block",
+    "textures": [
+        "mirror/top_bottom",
+        "mirror/top_bottom",
+        "mirror/side"
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "blockName": "bones",
+    "blockType": "cuboid-ne",
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "itemTextureIndex": 1,
+    "creativeTab": "westeros_decor_tab",
+    "label": "Bones",
+    "type": "toggleOnUse",
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0.03,
+        "yMax": 0.039,
+        "zMin": 0,
+        "zMax": 1
+    },
+    "states": [
+        {
+            "stateID": "random",
+            "randomTextures": [
+                {
+                    "textures": [
+                        "bones/bottom1",
+                        "bones/side1",
+                        "transparent"
+                    ]
+                },
+                {
+                    "textures": [
+                        "bones/bottom2",
+                        "bones/side2",
+                        "transparent"
+                    ]
+                },
+                {
+                    "textures": [
+                        "bones/bottom3",
+                        "bones/side3",
+                        "transparent"
+                    ]
+                }
+            ]
+        },
+        {
+            "stateID": "bones1",
+            "textures": [
+                "bones/bottom1",
+                "bones/side1",
+                "transparent"
+            ]
+        },
+        {
+            "stateID": "bones2",
+            "textures": [
+                "bones/bottom2",
+                "bones/side2",
+                "transparent"
+            ]
+        },
+        {
+            "stateID": "bones3",
+            "textures": [
+                "bones/bottom3",
+                "bones/side3",
+                "transparent"
+            ]
+        }
+    ]
+}

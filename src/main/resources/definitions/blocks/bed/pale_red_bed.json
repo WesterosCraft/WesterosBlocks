@@ -1,0 +1,18 @@
+{
+    "blockName": "pale_red_bed",
+    "stepSound": "wood",
+    "material": "cloth",
+    "blockType": "bed",
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Pale Red Bed",
+    "type": "shape:normal",
+    "itemTexture": "bed_block/bed_patchy_red_1",
+    "textures": [
+        "bed_block/bed_patchy_red_0",
+        "bed_block/bed_patchy_red_1",
+        "bed_block/bed_patchy_red_2",
+        "bed_block/bed_patchy_red_3",
+        "bed_block/bed_patchy_red_4",
+        "bed_block/bed_patchy_red_5"
+    ]
+}

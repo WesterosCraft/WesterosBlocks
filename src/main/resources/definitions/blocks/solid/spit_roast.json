@@ -1,0 +1,13 @@
+{
+    "blockName": "spit_roast",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Spit Roast",
+    "textures": [
+        "meat_spitroast/all"
+    ]
+}

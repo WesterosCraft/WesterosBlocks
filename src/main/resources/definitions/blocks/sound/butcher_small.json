@@ -1,0 +1,19 @@
+{
+    "blockName": "butcher_small",
+    "blockType": "sound",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "ground",
+    "resistance": 2,
+    "creativeTab": "westeros_sounds_tab",
+    "label": "Butcher Small",
+    "textures": [
+        "sound_block/sound_int"
+    ],
+    "soundList": [
+        "butcher_small"
+    ],
+    "type": "period:6,random-add:2,start-time:0,end-time:2400"
+}

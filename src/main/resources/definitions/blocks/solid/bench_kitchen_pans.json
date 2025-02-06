@@ -1,0 +1,15 @@
+{
+    "blockName": "bench_kitchen_pans",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Bench Kitchen Pans",
+    "textures": [
+        "bench_block/spruce_top",
+        "bench_block/crafting_table_top",
+        "bench_block/bench_kitchen_pans"
+    ]
+}

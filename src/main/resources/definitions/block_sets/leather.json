@@ -1,0 +1,24 @@
+{
+    "baseBlockName": "leather",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall"
+    ],
+    "hardness": 2,
+    "stepSound": "cloth",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "baseLabel": "Leather",
+    "textures": {
+        "all": "leather_block/leather"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "blockName": "alyssas_tears_mist_three",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "material": "web",
+    "connectTo": "material",
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Alyssas Tears Mist Three",
+    "textures": [
+        "alyssas_tears_mist/mist3"
+    ],
+    "type": "no-in-web"
+}

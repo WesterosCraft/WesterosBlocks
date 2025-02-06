@@ -1,0 +1,45 @@
+{
+    "blockName": "yellow_rose_bush",
+    "blockType": "leaves",
+    "stepSound": "grass",
+    "material": "leaves",
+    "type": "no-decay,better-foliage,overlay",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Yellow Rose Bush",
+    "colorMult": "textures/colormap/foliageoak",
+    "rotateRandom": true,
+    "randomTextures": [
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/yellow_rose0"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/yellow_rose1"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/yellow_rose2"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/yellow_rose3"
+            ],
+            "weight": 2
+        }
+    ]
+}

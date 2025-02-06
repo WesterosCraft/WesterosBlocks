@@ -1,0 +1,39 @@
+{
+    "blockName": "yellow_buttercups",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_flowers_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "Yellow Buttercups",
+    "randomTextures": [
+        {
+            "textures": [
+                "flowers/yellow_buttercups1"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/yellow_buttercups2"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/yellow_buttercups3"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/yellow_buttercups4"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "baseBlockName": "mud",
+    "variants": [
+        "solid",
+        "slab"
+    ],
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "craftedSnow",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_grass_dirt_tab",
+    "baseLabel": "Mud",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "mud/side1"
+            },
+            "weight": 20
+        },
+        {
+            "textures": {
+                "all": "mud/side2"
+            },
+            "weight": 20
+        },
+        {
+            "textures": {
+                "all": "mud/side3"
+            },
+            "weight": 20
+        },
+        {
+            "textures": {
+                "all": "mud/side4"
+            },
+            "weight": 20
+        },
+        {
+            "textures": {
+                "all": "mud/side5"
+            },
+            "weight": 20
+        },
+        {
+            "textures": {
+                "bottom": "mud/side1",
+                "top": "mud/top1",
+                "sides": "mud/side1"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "bottom": "mud/side2",
+                "top": "mud/top2",
+                "sides": "mud/side2"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "bottom": "mud/side3",
+                "top": "mud/top3",
+                "sides": "mud/side3"
+            },
+            "weight": 1
+        }
+    ]
+}

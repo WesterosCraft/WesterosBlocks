@@ -1,0 +1,28 @@
+{
+    "blockName": "coral_fire_web",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "material": "rock",
+    "creativeTab": "westeros_water_air_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "Fire Coral Web",
+    "randomTextures": [
+        {
+            "textures": [
+                "coral/fire/web1"
+            ]
+        },
+        {
+            "textures": [
+                "coral/fire/web2"
+            ]
+        }
+    ]
+}

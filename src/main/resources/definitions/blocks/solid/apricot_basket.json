@@ -1,0 +1,15 @@
+{
+    "blockName": "apricot_basket",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "cloth",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Apricot Basket",
+    "textures": [
+        "crate_block/basket_bottom",
+        "crate_block/basket_apricot",
+        "crate_block/basket_side"
+    ]
+}
