@@ -1,0 +1,32 @@
+{
+  "blockName": "test_block_2",
+  "blockType": "cuboid-nsewud",
+  "hardness": 3,
+  "stepSound": "wood",
+  "material": "wood",
+  "resistance": 2,
+  "harvestLevel": [
+    {
+      "tool": "axe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_test_tab",
+  "label": "Test Block 2",
+  "textures": [
+    "test_block/d_texture",
+    "test_block/u_texture",
+    "test_block/w_texture",
+    "test_block/e_texture",
+    "test_block/s_texture",
+    "test_block/n_texture"
+  ],
+  "boundingBox": {
+    "xMin": 0.0625,
+    "xMax": 0.9375,
+    "yMin": 0.0625,
+    "yMax": 0.9375,
+    "zMin": 0.0625,
+    "zMax": 0.9375
+  }
+}

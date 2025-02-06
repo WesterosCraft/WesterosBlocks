@@ -1,0 +1,24 @@
+{
+  "blockName": "test_multi_colormap",
+  "blockType": "cuboid",
+  "stepSound": "wood",
+  "material": "cloth",
+  "creativeTab": "westeros_test_tab",
+  "label": "Test Multi-Colormap",
+  "isCustomModel": true,
+  "colorMults": [
+    "textures/colormap/grass",
+    "textures/colormap/birch"
+  ],
+  "textures": [
+    "transparent"
+  ],
+  "boundingBox": {
+    "xMin": 0,
+    "xMax": 1,
+    "yMin": 0,
+    "yMax": 1,
+    "zMin": 0,
+    "zMax": 1
+  }
+}

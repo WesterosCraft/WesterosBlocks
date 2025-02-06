@@ -1,0 +1,14 @@
+{
+  "blockName": "test_block_5",
+  "blockType": "fence",
+  "hardness": 5,
+  "stepSound": "stone",
+  "material": "wood",
+  "resistance": 10,
+  "type": "unconnect:false",
+  "creativeTab": "westeros_test_tab",
+  "label": "Test Fence (unconnect)",
+  "textures": [
+    "test_block/w_texture"
+  ]
+}

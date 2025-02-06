@@ -1,0 +1,11 @@
+{
+  "blockName": "ctm_edges",
+  "blockType": "solid",
+  "stepSound": "wood",
+  "material": "cloth",
+  "creativeTab": "westeros_test_tab",
+  "label": "Edges CTM (to water)",
+  "textures": [
+    "ctm/edges"
+  ]
+}

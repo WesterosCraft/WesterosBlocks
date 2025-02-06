@@ -13,6 +13,6 @@ public class ModItems {
     }
 
     public static void registerModItems() {
-        WesterosBlocks.LOGGER.info("Registering items for " + WesterosBlocks.MOD_ID);
+        WesterosBlocks.LOGGER.info("Registering Mod Items for " + WesterosBlocks.MOD_ID);
     }
 }

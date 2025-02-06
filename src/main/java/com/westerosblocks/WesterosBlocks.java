@@ -18,18 +18,11 @@ import java.util.List;
 public class WesterosBlocks implements ModInitializer {
     public static final String MOD_ID = "westerosblocks";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-    List<String> configFiles = List.of(
-            "/definitions/color_maps.json",
-            "/definitions/block_tags.json",
-            "/definitions/menu_overrides.json",
-            "/definitions/block_sets.json",
-            "/definitions/blocks.json"
-//            "/definitions/test_blocks.json"
-    );
+
 
     @Override
     public void onInitialize() {
-        WesterosBlocksDefLoader.initialize(configFiles);
+        WesterosBlocksDefLoader.initialize();
         ModBlock.initialize();
         ModConfig.register();
         WesterosCreativeModeTabs.registerCreativeModeTabs();

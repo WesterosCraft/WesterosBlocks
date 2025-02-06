@@ -1,0 +1,11 @@
+{
+  "blockName": "ctm_pattern",
+  "blockType": "solid",
+  "stepSound": "wood",
+  "material": "cloth",
+  "creativeTab": "westeros_test_tab",
+  "label": "Pattern CTM",
+  "textures": [
+    "ctm/pattern"
+  ]
+}

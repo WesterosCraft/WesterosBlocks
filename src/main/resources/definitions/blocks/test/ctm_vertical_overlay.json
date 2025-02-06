@@ -1,0 +1,14 @@
+{
+  "blockName": "ctm_vertical_overlay",
+  "blockType": "solid",
+  "stepSound": "wood",
+  "material": "cloth",
+  "creativeTab": "westeros_test_tab",
+  "label": "Vertical Overlay CTM",
+  "textures": [
+    "piled_bones/side"
+  ],
+  "overlayTextures": [
+    "ctm/vertical_overlay"
+  ]
+}

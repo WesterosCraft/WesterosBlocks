@@ -1,0 +1,11 @@
+{
+  "blockName": "westeros_horizontal",
+  "blockType": "solid",
+  "stepSound": "wood",
+  "material": "cloth",
+  "creativeTab": "westeros_test_tab",
+  "label": "Westeros Horizontal CTM",
+  "textures": [
+    "ctm/westeroshorizontal"
+  ]
+}

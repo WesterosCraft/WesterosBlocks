@@ -10,27 +10,41 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
 
+// load definitions from resources/definitions parsed data
 // load definitions from resources/definitions parsed data
 public class WesterosBlocksDefLoader {
     public static WesterosBlocksDefLoader.WesterosBlocksConfig customConfig;
     private static ModBlock[] customBlockDefs;
 
+    private static final List<String> configFiles = List.of(
+            "/definitions/color_maps.json",
+            "/definitions/block_tags.json",
+            "/definitions/menu_overrides.json"
+    );
 
-    public static void initialize(List<String> configFiles) {
+    private static final String BLOCKS_DIRECTORY = "/definitions/blocks";
+    private static final String BLOCK_SETS_DIRECTORY = "/definitions/block_sets";
+
+    // determines order of how blocks get loaded, because certain block types need to be registered before others
+    private static final Map<String, Integer> BLOCK_TYPE_PRIORITIES = Map.of(
+            "plant", 1,
+            "web", 2,
+            "flowerpot", 3
+    );
+
+    public static void initialize() {
         customConfig = WesterosBlocksDefLoader.getBlockConfig(configFiles);
         customBlockDefs = getBlockDefs(customConfig);
         WesterosBlocks.LOGGER.info("Loaded {} block definitions", customBlockDefs.length);
 
         if (!sanityCheck(customBlockDefs)) {
-            WesterosBlocks.LOGGER.error("WesterosBlocks.json failed sanity check");
-            return;
+            WesterosBlocks.LOGGER.error("WesterosBlocks block definitions failed sanity check");
         }
-
     }
 
     public static class WesterosBlocksConfig {
@@ -51,19 +65,14 @@ public class WesterosBlocksDefLoader {
 
     /**
      * Loads multiple JSON configuration files and merges them into a single configuration.
-     *
-     * @param filenames List of resource paths to JSON configuration files
-     * @return Merged WesterosBlockConfig configuration
-     * @throws BlockConfigNotFoundException If any of the specified files cannot be found
-     * @throws JsonParseException           If there's an error parsing any of the JSON files
      */
     public static WesterosBlocksConfig loadBlockConfigs(List<String> filenames)
             throws BlockConfigNotFoundException, JsonParseException {
         Gson gson = new Gson();
         JsonObject mergedConfig = new JsonObject();
 
+        // Load standard config files
         for (String filename : filenames) {
-            // Read our block definition resources
             try (InputStream in = WesterosBlocks.class.getResourceAsStream(filename);
                  BufferedReader rdr = in != null ? new BufferedReader(new InputStreamReader(in)) : null) {
 
@@ -90,8 +99,50 @@ public class WesterosBlocksDefLoader {
                 throw new BlockConfigNotFoundException("Error reading config file: " + filename);
             }
         }
+
+        // Load block definitions from the new directory structure
+        JsonArray blocksArray = loadBlocksFromDirectory(BLOCKS_DIRECTORY);
+        mergedConfig.add("blocks", blocksArray);
+
+        // Load block set definitions from the new directory structure
+        JsonArray blockSetsArray = loadBlocksFromDirectory(BLOCK_SETS_DIRECTORY);
+        mergedConfig.add("blockSets", blockSetsArray);
+
         // Convert merged JsonObject back to WesterosBlockConfig
         return gson.fromJson(mergedConfig, WesterosBlocksConfig.class);
+    }
+
+    /**
+     * Loads JSON files from a directory and returns them as a JsonArray.
+     *
+     * @param directory The directory to load JSON files from
+     * @return JsonArray containing all JSON objects from the directory
+     */
+    private static JsonArray loadBlocksFromDirectory(String directory) {
+        Gson gson = new Gson();
+        JsonArray jsonArray = new JsonArray();
+
+        try {
+            // Traverse the directory
+            Path dirPath = Paths.get(WesterosBlocks.class.getResource(directory).toURI());
+            Files.walk(dirPath)
+                    .filter(Files::isRegularFile)
+                    .filter(path -> path.toString().endsWith(".json"))
+                    .forEach(path -> {
+                        try (InputStream in = Files.newInputStream(path);
+                             BufferedReader rdr = new BufferedReader(new InputStreamReader(in))) {
+                            // Parse each JSON file
+                            JsonObject jsonObject = gson.fromJson(rdr, JsonObject.class);
+                            jsonArray.add(jsonObject);
+                        } catch (IOException e) {
+                            WesterosBlocks.LOGGER.error("Error reading file: " + path, e);
+                        }
+                    });
+        } catch (Exception e) {
+            WesterosBlocks.LOGGER.error("Error loading definitions from directory: " + directory, e);
+        }
+
+        return jsonArray;
     }
 
     /**
@@ -106,10 +157,8 @@ public class WesterosBlocksDefLoader {
             JsonElement newElement = additional.get(key);
 
             if (existingElement == null) {
-                // If the key doesn't exist in base, add it
                 base.add(key, newElement);
             } else if (existingElement.isJsonObject() && newElement.isJsonObject()) {
-                // If both are objects, recursively merge
                 mergeJsonObjects(existingElement.getAsJsonObject(), newElement.getAsJsonObject());
             } else {
                 // For non-object types, the additional file's value takes precedence
@@ -119,7 +168,7 @@ public class WesterosBlocksDefLoader {
     }
 
     /**
-     * Returns the block config defined in blocks.json, blockSets.json etc
+     * Returns the block config defined in definitions/blocks and definitions/block_sets etc
      */
     public static WesterosBlocksConfig getBlockConfig(List<String> filenames) {
         WesterosBlocksConfig combinedConfig = null;
@@ -140,7 +189,7 @@ public class WesterosBlocksDefLoader {
     }
 
     public static boolean sanityCheck(ModBlock[] defs) {
-        HashSet<String> names = new HashSet<String>();
+        HashSet<String> names = new HashSet<>();
         // Make sure block IDs and names are unique
         for (ModBlock def : defs) {
             if (def == null)
@@ -154,7 +203,7 @@ public class WesterosBlocksDefLoader {
                 return false;
             }
         }
-        WesterosBlocks.LOGGER.info("WesterosBlocks.json passed sanity check");
+        WesterosBlocks.LOGGER.info("WesterosBlocks block definition files passed sanity check");
         return true;
     }
 
@@ -172,6 +221,11 @@ public class WesterosBlocksDefLoader {
                 expandedBlockDefs.addAll(variantBlockDefs);
             }
         }
+
+        // sorts block definitions by priority
+        expandedBlockDefs.sort(Comparator.comparingInt(block ->
+                BLOCK_TYPE_PRIORITIES.getOrDefault(block.blockType, Integer.MAX_VALUE)
+        ));
 
         return expandedBlockDefs.toArray(new ModBlock[0]);
     }
