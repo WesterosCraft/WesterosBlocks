@@ -1,6 +1,5 @@
 package com.westerosblocks.block.custom;
 
-import com.llamalad7.mixinextras.lib.apache.commons.ArrayUtils;
 import com.mojang.serialization.MapCodec;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.ModBlock;
@@ -9,7 +8,6 @@ import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.BedPart;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -31,10 +29,8 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
-import net.minecraft.world.WorldView;
 
 import java.util.List;
-import java.util.Optional;
 
 public class WCBedBlock extends HorizontalFacingBlock implements ModBlockLifecycle {
     public static final MapCodec<WCBedBlock> CODEC = createCodec(WCBedBlock::create);
@@ -44,7 +40,6 @@ public class WCBedBlock extends HorizontalFacingBlock implements ModBlockLifecyc
         return CODEC;
     }
 
-    // TODO: not sure if best way to create this?
     private static WCBedBlock create(AbstractBlock.Settings settings) {
         return new WCBedBlock(settings, null);
     }
@@ -58,7 +53,6 @@ public class WCBedBlock extends HorizontalFacingBlock implements ModBlockLifecyc
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
-
 
     public static final EnumProperty<BedPart> PART = Properties.BED_PART;
     public static final BooleanProperty OCCUPIED = Properties.OCCUPIED;
@@ -116,8 +110,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements ModBlockLifecyc
     }
 
     @Override
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
-                                 BlockHitResult hit) {
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (world.isClient) {
             return ActionResult.CONSUME;
         } else {
@@ -275,7 +268,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements ModBlockLifecyc
 
     public long getRenderingSeed(BlockState state, BlockPos pos) {
         BlockPos blockpos = pos.offset(state.get(FACING), state.get(PART) == BedPart.HEAD ? 0 : 1);
-        return MathHelper.hashCode(blockpos.getX(), pos.getY(), blockpos.getZ());
+        return blockpos.hashCode();
     }
 
     @Override
