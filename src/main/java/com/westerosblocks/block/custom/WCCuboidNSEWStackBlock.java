@@ -161,10 +161,4 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements ModBlockLif
            return blockstate.isOf(this) && blockstate.get(HALF) == DoubleBlockHalf.LOWER;
         }
      }
-
-    @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        addCustomTooltip(tooltip);
-        super.appendTooltip(stack, context, tooltip, options);
-    }
 }

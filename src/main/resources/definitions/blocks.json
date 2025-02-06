@@ -15649,6 +15649,7 @@
       "creativeTab": "westeros_banners_tab",
       "type": "no-break-under,allowHalfBreak",
       "label": "Greyjoy Banner",
+      "tooltips": ["§oWe Do Not Sow§r"],
       "itemTextureIndex": 2,
       "stack": [
         {

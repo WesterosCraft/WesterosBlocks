@@ -115,11 +115,6 @@ public class WCBedBlock extends HorizontalFacingBlock implements ModBlockLifecyc
         return TAGS;
     }
 
-    public static Direction getBedOrientation(BlockView world, BlockPos pos) {
-        BlockState blockState = world.getBlockState(pos);
-        return blockState.getBlock() instanceof BedBlock ? blockState.get(FACING) : null;
-    }
-
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
                                  BlockHitResult hit) {
@@ -259,73 +254,6 @@ public class WCBedBlock extends HorizontalFacingBlock implements ModBlockLifecyc
         return p_49558_.get(PART) == BedPart.HEAD ? direction.getOpposite() : direction;
     }
 
-    private static boolean isBunkBed(BlockView world, BlockPos pos) {
-        return world.getBlockState(pos.down()).getBlock() instanceof BedBlock;
-    }
-
-    public static Optional<Vec3d> findStandUpPosition(EntityType<?> type, WorldView world, BlockPos pos, float yaw) {
-        Direction facing = world.getBlockState(pos).get(FACING);
-        Direction clockwise = facing.rotateYClockwise();
-        Direction exitDir = clockwise.asRotation() == yaw ? clockwise.getOpposite() : clockwise;
-
-        if (isBunkBed(world, pos)) {
-            return findBunkBedStandUpPosition(type, world, pos, facing, exitDir);
-        } else {
-            int[][] offsets = getBedStandUpOffsets(facing, exitDir);
-            Optional<Vec3d> optional = findStandUpPositionAtOffset(type, world, pos, offsets, true);
-            return optional.isPresent() ? optional : findStandUpPositionAtOffset(type, world, pos, offsets, false);
-        }
-    }
-
-    private static Optional<Vec3d> findBunkBedStandUpPosition(EntityType<?> type, WorldView world, BlockPos pos, Direction facing, Direction exitDir) {
-        int[][] surroundOffsets = getBedSurroundStandUpOffsets(facing, exitDir);
-        Optional<Vec3d> surroundPos = findStandUpPositionAtOffset(type, world, pos, surroundOffsets, true);
-
-        if (surroundPos.isPresent()) return surroundPos;
-
-        BlockPos lowerPos = pos.down();
-        Optional<Vec3d> lowerSurroundPos = findStandUpPositionAtOffset(type, world, lowerPos, surroundOffsets, true);
-
-        if (lowerSurroundPos.isPresent()) return lowerSurroundPos;
-
-        int[][] aboveOffsets = getBedAboveStandUpOffsets(facing);
-        Optional<Vec3d> abovePos = findStandUpPositionAtOffset(type, world, pos, aboveOffsets, true);
-
-        if (abovePos.isPresent()) return abovePos;
-
-        Optional<Vec3d> surroundUnsafePos = findStandUpPositionAtOffset(type, world, pos, surroundOffsets, false);
-        if (surroundUnsafePos.isPresent()) return surroundUnsafePos;
-
-        Optional<Vec3d> lowerUnsafePos = findStandUpPositionAtOffset(type, world, lowerPos, surroundOffsets, false);
-        return lowerUnsafePos.isPresent() ? lowerUnsafePos : findStandUpPositionAtOffset(type, world, pos, aboveOffsets, false);
-    }
-
-    private static Optional<Vec3d> findStandUpPositionAtOffset(EntityType<?> type, WorldView world, BlockPos pos, int[][] offsets, boolean safe) {
-        BlockPos.Mutable mutablePos = new BlockPos.Mutable();
-
-        for (int[] offset : offsets) {
-            mutablePos.set(pos.getX() + offset[0], pos.getY(), pos.getZ() + offset[1]);
-            Vec3d dismountPos = new Vec3d(
-                    mutablePos.getX() + 0.5,
-                    mutablePos.getY() + 0.6,
-                    mutablePos.getZ() + 0.5
-            );
-
-            Box entityBounds = type.getDimensions().getBoxAt(dismountPos.x, dismountPos.y, dismountPos.z);
-            if (world.getBlockCollisions(null, entityBounds).iterator().hasNext()) {
-                continue;
-            }
-            BlockPos belowPos = mutablePos.down();
-            if (!world.getBlockState(belowPos).blocksMovement() && safe) {
-                continue;
-            }
-
-            return Optional.of(dismountPos);
-        }
-
-        return Optional.empty();
-    }
-
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING, PART, OCCUPIED);
@@ -348,27 +276,6 @@ public class WCBedBlock extends HorizontalFacingBlock implements ModBlockLifecyc
     public long getRenderingSeed(BlockState state, BlockPos pos) {
         BlockPos blockpos = pos.offset(state.get(FACING), state.get(PART) == BedPart.HEAD ? 0 : 1);
         return MathHelper.hashCode(blockpos.getX(), pos.getY(), blockpos.getZ());
-    }
-
-    private static int[][] getBedStandUpOffsets(Direction dir1, Direction dir2) {
-        return ArrayUtils.addAll(getBedSurroundStandUpOffsets(dir1, dir2), getBedAboveStandUpOffsets(dir1));
-    }
-
-    private static int[][] getBedSurroundStandUpOffsets(Direction dir1, Direction dir2) {
-        return new int[][]{
-                {dir2.getOffsetX(), dir2.getOffsetZ()},
-                {dir2.getOffsetX() - dir1.getOffsetX(), dir2.getOffsetZ() - dir1.getOffsetZ()},
-                {dir2.getOffsetX() - dir1.getOffsetX() * 2, dir2.getOffsetZ() - dir1.getOffsetZ() * 2},
-                {-dir1.getOffsetX() * 2, -dir1.getOffsetZ() * 2},
-                {-dir2.getOffsetX() - dir1.getOffsetX() * 2, -dir2.getOffsetZ() - dir1.getOffsetZ() * 2},
-                {-dir2.getOffsetX() - dir1.getOffsetX(), -dir2.getOffsetZ() - dir1.getOffsetZ()},
-                {-dir2.getOffsetX(), -dir2.getOffsetZ()}, {-dir2.getOffsetX() + dir1.getOffsetX(),
-                -dir2.getOffsetZ() + dir1.getOffsetZ()}, {dir1.getOffsetX(), dir1.getOffsetZ()},
-                {dir2.getOffsetX() + dir1.getOffsetX(), dir2.getOffsetZ() + dir1.getOffsetZ()}};
-    }
-
-    private static int[][] getBedAboveStandUpOffsets(Direction direction) {
-        return new int[][]{{0, 0}, {-direction.getOffsetX(), -direction.getOffsetZ()}};
     }
 
     @Override

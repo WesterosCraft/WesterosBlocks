@@ -115,12 +115,6 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements ModBlockLifecy
         return blockState;
     }
 
-    @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        addCustomTooltip(tooltip);
-        super.appendTooltip(stack, context, tooltip, options);
-    }
-
 //    @Override
 //    public BlockState getPlacementState(ItemPlacementContext ctx) {
 //        FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());

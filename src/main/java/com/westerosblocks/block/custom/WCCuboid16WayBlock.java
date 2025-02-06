@@ -114,10 +114,4 @@ public class WCCuboid16WayBlock extends WCCuboidBlock implements ModBlockLifecyc
         }
         return bs;
     }
-
-    @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        addCustomTooltip(tooltip);
-        super.appendTooltip(stack, context, tooltip, options);
-    }
 }

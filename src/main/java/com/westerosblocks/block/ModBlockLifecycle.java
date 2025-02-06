@@ -3,7 +3,6 @@ package com.westerosblocks.block;
 // Used to define the interfaces for properly priming one of our custom block definitions
 // must also have constructor with WesterosBlock as parameter
 
-import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 
 import java.util.List;

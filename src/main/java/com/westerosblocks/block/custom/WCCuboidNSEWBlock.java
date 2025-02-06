@@ -110,10 +110,4 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements ModBlockLifecycl
 		}
 		return bs;
 	}
-
-	@Override
-	public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-		addCustomTooltip(tooltip);
-		super.appendTooltip(stack, context, tooltip, options);
-	}
 }
