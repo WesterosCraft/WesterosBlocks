@@ -29,6 +29,7 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements ModBlockLifecyc
         return CODEC;
     }
 
-    private static WCBedBlock create(AbstractBlock.Settings settings) {
+    private static WCBedBlock create(Settings settings) {
         return new WCBedBlock(settings, null);
     }
 
@@ -48,7 +49,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements ModBlockLifecyc
         @Override
         public Block buildBlockClass(ModBlock def) {
             def.nonOpaque = true;
-            AbstractBlock.Settings settings = def.makeBlockSettings().nonOpaque();
+            Settings settings = def.makeBlockSettings().nonOpaque();
             Block blk = new WCBedBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
@@ -76,11 +77,12 @@ public class WCBedBlock extends HorizontalFacingBlock implements ModBlockLifecyc
 
     public final BedType bedType;
 
-    protected WCBedBlock(AbstractBlock.Settings settings, ModBlock def) {
+    protected WCBedBlock(Settings settings, @Nullable ModBlock def) {
         super(settings);
         this.color = DyeColor.RED;
         this.def = def;
-        String type = def.getTypeValue("shape", "normal");
+        String type = def != null ? def.getTypeValue("shape", "normal") : "";
+
         this.bedType = switch (type) {
             case "raised" -> BedType.RAISED;
             case "hammock" -> BedType.HAMMOCK;
