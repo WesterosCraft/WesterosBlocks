@@ -6,9 +6,8 @@ import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 
-
-// this is the Cloth Config API. Example of how to use the config:
-// boolean snowInTaiga = ModConfig.get().snowInTaiga;
+// example of how to run n your code
+// boolean autoRestore = ModConfig.INSTANCE.autoRestoreAllHalfDoors;
 
 @Config(name = WesterosBlocks.MOD_ID)
 public class ModConfig implements ConfigData {
@@ -20,6 +19,10 @@ public class ModConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip(count = 1)
     @ConfigEntry.Category("general")
     public boolean blockDevMode = false;
+
+    @ConfigEntry.Gui.Tooltip(count = 1)
+    @ConfigEntry.Category("general")
+    public boolean dumpWorldpainterCSV = false;
 
     @ConfigEntry.Gui.Tooltip(count = 1)
     @ConfigEntry.Category("general")
@@ -42,7 +45,7 @@ public class ModConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip(count = 1)
     @ConfigEntry.Category("world")
     @ConfigEntry.BoundedDiscrete(min = 5, max = 300)
-    public int seaLevelOverride = 30;
+    public int seaLevelOverride = 33;
 
     public static ModConfig INSTANCE;
 

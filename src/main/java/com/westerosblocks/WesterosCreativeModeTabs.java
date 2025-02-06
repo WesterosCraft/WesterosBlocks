@@ -59,7 +59,7 @@ public class WesterosCreativeModeTabs {
             new TabDefinition("westeros_do_not_use_tab", "Do Not Use", "note_utility_block")
     };
 
-    public static void registerTabs() {
+    public static void registerCreativeModeTabs() {
         for (TabDefinition def : TAB_DEFINITIONS) {
             TABS.put(def.id, registerTab(def.id, def.label, def.iconItem));
         }
@@ -84,9 +84,5 @@ public class WesterosCreativeModeTabs {
         Registry.register(Registries.ITEM_GROUP, key, group);
 
         return key;
-    }
-
-    public static void registerCreativeModeTabs() {
-        registerTabs();
     }
 }

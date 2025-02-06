@@ -11,18 +11,24 @@ import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class WCWebBlock extends Block implements ModBlockLifecycle {
     private ModBlock def;
@@ -40,13 +46,13 @@ public class WCWebBlock extends Block implements ModBlockLifecycle {
         public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings().noCollision();
 
-        	ModBlock.StateProperty state = def.buildStateProperty();
-        	if (state != null) {
-        		tempSTATE = state;
-        	}
+            ModBlock.StateProperty state = def.buildStateProperty();
+            if (state != null) {
+                tempSTATE = state;
+            }
             String t = def.getType();
             if ((t != null) && (t.contains(ModBlock.LAYER_SENSITIVE))) {
-            	tempLAYERS = Properties.LAYERS;
+                tempLAYERS = Properties.LAYERS;
             }
 
             Block blk = new WCWebBlock(settings, def);
@@ -70,19 +76,19 @@ public class WCWebBlock extends Block implements ModBlockLifecycle {
             }
         }
         BlockState bsdef = this.getDefaultState().with(WATERLOGGED, Boolean.FALSE);
-    	if (LAYERS != null) {
-    		bsdef = bsdef.with(LAYERS, 8);
-    	}
-        if (STATE != null) {
-        	bsdef = bsdef.with(STATE, STATE.defValue);
+        if (LAYERS != null) {
+            bsdef = bsdef.with(LAYERS, 8);
         }
-    	setDefaultState(bsdef);
+        if (STATE != null) {
+            bsdef = bsdef.with(STATE, STATE.defValue);
+        }
+        setDefaultState(bsdef);
     }
 
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (!noInWeb)
-    		super.onEntityCollision(state, world, pos, entity);
+            super.onEntityCollision(state, world, pos, entity);
         else
             // Here you can implement cobweb-like behavior
             entity.slowMovement(state, new Vec3d(0.25D, 0.05F, 0.25D));
@@ -95,49 +101,48 @@ public class WCWebBlock extends Block implements ModBlockLifecycle {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-    	if (tempSTATE != null) {
-    		STATE = tempSTATE;
-    		tempSTATE = null;
-    	}
-    	if (tempLAYERS != null) {
-    		LAYERS = tempLAYERS;
-    		tempLAYERS = null;
-    	}
-    	if (STATE != null) {
+        if (tempSTATE != null) {
+            STATE = tempSTATE;
+            tempSTATE = null;
+        }
+        if (tempLAYERS != null) {
+            LAYERS = tempLAYERS;
+            tempLAYERS = null;
+        }
+        if (STATE != null) {
             builder.add(STATE);
-    	}
-    	if (LAYERS != null) {
+        }
+        if (LAYERS != null) {
             builder.add(LAYERS);
-    	}
+        }
         builder.add(WATERLOGGED);
     }
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-    	BlockState bs = super.getPlacementState(ctx);
-    	if (bs == null) return null;
+        BlockState bs = super.getPlacementState(ctx);
+        if (bs == null) return null;
         FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
         bs = bs.with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
         if (STATE != null) {
-     	   bs = bs.with(STATE, STATE.defValue);
+            bs = bs.with(STATE, STATE.defValue);
         }
         if (LAYERS != null) {
-        	BlockState below = ctx.getWorld().getBlockState(ctx.getBlockPos().down());
-        	if ((below != null) && (below.contains(Properties.LAYERS))) {
-        		Block blk = below.getBlock();
-        		Integer layer = below.get(Properties.LAYERS);
-        		// See if soft layer
-        		if ((blk == Blocks.SNOW) || ((blk instanceof WCLayerBlock) && ((WCLayerBlock)blk).softLayer)) {
-        			layer = (layer > 2) ? Integer.valueOf(layer - 2) : Integer.valueOf(1);
-        		}
-        		bs = bs.with(LAYERS, layer);
-        	}
-        	else if ((below != null) && (below.getBlock() instanceof SlabBlock)) {
-        		SlabType slabtype = below.get(Properties.SLAB_TYPE);
-        		if (slabtype == SlabType.BOTTOM) bs = bs.with(LAYERS, 4);
-        	}
+            BlockState below = ctx.getWorld().getBlockState(ctx.getBlockPos().down());
+            if ((below != null) && (below.contains(Properties.LAYERS))) {
+                Block blk = below.getBlock();
+                Integer layer = below.get(Properties.LAYERS);
+                // See if soft layer
+                if ((blk == Blocks.SNOW) || ((blk instanceof WCLayerBlock) && ((WCLayerBlock) blk).softLayer)) {
+                    layer = (layer > 2) ? Integer.valueOf(layer - 2) : Integer.valueOf(1);
+                }
+                bs = bs.with(LAYERS, layer);
+            } else if ((below != null) && (below.getBlock() instanceof SlabBlock)) {
+                SlabType slabtype = below.get(Properties.SLAB_TYPE);
+                if (slabtype == SlabType.BOTTOM) bs = bs.with(LAYERS, 4);
+            }
         }
-    	return bs;
+        return bs;
     }
 
     @Override
@@ -157,8 +162,7 @@ public class WCWebBlock extends Block implements ModBlockLifecycle {
     }
 
     @Override
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
-                                 BlockHitResult hit) {
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         Hand hand = player.getActiveHand();
         if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
             state = state.cycle(this.STATE);
@@ -170,10 +174,16 @@ public class WCWebBlock extends Block implements ModBlockLifecycle {
         }
     }
 
-    private static String[] TAGS = { };
+    private static String[] TAGS = {};
+
     @Override
     public String[] getBlockTags() {
-    	return TAGS;
+        return TAGS;
     }
 
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        addCustomTooltip(tooltip);
+        super.appendTooltip(stack, context, tooltip, options);
+    }
 }

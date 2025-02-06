@@ -5,12 +5,18 @@ import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.WallTorchBlock;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.particle.SimpleParticleType;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
+
+import java.util.List;
 
 public class WCWallTorchBlock extends WallTorchBlock implements ModBlockLifecycle {
     private ModBlock def;
@@ -33,8 +39,7 @@ public class WCWallTorchBlock extends WallTorchBlock implements ModBlockLifecycl
             for (String tok : toks) {
                 if (tok.equals("allow-unsupported")) {
                     allow_unsupported = true;
-                }
-                else if (tok.equals("no-particle")) {
+                } else if (tok.equals("no-particle")) {
                     no_particle = true;
                 }
             }
@@ -63,9 +68,16 @@ public class WCWallTorchBlock extends WallTorchBlock implements ModBlockLifecycl
         return this.allow_unsupported || super.canPlaceAt(state, world, pos);
     }
 
-    private static String[] TAGS = { "wall_post_override" };
+    private static String[] TAGS = {"wall_post_override"};
+
     @Override
     public String[] getBlockTags() {
-    	return TAGS;
+        return TAGS;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        addCustomTooltip(tooltip);
+        super.appendTooltip(stack, context, tooltip, options);
     }
 }

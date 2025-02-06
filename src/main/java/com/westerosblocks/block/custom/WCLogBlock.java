@@ -7,6 +7,12 @@ import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.PillarBlock;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.text.Text;
+
+import java.util.List;
 
 public class WCLogBlock extends PillarBlock implements ModBlockLifecycle {
     public static class Factory extends ModBlockFactory {
@@ -38,4 +44,9 @@ public class WCLogBlock extends PillarBlock implements ModBlockLifecycle {
         return TAGS;
     }
 
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        addCustomTooltip(tooltip);
+        super.appendTooltip(stack, context, tooltip, options);
+    }
 }

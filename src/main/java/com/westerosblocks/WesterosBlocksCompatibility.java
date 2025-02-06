@@ -5,22 +5,24 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockLifecycle;
 import com.westerosblocks.block.ModBlockSetDef;
+import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.Property;
 
-// TODO figure out a good way to do the script stuff here
-// Contains methods for generating config files and other artifacts
-// needed for compatibility with external mods
+// Contains methods for generating config files and other artifacts needed for compatibility with external mods
 public class WesterosBlocksCompatibility {
-
+    private static final Path CONFIG_DIR = FabricLoader.getInstance().getConfigDir();
     public static final String BLOCKSET_PATH = "blocksets.json";
-    // TODO
-    public static final String WORLDPAINTER_PATH = "worldpainter.csv";
+    public static final String WORLDPAINTER_PATH = "westerosblocks_worldpainter.csv";
     public static final String[] WORLDPAINTER_COLS = {
             "name", "discriminator", "properties", "opacity", "receivesLight", "insubstantial",
             "resource", "tileEntity", "tileEntityId", "treeRelated", "vegetation", "blockLight",
@@ -104,44 +106,66 @@ public class WesterosBlocksCompatibility {
      * Dump a CustomBlocks config file for WorldPainter
      * https://www.worldpainter.net/trac/wiki/CustomBlocks
      */
-//    public static void dumpWorldPainterConfig(Block[] blocks, Path path) {
-//        List<Map<String, Object>> data = new ArrayList<Map<String, Object>>();
-//
-//        for (Block blk : blocks) {
-//            if (!(blk instanceof WesterosBlockLifecycle))
-//                continue;
-//
-//            WesterosBlockDef def = ((WesterosBlockLifecycle)blk).getWBDefinition();
-//            StateDefinition sd = blk.getStateDefinition();
-//
-//            Map<String, Object> row = new HashMap<String, Object>();
-//            row.put("name", WesterosBlocks.MOD_ID + ":" + def.blockName);
-//            // TODO
-//            row.put("discriminator", null);
-//            row.put("properties", null);
-//            row.put("opacity", null);
-//            row.put("receivesLight", null);
-//            row.put("insubstantial", null);
-//            row.put("resource", null);
-//            row.put("tileEntity", null);
-//            row.put("tileEntityId", null);
-//            row.put("treeRelated", null);
-//            row.put("vegetation", null);
-//            row.put("blockLight", null);
-//            row.put("natural", null);
-//            row.put("watery", null);
-//            row.put("colour", null);
-//            row.put("horizontal_orientation_schemes", null);
-//            row.put("vertical_orientation_scheme", null);
-//        }
-//
-//        try {
-//            File file = new File(path.toFile(), WORLDPAINTER_PATH);
-//            writeCSV(data, WORLDPAINTER_COLS, file);
-//        } catch (IOException e) {
-//            WesterosBlocks.LOGGER.error("Could not write " + WORLDPAINTER_PATH);
-//        }
-//    }
+    public static void dumpWorldPainterConfig(Block[] blocks) {
+        List<Map<String, Object>> data = new ArrayList<>();
+        Path wpPath = CONFIG_DIR.resolve(WORLDPAINTER_PATH);
+
+        for (Block blk : blocks) {
+            if (!(blk instanceof ModBlockLifecycle)) {
+                continue;
+            }
+
+            ModBlock def = ((ModBlockLifecycle) blk).getWBDefinition();
+
+            StateManager<Block, BlockState> stateManager = blk.getStateManager();
+            Collection<Property<?>> properties = stateManager.getProperties();
+
+            Map<String, Object> row = new HashMap<>();
+            row.put("name", WesterosBlocks.MOD_ID + ":" + def.blockName);
+
+            // Handle block properties
+            if (!properties.isEmpty()) {
+                StringBuilder propStr = new StringBuilder();
+                for (Property<?> prop : properties) {
+                    if (!propStr.isEmpty()) {
+                        propStr.append(",");
+                    }
+                    propStr.append(prop.getName());
+                }
+                row.put("properties", propStr.toString());
+            } else {
+                row.put("properties", null);
+            }
+
+            // Block characteristics
+            row.put("opacity", def.lightOpacity);
+            row.put("receivesLight", !def.nonOpaque);
+            row.put("insubstantial", def.nonOpaque);
+            row.put("blockLight", def.lightValue > 0 ? Math.round(15 * def.lightValue) : 0);
+
+            // Default values for other fields
+            row.put("discriminator", null);
+            row.put("resource", null);
+            row.put("tileEntity", null);
+            row.put("tileEntityId", null);
+            row.put("treeRelated", null);
+            row.put("vegetation", null);
+            row.put("natural", null);
+            row.put("watery", null);
+            row.put("colour", null);
+            row.put("horizontal_orientation_schemes", null);
+            row.put("vertical_orientation_scheme", null);
+
+            data.add(row);
+        }
+
+        try {
+            writeCSV(data, WORLDPAINTER_COLS, wpPath.toFile());
+        } catch (IOException e) {
+            WesterosBlocks.LOGGER.error("Could not write {}", WORLDPAINTER_PATH, e);
+        }
+    }
+
 
     public static void writeCSV(List<Map<String, Object>> data, String[] columns, File file)
             throws IOException {

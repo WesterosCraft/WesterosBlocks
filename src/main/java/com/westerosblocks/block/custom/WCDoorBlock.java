@@ -11,12 +11,17 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.DoorBlock;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
+import java.util.List;
 import java.util.Map;
 
 public class WCDoorBlock extends DoorBlock implements ModBlockLifecycle {
@@ -82,4 +87,9 @@ public class WCDoorBlock extends DoorBlock implements ModBlockLifecycle {
         return TAGS;
     }
 
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        addCustomTooltip(tooltip);
+        super.appendTooltip(stack, context, tooltip, options);
+    }
 }

@@ -4,13 +4,15 @@ import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.ModBlockFactory;
 import com.westerosblocks.block.ModBlockLifecycle;
-import com.westerosblocks.particle.ModParticleEffect;
 import com.westerosblocks.particle.WesterosParticleSystem;
 import net.minecraft.block.*;
-import net.minecraft.particle.ParticleTypes;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
@@ -20,7 +22,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-import java.util.Map;
+import java.util.List;
 
 public class WCFireBlock extends FireBlock implements ModBlockLifecycle {
     private ModBlock def;
@@ -96,6 +98,12 @@ public class WCFireBlock extends FireBlock implements ModBlockLifecycle {
     @Override
     public ModBlock getWBDefinition() {
         return def;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        addCustomTooltip(tooltip);
+        super.appendTooltip(stack, context, tooltip, options);
     }
 
     private static final String[] TAGS = {"fire"};

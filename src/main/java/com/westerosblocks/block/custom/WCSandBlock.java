@@ -7,7 +7,13 @@ import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ColoredFallingBlock;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.text.Text;
 import net.minecraft.util.ColorCode;
+
+import java.util.List;
 
 public class WCSandBlock extends ColoredFallingBlock implements ModBlockLifecycle {
 
@@ -33,9 +39,15 @@ public class WCSandBlock extends ColoredFallingBlock implements ModBlockLifecycl
     }
     
     private static String[] TAGS = { "sand" };
+
     @Override
     public String[] getBlockTags() {
     	return TAGS;
-    }    
+    }
 
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        addCustomTooltip(tooltip);
+        super.appendTooltip(stack, context, tooltip, options);
+    }
 }

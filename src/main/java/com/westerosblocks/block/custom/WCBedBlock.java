@@ -13,8 +13,10 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
@@ -60,7 +62,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements ModBlockLifecyc
 
     public static final EnumProperty<BedPart> PART = Properties.BED_PART;
     public static final BooleanProperty OCCUPIED = Properties.OCCUPIED;
-//    protected static final int HEIGHT = 9;
+    //    protected static final int HEIGHT = 9;
     protected static final VoxelShape BASE = createCuboidShape(0.0D, 3.0D, 0.0D, 16.0D, 9.0D, 16.0D);
     protected static final VoxelShape LEG_NORTH_WEST = createCuboidShape(0.0D, 0.0D, 0.0D, 3.0D, 3.0D, 3.0D);
     protected static final VoxelShape LEG_SOUTH_WEST = createCuboidShape(0.0D, 0.0D, 13.0D, 3.0D, 3.0D, 16.0D);
@@ -367,5 +369,11 @@ public class WCBedBlock extends HorizontalFacingBlock implements ModBlockLifecyc
 
     private static int[][] getBedAboveStandUpOffsets(Direction direction) {
         return new int[][]{{0, 0}, {-direction.getOffsetX(), -direction.getOffsetZ()}};
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        addCustomTooltip(tooltip);
+        super.appendTooltip(stack, context, tooltip, options);
     }
 }

@@ -9,14 +9,20 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.TorchBlock;
 import net.minecraft.fluid.FluidState;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.particle.SimpleParticleType;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
+
+import java.util.List;
 
 public class WCTorchBlock extends TorchBlock implements ModBlockLifecycle {
 
@@ -33,7 +39,7 @@ public class WCTorchBlock extends TorchBlock implements ModBlockLifecycle {
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, floorTorch), false, false);
         }
     }
-    
+
     private ModBlock def;
     private boolean allow_unsupported = false;
     private boolean no_particle = false;
@@ -48,6 +54,7 @@ public class WCTorchBlock extends TorchBlock implements ModBlockLifecycle {
     }
 
     private final Block wallBlock;
+
     protected WCTorchBlock(AbstractBlock.Settings settings, ModBlock def, Block wallTorch) {
         super(WCTorchBlock.getParticle(def.getType()), settings);
         this.def = def;
@@ -58,8 +65,7 @@ public class WCTorchBlock extends TorchBlock implements ModBlockLifecycle {
             for (String tok : toks) {
                 if (tok.equals("allow-unsupported")) {
                     allow_unsupported = true;
-                }
-                else if (tok.equals("no-particle")) {
+                } else if (tok.equals("no-particle")) {
                     no_particle = true;
                 }
             }
@@ -101,14 +107,20 @@ public class WCTorchBlock extends TorchBlock implements ModBlockLifecycle {
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-    	if (this.allow_unsupported) return true;
+        if (this.allow_unsupported) return true;
         return super.canPlaceAt(state, world, pos);
     }
 
-    private static String[] TAGS = { "wall_post_override" };
+    private static String[] TAGS = {"wall_post_override"};
+
     @Override
     public String[] getBlockTags() {
-    	return TAGS;
+        return TAGS;
     }
-    
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        addCustomTooltip(tooltip);
+        super.appendTooltip(stack, context, tooltip, options);
+    }
 }

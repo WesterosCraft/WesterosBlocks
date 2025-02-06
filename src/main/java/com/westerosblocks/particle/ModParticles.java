@@ -13,6 +13,7 @@ import java.util.Map;
 
 public class ModParticles {
     private static final Map<String, ParticleEffect> PARTICLE_EFFECTS = new HashMap<>();
+
     public static final SimpleParticleType WILDFIRE = FabricParticleTypes.simple();
 
     public static void init() {

@@ -44,5 +44,4 @@ public class ModSounds {
     public static SoundEvent getRegisteredSound(String soundName) {
         return REGISTERED_SOUNDS.get(soundName);
     }
-
 }

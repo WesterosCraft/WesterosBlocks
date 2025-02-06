@@ -8,15 +8,21 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.FluidState;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.MathHelper;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class WCCuboid16WayBlock extends WCCuboidBlock implements ModBlockLifecycle {
     public static class Factory extends ModBlockFactory {
@@ -41,7 +47,7 @@ public class WCCuboid16WayBlock extends WCCuboidBlock implements ModBlockLifecyc
             ModBlock.CuboidRotation.NONE,
             ModBlock.CuboidRotation.ROTY90,
             ModBlock.CuboidRotation.ROTY180,
-            ModBlock.CuboidRotation.ROTY270 };
+            ModBlock.CuboidRotation.ROTY270};
 
     protected WCCuboid16WayBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings, def, ROTATIONS);
@@ -52,7 +58,7 @@ public class WCCuboid16WayBlock extends WCCuboidBlock implements ModBlockLifecyc
             int idx = ROTATIONS * stidx;
             for (int i = 1; i < ROTATIONS; i++) {
                 for (ModBlock.Cuboid c : cuboid_by_facing[idx]) {
-                    cuboid_by_facing[idx+i].add(c.rotateCuboid(shape_rotations[i / 4]));
+                    cuboid_by_facing[idx + i].add(c.rotateCuboid(shape_rotations[i / 4]));
                 }
             }
         }
@@ -80,8 +86,7 @@ public class WCCuboid16WayBlock extends WCCuboidBlock implements ModBlockLifecyc
     protected int getIndexFromState(BlockState state) {
         if (STATE != null) {
             return (STATE.getIndex(state.get(STATE)) * ROTATIONS) + state.get(ROTATION);
-        }
-        else {
+        } else {
             return state.get(ROTATION);
         }
     }
@@ -100,7 +105,7 @@ public class WCCuboid16WayBlock extends WCCuboidBlock implements ModBlockLifecyc
     @Nullable
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
-        int dir = MathHelper.floor((double)(ctx.getPlayerYaw() * 16.0F / 360.0F) + 0.5D) & 15;
+        int dir = MathHelper.floor((double) (ctx.getPlayerYaw() * 16.0F / 360.0F) + 0.5D) & 15;
         BlockState bs = this.getDefaultState()
                 .with(ROTATION, dir)
                 .with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
@@ -108,5 +113,11 @@ public class WCCuboid16WayBlock extends WCCuboidBlock implements ModBlockLifecyc
             bs = bs.with(STATE, STATE.defValue);
         }
         return bs;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        addCustomTooltip(tooltip);
+        super.appendTooltip(stack, context, tooltip, options);
     }
 }

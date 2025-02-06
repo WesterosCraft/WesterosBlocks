@@ -16151,6 +16151,7 @@
       "label": "Wildfire",
       "particle": "wildfire",
       "material": "fire",
+      "tooltips": ["Very hot fire", "no fr its §2hot§r"],
       "textures": [
         "wildfire/wildfire_layer_0",
         "wildfire/wildfire_layer_1"

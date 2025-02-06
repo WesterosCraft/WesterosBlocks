@@ -8,11 +8,17 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LadderBlock;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldView;
+
+import java.util.List;
 
 public class WCLadderBlock extends LadderBlock implements ModBlockLifecycle {
 
@@ -67,6 +73,11 @@ public class WCLadderBlock extends LadderBlock implements ModBlockLifecycle {
     public String[] getBlockTags() {
     	if (no_climb) return TAGS_NOCLIMB;
     	return TAGS;
-    }    
+    }
 
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        addCustomTooltip(tooltip);
+        super.appendTooltip(stack, context, tooltip, options);
+    }
 }

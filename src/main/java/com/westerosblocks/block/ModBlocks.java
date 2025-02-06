@@ -1,8 +1,6 @@
 package com.westerosblocks.block;
 
-import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.WesterosBlocksDefLoader;
-import com.westerosblocks.WesterosCreativeModeTabs;
+import com.westerosblocks.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -62,12 +60,14 @@ public class ModBlocks {
         // TODO
         // Dump information for external mods
 //        WesterosBlocksCompatibility.dumpBlockSets(customConfig.blockSets, modConfigPath);
-//        WesterosBlocksCompatibility.dumpWorldPainterConfig(customBlocks, modConfigPath);
+
         // Brag on block type counts
 
         WesterosBlocks.LOGGER.info("TOTAL: " + blockCount + " custom blocks");
-        // TODO
-//        menuOverrides = customConfig.menuOverrides;
+        boolean dumpWorldpainterCSV = ModConfig.INSTANCE.dumpWorldpainterCSV;
+        if (dumpWorldpainterCSV) {
+            WesterosBlocksCompatibility.dumpWorldPainterConfig(customBlocks);
+        }
     }
 
     public static Block registerBlock(String name, Block block) {

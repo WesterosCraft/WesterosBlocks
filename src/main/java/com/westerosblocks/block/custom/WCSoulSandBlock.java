@@ -7,6 +7,12 @@ import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoulSandBlock;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.text.Text;
+
+import java.util.List;
 
 public class WCSoulSandBlock extends SoulSandBlock implements ModBlockLifecycle {
     public static class Factory extends ModBlockFactory {
@@ -24,15 +30,22 @@ public class WCSoulSandBlock extends SoulSandBlock implements ModBlockLifecycle 
         super(settings);
         this.def = def;
     }
+
     @Override
     public ModBlock getWBDefinition() {
         return def;
     }
 
-    private static String[] TAGS = { "soul_speed_blocks" };
+    private static String[] TAGS = {"soul_speed_blocks"};
+
     @Override
     public String[] getBlockTags() {
-    	return TAGS;
+        return TAGS;
     }
 
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        addCustomTooltip(tooltip);
+        super.appendTooltip(stack, context, tooltip, options);
+    }
 }

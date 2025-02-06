@@ -6,8 +6,13 @@ import com.westerosblocks.block.ModBlockFactory;
 import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
 
+import java.util.List;
 import java.util.Map;
 
 public class WCCropBlock extends WCPlantBlock implements ModBlockLifecycle {
@@ -40,6 +45,12 @@ public class WCCropBlock extends WCPlantBlock implements ModBlockLifecycle {
     @Override
     public String[] getBlockTags() {
         return TAGS;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        addCustomTooltip(tooltip);
+        super.appendTooltip(stack, context, tooltip, options);
     }
 
 }

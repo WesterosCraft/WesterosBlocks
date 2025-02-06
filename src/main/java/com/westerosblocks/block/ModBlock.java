@@ -15,6 +15,7 @@ import net.minecraft.particle.ParticleType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.Property;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
@@ -22,6 +23,7 @@ import net.minecraft.world.BlockRenderView;
 import net.minecraft.world.BlockView;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 // Our block configuration data that's populated using GSON, sourced from blocks.json
 public class ModBlock extends ModBlockStateRecord {
@@ -66,6 +68,8 @@ public class ModBlock extends ModBlockStateRecord {
     public int itemTextureIndex = 0;
     // List of custom sound names or sound IDs (for 'sound' blocks)
     public List<String> soundList = null;
+    // the block tooltips
+    public List<String> tooltips;
     // List of elements for a stack, first is bottom-most (for *-stack)
     public List<ModBlockStateRecord> stack = null;
     public List<ModBlockStateRecord> states = null;
