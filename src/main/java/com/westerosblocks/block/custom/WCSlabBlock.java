@@ -84,9 +84,9 @@ public class WCSlabBlock extends SlabBlock implements ModBlockLifecycle {
         this.setDefaultState(defbs);
     }
 
-    protected WCSlabBlock(AbstractBlock.Settings settings, ModBlock def) {
-        this(settings, def, false);
-    }
+//    protected WCSlabBlock(AbstractBlock.Settings settings, ModBlock def) {
+//        this(settings, def, false);
+//    }
 
     @Override
     public ModBlock getWBDefinition() {
