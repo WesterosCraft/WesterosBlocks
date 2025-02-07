@@ -2,6 +2,7 @@ package com.westerosblocks;
 
 import com.westerosblocks.block.*;
 import com.westerosblocks.block.entity.ModBlockEntities;
+import com.westerosblocks.config.ModConfig;
 import com.westerosblocks.item.ModItems;
 import com.westerosblocks.particle.ModParticles;
 import com.westerosblocks.sound.ModSounds;
@@ -9,8 +10,6 @@ import com.westerosblocks.util.AutoDoorRestore;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
-import net.minecraft.block.HangingSignBlock;
-import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

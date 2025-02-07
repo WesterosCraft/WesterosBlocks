@@ -1,13 +1,16 @@
-package com.westerosblocks;
+package com.westerosblocks.config;
 
+import com.westerosblocks.WesterosBlocks;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
+import me.shedaniel.clothconfig2.api.ConfigBuilder;
+import net.minecraft.text.Text;
 
 // example of how to run n your code
-// boolean autoRestore = ModConfig.INSTANCE.autoRestoreAllHalfDoors;
+// boolean autoRestore = ModConfig.get().autoRestoreAllHalfDoors;
 
 @Config(name = WesterosBlocks.MOD_ID)
 public class ModConfig implements ConfigData {
@@ -23,6 +26,10 @@ public class ModConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip(count = 1)
     @ConfigEntry.Category("general")
     public boolean dumpWorldpainterCSV = false;
+
+    @ConfigEntry.Gui.Tooltip(count = 1)
+    @ConfigEntry.Category("general")
+    public boolean dumpBlockSets = false;
 
     @ConfigEntry.Gui.Tooltip(count = 1)
     @ConfigEntry.Category("general")
@@ -52,5 +59,9 @@ public class ModConfig implements ConfigData {
     public static void register() {
         AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
         INSTANCE = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
+    }
+
+    public static ModConfig get() {
+        return INSTANCE;
     }
 }

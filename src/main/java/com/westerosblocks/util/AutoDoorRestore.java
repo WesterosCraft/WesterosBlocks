@@ -1,9 +1,8 @@
 package com.westerosblocks.util;
 
-import com.westerosblocks.ModConfig;
+import com.westerosblocks.config.ModConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.DoorBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 

@@ -51,7 +51,7 @@ public class WesterosBlocksCompatibility {
     /*
      * Dump information about block sets for external tools
      */
-    public static void dumpBlockSets(ModBlockSetDef[] blockSets, Path path) {
+    public static void dumpBlockSets(ModBlockSetDef[] blockSets) {
         FileWriter fos = null;
         try {
             // Create output file format
@@ -83,7 +83,7 @@ public class WesterosBlocksCompatibility {
                 bsf.blocksets.add(bsf_set);
             }
             // Write json
-            fos = new FileWriter(new File(path.toFile(), BLOCKSET_PATH));
+            fos = new FileWriter(new File(CONFIG_DIR.toFile(), BLOCKSET_PATH));
             Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
             gson.toJson(bsf, fos);
 

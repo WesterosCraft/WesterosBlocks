@@ -1,6 +1,7 @@
 package com.westerosblocks.block;
 
 import com.westerosblocks.*;
+import com.westerosblocks.config.ModConfig;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -57,14 +58,14 @@ public class ModBlocks {
 
         customBlocks = blklist.toArray(new Block[0]);
         ModBlock.dumpBlockPerf();
-        // TODO
-        // Dump information for external mods
-//        WesterosBlocksCompatibility.dumpBlockSets(customConfig.blockSets, modConfigPath);
-
-        // Brag on block type counts
-
         WesterosBlocks.LOGGER.info("TOTAL: " + blockCount + " custom blocks");
-        boolean dumpWorldpainterCSV = ModConfig.INSTANCE.dumpWorldpainterCSV;
+
+        boolean dumpBlockSets = ModConfig.get().dumpBlockSets;
+        boolean dumpWorldpainterCSV = ModConfig.get().dumpWorldpainterCSV;
+
+        if (dumpBlockSets) {
+            WesterosBlocksCompatibility.dumpBlockSets(WesterosBlocksDefLoader.getCustomConfig().blockSets);
+        }
         if (dumpWorldpainterCSV) {
             WesterosBlocksCompatibility.dumpWorldPainterConfig(customBlocks);
         }
