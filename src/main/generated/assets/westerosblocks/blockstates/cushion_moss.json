@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/cushion_moss/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/cushion_moss/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/cushion_moss/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/cushion_moss/base_v4"
+      }
+    ]
+  }
+}

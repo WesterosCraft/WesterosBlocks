@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/bog/mud",
+    "east": "westerosblocks:block/bog/bog4",
+    "north": "westerosblocks:block/bog/bog_side",
+    "particle": "westerosblocks:block/bog/bog_side",
+    "south": "westerosblocks:block/bog/bog_side",
+    "up": "westerosblocks:block/bog/bog4",
+    "west": "westerosblocks:block/bog/mud"
+  }
+}

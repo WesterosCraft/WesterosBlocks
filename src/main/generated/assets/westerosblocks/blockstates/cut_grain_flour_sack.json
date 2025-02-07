@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/generated/cut_grain_flour_sack/bottom_v1"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/generated/cut_grain_flour_sack/double_v1"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/generated/cut_grain_flour_sack/top_v1"
+    }
+  }
+}

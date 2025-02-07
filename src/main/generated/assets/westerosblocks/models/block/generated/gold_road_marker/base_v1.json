@@ -1,0 +1,171 @@
+{
+  "parent": "block/block",
+  "display": {
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        -90,
+        25
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ],
+      "translation": [
+        0,
+        4,
+        2
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        -90,
+        25
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ],
+      "translation": [
+        0,
+        4,
+        2
+      ]
+    },
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#txt0",
+          "uv": [
+            15.376,
+            0.0,
+            15.52,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#txt5",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#txt2",
+          "uv": [
+            0.47999954,
+            0.0,
+            0.6239996,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#txt3",
+          "uv": [
+            15.376,
+            0.0,
+            15.52,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#txt1",
+          "uv": [
+            15.376,
+            0.0,
+            15.52,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#txt4",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "from": [
+        15.376,
+        0.0,
+        0.0
+      ],
+      "to": [
+        15.52,
+        16.0,
+        16.0
+      ]
+    }
+  ],
+  "textures": {
+    "particle": "westerosblocks:block/transparent",
+    "txt0": "westerosblocks:block/transparent",
+    "txt1": "westerosblocks:block/transparent",
+    "txt2": "westerosblocks:block/transparent",
+    "txt3": "westerosblocks:block/transparent",
+    "txt4": "westerosblocks:block/road_marker_block/gold_road",
+    "txt5": "westerosblocks:block/road_marker_block/gold_road"
+  }
+}

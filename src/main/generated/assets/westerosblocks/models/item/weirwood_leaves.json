@@ -1,0 +1,10 @@
+{
+  "parent": "westerosblocks:block/tinted/leaves_overlay",
+  "textures": {
+    "end": "westerosblocks:block/leaves/weirwood/all",
+    "overlayend": "westerosblocks:block/leaves/weirwood/all",
+    "overlayside": "westerosblocks:block/leaves/weirwood/all",
+    "particle": "westerosblocks:block/leaves/weirwood/all",
+    "side": "westerosblocks:block/leaves/weirwood/all"
+  }
+}

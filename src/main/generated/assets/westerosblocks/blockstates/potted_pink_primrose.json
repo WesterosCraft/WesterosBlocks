@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/potted_pink_primrose/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/potted_pink_primrose/base_v2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_log",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_third/sandstone/column_top",
+    "east": "westerosblocks:block/ashlar_third/sandstone/column_top",
+    "north": "westerosblocks:block/ashlar_third/sandstone/column_side",
+    "particle": "westerosblocks:block/ashlar_third/sandstone/column_side",
+    "south": "westerosblocks:block/ashlar_third/sandstone/column_top",
+    "up": "westerosblocks:block/ashlar_third/sandstone/column_top",
+    "west": "westerosblocks:block/ashlar_third/sandstone/column_top"
+  }
+}

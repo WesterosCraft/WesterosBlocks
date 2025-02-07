@@ -1,0 +1,82 @@
+{
+  "variants": {
+    "type=bottom": [
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/bottom_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/bottom_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/bottom_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/bottom_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/bottom_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/bottom_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/bottom_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/bottom_v8"
+      }
+    ],
+    "type=double": [
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/double_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/double_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/double_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/double_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/double_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/double_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/double_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/double_v8"
+      }
+    ],
+    "type=top": [
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/top_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/top_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/top_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/top_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/top_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/top_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/top_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/southern_brick_slab/top_v8"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/plaster/smooth/purple/all",
+    "east": "westerosblocks:block/plaster/smooth/purple/all",
+    "north": "westerosblocks:block/plaster/smooth/purple/all",
+    "particle": "westerosblocks:block/plaster/smooth/purple/all",
+    "south": "westerosblocks:block/plaster/smooth/purple/all",
+    "up": "westerosblocks:block/plaster/smooth/purple/all",
+    "west": "westerosblocks:block/plaster/smooth/purple/all"
+  }
+}

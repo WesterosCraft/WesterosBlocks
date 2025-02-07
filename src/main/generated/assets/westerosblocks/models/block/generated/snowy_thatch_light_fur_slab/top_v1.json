@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/thatch/snowy_light/bottom",
+    "east": "westerosblocks:block/thatch/snowy_light/top",
+    "north": "westerosblocks:block/thatch/snowy_light/side_half",
+    "particle": "westerosblocks:block/thatch/snowy_light/side_half",
+    "south": "westerosblocks:block/thatch/snowy_light/bottom",
+    "up": "westerosblocks:block/thatch/snowy_light/top",
+    "west": "westerosblocks:block/thatch/snowy_light/bottom"
+  }
+}

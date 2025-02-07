@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/transparent",
+    "east": "westerosblocks:block/transparent",
+    "north": "westerosblocks:block/ashlar_third/dark_grey/arrow_slit",
+    "particle": "westerosblocks:block/ashlar_third/dark_grey/arrow_slit",
+    "south": "westerosblocks:block/transparent",
+    "up": "westerosblocks:block/transparent",
+    "west": "westerosblocks:block/transparent"
+  }
+}

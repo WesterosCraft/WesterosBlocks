@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side_tall",
+  "textures": {
+    "bottom": "westerosblocks:block/ashlar_third/westerlands_mossy/all5",
+    "particle": "westerosblocks:block/ashlar_third/westerlands_mossy/all5",
+    "side": "westerosblocks:block/ashlar_third/westerlands_mossy/all5",
+    "top": "westerosblocks:block/ashlar_third/westerlands_mossy/all5"
+  }
+}

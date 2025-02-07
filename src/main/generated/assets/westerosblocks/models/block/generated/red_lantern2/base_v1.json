@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/lighting/lantern_red_bottom",
+    "east": "westerosblocks:block/lighting/lantern_red_top",
+    "north": "westerosblocks:block/lighting/lantern_red_side",
+    "particle": "westerosblocks:block/lighting/lantern_red_side",
+    "south": "westerosblocks:block/lighting/lantern_red_bottom",
+    "up": "westerosblocks:block/lighting/lantern_red_top",
+    "west": "westerosblocks:block/lighting/lantern_red_bottom"
+  }
+}

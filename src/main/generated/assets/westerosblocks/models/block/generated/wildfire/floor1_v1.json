@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fire_floor",
+  "textures": {
+    "fire": "westerosblocks:block/wildfire/wildfire_layer_1"
+  }
+}

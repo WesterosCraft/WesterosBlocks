@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side",
+  "textures": {
+    "bottom": "westerosblocks:block/fieldstone/light_oldtown/all",
+    "particle": "westerosblocks:block/fieldstone/light_oldtown/all",
+    "side": "westerosblocks:block/fieldstone/light_oldtown/all",
+    "top": "westerosblocks:block/fieldstone/light_oldtown/all"
+  }
+}

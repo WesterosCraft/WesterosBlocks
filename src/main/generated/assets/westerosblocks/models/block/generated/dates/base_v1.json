@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/dates/bottom",
+    "east": "westerosblocks:block/dates/top",
+    "north": "westerosblocks:block/dates/side",
+    "particle": "westerosblocks:block/dates/side",
+    "south": "westerosblocks:block/dates/bottom",
+    "up": "westerosblocks:block/dates/top",
+    "west": "westerosblocks:block/dates/bottom"
+  }
+}

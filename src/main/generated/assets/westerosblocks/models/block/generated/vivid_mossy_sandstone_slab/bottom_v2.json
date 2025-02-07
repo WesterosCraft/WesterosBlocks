@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_third/tan_mossy/all2",
+    "east": "westerosblocks:block/ashlar_third/tan_mossy/all2",
+    "north": "westerosblocks:block/ashlar_third/tan_mossy/all2",
+    "particle": "westerosblocks:block/ashlar_third/tan_mossy/all2",
+    "south": "westerosblocks:block/ashlar_third/tan_mossy/all2",
+    "up": "westerosblocks:block/ashlar_third/tan_mossy/all2",
+    "west": "westerosblocks:block/ashlar_third/tan_mossy/all2"
+  }
+}

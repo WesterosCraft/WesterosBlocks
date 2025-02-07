@@ -1,0 +1,14 @@
+{
+  "values": [
+    "westerosblocks:coral_fire_fan_wall",
+    "westerosblocks:coral_brain_fan_wall",
+    "westerosblocks:coral_bubble_fan_wall",
+    "westerosblocks:coral_horn_fan_wall",
+    "westerosblocks:coral_tube_fan_wall",
+    "westerosblocks:coral_bubble_fan",
+    "westerosblocks:coral_tube_fan",
+    "westerosblocks:coral_horn_fan",
+    "westerosblocks:coral_fire_fan",
+    "westerosblocks:coral_brain_fan"
+  ]
+}

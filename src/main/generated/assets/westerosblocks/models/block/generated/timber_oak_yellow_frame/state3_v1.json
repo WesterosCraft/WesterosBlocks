@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_overlay",
+  "textures": {
+    "down": "westerosblocks:block/plaster/rough/lannisport_yellow/all1",
+    "down_ov": "westerosblocks:block/timber/oak/bottom",
+    "east": "westerosblocks:block/wood/oak/all",
+    "east_ov": "westerosblocks:block/timber/oak/frame",
+    "north": "westerosblocks:block/plaster/rough/lannisport_yellow/all1",
+    "north_ov": "westerosblocks:block/timber/oak/frame",
+    "particle": "westerosblocks:block/plaster/rough/lannisport_yellow/all1",
+    "south": "westerosblocks:block/plaster/rough/lannisport_yellow/all1",
+    "south_ov": "westerosblocks:block/timber/oak/frame",
+    "up": "westerosblocks:block/wood/oak/all",
+    "up_ov": "westerosblocks:block/transparent",
+    "west": "westerosblocks:block/plaster/rough/lannisport_yellow/all1",
+    "west_ov": "westerosblocks:block/timber/oak/frame"
+  }
+}

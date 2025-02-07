@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/crate_block/basket_bottom",
+    "east": "westerosblocks:block/crate_block/basket_grape_purple",
+    "north": "westerosblocks:block/crate_block/basket_side",
+    "particle": "westerosblocks:block/crate_block/basket_side",
+    "south": "westerosblocks:block/crate_block/basket_bottom",
+    "up": "westerosblocks:block/crate_block/basket_grape_purple",
+    "west": "westerosblocks:block/crate_block/basket_bottom"
+  }
+}

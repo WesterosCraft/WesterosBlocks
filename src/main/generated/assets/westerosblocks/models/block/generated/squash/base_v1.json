@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/squash/top",
+    "east": "westerosblocks:block/squash/top",
+    "north": "westerosblocks:block/squash/side",
+    "particle": "westerosblocks:block/squash/side",
+    "south": "westerosblocks:block/squash/top",
+    "up": "westerosblocks:block/squash/top",
+    "west": "westerosblocks:block/squash/top"
+  }
+}

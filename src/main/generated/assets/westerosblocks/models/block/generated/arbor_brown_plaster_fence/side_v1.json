@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_side",
+  "textures": {
+    "bottom": "westerosblocks:block/plaster/smooth/arbor_brown/all",
+    "particle": "westerosblocks:block/plaster/smooth/arbor_brown/all",
+    "side": "westerosblocks:block/plaster/smooth/arbor_brown/all",
+    "top": "westerosblocks:block/plaster/smooth/arbor_brown/all"
+  }
+}

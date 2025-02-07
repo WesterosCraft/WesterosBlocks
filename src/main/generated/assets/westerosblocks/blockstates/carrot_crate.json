@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/carrot_crate/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/carrot_crate/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/carrot_crate/base_v3"
+      }
+    ]
+  }
+}

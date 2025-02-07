@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/bog/mud",
+    "east": "westerosblocks:block/bog/bog9",
+    "north": "westerosblocks:block/bog/bog_slab_side",
+    "particle": "westerosblocks:block/bog/bog_slab_side",
+    "south": "westerosblocks:block/bog/mud",
+    "up": "westerosblocks:block/bog/bog9",
+    "west": "westerosblocks:block/bog/mud"
+  }
+}

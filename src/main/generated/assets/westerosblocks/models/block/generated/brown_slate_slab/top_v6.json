@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/slate/brown/all",
+    "east": "westerosblocks:block/slate/brown/directional6",
+    "north": "westerosblocks:block/slate/brown/all",
+    "particle": "westerosblocks:block/slate/brown/all",
+    "south": "westerosblocks:block/slate/brown/all",
+    "up": "westerosblocks:block/slate/brown/directional6",
+    "west": "westerosblocks:block/slate/brown/all"
+  }
+}

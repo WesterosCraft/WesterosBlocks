@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/pale_yellow_plaster_rough/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/pale_yellow_plaster_rough/base_v2"
+      }
+    ]
+  }
+}

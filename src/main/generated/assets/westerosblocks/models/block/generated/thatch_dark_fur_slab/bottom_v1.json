@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/thatch/dark/all",
+    "east": "westerosblocks:block/thatch/dark/all",
+    "north": "westerosblocks:block/thatch/dark/all",
+    "particle": "westerosblocks:block/thatch/dark/all",
+    "south": "westerosblocks:block/thatch/dark/all",
+    "up": "westerosblocks:block/thatch/dark/all",
+    "west": "westerosblocks:block/thatch/dark/all"
+  }
+}

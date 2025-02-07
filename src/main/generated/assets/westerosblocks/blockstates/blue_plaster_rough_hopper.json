@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/blue_plaster_rough_hopper/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/blue_plaster_rough_hopper/base_v2"
+      }
+    ]
+  }
+}

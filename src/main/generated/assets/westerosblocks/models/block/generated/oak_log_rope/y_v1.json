@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_log",
+  "textures": {
+    "down": "westerosblocks:block/bark/oak/top",
+    "east": "westerosblocks:block/bark/oak/top",
+    "north": "westerosblocks:block/bark/oak/rope",
+    "particle": "westerosblocks:block/bark/oak/rope",
+    "south": "westerosblocks:block/bark/oak/top",
+    "up": "westerosblocks:block/bark/oak/top",
+    "west": "westerosblocks:block/bark/oak/top"
+  }
+}

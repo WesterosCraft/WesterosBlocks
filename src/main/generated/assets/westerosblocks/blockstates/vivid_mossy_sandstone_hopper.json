@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/vivid_mossy_sandstone_hopper/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/vivid_mossy_sandstone_hopper/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/vivid_mossy_sandstone_hopper/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/vivid_mossy_sandstone_hopper/base_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/vivid_mossy_sandstone_hopper/base_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/vivid_mossy_sandstone_hopper/base_v6"
+      }
+    ]
+  }
+}

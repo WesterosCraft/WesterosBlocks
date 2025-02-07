@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/untinted/template_fence_gate",
+  "textures": {
+    "texture": "westerosblocks:block/terrainset/river/random_4x4"
+  }
+}

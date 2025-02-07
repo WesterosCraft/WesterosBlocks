@@ -1,0 +1,171 @@
+{
+  "parent": "block/block",
+  "display": {
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        -90,
+        25
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ],
+      "translation": [
+        0,
+        4,
+        2
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        -90,
+        25
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ],
+      "translation": [
+        0,
+        4,
+        2
+      ]
+    },
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#txt0",
+          "uv": [
+            0.16,
+            0.0,
+            1.12,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#txt5",
+          "uv": [
+            0.0,
+            6.3999996,
+            16.0,
+            16.0
+          ]
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#txt2",
+          "uv": [
+            14.88,
+            6.3999996,
+            15.84,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#txt3",
+          "uv": [
+            0.16,
+            6.3999996,
+            1.12,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#txt1",
+          "uv": [
+            0.16,
+            0.0,
+            1.12,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#txt4",
+          "uv": [
+            0.0,
+            6.3999996,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "from": [
+        0.16,
+        0.0,
+        0.0
+      ],
+      "to": [
+        1.12,
+        9.6,
+        16.0
+      ]
+    }
+  ],
+  "textures": {
+    "particle": "westerosblocks:block/transparent",
+    "txt0": "westerosblocks:block/transparent",
+    "txt1": "westerosblocks:block/transparent",
+    "txt2": "westerosblocks:block/wattle_fence/ctm2",
+    "txt3": "westerosblocks:block/wattle_fence/ctm2",
+    "txt4": "westerosblocks:block/wattle_fence/ctm2",
+    "txt5": "westerosblocks:block/wattle_fence/ctm2"
+  }
+}

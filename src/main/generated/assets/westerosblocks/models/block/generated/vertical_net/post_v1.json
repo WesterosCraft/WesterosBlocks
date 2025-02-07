@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/untinted/ctm_pane_post",
+  "textures": {
+    "cap": "westerosblocks:block/vertical_net/vertical_net1",
+    "side": "westerosblocks:block/vertical_net/vertical_net1"
+  }
+}
