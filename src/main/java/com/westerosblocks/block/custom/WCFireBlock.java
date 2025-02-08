@@ -1,14 +1,18 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.ModBlockFactory;
 import com.westerosblocks.block.ModBlockLifecycle;
-import com.westerosblocks.particle.WesterosParticleSystem;
+import com.westerosblocks.particle.ModParticles;
+//import com.westerosblocks.particle.WesterosParticleSystem;
 import net.minecraft.block.*;
+import net.minecraft.client.particle.ParticleFactory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.particle.ParticleEffect;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -23,6 +27,7 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
 import java.util.List;
+import java.util.Objects;
 
 public class WCFireBlock extends FireBlock implements ModBlockLifecycle {
     private ModBlock def;
@@ -60,6 +65,7 @@ public class WCFireBlock extends FireBlock implements ModBlockLifecycle {
 
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        // Keep the original fire ambient sound
         if (random.nextInt(24) == 0) {
             world.playSound(
                     pos.getX() + 0.5,
@@ -73,8 +79,24 @@ public class WCFireBlock extends FireBlock implements ModBlockLifecycle {
             );
         }
 
-        if (def.particle != null) {
-            WesterosParticleSystem.spawnFireParticles(world, pos, random, def.particle);
+        // Handle custom particles
+        if (def.particles != null && def.particles.length > 0) {
+            for (String particleType : def.particles) {
+                ParticleEffect particle = ModParticles.get(particleType);
+                if (particle != null && random.nextFloat() < 0.7f) {  // Add randomness to spawn rate
+                    // Calculate random position within block space
+                    double x = pos.getX() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
+                    double y = pos.getY() + 0.2 + random.nextFloat() * 0.6;
+                    double z = pos.getZ() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
+
+                    // Add some vertical velocity and slight random horizontal movement
+                    double velocityX = (random.nextFloat() - 0.5) * 0.02;
+                    double velocityY = 0.05 + random.nextFloat() * 0.02;
+                    double velocityZ = (random.nextFloat() - 0.5) * 0.02;
+
+                    world.addParticle(particle, x, y, z, velocityX, velocityY, velocityZ);
+                }
+            }
         }
     }
 

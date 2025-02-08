@@ -81,7 +81,7 @@ public class ModBlock extends ModBlockStateRecord {
     public static final String SHAPE_CROSSED = "crossed";
     // TODO wood type for wood blocks like fencegate. see WoodTypeUtil class
     public String woodType = null;
-    public String particle;
+    public String[] particles;
 
     private transient Map<String, String> parsedType;
     private final transient boolean hasCollisionBoxes = false;
@@ -446,7 +446,6 @@ public class ModBlock extends ModBlockStateRecord {
     private static final Map<String, BlockSoundGroup> stepSoundTable = new HashMap<>();
     //    private static final Map<String, CreativeModeTab> tabTable = new HashMap<>();
     private static final Map<String, ModBlockFactory> typeTable = new HashMap<String, ModBlockFactory>();
-    private static final Map<String, ParticleType<?>> particles = new HashMap<String, ParticleType<?>>();
 
     private transient boolean didInit = false;
 

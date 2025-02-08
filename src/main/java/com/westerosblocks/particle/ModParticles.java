@@ -4,6 +4,8 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.particle.custom.WildfireParticle;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
+import net.minecraft.client.particle.EndRodParticle;
+import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.particle.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -13,11 +15,9 @@ import java.util.Map;
 
 public class ModParticles {
     private static final Map<String, ParticleEffect> PARTICLE_EFFECTS = new HashMap<>();
-
     public static final SimpleParticleType WILDFIRE = FabricParticleTypes.simple();
 
-    public static void init() {
-        // Register vanilla particle references
+    public static void initialize() {
         PARTICLE_EFFECTS.put("hugeexplosion", ParticleTypes.EXPLOSION);
         PARTICLE_EFFECTS.put("fireworksSpark", ParticleTypes.FIREWORK);
         PARTICLE_EFFECTS.put("bubble", ParticleTypes.BUBBLE);
@@ -49,17 +49,22 @@ public class ModParticles {
         PARTICLE_EFFECTS.put("happyVillager", ParticleTypes.HAPPY_VILLAGER);
         PARTICLE_EFFECTS.put("soul_flame", ParticleTypes.SOUL_FIRE_FLAME);
 
-        // custom
-        PARTICLE_EFFECTS.put("wildfire", WILDFIRE);
+        registerParticle("wildfire", WILDFIRE);
     }
 
-    public static void registerParticles() {
-        Registry.register(Registries.PARTICLE_TYPE, WesterosBlocks.id("wildfire"), WILDFIRE);
-        ParticleFactoryRegistry.getInstance().register(ModParticles.WILDFIRE, WildfireParticle.Factory::new);
+    public static void initializeClient() {
+//        ParticleFactoryRegistry.getInstance().register(WILDFIRE, WildfireParticle.Factory::new);
+        // Register with base sprite factory - this lets Polytone handle the behavior
+        ParticleFactoryRegistry.getInstance().register(WILDFIRE,
+                FlameParticle.Factory::new); // Using BlockLeakParticle as a base
     }
 
-    public static ParticleEffect getParticle(String name) {
+    private static void registerParticle(String name, SimpleParticleType particleType) {
+        Registry.register(Registries.PARTICLE_TYPE, WesterosBlocks.id(name), particleType);
+        PARTICLE_EFFECTS.put(name, particleType);
+    }
+
+    public static ParticleEffect get(String name) {
         return PARTICLE_EFFECTS.get(name);
     }
-
 }

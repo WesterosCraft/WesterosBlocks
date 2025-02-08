@@ -4,7 +4,7 @@
     "creativeTab": "westeros_lighting_tab",
     "lightValue": 1,
     "label": "Wildfire",
-    "particle": "wildfire",
+    "particles": ["wildfire","largesmoke"],
     "material": "fire",
     "tooltips": [
         "Very hot fire",

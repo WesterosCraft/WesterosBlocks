@@ -62,6 +62,5 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("text.autoconfig.westerosblocks.option.doorNoConnect.@Tooltip[0]", "Avoid doors connecting to walls/panes/etc");
         translationBuilder.add("text.autoconfig.westerosblocks.option.seaLevelOverride", "Sea Level Override");
         translationBuilder.add("text.autoconfig.westerosblocks.option.seaLevelOverride.@Tooltip[0]", "Override sea level (default for Westeros=33, 0=disable override)");
-
     }
 }

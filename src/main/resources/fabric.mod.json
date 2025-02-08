@@ -9,7 +9,7 @@
 	],
 	"contact": {
 		"homepage": "https://westeroscraft.com/",
-		"sources": "https://github.com/WesterosCraft/WesterosBlocksFabric"
+		"sources": "https://github.com/WesterosCraft/WesterosBlocks"
 	},
 	"license": "Apache Public License v2",
 	"icon": "assets/westerosblocks/icon.png",
@@ -37,8 +37,5 @@
 		"java": ">=21",
 		"fabric-api": "*",
 		"cloth-config": ">=11.0.99"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }

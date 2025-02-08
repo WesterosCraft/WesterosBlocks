@@ -22,12 +22,12 @@ public class WesterosBlocks implements ModInitializer {
     public void onInitialize() {
         WesterosBlocksDefLoader.initialize();
         ModBlock.initialize();
+        ModParticles.initialize();
         ModConfig.register();
         WesterosCreativeModeTabs.registerCreativeModeTabs();
         ModBlocks.registerModBlocks();
         ModItems.registerModItems();
         ModSounds.registerSounds();
-        ModParticles.init();
         ModBlockEntities.registerModEntities();
 
         ServerLifecycleEvents.SERVER_STOPPING.register(server -> {

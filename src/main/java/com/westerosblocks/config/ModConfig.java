@@ -6,8 +6,6 @@ import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
-import me.shedaniel.clothconfig2.api.ConfigBuilder;
-import net.minecraft.text.Text;
 
 // example of how to run n your code
 // boolean autoRestore = ModConfig.get().autoRestoreAllHalfDoors;
