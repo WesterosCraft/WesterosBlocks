@@ -2,7 +2,7 @@ package com.westerosblocks;
 
 import com.google.gson.*;
 import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.block.ModBlockSetDef;
+import com.westerosblocks.block.ModBlockSet;
 import com.westerosblocks.block.ModBlockTags;
 import com.westerosblocks.item.WesterosItemMenuOverrides;
 
@@ -47,7 +47,7 @@ public class WesterosBlocksDefLoader {
     }
 
     public static class WesterosBlocksConfig {
-        public ModBlockSetDef[] blockSets;
+        public ModBlockSet[] blockSets;
         public ModBlock[] blocks;
         public WesterosItemMenuOverrides[] menuOverrides;
         public ModBlockTags[] blockTags;
@@ -208,12 +208,12 @@ public class WesterosBlocksDefLoader {
 
     // Expand block set definitions to obtain the full block definition list
     public static ModBlock[] getBlockDefs(WesterosBlocksConfig config) {
-        ModBlockSetDef[] blockSetDefs = config.blockSets;
+        ModBlockSet[] blockSetDefs = config.blockSets;
         ModBlock[] blockDefs = config.blocks;
         List<ModBlock> expandedBlockDefs = new LinkedList<>(Arrays.asList(blockDefs));
 
         if (config.blockSets.length > 0) {
-            for (ModBlockSetDef blockSetDef : blockSetDefs) {
+            for (ModBlockSet blockSetDef : blockSetDefs) {
                 if (blockSetDef == null)
                     continue;
                 List<ModBlock> variantBlockDefs = blockSetDef.generateBlockDefs();

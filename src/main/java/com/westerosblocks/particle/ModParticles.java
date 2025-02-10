@@ -1,10 +1,8 @@
 package com.westerosblocks.particle;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.particle.custom.WildfireParticle;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
-import net.minecraft.client.particle.EndRodParticle;
 import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.particle.*;
 import net.minecraft.registry.Registries;
@@ -53,10 +51,7 @@ public class ModParticles {
     }
 
     public static void initializeClient() {
-//        ParticleFactoryRegistry.getInstance().register(WILDFIRE, WildfireParticle.Factory::new);
-        // Register with base sprite factory - this lets Polytone handle the behavior
-        ParticleFactoryRegistry.getInstance().register(WILDFIRE,
-                FlameParticle.Factory::new); // Using BlockLeakParticle as a base
+        ParticleFactoryRegistry.getInstance().register(WILDFIRE, FlameParticle.Factory::new);
     }
 
     private static void registerParticle(String name, SimpleParticleType particleType) {

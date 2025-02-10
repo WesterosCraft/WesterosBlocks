@@ -2,14 +2,13 @@ package com.westerosblocks.block;
 
 import java.util.*;
 
-public class ModBlockSetDef {
+public class ModBlockSet {
     private static final float DEF_FLOAT = -999.0F;
     public static final int DEF_INT = -999;
 
     public String baseBlockName; // Unique name to be used as a base for all the generated block names
     public String baseLabel = null; // Base label associated with blocks in set
     public List<String> variants = null; // List of supported variants to create (solid, stair, slab, wall, fence, hopper)
-    // By default, all of the above variants will be created
     // By default, all of the above variants will be created
 
     public Map<String, String> altNames = null; // Alternative names to use for particular variants (optional)
@@ -49,7 +48,6 @@ public class ModBlockSetDef {
     public String colorMult = "#FFFFFF"; // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
 
     public List<StateRecord> states = null;
-
 
     public static final List<String> DEFAULT_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper");
     public static final List<String> SUPPORTED_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper", "tip",
@@ -136,10 +134,10 @@ public class ModBlockSetDef {
         this.altRandomTextures = preprocessVariantMap(this.altRandomTextures);
         this.altOverlayTextures = preprocessVariantMap(this.altOverlayTextures);
 
-        for (String variant : ModBlockSetDef.SUPPORTED_VARIANTS) {
+        for (String variant : ModBlockSet.SUPPORTED_VARIANTS) {
             if (this.variants != null && !variants.contains(variant))
                 continue;
-            else if (this.variants == null && !ModBlockSetDef.DEFAULT_VARIANTS.contains(variant))
+            else if (this.variants == null && !ModBlockSet.DEFAULT_VARIANTS.contains(variant))
                 continue;
 
             ModBlock variantDef = new ModBlock();
@@ -158,14 +156,14 @@ public class ModBlockSetDef {
             if (this.altLabels != null && this.altLabels.containsKey(variant)) {
                 variantDef.label = this.altLabels.get(variant);
             } else if (this.baseLabel != null) {
-                String suffix_label = (suffix.isEmpty()) ? "" : ModBlockSetDef.generateLabel(suffix);
+                String suffix_label = (suffix.isEmpty()) ? "" : ModBlockSet.generateLabel(suffix);
                 variantDef.label = this.baseLabel + " " + suffix_label;
             } else {
-                variantDef.label = ModBlockSetDef.generateLabel(variantDef.blockName);
+                variantDef.label = ModBlockSet.generateLabel(variantDef.blockName);
             }
 
             // Set blocktype for variant
-            String blockType = ModBlockSetDef.VARIANT_TYPES.get(variant);
+            String blockType = ModBlockSet.VARIANT_TYPES.get(variant);
             if (blockType == null)
                 blockType = variant;
             variantDef.blockType = blockType;
@@ -405,7 +403,7 @@ public class ModBlockSetDef {
 
         List<String> textureList = new LinkedList<>();
 
-        for (String texture : ModBlockSetDef.VARIANT_TEXTURES.get(variant)) {
+        for (String texture : ModBlockSet.VARIANT_TEXTURES.get(variant)) {
             if (textureMap.containsKey(texture)) textureList.add(textureMap.get(texture));
         }
 

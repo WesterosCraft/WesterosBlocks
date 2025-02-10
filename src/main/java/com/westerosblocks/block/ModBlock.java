@@ -10,107 +10,59 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.block.*;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.particle.ParticleType;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.Property;
-import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
-import net.minecraft.world.BlockRenderView;
 import net.minecraft.world.BlockView;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 // Our block configuration data that's populated using GSON, sourced from blocks.json
 public class ModBlock extends ModBlockStateRecord {
     private static final float DEF_FLOAT = -999.0F;
     public static final int DEF_INT = -999;
     public static final String LAYER_SENSITIVE = "layerSensitive";
-
-    // Locally unique block name
-    public String blockName;
-    // Block type ('solid', 'liquid', 'plant', 'log', 'stairs', etc)
-    public String blockType = "solid";
-    // Block hardness
-    public float hardness = DEF_FLOAT;
-    // Step sound (powder, wood, gravel, grass, stone, metal, glass, cloth, sand, snow, ladder, anvil)
-    public String stepSound = null;
-    // Generic material (air, grass, ground, wood, rock, iron, anvil, water, lava, leaves, plants, vine, sponge, etc)
-    public String material = null;
-    // Explosion resistance
-    public float resistance = DEF_FLOAT;
+    public String blockName; // Locally unique block name
+    public String blockType = "solid"; // Block type ('solid', 'liquid', 'plant', 'log', 'stairs', etc)
+    public float hardness = DEF_FLOAT;  // Block hardness
+    public String stepSound = null; // Step sound (powder, wood, gravel, grass, stone, metal, glass, cloth, sand, snow, ladder, anvil)
+    public String material = null; // Generic material (air, grass, ground, wood, rock, iron, anvil, water, lava, leaves, plants, vine, sponge, etc)
+    public float resistance = DEF_FLOAT; // Explosion resistance
     public int lightOpacity = DEF_INT;
-    // List of harvest levels
-    public List<HarvestLevel> harvestLevel = null;
+    public List<HarvestLevel> harvestLevel = null; // List of harvest levels
     public int fireSpreadSpeed = 0;
     public int flammability = 0;
-    // Creative tab for items
-    public String creativeTab = null;
-    // If block should add any custom tags
-    public List<String> customTags = null;
-    // Type field (used for plant types or other block type specific values)
-    public String type = "";
-    // If true, do render on pass 2 (for alpha blending)
-    public boolean alphaRender = false;
-    // Set ambient occlusion (default is true)
-    public Boolean ambientOcclusion = null;
-    // If true, does not block visibility of shared faces (solid blocks) and doesn't allow torches
-    public boolean nonOpaque = false;
-    // Label for item associated with block
-    public String label;
-    // Item texture, if any
-    public String itemTexture = null;
-    // Index of texture for item icon
-    public int itemTextureIndex = 0;
-    // List of custom sound names or sound IDs (for 'sound' blocks)
-    public List<String> soundList = null;
-    // the block tooltips
-    public List<String> tooltips;
-    // List of elements for a stack, first is bottom-most (for *-stack)
-    public List<ModBlockStateRecord> stack = null;
+    public String creativeTab = null; // Creative tab for items
+    public List<String> customTags = null; // If block should add any custom tags
+    public String type = ""; // Type field (used for plant types or other block type specific values)
+    public boolean alphaRender = false; // If true, do render on pass 2 (for alpha blending)
+    public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
+    public boolean nonOpaque = false; // If true, does not block visibility of shared faces (solid blocks) and doesn't allow torches
+    public String label; // Label for item associated with block
+    public String itemTexture = null; // Item texture, if any
+    public int itemTextureIndex = 0; // Index of texture for item icon
+    public List<String> soundList = null; // List of custom sound names or sound IDs (for 'sound' blocks)
+    public List<String> tooltips; // the block tooltips
+    public List<ModBlockStateRecord> stack = null;  // List of elements for a stack, first is bottom-most (for *-stack)
     public List<ModBlockStateRecord> states = null;
     private StateProperty stateProp = null;
     public String connectBy = "block";
-    // Shape for normal cuboid (box)
-    public static final String SHAPE_BOX = "box";
-    // TODO Shape for crossed squares (plant-style) (texture is index 0 in list)
-    public static final String SHAPE_CROSSED = "crossed";
-    // TODO wood type for wood blocks like fencegate. see WoodTypeUtil class
-    public String woodType = null;
+    public static final String SHAPE_BOX = "box"; // Shape for normal cuboid (box)
+    public static final String SHAPE_CROSSED = "crossed"; // TODO Shape for crossed squares (plant-style) (texture is index 0 in list)
+    public String woodType = null; // TODO wood type for wood blocks like fencegate. see WoodTypeUtil class
     public String[] particles;
 
+    private static final Map<String, BlockSoundGroup> stepSoundTable = new HashMap<>();
+    private static final Map<String, ModBlockFactory> typeTable = new HashMap<>();
     private transient Map<String, String> parsedType;
     private final transient boolean hasCollisionBoxes = false;
-
-    // TODO not sure if we need legacy stuff anymore
-//    public String legacyBlockID = null;
-//    public List<String> legacyBlockIDList = null;
-
-    public boolean isConnectMatch(BlockState bs1, BlockState bs2) {
-        if (this.connectBy.equals("material")) {
-            // TODO need to recreate AuxMaterial
-            return true;
-//            return AuxMaterial.getMaterial(bs1) == AuxMaterial.getMaterial(bs2);
-        } else {
-            return bs1.getBlock() == bs2.getBlock();
-        }
-    }
-
-    public int getBlockColor(BlockState state, BlockRenderView world, BlockPos pos, int tintIndex) {
-        return 0xFFFFFF;
-    }
-
-    public int getItemColor(ItemStack stack, int tintIndex) {
-        return 0xFFFFFF;
-    }
 
     public static class HarvestLevel {
         public String tool;
         public int level;
+
     }
 
     public static class RandomTextureSet {
@@ -118,6 +70,7 @@ public class ModBlock extends ModBlockStateRecord {
         public Integer weight = null;        // Weight for texture set (default = 1)
 
         // Get number of base textures
+
         public int getTextureCount() {
             return textures != null ? textures.size() : 0;
         }
@@ -128,45 +81,7 @@ public class ModBlock extends ModBlockStateRecord {
             }
             return textures.get(index % textures.size());
         }
-    }
 
-    public static class StackElement {
-        public List<String> textures = null; // List of textures
-        public BoundingBox boundingBox = null; // Bounding box
-        public List<Cuboid> cuboids = null; // List of cuboids composing block (for 'cuboid', and others)
-        public List<BoundingBox> collisionBoxes = null; // For 'solid', used for raytrace (arrow shots)
-        public List<RandomTextureSet> randomTextures = null;    // On supported blocks (solid, leaves, slabs, stairs),
-        // defines sets of textures used for additional random models
-        // If randomTextures is used, textures is ignored
-
-        public String getTextureByIndex(int idx) {
-            if ((textures != null) && (!textures.isEmpty())) {
-                if (idx >= textures.size()) {
-                    idx = textures.size() - 1;
-                }
-                return textures.get(idx);
-            }
-            return null;
-        }
-
-        // Get number of random texture sets
-        public int getRandomTextureSetCount() {
-            if ((randomTextures != null) && (!randomTextures.isEmpty())) {
-                return randomTextures.size();
-            }
-            return 0;
-        }
-
-        // Get given random texture set
-        public RandomTextureSet getRandomTextureSet(int setnum) {
-            if ((randomTextures != null) && (!randomTextures.isEmpty())) {
-                if (setnum >= randomTextures.size()) {
-                    setnum = randomTextures.size() - 1;
-                }
-                return randomTextures.get(setnum);
-            }
-            return null;
-        }
     }
 
     public static class BoundingBox {
@@ -176,6 +91,7 @@ public class ModBlock extends ModBlockStateRecord {
         public float yMax = 1.0F;
         public float zMin = 0.0F;
         public float zMax = 1.0F;
+
 
         public BoundingBox() {
         }
@@ -197,6 +113,7 @@ public class ModBlock extends ModBlockStateRecord {
             }
             return aabb;
         }
+
     }
 
     public static class Vector {
@@ -280,12 +197,12 @@ public class ModBlock extends ModBlockStateRecord {
                 return false;
             }
         }
-
         // TODO this method is now final, not sure if still needed
 //        @Override
 //        public int hashCode() {
 //            return 31 * super.hashCode() + this.values.hashCode();
 //        }
+
 
         @Override
         public Optional<String> parse(String key) {
@@ -297,6 +214,7 @@ public class ModBlock extends ModBlockStateRecord {
             int v = this.values.indexOf(val);
             return Math.max(v, 0);
         }
+
     }
 
     public StateProperty buildStateProperty() {
@@ -346,9 +264,6 @@ public class ModBlock extends ModBlockStateRecord {
             txtrot = txt_rot;
         }
 
-        public int getRotY() {
-            return yrot;
-        }
     }
 
     public static class Cuboid extends BoundingBox {
@@ -356,6 +271,7 @@ public class ModBlock extends ModBlockStateRecord {
         public int[] sideRotations = {0, 0, 0, 0, 0, 0};
         public String shape = SHAPE_BOX; // "box" = normal cuboid, "crossed" = plant-style crossed (texture 0)
         public boolean[] noTint;
+
 
         public Cuboid rotateCuboid(CuboidRotation rot) {
             Cuboid c = new Cuboid();
@@ -417,6 +333,7 @@ public class ModBlock extends ModBlockStateRecord {
             this.sideTextures = sidetextures;
             this.noTint = noTint;
         }
+
     }
 
     public Map<String, String> getMappedType() {
@@ -442,10 +359,6 @@ public class ModBlock extends ModBlockStateRecord {
     public String getTypeValue(String key) {
         return getTypeValue(key, "");
     }
-
-    private static final Map<String, BlockSoundGroup> stepSoundTable = new HashMap<>();
-    //    private static final Map<String, CreativeModeTab> tabTable = new HashMap<>();
-    private static final Map<String, ModBlockFactory> typeTable = new HashMap<String, ModBlockFactory>();
 
     private transient boolean didInit = false;
 
@@ -536,7 +449,7 @@ public class ModBlock extends ModBlockStateRecord {
                     String blockType = entry.getKey();
                     long count = entry.getValue()[0];
                     long totalMs = entry.getValue()[1];
-                    double avgMs = count > 0 ? (double)totalMs / count : 0;
+                    double avgMs = count > 0 ? (double) totalMs / count : 0;
 
                     WesterosBlocks.LOGGER.info(String.format("%-20s %-10d %-15d %-15.2f",
                             blockType, count, totalMs, avgMs));
@@ -608,26 +521,6 @@ public class ModBlock extends ModBlockStateRecord {
             String[] parts = token.split(":");
             if (parts.length == 2) {
                 params.put(parts[0].trim(), parts[1].trim());
-            }
-        }
-        return params;
-    }
-
-    /**
-     * Parses block type string into parameters and flags
-     */
-    public static Map<String, String> parseBlockParameters(String typeString) {
-        Map<String, String> params = new HashMap<>();
-        if (typeString != null) {
-            for (String token : typeString.split(",")) {
-                token = token.trim();
-                if (token.contains(":")) {
-                    String[] parts = token.split(":", 2);
-                    params.put(parts[0].trim(), parts[1].trim());
-                } else {
-                    // For flags without values, store them with an empty string value
-                    params.put(token, "");
-                }
             }
         }
         return params;

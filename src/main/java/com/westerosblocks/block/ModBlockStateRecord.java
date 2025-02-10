@@ -10,37 +10,21 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
 public class ModBlockStateRecord {
-    // If not defined, value is "stateN"
-    public String stateID = null;
-    // Bounding box
-    public BoundingBox boundingBox = null;
-    // List of cuboids composing block (for 'cuboid', and others)
-    public List<Cuboid> cuboids = null;
-    // For 'solid', used for raytrace (arrow shots)
-    public List<BoundingBox> collisionBoxes = null;
-    // For 'solid', used for support/connection (fences, walls, torches)
-    public List<BoundingBox> supportBoxes = null;
-    // If set and true, don't generate new custom model (hand crafted)
-    public Boolean isCustomModel = false;
-    // List of textures (for single texture set)
-    public List<String> textures = null;
-    // On supported blocks (solid, leaves, slabs, stairs), defines sets of textures used for additional random models
-    // If randomTextures is used, textures is ignored
-    public List<RandomTextureSet> randomTextures = null;
-    // List of overlay textures (for types supporting overlays)
-    public List<String> overlayTextures = null;
-    // Set random rotation for supporting blocks (solid, leaves)
-    public boolean rotateRandom = false;
-    // Emitted light level (0.0-1.0)
-    public float lightValue = 0.0F;
-    // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
-    public String colorMult = "#FFFFFF";
-    // Allows for custom color handlers with multiple colormaps (accessed via tintindex in models)
-    public List<String> colorMults = null;
-    // Additional rotation around Y axis (only for cuboid blocks with rotation) - done in blockstate 0, 90, 180, 270
-    public int rotYOffset = 0;
+    public String stateID = null; // If not defined, value is "stateN"
+    public BoundingBox boundingBox = null; // Bounding box
+    public List<Cuboid> cuboids = null; // List of cuboids composing block (for 'cuboid', and others)
+    public List<BoundingBox> collisionBoxes = null; // For 'solid', used for raytrace (arrow shots)
+    public List<BoundingBox> supportBoxes = null; // For 'solid', used for support/connection (fences, walls, torches)
+    public Boolean isCustomModel = false; // If set and true, don't generate new custom model (hand crafted)
+    public List<String> textures = null; // List of textures (for single texture set)
+    public List<RandomTextureSet> randomTextures = null; // On supported blocks (solid, leaves, slabs, stairs), defines sets of textures used for additional random models. // If randomTextures is used, textures is ignored
+    public List<String> overlayTextures = null; // List of overlay textures (for types supporting overlays)
+    public boolean rotateRandom = false; // Set random rotation for supporting blocks (solid, leaves)
+    public float lightValue = 0.0F; // Emitted light level (0.0-1.0)
+    public String colorMult = "#FFFFFF"; // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
+    public List<String> colorMults = null; // Allows for custom color handlers with multiple colormaps (accessed via tintindex in models)
+    public int rotYOffset = 0; // Additional rotation around Y axis (only for cuboid blocks with rotation) - done in blockstate 0, 90, 180, 270
 
     public void doStateRecordInit() {
         // If just base textures, generate equivalent random textures (simpler logic for blocks that support them
@@ -85,19 +69,19 @@ public class ModBlockStateRecord {
     }
 
     public String getTextureByIndex(int idx) {
-		RandomTextureSet set = getRandomTextureSet(0);
-		if (set != null) {
-			return set.getTextureByIndex(idx);
-		}
-		return null;
-	}
+        RandomTextureSet set = getRandomTextureSet(0);
+        if (set != null) {
+            return set.getTextureByIndex(idx);
+        }
+        return null;
+    }
 
-	public String getOverlayTextureByIndex(int idx) {
-		if (this.overlayTextures != null) {
-			return this.overlayTextures.get(Math.min(idx,this.overlayTextures.size()-1));
-		}
-		return null;
-	}
+    public String getOverlayTextureByIndex(int idx) {
+        if (this.overlayTextures != null) {
+            return this.overlayTextures.get(Math.min(idx, this.overlayTextures.size() - 1));
+        }
+        return null;
+    }
 
     // Get number of random texture sets
     public int getRandomTextureSetCount() {

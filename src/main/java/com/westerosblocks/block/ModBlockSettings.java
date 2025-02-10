@@ -8,6 +8,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import java.util.HashMap;
 import java.util.Map;
 
+// replaces old material system from 1.18
 public class ModBlockSettings {
     private static final Map<String, AbstractBlock.Settings> BASE_SETTINGS = new HashMap<>();
 

@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class ModSounds {
-    private static HashMap<String, SoundEvent> REGISTERED_SOUNDS = new HashMap<>();
+    private static final HashMap<String, SoundEvent> REGISTERED_SOUNDS = new HashMap<>();
     public static ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
 
     public static void registerSoundEvent(String name) {

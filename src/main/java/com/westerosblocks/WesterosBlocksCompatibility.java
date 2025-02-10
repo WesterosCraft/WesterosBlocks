@@ -11,7 +11,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.ModBlockLifecycle;
-import com.westerosblocks.block.ModBlockSetDef;
+import com.westerosblocks.block.ModBlockSet;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -51,22 +51,22 @@ public class WesterosBlocksCompatibility {
     /*
      * Dump information about block sets for external tools
      */
-    public static void dumpBlockSets(ModBlockSetDef[] blockSets) {
+    public static void dumpBlockSets(ModBlockSet[] blockSets) {
         FileWriter fos = null;
         try {
             // Create output file format
             BlockSetFile bsf = new BlockSetFile();
-            for (ModBlockSetDef blockSet : blockSets) {
+            for (ModBlockSet blockSet : blockSets) {
                 BlockSetFileSetDef bsf_set = new BlockSetFileSetDef();
                 bsf_set.id = WesterosBlocks.MOD_ID + ":" + blockSet.baseBlockName;
                 if (blockSet.baseLabel != null) {
                     bsf_set.altname = blockSet.baseLabel.replaceAll(" ", "_").toLowerCase();
                 }
                 // The following is duplicated from generateBlockDefs and can perhaps be refactored
-                for (String variant : ModBlockSetDef.SUPPORTED_VARIANTS) {
+                for (String variant : ModBlockSet.SUPPORTED_VARIANTS) {
                     if (blockSet.variants != null && !blockSet.variants.contains(variant))
                         continue;
-                    else if (blockSet.variants == null && !ModBlockSetDef.DEFAULT_VARIANTS.contains(variant))
+                    else if (blockSet.variants == null && !ModBlockSet.DEFAULT_VARIANTS.contains(variant))
                         continue;
                     BlockSetFileDef bsf_def = new BlockSetFileDef();
                     String suffix = (variant.equals("solid")) ? "" : variant;
