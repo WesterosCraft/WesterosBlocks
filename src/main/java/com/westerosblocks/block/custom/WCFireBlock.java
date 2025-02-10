@@ -35,7 +35,7 @@ public class WCFireBlock extends FireBlock implements ModBlockLifecycle {
     public static class Factory extends ModBlockFactory {
         @Override
         public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings settings = def.makeBlockSettings().noCollision().breakInstantly(); //.randomTicks();
+            AbstractBlock.Settings settings = def.makeBlockSettings().noCollision().breakInstantly();
             Block blk = new WCFireBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }

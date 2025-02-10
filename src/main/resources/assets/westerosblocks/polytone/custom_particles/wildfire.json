@@ -2,7 +2,15 @@
   "initializer": {
     "lifetime": "10",
     "alpha": "0.8",
-    "size": "0.5"
+    "size": "0.1",
+    "dx": "0",
+    "dy": "0.05",
+    "dz": "0"
+  },
+  "ticker": {
+    "dx": "DX",
+    "dy": "DY",
+    "dz": "DZ"
   },
   "render_type": "translucent",
   "liquid_affinity": "non_liquids",
