@@ -79,23 +79,19 @@ public class WCFireBlock extends FireBlock implements ModBlockLifecycle {
             );
         }
 
-        // Handle custom particles
-        if (def.particles != null && def.particles.length > 0) {
-            for (String particleType : def.particles) {
-                ParticleEffect particle = ModParticles.get(particleType);
-                if (particle != null && random.nextFloat() < 0.7f) {  // Add randomness to spawn rate
-                    // Calculate random position within block space
-                    double x = pos.getX() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
-                    double y = pos.getY() + 0.2 + random.nextFloat() * 0.6;
-                    double z = pos.getZ() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
+        if (def.particle != null) {
+            ParticleEffect particle = ModParticles.get(def.particle);
+            // TODO msot particle behavior controlled by Polytone, need to see if we need this section of code too
+            if (particle != null && random.nextFloat() < 0.7f) {  // Add randomness to spawn rate
+                double x = pos.getX() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
+                double y = pos.getY() + 0.2 + random.nextFloat() * 0.6;
+                double z = pos.getZ() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
 
-                    // Add some vertical velocity and slight random horizontal movement
-                    double velocityX = (random.nextFloat() - 0.5) * 0.02;
-                    double velocityY = 0.05 + random.nextFloat() * 0.02;
-                    double velocityZ = (random.nextFloat() - 0.5) * 0.02;
+                double velocityX = (random.nextFloat() - 0.5) * 0.02;
+                double velocityY = 0.05 + random.nextFloat() * 0.02;
+                double velocityZ = (random.nextFloat() - 0.5) * 0.02;
 
-                    world.addParticle(particle, x, y, z, velocityX, velocityY, velocityZ);
-                }
+                world.addParticle(particle, x, y, z, velocityX, velocityY, velocityZ);
             }
         }
     }

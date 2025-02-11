@@ -8,6 +8,7 @@ import com.westerosblocks.block.custom.*;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.sound.BlockSoundGroup;
@@ -52,7 +53,7 @@ public class ModBlock extends ModBlockStateRecord {
     public static final String SHAPE_BOX = "box"; // Shape for normal cuboid (box)
     public static final String SHAPE_CROSSED = "crossed"; // TODO Shape for crossed squares (plant-style) (texture is index 0 in list)
     public String woodType = null; // TODO wood type for wood blocks like fencegate. see WoodTypeUtil class
-    public String[] particles;
+    public String particle;
 
     private static final Map<String, BlockSoundGroup> stepSoundTable = new HashMap<>();
     private static final Map<String, ModBlockFactory> typeTable = new HashMap<>();

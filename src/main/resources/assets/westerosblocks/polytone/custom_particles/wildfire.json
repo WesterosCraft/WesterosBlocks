@@ -2,16 +2,21 @@
   "initializer": {
     "lifetime": "10",
     "alpha": "0.8",
-    "size": "0.1",
+    "size": "0.2",
     "dx": "0",
     "dy": "0.05",
     "dz": "0"
   },
-  "ticker": {
-    "dx": "DX",
-    "dy": "DY",
-    "dz": "DZ"
-  },
+  "particle_emitters": [
+    {
+      "particle": "minecraft:large_smoke",
+      "chance": "0.2",
+      "x": "cos(AGE)+0.5",
+      "z": "cos(AGE)+0.5",
+      "y": "1",
+      "dy": "DX"
+    }
+  ],
   "render_type": "translucent",
   "liquid_affinity": "non_liquids",
   "has_physics": false
