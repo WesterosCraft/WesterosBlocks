@@ -492,7 +492,7 @@ public class ModBlock extends ModBlockStateRecord {
             settings = settings.sounds(getSoundType());
         }
 
-        // Handle light levels - state-dependent
+        // state-dependent light levels
         if (this.stateProp != null) {
             Map<String, Integer> lightLevels = new HashMap<>();
             for (ModBlockStateRecord sr : this.states) {
@@ -500,15 +500,27 @@ public class ModBlock extends ModBlockStateRecord {
                     lightLevels.put(sr.stateID, (int) (16.0 * sr.lightValue));
                 }
             }
-            // TODO: Handle state-dependent light levels
+            if (!lightLevels.isEmpty()) {
+                settings = settings.luminance((state) -> {
+                    if (state.contains(this.stateProp)) {
+                        String currentState = state.get(this.stateProp);
+                        return lightLevels.getOrDefault(currentState, 0);
+                    }
+                    return 0;
+                });
+            }
+            // handle simple light level
+        } else if (lightValue > 0.0F || !states.isEmpty() && states.getFirst().lightValue > 0.0F) {
+            float lightLevel = Math.max(lightValue, states.isEmpty() ? 0 : states.getFirst().lightValue);
+            settings = settings.luminance((state) -> (int) (16.0 * lightLevel));
         }
-        // Handle simple light level
+        // simple light level
         else if (lightValue > 0.0F || !states.isEmpty() && states.getFirst().lightValue > 0.0F) {
             float lightLevel = Math.max(lightValue, states.isEmpty() ? 0 : states.getFirst().lightValue);
             settings = settings.luminance((state) -> (int) (16.0 * lightLevel));
         }
 
-        // Handle transparency/occlusion
+        // transparency/occlusion
         if ((!ambientOcclusion) || (nonOpaque)) {
             settings = settings.nonOpaque().blockVision(ModBlock::never);
         }

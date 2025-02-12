@@ -33,7 +33,7 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.List;
 
-public class WCPlantBlock extends PlantBlock implements ModBlockLifecycle {
+public class WCPlantBlock extends Block implements ModBlockLifecycle {
 
     public static class Factory extends ModBlockFactory {
         @Override
