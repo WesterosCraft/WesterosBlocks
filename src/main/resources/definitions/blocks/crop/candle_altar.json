@@ -1,61 +1,61 @@
 {
-    "blockName": "candle_altar",
-    "blockType": "crop",
-    "stepSound": "powder",
-    "material": "wood",
-    "creativeTab": "westeros_lighting_tab",
-    "label": "Candle Altar",
-    "type": "toggleOnUse",
-    "boundingBox": {
-        "xMin": 0.125,
-        "xMax": 0.875,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.125,
-        "zMax": 0.875
-    },
-    "states": [
+  "blockName": "candle_altar",
+  "blockType": "crop",
+  "stepSound": "powder",
+  "material": "wood",
+  "creativeTab": "westeros_lighting_tab",
+  "label": "Candle Altar",
+  "type": "toggleOnUse",
+  "boundingBox": {
+    "xMin": 0.125,
+    "xMax": 0.875,
+    "yMin": 0,
+    "yMax": 1,
+    "zMin": 0.125,
+    "zMax": 0.875
+  },
+  "states": [
+    {
+      "stateID": "lit",
+      "lightValue": 0.625,
+      "randomTextures": [
         {
-            "stateID": "lit",
-            "lightValue": 0.625,
-            "randomTextures": [
-                {
-                    "textures": [
-                        "lighting/candle_altar/lit1"
-                    ]
-                },
-                {
-                    "textures": [
-                        "lighting/candle_altar/lit2"
-                    ]
-                },
-                {
-                    "textures": [
-                        "lighting/candle_altar/lit3"
-                    ]
-                }
-            ]
+          "textures": [
+            "lighting/candle_altar/lit1"
+          ]
         },
         {
-            "stateID": "unlit",
-            "lightValue": 0.0,
-            "randomTextures": [
-                {
-                    "textures": [
-                        "lighting/candle_altar/unlit1"
-                    ]
-                },
-                {
-                    "textures": [
-                        "lighting/candle_altar/unlit2"
-                    ]
-                },
-                {
-                    "textures": [
-                        "lighting/candle_altar/unlit3"
-                    ]
-                }
-            ]
+          "textures": [
+            "lighting/candle_altar/lit2"
+          ]
+        },
+        {
+          "textures": [
+            "lighting/candle_altar/lit3"
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "stateID": "unlit",
+      "lightValue": 0.0,
+      "randomTextures": [
+        {
+          "textures": [
+            "lighting/candle_altar/unlit1"
+          ]
+        },
+        {
+          "textures": [
+            "lighting/candle_altar/unlit2"
+          ]
+        },
+        {
+          "textures": [
+            "lighting/candle_altar/unlit3"
+          ]
+        }
+      ]
+    }
+  ]
 }
