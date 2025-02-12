@@ -5,13 +5,8 @@ import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.ModBlockSet;
 import com.westerosblocks.block.ModBlockTags;
 import com.westerosblocks.item.WesterosItemMenuOverrides;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
-import net.minecraft.resource.Resource;
-import net.minecraft.resource.ResourceManager;
-import net.minecraft.resource.ResourceType;
-import net.minecraft.util.Identifier;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -77,7 +72,6 @@ public class WesterosBlocksDefLoader {
             throws BlockConfigNotFoundException, JsonParseException {
         JsonObject mergedConfig = new JsonObject();
 
-        // Load standard config files
         for (String filename : filenames) {
             try (InputStream in = WesterosBlocks.class.getResourceAsStream(filename);
                  BufferedReader reader = new BufferedReader(new InputStreamReader(in))) {
@@ -92,20 +86,18 @@ public class WesterosBlocksDefLoader {
             }
         }
 
-        // Load blocks from directories
         try {
-            // Load block definitions
+            // block defs
             JsonArray blocksArray = loadBlocksFromDirectory(BLOCKS_DIRECTORY);
             mergedConfig.add("blocks", blocksArray);
 
-            // Load block sets
+            // block set defs
             JsonArray blockSetsArray = loadBlocksFromDirectory(BLOCK_SETS_DIRECTORY);
             mergedConfig.add("blockSets", blockSetsArray);
         } catch (Exception e) {
             WesterosBlocks.LOGGER.error("Error loading block definitions", e);
         }
 
-        // Use type adapters for proper deserialization
         return GSON.fromJson(mergedConfig, WesterosBlocksConfig.class);
     }
 
@@ -126,12 +118,10 @@ public class WesterosBlocksDefLoader {
 
         // For each root path in the mod jar
         for (Path rootPath : container.getRootPaths()) {
-            Path dirPath = rootPath.resolve(directory.substring(1)); // Remove leading slash
+            Path dirPath = rootPath.resolve(directory.substring(1)); // removes leading slash
 
-            // Check if directory exists
             if (Files.exists(dirPath) && Files.isDirectory(dirPath)) {
                 try {
-                    // Walk through all files in the directory
                     Files.walk(dirPath)
                             .filter(path -> path.toString().endsWith(".json"))
                             .forEach(path -> {
@@ -151,11 +141,11 @@ public class WesterosBlocksDefLoader {
                                         }
                                     }
                                 } catch (Exception e) {
-                                    WesterosBlocks.LOGGER.error("Error reading file: " + path, e);
+                                    WesterosBlocks.LOGGER.error("Error reading file: {}", path, e);
                                 }
                             });
                 } catch (IOException e) {
-                    WesterosBlocks.LOGGER.error("Error walking directory: " + dirPath, e);
+                    WesterosBlocks.LOGGER.error("Error walking directory: {}", dirPath, e);
                 }
             }
         }
@@ -189,7 +179,6 @@ public class WesterosBlocksDefLoader {
         }
     }
 
-
     /**
      * Returns the block config defined in definitions/blocks and definitions/block_sets etc
      */
@@ -222,7 +211,7 @@ public class WesterosBlocksDefLoader {
                 return false;
             }
             if (!names.add(def.blockName)) { // If already defined
-                WesterosBlocks.LOGGER.error(String.format("Block '%s' - blockName duplicated", def.blockName));
+                WesterosBlocks.LOGGER.error("Block '{}' - blockName duplicated", def.blockName);
                 return false;
             }
         }

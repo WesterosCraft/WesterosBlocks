@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/thatch/snowy_dark/top",
-    "side": "westerosblocks:block/thatch/snowy_dark/top",
-    "top": "westerosblocks:block/thatch/snowy_dark/top"
-  }
-}

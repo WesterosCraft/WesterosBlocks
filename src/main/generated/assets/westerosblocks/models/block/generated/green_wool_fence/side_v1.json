@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_side",
-  "textures": {
-    "bottom": "westerosblocks:block/wool/green/all",
-    "particle": "westerosblocks:block/wool/green/all",
-    "side": "westerosblocks:block/wool/green/all",
-    "top": "westerosblocks:block/wool/green/all"
-  }
-}

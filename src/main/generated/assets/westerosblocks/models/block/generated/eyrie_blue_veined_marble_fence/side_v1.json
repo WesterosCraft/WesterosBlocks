@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_side",
-  "textures": {
-    "bottom": "westerosblocks:block/marble/eyrie_blue_veined/all",
-    "particle": "westerosblocks:block/marble/eyrie_blue_veined/all",
-    "side": "westerosblocks:block/marble/eyrie_blue_veined/all",
-    "top": "westerosblocks:block/marble/eyrie_blue_veined/all"
-  }
-}

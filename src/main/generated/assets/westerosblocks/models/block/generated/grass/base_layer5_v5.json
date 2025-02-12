@@ -1,6 +1,0 @@
-{
-  "parent": "westerosblocks:block/tinted/cross_layer5",
-  "textures": {
-    "cross": "minecraft:block/fern/fern5"
-  }
-}

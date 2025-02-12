@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side",
-  "textures": {
-    "bottom": "westerosblocks:block/plaster/rough/casterly_crimson/all1",
-    "particle": "westerosblocks:block/plaster/rough/casterly_crimson/all1",
-    "side": "westerosblocks:block/plaster/rough/casterly_crimson/all1",
-    "top": "westerosblocks:block/plaster/rough/casterly_crimson/all1"
-  }
-}

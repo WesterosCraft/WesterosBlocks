@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_post",
-  "textures": {
-    "bottom": "westerosblocks:block/ashlar_half/reach/all",
-    "particle": "westerosblocks:block/ashlar_half/reach/all",
-    "side": "westerosblocks:block/ashlar_half/reach/all",
-    "top": "westerosblocks:block/ashlar_half/reach/all"
-  }
-}

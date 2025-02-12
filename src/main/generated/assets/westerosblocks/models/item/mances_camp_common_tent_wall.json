@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/wall_inventory",
-  "textures": {
-    "wall": "westerosblocks:block/mances_camp_common_tent/outside2"
-  }
-}

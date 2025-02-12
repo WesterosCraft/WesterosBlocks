@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/wall_inventory",
-  "textures": {
-    "wall": "westerosblocks:block/stacked_bones/bone_stacked_side"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/inner_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/ore/coal/all1",
-    "side": "westerosblocks:block/ore/coal/all1",
-    "top": "westerosblocks:block/ore/coal/all1"
-  }
-}

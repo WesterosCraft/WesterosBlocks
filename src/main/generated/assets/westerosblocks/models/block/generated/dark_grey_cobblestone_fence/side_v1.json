@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_side",
-  "textures": {
-    "bottom": "westerosblocks:block/cobblestone/dark_grey/all1",
-    "particle": "westerosblocks:block/cobblestone/dark_grey/all1",
-    "side": "westerosblocks:block/cobblestone/dark_grey/all1",
-    "top": "westerosblocks:block/cobblestone/dark_grey/all1"
-  }
-}

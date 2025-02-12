@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/inner_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/terrainset/vale/random_6x6",
-    "side": "westerosblocks:block/terrainset/vale/random_6x6",
-    "top": "westerosblocks:block/terrainset/vale/random_6x6"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/outer_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/cobblestone/westerlands/all3",
-    "side": "westerosblocks:block/cobblestone/westerlands/all3",
-    "top": "westerosblocks:block/cobblestone/westerlands/all3"
-  }
-}

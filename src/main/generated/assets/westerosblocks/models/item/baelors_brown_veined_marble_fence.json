@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/marble/baelors_brown_veined/all",
-    "side": "westerosblocks:block/marble/baelors_brown_veined/all",
-    "top": "westerosblocks:block/marble/baelors_brown_veined/all"
-  }
-}

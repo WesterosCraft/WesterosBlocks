@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/tinted/outer_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/rubble/icy_northern/all1",
-    "side": "westerosblocks:block/rubble/icy_northern/all1",
-    "top": "westerosblocks:block/rubble/icy_northern/all1"
-  }
-}

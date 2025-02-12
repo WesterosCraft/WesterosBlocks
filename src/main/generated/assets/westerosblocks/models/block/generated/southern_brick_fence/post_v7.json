@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_post",
-  "textures": {
-    "bottom": "westerosblocks:block/brick/southern/all7",
-    "particle": "westerosblocks:block/brick/southern/all7",
-    "side": "westerosblocks:block/brick/southern/all7",
-    "top": "westerosblocks:block/brick/southern/all7"
-  }
-}

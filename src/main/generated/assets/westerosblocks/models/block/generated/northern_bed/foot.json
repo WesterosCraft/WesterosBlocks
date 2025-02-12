@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/bed_foot",
-  "textures": {
-    "bedend": "westerosblocks:block/bed_block/bed_north_5",
-    "bedside": "westerosblocks:block/bed_block/bed_north_3",
-    "bedtop": "westerosblocks:block/bed_block/bed_north_1",
-    "particle": "westerosblocks:block/bed_block/bed_north_0"
-  }
-}
