@@ -21,7 +21,7 @@ public class ModBlockStateRecord {
     public List<RandomTextureSet> randomTextures = null; // On supported blocks (solid, leaves, slabs, stairs), defines sets of textures used for additional random models. // If randomTextures is used, textures is ignored
     public List<String> overlayTextures = null; // List of overlay textures (for types supporting overlays)
     public boolean rotateRandom = false; // Set random rotation for supporting blocks (solid, leaves)
-    public float lightValue = 0.0F; // Emitted light level (0.0-1.0)
+    public float lightValue = 0; // Emitted light level (0 - 15)
     public String colorMult = "#FFFFFF"; // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
     public List<String> colorMults = null; // Allows for custom color handlers with multiple colormaps (accessed via tintindex in models)
     public int rotYOffset = 0; // Additional rotation around Y axis (only for cuboid blocks with rotation) - done in blockstate 0, 90, 180, 270

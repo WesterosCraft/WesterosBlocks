@@ -4,7 +4,7 @@
     "stepSound": "powder",
     "material": "wood",
     "creativeTab": "westeros_lighting_tab",
-    "lightValue": 0.625,
+    "lightValue": 10,
     "label": "Candle",
     "type": "allow-unsupported",
     "textures": [

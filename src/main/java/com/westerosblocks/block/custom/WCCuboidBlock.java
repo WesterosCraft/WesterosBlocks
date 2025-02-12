@@ -193,14 +193,17 @@ public class WCCuboidBlock extends Block implements ModBlockLifecycle {
 
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        Hand hand = player.getActiveHand();
-        if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
-            state = state.cycle(this.STATE);
-            world.setBlockState(pos, state, Block.NOTIFY_ALL);
-            world.syncWorldEvent(player, 1006, pos, 0);
-            return ActionResult.success(world.isClient);
+        if (this.toggleOnUse) {
+            Hand hand = player.getActiveHand();
+            if ((this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
+                state = state.cycle(this.STATE);
+                world.setBlockState(pos, state, Block.NOTIFY_ALL);
+                world.syncWorldEvent(player, 1006, pos, 0);
+                return ActionResult.success(world.isClient);
+            }
         }
-        return ActionResult.PASS;
+
+        return super.onUse(state, world, pos, player, hit);
     }
 
     protected VoxelShape getBoundingBoxFromCuboidList(List<ModBlock.Cuboid> cl) {

@@ -182,7 +182,7 @@
     "states": [
         {
             "stateID": "lit",
-            "lightValue": 0.7,
+            "lightValue": 7,
             "textures": [
                 "metal/iron/all1",
                 "lighting/lantern_handheld_center",

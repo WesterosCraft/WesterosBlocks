@@ -6,7 +6,7 @@
     "stepSound": "stone",
     "material": "rock",
     "resistance": 10,
-    "lightValue": 0.875,
+    "lightValue": 10,
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Dornish Mud Furnace",
     "type": "always-on:true",

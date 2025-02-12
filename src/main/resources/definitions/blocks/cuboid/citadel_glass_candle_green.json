@@ -7,7 +7,7 @@
     "stepSound": "metal",
     "material": "iron",
     "resistance": 2,
-    "lightValue": 0.2,
+    "lightValue": 2,
     "harvestLevel": [
         {
             "tool": "axe",

@@ -6,7 +6,7 @@
     "stepSound": "metal",
     "material": "iron",
     "resistance": 10,
-    "lightValue": 0.875,
+    "lightValue": 10,
     "creativeTab": "westeros_furniture_tab",
     "label": "Ashlar Furnace Reach",
     "type": "always-on:false",

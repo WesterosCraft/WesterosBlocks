@@ -49,6 +49,7 @@ public class WCSolidBlock extends Block implements ModBlockLifecycle {
         public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.makeBlockSettings();
             ModBlock.StateProperty state = def.buildStateProperty();
+
             if (state != null) {
                 tempSTATE = state;
             }
@@ -128,6 +129,10 @@ public class WCSolidBlock extends Block implements ModBlockLifecycle {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        if (tempSTATE != null) {
+            STATE = tempSTATE;
+            tempSTATE = null;
+        }
         if (tempCONNECTSTATE != null) {
             builder.add(tempCONNECTSTATE);
             tempCONNECTSTATE = null;
@@ -135,10 +140,6 @@ public class WCSolidBlock extends Block implements ModBlockLifecycle {
         if (tempSYMMETRICAL != null) {
             builder.add(tempSYMMETRICAL);
             tempSYMMETRICAL = null;
-        }
-        if (tempSTATE != null) {
-            STATE = tempSTATE;
-            tempSTATE = null;
         }
         if (STATE != null) {
             builder.add(STATE);

@@ -5,7 +5,7 @@
     "stepSound": "metal",
     "material": "iron",
     "resistance": 10,
-    "lightValue": 0.875,
+    "lightValue": 10,
     "creativeTab": "westeros_lighting_tab",
     "label": "Lit Brazier",
     "textures": [

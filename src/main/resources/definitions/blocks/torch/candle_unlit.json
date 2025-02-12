@@ -4,7 +4,7 @@
     "stepSound": "powder",
     "material": "wood",
     "creativeTab": "westeros_lighting_tab",
-    "lightValue": 0.0,
+    "lightValue": 0,
     "label": "Unlit Candle",
     "type": "allow-unsupported,no-particle",
     "textures": [

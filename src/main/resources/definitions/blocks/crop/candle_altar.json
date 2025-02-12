@@ -17,7 +17,7 @@
   "states": [
     {
       "stateID": "lit",
-      "lightValue": 0.625,
+      "lightValue": 10,
       "randomTextures": [
         {
           "textures": [
@@ -38,7 +38,7 @@
     },
     {
       "stateID": "unlit",
-      "lightValue": 0.0,
+      "lightValue": 0,
       "randomTextures": [
         {
           "textures": [

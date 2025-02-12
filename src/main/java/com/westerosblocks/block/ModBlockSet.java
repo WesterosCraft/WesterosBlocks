@@ -44,7 +44,7 @@ public class ModBlockSet {
     // for each variant (if supported)
     public Map<String, String> overlayTextures = null; // Map of overlay textures (for types supporting overlays)
 
-    public float lightValue = 0.0F; // Emitted light level (0.0-1.0)
+    public float lightValue = 0; // Emitted light level (0 - 15)
     public String colorMult = "#FFFFFF"; // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
 
     public List<StateRecord> states = null;
@@ -113,7 +113,7 @@ public class ModBlockSet {
     public static class StateRecord {
         public String stateID = null;
         public String excludeVariants = null;
-        public float lightValue = 0.0F;
+        public float lightValue = 0;
         public String colorMult = "#FFFFFF";
 
         public Map<String, List<String>> altTextures = null;

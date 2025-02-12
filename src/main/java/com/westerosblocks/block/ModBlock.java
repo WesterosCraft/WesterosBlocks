@@ -198,24 +198,16 @@ public class ModBlock extends ModBlockStateRecord {
                 return false;
             }
         }
-        // TODO this method is now final, not sure if still needed
-//        @Override
-//        public int hashCode() {
-//            return 31 * super.hashCode() + this.values.hashCode();
-//        }
-
 
         @Override
-        public Optional<String> parse(String key) {
-            String val = this.valMap.get(key);
-            return (val != null) ? Optional.of(val) : Optional.empty();
+        public Optional<String> parse(String value) {
+            return Optional.ofNullable(this.valMap.get(value));
         }
 
         public int getIndex(String val) {
             int v = this.values.indexOf(val);
             return Math.max(v, 0);
         }
-
     }
 
     public StateProperty buildStateProperty() {
@@ -401,11 +393,14 @@ public class ModBlock extends ModBlockStateRecord {
                 se.doStateRecordInit();
             }
         }
+
         if (this.states.size() > 1) {
-            ArrayList<String> ids = new ArrayList<String>();
+            ArrayList<String> ids = new ArrayList<>();
             for (int i = 0; i < states.size(); i++) {
                 ModBlockStateRecord rec = states.get(i);
-                if (rec.stateID == null) rec.stateID = String.format("state%d", i);
+                if (rec.stateID == null) {
+                    rec.stateID = String.format("state%d", i);
+                }
                 ids.add(rec.stateID);
             }
             stateProp = new StateProperty(ids);
@@ -496,8 +491,8 @@ public class ModBlock extends ModBlockStateRecord {
         if (this.stateProp != null) {
             Map<String, Integer> lightLevels = new HashMap<>();
             for (ModBlockStateRecord sr : this.states) {
-                if (sr.lightValue > 0.0F) {
-                    lightLevels.put(sr.stateID, (int) (16.0 * sr.lightValue));
+                if (sr.lightValue > 0) {
+                    lightLevels.put(sr.stateID, (int) (sr.lightValue));
                 }
             }
             if (!lightLevels.isEmpty()) {
@@ -510,14 +505,14 @@ public class ModBlock extends ModBlockStateRecord {
                 });
             }
             // handle simple light level
-        } else if (lightValue > 0.0F || !states.isEmpty() && states.getFirst().lightValue > 0.0F) {
+        } else if (lightValue > 0 || !states.isEmpty() && states.getFirst().lightValue > 0.0F) {
             float lightLevel = Math.max(lightValue, states.isEmpty() ? 0 : states.getFirst().lightValue);
-            settings = settings.luminance((state) -> (int) (16.0 * lightLevel));
+            settings = settings.luminance((state) -> (int) (lightLevel));
         }
         // simple light level
-        else if (lightValue > 0.0F || !states.isEmpty() && states.getFirst().lightValue > 0.0F) {
+        else if (lightValue > 0 || !states.isEmpty() && states.getFirst().lightValue > 0.0F) {
             float lightLevel = Math.max(lightValue, states.isEmpty() ? 0 : states.getFirst().lightValue);
-            settings = settings.luminance((state) -> (int) (16.0 * lightLevel));
+            settings = settings.luminance((state) -> (int) (lightLevel));
         }
 
         // transparency/occlusion

@@ -35,7 +35,7 @@ public class WCFurnaceBlock extends AbstractFurnaceBlock implements ModBlockLife
             boolean alwaysOn = def.getTypeValue("always-on").equals("true");
             AbstractBlock.Settings settings = def.makeBlockSettings()
                     .luminance(state -> (alwaysOn || state.get(Properties.LIT)) ?
-                            (int)(16 * def.lightValue) : 0);
+                            (int)(def.lightValue) : 0);
 
             Block block = new WCFurnaceBlock(settings, def);
 

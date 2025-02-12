@@ -140,7 +140,7 @@ public class WesterosBlocksCompatibility {
             row.put("opacity", def.lightOpacity);
             row.put("receivesLight", !def.nonOpaque);
             row.put("insubstantial", def.nonOpaque);
-            row.put("blockLight", def.lightValue > 0 ? Math.round(15 * def.lightValue) : 0);
+            row.put("blockLight", def.lightValue > 0 ? def.lightValue : 0);
 
             // Default values for other fields
             row.put("discriminator", null);

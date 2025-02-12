@@ -182,7 +182,7 @@
     "states": [
         {
             "stateID": "lit",
-            "lightValue": 0.55,
+            "lightValue": 7,
             "textures": [
                 "wood/jungle/all",
                 "lighting/lantern_handheld_red_center",

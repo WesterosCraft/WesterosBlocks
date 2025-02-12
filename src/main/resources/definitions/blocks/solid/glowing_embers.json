@@ -7,7 +7,7 @@
     "resistance": 5,
     "creativeTab": "westeros_lighting_tab",
     "label": "Glowing Embers",
-    "lightValue": 0.5,
+    "lightValue": 2,
     "textures": [
         "lighting/coals_glowing"
     ]

@@ -117,7 +117,7 @@ public class WCWallBlock extends WallBlock implements ModBlockLifecycle {
     }
 
     protected WCWallBlock(AbstractBlock.Settings settings, ModBlock def, boolean doUnconnect, boolean doConnectstate) {
-        super(settings); // Call parent WallBlock constructor
+        super(settings);
         this.def = def;
 
         String t = def.getType();
@@ -180,14 +180,6 @@ public class WCWallBlock extends WallBlock implements ModBlockLifecycle {
             }
             this.ourShapeByIndex = ourShapeByIndexSharedNormal;
         }
-    }
-
-    protected WCWallBlock(AbstractBlock.Settings settings, ModBlock def, boolean doUnconnect) {
-        this(settings, def, doUnconnect, false);
-    }
-
-    protected WCWallBlock(AbstractBlock.Settings settings, ModBlock def) {
-        this(settings, def, false, false);
     }
 
     @Override
@@ -475,15 +467,17 @@ public class WCWallBlock extends WallBlock implements ModBlockLifecycle {
 
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        Hand hand = player.getActiveHand();
-        if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
-            state = state.cycle(this.STATE);
-            world.setBlockState(pos, state, 10);
-            world.syncWorldEvent(player, 1006, pos, 0);
-            return ActionResult.success(world.isClient);
-        } else {
-            return ActionResult.PASS;
+        if (this.toggleOnUse) {
+            Hand hand = player.getActiveHand();
+            if ((this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
+                state = state.cycle(this.STATE);
+                world.setBlockState(pos, state, 10);
+                world.syncWorldEvent(player, 1006, pos, 0);
+                return ActionResult.success(world.isClient);
+            }
         }
+
+        return super.onUse(state, world, pos, player, hit);
     }
 
     private static final String[] TAGS = {"walls"};

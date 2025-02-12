@@ -7,7 +7,7 @@
     "resistance": 5,
     "creativeTab": "westeros_lighting_tab",
     "label": "Large Red Lantern",
-    "lightValue": 0.55,
+    "lightValue": 7,
     "textures": [
         "lighting/lantern_red_bottom",
         "lighting/lantern_red_top",

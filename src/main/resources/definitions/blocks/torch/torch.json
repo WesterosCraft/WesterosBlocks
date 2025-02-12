@@ -4,7 +4,7 @@
     "stepSound": "metal",
     "material": "iron",
     "creativeTab": "westeros_lighting_tab",
-    "lightValue": 0.875,
+    "lightValue": 13,
     "label": "Torch",
     "type": "allow-unsupported",
     "textures": [
