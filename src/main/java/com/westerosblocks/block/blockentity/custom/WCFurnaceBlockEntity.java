@@ -1,7 +1,7 @@
-package com.westerosblocks.block.entity.custom;
+package com.westerosblocks.block.blockentity.custom;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.entity.ModBlockEntities;
+import com.westerosblocks.block.blockentity.ModBlockEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.entity.player.PlayerInventory;

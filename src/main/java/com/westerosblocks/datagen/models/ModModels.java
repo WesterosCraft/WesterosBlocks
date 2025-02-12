@@ -355,6 +355,28 @@ public class ModModels extends Models {
                 scale.add(0.5);
                 display.add("scale", scale);
 
+                // add gui object
+                JsonObject gui = new JsonObject();
+                JsonArray guirotation = new JsonArray();
+                guirotation.add(0);
+                guirotation.add(90);
+                guirotation.add(0);
+                gui.add("rotation", guirotation);
+
+                JsonArray guitranslation = new JsonArray();
+                guitranslation.add(0);
+                guitranslation.add(0);
+                guitranslation.add(0);
+                gui.add("translation", guitranslation);
+
+                JsonArray guiscale = new JsonArray();
+                guiscale.add(0.825);
+                guiscale.add(0.825);
+                guiscale.add(0.825);
+                gui.add("scale", guiscale);
+
+                display.add("gui", gui);
+
                 json.add("display", display);
 
                 // Add elements array

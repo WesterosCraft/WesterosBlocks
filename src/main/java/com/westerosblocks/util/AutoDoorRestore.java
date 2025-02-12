@@ -45,7 +45,7 @@ public class AutoDoorRestore {
     private static long secCount = 0;
 
     public static boolean isAutoRestoreHalfDoor(Block blk) {
-        if (ModConfig.INSTANCE.autoRestoreAllHalfDoors) return true;
+        if (ModConfig.get().autoRestoreAllHalfDoors) return true;
         return false;
     }
 
@@ -55,7 +55,7 @@ public class AutoDoorRestore {
         if ((ri == null) && (!isCreative)) {    // New one, and not creative mode, add record
             ri = new RestoreInfo();
             ri.open = isOpen;
-            ri.secCount = secCount + ModConfig.INSTANCE.autoRestoreTime;
+            ri.secCount = secCount + ModConfig.get().autoRestoreTime;
             pendingHalfDoorRestore.put(pdc, ri);
         }
         // Else, if restore record pending, but creative change, drop it
@@ -63,7 +63,7 @@ public class AutoDoorRestore {
             if (isCreative) {
                 pendingHalfDoorRestore.remove(pdc);
             } else {    // Else, reset restore time
-                ri.secCount = secCount + ModConfig.INSTANCE.autoRestoreTime;
+                ri.secCount = secCount + ModConfig.get().autoRestoreTime;
             }
         }
     }

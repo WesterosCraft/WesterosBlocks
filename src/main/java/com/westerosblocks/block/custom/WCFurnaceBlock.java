@@ -5,7 +5,7 @@ import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.ModBlockFactory;
 import com.westerosblocks.block.ModBlockLifecycle;
-import com.westerosblocks.block.entity.custom.WCFurnaceBlockEntity;
+import com.westerosblocks.block.blockentity.custom.WCFurnaceBlockEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.*;

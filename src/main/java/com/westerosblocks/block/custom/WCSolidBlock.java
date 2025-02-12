@@ -203,13 +203,14 @@ public class WCSolidBlock extends Block implements ModBlockLifecycle {
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         Hand hand = player.getActiveHand();
         if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
-            state = state.cycle(this.STATE);
-            world.setBlockState(pos, state, 10);
-            world.syncWorldEvent(player, 1006, pos, 0);
-            return ActionResult.success(world.isClient);
-        } else {
-            return ActionResult.PASS;
+            if (state.contains(this.STATE)) {
+                state = state.cycle(this.STATE);
+                world.setBlockState(pos, state, Block.NOTIFY_ALL);
+                world.syncWorldEvent(player, 1006, pos, 0);
+                return ActionResult.success(world.isClient);
+            }
         }
+        return ActionResult.PASS;
     }
 
     private static final String[] TAGS = {};

@@ -52,7 +52,7 @@ public class ModConfig implements ConfigData {
     @ConfigEntry.BoundedDiscrete(min = 5, max = 300)
     public int seaLevelOverride = 33;
 
-    public static ModConfig INSTANCE;
+    private static ModConfig INSTANCE;
 
     public static void register() {
         AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);

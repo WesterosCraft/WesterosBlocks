@@ -1,7 +1,7 @@
 package com.westerosblocks;
 
 import com.westerosblocks.block.*;
-import com.westerosblocks.block.entity.ModBlockEntities;
+import com.westerosblocks.block.blockentity.ModBlockEntities;
 import com.westerosblocks.config.ModConfig;
 import com.westerosblocks.item.ModItems;
 import com.westerosblocks.particle.ModParticles;

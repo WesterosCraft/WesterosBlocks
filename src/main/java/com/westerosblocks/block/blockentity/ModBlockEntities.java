@@ -1,10 +1,10 @@
-package com.westerosblocks.block.entity;
+package com.westerosblocks.block.blockentity;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosBlocksDefLoader;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.block.entity.custom.WCFurnaceBlockEntity;
+import com.westerosblocks.block.blockentity.custom.WCFurnaceBlockEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;

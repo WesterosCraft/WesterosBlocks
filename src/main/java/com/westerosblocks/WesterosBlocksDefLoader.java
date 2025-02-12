@@ -57,9 +57,6 @@ public class WesterosBlocksDefLoader {
     }
 
     public static class BlockConfigNotFoundException extends Exception {
-        public BlockConfigNotFoundException() {
-        }
-
         public BlockConfigNotFoundException(String message) {
             super(message);
         }
