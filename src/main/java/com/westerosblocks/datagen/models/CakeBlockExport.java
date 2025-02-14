@@ -34,11 +34,9 @@ public class CakeBlockExport extends ModelExport {
 
         // Generate variants for each bite state
         for (int bites = 0; bites < 7; bites++) {
-            BlockStateVariant variant = BlockStateVariant.create();
             String modelName = bites == 0 ? "uneaten" : "slice" + bites;
             Identifier modelId = getModelId(modelName, 0, def.isCustomModel());
-            variant.put(VariantSettings.MODEL, modelId);
-
+            BlockStateVariant variant = VariantBuilder.create(modelId, null);
             blockStateBuilder.addVariant("bites=" + bites, variant, null, variants);
         }
 

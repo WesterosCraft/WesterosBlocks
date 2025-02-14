@@ -50,20 +50,9 @@ public class CuboidNSEWBlockExport extends CuboidBlockExport {
                 // For each texture set
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
                     ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
-
-                    BlockStateVariant variant = BlockStateVariant.create();
                     Identifier modelId = getModelId(baseName, setIdx, sr.isCustomModel());
-                    variant.put(VariantSettings.MODEL, modelId);
-
-                    if (set.weight != null) {
-                        variant.put(VariantSettings.WEIGHT, set.weight);
-                    }
-
-                    // Calculate rotation based on direction and offset
                     int rotation = (ROTATIONS[dirIndex] + sr.rotYOffset) % 360;
-                    if (rotation > 0) {
-                        variant.put(VariantSettings.Y, getRotation(rotation));
-                    }
+                    BlockStateVariant variant = VariantBuilder.createWithRotation(modelId, set, rotation);
 
                     blockStateBuilder.addVariant(
                             "facing=" + FACING_DIRECTIONS[dirIndex],

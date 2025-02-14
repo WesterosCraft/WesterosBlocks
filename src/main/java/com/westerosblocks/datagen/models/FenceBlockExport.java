@@ -66,18 +66,14 @@ public class FenceBlockExport extends ModelExport {
             for (ModelRec part : PARTS) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
                     ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
-
-                    BlockStateVariant variant = BlockStateVariant.create();
-                    variant.put(VariantSettings.MODEL, getModelId(part.modelExt(), setIdx, sr.stateID));
-                    if (set.weight != null) {
-                        variant.put(VariantSettings.WEIGHT, set.weight);
-                    }
-                    if (part.uvLock() != null) {
-                        variant.put(VariantSettings.UVLOCK, part.uvLock());
-                    }
-                    if (part.yRot() != null) {
-                        variant.put(VariantSettings.Y, getRotation(part.yRot()));
-                    }
+                    Identifier modelId = getModelId(part.modelExt(), setIdx, sr.stateID);
+                    BlockStateVariant variant = VariantBuilder.create(
+                            modelId,
+                            set,
+                            part.yRot(),
+                            null,
+                            part.uvLock()
+                    );
 
                     When when = null;
                     if (part.north() != null || part.south() != null || part.east() != null || part.west() != null) {

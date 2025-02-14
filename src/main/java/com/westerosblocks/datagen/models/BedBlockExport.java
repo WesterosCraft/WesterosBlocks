@@ -48,15 +48,10 @@ public class BedBlockExport extends ModelExport {
         }
 
         for (ModelRec rec : MODELS) {
-            BlockStateVariant variant = BlockStateVariant.create();
             Identifier modelId = modelFileName(def.blockName, rec);
-            variant.put(VariantSettings.MODEL, modelId);
-            if (rec.y != 0) {
-                variant.put(VariantSettings.Y, getRotation(rec.y));
-            }
+            BlockStateVariant variant = VariantBuilder.createWithRotation(modelId, null, rec.y);
             blockStateBuilder.addVariant(rec.cond, variant, null, variants);
         }
-
         generateBlockStateFiles(generator, block, variants);
     }
 

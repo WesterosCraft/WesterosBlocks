@@ -63,20 +63,15 @@ public class WallBlockExport extends ModelExport {
             for (ModelPart part : PARTS) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
                     ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
-
-                    BlockStateVariant variant = BlockStateVariant.create();
                     Identifier modelId = getModelId(part.modExt(), setIdx, sr);
-                    variant.put(VariantSettings.MODEL, modelId);
 
-                    if (set.weight != null) {
-                        variant.put(VariantSettings.WEIGHT, set.weight);
-                    }
-                    if (part.uvlock() != null) {
-                        variant.put(VariantSettings.UVLOCK, part.uvlock());
-                    }
-                    if (part.y() != null) {
-                        variant.put(VariantSettings.Y, getRotation(part.y()));
-                    }
+                    BlockStateVariant variant = VariantBuilder.create(
+                            modelId,
+                            set,
+                            part.y(),
+                            null,
+                            part.uvlock()
+                    );
 
                     When.PropertyCondition baseCondition = part.condition();
 

@@ -56,21 +56,16 @@ public class CuboidNSEWUDBlockExport extends CuboidBlockExport {
             for (String facing : FACING_DIRECTIONS) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
                     ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
-
-                    BlockStateVariant variant = BlockStateVariant.create();
                     Identifier modelId = getModelId(baseName, setIdx, sr.isCustomModel());
-                    variant.put(VariantSettings.MODEL, modelId);
-                    if (set.weight != null) {
-                        variant.put(VariantSettings.WEIGHT, set.weight);
-                    }
                     RotationData rotation = ROTATIONS.get(facing);
-                    if (rotation.x != 0) {
-                        variant.put(VariantSettings.X, getRotation(rotation.x));
-                    }
                     int yRot = (rotation.y + sr.rotYOffset) % 360;
-                    if (yRot > 0) {
-                        variant.put(VariantSettings.Y, getRotation(yRot));
-                    }
+                    BlockStateVariant variant = VariantBuilder.create(
+                            modelId,
+                            set,
+                            yRot,
+                            rotation.x,
+                            null
+                    );
 
                     blockStateBuilder.addVariant("facing=" + facing, variant, stateIDs, variants);
                 }
