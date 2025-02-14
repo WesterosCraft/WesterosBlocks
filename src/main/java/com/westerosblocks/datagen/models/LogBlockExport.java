@@ -35,20 +35,8 @@ public class LogBlockExport extends ModelExport {
         for (int i = 0; i < states.length; i++) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
                 ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-
-                BlockStateVariant variant = BlockStateVariant.create();
                 Identifier symId = WesterosBlocks.id(GENERATED_PATH + getModelName(models[i], setIdx));
-                variant.put(VariantSettings.MODEL, symId);
-                if (set.weight != null) {
-                    variant.put(VariantSettings.WEIGHT, set.weight);
-                }
-                if (xrot[i] > 0) {
-                    variant.put(VariantSettings.X, getRotation(xrot[i]));
-                }
-
-                if (yrot[i] != 0) {
-                    variant.put(VariantSettings.Y, getRotation(yrot[i]));
-                }
+                BlockStateVariant variant = VariantBuilder.create(symId, set, yrot[i], xrot[i], null);
                 blockStateBuilder.addVariant(states[i], variant, null, variants);
             }
         }
@@ -65,8 +53,27 @@ public class LogBlockExport extends ModelExport {
         }
     }
 
+    String getTextureWithFallback(ModBlock.RandomTextureSet set, int index) {
+        int textureCount = set.getTextureCount();
+        if (index < textureCount) {
+            return set.getTextureByIndex(index);
+        }
+        // If requested index is beyond available textures, return last texture
+        return set.getTextureByIndex(textureCount - 1);
+    }
+
     public void generateLogModel(BlockStateModelGenerator generator, String type, ModBlock.RandomTextureSet set, boolean isTinted, int setIdx, String modelSuffix) {
-        TextureMap textureMap = ModTextureMap.frontTopSides(set, null, null, null);
+
+
+        TextureMap textureMap = new TextureMap()
+                .put(TextureKey.DOWN, createBlockIdentifier(getTextureWithFallback(set,0)))
+                .put(TextureKey.UP, createBlockIdentifier(getTextureWithFallback(set,1)))
+                .put(TextureKey.NORTH, createBlockIdentifier(getTextureWithFallback(set,2)))
+                .put(TextureKey.SOUTH, createBlockIdentifier(getTextureWithFallback(set,2)))
+                .put(TextureKey.WEST, createBlockIdentifier(getTextureWithFallback(set,2)))
+                .put(TextureKey.EAST, createBlockIdentifier(getTextureWithFallback(set,2)))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(getTextureWithFallback(set,2)));
+
         Identifier modelId = Identifier.of(WesterosBlocks.MOD_ID,
                 String.format("%s%s/%s_v%s", GENERATED_PATH, def.blockName, modelSuffix, setIdx + 1));
 
