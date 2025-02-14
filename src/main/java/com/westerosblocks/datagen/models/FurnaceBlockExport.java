@@ -73,11 +73,8 @@ public class FurnaceBlockExport extends ModelExport {
         boolean isTinted = def.isTinted();
         String parentPath = "block/" + (isTinted ? "tinted/orientable" : "orientable");
 
-        // Generate lit model
-        TextureMap litTextureMap = new TextureMap()
-                .put(TextureKey.TOP, createBlockIdentifier(set.getTextureByIndex(1)))
-                .put(TextureKey.SIDE, createBlockIdentifier(set.getTextureByIndex(2)))
-                .put(TextureKey.FRONT, createBlockIdentifier(set.getTextureByIndex(3))); // ON
+        TextureMap litTextureMap = ModTextureMap.directional(set);
+        TextureMap baseTextureMap = ModTextureMap.directional(set);
 
         Model litModel = new Model(
                 Optional.of(Identifier.of(isTinted ? WesterosBlocks.MOD_ID : "minecraft", parentPath)),
@@ -85,12 +82,6 @@ public class FurnaceBlockExport extends ModelExport {
                 TextureKey.TOP, TextureKey.SIDE, TextureKey.FRONT
         );
         litModel.upload(getModelId("lit", false), litTextureMap, generator.modelCollector);
-
-        // Generate base (unlit) model
-        TextureMap baseTextureMap = new TextureMap()
-                .put(TextureKey.TOP, createBlockIdentifier(set.getTextureByIndex(1)))
-                .put(TextureKey.SIDE, createBlockIdentifier(set.getTextureByIndex(2)))
-                .put(TextureKey.FRONT, createBlockIdentifier(set.getTextureByIndex(4))); // OFF
 
         Model baseModel = new Model(
                 Optional.of(Identifier.of(isTinted ? WesterosBlocks.MOD_ID : "minecraft", parentPath)),
@@ -101,8 +92,7 @@ public class FurnaceBlockExport extends ModelExport {
     }
 
     private Identifier getModelId(String variant, boolean isCustom) {
-        return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/%s_v1", isCustom ? CUSTOM_PATH : GENERATED_PATH, def.getBlockName(), variant));
+        return getBaseModelId(variant, 0, isCustom);
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {

@@ -11,8 +11,50 @@ import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class ModModelProvider extends FabricModelProvider {
+    private static final Map<String, BlockExportFactory> BLOCK_EXPORTERS = new HashMap<>();
+
+    static {
+        BLOCK_EXPORTERS.put("soulsand", SolidBlockExport::new);
+        BLOCK_EXPORTERS.put("sand", SolidBlockExport::new);
+        BLOCK_EXPORTERS.put("solid", SolidBlockExport::new);
+        BLOCK_EXPORTERS.put("sound", SoundBlockExport::new);
+        BLOCK_EXPORTERS.put("stair", StairBlockExport::new);
+        BLOCK_EXPORTERS.put("leaves", LeavesBlockExport::new);
+        BLOCK_EXPORTERS.put("log", LogBlockExport::new);
+        BLOCK_EXPORTERS.put("plant", CrossBlockExport::new);
+        BLOCK_EXPORTERS.put("web", CrossBlockExport::new);
+        BLOCK_EXPORTERS.put("pane", PaneBlockExport::new);
+        BLOCK_EXPORTERS.put("crop", CropBlockExport::new);
+        BLOCK_EXPORTERS.put("door", DoorBlockExport::new);
+        BLOCK_EXPORTERS.put("slab", SlabBlockExport::new);
+        BLOCK_EXPORTERS.put("fence", FenceBlockExport::new);
+        BLOCK_EXPORTERS.put("wall", WallBlockExport::new);
+        BLOCK_EXPORTERS.put("trapdoor", TrapDoorBlockExport::new);
+        BLOCK_EXPORTERS.put("torch", TorchBlockExport::new);
+        BLOCK_EXPORTERS.put("fan", FanBlockExport::new);
+        BLOCK_EXPORTERS.put("ladder", LadderBlockExport::new);
+        BLOCK_EXPORTERS.put("fire", FireBlockExport::new);
+        BLOCK_EXPORTERS.put("bed", BedBlockExport::new);
+        BLOCK_EXPORTERS.put("cuboid", CuboidBlockExport::new);
+        BLOCK_EXPORTERS.put("beacon", CuboidBlockExport::new);
+        BLOCK_EXPORTERS.put("cuboid-ne", CuboidNEBlockExport::new);
+        BLOCK_EXPORTERS.put("cuboid-nsew", CuboidNSEWBlockExport::new);
+        BLOCK_EXPORTERS.put("cuboid-16way", Cuboid16WayBlockExport::new);
+        BLOCK_EXPORTERS.put("cuboid-nsew-stack", CuboidNSEWStackBlockExport::new);
+        BLOCK_EXPORTERS.put("cuboid-nsewud", CuboidNSEWUDBlockExport::new);
+        BLOCK_EXPORTERS.put("layer", LayerBlockExport::new);
+        BLOCK_EXPORTERS.put("rail", RailBlockExport::new);
+        BLOCK_EXPORTERS.put("halfdoor", HalfDoorBlockExport::new);
+        BLOCK_EXPORTERS.put("cake", CakeBlockExport::new);
+        BLOCK_EXPORTERS.put("furnace", FurnaceBlockExport::new);
+        BLOCK_EXPORTERS.put("vines", VinesBlockExport::new);
+        BLOCK_EXPORTERS.put("flowerpot", FlowerPotExport::new);
+        BLOCK_EXPORTERS.put("fencegate", FenceGateBlockExport::new);
+    }
+
     public ModModelProvider(FabricDataOutput output) {
         super(output);
     }
@@ -26,141 +68,12 @@ public class ModModelProvider extends FabricModelProvider {
             if (customBlockDef == null) continue;
             Block currentBlock = customBlocks.get(customBlockDef.getBlockName());
 
-            switch (customBlockDef.blockType) {
-                case "soulsand":
-                case "sand":
-                case "solid": {
-                    new SolidBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "sound": {
-                    new SoundBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "stair": {
-                    new StairBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "leaves": {
-                    new LeavesBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "log": {
-                    new LogBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "plant":
-                case "web": {
-                    new CrossBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "pane": {
-                    new PaneBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "crop": {
-                    new CropBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "door": {
-                    new DoorBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "slab": {
-                    new SlabBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "fence": {
-                    new FenceBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "wall": {
-                    new WallBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "trapdoor": {
-                    new TrapDoorBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "torch": {
-                    new TorchBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "fan": {
-                    new FanBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "ladder": {
-                    new LadderBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "fire": {
-                    new FireBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "bed": {
-                    new BedBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "cuboid":
-                case "beacon": {
-                    new CuboidBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "cuboid-ne": {
-                    new CuboidNEBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "cuboid-nsew": {
-                    new CuboidNSEWBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "cuboid-16way": {
-                    new Cuboid16WayBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "cuboid-nsew-stack": {
-                    new CuboidNSEWStackBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "cuboid-nsewud": {
-                    new CuboidNSEWUDBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "layer": {
-                    new LayerBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "rail": {
-                    new RailBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "halfdoor": {
-                    new HalfDoorBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "cake": {
-                    new CakeBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "furnace": {
-                    new FurnaceBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "vines": {
-                    new VinesBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "flowerpot": {
-                    new FlowerPotExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                case "fencegate": {
-                    new FenceGateBlockExport(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-                    break;
-                }
-                default:
-                    WesterosBlocks.LOGGER.warn("DATAGEN: Unknown block type: {} for block {}", customBlockDef.blockType, customBlockDef.blockName);
+            BlockExportFactory factory = BLOCK_EXPORTERS.get(customBlockDef.blockType);
+            if (factory != null) {
+                factory.create(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
+            } else {
+                WesterosBlocks.LOGGER.warn("DATAGEN: Unknown block type: {} for block {}",
+                        customBlockDef.blockType, customBlockDef.blockName);
             }
         }
     }

@@ -156,13 +156,6 @@ public class StairBlockExport extends ModelExport {
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
-        boolean hasMultipleStates = blockDefinition.states.size() > 1;
-        String basePath = hasMultipleStates ? "/base" : "";
-        String path = String.format("%s%s%s/base_v1", blockDefinition.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH, blockDefinition.blockName, basePath);
-
-        itemModelGenerator.register(
-                block.asItem(),
-                new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())
-        );
+        generateBlockBasedItemModel(itemModelGenerator, block, blockDefinition);
     }
 }

@@ -88,10 +88,6 @@ public class LeavesBlockExport extends ModelExport {
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
-        ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
-        TextureMap textureMap = ModTextureMap.leaves(firstSet, true);
-        Model model = ModModels.LEAVES_OVERLAY("tinted/leaves_overlay");
-
-        model.upload(ModelIds.getItemModelId(currentBlock.asItem()), textureMap, itemModelGenerator.writer);
+        generateBasicItemModel(itemModelGenerator, currentBlock, blockDefinition);
     }
 }

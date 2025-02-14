@@ -99,11 +99,7 @@ public class FanBlockExport extends ModelExport {
 
 
     private Identifier getModelId(String blockName, String variant, int setIdx) {
-        return WesterosBlocks.id(String.format("%s%s/%s_v%d",
-                GENERATED_PATH,
-                blockName,
-                variant,
-                setIdx + 1));
+        return getBaseModelId(variant, setIdx, def.isCustomModel());
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {

@@ -135,13 +135,6 @@ public class SlabBlockExport extends ModelExport {
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
-        boolean hasMultipleStates = blockDefinition.states.size() > 1;
-        String basePath = hasMultipleStates ? "/base" : "";
-        String path = String.format("%s%s%s/bottom_v1", GENERATED_PATH, blockDefinition.blockName, basePath);
-
-        itemModelGenerator.register(
-                currentBlock.asItem(),
-                new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())
-        );
+        generateBlockBasedItemModel(itemModelGenerator, currentBlock, blockDefinition, "bottom");
     }
 }

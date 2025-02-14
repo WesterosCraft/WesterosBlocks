@@ -52,31 +52,19 @@ public class TrapDoorBlockExport extends ModelExport {
         for (ModelEntry entry : MODEL_ENTRIES) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
                 ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-
-                BlockStateVariant variant = BlockStateVariant.create();
                 Identifier modelId = getModelId(entry.modelType, setIdx);
-                variant.put(VariantSettings.MODEL, modelId);
 
-                if (set.weight != null) {
-                    variant.put(VariantSettings.WEIGHT, set.weight);
-                }
-
-                if (entry.yRotation != 0) {
-                    variant.put(VariantSettings.Y, getRotation(entry.yRotation));
-                }
-
+                BlockStateVariant variant = VariantBuilder.createWithRotation(modelId, set, entry.yRotation);
                 blockStateBuilder.addVariant(entry.condition, variant, null, variants);
             }
         }
 
         generateBlockStateFiles(generator, block, variants);
 
-
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
             ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
             generateTrapdoorModels(generator, set, setIdx);
         }
-
     }
 
     private void generateTrapdoorModels(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, int setIdx) {
@@ -93,6 +81,7 @@ public class TrapDoorBlockExport extends ModelExport {
                 String.format("%s%s/%s_v%d", GENERATED_PATH, def.getBlockName(), type, setIdx + 1));
     }
 
+    // todo make this a bit more attractive. just scale down display maybe
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
         String path = String.format("%s%s/bottom_v1", GENERATED_PATH, blockDefinition.blockName);
 

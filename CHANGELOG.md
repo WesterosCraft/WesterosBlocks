@@ -1,6 +1,7 @@
 ## Changelog
 
 # 11 Feb 2025
+- Initial port to Fabric 1.21.1
 - "WesterosBlocks.json" is now split among different files in the `resources/definitions` folders. Blocksets and block
   definition files are now separate
 - Any methods that loaded these json files is in the WesterosBlocksDefLoader class

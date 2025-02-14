@@ -81,15 +81,6 @@ public class CuboidNSEWUDBlockExport extends CuboidBlockExport {
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
-        ModBlockStateRecord firstState = blockDefinition.states.getFirst();
-        String baseName = firstState.stateID == null ? "base" : firstState.stateID;
-        String pathPrefix = firstState.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH;
-        String path = String.format("%s%s/%s_v1", pathPrefix, blockDefinition.getBlockName(), baseName);
-
-        itemModelGenerator.register(
-                block.asItem(),
-                new Model(Optional.of(WesterosBlocks.id(path)),
-                        Optional.empty())
-        );
+        generateBlockBasedItemModel(itemModelGenerator, block, blockDefinition);
     }
 }

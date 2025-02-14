@@ -144,11 +144,7 @@ public class PaneBlockExport extends ModelExport {
     }
 
     private Identifier getModelId(String variant, int setIdx) {
-        return WesterosBlocks.id(String.format("%s%s/%s_v%d",
-                        GENERATED_PATH,
-                        def.getBlockName(),
-                        variant,
-                        setIdx + 1));
+        return getBaseModelId(variant, setIdx, def.isCustomModel());
     }
 
     private Property<Boolean> getProperty(String direction) {

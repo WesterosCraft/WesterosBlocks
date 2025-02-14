@@ -143,11 +143,7 @@ public class DoorBlockExport extends ModelExport {
     }
 
     private Identifier getModelId(String variant, boolean isCustom) {
-        return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/%s_v1",
-                        isCustom ? CUSTOM_PATH : GENERATED_PATH,
-                        def.getBlockName(),
-                        variant));
+        return getBaseModelId(variant, 0, isCustom);
     }
 
     // TODO the door model is ugly af i think we need item textures

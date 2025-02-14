@@ -71,16 +71,8 @@ public class TorchBlockExport extends ModelExport {
         for (int i = 0; i < FACING_DIRECTIONS.length; i++) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
                 ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-
-                BlockStateVariant variant = BlockStateVariant.create();
                 Identifier modelId = getModelId("wall", setIdx);
-                variant.put(VariantSettings.MODEL, modelId);
-
-                if (set.weight != null) {
-                    variant.put(VariantSettings.WEIGHT, set.weight);
-                }
-
-                variant.put(VariantSettings.Y, getRotation(ROTATIONS[i]));
+                BlockStateVariant variant = VariantBuilder.createWithRotation(modelId, set, ROTATIONS[i]);
                 blockStateBuilder.addVariant(FACING_DIRECTIONS[i], variant, null, variants);
             }
         }
@@ -110,8 +102,8 @@ public class TorchBlockExport extends ModelExport {
 
     }
 
-    private Identifier getModelId(String type, int setIdx) {
-        return WesterosBlocks.id(String.format("%s%s/%s_v%d", GENERATED_PATH, def.blockName, type, setIdx + 1));
+    private Identifier getModelId(String variant, int setIdx) {
+        return getBaseModelId(variant, setIdx, false);
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {

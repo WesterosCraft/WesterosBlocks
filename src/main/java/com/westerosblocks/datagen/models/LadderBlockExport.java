@@ -70,12 +70,7 @@ public class LadderBlockExport extends ModelExport {
         model.upload(modelId, textureMap, generator.modelCollector);
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
-        String path = String.format("%s%s/%s", blockDefinition.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH, blockDefinition.getBlockName(), "base_v1");
-
-        itemModelGenerator.register(
-                currentBlock.asItem(),
-                new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())
-        );
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
+        generateBlockBasedItemModel(itemModelGenerator, block, blockDefinition);
     }
 }

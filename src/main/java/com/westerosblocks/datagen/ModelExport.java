@@ -4,6 +4,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockStateRecord;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
@@ -130,6 +131,39 @@ public class ModelExport {
         generator.blockStateCollector.accept(supplier);
     }
 
+    protected static class VariantBuilder {
+        public static BlockStateVariant create(Identifier modelId, ModBlock.RandomTextureSet set, Integer yRotation, Integer xRotation, Boolean uvLock) {
+            BlockStateVariant variant = BlockStateVariant.create()
+                    .put(VariantSettings.MODEL, modelId);
+
+            if (set != null && set.weight != null) {
+                variant.put(VariantSettings.WEIGHT, set.weight);
+            }
+
+            if (yRotation != null && yRotation != 0) {
+                variant.put(VariantSettings.Y, getRotation(yRotation));
+            }
+
+            if (xRotation != null && xRotation != 0) {
+                variant.put(VariantSettings.X, getRotation(xRotation));
+            }
+
+            if (uvLock != null) {
+                variant.put(VariantSettings.UVLOCK, uvLock);
+            }
+
+            return variant;
+        }
+
+        public static BlockStateVariant create(Identifier modelId, ModBlock.RandomTextureSet set) {
+            return create(modelId, set, null, null, null);
+        }
+
+        public static BlockStateVariant createWithRotation(Identifier modelId, ModBlock.RandomTextureSet set, int yRotation) {
+            return create(modelId, set, yRotation, null, null);
+        }
+    }
+
     public boolean isTransparentTexture(String txt) {
         if (txt != null) {
             return txt.equals("transparent");
@@ -139,5 +173,76 @@ public class ModelExport {
 
     protected static String getModelName(String ext, int setidx) {
         return def.blockName + "/" + ext + ("_v" + (setidx + 1));
+    }
+
+    public void generateBlockStateModels() {
+    }
+
+    protected static Identifier getBaseModelId(String variant, int setIdx, boolean isCustom, String blockName) {
+        return WesterosBlocks.id(String.format("%s%s/%s_v%d",
+                isCustom ? CUSTOM_PATH : GENERATED_PATH,
+                blockName,
+                variant,
+                setIdx + 1));
+    }
+
+    // Overload for when blockName = def.blockName
+    protected Identifier getBaseModelId(String variant, int setIdx, boolean isCustom) {
+        return getBaseModelId(variant, setIdx, isCustom, def.getBlockName());
+    }
+
+
+    protected static void generateBasicItemModel(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
+        if (blockDefinition == null || blockDefinition.states.isEmpty()) {
+            return;
+        }
+
+        ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
+        if (firstSet == null) {
+            // Try getting from first state if direct access fails
+            ModBlockStateRecord firstState = blockDefinition.states.getFirst();
+            if (firstState != null) {
+                firstSet = firstState.getRandomTextureSet(0);
+            }
+        }
+
+        if (firstSet == null) {
+            throw new IllegalStateException("No texture set found for block: " + block);
+        }
+
+        TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
+
+        Models.GENERATED.upload(
+                ModelIds.getItemModelId(block.asItem()),
+                textureMap,
+                itemModelGenerator.writer
+        );
+    }
+
+    // For blocks that use their block model as item model
+    protected static void generateBlockBasedItemModel(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition, String variant) {
+        if (blockDefinition == null || blockDefinition.states.isEmpty()) {
+            throw new IllegalStateException("No block definition or states found for block: " + block);
+        }
+        ModBlockStateRecord firstState = blockDefinition.states.getFirst();
+
+        if (firstState == null) {
+            throw new IllegalStateException("First state is null for block: " + block);
+        }
+
+        String basePath = blockDefinition.states.size() > 1 ? "/base" : "";
+        String path = String.format("%s%s%s/%s_v1",
+                firstState.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH,
+                blockDefinition.getBlockName(),
+                basePath,
+                variant);
+
+        itemModelGenerator.register(block.asItem(), new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())
+        );
+    }
+
+    // Overload for default "base" variant
+    protected static void generateBlockBasedItemModel(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
+        generateBlockBasedItemModel(itemModelGenerator, block, blockDefinition, "base");
     }
 }

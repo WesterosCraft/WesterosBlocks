@@ -132,13 +132,6 @@ public class FireBlockExport extends ModelExport {
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
-        ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
-        TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
-
-        Models.GENERATED.upload(
-                ModelIds.getItemModelId(currentBlock.asItem()),
-                textureMap,
-                itemModelGenerator.writer
-        );
+        generateBasicItemModel(itemModelGenerator, currentBlock, blockDefinition);
     }
 }

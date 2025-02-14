@@ -9,6 +9,20 @@ import static com.westerosblocks.datagen.ModelExport.createBlockIdentifier;
 
 public class ModTextureMap extends TextureMap {
 
+    public static TextureMap singleTexture(ModBlock.RandomTextureSet set) {
+        return new TextureMap()
+                .put(TextureKey.ALL, createBlockIdentifier(set.getTextureByIndex(0)))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(set.getTextureByIndex(0)));
+    }
+
+    public static TextureMap directional(ModBlock.RandomTextureSet set) {
+        return new TextureMap()
+                .put(TextureKey.TOP, createBlockIdentifier(set.getTextureByIndex(0)))
+                .put(TextureKey.SIDE, createBlockIdentifier(set.getTextureByIndex(1)))
+                .put(TextureKey.FRONT, createBlockIdentifier(set.getTextureByIndex(2)))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(set.getTextureByIndex(1)));
+    }
+
     public static TextureMap frontTopSides(ModBlock.RandomTextureSet ts, ModBlockStateRecord currentRec, Boolean hasOverlay, Boolean isSymmetrical) {
         TextureMap tMap = new TextureMap()
                 .put(TextureKey.DOWN, createBlockIdentifier(ts.getTextureByIndex(0)))
@@ -91,9 +105,8 @@ public class ModTextureMap extends TextureMap {
                 .put(TextureKey.SIDE, createBlockIdentifier(set.getTextureByIndex(2)))
                 .put(TextureKey.PARTICLE, createBlockIdentifier(set.getTextureByIndex(2)));
 
-        if (hasOverlay != null && hasOverlay) {
-            tMap
-                    .put(ModTextureKey.BOTTOM_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(0)))
+        if (hasOverlay != null && hasOverlay && sr != null) {
+            tMap.put(ModTextureKey.BOTTOM_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(0)))
                     .put(ModTextureKey.TOP_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(1)))
                     .put(ModTextureKey.SIDE_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(2)));
         }

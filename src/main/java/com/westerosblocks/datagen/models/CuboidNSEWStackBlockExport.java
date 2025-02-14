@@ -91,12 +91,6 @@ public class CuboidNSEWStackBlockExport extends CuboidBlockExport {
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
-        String path = String.format("%s%s/base_v1", GENERATED_PATH, blockDefinition.blockName);
-
-        itemModelGenerator.register(
-                block.asItem(),
-                new Model(Optional.of(WesterosBlocks.id(path)),
-                        Optional.empty())
-        );
+        generateBlockBasedItemModel(itemModelGenerator, block, blockDefinition);
     }
 }

@@ -88,7 +88,7 @@ public class BedBlockExport extends ModelExport {
     }
 
     private static Identifier modelFileName(String blockName, ModelRec rec) {
-        return WesterosBlocks.id(String.format("%s%s/%s", GENERATED_PATH, blockName, rec.ext));
+        return getBaseModelId(rec.ext, 0, false, blockName);
     }
 
     private static TextureMap createCustomTextureMap(ModBlock def, boolean head) {

@@ -70,22 +70,8 @@ public class VinesBlockExport extends ModelExport {
     }
 
     private BlockStateVariant createVariant(ModBlock.RandomTextureSet set, int setIdx, int yRotation, boolean isVertical, int xRotation) {
-        BlockStateVariant variant = BlockStateVariant.create()
-                .put(VariantSettings.MODEL, getModelId(isVertical ? "top" : "base", setIdx));
-
-        if (set.weight != null) {
-            variant.put(VariantSettings.WEIGHT, set.weight);
-        }
-
-        if (yRotation != 0) {
-            variant.put(VariantSettings.Y, getRotation(yRotation));
-        }
-
-        if (xRotation != 0) {
-            variant.put(VariantSettings.X, getRotation(xRotation));
-        }
-
-        return variant;
+        Identifier modelId = getModelId(isVertical ? "top" : "base", setIdx);
+        return VariantBuilder.create(modelId, set, yRotation, xRotation, null);
     }
 
     private void generateVineModels(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, int setIdx) {

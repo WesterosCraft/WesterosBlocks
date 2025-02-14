@@ -57,8 +57,8 @@ public class CakeBlockExport extends ModelExport {
         }
     }
 
-    private Identifier getModelId(String variant, int setIdx, boolean isCustom) {
-        return WesterosBlocks.id(String.format("%s%s/%s_v%d", isCustom ? CUSTOM_PATH : GENERATED_PATH, def.getBlockName(), variant, setIdx + 1));
+    private Identifier getModelId(String id, int setIdx, boolean isCustom) {
+        return getBaseModelId(id, setIdx, isCustom);
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
