@@ -95,14 +95,8 @@ public class DoorBlockExport extends ModelExport {
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
         for (ModelRec rec : MODELS) {
-            BlockStateVariant variant = BlockStateVariant.create();
             Identifier modelId = getModelId(rec.ext, def.isCustomModel());
-            variant.put(VariantSettings.MODEL, modelId);
-
-            if (rec.y != 0) {
-                variant.put(VariantSettings.Y, getRotation(rec.y));
-            }
-
+            BlockStateVariant variant = VariantBuilder.createWithRotation(modelId, null, rec.y);
             blockStateBuilder.addVariant(rec.cond, variant, null, variants);
         }
 

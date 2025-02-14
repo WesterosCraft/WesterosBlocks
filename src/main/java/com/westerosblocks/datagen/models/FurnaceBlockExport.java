@@ -47,20 +47,12 @@ public class FurnaceBlockExport extends ModelExport {
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
-        // Generate block state variants for each model configuration
         for (ModelRec rec : MODELS) {
-            BlockStateVariant variant = BlockStateVariant.create();
             Identifier modelId = getModelId(rec.ext, def.isCustomModel());
-            variant.put(VariantSettings.MODEL, modelId);
-
-            if (rec.y != 0) {
-                variant.put(VariantSettings.Y, getRotation(rec.y));
-            }
-
+            BlockStateVariant variant = VariantBuilder.createWithRotation(modelId, null, rec.y);
             blockStateBuilder.addVariant(rec.cond, variant, null, variants);
         }
 
-        // Generate the actual models if not custom
         if (!def.isCustomModel()) {
             generateFurnaceModels(generator);
         }

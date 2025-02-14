@@ -87,24 +87,14 @@ public class StairBlockExport extends ModelExport {
 
         for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
             ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
-
-            BlockStateVariant variant = BlockStateVariant.create();
             Identifier modelId = getModelId(modelType, setIdx, sr.stateID);
-            variant.put(VariantSettings.MODEL, modelId);
-
-            if (set.weight != null) {
-                variant.put(VariantSettings.WEIGHT, set.weight);
-            }
-            if (xRot != 0) {
-                variant.put(VariantSettings.X, getRotation(xRot));
-            }
-            if (yRot != 0) {
-                variant.put(VariantSettings.Y, getRotation(yRot));
-            }
-            if (!stairBlock.no_uvlock && (xRot != 0 || yRot != 0)) {
-                variant.put(VariantSettings.UVLOCK, true);
-            }
-
+            BlockStateVariant variant = VariantBuilder.create(
+                    modelId,
+                    set,
+                    yRot,
+                    xRot,
+                    !stairBlock.no_uvlock && (xRot != 0 || yRot != 0)
+            );
             builder.addVariant(condition, variant, stateIDs, variants);
         }
     }

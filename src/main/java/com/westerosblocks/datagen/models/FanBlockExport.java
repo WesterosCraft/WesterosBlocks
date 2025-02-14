@@ -30,8 +30,7 @@ public class FanBlockExport extends ModelExport {
 
         // Add floor variants with waterlogged states but no facing
         for (boolean waterlogged : new boolean[]{true, false}) {
-            BlockStateVariant floorVariant = BlockStateVariant.create()
-                    .put(VariantSettings.MODEL, getModelId(def.blockName, "base", 1));
+            BlockStateVariant floorVariant = VariantBuilder.create(getModelId(def.blockName, "base", 1), null);
             blockStateBuilder.addVariant("waterlogged=" + waterlogged, floorVariant, null, variants);
         }
 
@@ -60,10 +59,7 @@ public class FanBlockExport extends ModelExport {
             directionRotations.forEach((direction, rotation) -> {
                 // Generate variants for both waterlogged states
                 for (boolean waterlogged : new boolean[]{true, false}) {
-                    BlockStateVariant variant = BlockStateVariant.create()
-                            .put(VariantSettings.MODEL, getModelId(def.blockName, "wall", 0))
-                            .put(VariantSettings.Y, getRotation(rotation));
-
+                    BlockStateVariant variant = VariantBuilder.createWithRotation(getModelId(def.blockName, "wall", 0), null, rotation);
                     String condition = String.format("facing=%s,waterlogged=%s", direction, waterlogged);
                     wallStateBuilder.addVariant(condition, variant, null, wallVariants);
                 }

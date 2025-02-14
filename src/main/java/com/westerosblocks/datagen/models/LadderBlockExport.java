@@ -47,15 +47,8 @@ public class LadderBlockExport extends ModelExport {
 
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
                 ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-                BlockStateVariant variant = BlockStateVariant.create();
                 Identifier modId = modelFileName(setIdx, def.isCustomModel());
-                variant.put(VariantSettings.MODEL, modId);
-                if (set.weight != null) {
-                    variant.put(VariantSettings.WEIGHT, set.weight);
-                }
-                if (Y_ROTATIONS[faceIdx] > 0) {
-                    variant.put(VariantSettings.Y, getRotation(Y_ROTATIONS[faceIdx]));
-                }
+                BlockStateVariant variant = VariantBuilder.createWithRotation(modId, set, Y_ROTATIONS[faceIdx]);
                 blockStateBuilder.addVariant("facing=" + FACES[faceIdx], variant, null, variants);
             }
         }

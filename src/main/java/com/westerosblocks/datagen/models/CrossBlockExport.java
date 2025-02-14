@@ -52,16 +52,9 @@ public class CrossBlockExport extends ModelExport {
                     ModBlock.RandomTextureSet set = currentRec.getRandomTextureSet(setIdx);
 
                     for (int rotIdx = 0; rotIdx < rotationCount; rotIdx++) {
-                        BlockStateVariant variant = BlockStateVariant.create();
                         Identifier modelId = getModelId(id, setIdx, currentRec.isCustomModel());
-                        variant.put(VariantSettings.MODEL, modelId);
-                        if (set.weight != null) {
-                            variant.put(VariantSettings.WEIGHT, set.weight);
-                        }
-                        if (rotIdx > 0) {
-                            variant.put(VariantSettings.Y, getRotation(90 * rotIdx));
-                        }
                         Set<String> stateIDs = currentRec.stateID == null ? null : Collections.singleton(currentRec.stateID);
+                        BlockStateVariant variant = VariantBuilder.createWithRotation(modelId, set, rotIdx > 0 ? 90 * rotIdx : 0);
                         blockStateBuilder.addVariant(layerCondition, variant, stateIDs, variants);
                     }
                 }

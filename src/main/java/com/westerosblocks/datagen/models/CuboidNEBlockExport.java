@@ -44,23 +44,11 @@ public class CuboidNEBlockExport extends CuboidBlockExport {
             for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
                 ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
-                // Generate variants for east and north directions
                 for (int dirIndex = 0; dirIndex < DIRECTIONS.length; dirIndex++) {
-                    BlockStateVariant variant = BlockStateVariant.create();
                     Identifier modelId = getModelId(baseName, setIdx, sr.isCustomModel());
-                    variant.put(VariantSettings.MODEL, modelId);
-
-                    if (set.weight != null) {
-                        variant.put(VariantSettings.WEIGHT, set.weight);
-                    }
-
-                    // Calculate rotation based on direction
                     int rotation = (90 * dirIndex + sr.rotYOffset) % 360;
-                    if (rotation > 0) {
-                        variant.put(VariantSettings.Y, getRotation(rotation));
-                    }
+                    BlockStateVariant variant = VariantBuilder.createWithRotation(modelId, set, rotation);
 
-                    // Add variant to builder
                     blockStateBuilder.addVariant(
                             "facing=" + DIRECTIONS[dirIndex],
                             variant,

@@ -81,30 +81,18 @@ public class SlabBlockExport extends ModelExport {
                 ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
 
                 // Do state for top half block
-                BlockStateVariant topVariant = BlockStateVariant.create();
                 Identifier topId = getModelName(def.blockName, "top", setIdx, sr.stateID);
-                topVariant.put(VariantSettings.MODEL, topId);
-                if (set.weight != null) {
-                    topVariant.put(VariantSettings.WEIGHT, set.weight);
-                }
+                BlockStateVariant topVariant = VariantBuilder.create(topId, set);
                 blockStateBuilder.addVariant("type=top", topVariant, stateIDs, variants);
 
                 // Do bottom half slab
-                BlockStateVariant bottomVariant = BlockStateVariant.create();
                 Identifier bottomId = getModelName(def.blockName, "bottom", setIdx, sr.stateID);
-                bottomVariant.put(VariantSettings.MODEL, bottomId);
-                if (set.weight != null) {
-                    bottomVariant.put(VariantSettings.WEIGHT, set.weight);
-                }
+                BlockStateVariant bottomVariant = VariantBuilder.create(bottomId, set);
                 blockStateBuilder.addVariant("type=bottom", bottomVariant, stateIDs, variants);
 
                 // Do full slab
-                BlockStateVariant doubleVariant = BlockStateVariant.create();
                 Identifier doubleId = getModelName(def.blockName, "double", setIdx, sr.stateID);
-                doubleVariant.put(VariantSettings.MODEL, doubleId);
-                if (set.weight != null) {
-                    doubleVariant.put(VariantSettings.WEIGHT, set.weight);
-                }
+                BlockStateVariant doubleVariant = VariantBuilder.create(doubleId, set);
                 blockStateBuilder.addVariant("type=double", doubleVariant, stateIDs, variants);
 
                 // Make models

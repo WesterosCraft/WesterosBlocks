@@ -75,13 +75,7 @@ public class PaneBlockExport extends ModelExport {
         When.PropertyCondition directionCondition = When.create()
                 .set(getProperty(direction), true);
 
-        BlockStateVariant variant = BlockStateVariant.create()
-                .put(VariantSettings.MODEL, getModelId("side", 0))
-                .put(VariantSettings.UVLOCK, true);
-
-        if (rotation > 0) {
-            variant.put(VariantSettings.Y, getRotation(rotation));
-        }
+        BlockStateVariant variant = VariantBuilder.create(getModelId("side", 0), null, rotation, null, true);
 
         if (legacyModel || barsModel) {
             // Add a single multipart entry with an OR condition

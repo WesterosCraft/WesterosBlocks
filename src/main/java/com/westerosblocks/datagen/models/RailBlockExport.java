@@ -52,19 +52,9 @@ public class RailBlockExport extends ModelExport {
         for (int i = 0; i < SHAPES.length; i++) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
                 ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-
-                BlockStateVariant variant = BlockStateVariant.create();
                 Identifier modelId = getModelId(MODEL_TYPES[i], setIdx);
-                variant.put(VariantSettings.MODEL, modelId);
 
-                if (set.weight != null) {
-                    variant.put(VariantSettings.WEIGHT, set.weight);
-                }
-
-                if (ROTATIONS[i] != 0) {
-                    variant.put(VariantSettings.Y, getRotation(ROTATIONS[i]));
-                }
-
+                BlockStateVariant variant = VariantBuilder.createWithRotation(modelId, set, ROTATIONS[i]);
                 blockStateBuilder.addVariant(SHAPES[i], variant, null, variants);
             }
         }

@@ -67,15 +67,11 @@ public class CuboidNSEWStackBlockExport extends CuboidBlockExport {
 
         for (int i = 0; i < directions.length; i++) {
             for (int setIdx = 0; setIdx < element.getRandomTextureSetCount(); setIdx++) {
-                BlockStateVariant variant = BlockStateVariant.create()
-                        .put(VariantSettings.MODEL, getModelId(modelType, setIdx, element.isCustomModel()));
+                ModBlock.RandomTextureSet set = element.getRandomTextureSet(setIdx);
+                Identifier modelId = getModelId(modelType, setIdx, element.isCustomModel());
                 int rotation = half.equals("upper") ? (rotations[i] + element.rotYOffset) % 360 : rotations[i];
-                if (rotation != 0) {
-                    variant.put(VariantSettings.Y, getRotation(rotation));
-                }
-                if (element.getRandomTextureSet(setIdx).weight != null) {
-                    variant.put(VariantSettings.WEIGHT, element.getRandomTextureSet(setIdx).weight);
-                }
+                BlockStateVariant variant = VariantBuilder.createWithRotation(modelId, set, rotation);
+
                 builder.addVariant(String.format("facing=%s,half=%s", directions[i], half), variant, null, variants);
             }
         }

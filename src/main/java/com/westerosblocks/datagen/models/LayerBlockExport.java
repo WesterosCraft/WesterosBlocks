@@ -33,13 +33,8 @@ public class LayerBlockExport extends ModelExport {
         for (int layer = 0; layer < layerBlock.layerCount; layer++) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
                 ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-
-                BlockStateVariant variant = BlockStateVariant.create();
                 Identifier modelId = getModelId(layer + 1, setIdx);
-                variant.put(VariantSettings.MODEL, modelId);
-                if (set.weight != null) {
-                    variant.put(VariantSettings.WEIGHT, set.weight);
-                }
+                BlockStateVariant variant = VariantBuilder.create(modelId, set);
                 blockStateBuilder.addVariant("layers=" + (layer + 1), variant, null, variants);
 
                 if (!def.isCustomModel()) {
