@@ -43,6 +43,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
             }
         }
 
+        // Items
+        translationBuilder.add("item.westerosblocks.longclaw", "Longclaw");
+
         // Config translations
         translationBuilder.add("text.autoconfig.westerosblocks.title", "WesterosBlocks Config");
         translationBuilder.add("text.autoconfig.westerosblocks.category.general", "General");
