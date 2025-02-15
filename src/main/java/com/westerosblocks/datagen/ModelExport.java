@@ -230,16 +230,22 @@ public class ModelExport {
             throw new IllegalStateException("First state is null for block: " + block);
         }
 
-        String basePath = blockDefinition.states.size() > 1 ? "/base" : "";
+        // For blocks with states, use the first state's ID instead of the provided variant
+        String variantToUse = firstState.stateID != null ? firstState.stateID : variant;
+
+        // Only add /base path for multi-state blocks WITHOUT explicit stateIDs
+        String basePath = blockDefinition.states.size() > 1 && firstState.stateID == null ? "/base" : "";
+
         String path = String.format("%s%s%s/%s_v1",
                 firstState.isCustomModel() ? CUSTOM_PATH : GENERATED_PATH,
                 blockDefinition.getBlockName(),
                 basePath,
-                variant);
+                variantToUse);
 
         itemModelGenerator.register(block.asItem(), new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())
         );
     }
+
 
     // Overload for default "base" variant
     protected static void generateBlockBasedItemModel(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
