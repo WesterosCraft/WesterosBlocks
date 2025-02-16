@@ -4,7 +4,7 @@ import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.ModBlockFactory;
 import com.westerosblocks.block.ModBlockLifecycle;
-import com.westerosblocks.util.WoodTypeUtil;
+import com.westerosblocks.util.ModWoodType;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -36,7 +36,7 @@ public class WCFenceGateBlock extends FenceGateBlock implements ModBlockLifecycl
     private boolean locked = false;
 
     protected WCFenceGateBlock(AbstractBlock.Settings settings, ModBlock def) {
-        super(WoodTypeUtil.getWoodType(def.getWoodType()), settings);
+        super(ModWoodType.getWoodType(def.getWoodType()), settings);
         this.def = def;
         String type = def.getType();
         if (type != null) {

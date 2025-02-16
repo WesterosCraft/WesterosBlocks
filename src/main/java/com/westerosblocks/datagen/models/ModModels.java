@@ -3,6 +3,8 @@ package com.westerosblocks.datagen.models;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
 import net.minecraft.data.client.TextureKey;
@@ -13,9 +15,10 @@ import java.util.Optional;
 
 public class ModModels extends Models {
 
-    public static Model ALL_SIDES(String parent, String namespace) {
+    public static Model ALL_SIDES(String namespace, String parent, ModBlock def) {
         return block(parent,
                 namespace,
+                def,
                 TextureKey.DOWN,
                 TextureKey.UP,
                 TextureKey.NORTH,
@@ -25,8 +28,9 @@ public class ModModels extends Models {
                 TextureKey.PARTICLE);
     }
 
-    public static Model ALL_SIDES_OVERLAY(String parent) {
+    public static Model ALL_SIDES_OVERLAY(String parent, ModBlock def) {
         return block(parent,
+                def,
                 TextureKey.DOWN,
                 TextureKey.UP,
                 TextureKey.NORTH,
@@ -42,8 +46,9 @@ public class ModModels extends Models {
                 ModTextureKey.EAST_OVERLAY);
     }
 
-    public static Model BOTTOM_TOP_SIDE_OVERLAY(String parent) {
+    public static Model BOTTOM_TOP_SIDE_OVERLAY(String parent, ModBlock def) {
         return block(parent,
+                def,
                 TextureKey.BOTTOM,
                 TextureKey.TOP,
                 TextureKey.SIDE,
@@ -54,8 +59,9 @@ public class ModModels extends Models {
         );
     }
 
-    public static Model BOTTOM_TOP_SIDE(String parent) {
+    public static Model BOTTOM_TOP_SIDE(String parent, ModBlock def) {
         return block(parent,
+                def,
                 TextureKey.BOTTOM,
                 TextureKey.TOP,
                 TextureKey.SIDE,
@@ -63,14 +69,16 @@ public class ModModels extends Models {
         );
     }
 
-    public static Model WC_LADDER(String parent) {
+    public static Model WC_LADDER(String parent, ModBlock def) {
         return block(parent,
+                def,
                 ModTextureKey.LADDER
         );
     }
 
-    public static Model BETTER_FOLIAGE(String parent) {
+    public static Model BETTER_FOLIAGE(String parent, ModBlock def) {
         return block(parent,
+                def,
                 TextureKey.PARTICLE,
                 TextureKey.ALL,
                 ModTextureKey.LEAVES_OVERLAY_END,
@@ -78,8 +86,9 @@ public class ModModels extends Models {
         );
     }
 
-    public static Model CUBOID(String parent) {
+    public static Model CUBOID(String parent, ModBlock def) {
         return block(parent,
+                def,
                 TextureKey.PARTICLE,
                 ModTextureKey.TEXTURE_0,
                 ModTextureKey.TEXTURE_1,
@@ -430,8 +439,9 @@ public class ModModels extends Models {
         };
     }
 
-    public static Model BED_PART(String parent) {
+    public static Model BED_PART(String parent, ModBlock def) {
         return block(parent,
+                def,
                 ModTextureKey.BED_TOP,
                 ModTextureKey.BED_END,
                 ModTextureKey.BED_SIDE,
@@ -523,8 +533,9 @@ public class ModModels extends Models {
         };
     }
 
-    public static Model LEAVES_OVERLAY(String parent){
+    public static Model LEAVES_OVERLAY(String parent, ModBlock def){
         return block(parent,
+                def,
                 TextureKey.END,
                 TextureKey.SIDE,
                 ModTextureKey.LEAVES_OVERLAY_END,
@@ -533,15 +544,63 @@ public class ModModels extends Models {
         );
     }
 
-    private static Model block(String parent, String namespace, TextureKey... requiredTextureKeys) {
-        return new Model(Optional.of(Identifier.of(namespace != null ? namespace : WesterosBlocks.MOD_ID, "block/" + parent)), Optional.empty(), requiredTextureKeys);
+    private static void addDisplayToJson(JsonObject json, ModBlock.DisplayProperties display) {
+        // blockDef can be directly from ModelExport.def
+//        WesterosBlocks.LOGGER.info("Adding display to JSON for block: {} with display: {}", def.blockName, def.display);
+
+        if (display != null && display.gui != null) {
+            JsonObject genDisplay = json.has("display") ?
+                    json.getAsJsonObject("display") : new JsonObject();
+            JsonObject gui = new JsonObject();
+
+            if (display.gui.rotation != null) {
+                JsonArray rotation = new JsonArray();
+                for (float v : display.gui.rotation) {
+                    rotation.add(v);
+                }
+                gui.add("rotation", rotation);
+            }
+
+            if (display.gui.scale != null) {
+                JsonArray scale = new JsonArray();
+                for (float v : display.gui.scale) {
+                    scale.add(v);
+                }
+                gui.add("scale", scale);
+            }
+
+            if (display.gui.translation != null) {
+                JsonArray translation = new JsonArray();
+                for (float v : display.gui.translation) {
+                    translation.add(v);
+                }
+                gui.add("translation", translation);
+            }
+
+            genDisplay.add("gui", gui);
+            json.add("display", genDisplay);
+        }
+    }
+
+
+
+    private static Model block(String parent, String namespace, ModBlock def, TextureKey... requiredTextureKeys) {
+
+        return new Model(Optional.of(Identifier.of(namespace != null ? namespace : WesterosBlocks.MOD_ID, "block/" + parent)), Optional.empty(), requiredTextureKeys) {
+            @Override
+            public JsonObject createJson(Identifier id, Map<TextureKey, Identifier> textures) {
+                JsonObject json = super.createJson(id, textures);
+                addDisplayToJson(json, def.display);
+                return json;
+            }
+        };
+    }
+
+    private static Model block(String parent, ModBlock def, TextureKey... requiredTextureKeys) {
+        return block(parent, WesterosBlocks.MOD_ID,def, requiredTextureKeys);
     }
 
     private static Model item(String parent, TextureKey... requiredTextureKeys) {
         return new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "item/" + parent)), Optional.empty(), requiredTextureKeys);
-    }
-
-    private static Model block(String parent, TextureKey... requiredTextureKeys) {
-        return new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parent)), Optional.empty(), requiredTextureKeys);
     }
 }

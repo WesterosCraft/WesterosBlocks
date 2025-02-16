@@ -63,8 +63,6 @@ public class LogBlockExport extends ModelExport {
     }
 
     public void generateLogModel(BlockStateModelGenerator generator, String type, ModBlock.RandomTextureSet set, boolean isTinted, int setIdx, String modelSuffix) {
-
-
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.DOWN, createBlockIdentifier(getTextureWithFallback(set,0)))
                 .put(TextureKey.UP, createBlockIdentifier(getTextureWithFallback(set,1)))
@@ -78,7 +76,7 @@ public class LogBlockExport extends ModelExport {
                 String.format("%s%s/%s_v%s", GENERATED_PATH, def.blockName, modelSuffix, setIdx + 1));
 
         String parentPath = getParentPath(isTinted, type);
-        Model model = ModModels.ALL_SIDES(parentPath, null);
+        Model model = ModModels.ALL_SIDES(null, parentPath, def);
         model.upload(modelId, textureMap, generator.modelCollector);
     }
 
@@ -92,7 +90,6 @@ public class LogBlockExport extends ModelExport {
         }
         return basePath + type;
     }
-
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
         itemModelGenerator.register(

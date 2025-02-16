@@ -14,7 +14,7 @@ import java.util.*;
 public class SolidBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final ModBlock def;
+    private static ModBlock def;
 
     public SolidBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
@@ -114,12 +114,12 @@ public class SolidBlockExport extends ModelExport {
 
         if (hasOverlay) {
             String parentPath = isTinted ? "tinted/cube_overlay" : "untinted/cube_overlay";
-            ModModels.ALL_SIDES_OVERLAY(parentPath)
+            ModModels.ALL_SIDES_OVERLAY(parentPath, def)
                     .upload(modelPath, textureMap, generator.modelCollector);
         } else if (set.getTextureCount() > 1 || isTinted) {
             String parentPath = isTinted ? "tinted/cube" : "cube";
             String namespace = isTinted ? WesterosBlocks.MOD_ID : "minecraft";
-            ModModels.ALL_SIDES(parentPath, namespace)
+            ModModels.ALL_SIDES(namespace, parentPath, def)
                     .upload(modelPath, textureMap, generator.modelCollector);
         } else {
             TextureMap textureMapAll = TextureMap.all(createBlockIdentifier(set.getTextureByIndex(0)));

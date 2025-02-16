@@ -26,7 +26,7 @@ public class DoorBlockMixin extends Block {
         }
     }
 
-    // TODO getBlockSupportShape doesnt exist anymore - find replacement. it might not be necessary with fabric api?
+    // TODO getBlockSupportShape doesnt exist anymore - find replacement. it might not be necessary with fabric api?  verify in beta testing
 //    @Override
 //    public VoxelShape getBlockSupportShape(BlockState state, BlockGetter reader, BlockPos pos) {
 //        if (Config.doorNoConnect) {

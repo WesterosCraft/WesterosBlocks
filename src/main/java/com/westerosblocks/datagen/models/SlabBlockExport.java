@@ -110,9 +110,9 @@ public class SlabBlockExport extends ModelExport {
 
                     Model model;
                     if (hasOverlay) {
-                        model = ModModels.ALL_SIDES_OVERLAY(parentPath);
+                        model = ModModels.ALL_SIDES_OVERLAY(parentPath, def);
                     } else {
-                        model = ModModels.ALL_SIDES(parentPath, namespace);
+                        model = ModModels.ALL_SIDES(namespace, parentPath, def);
                     }
                     model.upload(modelId, textureMap, generator.modelCollector);
                 }

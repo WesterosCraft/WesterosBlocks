@@ -7,8 +7,6 @@ import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.particle.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -63,17 +61,5 @@ public class ModParticles {
 
     public static ParticleEffect get(String name) {
         return PARTICLE_EFFECTS.get(name);
-    }
-
-    public static void spawnParticleInBlock(World world, BlockPos pos, String particleName) {
-        ParticleEffect particle = get(particleName);
-        if (particle != null) {
-            world.addParticle(particle,
-                    pos.getX() + 0.5,
-                    pos.getY() + 0.5,
-                    pos.getZ() + 0.5,
-                    0, 0, 0
-            );
-        }
     }
 }

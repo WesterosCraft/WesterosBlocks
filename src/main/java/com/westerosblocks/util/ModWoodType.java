@@ -1,8 +1,9 @@
 package com.westerosblocks.util;
-
 import net.minecraft.block.WoodType;
 
-public class WoodTypeUtil  {
+public class ModWoodType {
+    public static final WoodType WEIRWOOD = new WoodType("weirwood", ModBlockSetType.WEIRWOOD);
+
     /**
      * Gets the WoodType for a block based on its definition and settings.
      * This method can be used by any block that needs to determine its wood type,
@@ -24,6 +25,7 @@ public class WoodTypeUtil  {
                 case "cherry" -> WoodType.CHERRY;
                 case "mangrove" -> WoodType.MANGROVE;
                 case "bamboo" -> WoodType.BAMBOO;
+                case "weirwood" -> WEIRWOOD;
                 default -> WoodType.OAK;
             };
         }

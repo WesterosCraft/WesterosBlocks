@@ -71,7 +71,7 @@ public class LeavesBlockExport extends ModelExport {
         String parentPath = createParentPath(isBetterFoliage, def.isTinted(), hasOverlay, type, setIdx);
         Identifier modelId = getModelId(type, setIdx);
 
-        Model model = isBetterFoliage ? ModModels.BETTER_FOLIAGE(parentPath) : Models.LEAVES;
+        Model model = isBetterFoliage ? ModModels.BETTER_FOLIAGE(parentPath, def) : Models.LEAVES;
         model.upload(modelId, textureMap, generator.modelCollector);
     }
 

@@ -132,8 +132,8 @@ public class FenceBlockExport extends ModelExport {
         }
 
         Identifier modelId = getModelId(variant, setIdx, sr.stateID);
-        Model model = ModModels.BOTTOM_TOP_SIDE(parent);
-        Model overlayModel = ModModels.BOTTOM_TOP_SIDE_OVERLAY(parent);
+        Model model = ModModels.BOTTOM_TOP_SIDE(parent, def);
+        Model overlayModel = ModModels.BOTTOM_TOP_SIDE_OVERLAY(parent, def);
 
         if (hasOverlay) {
             overlayModel.upload(modelId, textures, generator.modelCollector);

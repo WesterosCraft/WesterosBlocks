@@ -8,7 +8,6 @@ import com.westerosblocks.block.custom.*;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.sound.BlockSoundGroup;
@@ -54,23 +53,31 @@ public class ModBlock extends ModBlockStateRecord {
     public static final String SHAPE_CROSSED = "crossed"; // TODO Shape for crossed squares (plant-style) (texture is index 0 in list)
     public String woodType = null; // TODO wood type for wood blocks like fencegate. see WoodTypeUtil class
     public String particle;
+    public DisplayProperties display = null;
 
     private static final Map<String, BlockSoundGroup> stepSoundTable = new HashMap<>();
     private static final Map<String, ModBlockFactory> typeTable = new HashMap<>();
     private transient Map<String, String> parsedType;
     private final transient boolean hasCollisionBoxes = false;
 
+    public static class DisplayProperties {
+        public GuiProperties gui;
+
+        public static class GuiProperties {
+            public float[] rotation;
+            public float[] scale;
+            public float[] translation;
+        }
+    }
+
     public static class HarvestLevel {
         public String tool;
         public int level;
-
     }
 
     public static class RandomTextureSet {
         public List<String> textures = null; // List of textures (for single texture set)
         public Integer weight = null;        // Weight for texture set (default = 1)
-
-        // Get number of base textures
 
         public int getTextureCount() {
             return textures != null ? textures.size() : 0;
@@ -550,10 +557,6 @@ public class ModBlock extends ModBlockStateRecord {
         return s;
     }
 
-    public boolean hasCollisionBoxes() {
-        return hasCollisionBoxes;
-    }
-
     public String getBlockName() {
         return this.blockName;
     }
@@ -627,6 +630,7 @@ public class ModBlock extends ModBlockStateRecord {
         return map;
     }
 
+    // TODO move this out of here
     public static void initialize() {
         stepSoundTable.put("powder", BlockSoundGroup.SAND);
         stepSoundTable.put("wood", BlockSoundGroup.WOOD);

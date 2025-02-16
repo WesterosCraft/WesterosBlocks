@@ -4,7 +4,7 @@ import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.ModBlockFactory;
 import com.westerosblocks.block.ModBlockLifecycle;
-import com.westerosblocks.util.BlockSetTypeUtil;
+import com.westerosblocks.util.ModBlockSetType;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -40,7 +40,7 @@ public class WCDoorBlock extends DoorBlock implements ModBlockLifecycle {
     private boolean allow_unsupported = false;
 
     protected WCDoorBlock(AbstractBlock.Settings settings, ModBlock def) {
-        super(BlockSetTypeUtil.getBlockSetType(settings, def), settings);
+        super(ModBlockSetType.getBlockSetType(settings, def), settings);
         this.def = def;
         String type = def.getType();
         if (type != null) {

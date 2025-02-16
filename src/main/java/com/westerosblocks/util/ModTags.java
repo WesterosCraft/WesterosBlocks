@@ -9,9 +9,6 @@ import net.minecraft.util.Identifier;
 
 public class ModTags {
     public static class Blocks {
-//        public static final TagKey<Block> NEEDS_PINK_GARNET_TOOL = createTag("needs_pink_garnet_tool");
-//        public static final TagKey<Block> INCORRECT_FOR_PINK_GARNET_TOOL = createTag("incorrect_for_pink_garnet_tool");
-
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, WesterosBlocks.id(name));
         }

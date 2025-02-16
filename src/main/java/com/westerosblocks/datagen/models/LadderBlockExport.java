@@ -16,7 +16,7 @@ import static com.westerosblocks.datagen.models.ModModels.WC_LADDER;
 public class LadderBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private final ModBlock def;
+    private static ModBlock def;
     static final String[] FACES = {"north", "south", "east", "west"};
     static final int[] Y_ROTATIONS = {0, 180, 90, 270};
 
@@ -59,7 +59,7 @@ public class LadderBlockExport extends ModelExport {
     protected static void generateLadderModel(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, Identifier modelId) {
         TextureMap textureMap = new TextureMap().put(ModTextureKey.LADDER, createBlockIdentifier(set.getTextureByIndex(0)));
         Identifier parentId = WesterosBlocks.id("untinted/ladder");
-        Model model = WC_LADDER(parentId.getPath());
+        Model model = WC_LADDER(parentId.getPath(), def);
         model.upload(modelId, textureMap, generator.modelCollector);
     }
 

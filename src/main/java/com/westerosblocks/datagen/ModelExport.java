@@ -15,12 +15,14 @@ public class ModelExport {
     public static final String GENERATED_PATH = "block/generated/";
     public static final String CUSTOM_PATH = "block/custom/";
     protected final Block block;
-    protected static ModBlock def;
+    public static ModBlock def;
     protected static BlockStateModelGenerator generator;
+    protected static ModBlock.DisplayProperties displayProperties;
 
     public ModelExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         this.block = block;
         ModelExport.def = def;
+        ModelExport.displayProperties = def.display;
         ModelExport.generator = generator;
     }
 
@@ -164,13 +166,6 @@ public class ModelExport {
         }
     }
 
-    public boolean isTransparentTexture(String txt) {
-        if (txt != null) {
-            return txt.equals("transparent");
-        }
-        return false;
-    }
-
     protected static String getModelName(String ext, int setidx) {
         return def.blockName + "/" + ext + ("_v" + (setidx + 1));
     }
@@ -190,7 +185,6 @@ public class ModelExport {
     protected Identifier getBaseModelId(String variant, int setIdx, boolean isCustom) {
         return getBaseModelId(variant, setIdx, isCustom, def.getBlockName());
     }
-
 
     protected static void generateBasicItemModel(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
         if (blockDefinition == null || blockDefinition.states.isEmpty()) {
@@ -245,7 +239,6 @@ public class ModelExport {
         itemModelGenerator.register(block.asItem(), new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())
         );
     }
-
 
     // Overload for default "base" variant
     protected static void generateBlockBasedItemModel(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {

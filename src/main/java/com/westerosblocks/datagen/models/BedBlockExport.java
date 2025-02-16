@@ -69,7 +69,7 @@ public class BedBlockExport extends ModelExport {
 
     private void generateBedPartModel(BlockStateModelGenerator generator, Identifier modelId, TextureMap textureMap, boolean isHead) {
         String parentPath = getBedParentPath(isHead);
-        Model model = ModModels.BED_PART(parentPath);
+        Model model = ModModels.BED_PART(parentPath, def);
         model.upload(modelId, textureMap, generator.modelCollector);
     }
 
