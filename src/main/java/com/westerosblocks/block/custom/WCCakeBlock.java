@@ -26,7 +26,7 @@ public class WCCakeBlock extends CakeBlock implements ModBlockLifecycle {
         }
     }
 
-    private ModBlock def;
+    private final ModBlock def;
 
     protected WCCakeBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
@@ -38,7 +38,7 @@ public class WCCakeBlock extends CakeBlock implements ModBlockLifecycle {
         return def;
     }
 
-    private static String[] TAGS = {};
+    private static final String[] TAGS = {};
 
     @Override
     public String[] getBlockTags() {

@@ -253,7 +253,6 @@ public class WCVinesBlock extends VineBlock implements ModBlockLifecycle {
             case LAND -> false;
             case WATER -> state.getFluidState().isIn(FluidTags.WATER);
             case AIR -> false;
-            default -> false;
         };
     }
 

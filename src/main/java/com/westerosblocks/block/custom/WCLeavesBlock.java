@@ -16,8 +16,7 @@ import java.util.List;
 
 public class WCLeavesBlock extends LeavesBlock implements ModBlockLifecycle {
     protected ModBlock def;
-    private final boolean nodecay;
-    public final boolean betterfoliage;
+    public final boolean betterFoliage;
     public final boolean overlay;
 
     public static class Factory extends ModBlockFactory {
@@ -36,9 +35,9 @@ public class WCLeavesBlock extends LeavesBlock implements ModBlockLifecycle {
         super(settings);
         this.def = def;
         String typ = def.getType();
-        betterfoliage = (typ != null) && typ.contains("better-foliage");
+        betterFoliage = (typ != null) && typ.contains("better-foliage");
         overlay = (typ != null) && typ.contains("overlay");
-        nodecay = (typ != null) && typ.contains("no-decay");
+        boolean nodecay = (typ != null) && typ.contains("no-decay");
         setDefaultState(this.getDefaultState().with(DISTANCE, 7).with(PERSISTENT, !nodecay));
     }
 

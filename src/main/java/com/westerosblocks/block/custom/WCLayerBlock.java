@@ -46,7 +46,7 @@ public class WCLayerBlock extends Block implements ModBlockLifecycle {
 			Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D),
 			Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
 
-	private ModBlock def;
+	private final ModBlock def;
 
 	public static class Factory extends ModBlockFactory {
 		@Override
@@ -148,7 +148,6 @@ public class WCLayerBlock extends Block implements ModBlockLifecycle {
             case LAND -> state.get(LAYERS) <= (layerCount / 2);
             case WATER -> state.getFluidState().isIn(FluidTags.WATER);
             case AIR -> false;
-            default -> false;
         };
 	}
 
@@ -157,7 +156,7 @@ public class WCLayerBlock extends Block implements ModBlockLifecycle {
 		builder.add(LAYERS, WATERLOGGED);
 	}
 
-	private static String[] TAGS = {};
+	private static final String[] TAGS = {};
 
 	@Override
 	public String[] getBlockTags() {

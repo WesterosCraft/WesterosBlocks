@@ -145,12 +145,12 @@ public class WCWallBlock extends WallBlock implements ModBlockLifecycle {
 
         // Initialize default state
         BlockState defbs = super.getDefaultState() // Use super to get base WallBlock state
-                .with(UP, Boolean.valueOf(true))
+                .with(UP, Boolean.TRUE)
                 .with(NORTH_WALL, WallShape.NONE)
                 .with(EAST_WALL, WallShape.NONE)
                 .with(SOUTH_WALL, WallShape.NONE)
                 .with(WEST_WALL, WallShape.NONE)
-                .with(WATERLOGGED, Boolean.valueOf(false));
+                .with(WATERLOGGED, Boolean.FALSE);
 
         if (unconnect) {
             defbs = defbs.with(UNCONNECT, Boolean.FALSE);
@@ -277,7 +277,7 @@ public class WCWallBlock extends WallBlock implements ModBlockLifecycle {
                             if (up) {
                                 shape = VoxelShapes.union(shape, voxelshape);
                             }
-                            map[getStateIndex(up.booleanValue(), east.ordinal(), west.ordinal(),
+                            map[getStateIndex(up, east.ordinal(), west.ordinal(),
                                     north.ordinal(), south.ordinal())] = shape;
                         }
                     }
@@ -320,7 +320,7 @@ public class WCWallBlock extends WallBlock implements ModBlockLifecycle {
         boolean flag3 = this.connectsTo(blockstate3, blockstate3.isSideSolidFullSquare(world, blockpos4, Direction.EAST),
                 Direction.EAST);
         BlockState blockstate5 = this.getDefaultState().with(WATERLOGGED,
-                Boolean.valueOf(fluidstate.getFluid() == Fluids.WATER));
+                fluidstate.getFluid() == Fluids.WATER);
         return this.updateShape(world, blockstate5, blockpos5, blockstate4, flag, flag1, flag2, flag3);
     }
 

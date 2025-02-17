@@ -40,7 +40,7 @@ public class WCCropBlock extends WCPlantBlock implements ModBlockLifecycle {
         super(settings, def);
     }
 
-    private static String[] TAGS = {"crops"};
+    private static final String[] TAGS = {"crops"};
 
     @Override
     public String[] getBlockTags() {

@@ -465,13 +465,7 @@ public class ModBlock extends ModBlockStateRecord {
     }
 
     public AbstractBlock.Settings applyCustomProperties() {
-        AbstractBlock.Settings settings;
-
-        if (null == null) {
-            settings = AbstractBlock.Settings.create();
-        } else {
-            settings = AbstractBlock.Settings.copy(null);
-        }
+        AbstractBlock.Settings settings = AbstractBlock.Settings.create();
 
         if (hardness >= 0.0F) {
             settings = resistance >= 0.0

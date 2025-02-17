@@ -1,14 +1,11 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.ModBlockFactory;
 import com.westerosblocks.block.ModBlockLifecycle;
 import com.westerosblocks.particle.ModParticles;
-//import com.westerosblocks.particle.WesterosParticleSystem;
 import net.minecraft.block.*;
-import net.minecraft.client.particle.ParticleFactory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.tooltip.TooltipType;
@@ -27,10 +24,9 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
 import java.util.List;
-import java.util.Objects;
 
 public class WCFireBlock extends FireBlock implements ModBlockLifecycle {
-    private ModBlock def;
+    private final ModBlock def;
 
     public static class Factory extends ModBlockFactory {
         @Override

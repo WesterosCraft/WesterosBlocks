@@ -24,7 +24,7 @@ public class WCSoulSandBlock extends SoulSandBlock implements ModBlockLifecycle 
         }
     }
 
-    private ModBlock def;
+    private final ModBlock def;
 
     protected WCSoulSandBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
@@ -36,7 +36,7 @@ public class WCSoulSandBlock extends SoulSandBlock implements ModBlockLifecycle 
         return def;
     }
 
-    private static String[] TAGS = {"soul_speed_blocks"};
+    private static final String[] TAGS = {"soul_speed_blocks"};
 
     @Override
     public String[] getBlockTags() {

@@ -24,7 +24,7 @@ public class LeavesBlockExport extends ModelExport {
 
     public void generateBlockStateModels() {
         WCLeavesBlock leavesBlock = (block instanceof WCLeavesBlock) ? (WCLeavesBlock) block : null;
-        boolean isBetterFoliage = leavesBlock != null && leavesBlock.betterfoliage;
+        boolean isBetterFoliage = leavesBlock != null && leavesBlock.betterFoliage;
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 

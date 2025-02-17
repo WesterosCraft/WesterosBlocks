@@ -2,7 +2,6 @@ package com.westerosblocks.datagen.models;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.ModBlockStateRecord;
 import com.westerosblocks.block.custom.WCCuboidBlock;
@@ -169,7 +168,7 @@ public class CuboidBlockExport extends ModelExport {
                 return element;
             }
 
-            private void addCrossedFace(JsonObject faces, String direction, boolean isTinted, Map<TextureKey, Identifier> textures) {
+            private void addCrossedFace(JsonObject faces, String direction, boolean isTinted) {
                 JsonObject face = new JsonObject();
                 JsonArray uv = new JsonArray();
                 uv.add(0.0);
@@ -224,8 +223,8 @@ public class CuboidBlockExport extends ModelExport {
 
     private void addFace(JsonObject faces, String face, int index,
                          ModBlock.Cuboid cuboid, int[] sidetxt,
-                         boolean[] noTint, int[] siderot, boolean isTinted,
-                         Map<TextureKey, Identifier> textures) {
+                         boolean[] noTint, int[] siderot, boolean isTinted
+                         ) {
         JsonObject faceObj = new JsonObject();
 
         // Set UV coordinates based on face
@@ -361,6 +360,7 @@ public class CuboidBlockExport extends ModelExport {
         return getBaseModelId(variant, setIdx, isCustom);
     }
 
+    // TODO do i need this
     private boolean isTransparent(String texture) {
         return texture.equals("transparent");
     }
