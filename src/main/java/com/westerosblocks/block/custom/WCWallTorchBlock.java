@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
@@ -19,7 +20,7 @@ import net.minecraft.world.WorldView;
 import java.util.List;
 
 public class WCWallTorchBlock extends WallTorchBlock implements ModBlockLifecycle {
-    private ModBlock def;
+    private final ModBlock def;
     private boolean allow_unsupported = false;
     private boolean no_particle = false;
 
@@ -53,9 +54,8 @@ public class WCWallTorchBlock extends WallTorchBlock implements ModBlockLifecycl
 
     @Override
     public String getTranslationKey() {
-        // TODO
-//        return this.asItem().getTranslationKey();
-        return "";
+        // format for the reg torch is block.westerosblocks.<blockname>
+        return "block." + WesterosBlocks.MOD_ID + ".wall_" + def.blockName;
     }
 
     @Override

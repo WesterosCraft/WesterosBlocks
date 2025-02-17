@@ -78,8 +78,7 @@ public class CuboidBlockExport extends ModelExport {
         createCuboidModel(sr, isTinted, set.getTextureCount()).upload(modelId, textureMap, generator.modelCollector);
     }
 
-    private Model createCuboidModel(ModBlockStateRecord sr, boolean isTinted, int textureCount) {
-        // Ensure we have at least 6 texture keys for the standard faces
+    public Model createCuboidModel(ModBlockStateRecord sr, boolean isTinted, int textureCount) {
         int requiredTextures = Math.max(6, textureCount);
 
         List<TextureKey> textureKeys = new ArrayList<>();
@@ -95,113 +94,118 @@ public class CuboidBlockExport extends ModelExport {
                 JsonObject json = super.createJson(id, textures);
                 json.addProperty("parent", "block/block");
 
-                // Add display settings
                 JsonObject display = new JsonObject();
-
-                // Add thirdperson settings
-                JsonObject thirdperson = new JsonObject();
-                JsonArray thirdRotation = new JsonArray();
-                thirdRotation.add(0);
-                thirdRotation.add(0);
-                thirdRotation.add(0);
-                thirdperson.add("rotation", thirdRotation);
-                JsonArray thirdTranslation = new JsonArray();
-                thirdTranslation.add(0);
-                thirdTranslation.add(0);
-                thirdTranslation.add(0);
-                thirdperson.add("translation", thirdTranslation);
-                JsonArray thirdScale = new JsonArray();
-                thirdScale.add(0.375);
-                thirdScale.add(0.375);
-                thirdScale.add(0.375);
-                thirdperson.add("scale", thirdScale);
-
-                display.add("thirdperson_righthand", thirdperson);
-                display.add("thirdperson_lefthand", thirdperson);
-
-                // Add firstperson settings
-                JsonObject firstperson = new JsonObject();
-                JsonArray firstRotation = new JsonArray();
-                firstRotation.add(0);
-                firstRotation.add(-90);
-                firstRotation.add(25);
-                firstperson.add("rotation", firstRotation);
-                JsonArray firstTranslation = new JsonArray();
-                firstTranslation.add(0);
-                firstTranslation.add(4);
-                firstTranslation.add(2);
-                firstperson.add("translation", firstTranslation);
-                JsonArray firstScale = new JsonArray();
-                firstScale.add(0.375);
-                firstScale.add(0.375);
-                firstScale.add(0.375);
-                firstperson.add("scale", firstScale);
-
-                display.add("firstperson_righthand", firstperson);
-                display.add("firstperson_lefthand", firstperson);
-
-                // Add gui settings
-                JsonObject gui = new JsonObject();
-                JsonArray guiRotation = new JsonArray();
-                guiRotation.add(0);
-                guiRotation.add(0);
-                guiRotation.add(0);
-                gui.add("rotation", guiRotation);
-                JsonArray guiTranslation = new JsonArray();
-                guiTranslation.add(0);
-                guiTranslation.add(0);
-                guiTranslation.add(0);
-                gui.add("translation", guiTranslation);
-                JsonArray guiScale = new JsonArray();
-                guiScale.add(0.625);
-                guiScale.add(0.625);
-                guiScale.add(0.625);
-                gui.add("scale", guiScale);
-
-                display.add("gui", gui);
-
-                // Add display object to json
                 json.add("display", display);
 
                 // Add elements array
                 JsonArray elements = new JsonArray();
 
                 for (ModBlock.Cuboid cuboid : cuboidBlock.getModelCuboids(def.states.indexOf(sr))) {
-                    JsonObject element = new JsonObject();
-
-                    // From coordinates
-                    JsonArray from = new JsonArray();
-                    from.add(getClamped(cuboid.xMin));
-                    from.add(getClamped(cuboid.yMin));
-                    from.add(getClamped(cuboid.zMin));
-                    element.add("from", from);
-
-                    // To coordinates
-                    JsonArray to = new JsonArray();
-                    to.add(getClamped(cuboid.xMax));
-                    to.add(getClamped(cuboid.yMax));
-                    to.add(getClamped(cuboid.zMax));
-                    element.add("to", to);
-
-                    // Add faces
-                    JsonObject faces = new JsonObject();
-                    addFaces(faces, cuboid, isTinted, textures);
-                    element.add("faces", faces);
-
-                    if ("crossed".equals(cuboid.shape)) {
-                        element.addProperty("shade", false);
+                    if (ModBlock.SHAPE_CROSSED.equals(cuboid.shape)) {
+                        // Handle crossed shape (like plants)
                         json.addProperty("ambientocclusion", false);
-                    }
 
-                    elements.add(element);
+                        // First diagonal
+                        JsonObject element1 = createCrossedElement(cuboid, true, isTinted, textures);
+                        elements.add(element1);
+
+                        // Second diagonal
+                        JsonObject element2 = createCrossedElement(cuboid, false, isTinted, textures);
+                        elements.add(element2);
+                    } else {
+                        JsonObject element = new JsonObject();
+                        addCuboidElement(element, cuboid, isTinted, textures);
+                        elements.add(element);
+                    }
                 }
 
                 json.add("elements", elements);
                 return json;
             }
 
-            private void addFaces(JsonObject faces, ModBlock.Cuboid cuboid,
-                                  boolean isTinted, Map<TextureKey, Identifier> textures) {
+            private JsonObject createCrossedElement(ModBlock.Cuboid cuboid, boolean firstDiagonal, boolean isTinted, Map<TextureKey, Identifier> textures) {
+                JsonObject element = new JsonObject();
+
+                // From coordinates
+                JsonArray from = new JsonArray();
+                if (firstDiagonal) {
+                    from.add(getClamped(cuboid.xMin));
+                    from.add(getClamped(cuboid.yMin));
+                    from.add(8.0);
+                } else {
+                    from.add(8.0);
+                    from.add(getClamped(cuboid.yMin));
+                    from.add(getClamped(cuboid.zMin));
+                }
+                element.add("from", from);
+
+                // To coordinates
+                JsonArray to = new JsonArray();
+                if (firstDiagonal) {
+                    to.add(getClamped(cuboid.xMax));
+                    to.add(getClamped(cuboid.yMax));
+                    to.add(8.0);
+                } else {
+                    to.add(8.0);
+                    to.add(getClamped(cuboid.yMax));
+                    to.add(getClamped(cuboid.zMax));
+                }
+                element.add("to", to);
+
+                // Set shade to false for crossed elements
+                element.addProperty("shade", false);
+
+                // Add faces
+                JsonObject faces = new JsonObject();
+                if (firstDiagonal) {
+                    addCrossedFace(faces, "north", isTinted, textures);
+                    addCrossedFace(faces, "south", isTinted, textures);
+                } else {
+                    addCrossedFace(faces, "east", isTinted, textures);
+                    addCrossedFace(faces, "west", isTinted, textures);
+                }
+                element.add("faces", faces);
+
+                return element;
+            }
+
+            private void addCrossedFace(JsonObject faces, String direction, boolean isTinted, Map<TextureKey, Identifier> textures) {
+                JsonObject face = new JsonObject();
+                JsonArray uv = new JsonArray();
+                uv.add(0.0);
+                uv.add(0.0);
+                uv.add(16.0);
+                uv.add(16.0);
+                face.add("uv", uv);
+                face.addProperty("texture", "#txt0");
+                if (isTinted) {
+                    face.addProperty("tintindex", 0);
+                }
+                faces.add(direction, face);
+            }
+
+            private void addCuboidElement(JsonObject element, ModBlock.Cuboid cuboid, boolean isTinted, Map<TextureKey, Identifier> textures) {
+                // From coordinates
+                JsonArray from = new JsonArray();
+                from.add(getClamped(cuboid.xMin));
+                from.add(getClamped(cuboid.yMin));
+                from.add(getClamped(cuboid.zMin));
+                element.add("from", from);
+
+                // To coordinates
+                JsonArray to = new JsonArray();
+                to.add(getClamped(cuboid.xMax));
+                to.add(getClamped(cuboid.yMax));
+                to.add(getClamped(cuboid.zMax));
+                element.add("to", to);
+
+                // Add faces
+                JsonObject faces = new JsonObject();
+                addCuboidFaces(faces, cuboid, isTinted, textures);
+                element.add("faces", faces);
+            }
+
+            private void addCuboidFaces(JsonObject faces, ModBlock.Cuboid cuboid, boolean isTinted, Map<TextureKey, Identifier> textures) {
                 int[] sidetxt = cuboid.sideTextures != null ? cuboid.sideTextures : STANDARD_TEXTURE_INDICES;
                 boolean[] noTint = cuboid.noTint != null ? cuboid.noTint : NO_TINT_ALL;
                 int[] siderot = cuboid.sideRotations != null ?
@@ -215,50 +219,40 @@ public class CuboidBlockExport extends ModelExport {
                 addFace(faces, "west", 4, cuboid, sidetxt, noTint, siderot, isTinted, textures);
                 addFace(faces, "east", 5, cuboid, sidetxt, noTint, siderot, isTinted, textures);
             }
-
-            private void addFace(JsonObject faces, String face, int index,
-                                 ModBlock.Cuboid cuboid, int[] sidetxt,
-                                 boolean[] noTint, int[] siderot, boolean isTinted,
-                                 Map<TextureKey, Identifier> textures) {
-                JsonObject faceObj = new JsonObject();
-
-                // Set UV coordinates based on face
-                JsonArray uv = new JsonArray();
-                calculateUVs(face, cuboid, uv);
-                faceObj.add("uv", uv);
-
-                // Get correct texture key
-//                TextureKey textureKey = modTextureKeyForIndex(sidetxt[index]);
-
-                // Add texture reference
-                faceObj.addProperty("texture", "#txt" + sidetxt[index]);
-
-                // Add rotation if needed
-                if (siderot[index] != 0) {
-                    faceObj.addProperty("rotation", siderot[index]);
-                }
-
-                // Add tint if needed
-                if (isTinted && !noTint[index]) {
-                    faceObj.addProperty("tintindex", 0);
-                }
-
-                // Add cullface if needed
-                String cullface = getCullface(face, cuboid);
-                if (cullface != null) {
-                    faceObj.addProperty("cullface", cullface);
-                }
-
-                faces.add(face, faceObj);
-            }
         };
     }
 
-    private static float getClamped(float v) {
-        v = 16F * v;
-        if (v < -16f) v = -16f;
-        if (v > 32f) v = 32f;
-        return v;
+    private void addFace(JsonObject faces, String face, int index,
+                         ModBlock.Cuboid cuboid, int[] sidetxt,
+                         boolean[] noTint, int[] siderot, boolean isTinted,
+                         Map<TextureKey, Identifier> textures) {
+        JsonObject faceObj = new JsonObject();
+
+        // Set UV coordinates based on face
+        JsonArray uv = new JsonArray();
+        calculateUVs(face, cuboid, uv);
+        faceObj.add("uv", uv);
+
+        // Get correct texture key
+        faceObj.addProperty("texture", "#txt" + sidetxt[index]);
+
+        // Add rotation if needed
+        if (siderot[index] != 0) {
+            faceObj.addProperty("rotation", siderot[index]);
+        }
+
+        // Add tint if needed
+        if (isTinted && !noTint[index]) {
+            faceObj.addProperty("tintindex", 0);
+        }
+
+        // Add cullface if needed
+        String cullface = getCullface(face, cuboid);
+        if (cullface != null) {
+            faceObj.addProperty("cullface", cullface);
+        }
+
+        faces.add(face, faceObj);
     }
 
     private void calculateUVs(String face, ModBlock.Cuboid cuboid, JsonArray uv) {
@@ -301,6 +295,13 @@ public class CuboidBlockExport extends ModelExport {
                 uv.add(16 - getClamped(cuboid.yMin));
             }
         }
+    }
+
+    private static float getClamped(float v) {
+        v = 16F * v;
+        if (v < -16f) v = -16f;
+        if (v > 32f) v = 32f;
+        return v;
     }
 
     private String getCullface(String face, ModBlock.Cuboid cuboid) {

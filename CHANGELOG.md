@@ -1,5 +1,18 @@
 ## Changelog
 
+# 15 Feb 2025
+- datagen cleanup
+- adds Longclaw
+- adds Weirwood custom wood type
+- adds "display" property to the BlockDefinitionFiles. You can now customize the creative item display via the "gui" prop
+  - example: `"display": {
+      "gui": {
+        "rotation": [0, 0, 0],
+        "translation": [45, 90, 0],
+        "scale": [.625, .625, .625]
+      }
+    }`
+
 # 11 Feb 2025
 - Initial port to Fabric 1.21.1
 - "WesterosBlocks.json" is now split among different files in the `resources/definitions` folders. Blocksets and block

@@ -3,12 +3,16 @@ package com.westerosblocks.item;
 import java.util.function.Supplier;
 import com.google.common.base.Suppliers;
 import net.minecraft.block.Block;
+import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 
 public enum ModToolMaterials implements ToolMaterial {
-    ;
+    // TODO customize
+    VALYRIAN_STEEL(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2031, 9.0F, 4.0F, 15, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));;
+
     private final TagKey<Block> inverseTag;
     private final int itemDurability;
     private final float miningSpeed;

@@ -439,6 +439,92 @@ public class ModModels extends Models {
         };
     }
 
+    public static Model WALL_16WAY_CUBOID() {
+        return new Model(
+                Optional.of(Identifier.ofVanilla("block/block")),
+                Optional.empty(),
+                TextureKey.PARTICLE,
+                ModTextureKey.TEXTURE_0,
+                ModTextureKey.TEXTURE_1,
+                ModTextureKey.TEXTURE_2,
+                ModTextureKey.TEXTURE_3,
+                ModTextureKey.TEXTURE_4,
+                ModTextureKey.TEXTURE_5
+        ) {
+            @Override
+            public JsonObject createJson(Identifier id, Map<TextureKey, Identifier> textures) {
+                JsonObject json = super.createJson(id, textures);
+
+                JsonObject display = new JsonObject();
+                JsonObject gui = new JsonObject();
+                JsonArray guiRotation = new JsonArray();
+                guiRotation.add(30);
+                guiRotation.add(225);
+                guiRotation.add(0);
+                gui.add("rotation", guiRotation);
+                JsonArray guiScale = new JsonArray();
+                guiScale.add(0.625);
+                guiScale.add(0.625);
+                guiScale.add(0.625);
+                gui.add("scale", guiScale);
+                display.add("gui", gui);
+                json.add("display", display);
+
+                JsonArray elements = new JsonArray();
+                JsonObject element = new JsonObject();
+
+                JsonArray from = new JsonArray();
+                from.add(4.0);  // Centered horizontally (4-12)
+                from.add(4.0);  // Centered vertically (4-12)
+                from.add(0.0);  // Attached to wall
+                element.add("from", from);
+
+                JsonArray to = new JsonArray();
+                to.add(12.0);   // Centered horizontally
+                to.add(12.0);   // Centered vertically
+                to.add(8.0);    // Depth from wall
+                element.add("to", to);
+
+                JsonObject faces = new JsonObject();
+
+                addFace(faces, "down", "#txt0", 4, 0, 12, 8);
+                addFace(faces, "up", "#txt1", 4, 0, 12, 8);
+                addFace(faces, "north", "#txt2", 4, 4, 12, 12, "north");
+                addFace(faces, "south", "#txt3", 4, 4, 12, 12);
+                addFace(faces, "west", "#txt4", 0, 4, 8, 12);
+                addFace(faces, "east", "#txt5", 0, 4, 8, 12);
+
+                element.add("faces", faces);
+                elements.add(element);
+                json.add("elements", elements);
+
+                return json;
+            }
+
+            private void addFace(JsonObject faces, String face, String texture,
+                                 double uMin, double vMin, double uMax, double vMax,
+                                 String cullface) {
+                JsonObject faceObj = new JsonObject();
+                JsonArray uv = new JsonArray();
+                uv.add(uMin);
+                uv.add(vMin);
+                uv.add(uMax);
+                uv.add(vMax);
+                faceObj.add("uv", uv);
+                faceObj.addProperty("texture", texture);
+                if (cullface != null) {
+                    faceObj.addProperty("cullface", cullface);
+                }
+                faces.add(face, faceObj);
+            }
+
+            private void addFace(JsonObject faces, String face, String texture,
+                                 double uMin, double vMin, double uMax, double vMax) {
+                addFace(faces, face, texture, uMin, vMin, uMax, vMax, null);
+            }
+        };
+    }
+
     public static Model BED_PART(String parent, ModBlock def) {
         return block(parent,
                 def,
@@ -581,8 +667,6 @@ public class ModModels extends Models {
             json.add("display", genDisplay);
         }
     }
-
-
 
     private static Model block(String parent, String namespace, ModBlock def, TextureKey... requiredTextureKeys) {
 

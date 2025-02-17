@@ -28,7 +28,7 @@ public class ModBlock extends ModBlockStateRecord {
     public String blockType = "solid"; // Block type ('solid', 'liquid', 'plant', 'log', 'stairs', etc)
     public float hardness = DEF_FLOAT;  // Block hardness
     public String stepSound = null; // Step sound (powder, wood, gravel, grass, stone, metal, glass, cloth, sand, snow, ladder, anvil)
-    public String material = null; // Generic material (air, grass, ground, wood, rock, iron, anvil, water, lava, leaves, plants, vine, sponge, etc)
+    public String material = null; // Generic material (air, grass, ground, wood, rock, iron, anvil, water, lava, leaves, plants, vine, sponge, etc.)
     public float resistance = DEF_FLOAT; // Explosion resistance
     public int lightOpacity = DEF_INT;
     public List<HarvestLevel> harvestLevel = null; // List of harvest levels
@@ -51,7 +51,7 @@ public class ModBlock extends ModBlockStateRecord {
     public String connectBy = "block";
     public static final String SHAPE_BOX = "box"; // Shape for normal cuboid (box)
     public static final String SHAPE_CROSSED = "crossed"; // TODO Shape for crossed squares (plant-style) (texture is index 0 in list)
-    public String woodType = null; // TODO wood type for wood blocks like fencegate. see WoodTypeUtil class
+    public String woodType = null;
     public String particle;
     public DisplayProperties display = null;
 
@@ -221,6 +221,7 @@ public class ModBlock extends ModBlockStateRecord {
         return stateProp;
     }
 
+    // todo why isnt his beign used anywhere
     public String getDefaultStateID() {
         if (this.states == null) return null;
         return this.states.getFirst().stateID;
@@ -588,7 +589,6 @@ public class ModBlock extends ModBlockStateRecord {
                 if (!def.type.contains(typeAttr)) {
                     WesterosBlocks.LOGGER.warn(String.format("validation: blockName '%s' is missing type attribute '%s'", val.blockName, typeAttr));
                     error = true;
-                    continue;
                 }
             }
 
@@ -616,7 +616,6 @@ public class ModBlock extends ModBlockStateRecord {
             if (substateError) {
                 WesterosBlocks.LOGGER.warn(String.format("validation: blockName '%s' has different stack or state lists", val.blockName));
                 error = true;
-                continue;
             }
         }
         return !error;
@@ -674,6 +673,7 @@ public class ModBlock extends ModBlockStateRecord {
         typeTable.put("cuboid", new WCCuboidBlock.Factory());
         typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
         typeTable.put("cuboid-16way", new WCCuboid16WayBlock.Factory());
+//        typeTable.put("cuboid-wall-16way", new WCCuboidWall16WayBlock.Factory());
         typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
         typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
         typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
@@ -695,6 +695,7 @@ public class ModBlock extends ModBlockStateRecord {
         typeTable.put("vines", new WCVinesBlock.Factory());
         typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
         typeTable.put("fencegate", new WCFenceGateBlock.Factory());
+
     }
 
     public BlockSoundGroup getSoundType() {
@@ -726,6 +727,4 @@ public class ModBlock extends ModBlockStateRecord {
         }
         return res;
     }
-
-
 }

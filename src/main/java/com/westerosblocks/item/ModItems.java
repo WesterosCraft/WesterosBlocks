@@ -9,7 +9,7 @@ import net.minecraft.registry.Registry;
 
 public class ModItems {
     public static final Item LONGCLAW_ITEM = registerItem("longclaw",
-            new LongclawItem(ToolMaterials.NETHERITE, new Item.Settings()
+            new LongclawItem(ModToolMaterials.VALYRIAN_STEEL, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 7, -3.4f))));
 
     private static Item registerItem(String name, Item item) {
@@ -19,7 +19,7 @@ public class ModItems {
     public static void registerModItems() {
         WesterosBlocks.LOGGER.info("Registering Mod Items for " + WesterosBlocks.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(LONGCLAW_ITEM);
         });
     }
