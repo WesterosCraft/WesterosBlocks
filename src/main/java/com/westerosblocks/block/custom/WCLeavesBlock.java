@@ -26,7 +26,7 @@ public class WCLeavesBlock extends LeavesBlock implements ModBlockLifecycle {
             if (def.lightOpacity == ModBlock.DEF_INT) {
                 def.lightOpacity = 1;
             }
-            AbstractBlock.Settings settings = def.makeBlockSettings().nonOpaque().suffocates((state, world, pos) -> false).blockVision((state, reader, pos) -> false);
+            AbstractBlock.Settings settings = def.applyCustomProperties().nonOpaque().suffocates((state, world, pos) -> false).blockVision((state, reader, pos) -> false);
             Block blk = new WCLeavesBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), true, true);
         }

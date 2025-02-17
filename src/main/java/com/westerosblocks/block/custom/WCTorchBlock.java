@@ -30,8 +30,8 @@ public class WCTorchBlock extends TorchBlock implements ModBlockLifecycle {
     public static class Factory extends ModBlockFactory {
         @Override
         public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings floorBlockSettings = def.makeBlockSettings().noCollision().breakInstantly();
-            AbstractBlock.Settings wallBlockSettings = def.makeBlockSettings().noCollision().breakInstantly();
+            AbstractBlock.Settings floorBlockSettings = def.applyCustomProperties().noCollision().breakInstantly();
+            AbstractBlock.Settings wallBlockSettings = def.applyCustomProperties().noCollision().breakInstantly();
             Block wallTorch = new WCWallTorchBlock(wallBlockSettings, def);
             Block floorTorch = new WCTorchBlock(floorBlockSettings, def, wallTorch);
 

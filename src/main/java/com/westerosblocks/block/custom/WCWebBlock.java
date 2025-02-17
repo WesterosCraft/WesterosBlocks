@@ -44,7 +44,7 @@ public class WCWebBlock extends Block implements ModBlockLifecycle {
     public static class Factory extends ModBlockFactory {
         @Override
         public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings settings = def.makeBlockSettings().noCollision();
+            AbstractBlock.Settings settings = def.applyCustomProperties().noCollision();
 
             ModBlock.StateProperty state = def.buildStateProperty();
             if (state != null) {

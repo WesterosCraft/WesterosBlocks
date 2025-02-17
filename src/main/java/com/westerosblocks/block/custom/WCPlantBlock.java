@@ -38,7 +38,7 @@ public class WCPlantBlock extends Block implements ModBlockLifecycle {
     public static class Factory extends ModBlockFactory {
         @Override
         public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings settings = def.makeBlockSettings().noCollision().breakInstantly();
+            AbstractBlock.Settings settings = def.applyCustomProperties().noCollision().breakInstantly();
             // See if we have a state property
             ModBlock.StateProperty state = def.buildStateProperty();
             if (state != null) {

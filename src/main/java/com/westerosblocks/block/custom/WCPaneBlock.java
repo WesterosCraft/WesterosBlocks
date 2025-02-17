@@ -26,7 +26,7 @@ public class WCPaneBlock extends PaneBlock implements ModBlockLifecycle {
     public static class Factory extends ModBlockFactory {
         @Override
         public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings settings = def.makeBlockSettings().nonOpaque();
+            AbstractBlock.Settings settings = def.applyCustomProperties().nonOpaque();
             String t = def.getType();
             boolean doUnconnect = false;
             if (t != null) {

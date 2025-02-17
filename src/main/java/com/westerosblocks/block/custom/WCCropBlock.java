@@ -30,7 +30,7 @@ public class WCCropBlock extends WCPlantBlock implements ModBlockLifecycle {
                 tempLAYERS = Properties.LAYERS;
             }
 
-            AbstractBlock.Settings settings = def.makeBlockSettings().noCollision().breakInstantly();
+            AbstractBlock.Settings settings = def.applyCustomProperties().noCollision().breakInstantly();
             Block blk = new WCCropBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }

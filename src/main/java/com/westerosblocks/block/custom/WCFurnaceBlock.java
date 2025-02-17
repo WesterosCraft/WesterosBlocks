@@ -33,7 +33,7 @@ public class WCFurnaceBlock extends AbstractFurnaceBlock implements ModBlockLife
         @Override
         public Block buildBlockClass(ModBlock def) {
             boolean alwaysOn = def.getTypeValue("always-on").equals("true");
-            AbstractBlock.Settings settings = def.makeBlockSettings()
+            AbstractBlock.Settings settings = def.applyCustomProperties()
                     .luminance(state -> (alwaysOn || state.get(Properties.LIT)) ?
                             (int)(def.lightValue) : 0);
 

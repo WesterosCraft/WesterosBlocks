@@ -20,7 +20,7 @@ public class WCSandBlock extends ColoredFallingBlock implements ModBlockLifecycl
     public static class Factory extends ModBlockFactory {
         @Override
         public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings settings = def.makeBlockSettings();
+            AbstractBlock.Settings settings = def.applyCustomProperties();
             Block blk = new WCSandBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), true, false);
         }

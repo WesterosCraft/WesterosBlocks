@@ -83,7 +83,7 @@ public class WCWallBlock extends WallBlock implements ModBlockLifecycle {
     public static class Factory extends ModBlockFactory {
         @Override
         public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings settings = def.makeBlockSettings();
+            AbstractBlock.Settings settings = def.applyCustomProperties();
             // See if we have a state property
             ModBlock.StateProperty state = def.buildStateProperty();
             if (state != null) {

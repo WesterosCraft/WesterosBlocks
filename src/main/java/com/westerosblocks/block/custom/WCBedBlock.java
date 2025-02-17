@@ -49,7 +49,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements ModBlockLifecyc
         @Override
         public Block buildBlockClass(ModBlock def) {
             def.nonOpaque = true;
-            Settings settings = def.makeBlockSettings().nonOpaque();
+            Settings settings = def.applyCustomProperties().nonOpaque();
             Block blk = new WCBedBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }

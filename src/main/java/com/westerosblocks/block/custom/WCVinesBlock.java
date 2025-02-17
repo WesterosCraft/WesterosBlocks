@@ -36,7 +36,7 @@ public class WCVinesBlock extends VineBlock implements ModBlockLifecycle {
     public static class Factory extends ModBlockFactory {
         @Override
         public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings settings = def.makeBlockSettings().nonOpaque();
+            AbstractBlock.Settings settings = def.applyCustomProperties().nonOpaque();
             Block blk = new WCVinesBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }

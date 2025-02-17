@@ -44,7 +44,7 @@ public class WCSoundBlock extends WCSolidBlock {
                 tempINDEX = IntProperty.of("index", 0, def.soundList.size() - 1);
             }
 
-            AbstractBlock.Settings settings = def.makeBlockSettings();
+            AbstractBlock.Settings settings = def.applyCustomProperties();
             Block blk = new WCSoundBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), true, def.nonOpaque);
         }

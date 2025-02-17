@@ -57,7 +57,7 @@ public class CuboidWall16WayBlockExport extends ModelExport {
                         // Convert 22.5 degree increments to integer degrees
                         int totalRotation = (BASE_ROTATIONS[faceIdx] + (int)(rotation * 22.5)) % 360;
 
-                        Identifier modelId = getModelId("wall", setIdx, sr.isCustomModel());
+                        Identifier modelId = getModelId(setIdx, sr.isCustomModel());
                         BlockStateVariant variant = VariantBuilder.create(
                                 modelId,
                                 set,
@@ -81,7 +81,7 @@ public class CuboidWall16WayBlockExport extends ModelExport {
         TextureMap textureMap = createCuboidTextureMap(set);
 
         // Generate the wall model
-        Identifier modelId = getModelId("wall", setIdx, sr.isCustomModel());
+        Identifier modelId = getModelId(setIdx, sr.isCustomModel());
         Model model = ModModels.WALL_16WAY_CUBOID();
         model.upload(modelId, textureMap, generator.modelCollector);
     }
@@ -97,11 +97,11 @@ public class CuboidWall16WayBlockExport extends ModelExport {
                 .put(ModTextureKey.TEXTURE_5, createBlockIdentifier(set.getTextureByIndex(5)));
     }
 
-    private Identifier getModelId(String variant, int setIdx, boolean isCustom) {
+    private Identifier getModelId(int setIdx, boolean isCustom) {
         return WesterosBlocks.id(String.format("%s%s/%s_v%d",
                 isCustom ? CUSTOM_PATH : GENERATED_PATH,
                 def.getBlockName(),
-                variant,
+                "wall",
                 setIdx + 1));
     }
 

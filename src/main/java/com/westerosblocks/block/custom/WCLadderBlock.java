@@ -25,7 +25,7 @@ public class WCLadderBlock extends LadderBlock implements ModBlockLifecycle {
     public static class Factory extends ModBlockFactory {
         @Override
         public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings settings = def.makeBlockSettings().nonOpaque();
+            AbstractBlock.Settings settings = def.applyCustomProperties().nonOpaque();
 
             Block blk = new WCLadderBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);

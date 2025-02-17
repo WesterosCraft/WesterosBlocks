@@ -51,7 +51,7 @@ public class WCLayerBlock extends Block implements ModBlockLifecycle {
 	public static class Factory extends ModBlockFactory {
 		@Override
 		public Block buildBlockClass(ModBlock def) {
-			AbstractBlock.Settings settings = def.makeBlockSettings();
+			AbstractBlock.Settings settings = def.applyCustomProperties();
 			settings = settings.blockVision((state, level, pos) -> state.get(LAYERS) >= 8);
 			Block blk = new WCLayerBlock(settings, def);
 

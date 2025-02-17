@@ -19,7 +19,7 @@ public class WCBeaconBlock extends WCCuboidBlock implements ModBlockLifecycle {
         @Override
         public Block buildBlockClass(ModBlock def) {
             def.nonOpaque = true;
-            AbstractBlock.Settings settings = def.makeBlockSettings();
+            AbstractBlock.Settings settings = def.applyCustomProperties();
             Block blk = new WCBeaconBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }

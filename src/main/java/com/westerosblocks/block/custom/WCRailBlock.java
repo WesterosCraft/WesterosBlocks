@@ -23,7 +23,7 @@ public class WCRailBlock extends RailBlock implements ModBlockLifecycle {
     public static class Factory extends ModBlockFactory {
         @Override
         public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings settings = def.makeBlockSettings().nonOpaque().noCollision();
+            AbstractBlock.Settings settings = def.applyCustomProperties().nonOpaque().noCollision();
 
             Block blk = new WCRailBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);

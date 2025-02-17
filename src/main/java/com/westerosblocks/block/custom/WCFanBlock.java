@@ -32,8 +32,8 @@ public class WCFanBlock extends Block implements ModBlockLifecycle {
     public static class Factory extends ModBlockFactory {
         @Override
         public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings fanSettings = def.makeBlockSettings().noCollision().breakInstantly();
-            AbstractBlock.Settings wallFanSettings = def.makeBlockSettings().noCollision().breakInstantly();
+            AbstractBlock.Settings fanSettings = def.applyCustomProperties().noCollision().breakInstantly();
+            AbstractBlock.Settings wallFanSettings = def.applyCustomProperties().noCollision().breakInstantly();
 
             Block wallFanBlock = new WCWallFanBlock(wallFanSettings, def);
             Block fanBlock = new WCFanBlock(fanSettings, def, wallFanBlock);

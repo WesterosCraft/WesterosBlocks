@@ -48,7 +48,6 @@ public class ModBlock extends ModBlockStateRecord {
     public List<ModBlockStateRecord> stack = null;  // List of elements for a stack, first is bottom-most (for *-stack)
     public List<ModBlockStateRecord> states = null;
     private StateProperty stateProp = null;
-    public String connectBy = "block";
     public static final String SHAPE_BOX = "box"; // Shape for normal cuboid (box)
     public static final String SHAPE_CROSSED = "crossed"; // TODO Shape for crossed squares (plant-style) (texture is index 0 in list)
     public String woodType = null;
@@ -58,7 +57,6 @@ public class ModBlock extends ModBlockStateRecord {
     private static final Map<String, BlockSoundGroup> stepSoundTable = new HashMap<>();
     private static final Map<String, ModBlockFactory> typeTable = new HashMap<>();
     private transient Map<String, String> parsedType;
-    private final transient boolean hasCollisionBoxes = false;
 
     public static class DisplayProperties {
         public GuiProperties gui;
@@ -219,12 +217,6 @@ public class ModBlock extends ModBlockStateRecord {
 
     public StateProperty buildStateProperty() {
         return stateProp;
-    }
-
-    // todo why isnt his beign used anywhere
-    public String getDefaultStateID() {
-        if (this.states == null) return null;
-        return this.states.getFirst().stateID;
     }
 
     public String getType() {
@@ -472,17 +464,13 @@ public class ModBlock extends ModBlockStateRecord {
         return block;
     }
 
-    public AbstractBlock.Settings makeBlockSettings() {
-        return applyCustomProperties(null);
-    }
-
-    private AbstractBlock.Settings applyCustomProperties(Block block) {
+    public AbstractBlock.Settings applyCustomProperties() {
         AbstractBlock.Settings settings;
 
-        if (block == null) {
+        if (null == null) {
             settings = AbstractBlock.Settings.create();
         } else {
-            settings = AbstractBlock.Settings.copy(block);
+            settings = AbstractBlock.Settings.copy(null);
         }
 
         if (hardness >= 0.0F) {
@@ -562,73 +550,6 @@ public class ModBlock extends ModBlockStateRecord {
         return this.blockName;
     }
 
-    // Return true if defs strictly subsumes validation (i.e., it preserves every block name, as well as
-    // every state-related attribute for each block); otherwise false.
-    public static boolean compareBlockDefs(ModBlock[] defs, ModBlock[] validation) {
-        Map<String, ModBlock> defmap = defsToMap(defs);
-        boolean error = false;
-        for (ModBlock val : validation) {
-            if (!defmap.containsKey(val.blockName)) {
-                WesterosBlocks.LOGGER.warn(String.format("validation: blockName '%s' missing", val.blockName));
-                error = true;
-                continue;
-            }
-
-            ModBlock def = defmap.get(val.blockName);
-            if (!def.blockType.equals(val.blockType)) {
-                // allow for solid subtypes to be recast
-                if (!def.blockType.matches("solid|sand|soulsand") && !def.blockType.matches("solid|sand|soulsand")) {
-                    WesterosBlocks.LOGGER.warn(String.format("validation: blockName '%s' has different blockType attribute", val.blockName));
-                    error = true;
-                    continue;
-                }
-            }
-
-            String[] valTypeAttrs = val.type.split(",");
-            for (String typeAttr : valTypeAttrs) {
-                if (!def.type.contains(typeAttr)) {
-                    WesterosBlocks.LOGGER.warn(String.format("validation: blockName '%s' is missing type attribute '%s'", val.blockName, typeAttr));
-                    error = true;
-                }
-            }
-
-            boolean substateError = false;
-            if (val.stack != null) {
-                if (def.stack == null || def.stack.size() != val.stack.size())
-                    substateError = true;
-                else {
-                    for (int i = 0; i < val.stack.size(); i++) {
-                        if (!def.stack.get(i).equals(val.stack.get(i)))
-                            substateError = true;
-                    }
-                }
-            }
-            if (val.states != null) {
-                if (def.states == null || def.states.size() != val.states.size())
-                    substateError = true;
-                else {
-                    for (int i = 0; i < val.states.size(); i++) {
-                        if (!def.states.get(i).equals(val.states.get(i)))
-                            substateError = true;
-                    }
-                }
-            }
-            if (substateError) {
-                WesterosBlocks.LOGGER.warn(String.format("validation: blockName '%s' has different stack or state lists", val.blockName));
-                error = true;
-            }
-        }
-        return !error;
-    }
-
-    public static Map<String, ModBlock> defsToMap(ModBlock[] defs) {
-        Map<String, ModBlock> map = new HashMap<String, ModBlock>();
-        for (ModBlock def : defs) {
-            map.put(def.blockName, def);
-        }
-        return map;
-    }
-
     // TODO move this out of here
     public static void initialize() {
         stepSoundTable.put("powder", BlockSoundGroup.SAND);
@@ -701,7 +622,7 @@ public class ModBlock extends ModBlockStateRecord {
     public BlockSoundGroup getSoundType() {
         BlockSoundGroup ss = stepSoundTable.get(stepSound);
         if (ss == null) {
-            WesterosBlocks.LOGGER.warn(String.format("Invalid step sound '%s' in block '%s'", stepSound, blockName));
+            WesterosBlocks.LOGGER.warn("Invalid step sound '{}' in block '{}'", stepSound, blockName);
             return BlockSoundGroup.STONE;
         }
         return ss;

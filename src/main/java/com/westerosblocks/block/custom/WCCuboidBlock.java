@@ -41,7 +41,7 @@ public class WCCuboidBlock extends Block implements ModBlockLifecycle {
         @Override
         public Block buildBlockClass(ModBlock def) {
             def.nonOpaque = true;
-            AbstractBlock.Settings settings = def.makeBlockSettings();
+            AbstractBlock.Settings settings = def.applyCustomProperties();
             // See if we have a state property
             ModBlock.StateProperty state = def.buildStateProperty();
             if (state != null) {
