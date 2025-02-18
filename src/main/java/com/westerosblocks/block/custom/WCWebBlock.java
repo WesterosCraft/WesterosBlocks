@@ -31,7 +31,7 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class WCWebBlock extends Block implements ModBlockLifecycle {
-    private ModBlock def;
+    private final ModBlock def;
     protected static ModBlock.StateProperty tempSTATE;
     protected static IntProperty tempLAYERS;
     protected ModBlock.StateProperty STATE;
@@ -157,7 +157,6 @@ public class WCWebBlock extends Block implements ModBlockLifecycle {
             case LAND -> false;
             case WATER -> state.getFluidState().isIn(FluidTags.WATER);
             case AIR -> false;
-            default -> false;
         };
     }
 
@@ -174,7 +173,7 @@ public class WCWebBlock extends Block implements ModBlockLifecycle {
         }
     }
 
-    private static String[] TAGS = {};
+    private static final String[] TAGS = {};
 
     @Override
     public String[] getBlockTags() {

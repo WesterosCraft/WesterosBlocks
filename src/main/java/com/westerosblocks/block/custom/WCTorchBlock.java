@@ -9,7 +9,6 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.TorchBlock;
-import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
@@ -109,7 +108,7 @@ public class WCTorchBlock extends TorchBlock implements ModBlockLifecycle {
         return super.canPlaceAt(state, world, pos);
     }
 
-    private static String[] TAGS = {"wall_post_override"};
+    private static final String[] TAGS = {"wall_post_override"};
 
     @Override
     public String[] getBlockTags() {

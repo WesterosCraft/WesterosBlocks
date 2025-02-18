@@ -4,7 +4,6 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
 import net.minecraft.data.client.TextureKey;
@@ -284,16 +283,16 @@ public class ModModels extends Models {
                 JsonObject faces = new JsonObject();
 
                 // Down face
-                faces.add("down", createFace(0, 0, 16, 16, "#txt0", "down", isTinted));
+                faces.add("down", createFace(0, "#txt0", "down", isTinted));
 
                 // Up face
-                faces.add("up", createFace(0, 0, 16, 16, "#txt1", yMax >= 16 ? "up" : null, isTinted));
+                faces.add("up", createFace(0, "#txt1", yMax >= 16 ? "up" : null, isTinted));
 
                 // Side faces - UV coordinates are adjusted for height
-                faces.add("north", createFace(0, 16 - yMax, 16, 16, "#txt2", "north", isTinted));
-                faces.add("south", createFace(0, 16 - yMax, 16, 16, "#txt3", "south", isTinted));
-                faces.add("west", createFace(0, 16 - yMax, 16, 16, "#txt4", "west", isTinted));
-                faces.add("east", createFace(0, 16 - yMax, 16, 16, "#txt5", "east", isTinted));
+                faces.add("north", createFace(16 - yMax, "#txt2", "north", isTinted));
+                faces.add("south", createFace(16 - yMax, "#txt3", "south", isTinted));
+                faces.add("west", createFace(16 - yMax, "#txt4", "west", isTinted));
+                faces.add("east", createFace(16 - yMax, "#txt5", "east", isTinted));
 
                 element.add("faces", faces);
                 elements.add(element);
@@ -302,24 +301,24 @@ public class ModModels extends Models {
                 return json;
             }
 
-            private JsonObject createFace(float uMin, float vMin, float uMax, float vMax,
-                                          String texture, String cullface, boolean tinted) {
+            private JsonObject createFace(float vMin,
+                                          String texture, String cullFace, boolean tinted) {
                 JsonObject face = new JsonObject();
 
                 // UV coordinates
                 JsonArray uv = new JsonArray();
-                uv.add(uMin);
+                uv.add((float) 0);
                 uv.add(vMin);
-                uv.add(uMax);
-                uv.add(vMax);
+                uv.add((float) 16);
+                uv.add((float) 16);
                 face.add("uv", uv);
 
                 // Texture reference
                 face.addProperty("texture", texture);
 
-                // Cullface if specified
-                if (cullface != null) {
-                    face.addProperty("cullface", cullface);
+                // CullFace if specified
+                if (cullFace != null) {
+                    face.addProperty("cullface", cullFace);
                 }
 
                 // Tint index if tinted

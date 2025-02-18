@@ -26,7 +26,7 @@ public class WCSandBlock extends ColoredFallingBlock implements ModBlockLifecycl
         }
     }
     
-    private ModBlock def;
+    private final ModBlock def;
     
     protected WCSandBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(new ColorCode(0xDBCAA0), settings);	// TODO: configurable dust color
@@ -38,7 +38,7 @@ public class WCSandBlock extends ColoredFallingBlock implements ModBlockLifecycl
         return def;
     }
     
-    private static String[] TAGS = { "sand" };
+    private static final String[] TAGS = { "sand" };
 
     @Override
     public String[] getBlockTags() {

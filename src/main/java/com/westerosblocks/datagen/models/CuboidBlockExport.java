@@ -113,7 +113,7 @@ public class CuboidBlockExport extends ModelExport {
                         elements.add(element2);
                     } else {
                         JsonObject element = new JsonObject();
-                        addCuboidElement(element, cuboid, isTinted, textures);
+                        addCuboidElement(element, cuboid, isTinted);
                         elements.add(element);
                     }
                 }
@@ -183,7 +183,7 @@ public class CuboidBlockExport extends ModelExport {
                 faces.add(direction, face);
             }
 
-            private void addCuboidElement(JsonObject element, ModBlock.Cuboid cuboid, boolean isTinted, Map<TextureKey, Identifier> textures) {
+            private void addCuboidElement(JsonObject element, ModBlock.Cuboid cuboid, boolean isTinted) {
                 // From coordinates
                 JsonArray from = new JsonArray();
                 from.add(getClamped(cuboid.xMin));
@@ -200,11 +200,11 @@ public class CuboidBlockExport extends ModelExport {
 
                 // Add faces
                 JsonObject faces = new JsonObject();
-                addCuboidFaces(faces, cuboid, isTinted, textures);
+                addCuboidFaces(faces, cuboid, isTinted);
                 element.add("faces", faces);
             }
 
-            private void addCuboidFaces(JsonObject faces, ModBlock.Cuboid cuboid, boolean isTinted, Map<TextureKey, Identifier> textures) {
+            private void addCuboidFaces(JsonObject faces, ModBlock.Cuboid cuboid, boolean isTinted) {
                 int[] sidetxt = cuboid.sideTextures != null ? cuboid.sideTextures : STANDARD_TEXTURE_INDICES;
                 boolean[] noTint = cuboid.noTint != null ? cuboid.noTint : NO_TINT_ALL;
                 int[] siderot = cuboid.sideRotations != null ?

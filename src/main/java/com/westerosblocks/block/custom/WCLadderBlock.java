@@ -67,8 +67,8 @@ public class WCLadderBlock extends LadderBlock implements ModBlockLifecycle {
         return allow_unsupported || super.canPlaceAt(state, world, pos);
      }
 
-    private static String[] TAGS = { "climbable" };
-    private static String[] TAGS_NOCLIMB = {  };
+    private static final String[] TAGS = { "climbable" };
+    private static final String[] TAGS_NOCLIMB = {  };
     @Override
     public String[] getBlockTags() {
     	if (no_climb) return TAGS_NOCLIMB;

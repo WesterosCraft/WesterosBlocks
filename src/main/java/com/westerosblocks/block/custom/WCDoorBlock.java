@@ -44,7 +44,7 @@ public class WCDoorBlock extends DoorBlock implements ModBlockLifecycle {
         this.def = def;
         String type = def.getType();
         if (type != null) {
-            Map<String, String> params = ModBlock.parseTypeParameters(type);
+//            Map<String, String> params = ModBlock.parseTypeParameters(type);
 
             String[] toks = type.split(",");
             for (String tok : toks) {

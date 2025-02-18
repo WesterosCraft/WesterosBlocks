@@ -11,7 +11,7 @@ import net.minecraft.registry.tag.TagKey;
 
 public enum ModToolMaterials implements ToolMaterial {
     // TODO customize
-    VALYRIAN_STEEL(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2031, 9.0F, 4.0F, 15, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));;
+    VALYRIAN_STEEL(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2031, 9.0F, 4.0F, 15, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;
