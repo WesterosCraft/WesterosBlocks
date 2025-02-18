@@ -22,5 +22,12 @@
         "yMax": 1,
         "zMin": 0,
         "zMax": 1
+    },
+    "display": {
+        "gui": {
+            "rotation": [ -70, 0, 150 ],
+            "translation": [ 0, 0, 0],
+            "scale":[ 0.625, 0.625, 0.625 ]
+        }
     }
 }

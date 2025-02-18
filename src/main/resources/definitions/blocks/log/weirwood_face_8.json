@@ -15,5 +15,12 @@
         "bark/weirwood/face_8",
         "bark/weirwood/face_8",
         "bark/weirwood/side"
-    ]
+    ],
+    "display": {
+        "gui": {
+            "rotation": [ -70, 0, 150 ],
+            "translation": [ 0, 0, 0],
+            "scale":[ 0.625, 0.625, 0.625 ]
+        }
+    }
 }

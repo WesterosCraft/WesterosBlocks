@@ -32,7 +32,7 @@ public class WCLadderBlock extends LadderBlock implements ModBlockLifecycle {
         }
     }
 
-    private ModBlock def;
+    private final ModBlock def;
     private boolean allow_unsupported;
     private boolean no_climb;
 

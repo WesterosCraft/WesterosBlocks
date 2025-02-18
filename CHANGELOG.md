@@ -1,5 +1,8 @@
 ## Changelog
 
+# 17 Feb 2025
+- tilt weirwood face blocks in the menu
+
 # 15 Feb 2025
 - datagen cleanup
 - adds Longclaw

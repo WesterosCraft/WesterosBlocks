@@ -6,6 +6,13 @@
     "bf": "westerosblocks:block/leaves/oak/bf",
     "particle": "westerosblocks:block/grass_block/forest_top2"
   },
+	"display": {
+		"gui": {
+			"rotation": [ 30, 225, 0 ],
+			"translation": [ 0, 0, 0],
+			"scale":[ 0.400, 0.400, 0.400 ]
+		}
+	},
   "elements": [
     { 
       "name": "Base",

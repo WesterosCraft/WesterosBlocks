@@ -22,7 +22,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
 import java.util.List;
-import java.util.Map;
 
 public class WCDoorBlock extends DoorBlock implements ModBlockLifecycle {
 
