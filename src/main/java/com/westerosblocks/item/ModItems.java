@@ -2,6 +2,7 @@ package com.westerosblocks.item;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.item.custom.LongclawItem;
+import com.westerosblocks.item.custom.ModShieldItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -12,6 +13,9 @@ public class ModItems {
             new LongclawItem(ModToolMaterials.VALYRIAN_STEEL, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 7, -3.4f))));
 
+    public static final Item LANNISTER_SHIELD_ITEM = registerItem("lannister_shield",
+            new ModShieldItem(new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 7, -3.4f))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, WesterosBlocks.id(name), item);
@@ -22,6 +26,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(LONGCLAW_ITEM);
+            entries.add(LANNISTER_SHIELD_ITEM);
         });
     }
 }

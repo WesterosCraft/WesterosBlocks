@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/shield",
+  "textures": {
+    "particle": "westerosblocks:item/lannister_shield",
+    "shield": "westerosblocks:item/lannister_shield"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "westerosblocks:item/lannister_shield_blocking"
+    }
+  ]
+}
