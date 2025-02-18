@@ -15,6 +15,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.BlockRenderView;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.biome.ColorResolver;
 import net.minecraft.world.biome.FoliageColors;
 import net.minecraft.world.biome.GrassColors;
 
@@ -26,53 +27,78 @@ import java.util.*;
 @Environment(EnvType.CLIENT)
 public class ColorHandlers {
     private static final Map<String, int[]> CUSTOM_COLOR_MAPS = new HashMap<>();
+    private static final Map<String, ColorResolver> CUSTOM_COLOR_RESOLVERS = new HashMap<>();
     public static ModBlockColorMap[] colorMaps;
 
+    private enum ColorType {
+        GRASS,
+        FOLIAGE,
+        WATER,
+        PINE,
+        BIRCH,
+        BASIC,
+        CUSTOM
+    }
+
     public static void registerColorProviders() {
+        for (Block block : ModBlocks.customBlocks) {
+            if (block instanceof ModBlockLifecycle) {
+                ModBlock def = ((ModBlockLifecycle) block).getWBDefinition();
+                if (def != null) {
+                    String colorMap = def.getBlockColorMapResource();
+                    if (colorMap != null) {
+                        loadCustomColor(colorMap, null, null);
+                    }
+                }
+            }
+        }
+
         registerBlockColors();
         registerItemColors();
     }
 
     private static void registerBlockColors() {
-        // Register custom blocks
+        // Register block colors using direct color calculation
         for (Block block : ModBlocks.customBlocks) {
             if (block instanceof ModBlockLifecycle) {
                 ModBlock def = ((ModBlockLifecycle) block).getWBDefinition();
                 if (def != null) {
                     // Handle blocks with multiple color multipliers
                     if (def.colorMults != null && !def.colorMults.isEmpty()) {
-                        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
+                        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
                             if (tintIndex >= 0 && tintIndex < def.colorMults.size()) {
-                                return getColor(def.colorMults.get(tintIndex), view, pos);
+                                return getDirectColor(def.colorMults.get(tintIndex), world, pos);
                             }
                             return -1;
                         }, block);
                     }
                     // Handle blocks with single color multiplier
                     else if (def.colorMult != null && !def.colorMult.equals("#FFFFFF")) {
-                        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
+                        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
                             if (tintIndex != 0) return -1;
-                            return getColor(def.colorMult, view, pos);
+                            return getDirectColor(def.colorMult, world, pos);
                         }, block);
                     }
                 }
             }
+        }
+    }
+
+    private static int getDirectColor(String colorMap, BlockRenderView view, BlockPos pos) {
+        if (colorMap == null) return -1;
+        if (colorMap.startsWith("#")) {
+            return parseHexColor(colorMap);
         }
 
-        // Register vanilla blocks
-        if (colorMaps != null) {
-            for (ModBlockColorMap map : colorMaps) {
-                for (String blockName : map.blockNames) {
-                    Block block = ModBlocks.findBlockByName(blockName, "minecraft");
-                    if (block != null) {
-                        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
-                            if (tintIndex != 0) return -1;
-                            return getColor(map.colorMult, view, pos);
-                        }, block);
-                    }
-                }
-            }
-        }
+        return switch (getColorType(colorMap)) {
+            case GRASS -> view != null ? BiomeColors.getGrassColor(view, pos) : GrassColors.getColor(0.5, 1.0);
+            case FOLIAGE -> view != null ? BiomeColors.getFoliageColor(view, pos) : FoliageColors.getDefaultColor();
+            case WATER -> view != null ? BiomeColors.getWaterColor(view, pos) : 0x3F76E4;
+            case PINE -> 0xff618961;
+            case BIRCH -> 0xff80a755;
+            case BASIC -> 0xff48b518;
+            default -> loadCustomColor(colorMap, view, pos);
+        };
     }
 
     private static void registerItemColors() {
@@ -151,31 +177,14 @@ public class ColorHandlers {
         try {
             String hex = colorHex.substring(1);
             if (hex.length() != 6) {
-                WesterosBlocks.LOGGER.warn("Invalid hex color length: " + colorHex);
+                WesterosBlocks.LOGGER.warn("Invalid hex color length: {}", colorHex);
                 return -1;
             }
             return Integer.parseInt(hex, 16);
         } catch (NumberFormatException e) {
-            WesterosBlocks.LOGGER.warn("Invalid hex color format: " + colorHex);
+            WesterosBlocks.LOGGER.warn("Invalid hex color format: {}", colorHex);
             return -1;
         }
-    }
-
-    private static int getColor(String colorMap, BlockRenderView view, BlockPos pos) {
-        if (colorMap == null) return -1;
-        if (colorMap.startsWith("#")) {
-            return parseHexColor(colorMap);
-        }
-
-        return switch (getColorType(colorMap)) {
-            case GRASS -> BiomeColors.getGrassColor(view, pos);
-            case FOLIAGE -> BiomeColors.getFoliageColor(view, pos);
-            case WATER -> BiomeColors.getWaterColor(view, pos);
-            case PINE -> 0xff618961;
-            case BIRCH -> 0xff80a755;
-            case BASIC -> 0xff48b518;
-            default -> loadCustomColor(colorMap, view, pos);
-        };
     }
 
     private static int getDefaultColor(String colorMap) {
@@ -205,16 +214,6 @@ public class ColorHandlers {
         return ColorType.CUSTOM;
     }
 
-    private enum ColorType {
-        GRASS,
-        FOLIAGE,
-        WATER,
-        PINE,
-        BIRCH,
-        BASIC,
-        CUSTOM
-    }
-
     private static String extractResourcePath(String colorMap) {
         if (colorMap.startsWith("textures/colormap/")) {
             return colorMap.substring("textures/colormap/".length());
@@ -229,23 +228,17 @@ public class ColorHandlers {
         int[] colors = CUSTOM_COLOR_MAPS.get(resourcePath);
         if (colors == null) return -1;
 
-        // Use a ColorResolver to get temperature and downfall from biome
-        return view.getColor(pos, (biome, x, z) -> {
-            float temperature = MathHelper.clamp(biome.getTemperature(), 0.0f, 1.0f);
-            // uses temperature and downfall internally
-            int defaultColor = biome.getGrassColorAt(x, z);
-            float downfall = ((defaultColor >> 8) & 0xFF) / 255.0f;
+        // For direct color access without biome context
+        float temperature = 0.5f; // Default values if we can't get biome
+        float downfall = 0.5f;
 
-            // Convert to color map coordinates
-            int i = (int) ((1.0 - temperature) * 255.0);
-            int j = (int) ((1.0 - downfall) * 255.0);
+        int i = (int)((1.0 - temperature) * 255.0);
+        int j = (int)((1.0 - downfall) * 255.0);
 
-            // Ensure we stay within bounds
-            i = MathHelper.clamp(i, 0, 255);
-            j = MathHelper.clamp(j, 0, 255);
+        i = MathHelper.clamp(i, 0, 255);
+        j = MathHelper.clamp(j, 0, 255);
 
-            return colors[j * 256 + i];
-        });
+        return colors[j * 256 + i];
     }
 
     private static int loadCustomDefaultColor(String colorMap) {
