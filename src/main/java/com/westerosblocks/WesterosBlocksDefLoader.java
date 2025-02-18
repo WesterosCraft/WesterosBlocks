@@ -2,6 +2,7 @@ package com.westerosblocks;
 
 import com.google.gson.*;
 import com.westerosblocks.block.ModBlock;
+import com.westerosblocks.block.ModBlockColorMap;
 import com.westerosblocks.block.ModBlockSet;
 import com.westerosblocks.block.ModBlockTags;
 import com.westerosblocks.item.WesterosItemMenuOverrides;
@@ -52,6 +53,7 @@ public class WesterosBlocksDefLoader {
     public static class WesterosBlocksConfig {
         public ModBlockSet[] blockSets;
         public ModBlock[] blocks;
+        public ModBlockColorMap[] colorMaps;
         public WesterosItemMenuOverrides[] menuOverrides;
         public ModBlockTags[] blockTags;
     }

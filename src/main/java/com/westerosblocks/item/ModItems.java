@@ -12,6 +12,7 @@ public class ModItems {
             new LongclawItem(ModToolMaterials.VALYRIAN_STEEL, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 7, -3.4f))));
 
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, WesterosBlocks.id(name), item);
     }

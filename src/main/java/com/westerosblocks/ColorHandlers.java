@@ -9,13 +9,18 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.client.color.world.BiomeColors;
-import net.minecraft.registry.Registries;
+import net.minecraft.resource.Resource;
+import net.minecraft.resource.ResourceManager;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.BlockRenderView;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.biome.FoliageColors;
 import net.minecraft.world.biome.GrassColors;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.*;
 
 @Environment(EnvType.CLIENT)
@@ -34,11 +39,20 @@ public class ColorHandlers {
             if (block instanceof ModBlockLifecycle) {
                 ModBlock def = ((ModBlockLifecycle) block).getWBDefinition();
                 if (def != null) {
-                    String colorMapResource = def.getBlockColorMapResource();
-                    if (colorMapResource != null) {
+                    // Handle blocks with multiple color multipliers
+                    if (def.colorMults != null && !def.colorMults.isEmpty()) {
                         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
-                            if (view == null || pos == null) return -1;
-                            return getColor(colorMapResource, view, pos);
+                            if (tintIndex >= 0 && tintIndex < def.colorMults.size()) {
+                                return getColor(def.colorMults.get(tintIndex), view, pos);
+                            }
+                            return -1;
+                        }, block);
+                    }
+                    // Handle blocks with single color multiplier
+                    else if (def.colorMult != null && !def.colorMult.equals("#FFFFFF")) {
+                        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
+                            if (tintIndex != 0) return -1;
+                            return getColor(def.colorMult, view, pos);
                         }, block);
                     }
                 }
@@ -52,7 +66,7 @@ public class ColorHandlers {
                     Block block = ModBlocks.findBlockByName(blockName, "minecraft");
                     if (block != null) {
                         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
-                            if (view == null || pos == null) return -1;
+                            if (tintIndex != 0) return -1;
                             return getColor(map.colorMult, view, pos);
                         }, block);
                     }
@@ -67,10 +81,21 @@ public class ColorHandlers {
             if (block instanceof ModBlockLifecycle) {
                 ModBlock def = ((ModBlockLifecycle) block).getWBDefinition();
                 if (def != null) {
-                    String colorMapResource = def.getBlockColorMapResource();
-                    if (colorMapResource != null) {
-                        ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
-                                getDefaultColor(colorMapResource), block.asItem());
+                    // Handle items with multiple color multipliers
+                    if (def.colorMults != null && !def.colorMults.isEmpty()) {
+                        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
+                            if (tintIndex >= 0 && tintIndex < def.colorMults.size()) {
+                                return getDefaultColor(def.colorMults.get(tintIndex));
+                            }
+                            return -1;
+                        }, block.asItem());
+                    }
+                    // Handle items with single color multiplier
+                    else if (def.colorMult != null && !def.colorMult.equals("#FFFFFF")) {
+                        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
+                            if (tintIndex != 0) return -1;
+                            return getDefaultColor(def.colorMult);
+                        }, block.asItem());
                     }
                 }
             }
@@ -82,17 +107,64 @@ public class ColorHandlers {
                 for (String blockName : map.blockNames) {
                     Block block = ModBlocks.findBlockByName(blockName, "minecraft");
                     if (block != null) {
-                        ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
-                                getDefaultColor(map.colorMult), block.asItem());
+                        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
+                            if (tintIndex != 0) return -1;
+                            return getDefaultColor(map.colorMult);
+                        }, block.asItem());
                     }
                 }
             }
         }
     }
 
+    public static void initColorMaps(ResourceManager resourceManager) {
+        CUSTOM_COLOR_MAPS.clear();
+
+        for (Identifier id : resourceManager.findResources("textures/colormap", path -> path.getPath().endsWith(".png")).keySet()) {
+            try {
+                Resource resource = resourceManager.getResource(id).orElse(null);
+                if (resource == null) continue;
+
+                BufferedImage image = ImageIO.read(resource.getInputStream());
+                if (image.getWidth() != 256 || image.getHeight() != 256) {
+                    WesterosBlocks.LOGGER.error("Invalid colormap size for {}: {}x{} (expected 256x256)",
+                            id, image.getWidth(), image.getHeight());
+                    continue;
+                }
+
+                int[] colors = new int[256 * 256];
+                image.getRGB(0, 0, 256, 256, colors, 0, 256);
+
+                String key = id.getPath().substring("textures/colormap/".length());
+                key = key.substring(0, key.length() - 4); // Remove .png
+                CUSTOM_COLOR_MAPS.put(key, colors);
+
+                WesterosBlocks.LOGGER.info("Loaded colormap: {}", key);
+            } catch (IOException e) {
+                WesterosBlocks.LOGGER.error("Failed to load colormap: {}", id, e);
+            }
+        }
+    }
+
+    private static int parseHexColor(String colorHex) {
+        if (colorHex == null || !colorHex.startsWith("#")) return -1;
+        try {
+            String hex = colorHex.substring(1);
+            if (hex.length() != 6) {
+                WesterosBlocks.LOGGER.warn("Invalid hex color length: " + colorHex);
+                return -1;
+            }
+            return Integer.parseInt(hex, 16);
+        } catch (NumberFormatException e) {
+            WesterosBlocks.LOGGER.warn("Invalid hex color format: " + colorHex);
+            return -1;
+        }
+    }
+
     private static int getColor(String colorMap, BlockRenderView view, BlockPos pos) {
+        if (colorMap == null) return -1;
         if (colorMap.startsWith("#")) {
-            return Integer.parseInt(colorMap.substring(1), 16);
+            return parseHexColor(colorMap);
         }
 
         return switch (getColorType(colorMap)) {
@@ -107,8 +179,9 @@ public class ColorHandlers {
     }
 
     private static int getDefaultColor(String colorMap) {
+        if (colorMap == null) return -1;
         if (colorMap.startsWith("#")) {
-            return Integer.parseInt(colorMap.substring(1), 16);
+            return parseHexColor(colorMap);
         }
 
         return switch (getColorType(colorMap)) {
