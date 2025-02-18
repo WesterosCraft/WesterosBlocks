@@ -9,19 +9,13 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.fluid.FluidState;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.text.Text;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.Direction;
-
-import java.util.List;
 
 public class WCCuboidNSEWBlock extends WCCuboidBlock implements ModBlockLifecycle {
 
@@ -86,10 +80,10 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements ModBlockLifecycl
 	protected int getIndexFromState(BlockState state) {
 		int off = super.getIndexFromState(state);
         return switch (state.get(FACING)) {
-            default -> off;
             case SOUTH -> off + 1;
             case WEST -> off + 2;
             case NORTH -> off + 3;
+            default -> off;
         };
 	}
 

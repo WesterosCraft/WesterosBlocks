@@ -68,7 +68,7 @@ public class WCWallTorchBlock extends WallTorchBlock implements ModBlockLifecycl
         return this.allow_unsupported || super.canPlaceAt(state, world, pos);
     }
 
-    private static String[] TAGS = {"wall_post_override"};
+    private static final String[] TAGS = {"wall_post_override"};
 
     @Override
     public String[] getBlockTags() {

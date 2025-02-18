@@ -40,7 +40,7 @@ public class WCSoundBlock extends WCSolidBlock {
                 return null;
             }
 
-            if ((def.soundList != null) && (def.soundList.size() > 1)) {
+            if (def.soundList.size() > 1) {
                 tempINDEX = IntProperty.of("index", 0, def.soundList.size() - 1);
             }
 

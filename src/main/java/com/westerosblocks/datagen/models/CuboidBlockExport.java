@@ -105,11 +105,11 @@ public class CuboidBlockExport extends ModelExport {
                         json.addProperty("ambientocclusion", false);
 
                         // First diagonal
-                        JsonObject element1 = createCrossedElement(cuboid, true, isTinted, textures);
+                        JsonObject element1 = createCrossedElement(cuboid, true, isTinted);
                         elements.add(element1);
 
                         // Second diagonal
-                        JsonObject element2 = createCrossedElement(cuboid, false, isTinted, textures);
+                        JsonObject element2 = createCrossedElement(cuboid, false, isTinted);
                         elements.add(element2);
                     } else {
                         JsonObject element = new JsonObject();
@@ -122,7 +122,7 @@ public class CuboidBlockExport extends ModelExport {
                 return json;
             }
 
-            private JsonObject createCrossedElement(ModBlock.Cuboid cuboid, boolean firstDiagonal, boolean isTinted, Map<TextureKey, Identifier> textures) {
+            private JsonObject createCrossedElement(ModBlock.Cuboid cuboid, boolean firstDiagonal, boolean isTinted) {
                 JsonObject element = new JsonObject();
 
                 // From coordinates
@@ -157,11 +157,11 @@ public class CuboidBlockExport extends ModelExport {
                 // Add faces
                 JsonObject faces = new JsonObject();
                 if (firstDiagonal) {
-                    addCrossedFace(faces, "north", isTinted, textures);
-                    addCrossedFace(faces, "south", isTinted, textures);
+                    addCrossedFace(faces, "north", isTinted);
+                    addCrossedFace(faces, "south", isTinted);
                 } else {
-                    addCrossedFace(faces, "east", isTinted, textures);
-                    addCrossedFace(faces, "west", isTinted, textures);
+                    addCrossedFace(faces, "east", isTinted);
+                    addCrossedFace(faces, "west", isTinted);
                 }
                 element.add("faces", faces);
 
@@ -211,12 +211,12 @@ public class CuboidBlockExport extends ModelExport {
                         cuboid.sideRotations : new int[]{0, 0, 0, 0, 0, 0};
 
                 // Add each face (down, up, north, south, west, east)
-                addFace(faces, "down", 0, cuboid, sidetxt, noTint, siderot, isTinted, textures);
-                addFace(faces, "up", 1, cuboid, sidetxt, noTint, siderot, isTinted, textures);
-                addFace(faces, "north", 2, cuboid, sidetxt, noTint, siderot, isTinted, textures);
-                addFace(faces, "south", 3, cuboid, sidetxt, noTint, siderot, isTinted, textures);
-                addFace(faces, "west", 4, cuboid, sidetxt, noTint, siderot, isTinted, textures);
-                addFace(faces, "east", 5, cuboid, sidetxt, noTint, siderot, isTinted, textures);
+                addFace(faces, "down", 0, cuboid, sidetxt, noTint, siderot, isTinted);
+                addFace(faces, "up", 1, cuboid, sidetxt, noTint, siderot, isTinted);
+                addFace(faces, "north", 2, cuboid, sidetxt, noTint, siderot, isTinted);
+                addFace(faces, "south", 3, cuboid, sidetxt, noTint, siderot, isTinted);
+                addFace(faces, "west", 4, cuboid, sidetxt, noTint, siderot, isTinted);
+                addFace(faces, "east", 5, cuboid, sidetxt, noTint, siderot, isTinted);
             }
         };
     }

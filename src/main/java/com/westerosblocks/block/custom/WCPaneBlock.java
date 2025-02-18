@@ -48,7 +48,7 @@ public class WCPaneBlock extends PaneBlock implements ModBlockLifecycle {
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
     protected static BooleanProperty tempUNCONNECT;
 
-    private ModBlock def;
+    private final ModBlock def;
     private boolean legacy_model;
     private boolean bars_model;
     public final boolean unconnect;

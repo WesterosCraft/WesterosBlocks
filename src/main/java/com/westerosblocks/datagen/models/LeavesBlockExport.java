@@ -68,14 +68,14 @@ public class LeavesBlockExport extends ModelExport {
 
     private void generateLeafModel(BlockStateModelGenerator generator, String type, ModBlock.RandomTextureSet set, int setIdx, boolean isBetterFoliage, boolean hasOverlay) {
         TextureMap textureMap = ModTextureMap.leaves(set, hasOverlay);
-        String parentPath = createParentPath(isBetterFoliage, def.isTinted(), hasOverlay, type, setIdx);
+        String parentPath = createParentPath(isBetterFoliage, def.isTinted(), hasOverlay, type);
         Identifier modelId = getModelId(type, setIdx);
 
         Model model = isBetterFoliage ? ModModels.BETTER_FOLIAGE(parentPath, def) : Models.LEAVES;
         model.upload(modelId, textureMap, generator.modelCollector);
     }
 
-    private String createParentPath(boolean isBetterFoliage, boolean isTinted, boolean hasOverlay, String type, int setIdx) {
+    private String createParentPath(boolean isBetterFoliage, boolean isTinted, boolean hasOverlay, String type) {
         String basePath = isTinted ? "tinted/" : "untinted/";
         String modelType = hasOverlay ? "leaves_overlay" : "leaves";
 

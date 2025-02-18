@@ -78,6 +78,7 @@ public class WCCuboidBlock extends Block implements ModBlockLifecycle {
             for (String tok : toks) {
                 if (tok.equals("toggleOnUse")) {
                     toggleOnUse = true;
+                    break;
                 }
             }
         }
@@ -187,7 +188,6 @@ public class WCCuboidBlock extends Block implements ModBlockLifecycle {
             case LAND -> false;
             case WATER -> state.getFluidState().isIn(FluidTags.WATER);
             case AIR -> false;
-            default -> false;
         };
     }
 

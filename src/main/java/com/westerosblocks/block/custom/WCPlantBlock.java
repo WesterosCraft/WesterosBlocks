@@ -85,6 +85,7 @@ public class WCPlantBlock extends Block implements ModBlockLifecycle {
             for (String tok : toks) {
                 if (tok.equals("toggleOnUse")) {
                     toggleOnUse = true;
+                    break;
                 }
             }
         }

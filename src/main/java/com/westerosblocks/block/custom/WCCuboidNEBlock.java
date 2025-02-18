@@ -8,18 +8,12 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.FluidState;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.text.Text;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.Direction;
-
-import java.util.List;
 
 public class WCCuboidNEBlock extends WCCuboidBlock implements ModBlockLifecycle {
 
@@ -75,10 +69,10 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements ModBlockLifecycle 
     @Override
     protected BlockState rotate(BlockState blockState, BlockRotation rotation) {
         return switch (rotation) {
-            default -> blockState;
             case COUNTERCLOCKWISE_90, CLOCKWISE_90 -> (blockState.get(FACING) == Direction.EAST) ?
                     blockState.with(FACING, Direction.NORTH) :
                     blockState.with(FACING, Direction.EAST);
+            default -> blockState;
         };
     }
 
@@ -89,7 +83,6 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements ModBlockLifecycle 
         Direction dir = Direction.EAST;    // Default
         for (Direction d : adirection) {
             if (d == Direction.EAST || d == Direction.WEST) {
-                dir = Direction.EAST;
                 break;
             }
             if (d == Direction.NORTH || d == Direction.SOUTH) {

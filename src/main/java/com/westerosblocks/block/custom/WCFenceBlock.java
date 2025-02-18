@@ -152,12 +152,6 @@ public class WCFenceBlock extends FenceBlock implements ModBlockLifecycle {
         return !Block.cannotConnect(state) && neighborIsFullSquare || bl || bl2;
     }
 
-    // Helper method to check if a fence gate can connect in a direction
-    private boolean canFenceGateConnect(BlockState state, Direction dir) {
-        Direction facing = state.get(FenceGateBlock.FACING);
-        return facing.getAxis() == dir.getAxis();
-    }
-
     private boolean isSameFence(BlockState state) {
         return state.isIn(BlockTags.FENCES) && state.isIn(BlockTags.WOODEN_FENCES) == this.getDefaultState().isIn(BlockTags.WOODEN_FENCES);
     }

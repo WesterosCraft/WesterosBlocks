@@ -119,10 +119,6 @@ public class WCSolidBlock extends Block implements ModBlockLifecycle {
         this.setDefaultState(defbs);
     }
 
-    protected WCSolidBlock(AbstractBlock.Settings props, ModBlock def, boolean doConnectstate) {
-        this(props, def, doConnectstate, null);
-    }
-
     protected WCSolidBlock(AbstractBlock.Settings props, ModBlock def) {
         this(props, def, false, null);
     }
@@ -186,6 +182,7 @@ public class WCSolidBlock extends Block implements ModBlockLifecycle {
         return (def.lightOpacity == 0) ? 1.0F : 0.2F;
     }
 
+    // todo check if i need this
     public boolean isTranslucent(BlockState state, BlockView world, BlockPos pos) {
         return (def.lightOpacity == 0);
     }
@@ -202,9 +199,9 @@ public class WCSolidBlock extends Block implements ModBlockLifecycle {
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         Hand hand = player.getActiveHand();
-        if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
-            if (state.contains(this.STATE)) {
-                state = state.cycle(this.STATE);
+        if (this.toggleOnUse && (STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
+            if (state.contains(STATE)) {
+                state = state.cycle(STATE);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);
                 world.syncWorldEvent(player, 1006, pos, 0);
                 return ActionResult.success(world.isClient);
