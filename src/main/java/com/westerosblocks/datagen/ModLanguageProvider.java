@@ -68,6 +68,6 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("text.autoconfig.westerosblocks.option.seaLevelOverride.@Tooltip[0]", "Override sea level (default for Westeros=33, 0=disable override)");
 
         // tags
-//        translationBuilder.add("tag.item.westerosblocks.shield", "Shield");
+        translationBuilder.add("tag.item.westerosblocks.shield", "Shield");
     }
 }

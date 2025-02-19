@@ -1,7 +1,15 @@
 ## Changelog
 
+# 19 Feb 2025
+- adds cascade particle
+
+# 18 Feb 2025
+- adds new shield item - lannister_shield. uses placeholder texture and model
+- adds new itemTags definition file to support shields and future tags
+
 # 17 Feb 2025
-- tilt weirwood face blocks in the menu
+- display feature tweaks
+- tilts weirwood face blocks in the menu
 
 # 15 Feb 2025
 - datagen cleanup

@@ -13,7 +13,8 @@ import java.util.Map;
 
 public class ModParticles {
     private static final Map<String, ParticleEffect> PARTICLE_EFFECTS = new HashMap<>();
-    public static final SimpleParticleType WILDFIRE = FabricParticleTypes.simple();
+    public static final SimpleParticleType WILDFIRE = FabricParticleTypes.simple(false);
+    public static final SimpleParticleType CASCADE = FabricParticleTypes.simple(true);
 
     public static void initialize() {
         PARTICLE_EFFECTS.put("hugeexplosion", ParticleTypes.EXPLOSION);
@@ -48,6 +49,7 @@ public class ModParticles {
         PARTICLE_EFFECTS.put("soul_flame", ParticleTypes.SOUL_FIRE_FLAME);
 
         registerParticle("wildfire", WILDFIRE);
+        registerParticle("cascade", CASCADE);
     }
 
     public static void initializeClient() {
