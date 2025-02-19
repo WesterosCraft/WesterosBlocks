@@ -1,6 +1,7 @@
 package com.westerosblocks;
 
 import com.westerosblocks.datagen.ModBlockTagProvider;
+import com.westerosblocks.datagen.ModItemTagProvider;
 import com.westerosblocks.datagen.ModLanguageProvider;
 import com.westerosblocks.datagen.ModModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -14,5 +15,6 @@ public class WesterosBlocksDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModLanguageProvider::new);
         pack.addProvider(ModBlockTagProvider::new);
+        pack.addProvider(ModItemTagProvider::new);
     }
 }

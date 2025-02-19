@@ -45,6 +45,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
         // Items
         translationBuilder.add("item.westerosblocks.longclaw", "Longclaw");
+        translationBuilder.add("item.westerosblocks.lannister_shield", "Lannister Shield");
 
         // Config translations
         translationBuilder.add("text.autoconfig.westerosblocks.title", "WesterosBlocks Config");
@@ -65,5 +66,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("text.autoconfig.westerosblocks.option.doorNoConnect.@Tooltip[0]", "Avoid doors connecting to walls/panes/etc");
         translationBuilder.add("text.autoconfig.westerosblocks.option.seaLevelOverride", "Sea Level Override");
         translationBuilder.add("text.autoconfig.westerosblocks.option.seaLevelOverride.@Tooltip[0]", "Override sea level (default for Westeros=33, 0=disable override)");
+
+        // tags
+//        translationBuilder.add("tag.item.westerosblocks.shield", "Shield");
     }
 }

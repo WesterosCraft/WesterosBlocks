@@ -1,7 +1,2 @@
-{
-  "parent": "minecraft:item/shield_blocking",
-  "textures": {
-    "particle": "westerosblocks:item/lannister_shield",
-    "shield": "westerosblocks:item/lannister_shield"
-  }
-}
+
+{"parent":"westerosblocks:item/lannister_shield","display":{"firstperson_righthand":{"translation":[-1,0,11],"scale":[1.15,1.15,1.15]}}}

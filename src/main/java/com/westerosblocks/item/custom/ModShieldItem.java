@@ -1,9 +1,9 @@
 package com.westerosblocks.item.custom;
+import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldItem;
+import net.minecraft.item.Item;
 
-import net.minecraft.item.ShieldItem;
-
-public class ModShieldItem extends ShieldItem {
-    public ModShieldItem(Settings settings) {
-        super(settings.maxDamage(336));
+public class ModShieldItem extends FabricShieldItem {
+    public ModShieldItem(Settings settings, int cooldownTicks, int enchantability, Item repairItems) {
+        super(settings, cooldownTicks, enchantability, repairItems);
     }
 }

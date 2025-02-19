@@ -1,0 +1,11 @@
+{
+  "itemTags": [
+    {
+      "customTag": "shield",
+      "isConventional": true,
+      "itemNames": [
+        "westerosblocks:lannister_shield"
+      ]
+    }
+  ]
+}

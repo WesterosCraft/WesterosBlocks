@@ -4,7 +4,7 @@ import com.google.gson.*;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.ModBlockColorMap;
 import com.westerosblocks.block.ModBlockSet;
-import com.westerosblocks.block.ModBlockTags;
+import com.westerosblocks.util.ModTags;
 import com.westerosblocks.item.WesterosItemMenuOverrides;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
@@ -28,6 +28,7 @@ public class WesterosBlocksDefLoader {
     private static final List<String> configFiles = List.of(
             "/definitions/color_maps.json",
             "/definitions/block_tags.json",
+            "/definitions/item_tags.json",
             "/definitions/menu_overrides.json"
     );
     private static final String BLOCKS_DIRECTORY = "/definitions/blocks";
@@ -55,7 +56,8 @@ public class WesterosBlocksDefLoader {
         public ModBlock[] blocks;
         public ModBlockColorMap[] colorMaps;
         public WesterosItemMenuOverrides[] menuOverrides;
-        public ModBlockTags[] blockTags;
+        public ModTags.ModBlockTag[] blockTags;
+        public ModTags.ModItemTag[] itemTags;
     }
 
     public static class BlockConfigNotFoundException extends Exception {

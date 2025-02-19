@@ -5,7 +5,7 @@ import com.westerosblocks.WesterosBlocksDefLoader;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.ModBlockLifecycle;
-import com.westerosblocks.block.ModBlockTags;
+import com.westerosblocks.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
@@ -31,12 +31,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         Map<String, FabricTagBuilder> tagBuilders = new HashMap<>();
 
         if (config.blockTags != null) {
-            for (ModBlockTags tag : config.blockTags) {
+            for (ModTags.ModBlockTag tag : config.blockTags) {
                 String tagId = tag.customTag.toLowerCase();
                 TagKey<Block> tagKey = TagKey.of(RegistryKey.ofRegistry(Identifier.of("blocks")),
                         Identifier.of(WesterosBlocks.MOD_ID, tagId));
 
-                FabricTagBuilder builder = getOrCreateTagBuilder(tagKey);
+                FabricTagBuilder builder = getOrCreateTagBuilder(tagKey).setReplace(false);
                 tagBuilders.put(tagId, builder);
 
                 // Add blocks listed in config tag
@@ -57,7 +57,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 for (String tag : wcBlock.getBlockTags()) {
                     TagKey<Block> tagKey = TagKey.of(RegistryKey.ofRegistry(Identifier.of("blocks")),
                             Identifier.ofVanilla(tag.toLowerCase()));
-                    getOrCreateTagBuilder(tagKey).add(block);
+                    getOrCreateTagBuilder(tagKey).add(block).setReplace(false);
                 }
 
                 // Add custom tags
@@ -66,7 +66,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         String tagId = tag.toLowerCase();
                         FabricTagBuilder builder = tagBuilders.get(tagId);
                         if (builder == null) {
-                            WesterosBlocks.LOGGER.error("Invalid customTag " + tag + " on block " + entry.getKey());
+                            WesterosBlocks.LOGGER.error("Invalid customTag {} on block {}", tag, entry.getKey());
                             continue;
                         }
                         builder.add(block);
