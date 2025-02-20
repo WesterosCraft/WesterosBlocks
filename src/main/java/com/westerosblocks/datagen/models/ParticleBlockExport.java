@@ -92,8 +92,7 @@ public class ParticleBlockExport extends ModelExport {
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
         // For the item model, we'll use the basic block model
-        ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
-        TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
+        TextureMap textureMap = TextureMap.layer0(Identifier.of(WesterosBlocks.MOD_ID, "item/" + blockDefinition.particle));
 
         Models.GENERATED.upload(
             ModelIds.getItemModelId(block.asItem()),

@@ -16,6 +16,7 @@ public class ModParticles {
     private static final Map<String, ParticleEffect> PARTICLE_EFFECTS = new HashMap<>();
     public static final SimpleParticleType WILDFIRE = FabricParticleTypes.simple(false);
     public static final SimpleParticleType CASCADE = FabricParticleTypes.simple(true);
+    public static final SimpleParticleType MIST = FabricParticleTypes.simple(true);
 
     public static void initialize() {
         PARTICLE_EFFECTS.put("hugeexplosion", ParticleTypes.EXPLOSION);
@@ -51,11 +52,13 @@ public class ModParticles {
 
         registerParticle("wildfire", WILDFIRE);
         registerParticle("cascade", CASCADE);
+        registerParticle("mist", MIST);
     }
 
     public static void initializeClient() {
         ParticleFactoryRegistry.getInstance().register(WILDFIRE, FlameParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(CASCADE, WaterSplashParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MIST, WaterSplashParticle.Factory::new);
     }
 
     private static void registerParticle(String name, SimpleParticleType particleType) {

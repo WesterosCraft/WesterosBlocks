@@ -1,0 +1,22 @@
+{
+  "initializer": {
+    "lifetime": "300",
+    "size": "10 + rand() * 5",
+    "alpha": "0.0001",
+    "hitbox_size": "0.1",
+    "has_physics": false,
+    "friction": "0.999"
+  },
+  "ticker": {
+    "dx": "DX * 0.999",
+    "dy": "DY * 0.999",
+    "dz": "DZ * 0.999",
+    "alpha": "max(smoothstep(0, 20, AGE) * 0.2, smoothstep(20, LIFETIME, LIFETIME - AGE) * 0.2)",
+    "remove_condition": "AGE >= LIFETIME"
+  },
+  "render_type": "translucent",
+  "liquid_affinity": "any",
+  "has_physics": false,
+  "kill_on_contact": false,
+  "kill_when_still": false
+}

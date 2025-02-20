@@ -1,0 +1,13 @@
+{
+  "blockName": "mist_particle_block",
+  "blockType": "particle",
+  "particle": "mist",
+  "label": "Mist Particle Block",
+  "creativeTab": "westeros_decor_tab",
+  "tooltips": [
+    "A block that emits a large mist of waterfall clouds."
+  ],
+  "textures": [
+    "transparent"
+  ]
+}
