@@ -4,6 +4,7 @@ import com.westerosblocks.WesterosBlocks;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.client.particle.FlameParticle;
+import net.minecraft.client.particle.WaterSplashParticle;
 import net.minecraft.particle.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -54,6 +55,7 @@ public class ModParticles {
 
     public static void initializeClient() {
         ParticleFactoryRegistry.getInstance().register(WILDFIRE, FlameParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(CASCADE, WaterSplashParticle.Factory::new);
     }
 
     private static void registerParticle(String name, SimpleParticleType particleType) {

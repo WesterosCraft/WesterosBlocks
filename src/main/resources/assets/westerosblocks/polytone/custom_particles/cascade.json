@@ -1,22 +1,21 @@
 {
   "initializer": {
     "lifetime": "10",
-    "size": "0.5",
+    "size": "1.0",
     "alpha": "1.0",
     "hitbox_size": "0.1",
     "has_physics": true,
-    "custom": "0",
-    "friction": "0.01"
+    "friction": "0.95"
   },
   "ticker": {
-    "dx": "DX * 0.98",
-    "dy": "DY - 0.01",
-    "dz": "DZ * 0.98",
+    "dx": "DX * 0.95",
+    "dy": "DY - 0.02",
+    "dz": "DZ * 0.95",
     "alpha": "1",
     "remove_condition": "AGE >= LIFETIME"
   },
   "render_type": "translucent",
-  "liquid_affinity": "non_liquids",
+  "liquid_affinity": "any",
   "has_physics": true,
   "kill_on_contact": false,
   "kill_when_still": false

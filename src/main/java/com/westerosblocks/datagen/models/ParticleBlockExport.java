@@ -64,7 +64,8 @@ public class ParticleBlockExport extends ModelExport {
     private void generateParticleBlockModel(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, int setIdx) {
         // Create a texture map for the particle block
         TextureMap textureMap = new TextureMap()
-                .put(TextureKey.ALL, createBlockIdentifier(set.getTextureByIndex(0)));
+                .put(TextureKey.ALL, createBlockIdentifier(set.getTextureByIndex(0)))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(set.getTextureByIndex(0)));
 
         // Get the model ID for the base variant
         Identifier modelId = getModelId("base", setIdx);
@@ -73,7 +74,8 @@ public class ParticleBlockExport extends ModelExport {
         Model model = new Model(
                 Optional.of(Identifier.ofVanilla("block/cube_all")),
                 Optional.empty(),
-                TextureKey.ALL
+                TextureKey.ALL,
+                TextureKey.PARTICLE
         );
 
         // Upload the model
