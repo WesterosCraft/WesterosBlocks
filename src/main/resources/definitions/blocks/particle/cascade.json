@@ -1,0 +1,11 @@
+{
+    "blockName": "cascade_particle_block",
+    "blockType": "particle",
+    "particle": "cascade",
+    "label": "Cascade Particle Block",
+    "creativeTab": "westeros_decor_tab",
+    "tooltips": ["A block that emits a cascade of water clouds, typically used to enhance water sources such as waterfalls and rapids."],
+    "textures": [
+        "transparent"
+    ]
+  }

@@ -49,7 +49,7 @@ public class ModBlock extends ModBlockStateRecord {
     public List<ModBlockStateRecord> states = null;
     private StateProperty stateProp = null;
     public static final String SHAPE_BOX = "box"; // Shape for normal cuboid (box)
-    public static final String SHAPE_CROSSED = "crossed"; // TODO Shape for crossed squares (plant-style) (texture is index 0 in list)
+    public static final String SHAPE_CROSSED = "crossed"; // Shape for plant-style crossed (texture 0)
     public String woodType = null;
     public String particle;
     public DisplayProperties display = null;
@@ -610,7 +610,7 @@ public class ModBlock extends ModBlockStateRecord {
         typeTable.put("vines", new WCVinesBlock.Factory());
         typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
         typeTable.put("fencegate", new WCFenceGateBlock.Factory());
-
+        typeTable.put("particle", new WCParticleBlock.Factory());
     }
 
     public BlockSoundGroup getSoundType() {
