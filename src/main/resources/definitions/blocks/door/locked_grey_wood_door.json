@@ -1,6 +1,7 @@
 {
     "blockName": "locked_grey_wood_door",
     "blockType": "door",
+    "woodType": "acacia",
     "hardness": 2,
     "stepSound": "wood",
     "material": "wood",

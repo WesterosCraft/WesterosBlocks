@@ -560,6 +560,7 @@ public class ModBlock extends ModBlockStateRecord {
         stepSoundTable.put("anvil", BlockSoundGroup.ANVIL);
         stepSoundTable.put("plant", BlockSoundGroup.CROP);
         stepSoundTable.put("slime", BlockSoundGroup.FUNGUS);
+
         // Tab table
 //        tabTable.put("buildingBlocks", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.BUILDING_BLOCKS));
         //tabTable.put("decorations", CreativeModeTabs.DECORATIONS);
@@ -610,7 +611,7 @@ public class ModBlock extends ModBlockStateRecord {
         typeTable.put("vines", new WCVinesBlock.Factory());
         typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
         typeTable.put("fencegate", new WCFenceGateBlock.Factory());
-        typeTable.put("particle", new WCParticleBlock.Factory());
+        typeTable.put("particle", new WCParticleEmitterBlock.Factory());
     }
 
     public BlockSoundGroup getSoundType() {

@@ -1,6 +1,7 @@
 {
     "blockName": "jungle_door",
     "blockType": "door",
+    "woodType": "jungle",
     "hardness": 2,
     "stepSound": "wood",
     "material": "wood",

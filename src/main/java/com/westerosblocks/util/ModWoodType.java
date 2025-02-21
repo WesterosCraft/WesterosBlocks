@@ -1,4 +1,5 @@
 package com.westerosblocks.util;
+
 import net.minecraft.block.WoodType;
 
 public class ModWoodType {

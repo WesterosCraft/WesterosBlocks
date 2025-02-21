@@ -1,8 +1,8 @@
 {
-  "blockName": "cascade_particle_block",
+  "blockName": "cascade_particle_emitter",
   "blockType": "particle",
   "particle": "cascade",
-  "label": "Cascade Particle Block",
+  "label": "Cascade Particle Emitter",
   "creativeTab": "westeros_decor_tab",
   "tooltips": [
     "A block that emits a cascade of waterfall clouds.",
@@ -10,5 +10,13 @@
   ],
   "textures": [
     "transparent"
-  ]
+  ],
+  "boundingBox": {
+    "xMin": 0.25,
+    "xMax": 0.75,
+    "yMin": 0,
+    "yMax": 0.5,
+    "zMin": 0.25,
+    "zMax": 0.75
+  }
 }

@@ -2,7 +2,6 @@ package com.westerosblocks.block.custom;
 
 import java.util.List;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.ModBlockFactory;
 import com.westerosblocks.block.ModBlockLifecycle;
@@ -30,7 +29,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
-public class WCParticleBlock extends Block implements ModBlockLifecycle, Waterloggable {
+public class WCParticleEmitterBlock extends Block implements ModBlockLifecycle, Waterloggable {
     protected static final VoxelShape SHAPE = Block.createCuboidShape(4.0D, 4.0D, 4.0D, 12.0D, 12.0D, 12.0D);
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     private final ModBlock def;
@@ -39,12 +38,12 @@ public class WCParticleBlock extends Block implements ModBlockLifecycle, Waterlo
         @Override
         public Block buildBlockClass(ModBlock def) {
             AbstractBlock.Settings settings = def.applyCustomProperties();
-            Block blk = new WCParticleBlock(settings, def);
-            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
+            Block blk = new WCParticleEmitterBlock(settings, def);
+            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, true);
         }
     }
 
-    public WCParticleBlock(Settings settings, ModBlock def) {
+    public WCParticleEmitterBlock(Settings settings, ModBlock def) {
         super(settings);
         this.def = def;
         this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false));
@@ -72,6 +71,11 @@ public class WCParticleBlock extends Block implements ModBlockLifecycle, Waterlo
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
+    }
+
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return getOutlineShape(state, world, pos, context);
     }
 
     @Override

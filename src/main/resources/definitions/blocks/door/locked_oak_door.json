@@ -1,6 +1,7 @@
 {
     "blockName": "locked_oak_door",
     "blockType": "door",
+    "woodType": "oak",
     "hardness": 2,
     "stepSound": "wood",
     "material": "wood",

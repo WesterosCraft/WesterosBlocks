@@ -28,7 +28,6 @@ import java.util.*;
 @Environment(EnvType.CLIENT)
 public class ColorHandlers {
     private static final Map<String, int[]> CUSTOM_COLOR_MAPS = new HashMap<>();
-    private static final Map<String, ColorResolver> CUSTOM_COLOR_RESOLVERS = new HashMap<>();
     public static ModBlockColorMap[] colorMaps;
 
     private enum ColorType {
@@ -166,11 +165,13 @@ public class ColorHandlers {
                 key = key.substring(0, key.length() - 4); // Remove .png
                 CUSTOM_COLOR_MAPS.put(key, colors);
 
-                WesterosBlocks.LOGGER.info("Loaded colormap: {}", key);
+
             } catch (IOException e) {
                 WesterosBlocks.LOGGER.error("Failed to load colormap: {}", id, e);
             }
         }
+
+        WesterosBlocks.LOGGER.info("Loaded {} colormaps", CUSTOM_COLOR_MAPS.size());
     }
 
     private static int parseHexColor(String colorHex) {

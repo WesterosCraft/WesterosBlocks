@@ -2,12 +2,12 @@
     "blockName": "cabbage",
     "blockType": "cuboid-16way",
     "hardness": 3,
-    "stepSound": "wood",
-    "material": "wood",
+    "stepSound": "plant",
+    "material": "plant",
     "resistance": 2,
     "harvestLevel": [
         {
-            "tool": "axe",
+            "tool": "hoe",
             "level": 1
         }
     ],

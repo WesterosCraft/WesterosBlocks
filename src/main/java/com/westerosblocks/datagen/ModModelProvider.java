@@ -54,7 +54,7 @@ public class ModModelProvider extends FabricModelProvider {
         BLOCK_EXPORTERS.put("vines", VinesBlockExport::new);
         BLOCK_EXPORTERS.put("flowerpot", FlowerPotExport::new);
         BLOCK_EXPORTERS.put("fencegate", FenceGateBlockExport::new);
-        BLOCK_EXPORTERS.put("particle", ParticleBlockExport::new);
+        BLOCK_EXPORTERS.put("particle", ParticleEmitterBlockExport::new);
     }
 
     public ModModelProvider(FabricDataOutput output) {
@@ -226,7 +226,7 @@ public class ModModelProvider extends FabricModelProvider {
                     break;
                 }
                 case "particle": {
-                    ParticleBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    ParticleEmitterBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 default:

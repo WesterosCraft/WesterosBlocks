@@ -1,6 +1,7 @@
 {
     "blockName": "northern_wood_door",
     "blockType": "door",
+    "woodType": "dark_oak",
     "hardness": 2,
     "stepSound": "wood",
     "material": "wood",

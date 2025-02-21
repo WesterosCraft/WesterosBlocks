@@ -48,7 +48,7 @@ public class WCTrapDoorBlock extends TrapdoorBlock implements ModBlockLifecycle 
     }
 
     protected WCTrapDoorBlock(AbstractBlock.Settings settings, ModBlock def) {
-        super(ModBlockSetType.getBlockSetType(settings, def), settings);
+        super(ModBlockSetType.getBlockSetType(def.woodType), settings);
         this.setDefaultState(this.getDefaultState()
                 .with(FACING, Direction.NORTH)
                 .with(OPEN, false)

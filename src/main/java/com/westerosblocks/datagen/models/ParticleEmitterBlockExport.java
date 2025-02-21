@@ -20,12 +20,12 @@ import net.minecraft.data.client.TextureMap;
 import net.minecraft.data.client.VariantSettings;
 import net.minecraft.util.Identifier;
 
-public class ParticleBlockExport extends ModelExport {
+public class ParticleEmitterBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
     private final ModBlock def;
 
-    public ParticleBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
+    public ParticleEmitterBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
         this.generator = generator;
         this.block = block;
@@ -69,11 +69,35 @@ public class ParticleBlockExport extends ModelExport {
 
         // Get the model ID for the base variant
         Identifier modelId = getModelId("base", setIdx);
+        String modelJson = """
+            {
+                "parent": "block/block",
+                "textures": {
+                    "particle": "#particle",
+                    "all": "#all"
+                },
+                "elements": [
+                    {   
+                        "from": [ 4, 4, 4 ],
+                        "to": [ 12, 12, 12 ],
+                        "faces": {
+                            "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#all" },
+                            "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#all" },
+                            "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#all" },
+                            "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#all" },
+                            "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#all" },
+                            "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#all" }
+                        }
+                    }
+                ]
+            }
+            """;
+
 
         // Create a new model with a smaller cube shape and translucent textures
         Model model = new Model(
                 Optional.of(Identifier.ofVanilla("block/cube_all")),
-                Optional.empty(),
+                Optional.of(modelJson),
                 TextureKey.ALL,
                 TextureKey.PARTICLE
         );

@@ -1,6 +1,7 @@
 {
     "blockName": "locked_white_wood_door",
     "blockType": "door",
+    "woodType": "birch",
     "hardness": 2,
     "stepSound": "wood",
     "material": "wood",

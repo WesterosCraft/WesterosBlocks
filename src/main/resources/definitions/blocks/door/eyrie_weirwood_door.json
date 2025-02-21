@@ -1,6 +1,7 @@
 {
     "blockName": "eyrie_weirwood_door",
     "blockType": "door",
+    "woodType": "weirwood",
     "hardness": 2,
     "stepSound": "wood",
     "material": "wood",

@@ -39,7 +39,7 @@ public class WCDoorBlock extends DoorBlock implements ModBlockLifecycle {
     private boolean allow_unsupported = false;
 
     protected WCDoorBlock(AbstractBlock.Settings settings, ModBlock def) {
-        super(ModBlockSetType.getBlockSetType(settings, def), settings);
+        super(ModBlockSetType.getBlockSetType(def.woodType), settings);
         this.def = def;
         String type = def.getType();
         if (type != null) {

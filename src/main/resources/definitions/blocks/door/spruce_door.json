@@ -1,6 +1,7 @@
 {
     "blockName": "spruce_door",
     "blockType": "door",
+    "woodType": "spruce",
     "hardness": 2,
     "stepSound": "wood",
     "material": "wood",
