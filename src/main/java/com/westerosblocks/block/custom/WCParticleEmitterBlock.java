@@ -62,7 +62,7 @@ public class WCParticleEmitterBlock extends Block implements ModBlockLifecycle, 
             if (particle != null) {
                 // Spawn particle at block center
                 double x = pos.getX() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
-                double y = pos.getY() + 0.2 + random.nextFloat() * 0.6;
+                double y = pos.getY() + 0.5;
                 double z = pos.getZ() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
 
                 world.addParticle(particle, x, y, z, 0.0D, 0.0D, 0.00);

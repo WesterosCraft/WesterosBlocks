@@ -1,7 +1,7 @@
 {
   "initializer": {
     "lifetime": "10",
-    "size": "1.0",
+    "size": ".8",
     "alpha": "1.0",
     "hitbox_size": "0.1",
     "has_physics": true,
