@@ -467,14 +467,16 @@ public class ModBlock extends ModBlockStateRecord {
     public AbstractBlock.Settings applyCustomProperties() {
         AbstractBlock.Settings settings = AbstractBlock.Settings.create();
 
-        if (hardness >= 0.0F) {
-            settings = resistance >= 0.0
-                    ? settings.strength(hardness, resistance)
-                    : settings.strength(hardness);
+        if (this.hardness >= 0.0F) {
+            if (this.resistance >= 0.0) {
+                settings.strength(this.hardness, this.resistance);
+            } else {
+                settings.strength(this.hardness);
+            }
         }
 
-        if (stepSound != null) {
-            settings = settings.sounds(getSoundType());
+        if (this.stepSound != null) {
+            settings.sounds(getSoundType());
         }
 
         // state-dependent light levels
@@ -486,7 +488,7 @@ public class ModBlock extends ModBlockStateRecord {
                 }
             }
             if (!lightLevels.isEmpty()) {
-                settings = settings.luminance((state) -> {
+                settings.luminance((state) -> {
                     if (state.contains(this.stateProp)) {
                         String currentState = state.get(this.stateProp);
                         return lightLevels.getOrDefault(currentState, 0);
@@ -494,20 +496,20 @@ public class ModBlock extends ModBlockStateRecord {
                     return 0;
                 });
             }
-            // handle simple light level
-        } else if (lightValue > 0 || !states.isEmpty() && states.getFirst().lightValue > 0.0F) {
-            float lightLevel = Math.max(lightValue, states.isEmpty() ? 0 : states.getFirst().lightValue);
-            settings = settings.luminance((state) -> (int) (lightLevel));
+        // handle simple light level
+        } else if (this.lightValue > 0 || !this.states.isEmpty() && this.states.getFirst().lightValue > 0.0F) {
+            float lightLevel = Math.max(lightValue, this.states.isEmpty() ? 0 : this.states.getFirst().lightValue);
+            settings.luminance((state) -> (int) (lightLevel));
         }
         // simple light level
-        else if (lightValue > 0 || !states.isEmpty() && states.getFirst().lightValue > 0.0F) {
+        else if (this.lightValue > 0 || !states.isEmpty() && states.getFirst().lightValue > 0.0F) {
             float lightLevel = Math.max(lightValue, states.isEmpty() ? 0 : states.getFirst().lightValue);
-            settings = settings.luminance((state) -> (int) (lightLevel));
+            settings.luminance((state) -> (int) (lightLevel));
         }
 
         // transparency/occlusion
-        if ((!ambientOcclusion) || (nonOpaque)) {
-            settings = settings.nonOpaque().blockVision(ModBlock::never);
+        if ((!this.ambientOcclusion) || (this.nonOpaque)) {
+            settings.nonOpaque().blockVision(ModBlock::never);
         }
 
         return settings;

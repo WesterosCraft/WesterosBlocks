@@ -3,6 +3,8 @@
   "blockType": "particle",
   "particle": "cascade",
   "label": "Cascade Particle Emitter",
+  "hardness": -1.0,
+  "resistance": 3600000.0,
   "creativeTab": "westeros_decor_tab",
   "tooltips": [
     "A block that emits a cascade of waterfall clouds.",

@@ -17,6 +17,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -25,6 +26,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
@@ -37,7 +39,11 @@ public class WCParticleEmitterBlock extends Block implements ModBlockLifecycle, 
     public static class Factory extends ModBlockFactory {
         @Override
         public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings settings = def.applyCustomProperties();
+            AbstractBlock.Settings settings = def.applyCustomProperties()
+                    .noCollision()
+                    .strength(-1.0F, 3600000.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK);
+
             Block blk = new WCParticleEmitterBlock(settings, def);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, true);
         }
@@ -59,11 +65,7 @@ public class WCParticleEmitterBlock extends Block implements ModBlockLifecycle, 
                 double y = pos.getY() + 0.2 + random.nextFloat() * 0.6;
                 double z = pos.getZ() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
 
-                double velocityX = (random.nextFloat() - 0.5) * 0.02;
-                double velocityY = 0.05 + random.nextFloat() * 0.02;
-                double velocityZ = (random.nextFloat() - 0.5) * 0.02;
-
-                world.addParticle(particle, x, y, z, velocityX, velocityY, velocityZ);
+                world.addParticle(particle, x, y, z, 0.0D, 0.0D, 0.00);
             }
         }
     }
@@ -75,7 +77,7 @@ public class WCParticleEmitterBlock extends Block implements ModBlockLifecycle, 
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return getOutlineShape(state, world, pos, context);
+        return VoxelShapes.empty();
     }
 
     @Override
