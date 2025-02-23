@@ -1,10 +1,10 @@
 {
     "blockName": "horizontal_paper",
     "blockType": "cuboid-nsew",
-    "hardness": 5,
-    "stepSound": "metal",
-    "material": "iron",
-    "resistance": 10,
+    "hardness": 1,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 1,
     "harvestLevel": [
         {
             "tool": "pickaxe",

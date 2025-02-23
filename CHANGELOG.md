@@ -1,5 +1,10 @@
 ## Changelog
 
+# 23 Feb 2025
+- adds thams paper model to new "horizontal_scroll" block
+- adds new WCCuboid8WayBlock type
+- adds custom cascade particle textures (still needs work!)
+
 # 19 Feb 2025
 - adds cascade particle
 

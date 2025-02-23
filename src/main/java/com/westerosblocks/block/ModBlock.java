@@ -239,9 +239,13 @@ public class ModBlock extends ModBlockStateRecord {
 
     public enum CuboidRotation {
         NONE(0, 0, 0, new int[]{0, 1, 2, 3, 4, 5}, new int[]{0, 0, 0, 0, 0, 0}),
+        ROTY45(0, 45, 0, new int[]{0, 1, 4, 5, 2, 3}, new int[]{315, 45, 0, 0, 0, 0}),
         ROTY90(0, 90, 0, new int[]{0, 1, 4, 5, 3, 2}, new int[]{270, 90, 0, 0, 0, 0}),
+        ROTY135(0, 135, 0, new int[]{0, 1, 3, 2, 4, 5}, new int[]{225, 135, 0, 0, 0, 0}),
         ROTY180(0, 180, 0, new int[]{0, 1, 3, 2, 5, 4}, new int[]{180, 180, 0, 0, 0, 0}),
+        ROTY225(0, 225, 0, new int[]{0, 1, 5, 4, 3, 2}, new int[]{135, 225, 0, 0, 0, 0}),
         ROTY270(0, 270, 0, new int[]{0, 1, 5, 4, 2, 3}, new int[]{90, 270, 0, 0, 0, 0}),
+        ROTY315(0, 315, 0, new int[]{0, 1, 2, 3, 5, 4}, new int[]{45, 315, 0, 0, 0, 0}),
         ROTZ90(0, 0, 90, new int[]{5, 4, 2, 3, 0, 1}, new int[]{270, 90, 270, 90, 90, 90}),
         ROTZ270(0, 0, 270, new int[]{4, 5, 2, 3, 1, 0}, new int[]{90, 270, 90, 270, 270, 270});
 
@@ -256,7 +260,6 @@ public class ModBlock extends ModBlockStateRecord {
             txtidx = txt_idx;
             txtrot = txt_rot;
         }
-
     }
 
     public static class Cuboid extends BoundingBox {
@@ -614,6 +617,7 @@ public class ModBlock extends ModBlockStateRecord {
         typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
         typeTable.put("fencegate", new WCFenceGateBlock.Factory());
         typeTable.put("particle", new WCParticleEmitterBlock.Factory());
+        typeTable.put("cuboid-8way", new WCCuboid8WayBlock.Factory());
     }
 
     public BlockSoundGroup getSoundType() {

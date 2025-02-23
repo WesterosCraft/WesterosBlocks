@@ -43,6 +43,7 @@ public class ModModelProvider extends FabricModelProvider {
         BLOCK_EXPORTERS.put("cuboid-ne", CuboidNEBlockExport::new);
         BLOCK_EXPORTERS.put("cuboid-nsew", CuboidNSEWBlockExport::new);
         BLOCK_EXPORTERS.put("cuboid-16way", Cuboid16WayBlockExport::new);
+        BLOCK_EXPORTERS.put("cuboid-8way", Cuboid8WayBlockExport::new);
         BLOCK_EXPORTERS.put("cuboid-wall-16way", CuboidWall16WayBlockExport::new);
         BLOCK_EXPORTERS.put("cuboid-nsew-stack", CuboidNSEWStackBlockExport::new);
         BLOCK_EXPORTERS.put("cuboid-nsewud", CuboidNSEWUDBlockExport::new);
@@ -55,6 +56,7 @@ public class ModModelProvider extends FabricModelProvider {
         BLOCK_EXPORTERS.put("flowerpot", FlowerPotExport::new);
         BLOCK_EXPORTERS.put("fencegate", FenceGateBlockExport::new);
         BLOCK_EXPORTERS.put("particle", ParticleEmitterBlockExport::new);
+
     }
 
     public ModModelProvider(FabricDataOutput output) {
@@ -176,10 +178,14 @@ public class ModModelProvider extends FabricModelProvider {
                     Cuboid16WayBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-                case "cuboid-wall-16way": {
-                    CuboidWall16WayBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                case "cuboid-8way": {
+                    Cuboid8WayBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
+//                case "cuboid-wall-16way": {
+//                    CuboidWall16WayBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+//                    break;
+//                }
                 case "flowerpot": {
                     FlowerPotExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
