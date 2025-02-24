@@ -39,7 +39,7 @@ public class WCFanBlock extends Block implements ModBlockLifecycle {
             Block fanBlock = new WCFanBlock(fanSettings, def, wallFanBlock);
 
             def.registerRenderType(ModBlocks.registerBlock(def.blockName + "_wall", wallFanBlock), false, false);
-            ModBlocks.getCustomBlocksByName().put(def.blockName + "_wall", wallFanBlock);
+            ModBlocks.getCustomBlocks().put(def.blockName + "_wall", wallFanBlock);
 
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, fanBlock), false, false);
         }

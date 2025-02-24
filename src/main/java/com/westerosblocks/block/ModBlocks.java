@@ -13,15 +13,12 @@ import net.minecraft.util.InvalidIdentifierException;
 import net.minecraft.util.crash.CrashException;
 import net.minecraft.util.crash.CrashReport;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ModBlocks {
-    public static Block[] customBlocks = new Block[0];
-    public static HashMap<String, Block> customBlocksByName = new HashMap<>();
+//    public static Block[] CUSTOM_BLOCKS = new Block[0];
+    public static Map<String, Block> CUSTOM_BLOCKS = new HashMap<>();
     public static ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
 
     public static void registerModBlocks() {
@@ -43,7 +40,7 @@ public class ModBlocks {
                 });
 
                 blklist.add(blk);
-                customBlocksByName.put(customBlock.blockName, blk);
+//                customBlocksByName.put(customBlock.blockName, blk);
                 // Add to counts
                 Integer cnt = countsByType.get(customBlock.blockType);
                 cnt = (cnt == null) ? 1 : (cnt + 1);
@@ -56,7 +53,7 @@ public class ModBlocks {
             }
         }
 
-        customBlocks = blklist.toArray(new Block[0]);
+//        CUSTOM_BLOCKS = blklist.toArray(new Block[0]);
         ModBlock.dumpBlockPerf();
         WesterosBlocks.LOGGER.info("TOTAL: " + blockCount + " custom blocks");
 
@@ -67,11 +64,12 @@ public class ModBlocks {
             WesterosBlocksCompatibility.dumpBlockSets(WesterosBlocksDefLoader.getCustomConfig().blockSets);
         }
         if (dumpWorldpainterCSV) {
-            WesterosBlocksCompatibility.dumpWorldPainterConfig(customBlocks);
+            WesterosBlocksCompatibility.dumpWorldPainterConfig(CUSTOM_BLOCKS.values().toArray(new Block[0]));
         }
     }
 
     public static Block registerBlock(String name, Block block) {
+        CUSTOM_BLOCKS.put(name, block);
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, WesterosBlocks.id(name), block);
     }
@@ -81,12 +79,16 @@ public class ModBlocks {
                 new BlockItem(block, new Item.Settings()));
     }
 
-    public static HashMap<String, Block> getCustomBlocksByName() {
-        return customBlocksByName;
+    public static Map<String, Block> getCustomBlocks() {
+        return CUSTOM_BLOCKS;
     }
 
+//    public static Map<String, Block> getCustomBlocks() {
+//        return Collections.synchronizedMap(new HashMap<>(customBlocksByName));
+//    }
+
     public static Block findBlockByName(String blkname, String namespace) {
-        Block blk = customBlocksByName.get(blkname);
+        Block blk = CUSTOM_BLOCKS.get(blkname);
         if (blk != null) return blk;
 
         Identifier id;
@@ -105,7 +107,7 @@ public class ModBlocks {
         }
 
         if (id != null && id.getNamespace().equals(namespace)) {
-            blk = customBlocksByName.get(id.getPath());
+            blk = CUSTOM_BLOCKS.get(id.getPath());
             if (blk != null) return blk;
         }
 

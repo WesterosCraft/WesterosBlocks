@@ -35,7 +35,7 @@ public class WCTorchBlock extends TorchBlock implements ModBlockLifecycle {
             Block floorTorch = new WCTorchBlock(floorBlockSettings, def, wallTorch);
 
             def.registerRenderType(ModBlocks.registerBlock("wall_" + def.blockName, wallTorch), false, false);
-            ModBlocks.getCustomBlocksByName().put("wall_" + def.blockName, wallTorch);
+            ModBlocks.getCustomBlocks().put("wall_" + def.blockName, wallTorch);
             return def.registerRenderType(ModBlocks.registerBlock(def.blockName, floorTorch), false, false);
         }
     }

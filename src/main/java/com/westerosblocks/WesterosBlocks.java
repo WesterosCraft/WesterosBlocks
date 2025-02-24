@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
 
 public class WesterosBlocks implements ModInitializer {
     public static final String MOD_ID = "westerosblocks";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static final Logger LOGGER = LoggerFactory.getLogger("WesterosBlocks");
 
     @Override
     public void onInitialize() {
@@ -39,4 +39,5 @@ public class WesterosBlocks implements ModInitializer {
     public static Identifier id(String path) {
         return Identifier.of(MOD_ID, path);
     }
+
 }

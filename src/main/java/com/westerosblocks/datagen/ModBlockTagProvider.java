@@ -47,10 +47,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         }
 
         // Handle tags from blocks
-        for (Map.Entry<String, Block> entry : ModBlocks.customBlocksByName.entrySet()) {
+        for (Map.Entry<String, Block> entry : ModBlocks.CUSTOM_BLOCKS.entrySet()) {
             Block block = entry.getValue();
-            if (block instanceof ModBlockLifecycle) {
-                ModBlockLifecycle wcBlock = (ModBlockLifecycle) block;
+            if (block instanceof ModBlockLifecycle wcBlock) {
                 ModBlock def = wcBlock.getWBDefinition();
 
                 // Add vanilla tags

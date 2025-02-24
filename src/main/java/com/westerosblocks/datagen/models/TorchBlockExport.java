@@ -64,7 +64,7 @@ public class TorchBlockExport extends ModelExport {
     }
 
     private void generateWallTorchBlockState() {
-        WCWallTorchBlock wallBlock = (WCWallTorchBlock) ModBlocks.getCustomBlocksByName().get("wall_" + def.blockName);
+        WCWallTorchBlock wallBlock = (WCWallTorchBlock) ModBlocks.getCustomBlocks().get("wall_" + def.blockName);
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(wallBlock);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
@@ -115,7 +115,7 @@ public class TorchBlockExport extends ModelExport {
 
         // wall torch item
         String wallBlockName = "wall_" + blockDefinition.blockName;
-        Block wallBlock = ModBlocks.getCustomBlocksByName().get(wallBlockName);
+        Block wallBlock = ModBlocks.getCustomBlocks().get(wallBlockName);
         if (wallBlock != null) {
             generateSingleItemModel(itemModelGenerator, wallBlock, firstSet, basePath);
         }

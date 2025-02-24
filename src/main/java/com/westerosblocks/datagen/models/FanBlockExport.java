@@ -51,7 +51,7 @@ public class FanBlockExport extends ModelExport {
 
         // For wall variants, we need a different block instance
         String wallBlockName = def.blockName + "_wall";
-        Block wallBlock = ModBlocks.getCustomBlocksByName().get(wallBlockName);
+        Block wallBlock = ModBlocks.getCustomBlocks().get(wallBlockName);
         if (wallBlock != null) {
             BlockStateBuilder wallStateBuilder = new BlockStateBuilder(wallBlock);
             final Map<String, List<BlockStateVariant>> wallVariants = wallStateBuilder.getVariants();
@@ -107,7 +107,7 @@ public class FanBlockExport extends ModelExport {
 
         // wall fan item
         String wallBlockName = blockDefinition.blockName + "_wall";
-        Block wallBlock = ModBlocks.getCustomBlocksByName().get(wallBlockName);
+        Block wallBlock = ModBlocks.getCustomBlocks().get(wallBlockName);
         if (wallBlock != null) {
             generateSingleItemModel(itemModelGenerator, wallBlock, firstSet, basePath);
         }

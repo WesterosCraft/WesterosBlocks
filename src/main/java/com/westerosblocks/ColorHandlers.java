@@ -15,8 +15,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.BlockRenderView;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.ColorResolver;
 import net.minecraft.world.biome.FoliageColors;
 import net.minecraft.world.biome.GrassColors;
 
@@ -41,7 +39,7 @@ public class ColorHandlers {
     }
 
     public static void registerColorProviders() {
-        for (Block block : ModBlocks.customBlocks) {
+        for (Block block : ModBlocks.CUSTOM_BLOCKS.values()) {
             if (block instanceof ModBlockLifecycle) {
                 ModBlock def = ((ModBlockLifecycle) block).getWBDefinition();
                 if (def != null) {
@@ -59,7 +57,7 @@ public class ColorHandlers {
 
     private static void registerBlockColors() {
         // Register block colors using direct color calculation
-        for (Block block : ModBlocks.customBlocks) {
+        for (Block block : ModBlocks.CUSTOM_BLOCKS.values()) {
             if (block instanceof ModBlockLifecycle) {
                 ModBlock def = ((ModBlockLifecycle) block).getWBDefinition();
                 if (def != null) {
@@ -103,7 +101,7 @@ public class ColorHandlers {
 
     private static void registerItemColors() {
         // Register custom items
-        for (Block block : ModBlocks.customBlocks) {
+        for (Block block : ModBlocks.CUSTOM_BLOCKS.values()) {
             if (block instanceof ModBlockLifecycle) {
                 ModBlock def = ((ModBlockLifecycle) block).getWBDefinition();
                 if (def != null) {

@@ -10,7 +10,6 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -63,11 +62,14 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        HashMap<String, Block> customBlocks = ModBlocks.getCustomBlocksByName();
+        Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
         ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
 
         for (ModBlock customBlockDef : customBlockDefs) {
-            if (customBlockDef == null) continue;
+            if (customBlockDef == null || customBlockDef.getBlockName() == null) {
+                WesterosBlocks.LOGGER.warn("Skipping null block definition or block name: {}", customBlockDef);
+                continue;
+            }
             Block currentBlock = customBlocks.get(customBlockDef.getBlockName());
 
             BlockExportFactory factory = BLOCK_EXPORTERS.get(customBlockDef.blockType);
@@ -82,11 +84,14 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        HashMap<String, Block> customBlocks = ModBlocks.getCustomBlocksByName();
+        Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
         ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
 
         for (ModBlock customBlockDef : customBlockDefs) {
-            if (customBlockDef == null) continue;
+            if (customBlockDef == null || customBlockDef.getBlockName() == null) {
+                WesterosBlocks.LOGGER.warn("Skipping null item definition for item name: {}", customBlockDef);
+                continue;
+            }
             Block currentBlock = customBlocks.get(customBlockDef.getBlockName());
             switch (customBlockDef.blockType) {
                 case "soulsand":

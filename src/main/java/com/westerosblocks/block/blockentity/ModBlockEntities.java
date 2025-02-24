@@ -18,7 +18,7 @@ public class ModBlockEntities {
     public static HashMap<String, BlockEntityType<?>> customEntitiesByName = new HashMap<>();
 
     static {
-        HashMap<String, Block> customBlocks = ModBlocks.getCustomBlocksByName();
+        Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
         ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
 
         Map<String, Block> furnaceBlocks = new HashMap<>();

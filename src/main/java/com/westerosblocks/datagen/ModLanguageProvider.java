@@ -9,11 +9,11 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryWrapper;
 
-import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class ModLanguageProvider extends FabricLanguageProvider {
-    HashMap<String, Block> customBlocks = ModBlocks.getCustomBlocksByName();
+    Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
     ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
 
     public ModLanguageProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
