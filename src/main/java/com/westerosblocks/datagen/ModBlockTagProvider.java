@@ -27,7 +27,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup lookup) {
-        // Handle custom tags defined in config
         Map<String, FabricTagBuilder> tagBuilders = new HashMap<>();
 
         if (config.blockTags != null) {

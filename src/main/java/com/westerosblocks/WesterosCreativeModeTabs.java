@@ -16,7 +16,6 @@ import java.util.Map;
 
 public class WesterosCreativeModeTabs {
     public static final Map<String, RegistryKey<ItemGroup>> TABS = new HashMap<>();
-
     public record TabDefinition(String id, String label, String iconItem) {
     }
 

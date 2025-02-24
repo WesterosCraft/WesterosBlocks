@@ -33,7 +33,7 @@ public class ModBlockEntities {
             }
         }
 
-        // register the block entities
+        // registerConfig the block entities
         for (Map.Entry<String, Block> entry : furnaceBlocks.entrySet()) {
             BlockEntityType<?> blockEntityType = register(entry.getKey(),
                     BlockEntityType.Builder.create(

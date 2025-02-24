@@ -17,17 +17,15 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ModBlocks {
-//    public static Block[] CUSTOM_BLOCKS = new Block[0];
     public static Map<String, Block> CUSTOM_BLOCKS = new HashMap<>();
-    public static ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
+    public static ModBlock[] CUSTOM_BLOCK_DEFS = WesterosBlocksDefLoader.getCustomBlockDefs();
 
     public static void registerModBlocks() {
         WesterosBlocks.LOGGER.info("Registering blocks for " + com.westerosblocks.WesterosBlocks.MOD_ID);
-        List<Block> blklist = new LinkedList<>();
         HashMap<String, Integer> countsByType = new HashMap<>();
         AtomicInteger blockCount = new AtomicInteger();
 
-        for (ModBlock customBlock : customBlockDefs) {
+        for (ModBlock customBlock : CUSTOM_BLOCK_DEFS) {
             if (customBlock == null)
                 continue;
 
@@ -39,9 +37,6 @@ public class ModBlocks {
                     entries.add(blk);
                 });
 
-                blklist.add(blk);
-//                customBlocksByName.put(customBlock.blockName, blk);
-                // Add to counts
                 Integer cnt = countsByType.get(customBlock.blockType);
                 cnt = (cnt == null) ? 1 : (cnt + 1);
                 countsByType.put(customBlock.blockType, cnt);
@@ -82,10 +77,6 @@ public class ModBlocks {
     public static Map<String, Block> getCustomBlocks() {
         return CUSTOM_BLOCKS;
     }
-
-//    public static Map<String, Block> getCustomBlocks() {
-//        return Collections.synchronizedMap(new HashMap<>(customBlocksByName));
-//    }
 
     public static Block findBlockByName(String blkname, String namespace) {
         Block blk = CUSTOM_BLOCKS.get(blkname);

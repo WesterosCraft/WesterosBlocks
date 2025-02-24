@@ -54,7 +54,7 @@ public class ModConfig implements ConfigData {
 
     private static ModConfig INSTANCE;
 
-    public static void register() {
+    public static void registerConfig() {
         AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
         INSTANCE = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
     }

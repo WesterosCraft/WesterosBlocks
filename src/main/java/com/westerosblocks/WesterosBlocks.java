@@ -21,7 +21,7 @@ public class WesterosBlocks implements ModInitializer {
     @Override
     public void onInitialize() {
         WesterosBlocksDefLoader.initialize();
-        ModConfig.register();
+        ModConfig.registerConfig();
         ModParticles.initialize();
         WesterosCreativeModeTabs.registerCreativeModeTabs();
         ModBlock.initialize();
