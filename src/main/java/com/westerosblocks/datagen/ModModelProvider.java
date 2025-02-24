@@ -14,50 +14,48 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ModModelProvider extends FabricModelProvider {
-    private static final Map<String, BlockExportFactory> BLOCK_EXPORTERS = new HashMap<>();
-
-    static {
-        BLOCK_EXPORTERS.put("soulsand", SolidBlockExport::new);
-        BLOCK_EXPORTERS.put("sand", SolidBlockExport::new);
-        BLOCK_EXPORTERS.put("solid", SolidBlockExport::new);
-        BLOCK_EXPORTERS.put("sound", SoundBlockExport::new);
-        BLOCK_EXPORTERS.put("stair", StairBlockExport::new);
-        BLOCK_EXPORTERS.put("leaves", LeavesBlockExport::new);
-        BLOCK_EXPORTERS.put("log", LogBlockExport::new);
-        BLOCK_EXPORTERS.put("plant", CrossBlockExport::new);
-        BLOCK_EXPORTERS.put("web", CrossBlockExport::new);
-        BLOCK_EXPORTERS.put("pane", PaneBlockExport::new);
-        BLOCK_EXPORTERS.put("crop", CropBlockExport::new);
-        BLOCK_EXPORTERS.put("door", DoorBlockExport::new);
-        BLOCK_EXPORTERS.put("slab", SlabBlockExport::new);
-        BLOCK_EXPORTERS.put("fence", FenceBlockExport::new);
-        BLOCK_EXPORTERS.put("wall", WallBlockExport::new);
-        BLOCK_EXPORTERS.put("trapdoor", TrapDoorBlockExport::new);
-        BLOCK_EXPORTERS.put("torch", TorchBlockExport::new);
-        BLOCK_EXPORTERS.put("fan", FanBlockExport::new);
-        BLOCK_EXPORTERS.put("ladder", LadderBlockExport::new);
-        BLOCK_EXPORTERS.put("fire", FireBlockExport::new);
-        BLOCK_EXPORTERS.put("bed", BedBlockExport::new);
-        BLOCK_EXPORTERS.put("cuboid", CuboidBlockExport::new);
-        BLOCK_EXPORTERS.put("beacon", CuboidBlockExport::new);
-        BLOCK_EXPORTERS.put("cuboid-ne", CuboidNEBlockExport::new);
-        BLOCK_EXPORTERS.put("cuboid-nsew", CuboidNSEWBlockExport::new);
-        BLOCK_EXPORTERS.put("cuboid-16way", Cuboid16WayBlockExport::new);
-        BLOCK_EXPORTERS.put("cuboid-8way", Cuboid8WayBlockExport::new);
-        BLOCK_EXPORTERS.put("cuboid-wall-16way", CuboidWall16WayBlockExport::new);
-        BLOCK_EXPORTERS.put("cuboid-nsew-stack", CuboidNSEWStackBlockExport::new);
-        BLOCK_EXPORTERS.put("cuboid-nsewud", CuboidNSEWUDBlockExport::new);
-        BLOCK_EXPORTERS.put("layer", LayerBlockExport::new);
-        BLOCK_EXPORTERS.put("rail", RailBlockExport::new);
-        BLOCK_EXPORTERS.put("halfdoor", HalfDoorBlockExport::new);
-        BLOCK_EXPORTERS.put("cake", CakeBlockExport::new);
-        BLOCK_EXPORTERS.put("furnace", FurnaceBlockExport::new);
-        BLOCK_EXPORTERS.put("vines", VinesBlockExport::new);
-        BLOCK_EXPORTERS.put("flowerpot", FlowerPotExport::new);
-        BLOCK_EXPORTERS.put("fencegate", FenceGateBlockExport::new);
-        BLOCK_EXPORTERS.put("particle", ParticleEmitterBlockExport::new);
-        BLOCK_EXPORTERS.put("cuboid-vertical-8way", CuboidVertical8WayBlockExport::new);
-    }
+    private static final Map<String, BlockExportFactory> BLOCK_EXPORTERS = Map.ofEntries(
+            Map.entry("soulsand", SolidBlockExport::new),
+            Map.entry("sand", SolidBlockExport::new),
+            Map.entry("solid", SolidBlockExport::new),
+            Map.entry("sound", SoundBlockExport::new),
+            Map.entry("stair", StairBlockExport::new),
+            Map.entry("leaves", LeavesBlockExport::new),
+            Map.entry("log", LogBlockExport::new),
+            Map.entry("plant", CrossBlockExport::new),
+            Map.entry("web", CrossBlockExport::new),
+            Map.entry("pane", PaneBlockExport::new),
+            Map.entry("crop", CropBlockExport::new),
+            Map.entry("door", DoorBlockExport::new),
+            Map.entry("slab", SlabBlockExport::new),
+            Map.entry("fence", FenceBlockExport::new),
+            Map.entry("wall", WallBlockExport::new),
+            Map.entry("trapdoor", TrapDoorBlockExport::new),
+            Map.entry("torch", TorchBlockExport::new),
+            Map.entry("fan", FanBlockExport::new),
+            Map.entry("ladder", LadderBlockExport::new),
+            Map.entry("fire", FireBlockExport::new),
+            Map.entry("bed", BedBlockExport::new),
+            Map.entry("cuboid", CuboidBlockExport::new),
+            Map.entry("beacon", CuboidBlockExport::new),
+            Map.entry("cuboid-ne", CuboidNEBlockExport::new),
+            Map.entry("cuboid-nsew", CuboidNSEWBlockExport::new),
+            Map.entry("cuboid-16way", Cuboid16WayBlockExport::new),
+            Map.entry("cuboid-8way", Cuboid8WayBlockExport::new),
+            Map.entry("cuboid-wall-16way", CuboidWall16WayBlockExport::new),
+            Map.entry("cuboid-nsew-stack", CuboidNSEWStackBlockExport::new),
+            Map.entry("cuboid-nsewud", CuboidNSEWUDBlockExport::new),
+            Map.entry("layer", LayerBlockExport::new),
+            Map.entry("rail", RailBlockExport::new),
+            Map.entry("halfdoor", HalfDoorBlockExport::new),
+            Map.entry("cake", CakeBlockExport::new),
+            Map.entry("furnace", FurnaceBlockExport::new),
+            Map.entry("vines", VinesBlockExport::new),
+            Map.entry("flowerpot", FlowerPotExport::new),
+            Map.entry("fencegate", FenceGateBlockExport::new),
+            Map.entry("particle", ParticleEmitterBlockExport::new),
+            Map.entry("cuboid-vertical-8way", CuboidVertical8WayBlockExport::new)
+    );
 
     public ModModelProvider(FabricDataOutput output) {
         super(output);
