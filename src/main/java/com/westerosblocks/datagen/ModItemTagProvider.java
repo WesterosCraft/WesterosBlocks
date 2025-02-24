@@ -21,6 +21,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     }
     WesterosBlocksDefLoader.WesterosBlocksConfig config = WesterosBlocksDefLoader.getCustomConfig();
 
+    @SuppressWarnings("unchecked")
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         if (config.itemTags != null) {

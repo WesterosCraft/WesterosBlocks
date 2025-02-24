@@ -618,6 +618,7 @@ public class ModBlock extends ModBlockStateRecord {
         typeTable.put("fencegate", new WCFenceGateBlock.Factory());
         typeTable.put("particle", new WCParticleEmitterBlock.Factory());
         typeTable.put("cuboid-8way", new WCCuboid8WayBlock.Factory());
+        typeTable.put("cuboid-vertical-8way", new WCCuboidVertical8WayBlock.Factory());
     }
 
     public BlockSoundGroup getSoundType() {

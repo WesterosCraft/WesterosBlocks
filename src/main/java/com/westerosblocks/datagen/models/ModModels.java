@@ -618,7 +618,7 @@ public class ModModels extends Models {
         };
     }
 
-    public static Model LEAVES_OVERLAY(String parent, ModBlock def){
+    public static Model LEAVES_OVERLAY(String parent, ModBlock def) {
         return block(parent,
                 def,
                 TextureKey.END,
@@ -666,6 +666,119 @@ public class ModModels extends Models {
             json.add("display", genDisplay);
         }
     }
+
+    // TODO figure out model this isnt right
+    public static Model WALL_MOUNTED_CUBOID(String parent, float rotation) {
+        return new Model(Optional.of(Identifier.ofVanilla("block/block")),
+                Optional.empty(),
+                TextureKey.PARTICLE,
+                ModTextureKey.TEXTURE_0,
+                ModTextureKey.TEXTURE_1,
+                ModTextureKey.TEXTURE_2,
+                ModTextureKey.TEXTURE_3,
+                ModTextureKey.TEXTURE_4,
+                ModTextureKey.TEXTURE_5) {
+            @Override
+            public JsonObject createJson(Identifier id, Map<TextureKey, Identifier> textures) {
+                JsonObject json = super.createJson(id, textures);
+
+                // Add display settings
+                JsonObject display = new JsonObject();
+
+                JsonArray displayRotation = new JsonArray();
+                displayRotation.add(0);
+                displayRotation.add(90);
+                displayRotation.add(0);
+                display.add("rotation", displayRotation);
+
+                JsonArray translation = new JsonArray();
+                translation.add(0);
+                translation.add(0);
+                translation.add(0);
+                display.add("translation", translation);
+
+                JsonArray scale = new JsonArray();
+                scale.add(0.5);
+                scale.add(0.5);
+                scale.add(0.5);
+                display.add("scale", scale);
+
+                json.add("display", display);
+
+                // Create element
+                JsonObject element = new JsonObject();
+
+                // Fixed position at center of wall
+                JsonArray from = new JsonArray();
+                from.add(6.0);  // Centered horizontally
+                from.add(6.0);  // Centered vertically
+                from.add(0.0);  // Against wall
+                element.add("from", from);
+
+                JsonArray to = new JsonArray();
+                to.add(10.0);   // Centered horizontally
+                to.add(10.0);   // Centered vertically
+                to.add(4.0);    // Depth from wall
+                element.add("to", to);
+
+                // Add faces
+                JsonObject faces = new JsonObject();
+
+                // Add faces with correct textures
+                addFace(faces, "north", "#txt2", 6, 6, 10, 10, "north");
+                addFace(faces, "south", "#txt3", 6, 6, 10, 10);
+                addFace(faces, "east", "#txt5", 0, 6, 4, 10);
+                addFace(faces, "west", "#txt4", 0, 6, 4, 10);
+                addFace(faces, "up", "#txt1", 6, 0, 10, 4);
+                addFace(faces, "down", "#txt0", 6, 0, 10, 4);
+
+                element.add("faces", faces);
+
+                // Add rotation for clock-like behavior
+                if (rotation != 0) {
+                    JsonObject rotJson = new JsonObject();
+                    rotJson.addProperty("angle", rotation);
+                    rotJson.addProperty("axis", "y");  // Y-axis rotation around the attachment point
+                    JsonArray originArray = new JsonArray();
+                    originArray.add(8);  // Center X
+                    originArray.add(8);  // Center Y
+                    originArray.add(0);  // At wall surface
+                    rotJson.add("origin", originArray);
+                    element.add("rotation", rotJson);
+                }
+
+                // Create elements array and add our cube
+                JsonArray elements = new JsonArray();
+                elements.add(element);
+                json.add("elements", elements);
+
+                return json;
+            }
+
+            private void addFace(JsonObject faces, String face, String texture,
+                                 double uMin, double vMin, double uMax, double vMax,
+                                 String cullface) {
+                JsonObject faceObj = new JsonObject();
+                JsonArray uv = new JsonArray();
+                uv.add(uMin);
+                uv.add(vMin);
+                uv.add(uMax);
+                uv.add(vMax);
+                faceObj.add("uv", uv);
+                faceObj.addProperty("texture", texture);
+                if (cullface != null) {
+                    faceObj.addProperty("cullface", cullface);
+                }
+                faces.add(face, faceObj);
+            }
+
+            private void addFace(JsonObject faces, String face, String texture,
+                                 double uMin, double vMin, double uMax, double vMax) {
+                addFace(faces, face, texture, uMin, vMin, uMax, vMax, null);
+            }
+        };
+    }
+
 
     private static Model block(String parent, String namespace, ModBlock def, TextureKey... requiredTextureKeys) {
 

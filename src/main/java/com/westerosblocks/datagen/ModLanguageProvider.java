@@ -67,7 +67,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("text.autoconfig.westerosblocks.option.seaLevelOverride", "Sea Level Override");
         translationBuilder.add("text.autoconfig.westerosblocks.option.seaLevelOverride.@Tooltip[0]", "Override sea level (default for Westeros=33, 0=disable override)");
 
-        // tags
-        translationBuilder.add("tag.item.westerosblocks.shield", "Shield");
+
+        // TODO getting warning in console when starting up so need to fix this "Dev warning - Untranslated Item Tags detected. Please translate your item tags so other mods such as recipe viewers can properly display your tag's name.
+        //	The format desired is tag.item.<namespace>.<path> for the translation key with slashes in path turned into periods."
+        translationBuilder.add("tag.item.c.tags.item.shield", "Shield");
     }
 }

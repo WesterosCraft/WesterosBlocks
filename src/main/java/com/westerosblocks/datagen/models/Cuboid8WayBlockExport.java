@@ -15,8 +15,8 @@ public class Cuboid8WayBlockExport extends CuboidBlockExport {
     private final ModBlock def;
 
     private static final String[] ROTATION_MODIFIERS = {
-            "",          // 0 degrees
-            "_rotn45",   // -45 degrees
+            "",
+            "_rotn45",
     };
 
     public Cuboid8WayBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
@@ -56,7 +56,7 @@ public class Cuboid8WayBlockExport extends CuboidBlockExport {
 
             if (!sr.isCustomModel()) {
                 for (int setIdx = 0; setIdx < sr.getRandomTextureSetCount(); setIdx++) {
-                    generateCuboidModels(generator, sr, setIdx, baseName);
+                    generateCuboidModels(sr, setIdx, baseName);
                 }
             }
         }
@@ -64,12 +64,12 @@ public class Cuboid8WayBlockExport extends CuboidBlockExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateCuboidModels(BlockStateModelGenerator generator, ModBlockStateRecord sr, int setIdx, String baseName) {
+    private void generateCuboidModels(ModBlockStateRecord sr, int setIdx, String baseName) {
         ModBlock.RandomTextureSet set = sr.getRandomTextureSet(setIdx);
         TextureMap textureMap = createCuboidTextureMap(set);
 
-        generateRotatedModel(baseName + ROTATION_MODIFIERS[0], textureMap, sr, setIdx, 0f);     // Normal
-        generateRotatedModel(baseName + ROTATION_MODIFIERS[1], textureMap, sr, setIdx, -45f);   // -45 degrees
+        generateRotatedModel(baseName + ROTATION_MODIFIERS[0], textureMap, sr, setIdx, 0f);
+        generateRotatedModel(baseName + ROTATION_MODIFIERS[1], textureMap, sr, setIdx, -45f);
     }
 
     private void generateRotatedModel(String modelName, TextureMap textureMap,

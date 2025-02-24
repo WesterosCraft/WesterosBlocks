@@ -56,7 +56,7 @@ public class ModModelProvider extends FabricModelProvider {
         BLOCK_EXPORTERS.put("flowerpot", FlowerPotExport::new);
         BLOCK_EXPORTERS.put("fencegate", FenceGateBlockExport::new);
         BLOCK_EXPORTERS.put("particle", ParticleEmitterBlockExport::new);
-
+        BLOCK_EXPORTERS.put("cuboid-vertical-8way", CuboidVertical8WayBlockExport::new);
     }
 
     public ModModelProvider(FabricDataOutput output) {
@@ -233,6 +233,10 @@ public class ModModelProvider extends FabricModelProvider {
                 }
                 case "particle": {
                     ParticleEmitterBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
+                case "cuboid-vertical-8way": {
+                    CuboidVertical8WayBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 default:
