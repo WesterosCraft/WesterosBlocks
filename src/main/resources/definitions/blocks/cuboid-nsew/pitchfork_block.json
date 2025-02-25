@@ -1,5 +1,5 @@
 {
-    "blockName": "pickaxe_block",
+    "blockName": "pitchfork_block",
     "blockType": "cuboid-nsew",
     "hardness": 5,
     "stepSound": "metal",
@@ -13,12 +13,12 @@
     ],
     "isCustomModel": true,
     "creativeTab": "westeros_tool_blocks_tab",
-    "label": "Pickaxe Block",
+    "label": "Pitchfork Block",
     "textures": [
         "transparent",
         "transparent",
-        "cuboid_block/pickaxe_left",
-        "cuboid_block/pickaxe_right",
+        "cuboid_block/pitchfork_left",
+        "cuboid_block/pitchfork_right",
         "transparent",
         "transparent"
     ],

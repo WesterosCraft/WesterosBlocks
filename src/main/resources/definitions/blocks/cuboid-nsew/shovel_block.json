@@ -5,6 +5,7 @@
     "stepSound": "metal",
     "material": "iron",
     "resistance": 10,
+    "isCustomModel": true,
     "harvestLevel": [
         {
             "tool": "pickaxe",

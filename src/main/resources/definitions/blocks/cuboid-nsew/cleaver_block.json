@@ -13,6 +13,7 @@
     ],
     "creativeTab": "westeros_tool_blocks_tab",
     "label": "Cleaver Block",
+    "isCustomModel": true,
     "textures": [
         "transparent",
         "transparent",
@@ -28,6 +29,5 @@
         "yMax": 1,
         "zMin": 0.499,
         "zMax": 0.5
-    },
-    "itemTextureIndex": 4
+    }
 }

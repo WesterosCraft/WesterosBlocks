@@ -1,0 +1,70 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "westerosblocks:block/tools/tools",
+		"particle": "westerosblocks:block/tools/tools"
+	},
+	"elements": [
+		{
+			"name": "Handle",
+			"from": [7.5, 1.05407, 7.91093],
+			"to": [8.5, 25.05407, 9.41093],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [7.5, 6.5325, 9.57843]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 0.5], "rotation": 270, "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 0.75], "rotation": 270, "texture": "#0"},
+				"south": {"uv": [0, 0.25, 16, 0.75], "rotation": 270, "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 0.75], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [1, 0.75, 2, 1.5], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [2, 1.5, 3, 3], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "Head",
+			"from": [5, -1.98528, 5.07843],
+			"to": [11, 4.01472, 5.07843],
+			"rotation": {"angle": 45, "axis": "x", "origin": [11.5, 1.03249, 5.07843]},
+			"faces": {
+				"north": {"uv": [0, 1.5, 3, 4.5], "texture": "#0"},
+				"south": {"uv": [0, 1.5, 3, 4.5], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [160, 0, 0],
+			"translation": [0, 8.25, 3.25]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [160, 0, 0],
+			"translation": [0, 8, 2.75]
+		},
+		"firstperson_righthand": {
+			"rotation": [110, 0, 0],
+			"translation": [1.25, 0, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [114, 0, 0],
+			"translation": [3.75, 0, 0]
+		},
+		"ground": {
+			"rotation": [64, 0, 0],
+			"translation": [0, -1.5, 0],
+			"scale": [0.675, 0.675, 0.675]
+		},
+		"gui": {
+			"rotation": [24, 17, -24],
+			"translation": [0, -1.5, 0],
+			"scale": [0.675, 0.675, 0.675]
+		},
+		"head": {
+			"rotation": [66, 0, 0],
+			"translation": [0, 8.5, -3]
+		},
+		"fixed": {
+			"rotation": [-26, 0, 0],
+			"translation": [0, -1.75, -0.25],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	}
+}

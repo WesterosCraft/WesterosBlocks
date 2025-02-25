@@ -5,10 +5,11 @@
     "stepSound": "metal",
     "material": "iron",
     "resistance": 10,
+    "isCustomModel": true,
     "harvestLevel": [
         {
             "tool": "pickaxe",
-            "level": 3
+            "level": 1
         }
     ],
     "creativeTab": "westeros_tool_blocks_tab",
