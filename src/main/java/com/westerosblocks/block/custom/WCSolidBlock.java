@@ -31,8 +31,8 @@ import java.util.List;
 
 public class WCSolidBlock extends Block implements ModBlockLifecycle {
     protected ModBlock def;
-    protected VoxelShape collisionbox;
-    protected VoxelShape supportbox;
+    protected VoxelShape collisionBox;
+    protected VoxelShape supportBox;
     public static final IntProperty CONNECTSTATE = IntProperty.of("connectstate", 0, 3);
     protected static IntProperty tempCONNECTSTATE;
     public final boolean connectstate;
@@ -96,11 +96,11 @@ public class WCSolidBlock extends Block implements ModBlockLifecycle {
             }
         }
 
-        collisionbox = def.makeCollisionBoxShape();
+        collisionBox = def.makeCollisionBoxShape();
         if (def.supportBoxes == null) {
-            supportbox = collisionbox;
+            supportBox = collisionBox;
         } else {
-            supportbox = def.makeSupportBoxShape(null);
+            supportBox = def.makeSupportBoxShape(null);
         }
 
         connectstate = doConnectstate;
@@ -148,17 +148,17 @@ public class WCSolidBlock extends Block implements ModBlockLifecycle {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return collisionbox;
+        return collisionBox;
     }
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return collisionbox;
+        return collisionBox;
     }
 
     @Override
     public VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
-        return supportbox;
+        return supportBox;
     }
 
     @Override
@@ -166,7 +166,7 @@ public class WCSolidBlock extends Block implements ModBlockLifecycle {
         if (def.nonOpaque)
             return VoxelShapes.empty();
         else
-            return collisionbox;
+            return collisionBox;
     }
 
     @Override
@@ -180,11 +180,6 @@ public class WCSolidBlock extends Block implements ModBlockLifecycle {
 
     public float getAmbientOcclusionLightLevel(BlockState state, BlockView world, BlockPos pos) {
         return (def.lightOpacity == 0) ? 1.0F : 0.2F;
-    }
-
-    // todo check if i need this
-    public boolean isTranslucent(BlockState state, BlockView world, BlockPos pos) {
-        return (def.lightOpacity == 0);
     }
 
     @Override

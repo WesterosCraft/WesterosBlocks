@@ -23,23 +23,42 @@ public class ModTextureMap extends TextureMap {
                 .put(TextureKey.PARTICLE, createBlockIdentifier(set.getTextureByIndex(1)));
     }
 
-    public static TextureMap frontTopSides(ModBlock.RandomTextureSet ts, ModBlockStateRecord currentRec, Boolean hasOverlay, Boolean isSymmetrical) {
-        TextureMap tMap = new TextureMap()
-                .put(TextureKey.DOWN, createBlockIdentifier(ts.getTextureByIndex(0)))
-                .put(TextureKey.UP, createBlockIdentifier(ts.getTextureByIndex(1)))
-                .put(TextureKey.NORTH, createBlockIdentifier(ts.getTextureByIndex(2)))
-                .put(TextureKey.SOUTH, createBlockIdentifier(ts.getTextureByIndex(3)))
-                .put(TextureKey.WEST, createBlockIdentifier(ts.getTextureByIndex(isSymmetrical != null && isSymmetrical ? 4 : 6)))
-                .put(TextureKey.EAST, createBlockIdentifier(ts.getTextureByIndex(isSymmetrical != null && isSymmetrical ? 5 : 7)))
-                .put(TextureKey.PARTICLE, createBlockIdentifier(ts.getTextureByIndex(2)));
+    public static TextureMap frontTopSides(ModBlock.RandomTextureSet ts, ModBlockStateRecord sr, Boolean hasOverlay, Boolean isSymmetrical) {
+        int textureCount = ts.getTextureCount();
 
-        if (hasOverlay != null && hasOverlay && currentRec != null) {
-            tMap.put(ModTextureKey.DOWN_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(0)))
-                    .put(ModTextureKey.UP_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(1)))
-                    .put(ModTextureKey.NORTH_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(2)))
-                    .put(ModTextureKey.SOUTH_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(3)))
-                    .put(ModTextureKey.WEST_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(4)))
-                    .put(ModTextureKey.EAST_OVERLAY, createBlockIdentifier(currentRec.getOverlayTextureByIndex(5)));
+        // Find the last non-transparent texture to use as default fallback
+        String defaultTexture = "";
+        for (int i = textureCount - 1; i >= 0; i--) {
+            String texture = ts.getTextureByIndex(i);
+            if (texture != null && !texture.equals("transparent")) {
+                defaultTexture = texture;
+                break;
+            }
+        }
+
+        // If no non-transparent texture found, use the last texture anyway
+        if (defaultTexture.isEmpty() && textureCount > 0) {
+            defaultTexture = ts.getTextureByIndex(textureCount - 1);
+        }
+
+        TextureMap tMap = new TextureMap()
+                .put(TextureKey.DOWN, createBlockIdentifier(textureCount > 0 ? ts.getTextureByIndex(0) : defaultTexture))
+                .put(TextureKey.UP, createBlockIdentifier(textureCount > 1 ? ts.getTextureByIndex(1) : defaultTexture))
+                .put(TextureKey.NORTH, createBlockIdentifier(textureCount > 2 ? ts.getTextureByIndex(2) : defaultTexture))
+                .put(TextureKey.SOUTH, createBlockIdentifier(textureCount > 3 ? ts.getTextureByIndex(3) : defaultTexture))
+                .put(TextureKey.WEST, createBlockIdentifier(textureCount > (isSymmetrical != null && isSymmetrical ? 4 : 6) ?
+                        ts.getTextureByIndex(isSymmetrical != null && isSymmetrical ? 4 : 6) : defaultTexture))
+                .put(TextureKey.EAST, createBlockIdentifier(textureCount > (isSymmetrical != null && isSymmetrical ? 5 : 7) ?
+                        ts.getTextureByIndex(isSymmetrical != null && isSymmetrical ? 5 : 7) : defaultTexture))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(textureCount > 2 ? ts.getTextureByIndex(2) : defaultTexture));
+
+        if (hasOverlay != null && hasOverlay && sr != null) {
+            tMap.put(ModTextureKey.DOWN_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(0)))
+                    .put(ModTextureKey.UP_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(1)))
+                    .put(ModTextureKey.NORTH_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(2)))
+                    .put(ModTextureKey.SOUTH_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(3)))
+                    .put(ModTextureKey.WEST_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(4)))
+                    .put(ModTextureKey.EAST_OVERLAY, createBlockIdentifier(sr.getOverlayTextureByIndex(5)));
         }
         return tMap;
     }

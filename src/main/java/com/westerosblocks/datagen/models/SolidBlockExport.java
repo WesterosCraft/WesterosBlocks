@@ -14,7 +14,7 @@ import java.util.*;
 public class SolidBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
-    private static ModBlock def;
+    private final ModBlock def;
 
     public SolidBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         super(generator, block, def);
@@ -23,28 +23,19 @@ public class SolidBlockExport extends ModelExport {
         this.def = def;
     }
 
-    protected static String getModelName(ModBlock def, String ext, int setidx) {
-        return def.blockName + "/" + ext + ("_v" + (setidx + 1));
-    }
-
-    protected static String getModelName(ModBlock def, String ext, int setidx, Boolean symmetrical) {
+    protected static String getModelName(ModBlock def, String ext, int setIdx, Boolean symmetrical) {
         String dir = symmetrical ? "symmetrical" : "asymmetrical";
-        return def.blockName + "/" + dir + "/" + ext + ("_v" + (setidx + 1));
+        return def.blockName + "/" + dir + "/" + ext + ("_v" + (setIdx + 1));
     }
 
-    public static Identifier modelFileName(ModBlock def, String ext, int setidx, Boolean isCustom) {
-        Identifier id = WesterosBlocks.id(getModelName(def, ext, setidx));
-        return id.withPrefixedPath(GENERATED_PATH);
-    }
-
-    public static Identifier modelFileName(ModBlock def, String ext, int setidx, Boolean isCustom, Boolean symmetrical) {
-        Identifier id = WesterosBlocks.id(getModelName(def, ext, setidx, symmetrical));
+    public static Identifier modelFileName(ModBlock def, String ext, int setIdx, Boolean symmetrical) {
+        Identifier id = WesterosBlocks.id(getModelName(def, ext, setIdx, symmetrical));
         return id.withPrefixedPath(GENERATED_PATH);
     }
 
     public void generateBlockStateModels() {
         WCSolidBlock solidBlock = (block instanceof WCSolidBlock) ? (WCSolidBlock) block : null;
-        boolean isSymmertrical = solidBlock != null && solidBlock.symmetrical;
+        boolean isSymmetrical = solidBlock != null && solidBlock.symmetrical;
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
 
@@ -60,9 +51,9 @@ public class SolidBlockExport extends ModelExport {
                 int rotationCount = sr.rotateRandom ? 4 : 1;    // 4 for random, just 1 if not
 
                 for (int rotIdx = 0; rotIdx < rotationCount; rotIdx++) {
-                    if (isSymmertrical) {
+                    if (isSymmetrical) {
                         BlockStateVariant varSymmetrical = BlockStateVariant.create();
-                        Identifier symId = modelFileName(def, fname, setIdx, sr.isCustomModel(), true);
+                        Identifier symId = modelFileName(def, fname, setIdx, true);
                         varSymmetrical.put(VariantSettings.MODEL, symId);
                         if (set.weight != null) {
                             varSymmetrical.put(VariantSettings.WEIGHT, set.weight);
@@ -73,8 +64,8 @@ public class SolidBlockExport extends ModelExport {
                         blockStateBuilder.addVariant("symmetrical=true", varSymmetrical, stateIDs, variants);
 
                         BlockStateVariant varAsymmetrical = BlockStateVariant.create();
-                        Identifier asymId = modelFileName(def, fname, setIdx, sr.isCustomModel(), false);
-                        varAsymmetrical.put(VariantSettings.MODEL, modelFileName(def, fname, setIdx, sr.isCustomModel(), false));
+                        Identifier asymId = modelFileName(def, fname, setIdx,  false);
+                        varAsymmetrical.put(VariantSettings.MODEL, modelFileName(def, fname, setIdx, false));
                         if (set.weight != null) {
                             varAsymmetrical.put(VariantSettings.WEIGHT, set.weight);
                         }
@@ -108,18 +99,23 @@ public class SolidBlockExport extends ModelExport {
         generateBlockStateFiles(generator, block, variants);
     }
 
-    protected static void generateSolidModel(BlockStateModelGenerator generator, Identifier modelPath, boolean isSymmetrical, boolean isTinted, boolean hasOverlay, ModBlockStateRecord currentRec, int setIdx) {
+    protected void generateSolidModel(BlockStateModelGenerator generator, Identifier modelPath,
+                                      boolean isSymmetrical, boolean isTinted, boolean hasOverlay,
+                                      ModBlockStateRecord currentRec, int setIdx) {
         ModBlock.RandomTextureSet set = currentRec.getRandomTextureSet(setIdx);
-        TextureMap textureMap = createTextureMap(set, isSymmetrical, hasOverlay, isTinted, currentRec);
+        TextureMap textureMap = createTextureMap(set, isSymmetrical, hasOverlay, currentRec);
 
-        if (hasOverlay) {
+        // For blocks with multiple textures, use CUBE model which requires all sides
+        if (set.getTextureCount() > 1 && !hasOverlay) {
+            Models.CUBE.upload(modelPath, textureMap, generator.modelCollector);
+        } else if (hasOverlay) {
             String parentPath = isTinted ? "tinted/cube_overlay" : "untinted/cube_overlay";
-            ModModels.ALL_SIDES_OVERLAY(parentPath, def)
+            ModModels.ALL_SIDES_OVERLAY(parentPath, this.def)
                     .upload(modelPath, textureMap, generator.modelCollector);
         } else if (set.getTextureCount() > 1 || isTinted) {
             String parentPath = isTinted ? "tinted/cube" : "cube";
             String namespace = isTinted ? WesterosBlocks.MOD_ID : "minecraft";
-            ModModels.ALL_SIDES(namespace, parentPath, def)
+            ModModels.ALL_SIDES(namespace, parentPath, this.def)
                     .upload(modelPath, textureMap, generator.modelCollector);
         } else {
             TextureMap textureMapAll = TextureMap.all(createBlockIdentifier(set.getTextureByIndex(0)));
@@ -127,11 +123,28 @@ public class SolidBlockExport extends ModelExport {
         }
     }
 
-    private static TextureMap createTextureMap(ModBlock.RandomTextureSet ts, boolean isSymmetrical, boolean hasOverlay, boolean isTinted, ModBlockStateRecord currentRec) {
-        if (hasOverlay) {
+    private static TextureMap createTextureMap(ModBlock.RandomTextureSet ts, boolean isSymmetrical, boolean hasOverlay, ModBlockStateRecord currentRec) {
+        // For special blocks or any block that might need all sides specified
+        if (ts.getTextureCount() > 0 && !hasOverlay) {
+            // Create a texture map that ensures all sides have a texture
+            TextureMap fullMap = new TextureMap();
+
+            // Add particle texture
+            fullMap.put(TextureKey.PARTICLE, createBlockIdentifier(ts.getTextureByIndex(0)));
+
+            // Add all sides, cycling through available textures when needed
+            TextureKey[] sides = {TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH,
+                    TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST};
+
+            for (int i = 0; i < sides.length; i++) {
+                // Use modulo to cycle through available textures
+                String texture = ts.getTextureByIndex(Math.min(i, ts.getTextureCount() - 1));
+                fullMap.put(sides[i], createBlockIdentifier(texture));
+            }
+
+            return fullMap;
+        } else if (hasOverlay) {
             return ModTextureMap.frontTopSides(ts, currentRec, true, isSymmetrical);
-        } else if (currentRec.getTextureCount() > 1 || isTinted) {
-            return ModTextureMap.frontTopSides(ts, null, false, isSymmetrical);
         } else {
             return new TextureMap().put(TextureKey.ALL, createBlockIdentifier(ts.getTextureByIndex(0)));
         }
