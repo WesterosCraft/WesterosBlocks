@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_log",
+  "textures": {
+    "down": "westerosblocks:block/ctm/pillar_end",
+    "east": "westerosblocks:block/ctm/pillar",
+    "north": "westerosblocks:block/ctm/pillar",
+    "particle": "westerosblocks:block/ctm/pillar",
+    "south": "westerosblocks:block/ctm/pillar",
+    "up": "westerosblocks:block/ctm/pillar_end",
+    "west": "westerosblocks:block/ctm/pillar"
+  }
+}

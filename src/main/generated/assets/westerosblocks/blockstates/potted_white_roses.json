@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/potted_white_roses/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/potted_white_roses/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/potted_white_roses/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/potted_white_roses/base_v4"
+      }
+    ]
+  }
+}

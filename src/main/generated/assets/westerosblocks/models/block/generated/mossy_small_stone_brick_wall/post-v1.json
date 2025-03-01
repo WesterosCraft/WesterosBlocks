@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/template_wall_post",
+  "textures": {
+    "bottom": "westerosblocks:block/ashlar_quarter/green_grey_mossy/all",
+    "particle": "westerosblocks:block/ashlar_quarter/green_grey_mossy/all",
+    "side": "westerosblocks:block/ashlar_quarter/green_grey_mossy/all",
+    "top": "westerosblocks:block/ashlar_quarter/green_grey_mossy/all"
+  }
+}

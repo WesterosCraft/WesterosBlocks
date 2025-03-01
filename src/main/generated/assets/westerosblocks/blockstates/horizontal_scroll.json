@@ -1,0 +1,169 @@
+{
+  "variants": {
+    "facing=east,state=paper1": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper1_v1"
+    },
+    "facing=east,state=paper10": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper10_v1"
+    },
+    "facing=east,state=paper11": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper11_v1"
+    },
+    "facing=east,state=paper2": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper2_v1"
+    },
+    "facing=east,state=paper3": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper3_v1"
+    },
+    "facing=east,state=paper4": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper4_v1"
+    },
+    "facing=east,state=paper5": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper5_v1"
+    },
+    "facing=east,state=paper6": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper6_v1"
+    },
+    "facing=east,state=paper7": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper7_v1"
+    },
+    "facing=east,state=paper8": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper8_v1"
+    },
+    "facing=east,state=paper9": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper9_v1"
+    },
+    "facing=north,state=paper1": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper1_v1",
+      "y": 270
+    },
+    "facing=north,state=paper10": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper10_v1",
+      "y": 270
+    },
+    "facing=north,state=paper11": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper11_v1",
+      "y": 270
+    },
+    "facing=north,state=paper2": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper2_v1",
+      "y": 270
+    },
+    "facing=north,state=paper3": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper3_v1",
+      "y": 270
+    },
+    "facing=north,state=paper4": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper4_v1",
+      "y": 270
+    },
+    "facing=north,state=paper5": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper5_v1",
+      "y": 270
+    },
+    "facing=north,state=paper6": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper6_v1",
+      "y": 270
+    },
+    "facing=north,state=paper7": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper7_v1",
+      "y": 270
+    },
+    "facing=north,state=paper8": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper8_v1",
+      "y": 270
+    },
+    "facing=north,state=paper9": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper9_v1",
+      "y": 270
+    },
+    "facing=south,state=paper1": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper1_v1",
+      "y": 90
+    },
+    "facing=south,state=paper10": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper10_v1",
+      "y": 90
+    },
+    "facing=south,state=paper11": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper11_v1",
+      "y": 90
+    },
+    "facing=south,state=paper2": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper2_v1",
+      "y": 90
+    },
+    "facing=south,state=paper3": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper3_v1",
+      "y": 90
+    },
+    "facing=south,state=paper4": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper4_v1",
+      "y": 90
+    },
+    "facing=south,state=paper5": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper5_v1",
+      "y": 90
+    },
+    "facing=south,state=paper6": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper6_v1",
+      "y": 90
+    },
+    "facing=south,state=paper7": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper7_v1",
+      "y": 90
+    },
+    "facing=south,state=paper8": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper8_v1",
+      "y": 90
+    },
+    "facing=south,state=paper9": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper9_v1",
+      "y": 90
+    },
+    "facing=west,state=paper1": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper1_v1",
+      "y": 180
+    },
+    "facing=west,state=paper10": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper10_v1",
+      "y": 180
+    },
+    "facing=west,state=paper11": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper11_v1",
+      "y": 180
+    },
+    "facing=west,state=paper2": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper2_v1",
+      "y": 180
+    },
+    "facing=west,state=paper3": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper3_v1",
+      "y": 180
+    },
+    "facing=west,state=paper4": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper4_v1",
+      "y": 180
+    },
+    "facing=west,state=paper5": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper5_v1",
+      "y": 180
+    },
+    "facing=west,state=paper6": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper6_v1",
+      "y": 180
+    },
+    "facing=west,state=paper7": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper7_v1",
+      "y": 180
+    },
+    "facing=west,state=paper8": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper8_v1",
+      "y": 180
+    },
+    "facing=west,state=paper9": {
+      "model": "westerosblocks:block/custom/horizontal_scroll/paper9_v1",
+      "y": 180
+    }
+  }
+}

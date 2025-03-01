@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/reach_gravel/side1",
+    "east": "westerosblocks:block/reach_gravel/side1",
+    "north": "westerosblocks:block/reach_gravel/side1",
+    "particle": "westerosblocks:block/reach_gravel/side1",
+    "south": "westerosblocks:block/reach_gravel/side1",
+    "up": "westerosblocks:block/reach_gravel/side1",
+    "west": "westerosblocks:block/reach_gravel/side1"
+  }
+}

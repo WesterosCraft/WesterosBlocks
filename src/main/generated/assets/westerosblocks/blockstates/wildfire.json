@@ -1,0 +1,132 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/wildfire/floor0_v1"
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/floor1_v1"
+        }
+      ],
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/wildfire/side0_v1",
+          "y": 0
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/side1_v1",
+          "y": 0
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/side_alt0_v1",
+          "y": 0
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/side_alt1_v1",
+          "y": 0
+        }
+      ],
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/wildfire/side0_v1",
+          "y": 90
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/side1_v1",
+          "y": 90
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/side_alt0_v1",
+          "y": 90
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/side_alt1_v1",
+          "y": 90
+        }
+      ],
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/wildfire/side0_v1",
+          "y": 180
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/side1_v1",
+          "y": 180
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/side_alt0_v1",
+          "y": 180
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/side_alt1_v1",
+          "y": 180
+        }
+      ],
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/wildfire/side0_v1",
+          "y": 270
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/side1_v1",
+          "y": 270
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/side_alt0_v1",
+          "y": 270
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/side_alt1_v1",
+          "y": 270
+        }
+      ],
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/wildfire/up0_v1"
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/up1_v1"
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/up_alt0_v1"
+        },
+        {
+          "model": "westerosblocks:block/generated/wildfire/up_alt1_v1"
+        }
+      ],
+      "when": {
+        "up": "true"
+      }
+    }
+  ]
+}

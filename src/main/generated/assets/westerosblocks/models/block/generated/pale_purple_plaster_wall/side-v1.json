@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side",
+  "textures": {
+    "bottom": "westerosblocks:block/plaster/smooth/pale_purple/all",
+    "particle": "westerosblocks:block/plaster/smooth/pale_purple/all",
+    "side": "westerosblocks:block/plaster/smooth/pale_purple/all",
+    "top": "westerosblocks:block/plaster/smooth/pale_purple/all"
+  }
+}

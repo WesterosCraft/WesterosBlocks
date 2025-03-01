@@ -1,0 +1,222 @@
+{
+  "parent": "block/block",
+  "display": {},
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#txt0",
+          "uv": [
+            6.008,
+            6.0080004,
+            9.992,
+            9.992001
+          ]
+        },
+        "east": {
+          "texture": "#txt0",
+          "uv": [
+            6.0080004,
+            11.6,
+            9.992001,
+            16.0
+          ]
+        },
+        "north": {
+          "texture": "#txt0",
+          "uv": [
+            6.0080004,
+            11.6,
+            9.992001,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#txt0",
+          "uv": [
+            6.008,
+            11.6,
+            9.992,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#txt0",
+          "uv": [
+            6.008,
+            6.008,
+            9.992,
+            9.992
+          ]
+        },
+        "west": {
+          "texture": "#txt0",
+          "uv": [
+            6.008,
+            11.6,
+            9.992,
+            16.0
+          ]
+        }
+      },
+      "from": [
+        6.008,
+        0.0,
+        6.008
+      ],
+      "to": [
+        9.992,
+        4.4,
+        9.992
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#txt0",
+          "uv": [
+            4.0,
+            4.0,
+            12.0,
+            12.0
+          ]
+        },
+        "east": {
+          "texture": "#txt0",
+          "uv": [
+            4.0,
+            6.0,
+            12.0,
+            11.6
+          ]
+        },
+        "north": {
+          "texture": "#txt0",
+          "uv": [
+            4.0,
+            6.0,
+            12.0,
+            11.6
+          ]
+        },
+        "south": {
+          "texture": "#txt0",
+          "uv": [
+            4.0,
+            6.0,
+            12.0,
+            11.6
+          ]
+        },
+        "up": {
+          "texture": "#txt0",
+          "uv": [
+            4.0,
+            4.0,
+            12.0,
+            12.0
+          ]
+        },
+        "west": {
+          "texture": "#txt0",
+          "uv": [
+            4.0,
+            6.0,
+            12.0,
+            11.6
+          ]
+        }
+      },
+      "from": [
+        4.0,
+        4.4,
+        4.0
+      ],
+      "to": [
+        12.0,
+        10.0,
+        12.0
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#txt0",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#txt0",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            6.0
+          ]
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#txt0",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            6.0
+          ]
+        },
+        "south": {
+          "texture": "#txt0",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            6.0
+          ]
+        },
+        "up": {
+          "texture": "#txt0",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#txt0",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            6.0
+          ]
+        }
+      },
+      "from": [
+        0.0,
+        10.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        16.0,
+        16.0
+      ]
+    }
+  ],
+  "textures": {
+    "particle": "westerosblocks:block/cobblestone_dark/oldtown/all",
+    "txt0": "westerosblocks:block/cobblestone_dark/oldtown/all",
+    "txt1": "westerosblocks:block/cobblestone_dark/oldtown/all",
+    "txt2": "westerosblocks:block/cobblestone_dark/oldtown/all",
+    "txt3": "westerosblocks:block/cobblestone_dark/oldtown/all",
+    "txt4": "westerosblocks:block/cobblestone_dark/oldtown/all",
+    "txt5": "westerosblocks:block/cobblestone_dark/oldtown/all"
+  }
+}

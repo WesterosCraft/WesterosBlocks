@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/generated/hop_crate/base_v1"
+    }
+  }
+}

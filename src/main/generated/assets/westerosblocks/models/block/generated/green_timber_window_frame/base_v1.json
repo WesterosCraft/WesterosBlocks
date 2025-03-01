@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/transparent",
+    "east": "westerosblocks:block/timber/green/window_frame",
+    "north": "westerosblocks:block/timber/green/window_frame",
+    "particle": "westerosblocks:block/transparent",
+    "south": "westerosblocks:block/timber/green/window_frame",
+    "up": "westerosblocks:block/transparent",
+    "west": "westerosblocks:block/timber/green/window_frame"
+  }
+}

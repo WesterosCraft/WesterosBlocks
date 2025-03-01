@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/generated/test_block_set/base_v1"
+    }
+  }
+}

@@ -1,0 +1,356 @@
+{
+  "parent": "block/block",
+  "display": {},
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#txt0",
+          "uv": [
+            6.5,
+            6.5,
+            9.5,
+            9.5
+          ]
+        },
+        "east": {
+          "texture": "#txt1",
+          "uv": [
+            6.5,
+            14.0,
+            9.5,
+            16.0
+          ]
+        },
+        "north": {
+          "texture": "#txt1",
+          "uv": [
+            6.5,
+            14.0,
+            9.5,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#txt1",
+          "uv": [
+            6.5,
+            14.0,
+            9.5,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#txt0",
+          "uv": [
+            6.5,
+            6.5,
+            9.5,
+            9.5
+          ]
+        },
+        "west": {
+          "texture": "#txt1",
+          "uv": [
+            6.5,
+            14.0,
+            9.5,
+            16.0
+          ]
+        }
+      },
+      "from": [
+        6.5,
+        0.0,
+        6.5
+      ],
+      "to": [
+        9.5,
+        2.0,
+        9.5
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#txt0",
+          "uv": [
+            4.0,
+            4.0,
+            12.0,
+            12.0
+          ]
+        },
+        "east": {
+          "texture": "#txt1",
+          "uv": [
+            4.0,
+            12.0,
+            12.0,
+            14.0
+          ]
+        },
+        "north": {
+          "texture": "#txt1",
+          "uv": [
+            4.0,
+            12.0,
+            12.0,
+            14.0
+          ]
+        },
+        "south": {
+          "texture": "#txt1",
+          "uv": [
+            4.0,
+            12.0,
+            12.0,
+            14.0
+          ]
+        },
+        "up": {
+          "texture": "#txt0",
+          "uv": [
+            4.0,
+            4.0,
+            12.0,
+            12.0
+          ]
+        },
+        "west": {
+          "texture": "#txt1",
+          "uv": [
+            4.0,
+            12.0,
+            12.0,
+            14.0
+          ]
+        }
+      },
+      "from": [
+        4.0,
+        2.0,
+        4.0
+      ],
+      "to": [
+        12.0,
+        4.0,
+        12.0
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#txt0",
+          "uv": [
+            2.0,
+            2.0,
+            14.0,
+            14.0
+          ]
+        },
+        "east": {
+          "texture": "#txt1",
+          "uv": [
+            2.0,
+            4.0,
+            14.0,
+            12.0
+          ]
+        },
+        "north": {
+          "texture": "#txt1",
+          "uv": [
+            2.0,
+            4.0,
+            14.0,
+            12.0
+          ]
+        },
+        "south": {
+          "texture": "#txt1",
+          "uv": [
+            2.0,
+            4.0,
+            14.0,
+            12.0
+          ]
+        },
+        "up": {
+          "texture": "#txt0",
+          "uv": [
+            2.0,
+            2.0,
+            14.0,
+            14.0
+          ]
+        },
+        "west": {
+          "texture": "#txt1",
+          "uv": [
+            2.0,
+            4.0,
+            14.0,
+            12.0
+          ]
+        }
+      },
+      "from": [
+        2.0,
+        4.0,
+        2.0
+      ],
+      "to": [
+        14.0,
+        12.0,
+        14.0
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#txt0",
+          "uv": [
+            4.0,
+            4.0,
+            12.0,
+            12.0
+          ]
+        },
+        "east": {
+          "texture": "#txt1",
+          "uv": [
+            4.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        },
+        "north": {
+          "texture": "#txt1",
+          "uv": [
+            4.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        },
+        "south": {
+          "texture": "#txt1",
+          "uv": [
+            4.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        },
+        "up": {
+          "texture": "#txt0",
+          "uv": [
+            4.0,
+            4.0,
+            12.0,
+            12.0
+          ]
+        },
+        "west": {
+          "texture": "#txt1",
+          "uv": [
+            4.0,
+            2.0,
+            12.0,
+            4.0
+          ]
+        }
+      },
+      "from": [
+        4.0,
+        12.0,
+        4.0
+      ],
+      "to": [
+        12.0,
+        14.0,
+        12.0
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#txt0",
+          "uv": [
+            6.5,
+            6.5,
+            9.5,
+            9.5
+          ]
+        },
+        "east": {
+          "texture": "#txt1",
+          "uv": [
+            6.5,
+            0.0,
+            9.5,
+            2.0
+          ]
+        },
+        "north": {
+          "texture": "#txt1",
+          "uv": [
+            6.5,
+            0.0,
+            9.5,
+            2.0
+          ]
+        },
+        "south": {
+          "texture": "#txt1",
+          "uv": [
+            6.5,
+            0.0,
+            9.5,
+            2.0
+          ]
+        },
+        "up": {
+          "texture": "#txt0",
+          "uv": [
+            6.5,
+            6.5,
+            9.5,
+            9.5
+          ]
+        },
+        "west": {
+          "texture": "#txt1",
+          "uv": [
+            6.5,
+            0.0,
+            9.5,
+            2.0
+          ]
+        }
+      },
+      "from": [
+        6.5,
+        14.0,
+        6.5
+      ],
+      "to": [
+        9.5,
+        16.0,
+        9.5
+      ]
+    }
+  ],
+  "textures": {
+    "particle": "westerosblocks:block/baelors_sphere/baelors_sphere_pink_topbottom",
+    "txt0": "westerosblocks:block/baelors_sphere/baelors_sphere_pink_topbottom",
+    "txt1": "westerosblocks:block/baelors_sphere/baelors_sphere_pink_side",
+    "txt2": "westerosblocks:block/baelors_sphere/baelors_sphere_pink_side",
+    "txt3": "westerosblocks:block/baelors_sphere/baelors_sphere_pink_side",
+    "txt4": "westerosblocks:block/baelors_sphere/baelors_sphere_pink_side",
+    "txt5": "westerosblocks:block/baelors_sphere/baelors_sphere_pink_side"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "westerosblocks:block/rubble/brown_grey_river/all1"
+  }
+}

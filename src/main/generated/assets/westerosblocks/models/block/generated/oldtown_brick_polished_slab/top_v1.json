@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_full/oldtown/all",
+    "east": "westerosblocks:block/ashlar_full/oldtown/all",
+    "north": "westerosblocks:block/ashlar_full/oldtown/all",
+    "particle": "westerosblocks:block/ashlar_full/oldtown/all",
+    "south": "westerosblocks:block/ashlar_full/oldtown/all",
+    "up": "westerosblocks:block/ashlar_full/oldtown/all",
+    "west": "westerosblocks:block/ashlar_full/oldtown/all"
+  }
+}

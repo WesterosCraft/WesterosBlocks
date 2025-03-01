@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_side",
+  "textures": {
+    "bottom": "westerosblocks:block/ashlar_third/light_terracotta/all",
+    "particle": "westerosblocks:block/ashlar_third/light_terracotta/all",
+    "side": "westerosblocks:block/ashlar_third/light_terracotta/all",
+    "top": "westerosblocks:block/ashlar_third/light_terracotta/all"
+  }
+}

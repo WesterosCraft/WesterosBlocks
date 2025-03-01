@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/wood/oak/all",
+    "east": "westerosblocks:block/clay_pot/solid",
+    "north": "westerosblocks:block/clay_pot/solid",
+    "particle": "westerosblocks:block/wood/oak/all",
+    "south": "westerosblocks:block/clay_pot/solid",
+    "up": "westerosblocks:block/clay_pot/solid",
+    "west": "westerosblocks:block/clay_pot/solid"
+  }
+}

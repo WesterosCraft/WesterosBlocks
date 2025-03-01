@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side",
+  "textures": {
+    "bottom": "westerosblocks:block/stone_valyrian/all1",
+    "particle": "westerosblocks:block/stone_valyrian/all1",
+    "side": "westerosblocks:block/stone_valyrian/all1",
+    "top": "westerosblocks:block/stone_valyrian/all1"
+  }
+}

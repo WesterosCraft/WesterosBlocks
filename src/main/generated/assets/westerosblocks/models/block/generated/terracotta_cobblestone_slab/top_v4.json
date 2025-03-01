@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/cobblestone/terracotta/all4",
+    "east": "westerosblocks:block/cobblestone/terracotta/all4",
+    "north": "westerosblocks:block/cobblestone/terracotta/all4",
+    "particle": "westerosblocks:block/cobblestone/terracotta/all4",
+    "south": "westerosblocks:block/cobblestone/terracotta/all4",
+    "up": "westerosblocks:block/cobblestone/terracotta/all4",
+    "west": "westerosblocks:block/cobblestone/terracotta/all4"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/coral/horn/all",
+    "east": "westerosblocks:block/coral/horn/all",
+    "north": "westerosblocks:block/coral/horn/all",
+    "particle": "westerosblocks:block/coral/horn/all",
+    "south": "westerosblocks:block/coral/horn/all",
+    "up": "westerosblocks:block/coral/horn/all",
+    "west": "westerosblocks:block/coral/horn/all"
+  }
+}

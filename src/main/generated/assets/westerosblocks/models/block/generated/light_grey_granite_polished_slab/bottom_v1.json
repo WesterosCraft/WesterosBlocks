@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_full/light_grey/all",
+    "east": "westerosblocks:block/ashlar_full/light_grey/all",
+    "north": "westerosblocks:block/ashlar_full/light_grey/all",
+    "particle": "westerosblocks:block/ashlar_full/light_grey/all",
+    "south": "westerosblocks:block/ashlar_full/light_grey/all",
+    "up": "westerosblocks:block/ashlar_full/light_grey/all",
+    "west": "westerosblocks:block/ashlar_full/light_grey/all"
+  }
+}

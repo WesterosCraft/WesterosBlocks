@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/untinted/template_fence_gate_wall_open",
+  "textures": {
+    "texture": "westerosblocks:block/terrainset/vale/random_6x6"
+  }
+}

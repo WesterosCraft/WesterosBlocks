@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/metal/oxidized_steel/all2",
+    "east": "westerosblocks:block/metal/oxidized_steel/all2",
+    "north": "westerosblocks:block/metal/oxidized_steel/all2",
+    "particle": "westerosblocks:block/metal/oxidized_steel/all2",
+    "south": "westerosblocks:block/metal/oxidized_steel/all2",
+    "up": "westerosblocks:block/metal/oxidized_steel/all2",
+    "west": "westerosblocks:block/metal/oxidized_steel/all2"
+  }
+}

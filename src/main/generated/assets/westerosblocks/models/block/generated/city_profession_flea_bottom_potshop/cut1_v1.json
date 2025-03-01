@@ -1,0 +1,155 @@
+{
+  "parent": "block/block",
+  "display": {},
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#txt4",
+          "uv": [
+            0.0,
+            7.2,
+            16.0,
+            8.8
+          ]
+        },
+        "east": {
+          "texture": "#txt4",
+          "uv": [
+            7.2,
+            0.0,
+            8.8,
+            16.0
+          ]
+        },
+        "north": {
+          "texture": "#txt2",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#txt2",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#txt4",
+          "uv": [
+            0.0,
+            7.2,
+            16.0,
+            8.8
+          ]
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#txt4",
+          "uv": [
+            7.2,
+            0.0,
+            8.8,
+            16.0
+          ]
+        }
+      },
+      "from": [
+        0.0,
+        0.0,
+        7.2
+      ],
+      "to": [
+        16.0,
+        16.0,
+        8.8
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#txt0",
+          "uv": [
+            0.0,
+            7.3599997,
+            16.0,
+            8.639999
+          ]
+        },
+        "east": {
+          "texture": "#txt0",
+          "uv": [
+            7.3599997,
+            0.0,
+            8.639999,
+            16.0
+          ]
+        },
+        "north": {
+          "texture": "#txt3",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#txt3",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#txt1",
+          "uv": [
+            0.0,
+            7.36,
+            16.0,
+            8.64
+          ]
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#txt0",
+          "uv": [
+            7.36,
+            0.0,
+            8.64,
+            16.0
+          ]
+        }
+      },
+      "from": [
+        0.0,
+        0.0,
+        7.36
+      ],
+      "to": [
+        16.0,
+        16.0,
+        8.64
+      ]
+    }
+  ],
+  "textures": {
+    "particle": "westerosblocks:block/sign_block/sign_bottom",
+    "txt0": "westerosblocks:block/sign_block/sign_bottom",
+    "txt1": "westerosblocks:block/sign_block/sign_top",
+    "txt2": "westerosblocks:block/profession_sign_base/potshop",
+    "txt3": "westerosblocks:block/profession_sign_base/sign_cut1",
+    "txt4": "westerosblocks:block/transparent",
+    "txt5": "westerosblocks:block/transparent"
+  }
+}

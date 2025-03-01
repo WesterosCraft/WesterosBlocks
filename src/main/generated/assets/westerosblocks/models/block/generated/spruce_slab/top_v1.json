@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/wood/spruce/all",
+    "east": "westerosblocks:block/wood/spruce/plankctm",
+    "north": "westerosblocks:block/wood/spruce/plankctm",
+    "particle": "westerosblocks:block/wood/spruce/plankctm",
+    "south": "westerosblocks:block/wood/spruce/plankctm",
+    "up": "westerosblocks:block/wood/spruce/all",
+    "west": "westerosblocks:block/wood/spruce/plankctm"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "parent": "block/block",
+  "display": {},
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "rotation": 90,
+          "texture": "#txt0",
+          "uv": [
+            6.008,
+            3.9840002,
+            9.992,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#txt0",
+          "uv": [
+            3.9840002,
+            6.0080004,
+            16.0,
+            9.992001
+          ]
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#txt0",
+          "uv": [
+            6.0080004,
+            6.0080004,
+            9.992001,
+            9.992001
+          ]
+        },
+        "south": {
+          "texture": "#txt0",
+          "uv": [
+            6.008,
+            6.0080004,
+            9.992,
+            9.992001
+          ]
+        },
+        "up": {
+          "rotation": 270,
+          "texture": "#txt0",
+          "uv": [
+            6.008,
+            0.0,
+            9.992,
+            12.016
+          ]
+        },
+        "west": {
+          "texture": "#txt0",
+          "uv": [
+            0.0,
+            6.0080004,
+            12.016,
+            9.992001
+          ]
+        }
+      },
+      "from": [
+        6.008,
+        6.008,
+        0.0
+      ],
+      "to": [
+        9.992,
+        9.992,
+        12.016
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "rotation": 90,
+          "texture": "#txt1",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            3.9840002
+          ]
+        },
+        "east": {
+          "texture": "#txt1",
+          "uv": [
+            0.0,
+            0.0,
+            3.9840002,
+            16.0
+          ]
+        },
+        "north": {
+          "texture": "#txt2",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#txt2",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "rotation": 270,
+          "texture": "#txt1",
+          "uv": [
+            0.0,
+            12.016,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#txt1",
+          "uv": [
+            12.016,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "from": [
+        0.0,
+        0.0,
+        12.016
+      ],
+      "to": [
+        16.0,
+        16.0,
+        16.0
+      ]
+    }
+  ],
+  "textures": {
+    "particle": "westerosblocks:block/cuboid_nsewud_block/piston_side",
+    "txt0": "westerosblocks:block/cuboid_nsewud_block/piston_side",
+    "txt1": "westerosblocks:block/cuboid_nsewud_block/piston_side_rotated",
+    "txt2": "westerosblocks:block/cuboid_nsewud_block/piston_top_sticky",
+    "txt3": "westerosblocks:block/cuboid_nsewud_block/piston_top_sticky",
+    "txt4": "westerosblocks:block/cuboid_nsewud_block/piston_top_sticky",
+    "txt5": "westerosblocks:block/cuboid_nsewud_block/piston_top_sticky"
+  }
+}

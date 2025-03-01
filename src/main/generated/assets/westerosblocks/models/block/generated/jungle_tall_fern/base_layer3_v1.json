@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/tinted/cross_layer3",
+  "textures": {
+    "cross": "westerosblocks:block/jungle_tall_fern/side"
+  }
+}

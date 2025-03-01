@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/slate/red/rotated",
+    "side": "westerosblocks:block/slate/red/all",
+    "top": "westerosblocks:block/slate/red/rotated"
+  }
+}

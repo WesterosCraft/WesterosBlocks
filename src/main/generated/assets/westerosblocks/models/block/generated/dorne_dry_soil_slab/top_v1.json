@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/dorne_dry_soil/side",
+    "east": "westerosblocks:block/dorne_dry_soil/side",
+    "north": "westerosblocks:block/dorne_dry_soil/side",
+    "particle": "westerosblocks:block/dorne_dry_soil/side",
+    "south": "westerosblocks:block/dorne_dry_soil/side",
+    "up": "westerosblocks:block/dorne_dry_soil/side",
+    "west": "westerosblocks:block/dorne_dry_soil/side"
+  }
+}

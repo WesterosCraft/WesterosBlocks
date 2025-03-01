@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/plaster/rough/dark_grey/all1",
+    "east": "westerosblocks:block/plaster/rough/dark_grey/all1",
+    "north": "westerosblocks:block/plaster/rough/dark_grey/all1",
+    "particle": "westerosblocks:block/plaster/rough/dark_grey/all1",
+    "south": "westerosblocks:block/plaster/rough/dark_grey/all1",
+    "up": "westerosblocks:block/plaster/rough/dark_grey/all1",
+    "west": "westerosblocks:block/plaster/rough/dark_grey/all1"
+  }
+}
