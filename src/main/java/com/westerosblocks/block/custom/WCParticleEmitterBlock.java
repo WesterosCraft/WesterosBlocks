@@ -60,10 +60,11 @@ public class WCParticleEmitterBlock extends Block implements ModBlockLifecycle, 
         if (def.particle != null) {
             ParticleEffect particle = ModParticles.get(def.particle);
             if (particle != null) {
-                // Spawn particle at block center
-                double x = pos.getX() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
+                // Use the block's center position exactly, without offsets
+                // Let Polytone handle all positioning and velocity
+                double x = pos.getX() + 0.5;
                 double y = pos.getY() + 0.5;
-                double z = pos.getZ() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
+                double z = pos.getZ() + 0.5;
 
                 world.addParticle(particle, x, y, z, 0.0D, 0.0D, 0.00);
             }

@@ -1,0 +1,20 @@
+{
+  "blockName": "signal_smoke_particle_emitter",
+  "blockType": "particle",
+  "particle": "signal_smoke",
+  "label": "Signal Smoke Particle Emitter",
+  "hardness": -1.0,
+  "resistance": 3600000.0,
+  "creativeTab": "westeros_decor_tab",
+  "textures": [
+    "transparent"
+  ],
+  "boundingBox": {
+    "xMin": 0.25,
+    "xMax": 0.75,
+    "yMin": 0,
+    "yMax": 0.5,
+    "zMin": 0.25,
+    "zMax": 0.75
+  }
+}

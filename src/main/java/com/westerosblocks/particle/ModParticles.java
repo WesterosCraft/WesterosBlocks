@@ -3,6 +3,7 @@ package com.westerosblocks.particle;
 import com.westerosblocks.WesterosBlocks;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
+import net.minecraft.client.particle.CampfireSmokeParticle;
 import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.client.particle.WaterSplashParticle;
 import net.minecraft.particle.*;
@@ -17,15 +18,16 @@ public class ModParticles {
     public static final SimpleParticleType WILDFIRE = FabricParticleTypes.simple(false);
     public static final SimpleParticleType CASCADE = FabricParticleTypes.simple(true);
     public static final SimpleParticleType MIST = FabricParticleTypes.simple(true);
+    public static final SimpleParticleType COSY_SMOKE = FabricParticleTypes.simple(true);
 
     public static void initialize() {
-        PARTICLE_EFFECTS.put("hugeexplosion", ParticleTypes.EXPLOSION);
+        PARTICLE_EFFECTS.put("huge_explosion", ParticleTypes.EXPLOSION);
         PARTICLE_EFFECTS.put("fireworksSpark", ParticleTypes.FIREWORK);
         PARTICLE_EFFECTS.put("bubble", ParticleTypes.BUBBLE);
         PARTICLE_EFFECTS.put("suspended", ParticleTypes.UNDERWATER);
-        PARTICLE_EFFECTS.put("depthsuspend", ParticleTypes.UNDERWATER);
+        PARTICLE_EFFECTS.put("depth_suspend", ParticleTypes.UNDERWATER);
         PARTICLE_EFFECTS.put("crit", ParticleTypes.CRIT);
-        PARTICLE_EFFECTS.put("magicCrit", ParticleTypes.CRIT);
+        PARTICLE_EFFECTS.put("magic_crit", ParticleTypes.CRIT);
         PARTICLE_EFFECTS.put("smoke", ParticleTypes.SMOKE);
         PARTICLE_EFFECTS.put("mobSpell", ParticleTypes.ENCHANT);
         PARTICLE_EFFECTS.put("mobSpellAmbient", ParticleTypes.ENCHANT);
@@ -34,22 +36,25 @@ public class ModParticles {
         PARTICLE_EFFECTS.put("witchMagic", ParticleTypes.WITCH);
         PARTICLE_EFFECTS.put("note", ParticleTypes.NOTE);
         PARTICLE_EFFECTS.put("portal", ParticleTypes.PORTAL);
-        PARTICLE_EFFECTS.put("enchantmenttable", ParticleTypes.POOF);
+        PARTICLE_EFFECTS.put("enchantment_table", ParticleTypes.POOF);
         PARTICLE_EFFECTS.put("flame", ParticleTypes.FLAME);
         PARTICLE_EFFECTS.put("lava", ParticleTypes.LAVA);
         PARTICLE_EFFECTS.put("splash", ParticleTypes.SPLASH);
-        PARTICLE_EFFECTS.put("largesmoke", ParticleTypes.LARGE_SMOKE);
+        PARTICLE_EFFECTS.put("large_smoke", ParticleTypes.LARGE_SMOKE);
         PARTICLE_EFFECTS.put("cloud", ParticleTypes.CLOUD);
-        PARTICLE_EFFECTS.put("snowballpoof", ParticleTypes.POOF);
+        PARTICLE_EFFECTS.put("snowball_poof", ParticleTypes.POOF);
         PARTICLE_EFFECTS.put("dripWater", ParticleTypes.DRIPPING_WATER);
         PARTICLE_EFFECTS.put("dripLava", ParticleTypes.DRIPPING_LAVA);
-        PARTICLE_EFFECTS.put("snowshovel", ParticleTypes.ITEM_SNOWBALL);
+        PARTICLE_EFFECTS.put("snowball", ParticleTypes.ITEM_SNOWBALL);
         PARTICLE_EFFECTS.put("slime", ParticleTypes.ITEM_SLIME);
         PARTICLE_EFFECTS.put("heart", ParticleTypes.HEART);
-        PARTICLE_EFFECTS.put("angryVillager", ParticleTypes.ANGRY_VILLAGER);
-        PARTICLE_EFFECTS.put("happyVillager", ParticleTypes.HAPPY_VILLAGER);
+        PARTICLE_EFFECTS.put("angry_villager", ParticleTypes.ANGRY_VILLAGER);
+        PARTICLE_EFFECTS.put("happy_villager", ParticleTypes.HAPPY_VILLAGER);
         PARTICLE_EFFECTS.put("soul_flame", ParticleTypes.SOUL_FIRE_FLAME);
+        PARTICLE_EFFECTS.put("campfire_cosy_smoke", ParticleTypes.CAMPFIRE_COSY_SMOKE);
+        PARTICLE_EFFECTS.put("campfire_signal_smoke", ParticleTypes.CAMPFIRE_SIGNAL_SMOKE);
 
+        registerParticle("cosy_smoke", COSY_SMOKE);
         registerParticle("wildfire", WILDFIRE);
         registerParticle("cascade", CASCADE);
         registerParticle("mist", MIST);
@@ -59,6 +64,7 @@ public class ModParticles {
         ParticleFactoryRegistry.getInstance().register(WILDFIRE, FlameParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(CASCADE, WaterSplashParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(MIST, WaterSplashParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(COSY_SMOKE, CampfireSmokeParticle.CosySmokeFactory::new);
     }
 
     private static void registerParticle(String name, SimpleParticleType particleType) {
