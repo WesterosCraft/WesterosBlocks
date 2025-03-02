@@ -11,14 +11,15 @@
     "Typically used to enhance water sources such as waterfalls and rapids."
   ],
   "textures": [
+    "particle_emitter/cascade_emitter",
     "transparent"
   ],
   "boundingBox": {
-  "xMin": 0.25,
-  "xMax": 0.75,
-  "yMin": 0,
-  "yMax": 0.5,
-  "zMin": 0.25,
-  "zMax": 0.75
-}
+    "xMin": 0.25,
+    "xMax": 0.75,
+    "yMin": 0,
+    "yMax": 0.5,
+    "zMin": 0.25,
+    "zMax": 0.75
+  }
 }

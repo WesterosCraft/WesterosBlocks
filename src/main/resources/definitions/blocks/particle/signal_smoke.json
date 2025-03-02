@@ -1,14 +1,13 @@
 {
-  "blockName": "mist_particle_emitter",
+  "blockName": "signal_smoke_particle_emitter",
   "blockType": "particle",
-  "particle": "mist",
-  "label": "Mist Particle Emitter",
+  "particle": "signal_smoke",
+  "label": "Signal Smoke Particle Emitter",
+  "hardness": -1.0,
+  "resistance": 3600000.0,
   "creativeTab": "westeros_decor_tab",
-  "tooltips": [
-    "A block that emits a large mist."
-  ],
   "textures": [
-    "particle_emitter/mist_emitter",
+    "particle_emitter/signal_smoke_emitter",
     "transparent"
   ],
   "boundingBox": {

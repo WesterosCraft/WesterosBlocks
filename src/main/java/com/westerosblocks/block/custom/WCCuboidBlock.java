@@ -194,8 +194,7 @@ public class WCCuboidBlock extends Block implements ModBlockLifecycle {
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (this.toggleOnUse) {
-            Hand hand = player.getActiveHand();
-            if ((this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
+            if ((this.STATE != null) && player.isCreative()) {
                 state = state.cycle(this.STATE);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);
                 world.syncWorldEvent(player, 1006, pos, 0);

@@ -779,6 +779,68 @@ public class ModModels extends Models {
         };
     }
 
+    public static Model PARTICLE_EMITTER(boolean powered) {
+        return new Model(
+                Optional.empty(), // No parent
+                Optional.empty(),
+                TextureKey.PARTICLE) {
+            @Override
+            public JsonObject createJson(Identifier id, Map<TextureKey, Identifier> textures) {
+                JsonObject json = new JsonObject();
+                // Create elements array
+                JsonArray elements = new JsonArray();
+                JsonObject element = new JsonObject();
+
+                // Set dimensions based on powered state
+                int min = powered ? 6 : 4;
+                int max = powered ? 10 : 12;
+
+                // From coordinates (as array)
+                JsonArray from = new JsonArray();
+                from.add(min);
+                from.add(min);
+                from.add(min);
+                element.add("from", from);
+
+                // To coordinates (as array)
+                JsonArray to = new JsonArray();
+                to.add(max);
+                to.add(max);
+                to.add(max);
+                element.add("to", to);
+
+                // Add faces
+                JsonObject faces = new JsonObject();
+
+                // Add each face with proper UV mapping - using placeholder texture reference
+                addFace(faces, "north", "#0", min, min, max, max);
+                addFace(faces, "east", "#0", min, min, max, max);
+                addFace(faces, "south", "#0", min, min, max, max);
+                addFace(faces, "west", "#0", min, min, max, max);
+                addFace(faces, "up", "#0", min, min, max, max);
+                addFace(faces, "down", "#0", min, min, max, max);
+
+                element.add("faces", faces);
+                elements.add(element);
+                json.add("elements", elements);
+
+                return json;
+            }
+
+            private void addFace(JsonObject faces, String face, String texture,
+                                 int uMin, int vMin, int uMax, int vMax) {
+                JsonObject faceObj = new JsonObject();
+                JsonArray uv = new JsonArray();
+                uv.add(uMin);
+                uv.add(vMin);
+                uv.add(uMax);
+                uv.add(vMax);
+                faceObj.add("uv", uv);
+                faceObj.addProperty("texture", texture);
+                faces.add(face, faceObj);
+            }
+        };
+    }
 
     private static Model block(String parent, String namespace, ModBlock def, TextureKey... requiredTextureKeys) {
 
