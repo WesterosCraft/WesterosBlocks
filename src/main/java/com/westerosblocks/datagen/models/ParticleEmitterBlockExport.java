@@ -20,6 +20,8 @@ import net.minecraft.data.client.TextureMap;
 import net.minecraft.data.client.VariantSettings;
 import net.minecraft.util.Identifier;
 
+
+// TODO refactor for on/off state
 public class ParticleEmitterBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
