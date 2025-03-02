@@ -15,7 +15,7 @@
     "remove_condition": "AGE >= LIFETIME"
   },
   "render_type": "translucent",
-  "liquid_affinity": "any",
+  "liquid_affinity": "non_liquids",
   "has_physics": false,
   "kill_on_contact": false,
   "kill_when_still": false
