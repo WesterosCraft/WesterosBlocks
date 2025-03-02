@@ -1,16 +1,16 @@
 {
   "textures": [
-    "minecraft:big_smoke_0",
-    "minecraft:big_smoke_1",
-    "minecraft:big_smoke_2",
-    "minecraft:big_smoke_3",
-    "minecraft:big_smoke_4",
-    "minecraft:big_smoke_5",
-    "minecraft:big_smoke_6",
-    "minecraft:big_smoke_7",
-    "minecraft:big_smoke_8",
-    "minecraft:big_smoke_9",
-    "minecraft:big_smoke_10",
-    "minecraft:big_smoke_11"
+    "minecraft:campfire_cosy_smoke/0",
+    "minecraft:campfire_cosy_smoke/1",
+    "minecraft:campfire_cosy_smoke/2",
+    "minecraft:campfire_cosy_smoke/3",
+    "minecraft:campfire_cosy_smoke/4",
+    "minecraft:campfire_cosy_smoke/5",
+    "minecraft:campfire_cosy_smoke/6",
+    "minecraft:campfire_cosy_smoke/7",
+    "minecraft:campfire_cosy_smoke/8",
+    "minecraft:campfire_cosy_smoke/9",
+    "minecraft:campfire_cosy_smoke/10",
+    "minecraft:campfire_cosy_smoke/11"
   ]
 }

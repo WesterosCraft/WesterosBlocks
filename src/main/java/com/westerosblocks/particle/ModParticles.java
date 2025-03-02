@@ -19,6 +19,7 @@ public class ModParticles {
     public static final SimpleParticleType CASCADE = FabricParticleTypes.simple(true);
     public static final SimpleParticleType MIST = FabricParticleTypes.simple(true);
     public static final SimpleParticleType COSY_SMOKE = FabricParticleTypes.simple(true);
+    public static final SimpleParticleType SIGNAL_SMOKE = FabricParticleTypes.simple(true);
 
     public static void initialize() {
         PARTICLE_EFFECTS.put("huge_explosion", ParticleTypes.EXPLOSION);
@@ -54,6 +55,7 @@ public class ModParticles {
         PARTICLE_EFFECTS.put("campfire_cosy_smoke", ParticleTypes.CAMPFIRE_COSY_SMOKE);
         PARTICLE_EFFECTS.put("campfire_signal_smoke", ParticleTypes.CAMPFIRE_SIGNAL_SMOKE);
 
+        registerParticle("signal_smoke", SIGNAL_SMOKE);
         registerParticle("cosy_smoke", COSY_SMOKE);
         registerParticle("wildfire", WILDFIRE);
         registerParticle("cascade", CASCADE);
@@ -65,6 +67,7 @@ public class ModParticles {
         ParticleFactoryRegistry.getInstance().register(CASCADE, WaterSplashParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(MIST, WaterSplashParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(COSY_SMOKE, CampfireSmokeParticle.CosySmokeFactory::new);
+        ParticleFactoryRegistry.getInstance().register(SIGNAL_SMOKE, CampfireSmokeParticle.SignalSmokeFactory::new);
     }
 
     private static void registerParticle(String name, SimpleParticleType particleType) {

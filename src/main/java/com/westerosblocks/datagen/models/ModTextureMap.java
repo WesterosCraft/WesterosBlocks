@@ -41,15 +41,17 @@ public class ModTextureMap extends TextureMap {
             defaultTexture = ts.getTextureByIndex(textureCount - 1);
         }
 
+        // For WEST and EAST, use the correct indices based on symmetry
+        int westIndex = isSymmetrical != null && isSymmetrical ? 4 : 6;
+        int eastIndex = isSymmetrical != null && isSymmetrical ? 5 : 7;
+
         TextureMap tMap = new TextureMap()
                 .put(TextureKey.DOWN, createBlockIdentifier(textureCount > 0 ? ts.getTextureByIndex(0) : defaultTexture))
                 .put(TextureKey.UP, createBlockIdentifier(textureCount > 1 ? ts.getTextureByIndex(1) : defaultTexture))
                 .put(TextureKey.NORTH, createBlockIdentifier(textureCount > 2 ? ts.getTextureByIndex(2) : defaultTexture))
                 .put(TextureKey.SOUTH, createBlockIdentifier(textureCount > 3 ? ts.getTextureByIndex(3) : defaultTexture))
-                .put(TextureKey.WEST, createBlockIdentifier(textureCount > (isSymmetrical != null && isSymmetrical ? 4 : 6) ?
-                        ts.getTextureByIndex(isSymmetrical != null && isSymmetrical ? 4 : 6) : defaultTexture))
-                .put(TextureKey.EAST, createBlockIdentifier(textureCount > (isSymmetrical != null && isSymmetrical ? 5 : 7) ?
-                        ts.getTextureByIndex(isSymmetrical != null && isSymmetrical ? 5 : 7) : defaultTexture))
+                .put(TextureKey.WEST, createBlockIdentifier(textureCount > westIndex ? ts.getTextureByIndex(westIndex) : defaultTexture))
+                .put(TextureKey.EAST, createBlockIdentifier(textureCount > eastIndex ? ts.getTextureByIndex(eastIndex) : defaultTexture))
                 .put(TextureKey.PARTICLE, createBlockIdentifier(textureCount > 2 ? ts.getTextureByIndex(2) : defaultTexture));
 
         if (hasOverlay != null && hasOverlay && sr != null) {
@@ -62,6 +64,7 @@ public class ModTextureMap extends TextureMap {
         }
         return tMap;
     }
+
 
     public static TextureMap txtN(ModBlock.RandomTextureSet ts) {
         return new TextureMap()

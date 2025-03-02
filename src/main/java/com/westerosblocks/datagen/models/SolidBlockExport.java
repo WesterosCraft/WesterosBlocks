@@ -33,6 +33,18 @@ public class SolidBlockExport extends ModelExport {
         return id.withPrefixedPath(GENERATED_PATH);
     }
 
+    // Add a differently named method for regular (non-symmetrical) paths
+    protected static String getStandardModelName(ModBlock def, String ext, int setIdx) {
+        return def.blockName + "/" + ext + ("_v" + (setIdx + 1));
+    }
+
+    public static Identifier standardModelFileName(ModBlock def, String ext, int setIdx, Boolean isCustom) {
+        String path = String.format("%s%s/%s_v%d",
+                isCustom ? CUSTOM_PATH : GENERATED_PATH,
+                def.blockName, ext, setIdx + 1);
+        return WesterosBlocks.id(path);
+    }
+
     public void generateBlockStateModels() {
         WCSolidBlock solidBlock = (block instanceof WCSolidBlock) ? (WCSolidBlock) block : null;
         boolean isSymmetrical = solidBlock != null && solidBlock.symmetrical;
@@ -80,8 +92,8 @@ public class SolidBlockExport extends ModelExport {
                                 isTinted, hasOverlay, sr, setIdx);
                     } else {
                         BlockStateVariant variant = BlockStateVariant.create();
-                        Identifier id = modelFileName(def, fname, setIdx, sr.isCustomModel());
-                        variant.put(VariantSettings.MODEL, modelFileName(def, fname, setIdx, sr.isCustomModel()));
+                        Identifier id = standardModelFileName(def, fname, setIdx, sr.isCustomModel());
+                        variant.put(VariantSettings.MODEL, id);
                         if (set.weight != null) {
                             variant.put(VariantSettings.WEIGHT, set.weight);
                         }
@@ -103,7 +115,7 @@ public class SolidBlockExport extends ModelExport {
                                       boolean isSymmetrical, boolean isTinted, boolean hasOverlay,
                                       ModBlockStateRecord currentRec, int setIdx) {
         ModBlock.RandomTextureSet set = currentRec.getRandomTextureSet(setIdx);
-        TextureMap textureMap = createTextureMap(set, isSymmetrical, hasOverlay, currentRec);
+        TextureMap textureMap = createTextureMap(set, isSymmetrical, hasOverlay, isTinted, currentRec);
 
         // For blocks with multiple textures, use CUBE model which requires all sides
         if (set.getTextureCount() > 1 && !hasOverlay) {
@@ -123,29 +135,37 @@ public class SolidBlockExport extends ModelExport {
         }
     }
 
-    private static TextureMap createTextureMap(ModBlock.RandomTextureSet ts, boolean isSymmetrical, boolean hasOverlay, ModBlockStateRecord currentRec) {
-        // For special blocks or any block that might need all sides specified
-        if (ts.getTextureCount() > 0 && !hasOverlay) {
+    private static TextureMap createTextureMap(ModBlock.RandomTextureSet ts, boolean isSymmetrical, boolean hasOverlay, boolean isTinted, ModBlockStateRecord currentRec) {
+        // For special blocks that need specific texture handling
+        if (ts.getTextureCount() > 1 && !hasOverlay) {
             // Create a texture map that ensures all sides have a texture
             TextureMap fullMap = new TextureMap();
 
             // Add particle texture
             fullMap.put(TextureKey.PARTICLE, createBlockIdentifier(ts.getTextureByIndex(0)));
 
-            // Add all sides, cycling through available textures when needed
-            TextureKey[] sides = {TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH,
-                    TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST};
+            // Texture keys in order they'll be used
+            TextureKey[] sides = {
+                    TextureKey.DOWN, TextureKey.UP,
+                    TextureKey.NORTH, TextureKey.SOUTH,
+                    TextureKey.EAST, TextureKey.WEST
+            };
 
             for (int i = 0; i < sides.length; i++) {
-                // Use modulo to cycle through available textures
-                String texture = ts.getTextureByIndex(Math.min(i, ts.getTextureCount() - 1));
-                fullMap.put(sides[i], createBlockIdentifier(texture));
+                // For textures beyond what's available in the set, use the last available texture
+                int textureIndex = Math.min(i, ts.getTextureCount() - 1);
+                fullMap.put(sides[i], createBlockIdentifier(ts.getTextureByIndex(textureIndex)));
             }
 
             return fullMap;
         } else if (hasOverlay) {
+            // Maintain original overlay logic with symmetrical parameter
             return ModTextureMap.frontTopSides(ts, currentRec, true, isSymmetrical);
+        } else if (currentRec.getTextureCount() > 1 || isTinted) {
+            // Maintain original multi-texture or tinted logic with symmetrical parameter
+            return ModTextureMap.frontTopSides(ts, null, false, isSymmetrical);
         } else {
+            // Simple single texture case
             return new TextureMap().put(TextureKey.ALL, createBlockIdentifier(ts.getTextureByIndex(0)));
         }
     }
