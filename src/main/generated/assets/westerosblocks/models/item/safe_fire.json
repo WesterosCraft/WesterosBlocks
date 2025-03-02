@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/safe_fire/fire_layer_0"
+  }
+}

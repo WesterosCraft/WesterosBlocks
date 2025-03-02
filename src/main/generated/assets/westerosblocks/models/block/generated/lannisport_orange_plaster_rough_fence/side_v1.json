@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_side",
+  "textures": {
+    "bottom": "westerosblocks:block/plaster/rough/lannisport_orange/all1",
+    "particle": "westerosblocks:block/plaster/rough/lannisport_orange/all1",
+    "side": "westerosblocks:block/plaster/rough/lannisport_orange/all1",
+    "top": "westerosblocks:block/plaster/rough/lannisport_orange/all1"
+  }
+}

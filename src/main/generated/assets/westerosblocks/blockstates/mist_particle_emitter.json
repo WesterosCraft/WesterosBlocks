@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/generated/mist_particle_emitter/base_v1"
+    }
+  }
+}

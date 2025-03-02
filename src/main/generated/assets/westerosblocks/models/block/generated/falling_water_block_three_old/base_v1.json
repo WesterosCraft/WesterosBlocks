@@ -1,0 +1,85 @@
+{
+  "parent": "block/block",
+  "display": {},
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#txt0",
+          "uv": [
+            14.72,
+            0.0,
+            15.52,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#txt5",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#txt2",
+          "uv": [
+            0.47999954,
+            0.0,
+            1.2799997,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#txt3",
+          "uv": [
+            14.72,
+            0.0,
+            15.52,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#txt1",
+          "uv": [
+            14.72,
+            0.0,
+            15.52,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#txt4",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "from": [
+        14.72,
+        0.0,
+        0.0
+      ],
+      "to": [
+        15.52,
+        16.0,
+        16.0
+      ]
+    }
+  ],
+  "textures": {
+    "particle": "westerosblocks:block/transparent",
+    "txt0": "westerosblocks:block/transparent",
+    "txt1": "westerosblocks:block/transparent",
+    "txt2": "westerosblocks:block/transparent",
+    "txt3": "westerosblocks:block/transparent",
+    "txt4": "westerosblocks:block/alyssas_tears_mist/mist3_both",
+    "txt5": "westerosblocks:block/alyssas_tears_mist/mist3_both"
+  }
+}

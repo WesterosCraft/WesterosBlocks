@@ -1,0 +1,86 @@
+{
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#txt0",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "cullface": "east",
+          "texture": "#txt5",
+          "uv": [
+            0.0,
+            2.0,
+            16.0,
+            16.0
+          ]
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#txt2",
+          "uv": [
+            0.0,
+            2.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "cullface": "south",
+          "texture": "#txt3",
+          "uv": [
+            0.0,
+            2.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#txt1",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#txt4",
+          "uv": [
+            0.0,
+            2.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        14.0,
+        16
+      ]
+    }
+  ],
+  "textures": {
+    "particle": "westerosblocks:block/pebble/westerlands/dry2",
+    "txt0": "westerosblocks:block/pebble/westerlands/dry2",
+    "txt1": "westerosblocks:block/pebble/westerlands/dry2",
+    "txt2": "westerosblocks:block/pebble/westerlands/dry2",
+    "txt3": "westerosblocks:block/pebble/westerlands/dry2",
+    "txt4": "westerosblocks:block/pebble/westerlands/dry2",
+    "txt5": "westerosblocks:block/pebble/westerlands/dry2"
+  }
+}

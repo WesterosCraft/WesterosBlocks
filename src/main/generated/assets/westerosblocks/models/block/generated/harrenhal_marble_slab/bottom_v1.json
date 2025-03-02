@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/marble/harrenhal/all",
+    "east": "westerosblocks:block/marble/harrenhal/all",
+    "north": "westerosblocks:block/marble/harrenhal/all",
+    "particle": "westerosblocks:block/marble/harrenhal/all",
+    "south": "westerosblocks:block/marble/harrenhal/all",
+    "up": "westerosblocks:block/marble/harrenhal/all",
+    "west": "westerosblocks:block/marble/harrenhal/all"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_overlay",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_quarter_rounded/grey/all",
+    "down_ov": "westerosblocks:block/timber/northern/bottom",
+    "east": "westerosblocks:block/ashlar_quarter_rounded/grey/all",
+    "east_ov": "westerosblocks:block/timber/northern/vertical",
+    "north": "westerosblocks:block/ashlar_quarter_rounded/grey/all",
+    "north_ov": "westerosblocks:block/timber/northern/vertical",
+    "particle": "westerosblocks:block/ashlar_quarter_rounded/grey/all",
+    "south": "westerosblocks:block/ashlar_quarter_rounded/grey/all",
+    "south_ov": "westerosblocks:block/timber/northern/vertical",
+    "up": "westerosblocks:block/wood/northern/all",
+    "up_ov": "westerosblocks:block/transparent",
+    "west": "westerosblocks:block/ashlar_quarter_rounded/grey/all",
+    "west_ov": "westerosblocks:block/timber/northern/vertical"
+  }
+}

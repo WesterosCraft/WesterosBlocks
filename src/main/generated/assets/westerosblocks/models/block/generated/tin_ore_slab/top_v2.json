@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/ore/tin/all2",
+    "east": "westerosblocks:block/ore/tin/all2",
+    "north": "westerosblocks:block/ore/tin/all2",
+    "particle": "westerosblocks:block/ore/tin/all2",
+    "south": "westerosblocks:block/ore/tin/all2",
+    "up": "westerosblocks:block/ore/tin/all2",
+    "west": "westerosblocks:block/ore/tin/all2"
+  }
+}

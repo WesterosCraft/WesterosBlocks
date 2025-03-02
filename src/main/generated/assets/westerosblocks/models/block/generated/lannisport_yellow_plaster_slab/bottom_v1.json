@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/plaster/smooth/lannisport_yellow/all",
+    "east": "westerosblocks:block/plaster/smooth/lannisport_yellow/all",
+    "north": "westerosblocks:block/plaster/smooth/lannisport_yellow/all",
+    "particle": "westerosblocks:block/plaster/smooth/lannisport_yellow/all",
+    "south": "westerosblocks:block/plaster/smooth/lannisport_yellow/all",
+    "up": "westerosblocks:block/plaster/smooth/lannisport_yellow/all",
+    "west": "westerosblocks:block/plaster/smooth/lannisport_yellow/all"
+  }
+}

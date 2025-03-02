@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/brick/orange/all1",
+    "east": "westerosblocks:block/brick/orange/rowlock1",
+    "north": "westerosblocks:block/brick/orange/rowlock1",
+    "particle": "westerosblocks:block/brick/orange/all1",
+    "south": "westerosblocks:block/brick/orange/rowlock1",
+    "up": "westerosblocks:block/brick/orange/all1",
+    "west": "westerosblocks:block/brick/orange/rowlock1"
+  }
+}

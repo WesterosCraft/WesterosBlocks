@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/potted_heather/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/potted_heather/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/potted_heather/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/potted_heather/base_v4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "variants": {
+    "type=bottom,state=base": {
+      "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_slab/base/bottom_v1"
+    },
+    "type=bottom,state=blue": {
+      "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_slab/blue/bottom_v1"
+    },
+    "type=bottom,state=green": {
+      "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_slab/green/bottom_v1"
+    },
+    "type=bottom,state=red": {
+      "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_slab/red/bottom_v1"
+    },
+    "type=double,state=base": {
+      "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_slab/base/double_v1"
+    },
+    "type=double,state=blue": {
+      "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_slab/blue/double_v1"
+    },
+    "type=double,state=green": {
+      "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_slab/green/double_v1"
+    },
+    "type=double,state=red": {
+      "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_slab/red/double_v1"
+    },
+    "type=top,state=base": {
+      "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_slab/base/top_v1"
+    },
+    "type=top,state=blue": {
+      "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_slab/blue/top_v1"
+    },
+    "type=top,state=green": {
+      "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_slab/green/top_v1"
+    },
+    "type=top,state=red": {
+      "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_slab/red/top_v1"
+    }
+  }
+}

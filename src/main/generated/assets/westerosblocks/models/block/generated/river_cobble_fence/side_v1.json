@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/fence_side",
+  "textures": {
+    "bottom": "westerosblocks:block/rubble/river/all1",
+    "particle": "westerosblocks:block/rubble/river/all1",
+    "side": "westerosblocks:block/rubble/river/all1",
+    "top": "westerosblocks:block/rubble/river/all1"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side",
+  "textures": {
+    "bottom": "westerosblocks:block/plaster/rough/gulltown_green/all2",
+    "particle": "westerosblocks:block/plaster/rough/gulltown_green/all2",
+    "side": "westerosblocks:block/plaster/rough/gulltown_green/all2",
+    "top": "westerosblocks:block/plaster/rough/gulltown_green/all2"
+  }
+}

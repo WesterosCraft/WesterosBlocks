@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/wool/black/all",
+    "east": "westerosblocks:block/wool/black/all",
+    "north": "westerosblocks:block/wool/black/all",
+    "particle": "westerosblocks:block/wool/black/all",
+    "south": "westerosblocks:block/wool/black/all",
+    "up": "westerosblocks:block/wool/black/all",
+    "west": "westerosblocks:block/wool/black/all"
+  }
+}

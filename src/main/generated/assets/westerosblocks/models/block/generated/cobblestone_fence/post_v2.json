@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/fence_post",
+  "textures": {
+    "bottom": "westerosblocks:block/cobblestone/grey/all2",
+    "particle": "westerosblocks:block/cobblestone/grey/all2",
+    "side": "westerosblocks:block/cobblestone/grey/all2",
+    "top": "westerosblocks:block/cobblestone/grey/all2"
+  }
+}

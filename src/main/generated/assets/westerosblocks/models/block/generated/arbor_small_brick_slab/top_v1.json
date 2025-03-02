@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/fieldstone/arbor/all",
+    "east": "westerosblocks:block/fieldstone/arbor/all",
+    "north": "westerosblocks:block/fieldstone/arbor/all",
+    "particle": "westerosblocks:block/fieldstone/arbor/all",
+    "south": "westerosblocks:block/fieldstone/arbor/all",
+    "up": "westerosblocks:block/fieldstone/arbor/all",
+    "west": "westerosblocks:block/fieldstone/arbor/all"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/plaster/smooth/lannisport_orange/all",
+    "east": "westerosblocks:block/plaster/smooth/lannisport_orange/all",
+    "north": "westerosblocks:block/plaster/smooth/lannisport_orange/all",
+    "particle": "westerosblocks:block/plaster/smooth/lannisport_orange/all",
+    "south": "westerosblocks:block/plaster/smooth/lannisport_orange/all",
+    "up": "westerosblocks:block/plaster/smooth/lannisport_orange/all",
+    "west": "westerosblocks:block/plaster/smooth/lannisport_orange/all"
+  }
+}

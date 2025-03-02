@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,part=foot": {
+      "model": "westerosblocks:block/generated/noble_red_bed/foot_v1",
+      "y": 270
+    },
+    "facing=east,part=head": {
+      "model": "westerosblocks:block/generated/noble_red_bed/head_v1",
+      "y": 270
+    },
+    "facing=north,part=foot": {
+      "model": "westerosblocks:block/generated/noble_red_bed/foot_v1",
+      "y": 180
+    },
+    "facing=north,part=head": {
+      "model": "westerosblocks:block/generated/noble_red_bed/head_v1",
+      "y": 180
+    },
+    "facing=south,part=foot": {
+      "model": "westerosblocks:block/generated/noble_red_bed/foot_v1"
+    },
+    "facing=south,part=head": {
+      "model": "westerosblocks:block/generated/noble_red_bed/head_v1"
+    },
+    "facing=west,part=foot": {
+      "model": "westerosblocks:block/generated/noble_red_bed/foot_v1",
+      "y": 90
+    },
+    "facing=west,part=head": {
+      "model": "westerosblocks:block/generated/noble_red_bed/head_v1",
+      "y": 90
+    }
+  }
+}

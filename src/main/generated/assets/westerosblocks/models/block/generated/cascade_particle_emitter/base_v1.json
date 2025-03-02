@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "westerosblocks:block/transparent",
+    "particle": "westerosblocks:block/transparent"
+  }
+}

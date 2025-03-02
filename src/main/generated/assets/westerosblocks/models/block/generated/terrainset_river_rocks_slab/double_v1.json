@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/terrainset/river/random_4x4",
+    "east": "westerosblocks:block/terrainset/river/random_4x4",
+    "north": "westerosblocks:block/terrainset/river/random_4x4",
+    "particle": "westerosblocks:block/terrainset/river/random_4x4",
+    "south": "westerosblocks:block/terrainset/river/random_4x4",
+    "up": "westerosblocks:block/terrainset/river/random_4x4",
+    "west": "westerosblocks:block/terrainset/river/random_4x4"
+  }
+}

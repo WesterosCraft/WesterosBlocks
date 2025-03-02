@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_full/westerlands/all",
+    "east": "westerosblocks:block/ashlar_full/westerlands/all",
+    "north": "westerosblocks:block/ashlar_full/westerlands/all",
+    "particle": "westerosblocks:block/ashlar_full/westerlands/all",
+    "south": "westerosblocks:block/ashlar_full/westerlands/all",
+    "up": "westerosblocks:block/ashlar_full/westerlands/all",
+    "west": "westerosblocks:block/ashlar_full/westerlands/all"
+  }
+}

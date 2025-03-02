@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/untinted/template_torch_wall",
+  "textures": {
+    "torch": "westerosblocks:block/lighting/torch_unlit"
+  }
+}

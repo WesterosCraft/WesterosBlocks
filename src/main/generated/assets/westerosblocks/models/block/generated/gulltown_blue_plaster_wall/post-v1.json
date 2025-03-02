@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_post",
+  "textures": {
+    "bottom": "westerosblocks:block/plaster/smooth/gulltown_blue/all",
+    "particle": "westerosblocks:block/plaster/smooth/gulltown_blue/all",
+    "side": "westerosblocks:block/plaster/smooth/gulltown_blue/all",
+    "top": "westerosblocks:block/plaster/smooth/gulltown_blue/all"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "parent": "block/block",
+  "display": {},
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "texture": "#txt0",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#txt5",
+          "uv": [
+            0.0,
+            15.504,
+            16.0,
+            15.52
+          ]
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#txt2",
+          "uv": [
+            0.0,
+            15.504,
+            16.0,
+            15.52
+          ]
+        },
+        "south": {
+          "texture": "#txt3",
+          "uv": [
+            0.0,
+            15.504,
+            16.0,
+            15.52
+          ]
+        },
+        "up": {
+          "texture": "#txt1",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#txt4",
+          "uv": [
+            0.0,
+            15.504,
+            16.0,
+            15.52
+          ]
+        }
+      },
+      "from": [
+        0.0,
+        0.48,
+        0.0
+      ],
+      "to": [
+        16.0,
+        0.496,
+        16.0
+      ]
+    }
+  ],
+  "textures": {
+    "particle": "westerosblocks:block/lily_pad/side6",
+    "txt0": "westerosblocks:block/lily_pad/side6",
+    "txt1": "westerosblocks:block/lily_pad/side6",
+    "txt2": "westerosblocks:block/lily_pad/side6",
+    "txt3": "westerosblocks:block/lily_pad/side6",
+    "txt4": "westerosblocks:block/lily_pad/side6",
+    "txt5": "westerosblocks:block/lily_pad/side6"
+  }
+}

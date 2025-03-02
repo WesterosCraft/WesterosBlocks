@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/marble/quartz/all",
+    "east": "westerosblocks:block/marble/quartz/all",
+    "north": "westerosblocks:block/marble/quartz/all",
+    "particle": "westerosblocks:block/marble/quartz/all",
+    "south": "westerosblocks:block/marble/quartz/all",
+    "up": "westerosblocks:block/marble/quartz/all",
+    "west": "westerosblocks:block/marble/quartz/all"
+  }
+}

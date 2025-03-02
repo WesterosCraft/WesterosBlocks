@@ -1,0 +1,180 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/post_v1"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/post_v2"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/post_v3"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/post_v4"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v1",
+        "uvlock": true
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v2",
+        "uvlock": true
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v3",
+        "uvlock": true
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v4",
+        "uvlock": true
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v1",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v2",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v3",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v4",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v1",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v2",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v3",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v4",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v1",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v2",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v3",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/generated/flowstone_fence/side_v4",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    }
+  ]
+}

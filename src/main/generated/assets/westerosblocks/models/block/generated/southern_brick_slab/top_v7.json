@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/brick/southern/all7",
+    "east": "westerosblocks:block/brick/southern/all7",
+    "north": "westerosblocks:block/brick/southern/all7",
+    "particle": "westerosblocks:block/brick/southern/all7",
+    "south": "westerosblocks:block/brick/southern/all7",
+    "up": "westerosblocks:block/brick/southern/all7",
+    "west": "westerosblocks:block/brick/southern/all7"
+  }
+}
