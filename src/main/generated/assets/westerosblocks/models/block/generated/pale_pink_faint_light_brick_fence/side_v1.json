@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_side",
-  "textures": {
-    "bottom": "westerosblocks:block/fieldstone/light_pale_pink/all",
-    "particle": "westerosblocks:block/fieldstone/light_pale_pink/all",
-    "side": "westerosblocks:block/fieldstone/light_pale_pink/all",
-    "top": "westerosblocks:block/fieldstone/light_pale_pink/all"
-  }
-}

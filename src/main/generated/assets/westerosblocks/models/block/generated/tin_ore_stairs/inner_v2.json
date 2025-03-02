@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/inner_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/ore/tin/all2",
-    "side": "westerosblocks:block/ore/tin/all2",
-    "top": "westerosblocks:block/ore/tin/all2"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side",
-  "textures": {
-    "bottom": "westerosblocks:block/ashlar_quarter_rounded/light_oldtown/all",
-    "particle": "westerosblocks:block/ashlar_quarter_rounded/light_oldtown/all",
-    "side": "westerosblocks:block/ashlar_quarter_rounded/light_oldtown/all",
-    "top": "westerosblocks:block/ashlar_quarter_rounded/light_oldtown/all"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side",
-  "textures": {
-    "bottom": "westerosblocks:block/marble/quartz/wall/top",
-    "particle": "westerosblocks:block/marble/quartz/wall/side",
-    "side": "westerosblocks:block/marble/quartz/wall/side",
-    "top": "westerosblocks:block/marble/quartz/wall/top"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_side",
-  "textures": {
-    "bottom": "westerosblocks:block/cobblestone_dark/sandy_pink/all",
-    "particle": "westerosblocks:block/cobblestone_dark/sandy_pink/all",
-    "side": "westerosblocks:block/cobblestone_dark/sandy_pink/all",
-    "top": "westerosblocks:block/cobblestone_dark/sandy_pink/all"
-  }
-}

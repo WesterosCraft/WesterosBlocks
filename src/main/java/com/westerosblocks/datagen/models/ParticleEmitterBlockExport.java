@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.datagen.ModelExport;
@@ -20,8 +21,6 @@ import net.minecraft.data.client.TextureMap;
 import net.minecraft.data.client.VariantSettings;
 import net.minecraft.util.Identifier;
 
-
-// TODO refactor for on/off state
 public class ParticleEmitterBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
     private final Block block;
@@ -42,88 +41,121 @@ public class ParticleEmitterBlockExport extends ModelExport {
         if (!def.isCustomModel()) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
                 ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-                generateParticleBlockModel(generator, set, setIdx);
+                // Generate both on and off models with appropriate texture indices
+                generateParticleBlockModel(generator, set, setIdx, false); // Off state - index 0
+                generateParticleBlockModel(generator, set, setIdx, true);  // On state - index 1
             }
         }
 
-        // Add variant for the base model
+        // Define the state variants for powered=false and powered=true
         for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
             ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-            BlockStateVariant variant = BlockStateVariant.create();
-            Identifier modelId = getModelId("base", setIdx);
-            variant.put(VariantSettings.MODEL, modelId);
+
+            // Off state variant
+            BlockStateVariant offVariant = BlockStateVariant.create();
+            Identifier offModelId = getModelId("off", setIdx);
+            offVariant.put(VariantSettings.MODEL, offModelId);
 
             if (set.weight != null) {
-                variant.put(VariantSettings.WEIGHT, set.weight);
+                offVariant.put(VariantSettings.WEIGHT, set.weight);
             }
 
-            blockStateBuilder.addVariant("", variant, null, variants);
+            // On state variant
+            BlockStateVariant onVariant = BlockStateVariant.create();
+            Identifier onModelId = getModelId("on", setIdx);
+            onVariant.put(VariantSettings.MODEL, onModelId);
+
+            if (set.weight != null) {
+                onVariant.put(VariantSettings.WEIGHT, set.weight);
+            }
+
+            // Add variants with their conditions
+            blockStateBuilder.addVariant("powered=false", offVariant, null, variants);
+            blockStateBuilder.addVariant("powered=true", onVariant, null, variants);
         }
 
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateParticleBlockModel(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, int setIdx) {
-        // Create a texture map for the particle block
-        TextureMap textureMap = new TextureMap()
-                .put(TextureKey.ALL, createBlockIdentifier(set.getTextureByIndex(0)))
-                .put(TextureKey.PARTICLE, createBlockIdentifier(set.getTextureByIndex(0)));
+    private void generateParticleBlockModel(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, int setIdx, boolean powered) {
+        // Get the texture ID for the current state - index 0 for off, index 1 for on
+        int textureIndex = powered ? 1 : 0;
 
-        // Get the model ID for the base variant
-        Identifier modelId = getModelId("base", setIdx);
-        String modelJson = """
-            {
-                "parent": "block/block",
-                "textures": {
-                    "particle": "#particle",
-                    "all": "#all"
-                },
-                "elements": [
-                    {   
-                        "from": [ 4, 4, 4 ],
-                        "to": [ 12, 12, 12 ],
-                        "faces": {
-                            "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#all" },
-                            "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#all" },
-                            "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#all" },
-                            "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#all" },
-                            "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#all" },
-                            "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#all" }
-                        }
-                    }
-                ]
-            }
-            """;
+        // Make sure we have enough textures in the set
+        String textureId;
+        if (textureIndex < set.getTextureCount()) {
+            textureId = set.getTextureByIndex(textureIndex);
+        } else {
+            // Fallback to the first texture if the requested index doesn't exist
+            textureId = set.getTextureByIndex(0);
+        }
 
+        Identifier textureIdentifier = createBlockIdentifier(textureId);
 
-        // Create a new model with a smaller cube shape and translucent textures
-        Model model = new Model(
-                Optional.of(Identifier.ofVanilla("block/cube_all")),
-                Optional.of(modelJson),
-                TextureKey.ALL,
-                TextureKey.PARTICLE
-        );
+        // Create a custom model with our custom textures mapping
+        Model model = new CustomParticleEmitterModel(powered, textureIdentifier.toString());
+
+        // Get the model ID for the variant
+        String variant = powered ? "on" : "off";
+        Identifier modelId = getModelId(variant, setIdx);
+
+        // Use a dummy TextureMap since our custom model handles textures
+        TextureMap emptyMap = new TextureMap().put(TextureKey.PARTICLE, textureIdentifier);
 
         // Upload the model
-        model.upload(modelId, textureMap, generator.modelCollector);
+        model.upload(modelId, emptyMap, generator.modelCollector);
+    }
+
+    private static class CustomParticleEmitterModel extends Model {
+        private final boolean powered;
+        private final String texture;
+
+        public CustomParticleEmitterModel(boolean powered, String texture) {
+            super(Optional.empty(), Optional.empty(), TextureKey.PARTICLE);
+            this.powered = powered;
+            this.texture = texture;
+        }
+
+        @Override
+        public JsonObject createJson(Identifier id, Map<TextureKey, Identifier> textures) {
+            // Get the base elements from the PARTICLE_EMITTER model
+            JsonObject baseJson = ModModels.PARTICLE_EMITTER(powered)
+                    .createJson(id, textures);
+
+            // Add our custom textures section
+            JsonObject texturesJson = new JsonObject();
+            texturesJson.addProperty("0", texture);
+            texturesJson.addProperty("particle", texture);
+            baseJson.add("textures", texturesJson);
+
+            return baseJson;
+        }
     }
 
     private Identifier getModelId(String variant, int setIdx) {
-        return WesterosBlocks.id(String.format("%s%s/%s_v%d", 
-            GENERATED_PATH,
-            def.getBlockName(),
-            variant,
-            setIdx + 1));
+        return WesterosBlocks.id(String.format("%s%s/%s_v%d",
+                GENERATED_PATH,
+                def.getBlockName(),
+                variant,
+                setIdx + 1));
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
-        // For the item model, we'll use the basic block model
-        TextureMap textureMap = TextureMap.layer0(Identifier.of(WesterosBlocks.MOD_ID, "item/" + blockDefinition.particle));
+        // For the item model, always use the "off" state texture (index 0)
+        String texture;
+        if (blockDefinition.getRandomTextureSetCount() > 0) {
+            texture = blockDefinition.getRandomTextureSet(0).getTextureByIndex(0);
+        } else {
+            // Fallback to particle texture if no texture sets
+            texture = blockDefinition.particle != null ? blockDefinition.particle : "transparent";
+        }
+
+        TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(texture));
 
         Models.GENERATED.upload(
-            ModelIds.getItemModelId(block.asItem()),
-            textureMap,
-            itemModelGenerator.writer
+                ModelIds.getItemModelId(block.asItem()),
+                textureMap,
+                itemModelGenerator.writer
         );
     }
 }
