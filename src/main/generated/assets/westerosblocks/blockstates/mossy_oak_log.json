@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "westerosblocks:block/generated/mossy_oak_log/x_v1",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "westerosblocks:block/generated/mossy_oak_log/y_v1"
+    },
+    "axis=z": {
+      "model": "westerosblocks:block/generated/mossy_oak_log/z_v1",
+      "x": 90
+    }
+  }
+}

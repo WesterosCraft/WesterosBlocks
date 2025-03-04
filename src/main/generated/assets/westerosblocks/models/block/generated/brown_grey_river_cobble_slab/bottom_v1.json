@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/rubble/brown_grey_river/all1",
+    "east": "westerosblocks:block/rubble/brown_grey_river/all1",
+    "north": "westerosblocks:block/rubble/brown_grey_river/all1",
+    "particle": "westerosblocks:block/rubble/brown_grey_river/all1",
+    "south": "westerosblocks:block/rubble/brown_grey_river/all1",
+    "up": "westerosblocks:block/rubble/brown_grey_river/all1",
+    "west": "westerosblocks:block/rubble/brown_grey_river/all1"
+  }
+}

@@ -12,6 +12,7 @@ public class WesterosBlocksClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+
         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new WesterosResourceReloadListener());
         ColorHandlers.registerColorProviders();
         ModParticles.initializeClient();

@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/untinted/template_fence_gate_wall",
+  "textures": {
+    "texture": "westerosblocks:block/terrainset/magma/all"
+  }
+}

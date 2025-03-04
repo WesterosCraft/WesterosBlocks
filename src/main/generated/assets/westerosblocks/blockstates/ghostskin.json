@@ -1,0 +1,102 @@
+{
+  "variants": {
+    "facing=east": [
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v4"
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v5"
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v6"
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v1",
+        "y": 270
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v2",
+        "y": 270
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v3",
+        "y": 270
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v4",
+        "y": 270
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v5",
+        "y": 270
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v6",
+        "y": 270
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v1",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v2",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v3",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v4",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v5",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v6",
+        "y": 90
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v1",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v2",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v3",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v4",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v5",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/custom/ghostskin/base_v6",
+        "y": 180
+      }
+    ]
+  }
+}

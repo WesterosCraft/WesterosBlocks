@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_overlay",
+  "textures": {
+    "down": "westerosblocks:block/plaster/rough/gulltown_green/all1",
+    "down_ov": "westerosblocks:block/timber/northern/bottom",
+    "east": "westerosblocks:block/plaster/rough/gulltown_green/all1",
+    "east_ov": "westerosblocks:block/timber/northern/bressummer",
+    "north": "westerosblocks:block/plaster/rough/gulltown_green/all1",
+    "north_ov": "westerosblocks:block/timber/northern/bressummer",
+    "particle": "westerosblocks:block/plaster/rough/gulltown_green/all1",
+    "south": "westerosblocks:block/plaster/rough/gulltown_green/all1",
+    "south_ov": "westerosblocks:block/timber/northern/bressummer",
+    "up": "westerosblocks:block/wood/northern/all",
+    "up_ov": "westerosblocks:block/transparent",
+    "west": "westerosblocks:block/plaster/rough/gulltown_green/all1",
+    "west_ov": "westerosblocks:block/timber/northern/bressummer"
+  }
+}

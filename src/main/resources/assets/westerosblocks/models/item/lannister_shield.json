@@ -1,6 +1,6 @@
 {
-  "credit": "Made by SyndiShanX",
   "texture_size": [32, 32],
+  "gui_light": "front",
   "textures": {
     "particle": "westerosblocks:item/lannister_shield",
     "front": "westerosblocks:item/lannister_shield",

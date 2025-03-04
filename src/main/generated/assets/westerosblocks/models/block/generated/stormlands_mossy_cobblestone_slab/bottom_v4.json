@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/cobblestone/stormlands_mossy/all4",
+    "east": "westerosblocks:block/cobblestone/stormlands_mossy/all4",
+    "north": "westerosblocks:block/cobblestone/stormlands_mossy/all4",
+    "particle": "westerosblocks:block/cobblestone/stormlands_mossy/all4",
+    "south": "westerosblocks:block/cobblestone/stormlands_mossy/all4",
+    "up": "westerosblocks:block/cobblestone/stormlands_mossy/all4",
+    "west": "westerosblocks:block/cobblestone/stormlands_mossy/all4"
+  }
+}

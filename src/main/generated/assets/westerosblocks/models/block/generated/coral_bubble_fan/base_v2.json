@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/untinted/fan",
+  "textures": {
+    "fan": "westerosblocks:block/coral/bubble/fan2"
+  }
+}

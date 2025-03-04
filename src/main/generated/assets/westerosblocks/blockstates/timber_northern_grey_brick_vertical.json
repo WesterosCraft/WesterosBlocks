@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "state=state0": {
+      "model": "westerosblocks:block/generated/timber_northern_grey_brick_vertical/state0_v1"
+    },
+    "state=state1": {
+      "model": "westerosblocks:block/generated/timber_northern_grey_brick_vertical/state1_v1"
+    },
+    "state=state2": {
+      "model": "westerosblocks:block/generated/timber_northern_grey_brick_vertical/state2_v1"
+    }
+  }
+}

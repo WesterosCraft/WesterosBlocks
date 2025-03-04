@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/oxidized_iron_hopper/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/oxidized_iron_hopper/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/oxidized_iron_hopper/base_v3"
+      }
+    ]
+  }
+}

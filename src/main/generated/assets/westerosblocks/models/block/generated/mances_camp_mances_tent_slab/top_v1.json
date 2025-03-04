@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/mances_camp_mances_tent/outside",
+    "east": "westerosblocks:block/mances_camp_mances_tent/outside",
+    "north": "westerosblocks:block/mances_camp_mances_tent/outside",
+    "particle": "westerosblocks:block/mances_camp_mances_tent/outside",
+    "south": "westerosblocks:block/mances_camp_mances_tent/outside",
+    "up": "westerosblocks:block/mances_camp_mances_tent/outside",
+    "west": "westerosblocks:block/mances_camp_mances_tent/outside"
+  }
+}

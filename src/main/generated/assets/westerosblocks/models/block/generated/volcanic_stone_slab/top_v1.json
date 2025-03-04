@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/terrainset/magma/all",
+    "east": "westerosblocks:block/terrainset/magma/all",
+    "north": "westerosblocks:block/terrainset/magma/all",
+    "particle": "westerosblocks:block/terrainset/magma/all",
+    "south": "westerosblocks:block/terrainset/magma/all",
+    "up": "westerosblocks:block/terrainset/magma/all",
+    "west": "westerosblocks:block/terrainset/magma/all"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "parent": "block/block",
+  "display": {},
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#txt0",
+          "uv": [
+            2.0,
+            2.0,
+            14.0,
+            14.0
+          ]
+        },
+        "east": {
+          "texture": "#txt5",
+          "uv": [
+            2.0,
+            8.0,
+            14.0,
+            16.0
+          ]
+        },
+        "north": {
+          "texture": "#txt2",
+          "uv": [
+            2.0,
+            8.0,
+            14.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#txt3",
+          "uv": [
+            2.0,
+            8.0,
+            14.0,
+            16.0
+          ]
+        },
+        "up": {
+          "texture": "#txt1",
+          "uv": [
+            2.0,
+            2.0,
+            14.0,
+            14.0
+          ]
+        },
+        "west": {
+          "texture": "#txt4",
+          "uv": [
+            2.0,
+            8.0,
+            14.0,
+            16.0
+          ]
+        }
+      },
+      "from": [
+        2.0,
+        0.0,
+        2.0
+      ],
+      "to": [
+        14.0,
+        8.0,
+        14.0
+      ]
+    }
+  ],
+  "textures": {
+    "particle": "westerosblocks:block/bread/bottom",
+    "txt0": "westerosblocks:block/bread/bottom",
+    "txt1": "westerosblocks:block/bread/top",
+    "txt2": "westerosblocks:block/bread/side",
+    "txt3": "westerosblocks:block/bread/side",
+    "txt4": "westerosblocks:block/bread/side",
+    "txt5": "westerosblocks:block/bread/side"
+  }
+}

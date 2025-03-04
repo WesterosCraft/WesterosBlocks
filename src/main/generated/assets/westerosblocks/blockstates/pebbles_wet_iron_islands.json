@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/pebbles_wet_iron_islands/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/pebbles_wet_iron_islands/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/pebbles_wet_iron_islands/base_v3"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side",
+  "textures": {
+    "bottom": "westerosblocks:block/cobblestone/stormlands_mossy/all5",
+    "particle": "westerosblocks:block/cobblestone/stormlands_mossy/all5",
+    "side": "westerosblocks:block/cobblestone/stormlands_mossy/all5",
+    "top": "westerosblocks:block/cobblestone/stormlands_mossy/all5"
+  }
+}

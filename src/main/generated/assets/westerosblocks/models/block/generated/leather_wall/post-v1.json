@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_post",
+  "textures": {
+    "bottom": "westerosblocks:block/leather_block/leather",
+    "particle": "westerosblocks:block/leather_block/leather",
+    "side": "westerosblocks:block/leather_block/leather",
+    "top": "westerosblocks:block/leather_block/leather"
+  }
+}

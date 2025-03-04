@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/dirt/top_bot2",
+    "east": "westerosblocks:block/dirt/ground",
+    "north": "westerosblocks:block/dirt/ground",
+    "particle": "westerosblocks:block/dirt/ground",
+    "south": "westerosblocks:block/dirt/ground",
+    "up": "westerosblocks:block/dirt/top_bot2",
+    "west": "westerosblocks:block/dirt/ground"
+  }
+}

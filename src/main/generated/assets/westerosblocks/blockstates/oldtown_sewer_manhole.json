@@ -1,0 +1,58 @@
+{
+  "variants": {
+    "facing=east,half=bottom,open=false": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/bottom_v1"
+    },
+    "facing=east,half=bottom,open=true": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/open_v1",
+      "y": 90
+    },
+    "facing=east,half=top,open=false": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/top_v1"
+    },
+    "facing=east,half=top,open=true": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/open_v1",
+      "y": 90
+    },
+    "facing=north,half=bottom,open=false": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/bottom_v1"
+    },
+    "facing=north,half=bottom,open=true": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/open_v1"
+    },
+    "facing=north,half=top,open=false": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/top_v1"
+    },
+    "facing=north,half=top,open=true": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/open_v1"
+    },
+    "facing=south,half=bottom,open=false": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/bottom_v1"
+    },
+    "facing=south,half=bottom,open=true": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/open_v1",
+      "y": 180
+    },
+    "facing=south,half=top,open=false": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/top_v1"
+    },
+    "facing=south,half=top,open=true": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/open_v1",
+      "y": 180
+    },
+    "facing=west,half=bottom,open=false": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/bottom_v1"
+    },
+    "facing=west,half=bottom,open=true": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/open_v1",
+      "y": 270
+    },
+    "facing=west,half=top,open=false": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/top_v1"
+    },
+    "facing=west,half=top,open=true": {
+      "model": "westerosblocks:block/generated/oldtown_sewer_manhole/open_v1",
+      "y": 270
+    }
+  }
+}

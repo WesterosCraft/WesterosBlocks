@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side",
+  "textures": {
+    "bottom": "westerosblocks:block/wool/cyan/all",
+    "particle": "westerosblocks:block/wool/cyan/all",
+    "side": "westerosblocks:block/wool/cyan/all",
+    "top": "westerosblocks:block/wool/cyan/all"
+  }
+}

@@ -4,7 +4,8 @@
       "customTag": "shield",
       "isConventional": true,
       "itemNames": [
-        "westerosblocks:lannister_shield"
+        "westerosblocks:lannister_shield",
+        "westerosblocks:stark_shield"
       ]
     }
   ]
