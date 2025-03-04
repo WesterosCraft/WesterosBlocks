@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/cascade_particle_emitter/base_v1"
+    "powered=false": {
+      "model": "westerosblocks:block/generated/cascade_particle_emitter/off_v1"
+    },
+    "powered=true": {
+      "model": "westerosblocks:block/generated/cascade_particle_emitter/on_v1"
     }
   }
 }
