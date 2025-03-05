@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/inner_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/wood/birch/all",
-    "side": "westerosblocks:block/wood/birch/plankctm",
-    "top": "westerosblocks:block/wood/birch/all"
-  }
-}

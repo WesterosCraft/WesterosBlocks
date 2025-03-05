@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/plaster/smooth/white_daub/all",
-    "side": "westerosblocks:block/plaster/smooth/white_daub/all",
-    "top": "westerosblocks:block/plaster/smooth/white_daub/all"
-  }
-}

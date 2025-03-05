@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/ashlar_full/dark_sandstone/all",
-    "side": "westerosblocks:block/ashlar_full/dark_sandstone/all",
-    "top": "westerosblocks:block/ashlar_full/dark_sandstone/all"
-  }
-}

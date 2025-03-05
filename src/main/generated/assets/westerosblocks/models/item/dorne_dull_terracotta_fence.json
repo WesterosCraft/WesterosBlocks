@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/ashlar_third/dull_terracotta/all",
-    "side": "westerosblocks:block/ashlar_third/dull_terracotta/all",
-    "top": "westerosblocks:block/ashlar_third/dull_terracotta/all"
-  }
-}

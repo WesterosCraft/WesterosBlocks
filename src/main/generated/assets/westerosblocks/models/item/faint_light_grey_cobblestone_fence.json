@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/cobblestone/light_grey/all1",
-    "side": "westerosblocks:block/cobblestone/light_grey/all1",
-    "top": "westerosblocks:block/cobblestone/light_grey/all1"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/inner_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/ashlar_third/westerlands/all",
-    "side": "westerosblocks:block/ashlar_third/westerlands/all",
-    "top": "westerosblocks:block/ashlar_third/westerlands/all"
-  }
-}

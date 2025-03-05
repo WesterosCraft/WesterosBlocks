@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/outer_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/thatch/dark/all",
-    "side": "westerosblocks:block/thatch/dark/all",
-    "top": "westerosblocks:block/thatch/dark/all"
-  }
-}

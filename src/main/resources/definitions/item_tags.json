@@ -4,8 +4,8 @@
       "customTag": "shield",
       "isConventional": true,
       "itemNames": [
-        "westerosblocks:lannister_shield",
-        "westerosblocks:stark_shield"
+        "westerosblocks:stark_kite_shield",
+        "westerosblocks:tully_heater_shield"
       ]
     }
   ]

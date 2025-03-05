@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/outer_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/coral/bubble/all",
-    "side": "westerosblocks:block/coral/bubble/all",
-    "top": "westerosblocks:block/coral/bubble/all"
-  }
-}

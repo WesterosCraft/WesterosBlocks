@@ -45,8 +45,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
         // Items
         translationBuilder.add("item.westerosblocks.longclaw", "Longclaw");
-        translationBuilder.add("item.westerosblocks.lannister_shield", "Lannister Shield");
-        translationBuilder.add("item.westerosblocks.stark_shield", "Stark Shield");
+//        translationBuilder.add("item.westerosblocks.lannister_shield", "Lannister Shield");
+        translationBuilder.add("item.westerosblocks.stark_kite_shield", "Stark Kite Shield");
+        translationBuilder.add("item.westerosblocks.tully_heater_shield", "Tully Heater Shield");
 
         // Config translations
         translationBuilder.add("text.autoconfig.westerosblocks.title", "WesterosBlocks Config");

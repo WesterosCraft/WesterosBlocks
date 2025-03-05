@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/outer_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/mances_camp_common_tent/outside1",
-    "side": "westerosblocks:block/mances_camp_common_tent/outside1",
-    "top": "westerosblocks:block/mances_camp_common_tent/outside1"
-  }
-}

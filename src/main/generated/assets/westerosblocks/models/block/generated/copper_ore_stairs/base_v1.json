@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/ore/copper/all1",
-    "side": "westerosblocks:block/ore/copper/all1",
-    "top": "westerosblocks:block/ore/copper/all1"
-  }
-}

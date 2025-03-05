@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/inner_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/fieldstone/westerlands/all",
-    "side": "westerosblocks:block/fieldstone/westerlands/all",
-    "top": "westerosblocks:block/fieldstone/westerlands/all"
-  }
-}

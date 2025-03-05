@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/dark_brown_sandstone/all",
-    "side": "westerosblocks:block/dark_brown_sandstone/all",
-    "top": "westerosblocks:block/dark_brown_sandstone/all"
-  }
-}

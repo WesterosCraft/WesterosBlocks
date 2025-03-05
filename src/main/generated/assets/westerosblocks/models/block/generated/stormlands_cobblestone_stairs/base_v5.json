@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/cobblestone/stormlands/all5",
-    "side": "westerosblocks:block/cobblestone/stormlands/all5",
-    "top": "westerosblocks:block/cobblestone/stormlands/all5"
-  }
-}
