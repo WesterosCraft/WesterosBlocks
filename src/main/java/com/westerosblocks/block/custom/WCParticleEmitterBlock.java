@@ -24,6 +24,7 @@ import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -67,13 +68,55 @@ public class WCParticleEmitterBlock extends Block implements ModBlockLifecycle, 
         if (state.get(POWERED) && def.particle != null) {
             ParticleEffect particle = ModParticles.get(def.particle);
             if (particle != null) {
-                // Use the block's center position exactly, without offsets
-                // Let Polytone handle all positioning and velocity
-                double x = pos.getX() + 0.5;
-                double y = pos.getY() + 0.5;
-                double z = pos.getZ() + 0.5;
+                if (def.particle.equals("cosy_smoke") || def.particle.equals("minecraft:cosy_smoke")) {
+                    // Add a random check to reduce spawn frequency
+                    if (random.nextInt(3) > 0) {
+                        double x = pos.getX() + 0.5 + random.nextDouble() / 3.0 * (random.nextBoolean() ? 1 : -1);
+                        double y = pos.getY() + random.nextDouble() + random.nextDouble();
+                        double z = pos.getZ() + 0.5 + random.nextDouble() / 3.0 * (random.nextBoolean() ? 1 : -1);
 
-                world.addParticle(particle, x, y, z, 0.0D, 0.0D, 0.00);
+                        world.addParticle(particle, x, y, z, 0.0D, 0.07D, 0.0D);
+                    }
+                } else if (def.particle.equals("signal_smoke") || def.particle.equals("minecraft:signal_smoke")) {
+                    // Add a random check to reduce spawn frequency
+                    if (random.nextInt(3) > 0) {
+                        double x = pos.getX() + 0.5 + random.nextDouble() / 3.0 * (random.nextBoolean() ? 1 : -1);
+                        double y = pos.getY() + random.nextDouble() + random.nextDouble();
+                        double z = pos.getZ() + 0.5 + random.nextDouble() / 3.0 * (random.nextBoolean() ? 1 : -1);
+
+                        world.addParticle(particle, x, y, z, 0.0D, 0.07D, 0.0D);
+                    }
+                } else if (def.particle.equals("mist") || def.particle.equals("minecraft:mist")) {
+                    if (random.nextInt(4) == 0) {  // Less frequent spawning
+                        double x = pos.getX() + 0.5 + (random.nextFloat() - 0.5) * 0.8;
+                        double y = pos.getY() + 0.2;
+                        double z = pos.getZ() + 0.5 + (random.nextFloat() - 0.5) * 0.8;
+
+                        float vx = (random.nextFloat() - 0.5f) * 0.05f;
+                        float vy = random.nextFloat() * 0.02f;
+                        float vz = (random.nextFloat() - 0.5f) * 0.05f;
+
+                        world.addParticle(particle, x, y, z, vx, vy, vz);
+                    }
+                } else if (def.particle.equals("cascade") || def.particle.equals("minecraft:cascade")) {
+                    if (random.nextInt(2) == 0) {  // Moderate frequency
+                        double x = pos.getX() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
+                        double y = pos.getY() + 0.8;
+                        double z = pos.getZ() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
+
+                        float vx = (random.nextFloat() - 0.5f) * 0.1f;
+                        float vy = random.nextFloat() * 0.1f;
+                        float vz = (random.nextFloat() - 0.5f) * 0.1f;
+
+                        world.addParticle(particle, x, y, z, vx, vy, vz);
+                    }
+                } else {
+                    double x = pos.getX() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
+                    double y = pos.getY() + 0.5;
+                    double z = pos.getZ() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
+
+                    world.addParticle(particle, x, y, z, 0.0D, 0.0D, 0.00);
+                }
             }
         }
     }
@@ -123,8 +166,8 @@ public class WCParticleEmitterBlock extends Block implements ModBlockLifecycle, 
 
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-//         && player.getStackInHand(hand).isEmpty()
-        if ((POWERED != null) && player.isCreative()) {
+        Hand hand = player.getActiveHand();
+        if ((POWERED != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
             state = state.cycle(POWERED);
             world.setBlockState(pos, state, Block.NOTIFY_ALL);
             world.syncWorldEvent(player, 1006, pos, 0);

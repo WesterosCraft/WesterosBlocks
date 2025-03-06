@@ -1,22 +1,16 @@
 {
   "initializer": {
     "lifetime": "300",
-    "size": "10 + rand() * 5",
     "alpha": "0.0001",
-    "hitbox_size": "0.1",
-    "has_physics": false,
+    "size": "10 + rand() * 5",
     "friction": "0.999"
   },
   "ticker": {
-    "dx": "DX * 0.999",
-    "dy": "DY * 0.999",
-    "dz": "DZ * 0.999",
-    "alpha": "max(smoothstep(0, 20, AGE) * 0.2, smoothstep(20, LIFETIME, LIFETIME - AGE) * 0.2)",
-    "remove_condition": "AGE >= LIFETIME"
+    "alpha": "step(20, AGE) * lerp((AGE - 20) / LIFETIME, 0.2, 0.0) + (1 - step(20, AGE)) * lerp(AGE / 20, 0.0, 0.2)"
   },
   "render_type": "translucent",
   "liquid_affinity": "non_liquids",
-  "has_physics": false,
-  "kill_on_contact": false,
-  "kill_when_still": false
+  "has_physics": true,
+  "kill_when_still": false,
+  "kill_on_contact": false
 }

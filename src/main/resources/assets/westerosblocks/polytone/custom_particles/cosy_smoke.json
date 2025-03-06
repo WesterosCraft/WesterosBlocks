@@ -1,20 +1,20 @@
 {
   "initializer": {
-    "lifetime": "80 + rand() * 50",
+    "lifetime": "120 + rand() * 60",
     "alpha": "0.9",
-    "size": "0.5",
-    "friction": "0.98",
-    "x": "X + (rand() - 0.5) * 0.3",
-    "z": "Z + (rand() - 0.5) * 0.3"
+    "size": "0.50",
+    "dy": "DY + rand() / 500",
+    "friction": "0.98"
   },
   "ticker": {
-    "y": "Y + 0.02",
-    "x": "X + (rand() - 0.5) * 0.003",
-    "z": "Z + (rand() - 0.5) * 0.003",
-    "alpha": "max(0.01, ALPHA - 0.015 * step(LIFETIME - 60, AGE))"
+    "dx": "DX + rand() / 5000 * signum(rand() - 0.5)",
+    "dz": "DZ + rand() / 5000 * signum(rand() - 0.5)",
+    "dy": "DY - 0.000003",
+    "alpha": "max(0.01, ALPHA - 0.015 * step(AGE, LIFETIME - 60))"
   },
   "render_type": "translucent",
   "liquid_affinity": "non_liquids",
-  "has_physics": false,
-  "kill_when_still": false
+  "has_physics": true,
+  "kill_when_still": false,
+  "kill_on_contact": false
 }
