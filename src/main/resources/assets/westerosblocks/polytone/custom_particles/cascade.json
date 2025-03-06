@@ -2,7 +2,7 @@
   "initializer": {
     "lifetime": "10",
     "alpha": "1.0",
-    "size": "1.0",
+    "size": "0.80",
     "friction": "0.95"
   },
   "ticker": {

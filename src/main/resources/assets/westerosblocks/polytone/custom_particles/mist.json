@@ -6,7 +6,7 @@
     "friction": "0.999"
   },
   "ticker": {
-    "alpha": "step(20, AGE) * lerp((AGE - 20) / LIFETIME, 0.2, 0.0) + (1 - step(20, AGE)) * lerp(AGE / 20, 0.0, 0.2)"
+    "alpha": "step(20, AGE) * lerp((AGE - 20) / (LIFETIME - 20), 0.2, 0.0) + (1 - step(20, AGE)) * lerp(AGE / 20, 0.0, 0.2)"
   },
   "render_type": "translucent",
   "liquid_affinity": "non_liquids",
