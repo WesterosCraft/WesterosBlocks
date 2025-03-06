@@ -28,7 +28,7 @@ public class LadderBlockExport extends ModelExport {
     }
 
     public static Identifier modelFileName(int setidx, boolean isCustomModel) {
-        return WesterosBlocks.id(getModelName("base", setidx)).withPrefixedPath(isCustomModel ? CUSTOM_PATH : GENERATED_PATH);
+        return WesterosBlocks.id(getModelName(def,"base", setidx)).withPrefixedPath(isCustomModel ? CUSTOM_PATH : GENERATED_PATH);
     }
 
     public void generateBlockStateModels() {

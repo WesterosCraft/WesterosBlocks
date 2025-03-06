@@ -2,6 +2,7 @@ package com.westerosblocks;
 
 import com.westerosblocks.block.ModBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -11,12 +12,18 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class WesterosCreativeModeTabs {
     public static final Map<String, RegistryKey<ItemGroup>> TABS = new HashMap<>();
-    public record TabDefinition(String id, String label, String iconItem) {
+    public record TabDefinition(String id, String label, String iconItem, boolean devOnly) {
+        // Overloaded constructor for backward compatibility - defaults to not dev-only
+        public TabDefinition(String id, String label, String iconItem) {
+            this(id, label, iconItem, false);
+        }
     }
 
     public static final TabDefinition[] TAB_DEFINITIONS = {
@@ -53,13 +60,28 @@ public class WesterosCreativeModeTabs {
             new TabDefinition("westeros_water_air_tab", "Water and Air", "falling_water_block_one"),
             new TabDefinition("westeros_misc_tab", "Miscellaneous", "piled_bones"),
             new TabDefinition("westeros_utility_tab", "Utility", "approval_utility_block"),
-            new TabDefinition("westeros_test_tab", "Test", "test_block"),
             new TabDefinition("westeros_sounds_tab", "Sounds", "tavern_small"),
-            new TabDefinition("westeros_do_not_use_tab", "Do Not Use", "note_utility_block")
+            new TabDefinition("westeros_do_not_use_tab", "Do Not Use", "note_utility_block"),
+            new TabDefinition("westeros_test_tab", "Test", "test_block", true),
     };
 
     public static void registerCreativeModeTabs() {
+        boolean isDevelopmentEnvironment = FabricLoader.getInstance().isDevelopmentEnvironment();
+        WesterosBlocks.LOGGER.info("Registering creative tabs in {} environment",
+                isDevelopmentEnvironment ? "development" : "production");
+
+        // Filter tabs based on environment
+        List<TabDefinition> activeTabDefs = new ArrayList<>();
         for (TabDefinition def : TAB_DEFINITIONS) {
+            if (!def.devOnly || isDevelopmentEnvironment) {
+                activeTabDefs.add(def);
+            } else {
+                WesterosBlocks.LOGGER.info("Skipping dev-only tab '{}' in production environment", def.id);
+            }
+        }
+
+        // Register the tabs that should be active in this environment
+        for (TabDefinition def : activeTabDefs) {
             TABS.put(def.id, registerTab(def.id, def.label, def.iconItem));
         }
     }
@@ -73,8 +95,13 @@ public class WesterosCreativeModeTabs {
                 .displayName(Text.literal(title))
                 .entries((context, entries) -> {
                     for (ModBlock def : WesterosBlocksDefLoader.getCustomBlockDefs()) {
-                        if (def != null && def.creativeTab.equals(tabName)) {
-                            entries.add(Registries.ITEM.get(WesterosBlocks.id(def.blockName)));
+                        if (def != null && def.creativeTab != null && def.creativeTab.equals(tabName)) {
+                            try {
+                                entries.add(Registries.ITEM.get(WesterosBlocks.id(def.blockName)));
+                            } catch (Exception e) {
+                                WesterosBlocks.LOGGER.error("Failed to add item {} to tab {}: {}",
+                                        def.blockName, tabName, e.getMessage());
+                            }
                         }
                     }
                 })

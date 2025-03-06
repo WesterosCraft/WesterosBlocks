@@ -33,6 +33,7 @@ public class WesterosBlocksDefLoader {
     );
     private static final String BLOCKS_DIRECTORY = "/definitions/blocks";
     private static final String BLOCK_SETS_DIRECTORY = "/definitions/block_sets";
+    private static final String TEST_BLOCKS_DIRECTORY = "/definitions/test";
 
     // determines order of how blocks get loaded, because certain block types need to be registered before others
     private static final Map<String, Integer> BLOCK_TYPE_PRIORITIES = Map.of(
@@ -95,6 +96,20 @@ public class WesterosBlocksDefLoader {
             // block set defs
             JsonArray blockSetsArray = loadBlocksFromDirectory(BLOCK_SETS_DIRECTORY);
             mergedConfig.add("blockSets", blockSetsArray);
+
+            // test blocks - only in dev environment
+            if (FabricLoader.getInstance().isDevelopmentEnvironment()) {
+                JsonArray testBlocksArray = loadBlocksFromDirectory(TEST_BLOCKS_DIRECTORY);
+                if (!testBlocksArray.isEmpty()) {
+                    WesterosBlocks.LOGGER.info("Loading {} test blocks in development environment", testBlocksArray.size());
+                    // Add test blocks to the existing blocks array
+                    JsonArray existingBlocks = mergedConfig.getAsJsonArray("blocks");
+                    for (JsonElement element : testBlocksArray) {
+                        existingBlocks.add(element);
+                    }
+                }
+            }
+
         } catch (Exception e) {
             WesterosBlocks.LOGGER.error("Error loading block definitions", e);
         }

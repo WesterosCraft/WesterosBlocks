@@ -66,18 +66,23 @@ public class ModModelProvider extends FabricModelProvider {
         ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
 
         for (ModBlock customBlockDef : customBlockDefs) {
-            if (customBlockDef == null || customBlockDef.getBlockName() == null) {
-                WesterosBlocks.LOGGER.warn("Skipping null block definition or block name: {}", customBlockDef);
-                continue;
-            }
-            Block currentBlock = customBlocks.get(customBlockDef.getBlockName());
+            if (customBlockDef == null || customBlockDef.getBlockName() == null) continue;
 
-            BlockExportFactory factory = BLOCK_EXPORTERS.get(customBlockDef.blockType);
-            if (factory != null) {
-                factory.create(blockStateModelGenerator, currentBlock, customBlockDef).generateBlockStateModels();
-            } else {
-                WesterosBlocks.LOGGER.warn("DATAGEN: Unknown block type: {} for block {}",
-                        customBlockDef.blockType, customBlockDef.blockName);
+            Block currentBlock = customBlocks.get(customBlockDef.getBlockName());
+            if (currentBlock == null) continue;
+
+            try {
+                BlockExportFactory factory = BLOCK_EXPORTERS.get(customBlockDef.blockType);
+                if (factory != null) {
+                    ModelExport exporter = factory.create(blockStateModelGenerator, currentBlock, customBlockDef);
+                    exporter.generateBlockStateModels();
+                } else {
+                    WesterosBlocks.LOGGER.warn("DATAGEN: Unknown block type: {} for block {}",
+                            customBlockDef.blockType, customBlockDef.blockName);
+                }
+            } catch (Exception e) {
+                WesterosBlocks.LOGGER.error("Error generating models for {}: {}",
+                        customBlockDef.blockName, e.getMessage(), e);
             }
         }
     }

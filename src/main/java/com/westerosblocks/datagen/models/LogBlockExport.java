@@ -35,7 +35,7 @@ public class LogBlockExport extends ModelExport {
         for (int i = 0; i < states.length; i++) {
             for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
                 ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-                Identifier symId = WesterosBlocks.id(GENERATED_PATH + getModelName(models[i], setIdx));
+                Identifier symId = WesterosBlocks.id(GENERATED_PATH + getModelName(def, models[i], setIdx));
                 BlockStateVariant variant = VariantBuilder.create(symId, set, yrot[i], xrot[i], null);
                 blockStateBuilder.addVariant(states[i], variant, null, variants);
             }

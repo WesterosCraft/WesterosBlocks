@@ -3,6 +3,7 @@ package com.westerosblocks.block;
 import com.westerosblocks.*;
 import com.westerosblocks.config.ModConfig;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -19,6 +20,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ModBlocks {
     public static Map<String, Block> CUSTOM_BLOCKS = new HashMap<>();
     public static ModBlock[] CUSTOM_BLOCK_DEFS = WesterosBlocksDefLoader.getCustomBlockDefs();
+    static boolean isDevelopmentEnvironment = FabricLoader.getInstance().isDevelopmentEnvironment();
 
     public static void registerModBlocks() {
         WesterosBlocks.LOGGER.info("Registering blocks for " + com.westerosblocks.WesterosBlocks.MOD_ID);
@@ -30,6 +32,12 @@ public class ModBlocks {
                 continue;
 
             Block blk = customBlock.createBlock();
+
+            // Skip test blocks in production environment
+            if (!isDevelopmentEnvironment && isTestBlock(customBlock)) {
+                WesterosBlocks.LOGGER.info("Skipping test block {} in production environment", customBlock.blockName);
+                continue;
+            }
 
             if (blk != null) {
                 // Register creative tab
@@ -48,9 +56,8 @@ public class ModBlocks {
             }
         }
 
-//        CUSTOM_BLOCKS = blklist.toArray(new Block[0]);
         ModBlock.dumpBlockPerf();
-        WesterosBlocks.LOGGER.info("TOTAL: " + blockCount + " custom blocks");
+        WesterosBlocks.LOGGER.info("TOTAL: {} custom blocks", blockCount);
 
         boolean dumpBlockSets = ModConfig.get().dumpBlockSets;
         boolean dumpWorldpainterCSV = ModConfig.get().dumpWorldpainterCSV;
@@ -111,6 +118,12 @@ public class ModBlocks {
 
     public static void crash(String msg) {
         crash(new Exception(), msg);
+    }
+
+    private static boolean isTestBlock(ModBlock block) {
+        return block.blockName.startsWith("test_") ||
+                block.blockName.contains("_test_") ||
+                (block.customTags != null && block.customTags.contains("test"));
     }
 
     /**

@@ -15,15 +15,16 @@ public class ModelExport {
     public static final String GENERATED_PATH = "block/generated/";
     public static final String CUSTOM_PATH = "block/custom/";
     protected final Block block;
-    public static ModBlock def;
-    protected static BlockStateModelGenerator generator;
-    protected static ModBlock.DisplayProperties displayProperties;
+    protected final ModBlock def;
+    protected final BlockStateModelGenerator generator;
+    protected final ModBlock.DisplayProperties displayProperties;
+
 
     public ModelExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
         this.block = block;
-        ModelExport.def = def;
-        ModelExport.displayProperties = def.display;
-        ModelExport.generator = generator;
+        this.def = def;
+        this.displayProperties = def.display;
+        this.generator = generator;
     }
 
     public static Identifier createBlockIdentifier(String texturePath) {
@@ -166,7 +167,7 @@ public class ModelExport {
         }
     }
 
-    protected static String getModelName(String ext, int setidx) {
+    protected static String getModelName(ModBlock def, String ext, int setidx) {
         return def.blockName + "/" + ext + ("_v" + (setidx + 1));
     }
 
