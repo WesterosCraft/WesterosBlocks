@@ -60,7 +60,4 @@ public class ModTextureKey {
         }
         return TXT_N_KEYS[index];
     }
-
-//    private ModTextureKey() {
-//    }
 }

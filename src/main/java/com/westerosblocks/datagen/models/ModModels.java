@@ -27,6 +27,15 @@ public class ModModels extends Models {
                 TextureKey.PARTICLE);
     }
 
+    public static Model CUBOID_NSEW_STACK_ITEM() {
+        return new Model(Optional.of(Identifier.of("westerosblocks", "item/cuboid_nsew_stack_item")),
+                Optional.empty(),
+                TextureKey.PARTICLE,
+                ModTextureKey.TEXTURE_1,
+                ModTextureKey.TEXTURE_2,
+                ModTextureKey.TEXTURE_5);
+    }
+
     public static Model ALL_SIDES_OVERLAY(String parent, ModBlock def) {
         return block(parent,
                 def,

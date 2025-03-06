@@ -87,6 +87,21 @@ public class CuboidNSEWStackBlockExport extends CuboidBlockExport {
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
-        generateBlockBasedItemModel(itemModelGenerator, block, blockDefinition);
+        Identifier itemModelId = WesterosBlocks.id("item/" + blockDefinition.getBlockName());
+
+        ModBlockStateRecord bottomElement = blockDefinition.getStackElementByIndex(0);
+        ModBlockStateRecord topElement = blockDefinition.getStackElementByIndex(1);
+
+        ModBlock.RandomTextureSet bottomTextureSet = bottomElement.getRandomTextureSet(0);
+        ModBlock.RandomTextureSet topTextureSet = topElement.getRandomTextureSet(0);
+
+        TextureMap itemTextureMap = new TextureMap()
+                .put(ModTextureKey.TEXTURE_1, createBlockIdentifier(topTextureSet.getTextureByIndex(4)))
+                .put(ModTextureKey.TEXTURE_2, createBlockIdentifier(bottomTextureSet.getTextureByIndex(4)))
+                .put(ModTextureKey.TEXTURE_5, createBlockIdentifier(topTextureSet.getTextureByIndex(5)))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(topTextureSet.getTextureByIndex(4)));
+
+        Model combinedItemModel = ModModels.CUBOID_NSEW_STACK_ITEM();
+        combinedItemModel.upload(itemModelId, itemTextureMap, itemModelGenerator.writer);
     }
 }
