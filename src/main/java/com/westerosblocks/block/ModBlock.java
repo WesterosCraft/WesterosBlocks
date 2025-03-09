@@ -8,6 +8,7 @@ import com.westerosblocks.block.custom.*;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.*;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.sound.BlockSoundGroup;
@@ -457,12 +458,18 @@ public class ModBlock extends ModBlockStateRecord {
 
     @Environment(EnvType.CLIENT)
     public Block registerRenderType(Block block, boolean isSolid, boolean isTransparent) {
-        if (this.alphaRender) {
-            BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getTranslucent());
-        } else if (!isSolid) {
-            BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
-        } else if (isTransparent) {
-            BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutoutMipped());
+        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
+
+            if (this.alphaRender) {
+                BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getTranslucent());
+                return block;
+            } else if (!isSolid) {
+                BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
+                return block;
+            } else if (isTransparent) {
+                BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutoutMipped());
+                return block;
+            }
         }
         return block;
     }

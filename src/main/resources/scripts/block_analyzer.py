@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Block Analyzer Script
 # Creates a CSV file listing all block definitions with their properties
-# Output format: blockName,blockType,label,isBlockSet,blockSetName
+# Output format: blockName,blockType,label,isBlockSet,blockSetName,creativeTab
 
 import os
 import json
@@ -86,6 +86,7 @@ def parse_block_definition(file_path):
             'blockName': definition.get('blockName', os.path.basename(file_path)[:-5]),  # Remove .json
             'blockType': definition.get('blockType', 'unknown'),
             'label': definition.get('label', definition.get('blockName', '')),
+            'creativeTab': definition.get('creativeTab', ''),  # Get the creativeTab property
             'isBlockSet': False  # Individual block definition
         }
     except Exception as e:
@@ -146,10 +147,14 @@ def process_block_sets(file_path):
 
             block_type = variant_types.get(variant, variant)
 
+            # Get the creative tab from the block set
+            creative_tab = block_set.get('creativeTab', '')
+
             results.append({
                 'blockName': final_block_name,
                 'blockType': block_type,
                 'label': final_label,
+                'creativeTab': creative_tab,  # Add the creative tab
                 'isBlockSet': True,  # This block comes from a block set
                 'blockSetName': block_set['baseBlockName']  # Store the original block set name
             })
@@ -201,7 +206,7 @@ def main():
 
     # Generate CSV content
     with open(OUTPUT_FILE, 'w', newline='', encoding='utf-8') as f:
-        fieldnames = ['blockName', 'blockType', 'label', 'isBlockSet', 'blockSetName']
+        fieldnames = ['blockName', 'blockType', 'label', 'creativeTab', 'isBlockSet', 'blockSetName']
         writer = csv.DictWriter(f, fieldnames=fieldnames)
 
         writer.writeheader()
@@ -211,6 +216,7 @@ def main():
                 'blockName': block['blockName'],
                 'blockType': block['blockType'],
                 'label': block['label'],
+                'creativeTab': block.get('creativeTab', ''),  # Include creativeTab in the CSV
                 'isBlockSet': 'Yes' if block.get('isBlockSet', False) else 'No',
                 'blockSetName': block.get('blockSetName', '')
             }

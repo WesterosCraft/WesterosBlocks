@@ -6,6 +6,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+// TODO not sure if we really need this, handled in datapack now
 @Mixin(DimensionEffects.class)
 public class DimensionEffectsMixin {
     @Inject(method = "getCloudsHeight()F", at = @At("TAIL"), cancellable = true)

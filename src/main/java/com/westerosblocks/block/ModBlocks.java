@@ -35,7 +35,6 @@ public class ModBlocks {
 
             // Skip test blocks in production environment
             if (!isDevelopmentEnvironment && isTestBlock(customBlock)) {
-                WesterosBlocks.LOGGER.info("Skipping test block {} in production environment", customBlock.blockName);
                 continue;
             }
 

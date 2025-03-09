@@ -9,7 +9,6 @@ import net.minecraft.util.Identifier;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 public class SoundBlockExport extends ModelExport {
     private final BlockStateModelGenerator generator;
@@ -48,11 +47,7 @@ public class SoundBlockExport extends ModelExport {
                 .put(TextureKey.ALL, createBlockIdentifier(set.getTextureByIndex(0)));
 
         Identifier modelId = getModelId("base", setIdx, false);
-        Model model = new Model(
-                Optional.of(Identifier.ofVanilla("block/cube_all")),
-                Optional.empty(),
-                TextureKey.ALL
-        );
+        Model model = Models.CUBE_ALL;
         model.upload(modelId, textureMap, generator.modelCollector);
     }
 
@@ -65,9 +60,7 @@ public class SoundBlockExport extends ModelExport {
                         setIdx + 1));
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator,
-                                          Block block,
-                                          ModBlock blockDefinition) {
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
         ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
 
