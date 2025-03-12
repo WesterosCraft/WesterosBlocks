@@ -1,0 +1,110 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "builtin/entity",
+  "gui_light": "front",
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "westerosblocks:item/greyjoy_round_shield_blocking"
+    }
+  ],
+  "texture_size": [
+    64,
+    64
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        70,
+        -2,
+        1
+      ],
+      "translation": [
+        0.5,
+        -3.5,
+        -9.75
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        70,
+        -2,
+        1
+      ],
+      "translation": [
+        0.5,
+        -3.5,
+        -9.75
+      ]
+    },
+    "firstperson_righthand": {
+      "translation": [
+        0,
+        -9.5,
+        0
+      ]
+    },
+    "firstperson_lefthand": {
+      "translation": [
+        0,
+        -9.5,
+        0
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        -2,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "gui": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        -7,
+        0
+      ],
+      "scale": [
+        0.7,
+        0.7,
+        0.7
+      ]
+    },
+    "head": {
+      "translation": [
+        0,
+        0,
+        -7
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "fixed": {
+      "translation": [
+        0,
+        -28.5,
+        0
+      ],
+      "scale": [
+        2.5,
+        2.5,
+        2.5
+      ]
+    }
+  }
+}

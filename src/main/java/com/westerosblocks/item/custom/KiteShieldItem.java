@@ -1,10 +1,8 @@
 package com.westerosblocks.item.custom;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.item.client.StarkShieldRenderer;
-import com.westerosblocks.item.client.TullyShieldRenderer;
+import com.westerosblocks.item.client.KiteShieldRenderer;
 import net.minecraft.client.render.item.BuiltinModelItemRenderer;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.UseAction;
@@ -12,30 +10,33 @@ import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.SingletonGeoAnimatable;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 import software.bernie.geckolib.renderer.GeoItemRenderer;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
 
-public class TullyShieldItem extends ModShieldItem implements GeoItem {
+public class KiteShieldItem extends ModShieldItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final int cooldownTicks;
     private final Item repairItem;
+    private final String path;
 
-    public TullyShieldItem(Settings settings, int cooldownTicks, int enchantability, Item repairItems) {
-        super(settings, cooldownTicks, enchantability, repairItems);
+    public KiteShieldItem(Settings settings, int cooldownTicks, int enchantability, Item repairItems, String path) {
+        super(settings, cooldownTicks, enchantability,repairItems);
         this.cooldownTicks = cooldownTicks;
         this.repairItem = repairItems;
+        this.path = path;
 
-        //TODO do we need this? Register our item for server-side animation handling
+        // Register our item for server-side animation handling
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
     }
 
     // Animation predicate for the shield
 //    private PlayState predicate(AnimationState<StarkShieldItem> state) {
-    // Check if we're in first person view to handle perspective-specific animations
-    // You can customize this based on your needs
+        // Check if we're in first person view to handle perspective-specific animations
+        // You can customize this based on your needs
 //        state.getController().setAnimation(RawAnimation.begin().thenLoop("idle"));
 //        return PlayState.CONTINUE;
 //    }
@@ -53,14 +54,14 @@ public class TullyShieldItem extends ModShieldItem implements GeoItem {
     @Override
     public void createGeoRenderer(Consumer<GeoRenderProvider> consumer) {
         consumer.accept(new GeoRenderProvider() {
-            private TullyShieldRenderer renderer;
+            private GeoItemRenderer<KiteShieldItem> renderer;
 
             @Override
             public BuiltinModelItemRenderer getGeoItemRenderer() {
                 if (this.renderer == null) {
 
-                    this.renderer = new TullyShieldRenderer(
-                            new DefaultedItemGeoModel<>(WesterosBlocks.id("tully_heater_shield"))
+                    this.renderer = new KiteShieldRenderer(
+                            new DefaultedItemGeoModel<>(WesterosBlocks.id(path))
                     );
                 }
                 return this.renderer;
@@ -82,5 +83,4 @@ public class TullyShieldItem extends ModShieldItem implements GeoItem {
     public int getEnchantability() {
         return 15;
     }
-
 }

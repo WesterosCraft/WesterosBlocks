@@ -3,7 +3,7 @@
   "minecraft:geometry": [
     {
       "description": {
-        "identifier": "geometry.tully_heater_shield",
+        "identifier": "geometry.heater_shield",
         "texture_width": 64,
         "texture_height": 64,
         "visible_bounds_width": 4,
@@ -26,6 +26,7 @@
         {
           "name": "rim",
           "parent": "root",
+          
           "pivot": [
             -0.31283,
             -6.25,

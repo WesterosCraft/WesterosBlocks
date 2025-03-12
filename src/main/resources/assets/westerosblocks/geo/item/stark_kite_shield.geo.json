@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.stark_kite_shield",
+				"identifier": "geometry.kite_shield",
 				"texture_width": 64,
 				"texture_height": 64,
 				"visible_bounds_width": 2,
