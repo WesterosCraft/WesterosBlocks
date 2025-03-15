@@ -1,9 +1,13 @@
 """A script for converting a pack from CTM+WesterosCTM format to Optifine/Continuity format.
 
+Usage
+-----
+`python src/main/resources/scripts/ctm_to_continuity.py`
+
 Notes
 -----
 Todo:
-- Implement dumping CTMDefs to Continuity .properties format (see pseudocode in main)
+- Need to handle case where CTM textures have an animation .mcmeta defined (need to slice tiles for each frame and also copy over mcmeta)
 - Test and refine
 
 To debug:
@@ -32,10 +36,14 @@ Continuity limitations:
 """
 
 import os
+import string
 import argparse
 import numpy as np
 import json
 import cv2
+import shutil
+
+from pathlib import Path
 
 # Supported extensions
 TILE_EXTS = {'png', 'jpg', 'jpeg'}
@@ -44,6 +52,9 @@ CTM_EXT = 'mcmeta'
 # Property values supported by Optifine for validation
 VALID_CONNECT = ['block', 'tile', 'state']
 VALID_LAYER = ['cutout_mipped', 'cutout', 'translucent']
+
+MIN_HEIGHT = -64
+MAX_HEIGHT = 65535
 
 # Directory structure
 SCRIPTS_DIR = 'scripts'
@@ -132,7 +143,7 @@ class CTMRoot:
   """The root CTM texture and definition associated with a model texture."""
   def __init__(self, name, source):
     self.name = name
-    self.source = source,
+    self.source = source
     self.ctm = None
     self.texture = None
 
@@ -166,6 +177,31 @@ class CTMProp:
     for p in self.nested_props.values():
       ret += p.iterate_props()
     return ret
+  
+  def to_files(self, name, label=None, conds=None):
+    label = label if label is not None else name
+    name_stem = get_stem(name)
+    label_stem = get_stem(label)
+    tiles = {f'{label}/{idx}.png': ('Image', tile) for idx, tile in enumerate(self.tiles)}
+    tile_refs = [f'{label_stem}/{idx}' for idx in range(len(self.tiles))]
+    contents = {
+      'method': self.method,
+      'matchTiles': name_stem,
+      'layer': self.layer,
+      'connect': self.connect,
+      'tiles': tile_refs
+    }
+    contents |= self.method_props
+    contents |= (conds if conds is not None else {})
+    contents_str = '\n'.join([
+      f"{k}={format_value(v)}" for k,v in contents.items() if v is not None
+    ])
+    
+    properties = {f'{label}.properties': ('Properties', contents_str)}
+    ret = tiles | properties
+    for tile, prop in self.nested_props.items():
+      ret |= prop.to_files(f'{label}/{tile}')
+    return ret
 
   def __str__(self):
     propdict = {k:(v if k != 'tiles' else list(range(len(v)))) for k,v in self.__dict__.items() if k not in ['nested_props']}
@@ -183,6 +219,9 @@ class CTMDef:
   def iterate_props(self) -> list[CTMProp]:
     pass
 
+  def to_files(self) -> dict[str, str]:
+    pass
+
   def __hash__(self):
     return hash(self.name)
   
@@ -195,6 +234,9 @@ class CTMSingleDef(CTMDef):
 
   def iterate_props(self):
     return self.prop.iterate_props()
+  
+  def to_files(self):
+    return self.prop.to_files(self.name)
 
   def __str__(self):
     return f'{self.name}:\n  ' + str(self.prop)
@@ -209,6 +251,20 @@ class CTMCond:
     ):
     self.biomes = biomes
     self.heights = heights
+
+  def to_dict(self):
+    ret = {}
+    if self.biomes:
+      ret['biomes'] = list(self.biomes)
+    if self.has_heights():
+      ret['heights'] = (
+        max(MIN_HEIGHT, self.heights[0]),
+        min(MAX_HEIGHT, self.heights[1])
+      )
+    return ret
+  
+  def has_heights(self):
+    return self.heights and (self.heights[0] > float('-inf') or self.heights[1] < float('inf'))
 
   def __str__(self):
     conds = list(self.biomes)
@@ -236,11 +292,39 @@ class CTMCondDef(CTMDef):
       ret += self.default.iterate_props()
     return ret
   
+  def to_files(self):
+    ret = {}
+    for idx, (cond, prop) in enumerate(self.props.items()):
+      suffix = string.ascii_lowercase[idx] if idx < len(string.ascii_lowercase) else str(idx)
+      ret |= prop.to_files(self.name, label=f"{self.name}_{suffix}", conds=cond.to_dict())
+    if self.default and self.get_default_dict():
+      ret |= self.default.to_files(self.name, label=f"{self.name}_default", conds=self.get_default_dict())
+    return ret
+    
+  def get_default_dict(self):
+    ret = {}
+    all_biomes = self.get_all_biomes()
+    if all_biomes:
+      ret['biomes'] = '!' + ' '.join(all_biomes)
+    all_heights = self.get_all_heights()
+    if all_heights:
+      complement = compute_complement_intervals(all_heights)
+      if complement and complement != [(float('-inf'), float('inf'))]:
+        ret['heights'] = [(max(MIN_HEIGHT, h), min(MAX_HEIGHT, h)) for h in complement]
+    return ret
+  
   def get_all_biomes(self):
     biomes = set()
-    for propcond in self.props.keys():
-      biomes |= propcond.biomes
+    for cond in self.props.keys():
+      biomes |= cond.biomes
     return biomes
+  
+  def get_all_heights(self):
+    all_heights = []
+    for cond in self.props.keys():
+      if cond.has_heights():
+        all_heights.append(cond.heights)
+    return all_heights
   
   def __str__(self):
     strs = []
@@ -376,7 +460,7 @@ def get_cond(ctm_cond):
     heights[0] = ctm_cond['yPosMin']
   if 'yPosMax' in ctm_cond:
     heights[1] = ctm_cond['yPosMax']
-  return CTMCond(biomes=biomes, heights=tuple(heights))
+  return CTMCond(biomes=set(biomes), heights=tuple(heights))
 
 
 def form_cond_root(type, texture, ctm, ctm_cond):
@@ -735,6 +819,7 @@ def parse_westeros_cond(root: CTMRoot):
     if cond:
       add_rec_props(ctm, cond, rec_ctm)
     else:
+      rec_ctm.name = root.name
       return rec_ctm
       
   # NOTE: the following shouldn't be necessary since default is a single tile
@@ -870,10 +955,52 @@ def get_texture_path(name):
   return TEXTURE_PATHS[path]
 
 
+def get_stem(name):
+  """Get the stem of a texture path."""
+  return name.split('/')[-1]
+
+
+def clear_dir(path):
+  """Clear a directory."""
+  if os.path.isdir(path):
+    shutil.rmtree(path)
+  Path(path).mkdir(parents=True, exist_ok=True)
+
+
+def remove_file(fname):
+  """Remove a file if it exists."""
+  if os.path.isfile(fname):
+    os.remove(fname)
+
+
+def ensure_path(fname):
+  """Ensures that all directories along the path to a given filename exist."""
+  path = '/'.join(fname.split('/')[:-1])
+  Path(path).mkdir(parents=True, exist_ok=True)
+
+
 def read_json(fname):
   """Read a JSON file."""
   with open(fname, 'r') as f:
     return json.load(f)
+  
+
+def write_json(fname, contents):
+  """Write a JSON file."""
+  with open(fname, 'w') as f:
+    return json.dump(contents, f, indent=2)
+  
+
+def read_file(fname):
+  """Read a file as text."""
+  with open(fname, 'r') as f:
+    return f.read()
+  
+
+def write_file(fname, contents):
+  """Write text to a file."""
+  with open(fname, 'w') as f:
+    return f.write(contents)
   
 
 def read_lines(fname):
@@ -892,6 +1019,11 @@ def read_image(source):
     return texture
   else:
     return source
+  
+
+def write_image(fname, contents):
+  """Write an image (CV2 array format) to an image file."""
+  cv2.imwrite(fname, contents)
 
 
 def split_tiles(texture):
@@ -926,6 +1058,32 @@ def split_slice(texture, row, col, h, w):
   return texture[row*32:(row+h)*32, col*32:(col+w)*32, :]
 
 
+def compute_complement_intervals(intervals):
+  if not intervals:
+    return [(float('-inf'), float('inf'))]
+      
+  sorted_intervals = sorted(intervals)
+  complement_intervals = []
+
+  if sorted_intervals[0][0] > float('-inf'):
+    complement_intervals.append((float('-inf'), sorted_intervals[0][0] - 1))
+  
+  for i in range(len(sorted_intervals) - 1):
+    end_current = sorted_intervals[i][1]
+    start_next = sorted_intervals[i + 1][0]
+      
+    if end_current + 1 < start_next:
+      if end_current + 1 == start_next - 1:
+        complement_intervals.append(end_current + 1)
+      else:
+        complement_intervals.append((end_current + 1, start_next - 1))
+  
+  if sorted_intervals[-1][1] < float('inf'):
+    complement_intervals.append((sorted_intervals[-1][1] + 1, float('inf')))
+  
+  return complement_intervals
+
+
 def testdisplay(ctm: CTMDef):
   """Print CTM info and display tiles for debugging."""
   print(ctm)
@@ -933,6 +1091,11 @@ def testdisplay(ctm: CTMDef):
     for t in prop.tiles:
       cv2.imshow("test", t)
       cv2.waitKey(0)
+
+
+def is_mcmeta(path):
+  """Check if path is an mcmeta file."""
+  return path.endswith(CTM_EXT)
 
 
 def is_tile(path):
@@ -1007,6 +1170,53 @@ def register_model_textures(path):
         MODEL_TEXTURES.add(namespace_to_path(text))
 
 
+# =======================================================
+# Compilation
+# =======================================================
+        
+
+def get_output_path(path):
+  return f'{OUTPUT_DIR}/{ASSETS_DIR}/{path}'
+
+
+def strip_ctm(contents):
+  """Remove CTM from the contents of a .mcmeta file."""
+  return {k:v for k,v in contents.items() if k.lower() != 'ctm'}
+
+
+def copy_assets(path):
+  """Copy each asset to the output directory."""
+  new_path = get_output_path(path)
+  ensure_path(new_path)
+  if is_mcmeta(path):
+    contents = read_json(path)
+    new_contents = strip_ctm(contents)
+    if new_contents:
+      write_json(new_path, new_contents)
+  else:
+    shutil.copyfile(path, new_path)
+
+
+def format_value(v):
+  if isinstance(v, str):
+    return v
+  elif isinstance(v, (int, float)):
+    return str(v)
+  elif isinstance(v, bool):
+    return 'true' if v else 'false'
+  elif isinstance(v, tuple) and len(v) == 2 and isinstance(v[0], int) and isinstance(v[1], int):
+    l = str(v[0]) if v[0] >= 0 else f'({v[0]})'
+    u = str(v[1]) if v[1] >= 0 else f'({v[1]})'
+    return f'{l}-{u}'
+  elif isinstance(v, list):
+    return ' '.join([format_value(x) for x in v])
+    
+
+# =======================================================
+# Execution
+# =======================================================
+  
+
 def traverse(rootdir, cond, func):
   """Recursively traverse from a root directory, applying `func` to each path that satisfies `cond`."""
   for d in os.listdir(rootdir):
@@ -1015,11 +1225,6 @@ def traverse(rootdir, cond, func):
       traverse(path, cond, func)
     elif os.path.isfile(path) and cond(path):
       func(path)
-
-
-# =======================================================
-# Execution
-# =======================================================
 
 
 def init(roots):
@@ -1053,6 +1258,38 @@ def init(roots):
     )
 
 
+def dump(roots):
+  """Compile and dump CTM classes to .properties files."""
+  clear_dir(OUTPUT_DIR)
+
+  # Copy all textures and mcmeta (stripped of CTM) to output directory
+  for root in roots:
+    traverse(
+      root+'/'+BLOCK_TEXTURES_DIR,
+      lambda x: is_tile(x) or is_mcmeta(x),
+      copy_assets
+    )
+
+  # Remove textures and mcmeta referenced in any CTMRoot (apart from the source texture).
+  textures_to_remove = set([v for k,v in TEXTURE_PATHS.items() if k not in MODEL_TEXTURES])
+  for path in textures_to_remove:
+    new_path = get_output_path(path)
+    new_path_mcmeta = new_path + '.mcmeta'
+    remove_file(new_path)
+    remove_file(new_path_mcmeta)
+
+  # Dump each finished CTMRoot and CTMDef
+  for ctm_root, ctm in FINISHED_CTM.items():
+    out_files = ctm.to_files()
+    for fname, (ftype, contents) in out_files.items():
+      out_fname = get_output_path(fname)
+      ensure_path(out_fname)
+      if ftype == 'Properties':
+        write_file(out_fname, contents)
+      elif ftype == 'Image':
+        write_image(out_fname, contents)
+
+
 def main(roots, verbose=False):
   init(roots)
 
@@ -1078,29 +1315,8 @@ def main(roots, verbose=False):
     for k,v in sorted(TYPE_STATS.items(), key=lambda x: x[1], reverse=True):
       print(f'{k}: {v}')
 
-  # TODO: compile and write CTM classes to Continuity format
-  #
-  # 1. copy each assets textures directory to the output directory
-  # 2. remove all .png and .mcmeta files referenced in any CTMRoot, except for those that are the source of the root
-  #   - may need to hook into the function for registering the texture paths to add them to a global set
-  #   - NOTE: some .mcmeta files contain both animation and ctm definitions; in this case, keep the .mcmeta file
-  #     but remove the ctm property
-  # 3. for each finished CTMRoot and CTMDef:
-  #   3a. if CTMSingleDef:
-  #     - write each tile to <name>/<idx>.png
-  #     - write CTMProp into <name>.properties file, containing "matchTiles=<source>"
-  #     - note: if nested_props, create additional .properties files with "matchTiles=<idx>"
-  #   3b. if CTMCondDef:
-  #     - write each tile to <name>_{a,b,...,default}/<idx>.png
-  #     - for each CTMCond and CTMProp, write CTMProp into <name>_{a,b,...}.properties
-  #       containing "matchTiles=<source>" and the corresponding condition (e.g., "biomes=...")
-  #     - for the default CTMProp, compute the complement of all other CTMConds
-  #         * for biomes, this is "!biome1 biome2 ...", where the biomes of all conds are included
-  #         * for heights, this is the complement of the interval [-inf, inf] and the other cond
-  #           intervals (if this interval is empty, ignore the default)
-  #     - write the default CTMProp into <name>_default.properties containing "matchTiles=<source>"
-  #       and the condition calculated previously
-  
+  dump(roots)
+
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
