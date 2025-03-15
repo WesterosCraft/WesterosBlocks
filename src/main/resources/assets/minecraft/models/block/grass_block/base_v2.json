@@ -3,7 +3,7 @@
   "textures": {
     "particle": "minecraft:block/dirt",
     "bottom": "minecraft:block/dirt",
-    "top": "minecraft:block/grass_block/top2"
+    "top": "westerosblocks:block/grass_block/top2"
   },
   "elements": [
     {

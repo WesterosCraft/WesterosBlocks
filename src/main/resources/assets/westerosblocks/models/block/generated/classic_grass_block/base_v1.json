@@ -18,12 +18,12 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/classic_grass_block/grass_block_side_overlay",
-    "txt5": "westerosblocks:block/classic_grass_block/grass_block_side_overlay",
-    "txt3": "westerosblocks:block/classic_grass_block/grass_block_side_overlay",
-    "txt0": "westerosblocks:block/classic_grass_block/top1",
+    "txt4": "westerosblocks:block/grass_block/side_overlay",
+    "txt5": "westerosblocks:block/grass_block/side_overlay",
+    "txt3": "westerosblocks:block/grass_block/side_overlay",
+    "txt0": "westerosblocks:block/grass_block/top1",
     "txt1": "westerosblocks:block/dirt/ground",
-    "particle": "westerosblocks:block/classic_grass_block/top1"
+    "particle": "westerosblocks:block/grass_block/top1"
   },
   "elements": [
     {
