@@ -1308,7 +1308,13 @@ def main(roots, verbose=False):
   print()
   print(f'{len(FINISHED_CTM)}/{len(CTM_ROOTS)} CTMs parsed')
   print(f'{len(ERROR_CTM)}/{len(CTM_ROOTS)} CTMs parsed with errors')
+  if verbose:
+    for ctm in ERROR_CTM:
+      print(f'  - {ctm.name}')
   print(f'{len(IGNORED_CTM)}/{len(CTM_ROOTS)} CTMs skipped')
+  if verbose:
+    for ctm in IGNORED_CTM:
+      print(f'  - {ctm.name}')
 
   if verbose:
     print('\nCTM type stats:')
