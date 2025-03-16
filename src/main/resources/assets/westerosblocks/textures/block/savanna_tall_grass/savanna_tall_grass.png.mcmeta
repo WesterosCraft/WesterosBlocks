@@ -1,8 +1,4 @@
 {
-  "ctm": {
-    "ctm_version": 1,
-    "proxy": "westerosblocks:block/savanna_tall_grass/savanna_tall_grass_ctm"
-  },
   "animation": {
     "frames": [
       {
