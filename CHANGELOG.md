@@ -1,5 +1,10 @@
 ## Changelog
 
+# March 2025
+- adds shields
+- adds geckolib depencendy
+- adds particle emitter block with four variants - cosy_smoke, signal_smoke, cascade, mist
+
 # 23 Feb 2025
 - adds thams paper model to new "horizontal_scroll" block
 - adds new WCCuboid8WayBlock type
