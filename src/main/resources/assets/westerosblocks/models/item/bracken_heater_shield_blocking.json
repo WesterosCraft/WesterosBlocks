@@ -1,0 +1,4 @@
+{
+  "parent": "westerosblocks:item/bracken_heater_shield",
+  "gui_light": "front"
+}
