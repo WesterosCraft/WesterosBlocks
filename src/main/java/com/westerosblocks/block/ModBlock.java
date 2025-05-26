@@ -456,19 +456,14 @@ public class ModBlock extends ModBlockStateRecord {
                 });
     }
 
-    @Environment(EnvType.CLIENT)
     public Block registerRenderType(Block block, boolean isSolid, boolean isTransparent) {
         if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
-
             if (this.alphaRender) {
                 BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getTranslucent());
-                return block;
             } else if (!isSolid) {
                 BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
-                return block;
             } else if (isTransparent) {
                 BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutoutMipped());
-                return block;
             }
         }
         return block;
