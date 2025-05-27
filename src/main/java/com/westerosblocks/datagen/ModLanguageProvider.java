@@ -48,6 +48,12 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 //        translationBuilder.add("item.westerosblocks.lannister_shield", "Lannister Shield");
         translationBuilder.add("item.westerosblocks.stark_kite_shield", "Stark Kite Shield");
         translationBuilder.add("item.westerosblocks.tully_heater_shield", "Tully Heater Shield");
+        translationBuilder.add("item.westerosblocks.hedge_knight_heater_shield", "Hedge Knight Heater Shield");
+        translationBuilder.add("item.westerosblocks.targaryen_heater_shield", "Targaryen Heater Shield");
+        translationBuilder.add("item.westerosblocks.bracken_heater_shield", "Bracken Heater Shield");
+        translationBuilder.add("item.westerosblocks.greyjoy_round_shield", "Greyjoy Round Shield");
+        translationBuilder.add("item.westerosblocks.blackfyre_heater_shield", "Blackfyre Heater Shield");
+        translationBuilder.add("item.westerosblocks.blackwood_heater_shield", "Blackwood Heater Shield");
 
         // Config translations
         translationBuilder.add("text.autoconfig.westerosblocks.title", "WesterosBlocks Config");

@@ -37,6 +37,10 @@ public class ModItems {
     public static final Item BRACKEN_HEATER_SHIELD = registerItem("bracken_heater_shield",
             new HeaterShieldItem(new Item.Settings().maxDamage(2800), 3, 15, Items.NETHERITE_INGOT, "bracken_heater_shield"));
 
+    public static final Item HEDGE_KNIGHT_HEATER_SHIELD = registerItem("hedge_knight_heater_shield",
+            new HeaterShieldItem(new Item.Settings().maxDamage(2800), 3, 15, Items.NETHERITE_INGOT, "hedge_knight_heater_shield"));
+
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, WesterosBlocks.id(name), item);
     }
@@ -55,6 +59,7 @@ public class ModItems {
             entries.add(BLACKWOOD_HEATER_SHIELD);
             entries.add(BRACKEN_HEATER_SHIELD);
             entries.add(TARGARYEN_HEATER_SHIELD);
+            entries.add(HEDGE_KNIGHT_HEATER_SHIELD);
         });
     }
 }
