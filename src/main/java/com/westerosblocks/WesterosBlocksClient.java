@@ -1,6 +1,7 @@
 package com.westerosblocks;
 
 import com.westerosblocks.particle.ModParticles;
+//import com.westerosblocks.util.ModModelPredicates;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
@@ -16,6 +17,7 @@ public class WesterosBlocksClient implements ClientModInitializer {
         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new WesterosResourceReloadListener());
         ColorHandlers.registerColorProviders();
         ModParticles.initializeClient();
+//        ModModelPredicates.registerModelPredicates();
     }
 
     private static class WesterosResourceReloadListener implements SimpleSynchronousResourceReloadListener {

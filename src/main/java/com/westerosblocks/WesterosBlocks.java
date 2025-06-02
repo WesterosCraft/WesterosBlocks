@@ -2,6 +2,7 @@ package com.westerosblocks;
 
 import com.westerosblocks.block.*;
 import com.westerosblocks.block.blockentity.ModBlockEntities;
+import com.westerosblocks.command.ParticleEmitterCommand;
 import com.westerosblocks.config.ModConfig;
 import com.westerosblocks.item.ModItems;
 import com.westerosblocks.particle.ModParticles;
@@ -29,6 +30,9 @@ public class WesterosBlocks implements ModInitializer {
         ModItems.registerModItems();
         ModSounds.registerSounds();
         ModBlockEntities.registerModEntities();
+        
+        // Register commands
+        ParticleEmitterCommand.register();
 
         ServerLifecycleEvents.SERVER_STOPPING.register(server -> {
             // handles any pending door restores (force immediate)
