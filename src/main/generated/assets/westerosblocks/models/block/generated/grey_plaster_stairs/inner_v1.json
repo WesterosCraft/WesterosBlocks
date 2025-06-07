@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/plaster/smooth/grey/all",
+    "side": "westerosblocks:block/plaster/smooth/grey/all",
+    "top": "westerosblocks:block/plaster/smooth/grey/all"
+  }
+}

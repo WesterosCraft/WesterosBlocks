@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/pebbles_dry_reach/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/pebbles_dry_reach/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/pebbles_dry_reach/base_v3"
+      }
+    ]
+  }
+}

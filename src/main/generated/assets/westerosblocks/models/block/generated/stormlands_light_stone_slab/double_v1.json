@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_smooth/stormlands/all",
+    "east": "westerosblocks:block/ashlar_smooth/stormlands/all",
+    "north": "westerosblocks:block/ashlar_smooth/stormlands/all",
+    "particle": "westerosblocks:block/ashlar_smooth/stormlands/all",
+    "south": "westerosblocks:block/ashlar_smooth/stormlands/all",
+    "up": "westerosblocks:block/ashlar_smooth/stormlands/all",
+    "west": "westerosblocks:block/ashlar_smooth/stormlands/all"
+  }
+}

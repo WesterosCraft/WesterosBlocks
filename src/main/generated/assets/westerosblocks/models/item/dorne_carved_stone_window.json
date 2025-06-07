@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/pane_block/moorish_stone_window_pane"
+  }
+}

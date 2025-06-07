@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/custom/test_multi_colormap/base_v1"
+    }
+  }
+}

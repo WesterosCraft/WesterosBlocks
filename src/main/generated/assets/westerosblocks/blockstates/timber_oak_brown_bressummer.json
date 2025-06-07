@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "state=state0": {
+      "model": "westerosblocks:block/generated/timber_oak_brown_bressummer/state0_v1"
+    },
+    "state=state1": {
+      "model": "westerosblocks:block/generated/timber_oak_brown_bressummer/state1_v1"
+    },
+    "state=state2": {
+      "model": "westerosblocks:block/generated/timber_oak_brown_bressummer/state2_v1"
+    },
+    "state=state3": {
+      "model": "westerosblocks:block/generated/timber_oak_brown_bressummer/state3_v1"
+    },
+    "state=state4": {
+      "model": "westerosblocks:block/generated/timber_oak_brown_bressummer/state4_v1"
+    }
+  }
+}

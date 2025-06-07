@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/cobblestone_dark/sandy_pink/all",
+    "east": "westerosblocks:block/cobblestone_dark/sandy_pink/all",
+    "north": "westerosblocks:block/cobblestone_dark/sandy_pink/all",
+    "particle": "westerosblocks:block/cobblestone_dark/sandy_pink/all",
+    "south": "westerosblocks:block/cobblestone_dark/sandy_pink/all",
+    "up": "westerosblocks:block/cobblestone_dark/sandy_pink/all",
+    "west": "westerosblocks:block/cobblestone_dark/sandy_pink/all"
+  }
+}

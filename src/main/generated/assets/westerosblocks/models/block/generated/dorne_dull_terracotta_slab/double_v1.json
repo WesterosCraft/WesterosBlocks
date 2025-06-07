@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_third/dull_terracotta/all",
+    "east": "westerosblocks:block/ashlar_third/dull_terracotta/all",
+    "north": "westerosblocks:block/ashlar_third/dull_terracotta/all",
+    "particle": "westerosblocks:block/ashlar_third/dull_terracotta/all",
+    "south": "westerosblocks:block/ashlar_third/dull_terracotta/all",
+    "up": "westerosblocks:block/ashlar_third/dull_terracotta/all",
+    "west": "westerosblocks:block/ashlar_third/dull_terracotta/all"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/cobblestone/green_grey/all2",
+    "east": "westerosblocks:block/cobblestone/green_grey/all2",
+    "north": "westerosblocks:block/cobblestone/green_grey/all2",
+    "particle": "westerosblocks:block/cobblestone/green_grey/all2",
+    "south": "westerosblocks:block/cobblestone/green_grey/all2",
+    "up": "westerosblocks:block/cobblestone/green_grey/all2",
+    "west": "westerosblocks:block/cobblestone/green_grey/all2"
+  }
+}

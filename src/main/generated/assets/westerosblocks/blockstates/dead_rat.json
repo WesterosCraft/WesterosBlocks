@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/dead_rat/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_rat/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_rat/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_rat/base_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_rat/base_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_rat/base_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_rat/base_v7"
+      }
+    ]
+  }
+}

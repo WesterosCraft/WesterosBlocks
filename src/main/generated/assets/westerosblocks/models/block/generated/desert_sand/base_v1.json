@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/sand_block/sand_desert",
+    "east": "westerosblocks:block/sand_block/sand_desert",
+    "north": "westerosblocks:block/sand_block/sand_desert",
+    "particle": "westerosblocks:block/sand_block/sand_desert",
+    "south": "westerosblocks:block/sand_block/sand_desert",
+    "up": "westerosblocks:block/sand_block/sand_desert",
+    "west": "westerosblocks:block/sand_block/sand_desert"
+  }
+}

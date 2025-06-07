@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_half/reach/all",
+    "east": "westerosblocks:block/ashlar_half/reach/all",
+    "north": "westerosblocks:block/ashlar_half/reach/all",
+    "particle": "westerosblocks:block/ashlar_half/reach/all",
+    "south": "westerosblocks:block/ashlar_half/reach/all",
+    "up": "westerosblocks:block/ashlar_half/reach/all",
+    "west": "westerosblocks:block/ashlar_half/reach/all"
+  }
+}

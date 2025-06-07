@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "state=empty": {
+      "model": "westerosblocks:block/generated/pewter_plate/empty_v1"
+    },
+    "state=food": {
+      "model": "westerosblocks:block/generated/pewter_plate/food_v1"
+    }
+  }
+}

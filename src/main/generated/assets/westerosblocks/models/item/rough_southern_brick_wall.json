@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "westerosblocks:block/brick/southern_rough/all1"
+  }
+}

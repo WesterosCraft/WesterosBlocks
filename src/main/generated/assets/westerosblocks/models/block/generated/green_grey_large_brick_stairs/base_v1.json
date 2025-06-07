@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/ashlar_half/green_grey/all",
+    "side": "westerosblocks:block/ashlar_half/green_grey/all",
+    "top": "westerosblocks:block/ashlar_half/green_grey/all"
+  }
+}

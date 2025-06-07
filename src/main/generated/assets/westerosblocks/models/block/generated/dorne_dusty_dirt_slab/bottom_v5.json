@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/dorne_dusty_dirt/side5",
+    "east": "westerosblocks:block/dorne_dusty_dirt/side5",
+    "north": "westerosblocks:block/dorne_dusty_dirt/side5",
+    "particle": "westerosblocks:block/dorne_dusty_dirt/side5",
+    "south": "westerosblocks:block/dorne_dusty_dirt/side5",
+    "up": "westerosblocks:block/dorne_dusty_dirt/side5",
+    "west": "westerosblocks:block/dorne_dusty_dirt/side5"
+  }
+}

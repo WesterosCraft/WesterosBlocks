@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/plaster/smooth/sandy_pink/all",
+    "east": "westerosblocks:block/plaster/smooth/sandy_pink/all",
+    "north": "westerosblocks:block/plaster/smooth/sandy_pink/all",
+    "particle": "westerosblocks:block/plaster/smooth/sandy_pink/all",
+    "south": "westerosblocks:block/plaster/smooth/sandy_pink/all",
+    "up": "westerosblocks:block/plaster/smooth/sandy_pink/all",
+    "west": "westerosblocks:block/plaster/smooth/sandy_pink/all"
+  }
+}

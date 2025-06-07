@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/metal/bronze/all2",
+    "side": "westerosblocks:block/metal/bronze/all2",
+    "top": "westerosblocks:block/metal/bronze/all2"
+  }
+}

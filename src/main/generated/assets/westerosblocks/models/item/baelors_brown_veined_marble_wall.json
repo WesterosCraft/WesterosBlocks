@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "westerosblocks:block/marble/baelors_brown_veined/all"
+  }
+}

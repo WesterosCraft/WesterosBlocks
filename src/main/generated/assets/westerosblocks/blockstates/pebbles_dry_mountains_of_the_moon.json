@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/pebbles_dry_mountains_of_the_moon/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/pebbles_dry_mountains_of_the_moon/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/pebbles_dry_mountains_of_the_moon/base_v3"
+      }
+    ]
+  }
+}

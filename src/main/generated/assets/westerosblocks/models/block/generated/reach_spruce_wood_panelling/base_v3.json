@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/wood/spruce/panelling/top_bottom",
+    "east": "westerosblocks:block/wood/spruce/panelling/side3",
+    "north": "westerosblocks:block/wood/spruce/panelling/side3",
+    "particle": "westerosblocks:block/wood/spruce/panelling/top_bottom",
+    "south": "westerosblocks:block/wood/spruce/panelling/side3",
+    "up": "westerosblocks:block/wood/spruce/panelling/top_bottom",
+    "west": "westerosblocks:block/wood/spruce/panelling/side3"
+  }
+}

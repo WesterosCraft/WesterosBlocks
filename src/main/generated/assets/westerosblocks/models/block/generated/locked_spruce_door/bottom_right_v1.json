@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "textures": {
+    "bottom": "westerosblocks:block/wood/spruce/door_locked_bottom",
+    "top": "westerosblocks:block/wood/spruce/door_locked_top"
+  }
+}

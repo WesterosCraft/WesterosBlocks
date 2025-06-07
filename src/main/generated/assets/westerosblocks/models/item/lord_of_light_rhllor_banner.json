@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:item/cuboid_nsew_stack_item",
+  "textures": {
+    "particle": "westerosblocks:block/banner/other/lord_of_light_rhllor/top",
+    "txt1": "westerosblocks:block/banner/other/lord_of_light_rhllor/top",
+    "txt2": "westerosblocks:block/banner/other/lord_of_light_rhllor/bottom",
+    "txt5": "westerosblocks:block/banner/other/lord_of_light_rhllor/top"
+  }
+}

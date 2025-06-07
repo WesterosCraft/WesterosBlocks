@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_post_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/test_block/d_texture",
+    "particle": "westerosblocks:block/test_block/d_texture",
+    "side": "westerosblocks:block/test_block/d_texture",
+    "top": "westerosblocks:block/test_block/u_texture"
+  }
+}

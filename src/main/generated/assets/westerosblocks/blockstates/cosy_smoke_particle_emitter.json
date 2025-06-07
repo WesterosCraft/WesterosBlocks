@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "westerosblocks:block/generated/cosy_smoke_particle_emitter/off_v1"
+    },
+    "powered=true": {
+      "model": "westerosblocks:block/generated/cosy_smoke_particle_emitter/on_v1"
+    }
+  }
+}

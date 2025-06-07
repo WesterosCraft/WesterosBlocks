@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/generated/cobble_keystone/base_v1"
+    }
+  }
+}
