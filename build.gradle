@@ -79,6 +79,12 @@ jar {
 	from("LICENSE") {
 		rename { "${it}_${project.base.archivesName.get()}"}
 	}
+	
+	manifest {
+		attributes(
+			'Multi-Release': 'true'
+		)
+	}
 }
 
 // configure the maven publication
