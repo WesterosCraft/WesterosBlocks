@@ -63,6 +63,7 @@ TEXTURES_DIR = 'textures'
 MODELS_DIR = 'models'
 BLOCK_TEXTURES_DIR = TEXTURES_DIR + '/block'
 BLOCK_MODELS_DIR = MODELS_DIR + '/block'
+CTM_DIR = 'optifine/ctm'
 
 CALLING_DIR = os.path.dirname(__file__)
 WORKING_DIR = os.getcwd()
@@ -178,15 +179,15 @@ class CTMProp:
       ret += p.iterate_props()
     return ret
   
-  def to_files(self, name, label=None, conds=None):
+  def to_files(self, name, label=None, conds=None, nested=False):
     label = label if label is not None else name
-    name_stem = get_stem(name)
+    source_tile = get_stem(name) if nested else path_to_namespace(name)
     label_stem = get_stem(label)
     tiles = {f'{label}/{idx}.png': ('Image', tile) for idx, tile in enumerate(self.tiles)}
     tile_refs = [f'{label_stem}/{idx}' for idx in range(len(self.tiles))]
     contents = {
       'method': self.method,
-      'matchTiles': name_stem,
+      'matchTiles': source_tile,
       'layer': self.layer,
       'connect': self.connect,
       'tiles': tile_refs
@@ -200,7 +201,7 @@ class CTMProp:
     properties = {f'{label}.properties': ('Properties', contents_str)}
     ret = tiles | properties
     for tile, prop in self.nested_props.items():
-      ret |= prop.to_files(f'{label}/{tile}')
+      ret |= prop.to_files(f'{label}/{tile}', nested=True)
     return ret
 
   def __str__(self):
@@ -947,6 +948,14 @@ def namespace_to_path(name):
   return f'{namespace}/{TEXTURES_DIR}/{loc}'
 
 
+def path_to_namespace(path):
+  """Convert path to namespace."""
+  if '/' not in path: # unexpected
+    return path
+  parts = path.split('/')
+  return parts[0] + ':' + '/'.join(parts[1:])
+
+
 def get_texture_path(name):
   """Get full texture path from namespace."""
   path = namespace_to_path(name)
@@ -1179,6 +1188,11 @@ def get_output_path(path):
   return f'{OUTPUT_DIR}/{ASSETS_DIR}/{path}'
 
 
+def get_ctm_path(path):
+  path = path.replace(BLOCK_TEXTURES_DIR, CTM_DIR)
+  return f'{OUTPUT_DIR}/{ASSETS_DIR}/{path}'
+
+
 def strip_ctm(contents):
   """Remove CTM from the contents of a .mcmeta file."""
   return {k:v for k,v in contents.items() if k.lower() != 'ctm'}
@@ -1282,7 +1296,7 @@ def dump(roots):
   for ctm_root, ctm in FINISHED_CTM.items():
     out_files = ctm.to_files()
     for fname, (ftype, contents) in out_files.items():
-      out_fname = get_output_path(fname)
+      out_fname = get_ctm_path(fname)
       ensure_path(out_fname)
       if ftype == 'Properties':
         write_file(out_fname, contents)
