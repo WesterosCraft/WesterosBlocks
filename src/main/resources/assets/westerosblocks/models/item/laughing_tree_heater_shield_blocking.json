@@ -1,0 +1,4 @@
+{
+  "parent": "westerosblocks:item/laughing_tree_heater_shield",
+  "gui_light": "front"
+}

@@ -7,7 +7,7 @@
       "predicate": {
         "blocking": 1
       },
-      "model": "westerosblocks:item/blackfyre_heater_shield_blocking"
+      "model": "westerosblocks:item/laughing_tree_heater_shield_blocking"
     }
   ],
   "texture_size": [
@@ -118,6 +118,6 @@
     }
   },
   "textures": {
-    "particle": "item/tully_heater_shield"
+    "particle": "item/laughing_tree_heater_shield"
   }
 }

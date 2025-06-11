@@ -27,9 +27,9 @@
         -7.75
       ],
       "scale": [
-        0.875,
-        0.875,
-        0.875
+        0.8,
+        0.8,
+        0.8
       ]
     },
     "thirdperson_lefthand": {
@@ -44,9 +44,9 @@
         -7.75
       ],
       "scale": [
-        0.875,
-        0.875,
-        0.875
+        0.8,
+        0.8,
+        0.8
       ]
     },
     "firstperson_righthand": {
@@ -70,9 +70,9 @@
         0
       ],
       "scale": [
-        0.875,
-        0.875,
-        0.875
+        0.8,
+        0.8,
+        0.8
       ]
     },
     "gui": {
@@ -118,6 +118,6 @@
     }
   },
   "textures": {
-    "particle": "item/tully_heater_shield"
+    "particle": "item/targaryen_heater_shield"
   }
 }
