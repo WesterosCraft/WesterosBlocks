@@ -6,7 +6,6 @@ import com.google.common.collect.Maps;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.custom.*;
 import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.*;

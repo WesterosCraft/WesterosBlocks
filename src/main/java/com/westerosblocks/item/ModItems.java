@@ -3,8 +3,8 @@ package com.westerosblocks.item;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.item.custom.HeaterShieldItem;
 import com.westerosblocks.item.custom.KiteShieldItem;
-import com.westerosblocks.item.custom.LongclawItem;
 import com.westerosblocks.item.custom.RoundShieldItem;
+import com.westerosblocks.item.custom.ValyrianSteelSwordItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -12,8 +12,9 @@ import net.minecraft.registry.Registry;
 
 public class ModItems {
     public static final Item LONGCLAW = registerItem("longclaw",
-            new LongclawItem(ModToolMaterials.VALYRIAN_STEEL, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 7, -3.4f))));
+            new ValyrianSteelSwordItem(ModToolMaterials.VALYRIAN_STEEL, new Item.Settings()
+                    .maxDamage(3000)
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.VALYRIAN_STEEL, 8, -2.8f))));
 
     public static final Item VALYRIAN_STEEL_INGOT = registerItem("valyrian_steel_ingot",
             new Item(new Item.Settings()));

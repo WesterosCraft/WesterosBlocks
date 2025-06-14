@@ -11,7 +11,6 @@ import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.particle.DustParticleEffect;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
@@ -23,123 +22,114 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ParticleEmitterCommand {
-    
+    private static final int DEFAULT_RADIUS = 16;
+    private static final int MAX_RADIUS = 100;
+    private static final int MIN_RADIUS = 1;
+
     public static void register() {
         CommandRegistrationCallback.EVENT.register(ParticleEmitterCommand::registerCommands);
     }
-    
+
     private static void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher, 
                                        CommandRegistryAccess registryAccess, 
                                        CommandManager.RegistrationEnvironment environment) {
         dispatcher.register(CommandManager.literal("particleemitter")
                 .requires(source -> source.hasPermissionLevel(2))
                 .then(CommandManager.literal("list")
-                        .then(CommandManager.argument("radius", IntegerArgumentType.integer(1, 100))
+                        .then(CommandManager.argument("radius", IntegerArgumentType.integer(MIN_RADIUS, MAX_RADIUS))
                                 .executes(context -> listParticleEmitters(context, IntegerArgumentType.getInteger(context, "radius"))))
-                        .executes(context -> listParticleEmitters(context, 16)))
-                // .then(CommandManager.literal("toggle")
-                //         .then(CommandManager.argument("radius", IntegerArgumentType.integer(1, 100))
-                //                 .executes(context -> toggleParticleEmitters(context, IntegerArgumentType.getInteger(context, "radius"))))
-                //         .executes(context -> toggleParticleEmitters(context, 16)))
+                        .executes(context -> listParticleEmitters(context, DEFAULT_RADIUS)))
                 .then(CommandManager.literal("highlight")
-                        .then(CommandManager.argument("radius", IntegerArgumentType.integer(1, 100))
+                        .then(CommandManager.argument("radius", IntegerArgumentType.integer(MIN_RADIUS, MAX_RADIUS))
                                 .executes(context -> highlightParticleEmitters(context, IntegerArgumentType.getInteger(context, "radius"))))
-                        .executes(context -> highlightParticleEmitters(context, 16)))
+                        .executes(context -> highlightParticleEmitters(context, DEFAULT_RADIUS)))
                 .then(CommandManager.literal("help")
                         .executes(ParticleEmitterCommand::showHelp)));
     }
-    
+
     private static int listParticleEmitters(CommandContext<ServerCommandSource> context, int radius) throws CommandSyntaxException {
         ServerCommandSource source = context.getSource();
-        ServerPlayerEntity player = source.getPlayerOrThrow();
-        ServerWorld world = source.getWorld();
-        BlockPos playerPos = player.getBlockPos();
-        
-        List<BlockPos> emitters = findParticleEmitters(world, playerPos, radius);
+        List<BlockPos> emitters = findParticleEmittersInRadius(source, radius);
+
+        if (emitters.isEmpty()) {
+            sendNoEmittersFoundMessage(source, radius);
+            return 0;
+        }
+
+        source.sendFeedback(() -> Text.literal("Found " + emitters.size() + " particle emitter(s) within " + radius + " blocks:")
+                .formatted(Formatting.GREEN), false);
+
+        for (BlockPos pos : emitters) {
+            sendEmitterStatusMessage(source, pos, source.getWorld().getBlockState(pos), source.getPlayerOrThrow().getBlockPos());
+        }
+
+        return emitters.size();
+    }
+
+    private static int highlightParticleEmitters(CommandContext<ServerCommandSource> context, int radius) throws CommandSyntaxException {
+        ServerCommandSource source = context.getSource();
+        List<BlockPos> emitters = findParticleEmittersInRadius(source, radius);
         
         if (emitters.isEmpty()) {
-            source.sendFeedback(() -> Text.literal("No particle emitters found within " + radius + " blocks.")
-                    .formatted(Formatting.YELLOW), false);
+            sendNoEmittersFoundMessage(source, radius);
             return 0;
         }
         
-        source.sendFeedback(() -> Text.literal("Found " + emitters.size() + " particle emitter(s) within " + radius + " blocks:")
-                .formatted(Formatting.GREEN), false);
-        
-        for (BlockPos pos : emitters) {
-            BlockState state = world.getBlockState(pos);
-            boolean isPowered = state.get(WCParticleEmitterBlock.POWERED);
-            String status = isPowered ? "ON (invisible)" : "OFF (visible)";
-            Formatting color = isPowered ? Formatting.RED : Formatting.GREEN;
-            
-            double distance = Math.sqrt(playerPos.getSquaredDistance(pos));
-            
-            source.sendFeedback(() -> Text.literal(String.format("  %s [%d, %d, %d] - %s (%.1f blocks away)", 
-                    status, pos.getX(), pos.getY(), pos.getZ(), status, distance))
-                    .formatted(color), false);
-        }
+        highlightEmitters(source.getWorld(), emitters);
+        source.sendFeedback(() -> Text.literal("Highlighted " + emitters.size() + " particle emitter(s) within " + radius + " blocks. Red = ON/Invisible, Green = OFF/Visible")
+                .formatted(Formatting.AQUA), false);
         
         return emitters.size();
     }
-    
-    private static int toggleParticleEmitters(CommandContext<ServerCommandSource> context, int radius) throws CommandSyntaxException {
+
+    private static int showHelp(CommandContext<ServerCommandSource> context) {
         ServerCommandSource source = context.getSource();
-        ServerPlayerEntity player = source.getPlayerOrThrow();
-        ServerWorld world = source.getWorld();
-        BlockPos playerPos = player.getBlockPos();
-        
-        List<BlockPos> emitters = findParticleEmitters(world, playerPos, radius);
-        
-        if (emitters.isEmpty()) {
-            source.sendFeedback(() -> Text.literal("No particle emitters found within " + radius + " blocks.")
-                    .formatted(Formatting.YELLOW), false);
-            return 0;
-        }
-        
-        int toggledCount = 0;
-        for (BlockPos pos : emitters) {
-            BlockState state = world.getBlockState(pos);
-            BlockState newState = state.cycle(WCParticleEmitterBlock.POWERED);
-            world.setBlockState(pos, newState);
-            toggledCount++;
-        }
-        
-        final int finalToggledCount = toggledCount;
-        source.sendFeedback(() -> Text.literal("Toggled " + finalToggledCount + " particle emitter(s) within " + radius + " blocks.")
-                .formatted(Formatting.GREEN), false);
-        
-        return toggledCount;
+
+        source.sendFeedback(() -> Text.literal("Particle Emitter Commands:").formatted(Formatting.GOLD), false);
+        source.sendFeedback(() -> Text.literal("  /particleemitter list [radius] - List nearby particle emitters").formatted(Formatting.WHITE), false);
+        source.sendFeedback(() -> Text.literal("  /particleemitter highlight [radius] - Show particles around emitters").formatted(Formatting.WHITE), false);
+        source.sendFeedback(() -> Text.literal("  /particleemitter help - Show this help").formatted(Formatting.WHITE), false);
+        source.sendFeedback(() -> Text.literal("Default radius is " + DEFAULT_RADIUS + " blocks. Red highlights = ON/Invisible, Green = OFF/Visible")
+                .formatted(Formatting.GRAY), false);
+
+        return 1;
     }
-    
-    private static int highlightParticleEmitters(CommandContext<ServerCommandSource> context, int radius) throws CommandSyntaxException {
-        ServerCommandSource source = context.getSource();
-        ServerPlayerEntity player = source.getPlayerOrThrow();
+
+    private static List<BlockPos> findParticleEmittersInRadius(ServerCommandSource source, int radius) throws CommandSyntaxException {
         ServerWorld world = source.getWorld();
-        BlockPos playerPos = player.getBlockPos();
-        
-        List<BlockPos> emitters = findParticleEmitters(world, playerPos, radius);
-        
-        if (emitters.isEmpty()) {
-            source.sendFeedback(() -> Text.literal("No particle emitters found within " + radius + " blocks.")
-                    .formatted(Formatting.YELLOW), false);
-            return 0;
-        }
-        
-        // Create highlighting particles around each emitter
+        BlockPos center = source.getPlayerOrThrow().getBlockPos();
+        return findParticleEmitters(world, center, radius);
+    }
+
+    private static void sendNoEmittersFoundMessage(ServerCommandSource source, int radius) {
+        source.sendFeedback(() -> Text.literal("No particle emitters found within " + radius + " blocks.")
+                .formatted(Formatting.YELLOW), false);
+    }
+
+    private static void sendEmitterStatusMessage(ServerCommandSource source, BlockPos pos, BlockState state, BlockPos playerPos) {
+        boolean isPowered = state.get(WCParticleEmitterBlock.POWERED);
+        String status = isPowered ? "ON (invisible)" : "OFF (visible)";
+        Formatting color = isPowered ? Formatting.RED : Formatting.GREEN;
+
+        double distance = Math.sqrt(playerPos.getSquaredDistance(pos));
+
+        source.sendFeedback(() -> Text.literal(String.format("  %s [%d, %d, %d] - %s (%.1f blocks away)", 
+                status, pos.getX(), pos.getY(), pos.getZ(), status, distance))
+                .formatted(color), false);
+    }
+
+    private static void highlightEmitters(ServerWorld world, List<BlockPos> emitters) {
         for (BlockPos pos : emitters) {
             BlockState state = world.getBlockState(pos);
             boolean isPowered = state.get(WCParticleEmitterBlock.POWERED);
-            
-            // Use different colors for powered vs unpowered
-            Vector3f color = isPowered ? new Vector3f(1.0f, 0.0f, 0.0f) : new Vector3f(0.0f, 1.0f, 0.0f); // Red for ON, Green for OFF
+
+            Vector3f color = isPowered ? new Vector3f(1.0f, 0.0f, 0.0f) : new Vector3f(0.0f, 1.0f, 0.0f);
             DustParticleEffect particleEffect = new DustParticleEffect(color, 2.0f);
-            
-            // Create a cube outline of particles around the block
+
             double x = pos.getX() + 0.5;
             double y = pos.getY() + 0.5;
             double z = pos.getZ() + 0.5;
             
-            // Create particles in a frame around the block
             for (int i = 0; i < 20; i++) {
                 double offsetX = (Math.random() - 0.5) * 1.2;
                 double offsetY = (Math.random() - 0.5) * 1.2;
@@ -149,24 +139,6 @@ public class ParticleEmitterCommand {
                         1, 0.0, 0.0, 0.0, 0.0);
             }
         }
-        
-        source.sendFeedback(() -> Text.literal("Highlighted " + emitters.size() + " particle emitter(s) within " + radius + " blocks. Red = ON/Invisible, Green = OFF/Visible")
-                .formatted(Formatting.AQUA), false);
-        
-        return emitters.size();
-    }
-    
-    private static int showHelp(CommandContext<ServerCommandSource> context) {
-        ServerCommandSource source = context.getSource();
-        
-        source.sendFeedback(() -> Text.literal("Particle Emitter Commands:").formatted(Formatting.GOLD), false);
-        source.sendFeedback(() -> Text.literal("  /particleemitter list [radius] - List nearby particle emitters").formatted(Formatting.WHITE), false);
-        source.sendFeedback(() -> Text.literal("  /particleemitter toggle [radius] - Toggle all particle emitters in area").formatted(Formatting.WHITE), false);
-        source.sendFeedback(() -> Text.literal("  /particleemitter highlight [radius] - Show particles around emitters").formatted(Formatting.WHITE), false);
-        source.sendFeedback(() -> Text.literal("  /particleemitter help - Show this help").formatted(Formatting.WHITE), false);
-        source.sendFeedback(() -> Text.literal("Default radius is 16 blocks. Red highlights = ON/Invisible, Green = OFF/Visible").formatted(Formatting.GRAY), false);
-        
-        return 1;
     }
     
     private static List<BlockPos> findParticleEmitters(World world, BlockPos center, int radius) {
@@ -176,9 +148,7 @@ public class ParticleEmitterCommand {
             for (int y = center.getY() - radius; y <= center.getY() + radius; y++) {
                 for (int z = center.getZ() - radius; z <= center.getZ() + radius; z++) {
                     BlockPos pos = new BlockPos(x, y, z);
-                    BlockState state = world.getBlockState(pos);
-                    
-                    if (state.getBlock() instanceof WCParticleEmitterBlock) {
+                    if (world.getBlockState(pos).getBlock() instanceof WCParticleEmitterBlock) {
                         emitters.add(pos);
                     }
                 }
