@@ -1,6 +1,5 @@
 package com.westerosblocks.item.client;
 
-import com.westerosblocks.item.custom.KiteShieldItem;
 import com.westerosblocks.item.custom.RoundShieldItem;
 import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.renderer.GeoItemRenderer;

@@ -1,6 +1,7 @@
 {
     "blockName": "weirwood_face_7",
     "blockType": "log",
+    "woodType": "weirwood",
     "stepSound": "wood",
     "material": "wood",
     "harvestLevel": [

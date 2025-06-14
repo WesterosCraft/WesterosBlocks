@@ -129,21 +129,20 @@ public class ParticleEmitterCommand {
             double x = pos.getX() + 0.5;
             double y = pos.getY() + 0.5;
             double z = pos.getZ() + 0.5;
-            
+
             for (int i = 0; i < 20; i++) {
                 double offsetX = (Math.random() - 0.5) * 1.2;
                 double offsetY = (Math.random() - 0.5) * 1.2;
                 double offsetZ = (Math.random() - 0.5) * 1.2;
-                
-                world.spawnParticles(particleEffect, x + offsetX, y + offsetY, z + offsetZ, 
+                world.spawnParticles(particleEffect, x + offsetX, y + offsetY, z + offsetZ,
                         1, 0.0, 0.0, 0.0, 0.0);
             }
         }
     }
-    
+
     private static List<BlockPos> findParticleEmitters(World world, BlockPos center, int radius) {
         List<BlockPos> emitters = new ArrayList<>();
-        
+
         for (int x = center.getX() - radius; x <= center.getX() + radius; x++) {
             for (int y = center.getY() - radius; y <= center.getY() + radius; y++) {
                 for (int z = center.getZ() - radius; z <= center.getZ() + radius; z++) {
@@ -154,7 +153,7 @@ public class ParticleEmitterCommand {
                 }
             }
         }
-        
+
         return emitters;
     }
-} 
+}
