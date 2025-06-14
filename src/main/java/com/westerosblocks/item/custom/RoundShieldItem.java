@@ -1,7 +1,6 @@
 package com.westerosblocks.item.custom;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.item.client.KiteShieldRenderer;
 import com.westerosblocks.item.client.RoundShieldRenderer;
 import net.minecraft.client.render.item.BuiltinModelItemRenderer;
 import net.minecraft.item.Item;

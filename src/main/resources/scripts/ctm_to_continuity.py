@@ -186,7 +186,7 @@ class CTMProp:
         tile_refs = [f'{label_stem}/{idx}' for idx in range(len(self.tiles))]
         contents = {
             'method': self.method,
-            'matchTiles': name_stem,
+            'matchTiles': name if not self.nested_props else name_stem,
             'layer': self.layer,
             'connect': self.connect,
             'tiles': tile_refs
@@ -1176,7 +1176,13 @@ def register_model_textures(path):
 
 
 def get_output_path(path):
-    return f'{OUTPUT_DIR}/{ASSETS_DIR}/{path}'
+    """Get the output path for an asset, placing CTM-related files in the optifine/ctm directory."""
+    if is_mcmeta(path) or path.endswith('.properties'):
+        # For CTM-related files, place in optifine/ctm directory
+        return f'{OUTPUT_DIR}/optifine/ctm/{path}'
+    else:
+        # For other assets, keep in original location
+        return f'{OUTPUT_DIR}/{ASSETS_DIR}/{path}'
 
 
 def strip_ctm(contents):

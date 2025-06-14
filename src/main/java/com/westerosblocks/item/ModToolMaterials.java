@@ -3,15 +3,18 @@ package com.westerosblocks.item;
 import java.util.function.Supplier;
 import com.google.common.base.Suppliers;
 import net.minecraft.block.Block;
-import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.Identifier;
+import com.westerosblocks.WesterosBlocks;
 
 public enum ModToolMaterials implements ToolMaterial {
-    // TODO customize
-    VALYRIAN_STEEL(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2031, 9.0F, 4.0F, 15, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));
+    VALYRIAN_STEEL(
+            TagKey.of(RegistryKey.ofRegistry(Identifier.of("blocks")), WesterosBlocks.id("needs_valyrian_steel_tool")),
+            2500, 12.0F, 5.0F, 20,
+            () -> Ingredient.ofItems(ModItems.VALYRIAN_STEEL_INGOT));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

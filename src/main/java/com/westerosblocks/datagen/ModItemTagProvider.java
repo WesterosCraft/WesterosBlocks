@@ -2,6 +2,7 @@ package com.westerosblocks.datagen;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosBlocksDefLoader;
+import com.westerosblocks.item.ModItems;
 import com.westerosblocks.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -24,6 +25,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @SuppressWarnings("unchecked")
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        // Add Valyrian steel tools tag
+        getOrCreateTagBuilder(TagKey.of(RegistryKey.ofRegistry(Identifier.of("items")),
+                WesterosBlocks.id("valyrian_steel_tools")))
+                .add(ModItems.LONGCLAW)
+                .setReplace(false);
+
         if (config.itemTags != null) {
             for (ModTags.ModItemTag tag : config.itemTags) {
                 String tagId = tag.customTag.toLowerCase();
