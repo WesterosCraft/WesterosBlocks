@@ -14,5 +14,13 @@
   "liquid_affinity": "non_liquids",
   "has_physics": true,
   "kill_when_still": false,
-  "kill_on_contact": false
+  "kill_on_contact": false,
+  "sound_emitters": [
+    {
+      "sound": "westerosblocks:cascade",
+      "chance": "rand()*0.3",
+      "pitch": "0.2+gaussian()*0.3",
+      "volume": "SPEED"
+    }
+  ]
 }

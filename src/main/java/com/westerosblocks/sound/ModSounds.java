@@ -26,11 +26,15 @@ public class ModSounds {
     }
 
     public static void registerSounds() {
+        WesterosBlocks.LOGGER.info("Registering Mod Sounds for " + WesterosBlocks.MOD_ID);
+        // Register the cascade sound
+        registerSoundEvent("cascade");
+        
         for (ModBlock customBlockDef : customBlockDefs) {
             if (customBlockDef == null) continue;
             registerBlockSoundEvents(customBlockDef.soundList);
         }
-        WesterosBlocks.LOGGER.info("Registering Mod Sounds for " + WesterosBlocks.MOD_ID);
+        
     }
 
     public static void registerBlockSoundEvents(List<String> soundList) {
