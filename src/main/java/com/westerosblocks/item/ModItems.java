@@ -18,7 +18,6 @@ public class ModItems {
     public static final Item VALYRIAN_STEEL_INGOT = registerItem("valyrian_steel_ingot",
             new Item(new Item.Settings()));
 
-    // TODO make the settings make sense
     public static final Item STARK_KITE_SHIELD = registerItem("stark_kite_shield",
             new KiteShieldItem(new Item.Settings().maxDamage(3200), 6, 18, Items.NETHERITE_INGOT, "stark_kite_shield"));
 

@@ -6,8 +6,6 @@ import net.minecraft.client.render.item.BuiltinModelItemRenderer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.UseAction;
-import software.bernie.geckolib.animatable.GeoItem;
-import software.bernie.geckolib.animatable.SingletonGeoAnimatable;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
@@ -16,20 +14,15 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
 
-public class RoundShieldItem extends ModShieldItem implements GeoItem {
+public class RoundShieldItem extends ModShieldItem  {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-    private final int cooldownTicks;
     private final Item repairItem;
     private final String path;
 
     public RoundShieldItem(Settings settings, int cooldownTicks, int enchantability, Item repairItems, String path) {
         super(settings, cooldownTicks, enchantability, repairItems);
-        this.cooldownTicks = cooldownTicks;
         this.repairItem = repairItems;
         this.path = path;
-
-        // Register our item for server-side animation handling
-        SingletonGeoAnimatable.registerSyncedAnimatable(this);
     }
 
     @Override

@@ -24,7 +24,7 @@ import net.minecraft.world.WorldView;
 
 import java.util.ArrayList;
 
-public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements ModBlockLifecycle {
+public class WCCuboidNSEWStackBlock extends WCCuboidBlock {
 
     public static class Factory extends ModBlockFactory {
         @Override
