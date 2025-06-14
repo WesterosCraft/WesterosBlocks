@@ -1,0 +1,34 @@
+{
+    "blockName": "red_curtain",
+    "blockType": "cuboid-nsew",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "hardness": 5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "label": "Red Curtain",
+    "textures": [
+        "transparent",
+        "transparent",
+        "transparent",
+        "transparent",
+        "red_curtain",
+        "red_curtain"
+    ],
+    "boundingBox": {
+        "xMin": 0.961,
+        "xMax": 0.97,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+    }
+}
