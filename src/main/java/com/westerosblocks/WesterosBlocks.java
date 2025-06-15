@@ -9,7 +9,6 @@ import com.westerosblocks.particle.ModParticles;
 import com.westerosblocks.sound.ModSounds;
 import com.westerosblocks.util.AutoDoorRestore;
 import net.fabricmc.api.ModInitializer;
-
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;

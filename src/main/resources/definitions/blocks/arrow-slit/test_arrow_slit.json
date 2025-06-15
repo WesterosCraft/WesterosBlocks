@@ -14,45 +14,6 @@
   "creativeTab": "westeros_decor_tab",
   "type": "no-break-under",
   "label": "Test Arrow Slit",
-  "itemTextureIndex": 0,
-  "stack": [
-    {
-      "textures": [
-        "test_blocks/arrow_slit/arrow_slit_side",
-        "test_blocks/arrow_slit/arrow_slit_side",
-        "test_blocks/arrow_slit/arrow_slit_side",
-        "test_blocks/arrow_slit/arrow_slit_side",
-        "test_blocks/arrow_slit/arrow_slit_top",
-        "test_blocks/arrow_slit/arrow_slit_bottom"
-      ],
-      "boundingBox": {
-        "xMin": 0,
-        "xMax": 16,
-        "yMin": 0,
-        "yMax": 8,
-        "zMin": 0,
-        "zMax": 16
-      }
-    },
-    {
-      "textures": [
-        "test_blocks/arrow_slit/arrow_slit_side",
-        "test_blocks/arrow_slit/arrow_slit_side",
-        "test_blocks/arrow_slit/arrow_slit_side",
-        "test_blocks/arrow_slit/arrow_slit_side",
-        "test_blocks/arrow_slit/arrow_slit_top",
-        "test_blocks/arrow_slit/arrow_slit_bottom"
-      ],
-      "boundingBox": {
-        "xMin": 0,
-        "xMax": 16,
-        "yMin": 8,
-        "yMax": 16,
-        "zMin": 0,
-        "zMax": 16
-      }
-    }
-  ],
   "states": [
     {
       "stateID": "single",

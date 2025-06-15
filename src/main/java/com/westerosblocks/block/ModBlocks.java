@@ -1,6 +1,7 @@
 package com.westerosblocks.block;
 
 import com.westerosblocks.*;
+import com.westerosblocks.block.custom.WCArrowSlitBlock;
 import com.westerosblocks.config.ModConfig;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.loader.api.FabricLoader;
@@ -26,6 +27,15 @@ public class ModBlocks {
         WesterosBlocks.LOGGER.info("Registering blocks for " + com.westerosblocks.WesterosBlocks.MOD_ID);
         HashMap<String, Integer> countsByType = new HashMap<>();
         AtomicInteger blockCount = new AtomicInteger();
+
+        // Register test arrow slit block
+        registerArrowSlitBlock(
+            "test_arrow_slit",
+            "westeros_decor_tab",
+            2.0f,
+            6.0f,
+            1
+        );
 
         for (ModBlock customBlock : CUSTOM_BLOCK_DEFS) {
             if (customBlock == null)
@@ -143,5 +153,21 @@ public class ModBlocks {
             }
         }
         return params;
+    }
+
+    public static Block registerArrowSlitBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel) {
+        WCArrowSlitBlock block = new WCArrowSlitBlock.Builder(name)
+            .creativeTab(creativeTab)
+            .hardness(hardness)
+            .resistance(resistance)
+            .harvestLevel(harvestLevel)
+            .build();
+
+        // Register creative tab
+        ItemGroupEvents.modifyEntriesEvent(WesterosCreativeModeTabs.TABS.get(creativeTab)).register(entries -> {
+            entries.add(block);
+        });
+
+        return registerBlock(name, block);
     }
 }

@@ -1,9 +1,5 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.block.ModBlockFactory;
-import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -25,18 +21,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.util.StringIdentifiable;
 
-public class WCArrowSlitBlock extends Block implements ModBlockLifecycle {
-
-    public static class Factory extends ModBlockFactory {
-        @Override
-        public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings settings = def.applyCustomProperties();
-            Block blk = new WCArrowSlitBlock(settings, def);
-            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
-        }
-    }
-
-    private final ModBlock def;
+public class WCArrowSlitBlock extends Block {
     public static final EnumProperty<ArrowSlitType> TYPE = EnumProperty.of("type", ArrowSlitType.class);
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
@@ -115,12 +100,24 @@ public class WCArrowSlitBlock extends Block implements ModBlockLifecycle {
         Block.createCuboidShape(0, 0, 10, 16, 16, 16)
     );
 
-    protected WCArrowSlitBlock(AbstractBlock.Settings settings, ModBlock def) {
+    private final String blockName;
+    private final String creativeTab;
+
+    protected WCArrowSlitBlock(AbstractBlock.Settings settings, String blockName, String creativeTab) {
         super(settings);
-        this.def = def;
+        this.blockName = blockName;
+        this.creativeTab = creativeTab;
         setDefaultState(getDefaultState()
             .with(TYPE, ArrowSlitType.SINGLE)
             .with(FACING, Direction.NORTH));
+    }
+
+    public String getBlockName() {
+        return blockName;
+    }
+
+    public String getCreativeTab() {
+        return creativeTab;
     }
 
     @Override
@@ -168,16 +165,6 @@ public class WCArrowSlitBlock extends Block implements ModBlockLifecycle {
     }
 
     @Override
-    public ModBlock getWBDefinition() {
-        return def;
-    }
-
-    @Override
-    public String[] getBlockTags() {
-        return new String[0];
-    }
-
-    @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return getShapeForState(state);
     }
@@ -218,6 +205,63 @@ public class WCArrowSlitBlock extends Block implements ModBlockLifecycle {
             };
             default -> NORTH_SINGLE;
         };
+    }
+
+    public static class Builder {
+        private String blockName;
+        private String creativeTab;
+        private float hardness = 2.0f;
+        private float resistance = 6.0f;
+        private String material = "stone";
+        private String stepSound = "stone";
+        private int harvestLevel = 1;
+
+        public Builder(String blockName) {
+            this.blockName = blockName;
+        }
+
+        public Builder creativeTab(String creativeTab) {
+            this.creativeTab = creativeTab;
+            return this;
+        }
+
+        public Builder hardness(float hardness) {
+            this.hardness = hardness;
+            return this;
+        }
+
+        public Builder resistance(float resistance) {
+            this.resistance = resistance;
+            return this;
+        }
+
+        public Builder material(String material) {
+            this.material = material;
+            return this;
+        }
+
+        public Builder stepSound(String stepSound) {
+            this.stepSound = stepSound;
+            return this;
+        }
+
+        public Builder harvestLevel(int level) {
+            this.harvestLevel = level;
+            return this;
+        }
+
+        public WCArrowSlitBlock build() {
+            if (blockName == null || creativeTab == null) {
+                throw new IllegalStateException("Block name and creative tab must be set");
+            }
+
+            AbstractBlock.Settings settings = AbstractBlock.Settings.create()
+                .strength(hardness, resistance)
+                .requiresTool()
+                .mapColor(net.minecraft.block.MapColor.STONE_GRAY);
+
+            return new WCArrowSlitBlock(settings, blockName, creativeTab);
+        }
     }
 
     public enum ArrowSlitType implements StringIdentifiable {
