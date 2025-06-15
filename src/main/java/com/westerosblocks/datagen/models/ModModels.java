@@ -638,6 +638,22 @@ public class ModModels extends Models {
         );
     }
 
+    public static Model ARROW_SLIT() {
+        return new Model(Optional.of(Identifier.of("westerosblocks", "block/arrow_slit")),
+                Optional.empty(),
+                TextureKey.PARTICLE,
+                ModTextureKey.TEXTURE_4,
+                ModTextureKey.TEXTURE_5);
+    }
+
+    public static Model ARROW_SLIT_ITEM() {
+        return new Model(Optional.of(Identifier.of("westerosblocks", "item/arrow_slit_item")),
+                Optional.empty(),
+                TextureKey.PARTICLE,
+                ModTextureKey.TEXTURE_4,
+                ModTextureKey.TEXTURE_5);
+    }
+
     private static void addDisplayToJson(JsonObject json, ModBlock.DisplayProperties display) {
         // blockDef can be directly from ModelExport.def
 //        WesterosBlocks.LOGGER.info("Adding display to JSON for block: {} with display: {}", def.blockName, def.display);

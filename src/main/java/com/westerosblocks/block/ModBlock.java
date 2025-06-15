@@ -58,6 +58,17 @@ public class ModBlock extends ModBlockStateRecord {
     private static final Map<String, ModBlockFactory> typeTable = new HashMap<>();
     private transient Map<String, String> parsedType;
 
+    static {
+        typeTable.put("solid", new WCSolidBlock.Factory());
+        typeTable.put("cuboid", new WCCuboidBlock.Factory());
+        typeTable.put("cuboid-8way", new WCCuboid8WayBlock.Factory());
+        typeTable.put("cuboid-16way", new WCCuboid16WayBlock.Factory());
+        typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
+        typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
+        typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
+        typeTable.put("arrow-slit", new WCArrowSlitBlock.Factory());
+    }
+
     public static class DisplayProperties {
         public GuiProperties gui;
 

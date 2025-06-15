@@ -53,7 +53,8 @@ public class ModModelProvider extends FabricModelProvider {
             Map.entry("flowerpot", FlowerPotExport::new),
             Map.entry("fencegate", FenceGateBlockExport::new),
             Map.entry("particle", ParticleEmitterBlockExport::new),
-            Map.entry("cuboid-vertical-8way", CuboidVertical8WayBlockExport::new)
+            Map.entry("cuboid-vertical-8way", CuboidVertical8WayBlockExport::new),
+            Map.entry("arrow-slit", ArrowSlitBlockExport::new)
     );
 
     public ModModelProvider(FabricDataOutput output) {
@@ -245,6 +246,10 @@ public class ModModelProvider extends FabricModelProvider {
                 }
                 case "cuboid-vertical-8way": {
                     CuboidVertical8WayBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                    break;
+                }
+                case "arrow-slit": {
+                    ArrowSlitBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
                 default:
