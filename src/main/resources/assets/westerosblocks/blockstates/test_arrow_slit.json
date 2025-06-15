@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "type=single": {
+            "model": "westerosblocks:block/custom/test_arrow_slit/test_arrow_slit_single"
+        },
+        "type=top": {
+            "model": "westerosblocks:block/custom/test_arrow_slit/test_arrow_slit_top"
+        },
+        "type=bottom": {
+            "model": "westerosblocks:block/custom/test_arrow_slit/test_arrow_slit_bottom"
+        },
+        "type=mid": {
+            "model": "westerosblocks:block/custom/test_arrow_slit/test_arrow_slit_mid"
+        }
+    }
+} 
