@@ -38,16 +38,19 @@ public class WCArrowSlitBlock extends Block implements ModBlockLifecycle {
 
     private final ModBlock def;
     public static final EnumProperty<ArrowSlitType> TYPE = EnumProperty.of("type", ArrowSlitType.class);
+    public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
     protected WCArrowSlitBlock(AbstractBlock.Settings settings, ModBlock def) {
         super(settings);
         this.def = def;
-        setDefaultState(getDefaultState().with(TYPE, ArrowSlitType.SINGLE));
+        setDefaultState(getDefaultState()
+            .with(TYPE, ArrowSlitType.SINGLE)
+            .with(FACING, Direction.NORTH));
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(TYPE);
+        builder.add(TYPE, FACING);
     }
 
     @Override
@@ -70,6 +73,12 @@ public class WCArrowSlitBlock extends Block implements ModBlockLifecycle {
             return state.with(TYPE, newType);
         }
         return state;
+    }
+
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        return this.getDefaultState()
+            .with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
     }
 
     @Override
