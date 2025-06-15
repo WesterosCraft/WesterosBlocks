@@ -23,19 +23,21 @@ public class ModBlocks {
     public static ModBlock[] CUSTOM_BLOCK_DEFS = WesterosBlocksDefLoader.getCustomBlockDefs();
     static boolean isDevelopmentEnvironment = FabricLoader.getInstance().isDevelopmentEnvironment();
 
+    public static final Block TEST_ARROW_SLIT = registerArrowSlitBlock(
+        "test_arrow_slit",
+        "westeros_decor_tab",
+        2.0f,
+        6.0f,
+        1
+    );
+
     public static void registerModBlocks() {
         WesterosBlocks.LOGGER.info("Registering blocks for " + com.westerosblocks.WesterosBlocks.MOD_ID);
         HashMap<String, Integer> countsByType = new HashMap<>();
         AtomicInteger blockCount = new AtomicInteger();
 
         // Register test arrow slit block
-        registerArrowSlitBlock(
-            "test_arrow_slit",
-            "westeros_decor_tab",
-            2.0f,
-            6.0f,
-            1
-        );
+     
 
         for (ModBlock customBlock : CUSTOM_BLOCK_DEFS) {
             if (customBlock == null)

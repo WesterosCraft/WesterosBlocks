@@ -53,8 +53,8 @@ public class ModModelProvider extends FabricModelProvider {
             Map.entry("flowerpot", FlowerPotExport::new),
             Map.entry("fencegate", FenceGateBlockExport::new),
             Map.entry("particle", ParticleEmitterBlockExport::new),
-            Map.entry("cuboid-vertical-8way", CuboidVertical8WayBlockExport::new),
-            Map.entry("arrow-slit", ArrowSlitBlockExport::new)
+            Map.entry("cuboid-vertical-8way", CuboidVertical8WayBlockExport::new)
+            // Map.entry("arrow-slit", ArrowSlitBlockExport::new)
     );
 
     public ModModelProvider(FabricDataOutput output) {
@@ -63,6 +63,11 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        // Handle test arrow slit block first - using our new implementation
+        Block testArrowSlit = ModBlocks.TEST_ARROW_SLIT;
+        ArrowSlitModelProvider.generateBlockStateModels(blockStateModelGenerator, testArrowSlit);
+
+        // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
         ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
 
@@ -90,6 +95,18 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        // Handle test arrow slit block first - using our new implementation
+        // Block testArrowSlit = ModBlocks.CUSTOM_BLOCKS.get("test_arrow_slit");
+        // if (testArrowSlit != null) {
+        //     try {
+        //         ArrowSlitModelProvider.generateItemModels(itemModelGenerator, testArrowSlit);
+        //         WesterosBlocks.LOGGER.info("Successfully generated item models for test_arrow_slit");
+        //     } catch (Exception e) {
+        //         WesterosBlocks.LOGGER.error("Failed to generate item models for test_arrow_slit: {}", e.getMessage(), e);
+        //     }
+        // }
+
+        // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
         ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
 
@@ -248,10 +265,10 @@ public class ModModelProvider extends FabricModelProvider {
                     CuboidVertical8WayBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-                case "arrow-slit": {
-                    ArrowSlitBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-                    break;
-                }
+                // case "arrow-slit": {
+                //     ArrowSlitModelProvider.generateItemModels(itemModelGenerator, currentBlock);
+                //     break;
+                // }
                 default:
                     WesterosBlocks.LOGGER.warn("DATAGEN: Unknown item type: {} for item {}", customBlockDef.blockType, customBlockDef.blockName);
             }

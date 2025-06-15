@@ -65,9 +65,9 @@ public class ArrowSlitBlockExport extends ModelExport {
         };
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
-        // For arrow slits, we'll use the single model as the item model
-        String path = String.format("%stest_arrow_slit/test_arrow_slit_single", CUSTOM_PATH);
-        itemModelGenerator.register(block.asItem(), new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty()));
-    }
+    // public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
+    //     // For arrow slits, we'll use the single model as the item model
+    //     String path = String.format("%stest_arrow_slit/test_arrow_slit_single", CUSTOM_PATH);
+    //     itemModelGenerator.register(block.asItem(), new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty()));
+    // }
 } 
