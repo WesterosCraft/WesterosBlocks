@@ -2,8 +2,8 @@
     "blockName": "cuy_banner",
     "blockType": "cuboid-nsew-stack",
     "hardness": 1,
-    "stepSound": "wood",
-    "material": "wood",
+    "stepSound": "cloth",
+    "material": "cloth",
     "resistance": 1,
     "harvestLevel": [
         {
