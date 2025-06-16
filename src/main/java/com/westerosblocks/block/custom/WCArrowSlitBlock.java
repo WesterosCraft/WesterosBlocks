@@ -28,8 +28,8 @@ public class WCArrowSlitBlock extends Block {
     // Define the base shapes for each part of the arrow slit
     private static final VoxelShape LEFT_WALL = Block.createCuboidShape(0, 0, 0, 6, 16, 16);
     private static final VoxelShape RIGHT_WALL = Block.createCuboidShape(10, 0, 0, 16, 16, 16);
-    private static final VoxelShape BOTTOM_LEDGE = Block.createCuboidShape(6, 0, 0, 10, 1, 16);
-    private static final VoxelShape TOP_LEDGE = Block.createCuboidShape(6, 15, 0, 10, 16, 16);
+    private static final VoxelShape BOTTOM_LEDGE = Block.createCuboidShape(6, 0, 0, 10, 3, 16);
+    private static final VoxelShape TOP_LEDGE = Block.createCuboidShape(6, 13, 0, 10, 16, 16);
 
     // Define shapes for each direction and type
     private static final VoxelShape NORTH_SINGLE = VoxelShapes.union(LEFT_WALL, RIGHT_WALL, BOTTOM_LEDGE, TOP_LEDGE);
@@ -40,18 +40,18 @@ public class WCArrowSlitBlock extends Block {
     private static final VoxelShape SOUTH_SINGLE = VoxelShapes.union(
         Block.createCuboidShape(0, 0, 0, 6, 16, 16),
         Block.createCuboidShape(10, 0, 0, 16, 16, 16),
-        Block.createCuboidShape(6, 0, 0, 10, 1, 16),
-        Block.createCuboidShape(6, 15, 0, 10, 16, 16)
+        Block.createCuboidShape(6, 0, 0, 10, 3, 16),
+        Block.createCuboidShape(6, 13, 0, 10, 16, 16)
     );
     private static final VoxelShape SOUTH_TOP = VoxelShapes.union(
         Block.createCuboidShape(0, 0, 0, 6, 16, 16),
         Block.createCuboidShape(10, 0, 0, 16, 16, 16),
-        Block.createCuboidShape(6, 15, 0, 10, 16, 16)
+        Block.createCuboidShape(6, 13, 0, 10, 16, 16)
     );
     private static final VoxelShape SOUTH_BOTTOM = VoxelShapes.union(
         Block.createCuboidShape(0, 0, 0, 6, 16, 16),
         Block.createCuboidShape(10, 0, 0, 16, 16, 16),
-        Block.createCuboidShape(6, 0, 0, 10, 1, 16)
+        Block.createCuboidShape(6, 0, 0, 10, 3, 16)
     );
     private static final VoxelShape SOUTH_MID = VoxelShapes.union(
         Block.createCuboidShape(0, 0, 0, 6, 16, 16),
@@ -61,18 +61,18 @@ public class WCArrowSlitBlock extends Block {
     private static final VoxelShape EAST_SINGLE = VoxelShapes.union(
         Block.createCuboidShape(0, 0, 0, 16, 16, 6),
         Block.createCuboidShape(0, 0, 10, 16, 16, 16),
-        Block.createCuboidShape(0, 0, 6, 16, 1, 10),
-        Block.createCuboidShape(0, 15, 6, 16, 16, 10)
+        Block.createCuboidShape(0, 0, 6, 16, 3, 10),
+        Block.createCuboidShape(0, 13, 6, 16, 16, 10)
     );
     private static final VoxelShape EAST_TOP = VoxelShapes.union(
         Block.createCuboidShape(0, 0, 0, 16, 16, 6),
         Block.createCuboidShape(0, 0, 10, 16, 16, 16),
-        Block.createCuboidShape(0, 15, 6, 16, 16, 10)
+        Block.createCuboidShape(0, 13, 6, 16, 16, 10)
     );
     private static final VoxelShape EAST_BOTTOM = VoxelShapes.union(
         Block.createCuboidShape(0, 0, 0, 16, 16, 6),
         Block.createCuboidShape(0, 0, 10, 16, 16, 16),
-        Block.createCuboidShape(0, 0, 6, 16, 1, 10)
+        Block.createCuboidShape(0, 0, 6, 16, 3, 10)
     );
     private static final VoxelShape EAST_MID = VoxelShapes.union(
         Block.createCuboidShape(0, 0, 0, 16, 16, 6),
@@ -82,18 +82,18 @@ public class WCArrowSlitBlock extends Block {
     private static final VoxelShape WEST_SINGLE = VoxelShapes.union(
         Block.createCuboidShape(0, 0, 0, 16, 16, 6),
         Block.createCuboidShape(0, 0, 10, 16, 16, 16),
-        Block.createCuboidShape(0, 0, 6, 16, 1, 10),
-        Block.createCuboidShape(0, 15, 6, 16, 16, 10)
+        Block.createCuboidShape(0, 0, 6, 16, 3, 10),
+        Block.createCuboidShape(0, 13, 6, 16, 16, 10)
     );
     private static final VoxelShape WEST_TOP = VoxelShapes.union(
         Block.createCuboidShape(0, 0, 0, 16, 16, 6),
         Block.createCuboidShape(0, 0, 10, 16, 16, 16),
-        Block.createCuboidShape(0, 15, 6, 16, 16, 10)
+        Block.createCuboidShape(0, 13, 6, 16, 16, 10)
     );
     private static final VoxelShape WEST_BOTTOM = VoxelShapes.union(
         Block.createCuboidShape(0, 0, 0, 16, 16, 6),
         Block.createCuboidShape(0, 0, 10, 16, 16, 16),
-        Block.createCuboidShape(0, 0, 6, 16, 1, 10)
+        Block.createCuboidShape(0, 0, 6, 16, 3, 10)
     );
     private static final VoxelShape WEST_MID = VoxelShapes.union(
         Block.createCuboidShape(0, 0, 0, 16, 16, 6),

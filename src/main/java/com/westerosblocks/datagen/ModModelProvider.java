@@ -54,7 +54,6 @@ public class ModModelProvider extends FabricModelProvider {
             Map.entry("fencegate", FenceGateBlockExport::new),
             Map.entry("particle", ParticleEmitterBlockExport::new),
             Map.entry("cuboid-vertical-8way", CuboidVertical8WayBlockExport::new)
-            // Map.entry("arrow-slit", ArrowSlitBlockExport::new)
     );
 
     public ModModelProvider(FabricDataOutput output) {
@@ -64,25 +63,10 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         // Use the new dynamic model provider for arrow slits
-        DynamicArrowSlitModelProvider.TextureConfig testArrowSlitConfig = new DynamicArrowSlitModelProvider.TextureConfig(
-            "1",  // Using "1" as the texture key to match the test model
-            "westerosblocks:block/test_block/arrow_slit/arrow_slit_side"
-        );
-        DynamicArrowSlitModelProvider.generateBlockStateModels(blockStateModelGenerator, ModBlocks.TEST_ARROW_SLIT, testArrowSlitConfig);
-
-        DynamicArrowSlitModelProvider.TextureConfig arborArrowSlitConfig = new DynamicArrowSlitModelProvider.TextureConfig(
-            "1",  // Using "1" as the texture key to match the test model
-            "westerosblocks:block/ashlar_third/arbor/all"
-        );
-        DynamicArrowSlitModelProvider.generateBlockStateModels(blockStateModelGenerator, ModBlocks.ARBOR_BRICK_ARROW_SLIT, arborArrowSlitConfig);
-
-        DynamicArrowSlitModelProvider.TextureConfig blackGraniteArrowSlitConfig = new DynamicArrowSlitModelProvider.TextureConfig(
-            "1",  // Using "1" as the texture key to match the test model
-            "westerosblocks:block/ashlar_third/black/all"
-        );
-        DynamicArrowSlitModelProvider.generateBlockStateModels(blockStateModelGenerator, ModBlocks.BLACK_GRANITE_ARROW_SLIT, blackGraniteArrowSlitConfig);
-
-
+        ArrowSlitBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.ARBOR_BRICK_ARROW_SLIT,
+            "westerosblocks:block/ashlar_third/arbor/all");
+        ArrowSlitBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.BLACK_GRANITE_ARROW_SLIT,
+            "westerosblocks:block/ashlar_third/black/all");
 
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
@@ -113,8 +97,8 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         // Use the new dynamic model provider for arrow slits
-        DynamicArrowSlitModelProvider.generateItemModels(itemModelGenerator, ModBlocks.TEST_ARROW_SLIT);
-        DynamicArrowSlitModelProvider.generateItemModels(itemModelGenerator, ModBlocks.ARBOR_BRICK_ARROW_SLIT);
+        ArrowSlitBlockExport.generateItemModels(itemModelGenerator, ModBlocks.ARBOR_BRICK_ARROW_SLIT);
+        ArrowSlitBlockExport.generateItemModels(itemModelGenerator, ModBlocks.BLACK_GRANITE_ARROW_SLIT);
 
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
