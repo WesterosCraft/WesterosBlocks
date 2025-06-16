@@ -39,6 +39,14 @@ public class ModBlocks {
         1
     );
 
+    public static final Block BLACK_GRANITE_ARROW_SLIT = registerArrowSlitBlock(
+        "black_granite_arrow_slit",
+        "westeros_decor_tab",
+        2.0f,
+        6.0f,
+        1
+    );
+
     public static void registerModBlocks() {
         WesterosBlocks.LOGGER.info("Registering blocks for " + com.westerosblocks.WesterosBlocks.MOD_ID);
         HashMap<String, Integer> countsByType = new HashMap<>();

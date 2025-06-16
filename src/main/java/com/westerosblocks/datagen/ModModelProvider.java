@@ -64,8 +64,25 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         // Use the new dynamic model provider for arrow slits
-        DynamicArrowSlitModelProvider.generateBlockStateModels(blockStateModelGenerator, ModBlocks.TEST_ARROW_SLIT, "westerosblocks:block/test_block/arrow_slit/arrow_slit_side");
-        DynamicArrowSlitModelProvider.generateBlockStateModels(blockStateModelGenerator, ModBlocks.ARBOR_BRICK_ARROW_SLIT, "westerosblocks:block/ashlar_third/arbor/arrow_slit");
+        DynamicArrowSlitModelProvider.TextureConfig testArrowSlitConfig = new DynamicArrowSlitModelProvider.TextureConfig(
+            "1",  // Using "1" as the texture key to match the test model
+            "westerosblocks:block/test_block/arrow_slit/arrow_slit_side"
+        );
+        DynamicArrowSlitModelProvider.generateBlockStateModels(blockStateModelGenerator, ModBlocks.TEST_ARROW_SLIT, testArrowSlitConfig);
+
+        DynamicArrowSlitModelProvider.TextureConfig arborArrowSlitConfig = new DynamicArrowSlitModelProvider.TextureConfig(
+            "1",  // Using "1" as the texture key to match the test model
+            "westerosblocks:block/ashlar_third/arbor/all"
+        );
+        DynamicArrowSlitModelProvider.generateBlockStateModels(blockStateModelGenerator, ModBlocks.ARBOR_BRICK_ARROW_SLIT, arborArrowSlitConfig);
+
+        DynamicArrowSlitModelProvider.TextureConfig blackGraniteArrowSlitConfig = new DynamicArrowSlitModelProvider.TextureConfig(
+            "1",  // Using "1" as the texture key to match the test model
+            "westerosblocks:block/ashlar_third/black/all"
+        );
+        DynamicArrowSlitModelProvider.generateBlockStateModels(blockStateModelGenerator, ModBlocks.BLACK_GRANITE_ARROW_SLIT, blackGraniteArrowSlitConfig);
+
+
 
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
