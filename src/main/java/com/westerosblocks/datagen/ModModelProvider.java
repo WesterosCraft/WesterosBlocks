@@ -96,15 +96,15 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         // Handle test arrow slit block first - using our new implementation
-        // Block testArrowSlit = ModBlocks.CUSTOM_BLOCKS.get("test_arrow_slit");
-        // if (testArrowSlit != null) {
-        //     try {
-        //         ArrowSlitModelProvider.generateItemModels(itemModelGenerator, testArrowSlit);
-        //         WesterosBlocks.LOGGER.info("Successfully generated item models for test_arrow_slit");
-        //     } catch (Exception e) {
-        //         WesterosBlocks.LOGGER.error("Failed to generate item models for test_arrow_slit: {}", e.getMessage(), e);
-        //     }
-        // }
+        Block testArrowSlit = ModBlocks.TEST_ARROW_SLIT;
+        if (testArrowSlit != null) {
+            try {
+                ArrowSlitModelProvider.generateItemModels(itemModelGenerator, testArrowSlit);
+                WesterosBlocks.LOGGER.info("Successfully generated item models for test_arrow_slit");
+            } catch (Exception e) {
+                WesterosBlocks.LOGGER.error("Failed to generate item models for test_arrow_slit: {}", e.getMessage(), e);
+            }
+        }
 
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();

@@ -5,15 +5,11 @@ import com.westerosblocks.block.custom.WCArrowSlitBlock;
 import com.westerosblocks.block.custom.WCArrowSlitBlock.ArrowSlitType;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import java.util.Optional;
 
 public class ArrowSlitModelProvider {
     public static void generateBlockStateModels(BlockStateModelGenerator generator, Block block) {
-        // Register the item model first
-        generator.registerItemModel(block.asItem());
-        
         // Create variants for each state and direction
         BlockStateVariantMap variants = BlockStateVariantMap.create(WCArrowSlitBlock.FACING, WCArrowSlitBlock.TYPE)
             // Single state
@@ -28,7 +24,7 @@ public class ArrowSlitModelProvider {
             .register(Direction.WEST, ArrowSlitType.SINGLE, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, WesterosBlocks.id("block/custom/arrow_slit/test_arrow_slit_single"))
                 .put(VariantSettings.Y, VariantSettings.Rotation.R270))
-            
+
             // Mid state
             .register(Direction.NORTH, ArrowSlitType.MID, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, WesterosBlocks.id("block/custom/arrow_slit/test_arrow_slit_mid")))
@@ -41,7 +37,7 @@ public class ArrowSlitModelProvider {
             .register(Direction.WEST, ArrowSlitType.MID, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, WesterosBlocks.id("block/custom/arrow_slit/test_arrow_slit_mid"))
                 .put(VariantSettings.Y, VariantSettings.Rotation.R270))
-            
+
             // Bottom state
             .register(Direction.NORTH, ArrowSlitType.BOTTOM, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, WesterosBlocks.id("block/custom/arrow_slit/test_arrow_slit_bottom")))
@@ -54,7 +50,7 @@ public class ArrowSlitModelProvider {
             .register(Direction.WEST, ArrowSlitType.BOTTOM, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, WesterosBlocks.id("block/custom/arrow_slit/test_arrow_slit_bottom"))
                 .put(VariantSettings.Y, VariantSettings.Rotation.R270))
-            
+
             // Top state
             .register(Direction.NORTH, ArrowSlitType.TOP, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, WesterosBlocks.id("block/custom/arrow_slit/test_arrow_slit_top")))
@@ -76,18 +72,11 @@ public class ArrowSlitModelProvider {
     }
 
     public static void generateItemModels(ItemModelGenerator generator, Block block) {
-        // Create a custom item model that inherits from the block model
+        // Create a simple item model that inherits from the block model
         Model model = new Model(
             Optional.of(WesterosBlocks.id("block/custom/arrow_slit/test_arrow_slit_single")),
-            Optional.empty(),
-            TextureKey.PARTICLE
+            Optional.empty()
         );
-        
-        // Upload the model with a texture map
-        model.upload(
-            ModelIds.getItemModelId(block.asItem()),
-            new TextureMap().put(TextureKey.PARTICLE, WesterosBlocks.id("block/custom/arrow_slit/test_arrow_slit_single")),
-            generator.writer
-        );
+        generator.register(block.asItem(), model);
     }
 } 
