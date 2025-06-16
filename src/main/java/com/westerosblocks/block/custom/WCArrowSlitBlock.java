@@ -130,7 +130,7 @@ public class WCArrowSlitBlock extends Block {
         if (direction == Direction.UP || direction == Direction.DOWN) {
             boolean hasTop = world.getBlockState(pos.up()).isOf(this);
             boolean hasBottom = world.getBlockState(pos.down()).isOf(this);
-            
+
             ArrowSlitType newType;
             if (hasTop && hasBottom) {
                 newType = ArrowSlitType.MID;
@@ -141,7 +141,7 @@ public class WCArrowSlitBlock extends Block {
             } else {
                 newType = ArrowSlitType.SINGLE;
             }
-            
+
             return state.with(TYPE, newType);
         }
         return state;

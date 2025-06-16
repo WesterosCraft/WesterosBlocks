@@ -63,9 +63,9 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        // Handle test arrow slit block first - using our new implementation
-        Block testArrowSlit = ModBlocks.TEST_ARROW_SLIT;
-        ArrowSlitModelProvider.generateBlockStateModels(blockStateModelGenerator, testArrowSlit);
+        // Use the new dynamic model provider for arrow slits
+        DynamicArrowSlitModelProvider.generateBlockStateModels(blockStateModelGenerator, ModBlocks.TEST_ARROW_SLIT, "westerosblocks:block/test_block/arrow_slit/arrow_slit_side");
+        DynamicArrowSlitModelProvider.generateBlockStateModels(blockStateModelGenerator, ModBlocks.ARBOR_BRICK_ARROW_SLIT, "westerosblocks:block/ashlar_third/arbor/arrow_slit");
 
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
@@ -95,16 +95,9 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        // Handle test arrow slit block first - using our new implementation
-        Block testArrowSlit = ModBlocks.TEST_ARROW_SLIT;
-        if (testArrowSlit != null) {
-            try {
-                ArrowSlitModelProvider.generateItemModels(itemModelGenerator, testArrowSlit);
-                WesterosBlocks.LOGGER.info("Successfully generated item models for test_arrow_slit");
-            } catch (Exception e) {
-                WesterosBlocks.LOGGER.error("Failed to generate item models for test_arrow_slit: {}", e.getMessage(), e);
-            }
-        }
+        // Use the new dynamic model provider for arrow slits
+        DynamicArrowSlitModelProvider.generateItemModels(itemModelGenerator, ModBlocks.TEST_ARROW_SLIT);
+        DynamicArrowSlitModelProvider.generateItemModels(itemModelGenerator, ModBlocks.ARBOR_BRICK_ARROW_SLIT);
 
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();

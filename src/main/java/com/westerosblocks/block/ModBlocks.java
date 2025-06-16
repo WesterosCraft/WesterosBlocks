@@ -31,13 +31,18 @@ public class ModBlocks {
         1
     );
 
+    public static final Block ARBOR_BRICK_ARROW_SLIT = registerArrowSlitBlock(
+        "arbor_brick_arrow_slit",
+        "westeros_decor_tab",
+        2.0f,
+        6.0f,
+        1
+    );
+
     public static void registerModBlocks() {
         WesterosBlocks.LOGGER.info("Registering blocks for " + com.westerosblocks.WesterosBlocks.MOD_ID);
         HashMap<String, Integer> countsByType = new HashMap<>();
         AtomicInteger blockCount = new AtomicInteger();
-
-        // Register test arrow slit block
-     
 
         for (ModBlock customBlock : CUSTOM_BLOCK_DEFS) {
             if (customBlock == null)
