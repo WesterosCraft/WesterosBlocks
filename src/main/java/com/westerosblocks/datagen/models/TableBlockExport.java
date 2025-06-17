@@ -7,6 +7,7 @@ import com.westerosblocks.block.custom.WCTableBlock;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
 import java.util.Optional;
 
@@ -38,59 +39,77 @@ public class TableBlockExport {
         Identifier centerModelId = createModel(generator, block, TableType.CENTER, texturePath);
         Identifier cornerModelId = createModel(generator, block, TableType.CORNER, texturePath);
 
-        // Create variants for each state
+        // Create variants for each state with proper rotation
         BlockStateVariantMap variants = BlockStateVariantMap.create(WCTableBlock.NORTH, WCTableBlock.EAST, WCTableBlock.SOUTH, WCTableBlock.WEST, WCTableBlock.WATERLOGGED)
-            // Single table (no connections)
+            // Single table (no connections) - no rotation needed
             .register(false, false, false, false, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, singleModelId))
             .register(false, false, false, false, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, singleModelId))
             
-            // Double table (connected in one direction)
+            // Double table (connected in one direction) - rotate based on connection
             .register(false, false, false, true, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, doubleModelId))
+                .put(VariantSettings.MODEL, doubleModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90)) // Connected EAST - rotate so legs face WEST
             .register(false, false, false, true, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, doubleModelId))
+                .put(VariantSettings.MODEL, doubleModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
             .register(false, false, true, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, doubleModelId))
+                .put(VariantSettings.MODEL, doubleModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180)) // Connected SOUTH - rotate so legs face NORTH
             .register(false, false, true, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, doubleModelId))
+                .put(VariantSettings.MODEL, doubleModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
             .register(false, true, false, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, doubleModelId))
+                .put(VariantSettings.MODEL, doubleModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270)) // Connected WEST - rotate so legs face EAST
             .register(false, true, false, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, doubleModelId))
+                .put(VariantSettings.MODEL, doubleModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
             .register(true, false, false, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, doubleModelId))
+                .put(VariantSettings.MODEL, doubleModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180)) // Connected NORTH - rotate so legs face SOUTH
             .register(true, false, false, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, doubleModelId))
+                .put(VariantSettings.MODEL, doubleModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
             
-            // Corner table (connected in two adjacent directions)
+            // Corner table (connected in two adjacent directions) - rotate based on primary connection
             .register(false, false, true, true, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId))
+                .put(VariantSettings.MODEL, cornerModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270)) // SOUTH + EAST - rotate so corner faces away from connections
             .register(false, false, true, true, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId))
+                .put(VariantSettings.MODEL, cornerModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
             .register(false, true, false, true, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId))
+                .put(VariantSettings.MODEL, cornerModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180)) // WEST + SOUTH - rotate so corner faces away from connections
             .register(false, true, false, true, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId))
+                .put(VariantSettings.MODEL, cornerModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
             .register(false, true, true, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId))
+                .put(VariantSettings.MODEL, cornerModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90)) // WEST + NORTH - rotate so corner faces away from connections
             .register(false, true, true, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId))
+                .put(VariantSettings.MODEL, cornerModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
             .register(true, false, false, true, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId))
+                .put(VariantSettings.MODEL, cornerModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270)) // NORTH + EAST - rotate so corner faces away from connections
             .register(true, false, false, true, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId))
+                .put(VariantSettings.MODEL, cornerModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
             .register(true, false, true, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId))
+                .put(VariantSettings.MODEL, cornerModelId)) // NORTH + SOUTH - no rotation needed
             .register(true, false, true, false, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId))
             .register(true, true, false, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId))
+                .put(VariantSettings.MODEL, cornerModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90)) // NORTH + WEST - rotate so corner faces away from connections
             .register(true, true, false, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId))
+                .put(VariantSettings.MODEL, cornerModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
             
-            // Center table (connected in three or four directions)
+            // Center table (connected in three or four directions) - no rotation needed
             .register(false, true, true, true, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, centerModelId))
             .register(false, true, true, true, true, BlockStateVariant.create()
@@ -146,6 +165,7 @@ public class TableBlockExport {
                 elements.add(createTableLeg(10, 0, 2));
             }
             case DOUBLE -> {
+                // Double table has legs on the front edge (facing NORTH by default)
                 elements.add(createTableLeg(2, 0, 2));
                 elements.add(createTableLeg(10, 0, 2));
             }
@@ -153,6 +173,7 @@ public class TableBlockExport {
                 // No legs for center piece
             }
             case CORNER -> {
+                // Corner table has one leg in the corner (front-left by default)
                 elements.add(createTableLeg(2, 0, 2));
             }
         }
