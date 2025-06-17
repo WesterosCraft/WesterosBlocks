@@ -77,12 +77,12 @@ public class TableBlockExport {
                 .put(VariantSettings.Y, VariantSettings.Rotation.R90))
             
             // North-East corner (north=true, east=true, west=false, south=false)
-            .register(false, true, false, true, false, BlockStateVariant.create()
+            .register(true, true, false, false, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
-            .register(false, true, false, true, true, BlockStateVariant.create()
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
+            .register(true, true, false, false, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
             
             // South-West corner (south=true, west=true, north=false, east=false)
             .register(false, true, true, false, false, BlockStateVariant.create()
@@ -109,10 +109,10 @@ public class TableBlockExport {
                 .put(VariantSettings.Y, VariantSettings.Rotation.R270))
             
             // East-West corner (east=true, west=true, north=false, south=false)
-            .register(true, true, false, false, false, BlockStateVariant.create()
+            .register(false, true, false, true, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
                 .put(VariantSettings.Y, VariantSettings.Rotation.R0))
-            .register(true, true, false, false, true, BlockStateVariant.create()
+            .register(false, true, false, true, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
                 .put(VariantSettings.Y, VariantSettings.Rotation.R0))
 
