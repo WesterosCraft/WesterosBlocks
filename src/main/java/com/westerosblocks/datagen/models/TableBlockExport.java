@@ -55,11 +55,9 @@ public class TableBlockExport {
                 .put(VariantSettings.MODEL, doubleModelId)
                 .put(VariantSettings.Y, VariantSettings.Rotation.R90))
             .register(false, false, true, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, doubleModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180)) // Connected SOUTH - rotate so legs face NORTH
+                .put(VariantSettings.MODEL, doubleModelId)) // Connected SOUTH - no rotation needed, legs face SOUTH
             .register(false, false, true, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, doubleModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                .put(VariantSettings.MODEL, doubleModelId))
             .register(false, true, false, false, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, doubleModelId)
                 .put(VariantSettings.Y, VariantSettings.Rotation.R270)) // Connected WEST - rotate so legs face EAST
