@@ -14,76 +14,103 @@ public class TableBlockExport {
     private static final String PARTICLE_KEY = "particle";
     private static final String TEXTURE_KEY = "1";
 
+    public enum TableType {
+        SINGLE("single"),
+        DOUBLE("double"),
+        CENTER("center"),
+        CORNER("corner");
+
+        private final String name;
+
+        TableType(String name) {
+            this.name = name;
+        }
+
+        public String asString() {
+            return this.name;
+        }
+    }
+
     public static void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {
-        // Create the base model
-        Identifier modelId = createModel(generator, block, texturePath);
+        // Create models for each table type
+        Identifier singleModelId = createModel(generator, block, TableType.SINGLE, texturePath);
+        Identifier doubleModelId = createModel(generator, block, TableType.DOUBLE, texturePath);
+        Identifier centerModelId = createModel(generator, block, TableType.CENTER, texturePath);
+        Identifier cornerModelId = createModel(generator, block, TableType.CORNER, texturePath);
 
         // Create variants for each state
         BlockStateVariantMap variants = BlockStateVariantMap.create(WCTableBlock.NORTH, WCTableBlock.EAST, WCTableBlock.SOUTH, WCTableBlock.WEST, WCTableBlock.WATERLOGGED)
+            // Single table (no connections)
             .register(false, false, false, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, singleModelId))
             .register(false, false, false, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, singleModelId))
+            
+            // Double table (connected in one direction)
             .register(false, false, false, true, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, doubleModelId))
             .register(false, false, false, true, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, doubleModelId))
             .register(false, false, true, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, doubleModelId))
             .register(false, false, true, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
-            .register(false, false, true, true, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
-            .register(false, false, true, true, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, doubleModelId))
             .register(false, true, false, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, doubleModelId))
             .register(false, true, false, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
-            .register(false, true, false, true, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
-            .register(false, true, false, true, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
-            .register(false, true, true, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
-            .register(false, true, true, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
-            .register(false, true, true, true, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
-            .register(false, true, true, true, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, doubleModelId))
             .register(true, false, false, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, doubleModelId))
             .register(true, false, false, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, doubleModelId))
+            
+            // Corner table (connected in two adjacent directions)
+            .register(false, false, true, true, false, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, cornerModelId))
+            .register(false, false, true, true, true, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, cornerModelId))
+            .register(false, true, false, true, false, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, cornerModelId))
+            .register(false, true, false, true, true, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, cornerModelId))
+            .register(false, true, true, false, false, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, cornerModelId))
+            .register(false, true, true, false, true, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, cornerModelId))
             .register(true, false, false, true, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, cornerModelId))
             .register(true, false, false, true, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, cornerModelId))
             .register(true, false, true, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, cornerModelId))
             .register(true, false, true, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
-            .register(true, false, true, true, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
-            .register(true, false, true, true, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, cornerModelId))
             .register(true, true, false, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, cornerModelId))
             .register(true, true, false, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, cornerModelId))
+            
+            // Center table (connected in three or four directions)
+            .register(false, true, true, true, false, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, centerModelId))
+            .register(false, true, true, true, true, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, centerModelId))
+            .register(true, false, true, true, false, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, centerModelId))
+            .register(true, false, true, true, true, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, centerModelId))
             .register(true, true, false, true, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, centerModelId))
             .register(true, true, false, true, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, centerModelId))
             .register(true, true, true, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, centerModelId))
             .register(true, true, true, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, centerModelId))
             .register(true, true, true, true, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId))
+                .put(VariantSettings.MODEL, centerModelId))
             .register(true, true, true, true, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId));
+                .put(VariantSettings.MODEL, centerModelId));
 
         // Register the block state
         generator.blockStateCollector.accept(
@@ -92,7 +119,7 @@ public class TableBlockExport {
         );
     }
 
-    private static Identifier createModel(BlockStateModelGenerator generator, Block block, String texturePath) {
+    private static Identifier createModel(BlockStateModelGenerator generator, Block block, TableType type, String texturePath) {
         JsonObject modelJson = new JsonObject();
         modelJson.addProperty("parent", "minecraft:block/cube");
         modelJson.addProperty("credit", "Generated by WesterosBlocks");
@@ -104,22 +131,36 @@ public class TableBlockExport {
         textures.addProperty(PARTICLE_KEY, texturePath);
         modelJson.add("textures", textures);
 
-        // Add elements
+        // Add elements based on type
         JsonArray elements = new JsonArray();
         
-        // Table top
+        // Common table top for all types
         elements.add(createTableTop());
-        
-        // Table legs
-        elements.add(createTableLeg(2, 0, 2));
-        elements.add(createTableLeg(2, 0, 10));
-        elements.add(createTableLeg(10, 0, 10));
-        elements.add(createTableLeg(10, 0, 2));
+
+        // Type-specific legs
+        switch (type) {
+            case SINGLE -> {
+                elements.add(createTableLeg(2, 0, 2));
+                elements.add(createTableLeg(2, 0, 10));
+                elements.add(createTableLeg(10, 0, 10));
+                elements.add(createTableLeg(10, 0, 2));
+            }
+            case DOUBLE -> {
+                elements.add(createTableLeg(2, 0, 2));
+                elements.add(createTableLeg(10, 0, 2));
+            }
+            case CENTER -> {
+                // No legs for center piece
+            }
+            case CORNER -> {
+                elements.add(createTableLeg(2, 0, 2));
+            }
+        }
 
         modelJson.add("elements", elements);
 
-        // Create a unique model ID for this block
-        String modelPath = "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", "");
+        // Create a unique model ID for this block and type
+        String modelPath = "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", "") + "_" + type.asString();
         Identifier modelId = WesterosBlocks.id(modelPath);
 
         // Register the model
@@ -192,8 +233,8 @@ public class TableBlockExport {
     }
 
     public static void generateItemModels(ItemModelGenerator generator, Block block) {
-        // Create a simple item model that inherits from the block model
-        String modelPath = "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", "");
+        // Create a simple item model that inherits from the single table model
+        String modelPath = "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", "") + "_single";
         Model model = new Model(
             Optional.of(WesterosBlocks.id(modelPath)),
             Optional.empty()
