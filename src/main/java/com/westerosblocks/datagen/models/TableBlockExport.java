@@ -76,38 +76,38 @@ public class TableBlockExport {
             // Corner table (connected in two adjacent directions) - rotate based on primary connection
             .register(false, false, true, true, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R270)) // SOUTH + EAST - rotate so corner faces away from connections
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180)) // SOUTH + EAST - rotate so corner faces NORTHWEST
             .register(false, false, true, true, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
             .register(false, true, false, true, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180)) // WEST + SOUTH - rotate so corner faces away from connections
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180)) // WEST + SOUTH - rotate so corner faces NORTHEAST
             .register(false, true, false, true, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
                 .put(VariantSettings.Y, VariantSettings.Rotation.R180))
             .register(false, true, true, false, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R90)) // WEST + NORTH - rotate so corner faces away from connections
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270)) // WEST + NORTH - rotate so corner faces SOUTHEAST
             .register(false, true, true, false, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
             .register(true, false, false, true, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R270)) // NORTH + EAST - rotate so corner faces away from connections
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90)) // NORTH + EAST - rotate so corner faces SOUTHWEST
             .register(true, false, false, true, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
-            .register(true, false, true, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId)) // NORTH + SOUTH - no rotation needed
-            .register(true, false, true, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId))
-            .register(true, true, false, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R90)) // NORTH + WEST - rotate so corner faces away from connections
-            .register(true, true, false, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId)
                 .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+            .register(true, false, true, false, false, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, cornerModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180)) // NORTH + SOUTH - rotate so corner faces EAST or WEST
+            .register(true, false, true, false, true, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, cornerModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+            .register(true, true, false, false, false, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, cornerModelId)) // NORTH + WEST - no rotation needed
+            .register(true, true, false, false, true, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, cornerModelId))
             
             // Center table (connected in three or four directions) - no rotation needed
             .register(false, true, true, true, false, BlockStateVariant.create()
