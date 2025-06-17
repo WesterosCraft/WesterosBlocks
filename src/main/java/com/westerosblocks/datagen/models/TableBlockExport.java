@@ -79,10 +79,10 @@ public class TableBlockExport {
             // North-East corner (north=true, east=true, west=false, south=false)
             .register(false, true, false, true, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R0))
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
             .register(false, true, false, true, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R0))
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
             
             // South-West corner (south=true, west=true, north=false, east=false)
             .register(false, true, true, false, false, BlockStateVariant.create()
@@ -191,12 +191,6 @@ public class TableBlockExport {
         element.addProperty("name", "top");
         element.add("from", createArray(0, 12, 0));
         element.add("to", createArray(16, 16, 16));
-        
-        JsonObject rotation = new JsonObject();
-        rotation.addProperty("angle", 0);
-        rotation.addProperty("axis", "y");
-        rotation.add("origin", createArray(8, 2, 8));
-        element.add("rotation", rotation);
 
         JsonObject faces = new JsonObject();
         faces.add("north", createFace(0, 0, 16, 4, "#1"));
@@ -215,12 +209,6 @@ public class TableBlockExport {
         element.addProperty("name", "leg");
         element.add("from", createArray(x, y, z));
         element.add("to", createArray(x + 4, y + 12, z + 4));
-        
-        JsonObject rotation = new JsonObject();
-        rotation.addProperty("angle", 0);
-        rotation.addProperty("axis", "y");
-        rotation.add("origin", createArray(x, y, z));
-        element.add("rotation", rotation);
 
         JsonObject faces = new JsonObject();
         faces.add("north", createFace(0, 0, 4, 16, "#1"));

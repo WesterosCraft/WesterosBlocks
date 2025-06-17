@@ -16,21 +16,17 @@
            
             "minecraft:ice_spikes",
             "minecraft:mushroom_fields",
-            "minecraft:mushroom_field_shore",
             "minecraft:ocean",
             "minecraft:swamp",
             "minecraft:forest",
-            "minecraft:desert",
-            "minecraft:desert_hills",
-            "minecraft:jungle_edge"
+            "minecraft:desert"
           ],
           "rowOut": 0,
           "colOut": 0
         },
         {
           "biomeNames": [
-            "minecraft:jungle",
-            "minecraft:jungle_hills"
+            "minecraft:jungle"
           ],
           "rowOut": 1,
           "colOut": 0

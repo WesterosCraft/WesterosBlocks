@@ -14,11 +14,8 @@
       "conds": [
         {
           "biomeNames": [
-            "minecraft:extreme_hills",
             "minecraft:stony_shore",
             "minecraft:taiga",
-            
-            "minecraft:taiga_mountains",
             "minecraft:snowy_taiga",
             "minecraft:ice_spikes",
             "minecraft:frozen_river",
