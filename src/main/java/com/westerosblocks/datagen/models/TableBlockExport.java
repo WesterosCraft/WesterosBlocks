@@ -33,81 +33,77 @@ public class TableBlockExport {
     }
 
     public static void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {
-        // Create models for each table type
         Identifier singleModelId = createModel(generator, block, TableType.SINGLE, texturePath);
         Identifier doubleModelId = createModel(generator, block, TableType.DOUBLE, texturePath);
         Identifier centerModelId = createModel(generator, block, TableType.CENTER, texturePath);
         Identifier cornerModelId = createModel(generator, block, TableType.CORNER, texturePath);
 
-        // Create variants for each state with proper rotation
         BlockStateVariantMap variants = BlockStateVariantMap.create(WCTableBlock.NORTH, WCTableBlock.EAST, WCTableBlock.SOUTH, WCTableBlock.WEST, WCTableBlock.WATERLOGGED)
-            // Single table (no connections) - no rotation needed
             .register(false, false, false, false, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, singleModelId))
             .register(false, false, false, false, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, singleModelId))
             
-            // Double table (connected in one direction) - rotate based on connection
             .register(false, false, false, true, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, doubleModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R90)) // Connected EAST - rotate so legs face WEST
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
             .register(false, false, false, true, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, doubleModelId)
                 .put(VariantSettings.Y, VariantSettings.Rotation.R90))
             .register(false, false, true, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, doubleModelId)) // Connected SOUTH - no rotation needed, legs face SOUTH
+                .put(VariantSettings.MODEL, doubleModelId))
             .register(false, false, true, false, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, doubleModelId))
             .register(false, true, false, false, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, doubleModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R270)) // Connected WEST - rotate so legs face EAST
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
             .register(false, true, false, false, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, doubleModelId)
                 .put(VariantSettings.Y, VariantSettings.Rotation.R270))
             .register(true, false, false, false, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, doubleModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180)) // Connected NORTH - rotate so legs face SOUTH
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
             .register(true, false, false, false, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, doubleModelId)
                 .put(VariantSettings.Y, VariantSettings.Rotation.R180))
             
-            // Corner table (connected in two adjacent directions) - rotate based on primary connection
             .register(false, false, true, true, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180)) // SOUTH + EAST - rotate so corner faces NORTHWEST
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
             .register(false, false, true, true, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
             .register(false, true, false, true, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180)) // WEST + SOUTH - rotate so corner faces NORTHEAST
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
             .register(false, true, false, true, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
             .register(false, true, true, false, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R270)) // WEST + NORTH - rotate so corner faces SOUTHEAST
+                .put(VariantSettings.Y, VariantSettings.Rotation.R0))
             .register(false, true, true, false, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                .put(VariantSettings.Y, VariantSettings.Rotation.R0))
             .register(true, false, false, true, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R90)) // NORTH + EAST - rotate so corner faces SOUTHWEST
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
             .register(true, false, false, true, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
             .register(true, false, true, false, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180)) // NORTH + SOUTH - rotate so corner faces EAST or WEST
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
             .register(true, false, true, false, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cornerModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
             .register(true, true, false, false, false, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId)) // NORTH + WEST - no rotation needed
+                .put(VariantSettings.MODEL, cornerModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R0))
             .register(true, true, false, false, true, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, cornerModelId))
+                .put(VariantSettings.MODEL, cornerModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R0))
             
-            // Center table (connected in three or four directions) - no rotation needed
             .register(false, true, true, true, false, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, centerModelId))
             .register(false, true, true, true, true, BlockStateVariant.create()
@@ -129,7 +125,6 @@ public class TableBlockExport {
             .register(true, true, true, true, true, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, centerModelId));
 
-        // Register the block state
         generator.blockStateCollector.accept(
             VariantsBlockStateSupplier.create(block)
                 .coordinate(variants)
@@ -142,19 +137,15 @@ public class TableBlockExport {
         modelJson.addProperty("credit", "Generated by WesterosBlocks");
         modelJson.addProperty("texture_size", 32);
 
-        // Add textures
         JsonObject textures = new JsonObject();
         textures.addProperty(TEXTURE_KEY, texturePath);
         textures.addProperty(PARTICLE_KEY, texturePath);
         modelJson.add("textures", textures);
 
-        // Add elements based on type
         JsonArray elements = new JsonArray();
         
-        // Common table top for all types
         elements.add(createTableTop());
 
-        // Type-specific legs
         switch (type) {
             case SINGLE -> {
                 elements.add(createTableLeg(2, 0, 2));
@@ -163,26 +154,21 @@ public class TableBlockExport {
                 elements.add(createTableLeg(10, 0, 2));
             }
             case DOUBLE -> {
-                // Double table has legs on the front edge (facing NORTH by default)
                 elements.add(createTableLeg(2, 0, 2));
                 elements.add(createTableLeg(10, 0, 2));
             }
             case CENTER -> {
-                // No legs for center piece
             }
             case CORNER -> {
-                // Corner table has one leg in the corner (front-left by default)
                 elements.add(createTableLeg(2, 0, 2));
             }
         }
 
         modelJson.add("elements", elements);
 
-        // Create a unique model ID for this block and type
         String modelPath = "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", "") + "_" + type.asString();
         Identifier modelId = WesterosBlocks.id(modelPath);
 
-        // Register the model
         generator.modelCollector.accept(modelId, () -> modelJson);
 
         return modelId;
@@ -252,7 +238,6 @@ public class TableBlockExport {
     }
 
     public static void generateItemModels(ItemModelGenerator generator, Block block) {
-        // Create a simple item model that inherits from the single table model
         String modelPath = "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", "") + "_single";
         Model model = new Model(
             Optional.of(WesterosBlocks.id(modelPath)),
