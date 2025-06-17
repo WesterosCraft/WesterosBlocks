@@ -2,6 +2,7 @@ package com.westerosblocks.block;
 
 import com.westerosblocks.*;
 import com.westerosblocks.block.custom.WCArrowSlitBlock;
+import com.westerosblocks.block.custom.WCTableBlock;
 import com.westerosblocks.config.ModConfig;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.loader.api.FabricLoader;
@@ -33,6 +34,14 @@ public class ModBlocks {
 
     public static final Block BLACK_GRANITE_ARROW_SLIT = registerArrowSlitBlock(
         "black_granite_arrow_slit",
+        "westeros_decor_tab",
+        2.0f,
+        6.0f,
+        1
+    );
+
+    public static final Block OAK_TABLE = registerTableBlock(
+        "oak_table",
         "westeros_decor_tab",
         2.0f,
         6.0f,
@@ -164,6 +173,22 @@ public class ModBlocks {
 
     public static Block registerArrowSlitBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel) {
         WCArrowSlitBlock block = new WCArrowSlitBlock.Builder(name)
+            .creativeTab(creativeTab)
+            .hardness(hardness)
+            .resistance(resistance)
+            .harvestLevel(harvestLevel)
+            .build();
+
+        // Register creative tab
+        ItemGroupEvents.modifyEntriesEvent(WesterosCreativeModeTabs.TABS.get(creativeTab)).register(entries -> {
+            entries.add(block);
+        });
+
+        return registerBlock(name, block);
+    }
+
+    public static Block registerTableBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel) {
+        WCTableBlock block = new WCTableBlock.Builder(name)
             .creativeTab(creativeTab)
             .hardness(hardness)
             .resistance(resistance)

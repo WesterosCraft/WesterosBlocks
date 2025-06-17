@@ -68,6 +68,10 @@ public class ModModelProvider extends FabricModelProvider {
         ArrowSlitBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.BLACK_GRANITE_ARROW_SLIT,
             "westerosblocks:block/ashlar_third/black/all");
 
+        // Use the new dynamic model provider for tables
+        TableBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.OAK_TABLE,
+            "westerosblocks:block/table_top");
+
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
         ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
@@ -99,6 +103,9 @@ public class ModModelProvider extends FabricModelProvider {
         // Use the new dynamic model provider for arrow slits
         ArrowSlitBlockExport.generateItemModels(itemModelGenerator, ModBlocks.ARBOR_BRICK_ARROW_SLIT);
         ArrowSlitBlockExport.generateItemModels(itemModelGenerator, ModBlocks.BLACK_GRANITE_ARROW_SLIT);
+
+        // Use the new dynamic model provider for tables
+        TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks.OAK_TABLE);
 
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();

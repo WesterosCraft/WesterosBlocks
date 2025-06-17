@@ -1,0 +1,11 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "westerosblocks:block/table_top",
+        "up": "westerosblocks:block/table_top",
+        "north": "westerosblocks:block/table_side",
+        "south": "westerosblocks:block/table_side",
+        "east": "westerosblocks:block/table_side",
+        "west": "westerosblocks:block/table_side"
+    }
+} 
