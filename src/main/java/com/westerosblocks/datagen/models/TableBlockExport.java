@@ -7,7 +7,6 @@ import com.westerosblocks.block.custom.WCTableBlock;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Direction;
 
 import java.util.Optional;
 
