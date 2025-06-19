@@ -2,8 +2,6 @@
     "baseBlockName": "test_multistate_overlay_block_set",
     "variants": [
         "solid",
-        "stairs",
-        "slab",
         "wall",
         "fence",
         "hopper"
