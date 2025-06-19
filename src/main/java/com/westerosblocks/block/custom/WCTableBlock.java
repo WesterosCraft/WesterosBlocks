@@ -115,6 +115,19 @@ public class WCTableBlock extends Block {
         Block.createCuboidShape(1, 11, 0, 15, 14, 16) // Full width inner top
     );
 
+    // Center shapes for different orientations
+    // North-South center (north and south connected)
+    private static final VoxelShape CENTER_SHAPE_NORTH_SOUTH = VoxelShapes.union(
+        TABLE_TOP,
+        Block.createCuboidShape(1, 11, 0, 15, 14, 16) // Full width inner top (north/south)
+    );
+
+    // East-West center (east and west connected)
+    private static final VoxelShape CENTER_SHAPE_EAST_WEST = VoxelShapes.union(
+        TABLE_TOP,
+        Block.createCuboidShape(0, 11, 1, 16, 14, 15) // Full width inner top (east/west)
+    );
+
     private final String blockName;
     private final String creativeTab;
 
@@ -211,7 +224,12 @@ public class WCTableBlock extends Block {
             case 2 -> {
                 // Check if it's adjacent connections (corner) or opposite connections (center)
                 if ((north && south) || (east && west)) {
-                    yield CENTER_SHAPE;
+                    // Determine which center shape to use based on connected sides
+                    if (north && south) {
+                        yield CENTER_SHAPE_NORTH_SOUTH;
+                    } else {
+                        yield CENTER_SHAPE_EAST_WEST;
+                    }
                 } else {
                     // Determine which corner shape to use based on connected sides
                     if (south && east) {
@@ -225,7 +243,20 @@ public class WCTableBlock extends Block {
                     }
                 }
             }
-            case 3, 4 -> CENTER_SHAPE; // Multiple connections use center shape
+            case 3, 4 -> {
+                // For multiple connections, determine the primary orientation
+                if ((north && south) || (east && west)) {
+                    // If we have opposite connections, use the appropriate center shape
+                    if (north && south) {
+                        yield CENTER_SHAPE_NORTH_SOUTH;
+                    } else {
+                        yield CENTER_SHAPE_EAST_WEST;
+                    }
+                } else {
+                    // Default to north-south center for complex connections
+                    yield CENTER_SHAPE_NORTH_SOUTH;
+                }
+            }
             default -> SINGLE_SHAPE;
         };
     }
