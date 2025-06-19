@@ -80,6 +80,35 @@ public class WCTableBlock extends Block {
         TABLE_LEG // Single corner leg
     );
 
+    // Corner shapes for different orientations
+    // South-East corner (south and east connected)
+    private static final VoxelShape CORNER_SHAPE_SOUTH_EAST = VoxelShapes.union(
+        TABLE_TOP,
+        Block.createCuboidShape(1, 11, 1, 16, 14, 16), // Extended inner top
+        TABLE_LEG // Single corner leg
+    );
+
+    // South-West corner (south and west connected)
+    private static final VoxelShape CORNER_SHAPE_SOUTH_WEST = VoxelShapes.union(
+        TABLE_TOP,
+        Block.createCuboidShape(0, 11, 1, 15, 14, 16), // Extended inner top
+        Block.createCuboidShape(12, 0, 1, 15, 11, 4) // Single corner leg
+    );
+
+    // North-East corner (north and east connected)
+    private static final VoxelShape CORNER_SHAPE_NORTH_EAST = VoxelShapes.union(
+        TABLE_TOP,
+        Block.createCuboidShape(1, 11, 0, 16, 14, 15), // Extended inner top
+        Block.createCuboidShape(1, 0, 12, 4, 11, 15) // Single corner leg
+    );
+
+    // North-West corner (north and west connected)
+    private static final VoxelShape CORNER_SHAPE_NORTH_WEST = VoxelShapes.union(
+        TABLE_TOP,
+        Block.createCuboidShape(0, 11, 0, 15, 14, 15), // Extended inner top
+        Block.createCuboidShape(12, 0, 12, 15, 11, 15) // Single corner leg
+    );
+
     // Center table (connected on opposite sides)
     private static final VoxelShape CENTER_SHAPE = VoxelShapes.union(
         TABLE_TOP,
@@ -184,7 +213,16 @@ public class WCTableBlock extends Block {
                 if ((north && south) || (east && west)) {
                     yield CENTER_SHAPE;
                 } else {
-                    yield CORNER_SHAPE;
+                    // Determine which corner shape to use based on connected sides
+                    if (south && east) {
+                        yield CORNER_SHAPE_SOUTH_EAST;
+                    } else if (south && west) {
+                        yield CORNER_SHAPE_SOUTH_WEST;
+                    } else if (north && east) {
+                        yield CORNER_SHAPE_NORTH_EAST;
+                    } else {
+                        yield CORNER_SHAPE_NORTH_WEST;
+                    }
                 }
             }
             case 3, 4 -> CENTER_SHAPE; // Multiple connections use center shape
