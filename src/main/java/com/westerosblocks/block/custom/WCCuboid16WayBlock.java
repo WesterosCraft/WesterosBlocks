@@ -19,7 +19,7 @@ import net.minecraft.util.math.MathHelper;
 import org.jetbrains.annotations.Nullable;
 
 
-public class WCCuboid16WayBlock extends WCCuboidBlock implements ModBlockLifecycle {
+public class WCCuboid16WayBlock extends WCCuboidBlock {
     public static class Factory extends ModBlockFactory {
         @Override
         public Block buildBlockClass(ModBlock def) {
