@@ -29,7 +29,8 @@ public class ModBlocks {
         "westeros_decor_tab",
         2.0f,
         6.0f,
-        1
+        1,
+        "westerosblocks:block/ashlar_third/arbor/all"
     );
 
     public static final Block BLACK_GRANITE_ARROW_SLIT = registerArrowSlitBlock(
@@ -37,15 +38,35 @@ public class ModBlocks {
         "westeros_decor_tab",
         2.0f,
         6.0f,
-        1
+        1,
+        "westerosblocks:block/ashlar_third/black/all"
     );
 
     public static final Block OAK_TABLE = registerTableBlock(
         "oak_table",
-        "westeros_decor_tab",
+        "westeros_furniture_tab",
         2.0f,
         6.0f,
-        1
+        1,
+        "westerosblocks:block/oak_planks"
+    );
+
+    public static final Block BIRCH_TABLE = registerTableBlock(
+        "birch_table",
+        "westeros_furniture_tab",
+        2.0f,
+        6.0f,
+        1,
+        "westerosblocks:block/birch_planks"
+    );
+
+    public static final Block SPRUCE_TABLE = registerTableBlock(
+        "spruce_table",
+        "westeros_furniture_tab",
+        2.0f,
+        6.0f,
+        1,
+        "westerosblocks:block/spruce_planks"
     );
 
     public static void registerModBlocks() {
@@ -172,6 +193,10 @@ public class ModBlocks {
     }
 
     public static Block registerArrowSlitBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel) {
+        return registerArrowSlitBlock(name, creativeTab, hardness, resistance, harvestLevel, "westerosblocks:block/side.block");
+    }
+
+    public static Block registerArrowSlitBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath) {
         WCArrowSlitBlock block = new WCArrowSlitBlock.Builder(name)
             .creativeTab(creativeTab)
             .hardness(hardness)
@@ -187,7 +212,7 @@ public class ModBlocks {
         return registerBlock(name, block);
     }
 
-    public static Block registerTableBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel) {
+    public static Block registerTableBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath) {
         WCTableBlock block = new WCTableBlock.Builder(name)
             .creativeTab(creativeTab)
             .hardness(hardness)

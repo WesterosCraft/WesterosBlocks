@@ -70,7 +70,11 @@ public class ModModelProvider extends FabricModelProvider {
 
         // Use the new dynamic model provider for tables
         TableBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.OAK_TABLE,
-            "westerosblocks:block/table_top");
+            "westerosblocks:block/wood/oak/all");
+        TableBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.BIRCH_TABLE,
+            "westerosblocks:block/wood/birch/all");
+        TableBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.SPRUCE_TABLE,
+            "westerosblocks:block/wood/spruce/all");
 
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
@@ -106,6 +110,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         // Use the new dynamic model provider for tables
         TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks.OAK_TABLE);
+        TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks.BIRCH_TABLE);
+        TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks.SPRUCE_TABLE);
 
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();

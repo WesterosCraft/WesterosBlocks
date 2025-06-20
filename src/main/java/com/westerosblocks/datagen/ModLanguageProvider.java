@@ -78,7 +78,13 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("text.autoconfig.westerosblocks.option.seaLevelOverride.@Tooltip[0]", "Override sea level (default for Westeros=33, 0=disable override)");
 
         // Block translations
+
+        translationBuilder.add("block.westerosblocks.arbor_brick_arrow_slit", "Arbor Brick Arrow Slit");
+        translationBuilder.add("block.westerosblocks.black_granite_arrow_slit", "Black Granite Arrow Slit");
+
         translationBuilder.add("block.westerosblocks.oak_table", "Oak Table");
+        translationBuilder.add("block.westerosblocks.spruce_table", "Spruce Table");
+        translationBuilder.add("block.westerosblocks.birch_table", "Birch Table");
 
         // TODO can prob grab the item tag def json and generate this automatically when/if we get more
         // The format desired is tag.item.<namespace>.<path> for the translation key with slashes in path turned into periods."
