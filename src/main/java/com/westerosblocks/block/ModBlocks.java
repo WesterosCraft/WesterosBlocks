@@ -2,6 +2,7 @@ package com.westerosblocks.block;
 
 import com.westerosblocks.*;
 import com.westerosblocks.block.custom.WCArrowSlitBlock;
+import com.westerosblocks.block.custom.WCChairBlock;
 import com.westerosblocks.block.custom.WCTableBlock;
 import com.westerosblocks.config.ModConfig;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -67,6 +68,33 @@ public class ModBlocks {
         6.0f,
         1,
         "westerosblocks:block/spruce_planks"
+    );
+
+    public static final Block OAK_CHAIR = registerChairBlock(
+        "oak_chair",
+        "westeros_furniture_tab",
+        2.0f,
+        6.0f,
+        1,
+        "westerosblocks:block/wood/oak/all"
+    );
+
+    public static final Block BIRCH_CHAIR = registerChairBlock(
+        "birch_chair",
+        "westeros_furniture_tab",
+        2.0f,
+        6.0f,
+        1,
+        "westerosblocks:block/wood/birch/all"
+    );
+
+    public static final Block SPRUCE_CHAIR = registerChairBlock(
+        "spruce_chair",
+        "westeros_furniture_tab",
+        2.0f,
+        6.0f,
+        1,
+        "westerosblocks:block/wood/spruce/all"
     );
 
     public static void registerModBlocks() {
@@ -214,6 +242,22 @@ public class ModBlocks {
 
     public static Block registerTableBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath) {
         WCTableBlock block = new WCTableBlock.Builder(name)
+            .creativeTab(creativeTab)
+            .hardness(hardness)
+            .resistance(resistance)
+            .harvestLevel(harvestLevel)
+            .build();
+
+        // Register creative tab
+        ItemGroupEvents.modifyEntriesEvent(WesterosCreativeModeTabs.TABS.get(creativeTab)).register(entries -> {
+            entries.add(block);
+        });
+
+        return registerBlock(name, block);
+    }
+
+    public static Block registerChairBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath) {
+        WCChairBlock block = new WCChairBlock.Builder(name)
             .creativeTab(creativeTab)
             .hardness(hardness)
             .resistance(resistance)

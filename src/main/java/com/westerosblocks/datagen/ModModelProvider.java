@@ -76,6 +76,14 @@ public class ModModelProvider extends FabricModelProvider {
         TableBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.SPRUCE_TABLE,
             "westerosblocks:block/wood/spruce/all");
 
+        // Use the new dynamic model provider for chairs
+        ChairBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.OAK_CHAIR,
+            "westerosblocks:block/wood/oak/all");
+        ChairBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.BIRCH_CHAIR,
+            "westerosblocks:block/wood/birch/all");
+        ChairBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.SPRUCE_CHAIR,
+            "westerosblocks:block/wood/spruce/all");
+
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
         ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
@@ -112,6 +120,11 @@ public class ModModelProvider extends FabricModelProvider {
         TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks.OAK_TABLE);
         TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks.BIRCH_TABLE);
         TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks.SPRUCE_TABLE);
+
+        // Use the new dynamic model provider for chairs
+        ChairBlockExport.generateItemModels(itemModelGenerator, ModBlocks.OAK_CHAIR);
+        ChairBlockExport.generateItemModels(itemModelGenerator, ModBlocks.BIRCH_CHAIR);
+        ChairBlockExport.generateItemModels(itemModelGenerator, ModBlocks.SPRUCE_CHAIR);
 
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
