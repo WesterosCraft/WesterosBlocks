@@ -35,17 +35,17 @@ public class ChairBlockExport {
                 .put(VariantSettings.MODEL, cardinalModelId)
                 .put(VariantSettings.Y, VariantSettings.Rotation.R270))
             
-            // Diagonal directions - use 45-degree rotated model with Y rotations
-            // Fixed rotation mapping to correct the 180° offset
+            // Diagonal directions - use 45-degree rotated model with adjusted Y rotations
+            // The diagonal model is already rotated 45°, so we need to adjust the Y rotations
             .register(1, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, diagonalModelId)
                 .put(VariantSettings.Y, VariantSettings.Rotation.R90))
             .register(3, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, diagonalModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
             .register(5, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, diagonalModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
             .register(7, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, diagonalModelId));
 
