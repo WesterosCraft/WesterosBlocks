@@ -26,7 +26,7 @@ public class WesterosBlocksCompatibility {
     public static final String[] WORLDPAINTER_COLS = {
             "name", "discriminator", "properties", "opacity", "receivesLight", "insubstantial",
             "resource", "tileEntity", "tileEntityId", "treeRelated", "vegetation", "blockLight",
-            "natural", "watery", "colour", "horizontal_orientation_schemes", "vertical_orientation_scheme"
+            "natural", "watery", "colour"
     };
 
     /*
@@ -122,14 +122,16 @@ public class WesterosBlocksCompatibility {
             Map<String, Object> row = new HashMap<>();
             row.put("name", WesterosBlocks.MOD_ID + ":" + def.blockName);
 
-            // Handle block properties
+            // Handle block properties with proper type definitions
             if (!properties.isEmpty()) {
                 StringBuilder propStr = new StringBuilder();
                 for (Property<?> prop : properties) {
                     if (!propStr.isEmpty()) {
                         propStr.append(",");
                     }
-                    propStr.append(prop.getName());
+                    String propName = prop.getName();
+                    String propType = getPropertyType(prop);
+                    propStr.append(propName).append(":").append(propType);
                 }
                 row.put("properties", propStr.toString());
             } else {
@@ -137,34 +139,119 @@ public class WesterosBlocksCompatibility {
             }
 
             // Block characteristics
-            row.put("opacity", def.lightOpacity);
+            row.put("opacity", def.lightOpacity != ModBlock.DEF_INT ? def.lightOpacity : 15);
             row.put("receivesLight", !def.nonOpaque);
             row.put("insubstantial", def.nonOpaque);
-            row.put("blockLight", def.lightValue > 0 ? def.lightValue : 0);
+            row.put("blockLight", def.lightValue > 0 ? (int)def.lightValue : 0);
 
-            // Default values for other fields
+            // Determine if block is a resource (ore-like)
+            boolean isResource = isResourceBlock(def);
+            row.put("resource", isResource);
+
+            // Determine if block is tile entity
+            boolean isTileEntity = isTileEntityBlock(def);
+            row.put("tileEntity", isTileEntity);
+            row.put("tileEntityId", isTileEntity ? WesterosBlocks.MOD_ID + ":" + def.blockName : null);
+
+            // Determine if block is tree-related
+            boolean isTreeRelated = isTreeRelatedBlock(def);
+            row.put("treeRelated", isTreeRelated);
+
+            // Determine if block is vegetation
+            boolean isVegetation = isVegetationBlock(def);
+            row.put("vegetation", isVegetation);
+
+            // Determine if block is natural
+            boolean isNatural = isNaturalBlock(def);
+            row.put("natural", isNatural);
+
+            // Determine if block is watery
+            boolean isWatery = isWateryBlock(def);
+            row.put("watery", isWatery);
+
+            // Set color (magenta for now, can be enhanced later)
+            row.put("colour", "ffff00ff");
+
+            // No discriminator needed for now
             row.put("discriminator", null);
-            row.put("resource", null);
-            row.put("tileEntity", null);
-            row.put("tileEntityId", null);
-            row.put("treeRelated", null);
-            row.put("vegetation", null);
-            row.put("natural", null);
-            row.put("watery", null);
-            row.put("colour", null);
-            row.put("horizontal_orientation_schemes", null);
-            row.put("vertical_orientation_scheme", null);
 
             data.add(row);
         }
 
         try {
             writeCSV(data, WORLDPAINTER_COLS, wpPath.toFile());
+            WesterosBlocks.LOGGER.info("WorldPainter CSV exported to: {}", wpPath);
         } catch (IOException e) {
             WesterosBlocks.LOGGER.error("Could not write {}", WORLDPAINTER_PATH, e);
         }
     }
 
+    private static String getPropertyType(Property<?> prop) {
+        if (prop.getValues().size() == 2 && prop.getValues().contains(true) && prop.getValues().contains(false)) {
+            return "b";
+        } else if (prop.getValues().stream().allMatch(v -> v instanceof Integer)) {
+            int min = prop.getValues().stream().mapToInt(v -> (Integer) v).min().orElse(0);
+            int max = prop.getValues().stream().mapToInt(v -> (Integer) v).max().orElse(15);
+            return "i[" + min + "-" + max + "]";
+        } else {
+            // Enumeration
+            String values = prop.getValues().stream()
+                    .map(Object::toString)
+                    .collect(java.util.stream.Collectors.joining(";"));
+            return "e[" + values + "]";
+        }
+    }
+
+    private static boolean isResourceBlock(ModBlock def) {
+        if (def.customTags != null) {
+            return def.customTags.contains("ore") || def.customTags.contains("resource");
+        }
+        return def.blockName.contains("ore") || def.blockName.contains("gem") || 
+               def.blockName.contains("crystal") || def.blockName.contains("mineral");
+    }
+
+    private static boolean isTileEntityBlock(ModBlock def) {
+        return "furnace".equals(def.blockType) || "beacon".equals(def.blockType) || 
+               def.blockName.contains("furnace") || def.blockName.contains("beacon") ||
+               def.blockName.contains("chest") || def.blockName.contains("barrel");
+    }
+
+    private static boolean isTreeRelatedBlock(ModBlock def) {
+        if (def.customTags != null) {
+            return def.customTags.contains("tree") || def.customTags.contains("log") || 
+                   def.customTags.contains("leaves") || def.customTags.contains("wood");
+        }
+        return "log".equals(def.blockType) || "leaves".equals(def.blockType) || 
+               def.blockName.contains("log") || def.blockName.contains("leaves") ||
+               def.blockName.contains("wood") || def.blockName.contains("tree");
+    }
+
+    private static boolean isVegetationBlock(ModBlock def) {
+        if (def.customTags != null) {
+            return def.customTags.contains("plant") || def.customTags.contains("flower") || 
+                   def.customTags.contains("crop") || def.customTags.contains("vegetation");
+        }
+        return "plant".equals(def.blockType) || def.blockName.contains("plant") || 
+               def.blockName.contains("flower") || def.blockName.contains("crop") ||
+               def.blockName.contains("grass") || def.blockName.contains("vine");
+    }
+
+    private static boolean isNaturalBlock(ModBlock def) {
+        if (def.customTags != null) {
+            return !def.customTags.contains("manmade") && !def.customTags.contains("artificial");
+        }
+        // Assume natural unless it's clearly manmade
+        return !def.blockName.contains("brick") && !def.blockName.contains("concrete") && 
+               !def.blockName.contains("metal") && !def.blockName.contains("furniture");
+    }
+
+    private static boolean isWateryBlock(ModBlock def) {
+        if (def.customTags != null) {
+            return def.customTags.contains("water") || def.customTags.contains("liquid");
+        }
+        return "liquid".equals(def.blockType) || def.blockName.contains("water") || 
+               def.blockName.contains("lava") || def.blockName.contains("liquid");
+    }
 
     public static void writeCSV(List<Map<String, Object>> data, String[] columns, File file)
             throws IOException {
@@ -179,8 +266,15 @@ public class WesterosBlocksCompatibility {
                         row.add(String.valueOf(val));
                     else if (val instanceof Boolean)
                         row.add(((Boolean) val) ? "true" : "false");
-                    else
-                        row.add("\"" + val + "\"");
+                    else {
+                        String strVal = val.toString();
+                        // Only quote strings that contain commas, quotes, or newlines
+                        if (strVal.contains(",") || strVal.contains("\"") || strVal.contains("\n")) {
+                            row.add("\"" + strVal.replace("\"", "\"\"") + "\"");
+                        } else {
+                            row.add(strVal);
+                        }
+                    }
                 } else {
                     row.add("");
                 }
