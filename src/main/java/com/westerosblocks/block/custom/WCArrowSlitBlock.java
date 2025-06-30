@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.util.ModUtils;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -165,7 +166,7 @@ public class WCArrowSlitBlock extends Block {
     private final String blockName;
     private final String creativeTab;
 
-    protected WCArrowSlitBlock(AbstractBlock.Settings settings, String blockName, String creativeTab) {
+    public WCArrowSlitBlock(AbstractBlock.Settings settings, String blockName, String creativeTab) {
         super(settings);
         this.blockName = blockName;
         this.creativeTab = creativeTab;
@@ -267,63 +268,6 @@ public class WCArrowSlitBlock extends Block {
             };
             default -> NORTH_SINGLE;
         };
-    }
-
-    public static class Builder {
-        private String blockName;
-        private String creativeTab;
-        private float hardness = 2.0f;
-        private float resistance = 6.0f;
-        private String material = "stone";
-        private String stepSound = "stone";
-        private int harvestLevel = 1;
-
-        public Builder(String blockName) {
-            this.blockName = blockName;
-        }
-
-        public Builder creativeTab(String creativeTab) {
-            this.creativeTab = creativeTab;
-            return this;
-        }
-
-        public Builder hardness(float hardness) {
-            this.hardness = hardness;
-            return this;
-        }
-
-        public Builder resistance(float resistance) {
-            this.resistance = resistance;
-            return this;
-        }
-
-        public Builder material(String material) {
-            this.material = material;
-            return this;
-        }
-
-        public Builder stepSound(String stepSound) {
-            this.stepSound = stepSound;
-            return this;
-        }
-
-        public Builder harvestLevel(int level) {
-            this.harvestLevel = level;
-            return this;
-        }
-
-        public WCArrowSlitBlock build() {
-            if (blockName == null || creativeTab == null) {
-                throw new IllegalStateException("Block name and creative tab must be set");
-            }
-
-            AbstractBlock.Settings settings = AbstractBlock.Settings.create()
-                .strength(hardness, resistance)
-                .requiresTool()
-                .mapColor(net.minecraft.block.MapColor.STONE_GRAY);
-
-            return new WCArrowSlitBlock(settings, blockName, creativeTab);
-        }
     }
 
     public enum ArrowSlitType implements StringIdentifiable {
