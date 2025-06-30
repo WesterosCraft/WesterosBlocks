@@ -1,5 +1,7 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.util.ModUtils;
+import com.westerosblocks.util.ModWoodType;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -17,6 +19,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
+import net.minecraft.block.WoodType;
 
 public class WCTableBlock extends Block {
     public static final BooleanProperty NORTH = Properties.NORTH;
@@ -130,11 +133,21 @@ public class WCTableBlock extends Block {
 
     private final String blockName;
     private final String creativeTab;
+    private final WoodType woodType;
 
-    protected WCTableBlock(AbstractBlock.Settings settings, String blockName, String creativeTab) {
+    public WCTableBlock(AbstractBlock.Settings settings, String blockName, String creativeTab) {
+        this(settings, blockName, creativeTab, "oak");
+    }
+
+    public WCTableBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, String woodType) {
+        this(settings, blockName, creativeTab, ModWoodType.getWoodType(woodType));
+    }
+
+    public WCTableBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, WoodType woodType) {
         super(settings);
         this.blockName = blockName;
         this.creativeTab = creativeTab;
+        this.woodType = woodType;
         this.setDefaultState(this.getDefaultState()
                 .with(NORTH, false)
                 .with(EAST, false)
@@ -149,6 +162,10 @@ public class WCTableBlock extends Block {
 
     public String getCreativeTab() {
         return creativeTab;
+    }
+
+    public WoodType getWoodType() {
+        return woodType;
     }
 
     @Override
@@ -259,63 +276,5 @@ public class WCTableBlock extends Block {
             }
             default -> SINGLE_SHAPE;
         };
-    }
-
-    public static class Builder {
-        private String blockName;
-        private String creativeTab;
-        private float hardness = 2.0f;
-        private float resistance = 6.0f;
-        private String material = "wood";
-        private String stepSound = "wood";
-        private int harvestLevel = 1;
-
-        public Builder(String blockName) {
-            this.blockName = blockName;
-        }
-
-        public Builder creativeTab(String creativeTab) {
-            this.creativeTab = creativeTab;
-            return this;
-        }
-
-        public Builder hardness(float hardness) {
-            this.hardness = hardness;
-            return this;
-        }
-
-        public Builder resistance(float resistance) {
-            this.resistance = resistance;
-            return this;
-        }
-
-        public Builder material(String material) {
-            this.material = material;
-            return this;
-        }
-
-        public Builder stepSound(String stepSound) {
-            this.stepSound = stepSound;
-            return this;
-        }
-
-        public Builder harvestLevel(int level) {
-            this.harvestLevel = level;
-            return this;
-        }
-
-        public WCTableBlock build() {
-            if (blockName == null || creativeTab == null) {
-                throw new IllegalStateException("Block name and creative tab must be set");
-            }
-
-            AbstractBlock.Settings settings = AbstractBlock.Settings.create()
-                .strength(hardness, resistance)
-                .requiresTool()
-                .mapColor(net.minecraft.block.MapColor.OAK_TAN)
-                .nonOpaque();
-
-            return new WCTableBlock(settings, blockName, creativeTab);
-        }
     }
 } 

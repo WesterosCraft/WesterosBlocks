@@ -5,9 +5,14 @@ import com.westerosblocks.block.custom.WCArrowSlitBlock;
 import com.westerosblocks.block.custom.WCChairBlock;
 import com.westerosblocks.block.custom.WCTableBlock;
 import com.westerosblocks.config.ModConfig;
+import com.westerosblocks.util.ModUtils;
+import com.westerosblocks.util.ModWoodType;
+
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.WoodType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -49,7 +54,8 @@ public class ModBlocks {
         2.0f,
         6.0f,
         1,
-        "westerosblocks:block/oak_planks"
+        "westerosblocks:block/oak_planks",
+        WoodType.OAK
     );
 
     public static final Block BIRCH_TABLE = registerTableBlock(
@@ -58,7 +64,8 @@ public class ModBlocks {
         2.0f,
         6.0f,
         1,
-        "westerosblocks:block/birch_planks"
+        "westerosblocks:block/birch_planks",
+        WoodType.BIRCH
     );
 
     public static final Block SPRUCE_TABLE = registerTableBlock(
@@ -67,7 +74,8 @@ public class ModBlocks {
         2.0f,
         6.0f,
         1,
-        "westerosblocks:block/spruce_planks"
+        "westerosblocks:block/spruce_planks",
+        WoodType.SPRUCE
     );
 
     public static final Block OAK_CHAIR = registerChairBlock(
@@ -76,7 +84,8 @@ public class ModBlocks {
         2.0f,
         6.0f,
         1,
-        "westerosblocks:block/wood/oak/all"
+        "westerosblocks:block/wood/oak/all",
+        WoodType.OAK
     );
 
     public static final Block BIRCH_CHAIR = registerChairBlock(
@@ -85,7 +94,8 @@ public class ModBlocks {
         2.0f,
         6.0f,
         1,
-        "westerosblocks:block/wood/birch/all"
+        "westerosblocks:block/wood/birch/all",
+        WoodType.BIRCH
     );
 
     public static final Block SPRUCE_CHAIR = registerChairBlock(
@@ -94,7 +104,8 @@ public class ModBlocks {
         2.0f,
         6.0f,
         1,
-        "westerosblocks:block/wood/spruce/all"
+        "westerosblocks:block/wood/spruce/all",
+        WoodType.SPRUCE
     );
 
     public static void registerModBlocks() {
@@ -225,44 +236,70 @@ public class ModBlocks {
     }
 
     public static Block registerArrowSlitBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath) {
-        WCArrowSlitBlock block = new WCArrowSlitBlock.Builder(name)
-            .creativeTab(creativeTab)
-            .hardness(hardness)
-            .resistance(resistance)
-            .harvestLevel(harvestLevel)
-            .build();
-
-        // Register creative tab
-        ItemGroupEvents.modifyEntriesEvent(WesterosCreativeModeTabs.TABS.get(creativeTab)).register(entries -> {
-            entries.add(block);
-        });
-
-        return registerBlock(name, block);
+        return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, WCArrowSlitBlock.class, true);
     }
 
     public static Block registerTableBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath) {
-        WCTableBlock block = new WCTableBlock.Builder(name)
-            .creativeTab(creativeTab)
-            .hardness(hardness)
-            .resistance(resistance)
-            .harvestLevel(harvestLevel)
-            .build();
+        return registerTableBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, "oak");
+    }
 
-        // Register creative tab
-        ItemGroupEvents.modifyEntriesEvent(WesterosCreativeModeTabs.TABS.get(creativeTab)).register(entries -> {
-            entries.add(block);
-        });
+    public static Block registerTableBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, String woodType) {
+        return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, WCTableBlock.class, false, woodType);
+    }
 
-        return registerBlock(name, block);
+    public static Block registerTableBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, WoodType woodType) {
+        return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, WCTableBlock.class, false, woodType);
     }
 
     public static Block registerChairBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath) {
-        WCChairBlock block = new WCChairBlock.Builder(name)
+        return registerChairBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, "oak");
+    }
+
+    public static Block registerChairBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, String woodType) {
+        return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, WCChairBlock.class, false, woodType);
+    }
+
+    public static Block registerChairBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, WoodType woodType) {
+        return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, WCChairBlock.class, false, woodType);
+    }
+
+    private static Block registerCustomBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, Class<?> blockClass, boolean stoneLike) {
+        return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, blockClass, stoneLike, "oak");
+    }
+
+    private static Block registerCustomBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, Class<?> blockClass, boolean stoneLike, String woodType) {
+        return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, blockClass, stoneLike, ModWoodType.getWoodType(woodType));
+    }
+
+    private static Block registerCustomBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, Class<?> blockClass, boolean stoneLike, WoodType woodType) {
+        ModUtils.BlockBuilder builder = new ModUtils.BlockBuilder(name)
             .creativeTab(creativeTab)
             .hardness(hardness)
             .resistance(resistance)
-            .harvestLevel(harvestLevel)
-            .build();
+            .harvestLevel(harvestLevel);
+
+        if (stoneLike) {
+            builder.stoneLike();
+        } else {
+            builder.woodLike();
+        }
+
+        AbstractBlock.Settings settings = builder.buildSettings();
+        Block block;
+
+        try {
+            if (blockClass == WCArrowSlitBlock.class) {
+                block = new WCArrowSlitBlock(settings, builder.getBlockName(), builder.getCreativeTab());
+            } else if (blockClass == WCTableBlock.class) {
+                block = new WCTableBlock(settings, builder.getBlockName(), builder.getCreativeTab(), woodType);
+            } else if (blockClass == WCChairBlock.class) {
+                block = new WCChairBlock(settings, builder.getBlockName(), builder.getCreativeTab(), woodType);
+            } else {
+                throw new IllegalArgumentException("Unsupported block class: " + blockClass.getSimpleName());
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to create block instance for " + name, e);
+        }
 
         // Register creative tab
         ItemGroupEvents.modifyEntriesEvent(WesterosCreativeModeTabs.TABS.get(creativeTab)).register(entries -> {
