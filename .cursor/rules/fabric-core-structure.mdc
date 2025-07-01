@@ -1,0 +1,91 @@
+---
+description: 
+globs: src/main/java/**,src/main/resources/**
+alwaysApply: false
+---
+# Fabric Core Structure Rules
+rules:
+  - name: "Fabric mod structure"
+    description: "Enforce proper Fabric mod directory structure and organization"
+    patterns:
+      - "src/main/java/com/*/mod_id/"
+      - "src/client/java/com/*/mod_id/"
+      - "src/main/resources/fabric.mod.json"
+      - "src/main/resources/assets/mod_id/"
+      - "src/main/resources/data/mod_id/"
+      - "src/generated/resources/"
+
+  - name: "Main mod initializer"
+    description: "Standard ModInitializer class structure"
+    template: |
+      package com.example.{mod_id};
+      
+      import org.slf4j.Logger;
+      import org.slf4j.LoggerFactory;
+      import net.fabricmc.api.ModInitializer;
+      
+      public class {ModName} implements ModInitializer {
+          public static final String MOD_ID = "{mod_id}";
+          public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+      
+          @Override
+          public void onInitialize() {
+              LOGGER.info("Initializing {}", MOD_ID);
+              
+              // Registry initialization
+              ModItems.initialize();
+              ModBlocks.initialize();
+              ModSounds.initialize();
+          }
+      }
+
+  - name: "Client mod initializer"
+    description: "Standard ClientModInitializer class structure"
+    template: |
+      package com.example.westerosblocks;
+      
+      import net.fabricmc.api.ClientModInitializer;
+      import net.fabricmc.api.EnvType;
+      import net.fabricmc.api.Environment;
+      
+      @Environment(EnvType.CLIENT)
+      public class {ModName}Client implements ClientModInitializer {
+          @Override
+          public void onInitializeClient() {
+              {ModName}.LOGGER.info("Initializing {} client", {ModName}.MOD_ID);
+              
+              // Client-specific registrations
+              registerBlockEntityRenderers();
+              registerKeyBindings();
+          }
+      }
+
+  - name: "fabric.mod.json structure"
+    description: "Standard fabric.mod.json configuration"
+    template: |
+      {
+        "schemaVersion": 1,
+        "id": "{mod_id}",
+        "version": "1.0.0",
+        "name": "{Mod Name}",
+        "icon": "assets/{mod_id}/icon.png",
+        "environment": "*",
+        "entrypoints": {
+          "main": ["com.example.{mod_id}.{ModName}"],
+          "client": ["com.example.{mod_id}.{ModName}Client"]
+        },
+        "mixins": ["{mod_id}.mixins.json"],
+        "depends": {
+          "fabricloader": ">=0.14.0",
+          "fabric-api": "*",
+          "minecraft": "~1.21.0"
+        }
+      }
+
+  - name: "Logger patterns"
+    description: "Consistent logging patterns"
+    suggestions:
+      - "public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);"
+      - "LOGGER.info(\"Initializing {}\", MOD_ID);"
+      - "LOGGER.warn(\"Warning: {}\", message);"
+      - "LOGGER.error(\"Error: {}\", error);"

@@ -1,0 +1,586 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# WesterosBlocks Custom Block Development Rules
+
+## Overview
+This document outlines the standardized approach for adding custom blocks to the WesterosBlocks mod, following the established patterns used in `WCArrowSlitBlock`, `WCTableBlock`, `WCChairBlock`, and `WCSignPostBlock`.
+
+## Block Development Pattern
+
+### 1. Block Class Structure
+All custom blocks should follow this structure:
+
+```java
+package com.westerosblocks.block.custom;
+
+import com.westerosblocks.util.ModUtils;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.ShapeContext;
+import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
+import net.minecraft.world.WorldAccess;
+
+public class WC[BlockName]Block extends Block {
+    // State properties
+    public static final [PropertyType] [PROPERTY_NAME] = [PropertyDefinition];
+    
+    // Voxel shapes for collision and rendering
+    private static final VoxelShape [SHAPE_NAME] = Block.createCuboidShape(x1, y1, z1, x2, y2, z2);
+    
+    // Instance variables
+    private final String blockName;
+    private final String creativeTab;
+    
+    public WC[BlockName]Block(AbstractBlock.Settings settings, String blockName, String creativeTab) {
+        super(settings);
+        this.blockName = blockName;
+        this.creativeTab = creativeTab;
+        setDefaultState(getDefaultState()
+            .with([PROPERTY], [DEFAULT_VALUE]));
+    }
+    
+    // Required getters
+    public String getBlockName() { return blockName; }
+    public String getCreativeTab() { return creativeTab; }
+    
+    // Required overrides
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add([ALL_PROPERTIES]);
+    }
+    
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        return this.getDefaultState()
+            .with([PROPERTY], [PLACEMENT_LOGIC]);
+    }
+    
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return getShapeForState(state);
+    }
+    
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return getShapeForState(state);
+    }
+    
+    private VoxelShape getShapeForState(BlockState state) {
+        // Return appropriate shape based on state properties
+        return [SHAPE_LOGIC];
+    }
+}
+```
+
+### 2. Block Registration Pattern
+
+#### 2.1 Add Registration Method to ModBlocks.java
+Add a registration method following this pattern:
+
+```java
+public static Block register[BlockName]Block(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath) {
+    return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, WC[BlockName]Block.class, [stoneLike]);
+}
+
+// For blocks with wood type support
+public static Block register[BlockName]Block(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, String woodType) {
+    return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, WC[BlockName]Block.class, false, woodType);
+}
+
+public static Block register[BlockName]Block(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, WoodType woodType) {
+    return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, WC[BlockName]Block.class, false, woodType);
+}
+```
+
+#### 2.2 Update registerCustomBlock Method
+Add your block class to the switch statement in `registerCustomBlock`:
+
+```java
+if (blockClass == WC[BlockName]Block.class) {
+    block = new WC[BlockName]Block(settings, builder.getBlockName(), builder.getCreativeTab());
+} else if (blockClass == WC[BlockName]Block.class) {
+    block = new WC[BlockName]Block(settings, builder.getBlockName(), builder.getCreativeTab(), woodType);
+}
+```
+
+#### 2.3 Register Block Instances
+Add block instances at the top of `ModBlocks.java`:
+
+```java
+public static final Block [BLOCK_NAME] = register[BlockName]Block(
+    "[block_name]",
+    "[creative_tab]",
+    2.0f,  // hardness
+    6.0f,  // resistance
+    1,     // harvest level
+    "[texture_path]"
+);
+```
+
+### 3. Block Properties and States
+
+#### 3.1 Common Properties
+- `DirectionProperty FACING = Properties.HORIZONTAL_FACING` - For directional blocks
+- `BooleanProperty NORTH/SOUTH/EAST/WEST` - For connecting blocks
+- `EnumProperty<TYPE> TYPE` - For block variants
+- `IntProperty ROTATION` - For rotation (0-7 for 8-way, 0-15 for 16-way)
+- `BooleanProperty WATERLOGGED = Properties.WATERLOGGED` - For waterlogging
+
+#### 3.2 Enum Properties
+Create enums implementing `StringIdentifiable`:
+
+```java
+public enum [TypeName] implements StringIdentifiable {
+    @VALUE1,
+    @VALUE2;
+    
+    private final String name;
+    
+    @TypeName {
+        this.name = name;
+    }
+    
+    @Override
+    public String asString() {
+        return this.name;
+    }
+}
+```
+
+### 4. Voxel Shapes
+
+#### 4.1 Shape Definition
+Define shapes using `Block.createCuboidShape(x1, y1, z1, x2, y2, z2)`:
+- Coordinates are in 16ths of a block (0-16)
+- x1,y1,z1 is the minimum corner
+- x2,y2,z2 is the maximum corner
+
+#### 4.2 Shape Composition
+Use `VoxelShapes.union()` to combine multiple shapes:
+
+```java
+private static final VoxelShape COMPLEX_SHAPE = VoxelShapes.union(
+    SHAPE1,
+    SHAPE2,
+    SHAPE3
+);
+```
+
+#### 4.3 Directional Shapes
+For directional blocks, define shapes for each direction:
+
+```java
+private static final VoxelShape NORTH_SHAPE = [shape];
+private static final VoxelShape SOUTH_SHAPE = [shape];
+private static final VoxelShape EAST_SHAPE = [shape];
+private static final VoxelShape WEST_SHAPE = [shape];
+```
+
+### 5. Creative Tabs
+
+Available creative tabs (from `WesterosCreativeModeTabs.java`):
+- `westeros_furniture_tab` - Furniture items
+- `westeros_decor_tab` - Decorative items
+- `westeros_lighting_tab` - Lighting items
+- `westeros_utility_tab` - Utility blocks
+- `westeros_test_tab` - Test blocks (dev only)
+- And many more...
+
+### 6. Block Settings
+
+Use `ModUtils.BlockBuilder` for consistent settings:
+
+```java
+ModUtils.BlockBuilder builder = new ModUtils.BlockBuilder(name)
+    .creativeTab(creativeTab)
+    .hardness(hardness)
+    .resistance(resistance)
+    .harvestLevel(harvestLevel);
+
+if (stoneLike) {
+    builder.stoneLike();  // Stone properties
+} else {
+    builder.woodLike();   // Wood properties
+}
+
+AbstractBlock.Settings settings = builder.buildSettings();
+```
+
+### 7. Block Entity Integration (if needed)
+
+#### 7.1 Create Block Entity Class
+```java
+public class WC[BlockName]BlockEntity extends BlockEntity {
+    public WC[BlockName]BlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.getBlockEntityType("[block_name]"), pos, state);
+    }
+}
+```
+
+#### 7.2 Register in ModBlockEntities.java
+```java
+BlockEntityType<?> blockEntityType = register("[block_name]",
+    BlockEntityType.Builder.create(
+        (pos, state) -> new WC[BlockName]BlockEntity(pos, state),
+        block
+    ).build(null)
+);
+```
+
+### 8. Advanced Features
+
+#### 8.1 Connecting Blocks
+Implement `getStateForNeighborUpdate` for blocks that connect to neighbors:
+
+```java
+@Override
+public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    if (direction.getAxis().isHorizontal()) {
+        boolean isConnected = neighborState.isOf(this);
+        return state.with(getPropertyForDirection(direction), isConnected);
+    }
+    return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+}
+```
+
+#### 8.2 Interactive Blocks
+Override `onUse` for blocks that respond to right-click:
+
+```java
+@Override
+protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+    // Handle interaction logic
+    return ActionResult.SUCCESS;
+}
+```
+
+#### 8.3 Waterlogging
+Add `WATERLOGGED` property and implement waterlogging logic:
+
+```java
+@Override
+public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    if (state.get(WATERLOGGED)) {
+        world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+    }
+    // ... rest of logic
+}
+```
+
+### 9. File Organization
+
+#### 9.1 Block Class Location
+- Place custom block classes in: `src/main/java/com/westerosblocks/block/custom/`
+- Naming convention: `WC[BlockName]Block.java`
+
+#### 9.2 Block Entity Location (if needed)
+- Place block entity classes in: `src/main/java/com/westerosblocks/block/blockentity/custom/`
+- Naming convention: `WC[BlockName]BlockEntity.java`
+
+### 10. Testing and Validation
+
+#### 10.1 Development Environment
+- Test blocks are only available in development environment
+- Use `westeros_test_tab` for experimental blocks
+- Check `isDevelopmentEnvironment` flag in `FabricLoader.getInstance().isDevelopmentEnvironment()`
+
+#### 10.2 Block Validation
+- Ensure all required methods are implemented
+- Verify voxel shapes are correctly defined
+- Test block placement and interaction
+- Validate creative tab registration
+
+### 11. Common Patterns
+
+#### 11.1 Directional Blocks
+- Use `FACING` property with `HORIZONTAL_FACING`
+- Implement `getPlacementState` to set facing based on player direction
+- Define shapes for each cardinal direction
+
+#### 11.2 Connecting Blocks
+- Use `NORTH`, `SOUTH`, `EAST`, `WEST` boolean properties
+- Implement `getStateForNeighborUpdate` for dynamic connections
+- Define shapes for different connection states
+
+#### 11.3 Rotating Blocks
+- Use `ROTATION` property (0-7 for 8-way, 0-15 for 16-way)
+- Implement rotation logic in `getPlacementState`
+- Define shapes for each rotation state
+
+#### 11.4 Wood Type Blocks
+- Accept `WoodType` parameter in constructor
+- Store wood type for texture/model selection
+- Use `ModWoodType.getWoodType()` for conversion
+
+### 12. Best Practices
+
+1. **Consistency**: Follow the established naming conventions and patterns
+2. **Reusability**: Use `ModUtils.BlockBuilder` for consistent settings
+3. **Performance**: Cache voxel shapes where possible
+4. **Documentation**: Add comments for complex logic
+5. **Testing**: Test in both development and production environments
+6. **Error Handling**: Add proper exception handling for block creation
+7. **Resource Management**: Ensure proper cleanup in block entities
+
+### 13. Data Generation (Datagen) Patterns
+
+#### 13.1 Model Generation Structure
+All custom blocks need model generation classes following this pattern:
+
+```java
+package com.westerosblocks.datagen.models;
+
+import com.westerosblocks.block.custom.WC[BlockName]Block;
+import net.minecraft.block.Block;
+import net.minecraft.data.client.*;
+import net.minecraft.util.Identifier;
+
+public class [BlockName]BlockExport {
+
+    public static void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // Create model identifiers for different states
+        Identifier [state1]ModelId = ModelExportUtils.createModelWithKey1(
+            generator, block, 
+            "westerosblocks:block/custom/[blockname]/[blockname]_[state1]", 
+            texturePath, "[state1]"
+        );
+        Identifier [state2]ModelId = ModelExportUtils.createModelWithKey1(
+            generator, block, 
+            "westerosblocks:block/custom/[blockname]/[blockname]_[state2]", 
+            texturePath, "[state2]"
+        );
+
+        // Create variants for each state combination
+        BlockStateVariantMap variants = BlockStateVariantMap.create([PROPERTY1], [PROPERTY2])
+            .register([value1], [value2], BlockStateVariant.create()
+                .put(VariantSettings.MODEL, [state1]ModelId))
+            .register([value3], [value4], BlockStateVariant.create()
+                .put(VariantSettings.MODEL, [state2]ModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90));
+
+        // Register the block state
+        ModelExportUtils.registerBlockState(generator, block, variants);
+    }
+
+    public static void generateItemModels(ItemModelGenerator generator, Block block) {
+        // Create item model that inherits from block model
+        ModelExportUtils.generateItemModel(generator, block, "[default_state]");
+    }
+}
+```
+
+#### 13.2 Common Model Generation Patterns
+
+##### 13.2.1 Directional Blocks (4-way rotation)
+```java
+// For blocks with FACING property
+BlockStateVariantMap variants = BlockStateVariantMap.create(WC[BlockName]Block.FACING)
+    .register(Direction.NORTH, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, modelId))
+    .register(Direction.EAST, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, modelId)
+        .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+    .register(Direction.SOUTH, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, modelId)
+        .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+    .register(Direction.WEST, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, modelId)
+        .put(VariantSettings.Y, VariantSettings.Rotation.R270));
+```
+
+##### 13.2.2 Rotating Blocks (8-way rotation)
+```java
+// For blocks with ROTATION property (0-7)
+BlockStateVariantMap variants = BlockStateVariantMap.create(WC[BlockName]Block.ROTATION)
+    .register(0, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, cardinalModelId))
+    .register(2, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, cardinalModelId)
+        .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+    .register(4, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, cardinalModelId)
+        .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+    .register(6, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, cardinalModelId)
+        .put(VariantSettings.Y, VariantSettings.Rotation.R270))
+    // Diagonal rotations use different model
+    .register(1, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, diagonalModelId)
+        .put(VariantSettings.Y, VariantSettings.Rotation.R90));
+```
+
+##### 13.2.3 Connecting Blocks
+```java
+// For blocks with NORTH, SOUTH, EAST, WEST properties
+BlockStateVariantMap variants = BlockStateVariantMap.create(
+    WC[BlockName]Block.NORTH, WC[BlockName]Block.EAST, 
+    WC[BlockName]Block.SOUTH, WC[BlockName]Block.WEST, 
+    WC[BlockName]Block.WATERLOGGED)
+    .register(false, false, false, false, false, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, singleModelId))
+    .register(false, false, false, true, false, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, doubleModelId)
+        .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+    .register(false, false, true, false, false, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, doubleModelId));
+```
+
+##### 13.2.4 Enum-based States
+```java
+// For blocks with enum properties
+BlockStateVariantMap variants = BlockStateVariantMap.create(WC[BlockName]Block.TYPE, WC[BlockName]Block.FACING)
+    .register([EnumType].SINGLE, Direction.NORTH, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, singleModelId))
+    .register([EnumType].TOP, Direction.NORTH, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, topModelId))
+    .register([EnumType].BOTTOM, Direction.NORTH, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, bottomModelId));
+```
+
+#### 13.3 Model File Organization
+
+##### 13.3.1 Block Model Files
+Create JSON model files in: `src/main/resources/assets/westerosblocks/models/block/custom/[blockname]/`
+- `[blockname]_[state1].json` - Model for state1
+- `[blockname]_[state2].json` - Model for state2
+- etc.
+
+##### 13.3.2 Item Model Files
+Item models are automatically generated but can be customized in: `src/main/resources/assets/westerosblocks/models/item/`
+
+#### 13.4 Registration in ModModelProvider.java
+
+##### 13.4.1 Add to Block State Generation
+```java
+@Override
+public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+    // Add your block export calls
+    [BlockName]BlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.[BLOCK_NAME],
+        "[texture_path]");
+    
+    // ... existing code for other blocks
+}
+```
+
+##### 13.4.2 Add to Item Model Generation
+```java
+@Override
+public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+    // Add your block export calls
+    [BlockName]BlockExport.generateItemModels(itemModelGenerator, ModBlocks.[BLOCK_NAME]);
+    
+    // ... existing code for other blocks
+}
+```
+
+#### 13.5 Language File Generation
+
+##### 13.5.1 Add to ModLanguageProvider.java
+```java
+@Override
+public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
+    // Add block translations
+    translationBuilder.add("block.westerosblocks.[block_name]", "[Display Name]");
+    
+    // Add tooltip translations (if applicable)
+    translationBuilder.add("tooltip.westerosblocks.[block_name].tooltip", "[Tooltip Text]");
+    
+    // ... existing translations
+}
+```
+
+#### 13.6 Model Export Utilities
+
+The `ModelExportUtils` class provides helper methods:
+
+```java
+// Create model with texture key
+ModelExportUtils.createModelWithKey1(generator, block, modelPath, texturePath, textureKey)
+
+// Create simple model
+ModelExportUtils.createModel(generator, block, modelPath, texturePath, textureKey)
+
+// Register block state
+ModelExportUtils.registerBlockState(generator, block, variants)
+
+// Generate item model
+ModelExportUtils.generateItemModel(generator, block, defaultState)
+```
+
+#### 13.7 Texture Organization
+
+##### 13.7.1 Texture Files
+Place textures in: `src/main/resources/assets/westerosblocks/textures/block/`
+- Use consistent naming: `[blockname]_[state].png`
+- Support multiple texture variants for different states
+
+##### 13.7.2 Texture Paths
+- Base texture path: `westerosblocks:block/[texture_name]`
+- For wood types: `westerosblocks:block/wood/[woodtype]/all`
+- For stone types: `westerosblocks:block/ashlar_third/[stonetype]/all`
+
+#### 13.8 Advanced Model Patterns
+
+##### 13.8.1 Multiple Model Types
+```java
+// Create different models for different states
+Identifier singleModelId = ModelExportUtils.createModelWithKey1(generator, block, 
+    "westerosblocks:block/custom/[blockname]/[blockname]_single", 
+    texturePath, "single");
+Identifier doubleModelId = ModelExportUtils.createModelWithKey1(generator, block, 
+    "westerosblocks:block/custom/[blockname]/[blockname]_double", 
+    texturePath, "double");
+```
+
+##### 13.8.2 Complex State Combinations
+```java
+// Handle multiple boolean properties
+BlockStateVariantMap variants = BlockStateVariantMap.create(
+    PROPERTY1, PROPERTY2, PROPERTY3, PROPERTY4, WATERLOGGED)
+    .register(false, false, false, false, false, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, singleModelId))
+    .register(true, false, false, false, false, BlockStateVariant.create()
+        .put(VariantSettings.MODEL, connectedModelId))
+    // ... more combinations
+```
+
+#### 13.9 Testing and Validation
+
+##### 13.9.1 Model Validation
+- Ensure all state combinations have corresponding models
+- Verify texture paths are correct
+- Test rotation and transformation logic
+- Validate item models inherit correctly
+
+##### 13.9.2 Language Validation
+- Check translation keys match block names
+- Verify display names are appropriate
+- Test tooltip functionality
+
+### 14. Example Implementation
+
+See the following files for complete examples:
+- `WCArrowSlitBlock.java` - Directional connecting blocks
+- `WCTableBlock.java` - Connecting blocks with complex shapes
+- `WCChairBlock.java` - Rotating blocks
+- `WCSignPostBlock.java` - Interactive blocks with block entities
+
+**Datagen Examples:**
+- `ArrowSlitBlockExport.java` - Enum-based states with directional rotation
+- `TableBlockExport.java` - Complex connecting block states
+- `ChairBlockExport.java` - 8-way rotation with cardinal/diagonal models
+- `ModModelProvider.java` - Registration and factory patterns
+- `ModLanguageProvider.java` - Translation generation
+
+These examples demonstrate all the patterns and best practices outlined in this document. 

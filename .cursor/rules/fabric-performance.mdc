@@ -1,0 +1,79 @@
+---
+description: 
+globs: src/main/java/**,src/main/resources/**
+alwaysApply: false
+---
+# Fabric Performance and Best Practices Rules
+rules:
+  - name: "Efficient event usage"
+    description: "Prefer events over mixins for performance"
+    template: |
+      // Prefer this (Event-based)
+      UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
+          // Event logic
+          return ActionResult.PASS;
+      });
+      
+      // Over this (Mixin-based) when events are available
+
+  - name: "Safe client-server checks"
+    description: "Proper environment separation"
+    templates:
+      - "if (world.isClient()) return ActionResult.PASS;" # Client check
+      - "if (!world.isClient()) { /* server logic */ }" # Server check
+      - "@Environment(EnvType.CLIENT)" # Client-only annotation
+
+  - name: "Null safety patterns"
+    description: "Defensive programming patterns"
+    templates:
+      - "if (world == null) return;" # Null check
+      - "Entity entity = world.getEntityById(id); if (entity == null) return;" # Entity validation
+      - "stack.getOrDefault(component, defaultValue)" # Safe component access
+
+  - name: "Resource caching"
+    description: "Cache frequently used objects"
+    template: |
+      private static final Map<String, Identifier> IDENTIFIER_CACHE = new ConcurrentHashMap<>();
+      
+      public static Identifier cachedIdentifier(String namespace, String path) {
+          return IDENTIFIER_CACHE.computeIfAbsent(namespace + ":" + path, 
+              key -> Identifier.of(namespace, path));
+      }
+
+  - name: "Batch operations"
+    description: "Efficient batch processing patterns"
+    template: |
+      // Batch networking
+      for (ServerPlayerEntity player : PlayerLookup.tracking(entity)) {
+          ServerPlayNetworking.send(player, packet);
+      }
+      
+      // Batch rendering
+      Tessellator tessellator = Tessellator.getInstance();
+      BufferBuilder buffer = tessellator.begin(DrawMode.QUADS, VertexFormats.POSITION_COLOR);
+      
+      for (Element element : elements) {
+          addElementToBuffer(buffer, element);
+      }
+      
+      BufferRenderer.drawWithGlobalProgram(buffer.end());
+
+  - name: "Memory management"
+    description: "Efficient memory usage patterns"
+    suggestions:
+      - "Use records for immutable data structures"
+      - "Clear collections in cleanup methods"
+      - "Avoid creating unnecessary objects in hot paths"
+      - "Use primitive collections for performance-critical code"
+      - "Cache computed values that are expensive to calculate"
+
+  - name: "Common anti-patterns"
+    description: "Patterns to avoid"
+    avoid:
+      - "Excessive mixin usage when events are available"
+      - "Frequent registry lookups (cache values instead)"
+      - "Blocking operations on the main thread"
+      - "Missing null checks on world/entity access"
+      - "Forgetting to validate server-side packet data"
+      - "Inefficient rendering (multiple draw calls)"
+      - "Memory leaks from unclosed resources"

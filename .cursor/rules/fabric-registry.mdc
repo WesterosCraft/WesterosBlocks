@@ -1,0 +1,68 @@
+---
+description: 
+globs: src/main/java/**,src/main/resources/**
+alwaysApply: false
+---
+# Fabric Registry Rules
+rules:
+  - name: "Registry key creation"
+    description: "Standard registry key creation pattern"
+    template: |
+      public static final RegistryKey<{Type}> {NAME} = RegistryKey.of(RegistryKeys.{REGISTRY_TYPE}, 
+          Identifier.of(MOD_ID, "{name}"));
+
+  - name: "Registry registration"
+    description: "Standard registry registration pattern"
+    template: |
+      public static final {Type} {NAME} = Registry.register(
+          Registries.{REGISTRY_TYPE},
+          Identifier.of(MOD_ID, "{name}"),
+          new {Type}({parameters})
+      );
+
+  - name: "Component type registration"
+    description: "Data component type registration"
+    template: |
+      public static final ComponentType<{DataType}> {COMPONENT_NAME} = Registry.register(
+          Registries.DATA_COMPONENT_TYPE,
+          Identifier.of(MOD_ID, "{component_name}"),
+          ComponentType.<{DataType}>builder().codec({DataType}.CODEC).build()
+      ); 
+
+  - name: "Sound event registration"
+    description: "Sound event registration pattern"
+    template: |
+      private static SoundEvent registerSound(String id) {
+          Identifier identifier = Identifier.of(MOD_ID, id);
+          return Registry.register(Registries.SOUND_EVENT, identifier, SoundEvent.of(identifier));
+      }
+
+  - name: "Block entity registration"
+    description: "Block entity type registration"
+    template: |
+      public static final BlockEntityType<{BlockEntityName}> {NAME} = Registry.register(
+          Registries.BLOCK_ENTITY_TYPE,
+          Identifier.of(MOD_ID, "{name}"),
+          FabricBlockEntityTypeBuilder.create({BlockEntityName}::new, {AssociatedBlocks}).build()
+      );
+
+  - name: "Registry initialization order"
+    description: "Recommended registry initialization order"
+    template: |
+      @Override
+      public void onInitialize() {
+          // 1. Core registries first
+          ModComponents.initialize();
+          ModSounds.initialize();
+          
+          // 2. Basic content
+          ModItems.initialize();
+          ModBlocks.initialize();
+          
+          // 3. Complex systems
+          ModBlockEntities.initialize();
+          ModEnchantments.initialize();
+          
+          // 4. Events and integrations
+          registerEvents();
+      }

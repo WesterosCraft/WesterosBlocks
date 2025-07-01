@@ -1,0 +1,61 @@
+---
+description: 
+globs: src/main/java/**,src/main/resources/**
+alwaysApply: false
+---
+# Fabric Server-Side Rules
+rules:
+  - name: "Server-side validation"
+    description: "Always validate server-side input"
+    template: |
+      ServerPlayNetworking.registerGlobalReceiver({PayloadName}.ID, (payload, context) -> {
+          // ALWAYS validate server-side data
+          if (payload.entityId() < 0) {
+              LOGGER.warn("Invalid entity ID: {}", payload.entityId());
+              return;
+          }
+          
+          Entity entity = context.player().getWorld().getEntityById(payload.entityId());
+          if (entity == null) {
+              LOGGER.warn("Entity not found: {}", payload.entityId());
+              return;
+          }
+          
+          // Additional validation
+          if (!entity.isInRange(context.player(), MAX_RANGE)) {
+              LOGGER.warn("Entity out of range");
+              return;
+          }
+          
+          // Process validated request
+      });
+
+  - name: "Player lookup patterns"
+    description: "Efficient player targeting"
+    templates:
+      - "PlayerLookup.world((ServerWorld) world)" # All players in world
+      - "PlayerLookup.tracking(entity)" # Players tracking entity
+      - "PlayerLookup.tracking((ServerWorld) world, chunkPos)" # Players tracking chunk
+      - "PlayerLookup.around((ServerWorld) world, pos, radius)" # Players in radius
+
+  - name: "Server lifecycle events"
+    description: "Server lifecycle event handling"
+    template: |
+      ServerLifecycleEvents.SERVER_STARTING.register(server -> {
+          // Server starting logic
+      });
+      
+      ServerLifecycleEvents.SERVER_STARTED.register(server -> {
+          // Server started logic
+      });
+      
+      ServerLifecycleEvents.SERVER_STOPPING.register(server -> {
+          // Server stopping logic
+      });
+
+  - name: "World state checks"
+    description: "Proper world state validation"
+    templates:
+      - "if (world.isClient()) return ActionResult.PASS;" # Client-side check
+      - "if (!world.isClient()) { /* server logic */ }" # Server-side check
+      - "if (world instanceof ServerWorld serverWorld) { /* server world logic */ }"

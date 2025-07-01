@@ -1,0 +1,108 @@
+---
+description: 
+globs: src/main/java/**,src/main/resources/**
+alwaysApply: false
+---
+# Fabric Data Generation Rules
+rules:
+  - name: "DataGenerator entrypoint"
+    description: "Standard data generation entrypoint"
+    template: |
+      public class {ModName}DataGenerator implements DataGeneratorEntrypoint {
+          @Override
+          public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
+              FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
+              
+              // Add providers
+              pack.addProvider({ModName}RecipeProvider::new);
+              pack.addProvider({ModName}BlockLootTableProvider::new);
+              pack.addProvider({ModName}ItemTagProvider::new);
+              pack.addProvider({ModName}AdvancementProvider::new);
+          }
+      } 
+
+  - name: "Recipe provider"
+    description: "Recipe generation provider structure"
+    template: |
+      public class {ModName}RecipeProvider extends FabricRecipeProvider {
+          public {ModName}RecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+              super(output, registriesFuture);
+          }
+          
+          @Override
+          protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup registryLookup, RecipeExporter exporter) {
+              return new RecipeGenerator(registryLookup, exporter) {
+                  @Override
+                  public void generate() {
+                      // Recipe generation logic
+                  }
+              };
+          }
+      } 
+
+  - name: "Recipe patterns"
+    description: "Common recipe generation patterns"
+    templates:
+      - |
+        // Shapeless recipe
+        createShapeless(RecipeCategory.MISC, ModItems.{ITEM})
+            .input(Items.DIAMOND)
+            .input(Items.STICK)
+            .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+            .offerTo(exporter);
+      - |
+        // Shaped recipe
+        createShaped(RecipeCategory.TOOLS, ModItems.{ITEM})
+            .pattern("DDD")
+            .pattern(" S ")
+            .pattern(" S ")
+            .input('D', Items.DIAMOND)
+            .input('S', Items.STICK)
+            .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+            .offerTo(exporter);
+      - |
+        // Smelting recipe
+        createSmelting(Ingredient.ofItems(Items.IRON_ORE), RecipeCategory.MISC, Items.IRON_INGOT, 0.7f, 200)
+            .criterion(hasItem(Items.IRON_ORE), conditionsFromItem(Items.IRON_ORE))
+            .offerTo(exporter);
+
+  - name: "Loot table provider"
+    description: "Loot table generation provider"
+    template: |
+      public class {ModName}BlockLootTableProvider extends FabricBlockLootTableProvider {
+          protected {ModName}BlockLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+              super(dataOutput, registryLookup);
+          }
+          
+          @Override
+          public void generate() {
+              // Simple block drop
+              addDrop(ModBlocks.{BLOCK_NAME});
+              
+              // Custom loot table
+              addDrop(ModBlocks.{BLOCK_NAME}, 
+                  LootTable.builder()
+                      .pool(LootPool.builder()
+                          .rolls(ConstantLootNumberProvider.create(1))
+                          .with(ItemEntry.builder(Items.DIAMOND)
+                              .conditionally(RandomChanceLootCondition.builder(0.1f)))
+                          .build())
+                      .build());
+          }
+      } 
+
+  - name: "Tag provider"
+    description: "Tag generation provider"
+    template: |
+      public class {ModName}ItemTagProvider extends FabricTagProvider<Item> {
+          public {ModName}ItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+              super(output, RegistryKeys.ITEM, registriesFuture);
+          }
+          
+          @Override
+          protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+              getOrCreateTagBuilder(ModTags.{TAG_NAME})
+                  .add(ModItems.{ITEM_NAME})
+                  .addOptionalTag(ItemTags.PICKAXES);
+          }
+      }

@@ -1,0 +1,70 @@
+---
+description: 
+globs: src/main/java/**,src/main/resources/**
+alwaysApply: false
+---
+# Fabric Client-Side Rules
+rules:
+  - name: "Client environment annotation"
+    description: "Proper client-side environment annotations"
+    template: |
+      @Environment(EnvType.CLIENT)
+      public class {ClassName} {
+          // Client-only code
+      }
+
+  - name: "HUD rendering"
+    description: "Custom HUD element rendering"
+    template: |
+      HudRenderCallback.EVENT.register((drawContext, tickDelta) -> {
+          MatrixStack matrices = drawContext.getMatrices();
+          
+          matrices.push();
+          // Rendering transformations
+          matrices.translate(x, y, 0);
+          matrices.scale(scale, scale, 1.0f);
+          
+          // Render custom HUD elements
+          drawContext.drawText(client.textRenderer, text, x, y, color, false);
+          
+          matrices.pop();
+      });
+
+  - name: "Block entity renderer"
+    description: "Custom block entity renderer"
+    template: |
+      @Environment(EnvType.CLIENT)
+      public class {BlockEntityName}Renderer implements BlockEntityRenderer<{BlockEntityName}> {
+          public {BlockEntityName}Renderer(BlockEntityRendererFactory.Context context) {
+              // Initialize renderer
+          }
+          
+          @Override
+          public void render({BlockEntityName} entity, float tickDelta, MatrixStack matrices, 
+                            VertexConsumerProvider vertexConsumers, int light, int overlay) {
+              matrices.push();
+              
+              // Rendering logic
+              
+              matrices.pop();
+          }
+      }
+
+  - name: "Client tick events"
+    description: "Client-side tick event handling"
+    template: |
+      ClientTickEvents.END_CLIENT_TICK.register(client -> {
+          // Client tick logic
+      });
+      
+      ClientTickEvents.END_WORLD_TICK.register(world -> {
+          // World tick logic
+      });
+
+  - name: "Rendering safety"
+    description: "Safe rendering practices"
+    suggestions:
+      - "Always use matrices.push() and matrices.pop() pairs"
+      - "Check if world/client is null before accessing"
+      - "Use proper vertex formats for buffer builders"
+      - "Set appropriate render states before drawing"

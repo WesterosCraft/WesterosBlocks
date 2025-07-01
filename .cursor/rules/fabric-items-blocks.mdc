@@ -1,0 +1,107 @@
+---
+description: 
+globs: src/main/java/**,src/main/resources/**
+alwaysApply: false
+---
+# Fabric Items and Blocks Rules
+rules:
+  - name: "Item registration pattern"
+    description: "Standard item registration with helper method"
+    template: |
+      public class ModItems {
+          public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
+              RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, name));
+              Item item = itemFactory.apply(settings.registryKey(itemKey));
+              Registry.register(Registries.ITEM, itemKey, item);
+              return item;
+          }
+          
+          public static final Item {ITEM_NAME} = register("{item_name}", Item::new, new Item.Settings());
+          
+          public static void initialize() {
+              MOD_LOGGER.info("Registering {} items", MOD_ID);
+          }
+      }
+
+  - name: "Block registration pattern"
+    description: "Standard block registration with automatic item registration"
+    template: |
+      public class ModBlocks {
+          public static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, 
+                                     AbstractBlock.Settings settings, boolean shouldRegisterItem) {
+              RegistryKey<Block> blockKey = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MOD_ID, name));
+              Block block = blockFactory.apply(settings.registryKey(blockKey));
+              Registry.register(Registries.BLOCK, blockKey, block);
+              
+              if (shouldRegisterItem) {
+                  RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, name));
+                  Registry.register(Registries.ITEM, itemKey, new BlockItem(block, new Item.Settings().registryKey(itemKey)));
+              }
+              
+              return block;
+          }
+          
+          public static final Block {BLOCK_NAME} = register("{block_name}", Block::new, 
+              AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE), true);
+          
+          public static void initialize() {
+              MOD_LOGGER.info("Registering {} blocks", MOD_ID);
+          }
+      }
+
+  - name: "Custom item class"
+    description: "Template for custom item classes"
+    template: |
+      public class {ItemName} extends Item {
+          public {ItemName}(Settings settings) {
+              super(settings);
+          }
+          
+          @Override
+          public ActionResult use(World world, PlayerEntity user, Hand hand) {
+              if (world.isClient) {
+                  return ActionResult.PASS;
+              }
+              // Server-side logic here
+              return ActionResult.SUCCESS;
+          }
+          
+          @Override
+          public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+              tooltip.add(Text.translatable("itemTooltip.{mod_id}.{item_name}").formatted(Formatting.GOLD));
+          }
+      }
+
+  - name: "Block state properties"
+    description: "Block state property definitions and usage"
+    template: |
+      public class {BlockName} extends Block {
+          public static final BooleanProperty ACTIVATED = BooleanProperty.of("activated");
+          public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
+          public static final IntProperty LEVEL = IntProperty.of("level", 0, 15);
+          
+          public {BlockName}(Settings settings) {
+              super(settings);
+              setDefaultState(getDefaultState()
+                  .with(ACTIVATED, false)
+                  .with(FACING, Direction.NORTH)
+                  .with(LEVEL, 0));
+          }
+          
+          @Override
+          protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+              builder.add(ACTIVATED, FACING, LEVEL);
+          }
+      }
+
+  - name: "Item group integration"
+    description: "Adding items to creative tabs"
+    template: |
+      ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
+          .register(itemGroup -> itemGroup.add(ModItems.{ITEM_NAME}));
+      
+      // Custom item group
+      public static final ItemGroup CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
+          .icon(() -> new ItemStack(ModItems.{ICON_ITEM}))
+          .displayName(Text.translatable("itemGroup.{mod_id}"))
+          .build();

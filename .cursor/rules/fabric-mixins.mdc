@@ -1,0 +1,96 @@
+---
+description: 
+globs: src/main/java/**,src/main/resources/**
+alwaysApply: false
+---
+# Fabric Mixin Rules
+rules:
+  - name: "Basic mixin structure"
+    description: "Standard mixin class structure"
+    template: |
+      @Mixin({TargetClass}.class)
+      public class {TargetClass}Mixin {
+          @Inject(at = @At("HEAD"), method = "{methodName}", cancellable = true)
+          private void on{MethodName}(CallbackInfo info) {
+              // Mixin logic
+              if (shouldCancel) {
+                  info.cancel();
+              }
+          }
+      }
+
+  - name: "Mixin with return value"
+    description: "Mixin for methods with return values"
+    template: |
+      @Mixin({TargetClass}.class)
+      public class {TargetClass}Mixin {
+          @Inject(at = @At("HEAD"), method = "{methodName}", cancellable = true)
+          private void on{MethodName}(CallbackInfoReturnable<{ReturnType}> info) {
+              if (shouldModifyReturn) {
+                  info.setReturnValue({newValue});
+              }
+          }
+      }
+
+  - name: "Shadow fields and methods"
+    description: "Accessing private fields and methods"
+    template: |
+      @Mixin({TargetClass}.class)
+      public class {TargetClass}Mixin {
+          @Shadow private {FieldType} {fieldName};
+          
+          @Shadow
+          protected abstract {ReturnType} {methodName}({Parameters});
+          
+          @Inject(at = @At("HEAD"), method = "publicMethod")
+          private void onPublicMethod(CallbackInfo info) {
+              // Access shadow fields/methods
+              this.{fieldName} = newValue;
+              this.{methodName}(parameters);
+          }
+      }
+
+  - name: "Accessor mixin"
+    description: "Creating accessors for private members"
+    template: |
+      @Mixin({TargetClass}.class)
+      public interface {TargetClass}Accessor {
+          @Accessor("{fieldName}")
+          {FieldType} get{FieldName}();
+          
+          @Accessor("{fieldName}")
+          void set{FieldName}({FieldType} value);
+          
+          @Invoker("{methodName}")
+          {ReturnType} invoke{MethodName}({Parameters});
+      }
+
+  - name: "Mixin configuration"
+    description: "Mixin configuration JSON structure"
+    template: |
+      {
+        "required": true,
+        "package": "com.example.{mod_id}.mixin",
+        "compatibilityLevel": "JAVA_21",
+        "refmap": "{mod_id}.refmap.json",
+        "mixins": [
+          "{CommonMixin}"
+        ],
+        "client": [
+          "{ClientMixin}"
+        ],
+        "server": [
+          "{ServerMixin}"
+        ],
+        "minVersion": "0.8"
+      }
+
+  - name: "Access widener"
+    description: "Access widener configuration"
+    template: |
+      # {mod_id}.accesswidener
+      accessWidener v2 named
+      
+      accessible method {package}/{ClassName} {methodName} ({MethodDescriptor}){ReturnDescriptor}
+      accessible field {package}/{ClassName} {fieldName} {FieldDescriptor}
+      mutable field {package}/{ClassName} {fieldName} {FieldDescriptor}

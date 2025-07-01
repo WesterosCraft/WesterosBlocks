@@ -1,0 +1,53 @@
+---
+description: 
+globs: src/main/java/**,src/main/resources/**
+alwaysApply: false
+---
+# Fabric Component System Rules
+rules:
+  - name: "Simple component registration"
+    description: "Basic component type registration"
+    template: |
+      public static final ComponentType<{DataType}> {COMPONENT_NAME} = Registry.register(
+          Registries.DATA_COMPONENT_TYPE,
+          Identifier.of(MOD_ID, "{component_name}"),
+          ComponentType.<{DataType}>builder().codec({CODEC}).build()
+      ); 
+
+  - name: "Complex component with codec"
+    description: "Component with custom record and codec"
+    template: |
+      public record {ComponentName}({DataType} data, boolean flag) {
+          public static final Codec<{ComponentName}> CODEC = RecordCodecBuilder.create(builder ->
+              builder.group(
+                  {DataType}.CODEC.fieldOf("data").forGetter({ComponentName}::data),
+                  Codec.BOOL.optionalFieldOf("flag", false).forGetter({ComponentName}::flag)
+              ).apply(builder, {ComponentName}::new)
+          );
+      }
+
+  - name: "Component usage patterns"
+    description: "Safe component access patterns"
+    templates:
+      - "int value = stack.getOrDefault(ModComponents.{COMPONENT}, 0);" # Safe access with default
+      - "stack.set(ModComponents.{COMPONENT}, newValue);" # Set component value
+      - "if (stack.contains(ModComponents.{COMPONENT})) { /* logic */ }" # Check existence
+      - "int oldValue = stack.remove(ModComponents.{COMPONENT});" # Remove component
+
+  - name: "Default component in item"
+    description: "Setting default components in item settings"
+    template: |
+      public static final Item {ITEM_NAME} = register("{item_name}", {ItemClass}::new,
+          new Item.Settings().component(ModComponents.{COMPONENT}, {defaultValue}));
+
+  - name: "Component tooltip"
+    description: "Displaying component data in tooltips"
+    template: |
+      @Override
+      public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+          {DataType} data = stack.getOrDefault(ModComponents.{COMPONENT}, {defaultValue});
+          if (data != {defaultValue}) {
+              tooltip.add(Text.translatable("tooltip.westerosblocks.{component_name}", data)
+                  .formatted(Formatting.GOLD));
+          }
+      }

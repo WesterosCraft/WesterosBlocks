@@ -1,0 +1,90 @@
+---
+description: 
+globs: src/main/java/**,src/main/resources/**
+alwaysApply: false
+---
+# Fabric Networking and Events Rules
+rules:
+  - name: "Custom payload pattern"
+    description: "Standard CustomPayload record structure"
+    template: |
+      public record {PayloadName}({DataType} data) implements CustomPayload {
+          public static final Identifier PAYLOAD_ID = Identifier.of(MOD_ID, "{payload_name}");
+          public static final CustomPayload.Id<{PayloadName}> ID = new CustomPayload.Id<>(PAYLOAD_ID);
+          public static final PacketCodec<RegistryByteBuf, {PayloadName}> CODEC = 
+              PacketCodec.tuple({DataType}.PACKET_CODEC, {PayloadName}::{field}, {PayloadName}::new);
+          
+          @Override
+          public Id<? extends CustomPayload> getId() {
+              return ID;
+          }
+      } 
+
+  - name: "Server-to-client packet"
+    description: "S2C packet registration and handling"
+    template: |
+      // Registration (in common initializer)
+      PayloadTypeRegistry.playS2C().register({PayloadName}.ID, {PayloadName}.CODEC); 
+      
+      // Client-side handling (in client initializer)
+      ClientPlayNetworking.registerGlobalReceiver({PayloadName}.ID, (payload, context) -> {
+          ClientWorld world = context.client().world;
+          if (world == null) return;
+          
+          // Handle packet on client
+      });
+      
+      // Server-side sending
+      for (ServerPlayerEntity player : PlayerLookup.world((ServerWorld) world)) {
+          ServerPlayNetworking.send(player, new {PayloadName}(data)); 
+      }
+
+  - name: "Client-to-server packet"
+    description: "C2S packet registration and handling"
+    template: |
+      // Registration (in common initializer)
+      PayloadTypeRegistry.playC2S().register({PayloadName}.ID, {PayloadName}.CODEC); 
+      
+      // Server-side handling (in common initializer)
+      ServerPlayNetworking.registerGlobalReceiver({PayloadName}.ID, (payload, context) -> {
+          // ALWAYS validate server-side data
+          if (payload.data() < 0) return;
+          
+          Entity entity = context.player().getWorld().getEntityById(payload.entityId());
+          if (entity instanceof LivingEntity living && living.isInRange(context.player(), 5)) {
+              // Validated logic
+          }
+      });
+      
+      // Client-side sending
+      ClientPlayNetworking.send(new {PayloadName}(data)); 
+
+  - name: "Event registration patterns"
+    description: "Common event callback patterns"
+    templates:
+      - |
+        // Attack block event
+        AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
+            // Handle block attack
+            return ActionResult.PASS;
+        });
+      - |
+        // Use entity event
+        UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
+            // Handle entity interaction
+            return ActionResult.PASS;
+        }); 
+      - |
+        // Player block break event
+        PlayerBlockBreakEvents.AFTER.register((world, player, pos, state, blockEntity) -> {
+            // Handle block break aftermath
+        });
+      - |
+        // Loot table modification
+        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+            if (source.isBuiltin() && LOOT_TABLE_ID.equals(key)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                    .with(ItemEntry.builder(Items.DIAMOND));
+                tableBuilder.pool(poolBuilder);
+            }
+        });
