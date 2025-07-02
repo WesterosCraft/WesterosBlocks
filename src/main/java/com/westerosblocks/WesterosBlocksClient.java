@@ -1,8 +1,11 @@
 package com.westerosblocks;
 
+import com.westerosblocks.block.blockentity.ModBlockEntities;
+import com.westerosblocks.client.renderer.WCWaySignBlockEntityRenderer;
 import com.westerosblocks.particle.ModParticles;
 //import com.westerosblocks.util.ModModelPredicates;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
 import net.minecraft.resource.ResourceManager;
@@ -17,6 +20,10 @@ public class WesterosBlocksClient implements ClientModInitializer {
         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new WesterosResourceReloadListener());
         ColorHandlers.registerColorProviders();
         ModParticles.initializeClient();
+        
+        // Register block entity renderers
+        BlockEntityRendererRegistry.register(ModBlockEntities.WAY_SIGN_BLOCK_ENTITY, WCWaySignBlockEntityRenderer::new);
+        
 //        ModModelPredicates.registerModelPredicates();
     }
 

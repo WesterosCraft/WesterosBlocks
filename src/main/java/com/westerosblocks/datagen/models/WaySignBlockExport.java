@@ -26,11 +26,22 @@ public class WaySignBlockExport {
             texturePath, "all", "all"
         );
 
-        // Register the block state to use our custom model
-        generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block, BlockStateVariant.create()
+        // Create variants for each direction
+        BlockStateVariantMap variants = BlockStateVariantMap.create(WCWaySignBlock.FACING)
+            .register(Direction.NORTH, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, waySignModelId))
-        );
+            .register(Direction.EAST, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, waySignModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+            .register(Direction.SOUTH, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, waySignModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+            .register(Direction.WEST, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, waySignModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270));
+
+        // Register the block state
+        ModelExportUtils.registerBlockState(generator, block, variants);
     }
 
     private static void generateWallBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {

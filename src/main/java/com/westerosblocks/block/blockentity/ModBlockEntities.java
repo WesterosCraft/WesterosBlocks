@@ -5,6 +5,7 @@ import com.westerosblocks.WesterosBlocksDefLoader;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.blockentity.custom.WCFurnaceBlockEntity;
+import com.westerosblocks.block.blockentity.WCWaySignBlockEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
@@ -16,6 +17,12 @@ import java.util.Map;
 
 public class ModBlockEntities {
     public static HashMap<String, BlockEntityType<?>> customEntitiesByName = new HashMap<>();
+    
+    public static final BlockEntityType<WCWaySignBlockEntity> WAY_SIGN_BLOCK_ENTITY = Registry.register(
+        Registries.BLOCK_ENTITY_TYPE,
+        WesterosBlocks.id("way_sign"),
+        BlockEntityType.Builder.create(WCWaySignBlockEntity::new).build(null)
+    );
 
     static {
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();

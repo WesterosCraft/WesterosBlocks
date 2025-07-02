@@ -6,6 +6,7 @@ import com.westerosblocks.block.custom.WCChairBlock;
 import com.westerosblocks.block.custom.WCTableBlock;
 import com.westerosblocks.block.custom.WCWaySignBlock;
 import com.westerosblocks.block.custom.WCWaySignWallBlock;
+import com.westerosblocks.item.WCWaySignItem;
 import com.westerosblocks.config.ModConfig;
 import com.westerosblocks.util.ModUtils;
 import com.westerosblocks.util.ModWoodType;
@@ -174,8 +175,14 @@ public class ModBlocks {
     }
 
     private static void registerBlockItem(String name, Block block) {
-        Registry.register(Registries.ITEM, WesterosBlocks.id(name),
-                new BlockItem(block, new Item.Settings()));
+        // Use custom item for way sign blocks
+        if (block instanceof WCWaySignBlock waySignBlock) {
+            Registry.register(Registries.ITEM, WesterosBlocks.id(name),
+                    new com.westerosblocks.item.WCWaySignItem(block, new Item.Settings(), waySignBlock.getWoodType().toString()));
+        } else {
+            Registry.register(Registries.ITEM, WesterosBlocks.id(name),
+                    new BlockItem(block, new Item.Settings()));
+        }
     }
 
     public static Map<String, Block> getCustomBlocks() {
