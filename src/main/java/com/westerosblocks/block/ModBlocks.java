@@ -4,6 +4,8 @@ import com.westerosblocks.*;
 import com.westerosblocks.block.custom.WCArrowSlitBlock;
 import com.westerosblocks.block.custom.WCChairBlock;
 import com.westerosblocks.block.custom.WCTableBlock;
+import com.westerosblocks.block.custom.WCWaySignBlock;
+import com.westerosblocks.block.custom.WCWaySignWallBlock;
 import com.westerosblocks.config.ModConfig;
 import com.westerosblocks.util.ModUtils;
 import com.westerosblocks.util.ModWoodType;
@@ -106,6 +108,16 @@ public class ModBlocks {
         1,
         "westerosblocks:block/wood/spruce/all",
         WoodType.SPRUCE
+    );
+
+    public static final Block OAK_WAY_SIGN = registerWaySignBlock(
+        "oak_way_sign",
+        "westeros_decor_tab",
+        2.0f,
+        6.0f,
+        1,
+        "westerosblocks:block/wood/oak/all",
+        WoodType.OAK
     );
 
     public static void registerModBlocks() {
@@ -263,6 +275,24 @@ public class ModBlocks {
         return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, WCChairBlock.class, false, woodType);
     }
 
+    public static Block registerWaySignBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath) {
+        return registerWaySignBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, WoodType.OAK);
+    }
+
+    public static Block registerWaySignBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, String woodType) {
+        return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, WCWaySignBlock.class, false, woodType);
+    }
+
+    public static Block registerWaySignBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, WoodType woodType) {
+        // Register the main way sign block (fence post replacement)
+        Block mainBlock = registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, WCWaySignBlock.class, false, woodType);
+        
+        // Register the wall way sign block
+        Block wallBlock = registerCustomBlock("wall_" + name, creativeTab, hardness, resistance, harvestLevel, texturePath, WCWaySignWallBlock.class, false, woodType);
+        
+        return mainBlock;
+    }
+
     private static Block registerCustomBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, Class<?> blockClass, boolean stoneLike) {
         return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, blockClass, stoneLike, "oak");
     }
@@ -294,6 +324,10 @@ public class ModBlocks {
                 block = new WCTableBlock(settings, builder.getBlockName(), builder.getCreativeTab(), woodType);
             } else if (blockClass == WCChairBlock.class) {
                 block = new WCChairBlock(settings, builder.getBlockName(), builder.getCreativeTab(), woodType);
+            } else if (blockClass == WCWaySignBlock.class) {
+                block = new WCWaySignBlock(settings, builder.getBlockName(), builder.getCreativeTab(), woodType);
+            } else if (blockClass == WCWaySignWallBlock.class) {
+                block = new WCWaySignWallBlock(settings, builder.getBlockName(), builder.getCreativeTab(), woodType);
             } else {
                 throw new IllegalArgumentException("Unsupported block class: " + blockClass.getSimpleName());
             }

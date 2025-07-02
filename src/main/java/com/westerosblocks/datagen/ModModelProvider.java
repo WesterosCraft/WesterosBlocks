@@ -84,9 +84,23 @@ public class ModModelProvider extends FabricModelProvider {
         ChairBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.SPRUCE_CHAIR,
             "westerosblocks:block/wood/spruce/all");
 
+        // Use the new dynamic model provider for way signs
+        WaySignBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.OAK_WAY_SIGN,
+            "westerosblocks:block/wood/oak/all");
+        
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
         ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
+        
+        // Handle wall way sign blocks
+        for (Map.Entry<String, Block> entry : customBlocks.entrySet()) {
+            if (entry.getKey().startsWith("wall_") && entry.getValue() instanceof com.westerosblocks.block.custom.WCWaySignWallBlock) {
+                String baseName = entry.getKey().substring(5); // Remove "wall_" prefix
+                String woodType = baseName.split("_")[0]; // Extract wood type
+                String texturePath = "westerosblocks:block/wood/" + woodType + "/all";
+                WaySignBlockExport.generateBlockStateModels(blockStateModelGenerator, entry.getValue(), texturePath);
+            }
+        }
 
         for (ModBlock customBlockDef : customBlockDefs) {
             if (customBlockDef == null || customBlockDef.getBlockName() == null) continue;
@@ -125,6 +139,9 @@ public class ModModelProvider extends FabricModelProvider {
         ChairBlockExport.generateItemModels(itemModelGenerator, ModBlocks.OAK_CHAIR);
         ChairBlockExport.generateItemModels(itemModelGenerator, ModBlocks.BIRCH_CHAIR);
         ChairBlockExport.generateItemModels(itemModelGenerator, ModBlocks.SPRUCE_CHAIR);
+
+        // Use the new dynamic model provider for way signs
+        WaySignBlockExport.generateItemModels(itemModelGenerator, ModBlocks.OAK_WAY_SIGN);
 
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();

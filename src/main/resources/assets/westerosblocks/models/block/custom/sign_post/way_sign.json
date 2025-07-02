@@ -1,0 +1,52 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+    "textures": {
+        "all": "westerosblocks:block/wood/oak/all"
+    },
+	"elements": [
+		{
+			"from": [-2, 9, 0],
+			"to": [0, 12, 1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-2, 9, 0]},
+			"color": 0,
+			"faces": {
+				"north": {"uv": [0, 0, 1, 1.5], "texture": "#all"},
+				"east": {"uv": [0, 0, 0.5, 1.5], "texture": "#all"},
+				"south": {"uv": [0, 0, 1, 1.5], "texture": "#all"},
+				"west": {"uv": [0, 0, 0.5, 1.5], "texture": "#all"},
+				"up": {"uv": [0, 0, 1, 0.5], "texture": "#all"},
+				"down": {"uv": [0, 0, 1, 0.5], "texture": "#all"}
+			}
+		},
+		{
+			"from": [-3, 10, 0],
+			"to": [-2, 11, 1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-4, 9, 0]},
+			"color": 2,
+			"faces": {
+				"north": {"uv": [0, 0, 0.5, 0.5], "texture": "#all"},
+				"east": {"uv": [0, 0, 0.5, 0.5], "texture": "#all"},
+				"south": {"uv": [0, 0, 0.5, 0.5], "texture": "#all"},
+				"west": {"uv": [0, 0, 0.5, 0.5], "texture": "#all"},
+				"up": {"uv": [0, 0, 0.5, 0.5], "texture": "#all"},
+				"down": {"uv": [0, 0, 0.5, 0.5], "texture": "#all"}
+			}
+		},
+		{
+			"from": [0, 8, 0],
+			"to": [16, 13, 1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 11, 0]},
+			"color": 2,
+			"faces": {
+				"north": {"uv": [0, 0, 8, 2.5], "texture": "#all"},
+				"east": {"uv": [0, 0, 0.5, 2.5], "texture": "#all"},
+				"south": {"uv": [0, 0, 8, 2.5], "texture": "#all"},
+				"west": {"uv": [0, 0, 0.5, 2.5], "texture": "#all"},
+				"up": {"uv": [0, 0, 8, 0.5], "texture": "#all"},
+				"down": {"uv": [0, 0, 8, 0.5], "texture": "#all"}
+			}
+		}
+	]
+}
