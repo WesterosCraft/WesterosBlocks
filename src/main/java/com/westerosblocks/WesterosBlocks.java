@@ -4,6 +4,7 @@ import com.westerosblocks.block.*;
 import com.westerosblocks.block.blockentity.ModBlockEntities;
 import com.westerosblocks.command.ParticleEmitterCommand;
 import com.westerosblocks.config.ModConfig;
+import com.westerosblocks.entity.ModEntities;
 import com.westerosblocks.item.ModItems;
 import com.westerosblocks.particle.ModParticles;
 import com.westerosblocks.sound.ModSounds;
@@ -29,6 +30,7 @@ public class WesterosBlocks implements ModInitializer {
         ModItems.registerModItems();
         ModSounds.registerSounds();
         ModBlockEntities.registerModEntities();
+        ModEntities.registerModEntities();
         
         // Register commands
         ParticleEmitterCommand.register();

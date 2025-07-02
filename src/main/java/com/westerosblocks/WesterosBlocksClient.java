@@ -1,16 +1,17 @@
 package com.westerosblocks;
 
-import com.westerosblocks.block.blockentity.ModBlockEntities;
-import com.westerosblocks.client.renderer.WCWaySignBlockEntityRenderer;
+
+import com.westerosblocks.entity.ModEntities;
+import com.westerosblocks.entity.client.ChairRenderer;
 import com.westerosblocks.particle.ModParticles;
 //import com.westerosblocks.util.ModModelPredicates;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.resource.ResourceType;
 import net.minecraft.util.Identifier;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 
 public class WesterosBlocksClient implements ClientModInitializer {
 
@@ -21,10 +22,7 @@ public class WesterosBlocksClient implements ClientModInitializer {
         ColorHandlers.registerColorProviders();
         ModParticles.initializeClient();
         
-        // Register block entity renderers
-        BlockEntityRendererRegistry.register(ModBlockEntities.WAY_SIGN_BLOCK_ENTITY, WCWaySignBlockEntityRenderer::new);
-        
-//        ModModelPredicates.registerModelPredicates();
+        EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
     }
 
     private static class WesterosResourceReloadListener implements SimpleSynchronousResourceReloadListener {
