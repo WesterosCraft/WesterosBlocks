@@ -5,7 +5,6 @@ import com.westerosblocks.WesterosBlocksDefLoader;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.blockentity.custom.WCFurnaceBlockEntity;
-import com.westerosblocks.block.blockentity.WCWaySignBlockEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
