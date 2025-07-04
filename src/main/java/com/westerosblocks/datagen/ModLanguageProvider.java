@@ -93,6 +93,11 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.oak_way_sign", "Oak Way Sign");
         translationBuilder.add("block.westerosblocks.wall_oak_way_sign", "Oak Way Sign");
 
+        translationBuilder.add("block.westerosblocks.kings_landing_sewer_manhole", "King's Landing Sewer Manhole");
+        translationBuilder.add("block.westerosblocks.oldtown_sewer_manhole", "Oldtown Sewer Manhole");
+        translationBuilder.add("block.westerosblocks.sewer_manhole", "Generic Sewer Manhole");
+        translationBuilder.add("block.westerosblocks.white_harbor_sewer_manhole", "White Harbor Sewer Manhole");
+
         // TODO can prob grab the item tag def json and generate this automatically when/if we get more
         // The format desired is tag.item.<namespace>.<path> for the translation key with slashes in path turned into periods."
         translationBuilder.add("tag.item.c.shield", "Shield");

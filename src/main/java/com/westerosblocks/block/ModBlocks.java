@@ -6,6 +6,7 @@ import com.westerosblocks.block.custom.WCChairBlock;
 import com.westerosblocks.block.custom.WCTableBlock;
 import com.westerosblocks.block.custom.WCWaySignBlock;
 import com.westerosblocks.block.custom.WCWaySignWallBlock;
+import com.westerosblocks.block.custom.WCStandaloneTrapDoorBlock;
 import com.westerosblocks.item.WCWaySignItem;
 import com.westerosblocks.config.ModConfig;
 import com.westerosblocks.util.ModUtils;
@@ -118,6 +119,46 @@ public class ModBlocks {
         6.0f,
         1,
         "westerosblocks:block/wood/oak/all",
+        WoodType.OAK
+    );
+
+    public static final Block KINGS_LANDING_SEWER_MANHOLE = registerStandaloneTrapDoorBlock(
+        "kings_landing_sewer_manhole",
+        "westeros_decor_tab",
+        2.0f,
+        5.0f,
+        1,
+        "westerosblocks:block/trapdoor_block/kings_landing_manhole",
+        WoodType.OAK
+    );
+
+    public static final Block OLDTOWN_SEWER_MANHOLE = registerStandaloneTrapDoorBlock(
+        "oldtown_sewer_manhole",
+        "westeros_decor_tab",
+        2.0f,
+        5.0f,
+        1,
+        "westerosblocks:block/trapdoor_block/oldtown_manhole",
+        WoodType.OAK
+    );
+
+    public static final Block SEWER_MANHOLE = registerStandaloneTrapDoorBlock(
+        "sewer_manhole",
+        "westeros_decor_tab",
+        2.0f,
+        5.0f,
+        1,
+        "westerosblocks:block/trapdoor_block/manhole",
+        WoodType.OAK
+    );
+
+    public static final Block WHITE_HARBOR_SEWER_MANHOLE = registerStandaloneTrapDoorBlock(
+        "white_harbor_sewer_manhole",
+        "westeros_decor_tab",
+        2.0f,
+        5.0f,
+        1,
+        "westerosblocks:block/trapdoor_block/white_harbor_manhole",
         WoodType.OAK
     );
 
@@ -300,6 +341,22 @@ public class ModBlocks {
         return mainBlock;
     }
 
+    public static Block registerStandaloneTrapDoorBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath) {
+        return registerStandaloneTrapDoorBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, "oak");
+    }
+
+    public static Block registerStandaloneTrapDoorBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, String woodType) {
+        return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, WCStandaloneTrapDoorBlock.class, false, woodType);
+    }
+
+    public static Block registerStandaloneTrapDoorBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, WoodType woodType) {
+        return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, WCStandaloneTrapDoorBlock.class, false, woodType);
+    }
+
+    public static Block registerLockedTrapDoorBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, WoodType woodType) {
+        return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, WCStandaloneTrapDoorBlock.class, false, woodType, true);
+    }
+
     private static Block registerCustomBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, Class<?> blockClass, boolean stoneLike) {
         return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, blockClass, stoneLike, "oak");
     }
@@ -309,6 +366,10 @@ public class ModBlocks {
     }
 
     private static Block registerCustomBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, Class<?> blockClass, boolean stoneLike, WoodType woodType) {
+        return registerCustomBlock(name, creativeTab, hardness, resistance, harvestLevel, texturePath, blockClass, stoneLike, woodType, false);
+    }
+
+    private static Block registerCustomBlock(String name, String creativeTab, float hardness, float resistance, int harvestLevel, String texturePath, Class<?> blockClass, boolean stoneLike, WoodType woodType, boolean locked) {
         ModUtils.BlockBuilder builder = new ModUtils.BlockBuilder(name)
             .creativeTab(creativeTab)
             .hardness(hardness)
@@ -335,6 +396,8 @@ public class ModBlocks {
                 block = new WCWaySignBlock(settings, builder.getBlockName(), builder.getCreativeTab(), woodType);
             } else if (blockClass == WCWaySignWallBlock.class) {
                 block = new WCWaySignWallBlock(settings, builder.getBlockName(), builder.getCreativeTab(), woodType);
+            } else if (blockClass == WCStandaloneTrapDoorBlock.class) {
+                block = new WCStandaloneTrapDoorBlock(settings, builder.getBlockName(), builder.getCreativeTab(), woodType, locked);
             } else {
                 throw new IllegalArgumentException("Unsupported block class: " + blockClass.getSimpleName());
             }

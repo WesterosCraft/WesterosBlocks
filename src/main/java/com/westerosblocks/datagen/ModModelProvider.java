@@ -29,7 +29,7 @@ public class ModModelProvider extends FabricModelProvider {
             Map.entry("slab", SlabBlockExport::new),
             Map.entry("fence", FenceBlockExport::new),
             Map.entry("wall", WallBlockExport::new),
-            Map.entry("trapdoor", TrapDoorBlockExport::new),
+            // Map.entry("trapdoor", TrapDoorBlockExport::new),
             Map.entry("torch", TorchBlockExport::new),
             Map.entry("fan", FanBlockExport::new),
             Map.entry("ladder", LadderBlockExport::new),
@@ -87,6 +87,16 @@ public class ModModelProvider extends FabricModelProvider {
         // Use the new dynamic model provider for way signs
         WaySignBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.OAK_WAY_SIGN,
             "westerosblocks:block/wood/oak/all");
+
+        // Use the new dynamic model provider for trap doors
+        StandaloneTrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.KINGS_LANDING_SEWER_MANHOLE,
+            "westerosblocks:block/trapdoor_block/kings_landing_manhole");
+        StandaloneTrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.OLDTOWN_SEWER_MANHOLE,
+            "westerosblocks:block/trapdoor_block/oldtown_manhole");
+        StandaloneTrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.SEWER_MANHOLE,
+            "westerosblocks:block/trapdoor_block/manhole");
+        StandaloneTrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.WHITE_HARBOR_SEWER_MANHOLE,
+            "westerosblocks:block/trapdoor_block/white_harbor_manhole");
         
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
@@ -143,6 +153,12 @@ public class ModModelProvider extends FabricModelProvider {
         // Use the new dynamic model provider for way signs
         WaySignBlockExport.generateItemModels(itemModelGenerator, ModBlocks.OAK_WAY_SIGN);
 
+        // Use the new dynamic model provider for trap doors
+        StandaloneTrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks.KINGS_LANDING_SEWER_MANHOLE);
+        StandaloneTrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks.OLDTOWN_SEWER_MANHOLE);
+        StandaloneTrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks.SEWER_MANHOLE);
+        StandaloneTrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks.WHITE_HARBOR_SEWER_MANHOLE);
+
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
         ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
@@ -180,10 +196,10 @@ public class ModModelProvider extends FabricModelProvider {
                     RailBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-                case "trapdoor": {
-                    TrapDoorBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-                    break;
-                }
+                // case "trapdoor": {
+                //     TrapDoorBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                //     break;
+                // }
                 case "torch": {
                     TorchBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
