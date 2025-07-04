@@ -10,10 +10,15 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.WoodType;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.DyeColor;
+import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 
 /**
  * A fluent builder class for creating and registering custom blocks in WesterosBlocks.
@@ -78,6 +83,9 @@ public class BlockBuilder {
     /** Whether this block drops nothing when broken */
     private boolean dropsNothing = false;
     
+    /** Whether this block is transparent for alpha blending */
+    private boolean alphaRender = false;
+    
     /** Map color for this block (affects how it appears on maps) */
     private MapColor mapColor = null;
     
@@ -86,6 +94,12 @@ public class BlockBuilder {
     
     /** The tool type required to harvest this block (e.g., "pickaxe", "axe", "shovel") */
     private String harvestTool;
+    
+    /** Dye color for colored blocks (like beds) */
+    private DyeColor dyeColor = DyeColor.RED;
+    
+    /** Bed type for bed blocks */
+    private WCStandaloneBedBlock.BedType bedType = WCStandaloneBedBlock.BedType.NORMAL;
 
     /**
      * Creates a new BlockBuilder with the specified name.
@@ -343,6 +357,16 @@ public class BlockBuilder {
     }
 
     /**
+     * Enables alpha blending for this block (for transparent textures).
+     * 
+     * @return this builder for method chaining
+     */
+    public BlockBuilder alphaRender() {
+        this.alphaRender = true;
+        return this;
+    }
+
+    /**
      * Makes this block burnable (can be destroyed by fire).
      * 
      * @return this builder for method chaining
@@ -382,6 +406,28 @@ public class BlockBuilder {
      */
     public BlockBuilder mapColor(MapColor mapColor) {
         this.mapColor = mapColor;
+        return this;
+    }
+
+    /**
+     * Sets the dye color for this block (used for colored blocks like beds).
+     * 
+     * @param color The dye color to use
+     * @return this builder for method chaining
+     */
+    public BlockBuilder color(DyeColor color) {
+        this.dyeColor = color;
+        return this;
+    }
+
+    /**
+     * Sets the bed type for this block (used for bed blocks).
+     * 
+     * @param bedType The bed type to use
+     * @return this builder for method chaining
+     */
+    public BlockBuilder bedType(WCStandaloneBedBlock.BedType bedType) {
+        this.bedType = bedType;
         return this;
     }
 
@@ -464,6 +510,13 @@ public class BlockBuilder {
         // Create the block instance
         Block block = createBlock(settings);
 
+        // Register render type for transparency if needed
+        if (alphaRender) {
+            BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getTranslucent());
+        } else if (nonOpaque) {
+            BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
+        }
+
         // Register the block with the game registry
         Registry.register(Registries.BLOCK, WesterosBlocks.id(name), block);
 
@@ -508,6 +561,7 @@ public class BlockBuilder {
                 yield new WCWaySignBlock(settings, name, creativeTab, woodType);
             }
             case TRAPDOOR -> new WCTrapDoorBlock(settings, name, creativeTab, woodType, locked, soundType);
+            case BED -> new WCStandaloneBedBlock(settings, name, creativeTab, dyeColor, bedType);
         };
     }
 
@@ -527,6 +581,8 @@ public class BlockBuilder {
         /** Way sign blocks for directional markers */
         WAY_SIGN,
         /** Trapdoor blocks for entrances */
-        TRAPDOOR
+        TRAPDOOR,
+        /** Bed blocks for sleeping */
+        BED
     }
 } 
