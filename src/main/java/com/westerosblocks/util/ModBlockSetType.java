@@ -40,6 +40,11 @@ public class ModBlockSetType {
                 case "cherry" -> BlockSetType.CHERRY;
                 case "mangrove" -> BlockSetType.MANGROVE;
                 case "bamboo" -> BlockSetType.BAMBOO;
+                case "iron" -> BlockSetType.IRON;
+                case "copper" -> BlockSetType.COPPER;
+                case "gold" -> BlockSetType.GOLD;
+                case "stone" -> BlockSetType.STONE;
+                case "polished_blackstone" -> BlockSetType.POLISHED_BLACKSTONE;
                 case "weirwood" -> WEIRWOOD;
                 default -> BlockSetType.OAK;
             };

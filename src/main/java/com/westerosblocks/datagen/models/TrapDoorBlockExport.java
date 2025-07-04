@@ -1,93 +1,139 @@
 package com.westerosblocks.datagen.models;
 
-import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
+import net.minecraft.block.TrapdoorBlock;
+import net.minecraft.block.enums.BlockHalf;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+/**
+ * Standalone trap door block export for generating block states and models.
+ * This class is decoupled from the definition file system and follows Fabric datagen patterns.
+ */
+public class TrapDoorBlockExport {
 
-public class TrapDoorBlockExport extends ModelExport {
-    private final BlockStateModelGenerator generator;
-    private final Block block;
-    private final ModBlock def;
+    /**
+     * Generates block state models for a trap door block.
+     * 
+     * @param generator The BlockStateModelGenerator to register models with
+     * @param block The trap door block to generate models for
+     * @param texturePath The texture path for the trap door
+     */
+    public static void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // Create the base models for each trap door state
+        Identifier bottomModelId = createTrapDoorModel(generator, block, texturePath, "bottom");
+        Identifier topModelId = createTrapDoorModel(generator, block, texturePath, "top");
+        Identifier openModelId = createTrapDoorModel(generator, block, texturePath, "open");
 
-    private static final ModelEntry[] MODEL_ENTRIES = {
-            new ModelEntry("facing=north,half=bottom,open=false", "bottom", 0),
-            new ModelEntry("facing=south,half=bottom,open=false", "bottom", 0),
-            new ModelEntry("facing=east,half=bottom,open=false", "bottom", 0),
-            new ModelEntry("facing=west,half=bottom,open=false", "bottom", 0),
-            new ModelEntry("facing=north,half=top,open=false", "top", 0),
-            new ModelEntry("facing=south,half=top,open=false", "top", 0),
-            new ModelEntry("facing=east,half=top,open=false", "top", 0),
-            new ModelEntry("facing=west,half=top,open=false", "top", 0),
-            new ModelEntry("facing=north,half=bottom,open=true", "open", 0),
-            new ModelEntry("facing=south,half=bottom,open=true", "open", 180),
-            new ModelEntry("facing=east,half=bottom,open=true", "open", 90),
-            new ModelEntry("facing=west,half=bottom,open=true", "open", 270),
-            new ModelEntry("facing=north,half=top,open=true", "open", 0),
-            new ModelEntry("facing=south,half=top,open=true", "open", 180),
-            new ModelEntry("facing=east,half=top,open=true", "open", 90),
-            new ModelEntry("facing=west,half=top,open=true", "open", 270)
-    };
+        // Create variants for all trap door states
+        BlockStateVariantMap variants = BlockStateVariantMap.create(TrapdoorBlock.FACING, TrapdoorBlock.OPEN, TrapdoorBlock.HALF)
+            // Bottom half, closed
+            .register(Direction.NORTH, false, BlockHalf.BOTTOM, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, bottomModelId))
+            .register(Direction.EAST, false, BlockHalf.BOTTOM, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, bottomModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+            .register(Direction.SOUTH, false, BlockHalf.BOTTOM, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, bottomModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+            .register(Direction.WEST, false, BlockHalf.BOTTOM, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, bottomModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
 
-    private record ModelEntry(String condition, String modelType, int yRotation) {
-    }
+            // Top half, closed
+            .register(Direction.NORTH, false, BlockHalf.TOP, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, topModelId))
+            .register(Direction.EAST, false, BlockHalf.TOP, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, topModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+            .register(Direction.SOUTH, false, BlockHalf.TOP, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, topModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+            .register(Direction.WEST, false, BlockHalf.TOP, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, topModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
 
-    public TrapDoorBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
-        super(generator, block, def);
-        this.generator = generator;
-        this.block = block;
-        this.def = def;
-    }
+            // Bottom half, open
+            .register(Direction.NORTH, true, BlockHalf.BOTTOM, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, openModelId))
+            .register(Direction.EAST, true, BlockHalf.BOTTOM, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, openModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+            .register(Direction.SOUTH, true, BlockHalf.BOTTOM, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, openModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+            .register(Direction.WEST, true, BlockHalf.BOTTOM, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, openModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
 
-    public void generateBlockStateModels() {
-        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
-        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
+            // Top half, open
+            .register(Direction.NORTH, true, BlockHalf.TOP, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, openModelId))
+            .register(Direction.EAST, true, BlockHalf.TOP, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, openModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+            .register(Direction.SOUTH, true, BlockHalf.TOP, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, openModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+            .register(Direction.WEST, true, BlockHalf.TOP, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, openModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270));
 
-        for (ModelEntry entry : MODEL_ENTRIES) {
-            for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-                Identifier modelId = getModelId(entry.modelType, setIdx);
-
-                BlockStateVariant variant = VariantBuilder.createWithRotation(modelId, set, entry.yRotation);
-                blockStateBuilder.addVariant(entry.condition, variant, null, variants);
-            }
-        }
-
-        generateBlockStateFiles(generator, block, variants);
-
-        for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-            ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-            generateTrapdoorModels(generator, set, setIdx);
-        }
-    }
-
-    private void generateTrapdoorModels(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, int setIdx) {
-        TextureMap textureMap = new TextureMap()
-                .put(TextureKey.TEXTURE, createBlockIdentifier(set.getTextureByIndex(0)));
-
-        Models.TEMPLATE_TRAPDOOR_BOTTOM.upload(getModelId("bottom", setIdx), textureMap, generator.modelCollector);
-        Models.TEMPLATE_TRAPDOOR_TOP.upload(getModelId("top", setIdx), textureMap, generator.modelCollector);
-        Models.TEMPLATE_TRAPDOOR_OPEN.upload(getModelId("open", setIdx), textureMap, generator.modelCollector);
-    }
-
-    private Identifier getModelId(String type, int setIdx) {
-        return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/%s_v%d", GENERATED_PATH, def.getBlockName(), type, setIdx + 1));
-    }
-
-    // todo make this a bit more attractive. just scale down display maybe
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
-        String path = String.format("%s%s/bottom_v1", GENERATED_PATH, blockDefinition.blockName);
-
-        itemModelGenerator.register(
-                block.asItem(),
-                new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty())
+        // Register the block state with the generator
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block)
+                .coordinate(variants)
         );
     }
-}
+
+    /**
+     * Creates a trap door model with the specified variant.
+     * 
+     * @param generator The BlockStateModelGenerator to register the model with
+     * @param block The block this model is for
+     * @param texturePath The texture path to use
+     * @param variant The variant name (bottom, top, open)
+     * @return The created model Identifier
+     */
+    private static Identifier createTrapDoorModel(BlockStateModelGenerator generator, Block block, String texturePath, String variant) {
+        // Create a unique model ID for this block and variant
+        String modelPath = "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", "") + "_" + variant;
+        Identifier modelId = Identifier.of("westerosblocks", modelPath);
+
+        // Create texture map
+        TextureMap textureMap = new TextureMap()
+            .put(TextureKey.TEXTURE, Identifier.of(texturePath))
+            .put(TextureKey.PARTICLE, Identifier.of(texturePath));
+
+        switch (variant) {
+            case "bottom":
+                Models.TEMPLATE_TRAPDOOR_BOTTOM.upload(modelId, textureMap, generator.modelCollector);
+                break;
+            case "top":
+                Models.TEMPLATE_TRAPDOOR_TOP.upload(modelId, textureMap, generator.modelCollector);
+                break;
+            case "open":
+                Models.TEMPLATE_TRAPDOOR_OPEN.upload(modelId, textureMap, generator.modelCollector);
+                break;
+        }
+
+        return modelId;
+    }
+
+    /**
+     * Generates item models for a trap door block.
+     * 
+     * @param generator The ItemModelGenerator to register models with
+     * @param block The trap door block to generate item models for
+     */
+    public static void generateItemModels(ItemModelGenerator generator, Block block) {
+        // Create a simple item model that inherits from the block model
+        String modelPath = "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", "") + "_bottom";
+        Model model = new Model(
+            java.util.Optional.of(Identifier.of("westerosblocks", modelPath)),
+            java.util.Optional.empty()
+        );
+        generator.register(block.asItem(), model);
+    }
+} 

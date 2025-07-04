@@ -1,10 +1,7 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.block.ModBlockFactory;
-import com.westerosblocks.block.ModBlockLifecycle;
 import com.westerosblocks.util.ModBlockSetType;
+import com.westerosblocks.util.ModWoodType;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -24,54 +21,80 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
+import net.minecraft.block.WoodType;
 
 import java.util.List;
 
-public class WCTrapDoorBlock extends TrapdoorBlock implements ModBlockLifecycle {
-    public static class Factory extends ModBlockFactory {
-        @Override
-        public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings settings = def.applyCustomProperties().nonOpaque() // Important for waterlogging to work properly
-                    .solidBlock((state, world, pos) -> false); // Allow;
-            Block blk = new WCTrapDoorBlock(settings, def);
-            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
-        }
+public class WCTrapDoorBlock extends TrapdoorBlock {
+    private final String blockName;
+    private final String creativeTab;
+    private final WoodType woodType;
+    private final boolean locked;
+    private final String soundType;
+
+    public WCTrapDoorBlock(AbstractBlock.Settings settings, String blockName, String creativeTab) {
+        this(settings, blockName, creativeTab, ModWoodType.getWoodType("oak"), false, "wood");
     }
 
-    private final ModBlock def;
-    private boolean locked = false;
-
-
-    @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, OPEN, HALF, POWERED, WATERLOGGED);
+    public WCTrapDoorBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, String woodType) {
+        this(settings, blockName, creativeTab, ModWoodType.getWoodType(woodType), false, "wood");
     }
 
-    protected WCTrapDoorBlock(AbstractBlock.Settings settings, ModBlock def) {
-        super(ModBlockSetType.getBlockSetType(def.woodType), settings);
+    public WCTrapDoorBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, String woodType, boolean locked) {
+        this(settings, blockName, creativeTab, ModWoodType.getWoodType(woodType), locked, "wood");
+    }
+
+    public WCTrapDoorBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, String woodType, boolean locked, String soundType) {
+        this(settings, blockName, creativeTab, ModWoodType.getWoodType(woodType), locked, soundType);
+    }
+
+    public WCTrapDoorBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, WoodType woodType) {
+        this(settings, blockName, creativeTab, woodType, false, "wood");
+    }
+
+    public WCTrapDoorBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, WoodType woodType, boolean locked) {
+        this(settings, blockName, creativeTab, woodType, locked, "wood");
+    }
+
+    public WCTrapDoorBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, WoodType woodType, boolean locked, String soundType) {
+        super(ModBlockSetType.getBlockSetType(soundType), settings);
+        this.blockName = blockName;
+        this.creativeTab = creativeTab;
+        this.woodType = woodType;
+        this.locked = locked;
+        this.soundType = soundType;
+        
         this.setDefaultState(this.getDefaultState()
                 .with(FACING, Direction.NORTH)
                 .with(OPEN, false)
                 .with(HALF, BlockHalf.BOTTOM)
                 .with(POWERED, false)
                 .with(WATERLOGGED, false));
-        this.def = def;
-        String type = def.getType();
-        if (type != null) {
-            String[] toks = type.split(",");
-            for (String tok : toks) {
-                String[] flds = tok.split(":");
-                if (flds.length < 2) continue;
-                if (flds[0].equals("locked")) {
-                    locked = flds[1].equals("true");
-                }
-            }
-        }
+    }
+
+    public String getBlockName() {
+        return blockName;
+    }
+
+    public String getCreativeTab() {
+        return creativeTab;
+    }
+
+    public WoodType getWoodType() {
+        return woodType;
+    }
+
+    public boolean isLocked() {
+        return locked;
+    }
+
+    public String getSoundType() {
+        return soundType;
     }
 
     @Override
-    public ModBlock getWBDefinition() {
-        return def;
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(FACING, OPEN, HALF, POWERED, WATERLOGGED);
     }
 
     @Override
@@ -80,13 +103,6 @@ public class WCTrapDoorBlock extends TrapdoorBlock implements ModBlockLifecycle 
             return ActionResult.PASS;
         } else {
             return super.onUse(state, world, pos, player, hit);
-//            state = state.cycle(OPEN);
-//            world.setBlockState(pos, state, 2);
-//            if (state.get(WATERLOGGED)) {
-//                world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
-//            }
-//            this.playToggleSound(player, world, pos, state.get(OPEN));
-//            return ActionResult.success(world.isClient);
         }
     }
 
@@ -116,16 +132,11 @@ public class WCTrapDoorBlock extends TrapdoorBlock implements ModBlockLifecycle 
         return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
-    private static final String[] TAGS = {"trapdoors"};
-
-    @Override
-    public String[] getBlockTags() {
-        return TAGS;
-    }
-
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        addCustomTooltip(tooltip);
+        if (this.locked) {
+            tooltip.add(Text.translatable("tooltip.westerosblocks.locked_trapdoor").formatted(net.minecraft.util.Formatting.RED));
+        }
         super.appendTooltip(stack, context, tooltip, options);
     }
-}
+} 

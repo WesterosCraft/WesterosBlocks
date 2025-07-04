@@ -89,13 +89,13 @@ public class ModModelProvider extends FabricModelProvider {
             "westerosblocks:block/wood/oak/all");
 
         // Use the new dynamic model provider for trap doors
-        StandaloneTrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.KINGS_LANDING_SEWER_MANHOLE,
+        TrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.KINGS_LANDING_SEWER_MANHOLE,
             "westerosblocks:block/trapdoor_block/kings_landing_manhole");
-        StandaloneTrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.OLDTOWN_SEWER_MANHOLE,
+        TrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.OLDTOWN_SEWER_MANHOLE,
             "westerosblocks:block/trapdoor_block/oldtown_manhole");
-        StandaloneTrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.SEWER_MANHOLE,
+        TrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.SEWER_MANHOLE,
             "westerosblocks:block/trapdoor_block/manhole");
-        StandaloneTrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.WHITE_HARBOR_SEWER_MANHOLE,
+        TrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks.WHITE_HARBOR_SEWER_MANHOLE,
             "westerosblocks:block/trapdoor_block/white_harbor_manhole");
         
         // Handle other blocks from definition files
@@ -154,10 +154,10 @@ public class ModModelProvider extends FabricModelProvider {
         WaySignBlockExport.generateItemModels(itemModelGenerator, ModBlocks.OAK_WAY_SIGN);
 
         // Use the new dynamic model provider for trap doors
-        StandaloneTrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks.KINGS_LANDING_SEWER_MANHOLE);
-        StandaloneTrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks.OLDTOWN_SEWER_MANHOLE);
-        StandaloneTrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks.SEWER_MANHOLE);
-        StandaloneTrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks.WHITE_HARBOR_SEWER_MANHOLE);
+        TrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks.KINGS_LANDING_SEWER_MANHOLE);
+        TrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks.OLDTOWN_SEWER_MANHOLE);
+        TrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks.SEWER_MANHOLE);
+        TrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks.WHITE_HARBOR_SEWER_MANHOLE);
 
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
