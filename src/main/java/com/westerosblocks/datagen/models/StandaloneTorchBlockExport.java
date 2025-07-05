@@ -1,7 +1,6 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.custom.StandaloneTorchBlock;
 import com.westerosblocks.block.custom.StandaloneWallTorchBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
@@ -109,9 +108,9 @@ public class StandaloneTorchBlockExport extends ModelExport {
     }
 
     public static void generateItemModels(ItemModelGenerator generator, Block standingTorch, Block wallTorch) {
-        // Generate item model for standing torch only
-        // Wall torch blocks don't need item models since they're not in creative tab
+        // Generate item models for both standing and wall torch blocks
         generateSingleItemModel(generator, standingTorch);
+        generateSingleItemModel(generator, wallTorch);
     }
 
     private static void generateSingleItemModel(ItemModelGenerator generator, Block block) {
@@ -130,9 +129,6 @@ public class StandaloneTorchBlockExport extends ModelExport {
     private static String getTexturePath(Block block) {
         // Extract texture path from block name
         String blockName = block.getTranslationKey().replace("block.westerosblocks.", "");
-        if (blockName.startsWith("wall_")) {
-            blockName = blockName.substring(5); // Remove "wall_" prefix
-        }
         
         // Map block names to texture paths
         return switch (blockName) {
@@ -140,6 +136,10 @@ public class StandaloneTorchBlockExport extends ModelExport {
             case "torch_unlit" -> "lighting/torch_unlit";
             case "candle" -> "lighting/candle";
             case "candle_unlit" -> "lighting/candle_unlit";
+            case "wall_torch" -> "lighting/torch";
+            case "wall_torch_unlit" -> "lighting/torch_unlit";
+            case "wall_candle" -> "lighting/candle";
+            case "wall_candle_unlit" -> "lighting/candle_unlit";
             default -> "lighting/torch"; // fallback
         };
     }

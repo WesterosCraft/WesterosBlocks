@@ -18,8 +18,6 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.DyeColor;
-import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 
 import java.util.List;
@@ -606,6 +604,13 @@ public class BlockBuilder {
      * @return The registered wall block
      */
     private Block registerWallBlock(Block wallBlock, String wallName) {
+        // Register render type for transparency if needed (same as main block)
+        if (alphaRender) {
+            BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, RenderLayer.getTranslucent());
+        } else if (nonOpaque) {
+            BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, RenderLayer.getCutout());
+        }
+        
         Registry.register(Registries.BLOCK, WesterosBlocks.id(wallName), wallBlock);
         Registry.register(Registries.ITEM, WesterosBlocks.id(wallName), 
             new BlockItem(wallBlock, new Item.Settings()));

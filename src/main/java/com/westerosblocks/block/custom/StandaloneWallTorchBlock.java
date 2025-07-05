@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.WallTorchBlock;
@@ -8,7 +9,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.particle.SimpleParticleType;
-import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
@@ -52,7 +52,7 @@ public class StandaloneWallTorchBlock extends WallTorchBlock {
 
     private static SimpleParticleType getParticle(boolean noParticle) {
         if (noParticle) {
-            return null;
+            return null; 
         }
         return ParticleTypes.FLAME;
     }
@@ -66,7 +66,14 @@ public class StandaloneWallTorchBlock extends WallTorchBlock {
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        return this.allowUnsupported || super.canPlaceAt(state, world, pos);
+        if (this.allowUnsupported) return true;
+        return super.canPlaceAt(state, world, pos);
+    }
+
+    private static final String[] TAGS = {"wall_post_override"};
+
+    public String[] getBlockTags() {
+        return TAGS;
     }
 
     @Override
