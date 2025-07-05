@@ -97,9 +97,6 @@ public class BlockBuilder {
     
     /** Dye color for colored blocks (like beds) */
     private DyeColor dyeColor = DyeColor.RED;
-    
-    /** Bed type for bed blocks */
-    private WCStandaloneBedBlock.BedType bedType = WCStandaloneBedBlock.BedType.NORMAL;
 
     /**
      * Creates a new BlockBuilder with the specified name.
@@ -421,17 +418,6 @@ public class BlockBuilder {
     }
 
     /**
-     * Sets the bed type for this block (used for bed blocks).
-     * 
-     * @param bedType The bed type to use
-     * @return this builder for method chaining
-     */
-    public BlockBuilder bedType(WCStandaloneBedBlock.BedType bedType) {
-        this.bedType = bedType;
-        return this;
-    }
-
-    /**
      * Sets the block type (called internally by registration methods).
      * 
      * @param blockType The type of custom block to create
@@ -560,8 +546,7 @@ public class BlockBuilder {
                 });
                 yield new WCWaySignBlock(settings, name, creativeTab, woodType);
             }
-            case TRAPDOOR -> new WCTrapDoorBlock(settings, name, creativeTab, woodType, locked, soundType);
-            case BED -> new WCStandaloneBedBlock(settings, name, creativeTab, dyeColor, bedType);
+                case TRAPDOOR -> new WCTrapDoorBlock(settings, name, creativeTab, woodType, locked, soundType);
         };
     }
 
@@ -581,8 +566,6 @@ public class BlockBuilder {
         /** Way sign blocks for directional markers */
         WAY_SIGN,
         /** Trapdoor blocks for entrances */
-        TRAPDOOR,
-        /** Bed blocks for sleeping */
-        BED
+        TRAPDOOR
     }
 } 
