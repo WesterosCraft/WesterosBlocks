@@ -1,6 +1,5 @@
 package com.westerosblocks.datagen.models;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.custom.WCChairBlock;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -37,7 +36,7 @@ public class ChairBlockExport {
             .register(6, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, cardinalModelId)
                 .put(VariantSettings.Y, VariantSettings.Rotation.R270))
-            
+
             // Diagonal directions - use 45-degree rotated model with adjusted Y rotations
             // The diagonal model is already rotated 45°, so we need to adjust the Y rotations
             .register(1, BlockStateVariant.create()
@@ -52,8 +51,11 @@ public class ChairBlockExport {
             .register(7, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, diagonalModelId));
 
-        // Register the block state
-        ModelExportUtils.registerBlockState(generator, block, variants);
+        // Register the block state directly with the generator's collector
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block)
+                .coordinate(variants)
+        );
     }
 
     public static void generateItemModels(ItemModelGenerator generator, Block block) {

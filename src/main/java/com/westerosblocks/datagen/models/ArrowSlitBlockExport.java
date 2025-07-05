@@ -86,8 +86,11 @@ public class ArrowSlitBlockExport {
                 .put(VariantSettings.MODEL, topModelId)
                 .put(VariantSettings.Y, VariantSettings.Rotation.R270));
 
-        // Register the block state
-        ModelExportUtils.registerBlockState(generator, block, variants);
+        // Register the block state directly with the generator's collector
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block)
+                .coordinate(variants)
+        );
     }
 
     public static void generateItemModels(ItemModelGenerator generator, Block block) {
