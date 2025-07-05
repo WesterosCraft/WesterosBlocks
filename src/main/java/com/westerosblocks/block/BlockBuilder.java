@@ -62,6 +62,9 @@ public class BlockBuilder {
     /** Path to the block's texture file (relative to assets/westerosblocks/textures/block/) */
     private String texturePath;
     
+    /** Multiple texture paths for blocks that need different textures on different faces */
+    private String[] texturePaths;
+    
     /** Wood type for wooden blocks (affects sounds, textures, and behavior) */
     private WoodType woodType = WoodType.OAK;
     
@@ -295,6 +298,41 @@ public class BlockBuilder {
     }
 
     /**
+     * Sets multiple texture paths for blocks that need different textures on different faces.
+     * 
+     * <p>For log blocks, the order is typically [bottom, top, side].
+     * For other block types, the order depends on the specific block implementation.
+     * 
+     * @param texturePaths Array of texture paths (without .png extension)
+     * @return this builder for method chaining
+     */
+    public BlockBuilder textures(String... texturePaths) {
+        this.texturePaths = new String[texturePaths.length];
+        for (int i = 0; i < texturePaths.length; i++) {
+            this.texturePaths[i] = "westerosblocks:block/" + texturePaths[i];
+        }
+        return this;
+    }
+
+    /**
+     * Gets the texture paths array for multi-texture blocks.
+     * 
+     * @return Array of texture paths, or null if not set
+     */
+    public String[] getTexturePaths() {
+        return texturePaths;
+    }
+
+    /**
+     * Gets the primary texture path for single-texture blocks.
+     * 
+     * @return The texture path, or null if not set
+     */
+    public String getTexturePath() {
+        return texturePath;
+    }
+
+    /**
      * Sets the wood type for this block using a WoodType enum.
      * 
      * @param woodType The wood type enum value
@@ -446,7 +484,7 @@ public class BlockBuilder {
         if (blockType == null) {
             throw new IllegalStateException("Block type not specified for " + name);
         }
-        if (texturePath == null) {
+        if (texturePath == null && (texturePaths == null || texturePaths.length == 0)) {
             throw new IllegalStateException("Texture path not specified for " + name);
         }
 
@@ -546,7 +584,8 @@ public class BlockBuilder {
                 });
                 yield new WCWaySignBlock(settings, name, creativeTab, woodType);
             }
-                case TRAPDOOR -> new WCTrapDoorBlock(settings, name, creativeTab, woodType, locked, soundType);
+            case TRAPDOOR -> new WCTrapDoorBlock(settings, name, creativeTab, woodType, locked, soundType);
+            case LOG -> new WCLogBlock(settings, name, creativeTab, woodType.toString().toLowerCase(), texturePaths);
         };
     }
 
@@ -566,6 +605,8 @@ public class BlockBuilder {
         /** Way sign blocks for directional markers */
         WAY_SIGN,
         /** Trapdoor blocks for entrances */
-        TRAPDOOR
+        TRAPDOOR,
+        /** Log blocks for wooden structures */
+        LOG
     }
 } 

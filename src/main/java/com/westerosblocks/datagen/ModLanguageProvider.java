@@ -98,6 +98,38 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.sewer_manhole", "Generic Sewer Manhole");
         translationBuilder.add("block.westerosblocks.white_harbor_sewer_manhole", "White Harbor Sewer Manhole");
 
+        // Log block translations
+        translationBuilder.add("block.westerosblocks.oak_log_chain", "Oak Log Chain");
+        translationBuilder.add("block.westerosblocks.jungle_log_chain", "Jungle Log Chain");
+        translationBuilder.add("block.westerosblocks.jungle_log_rope", "Jungle Log Rope");
+        translationBuilder.add("block.westerosblocks.archery_target", "Archery Target");
+        translationBuilder.add("block.westerosblocks.closed_barrel", "Closed Barrel");
+        translationBuilder.add("block.westerosblocks.firewood", "Firewood");
+        translationBuilder.add("block.westerosblocks.marble_pillar", "Marble Pillar");
+        translationBuilder.add("block.westerosblocks.marble_pillar_vertical_ctm", "Marble Pillar Vertical");
+        translationBuilder.add("block.westerosblocks.mossy_oak_log", "Mossy Oak Log");
+        translationBuilder.add("block.westerosblocks.mossy_birch_log", "Mossy Birch Log");
+        translationBuilder.add("block.westerosblocks.mossy_spruce_log", "Mossy Spruce Log");
+        translationBuilder.add("block.westerosblocks.mossy_jungle_log", "Mossy Jungle Log");
+
+        // Additional log block translations from JSON definitions
+        translationBuilder.add("block.westerosblocks.oak_log_rope", "Oak Log Rope");
+        translationBuilder.add("block.westerosblocks.palm_tree_log", "Palm Tree Log");
+        translationBuilder.add("block.westerosblocks.sandstone_pillar", "Sandstone Pillar");
+        translationBuilder.add("block.westerosblocks.spruce_log_chain", "Spruce Log Chain");
+        translationBuilder.add("block.westerosblocks.spruce_log_rope", "Spruce Log Rope");
+        translationBuilder.add("block.westerosblocks.stacked_bones", "Stacked Bones");
+        translationBuilder.add("block.westerosblocks.weirwood_face_0", "Weirwood Face 0");
+        translationBuilder.add("block.westerosblocks.weirwood_face_1", "Weirwood Face 1");
+        translationBuilder.add("block.westerosblocks.weirwood_face_2", "Weirwood Face 2");
+        translationBuilder.add("block.westerosblocks.weirwood_face_3", "Weirwood Face 3");
+        translationBuilder.add("block.westerosblocks.weirwood_face_4", "Weirwood Face 4");
+        translationBuilder.add("block.westerosblocks.weirwood_face_5", "Weirwood Face 5");
+        translationBuilder.add("block.westerosblocks.weirwood_face_6", "Weirwood Face 6");
+        translationBuilder.add("block.westerosblocks.weirwood_face_7", "Weirwood Face 7");
+        translationBuilder.add("block.westerosblocks.weirwood_face_8", "Weirwood Face 8");
+        translationBuilder.add("block.westerosblocks.weirwood_scars", "Weirwood Scars");
+
         // TODO can prob grab the item tag def json and generate this automatically when/if we get more
         // The format desired is tag.item.<namespace>.<path> for the translation key with slashes in path turned into periods."
         translationBuilder.add("tag.item.c.shield", "Shield");

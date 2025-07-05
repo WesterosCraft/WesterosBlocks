@@ -1,0 +1,160 @@
+package com.westerosblocks.datagen;
+
+
+import com.westerosblocks.block.ModBlocks2;
+import com.westerosblocks.datagen.models.*;
+import net.minecraft.data.client.*;
+
+public class ModModelProvider2 {
+
+    public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        // arrow slits
+        ArrowSlitBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ARBOR_BRICK_ARROW_SLIT,
+            "westerosblocks:block/ashlar_third/arbor/all");
+        ArrowSlitBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLACK_GRANITE_ARROW_SLIT,
+            "westerosblocks:block/ashlar_third/black/all");
+
+        // tables
+        TableBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_TABLE,
+            "westerosblocks:block/wood/oak/all");
+        TableBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BIRCH_TABLE,
+            "westerosblocks:block/wood/birch/all");
+        TableBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPRUCE_TABLE,
+            "westerosblocks:block/wood/spruce/all");
+
+        // chairs
+        ChairBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_CHAIR,
+            "westerosblocks:block/wood/oak/all");
+        ChairBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BIRCH_CHAIR,
+            "westerosblocks:block/wood/birch/all");
+        ChairBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPRUCE_CHAIR,
+            "westerosblocks:block/wood/spruce/all");
+
+        // way signs
+        WaySignBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_WAY_SIGN,
+            "westerosblocks:block/wood/oak/all");
+
+        // trap doors
+        TrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.KINGS_LANDING_SEWER_MANHOLE,
+            "westerosblocks:block/trapdoor_block/kings_landing_manhole");
+        TrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OLDTOWN_SEWER_MANHOLE,
+            "westerosblocks:block/trapdoor_block/oldtown_manhole");
+        TrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SEWER_MANHOLE,
+            "westerosblocks:block/trapdoor_block/manhole");
+        TrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WHITE_HARBOR_SEWER_MANHOLE,
+            "westerosblocks:block/trapdoor_block/white_harbor_manhole");
+
+        // log blocks
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_LOG_CHAIN,
+            new String[]{"bark/oak/top", "bark/oak/top", "bark/oak/chain"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.JUNGLE_LOG_CHAIN,
+            new String[]{"bark/jungle/top", "bark/jungle/top", "bark/jungle/chain"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.JUNGLE_LOG_ROPE,
+            new String[]{"bark/jungle/top", "bark/jungle/top", "bark/jungle/rope"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ARCHERY_TARGET,
+            new String[]{"archery_target/front", "archery_target/front", "archery_target/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CLOSED_BARREL,
+            new String[]{"barrel_closed/barrel_top_closed", "barrel_closed/barrel_top_closed", "barrel_sides/side1"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FIREWOOD,
+            new String[]{"firewood/top", "firewood/top", "firewood/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MARBLE_PILLAR,
+            new String[]{"marble/quartz/column_topbottom", "marble/quartz/column_topbottom", "marble/quartz/column_side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MARBLE_PILLAR_VERTICAL_CTM,
+            new String[]{"marble/quartz/column_topbottom", "marble/quartz/column_topbottom", "marble/quartz/column_side_ctm"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MOSSY_OAK_LOG,
+            new String[]{"bark/oak/mossy/bottom", "bark/oak/mossy/top", "bark/oak/mossy/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MOSSY_BIRCH_LOG,
+            new String[]{"bark/birch/mossy/bottom", "bark/birch/mossy/top", "bark/birch/mossy/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MOSSY_SPRUCE_LOG,
+            new String[]{"bark/spruce/mossy/bottom", "bark/spruce/mossy/top", "bark/spruce/mossy/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MOSSY_JUNGLE_LOG,
+            new String[]{"bark/jungle/mossy/bottom", "bark/jungle/mossy/top", "bark/jungle/mossy/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_LOG_ROPE,
+            new String[]{"bark/oak/top", "bark/oak/top", "bark/oak/rope"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.PALM_TREE_LOG,
+            new String[]{"bark/palm/top", "bark/palm/top", "bark/palm/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SANDSTONE_PILLAR,
+            new String[]{"ashlar_third/sandstone/column_top", "ashlar_third/sandstone/column_top", "ashlar_third/sandstone/column_side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPRUCE_LOG_CHAIN,
+            new String[]{"bark/spruce/top", "bark/spruce/top", "bark/spruce/chain"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPRUCE_LOG_ROPE,
+            new String[]{"bark/spruce/top", "bark/spruce/top", "bark/spruce/rope"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.STACKED_BONES,
+            new String[]{"stacked_bones/bone_stacked_front", "stacked_bones/bone_stacked_front", "stacked_bones/bone_stacked_side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_0,
+            new String[]{"bark/weirwood/face_0", "bark/weirwood/face_0", "bark/weirwood/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_1,
+            new String[]{"bark/weirwood/face_1", "bark/weirwood/face_1", "bark/weirwood/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_2,
+            new String[]{"bark/weirwood/face_2", "bark/weirwood/face_2", "bark/weirwood/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_3,
+            new String[]{"bark/weirwood/face_3", "bark/weirwood/face_3", "bark/weirwood/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_4,
+            new String[]{"bark/weirwood/face_4", "bark/weirwood/face_4", "bark/weirwood/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_5,
+            new String[]{"bark/weirwood/face_5", "bark/weirwood/face_5", "bark/weirwood/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_6,
+            new String[]{"bark/weirwood/face_6", "bark/weirwood/face_6", "bark/weirwood/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_7,
+            new String[]{"bark/weirwood/face_7", "bark/weirwood/face_7", "bark/weirwood/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_8,
+            new String[]{"bark/weirwood/face_8", "bark/weirwood/face_8", "bark/weirwood/side"});
+        LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_SCARS,
+            new String[]{"bark/weirwood/scars", "bark/weirwood/scars", "bark/weirwood/side"});
+    }
+
+    public static void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        // Use the new dynamic model provider for arrow slits
+        ArrowSlitBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.ARBOR_BRICK_ARROW_SLIT);
+        ArrowSlitBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.BLACK_GRANITE_ARROW_SLIT);
+
+        // Use the new dynamic model provider for tables
+        TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.OAK_TABLE);
+        TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.BIRCH_TABLE);
+        TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.SPRUCE_TABLE);
+
+        // Use the new dynamic model provider for chairs
+        ChairBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.OAK_CHAIR);
+        ChairBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.BIRCH_CHAIR);
+        ChairBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.SPRUCE_CHAIR);
+
+        // Use the new dynamic model provider for way signs
+        WaySignBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.OAK_WAY_SIGN);
+
+        // Use the new dynamic model provider for trap doors
+        TrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.KINGS_LANDING_SEWER_MANHOLE);
+        TrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.OLDTOWN_SEWER_MANHOLE);
+        TrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.SEWER_MANHOLE);
+        TrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WHITE_HARBOR_SEWER_MANHOLE);
+
+        // Use the new dynamic model provider for standalone log blocks
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.OAK_LOG_CHAIN);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.JUNGLE_LOG_CHAIN);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.JUNGLE_LOG_ROPE);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.ARCHERY_TARGET);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.CLOSED_BARREL);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.FIREWOOD);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.MARBLE_PILLAR);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.MARBLE_PILLAR_VERTICAL_CTM);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.MOSSY_OAK_LOG);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.MOSSY_BIRCH_LOG);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.MOSSY_SPRUCE_LOG);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.MOSSY_JUNGLE_LOG);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.OAK_LOG_ROPE);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.PALM_TREE_LOG);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.SANDSTONE_PILLAR);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.SPRUCE_LOG_CHAIN);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.SPRUCE_LOG_ROPE);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.STACKED_BONES);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_FACE_0);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_FACE_1);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_FACE_2);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_FACE_3);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_FACE_4);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_FACE_5);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_FACE_6);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_FACE_7);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_FACE_8);
+        LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_SCARS);
+    }
+} 

@@ -3,7 +3,6 @@ package com.westerosblocks.datagen;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosBlocksDefLoader;
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.ModBlocks2;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.datagen.models.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -21,7 +20,7 @@ public class ModModelProvider extends FabricModelProvider {
             Map.entry("sound", SoundBlockExport::new),
             Map.entry("stair", StairBlockExport::new),
             Map.entry("leaves", LeavesBlockExport::new),
-            Map.entry("log", LogBlockExport::new),
+            // Map.entry("log", LogBlockExport::new),
             Map.entry("plant", CrossBlockExport::new),
             Map.entry("web", CrossBlockExport::new),
             Map.entry("pane", PaneBlockExport::new),
@@ -63,46 +62,12 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        // Use the new dynamic model provider for arrow slits
-        ArrowSlitBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ARBOR_BRICK_ARROW_SLIT,
-            "westerosblocks:block/ashlar_third/arbor/all");
-        ArrowSlitBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLACK_GRANITE_ARROW_SLIT,
-            "westerosblocks:block/ashlar_third/black/all");
+        // Generate specific block models
+        ModModelProvider2.generateBlockStateModels(blockStateModelGenerator);
 
-        // Use the new dynamic model provider for tables
-        TableBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_TABLE,
-            "westerosblocks:block/wood/oak/all");
-        TableBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BIRCH_TABLE,
-            "westerosblocks:block/wood/birch/all");
-        TableBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPRUCE_TABLE,
-            "westerosblocks:block/wood/spruce/all");
-
-        // Use the new dynamic model provider for chairs
-        ChairBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_CHAIR,
-            "westerosblocks:block/wood/oak/all");
-        ChairBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BIRCH_CHAIR,
-            "westerosblocks:block/wood/birch/all");
-        ChairBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPRUCE_CHAIR,
-            "westerosblocks:block/wood/spruce/all");
-
-        // Use the new dynamic model provider for way signs
-        WaySignBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_WAY_SIGN,
-            "westerosblocks:block/wood/oak/all");
-
-        // Use the new dynamic model provider for trap doors
-        TrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.KINGS_LANDING_SEWER_MANHOLE,
-            "westerosblocks:block/trapdoor_block/kings_landing_manhole");
-        TrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OLDTOWN_SEWER_MANHOLE,
-            "westerosblocks:block/trapdoor_block/oldtown_manhole");
-        TrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SEWER_MANHOLE,
-            "westerosblocks:block/trapdoor_block/manhole");
-        TrapDoorBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WHITE_HARBOR_SEWER_MANHOLE,
-            "westerosblocks:block/trapdoor_block/white_harbor_manhole");
-        
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
         ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
-        
         // Handle wall way sign blocks
         for (Map.Entry<String, Block> entry : customBlocks.entrySet()) {
             if (entry.getKey().startsWith("wall_") && entry.getValue() instanceof com.westerosblocks.block.custom.WCWaySignWallBlock) {
@@ -137,29 +102,9 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        // Use the new dynamic model provider for arrow slits
-        ArrowSlitBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.ARBOR_BRICK_ARROW_SLIT);
-        ArrowSlitBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.BLACK_GRANITE_ARROW_SLIT);
-
-        // Use the new dynamic model provider for tables
-        TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.OAK_TABLE);
-        TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.BIRCH_TABLE);
-        TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.SPRUCE_TABLE);
-
-        // Use the new dynamic model provider for chairs
-        ChairBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.OAK_CHAIR);
-        ChairBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.BIRCH_CHAIR);
-        ChairBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.SPRUCE_CHAIR);
-
-        // Use the new dynamic model provider for way signs
-        WaySignBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.OAK_WAY_SIGN);
-
-        // Use the new dynamic model provider for trap doors
-        TrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.KINGS_LANDING_SEWER_MANHOLE);
-        TrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.OLDTOWN_SEWER_MANHOLE);
-        TrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.SEWER_MANHOLE);
-        TrapDoorBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WHITE_HARBOR_SEWER_MANHOLE);
-
+        // Generate specific item models
+        ModModelProvider2.generateItemModels(itemModelGenerator);
+        
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
         ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
@@ -189,10 +134,10 @@ public class ModModelProvider extends FabricModelProvider {
                     LadderBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-                case "log": {
-                    LogBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-                    break;
-                }
+                // case "log": {
+                //     LogBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                //     break;
+                // }
                 case "rail": {
                     RailBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
