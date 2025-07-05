@@ -3,6 +3,8 @@ package com.westerosblocks.block;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.*;
+import com.westerosblocks.block.custom.StandaloneTorchBlock;
+import com.westerosblocks.block.custom.StandaloneWallTorchBlock;
 import com.westerosblocks.util.ModWoodType;
 import com.westerosblocks.util.ModBlockSoundGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -19,6 +21,8 @@ import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+
+import java.util.List;
 
 /**
  * A fluent builder class for creating and registering custom blocks in WesterosBlocks.
@@ -100,6 +104,13 @@ public class BlockBuilder {
     
     /** Dye color for colored blocks (like beds) */
     private DyeColor dyeColor = DyeColor.RED;
+    
+    /** Torch-specific properties */
+    private boolean allowUnsupported = false;
+    private boolean noParticle = false;
+    private List<String> tooltips = null;
+    private int lightLevel = 0;
+    private Block wallBlock = null;
 
     /**
      * Creates a new BlockBuilder with the specified name.
@@ -333,6 +344,87 @@ public class BlockBuilder {
     }
 
     /**
+     * Gets the block name.
+     * 
+     * @return the block name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Gets the creative tab.
+     * 
+     * @return the creative tab
+     */
+    public String getCreativeTab() {
+        return creativeTab;
+    }
+
+    /**
+     * Gets the hardness value.
+     * 
+     * @return the hardness value
+     */
+    public float getHardness() {
+        return hardness;
+    }
+
+    /**
+     * Gets the resistance value.
+     * 
+     * @return the resistance value
+     */
+    public float getResistance() {
+        return resistance;
+    }
+
+    /**
+     * Gets the sound type.
+     * 
+     * @return the sound type
+     */
+    public String getSoundType() {
+        return soundType;
+    }
+
+    /**
+     * Gets whether this block is non-opaque.
+     * 
+     * @return true if non-opaque
+     */
+    public boolean isNonOpaque() {
+        return nonOpaque;
+    }
+
+    /**
+     * Gets whether this block has no collision.
+     * 
+     * @return true if no collision
+     */
+    public boolean isNoCollision() {
+        return noCollision;
+    }
+
+    /**
+     * Gets whether this block drops nothing.
+     * 
+     * @return true if drops nothing
+     */
+    public boolean isDropsNothing() {
+        return dropsNothing;
+    }
+
+    /**
+     * Gets the map color.
+     * 
+     * @return the map color
+     */
+    public MapColor getMapColor() {
+        return mapColor;
+    }
+
+    /**
      * Sets the wood type for this block using a WoodType enum.
      * 
      * @param woodType The wood type enum value
@@ -456,12 +548,72 @@ public class BlockBuilder {
     }
 
     /**
+     * Sets whether this torch can be placed without support.
+     * 
+     * @return this builder for method chaining
+     */
+    public BlockBuilder allowUnsupported() {
+        this.allowUnsupported = true;
+        return this;
+    }
+
+    /**
+     * Sets whether this torch should emit particles.
+     * 
+     * @return this builder for method chaining
+     */
+    public BlockBuilder noParticle() {
+        this.noParticle = true;
+        return this;
+    }
+
+    /**
+     * Sets custom tooltips for this torch.
+     * 
+     * @param tooltips List of tooltip strings
+     * @return this builder for method chaining
+     */
+    public BlockBuilder tooltips(List<String> tooltips) {
+        this.tooltips = tooltips;
+        return this;
+    }
+
+    /**
+     * Sets the light level emitted by this block (0-15).
+     * 
+     * @param lightLevel The light level (0-15)
+     * @return this builder for method chaining
+     */
+    public BlockBuilder lightLevel(int lightLevel) {
+        this.lightLevel = lightLevel;
+        return this;
+    }
+
+    /**
      * Sets the block type (called internally by registration methods).
      * 
      * @param blockType The type of custom block to create
      */
-    void setBlockType(BlockType blockType) {
+    public void setBlockType(BlockType blockType) {
         this.blockType = blockType;
+    }
+
+    /**
+     * Helper method to register a wall block variant.
+     * 
+     * @param wallBlock The wall block to register
+     * @param wallName The name for the wall block
+     * @return The registered wall block
+     */
+    private Block registerWallBlock(Block wallBlock, String wallName) {
+        Registry.register(Registries.BLOCK, WesterosBlocks.id(wallName), wallBlock);
+        Registry.register(Registries.ITEM, WesterosBlocks.id(wallName), 
+            new BlockItem(wallBlock, new Item.Settings()));
+        
+        // Note: Wall torch blocks are NOT added to creative tab
+        // They are automatically created when placing standing torches against walls
+        
+        return wallBlock;
     }
 
     /**
@@ -492,6 +644,11 @@ public class BlockBuilder {
         AbstractBlock.Settings settings = AbstractBlock.Settings.create()
             .strength(hardness, resistance)
             .sounds(ModBlockSoundGroup.getBlockSoundGroup(soundType));
+
+        // Apply light level if specified
+        if (lightLevel > 0) {
+            settings = settings.luminance(state -> lightLevel);
+        }
 
         // Apply harvest requirements
         if (harvestTool != null) {
@@ -560,6 +717,11 @@ public class BlockBuilder {
             entries.add(block);
         });
 
+        // Handle torch wall block registration
+        if (blockType == BlockType.TORCH && wallBlock != null) {
+            registerWallBlock(wallBlock, "wall_" + name);
+        }
+
         return block;
     }
 
@@ -586,6 +748,30 @@ public class BlockBuilder {
             }
             case TRAPDOOR -> new WCTrapDoorBlock(settings, name, creativeTab, woodType, locked, soundType);
             case LOG -> new WCLogBlock(settings, name, creativeTab, woodType.toString().toLowerCase(), texturePaths);
+            case TORCH -> {
+                // Create wall torch first
+                StandaloneWallTorchBlock wallTorch = new StandaloneWallTorchBlock(
+                    settings,
+                    allowUnsupported,
+                    noParticle,
+                    "block." + WesterosBlocks.MOD_ID + ".wall_" + name,
+                    tooltips
+                );
+
+                // Create and return standing torch
+                StandaloneTorchBlock standingTorch = new StandaloneTorchBlock(
+                    settings,
+                    wallTorch,
+                    allowUnsupported,
+                    noParticle,
+                    "block." + WesterosBlocks.MOD_ID + "." + name,
+                    tooltips
+                );
+
+                // Store wall torch for registration in register() method
+                this.wallBlock = wallTorch;
+                yield standingTorch;
+            }
         };
     }
 
@@ -595,7 +781,7 @@ public class BlockBuilder {
      * <p>Each type corresponds to a specific custom block class that provides
      * specialized behavior and rendering.
      */
-    enum BlockType {
+    public enum BlockType {
         /** Arrow slit blocks for defensive structures */
         ARROW_SLIT,
         /** Table blocks for furniture */
@@ -607,6 +793,8 @@ public class BlockBuilder {
         /** Trapdoor blocks for entrances */
         TRAPDOOR,
         /** Log blocks for wooden structures */
-        LOG
+        LOG,
+        /** Torch blocks for lighting */
+        TORCH
     }
 } 

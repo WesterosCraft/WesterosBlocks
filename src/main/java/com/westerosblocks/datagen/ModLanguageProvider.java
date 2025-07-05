@@ -130,6 +130,13 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.weirwood_face_8", "Weirwood Face 8");
         translationBuilder.add("block.westerosblocks.weirwood_scars", "Weirwood Scars");
 
+        // Standalone torch block translations
+        // Note: Only standing torch variants are translated since wall variants aren't in creative tab
+        translationBuilder.add("block.westerosblocks.torch", "Torch");
+        translationBuilder.add("block.westerosblocks.torch_unlit", "Unlit Torch");
+        translationBuilder.add("block.westerosblocks.candle", "Candle");
+        translationBuilder.add("block.westerosblocks.candle_unlit", "Unlit Candle");
+
         // TODO can prob grab the item tag def json and generate this automatically when/if we get more
         // The format desired is tag.item.<namespace>.<path> for the translation key with slashes in path turned into periods."
         translationBuilder.add("tag.item.c.shield", "Shield");

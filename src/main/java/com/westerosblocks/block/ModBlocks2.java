@@ -492,6 +492,53 @@ public class ModBlocks2 {
             .textures("bark/weirwood/scars", "bark/weirwood/scars", "bark/weirwood/side")
     );
 
+    // TORCH BLOCKS
+    public static final Block TORCH = registerTorchBlock(
+        "torch",
+        builder -> builder
+            .creativeTab("westeros_lighting_tab")
+            .texture("lighting/torch")
+            .allowUnsupported()
+            .soundType("metal")
+            .lightLevel(13)
+            .alphaRender()
+    );
+
+    public static final Block TORCH_UNLIT = registerTorchBlock(
+        "torch_unlit",
+        builder -> builder
+            .creativeTab("westeros_lighting_tab")
+            .texture("lighting/torch_unlit")
+            .allowUnsupported()
+            .noParticle()
+            .soundType("metal")
+            .lightLevel(0)
+            .alphaRender()
+    );
+
+    public static final Block CANDLE = registerTorchBlock(
+        "candle",
+        builder -> builder
+            .creativeTab("westeros_lighting_tab")
+            .texture("lighting/candle")
+            .allowUnsupported()
+            .soundType("powder")
+            .lightLevel(10)
+            .alphaRender()
+    );
+
+    public static final Block CANDLE_UNLIT = registerTorchBlock(
+        "candle_unlit",
+        builder -> builder
+            .creativeTab("westeros_lighting_tab")
+            .texture("lighting/candle_unlit")
+            .allowUnsupported()
+            .noParticle()
+            .soundType("powder")
+            .lightLevel(0)
+            .alphaRender()
+    );
+
     // BATCH REGISTRATION METHODS FOR MASS BLOCK CREATION
     // public static void registerArrowSlits() {
     //     String[] materials = {
@@ -606,6 +653,20 @@ public class ModBlocks2 {
             .soundType("wood");
 
         builder.setBlockType(BlockBuilder.BlockType.LOG);
+        return configurator.configure(builder).register();
+    }
+
+    public static Block registerTorchBlock(String name, BlockBuilderConfigurator configurator) {
+        BlockBuilder builder = new BlockBuilder(name)
+            .creativeTab("westeros_lighting_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .dropsNothing()
+            .alphaRender()
+            .texture("lighting/torch"); // Default texture
+
+        builder.setBlockType(BlockBuilder.BlockType.TORCH);
         return configurator.configure(builder).register();
     }
 

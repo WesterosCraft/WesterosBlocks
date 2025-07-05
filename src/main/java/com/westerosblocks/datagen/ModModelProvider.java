@@ -30,7 +30,7 @@ public class ModModelProvider extends FabricModelProvider {
             Map.entry("fence", FenceBlockExport::new),
             Map.entry("wall", WallBlockExport::new),
             // Map.entry("trapdoor", TrapDoorBlockExport::new),
-            Map.entry("torch", TorchBlockExport::new),
+            // Map.entry("torch", TorchBlockExport::new),
             Map.entry("fan", FanBlockExport::new),
             Map.entry("ladder", LadderBlockExport::new),
             Map.entry("fire", FireBlockExport::new),
@@ -146,10 +146,10 @@ public class ModModelProvider extends FabricModelProvider {
                 //     TrapDoorBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                 //     break;
                 // }
-                case "torch": {
-                    TorchBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-                    break;
-                }
+                // case "torch": {
+                //     TorchBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                //     break;
+                // }
                 case "leaves": {
                     LeavesBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;

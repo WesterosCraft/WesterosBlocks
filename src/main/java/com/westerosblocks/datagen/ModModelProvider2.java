@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen;
 
 
+import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks2;
 import com.westerosblocks.datagen.models.*;
 import net.minecraft.data.client.*;
@@ -101,6 +102,16 @@ public class ModModelProvider2 {
             new String[]{"bark/weirwood/face_8", "bark/weirwood/face_8", "bark/weirwood/side"});
         LogBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_SCARS,
             new String[]{"bark/weirwood/scars", "bark/weirwood/scars", "bark/weirwood/side"});
+
+        // Standalone torch blocks
+        StandaloneTorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TORCH, 
+            net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_torch")), "lighting/torch");
+        StandaloneTorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TORCH_UNLIT, 
+            net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_torch_unlit")), "lighting/torch_unlit");
+        StandaloneTorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CANDLE, 
+            net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_candle")), "lighting/candle");
+        StandaloneTorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CANDLE_UNLIT, 
+            net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_candle_unlit")), "lighting/candle_unlit");
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -156,5 +167,15 @@ public class ModModelProvider2 {
         LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_FACE_7);
         LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_FACE_8);
         LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_SCARS);
+
+        // Standalone torch item models
+        StandaloneTorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.TORCH, 
+            net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_torch")));
+        StandaloneTorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.TORCH_UNLIT, 
+            net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_torch_unlit")));
+        StandaloneTorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.CANDLE, 
+            net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_candle")));
+        StandaloneTorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.CANDLE_UNLIT, 
+            net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_candle_unlit")));
     }
 } 
