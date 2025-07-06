@@ -1,9 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.block.custom.WCWallTorchBlock;
+import com.westerosblocks.block.custom.StandaloneWallTorchBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -13,123 +11,136 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class TorchBlockExport extends ModelExport {
-    private final BlockStateModelGenerator generator;
-    private final Block block;
-    private final ModBlock def;
+public class StandaloneTorchBlockExport extends ModelExport {
 
-    private static final String[] FACING_DIRECTIONS = {
-            "facing=east", "facing=south", "facing=west", "facing=north"
-    };
-    private static final int[] ROTATIONS = {0, 90, 180, 270};
-
-    public TorchBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
-        super(generator, block, def);
-        this.generator = generator;
-        this.block = block;
-        this.def = def;
+    public StandaloneTorchBlockExport(BlockStateModelGenerator generator, Block block) {
+        super(generator, block, null);
     }
 
-    public void generateBlockStateModels() {
-        for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-            ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-            if (!def.isCustomModel()) {
-                generateTorchModels(generator, set, setIdx);
-            }
-        }
-
-        generateWallTorchBlockState();
-        generateStandingTorchBlockState();
+    public static void generateBlockStateModels(BlockStateModelGenerator generator, Block standingTorch, Block wallTorch, String texturePath) {
+        // Generate standing torch block state
+        generateStandingTorchBlockState(generator, standingTorch, texturePath);
+        
+        // Generate wall torch block state
+        generateWallTorchBlockState(generator, wallTorch, texturePath);
     }
 
-    private void generateStandingTorchBlockState() {
+    private static void generateStandingTorchBlockState(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // Create the standing torch model
+        Identifier standingModelId = createStandingTorchModel(generator, block, texturePath);
+
+        // Create block state variant (standing torch has no properties)
+        BlockStateVariant standingVariant = BlockStateVariant.create()
+            .put(VariantSettings.MODEL, standingModelId);
+
+        // Use BlockStateBuilder like the original TorchBlockExport
         BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
         final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
+        blockStateBuilder.addVariant("", standingVariant, null, variants);
 
-        for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-            ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-
-            BlockStateVariant standingVariant = BlockStateVariant.create();
-            Identifier standingModelId = getModelId("base", setIdx);
-            standingVariant.put(VariantSettings.MODEL, standingModelId);
-
-            if (set.weight != null) {
-                standingVariant.put(VariantSettings.WEIGHT, set.weight);
-            }
-
-            blockStateBuilder.addVariant("", standingVariant, null, variants);
-        }
-
+        // Generate block state files
         generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateWallTorchBlockState() {
-        WCWallTorchBlock wallBlock = (WCWallTorchBlock) ModBlocks.getCustomBlocks().get("wall_" + def.blockName);
-        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(wallBlock);
-        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
+    private static void generateWallTorchBlockState(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // Create the wall torch model
+        Identifier wallModelId = createWallTorchModel(generator, block, texturePath);
 
-        for (int i = 0; i < FACING_DIRECTIONS.length; i++) {
-            for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-                Identifier modelId = getModelId("wall", setIdx);
-                BlockStateVariant variant = VariantBuilder.createWithRotation(modelId, set, ROTATIONS[i]);
-                blockStateBuilder.addVariant(FACING_DIRECTIONS[i], variant, null, variants);
-            }
-        }
+        // Create variants for each facing direction
+        BlockStateVariantMap variants = BlockStateVariantMap.create(StandaloneWallTorchBlock.FACING)
+            .register(net.minecraft.util.math.Direction.NORTH, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, wallModelId))
+            .register(net.minecraft.util.math.Direction.EAST, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, wallModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+            .register(net.minecraft.util.math.Direction.SOUTH, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, wallModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+            .register(net.minecraft.util.math.Direction.WEST, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, wallModelId)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R270));
 
-        generateBlockStateFiles(generator, wallBlock, variants);
-    }
-
-    private void generateTorchModels(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, int setIdx) {
-        TextureMap torchTextureMap = new TextureMap()
-                .put(TextureKey.TORCH, createBlockIdentifier(set.getTextureByIndex(0)));
-        // wall torch model
-        Identifier wallModelId = getModelId("wall", setIdx);
-        Model wallTorchModel = new Model(
-                Optional.of(WesterosBlocks.id("block/untinted/template_torch_wall")),
-                Optional.empty(),
-                TextureKey.TORCH
+        // Register the block state using the generator's collector
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block)
+                .coordinate(variants)
         );
-        wallTorchModel.upload(wallModelId, torchTextureMap, generator.modelCollector);
-        // standing torch model
-        Identifier torchModelId = getModelId("base", setIdx);
-        Model torchModel = new Model(
-                Optional.of(WesterosBlocks.id("block/untinted/template_torch")),
-                Optional.empty(),
-                TextureKey.TORCH
-        );
-        torchModel.upload(torchModelId, torchTextureMap, generator.modelCollector);
-
     }
 
-    private Identifier getModelId(String variant, int setIdx) {
-        return getBaseModelId(variant, setIdx, false);
-    }
-
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
-        ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
-        String basePath = blockDefinition.isTinted() ? "tinted" : "untinted";
-
-        // main torch item
-        generateSingleItemModel(itemModelGenerator, block, firstSet, basePath);
-
-        // wall torch item
-        String wallBlockName = "wall_" + blockDefinition.blockName;
-        Block wallBlock = ModBlocks.getCustomBlocks().get(wallBlockName);
-        if (wallBlock != null) {
-            generateSingleItemModel(itemModelGenerator, wallBlock, firstSet, basePath);
-        }
-    }
-
-    private static void generateSingleItemModel(ItemModelGenerator itemModelGenerator, Block block, ModBlock.RandomTextureSet set, String basePath) {
+    private static Identifier createStandingTorchModel(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // Create texture map for standing torch
         TextureMap textureMap = new TextureMap()
-                .put(TextureKey.LAYER0, createBlockIdentifier(set.getTextureByIndex(0)));
+            .put(TextureKey.TORCH, Identifier.of("westerosblocks", "block/" + texturePath));
 
-        Models.GENERATED.upload(
-                ModelIds.getItemModelId(block.asItem()),
-                textureMap,
-                itemModelGenerator.writer
+        // Create model identifier
+        Identifier modelId = Identifier.of(WesterosBlocks.MOD_ID, 
+            "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", ""));
+
+        // Create and upload the model using the template
+        Model model = new Model(
+            Optional.of(WesterosBlocks.id("block/untinted/template_torch")),
+            Optional.empty(),
+            TextureKey.TORCH
         );
+        model.upload(modelId, textureMap, generator.modelCollector);
 
+        return modelId;
     }
-}
+
+    private static Identifier createWallTorchModel(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // Create texture map for wall torch
+        TextureMap textureMap = new TextureMap()
+            .put(TextureKey.TORCH, Identifier.of("westerosblocks", "block/" + texturePath));
+
+        // Create model identifier
+        Identifier modelId = Identifier.of(WesterosBlocks.MOD_ID, 
+            "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", ""));
+
+        // Create and upload the model using the template
+        Model model = new Model(
+            Optional.of(WesterosBlocks.id("block/untinted/template_torch_wall")),
+            Optional.empty(),
+            TextureKey.TORCH
+        );
+        model.upload(modelId, textureMap, generator.modelCollector);
+
+        return modelId;
+    }
+
+    public static void generateItemModels(ItemModelGenerator generator, Block standingTorch, Block wallTorch) {
+        // Generate item models for both standing and wall torch blocks
+        generateSingleItemModel(generator, standingTorch);
+        generateSingleItemModel(generator, wallTorch);
+    }
+
+    private static void generateSingleItemModel(ItemModelGenerator generator, Block block) {
+        // Create texture map for item model
+        TextureMap textureMap = new TextureMap()
+            .put(TextureKey.LAYER0, Identifier.of("westerosblocks", "block/" + getTexturePath(block)));
+
+        // Create and upload the generated item model
+        Models.GENERATED.upload(
+            ModelIds.getItemModelId(block.asItem()),
+            textureMap,
+            generator.writer
+        );
+    }
+
+    private static String getTexturePath(Block block) {
+        // Extract texture path from block name
+        String blockName = block.getTranslationKey().replace("block.westerosblocks.", "");
+        
+        // Map block names to texture paths
+        return switch (blockName) {
+            case "torch" -> "lighting/torch";
+            case "torch_unlit" -> "lighting/torch_unlit";
+            case "candle" -> "lighting/candle";
+            case "candle_unlit" -> "lighting/candle_unlit";
+            case "wall_torch" -> "lighting/torch";
+            case "wall_torch_unlit" -> "lighting/torch_unlit";
+            case "wall_candle" -> "lighting/candle";
+            case "wall_candle_unlit" -> "lighting/candle_unlit";
+            default -> "lighting/torch"; // fallback
+        };
+    }
+} 
