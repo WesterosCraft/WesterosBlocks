@@ -15,7 +15,7 @@ import java.util.Map;
 public class ModModelProvider extends FabricModelProvider {
     private static final Map<String, BlockExportFactory> BLOCK_EXPORTERS = Map.ofEntries(
             Map.entry("soulsand", SolidBlockExport::new),
-            Map.entry("sand", SolidBlockExport::new),
+            // Map.entry("sand", SolidBlockExport::new),
             Map.entry("solid", SolidBlockExport::new),
             Map.entry("sound", SoundBlockExport::new),
             Map.entry("stair", StairBlockExport::new),

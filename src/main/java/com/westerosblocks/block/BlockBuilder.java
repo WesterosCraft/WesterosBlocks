@@ -3,8 +3,9 @@ package com.westerosblocks.block;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.*;
-import com.westerosblocks.block.custom.StandaloneTorchBlock;
-import com.westerosblocks.block.custom.StandaloneWallTorchBlock;
+import com.westerosblocks.block.custom.WCTorchBlock;
+import com.westerosblocks.block.custom.WCWallTorchBlock;
+import com.westerosblocks.block.custom.StandaloneWCSandBlock;
 import com.westerosblocks.util.ModWoodType;
 import com.westerosblocks.util.ModBlockSoundGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -755,7 +756,7 @@ public class BlockBuilder {
             case LOG -> new WCLogBlock(settings, name, creativeTab, woodType.toString().toLowerCase(), texturePaths);
             case TORCH -> {
                 // Create wall torch first
-                StandaloneWallTorchBlock wallTorch = new StandaloneWallTorchBlock(
+                WCWallTorchBlock wallTorch = new WCWallTorchBlock(
                     settings,
                     allowUnsupported,
                     noParticle,
@@ -764,7 +765,7 @@ public class BlockBuilder {
                 );
 
                 // Create and return standing torch
-                StandaloneTorchBlock standingTorch = new StandaloneTorchBlock(
+                WCTorchBlock standingTorch = new WCTorchBlock(
                     settings,
                     wallTorch,
                     allowUnsupported,
@@ -777,6 +778,7 @@ public class BlockBuilder {
                 this.wallBlock = wallTorch;
                 yield standingTorch;
             }
+            case SAND -> new StandaloneWCSandBlock(settings, name, creativeTab, tooltips);
         };
     }
 
@@ -800,6 +802,8 @@ public class BlockBuilder {
         /** Log blocks for wooden structures */
         LOG,
         /** Torch blocks for lighting */
-        TORCH
+        TORCH,
+        /** Sand blocks for falling particles */
+        SAND
     }
 } 

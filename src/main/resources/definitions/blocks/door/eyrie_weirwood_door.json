@@ -1,5 +1,5 @@
 {
-    "blockName": "eyrie_weirwood_door",
+    "blockName": "eyrie_weirwood_door_old",
     "blockType": "door",
     "woodType": "weirwood",
     "hardness": 2,
@@ -7,7 +7,7 @@
     "material": "wood",
     "resistance": 5,
     "creativeTab": "westeros_wood_planks_tab",
-    "label": "Eyrie Weirwood Door",
+    "label": "Eyrie Weirwood Door Old",
     "textures": [
         "door_block/door_weirwood_top",
         "door_block/door_weirwood_bottom"

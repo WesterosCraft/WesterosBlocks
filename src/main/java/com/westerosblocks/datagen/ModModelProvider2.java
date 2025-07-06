@@ -5,22 +5,28 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks2;
 import com.westerosblocks.datagen.models.*;
 import net.minecraft.data.client.*;
+import net.minecraft.registry.Registries;
 
 public class ModModelProvider2 {
 
     public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        // Create instances of export classes
+        ArrowSlitBlockExport arrowSlitExport = new ArrowSlitBlockExport();
+        TableBlockExport tableExport = new TableBlockExport();
+        StandaloneSandBlockExport sandExport = new StandaloneSandBlockExport();
+
         // arrow slits
-        ArrowSlitBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ARBOR_BRICK_ARROW_SLIT,
+        arrowSlitExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ARBOR_BRICK_ARROW_SLIT,
             "westerosblocks:block/ashlar_third/arbor/all");
-        ArrowSlitBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLACK_GRANITE_ARROW_SLIT,
+        arrowSlitExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLACK_GRANITE_ARROW_SLIT,
             "westerosblocks:block/ashlar_third/black/all");
 
         // tables
-        TableBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_TABLE,
+        tableExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_TABLE,
             "westerosblocks:block/wood/oak/all");
-        TableBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BIRCH_TABLE,
+        tableExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BIRCH_TABLE,
             "westerosblocks:block/wood/birch/all");
-        TableBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPRUCE_TABLE,
+        tableExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPRUCE_TABLE,
             "westerosblocks:block/wood/spruce/all");
 
         // chairs
@@ -104,25 +110,34 @@ public class ModModelProvider2 {
             new String[]{"bark/weirwood/scars", "bark/weirwood/scars", "bark/weirwood/side"});
 
         // Standalone torch blocks
-        StandaloneTorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TORCH, 
-            net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_torch")), "lighting/torch");
-        StandaloneTorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TORCH_UNLIT, 
-            net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_torch_unlit")), "lighting/torch_unlit");
-        StandaloneTorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CANDLE, 
-            net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_candle")), "lighting/candle");
-        StandaloneTorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CANDLE_UNLIT, 
-            net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_candle_unlit")), "lighting/candle_unlit");
+        TorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TORCH, 
+            Registries.BLOCK.get(WesterosBlocks.id("wall_torch")), "lighting/torch");
+        TorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TORCH_UNLIT, 
+            Registries.BLOCK.get(WesterosBlocks.id("wall_torch_unlit")), "lighting/torch_unlit");
+        TorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CANDLE, 
+            Registries.BLOCK.get(WesterosBlocks.id("wall_candle")), "lighting/candle");
+        TorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CANDLE_UNLIT, 
+            Registries.BLOCK.get(WesterosBlocks.id("wall_candle_unlit")), "lighting/candle_unlit");
+
+        // Standalone sand blocks
+        sandExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SAND_SKELETON, 
+            "westerosblocks:block/sand_block/sand_skeleton");
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        // Create instances of export classes
+        ArrowSlitBlockExport arrowSlitExport = new ArrowSlitBlockExport();
+        TableBlockExport tableExport = new TableBlockExport();
+        StandaloneSandBlockExport sandExport = new StandaloneSandBlockExport();
+
         // Use the new dynamic model provider for arrow slits
-        ArrowSlitBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.ARBOR_BRICK_ARROW_SLIT);
-        ArrowSlitBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.BLACK_GRANITE_ARROW_SLIT);
+        arrowSlitExport.generateItemModels(itemModelGenerator, ModBlocks2.ARBOR_BRICK_ARROW_SLIT);
+        arrowSlitExport.generateItemModels(itemModelGenerator, ModBlocks2.BLACK_GRANITE_ARROW_SLIT);
 
         // Use the new dynamic model provider for tables
-        TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.OAK_TABLE);
-        TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.BIRCH_TABLE);
-        TableBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.SPRUCE_TABLE);
+        tableExport.generateItemModels(itemModelGenerator, ModBlocks2.OAK_TABLE);
+        tableExport.generateItemModels(itemModelGenerator, ModBlocks2.BIRCH_TABLE);
+        tableExport.generateItemModels(itemModelGenerator, ModBlocks2.SPRUCE_TABLE);
 
         // Use the new dynamic model provider for chairs
         ChairBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.OAK_CHAIR);
@@ -169,13 +184,16 @@ public class ModModelProvider2 {
         LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_SCARS);
 
         // Standalone torch item models
-        StandaloneTorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.TORCH, 
+        TorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.TORCH, 
             net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_torch")));
-        StandaloneTorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.TORCH_UNLIT, 
+        TorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.TORCH_UNLIT, 
             net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_torch_unlit")));
-        StandaloneTorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.CANDLE, 
+        TorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.CANDLE, 
             net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_candle")));
-        StandaloneTorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.CANDLE_UNLIT, 
+        TorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.CANDLE_UNLIT, 
             net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_candle_unlit")));
+
+        // Standalone sand item models
+        sandExport.generateItemModels(itemModelGenerator, ModBlocks2.SAND_SKELETON);
     }
 } 

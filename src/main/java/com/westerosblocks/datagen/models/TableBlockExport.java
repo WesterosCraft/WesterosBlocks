@@ -5,7 +5,11 @@ import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 
-public class TableBlockExport {
+/**
+ * TableBlockExport that extends ModelExport2 for consistent model generation patterns.
+ * Handles table blocks with connection-based state generation using multipart block states.
+ */
+public class TableBlockExport extends ModelExport2 {
 
     public enum TableType {
         SINGLE("single"),
@@ -24,24 +28,25 @@ public class TableBlockExport {
         }
     }
 
-    public static void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {
-        // Create the base models for each type
-        Identifier singleModelId = ModelExportUtils.createModelWithKey1(
+    @Override
+    public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // Create the base models for each type using the utility methods from ModelExport2
+        Identifier singleModelId = createModelWithKey1(
             generator, block, 
             "westerosblocks:block/custom/table/table_single", 
             texturePath, "single"
         );
-        Identifier doubleModelId = ModelExportUtils.createModelWithKey1(
+        Identifier doubleModelId = createModelWithKey1(
             generator, block, 
             "westerosblocks:block/custom/table/table_double", 
             texturePath, "double"
         );
-        Identifier centerModelId = ModelExportUtils.createModelWithKey1(
+        Identifier centerModelId = createModelWithKey1(
             generator, block, 
             "westerosblocks:block/custom/table/table_middle", 
             texturePath, "middle"
         );
-        Identifier cornerModelId = ModelExportUtils.createModelWithKey1(
+        Identifier cornerModelId = createModelWithKey1(
             generator, block, 
             "westerosblocks:block/custom/table/table_corner", 
             texturePath, "corner"
@@ -56,7 +61,7 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, false)
             .set(WCTableBlock.SOUTH, false)
             .set(WCTableBlock.WEST, false);
-        stateSupplier.with(singleCondition, BlockStateVariant.create().put(VariantSettings.MODEL, singleModelId));
+        stateSupplier.with(singleCondition, createVariant(singleModelId));
 
         // Double table variants (one connection)
         // North connection
@@ -65,9 +70,7 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, false)
             .set(WCTableBlock.SOUTH, false)
             .set(WCTableBlock.WEST, false);
-        stateSupplier.with(northDoubleCondition, BlockStateVariant.create()
-            .put(VariantSettings.MODEL, doubleModelId)
-            .put(VariantSettings.Y, VariantSettings.Rotation.R180));
+        stateSupplier.with(northDoubleCondition, createVariant(doubleModelId, 180));
 
         // South connection
         When.PropertyCondition southDoubleCondition = When.create()
@@ -75,8 +78,7 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, false)
             .set(WCTableBlock.SOUTH, true)
             .set(WCTableBlock.WEST, false);
-        stateSupplier.with(southDoubleCondition, BlockStateVariant.create()
-            .put(VariantSettings.MODEL, doubleModelId));
+        stateSupplier.with(southDoubleCondition, createVariant(doubleModelId));
 
         // East connection - needs horizontal flip
         When.PropertyCondition eastDoubleCondition = When.create()
@@ -84,9 +86,7 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, true)
             .set(WCTableBlock.SOUTH, false)
             .set(WCTableBlock.WEST, false);
-        stateSupplier.with(eastDoubleCondition, BlockStateVariant.create()
-            .put(VariantSettings.MODEL, doubleModelId)
-            .put(VariantSettings.Y, VariantSettings.Rotation.R270));
+        stateSupplier.with(eastDoubleCondition, createVariant(doubleModelId, 270));
 
         // West connection - needs horizontal flip
         When.PropertyCondition westDoubleCondition = When.create()
@@ -94,9 +94,7 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, false)
             .set(WCTableBlock.SOUTH, false)
             .set(WCTableBlock.WEST, true);
-        stateSupplier.with(westDoubleCondition, BlockStateVariant.create()
-            .put(VariantSettings.MODEL, doubleModelId)
-            .put(VariantSettings.Y, VariantSettings.Rotation.R90));
+        stateSupplier.with(westDoubleCondition, createVariant(doubleModelId, 90));
 
         // Corner variants (two adjacent connections)
         // North-West corner (north=true, west=true, east=false, south=false)
@@ -105,9 +103,7 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, false)
             .set(WCTableBlock.SOUTH, false)
             .set(WCTableBlock.WEST, true);
-        stateSupplier.with(northWestCornerCondition, BlockStateVariant.create()
-            .put(VariantSettings.MODEL, cornerModelId)
-            .put(VariantSettings.Y, VariantSettings.Rotation.R180));
+        stateSupplier.with(northWestCornerCondition, createVariant(cornerModelId, 180));
 
         // North-East corner (north=true, east=true, west=false, south=false)
         When.PropertyCondition northEastCornerCondition = When.create()
@@ -115,9 +111,7 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, true)
             .set(WCTableBlock.SOUTH, false)
             .set(WCTableBlock.WEST, false);
-        stateSupplier.with(northEastCornerCondition, BlockStateVariant.create()
-            .put(VariantSettings.MODEL, cornerModelId)
-            .put(VariantSettings.Y, VariantSettings.Rotation.R270));
+        stateSupplier.with(northEastCornerCondition, createVariant(cornerModelId, 270));
 
         // South-West corner (south=true, west=true, north=false, east=false)
         When.PropertyCondition southWestCornerCondition = When.create()
@@ -125,9 +119,7 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, false)
             .set(WCTableBlock.SOUTH, true)
             .set(WCTableBlock.WEST, true);
-        stateSupplier.with(southWestCornerCondition, BlockStateVariant.create()
-            .put(VariantSettings.MODEL, cornerModelId)
-            .put(VariantSettings.Y, VariantSettings.Rotation.R90));
+        stateSupplier.with(southWestCornerCondition, createVariant(cornerModelId, 90));
 
         // South-East corner (south=true, east=true, north=false, west=false)
         When.PropertyCondition southEastCornerCondition = When.create()
@@ -135,9 +127,7 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, true)
             .set(WCTableBlock.SOUTH, true)
             .set(WCTableBlock.WEST, false);
-        stateSupplier.with(southEastCornerCondition, BlockStateVariant.create()
-            .put(VariantSettings.MODEL, cornerModelId)
-            .put(VariantSettings.Y, VariantSettings.Rotation.R0));
+        stateSupplier.with(southEastCornerCondition, createVariant(cornerModelId));
 
         // Center variants (opposite connections)
         // North-South center
@@ -146,8 +136,7 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, false)
             .set(WCTableBlock.SOUTH, true)
             .set(WCTableBlock.WEST, false);
-        stateSupplier.with(northSouthCenterCondition, BlockStateVariant.create()
-            .put(VariantSettings.MODEL, centerModelId));
+        stateSupplier.with(northSouthCenterCondition, createVariant(centerModelId));
 
         // East-West center
         When.PropertyCondition eastWestCenterCondition = When.create()
@@ -155,9 +144,7 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, true)
             .set(WCTableBlock.SOUTH, false)
             .set(WCTableBlock.WEST, true);
-        stateSupplier.with(eastWestCenterCondition, BlockStateVariant.create()
-            .put(VariantSettings.MODEL, centerModelId)
-            .put(VariantSettings.Y, VariantSettings.Rotation.R270));
+        stateSupplier.with(eastWestCenterCondition, createVariant(centerModelId, 270));
 
         // Three connections
         // North-East-West
@@ -166,9 +153,7 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, true)
             .set(WCTableBlock.SOUTH, false)
             .set(WCTableBlock.WEST, true);
-        stateSupplier.with(threeConnectionsCondition1, BlockStateVariant.create()
-            .put(VariantSettings.MODEL, centerModelId)
-            .put(VariantSettings.Y, VariantSettings.Rotation.R90));
+        stateSupplier.with(threeConnectionsCondition1, createVariant(centerModelId, 90));
 
         // North-East-South
         When.PropertyCondition threeConnectionsCondition2 = When.create()
@@ -176,9 +161,7 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, true)
             .set(WCTableBlock.SOUTH, true)
             .set(WCTableBlock.WEST, false);
-        stateSupplier.with(threeConnectionsCondition2, BlockStateVariant.create()
-            .put(VariantSettings.MODEL, centerModelId)
-            .put(VariantSettings.Y, VariantSettings.Rotation.R180));
+        stateSupplier.with(threeConnectionsCondition2, createVariant(centerModelId, 180));
 
         // North-South-West
         When.PropertyCondition threeConnectionsCondition3 = When.create()
@@ -186,9 +169,7 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, false)
             .set(WCTableBlock.SOUTH, true)
             .set(WCTableBlock.WEST, true);
-        stateSupplier.with(threeConnectionsCondition3, BlockStateVariant.create()
-            .put(VariantSettings.MODEL, centerModelId)
-            .put(VariantSettings.Y, VariantSettings.Rotation.R180));
+        stateSupplier.with(threeConnectionsCondition3, createVariant(centerModelId, 180));
 
         // East-South-West
         When.PropertyCondition threeConnectionsCondition4 = When.create()
@@ -196,9 +177,7 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, true)
             .set(WCTableBlock.SOUTH, true)
             .set(WCTableBlock.WEST, true);
-        stateSupplier.with(threeConnectionsCondition4, BlockStateVariant.create()
-            .put(VariantSettings.MODEL, centerModelId)
-            .put(VariantSettings.Y, VariantSettings.Rotation.R90));
+        stateSupplier.with(threeConnectionsCondition4, createVariant(centerModelId, 90));
 
         // All connections
         When.PropertyCondition allConnectionsCondition = When.create()
@@ -206,14 +185,15 @@ public class TableBlockExport {
             .set(WCTableBlock.EAST, true)
             .set(WCTableBlock.SOUTH, true)
             .set(WCTableBlock.WEST, true);
-        stateSupplier.with(allConnectionsCondition, BlockStateVariant.create()
-            .put(VariantSettings.MODEL, centerModelId));
+        stateSupplier.with(allConnectionsCondition, createVariant(centerModelId));
 
-        // Register the block state using the generator's collector
-        generator.blockStateCollector.accept(stateSupplier);
+        // Register the block state using the utility method from ModelExport2
+        registerMultipartBlockState(generator, stateSupplier);
     }
 
-    public static void generateItemModels(ItemModelGenerator generator, Block block) {
-        ModelExportUtils.generateItemModel(generator, block, "single");
+    @Override
+    public void generateItemModels(ItemModelGenerator generator, Block block) {
+        // Create a simple item model that inherits from the block model
+        generateItemModel(generator, block, "single");
     }
 } 

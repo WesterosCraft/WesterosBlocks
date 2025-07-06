@@ -1,5 +1,5 @@
 {
-    "blockName": "locked_white_wood_door",
+    "blockName": "locked_white_wood_door_old",
     "blockType": "door",
     "woodType": "birch",
     "hardness": 2,
@@ -8,7 +8,7 @@
     "resistance": 5,
     "creativeTab": "westeros_wood_planks_tab",
     "type": "locked:true,allow-unsupported",
-    "label": "Locked White Wood Door",
+    "label": "Locked White Wood Door Old",
     "textures": [
         "wood/white/door_locked_top",
         "wood/white/door_locked_bottom"

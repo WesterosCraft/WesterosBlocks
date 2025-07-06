@@ -3,6 +3,7 @@ package com.westerosblocks.block;
 import com.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.WoodType;
+import java.util.List;
 
 /**
  * Builder-based block registration for WesterosBlocks.
@@ -539,6 +540,19 @@ public class ModBlocks2 {
             .alphaRender()
     );
 
+    // SAND BLOCKS
+    public static final Block SAND_SKELETON = registerSandBlock(
+        "sand_skeleton",
+        builder -> builder
+            .creativeTab("westeros_sand_gravel_tab")
+            .hardness(0.5f)
+            .resistance(0.5f)
+            .requiresShovel()
+            .soundType("sand")
+            .texture("sand_block/sand_skeleton")
+            .tooltips(List.of("Sand with embedded skeleton remains", "Falls like regular sand"))
+    );
+
     // BATCH REGISTRATION METHODS FOR MASS BLOCK CREATION
     // public static void registerArrowSlits() {
     //     String[] materials = {
@@ -667,6 +681,19 @@ public class ModBlocks2 {
             .texture("lighting/torch"); // Default texture
 
         builder.setBlockType(BlockBuilder.BlockType.TORCH);
+        return configurator.configure(builder).register();
+    }
+
+    public static Block registerSandBlock(String name, BlockBuilderConfigurator configurator) {
+        BlockBuilder builder = new BlockBuilder(name)
+            .creativeTab("westeros_sand_gravel_tab")
+            .hardness(0.5f)
+            .resistance(0.5f)
+            .requiresShovel()
+            .soundType("sand")
+            .texture("sand"); // Default texture
+
+        builder.setBlockType(BlockBuilder.BlockType.SAND);
         return configurator.configure(builder).register();
     }
 
