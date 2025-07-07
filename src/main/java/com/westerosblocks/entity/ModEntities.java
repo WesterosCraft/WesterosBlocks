@@ -17,7 +17,6 @@ public class ModEntities {
     EntityType.Builder.<ChairEntity>create(ChairEntity::new,SpawnGroup.MISC).dimensions(0.5f, 0.5f).build());
 
     public static void registerModEntities() {
-        WesterosBlocks.LOGGER.info("Registering Mod Entities for " + WesterosBlocks.MOD_ID);
+        WesterosBlocks.LOGGER.info("Registering Mod Block Entities for " + WesterosBlocks.MOD_ID);
     }
-        
 }
