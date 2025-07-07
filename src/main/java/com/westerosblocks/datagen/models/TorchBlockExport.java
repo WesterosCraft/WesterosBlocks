@@ -1,26 +1,21 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.custom.WCWallTorchBlock;
-import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 
-import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
-public class TorchBlockExport extends ModelExport {
+public class TorchBlockExport extends ModelExport2 {
 
-    public TorchBlockExport(BlockStateModelGenerator generator, Block block) {
-        super(generator, block, null);
-    }
+    @Override
+    public void generateBlockStateModels(BlockStateModelGenerator generator, Block standingTorch, String texturePath) {
+        Block wallTorch = Registries.BLOCK.get(WesterosBlocks.id("wall_" + standingTorch.getTranslationKey().replace("block.westerosblocks.", "")));
 
-    public static void generateBlockStateModels(BlockStateModelGenerator generator, Block standingTorch, Block wallTorch, String texturePath) {
         // Generate standing torch block state
         generateStandingTorchBlockState(generator, standingTorch, texturePath);
-        
         // Generate wall torch block state
         generateWallTorchBlockState(generator, wallTorch, texturePath);
     }
@@ -30,51 +25,32 @@ public class TorchBlockExport extends ModelExport {
         Identifier standingModelId = createStandingTorchModel(generator, block, texturePath);
 
         // Create block state variant (standing torch has no properties)
-        BlockStateVariant standingVariant = BlockStateVariant.create()
-            .put(VariantSettings.MODEL, standingModelId);
+        BlockStateVariant standingVariant = createVariant(standingModelId);
 
-        // Use BlockStateBuilder like the original TorchBlockExport
-        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
-        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
-        blockStateBuilder.addVariant("", standingVariant, null, variants);
-
-        // Generate block state files
-        generateBlockStateFiles(generator, block, variants);
+        // Register the block state using the generator's collector
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block, standingVariant)
+        );
     }
 
     private static void generateWallTorchBlockState(BlockStateModelGenerator generator, Block block, String texturePath) {
         // Create the wall torch model
         Identifier wallModelId = createWallTorchModel(generator, block, texturePath);
 
-        // Create variants for each facing direction
-        BlockStateVariantMap variants = BlockStateVariantMap.create(WCWallTorchBlock.FACING)
-            .register(net.minecraft.util.math.Direction.NORTH, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, wallModelId))
-            .register(net.minecraft.util.math.Direction.EAST, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, wallModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
-            .register(net.minecraft.util.math.Direction.SOUTH, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, wallModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
-            .register(net.minecraft.util.math.Direction.WEST, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, wallModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R270));
+        // Create variants for each facing direction using ModelExport2 utility method
+        BlockStateVariantMap variants = createCardinalVariants(wallModelId);
 
-        // Register the block state using the generator's collector
-        generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block)
-                .coordinate(variants)
-        );
+        // Register the block state using ModelExport2 utility method
+        registerBlockState(generator, block, variants);
     }
 
     private static Identifier createStandingTorchModel(BlockStateModelGenerator generator, Block block, String texturePath) {
         // Create texture map for standing torch
         TextureMap textureMap = new TextureMap()
-            .put(TextureKey.TORCH, Identifier.of("westerosblocks", "block/" + texturePath));
+            .put(TextureKey.TORCH, createBlockIdentifier(texturePath));
 
-        // Create model identifier
-        Identifier modelId = Identifier.of(WesterosBlocks.MOD_ID, 
-            "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", ""));
+        // Create model identifier using ModelExport2 utility method
+        Identifier modelId = createModelId(block);
 
         // Create and upload the model using the template
         Model model = new Model(
@@ -90,11 +66,10 @@ public class TorchBlockExport extends ModelExport {
     private static Identifier createWallTorchModel(BlockStateModelGenerator generator, Block block, String texturePath) {
         // Create texture map for wall torch
         TextureMap textureMap = new TextureMap()
-            .put(TextureKey.TORCH, Identifier.of("westerosblocks", "block/" + texturePath));
+            .put(TextureKey.TORCH, createBlockIdentifier(texturePath));
 
-        // Create model identifier
-        Identifier modelId = Identifier.of(WesterosBlocks.MOD_ID, 
-            "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", ""));
+        // Create model identifier using ModelExport2 utility method
+        Identifier modelId = createModelId(block);
 
         // Create and upload the model using the template
         Model model = new Model(
@@ -107,23 +82,10 @@ public class TorchBlockExport extends ModelExport {
         return modelId;
     }
 
-    public static void generateItemModels(ItemModelGenerator generator, Block standingTorch, Block wallTorch) {
-        // Generate item models for both standing and wall torch blocks
-        generateSingleItemModel(generator, standingTorch);
-        generateSingleItemModel(generator, wallTorch);
-    }
-
-    private static void generateSingleItemModel(ItemModelGenerator generator, Block block) {
-        // Create texture map for item model
-        TextureMap textureMap = new TextureMap()
-            .put(TextureKey.LAYER0, Identifier.of("westerosblocks", "block/" + getTexturePath(block)));
-
-        // Create and upload the generated item model
-        Models.GENERATED.upload(
-            ModelIds.getItemModelId(block.asItem()),
-            textureMap,
-            generator.writer
-        );
+    public static void generateItemModelsAuto(ItemModelGenerator generator, Block standingTorch, Block wallTorch) {
+        // Generate item models for both standing and wall torch blocks using ModelExport2 utility method
+        generateItemModel(generator, standingTorch);
+        generateItemModel(generator, wallTorch);
     }
 
     private static String getTexturePath(Block block) {
@@ -142,5 +104,12 @@ public class TorchBlockExport extends ModelExport {
             case "wall_candle_unlit" -> "lighting/candle_unlit";
             default -> "lighting/torch"; // fallback
         };
+    }
+
+    @Override
+    public void generateItemModels(ItemModelGenerator generator, Block block) {
+        // Generate item model for a single block
+        Block wallTorch = Registries.BLOCK.get(WesterosBlocks.id("wall_" + block.getTranslationKey().replace("block.westerosblocks.", "")));
+        generateItemModelsAuto(generator, block, wallTorch);
     }
 } 

@@ -68,15 +68,6 @@ public class ModModelProvider extends FabricModelProvider {
         // Handle other blocks from definition files
         Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
         ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
-        // Handle wall way sign blocks
-        for (Map.Entry<String, Block> entry : customBlocks.entrySet()) {
-            if (entry.getKey().startsWith("wall_") && entry.getValue() instanceof com.westerosblocks.block.custom.WCWaySignWallBlock) {
-                String baseName = entry.getKey().substring(5); // Remove "wall_" prefix
-                String woodType = baseName.split("_")[0]; // Extract wood type
-                String texturePath = "westerosblocks:block/wood/" + woodType + "/all";
-                WaySignBlockExport.generateBlockStateModels(blockStateModelGenerator, entry.getValue(), texturePath);
-            }
-        }
 
         for (ModBlock customBlockDef : customBlockDefs) {
             if (customBlockDef == null || customBlockDef.getBlockName() == null) continue;
