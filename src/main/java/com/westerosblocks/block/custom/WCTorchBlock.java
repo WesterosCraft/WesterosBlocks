@@ -1,9 +1,5 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.block.ModBlockFactory;
-import com.westerosblocks.block.ModBlockLifecycle;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -24,50 +20,44 @@ import net.minecraft.world.WorldView;
 
 import java.util.List;
 
-public class WCTorchBlock extends TorchBlock implements ModBlockLifecycle {
+/**
+ * Standalone torch block that doesn't depend on the def system.
+ * Provides the same functionality as WCTorchBlock but with direct configuration.
+ */
+public class WCTorchBlock extends TorchBlock {
 
-    public static class Factory extends ModBlockFactory {
-        @Override
-        public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings floorBlockSettings = def.applyCustomProperties().noCollision().breakInstantly();
-            AbstractBlock.Settings wallBlockSettings = def.applyCustomProperties().noCollision().breakInstantly();
-            Block wallTorch = new WCWallTorchBlock(wallBlockSettings, def);
-            Block floorTorch = new WCTorchBlock(floorBlockSettings, def, wallTorch);
+    private final boolean allowUnsupported;
+    private final boolean noParticle;
+    private final Block wallBlock;
+    private final String translationKey;
+    private final List<String> tooltips;
 
-            def.registerRenderType(ModBlocks.registerBlock("wall_" + def.blockName, wallTorch), false, false);
-            ModBlocks.getCustomBlocks().put("wall_" + def.blockName, wallTorch);
-            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, floorTorch), false, false);
-        }
+    /**
+     * Creates a new standalone torch block.
+     *
+     * @param settings Block settings
+     * @param wallBlock The corresponding wall torch block
+     * @param allowUnsupported Whether this torch can be placed without support
+     * @param noParticle Whether this torch should emit particles
+     * @param translationKey The translation key for this block
+     * @param tooltips Optional tooltips to display
+     */
+    public WCTorchBlock(AbstractBlock.Settings settings, Block wallBlock,
+                                boolean allowUnsupported, boolean noParticle,
+                                String translationKey, List<String> tooltips) {
+        super(getParticle(noParticle), settings);
+        this.wallBlock = wallBlock;
+        this.allowUnsupported = allowUnsupported;
+        this.noParticle = noParticle;
+        this.translationKey = translationKey;
+        this.tooltips = tooltips;
     }
 
-    private final ModBlock def;
-    private boolean allow_unsupported = false;
-    private boolean no_particle = false;
-
-    private static SimpleParticleType getParticle(String typeStr) {
-        if (typeStr != null && typeStr.contains("no-particle")) {
+    private static SimpleParticleType getParticle(boolean noParticle) {
+        if (noParticle) {
             return FabricParticleTypes.simple(false);
         }
         return ParticleTypes.FLAME;
-    }
-
-    private final Block wallBlock;
-
-    protected WCTorchBlock(AbstractBlock.Settings settings, ModBlock def, Block wallTorch) {
-        super(WCTorchBlock.getParticle(def.getType()), settings);
-        this.def = def;
-        this.wallBlock = wallTorch;
-        String t = def.getType();
-        if (t != null) {
-            String[] toks = t.split(",");
-            for (String tok : toks) {
-                if (tok.equals("allow-unsupported")) {
-                    allow_unsupported = true;
-                } else if (tok.equals("no-particle")) {
-                    no_particle = true;
-                }
-            }
-        }
     }
 
     @Override
@@ -93,31 +83,32 @@ public class WCTorchBlock extends TorchBlock implements ModBlockLifecycle {
     }
 
     @Override
-    public ModBlock getWBDefinition() {
-        return def;
-    }
-
-    @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (!this.no_particle) super.randomDisplayTick(state, world, pos, random);
+        if (!this.noParticle) {
+            super.randomDisplayTick(state, world, pos, random);
+        }
     }
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        if (this.allow_unsupported) return true;
+        if (this.allowUnsupported) {
+            return true;
+        }
         return super.canPlaceAt(state, world, pos);
     }
 
-    private static final String[] TAGS = {"wall_post_override"};
-
     @Override
-    public String[] getBlockTags() {
-        return TAGS;
+    public String getTranslationKey() {
+        return translationKey;
     }
 
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        addCustomTooltip(tooltip);
+        if (tooltips != null && !tooltips.isEmpty()) {
+            for (String tooltipText : tooltips) {
+                tooltip.add(Text.literal(tooltipText));
+            }
+        }
         super.appendTooltip(stack, context, tooltip, options);
     }
 }

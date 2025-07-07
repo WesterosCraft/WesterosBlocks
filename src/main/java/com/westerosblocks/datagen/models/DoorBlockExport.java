@@ -1,6 +1,5 @@
 package com.westerosblocks.datagen.models;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
@@ -140,7 +139,6 @@ public class DoorBlockExport extends ModelExport {
         return getBaseModelId(variant, 0, isCustom);
     }
 
-    // TODO the door model is ugly af i think we need item textures
     public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
         ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));

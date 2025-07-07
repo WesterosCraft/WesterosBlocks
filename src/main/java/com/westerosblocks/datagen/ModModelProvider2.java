@@ -104,14 +104,51 @@ public class ModModelProvider2 {
             new String[]{"bark/weirwood/scars", "bark/weirwood/scars", "bark/weirwood/side"});
 
         // Standalone torch blocks
-        StandaloneTorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TORCH, 
+        TorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TORCH,
             net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_torch")), "lighting/torch");
-        StandaloneTorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TORCH_UNLIT, 
+        TorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TORCH_UNLIT,
             net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_torch_unlit")), "lighting/torch_unlit");
-        StandaloneTorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CANDLE, 
+        TorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CANDLE,
             net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_candle")), "lighting/candle");
-        StandaloneTorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CANDLE_UNLIT, 
+        TorchBlockExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CANDLE_UNLIT,
             net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_candle_unlit")), "lighting/candle_unlit");
+
+        // Standalone door blocks
+        DoorBlockExport2 doorExporter = new DoorBlockExport2();
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WHITE_WOOD_DOOR, 
+            new String[]{"wood/white/door_top", "wood/white/door_bottom"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LOCKED_WHITE_WOOD_DOOR, 
+            new String[]{"wood/white/door_locked_top", "wood/white/door_locked_bottom"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.NORTHERN_WOOD_DOOR, 
+            new String[]{"wood/northern/door_top", "wood/northern/door_bottom"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPRUCE_DOOR, 
+            new String[]{"wood/spruce/door_top", "wood/spruce/door_bottom"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_DOOR, 
+            new String[]{"wood/oak/door_top", "wood/oak/door_bottom"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BIRCH_DOOR, 
+            new String[]{"wood/birch/door_top", "wood/birch/door_bottom"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.EYRIE_WEIRWOOD_DOOR, 
+            new String[]{"door_block/door_weirwood_top", "door_block/door_weirwood_bottom"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.GREY_WOOD_DOOR, 
+            new String[]{"wood/grey/door_top", "wood/grey/door_bottom"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.JUNGLE_DOOR, 
+            new String[]{"wood/jungle/door_top", "wood/jungle/door_bottom"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.RED_KEEP_SECRET_DOOR, 
+            new String[]{"ashlar_third/pale_red/all_noctm", "ashlar_third/pale_red/all_noctm"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HARRENHAL_SECRET_DOOR, 
+            new String[]{"ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LOCKED_BIRCH_DOOR, 
+            new String[]{"wood/birch/door_locked_top", "wood/birch/door_locked_bottom"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LOCKED_DARK_NORTHERN_WOOD_DOOR, 
+            new String[]{"wood/northern/door_locked_top", "wood/northern/door_locked_bottom"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LOCKED_GREY_WOOD_DOOR, 
+            new String[]{"wood/grey/door_locked_top", "wood/grey/door_locked_bottom"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LOCKED_SPRUCE_DOOR, 
+            new String[]{"wood/spruce/door_locked_top", "wood/spruce/door_locked_bottom"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LOCKED_JUNGLE_DOOR, 
+            new String[]{"wood/jungle/door_locked_top", "wood/jungle/door_locked_bottom"});
+        doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LOCKED_OAK_DOOR, 
+            new String[]{"wood/oak/door_locked_top", "wood/oak/door_locked_bottom"});
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -169,13 +206,33 @@ public class ModModelProvider2 {
         LogBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_SCARS);
 
         // Standalone torch item models
-        StandaloneTorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.TORCH, 
+        TorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.TORCH,
             net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_torch")));
-        StandaloneTorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.TORCH_UNLIT, 
+        TorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.TORCH_UNLIT,
             net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_torch_unlit")));
-        StandaloneTorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.CANDLE, 
+        TorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.CANDLE,
             net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_candle")));
-        StandaloneTorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.CANDLE_UNLIT, 
+        TorchBlockExport.generateItemModels(itemModelGenerator, ModBlocks2.CANDLE_UNLIT,
             net.minecraft.registry.Registries.BLOCK.get(WesterosBlocks.id("wall_candle_unlit")));
+
+        // Standalone door item models
+        DoorBlockExport2 doorExporter = new DoorBlockExport2();
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.WHITE_WOOD_DOOR, "wood/white/door_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_WHITE_WOOD_DOOR, "wood/white/door_locked_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.NORTHERN_WOOD_DOOR, "wood/northern/door_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.SPRUCE_DOOR, "wood/spruce/door_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.OAK_DOOR, "wood/oak/door_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.BIRCH_DOOR, "wood/birch/door_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.EYRIE_WEIRWOOD_DOOR, "door_block/door_weirwood_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.GREY_WOOD_DOOR, "wood/grey/door_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.JUNGLE_DOOR, "wood/jungle/door_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.RED_KEEP_SECRET_DOOR, "ashlar_third/pale_red/all_noctm");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.HARRENHAL_SECRET_DOOR, "ashlar_third/black/all_noctm");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_BIRCH_DOOR, "wood/birch/door_locked_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_DARK_NORTHERN_WOOD_DOOR, "wood/northern/door_locked_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_GREY_WOOD_DOOR, "wood/grey/door_locked_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_SPRUCE_DOOR, "wood/spruce/door_locked_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_JUNGLE_DOOR, "wood/jungle/door_locked_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_OAK_DOOR, "wood/oak/door_locked_top");
     }
 } 

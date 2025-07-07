@@ -137,6 +137,25 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.candle", "Candle");
         translationBuilder.add("block.westerosblocks.candle_unlit", "Unlit Candle");
 
+        // Door block translations
+        translationBuilder.add("block.westerosblocks.white_wood_door", "White Wood Door");
+        translationBuilder.add("block.westerosblocks.locked_white_wood_door", "Locked White Wood Door");
+        translationBuilder.add("block.westerosblocks.northern_wood_door", "Northern Wood Door");
+        translationBuilder.add("block.westerosblocks.spruce_door", "Spruce Door");
+        translationBuilder.add("block.westerosblocks.oak_door", "Oak Door");
+        translationBuilder.add("block.westerosblocks.birch_door", "Birch Door");
+        translationBuilder.add("block.westerosblocks.eyrie_weirwood_door", "Eyrie Weirwood Door");
+        translationBuilder.add("block.westerosblocks.grey_wood_door", "Grey Wood Door");
+        translationBuilder.add("block.westerosblocks.jungle_door", "Jungle Door");
+        translationBuilder.add("block.westerosblocks.red_keep_secret_door", "Red Keep Secret Door");
+        translationBuilder.add("block.westerosblocks.harrenhal_secret_door", "Harrenhal Secret Door");
+        translationBuilder.add("block.westerosblocks.locked_birch_door", "Locked Birch Door");
+        translationBuilder.add("block.westerosblocks.locked_dark_northern_wood_door", "Locked Dark Northern Wood Door");
+        translationBuilder.add("block.westerosblocks.locked_grey_wood_door", "Locked Grey Wood Door");
+        translationBuilder.add("block.westerosblocks.locked_spruce_door", "Locked Spruce Door");
+        translationBuilder.add("block.westerosblocks.locked_jungle_door", "Locked Jungle Door");
+        translationBuilder.add("block.westerosblocks.locked_oak_door", "Locked Oak Door");
+
         // TODO can prob grab the item tag def json and generate this automatically when/if we get more
         // The format desired is tag.item.<namespace>.<path> for the translation key with slashes in path turned into periods."
         translationBuilder.add("tag.item.c.shield", "Shield");

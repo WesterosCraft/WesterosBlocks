@@ -539,6 +539,257 @@ public class ModBlocks2 {
             .alphaRender()
     );
 
+    // DOOR BLOCKS
+    public static final Block WHITE_WOOD_DOOR = registerDoorBlock(
+        "white_wood_door",
+        builder -> builder
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.BIRCH)
+            .soundType("wood")
+            .allowUnsupported()
+            .textures("wood/white/door_top", "wood/white/door_bottom")
+    );
+
+    public static final Block LOCKED_WHITE_WOOD_DOOR = registerDoorBlock(
+        "locked_white_wood_door",
+        builder -> builder
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.BIRCH)
+            .soundType("wood")
+            .locked(true)
+            .allowUnsupported()
+            .textures("wood/white/door_locked_top", "wood/white/door_locked_bottom")
+    );
+
+    // Regular doors
+    public static final Block NORTHERN_WOOD_DOOR = registerDoorBlock(
+        "northern_wood_door",
+        builder -> builder
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.DARK_OAK)
+            .soundType("wood")
+            .allowUnsupported()
+            .textures("wood/northern/door_top", "wood/northern/door_bottom")
+    );
+
+    public static final Block SPRUCE_DOOR = registerDoorBlock(
+        "spruce_door",
+        builder -> builder
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.SPRUCE)
+            .soundType("wood")
+            .allowUnsupported()
+            .textures("wood/spruce/door_top", "wood/spruce/door_bottom")
+    );
+
+    public static final Block OAK_DOOR = registerDoorBlock(
+        "oak_door",
+        builder -> builder
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.OAK)
+            .soundType("wood")
+            .allowUnsupported()
+            .textures("wood/oak/door_top", "wood/oak/door_bottom")
+    );
+
+    public static final Block BIRCH_DOOR = registerDoorBlock(
+        "birch_door",
+        builder -> builder
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.BIRCH)
+            .soundType("wood")
+            .allowUnsupported()
+            .textures("wood/birch/door_top", "wood/birch/door_bottom")
+    );
+
+    public static final Block EYRIE_WEIRWOOD_DOOR = registerDoorBlock(
+        "eyrie_weirwood_door",
+        builder -> builder
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.OAK) // Weirwood uses oak as base
+            .soundType("wood")
+            .allowUnsupported()
+            .textures("door_block/door_weirwood_top", "door_block/door_weirwood_bottom")
+    );
+
+    public static final Block GREY_WOOD_DOOR = registerDoorBlock(
+        "grey_wood_door",
+        builder -> builder
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.ACACIA)
+            .soundType("wood")
+            .allowUnsupported()
+            .textures("wood/grey/door_top", "wood/grey/door_bottom")
+    );
+
+    public static final Block JUNGLE_DOOR = registerDoorBlock(
+        "jungle_door",
+        builder -> builder
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.JUNGLE)
+            .soundType("wood")
+            .allowUnsupported()
+            .textures("wood/jungle/door_top", "wood/jungle/door_bottom")
+    );
+
+    // Secret doors (stone material)
+    public static final Block RED_KEEP_SECRET_DOOR = registerDoorBlock(
+        "red_keep_secret_door",
+        builder -> builder
+            .creativeTab("westeros_misc_tab")
+            .hardness(7.0f)
+            .resistance(7.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.CRIMSON)
+            .soundType("stone")
+            .locked(true)
+            .allowUnsupported()
+            .textures("ashlar_third/pale_red/all_noctm", "ashlar_third/pale_red/all_noctm")
+    );
+
+    public static final Block HARRENHAL_SECRET_DOOR = registerDoorBlock(
+        "harrenhal_secret_door",
+        builder -> builder
+            .creativeTab("westeros_misc_tab")
+            .hardness(7.0f)
+            .resistance(7.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.DARK_OAK)
+            .soundType("stone")
+            .locked(true)
+            .allowUnsupported()
+            .textures("ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm")
+    );
+
+    // Locked doors
+    public static final Block LOCKED_BIRCH_DOOR = registerDoorBlock(
+        "locked_birch_door",
+        builder -> builder
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.BIRCH)
+            .soundType("wood")
+            .locked(true)
+            .allowUnsupported()
+            .textures("wood/birch/door_locked_top", "wood/birch/door_locked_bottom")
+    );
+
+    public static final Block LOCKED_DARK_NORTHERN_WOOD_DOOR = registerDoorBlock(
+        "locked_dark_northern_wood_door",
+        builder -> builder
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.DARK_OAK)
+            .soundType("wood")
+            .locked(true)
+            .allowUnsupported()
+            .textures("wood/northern/door_locked_top", "wood/northern/door_locked_bottom")
+    );
+
+    public static final Block LOCKED_GREY_WOOD_DOOR = registerDoorBlock(
+        "locked_grey_wood_door",
+        builder -> builder
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.ACACIA)
+            .soundType("wood")
+            .locked(true)
+            .allowUnsupported()
+            .textures("wood/grey/door_locked_top", "wood/grey/door_locked_bottom")
+    );
+
+    public static final Block LOCKED_SPRUCE_DOOR = registerDoorBlock(
+        "locked_spruce_door",
+        builder -> builder
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.SPRUCE)
+            .soundType("wood")
+            .locked(true)
+            .allowUnsupported()
+            .textures("wood/spruce/door_locked_top", "wood/spruce/door_locked_bottom")
+    );
+
+    public static final Block LOCKED_JUNGLE_DOOR = registerDoorBlock(
+        "locked_jungle_door",
+        builder -> builder
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.JUNGLE)
+            .soundType("wood")
+            .locked(true)
+            .allowUnsupported()
+            .textures("wood/jungle/door_locked_top", "wood/jungle/door_locked_bottom")
+    );
+
+    public static final Block LOCKED_OAK_DOOR = registerDoorBlock(
+        "locked_oak_door",
+        builder -> builder
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.OAK)
+            .soundType("wood")
+            .locked(true)
+            .allowUnsupported()
+            .textures("wood/oak/door_locked_top", "wood/oak/door_locked_bottom")
+    );
+
     // BATCH REGISTRATION METHODS FOR MASS BLOCK CREATION
     // public static void registerArrowSlits() {
     //     String[] materials = {
@@ -667,6 +918,21 @@ public class ModBlocks2 {
             .texture("lighting/torch"); // Default texture
 
         builder.setBlockType(BlockBuilder.BlockType.TORCH);
+        return configurator.configure(builder).register();
+    }
+
+    public static Block registerDoorBlock(String name, BlockBuilderConfigurator configurator) {
+        BlockBuilder builder = new BlockBuilder(name)
+            .creativeTab("westeros_wood_planks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.OAK)
+            .soundType("wood")
+            .locked(false);
+
+        builder.setBlockType(BlockBuilder.BlockType.DOOR);
         return configurator.configure(builder).register();
     }
 

@@ -3,8 +3,9 @@ package com.westerosblocks.block;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.*;
-import com.westerosblocks.block.custom.StandaloneTorchBlock;
-import com.westerosblocks.block.custom.StandaloneWallTorchBlock;
+import com.westerosblocks.block.custom.WCTorchBlock;
+import com.westerosblocks.block.custom.WCWallTorchBlock;
+import com.westerosblocks.block.custom.StandaloneDoorBlock;
 import com.westerosblocks.util.ModWoodType;
 import com.westerosblocks.util.ModBlockSoundGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -566,6 +567,19 @@ public class BlockBuilder {
     }
 
     /**
+     * Creates a door block with the specified properties.
+     * 
+     * <p>Doors are double-height blocks that can be opened and closed.
+     * They require proper support blocks above and below when placed.
+     * 
+     * @return this builder for method chaining
+     */
+    public BlockBuilder door() {
+        this.blockType = BlockType.DOOR;
+        return this;
+    }
+
+    /**
      * Sets custom tooltips for this torch.
      * 
      * @param tooltips List of tooltip strings
@@ -752,10 +766,18 @@ public class BlockBuilder {
                 yield new WCWaySignBlock(settings, name, creativeTab, woodType);
             }
             case TRAPDOOR -> new WCTrapDoorBlock(settings, name, creativeTab, woodType, locked, soundType);
+            case DOOR -> new StandaloneDoorBlock(
+                settings,
+                woodType.toString().toLowerCase(),
+                locked,
+                allowUnsupported,
+                "block." + WesterosBlocks.MOD_ID + "." + name,
+                tooltips
+            );
             case LOG -> new WCLogBlock(settings, name, creativeTab, woodType.toString().toLowerCase(), texturePaths);
             case TORCH -> {
                 // Create wall torch first
-                StandaloneWallTorchBlock wallTorch = new StandaloneWallTorchBlock(
+                WCWallTorchBlock wallTorch = new WCWallTorchBlock(
                     settings,
                     allowUnsupported,
                     noParticle,
@@ -764,7 +786,7 @@ public class BlockBuilder {
                 );
 
                 // Create and return standing torch
-                StandaloneTorchBlock standingTorch = new StandaloneTorchBlock(
+                WCTorchBlock standingTorch = new WCTorchBlock(
                     settings,
                     wallTorch,
                     allowUnsupported,
@@ -797,6 +819,8 @@ public class BlockBuilder {
         WAY_SIGN,
         /** Trapdoor blocks for entrances */
         TRAPDOOR,
+        /** Door blocks for entrances */
+        DOOR,
         /** Log blocks for wooden structures */
         LOG,
         /** Torch blocks for lighting */
