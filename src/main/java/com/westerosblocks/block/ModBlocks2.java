@@ -1,7 +1,5 @@
 package com.westerosblocks.block;
 
-import java.util.List;
-
 import com.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.WoodType;
@@ -802,7 +800,82 @@ public class ModBlocks2 {
             .requiresShovel()
             .soundType("sand")
             .texture("sand_block/sand_skeleton")
-            .tooltips(List.of("Sand with embedded skeleton remains", "Falls like regular sand"))
+    );
+
+    // CORAL FAN BLOCKS
+    public static final Block CORAL_BRAIN_FAN = registerFanBlock(
+        "coral_brain_fan",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .dropsNothing()
+            .soundType("stone")
+            .allowUnsupported()
+            .nonOpaque()
+            .alphaRender()
+            .texture("coral/brain/fan1")
+    );
+
+    public static final Block CORAL_BUBBLE_FAN = registerFanBlock(
+        "coral_bubble_fan",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .dropsNothing()
+            .soundType("stone")
+            .allowUnsupported()
+            .nonOpaque()
+            .alphaRender()
+            .texture("coral/bubble/fan1")
+    );
+
+    public static final Block CORAL_FIRE_FAN = registerFanBlock(
+        "coral_fire_fan",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .dropsNothing()
+            .soundType("stone")
+            .allowUnsupported()
+            .nonOpaque()
+            .alphaRender()
+            .texture("coral/fire/fan1")
+    );
+
+    public static final Block CORAL_HORN_FAN = registerFanBlock(
+        "coral_horn_fan",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .dropsNothing()
+            .soundType("stone")
+            .allowUnsupported()
+            .nonOpaque()
+            .alphaRender()
+            .texture("coral/horn/fan1")
+    );
+
+    public static final Block CORAL_TUBE_FAN = registerFanBlock(
+        "coral_tube_fan",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .dropsNothing()
+            .soundType("stone")
+            .allowUnsupported()
+            .nonOpaque()
+            .alphaRender()
+            .texture("coral/tube/fan1")
     );
 
 
@@ -962,6 +1035,22 @@ public class ModBlocks2 {
             .texture("sand"); // Default texture
 
         builder.setBlockType(BlockBuilder.BlockType.SAND);
+        return configurator.configure(builder).register();
+    }
+
+    public static Block registerFanBlock(String name, BlockBuilderConfigurator configurator) {
+        BlockBuilder builder = new BlockBuilder(name)
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .dropsNothing()
+            .soundType("stone")
+            .nonOpaque()
+            .alphaRender()
+            .texture("coral/brain/fan1"); // Default texture
+
+        builder.setBlockType(BlockBuilder.BlockType.FAN);
         return configurator.configure(builder).register();
     }
 

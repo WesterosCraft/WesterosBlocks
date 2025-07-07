@@ -15,6 +15,7 @@ public class ModModelProvider2 {
     static WaySignBlockExport waySignExporter = new WaySignBlockExport();
     static LogBlockExport logExporter = new LogBlockExport();
     static TorchBlockExport torchExporter = new TorchBlockExport();
+    static FanBlockExport2 fanExporter = new FanBlockExport2();
 
     public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         // Arrow Slits
@@ -157,6 +158,18 @@ public class ModModelProvider2 {
         // Sand Blocks
         sandExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SAND_SKELETON, 
             "sand_block/sand_skeleton");
+
+        // Coral Fan Blocks
+        fanExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CORAL_BRAIN_FAN, 
+            "coral/brain/fan1");
+        fanExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CORAL_BUBBLE_FAN, 
+            "coral/bubble/fan1");
+        fanExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CORAL_FIRE_FAN, 
+            "coral/fire/fan1");
+        fanExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CORAL_HORN_FAN, 
+            "coral/horn/fan1");
+        fanExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CORAL_TUBE_FAN, 
+            "coral/tube/fan1");
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -240,5 +253,12 @@ public class ModModelProvider2 {
 
         // Standalone sand item models
         sandExport.generateItemModels(itemModelGenerator, ModBlocks2.SAND_SKELETON);
+
+        // Coral Fan Blocks
+        fanExporter.generateItemModels(itemModelGenerator, ModBlocks2.CORAL_BRAIN_FAN);
+        fanExporter.generateItemModels(itemModelGenerator, ModBlocks2.CORAL_BUBBLE_FAN);
+        fanExporter.generateItemModels(itemModelGenerator, ModBlocks2.CORAL_FIRE_FAN);
+        fanExporter.generateItemModels(itemModelGenerator, ModBlocks2.CORAL_HORN_FAN);
+        fanExporter.generateItemModels(itemModelGenerator, ModBlocks2.CORAL_TUBE_FAN);
     }
 } 

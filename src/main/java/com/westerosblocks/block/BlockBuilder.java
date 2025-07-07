@@ -5,6 +5,8 @@ import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.*;
 import com.westerosblocks.block.custom.WCTorchBlock;
 import com.westerosblocks.block.custom.WCWallTorchBlock;
+import com.westerosblocks.block.custom.StandaloneWCFanBlock;
+import com.westerosblocks.block.custom.StandaloneWCWallFanBlock;
 import com.westerosblocks.util.ModWoodType;
 import com.westerosblocks.util.ModBlockSoundGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -735,8 +737,8 @@ public class BlockBuilder {
             entries.add(block);
         });
 
-        // Handle torch wall block registration
-        if (blockType == BlockType.TORCH && wallBlock != null) {
+        // Handle torch and fan wall block registration
+        if ((blockType == BlockType.TORCH || blockType == BlockType.FAN) && wallBlock != null) {
             registerWallBlock(wallBlock, "wall_" + name);
         }
 
@@ -799,6 +801,28 @@ public class BlockBuilder {
                 yield standingTorch;
             }
             case SAND -> new WCSandBlock(settings, name, creativeTab, tooltips);
+            case FAN -> {
+                // Create wall fan first
+                StandaloneWCWallFanBlock wallFan = new StandaloneWCWallFanBlock(
+                    settings,
+                    allowUnsupported,
+                    "block." + WesterosBlocks.MOD_ID + ".wall_" + name,
+                    tooltips
+                );
+
+                // Create and return standing fan
+                StandaloneWCFanBlock standingFan = new StandaloneWCFanBlock(
+                    settings,
+                    wallFan,
+                    allowUnsupported,
+                    "block." + WesterosBlocks.MOD_ID + "." + name,
+                    tooltips
+                );
+
+                // Store wall fan for registration in register() method
+                this.wallBlock = wallFan;
+                yield standingFan;
+            }
         };
     }
 
@@ -826,6 +850,8 @@ public class BlockBuilder {
         /** Torch blocks for lighting */
         TORCH,
         /** Sand blocks for falling particles */
-        SAND
+        SAND,
+        /** Fan blocks for decorative purposes */
+        FAN
     }
 } 
