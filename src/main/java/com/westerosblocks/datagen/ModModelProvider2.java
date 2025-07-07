@@ -156,7 +156,7 @@ public class ModModelProvider2 {
 
         // Sand Blocks
         sandExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SAND_SKELETON, 
-            "westerosblocks:block/sand_block/sand_skeleton");
+            "sand_block/sand_skeleton");
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -222,21 +222,21 @@ public class ModModelProvider2 {
         // Door Blocks
         doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.WHITE_WOOD_DOOR, "westerosblocks:item/white_door");
         doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_WHITE_WOOD_DOOR, "westerosblocks:item/white_door");
-        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.NORTHERN_WOOD_DOOR, "wood/northern/door_top");
-        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.SPRUCE_DOOR, "wood/spruce/door_top");
-        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.OAK_DOOR, "wood/oak/door_top");
-        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.BIRCH_DOOR, "wood/birch/door_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.NORTHERN_WOOD_DOOR, "westerosblocks:item/northern_door");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_DARK_NORTHERN_WOOD_DOOR, "westerosblocks:item/northern_door");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.SPRUCE_DOOR, "westerosblocks:item/spruce_door");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_SPRUCE_DOOR, "westerosblocks:item/spruce_door");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.OAK_DOOR, "westerosblocks:item/oak_door");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_OAK_DOOR, "westerosblocks:item/oak_door");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.BIRCH_DOOR, "westerosblocks:item/birch_door");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_BIRCH_DOOR, "westerosblocks:item/birch_door");
         doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.EYRIE_WEIRWOOD_DOOR, "westerosblocks:item/moon_door");
-        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.GREY_WOOD_DOOR, "wood/grey/door_top");
-        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.JUNGLE_DOOR, "wood/jungle/door_top");
-        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.RED_KEEP_SECRET_DOOR, "ashlar_third/pale_red/all_noctm");
-        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.HARRENHAL_SECRET_DOOR, "ashlar_third/black/all_noctm");
-        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_BIRCH_DOOR, "wood/birch/door_locked_top");
-        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_DARK_NORTHERN_WOOD_DOOR, "wood/northern/door_locked_top");
-        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_GREY_WOOD_DOOR, "wood/grey/door_locked_top");
-        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_SPRUCE_DOOR, "wood/spruce/door_locked_top");
-        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_JUNGLE_DOOR, "wood/jungle/door_locked_top");
-        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_OAK_DOOR, "wood/oak/door_locked_top");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.GREY_WOOD_DOOR, "westerosblocks:item/grey_door");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_GREY_WOOD_DOOR, "westerosblocks:item/grey_door");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.JUNGLE_DOOR, "westerosblocks:item/jungle_door");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOCKED_JUNGLE_DOOR, "westerosblocks:item/jungle_door");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.RED_KEEP_SECRET_DOOR, "westerosblocks:item/red_keep_door");
+        doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.HARRENHAL_SECRET_DOOR, "westerosblocks:item/harrenhal_door");
 
         // Standalone sand item models
         sandExport.generateItemModels(itemModelGenerator, ModBlocks2.SAND_SKELETON);

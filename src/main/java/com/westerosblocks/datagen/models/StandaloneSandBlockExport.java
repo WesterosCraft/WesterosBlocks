@@ -16,7 +16,7 @@ public class StandaloneSandBlockExport extends ModelExport2 {
         // Create the base model for the sand block using utility methods from ModelExport2
         Identifier modelId = createModelWithKey1(
             generator, block,
-            "westerosblocks:block/custom/sand/sand_base",
+            "minecraft:block/cube_all",
             texturePath,
             "base"
         );

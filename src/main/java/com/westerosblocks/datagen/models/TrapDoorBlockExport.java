@@ -11,26 +11,26 @@ public class TrapDoorBlockExport extends ModelExport2 {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {
-        // Create the base models for each trap door state
-        Identifier bottomModelId = createModelWithKey1(
+        // Create the base models for each trap door state using ModelExportUtils
+        Identifier bottomModelId = createModel(
             generator, block, 
-            "westerosblocks:block/custom/trapdoor/trapdoor_bottom", 
+            "minecraft:block/template_orientable_trapdoor_bottom", 
             texturePath, "bottom"
         );
-        Identifier topModelId = createModelWithKey1(
+        Identifier topModelId = createModel(
             generator, block, 
-            "westerosblocks:block/custom/trapdoor/trapdoor_top", 
+            "minecraft:block/template_orientable_trapdoor_top", 
             texturePath, "top"
         );
-        Identifier openModelId = createModelWithKey1(
+        Identifier openModelId = createModel(
             generator, block, 
-            "westerosblocks:block/custom/trapdoor/trapdoor_open", 
+            "minecraft:block/template_orientable_trapdoor_open", 
             texturePath, "open"
         );
 
-        // Create variants for all trap door states using the utility methods
+        // Create variants for all trap door states using ModelExport2 utility methods
         BlockStateVariantMap variants = BlockStateVariantMap.create(TrapdoorBlock.FACING, TrapdoorBlock.OPEN, TrapdoorBlock.HALF)
-            // Bottom half, closed - use utility method for cardinal directions
+            // Bottom half, closed
             .register(Direction.NORTH, false, BlockHalf.BOTTOM, createVariant(bottomModelId))
             .register(Direction.EAST, false, BlockHalf.BOTTOM, createVariant(bottomModelId, 90))
             .register(Direction.SOUTH, false, BlockHalf.BOTTOM, createVariant(bottomModelId, 180))
@@ -54,13 +54,13 @@ public class TrapDoorBlockExport extends ModelExport2 {
             .register(Direction.SOUTH, true, BlockHalf.TOP, createVariant(openModelId, 180))
             .register(Direction.WEST, true, BlockHalf.TOP, createVariant(openModelId, 270));
 
-        // Register the block state using the utility method
+        // Register the block state using ModelExport2 utility method
         registerBlockState(generator, block, variants);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator generator, Block block) {
-        // Create a simple item model that inherits from the bottom block model
+        // Create a simple item model that inherits from the block model using ModelExport2 utility method
         generateItemModel(generator, block, "bottom");
     }
 } 
