@@ -1,152 +1,207 @@
 package com.westerosblocks.datagen.models;
 
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.datagen.ModelExport;
+import com.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.block.DoorBlock;
+import net.minecraft.block.enums.DoubleBlockHalf;
+import net.minecraft.block.enums.DoorHinge;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
-import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
-//    bottom → door_bottom
-//    bottom_rh → door_bottom_right
-//    bottom_open → door_bottom_open
-//    bottom_right_open → door_bottom_right_open
-//    top → door_top
-//    top_rh → door_top_right
-//    top_open → door_top_open
-//    top_right_open → door_top_right_open
+/**
+ * Standalone door block export for generating block states and models.
+ * This class extends ModelExport2 and uses BlockStateModelGenerator methods where possible.
+ * It produces the same output as the original DoorBlockExport.
+ */
+public class DoorBlockExport extends ModelExport2 {
 
-public class DoorBlockExport extends ModelExport {
-    private final BlockStateModelGenerator generator;
-    private final Block block;
-    private final ModBlock def;
+    /**
+     * Generates block state models for a door block.
+     * 
+     * @param generator The BlockStateModelGenerator to register models with
+     * @param block The door block to generate models for
+     * @param texturePath The texture path for the door (legacy single texture support)
+     */
+    @Override
+    public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // For backward compatibility, use the same texture for both top and bottom
+        generateBlockStateModels(generator, block, new String[]{texturePath, texturePath});
+    }
 
-    private static class ModelRec {
-        String cond;
-        String ext;
-        int y;
-        ModelRec(String c, String e, int y) {
-            cond = c; ext = e; this.y = y;
-        }
-    };
+    /**
+     * Generates block state models for a door block with separate top and bottom textures.
+     * 
+     * @param generator The BlockStateModelGenerator to register models with
+     * @param block The door block to generate models for
+     * @param texturePaths Array of texture paths [top, bottom] for the door
+     */
+    public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String[] texturePaths) {
+        String topTexture = texturePaths[0];
+        String bottomTexture = texturePaths[1];
+        // Create the base models for each door state
+        Identifier bottomLeftModelId = createDoorModel(generator, block, topTexture, bottomTexture, "bottom_left");
+        Identifier bottomRightModelId = createDoorModel(generator, block, topTexture, bottomTexture, "bottom_right");
+        Identifier bottomLeftOpenModelId = createDoorModel(generator, block, topTexture, bottomTexture, "bottom_left_open");
+        Identifier bottomRightOpenModelId = createDoorModel(generator, block, topTexture, bottomTexture, "bottom_right_open");
+        Identifier topLeftModelId = createDoorModel(generator, block, topTexture, bottomTexture, "top_left");
+        Identifier topRightModelId = createDoorModel(generator, block, topTexture, bottomTexture, "top_right");
+        Identifier topLeftOpenModelId = createDoorModel(generator, block, topTexture, bottomTexture, "top_left_open");
+        Identifier topRightOpenModelId = createDoorModel(generator, block, topTexture, bottomTexture, "top_right_open");
 
-    private static final ModelRec[] MODELS = {
+        // Create variants for all door states using string conditions like the original
+        BlockStateVariantMap variants = BlockStateVariantMap.create(DoorBlock.FACING, DoorBlock.HALF, DoorBlock.HINGE, DoorBlock.OPEN)
             // EAST facing
-            new ModelRec("facing=east,half=lower,hinge=left,open=false", "bottom_left", 0),
-            new ModelRec("facing=east,half=lower,hinge=left,open=true", "bottom_left_open", 90),
-            new ModelRec("facing=east,half=lower,hinge=right,open=false", "bottom_right", 0),
-            new ModelRec("facing=east,half=lower,hinge=right,open=true", "bottom_right_open", 270),
-            new ModelRec("facing=east,half=upper,hinge=left,open=false", "top_left", 0),
-            new ModelRec("facing=east,half=upper,hinge=left,open=true", "top_left_open", 90),
-            new ModelRec("facing=east,half=upper,hinge=right,open=false", "top_right", 0),
-            new ModelRec("facing=east,half=upper,hinge=right,open=true", "top_right_open", 270),
+            .register(Direction.EAST, DoubleBlockHalf.LOWER, DoorHinge.LEFT, false, createVariant(bottomLeftModelId))
+            .register(Direction.EAST, DoubleBlockHalf.LOWER, DoorHinge.LEFT, true, createVariant(bottomLeftOpenModelId, 90))
+            .register(Direction.EAST, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, false, createVariant(bottomRightModelId))
+            .register(Direction.EAST, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, true, createVariant(bottomRightOpenModelId, 270))
+            .register(Direction.EAST, DoubleBlockHalf.UPPER, DoorHinge.LEFT, false, createVariant(topLeftModelId))
+            .register(Direction.EAST, DoubleBlockHalf.UPPER, DoorHinge.LEFT, true, createVariant(topLeftOpenModelId, 90))
+            .register(Direction.EAST, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, false, createVariant(topRightModelId))
+            .register(Direction.EAST, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true, createVariant(topRightOpenModelId, 270))
 
             // SOUTH facing
-            new ModelRec("facing=south,half=lower,hinge=left,open=false", "bottom_left", 90),
-            new ModelRec("facing=south,half=lower,hinge=left,open=true", "bottom_left_open", 180),
-            new ModelRec("facing=south,half=lower,hinge=right,open=false", "bottom_right", 90),
-            new ModelRec("facing=south,half=lower,hinge=right,open=true", "bottom_right_open", 0),
-            new ModelRec("facing=south,half=upper,hinge=left,open=false", "top_left", 90),
-            new ModelRec("facing=south,half=upper,hinge=left,open=true", "top_left_open", 180),
-            new ModelRec("facing=south,half=upper,hinge=right,open=false", "top_right", 90),
-            new ModelRec("facing=south,half=upper,hinge=right,open=true", "top_right_open", 0),
+            .register(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHinge.LEFT, false, createVariant(bottomLeftModelId, 90))
+            .register(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHinge.LEFT, true, createVariant(bottomLeftOpenModelId, 180))
+            .register(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, false, createVariant(bottomRightModelId, 90))
+            .register(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, true, createVariant(bottomRightOpenModelId, 0))
+            .register(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHinge.LEFT, false, createVariant(topLeftModelId, 90))
+            .register(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHinge.LEFT, true, createVariant(topLeftOpenModelId, 180))
+            .register(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, false, createVariant(topRightModelId, 90))
+            .register(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true, createVariant(topRightOpenModelId, 0))
 
             // WEST facing
-            new ModelRec("facing=west,half=lower,hinge=left,open=false", "bottom_left", 180),
-            new ModelRec("facing=west,half=lower,hinge=left,open=true", "bottom_left_open", 270),
-            new ModelRec("facing=west,half=lower,hinge=right,open=false", "bottom_right", 180),
-            new ModelRec("facing=west,half=lower,hinge=right,open=true", "bottom_right_open", 90),
-            new ModelRec("facing=west,half=upper,hinge=left,open=false", "top_left", 180),
-            new ModelRec("facing=west,half=upper,hinge=left,open=true", "top_left_open", 270),
-            new ModelRec("facing=west,half=upper,hinge=right,open=false", "top_right", 180),
-            new ModelRec("facing=west,half=upper,hinge=right,open=true", "top_right_open", 90),
+            .register(Direction.WEST, DoubleBlockHalf.LOWER, DoorHinge.LEFT, false, createVariant(bottomLeftModelId, 180))
+            .register(Direction.WEST, DoubleBlockHalf.LOWER, DoorHinge.LEFT, true, createVariant(bottomLeftOpenModelId, 270))
+            .register(Direction.WEST, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, false, createVariant(bottomRightModelId, 180))
+            .register(Direction.WEST, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, true, createVariant(bottomRightOpenModelId, 90))
+            .register(Direction.WEST, DoubleBlockHalf.UPPER, DoorHinge.LEFT, false, createVariant(topLeftModelId, 180))
+            .register(Direction.WEST, DoubleBlockHalf.UPPER, DoorHinge.LEFT, true, createVariant(topLeftOpenModelId, 270))
+            .register(Direction.WEST, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, false, createVariant(topRightModelId, 180))
+            .register(Direction.WEST, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true, createVariant(topRightOpenModelId, 90))
 
             // NORTH facing
-            new ModelRec("facing=north,half=lower,hinge=left,open=false", "bottom_left", 270),
-            new ModelRec("facing=north,half=lower,hinge=left,open=true", "bottom_left_open", 0),
-            new ModelRec("facing=north,half=lower,hinge=right,open=false", "bottom_right", 270),
-            new ModelRec("facing=north,half=lower,hinge=right,open=true", "bottom_right_open", 180),
-            new ModelRec("facing=north,half=upper,hinge=left,open=false", "top_left", 270),
-            new ModelRec("facing=north,half=upper,hinge=left,open=true", "top_left_open", 0),
-            new ModelRec("facing=north,half=upper,hinge=right,open=false", "top_right", 270),
-            new ModelRec("facing=north,half=upper,hinge=right,open=true", "top_right_open", 180)
-    };
+            .register(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHinge.LEFT, false, createVariant(bottomLeftModelId, 270))
+            .register(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHinge.LEFT, true, createVariant(bottomLeftOpenModelId, 0))
+            .register(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, false, createVariant(bottomRightModelId, 270))
+            .register(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, true, createVariant(bottomRightOpenModelId, 180))
+            .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.LEFT, false, createVariant(topLeftModelId, 270))
+            .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.LEFT, true, createVariant(topLeftOpenModelId, 0))
+            .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, false, createVariant(topRightModelId, 270))
+            .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true, createVariant(topRightOpenModelId, 180));
 
-    public DoorBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
-        super(generator, block, def);
-        this.generator = generator;
-        this.block = block;
-        this.def = def;
+        // Register the block state with the generator
+        registerBlockState(generator, block, variants);
     }
 
-    public void generateBlockStateModels() {
-        if (!def.isCustomModel()) {
-            for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-                generateDoorModels(generator, set);
-            }
-        }
+    /**
+     * Creates a door model with the specified variant.
+     * 
+     * @param generator The BlockStateModelGenerator to register the model with
+     * @param block The block this model is for
+     * @param topTexture The top texture path to use
+     * @param bottomTexture The bottom texture path to use
+     * @param variant The variant name (e.g., "bottom_left", "top_right_open")
+     * @return The created model Identifier
+     */
+    private static Identifier createDoorModel(BlockStateModelGenerator generator, Block block, String topTexture, String bottomTexture, String variant) {
+        // Create a unique model ID for this block and variant
+        String modelPath = "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", "") + "_" + variant;
+        Identifier modelId = WesterosBlocks.id(modelPath);
 
-        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
-        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
-
-        for (ModelRec rec : MODELS) {
-            Identifier modelId = getModelId(rec.ext, def.isCustomModel());
-            BlockStateVariant variant = VariantBuilder.createWithRotation(modelId, null, rec.y);
-            blockStateBuilder.addVariant(rec.cond, variant, null, variants);
-        }
-
-        generateBlockStateFiles(generator, block, variants);
-    }
-
-    private void generateDoorModels(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set) {
+        // Create texture map with separate top and bottom textures
         TextureMap textureMap = new TextureMap()
-                .put(TextureKey.TOP, createBlockIdentifier(set.getTextureByIndex(0)))
-                .put(TextureKey.BOTTOM, createBlockIdentifier(set.getTextureByIndex(1)));
+            .put(TextureKey.TOP, createBlockIdentifier(topTexture))
+            .put(TextureKey.BOTTOM, createBlockIdentifier(bottomTexture));
 
-        // Each entry is {model extension, parent model} pairs
-        String[][] variants = {
-                {"bottom_left", "door_bottom_left"},
-                {"bottom_right", "door_bottom_right"},
-                {"bottom_left_open", "door_bottom_left_open"},
-                {"bottom_right_open", "door_bottom_right_open"},
-                {"top_left", "door_top_left"},
-                {"top_right", "door_top_right"},
-                {"top_left_open", "door_top_left_open"},
-                {"top_right_open", "door_top_right_open"}
+        // Determine the parent model based on the variant
+        String parentModelPath = "block/" + getParentModelName(variant);
+
+        // Create and upload the model
+        Model doorModel = new Model(
+            Optional.of(Identifier.ofVanilla(parentModelPath)),
+            Optional.empty(),
+            TextureKey.TOP,
+            TextureKey.BOTTOM
+        );
+        doorModel.upload(modelId, textureMap, generator.modelCollector);
+
+        return modelId;
+    }
+
+    /**
+     * Maps door variants to their parent model names.
+     * 
+     * @param variant The door variant
+     * @return The parent model name
+     */
+    private static String getParentModelName(String variant) {
+        return switch (variant) {
+            case "bottom_left" -> "door_bottom_left";
+            case "bottom_right" -> "door_bottom_right";
+            case "bottom_left_open" -> "door_bottom_left_open";
+            case "bottom_right_open" -> "door_bottom_right_open";
+            case "top_left" -> "door_top_left";
+            case "top_right" -> "door_top_right";
+            case "top_left_open" -> "door_top_left_open";
+            case "top_right_open" -> "door_top_right_open";
+            default -> throw new IllegalArgumentException("Unknown door variant: " + variant);
         };
-
-        // Generate each door model variant
-        for (String[] variant : variants) {
-            String modelName = variant[0];
-            String parentPath = "block/" + variant[1];
-
-            Identifier modelId = getModelId(modelName, false);
-            Model doorModel = new Model(
-                    Optional.of(Identifier.ofVanilla(parentPath)),
-                    Optional.empty(),
-                    TextureKey.TOP,
-                    TextureKey.BOTTOM
-            );
-            doorModel.upload(modelId, textureMap, generator.modelCollector);
-        }
     }
 
-    private Identifier getModelId(String variant, boolean isCustom) {
-        return getBaseModelId(variant, 0, isCustom);
+    /**
+     * Generates item models for a door block.
+     * 
+     * @param generator The ItemModelGenerator to register the model with
+     * @param block The door block to generate item models for
+     */
+    @Override
+    public void generateItemModels(ItemModelGenerator generator, Block block) {
+        // Create a simple item model that inherits from the block model
+        String modelPath = "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", "");
+        Model model = new Model(
+            Optional.of(WesterosBlocks.id(modelPath)),
+            Optional.empty()
+        );
+        generator.register(block.asItem(), model);
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
-        ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
-        TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
-
+    /**
+     * Generates item models for a door block with a specific texture.
+     * 
+     * @param generator The ItemModelGenerator to register the model with
+     * @param block The door block to generate item models for
+     * @param texturePath The texture path to use for the item model
+     */
+    public void generateItemModels(ItemModelGenerator generator, Block block, String texturePath) {
+        TextureMap textureMap = TextureMap.layer0(createItemIdentifier(texturePath));
+        
         Models.GENERATED.upload(
-                ModelIds.getItemModelId(block.asItem()),
-                textureMap,
-                itemModelGenerator.writer
+            ModelIds.getItemModelId(block.asItem()),
+            textureMap,
+            generator.writer
         );
     }
-}
+
+    /**
+     * Creates an identifier for item textures, handling namespaces properly.
+     * Unlike createBlockIdentifier, this doesn't prepend "block/" for item textures.
+     * 
+     * @param texturePath The texture path (can include namespace like "westerosblocks:item/white_door")
+     * @return The identifier for the item texture
+     */
+    private static Identifier createItemIdentifier(String texturePath) {
+        // If the texture path includes a namespace
+        if (texturePath != null && texturePath.contains(":")) {
+            String namespace = texturePath.substring(0, texturePath.indexOf(':'));
+            String path = texturePath.substring(texturePath.indexOf(':') + 1);
+            return Identifier.of(namespace, path);
+        }
+        // No namespace, use mod ID and assume it's already the correct path
+        return WesterosBlocks.id(texturePath);
+    }
+
+} 

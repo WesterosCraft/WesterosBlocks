@@ -1,9 +1,5 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.block.ModBlockFactory;
-import com.westerosblocks.block.ModBlockLifecycle;
 import com.westerosblocks.util.ModBlockSetType;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -23,45 +19,46 @@ import net.minecraft.world.WorldView;
 
 import java.util.List;
 
-public class WCDoorBlock extends DoorBlock implements ModBlockLifecycle {
+/**
+ * Standalone door block that doesn't depend on the def system.
+ * Provides the same functionality as WCDoorBlock but with direct configuration.
+ */
+public class WCDoorBlock extends DoorBlock {
 
-    public static class Factory extends ModBlockFactory {
-        @Override
-        public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings settings = def.applyCustomProperties();
-            Block blk = new WCDoorBlock(settings, def);
-            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
-        }
+    private final boolean locked;
+    private final boolean allowUnsupported;
+    private final String translationKey;
+    private final List<String> tooltips;
+
+    /**
+     * Creates a new standalone door block.
+     *
+     * @param settings Block settings
+     * @param woodType The wood type for this door (affects sounds and behavior)
+     * @param locked Whether this door is locked (prevents opening)
+     * @param allowUnsupported Whether this door can be placed without proper support
+     * @param translationKey The translation key for this block
+     * @param tooltips Optional tooltips to display
+     */
+    public WCDoorBlock(AbstractBlock.Settings settings, String woodType,
+                              boolean locked, boolean allowUnsupported,
+                              String translationKey, List<String> tooltips) {
+        super(ModBlockSetType.getBlockSetType(woodType), settings);
+        this.locked = locked;
+        this.allowUnsupported = allowUnsupported;
+        this.translationKey = translationKey;
+        this.tooltips = tooltips;
     }
 
-    private final ModBlock def;
-    private boolean locked = false;
-    private boolean allow_unsupported = false;
-
-    protected WCDoorBlock(AbstractBlock.Settings settings, ModBlock def) {
-        super(ModBlockSetType.getBlockSetType(def.woodType), settings);
-        this.def = def;
-        String type = def.getType();
-        if (type != null) {
-//            Map<String, String> params = ModBlock.parseTypeParameters(type);
-
-            String[] toks = type.split(",");
-            for (String tok : toks) {
-                if (tok.equals("allow-unsupported")) {
-                    allow_unsupported = true;
-                }
-                String[] flds = tok.split(":");
-                if (flds.length < 2) continue;
-                if (flds[0].equals("locked")) {
-                    locked = flds[1].equals("true");
-                }
-            }
-        }
-    }
-
-    @Override
-    public ModBlock getWBDefinition() {
-        return def;
+    /**
+     * Creates a new standalone door block with default settings.
+     *
+     * @param settings Block settings
+     * @param woodType The wood type for this door
+     * @param translationKey The translation key for this block
+     */
+    public WCDoorBlock(AbstractBlock.Settings settings, String woodType, String translationKey) {
+        this(settings, woodType, false, false, translationKey, null);
     }
 
     @Override
@@ -75,20 +72,42 @@ public class WCDoorBlock extends DoorBlock implements ModBlockLifecycle {
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        if (allow_unsupported && (state.get(DoorBlock.HALF) == DoubleBlockHalf.LOWER)) return true;
+        if (allowUnsupported && (state.get(DoorBlock.HALF) == DoubleBlockHalf.LOWER)) {
+            return true;
+        }
         return super.canPlaceAt(state, world, pos);
     }
 
-    private static final String[] TAGS = {"doors"};
-
     @Override
-    public String[] getBlockTags() {
-        return TAGS;
+    public String getTranslationKey() {
+        return translationKey;
     }
 
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        addCustomTooltip(tooltip);
+        if (tooltips != null && !tooltips.isEmpty()) {
+            for (String tooltipText : tooltips) {
+                tooltip.add(Text.literal(tooltipText));
+            }
+        }
         super.appendTooltip(stack, context, tooltip, options);
     }
-}
+
+    /**
+     * Gets whether this door is locked.
+     *
+     * @return true if the door is locked
+     */
+    public boolean isLocked() {
+        return locked;
+    }
+
+    /**
+     * Gets whether this door allows unsupported placement.
+     *
+     * @return true if the door can be placed without support
+     */
+    public boolean allowsUnsupported() {
+        return allowUnsupported;
+    }
+} 

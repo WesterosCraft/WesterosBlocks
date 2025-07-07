@@ -765,7 +765,7 @@ public class BlockBuilder {
                 yield new WCWaySignBlock(settings, name, creativeTab, woodType);
             }
             case TRAPDOOR -> new WCTrapDoorBlock(settings, name, creativeTab, woodType, locked, soundType);
-            case DOOR -> new StandaloneDoorBlock(
+            case DOOR -> new WCDoorBlock(
                 settings,
                 woodType.toString().toLowerCase(),
                 locked,

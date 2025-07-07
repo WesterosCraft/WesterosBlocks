@@ -25,7 +25,7 @@ public class ModModelProvider extends FabricModelProvider {
             Map.entry("web", CrossBlockExport::new),
             Map.entry("pane", PaneBlockExport::new),
             Map.entry("crop", CropBlockExport::new),
-            Map.entry("door", DoorBlockExport::new),
+//            Map.entry("door", DoorBlockExport::new),
             Map.entry("slab", SlabBlockExport::new),
             Map.entry("fence", FenceBlockExport::new),
             Map.entry("wall", WallBlockExport::new),
@@ -175,10 +175,10 @@ public class ModModelProvider extends FabricModelProvider {
                     BedBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-                case "door": {
-                    DoorBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-                    break;
-                }
+//                case "door": {
+//                    DoorBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+//                    break;
+//                }
                 case "fan": {
                     FanBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
