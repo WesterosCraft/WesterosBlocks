@@ -14,11 +14,13 @@ public class StandaloneSandBlockExport extends ModelExport2 {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {
         // Create the base model for the sand block using utility methods from ModelExport2
-        Identifier modelId = createModelWithKey1(
+        // Use "all" texture key for cube_all parent model instead of "1"
+        Identifier modelId = createModel(
             generator, block,
             "minecraft:block/cube_all",
             texturePath,
-            "base"
+            "base",
+            "all"
         );
 
         // Register a simple block state with no variations
