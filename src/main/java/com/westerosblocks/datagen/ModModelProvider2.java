@@ -8,7 +8,7 @@ import net.minecraft.data.client.*;
 public class ModModelProvider2 {
     static ArrowSlitBlockExport arrowSlitExport = new ArrowSlitBlockExport();
     static TableBlockExport tableExport = new TableBlockExport();
-    static StandaloneSandBlockExport sandExport = new StandaloneSandBlockExport();
+    static SandBlockExport sandExport = new SandBlockExport();
     static DoorBlockExport doorExporter = new DoorBlockExport();
     static ChairBlockExport chairExporter = new ChairBlockExport();
     static TrapDoorBlockExport trapDoorExporter = new TrapDoorBlockExport();
@@ -55,97 +55,97 @@ public class ModModelProvider2 {
 
         // log blocks
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_LOG_CHAIN,
-            new String[]{"bark/oak/top", "bark/oak/top", "bark/oak/chain"});
+            "bark/oak/top", "bark/oak/top", "bark/oak/chain");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.JUNGLE_LOG_CHAIN,
-            new String[]{"bark/jungle/top", "bark/jungle/top", "bark/jungle/chain"});
+            "bark/jungle/top", "bark/jungle/top", "bark/jungle/chain");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.JUNGLE_LOG_ROPE,
-            new String[]{"bark/jungle/top", "bark/jungle/top", "bark/jungle/rope"});
+            "bark/jungle/top", "bark/jungle/top", "bark/jungle/rope");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ARCHERY_TARGET,
-            new String[]{"archery_target/front", "archery_target/front", "archery_target/side"});
+            "archery_target/front", "archery_target/front", "archery_target/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CLOSED_BARREL,
-            new String[]{"barrel_closed/barrel_top_closed", "barrel_closed/barrel_top_closed", "barrel_sides/side1"});
+            "barrel_closed/barrel_top_closed", "barrel_closed/barrel_top_closed", "barrel_sides/side1");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FIREWOOD,
-            new String[]{"firewood/top", "firewood/top", "firewood/side"});
+            "firewood/top", "firewood/top", "firewood/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MARBLE_PILLAR,
-            new String[]{"marble/quartz/column_topbottom", "marble/quartz/column_topbottom", "marble/quartz/column_side"});
+            "marble/quartz/column_topbottom", "marble/quartz/column_topbottom", "marble/quartz/column_side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MARBLE_PILLAR_VERTICAL_CTM,
-            new String[]{"marble/quartz/column_topbottom", "marble/quartz/column_topbottom", "marble/quartz/column_side_ctm"});
+            "marble/quartz/column_topbottom", "marble/quartz/column_topbottom", "marble/quartz/column_side_ctm");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MOSSY_OAK_LOG,
-            new String[]{"bark/oak/mossy/bottom", "bark/oak/mossy/top", "bark/oak/mossy/side"});
+            "bark/oak/mossy/bottom", "bark/oak/mossy/top", "bark/oak/mossy/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MOSSY_BIRCH_LOG,
-            new String[]{"bark/birch/mossy/bottom", "bark/birch/mossy/top", "bark/birch/mossy/side"});
+            "bark/birch/mossy/bottom", "bark/birch/mossy/top", "bark/birch/mossy/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MOSSY_SPRUCE_LOG,
-            new String[]{"bark/spruce/mossy/bottom", "bark/spruce/mossy/top", "bark/spruce/mossy/side"});
+            "bark/spruce/mossy/bottom", "bark/spruce/mossy/top", "bark/spruce/mossy/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MOSSY_JUNGLE_LOG,
-            new String[]{"bark/jungle/mossy/bottom", "bark/jungle/mossy/top", "bark/jungle/mossy/side"});
+            "bark/jungle/mossy/bottom", "bark/jungle/mossy/top", "bark/jungle/mossy/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_LOG_ROPE,
-            new String[]{"bark/oak/top", "bark/oak/top", "bark/oak/rope"});
+            "bark/oak/top", "bark/oak/top", "bark/oak/rope");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.PALM_TREE_LOG,
-            new String[]{"bark/palm/top", "bark/palm/top", "bark/palm/side"});
+            "bark/palm/top", "bark/palm/top", "bark/palm/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SANDSTONE_PILLAR,
-            new String[]{"ashlar_third/sandstone/column_top", "ashlar_third/sandstone/column_top", "ashlar_third/sandstone/column_side"});
+            "ashlar_third/sandstone/column_top", "ashlar_third/sandstone/column_top", "ashlar_third/sandstone/column_side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPRUCE_LOG_CHAIN,
-            new String[]{"bark/spruce/top", "bark/spruce/top", "bark/spruce/chain"});
+            "bark/spruce/top", "bark/spruce/top", "bark/spruce/chain");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPRUCE_LOG_ROPE,
-            new String[]{"bark/spruce/top", "bark/spruce/top", "bark/spruce/rope"});
+            "bark/spruce/top", "bark/spruce/top", "bark/spruce/rope");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.STACKED_BONES,
-            new String[]{"stacked_bones/bone_stacked_front", "stacked_bones/bone_stacked_front", "stacked_bones/bone_stacked_side"});
+            "stacked_bones/bone_stacked_front", "stacked_bones/bone_stacked_front", "stacked_bones/bone_stacked_side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_0,
-            new String[]{"bark/weirwood/face_0", "bark/weirwood/face_0", "bark/weirwood/side"});
+            "bark/weirwood/face_0", "bark/weirwood/face_0", "bark/weirwood/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_1,
-            new String[]{"bark/weirwood/face_1", "bark/weirwood/face_1", "bark/weirwood/side"});
+            "bark/weirwood/face_1", "bark/weirwood/face_1", "bark/weirwood/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_2,
-            new String[]{"bark/weirwood/face_2", "bark/weirwood/face_2", "bark/weirwood/side"});
+            "bark/weirwood/face_2", "bark/weirwood/face_2", "bark/weirwood/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_3,
-            new String[]{"bark/weirwood/face_3", "bark/weirwood/face_3", "bark/weirwood/side"});
+            "bark/weirwood/face_3", "bark/weirwood/face_3", "bark/weirwood/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_4,
-            new String[]{"bark/weirwood/face_4", "bark/weirwood/face_4", "bark/weirwood/side"});
+            "bark/weirwood/face_4", "bark/weirwood/face_4", "bark/weirwood/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_5,
-            new String[]{"bark/weirwood/face_5", "bark/weirwood/face_5", "bark/weirwood/side"});
+            "bark/weirwood/face_5", "bark/weirwood/face_5", "bark/weirwood/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_6,
-            new String[]{"bark/weirwood/face_6", "bark/weirwood/face_6", "bark/weirwood/side"});
+            "bark/weirwood/face_6", "bark/weirwood/face_6", "bark/weirwood/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_7,
-            new String[]{"bark/weirwood/face_7", "bark/weirwood/face_7", "bark/weirwood/side"});
+            "bark/weirwood/face_7", "bark/weirwood/face_7", "bark/weirwood/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_FACE_8,
-            new String[]{"bark/weirwood/face_8", "bark/weirwood/face_8", "bark/weirwood/side"});
+            "bark/weirwood/face_8", "bark/weirwood/face_8", "bark/weirwood/side");
         logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_SCARS,
-            new String[]{"bark/weirwood/scars", "bark/weirwood/scars", "bark/weirwood/side"});
+            "bark/weirwood/scars", "bark/weirwood/scars", "bark/weirwood/side");
 
         // Door blocks
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WHITE_WOOD_DOOR, 
-            new String[]{"wood/white/door_top", "wood/white/door_bottom"});
+            "wood/white/door_top", "wood/white/door_bottom");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LOCKED_WHITE_WOOD_DOOR, 
-            new String[]{"wood/white/door_locked_top", "wood/white/door_locked_bottom"});
+            "wood/white/door_locked_top", "wood/white/door_locked_bottom");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.NORTHERN_WOOD_DOOR, 
-            new String[]{"wood/northern/door_top", "wood/northern/door_bottom"});
+            "wood/northern/door_top", "wood/northern/door_bottom");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPRUCE_DOOR, 
-            new String[]{"wood/spruce/door_top", "wood/spruce/door_bottom"});
+            "wood/spruce/door_top", "wood/spruce/door_bottom");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_DOOR, 
-            new String[]{"wood/oak/door_top", "wood/oak/door_bottom"});
+            "wood/oak/door_top", "wood/oak/door_bottom");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BIRCH_DOOR, 
-            new String[]{"wood/birch/door_top", "wood/birch/door_bottom"});
+            "wood/birch/door_top", "wood/birch/door_bottom");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.EYRIE_WEIRWOOD_DOOR, 
-            new String[]{"door_block/door_weirwood_top", "door_block/door_weirwood_bottom"});
+            "door_block/door_weirwood_top", "door_block/door_weirwood_bottom");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.GREY_WOOD_DOOR, 
-            new String[]{"wood/grey/door_top", "wood/grey/door_bottom"});
+            "wood/grey/door_top", "wood/grey/door_bottom");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.JUNGLE_DOOR, 
-            new String[]{"wood/jungle/door_top", "wood/jungle/door_bottom"});
+            "wood/jungle/door_top", "wood/jungle/door_bottom");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.RED_KEEP_SECRET_DOOR, 
-            new String[]{"ashlar_third/pale_red/all_noctm", "ashlar_third/pale_red/all_noctm"});
+            "ashlar_third/pale_red/all_noctm", "ashlar_third/pale_red/all_noctm");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HARRENHAL_SECRET_DOOR, 
-            new String[]{"ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm"});
+            "ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LOCKED_BIRCH_DOOR, 
-            new String[]{"wood/birch/door_locked_top", "wood/birch/door_locked_bottom"});
+            "wood/birch/door_locked_top", "wood/birch/door_locked_bottom");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LOCKED_DARK_NORTHERN_WOOD_DOOR, 
-            new String[]{"wood/northern/door_locked_top", "wood/northern/door_locked_bottom"});
+            "wood/northern/door_locked_top", "wood/northern/door_locked_bottom");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LOCKED_GREY_WOOD_DOOR, 
-            new String[]{"wood/grey/door_locked_top", "wood/grey/door_locked_bottom"});
+            "wood/grey/door_locked_top", "wood/grey/door_locked_bottom");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LOCKED_SPRUCE_DOOR, 
-            new String[]{"wood/spruce/door_locked_top", "wood/spruce/door_locked_bottom"});
+            "wood/spruce/door_locked_top", "wood/spruce/door_locked_bottom");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LOCKED_JUNGLE_DOOR, 
-            new String[]{"wood/jungle/door_locked_top", "wood/jungle/door_locked_bottom"});
+            "wood/jungle/door_locked_top", "wood/jungle/door_locked_bottom");
         doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LOCKED_OAK_DOOR, 
-            new String[]{"wood/oak/door_locked_top", "wood/oak/door_locked_bottom"});
+            "wood/oak/door_locked_top", "wood/oak/door_locked_bottom");
 
 
         // Torch Blocks

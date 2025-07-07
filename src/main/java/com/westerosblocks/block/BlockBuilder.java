@@ -755,13 +755,13 @@ public class BlockBuilder {
             case TABLE -> new WCTableBlock(settings, name, creativeTab, woodType);
             case CHAIR -> new WCChairBlock(settings, name, creativeTab, woodType);
             case WAY_SIGN -> {
-                // Register wall variant too
-                Block wallBlock = new WCWaySignWallBlock(settings, "wall_" + name, creativeTab, woodType);
-                Registry.register(Registries.BLOCK, WesterosBlocks.id("wall_" + name), wallBlock);
-                Registry.register(Registries.ITEM, WesterosBlocks.id("wall_" + name), new BlockItem(wallBlock, new Item.Settings()));
-                ItemGroupEvents.modifyEntriesEvent(WesterosCreativeModeTabs.TABS.get(creativeTab)).register(entries -> {
-                    entries.add(wallBlock);
-                });
+//                // Register wall variant too
+//                Block wallBlock = new WCWaySignWallBlock(settings, "wall_" + name, creativeTab, woodType);
+//                Registry.register(Registries.BLOCK, WesterosBlocks.id("wall_" + name), wallBlock);
+//                Registry.register(Registries.ITEM, WesterosBlocks.id("wall_" + name), new BlockItem(wallBlock, new Item.Settings()));
+//                ItemGroupEvents.modifyEntriesEvent(WesterosCreativeModeTabs.TABS.get(creativeTab)).register(entries -> {
+//                    entries.add(wallBlock);
+//                });
                 yield new WCWaySignBlock(settings, name, creativeTab, woodType);
             }
             case TRAPDOOR -> new WCTrapDoorBlock(settings, name, creativeTab, woodType, locked, soundType);
@@ -798,7 +798,7 @@ public class BlockBuilder {
                 this.wallBlock = wallTorch;
                 yield standingTorch;
             }
-            case SAND -> new StandaloneWCSandBlock(settings, name, creativeTab, tooltips);
+            case SAND -> new WCSandBlock(settings, name, creativeTab, tooltips);
         };
     }
 

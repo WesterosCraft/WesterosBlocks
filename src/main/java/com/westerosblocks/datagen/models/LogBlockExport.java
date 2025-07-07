@@ -17,7 +17,7 @@ public class LogBlockExport extends ModelExport2 {
         generateBlockStateModels(generator, block, new String[]{texturePath});
     }
 
-    public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String[] texturePaths) {
+    public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String... texturePaths) {
         Identifier xModelId = createLogModel(generator, block, "cube_log_horizontal", texturePaths, "x");
         Identifier yModelId = createLogModel(generator, block, "cube_log", texturePaths, "y");
         Identifier zModelId = createLogModel(generator, block, "cube_log_horizontal", texturePaths, "z");
@@ -77,7 +77,7 @@ public class LogBlockExport extends ModelExport2 {
      * @param texturePaths The input texture array
      * @return An array with exactly 6 texture paths
      */
-    private String[] expandTextureArray(String[] texturePaths) {
+    private String[] expandTextureArray(String... texturePaths) {
         if (texturePaths == null || texturePaths.length == 0) {
             // Return default textures if none provided
             return new String[]{"stone", "stone", "stone", "stone", "stone", "stone"};

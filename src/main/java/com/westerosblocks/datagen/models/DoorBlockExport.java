@@ -36,9 +36,14 @@ public class DoorBlockExport extends ModelExport2 {
      * 
      * @param generator The BlockStateModelGenerator to register models with
      * @param block The door block to generate models for
-     * @param texturePaths Array of texture paths [top, bottom] for the door
+     * @param texturePaths Variable number of texture paths [top, bottom] for the door
      */
-    public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String[] texturePaths) {
+    public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String... texturePaths) {
+        // Ensure we have at least 2 textures (top and bottom)
+        if (texturePaths.length < 2) {
+            throw new IllegalArgumentException("Door blocks require at least 2 textures (top and bottom)");
+        }
+        
         String topTexture = texturePaths[0];
         String bottomTexture = texturePaths[1];
         // Create the base models for each door state

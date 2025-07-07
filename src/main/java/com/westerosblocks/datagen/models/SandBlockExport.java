@@ -9,7 +9,7 @@ import net.minecraft.util.Identifier;
  * Generates block state models and item models for sand blocks using BlockStateModelGenerator.
  * Sand blocks are simple blocks that don't have complex state variations.
  */
-public class StandaloneSandBlockExport extends ModelExport2 {
+public class SandBlockExport extends ModelExport2 {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {
