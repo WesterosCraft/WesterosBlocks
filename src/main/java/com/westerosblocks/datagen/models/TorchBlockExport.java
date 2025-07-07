@@ -1,9 +1,9 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.block.custom.WCWallTorchBlock;
 import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
-import net.minecraft.block.WallTorchBlock;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 
@@ -47,7 +47,7 @@ public class TorchBlockExport extends ModelExport {
         Identifier wallModelId = createWallTorchModel(generator, block, texturePath);
 
         // Create variants for each facing direction
-        BlockStateVariantMap variants = BlockStateVariantMap.create(WallTorchBlock.FACING)
+        BlockStateVariantMap variants = BlockStateVariantMap.create(WCWallTorchBlock.FACING)
             .register(net.minecraft.util.math.Direction.NORTH, BlockStateVariant.create()
                 .put(VariantSettings.MODEL, wallModelId))
             .register(net.minecraft.util.math.Direction.EAST, BlockStateVariant.create()

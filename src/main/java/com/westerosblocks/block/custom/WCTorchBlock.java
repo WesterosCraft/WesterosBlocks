@@ -34,7 +34,7 @@ public class WCTorchBlock extends TorchBlock {
 
     /**
      * Creates a new standalone torch block.
-     *
+     * 
      * @param settings Block settings
      * @param wallBlock The corresponding wall torch block
      * @param allowUnsupported Whether this torch can be placed without support
@@ -42,9 +42,9 @@ public class WCTorchBlock extends TorchBlock {
      * @param translationKey The translation key for this block
      * @param tooltips Optional tooltips to display
      */
-    public WCTorchBlock(AbstractBlock.Settings settings, Block wallBlock,
-                                boolean allowUnsupported, boolean noParticle,
-                                String translationKey, List<String> tooltips) {
+    public WCTorchBlock(AbstractBlock.Settings settings, Block wallBlock, 
+                               boolean allowUnsupported, boolean noParticle,
+                               String translationKey, List<String> tooltips) {
         super(getParticle(noParticle), settings);
         this.wallBlock = wallBlock;
         this.allowUnsupported = allowUnsupported;
@@ -111,4 +111,4 @@ public class WCTorchBlock extends TorchBlock {
         }
         super.appendTooltip(stack, context, tooltip, options);
     }
-}
+} 

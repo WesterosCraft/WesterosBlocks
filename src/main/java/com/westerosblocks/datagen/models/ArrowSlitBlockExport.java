@@ -7,94 +7,69 @@ import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 
-public class ArrowSlitBlockExport {
+/**
+ * Refactored version of ArrowSlitBlockExport that extends ModelExport2.
+ * This demonstrates how the new utility class can simplify complex block state generation.
+ */
+public class ArrowSlitBlockExport extends ModelExport2 {
 
-    public static void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {
+    @Override
+    public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {
         // Create the base models for each type
-        Identifier singleModelId = ModelExportUtils.createModelWithKey1(
+        Identifier singleModelId = createModelWithKey1(
             generator, block, 
             "westerosblocks:block/custom/arrow_slits/arrow_slit_single", 
             texturePath, "single"
         );
-        Identifier midModelId = ModelExportUtils.createModelWithKey1(
+        Identifier midModelId = createModelWithKey1(
             generator, block, 
             "westerosblocks:block/custom/arrow_slits/arrow_slit_middle", 
             texturePath, "middle"
         );
-        Identifier topModelId = ModelExportUtils.createModelWithKey1(
+        Identifier topModelId = createModelWithKey1(
             generator, block, 
             "westerosblocks:block/custom/arrow_slits/arrow_slit_top", 
             texturePath, "top"
         );
-        Identifier bottomModelId = ModelExportUtils.createModelWithKey1(
+        Identifier bottomModelId = createModelWithKey1(
             generator, block, 
             "westerosblocks:block/custom/arrow_slits/arrow_slit_bottom", 
             texturePath, "bottom"
         );
 
-        // Create variants for each state and direction
+        // Create variants for each state and direction using the utility methods
         BlockStateVariantMap variants = BlockStateVariantMap.create(WCArrowSlitBlock.FACING, WCArrowSlitBlock.TYPE)
-            // Single state
-            .register(Direction.NORTH, ArrowSlitType.SINGLE, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, singleModelId))
-            .register(Direction.EAST, ArrowSlitType.SINGLE, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, singleModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
-            .register(Direction.SOUTH, ArrowSlitType.SINGLE, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, singleModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
-            .register(Direction.WEST, ArrowSlitType.SINGLE, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, singleModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
+            // Single state - use utility method for cardinal directions
+            .register(Direction.NORTH, ArrowSlitType.SINGLE, createVariant(singleModelId))
+            .register(Direction.EAST, ArrowSlitType.SINGLE, createVariant(singleModelId, 90))
+            .register(Direction.SOUTH, ArrowSlitType.SINGLE, createVariant(singleModelId, 180))
+            .register(Direction.WEST, ArrowSlitType.SINGLE, createVariant(singleModelId, 270))
 
             // Middle state
-            .register(Direction.NORTH, ArrowSlitType.MIDDLE, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, midModelId))
-            .register(Direction.EAST, ArrowSlitType.MIDDLE, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, midModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
-            .register(Direction.SOUTH, ArrowSlitType.MIDDLE, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, midModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
-            .register(Direction.WEST, ArrowSlitType.MIDDLE, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, midModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
+            .register(Direction.NORTH, ArrowSlitType.MIDDLE, createVariant(midModelId))
+            .register(Direction.EAST, ArrowSlitType.MIDDLE, createVariant(midModelId, 90))
+            .register(Direction.SOUTH, ArrowSlitType.MIDDLE, createVariant(midModelId, 180))
+            .register(Direction.WEST, ArrowSlitType.MIDDLE, createVariant(midModelId, 270))
 
             // Bottom state
-            .register(Direction.NORTH, ArrowSlitType.BOTTOM, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, bottomModelId))
-            .register(Direction.EAST, ArrowSlitType.BOTTOM, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, bottomModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
-            .register(Direction.SOUTH, ArrowSlitType.BOTTOM, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, bottomModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
-            .register(Direction.WEST, ArrowSlitType.BOTTOM, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, bottomModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R270))
+            .register(Direction.NORTH, ArrowSlitType.BOTTOM, createVariant(bottomModelId))
+            .register(Direction.EAST, ArrowSlitType.BOTTOM, createVariant(bottomModelId, 90))
+            .register(Direction.SOUTH, ArrowSlitType.BOTTOM, createVariant(bottomModelId, 180))
+            .register(Direction.WEST, ArrowSlitType.BOTTOM, createVariant(bottomModelId, 270))
 
             // Top state
-            .register(Direction.NORTH, ArrowSlitType.TOP, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, topModelId))
-            .register(Direction.EAST, ArrowSlitType.TOP, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, topModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R90))
-            .register(Direction.SOUTH, ArrowSlitType.TOP, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, topModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R180))
-            .register(Direction.WEST, ArrowSlitType.TOP, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, topModelId)
-                .put(VariantSettings.Y, VariantSettings.Rotation.R270));
+            .register(Direction.NORTH, ArrowSlitType.TOP, createVariant(topModelId))
+            .register(Direction.EAST, ArrowSlitType.TOP, createVariant(topModelId, 90))
+            .register(Direction.SOUTH, ArrowSlitType.TOP, createVariant(topModelId, 180))
+            .register(Direction.WEST, ArrowSlitType.TOP, createVariant(topModelId, 270));
 
-        // Register the block state directly with the generator's collector
-        generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block)
-                .coordinate(variants)
-        );
+        // Register the block state using the utility method
+        registerBlockState(generator, block, variants);
     }
 
-    public static void generateItemModels(ItemModelGenerator generator, Block block) {
+    @Override
+    public void generateItemModels(ItemModelGenerator generator, Block block) {
         // Create a simple item model that inherits from the block model
-        ModelExportUtils.generateItemModel(generator, block, "single");
+        generateItemModel(generator, block, "single");
     }
 } 

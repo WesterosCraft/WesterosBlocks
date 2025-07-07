@@ -5,7 +5,6 @@ import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.*;
 import com.westerosblocks.block.custom.WCTorchBlock;
 import com.westerosblocks.block.custom.WCWallTorchBlock;
-import com.westerosblocks.block.custom.StandaloneDoorBlock;
 import com.westerosblocks.util.ModWoodType;
 import com.westerosblocks.util.ModBlockSoundGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -799,6 +798,7 @@ public class BlockBuilder {
                 this.wallBlock = wallTorch;
                 yield standingTorch;
             }
+            case SAND -> new StandaloneWCSandBlock(settings, name, creativeTab, tooltips);
         };
     }
 
@@ -824,6 +824,8 @@ public class BlockBuilder {
         /** Log blocks for wooden structures */
         LOG,
         /** Torch blocks for lighting */
-        TORCH
+        TORCH,
+        /** Sand blocks for falling particles */
+        SAND
     }
 } 
