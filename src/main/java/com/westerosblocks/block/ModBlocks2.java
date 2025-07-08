@@ -1003,6 +1003,132 @@ public class ModBlocks2 {
             .texture("wood/birch/shutters")
     );
 
+    public static final Block DORNE_RED_WINDOW_SHUTTERS = registerHalfDoorBlock(
+        "dorne_red_window_shutters",
+        builder -> builder
+            .creativeTab("westeros_windows_glass_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.OAK)
+            .soundType("wood")
+            .allowUnsupported()
+            .texture("shutter_block/shutters_dorne")
+    );
+
+    public static final Block GREEN_LANNISPORT_WINDOW_SHUTTERS = registerHalfDoorBlock(
+        "green_lannisport_window_shutters",
+        builder -> builder
+            .creativeTab("westeros_windows_glass_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.OAK)
+            .soundType("wood")
+            .allowUnsupported()
+            .texture("shutter_block/shutters_lannisport")
+    );
+
+    public static final Block GREY_WOOD_WINDOW_SHUTTERS = registerHalfDoorBlock(
+        "grey_wood_window_shutters",
+        builder -> builder
+            .creativeTab("westeros_windows_glass_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.ACACIA)
+            .soundType("wood")
+            .allowUnsupported()
+            .texture("wood/grey/shutters")
+    );
+
+    public static final Block JUNGLE_WINDOW_SHUTTERS = registerHalfDoorBlock(
+        "jungle_window_shutters",
+        builder -> builder
+            .creativeTab("westeros_windows_glass_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.JUNGLE)
+            .soundType("wood")
+            .allowUnsupported()
+            .texture("wood/jungle/shutters")
+    );
+
+    public static final Block NORTHERN_WOOD_WINDOW_SHUTTERS = registerHalfDoorBlock(
+        "northern_wood_window_shutters",
+        builder -> builder
+            .creativeTab("westeros_windows_glass_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.DARK_OAK)
+            .soundType("wood")
+            .allowUnsupported()
+            .texture("wood/northern/shutters")
+    );
+
+    public static final Block OAK_WINDOW_SHUTTERS = registerHalfDoorBlock(
+        "oak_window_shutters",
+        builder -> builder
+            .creativeTab("westeros_windows_glass_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.OAK)
+            .soundType("wood")
+            .allowUnsupported()
+            .texture("wood/oak/shutters")
+    );
+
+    public static final Block REACH_BLUE_WINDOW_SHUTTERS = registerHalfDoorBlock(
+        "reach_blue_window_shutters",
+        builder -> builder
+            .creativeTab("westeros_windows_glass_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.OAK)
+            .soundType("wood")
+            .allowUnsupported()
+            .texture("shutter_block/shutters_reach")
+    );
+
+    public static final Block SPRUCE_WINDOW_SHUTTERS = registerHalfDoorBlock(
+        "spruce_window_shutters",
+        builder -> builder
+            .creativeTab("westeros_windows_glass_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.SPRUCE)
+            .soundType("wood")
+            .allowUnsupported()
+            .texture("wood/spruce/shutters")
+    );
+
+    public static final Block WHITE_WOOD_WINDOW_SHUTTERS = registerHalfDoorBlock(
+        "white_wood_window_shutters",
+        builder -> builder
+            .creativeTab("westeros_windows_glass_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.BIRCH)
+            .soundType("wood")
+            .allowUnsupported()
+            .texture("wood/white/shutters")
+    );
+
 
     // BATCH REGISTRATION METHODS FOR MASS BLOCK CREATION
     // public static void registerArrowSlits() {

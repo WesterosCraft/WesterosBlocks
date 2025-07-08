@@ -192,6 +192,24 @@ public class ModModelProvider2 {
         // Half Door Blocks
         halfDoorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BIRCH_WINDOW_SHUTTERS, 
             "wood/birch/shutters");
+        halfDoorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DORNE_RED_WINDOW_SHUTTERS, 
+            "shutter_block/shutters_dorne");
+        halfDoorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.GREEN_LANNISPORT_WINDOW_SHUTTERS, 
+            "shutter_block/shutters_lannisport");
+        halfDoorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.GREY_WOOD_WINDOW_SHUTTERS, 
+            "wood/grey/shutters");
+        halfDoorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.JUNGLE_WINDOW_SHUTTERS, 
+            "wood/jungle/shutters");
+        halfDoorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.NORTHERN_WOOD_WINDOW_SHUTTERS, 
+            "wood/northern/shutters");
+        halfDoorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_WINDOW_SHUTTERS, 
+            "wood/oak/shutters");
+        halfDoorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.REACH_BLUE_WINDOW_SHUTTERS, 
+            "shutter_block/shutters_reach");
+        halfDoorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPRUCE_WINDOW_SHUTTERS, 
+            "wood/spruce/shutters");
+        halfDoorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WHITE_WOOD_WINDOW_SHUTTERS, 
+            "wood/white/shutters");
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -294,5 +312,14 @@ public class ModModelProvider2 {
 
         // Half Door Blocks
         halfDoorExporter.generateItemModels(itemModelGenerator, ModBlocks2.BIRCH_WINDOW_SHUTTERS, "wood/birch/shutters");
+        halfDoorExporter.generateItemModels(itemModelGenerator, ModBlocks2.DORNE_RED_WINDOW_SHUTTERS, "shutter_block/shutters_dorne");
+        halfDoorExporter.generateItemModels(itemModelGenerator, ModBlocks2.GREEN_LANNISPORT_WINDOW_SHUTTERS, "shutter_block/shutters_lannisport");
+        halfDoorExporter.generateItemModels(itemModelGenerator, ModBlocks2.GREY_WOOD_WINDOW_SHUTTERS, "wood/grey/shutters");
+        halfDoorExporter.generateItemModels(itemModelGenerator, ModBlocks2.JUNGLE_WINDOW_SHUTTERS, "wood/jungle/shutters");
+        halfDoorExporter.generateItemModels(itemModelGenerator, ModBlocks2.NORTHERN_WOOD_WINDOW_SHUTTERS, "wood/northern/shutters");
+        halfDoorExporter.generateItemModels(itemModelGenerator, ModBlocks2.OAK_WINDOW_SHUTTERS, "wood/oak/shutters");
+        halfDoorExporter.generateItemModels(itemModelGenerator, ModBlocks2.REACH_BLUE_WINDOW_SHUTTERS, "shutter_block/shutters_reach");
+        halfDoorExporter.generateItemModels(itemModelGenerator, ModBlocks2.SPRUCE_WINDOW_SHUTTERS, "wood/spruce/shutters");
+        halfDoorExporter.generateItemModels(itemModelGenerator, ModBlocks2.WHITE_WOOD_WINDOW_SHUTTERS, "wood/white/shutters");
     }
 } 
