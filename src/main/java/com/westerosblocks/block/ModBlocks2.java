@@ -878,6 +878,116 @@ public class ModBlocks2 {
             .texture("coral/tube/fan1")
     );
 
+    // VINES BLOCKS
+    public static final Block DAPPLED_MOSS = registerVinesBlock(
+        "dappled_moss",
+        builder -> builder
+            .creativeTab("westeros_foliage_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .dropsNothing()
+            .soundType("grass")
+            .nonOpaque()
+            .alphaRender()
+            .allowUnsupported()
+            .canGrowDownward()
+            .texture("dappled_moss/dappled")
+    );
+
+    public static final Block JASMINE_VINES = registerVinesBlock(
+        "jasmine_vines",
+        builder -> builder
+            .creativeTab("westeros_foliage_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .dropsNothing()
+            .soundType("grass")
+            .nonOpaque()
+            .alphaRender()
+            .allowUnsupported()
+            .canGrowDownward()
+            .textures("jasmine_vines/side1", "jasmine_vines/side1")
+    );
+
+    // Additional vine blocks from JSON definitions
+    public static final Block VINES = registerVinesBlock(
+        "vines",
+        builder -> builder
+            .creativeTab("westeros_foliage_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .dropsNothing()
+            .soundType("grass")
+            .nonOpaque()
+            .alphaRender()
+            .allowUnsupported()
+            .canGrowDownward()
+            .textures("vines/side1", "vines/side1")
+    );
+
+    public static final Block FALLING_WATER_BLOCK_ONE = registerVinesBlock(
+        "falling_water_block_one",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .dropsNothing()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .allowUnsupported()
+            .textures("alyssas_tears_mist/mist1", "alyssas_tears_mist/mist1")
+    );
+
+    public static final Block FALLING_WATER_BLOCK_TWO = registerVinesBlock(
+        "falling_water_block_two",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .dropsNothing()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .allowUnsupported()
+            .textures("alyssas_tears_mist/mist2", "alyssas_tears_mist/mist2")
+    );
+
+    public static final Block FALLING_WATER_BLOCK_THREE = registerVinesBlock(
+        "falling_water_block_three",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .dropsNothing()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .allowUnsupported()
+            .textures("alyssas_tears_mist/mist3", "alyssas_tears_mist/mist3")
+    );
+
+    public static final Block FALLING_WATER_BLOCK_FOUR = registerVinesBlock(
+        "falling_water_block_four",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .dropsNothing()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .allowUnsupported()
+            .textures("alyssas_tears_mist/mist4", "alyssas_tears_mist/mist4")
+    );
+
 
     // BATCH REGISTRATION METHODS FOR MASS BLOCK CREATION
     // public static void registerArrowSlits() {
@@ -1051,6 +1161,22 @@ public class ModBlocks2 {
             .texture("coral/brain/fan1"); // Default texture
 
         builder.setBlockType(BlockBuilder.BlockType.FAN);
+        return configurator.configure(builder).register();
+    }
+
+    public static Block registerVinesBlock(String name, BlockBuilderConfigurator configurator) {
+        BlockBuilder builder = new BlockBuilder(name)
+            .creativeTab("westeros_foliage_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .dropsNothing()
+            .soundType("grass")
+            .nonOpaque()
+            .alphaRender()
+            .texture("vines/vines"); // Default texture
+
+        builder.setBlockType(BlockBuilder.BlockType.VINES);
         return configurator.configure(builder).register();
     }
 

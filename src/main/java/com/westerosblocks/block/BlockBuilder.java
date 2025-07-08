@@ -7,6 +7,7 @@ import com.westerosblocks.block.custom.WCTorchBlock;
 import com.westerosblocks.block.custom.WCWallTorchBlock;
 import com.westerosblocks.block.custom.StandaloneWCFanBlock;
 import com.westerosblocks.block.custom.StandaloneWCWallFanBlock;
+import com.westerosblocks.block.custom.StandaloneVinesBlock;
 import com.westerosblocks.util.ModWoodType;
 import com.westerosblocks.util.ModBlockSoundGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -105,9 +106,10 @@ public class BlockBuilder {
     /** Dye color for colored blocks (like beds) */
     private DyeColor dyeColor = DyeColor.RED;
     
-    /** Torch-specific properties */
+    
     private boolean allowUnsupported = false;
     private boolean noParticle = false;
+    private boolean canGrowDownward = false;
     private List<String> tooltips = null;
     private int lightLevel = 0;
     private Block wallBlock = null;
@@ -568,6 +570,16 @@ public class BlockBuilder {
     }
 
     /**
+     * Sets whether this vines block can grow downward.
+     * 
+     * @return this builder for method chaining
+     */
+    public BlockBuilder canGrowDownward() {
+        this.canGrowDownward = true;
+        return this;
+    }
+
+    /**
      * Creates a door block with the specified properties.
      * 
      * <p>Doors are double-height blocks that can be opened and closed.
@@ -823,6 +835,7 @@ public class BlockBuilder {
                 this.wallBlock = wallFan;
                 yield standingFan;
             }
+            case VINES -> new StandaloneVinesBlock(settings, name, creativeTab, allowUnsupported, noParticle, canGrowDownward);
         };
     }
 
@@ -852,6 +865,8 @@ public class BlockBuilder {
         /** Sand blocks for falling particles */
         SAND,
         /** Fan blocks for decorative purposes */
-        FAN
+        FAN,
+        /** Vines blocks for climbing and decoration */
+        VINES
     }
 } 

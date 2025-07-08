@@ -1,0 +1,161 @@
+---
+globs: src/main/java/**,src/main/resources/**
+alwaysApply: false
+---
+## Conversion Steps
+
+### 1. Create Colormap Configuration
+**File**: `src/main/resources/assets/westerosblocks/polytone/colormaps/{colormap_name}.json`
+```json
+{
+  "x_axis": "0.5",
+  "y_axis": "0.5", 
+  "default_color": "#4a5d23"
+}
+```
+- Use fixed values (0.5, 0.5) to match old ColorHandlers behavior
+- For biome-based: use `"TEMPERATURE"` and `"DOWNFALL"` (uppercase)
+- Set appropriate default color
+
+### 2. Copy Texture
+**Command**: 
+```bash
+cp "src/main/resources/assets/westerosblocks/textures/colormap/{colormap_name}.png" "src/main/resources/assets/westerosblocks/polytone/colormaps/{colormap_name}.png"
+```
+
+### 3. Create Block Properties Modifier
+**File**: `src/main/resources/assets/westerosblocks/polytone/block_properties/{block_name}.json`
+```json
+{
+  "block": "westerosblocks:{block_name}",
+  "colormap": "westerosblocks:{colormap_name}"
+}
+```
+
+### 4. Create Item Modifier (for item tinting)
+**File**: `src/main/resources/assets/westerosblocks/polytone/item_modifiers/{block_name}.json`
+```json
+{
+  "targets": ["westerosblocks:{block_name}"],
+  "colormap": "westerosblocks:{colormap_name}"
+}
+```
+
+### 5. Remove Old Property
+Remove `"colorMult": "textures/colormap/{colormap_name}"` from block definition JSON.
+
+## Common Patterns
+
+### Fixed Color (matches old system)
+```json
+{
+  "x_axis": "0.5",
+  "y_axis": "0.5"
+}
+```
+
+### Biome-Based Color
+```json
+{
+  "x_axis": "TEMPERATURE",
+  "y_axis": "DOWNFALL"
+}
+```
+
+### Inverted Biome Color (old ColorHandlers style)
+```json
+{
+  "x_axis": "1.0 - TEMPERATURE",
+  "y_axis": "1.0 - DOWNFALL"
+}
+```
+
+## Error Prevention
+- Use uppercase `TEMPERATURE`/`DOWNFALL` (not lowercase)
+- Ensure texture file exists in colormaps folder
+- Check polytone.log for parsing errors
+- Verify block/item IDs match registry names
+
+## Testing
+1. Load game and check polytone.log for errors
+2. Verify block tinting matches old behavior
+3. Verify item tinting works in inventory
+4. Test in different biomes if using biome-based sampling## Conversion Steps
+
+### 1. Create Colormap Configuration
+**File**: `src/main/resources/assets/westerosblocks/polytone/colormaps/{colormap_name}.json`
+```json
+{
+  "x_axis": "0.5",
+  "y_axis": "0.5", 
+  "default_color": "#4a5d23"
+}
+```
+- Use fixed values (0.5, 0.5) to match old ColorHandlers behavior
+- For biome-based: use `"TEMPERATURE"` and `"DOWNFALL"` (uppercase)
+- Set appropriate default color
+
+### 2. Copy Texture
+**Command**: 
+```bash
+cp "src/main/resources/assets/westerosblocks/textures/colormap/{colormap_name}.png" "src/main/resources/assets/westerosblocks/polytone/colormaps/{colormap_name}.png"
+```
+
+### 3. Create Block Properties Modifier
+**File**: `src/main/resources/assets/westerosblocks/polytone/block_properties/{block_name}.json`
+```json
+{
+  "block": "westerosblocks:{block_name}",
+  "colormap": "westerosblocks:{colormap_name}"
+}
+```
+
+### 4. Create Item Modifier (for item tinting)
+**File**: `src/main/resources/assets/westerosblocks/polytone/item_modifiers/{block_name}.json`
+```json
+{
+  "targets": ["westerosblocks:{block_name}"],
+  "colormap": "westerosblocks:{colormap_name}"
+}
+```
+
+### 5. Remove Old Property
+Remove `"colorMult": "textures/colormap/{colormap_name}"` from block definition JSON.
+
+## Common Patterns
+
+### Fixed Color (matches old system)
+```json
+{
+  "x_axis": "0.5",
+  "y_axis": "0.5"
+}
+```
+
+### Biome-Based Color
+```json
+{
+  "x_axis": "TEMPERATURE",
+  "y_axis": "DOWNFALL"
+}
+```
+
+### Inverted Biome Color (old ColorHandlers style)
+```json
+{
+  "x_axis": "1.0 - TEMPERATURE",
+  "y_axis": "1.0 - DOWNFALL"
+}
+```
+
+## Error Prevention
+- Use uppercase `TEMPERATURE`/`DOWNFALL` (not lowercase)
+- Ensure texture file exists in colormaps folder
+- Check polytone.log for parsing errors
+- Verify block/item IDs match registry names
+
+## Testing
+1. Load game and check polytone.log for errors
+2. Verify block tinting matches old behavior
+3. Verify item tinting works in inventory
+4. Test in different biomes if using biome-based sampling

@@ -2,6 +2,7 @@ package com.westerosblocks.datagen;
 
 
 import com.westerosblocks.block.ModBlocks2;
+import com.westerosblocks.block.custom.StandaloneVinesBlock;
 import com.westerosblocks.datagen.models.*;
 import net.minecraft.data.client.*;
 
@@ -16,6 +17,7 @@ public class ModModelProvider2 {
     static LogBlockExport logExporter = new LogBlockExport();
     static TorchBlockExport torchExporter = new TorchBlockExport();
     static FanBlockExport2 fanExporter = new FanBlockExport2();
+    static StandaloneVinesBlockExport vinesExporter = new StandaloneVinesBlockExport();
 
     public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         // Arrow Slits
@@ -170,6 +172,22 @@ public class ModModelProvider2 {
             "coral/horn/fan1");
         fanExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CORAL_TUBE_FAN, 
             "coral/tube/fan1");
+
+        // Vines Blocks
+        vinesExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DAPPLED_MOSS, 
+            "dappled_moss/dappled", "dappled_moss/dappled");
+        vinesExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.JASMINE_VINES, 
+            "jasmine_vines/side1", "jasmine_vines/side1");
+        vinesExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.VINES, 
+            "vines/side1", "vines/side1");
+        vinesExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FALLING_WATER_BLOCK_ONE, 
+            "alyssas_tears_mist/mist1", "alyssas_tears_mist/mist1");
+        vinesExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FALLING_WATER_BLOCK_TWO, 
+            "alyssas_tears_mist/mist2", "alyssas_tears_mist/mist2");
+        vinesExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FALLING_WATER_BLOCK_THREE, 
+            "alyssas_tears_mist/mist3", "alyssas_tears_mist/mist3");
+        vinesExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FALLING_WATER_BLOCK_FOUR, 
+            "alyssas_tears_mist/mist4", "alyssas_tears_mist/mist4");
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -260,5 +278,14 @@ public class ModModelProvider2 {
         fanExporter.generateItemModels(itemModelGenerator, ModBlocks2.CORAL_FIRE_FAN);
         fanExporter.generateItemModels(itemModelGenerator, ModBlocks2.CORAL_HORN_FAN);
         fanExporter.generateItemModels(itemModelGenerator, ModBlocks2.CORAL_TUBE_FAN);
+
+        // Vines Blocks
+        vinesExporter.generateItemModels(itemModelGenerator, ModBlocks2.DAPPLED_MOSS, "dappled_moss/dappled");
+        vinesExporter.generateItemModels(itemModelGenerator, ModBlocks2.JASMINE_VINES, "jasmine_vines/side1");
+        vinesExporter.generateItemModels(itemModelGenerator, ModBlocks2.VINES, "vines/side1");
+        vinesExporter.generateItemModels(itemModelGenerator, ModBlocks2.FALLING_WATER_BLOCK_ONE, "alyssas_tears_mist/mist1");
+        vinesExporter.generateItemModels(itemModelGenerator, ModBlocks2.FALLING_WATER_BLOCK_TWO, "alyssas_tears_mist/mist2");
+        vinesExporter.generateItemModels(itemModelGenerator, ModBlocks2.FALLING_WATER_BLOCK_THREE, "alyssas_tears_mist/mist3");
+        vinesExporter.generateItemModels(itemModelGenerator, ModBlocks2.FALLING_WATER_BLOCK_FOUR, "alyssas_tears_mist/mist4");
     }
 } 

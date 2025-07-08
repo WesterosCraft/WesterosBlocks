@@ -1,0 +1,277 @@
+# WesterosBlocks Mod Development Rules
+
+## Project Overview
+WesterosBlocks is a Minecraft Fabric mod that uses both definition-based (JSON) and builder-based (Java) block registration systems. The mod follows specific patterns for block registration, model generation, and data generation.
+
+## Core Architecture Patterns
+
+### 1. Block Registration Systems
+**Two Systems Coexist:**
+- **Definition-Based**: Uses JSON files in `src/main/resources/definitions/blocks/` with `ModBlock` classes
+- **Builder-Based**: Uses `BlockBuilder` pattern in `ModBlocks2.java` with fluent API
+
+**Builder Pattern Structure:**
+```java
+public static final Block EXAMPLE_BLOCK = registerExampleBlock(
+    "example_block",
+    builder -> builder
+        .creativeTab("westeros_example_tab")
+        .hardness(2.0f)
+        .resistance(6.0f)
+        .texture("example/texture")
+);
+```
+
+### 2. Model Export System
+**Pattern**: Static exporter instances with methods taking generator and block parameters
+
+**Standard Exporter Structure:**
+```java
+public class {BlockType}BlockExport {
+    public {BlockType}BlockExport() {
+    }
+    
+    public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String... textures) {
+        // Implementation specific to block type
+    }
+    
+    public void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, String texture) {
+        // Item model generation using primary texture
+    }
+}
+```
+
+**Integration Pattern:**
+```java
+// In ModModelProvider2.java
+static {BlockType}BlockExport {blockType}Exporter = new {BlockType}BlockExport();
+
+// In generateBlockStateModels()
+{blockType}Exporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.EXAMPLE_BLOCK, "texture");
+
+// In generateItemModels()
+{blockType}Exporter.generateItemModels(itemModelGenerator, ModBlocks2.EXAMPLE_BLOCK, "texture");
+```
+
+### 3. Data Generation Structure
+**Files to Modify for New Block Types:**
+1. `ModBlocks2.java` - Block registration
+2. `ModModelProvider2.java` - Model generation
+3. `ModLanguageProvider.java` - Translations
+
+## Block Type Specific Rules
+
+### Generic Block Export Pattern
+**For Any Block Type:**
+1. **Create Exporter Class** in `datagen/models/{BlockType}BlockExport.java`
+2. **Follow Static Instance Pattern** with methods taking generator and block parameters
+3. **Handle Block-Specific Properties** (directions, variants, rotations, etc.)
+4. **Use Appropriate Texture Keys** from `ModTextureKey.java`
+5. **Generate Appropriate Models** using correct templates
+
+### Common Block Types and Requirements
+
+#### Vines Blocks
+**Class**: `StandaloneVinesBlock` extends `VineBlock`
+**Exporter**: `StandaloneVinesBlockExport`
+**Features**: 6-direction support, conditional DOWN growth, waterlogging
+**Textures**: Base and top textures
+**Models**: `vine_1` template for base, `vine_u` template for top
+
+#### Torch Blocks
+**Class**: `WCTorchBlock` with `WCWallTorchBlock`
+**Exporter**: `TorchBlockExport`
+**Features**: Wall variants, light levels, particle effects
+**Textures**: Single texture for both standing and wall variants
+
+#### Door Blocks
+**Class**: `WCDoorBlock`
+**Exporter**: `DoorBlockExport`
+**Features**: Locked variants, wood types, secret doors
+**Textures**: Top and bottom textures
+
+#### Log Blocks
+**Class**: Custom log block classes
+**Exporter**: `LogBlockExport`
+**Features**: Multiple textures (top, bottom, side), wood types
+**Textures**: Three textures (top, bottom, side)
+
+#### Arrow Slit Blocks
+**Class**: Custom arrow slit classes
+**Exporter**: `ArrowSlitBlockExport`
+**Features**: Directional variants, wall mounting
+**Textures**: Single texture with directional variants
+
+#### Table/Chair Blocks
+**Class**: Custom furniture classes
+**Exporter**: `TableBlockExport` / `ChairBlockExport`
+**Features**: Furniture-specific properties
+**Textures**: Wood-based textures
+
+## Texture and Model Rules
+
+### Texture Keys
+**Location**: `src/main/java/com/westerosblocks/datagen/models/ModTextureKey.java`
+**Usage**: Use appropriate texture keys for block types
+- `ModTextureKey.VINES` for vine blocks
+- `ModTextureKey.TEXTURE_0` through `ModTextureKey.TEXTURE_17` for multi-texture blocks
+- `ModTextureKey.LADDER` for ladder blocks
+- `ModTextureKey.FLOWER_POT` for flower pot blocks
+
+### Model Templates
+**Block-Specific Templates**:
+- **Vines**: `vine_1` template for base, `vine_u` template for top
+- **Torches**: Standard torch templates with rotations
+- **Doors**: Door templates with proper rotations
+- **Logs**: Log templates with axis handling
+- **Furniture**: Furniture-specific templates
+
+### Color Tinting
+**Old System**: `"colorMult": "textures/colormap/colormap_name"` in JSON
+**New System**: Convert to Polytone following cursor rules
+**Pattern**: Fixed values (0.5, 0.5) or biome-based (TEMPERATURE, DOWNFALL)
+
+## File Organization Rules
+
+### Java Source Structure
+```
+src/main/java/com/westerosblocks/
+├── block/
+│   ├── ModBlocks2.java          # Builder-based registrations
+│   ├── custom/                   # Custom block classes
+│   └── ModBlock.java            # Definition-based system
+├── datagen/
+│   ├── models/                   # Model exporters
+│   ├── ModModelProvider2.java   # Builder-based model generation
+│   └── ModLanguageProvider.java # Translations
+```
+
+### Resource Structure
+```
+src/main/resources/
+├── assets/westerosblocks/
+│   ├── textures/block/          # Block textures
+│   └── polytone/               # Color tinting system
+├── definitions/blocks/          # JSON block definitions
+└── fabric.mod.json             # Mod metadata
+```
+
+## Development Workflow
+
+### Adding New Block Types
+1. **Create Block Class** (if needed) in `block/custom/`
+2. **Add Registration Method** in `ModBlocks2.java`
+3. **Create Exporter** in `datagen/models/`
+4. **Add Model Generation** in `ModModelProvider2.java`
+5. **Add Translations** in `ModLanguageProvider.java`
+
+### Creating New Block Exporters
+1. **Study Similar Block Types** - Examine existing exporters for similar functionality
+2. **Create Exporter Class** - Follow the static instance pattern
+3. **Handle Block-Specific Properties** - Implement appropriate state handling
+4. **Use Correct Texture Keys** - Choose appropriate texture keys for the block type
+5. **Generate Appropriate Models** - Use correct model templates
+6. **Integrate into ModModelProvider2** - Add static instance and method calls
+7. **Test and Validate** - Ensure proper functionality
+
+### Converting JSON Definitions to Builder
+1. **Extract Properties** from JSON definition
+2. **Create Builder Registration** in `ModBlocks2.java`
+3. **Add Model Generation** calls
+4. **Add Translations**
+5. **Test and Validate**
+
+### Polytone Color Conversion
+1. **Create Colormap Config** in `polytone/colormaps/`
+2. **Copy Texture** to `polytone/colormaps/`
+3. **Create Block Properties** modifier
+4. **Create Item Modifier** for tinting
+5. **Remove Old Property** from JSON
+
+## Code Style and Patterns
+
+### Naming Conventions
+- **Block Names**: snake_case (e.g., `falling_water_block_one`)
+- **Class Names**: PascalCase (e.g., `StandaloneVinesBlock`)
+- **Method Names**: camelCase (e.g., `generateBlockStateModels`)
+- **Constants**: UPPER_SNAKE_CASE (e.g., `DAPPLED_MOSS`)
+- **Exporter Classes**: `{BlockType}BlockExport` (e.g., `VinesBlockExport`)
+
+### Import Organization
+```java
+// Standard imports
+import net.minecraft.block.*;
+import net.minecraft.data.client.*;
+
+// WesterosBlocks imports
+import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.block.custom.*;
+import com.westerosblocks.datagen.models.*;
+```
+
+### Error Prevention
+- **Null Checks**: Always check for null before accessing objects
+- **Type Safety**: Use proper casting for custom block types
+- **Resource Validation**: Ensure texture paths exist before registration
+- **Pattern Consistency**: Follow established patterns for new implementations
+- **Block-Specific Properties**: Handle appropriate properties for each block type
+
+## Testing Guidelines
+
+### Compilation Testing
+- Verify all imports are correct
+- Check method signatures match established patterns
+- Ensure all blocks are properly registered
+- Validate block-specific property handling
+
+### Runtime Testing
+- Verify block state models are generated correctly
+- Check item models are created
+- Confirm translations appear in-game
+- Test block placement and behavior
+- Validate block-specific functionality
+
+## Common Pitfalls
+
+### 1. Pattern Mismatch
+**Problem**: Creating new patterns instead of following existing ones
+**Solution**: Always examine existing implementations first
+
+### 2. Missing Integration
+**Problem**: Creating exporter but not integrating into model generation
+**Solution**: Always add to both `generateBlockStateModels()` and `generateItemModels()`
+
+### 3. Translation Missing
+**Problem**: Registering blocks without translations
+**Solution**: Always add translations in `ModLanguageProvider.java`
+
+### 4. Texture Path Errors
+**Problem**: Incorrect texture paths in model generation
+**Solution**: Use `createBlockIdentifier()` helper method
+
+### 5. Block-Specific Properties
+**Problem**: Not handling block-specific properties correctly
+**Solution**: Study existing implementations for similar block types
+
+### 6. Wrong Texture Keys
+**Problem**: Using incorrect texture keys for block type
+**Solution**: Check `ModTextureKey.java` for appropriate keys
+
+## Future Considerations
+
+### System Evolution
+- **Definition-Based**: Legacy system, consider migration to builder-based
+- **Builder-Based**: Primary system for new development
+- **Polytone**: Replace old color tinting system
+
+### Scalability
+- **Batch Registration**: Consider for similar block types
+- **Automated Generation**: For repetitive patterns
+- **Template System**: For common block configurations
+
+### Generic Patterns
+- **Reusable Exporters**: Create generic exporters for similar block types
+- **Common Interfaces**: Standardize common block property interfaces
+- **Template System**: Develop templates for common block patterns
+
+This ruleset ensures consistent development practices and maintains the architectural integrity of the WesterosBlocks mod while providing flexibility for different block types. 

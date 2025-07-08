@@ -156,6 +156,25 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.locked_jungle_door", "Locked Jungle Door");
         translationBuilder.add("block.westerosblocks.locked_oak_door", "Locked Oak Door");
 
+        // Sand block translations
+        translationBuilder.add("block.westerosblocks.sand_skeleton", "Sand Skeleton");
+
+        // Coral fan block translations
+        translationBuilder.add("block.westerosblocks.coral_brain_fan", "Coral Brain Fan");
+        translationBuilder.add("block.westerosblocks.coral_bubble_fan", "Coral Bubble Fan");
+        translationBuilder.add("block.westerosblocks.coral_fire_fan", "Coral Fire Fan");
+        translationBuilder.add("block.westerosblocks.coral_horn_fan", "Coral Horn Fan");
+        translationBuilder.add("block.westerosblocks.coral_tube_fan", "Coral Tube Fan");
+
+        // Vines block translations
+        translationBuilder.add("block.westerosblocks.dappled_moss", "Dappled Moss");
+        translationBuilder.add("block.westerosblocks.jasmine_vines", "Jasmine Vines");
+        translationBuilder.add("block.westerosblocks.vines", "Vines");
+        translationBuilder.add("block.westerosblocks.falling_water_block_one", "Falling Water Block One");
+        translationBuilder.add("block.westerosblocks.falling_water_block_two", "Falling Water Block Two");
+        translationBuilder.add("block.westerosblocks.falling_water_block_three", "Falling Water Block Three");
+        translationBuilder.add("block.westerosblocks.falling_water_block_four", "Falling Water Block Four");
+
         // TODO can prob grab the item tag def json and generate this automatically when/if we get more
         // The format desired is tag.item.<namespace>.<path> for the translation key with slashes in path turned into periods."
         translationBuilder.add("tag.item.c.shield", "Shield");
