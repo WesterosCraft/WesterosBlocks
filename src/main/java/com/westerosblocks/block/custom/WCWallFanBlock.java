@@ -2,8 +2,6 @@ package com.westerosblocks.block.custom;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
@@ -31,12 +29,17 @@ import net.minecraft.world.WorldView;
 import java.util.List;
 import java.util.Map;
 
-public class WCWallFanBlock extends Block implements Waterloggable, ModBlockLifecycle {
+/**
+ * Standalone wall fan block that doesn't depend on the def system.
+ * Provides the same functionality as WCWallFanBlock but with direct configuration.
+ */
+public class WCWallFanBlock extends Block implements Waterloggable {
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    private final ModBlock def;
     private final boolean allowUnsupported;
+    private final String translationKey;
+    private final List<String> tooltips;
 
     private static final Map<Direction, VoxelShape> SHAPES = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.createCuboidShape(0.0, 4.0, 5.0, 16.0, 12.0, 16.0),
@@ -45,31 +48,24 @@ public class WCWallFanBlock extends Block implements Waterloggable, ModBlockLife
             Direction.EAST, Block.createCuboidShape(0.0, 4.0, 0.0, 11.0, 12.0, 16.0)
     ));
 
-    protected WCWallFanBlock(AbstractBlock.Settings settings, ModBlock def) {
+    /**
+     * Creates a new standalone wall fan block.
+     * 
+     * @param settings Block settings
+     * @param allowUnsupported Whether this fan can be placed without support
+     * @param translationKey The translation key for this block
+     * @param tooltips Optional tooltips to display
+     */
+    public WCWallFanBlock(AbstractBlock.Settings settings,
+                          boolean allowUnsupported, String translationKey, List<String> tooltips) {
         super(settings);
-        this.def = def;
-
-        boolean allowUnsupported = false;
-        String type = def.getType();
-        if (type != null) {
-            String[] tokens = type.split(",");
-            for (String token : tokens) {
-                if (token.equals("allow-unsupported")) {
-                    allowUnsupported = true;
-                    break;
-                }
-            }
-        }
         this.allowUnsupported = allowUnsupported;
+        this.translationKey = translationKey;
+        this.tooltips = tooltips;
 
         setDefaultState(getStateManager().getDefaultState()
                 .with(FACING, Direction.NORTH)
                 .with(WATERLOGGED, false));
-    }
-
-    @Override
-    public ModBlock getWBDefinition() {
-        return def;
     }
 
     @Override
@@ -125,7 +121,7 @@ public class WCWallFanBlock extends Block implements Waterloggable, ModBlockLife
 
     @Override
     public boolean isTransparent(BlockState state, BlockView world, BlockPos pos) {
-        return !state.getFluidState().isEmpty() || state.get(WATERLOGGED);
+        return true;
     }
 
     @Override
@@ -153,16 +149,18 @@ public class WCWallFanBlock extends Block implements Waterloggable, ModBlockLife
         };
     }
 
-    private static final String[] TAGS = {"fans"};
-
     @Override
-    public String[] getBlockTags() {
-        return TAGS;
+    public String getTranslationKey() {
+        return translationKey;
     }
 
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        addCustomTooltip(tooltip);
+        if (tooltips != null && !tooltips.isEmpty()) {
+            for (String tooltipText : tooltips) {
+                tooltip.add(Text.literal(tooltipText));
+            }
+        }
         super.appendTooltip(stack, context, tooltip, options);
     }
-}
+} 

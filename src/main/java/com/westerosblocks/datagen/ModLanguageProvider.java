@@ -175,6 +175,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.falling_water_block_three", "Falling Water Block Three");
         translationBuilder.add("block.westerosblocks.falling_water_block_four", "Falling Water Block Four");
 
+        // Half door block translations
+        translationBuilder.add("block.westerosblocks.birch_window_shutters", "Birch Window Shutters");
+
         // TODO can prob grab the item tag def json and generate this automatically when/if we get more
         // The format desired is tag.item.<namespace>.<path> for the translation key with slashes in path turned into periods."
         translationBuilder.add("tag.item.c.shield", "Shield");

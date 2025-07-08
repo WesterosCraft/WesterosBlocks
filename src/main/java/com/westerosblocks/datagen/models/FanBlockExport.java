@@ -1,128 +1,119 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.datagen.ModelExport;
+import com.westerosblocks.block.custom.WCFanBlock;
+import com.westerosblocks.block.custom.WCWallFanBlock;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
-import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
-public class FanBlockExport extends ModelExport {
-    private final BlockStateModelGenerator generator;
-    private final Block block;
-    private final ModBlock def;
+public class FanBlockExport extends ModelExport2 {
 
-    public FanBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
-        super(generator, block, def);
-        this.generator = generator;
-        this.block = block;
-        this.def = def;
+    @Override
+    public void generateBlockStateModels(BlockStateModelGenerator generator, Block standingFan, String texturePath) {
+        // Get the wall fan block using the same pattern as TorchBlockExport
+        Block wallFan = Registries.BLOCK.get(WesterosBlocks.id("wall_" + standingFan.getTranslationKey().replace("block.westerosblocks.", "")));
+
+        // Generate standing fan block state
+        generateStandingFanBlockState(generator, standingFan, texturePath);
+        
+        // Generate wall fan block state if it exists
+        if (wallFan != null) {
+            generateWallFanBlockState(generator, wallFan, texturePath);
+        }
     }
 
-    public void generateBlockStateModels() {
-        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
-        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
+    private static void generateStandingFanBlockState(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // Create the standing fan model
+        Identifier standingModelId = createStandingFanModel(generator, block, texturePath);
 
-        // Add floor variants with waterlogged states but no facing
-        for (boolean waterlogged : new boolean[]{true, false}) {
-            BlockStateVariant floorVariant = VariantBuilder.create(getModelId(def.blockName, "base", 1), null);
-            blockStateBuilder.addVariant("waterlogged=" + waterlogged, floorVariant, null, variants);
-        }
+        // Create block state variants for waterlogged states
+        BlockStateVariantMap variants = BlockStateVariantMap.create(WCFanBlock.WATERLOGGED)
+            .register(false, createVariant(standingModelId))
+            .register(true, createVariant(standingModelId));
 
-        // For wall variants, handle both facing and waterlogged states
-        Map<String, Integer> directionRotations = Map.of(
-                "east", 90,
-                "south", 180,
-                "west", 270,
-                "north", 0
+        // Register the block state using ModelExport2 utility method
+        registerBlockState(generator, block, variants);
+    }
+
+    private static void generateWallFanBlockState(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // Create the wall fan model
+        Identifier wallModelId = createWallFanModel(generator, block, texturePath);
+
+        // Create variants for each facing direction and waterlogged state
+        BlockStateVariantMap variants = BlockStateVariantMap.create(WCWallFanBlock.FACING, WCWallFanBlock.WATERLOGGED)
+            .register(Direction.NORTH, false, createVariant(wallModelId))
+            .register(Direction.NORTH, true, createVariant(wallModelId))
+            .register(Direction.EAST, false, createVariant(wallModelId, 90))
+            .register(Direction.EAST, true, createVariant(wallModelId, 90))
+            .register(Direction.SOUTH, false, createVariant(wallModelId, 180))
+            .register(Direction.SOUTH, true, createVariant(wallModelId, 180))
+            .register(Direction.WEST, false, createVariant(wallModelId, 270))
+            .register(Direction.WEST, true, createVariant(wallModelId, 270));
+
+        // Register the block state using the generator's collector directly
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block)
+                .coordinate(variants)
         );
-
-        // Generate model variants if not using custom models
-        if (!def.isCustomModel()) {
-            for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                generateFanModels(generator, def.getRandomTextureSet(setIdx), setIdx);
-            }
-        }
-
-        // For wall variants, we need a different block instance
-        String wallBlockName = def.blockName + "_wall";
-        Block wallBlock = ModBlocks.getCustomBlocks().get(wallBlockName);
-        if (wallBlock != null) {
-            BlockStateBuilder wallStateBuilder = new BlockStateBuilder(wallBlock);
-            final Map<String, List<BlockStateVariant>> wallVariants = wallStateBuilder.getVariants();
-
-            directionRotations.forEach((direction, rotation) -> {
-                // Generate variants for both waterlogged states
-                for (boolean waterlogged : new boolean[]{true, false}) {
-                    BlockStateVariant variant = VariantBuilder.createWithRotation(getModelId(def.blockName, "wall", 0), null, rotation);
-                    String condition = String.format("facing=%s,waterlogged=%s", direction, waterlogged);
-                    wallStateBuilder.addVariant(condition, variant, null, wallVariants);
-                }
-            });
-
-            generateBlockStateFiles(generator, wallBlock, wallVariants);
-        }
-
-        generateBlockStateFiles(generator, block, variants);
     }
 
-    private void generateFanModels(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, int setIdx) {
+    private static Identifier createStandingFanModel(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // Create texture map for standing fan
         TextureMap textureMap = new TextureMap()
-                .put(TextureKey.FAN, createBlockIdentifier(set.getTextureByIndex(0)));
-        String basePath = def.isTinted() ? "tinted" : "untinted";
+            .put(TextureKey.FAN, createBlockIdentifier(texturePath));
 
-        // floor model
-        Model floorModel = new Model(
-                Optional.of(WesterosBlocks.id("block/" + basePath + "/fan")),
-                Optional.empty(),
-                TextureKey.FAN
-        );
-        floorModel.upload(getModelId(def.blockName, "base", setIdx), textureMap, generator.modelCollector);
+        // Create model identifier using ModelExport2 utility method
+        Identifier modelId = createModelId(block);
 
-        // wall model
-        Model wallModel = new Model(
-                Optional.of(WesterosBlocks.id("block/" + basePath + "/wall_fan")),
-                Optional.empty(),
-                TextureKey.FAN
+        // Create and upload the model using the template
+        Model model = new Model(
+            Optional.of(WesterosBlocks.id("block/untinted/fan")),
+            Optional.empty(),
+            TextureKey.FAN
         );
-        wallModel.upload(getModelId(def.blockName, "wall", setIdx), textureMap, generator.modelCollector);
+        model.upload(modelId, textureMap, generator.modelCollector);
+
+        return modelId;
+    }
+
+    private static Identifier createWallFanModel(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // Create texture map for wall fan
+        TextureMap textureMap = new TextureMap()
+            .put(TextureKey.FAN, createBlockIdentifier(texturePath));
+
+        // Create model identifier using ModelExport2 utility method
+        Identifier modelId = createModelId(block);
+
+        // Create and upload the model using the template
+        Model model = new Model(
+            Optional.of(WesterosBlocks.id("block/untinted/wall_fan")),
+            Optional.empty(),
+            TextureKey.FAN
+        );
+        model.upload(modelId, textureMap, generator.modelCollector);
+
+        return modelId;
     }
 
 
-    private Identifier getModelId(String blockName, String variant, int setIdx) {
-        return getBaseModelId(variant, setIdx, def.isCustomModel());
-    }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
-        ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
-        String basePath = blockDefinition.isTinted() ? "tinted" : "untinted";
-
-        // main fan item
-        generateSingleItemModel(itemModelGenerator, block, firstSet, basePath);
-
-        // wall fan item
-        String wallBlockName = blockDefinition.blockName + "_wall";
-        Block wallBlock = ModBlocks.getCustomBlocks().get(wallBlockName);
-        if (wallBlock != null) {
-            generateSingleItemModel(itemModelGenerator, wallBlock, firstSet, basePath);
+    public static void generateItemModelsAuto(ItemModelGenerator generator, Block standingFan, Block wallFan) {
+        // Generate item models for both standing and wall fan blocks using ModelExport2 utility method
+        generateItemModel(generator, standingFan);
+        if (wallFan != null) {
+            generateItemModel(generator, wallFan);
         }
     }
 
-    private static void generateSingleItemModel(ItemModelGenerator itemModelGenerator, Block block, ModBlock.RandomTextureSet set, String basePath) {
-        Model itemModel = new Model(
-                Optional.of(WesterosBlocks.id("block/" + basePath + "/fan")),
-                Optional.empty(),
-                TextureKey.FAN
-        );
-
-        TextureMap textureMap = new TextureMap()
-                .put(TextureKey.FAN, createBlockIdentifier(set.getTextureByIndex(0)));
-
-        itemModel.upload(ModelIds.getItemModelId(block.asItem()), textureMap, itemModelGenerator.writer);
+    @Override
+    public void generateItemModels(ItemModelGenerator generator, Block block) {
+        // Generate item model for a single block using the same pattern as TorchBlockExport
+        Block wallFan = Registries.BLOCK.get(WesterosBlocks.id("wall_" + block.getTranslationKey().replace("block.westerosblocks.", "")));
+        generateItemModelsAuto(generator, block, wallFan);
     }
-}
+} 

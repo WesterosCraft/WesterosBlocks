@@ -988,6 +988,21 @@ public class ModBlocks2 {
             .textures("alyssas_tears_mist/mist4", "alyssas_tears_mist/mist4")
     );
 
+    // HALF DOOR BLOCKS
+    public static final Block BIRCH_WINDOW_SHUTTERS = registerHalfDoorBlock(
+        "birch_window_shutters",
+        builder -> builder
+            .creativeTab("westeros_windows_glass_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.BIRCH)
+            .soundType("wood")
+            .allowUnsupported()
+            .texture("wood/birch/shutters")
+    );
+
 
     // BATCH REGISTRATION METHODS FOR MASS BLOCK CREATION
     // public static void registerArrowSlits() {
@@ -1177,6 +1192,22 @@ public class ModBlocks2 {
             .texture("vines/vines"); // Default texture
 
         builder.setBlockType(BlockBuilder.BlockType.VINES);
+        return configurator.configure(builder).register();
+    }
+
+    public static Block registerHalfDoorBlock(String name, BlockBuilderConfigurator configurator) {
+        BlockBuilder builder = new BlockBuilder(name)
+            .creativeTab("westeros_windows_glass_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .harvestLevel(1)
+            .requiresAxe()
+            .woodType(WoodType.BIRCH)
+            .soundType("wood")
+            .allowUnsupported()
+            .texture("wood/birch/shutters"); // Default texture
+
+        builder.setBlockType(BlockBuilder.BlockType.HALF_DOOR);
         return configurator.configure(builder).register();
     }
 

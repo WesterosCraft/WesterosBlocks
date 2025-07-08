@@ -613,7 +613,7 @@ public class ModBlock extends ModBlockStateRecord {
         typeTable.put("furnace", new WCFurnaceBlock.Factory());
         typeTable.put("sound", new WCSoundBlock.Factory());
         typeTable.put("beacon", new WCBeaconBlock.Factory());
-        typeTable.put("vines", new WCVinesBlock.Factory());
+        // typeTable.put("vines", new WCVinesBlock.Factory());
         typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
         typeTable.put("fencegate", new WCFenceGateBlock.Factory());
         typeTable.put("particle", new WCParticleEmitterBlock.Factory());

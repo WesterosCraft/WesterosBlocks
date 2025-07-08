@@ -46,10 +46,10 @@ public class ModModelProvider extends FabricModelProvider {
             Map.entry("cuboid-nsewud", CuboidNSEWUDBlockExport::new),
             Map.entry("layer", LayerBlockExport::new),
             Map.entry("rail", RailBlockExport::new),
-            Map.entry("halfdoor", HalfDoorBlockExport::new),
+             Map.entry("halfdoor", HalfDoorBlockExport::new),
             Map.entry("cake", CakeBlockExport::new),
             Map.entry("furnace", FurnaceBlockExport::new),
-            Map.entry("vines", VinesBlockExport::new),
+            // Map.entry("vines", VinesBlockExport::new),
             Map.entry("flowerpot", FlowerPotExport::new),
             Map.entry("fencegate", FenceGateBlockExport::new),
             Map.entry("particle", ParticleEmitterBlockExport::new),
@@ -158,10 +158,10 @@ public class ModModelProvider extends FabricModelProvider {
                     FenceGateBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-                case "vines": {
-                    VinesBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-                    break;
-                }
+                // case "vines": {
+                //     VinesBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                //     break;
+                // }
                 case "bed": {
                     BedBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
@@ -186,10 +186,10 @@ public class ModModelProvider extends FabricModelProvider {
                     PaneBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-                case "halfdoor": {
-                    HalfDoorBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-                    break;
-                }
+               case "halfdoor": {
+                   HalfDoorBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                   break;
+               }
                 case "cuboid-16way": {
                     Cuboid16WayBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;

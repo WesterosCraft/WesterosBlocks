@@ -2,7 +2,6 @@ package com.westerosblocks.datagen;
 
 
 import com.westerosblocks.block.ModBlocks2;
-import com.westerosblocks.block.custom.StandaloneVinesBlock;
 import com.westerosblocks.datagen.models.*;
 import net.minecraft.data.client.*;
 
@@ -16,8 +15,9 @@ public class ModModelProvider2 {
     static WaySignBlockExport waySignExporter = new WaySignBlockExport();
     static LogBlockExport logExporter = new LogBlockExport();
     static TorchBlockExport torchExporter = new TorchBlockExport();
-    static FanBlockExport2 fanExporter = new FanBlockExport2();
-    static StandaloneVinesBlockExport vinesExporter = new StandaloneVinesBlockExport();
+    static FanBlockExport fanExporter = new FanBlockExport();
+    static VinesBlockExport vinesExporter = new VinesBlockExport();
+    static StandaloneHalfDoorBlockExport halfDoorExporter = new StandaloneHalfDoorBlockExport();
 
     public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         // Arrow Slits
@@ -188,6 +188,10 @@ public class ModModelProvider2 {
             "alyssas_tears_mist/mist3", "alyssas_tears_mist/mist3");
         vinesExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FALLING_WATER_BLOCK_FOUR, 
             "alyssas_tears_mist/mist4", "alyssas_tears_mist/mist4");
+
+        // Half Door Blocks
+        halfDoorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BIRCH_WINDOW_SHUTTERS, 
+            "wood/birch/shutters");
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -287,5 +291,8 @@ public class ModModelProvider2 {
         vinesExporter.generateItemModels(itemModelGenerator, ModBlocks2.FALLING_WATER_BLOCK_TWO, "alyssas_tears_mist/mist2");
         vinesExporter.generateItemModels(itemModelGenerator, ModBlocks2.FALLING_WATER_BLOCK_THREE, "alyssas_tears_mist/mist3");
         vinesExporter.generateItemModels(itemModelGenerator, ModBlocks2.FALLING_WATER_BLOCK_FOUR, "alyssas_tears_mist/mist4");
+
+        // Half Door Blocks
+        halfDoorExporter.generateItemModels(itemModelGenerator, ModBlocks2.BIRCH_WINDOW_SHUTTERS, "wood/birch/shutters");
     }
 } 

@@ -1,22 +1,14 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.block.ModBlockFactory;
-import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
@@ -27,25 +19,11 @@ import net.minecraft.world.WorldView;
 import com.google.common.collect.ImmutableMap;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class WCVinesBlock extends VineBlock implements ModBlockLifecycle {
-    public static class Factory extends ModBlockFactory {
-        @Override
-        public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings settings = def.applyCustomProperties().nonOpaque();
-            Block blk = new WCVinesBlock(settings, def);
-            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
-        }
-    }
-
-    private final ModBlock def;
-    private boolean allow_unsupported = false;
-    private boolean no_climb = false;
-    public boolean has_down = false;
+public class WCVinesBlock extends VineBlock {
     public static final BooleanProperty DOWN = Properties.DOWN;
     private static final VoxelShape UP_AABB = Block.createCuboidShape(0.0D, 15.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     private static final VoxelShape DOWN_AABB = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
@@ -58,28 +36,34 @@ public class WCVinesBlock extends VineBlock implements ModBlockLifecycle {
     public static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION = createDirectionPropertyMap();
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    protected WCVinesBlock(AbstractBlock.Settings settings, ModBlock def) {
+    private final String blockName;
+    private final String creativeTab;
+    private final boolean allowUnsupported;
+    private final boolean noClimb;
+    private final boolean canGrowDownward;
+
+    public WCVinesBlock(AbstractBlock.Settings settings) {
+        this(settings, "vines", "westeros_foliage_tab", false, false, false);
+    }
+
+    public WCVinesBlock(AbstractBlock.Settings settings, String blockName, String creativeTab) {
+        this(settings, blockName, creativeTab, false, false, false);
+    }
+
+    public WCVinesBlock(AbstractBlock.Settings settings, String blockName, String creativeTab,
+                        boolean allowUnsupported, boolean noClimb, boolean canGrowDownward) {
         super(settings);
-        this.def = def;
-        String t = def.getType();
-        if (t != null) {
-            String[] toks = t.split(",");
-            for (String tok : toks) {
-                if (tok.equals("allow-unsupported")) {
-                    allow_unsupported = true;
-                }
-                if (tok.equals("no-climb")) {
-                    no_climb = true;
-                }
-                if (tok.equals("has-down")) {
-                    has_down = true;
-                }
-            }
-        }
+        this.blockName = blockName;
+        this.creativeTab = creativeTab;
+        this.allowUnsupported = allowUnsupported;
+        this.noClimb = noClimb;
+        this.canGrowDownward = canGrowDownward;
+        
         this.shapesCache = ImmutableMap.copyOf(getStateManager()
                 .getStates()
                 .stream()
                 .collect(Collectors.toMap(Function.identity(), WCVinesBlock::calculateShape)));
+        
         setDefaultState(this.getDefaultState()
                 .with(UP, Boolean.FALSE)
                 .with(NORTH, Boolean.FALSE)
@@ -90,9 +74,24 @@ public class WCVinesBlock extends VineBlock implements ModBlockLifecycle {
                 .with(WATERLOGGED, Boolean.FALSE));
     }
 
-    @Override
-    public ModBlock getWBDefinition() {
-        return def;
+    public String getBlockName() {
+        return blockName;
+    }
+
+    public String getCreativeTab() {
+        return creativeTab;
+    }
+
+    public boolean isAllowUnsupported() {
+        return allowUnsupported;
+    }
+
+    public boolean isNoClimb() {
+        return noClimb;
+    }
+
+    public boolean isCanGrowDownward() {
+        return canGrowDownward;
     }
 
     private static VoxelShape calculateShape(BlockState state) {
@@ -134,7 +133,7 @@ public class WCVinesBlock extends VineBlock implements ModBlockLifecycle {
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        return allow_unsupported || this.hasFaces(this.getUpdatedState(state, world, pos));
+        return allowUnsupported || this.hasFaces(this.getUpdatedState(state, world, pos));
     }
 
     private boolean hasFaces(BlockState state) {
@@ -154,11 +153,11 @@ public class WCVinesBlock extends VineBlock implements ModBlockLifecycle {
     }
 
     private boolean canSupportAtFace(BlockView world, BlockPos pos, Direction direction) {
-        if ((!has_down) && (direction == Direction.DOWN)) {
+        if ((!canGrowDownward) && (direction == Direction.DOWN)) {
             return false;
         } else {
             BlockPos blockpos = pos.offset(direction);
-            if (allow_unsupported) {
+            if (allowUnsupported) {
                 return true;
             }
             if (isAcceptableNeighbour(world, blockpos, direction)) {
@@ -181,13 +180,13 @@ public class WCVinesBlock extends VineBlock implements ModBlockLifecycle {
     private BlockState getUpdatedState(BlockState currentState, BlockView world, BlockPos pos) {
         BlockPos abovePos = pos.up();
         if (currentState.get(UP)) {
-            currentState = currentState.with(UP, allow_unsupported || isAcceptableNeighbour(world, abovePos, Direction.DOWN));
+            currentState = currentState.with(UP, allowUnsupported || isAcceptableNeighbour(world, abovePos, Direction.DOWN));
         }
 
         for (Direction direction : Direction.Type.HORIZONTAL) {
             BooleanProperty directionProperty = getPropertyForFace(direction);
             if (currentState.get(directionProperty)) {
-                boolean canSupport = allow_unsupported || this.canSupportAtFace(world, pos, direction);
+                boolean canSupport = allowUnsupported || this.canSupportAtFace(world, pos, direction);
                 if (!canSupport) {
                     BlockState aboveState = world.getBlockState(abovePos);
                     canSupport = aboveState.isOf(this) && aboveState.get(directionProperty);
@@ -197,8 +196,8 @@ public class WCVinesBlock extends VineBlock implements ModBlockLifecycle {
             }
         }
 
-        if (has_down && currentState.get(DOWN)) {
-            boolean canSupportDown = allow_unsupported || this.canSupportAtFace(world, pos, Direction.DOWN);
+        if (canGrowDownward && currentState.get(DOWN)) {
+            boolean canSupportDown = allowUnsupported || this.canSupportAtFace(world, pos, Direction.DOWN);
             currentState = currentState.with(DOWN, canSupportDown);
         }
 
@@ -214,7 +213,7 @@ public class WCVinesBlock extends VineBlock implements ModBlockLifecycle {
             BlockPos pos,
             BlockPos neighborPos
     ) {
-        if ((!has_down) && (direction == Direction.DOWN)) {
+        if ((!canGrowDownward) && (direction == Direction.DOWN)) {
             return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
         } else {
             BlockState blockstate = this.getUpdatedState(state, world, pos);
@@ -231,7 +230,7 @@ public class WCVinesBlock extends VineBlock implements ModBlockLifecycle {
         blockstate1 = blockstate1.with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
 
         for (Direction direction : ctx.getPlacementDirections()) {
-            if (has_down || (direction != Direction.DOWN)) {
+            if (canGrowDownward || (direction != Direction.DOWN)) {
                 BooleanProperty booleanproperty = getPropertyForFace(direction);
                 boolean flag1 = flag && blockstate.get(booleanproperty);
                 if (!flag1 && this.canSupportAtFace(ctx.getWorld(), ctx.getBlockPos(), direction)) {
@@ -265,15 +264,6 @@ public class WCVinesBlock extends VineBlock implements ModBlockLifecycle {
         return PROPERTY_BY_DIRECTION.get(p_176267_0_);
     }
 
-    private static final String[] TAGS = {"climbable"};
-    private static final String[] TAGS_NOCLIMB = {};
-
-    @Override
-    public String[] getBlockTags() {
-        if (no_climb) return TAGS_NOCLIMB;
-        return TAGS;
-    }
-
     private static Map<Direction, BooleanProperty> createDirectionPropertyMap() {
         Map<Direction, BooleanProperty> map = new HashMap<>();
         map.put(Direction.NORTH, Properties.NORTH);
@@ -285,9 +275,8 @@ public class WCVinesBlock extends VineBlock implements ModBlockLifecycle {
         return Map.copyOf(map);
     }
 
-    @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        addCustomTooltip(tooltip);
-        super.appendTooltip(stack, context, tooltip, options);
+    public String[] getBlockTags() {
+        if (noClimb) return new String[0];
+        return new String[]{"climbable"};
     }
-}
+} 

@@ -5,9 +5,10 @@ import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.*;
 import com.westerosblocks.block.custom.WCTorchBlock;
 import com.westerosblocks.block.custom.WCWallTorchBlock;
-import com.westerosblocks.block.custom.StandaloneWCFanBlock;
-import com.westerosblocks.block.custom.StandaloneWCWallFanBlock;
-import com.westerosblocks.block.custom.StandaloneVinesBlock;
+import com.westerosblocks.block.custom.WCFanBlock;
+import com.westerosblocks.block.custom.WCWallFanBlock;
+import com.westerosblocks.block.custom.WCVinesBlock;
+import com.westerosblocks.block.custom.StandaloneWCHalfDoorBlock;
 import com.westerosblocks.util.ModWoodType;
 import com.westerosblocks.util.ModBlockSoundGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -787,6 +788,12 @@ public class BlockBuilder {
                 "block." + WesterosBlocks.MOD_ID + "." + name,
                 tooltips
             );
+            case HALF_DOOR -> new StandaloneWCHalfDoorBlock(
+                settings,
+                locked,
+                allowUnsupported,
+                "block." + WesterosBlocks.MOD_ID + "." + name
+            );
             case LOG -> new WCLogBlock(settings, name, creativeTab, woodType.toString().toLowerCase(), texturePaths);
             case TORCH -> {
                 // Create wall torch first
@@ -815,7 +822,7 @@ public class BlockBuilder {
             case SAND -> new WCSandBlock(settings, name, creativeTab, tooltips);
             case FAN -> {
                 // Create wall fan first
-                StandaloneWCWallFanBlock wallFan = new StandaloneWCWallFanBlock(
+                WCWallFanBlock wallFan = new WCWallFanBlock(
                     settings,
                     allowUnsupported,
                     "block." + WesterosBlocks.MOD_ID + ".wall_" + name,
@@ -823,7 +830,7 @@ public class BlockBuilder {
                 );
 
                 // Create and return standing fan
-                StandaloneWCFanBlock standingFan = new StandaloneWCFanBlock(
+                WCFanBlock standingFan = new WCFanBlock(
                     settings,
                     wallFan,
                     allowUnsupported,
@@ -835,7 +842,7 @@ public class BlockBuilder {
                 this.wallBlock = wallFan;
                 yield standingFan;
             }
-            case VINES -> new StandaloneVinesBlock(settings, name, creativeTab, allowUnsupported, noParticle, canGrowDownward);
+            case VINES -> new WCVinesBlock(settings, name, creativeTab, allowUnsupported, noParticle, canGrowDownward);
         };
     }
 
@@ -858,6 +865,8 @@ public class BlockBuilder {
         TRAPDOOR,
         /** Door blocks for entrances */
         DOOR,
+        /** Half door blocks for partial entrances */
+        HALF_DOOR,
         /** Log blocks for wooden structures */
         LOG,
         /** Torch blocks for lighting */

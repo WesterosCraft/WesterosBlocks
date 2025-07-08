@@ -1,9 +1,5 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.block.ModBlockFactory;
-import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
@@ -27,53 +23,38 @@ import net.minecraft.world.WorldView;
 
 import java.util.List;
 
-public class WCFanBlock extends Block implements ModBlockLifecycle {
-    private final Block wallBlock;
-    public static class Factory extends ModBlockFactory {
-        @Override
-        public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings fanSettings = def.applyCustomProperties().noCollision().breakInstantly();
-            AbstractBlock.Settings wallFanSettings = def.applyCustomProperties().noCollision().breakInstantly();
-
-            Block wallFanBlock = new WCWallFanBlock(wallFanSettings, def);
-            Block fanBlock = new WCFanBlock(fanSettings, def, wallFanBlock);
-
-            def.registerRenderType(ModBlocks.registerBlock(def.blockName + "_wall", wallFanBlock), false, false);
-            ModBlocks.getCustomBlocks().put(def.blockName + "_wall", wallFanBlock);
-
-            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, fanBlock), false, false);
-        }
-    }
-
+/**
+ * Standalone fan block that doesn't depend on the def system.
+ * Provides the same functionality as WCFanBlock but with direct configuration.
+ */
+public class WCFanBlock extends Block implements Waterloggable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
-    private final ModBlock def;
+    
     private final boolean allowUnsupported;
+    private final Block wallBlock;
+    private final String translationKey;
+    private final List<String> tooltips;
     private static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 4.0, 14.0);
 
-    protected WCFanBlock(AbstractBlock.Settings settings, ModBlock def, Block wallFanBlock) {
+    /**
+     * Creates a new standalone fan block.
+     * 
+     * @param settings Block settings
+     * @param wallBlock The corresponding wall fan block
+     * @param allowUnsupported Whether this fan can be placed without support
+     * @param translationKey The translation key for this block
+     * @param tooltips Optional tooltips to display
+     */
+    public WCFanBlock(AbstractBlock.Settings settings, Block wallBlock,
+                      boolean allowUnsupported, String translationKey, List<String> tooltips) {
         super(settings);
-        this.def = def;
-        this.wallBlock = wallFanBlock;
-        boolean allowUnsupported = false;
-        String type = def.getType();
-        if (type != null) {
-            String[] tokens = type.split(",");
-            for (String token : tokens) {
-                if (token.equals("allow-unsupported")) {
-                    allowUnsupported = true;
-                    break;
-                }
-            }
-        }
+        this.wallBlock = wallBlock;
         this.allowUnsupported = allowUnsupported;
+        this.translationKey = translationKey;
+        this.tooltips = tooltips;
 
         this.setDefaultState(this.getStateManager().getDefaultState()
                 .with(WATERLOGGED, false));
-    }
-
-    @Override
-    public ModBlock getWBDefinition() {
-        return def;
     }
 
     @Override
@@ -134,7 +115,7 @@ public class WCFanBlock extends Block implements ModBlockLifecycle {
 
     @Override
     public boolean isTransparent(BlockState state, BlockView world, BlockPos pos) {
-        return !state.getFluidState().isEmpty();
+        return true;
     }
 
     @Override
@@ -151,16 +132,18 @@ public class WCFanBlock extends Block implements ModBlockLifecycle {
         };
     }
 
-    private static final String[] TAGS = {"fans"};
-
     @Override
-    public String[] getBlockTags() {
-        return TAGS;
+    public String getTranslationKey() {
+        return translationKey;
     }
 
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        addCustomTooltip(tooltip);
+        if (tooltips != null && !tooltips.isEmpty()) {
+            for (String tooltipText : tooltips) {
+                tooltip.add(Text.literal(tooltipText));
+            }
+        }
         super.appendTooltip(stack, context, tooltip, options);
     }
-}
+} 
