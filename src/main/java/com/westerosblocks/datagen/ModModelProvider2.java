@@ -17,7 +17,7 @@ public class ModModelProvider2 {
     static TorchBlockExport torchExporter = new TorchBlockExport();
     static FanBlockExport fanExporter = new FanBlockExport();
     static VinesBlockExport vinesExporter = new VinesBlockExport();
-    static StandaloneHalfDoorBlockExport halfDoorExporter = new StandaloneHalfDoorBlockExport();
+    static HalfDoorBlockExport halfDoorExporter = new HalfDoorBlockExport();
 
     public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         // Arrow Slits

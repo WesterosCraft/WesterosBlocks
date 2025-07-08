@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.block.custom.WCHalfDoorBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.DoorHinge;
 import net.minecraft.data.client.*;
@@ -14,7 +15,7 @@ import java.util.Optional;
  * This class extends ModelExport2 and uses BlockStateModelGenerator methods where possible.
  * It produces the same output as the original HalfDoorBlockExport but without definition dependencies.
  */
-public class StandaloneHalfDoorBlockExport extends ModelExport2 {
+public class HalfDoorBlockExport extends ModelExport2 {
 
     /**
      * Generates block state models for a half door block.
@@ -33,9 +34,9 @@ public class StandaloneHalfDoorBlockExport extends ModelExport2 {
 
         // Create variants for all half door states using BlockStateModelGenerator patterns
         BlockStateVariantMap variants = BlockStateVariantMap.create(
-            com.westerosblocks.block.custom.StandaloneWCHalfDoorBlock.FACING,
-            com.westerosblocks.block.custom.StandaloneWCHalfDoorBlock.HINGE,
-            com.westerosblocks.block.custom.StandaloneWCHalfDoorBlock.OPEN
+            WCHalfDoorBlock.FACING,
+            WCHalfDoorBlock.HINGE,
+            WCHalfDoorBlock.OPEN
         )
             // EAST facing
             .register(Direction.EAST, DoorHinge.LEFT, false, createVariant(bottomLeftModelId))

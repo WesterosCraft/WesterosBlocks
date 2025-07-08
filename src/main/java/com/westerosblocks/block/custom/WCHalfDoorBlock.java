@@ -36,7 +36,7 @@ import java.util.List;
  * This class provides the same functionality as WCHalfDoorBlock but with simplified
  * parameter handling for the builder-based registration system.
  */
-public class StandaloneWCHalfDoorBlock extends Block {
+public class WCHalfDoorBlock extends Block {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = Properties.OPEN;
     public static final EnumProperty<DoorHinge> HINGE = Properties.DOOR_HINGE;
@@ -59,7 +59,7 @@ public class StandaloneWCHalfDoorBlock extends Block {
      * @param allowUnsupported Whether this door can be placed without a supporting block below
      * @param translationKey The translation key for this block
      */
-    public StandaloneWCHalfDoorBlock(AbstractBlock.Settings settings, boolean locked, boolean allowUnsupported, String translationKey) {
+    public WCHalfDoorBlock(AbstractBlock.Settings settings, boolean locked, boolean allowUnsupported, String translationKey) {
         super(settings);
         this.locked = locked;
         this.allowUnsupported = allowUnsupported;
@@ -120,8 +120,8 @@ public class StandaloneWCHalfDoorBlock extends Block {
         int sum = (counterState.isFullCube(world, counterPos) ? -1 : 0) +
                 (clockState.isFullCube(world, clockPos) ? 1 : 0);
 
-        boolean counterIsDoor = counterState.getBlock() instanceof StandaloneWCHalfDoorBlock;
-        boolean clockIsDoor = clockState.getBlock() instanceof StandaloneWCHalfDoorBlock;
+        boolean counterIsDoor = counterState.getBlock() instanceof WCHalfDoorBlock;
+        boolean clockIsDoor = clockState.getBlock() instanceof WCHalfDoorBlock;
 
         if ((!counterIsDoor || clockIsDoor) && sum <= 0) {
             if ((!clockIsDoor || counterIsDoor) && sum >= 0) {

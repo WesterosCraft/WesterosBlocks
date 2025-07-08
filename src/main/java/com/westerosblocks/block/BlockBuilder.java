@@ -8,7 +8,7 @@ import com.westerosblocks.block.custom.WCWallTorchBlock;
 import com.westerosblocks.block.custom.WCFanBlock;
 import com.westerosblocks.block.custom.WCWallFanBlock;
 import com.westerosblocks.block.custom.WCVinesBlock;
-import com.westerosblocks.block.custom.StandaloneWCHalfDoorBlock;
+import com.westerosblocks.block.custom.WCHalfDoorBlock;
 import com.westerosblocks.util.ModWoodType;
 import com.westerosblocks.util.ModBlockSoundGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -788,7 +788,7 @@ public class BlockBuilder {
                 "block." + WesterosBlocks.MOD_ID + "." + name,
                 tooltips
             );
-            case HALF_DOOR -> new StandaloneWCHalfDoorBlock(
+            case HALF_DOOR -> new WCHalfDoorBlock(
                 settings,
                 locked,
                 allowUnsupported,

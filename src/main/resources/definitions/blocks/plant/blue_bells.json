@@ -1,19 +1,17 @@
 {
-    "blockName": "blue_bells",
-    "blockType": "plant",
-    "type": "layerSensitive",
-    "material": "plants",
-    "creativeTab": "westeros_flowers_tab",
-    "boundingBox": {
-        "xMin": 0.3,
-        "xMax": 0.7,
-        "yMin": 0,
-        "yMax": 0.6,
-        "zMin": 0.3,
-        "zMax": 0.7
-    },
-    "label": "Blue Bells",
-    "textures": [
-        "flowers/blue_bells"
-    ]
+  "blockName": "blue_bells_old",
+  "blockType": "plant",
+  "type": "layerSensitive",
+  "material": "plants",
+  "creativeTab": "westeros_flowers_tab",
+  "boundingBox": {
+    "xMin": 0.3,
+    "xMax": 0.7,
+    "yMin": 0,
+    "yMax": 0.6,
+    "zMin": 0.3,
+    "zMax": 0.7
+  },
+  "label": "Blue Bells Old",
+  "textures": ["flowers/blue_bells"]
 }

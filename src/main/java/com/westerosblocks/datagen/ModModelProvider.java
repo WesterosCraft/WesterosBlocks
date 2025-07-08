@@ -47,7 +47,7 @@ public class ModModelProvider extends FabricModelProvider {
             Map.entry("layer", LayerBlockExport::new),
             Map.entry("rail", RailBlockExport::new),
             //  Map.entry("halfdoor", HalfDoorBlockExport::new),
-            Map.entry("cake", CakeBlockExport::new),
+            
             Map.entry("furnace", FurnaceBlockExport::new),
             // Map.entry("vines", VinesBlockExport::new),
             Map.entry("flowerpot", FlowerPotExport::new),
@@ -235,10 +235,7 @@ public class ModModelProvider extends FabricModelProvider {
                     CuboidNSEWUDBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-                case "cake": {
-                    CakeBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-                    break;
-                }
+          
                 case "furnace": {
                     FurnaceBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;

@@ -142,11 +142,6 @@ public class ModBlockSettings {
                 .sounds(BlockSoundGroup.GLASS)
                 .luminance(state -> 11));
 
-        BASE_SETTINGS.put("cake", AbstractBlock.Settings.create()
-                .strength(0.5F)
-                .sounds(BlockSoundGroup.WOOL)
-                .nonOpaque());
-
         BASE_SETTINGS.put("web", AbstractBlock.Settings.create()
                 .noCollision()
                 .requiresTool()
