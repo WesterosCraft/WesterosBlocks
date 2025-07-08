@@ -1129,6 +1129,37 @@ public class ModBlocks2 {
             .texture("wood/white/shutters")
     );
 
+    // PLANT BLOCKS
+    public static final Block BLUE_BELLS = registerPlantBlock(
+        "blue_bells",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2) // 0.3-0.7, 0-0.6, 0.3-0.7
+            .texture("flowers/blue_bells")
+    );
+
+    public static final Block BLUE_CHICORY = registerPlantBlock(
+        "blue_chicory",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2) // 0.3-0.7, 0-0.6, 0.3-0.7
+            .texture("flowers/blue_chicory/side1")
+    );
+
 
     // BATCH REGISTRATION METHODS FOR MASS BLOCK CREATION
     // public static void registerArrowSlits() {
@@ -1334,6 +1365,21 @@ public class ModBlocks2 {
             .texture("wood/birch/shutters"); // Default texture
 
         builder.setBlockType(BlockBuilder.BlockType.HALF_DOOR);
+        return configurator.configure(builder).register();
+    }
+
+    public static Block registerPlantBlock(String name, BlockBuilderConfigurator configurator) {
+        BlockBuilder builder = new BlockBuilder(name)
+            .creativeTab("westeros_flowers_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .texture("flowers/plant"); // Default texture
+
+        builder.setBlockType(BlockBuilder.BlockType.PLANT);
         return configurator.configure(builder).register();
     }
 

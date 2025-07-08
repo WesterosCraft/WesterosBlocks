@@ -18,6 +18,7 @@ public class ModModelProvider2 {
     static FanBlockExport fanExporter = new FanBlockExport();
     static VinesBlockExport vinesExporter = new VinesBlockExport();
     static HalfDoorBlockExport halfDoorExporter = new HalfDoorBlockExport();
+    static StandaloneCrossBlockExport crossExporter = new StandaloneCrossBlockExport();
 
     public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         // Arrow Slits
@@ -210,6 +211,13 @@ public class ModModelProvider2 {
             "wood/spruce/shutters");
         halfDoorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WHITE_WOOD_WINDOW_SHUTTERS, 
             "wood/white/shutters");
+
+        // Cross Blocks (Plant Blocks)
+        crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLUE_BELLS, 
+            "flowers/blue_bells", true, 4);
+        crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLUE_CHICORY, 
+            "flowers/blue_chicory/side1", true, 4);
+    
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -321,5 +329,9 @@ public class ModModelProvider2 {
         halfDoorExporter.generateItemModels(itemModelGenerator, ModBlocks2.REACH_BLUE_WINDOW_SHUTTERS, "shutter_block/shutters_reach");
         halfDoorExporter.generateItemModels(itemModelGenerator, ModBlocks2.SPRUCE_WINDOW_SHUTTERS, "wood/spruce/shutters");
         halfDoorExporter.generateItemModels(itemModelGenerator, ModBlocks2.WHITE_WOOD_WINDOW_SHUTTERS, "wood/white/shutters");
+
+        // Cross Blocks (Plant Blocks)
+        crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.BLUE_BELLS, "flowers/blue_bells");
+        crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.BLUE_CHICORY, "flowers/blue_chicory/side1");
     }
 } 

@@ -114,6 +114,9 @@ public class BlockBuilder {
     private List<String> tooltips = null;
     private int lightLevel = 0;
     private Block wallBlock = null;
+    private boolean layerSensitive = false;
+    private boolean toggleOnUse = false;
+    private double[] boundingBox = null; // [xMin, xMax, yMin, yMax, zMin, zMax]
 
     /**
      * Creates a new BlockBuilder with the specified name.
@@ -527,6 +530,16 @@ public class BlockBuilder {
     }
 
     /**
+     * Makes this block break instantly (like plants).
+     * 
+     * @return this builder for method chaining
+     */
+    public BlockBuilder breakInstantly() {
+        this.hardness = 0.0f;
+        return this;
+    }
+
+    /**
      * Sets the map color for this block.
      * 
      * <p>Map colors affect how the block appears on maps and item frames.
@@ -612,6 +625,42 @@ public class BlockBuilder {
      */
     public BlockBuilder lightLevel(int lightLevel) {
         this.lightLevel = lightLevel;
+        return this;
+    }
+
+    /**
+     * Sets whether this plant block is sensitive to layer placement (for snow layers).
+     * 
+     * @return this builder for method chaining
+     */
+    public BlockBuilder layerSensitive() {
+        this.layerSensitive = true;
+        return this;
+    }
+
+    /**
+     * Sets whether this plant block can be toggled in creative mode.
+     * 
+     * @return this builder for method chaining
+     */
+    public BlockBuilder toggleOnUse() {
+        this.toggleOnUse = true;
+        return this;
+    }
+
+    /**
+     * Sets the custom bounding box for this block
+     * 
+     * @param xMin Minimum X coordinate
+     * @param xMax Maximum X coordinate
+     * @param yMin Minimum Y coordinate
+     * @param yMax Maximum Y coordinate
+     * @param zMin Minimum Z coordinate
+     * @param zMax Maximum Z coordinate
+     * @return this builder for method chaining
+     */
+    public BlockBuilder boundingBox(double xMin, double xMax, double yMin, double yMax, double zMin, double zMax) {
+        this.boundingBox = new double[]{xMin, xMax, yMin, yMax, zMin, zMax};
         return this;
     }
 
@@ -843,6 +892,9 @@ public class BlockBuilder {
                 yield standingFan;
             }
             case VINES -> new WCVinesBlock(settings, name, creativeTab, allowUnsupported, noParticle, canGrowDownward);
+            case PLANT -> {
+                yield new StandaloneWCPlantBlock(settings, name, creativeTab, layerSensitive, toggleOnUse);
+            }
         };
     }
 
@@ -876,6 +928,8 @@ public class BlockBuilder {
         /** Fan blocks for decorative purposes */
         FAN,
         /** Vines blocks for climbing and decoration */
-        VINES
+        VINES,
+        /** Plant blocks for flowers and vegetation */
+        PLANT
     }
 } 
