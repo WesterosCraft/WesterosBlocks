@@ -217,7 +217,6 @@ public class ModModelProvider2 {
             "flowers/blue_bells", true, 4);
         crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLUE_CHICORY, 
             "flowers/blue_chicory/side1", true, 4);
-    
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator) {

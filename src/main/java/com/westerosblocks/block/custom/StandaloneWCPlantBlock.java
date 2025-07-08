@@ -56,7 +56,7 @@ public class StandaloneWCPlantBlock extends Block {
     private final String creativeTab;
     private final boolean layerSensitive;
     private final boolean toggleOnUse;
-    private final IntProperty LAYERS;
+    private IntProperty LAYERS;
 
     public static final VoxelShape[] SHAPE_BY_LAYER = new VoxelShape[]{
             VoxelShapes.empty(),
@@ -106,18 +106,8 @@ public class StandaloneWCPlantBlock extends Block {
         this.layerSensitive = layerSensitive;
         this.toggleOnUse = toggleOnUse;
         
-        // Set up layer property if needed
-        if (layerSensitive) {
-            this.LAYERS = Properties.LAYERS;
-        } else {
-            this.LAYERS = null;
-        }
-        
-        // Set default state
+        // Set default state - don't set LAYERS here, it will be set in appendProperties
         BlockState defbs = this.getDefaultState().with(WATERLOGGED, false);
-        if (LAYERS != null) {
-            defbs = defbs.with(LAYERS, 8);
-        }
         this.setDefaultState(defbs);
     }
 
@@ -145,7 +135,7 @@ public class StandaloneWCPlantBlock extends Block {
         FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
         bs = bs.with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
         
-        if (LAYERS != null) {
+        if (layerSensitive && LAYERS != null) {
             BlockState below = ctx.getWorld().getBlockState(ctx.getBlockPos().offset(Direction.DOWN));
             if (below.contains(Properties.LAYERS)) {
                 Block blk = below.getBlock();
@@ -186,7 +176,8 @@ public class StandaloneWCPlantBlock extends Block {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        if (LAYERS != null) {
+        if (layerSensitive) {
+            LAYERS = Properties.LAYERS;
             builder.add(LAYERS);
         }
         builder.add(WATERLOGGED);
@@ -206,7 +197,7 @@ public class StandaloneWCPlantBlock extends Block {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        if (LAYERS != null) {
+        if (layerSensitive && LAYERS != null) {
             return SHAPE_BY_LAYER[state.get(LAYERS)];
         }
         return VoxelShapes.fullCube();
