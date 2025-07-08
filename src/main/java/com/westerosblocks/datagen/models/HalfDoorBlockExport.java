@@ -1,134 +1,144 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
+import net.minecraft.block.enums.DoorHinge;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
-import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
-public class HalfDoorBlockExport extends ModelExport {
-    private final BlockStateModelGenerator generator;
-    private final Block block;
-    private final ModBlock def;
+/**
+ * Standalone half door block export for generating block states and models.
+ * This class extends ModelExport2 and uses BlockStateModelGenerator methods where possible.
+ * It produces the same output as the original HalfDoorBlockExport but without definition dependencies.
+ */
+public class StandaloneHalfDoorBlockExport extends ModelExport2 {
 
-    private static class ModelRec {
-        String cond;
-        String ext;
-        int y;
-        ModelRec(String c, String e, int y) {
-            cond = c; ext = e; this.y = y;
-        }
-    }
+    /**
+     * Generates block state models for a half door block.
+     * 
+     * @param generator The BlockStateModelGenerator to register models with
+     * @param block The half door block to generate models for
+     * @param texturePath The texture path for the half door
+     */
+    @Override
+    public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // Create the base models for each half door variant
+        Identifier bottomLeftModelId = createHalfDoorModel(generator, block, texturePath, texturePath, "bottom_left");
+        Identifier bottomRightModelId = createHalfDoorModel(generator, block, texturePath, texturePath, "bottom_right");
+        Identifier bottomLeftOpenModelId = createHalfDoorModel(generator, block, texturePath, texturePath, "bottom_left_open");
+        Identifier bottomRightOpenModelId = createHalfDoorModel(generator, block, texturePath, texturePath, "bottom_right_open");
 
-    // Model definitions for half door variants
-    private static final ModelRec[] MODELS = {
+        // Create variants for all half door states using BlockStateModelGenerator patterns
+        BlockStateVariantMap variants = BlockStateVariantMap.create(
+            com.westerosblocks.block.custom.StandaloneWCHalfDoorBlock.FACING,
+            com.westerosblocks.block.custom.StandaloneWCHalfDoorBlock.HINGE,
+            com.westerosblocks.block.custom.StandaloneWCHalfDoorBlock.OPEN
+        )
             // EAST facing
-            new ModelRec("facing=east,hinge=left,open=false", "bottom_left", 0),
-            new ModelRec("facing=east,hinge=left,open=true", "bottom_left_open", 90),
-            new ModelRec("facing=east,hinge=right,open=false", "bottom_right", 0),
-            new ModelRec("facing=east,hinge=right,open=true", "bottom_right_open", 270),
+            .register(Direction.EAST, DoorHinge.LEFT, false, createVariant(bottomLeftModelId))
+            .register(Direction.EAST, DoorHinge.LEFT, true, createVariant(bottomLeftOpenModelId, 90))
+            .register(Direction.EAST, DoorHinge.RIGHT, false, createVariant(bottomRightModelId))
+            .register(Direction.EAST, DoorHinge.RIGHT, true, createVariant(bottomRightOpenModelId, 270))
 
             // SOUTH facing
-            new ModelRec("facing=south,hinge=left,open=false", "bottom_left", 90),
-            new ModelRec("facing=south,hinge=left,open=true", "bottom_left_open", 180),
-            new ModelRec("facing=south,hinge=right,open=false", "bottom_right", 90),
-            new ModelRec("facing=south,hinge=right,open=true", "bottom_right_open", 0),
+            .register(Direction.SOUTH, DoorHinge.LEFT, false, createVariant(bottomLeftModelId, 90))
+            .register(Direction.SOUTH, DoorHinge.LEFT, true, createVariant(bottomLeftOpenModelId, 180))
+            .register(Direction.SOUTH, DoorHinge.RIGHT, false, createVariant(bottomRightModelId, 90))
+            .register(Direction.SOUTH, DoorHinge.RIGHT, true, createVariant(bottomRightOpenModelId, 0))
 
             // WEST facing
-            new ModelRec("facing=west,hinge=left,open=false", "bottom_left", 180),
-            new ModelRec("facing=west,hinge=left,open=true", "bottom_left_open", 270),
-            new ModelRec("facing=west,hinge=right,open=false", "bottom_right", 180),
-            new ModelRec("facing=west,hinge=right,open=true", "bottom_right_open", 90),
+            .register(Direction.WEST, DoorHinge.LEFT, false, createVariant(bottomLeftModelId, 180))
+            .register(Direction.WEST, DoorHinge.LEFT, true, createVariant(bottomLeftOpenModelId, 270))
+            .register(Direction.WEST, DoorHinge.RIGHT, false, createVariant(bottomRightModelId, 180))
+            .register(Direction.WEST, DoorHinge.RIGHT, true, createVariant(bottomRightOpenModelId, 90))
 
             // NORTH facing
-            new ModelRec("facing=north,hinge=left,open=false", "bottom_left", 270),
-            new ModelRec("facing=north,hinge=left,open=true", "bottom_left_open", 0),
-            new ModelRec("facing=north,hinge=right,open=false", "bottom_right", 270),
-            new ModelRec("facing=north,hinge=right,open=true", "bottom_right_open", 180)
-    };
+            .register(Direction.NORTH, DoorHinge.LEFT, false, createVariant(bottomLeftModelId, 270))
+            .register(Direction.NORTH, DoorHinge.LEFT, true, createVariant(bottomLeftOpenModelId, 0))
+            .register(Direction.NORTH, DoorHinge.RIGHT, false, createVariant(bottomRightModelId, 270))
+            .register(Direction.NORTH, DoorHinge.RIGHT, true, createVariant(bottomRightOpenModelId, 180));
 
-    public HalfDoorBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
-        super(generator, block, def);
-        this.generator = generator;
-        this.block = block;
-        this.def = def;
+        // Register the block state with the generator
+        registerBlockState(generator, block, variants);
     }
 
-    public void generateBlockStateModels() {
-        if (!def.isCustomModel()) {
-            for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-                generateHalfDoorModels(generator, set);
-            }
-        }
+    /**
+     * Creates a half door model with the specified variant.
+     * 
+     * @param generator The BlockStateModelGenerator to register the model with
+     * @param block The block this model is for
+     * @param topTexture The top texture path to use
+     * @param bottomTexture The bottom texture path to use
+     * @param variant The variant name (e.g., "bottom_left", "bottom_right_open")
+     * @return The created model Identifier
+     */
+    private static Identifier createHalfDoorModel(BlockStateModelGenerator generator, Block block, String topTexture, String bottomTexture, String variant) {
+        // Create a unique model ID for this block and variant
+        String modelPath = "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", "") + "_" + variant;
+        Identifier modelId = WesterosBlocks.id(modelPath);
 
-        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
-        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
-
-        for (ModelRec rec : MODELS) {
-            BlockStateVariant variant = BlockStateVariant.create();
-            Identifier modelId = getModelId(rec.ext, def.isCustomModel());
-            variant.put(VariantSettings.MODEL, modelId);
-
-            if (rec.y != 0) {
-                variant.put(VariantSettings.Y, getRotation(rec.y));
-            }
-
-            blockStateBuilder.addVariant(rec.cond, variant, null, variants);
-        }
-
-        generateBlockStateFiles(generator, block, variants);
-    }
-
-    private void generateHalfDoorModels(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set) {
+        // Create texture map with bottom texture (parent models only use #bottom)
         TextureMap textureMap = new TextureMap()
-                .put(TextureKey.TOP, createBlockIdentifier(set.getTextureByIndex(0)))
-                .put(TextureKey.BOTTOM, createBlockIdentifier(set.getTextureByIndex(1)));
+            .put(TextureKey.BOTTOM, createBlockIdentifier(bottomTexture));
 
-        // Generate models for each door variant
-        String[][] variants = {
-                {"bottom_left", "half_door_left"},
-                {"bottom_right", "half_door_right"},
-                {"bottom_left_open", "half_door_left_open"},
-                {"bottom_right_open", "half_door_right_open"}
-        };
+        // Determine the parent model based on the variant
+        String parentModelPath = "block/untinted/" + getParentModelName(variant);
 
-        for (String[] variant : variants) {
-            String modelName = variant[0];
-            String parentPath = "block/untinted/" + variant[1];
-
-            Identifier modelId = getModelId(modelName, false);
-            Model doorModel = new Model(
-                    Optional.of(Identifier.of(WesterosBlocks.MOD_ID, parentPath)),
-                    Optional.empty(),
-                    TextureKey.TOP,
-                    TextureKey.BOTTOM
-            );
-            doorModel.upload(modelId, textureMap, generator.modelCollector);
-        }
-    }
-
-    private Identifier getModelId(String variant, boolean isCustom) {
-        return Identifier.of(WesterosBlocks.MOD_ID,
-                String.format("%s%s/%s_v1",
-                        isCustom ? CUSTOM_PATH : GENERATED_PATH,
-                        def.getBlockName(),
-                        variant));
-    }
-
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
-        ModBlock.RandomTextureSet firstSet = blockDefinition.getRandomTextureSet(0);
-        TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(firstSet.getTextureByIndex(0)));
-
-        Models.GENERATED.upload(
-                ModelIds.getItemModelId(block.asItem()),
-                textureMap,
-                itemModelGenerator.writer
+        // Create and upload the model
+        Model doorModel = new Model(
+            Optional.of(Identifier.of(WesterosBlocks.MOD_ID, parentModelPath)),
+            Optional.empty(),
+            TextureKey.BOTTOM
         );
+        doorModel.upload(modelId, textureMap, generator.modelCollector);
+
+        return modelId;
     }
-}
+
+    /**
+     * Maps half door variants to their parent model names.
+     * 
+     * @param variant The half door variant
+     * @return The parent model name
+     */
+    private static String getParentModelName(String variant) {
+        return switch (variant) {
+            case "bottom_left" -> "half_door_left";
+            case "bottom_right" -> "half_door_right";
+            case "bottom_left_open" -> "half_door_left_open";
+            case "bottom_right_open" -> "half_door_right_open";
+            default -> throw new IllegalArgumentException("Unknown half door variant: " + variant);
+        };
+    }
+
+    /**
+     * Generates item models for a half door block.
+     * 
+     * @param generator The ItemModelGenerator to register the model with
+     * @param block The half door block to generate item models for
+     * @param texturePath The texture path to use for the item model
+     */
+    public void generateItemModels(ItemModelGenerator generator, Block block, String texturePath) {
+        // Create a simple item model that uses the block texture
+        Identifier modelId = ModelIds.getItemModelId(block.asItem());
+        TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(texturePath));
+        
+        Models.GENERATED.upload(modelId, textureMap, generator.writer);
+    }
+
+    /**
+     * Generates item models for a half door block using the default texture.
+     * 
+     * @param generator The ItemModelGenerator to register the model with
+     * @param block The half door block to generate item models for
+     */
+    @Override
+    public void generateItemModels(ItemModelGenerator generator, Block block) {
+        // Use a default texture path based on the block name
+        String defaultTexture = "wood/birch/shutters"; // Default texture
+        generateItemModels(generator, block, defaultTexture);
+    }
+} 

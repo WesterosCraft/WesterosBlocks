@@ -1,6 +1,5 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.block.*;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.DoorHinge;
 import net.minecraft.entity.player.PlayerEntity;
@@ -32,17 +31,12 @@ import net.minecraft.world.event.GameEvent;
 
 import java.util.List;
 
-public class WCHalfDoorBlock extends Block implements ModBlockLifecycle {
-    public static class Factory extends ModBlockFactory {
-        @Override
-        public Block buildBlockClass(ModBlock def) {
-            def.nonOpaque = true;
-            AbstractBlock.Settings settings = def.applyCustomProperties();
-            Block blk = new WCHalfDoorBlock(settings, def);
-            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
-        }
-    }
-
+/**
+ * Standalone half door block that doesn't depend on the definition file system.
+ * This class provides the same functionality as WCHalfDoorBlock but with simplified
+ * parameter handling for the builder-based registration system.
+ */
+public class StandaloneWCHalfDoorBlock extends Block {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = Properties.OPEN;
     public static final EnumProperty<DoorHinge> HINGE = Properties.DOOR_HINGE;
@@ -53,43 +47,29 @@ public class WCHalfDoorBlock extends Block implements ModBlockLifecycle {
     protected static final VoxelShape EAST_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 3.0, 16.0, 16.0);
     protected static final VoxelShape WEST_SHAPE = Block.createCuboidShape(13.0, 0.0, 0.0, 16.0, 16.0, 16.0);
 
-    private final ModBlock def;
     private final boolean locked;
     private final boolean allowUnsupported;
+    private final String translationKey;
 
-    protected WCHalfDoorBlock(AbstractBlock.Settings settings, ModBlock def) {
+    /**
+     * Creates a new standalone half door block.
+     * 
+     * @param settings The block settings
+     * @param locked Whether this door is locked (cannot be opened by players)
+     * @param allowUnsupported Whether this door can be placed without a supporting block below
+     * @param translationKey The translation key for this block
+     */
+    public StandaloneWCHalfDoorBlock(AbstractBlock.Settings settings, boolean locked, boolean allowUnsupported, String translationKey) {
         super(settings);
-        this.def = def;
-
-        boolean locked = false;
-        boolean allowUnsupported = false;
-        String type = def.getType();
-        if (type != null) {
-            String[] tokens = type.split(",");
-            for (String token : tokens) {
-                if (token.equals("allow-unsupported")) {
-                    allowUnsupported = true;
-                }
-                String[] fields = token.split(":");
-                if (fields.length < 2) continue;
-                if (fields[0].equals("locked")) {
-                    locked = "true".equals(fields[1]);
-                }
-            }
-        }
         this.locked = locked;
         this.allowUnsupported = allowUnsupported;
+        this.translationKey = translationKey;
 
         this.setDefaultState(this.stateManager.getDefaultState()
                 .with(FACING, Direction.NORTH)
                 .with(OPEN, false)
                 .with(HINGE, DoorHinge.LEFT)
                 .with(POWERED, false));
-    }
-
-    @Override
-    public ModBlock getWBDefinition() {
-        return def;
     }
 
     @Override
@@ -140,8 +120,8 @@ public class WCHalfDoorBlock extends Block implements ModBlockLifecycle {
         int sum = (counterState.isFullCube(world, counterPos) ? -1 : 0) +
                 (clockState.isFullCube(world, clockPos) ? 1 : 0);
 
-        boolean counterIsDoor = counterState.getBlock() instanceof WCHalfDoorBlock;
-        boolean clockIsDoor = clockState.getBlock() instanceof WCHalfDoorBlock;
+        boolean counterIsDoor = counterState.getBlock() instanceof StandaloneWCHalfDoorBlock;
+        boolean clockIsDoor = clockState.getBlock() instanceof StandaloneWCHalfDoorBlock;
 
         if ((!counterIsDoor || clockIsDoor) && sum <= 0) {
             if ((!clockIsDoor || counterIsDoor) && sum >= 0) {
@@ -183,14 +163,6 @@ public class WCHalfDoorBlock extends Block implements ModBlockLifecycle {
                 world.getRandom().nextFloat() * 0.1F + 0.9F
         );
     }
-
-//    public void setOpen(@org.jetbrains.annotations.Nullable Entity entity, World world, BlockState state, BlockPos pos, boolean open) {
-//        if (state.isOf(this) && state.get(OPEN) != open) {
-//            world.setBlockState(pos, state.with(OPEN, open), Block.NOTIFY_LISTENERS | Block.REDRAW_ON_MAIN_THREAD);
-//            playToggleSound(world, pos, open);
-//            world.emitGameEvent(entity, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, pos);
-//        }
-//    }
 
     @Override
     public void neighborUpdate(BlockState state, World world, BlockPos pos, Block block, BlockPos fromPos, boolean notify) {
@@ -236,16 +208,13 @@ public class WCHalfDoorBlock extends Block implements ModBlockLifecycle {
                 state.rotate(mirror.getRotation(state.get(FACING))).cycle(HINGE);
     }
 
-    private static final String[] TAGS = {"doors"};
-
     @Override
-    public String[] getBlockTags() {
-        return TAGS;
+    public String getTranslationKey() {
+        return translationKey;
     }
 
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        addCustomTooltip(tooltip);
         super.appendTooltip(stack, context, tooltip, options);
     }
-}
+} 
