@@ -133,7 +133,13 @@ public class StandaloneFlowerPotBlockExport extends ModelExport2 {
     @Override
     public void generateItemModels(ItemModelGenerator generator, Block block) {
         // For flower pots, the item model should inherit from the block model
-        generateItemModel(generator, block);
+        // This ensures the item gets the same tinting as the block
+        String modelPath = "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", "");
+        Model model = new Model(
+            Optional.of(WesterosBlocks.id(modelPath)),
+            Optional.empty()
+        );
+        generator.register(block.asItem(), model);
     }
 
     /**
