@@ -50,7 +50,7 @@ public class ModModelProvider extends FabricModelProvider {
             
             Map.entry("furnace", FurnaceBlockExport::new),
             // Map.entry("vines", VinesBlockExport::new),
-            Map.entry("flowerpot", FlowerPotExport::new),
+//            Map.entry("flowerpot", FlowerPotExport::new),
             Map.entry("fencegate", FenceGateBlockExport::new),
             Map.entry("particle", ParticleEmitterBlockExport::new),
             Map.entry("cuboid-vertical-8way", CuboidVertical8WayBlockExport::new)
@@ -202,10 +202,10 @@ public class ModModelProvider extends FabricModelProvider {
 //                    CuboidWall16WayBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
 //                    break;
 //                }
-                case "flowerpot": {
-                    FlowerPotExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-                    break;
-                }
+//                case "flowerpot": {
+//                    FlowerPotExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+//                    break;
+//                }
                 case "fence": {
                     FenceBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;

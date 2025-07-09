@@ -42,7 +42,7 @@ public class WesterosCreativeModeTabs {
             new TabDefinition("westeros_panelling_carvings_tab", "Panelling and Carvings", "grey_keystone"),
             new TabDefinition("westeros_metal_tab", "Metal", "oxidized_bronze_block"),
             new TabDefinition("westeros_windows_glass_tab", "Windows and Glass", "coloured_sept_window"),
-            new TabDefinition("westeros_furniture_tab", "Furniture", "table"),
+            new TabDefinition("westeros_furniture_tab", "Furniture", "oak_table"),
             new TabDefinition("westeros_decor_tab", "Decor", "dead_hare"),
             new TabDefinition("westeros_lighting_tab", "Lighting", "red_lantern2"),
             new TabDefinition("westeros_tool_blocks_tab", "Tool Blocks", "piston_extension"),

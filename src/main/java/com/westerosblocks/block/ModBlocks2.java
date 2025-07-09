@@ -1250,6 +1250,663 @@ public class ModBlocks2 {
             .texture("bracken/side1")
     );
 
+    // BROWN MUSHROOM BLOCKS
+    public static final Block BROWN_MUSHROOM_1 = registerPlantBlock(
+        "brown_mushroom_1",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("brown_mushroom_block/mushroom_brown_0")
+    );
+
+    public static final Block BROWN_MUSHROOM_2 = registerPlantBlock(
+        "brown_mushroom_2",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("brown_mushroom_block/mushroom_brown_1")
+    );
+
+    public static final Block BROWN_MUSHROOM_3 = registerPlantBlock(
+        "brown_mushroom_3",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("brown_mushroom_block/mushroom_brown_2")
+    );
+
+    public static final Block BROWN_MUSHROOM_4 = registerPlantBlock(
+        "brown_mushroom_4",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("brown_mushroom_block/mushroom_brown_3")
+    );
+
+    public static final Block BROWN_MUSHROOM_5 = registerPlantBlock(
+        "brown_mushroom_5",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("brown_mushroom_block/mushroom_brown_4")
+    );
+
+    public static final Block BROWN_MUSHROOM_6 = registerPlantBlock(
+        "brown_mushroom_6",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("brown_mushroom_block/mushroom_brown_5")
+    );
+
+    public static final Block BROWN_MUSHROOM_7 = registerPlantBlock(
+        "brown_mushroom_7",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("brown_mushroom_block/mushroom_brown_6")
+    );
+
+    public static final Block BROWN_MUSHROOM_8 = registerPlantBlock(
+        "brown_mushroom_8",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("brown_mushroom_block/mushroom_brown_7")
+    );
+
+    public static final Block BROWN_MUSHROOM_9 = registerPlantBlock(
+        "brown_mushroom_9",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("brown_mushroom_block/mushroom_brown_8")
+    );
+
+    public static final Block BROWN_MUSHROOM_10 = registerPlantBlock(
+        "brown_mushroom_10",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("brown_mushroom_block/mushroom_brown_9")
+    );
+
+    public static final Block BROWN_MUSHROOM_11 = registerPlantBlock(
+        "brown_mushroom_11",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("brown_mushroom_block/mushroom_brown_10")
+    );
+
+    public static final Block BROWN_MUSHROOM_12 = registerPlantBlock(
+        "brown_mushroom_12",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("brown_mushroom_block/mushroom_brown_11")
+    );
+
+    public static final Block BROWN_MUSHROOM_13 = registerPlantBlock(
+        "brown_mushroom_13",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("brown_mushroom_block/mushroom_brown_12")
+    );
+
+    // CORAL WEB BLOCKS
+    public static final Block CORAL_BRAIN_WEB = registerPlantBlock(
+        "coral_brain_web",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("stone")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("coral/brain/web1")
+    );
+
+    public static final Block CORAL_BUBBLE_WEB = registerPlantBlock(
+        "coral_bubble_web",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("stone")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("coral/bubble/web1")
+    );
+
+    public static final Block CORAL_FIRE_WEB = registerPlantBlock(
+        "coral_fire_web",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("stone")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("coral/fire/web1")
+    );
+
+    public static final Block CORAL_HORN_WEB = registerPlantBlock(
+        "coral_horn_web",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("stone")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("coral/horn/web1")
+    );
+
+    public static final Block CORAL_TUBE_WEB = registerPlantBlock(
+        "coral_tube_web",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("stone")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("coral/tube/web1")
+    );
+
+    // ADDITIONAL PLANT BLOCKS
+    public static final Block COW_PARSELY = registerPlantBlock(
+        "cow_parsely",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("cow_parsely/side1")
+    );
+
+    public static final Block CRANBERRY_BUSH = registerPlantBlock(
+        "cranberry_bush",
+        builder -> builder
+            .creativeTab("westeros_crops_herbs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("cranberry/base1")
+    );
+
+    public static final Block DEAD_BRACKEN = registerPlantBlock(
+        "dead_bracken",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("dead_bracken/side1")
+    );
+
+    public static final Block DEAD_BUSH = registerPlantBlock(
+        "dead_bush",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("dorne_bush_thorny/side1")
+    );
+
+    public static final Block DEAD_SCRUB_GRASS = registerPlantBlock(
+        "dead_scrub_grass",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("flowers/dead_scrub_grass1")
+    );
+
+    public static final Block DOCK_LEAF = registerPlantBlock(
+        "dock_leaf",
+        builder -> builder
+            .creativeTab("westeros_crops_herbs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("dock_leaf/side1")
+    );
+
+    public static final Block FIREWEED = registerPlantBlock(
+        "fireweed",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("fireweed/side1")
+    );
+
+    public static final Block GRASS = registerPlantBlock(
+        "grass",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("minecraft:block/fern/fern1")
+    );
+
+    public static final Block GREEN_LEAFY_HERB = registerPlantBlock(
+        "green_leafy_herb",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("flowers/green_leafy_herb")
+    );
+
+    public static final Block GREEN_SCRUB_GRASS = registerPlantBlock(
+        "green_scrub_grass",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("flowers/green_scrub_grass1")
+    );
+
+    public static final Block GREEN_SPINY_HERB = registerPlantBlock(
+        "green_spiny_herb",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("flowers/green_spiny_herb1")
+    );
+
+    public static final Block HEATHER = registerPlantBlock(
+        "heather",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("flowers/heather/side1")
+    );
+
+    public static final Block KELP = registerPlantBlock(
+        "kelp",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .texture("kelp/side1")
+    );
+
+    public static final Block LADY_FERN = registerPlantBlock(
+        "lady_fern",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("flowers/lady_fern")
+    );
+
+    // FLOWER BLOCKS
+    public static final Block MAGENTA_ROSES = registerPlantBlock(
+        "magenta_roses",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("flowers/magenta_roses1")
+    );
+
+    public static final Block MEADOW_FESCUE = registerPlantBlock(
+        "meadow_fescue",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("flowers/meadow_fescue/side1")
+    );
+
+    public static final Block NETTLE = registerPlantBlock(
+        "nettle",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("flowers/nettle")
+    );
+
+    public static final Block ORANGE_BELLS = registerPlantBlock(
+        "orange_bells",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("flowers/orange_bells1")
+    );
+
+    public static final Block ORANGE_BOG_ASPHODEL = registerPlantBlock(
+        "orange_bog_asphodel",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("flowers/orange_bog_asphodel1")
+    );
+
+    public static final Block ORANGE_MARIGOLDS = registerPlantBlock(
+        "orange_marigolds",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("flowers/orange_marigolds1")
+    );
+
+    public static final Block ORANGE_SUN_STAR = registerPlantBlock(
+        "orange_sun_star",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("flowers/orange_sun_star")
+    );
+
+    public static final Block ORANGE_TROLLIUS = registerPlantBlock(
+        "orange_trollius",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2)
+            .texture("flowers/orange_trollius1")
+    );
+
+    public static final Block PINK_ALLIUM = registerPlantBlock("pink_allium", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/pink_allium1"));
+    public static final Block PINK_PRIMROSE = registerPlantBlock("pink_primrose", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/pink_primrose1"));
+    public static final Block PINK_ROSES = registerPlantBlock("pink_roses", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/pink_roses1"));
+    public static final Block PINK_SWEET_PEAS = registerPlantBlock("pink_sweet_peas", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/pink_sweet_peas1"));
+    public static final Block PINK_THISTLE = registerPlantBlock("pink_thistle", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/pink_thistle/side1"));
+    public static final Block PINK_TULIPS = registerPlantBlock("pink_tulips", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/pink_tulips1"));
+    public static final Block PINK_WILDFLOWERS = registerPlantBlock("pink_wildflowers", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/pink_wildflowers"));
+    public static final Block PURPLE_ALPINE_SOWTHISTLE = registerPlantBlock("purple_alpine_sowthistle", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/purple_alpine_sowthistle/side1"));
+    public static final Block PURPLE_FOXGLOVE = registerPlantBlock("purple_foxglove", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/purple_foxglove1"));
+    public static final Block PURPLE_LAVENDER = registerPlantBlock("purple_lavender", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/purple_lavender1"));
+    public static final Block PURPLE_PANSIES = registerPlantBlock("purple_pansies", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/purple_pansies1"));
+    public static final Block PURPLE_ROSES = registerPlantBlock("purple_roses", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/purple_roses1"));
+    public static final Block PURPLE_VIOLETS = registerPlantBlock("purple_violets", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/purple_violets1"));
+    public static final Block RED_ASTER = registerPlantBlock("red_aster", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/red_aster1"));
+    public static final Block RED_CARNATIONS = registerPlantBlock("red_carnations", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/red_carnations1"));
+    public static final Block RED_CHRYSANTHEMUM = registerPlantBlock("red_chrysanthemum", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/red_chrysanthemum1"));
+    public static final Block RED_DARK_ROSES = registerPlantBlock("red_dark_roses", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/red_dark_roses1"));
+    public static final Block RED_FERN = registerPlantBlock("red_fern", builder -> builder.creativeTab("westeros_grasses_shrubs_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("red_fern/side1"));
+    public static final Block RED_FLOWERING_SPINY_HERB = registerPlantBlock("red_flowering_spiny_herb", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/red_flowering_spiny_herb1"));
+    public static final Block RED_MUSHROOM_1 = registerPlantBlock("red_mushroom_1", builder -> builder.creativeTab("westeros_grasses_shrubs_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("red_mushroom_block/mushroom_red_0"));
+    public static final Block RED_MUSHROOM_2 = registerPlantBlock("red_mushroom_2", builder -> builder.creativeTab("westeros_grasses_shrubs_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("red_mushroom_block/mushroom_red_1"));
+    public static final Block RED_MUSHROOM_3 = registerPlantBlock("red_mushroom_3", builder -> builder.creativeTab("westeros_grasses_shrubs_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("red_mushroom_block/mushroom_red_2"));
+    public static final Block RED_MUSHROOM_4 = registerPlantBlock("red_mushroom_4", builder -> builder.creativeTab("westeros_grasses_shrubs_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("red_mushroom_block/mushroom_red_3"));
+    public static final Block RED_MUSHROOM_5 = registerPlantBlock("red_mushroom_5", builder -> builder.creativeTab("westeros_grasses_shrubs_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("red_mushroom_block/mushroom_red_4"));
+    public static final Block RED_MUSHROOM_6 = registerPlantBlock("red_mushroom_6", builder -> builder.creativeTab("westeros_grasses_shrubs_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("red_mushroom_block/mushroom_red_5"));
+    public static final Block RED_MUSHROOM_7 = registerPlantBlock("red_mushroom_7", builder -> builder.creativeTab("westeros_grasses_shrubs_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("red_mushroom_block/mushroom_red_6"));
+    public static final Block RED_MUSHROOM_8 = registerPlantBlock("red_mushroom_8", builder -> builder.creativeTab("westeros_grasses_shrubs_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("red_mushroom_block/mushroom_red_7"));
+    public static final Block RED_MUSHROOM_9 = registerPlantBlock("red_mushroom_9", builder -> builder.creativeTab("westeros_grasses_shrubs_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("red_mushroom_block/mushroom_red_8"));
+    public static final Block RED_POPPIES = registerPlantBlock("red_poppies", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/red_poppies1"));
+    public static final Block RED_ROSES = registerPlantBlock("red_roses", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/red_roses1"));
+    public static final Block RED_SORREL = registerPlantBlock("red_sorrel", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/red_sorrel1"));
+    public static final Block RED_SOURLEAF_BUSH = registerPlantBlock("red_sourleaf_bush", builder -> builder.creativeTab("westeros_crops_herbs_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/red_sourleaf_bush1"));
+    public static final Block RED_TULIPS = registerPlantBlock("red_tulips", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/red_tulips1"));
+    public static final Block STRAWBERRY_BUSH = registerPlantBlock("strawberry_bush", builder -> builder.creativeTab("westeros_crops_herbs_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/strawberry"));
+    public static final Block THICK_GRASS = registerPlantBlock("thick_grass", builder -> builder.creativeTab("westeros_grasses_shrubs_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("minecraft:block/grass/grass1"));
+    public static final Block UNSHADED_GRASS = registerPlantBlock("unshaded_grass", builder -> builder.creativeTab("westeros_grasses_shrubs_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("deadbush/side1"));
+    public static final Block WHITE_CHAMOMILE = registerPlantBlock("white_chamomile", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/white_chamomile1"));
+    public static final Block WHITE_DAISIES = registerPlantBlock("white_daisies", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/white_daisies1"));
+    public static final Block WHITE_LILYOFTHEVALLEY = registerPlantBlock("white_lilyofthevalley", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/white_lily_valley1"));
+    public static final Block WHITE_PEONY = registerPlantBlock("white_peony", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/white_peony1"));
+    public static final Block WHITE_ROSES = registerPlantBlock("white_roses", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/white_roses1"));
+    public static final Block YELLOW_BEDSTRAW = registerPlantBlock("yellow_bedstraw", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_bedstraw/side1"));
+    public static final Block YELLOW_BELLS = registerPlantBlock("yellow_bells", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_bells1"));
+    public static final Block YELLOW_BUTTERCUPS = registerPlantBlock("yellow_buttercups", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_buttercups1"));
+    public static final Block YELLOW_DAFFODILS = registerPlantBlock("yellow_daffodils", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_daffodils1"));
+    public static final Block YELLOW_DAISIES = registerPlantBlock("yellow_daisies", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_daisies1"));
+    public static final Block YELLOW_DANDELIONS = registerPlantBlock("yellow_dandelions", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_dandelions1"));
+    public static final Block YELLOW_HELLEBORE = registerPlantBlock("yellow_hellebore", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_hellebore1"));
+    public static final Block YELLOW_LUPINE = registerPlantBlock("yellow_lupine", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_lupine1"));
+    public static final Block YELLOW_ROSES = registerPlantBlock("yellow_roses", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_roses1"));
+    public static final Block YELLOW_RUDBECKIA = registerPlantBlock("yellow_rudbeckia", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_rudbeckia1"));
+    public static final Block YELLOW_SUNFLOWER = registerPlantBlock("yellow_sunflower", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_sunflower1"));
+    public static final Block YELLOW_TANSY = registerPlantBlock("yellow_tansy", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_tansy"));
+    public static final Block YELLOW_WILDFLOWERS = registerPlantBlock("yellow_wildflowers", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_sunflower/side1"));
     // FLOWER POT BLOCKS
     public static final Block POTTED_BLUE_BELLS = registerFlowerPotBlock(
         "potted_blue_bells",
@@ -1267,41 +1924,638 @@ public class ModBlocks2 {
             .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_chicory/side1")
     );
 
+    public static final Block POTTED_BLUE_FLAX = registerFlowerPotBlock(
+        "potted_blue_flax",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(BLUE_FLAX)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_flax1")
+    );
 
-    // BATCH REGISTRATION METHODS FOR MASS BLOCK CREATION
-    // public static void registerArrowSlits() {
-    //     String[] materials = {
-    //         "arbor_brick", "black_granite", "grey_granite", "white_granite",
-    //         "red_brick", "yellow_brick", "blue_brick", "green_brick"
-    //     };
+    public static final Block POTTED_BLUE_FORGETMENOTS = registerFlowerPotBlock(
+        "potted_blue_forgetmenots",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(BLUE_FORGETMENOTS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_forgetmenots1")
+    );
 
-    //     for (String material : materials) {
-    //         registerArrowSlitBlock(material + "_arrow_slit", builder -> builder
-    //             .texture("westerosblocks:block/ashlar_third/" + material.replace("_brick", "") + "/all"));
-    //     }
-    // }
+    public static final Block POTTED_BLUE_HYACINTH = registerFlowerPotBlock(
+        "potted_blue_hyacinth",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(BLUE_HYACINTH)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_hyacinth1")
+    );
 
-    /**
-     * Parses block type string into parameters and flags
-     */
-    public static java.util.Map<String, String> parseBlockParameters(String typeString) {
-        java.util.Map<String, String> params = new java.util.HashMap<>();
-        if (typeString != null) {
-            for (String token : typeString.split(",")) {
-                token = token.trim();
-                if (token.contains(":")) {
-                    String[] parts = token.split(":", 2);
-                    params.put(parts[0].trim(), parts[1].trim());
-                } else {
-                    // For flags without values, store them with an empty string value
-                    params.put(token, "");
-                }
-            }
-        }
-        return params;
-    }
+    public static final Block POTTED_BLUE_ORCHID = registerFlowerPotBlock(
+        "potted_blue_orchid",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(BLUE_ORCHID)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_orchid1")
+    );
 
-    // NEW BUILDER-BASED REGISTRATION METHODS WITH DEFAULTS
+    public static final Block POTTED_BLUE_SWAMP_BELLS = registerFlowerPotBlock(
+        "potted_blue_swamp_bells",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(BLUE_SWAMP_BELLS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_swamp_bells1")
+    );
+
+    public static final Block POTTED_BRACKEN = registerFlowerPotBlock(
+        "potted_bracken",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(BRACKEN)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "bracken/side1")
+    );
+
+    // Additional potted flowerpot blocks
+    public static final Block POTTED_BROWN_MUSHROOM_1 = registerFlowerPotBlock(
+        "potted_brown_mushroom_1",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(BROWN_MUSHROOM_1)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "brown_mushroom_block/mushroom_brown_0")
+    );
+
+    public static final Block POTTED_BROWN_MUSHROOM_3 = registerFlowerPotBlock(
+        "potted_brown_mushroom_3",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(BROWN_MUSHROOM_3)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "brown_mushroom_block/mushroom_brown_2")
+    );
+
+    public static final Block POTTED_BROWN_MUSHROOM_6 = registerFlowerPotBlock(
+        "potted_brown_mushroom_6",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(BROWN_MUSHROOM_6)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "brown_mushroom_block/mushroom_brown_5")
+    );
+
+    public static final Block POTTED_BROWN_MUSHROOM_13 = registerFlowerPotBlock(
+        "potted_brown_mushroom_13",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(BROWN_MUSHROOM_13)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "brown_mushroom_block/mushroom_brown_12")
+    );
+
+    public static final Block POTTED_CATTAILS = registerFlowerPotBlock(
+        "potted_cattails",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(null) // No corresponding plant block yet
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "cattails/side1")
+    );
+
+    public static final Block POTTED_COW_PARSELY = registerFlowerPotBlock(
+        "potted_cow_parsely",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(COW_PARSELY)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "cow_parsely/side1")
+    );
+
+    public static final Block POTTED_DEAD_BRACKEN = registerFlowerPotBlock(
+        "potted_dead_bracken",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(null) // No corresponding plant block yet
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side1")
+    );
+
+    public static final Block POTTED_DEAD_BUSH = registerFlowerPotBlock(
+        "potted_dead_bush",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(DEAD_BUSH)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "dorne_bush_thorny/side1")
+    );
+
+    public static final Block POTTED_DEAD_SCRUB_GRASS = registerFlowerPotBlock(
+        "potted_dead_scrub_grass",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(DEAD_SCRUB_GRASS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/dead_scrub_grass1")
+    );
+
+    public static final Block POTTED_DOCK_LEAF = registerFlowerPotBlock(
+        "potted_dock_leaf",
+        builder -> builder
+            .creativeTab("westeros_crops_herbs_tab")
+            .plantContent(DOCK_LEAF)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "dock_leaf/side1")
+    );
+
+    public static final Block POTTED_FIREWEED = registerFlowerPotBlock(
+        "potted_fireweed",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(FIREWEED)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "fireweed/side1")
+    );
+
+    public static final Block POTTED_GRASS = registerFlowerPotBlock(
+        "potted_grass",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(GRASS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "minecraft:block/fern/fern1")
+    );
+
+    public static final Block POTTED_GREEN_LEAFY_HERB = registerFlowerPotBlock(
+        "potted_green_leafy_herb",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(GREEN_LEAFY_HERB)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_leafy_herb")
+    );
+
+    public static final Block POTTED_GREEN_SCRUB_GRASS = registerFlowerPotBlock(
+        "potted_green_scrub_grass",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(GREEN_SCRUB_GRASS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_scrub_grass1")
+    );
+
+    public static final Block POTTED_GREEN_SPINY_HERB = registerFlowerPotBlock(
+        "potted_green_spiny_herb",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(GREEN_SPINY_HERB)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_spiny_herb1")
+    );
+
+    public static final Block POTTED_HEATHER = registerFlowerPotBlock(
+        "potted_heather",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(HEATHER)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "heather/side1")
+    );
+
+    public static final Block POTTED_LADY_FERN = registerFlowerPotBlock(
+        "potted_lady_fern",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(LADY_FERN)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "lady_fern/side1")
+    );
+
+    public static final Block POTTED_MAGENTA_ROSES = registerFlowerPotBlock(
+        "potted_magenta_roses",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(MAGENTA_ROSES)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/magenta_roses1")
+    );
+
+    public static final Block POTTED_MEADOW_FESCUE = registerFlowerPotBlock(
+        "potted_meadow_fescue",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(MEADOW_FESCUE)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/meadow_fescue/side1")
+    );
+
+    public static final Block POTTED_NETTLE = registerFlowerPotBlock(
+        "potted_nettle",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(NETTLE)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "nettle/side1")
+    );
+
+    public static final Block POTTED_ORANGE_BELLS = registerFlowerPotBlock(
+        "potted_orange_bells",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(ORANGE_BELLS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_bells1")
+    );
+
+    public static final Block POTTED_ORANGE_BOG_ASPHODEL = registerFlowerPotBlock(
+        "potted_orange_bog_asphodel",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(ORANGE_BOG_ASPHODEL)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_bog_asphodel1")
+    );
+
+    public static final Block POTTED_ORANGE_MARIGOLDS = registerFlowerPotBlock(
+        "potted_orange_marigolds",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(ORANGE_MARIGOLDS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_marigolds1")
+    );
+
+    public static final Block POTTED_ORANGE_SUN_STAR = registerFlowerPotBlock(
+        "potted_orange_sun_star",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(ORANGE_SUN_STAR)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_sun_star1")
+    );
+
+    public static final Block POTTED_ORANGE_TROLLIUS = registerFlowerPotBlock(
+        "potted_orange_trollius",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(ORANGE_TROLLIUS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_trollius1")
+    );
+
+    public static final Block POTTED_PINK_ALLIUM = registerFlowerPotBlock(
+        "potted_pink_allium",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(PINK_ALLIUM)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_allium1")
+    );
+
+    public static final Block POTTED_PINK_PRIMROSE = registerFlowerPotBlock(
+        "potted_pink_primrose",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(PINK_PRIMROSE)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_primrose1")
+    );
+
+    public static final Block POTTED_PINK_ROSES = registerFlowerPotBlock(
+        "potted_pink_roses",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(PINK_ROSES)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_roses1")
+    );
+
+    public static final Block POTTED_PINK_SWEET_PEAS = registerFlowerPotBlock(
+        "potted_pink_sweet_peas",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(PINK_SWEET_PEAS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_sweet_peas1")
+    );
+
+    public static final Block POTTED_PINK_THISTLE = registerFlowerPotBlock(
+        "potted_pink_thistle",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(PINK_THISTLE)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_thistle/side1")
+    );
+
+    public static final Block POTTED_PINK_TULIPS = registerFlowerPotBlock(
+        "potted_pink_tulips",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(PINK_TULIPS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_tulips1")
+    );
+
+    public static final Block POTTED_PINK_WILDFLOWERS = registerFlowerPotBlock(
+        "potted_pink_wildflowers",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(PINK_WILDFLOWERS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_wildflowers")
+    );
+
+    public static final Block POTTED_PURPLE_ALPINE_SOWTHISTLE = registerFlowerPotBlock(
+        "potted_purple_alpine_sowthistle",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(PURPLE_ALPINE_SOWTHISTLE)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_alpine_sowthistle/side1")
+    );
+
+    public static final Block POTTED_PURPLE_FOXGLOVE = registerFlowerPotBlock(
+        "potted_purple_foxglove",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(PURPLE_FOXGLOVE)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_foxglove1")
+    );
+
+    public static final Block POTTED_PURPLE_LAVENDER = registerFlowerPotBlock(
+        "potted_purple_lavender",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(PURPLE_LAVENDER)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_lavender1")
+    );
+
+    public static final Block POTTED_PURPLE_PANSIES = registerFlowerPotBlock(
+        "potted_purple_pansies",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(PURPLE_PANSIES)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_pansies1")
+    );
+
+    public static final Block POTTED_PURPLE_ROSES = registerFlowerPotBlock(
+        "potted_purple_roses",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(PURPLE_ROSES)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_roses1")
+    );
+
+    public static final Block POTTED_PURPLE_VIOLETS = registerFlowerPotBlock(
+        "potted_purple_violets",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(PURPLE_VIOLETS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_violets1")
+    );
+
+    public static final Block POTTED_RED_ASTER = registerFlowerPotBlock(
+        "potted_red_aster",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(RED_ASTER)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_aster1")
+    );
+
+    public static final Block POTTED_RED_CARNATIONS = registerFlowerPotBlock(
+        "potted_red_carnations",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(RED_CARNATIONS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_carnations1")
+    );
+
+    public static final Block POTTED_RED_CHRYSANTHEMUM = registerFlowerPotBlock(
+        "potted_red_chrysanthemum",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(RED_CHRYSANTHEMUM)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_chrysanthemum1")
+    );
+
+    public static final Block POTTED_RED_DARK_ROSES = registerFlowerPotBlock(
+        "potted_red_dark_roses",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(RED_DARK_ROSES)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_dark_roses1")
+    );
+
+    public static final Block POTTED_RED_FERN = registerFlowerPotBlock(
+        "potted_red_fern",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(RED_FERN)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_fern/side1")
+    );
+
+    public static final Block POTTED_RED_FLOWERING_SPINY_HERB = registerFlowerPotBlock(
+        "potted_red_flowering_spiny_herb",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(RED_FLOWERING_SPINY_HERB)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_flowering_spiny_herb1")
+    );
+
+    public static final Block POTTED_RED_MUSHROOM_1 = registerFlowerPotBlock(
+        "potted_red_mushroom_1",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(RED_MUSHROOM_1)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_0")
+    );
+
+    public static final Block POTTED_RED_MUSHROOM_2 = registerFlowerPotBlock(
+        "potted_red_mushroom_2",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(RED_MUSHROOM_2)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_1")
+    );
+
+    public static final Block POTTED_RED_MUSHROOM_3 = registerFlowerPotBlock(
+        "potted_red_mushroom_3",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(RED_MUSHROOM_3)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_2")
+    );
+
+    public static final Block POTTED_RED_MUSHROOM_7 = registerFlowerPotBlock(
+        "potted_red_mushroom_7",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(null) // No corresponding plant block yet
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_6")
+    );
+
+    public static final Block POTTED_RED_MUSHROOM_8 = registerFlowerPotBlock(
+        "potted_red_mushroom_8",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(null) // No corresponding plant block yet
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_7")
+    );
+
+    public static final Block POTTED_RED_MUSHROOM_9 = registerFlowerPotBlock(
+        "potted_red_mushroom_9",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .plantContent(RED_MUSHROOM_9)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_8")
+    );
+
+    public static final Block POTTED_RED_POPPIES = registerFlowerPotBlock(
+        "potted_red_poppies",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(RED_POPPIES)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_poppies1")
+    );
+
+    public static final Block POTTED_RED_ROSES = registerFlowerPotBlock(
+        "potted_red_roses",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(RED_ROSES)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_roses1")
+    );
+
+    public static final Block POTTED_RED_SORREL = registerFlowerPotBlock(
+        "potted_red_sorrel",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(RED_SORREL)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_sorrel1")
+    );
+
+    public static final Block POTTED_RED_SOURLEAF_BUSH = registerFlowerPotBlock(
+        "potted_red_sourleaf_bush",
+        builder -> builder
+            .creativeTab("westeros_crops_herbs_tab")
+            .plantContent(RED_SOURLEAF_BUSH)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_sourleaf_bush1")
+    );
+
+    public static final Block POTTED_RED_TULIPS = registerFlowerPotBlock(
+        "potted_red_tulips",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(RED_TULIPS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_tulips1")
+    );
+
+    public static final Block POTTED_WHITE_CHAMOMILE = registerFlowerPotBlock(
+        "potted_white_chamomile",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(WHITE_CHAMOMILE)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_chamomile1")
+    );
+
+    public static final Block POTTED_WHITE_DAISIES = registerFlowerPotBlock(
+        "potted_white_daisies",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(WHITE_DAISIES)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_daisies1")
+    );
+
+    public static final Block POTTED_WHITE_LILYOFTHEVALLEY = registerFlowerPotBlock(
+        "potted_white_lilyofthevalley",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(WHITE_LILYOFTHEVALLEY)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_lily_valley1")
+    );
+
+    public static final Block POTTED_WHITE_PEONY = registerFlowerPotBlock(
+        "potted_white_peony",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(WHITE_PEONY)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_peony1")
+    );
+
+    public static final Block POTTED_WHITE_ROSES = registerFlowerPotBlock(
+        "potted_white_roses",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(WHITE_ROSES)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_roses1")
+    );
+
+    public static final Block POTTED_YELLOW_BEDSTRAW = registerFlowerPotBlock(
+        "potted_yellow_bedstraw",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(YELLOW_BEDSTRAW)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_bedstraw/side1")
+    );
+
+    public static final Block POTTED_YELLOW_BELLS = registerFlowerPotBlock(
+        "potted_yellow_bells",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(YELLOW_BELLS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_bells1")
+    );
+
+    public static final Block POTTED_YELLOW_BUTTERCUPS = registerFlowerPotBlock(
+        "potted_yellow_buttercups",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(YELLOW_BUTTERCUPS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_buttercups1")
+    );
+
+    public static final Block POTTED_YELLOW_DAFFODILS = registerFlowerPotBlock(
+        "potted_yellow_daffodils",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(YELLOW_DAFFODILS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_daffodils1")
+    );
+
+    public static final Block POTTED_YELLOW_DAISIES = registerFlowerPotBlock(
+        "potted_yellow_daisies",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(YELLOW_DAISIES)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_daisies1")
+    );
+
+    public static final Block POTTED_YELLOW_DANDELIONS = registerFlowerPotBlock(
+        "potted_yellow_dandelions",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(YELLOW_DANDELIONS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_dandelions1")
+    );
+
+    public static final Block POTTED_YELLOW_HELLEBORE = registerFlowerPotBlock(
+        "potted_yellow_hellebore",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(YELLOW_HELLEBORE)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_hellebore1")
+    );
+
+    public static final Block POTTED_YELLOW_LUPINE = registerFlowerPotBlock(
+        "potted_yellow_lupine",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(YELLOW_LUPINE)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_lupine1")
+    );
+
+    public static final Block POTTED_YELLOW_ROSES = registerFlowerPotBlock(
+        "potted_yellow_roses",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(YELLOW_ROSES)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_roses1")
+    );
+
+    public static final Block POTTED_YELLOW_RUDBECKIA = registerFlowerPotBlock(
+        "potted_yellow_rudbeckia",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(YELLOW_RUDBECKIA)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_rudbeckia1")
+    );
+
+    public static final Block POTTED_YELLOW_SUNFLOWER = registerFlowerPotBlock(
+        "potted_yellow_sunflower",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(YELLOW_SUNFLOWER)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_sunflower1")
+    );
+
+    public static final Block POTTED_YELLOW_TANSY = registerFlowerPotBlock(
+        "potted_yellow_tansy",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(YELLOW_TANSY)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_tansy1")
+    );
+
+    public static final Block POTTED_YELLOW_WILDFLOWERS = registerFlowerPotBlock(
+        "potted_yellow_wildflowers",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(YELLOW_WILDFLOWERS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_wildflowers1")
+    );
 
     @FunctionalInterface
     public interface BlockBuilderConfigurator {

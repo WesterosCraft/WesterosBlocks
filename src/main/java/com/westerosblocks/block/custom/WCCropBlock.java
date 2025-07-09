@@ -1,7 +1,6 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.ModBlocks2;
 import com.westerosblocks.block.ModBlock;
 import com.westerosblocks.block.ModBlockFactory;
 import com.westerosblocks.block.ModBlockLifecycle;
@@ -25,7 +24,7 @@ public class WCCropBlock extends WCPlantBlock implements ModBlockLifecycle {
             if (state != null) {
                 tempSTATE = state;
             }
-            Map<String, String> params = ModBlocks2.parseBlockParameters(def.getType());
+            Map<String, String> params = ModBlocks.parseBlockParameters(def.getType());
 
             if (params.containsKey(ModBlock.LAYER_SENSITIVE)) {
                 tempLAYERS = Properties.LAYERS;

@@ -23,9 +23,11 @@ public class SandBlockExport extends ModelExport2 {
             "all"
         );
 
-        // Register a simple block state with no variations
-        // For blocks with no properties, we can use the registerSimpleCubeAll method
-        generator.registerSimpleCubeAll(block);
+        // Register a simple block state with our custom model (no properties)
+        BlockStateVariant variant = BlockStateVariant.create().put(VariantSettings.MODEL, modelId);
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block, variant)
+        );
     }
 
     @Override

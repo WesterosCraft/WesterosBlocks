@@ -38,7 +38,7 @@ public class WCSlabBlock extends SlabBlock implements ModBlockLifecycle {
             }
             boolean doConnectstate = false;
 
-            Map<String, String> params = ModBlocks2.parseBlockParameters(def.getType());
+            Map<String, String> params = ModBlocks.parseBlockParameters(def.getType());
             if (params.containsKey("connectstate")) {
                 doConnectstate = true;
                 tempCONNECTSTATE = CONNECTSTATE;

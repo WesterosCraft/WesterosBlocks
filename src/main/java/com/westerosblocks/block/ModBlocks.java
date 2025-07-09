@@ -140,6 +140,8 @@ public class ModBlocks {
         return Registries.BLOCK.get(id);
     }
 
+
+
     public static void crash(Exception x, String msg) {
         throw new CrashException(new CrashReport(msg, x));
     }
@@ -154,8 +156,24 @@ public class ModBlocks {
                 (block.customTags != null && block.customTags.contains("test"));
     }
 
-
-
-
+    /**
+     * Parses block type string into parameters and flags
+     */
+    public static java.util.Map<String, String> parseBlockParameters(String typeString) {
+        java.util.Map<String, String> params = new java.util.HashMap<>();
+        if (typeString != null) {
+            for (String token : typeString.split(",")) {
+                token = token.trim();
+                if (token.contains(":")) {
+                    String[] parts = token.split(":", 2);
+                    params.put(parts[0].trim(), parts[1].trim());
+                } else {
+                    // For flags without values, store them with an empty string value
+                    params.put(token, "");
+                }
+            }
+        }
+        return params;
+    }
 
 }
