@@ -1,10 +1,5 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.block.ModBlockFactory;
-import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -13,75 +8,40 @@ import net.minecraft.text.Text;
 
 import java.util.List;
 
-public class WCFlowerPotBlock extends FlowerPotBlock implements ModBlockLifecycle {
+/**
+ * Standalone flower pot block that doesn't depend on ModBlock functionality.
+ * This class provides the same core functionality as WCFlowerPotBlock but
+ * without the definition-based system dependencies.
+ */
+public class WCFlowerPotBlock extends FlowerPotBlock {
 
-    public static class Factory extends ModBlockFactory {
-        @Override
-        public Block buildBlockClass(ModBlock def) {
-            Block content = Blocks.AIR;
-            String emptyPotID = "minecraft:flower_pot";
-            String plantBlockID = null;
-
-            if (def.getType() != null) {
-                String[] toks = def.getType().split(",");
-                for (String tok : toks) {
-                    if (tok.startsWith("pot-id:")) {
-                        emptyPotID = tok.substring(tok.indexOf(':') + 1).trim();
-                    }
-                    if (tok.equals("empty-pot")) {
-                        emptyPotID = null;
-                    }
-                    if (tok.startsWith("plant-id:")) {
-                        plantBlockID = tok.substring(tok.indexOf(':') + 1).trim();
-                    }
-                }
-            }
-
-            // Get empty pot block
-            if (emptyPotID != null) {
-                Block potBlock = ModBlocks.findBlockByName(emptyPotID, "minecraft");
-                if (!(potBlock instanceof FlowerPotBlock) || potBlock == Blocks.AIR) {
-                    WesterosBlocks.LOGGER.error("emptyPotID '{}' not found or invalid for block '{}'",
-                            emptyPotID, def.blockName);
-                    return null;
-                }
-
-                // Get plant block if specified
-                if (plantBlockID != null) {
-                    Block plant = ModBlocks.findBlockByName(plantBlockID, "minecraft");
-                    if (plant == null || plant == Blocks.AIR) {
-                        WesterosBlocks.LOGGER.error("plantBlockID '{}' not found for block '{}'",
-                                plantBlockID, def.blockName);
-                        return null;
-                    }
-                    content = plant;
-                }
-            }
-
-            // Create and register the flower pot block
-            AbstractBlock.Settings settings = def.applyCustomProperties();
-            Block blk = new WCFlowerPotBlock(content, settings, def);
-            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, def.nonOpaque);
-        }
-    }
-
-    protected final ModBlock def;
-
-    protected WCFlowerPotBlock(Block content, AbstractBlock.Settings settings, ModBlock def) {
+    /**
+     * Creates a flower pot block with the specified content block.
+     * 
+     * @param content The block that will be placed inside the flower pot
+     * @param settings The block settings
+     */
+    public WCFlowerPotBlock(Block content, AbstractBlock.Settings settings) {
         super(content, settings);
-        this.def = def;
     }
 
-    @Override
-    public ModBlock getWBDefinition() {
-        return def;
+    /**
+     * Creates an empty flower pot block.
+     * 
+     * @param settings The block settings
+     */
+    public WCFlowerPotBlock(AbstractBlock.Settings settings) {
+        super(Blocks.AIR, settings);
     }
 
-    private static final String[] TAGS = {"flower_pots"};
-
-    @Override
-    public String[] getBlockTags() {
-        return TAGS;
+    /**
+     * Override this method to add custom tooltips to the flower pot.
+     * The default implementation does nothing.
+     * 
+     * @param tooltip The tooltip list to add to
+     */
+    protected void addCustomTooltip(List<Text> tooltip) {
+        // Override in subclasses to add custom tooltips
     }
 
     @Override
@@ -89,4 +49,14 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements ModBlockLifecycl
         addCustomTooltip(tooltip);
         super.appendTooltip(stack, context, tooltip, options);
     }
-}
+
+    /**
+     * Get the block tags for this flower pot block.
+     * Override this method to provide custom tags.
+     * 
+     * @return Array of block tag names
+     */
+    public String[] getBlockTags() {
+        return new String[]{"flower_pots"};
+    }
+} 

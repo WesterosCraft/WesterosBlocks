@@ -1,100 +1,107 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.block.ModBlockStateRecord;
-import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 
-import java.util.*;
+import java.util.Optional;
 
-public class CrossBlockExport extends ModelExport {
-    private final BlockStateModelGenerator generator;
-    private final Block block;
-    private final ModBlock def;
-    protected boolean layerSensitive = false;
-
-    private static final String[] LAYER_CONDITIONS = {
-            "layers=8", "layers=1", "layers=2", "layers=3",
-            "layers=4", "layers=5", "layers=6", "layers=7"
-    };
-
-    public CrossBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
-        super(generator, block, def);
-        this.generator = generator;
-        this.block = block;
-        this.def = def;
-        String t = def.getType();
-        if ((t != null) && (t.contains(ModBlock.LAYER_SENSITIVE))) {
-            layerSensitive = true;
-        }
+/**
+ * Standalone cross block export for builder-based block registration.
+ * Generates cross models similar to CrossBlockExport but for the new system.
+ */
+public class CrossBlockExport extends ModelExport2 {
+    
+    public CrossBlockExport() {
     }
-
-    public void generateBlockStateModels() {
-        String[] conditions = layerSensitive ? LAYER_CONDITIONS : new String[]{""};
-        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
-        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
-        int rotationCount = def.rotateRandom ? 4 : 1;
-
-        for (int layer = 0; layer < conditions.length; layer++) {
-            String layerCondition = conditions[layer];
-
-            for (int idx = 0; idx < def.states.size(); idx++) {
-                ModBlockStateRecord currentRec = def.states.get(idx);
-                String id = currentRec.stateID == null ? "base" : currentRec.stateID;
-                if (layer > 0) {
-                    id = id + "_layer" + layer;
-                }
-
-                for (int setIdx = 0; setIdx < currentRec.getRandomTextureSetCount(); setIdx++) {
-                    ModBlock.RandomTextureSet set = currentRec.getRandomTextureSet(setIdx);
-
-                    for (int rotIdx = 0; rotIdx < rotationCount; rotIdx++) {
-                        Identifier modelId = getModelId(id, setIdx, currentRec.isCustomModel());
-                        Set<String> stateIDs = currentRec.stateID == null ? null : Collections.singleton(currentRec.stateID);
-                        BlockStateVariant variant = VariantBuilder.createWithRotation(modelId, set, rotIdx > 0 ? 90 * rotIdx : 0);
-                        blockStateBuilder.addVariant(layerCondition, variant, stateIDs, variants);
-                    }
-                }
-
-                if (!currentRec.isCustomModel()) {
-                    generateCrossModel(generator, currentRec, id, layer);
-                }
-            }
-        }
-
-        generateBlockStateFiles(generator, block, variants);
+    
+    @Override
+    public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {
+        generateBlockStateModels(generator, block, texturePath, false, 1);
     }
-
-    private void generateCrossModel(BlockStateModelGenerator generator, ModBlockStateRecord rec, String id, int layer) {
-        boolean isTinted = rec.isTinted();
-
-        for (int setIdx = 0; setIdx < rec.getRandomTextureSetCount(); setIdx++) {
-            ModBlock.RandomTextureSet set = rec.getRandomTextureSet(setIdx);
-            TextureMap textureMap = new TextureMap()
-                    .put(TextureKey.CROSS, createBlockIdentifier(set.getTextureByIndex(0)));
-            Identifier modelId = getModelId(id, setIdx, false);
-            String parentPath = isTinted ? "tinted/cross" : "untinted/cross";
-            if (layer > 0) {
-                parentPath += "_layer" + layer;
-            }
-
-            Model model = new Model(
-                    Optional.of(WesterosBlocks.id("block/" + parentPath)),
-                    Optional.empty(),
-                    TextureKey.CROSS
+    
+    /**
+     * Generates block state models for cross blocks.
+     * 
+     * @param generator The BlockStateModelGenerator to use
+     * @param block The block to generate models for
+     * @param texturePath The texture path to use
+     * @param isTinted Whether the block should be tinted
+     * @param rotationCount Number of random rotations (1 or 4)
+     */
+    public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath, boolean isTinted, int rotationCount) {
+        // Create the cross model
+        Identifier modelId = createCrossModel(generator, block, texturePath, isTinted);
+        
+        // Create variants for different rotations
+        if (rotationCount == 1) {
+            // Single variant - no rotation
+            BlockStateVariant variant = createVariant(modelId);
+            generator.blockStateCollector.accept(
+                VariantsBlockStateSupplier.create(block, variant)
             );
-            model.upload(modelId, textureMap, generator.modelCollector);
+        } else {
+            // Multiple variants with rotations
+            BlockStateVariant[] variants = new BlockStateVariant[rotationCount];
+            for (int rotation = 0; rotation < rotationCount; rotation++) {
+                variants[rotation] = createVariant(modelId, rotation * 90);
+            }
+            generator.blockStateCollector.accept(
+                VariantsBlockStateSupplier.create(block, variants)
+            );
         }
     }
-
-    private Identifier getModelId(String id, int setIdx, boolean isCustom) {
-        return getBaseModelId(id, setIdx, isCustom);
+    
+    /**
+     * Creates a cross model with the specified texture.
+     * 
+     * @param generator The BlockStateModelGenerator to use
+     * @param block The block to create a model for
+     * @param texturePath The texture path to use
+     * @param isTinted Whether the block should be tinted
+     * @return The created model identifier
+     */
+    private Identifier createCrossModel(BlockStateModelGenerator generator, Block block, String texturePath, boolean isTinted) {
+        String parentPath = isTinted ? "block/tinted/cross" : "block/untinted/cross";
+        Identifier modelId = createModelId(block);
+        Identifier textureId = createBlockIdentifier(texturePath);
+        
+        TextureMap textureMap = new TextureMap()
+            .put(TextureKey.CROSS, textureId);
+        
+        Model model = new Model(
+            Optional.of(WesterosBlocks.id(parentPath)),
+            Optional.empty(),
+            TextureKey.CROSS
+        );
+        
+        model.upload(modelId, textureMap, generator.modelCollector);
+        return modelId;
     }
-
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block currentBlock, ModBlock blockDefinition) {
-        generateBasicItemModel(itemModelGenerator, currentBlock, blockDefinition);
+    
+    @Override
+    public void generateItemModels(ItemModelGenerator generator, Block block) {
+        // Use the same approach as the old CrossBlockExport - no tinting for items
+        // For the default case, we need to determine the texture path from the block name
+        String texturePath = "flowers/" + block.getTranslationKey().replace("block.westerosblocks.", "");
+        generateItemModels(generator, block, texturePath);
     }
-}
+    
+    /**
+     * Generates item models for cross blocks with a specific texture.
+     * 
+     * @param generator The ItemModelGenerator to use
+     * @param block The block to generate item models for
+     * @param texturePath The texture path to use
+     */
+    public void generateItemModels(ItemModelGenerator generator, Block block, String texturePath) {
+        TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(texturePath));
+        
+        Models.GENERATED.upload(
+            ModelIds.getItemModelId(block.asItem()),
+            textureMap,
+            generator.writer
+        );
+    }
+} 

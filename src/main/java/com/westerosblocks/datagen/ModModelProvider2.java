@@ -18,8 +18,8 @@ public class ModModelProvider2 {
     static FanBlockExport fanExporter = new FanBlockExport();
     static VinesBlockExport vinesExporter = new VinesBlockExport();
     static HalfDoorBlockExport halfDoorExporter = new HalfDoorBlockExport();
-    static StandaloneCrossBlockExport crossExporter = new StandaloneCrossBlockExport();
-    static StandaloneFlowerPotBlockExport flowerPotExporter = new StandaloneFlowerPotBlockExport();
+    static CrossBlockExport crossExporter = new CrossBlockExport();
+    static FlowerPotBlockExport flowerPotExporter = new FlowerPotBlockExport();
 
     public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         // Arrow Slits

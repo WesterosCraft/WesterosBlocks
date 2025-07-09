@@ -1,7 +1,6 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.custom.StandaloneFlowerPotBlock;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
@@ -22,7 +21,7 @@ import java.util.Optional;
  * flowerPotExporter.generateItemModels(itemGenerator, block);
  * }</pre>
  */
-public class StandaloneFlowerPotBlockExport extends ModelExport2 {
+public class FlowerPotBlockExport extends ModelExport2 {
 
     /**
      * Generates block state models for a flower pot block.

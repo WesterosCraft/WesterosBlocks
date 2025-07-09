@@ -9,7 +9,7 @@ import com.westerosblocks.block.custom.WCFanBlock;
 import com.westerosblocks.block.custom.WCWallFanBlock;
 import com.westerosblocks.block.custom.WCVinesBlock;
 import com.westerosblocks.block.custom.WCHalfDoorBlock;
-import com.westerosblocks.block.custom.StandaloneFlowerPotBlock;
+import com.westerosblocks.block.custom.WCFlowerPotBlock;
 import com.westerosblocks.util.ModWoodType;
 import com.westerosblocks.util.ModBlockSoundGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -907,9 +907,9 @@ public class BlockBuilder {
             }
             case VINES -> new WCVinesBlock(settings, name, creativeTab, allowUnsupported, noParticle, canGrowDownward);
             case PLANT -> {
-                yield new StandaloneWCPlantBlock(settings, name, creativeTab, layerSensitive, toggleOnUse);
+                yield new WCPlantBlock(settings, name, creativeTab, layerSensitive, toggleOnUse);
             }
-            case FLOWER_POT -> new StandaloneFlowerPotBlock(plantContent != null ? plantContent : Blocks.AIR, settings);
+            case FLOWER_POT -> new WCFlowerPotBlock(plantContent != null ? plantContent : Blocks.AIR, settings);
         };
     }
 
