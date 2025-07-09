@@ -1496,6 +1496,7 @@ public class ModBlocks2 {
             .hardness(0.0f)
             .resistance(0.0f)
             .soundType("stone")
+            .nonOpaque()
             .texture("flower_pot"); // Default texture
 
         builder.setBlockType(BlockBuilder.BlockType.FLOWER_POT);

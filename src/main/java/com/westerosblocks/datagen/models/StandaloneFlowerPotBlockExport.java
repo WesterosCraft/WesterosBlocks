@@ -38,7 +38,31 @@ public class StandaloneFlowerPotBlockExport extends ModelExport2 {
         
         // Create the model with the three textures
         Identifier modelId = createModelId(block);
-        createFlowerPotModel(generator, block, modelId, dirtTexture, flowerPotTexture, plantTexture);
+        createFlowerPotModel(generator, block, modelId, dirtTexture, flowerPotTexture, plantTexture, false);
+        
+        // Register the block state with a simple variant (no rotation needed for flower pots)
+        BlockStateVariant variant = createVariant(modelId);
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block, variant)
+        );
+    }
+
+    /**
+     * Generates block state models for a flower pot block with tinting support.
+     * 
+     * @param generator The BlockStateModelGenerator to use
+     * @param block The flower pot block
+     * @param dirtTexture The dirt texture path (e.g., "minecraft:block/dirt")
+     * @param flowerPotTexture The flower pot texture path (e.g., "minecraft:block/flower_pot")
+     * @param plantTexture The plant texture path (e.g., "flowers/blue_bells")
+     * @param isTinted Whether the plant should be tinted
+     */
+    public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, 
+                                       String dirtTexture, String flowerPotTexture, String plantTexture, boolean isTinted) {
+        
+        // Create the model with the three textures
+        Identifier modelId = createModelId(block);
+        createFlowerPotModel(generator, block, modelId, dirtTexture, flowerPotTexture, plantTexture, isTinted);
         
         // Register the block state with a simple variant (no rotation needed for flower pots)
         BlockStateVariant variant = createVariant(modelId);
@@ -71,9 +95,10 @@ public class StandaloneFlowerPotBlockExport extends ModelExport2 {
      * @param dirtTexture The dirt texture path
      * @param flowerPotTexture The flower pot texture path
      * @param plantTexture The plant texture path
+     * @param isTinted Whether the plant should be tinted
      */
     private void createFlowerPotModel(BlockStateModelGenerator generator, Block block, Identifier modelId,
-                                    String dirtTexture, String flowerPotTexture, String plantTexture) {
+                                    String dirtTexture, String flowerPotTexture, String plantTexture, boolean isTinted) {
         
         // Create texture map with the three required textures
         TextureMap textureMap = new TextureMap()
@@ -83,8 +108,7 @@ public class StandaloneFlowerPotBlockExport extends ModelExport2 {
             .put(TextureKey.PARTICLE, createBlockIdentifier(flowerPotTexture));
 
         // Determine if we should use tinted or untinted template
-        // For now, we'll use untinted by default, but this could be made configurable
-        String parentPath = "untinted/flower_pot_cross";
+        String parentPath = isTinted ? "tinted/flower_pot_cross" : "untinted/flower_pot_cross";
 
         // Create the model
         Model model = new Model(
