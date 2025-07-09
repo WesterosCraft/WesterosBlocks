@@ -1250,6 +1250,23 @@ public class ModBlocks2 {
             .texture("bracken/side1")
     );
 
+    // FLOWER POT BLOCKS
+    public static final Block POTTED_BLUE_BELLS = registerFlowerPotBlock(
+        "potted_blue_bells",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(BLUE_BELLS)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_bells")
+    );
+
+    public static final Block POTTED_BLUE_CHICORY = registerFlowerPotBlock(
+        "potted_blue_chicory",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .plantContent(BLUE_CHICORY)
+            .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_chicory/side1")
+    );
+
 
     // BATCH REGISTRATION METHODS FOR MASS BLOCK CREATION
     // public static void registerArrowSlits() {
@@ -1470,6 +1487,18 @@ public class ModBlocks2 {
             .texture("flowers/plant"); // Default texture
 
         builder.setBlockType(BlockBuilder.BlockType.PLANT);
+        return configurator.configure(builder).register();
+    }
+
+    public static Block registerFlowerPotBlock(String name, BlockBuilderConfigurator configurator) {
+        BlockBuilder builder = new BlockBuilder(name)
+            .creativeTab("westeros_flowers_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .soundType("stone")
+            .texture("flower_pot"); // Default texture
+
+        builder.setBlockType(BlockBuilder.BlockType.FLOWER_POT);
         return configurator.configure(builder).register();
     }
 

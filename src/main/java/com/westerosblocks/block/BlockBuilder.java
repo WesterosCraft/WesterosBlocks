@@ -9,11 +9,13 @@ import com.westerosblocks.block.custom.WCFanBlock;
 import com.westerosblocks.block.custom.WCWallFanBlock;
 import com.westerosblocks.block.custom.WCVinesBlock;
 import com.westerosblocks.block.custom.WCHalfDoorBlock;
+import com.westerosblocks.block.custom.StandaloneFlowerPotBlock;
 import com.westerosblocks.util.ModWoodType;
 import com.westerosblocks.util.ModBlockSoundGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.WoodType;
 import net.minecraft.client.render.RenderLayer;
@@ -117,6 +119,7 @@ public class BlockBuilder {
     private boolean layerSensitive = false;
     private boolean toggleOnUse = false;
     private double[] boundingBox = null; // [xMin, xMax, yMin, yMax, zMin, zMax]
+    private Block plantContent = null; // For flower pot blocks
 
     /**
      * Creates a new BlockBuilder with the specified name.
@@ -665,6 +668,17 @@ public class BlockBuilder {
     }
 
     /**
+     * Sets the plant content for flower pot blocks.
+     * 
+     * @param plantContent The block that will be placed inside the flower pot
+     * @return this builder for method chaining
+     */
+    public BlockBuilder plantContent(Block plantContent) {
+        this.plantContent = plantContent;
+        return this;
+    }
+
+    /**
      * Sets the block type (called internally by registration methods).
      * 
      * @param blockType The type of custom block to create
@@ -895,6 +909,7 @@ public class BlockBuilder {
             case PLANT -> {
                 yield new StandaloneWCPlantBlock(settings, name, creativeTab, layerSensitive, toggleOnUse);
             }
+            case FLOWER_POT -> new StandaloneFlowerPotBlock(plantContent != null ? plantContent : Blocks.AIR, settings);
         };
     }
 
@@ -930,6 +945,8 @@ public class BlockBuilder {
         /** Vines blocks for climbing and decoration */
         VINES,
         /** Plant blocks for flowers and vegetation */
-        PLANT
+        PLANT,
+        /** Flower pot blocks for decorative plants */
+        FLOWER_POT
     }
 } 
