@@ -19,6 +19,7 @@ public class ModModelProvider2 {
     static VinesBlockExport vinesExporter = new VinesBlockExport();
     static HalfDoorBlockExport halfDoorExporter = new HalfDoorBlockExport();
     static StandaloneCrossBlockExport crossExporter = new StandaloneCrossBlockExport();
+    static StandaloneFlowerPotBlockExport flowerPotExporter = new StandaloneFlowerPotBlockExport();
 
     public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         // Arrow Slits
@@ -229,6 +230,12 @@ public class ModModelProvider2 {
             "flowers/blue_swamp_bells1", true, 4);
         crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BRACKEN, 
             "bracken/side1", true, 4);
+
+        // Flower Pot Blocks
+        flowerPotExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.POTTED_BLUE_BELLS, 
+            "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_bells");
+        flowerPotExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.POTTED_BLUE_CHICORY, 
+            "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_chicory/side1");
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -350,5 +357,9 @@ public class ModModelProvider2 {
         crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.BLUE_ORCHID, "flowers/blue_orchid1");
         crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.BLUE_SWAMP_BELLS, "flowers/blue_swamp_bells1");
         crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.BRACKEN, "bracken/side1");
+
+        // Flower Pot Blocks
+        flowerPotExporter.generateItemModels(itemModelGenerator, ModBlocks2.POTTED_BLUE_BELLS);
+        flowerPotExporter.generateItemModels(itemModelGenerator, ModBlocks2.POTTED_BLUE_CHICORY);
     }
 } 
