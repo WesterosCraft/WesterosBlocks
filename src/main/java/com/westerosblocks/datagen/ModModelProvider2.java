@@ -217,6 +217,18 @@ public class ModModelProvider2 {
             "flowers/blue_bells", true, 4);
         crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLUE_CHICORY, 
             "flowers/blue_chicory/side1", true, 4);
+        crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLUE_FLAX, 
+            "flowers/blue_flax1", true, 4);
+        crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLUE_FORGETMENOTS, 
+            "flowers/blue_forgetmenots1", true, 4);
+        crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLUE_HYACINTH, 
+            "flowers/blue_hyacinth1", true, 4);
+        crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLUE_ORCHID, 
+            "flowers/blue_orchid1", true, 4);
+        crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLUE_SWAMP_BELLS, 
+            "flowers/blue_swamp_bells1", true, 4);
+        crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BRACKEN, 
+            "bracken/side1", true, 4);
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -332,5 +344,11 @@ public class ModModelProvider2 {
         // Cross Blocks (Plant Blocks)
         crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.BLUE_BELLS, "flowers/blue_bells");
         crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.BLUE_CHICORY, "flowers/blue_chicory/side1");
+        crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.BLUE_FLAX, "flowers/blue_flax1");
+        crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.BLUE_FORGETMENOTS, "flowers/blue_forgetmenots1");
+        crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.BLUE_HYACINTH, "flowers/blue_hyacinth1");
+        crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.BLUE_ORCHID, "flowers/blue_orchid1");
+        crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.BLUE_SWAMP_BELLS, "flowers/blue_swamp_bells1");
+        crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.BRACKEN, "bracken/side1");
     }
 } 

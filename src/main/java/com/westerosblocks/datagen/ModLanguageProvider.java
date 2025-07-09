@@ -190,6 +190,12 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         // Cross block (plant) translations
         translationBuilder.add("block.westerosblocks.blue_bells", "Blue Bells");
         translationBuilder.add("block.westerosblocks.blue_chicory", "Blue Chicory");
+        translationBuilder.add("block.westerosblocks.blue_flax", "Blue Flax");
+        translationBuilder.add("block.westerosblocks.blue_forgetmenots", "Blue Forget-me-nots");
+        translationBuilder.add("block.westerosblocks.blue_hyacinth", "Blue Hyacinth");
+        translationBuilder.add("block.westerosblocks.blue_orchid", "Blue Orchid");
+        translationBuilder.add("block.westerosblocks.blue_swamp_bells", "Blue Swamp Bells");
+        translationBuilder.add("block.westerosblocks.bracken", "Bracken");
 
         // TODO can prob grab the item tag def json and generate this automatically when/if we get more
         // The format desired is tag.item.<namespace>.<path> for the translation key with slashes in path turned into periods."

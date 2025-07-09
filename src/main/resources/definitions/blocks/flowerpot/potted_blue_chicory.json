@@ -4,7 +4,7 @@
   "material": "wood",
   "creativeTab": "westeros_flowers_tab",
   "label": "Potted Blue Chicory",
-  "type": "plant-id:blue_chicory_old",
+  "type": "plant-id:blue_chicory",
   "randomTextures": [
     {
       "textures": [

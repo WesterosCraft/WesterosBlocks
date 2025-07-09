@@ -1160,6 +1160,96 @@ public class ModBlocks2 {
             .texture("flowers/blue_chicory/side1")
     );
 
+    public static final Block BLUE_FLAX = registerPlantBlock(
+        "blue_flax",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2) // 0.3-0.7, 0-0.6, 0.3-0.7
+            .texture("flowers/blue_flax1")
+    );
+
+    public static final Block BLUE_FORGETMENOTS = registerPlantBlock(
+        "blue_forgetmenots",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2) // 0.3-0.7, 0-0.6, 0.3-0.7
+            .texture("flowers/blue_forgetmenots1")
+    );
+
+    public static final Block BLUE_HYACINTH = registerPlantBlock(
+        "blue_hyacinth",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2) // 0.3-0.7, 0-0.6, 0.3-0.7
+            .texture("flowers/blue_hyacinth1")
+    );
+
+    public static final Block BLUE_ORCHID = registerPlantBlock(
+        "blue_orchid",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2) // 0.3-0.7, 0-0.6, 0.3-0.7
+            .texture("flowers/blue_orchid1")
+    );
+
+    public static final Block BLUE_SWAMP_BELLS = registerPlantBlock(
+        "blue_swamp_bells",
+        builder -> builder
+            .creativeTab("westeros_flowers_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2) // 0.3-0.7, 0-0.6, 0.3-0.7
+            .texture("flowers/blue_swamp_bells1")
+    );
+
+    public static final Block BRACKEN = registerPlantBlock(
+        "bracken",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .layerSensitive()
+            .boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2) // 0.3-0.7, 0-0.6, 0.3-0.7
+            .texture("bracken/side1")
+    );
+
 
     // BATCH REGISTRATION METHODS FOR MASS BLOCK CREATION
     // public static void registerArrowSlits() {
