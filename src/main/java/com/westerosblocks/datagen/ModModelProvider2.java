@@ -19,7 +19,9 @@ public class ModModelProvider2 {
     static VinesBlockExport vinesExporter = new VinesBlockExport();
     static HalfDoorBlockExport halfDoorExporter = new HalfDoorBlockExport();
     static CrossBlockExport crossExporter = new CrossBlockExport();
+    static WebBlockExport webExporter = new WebBlockExport();
     static FlowerPotBlockExport flowerPotExporter = new FlowerPotBlockExport();
+    static CropBlockExport2 cropExporter = new CropBlockExport2();
 
     public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         // Arrow Slits
@@ -596,6 +598,98 @@ public class ModModelProvider2 {
             "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_tansy");
         flowerPotExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.POTTED_YELLOW_WILDFLOWERS, 
             "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_wildflowers");
+
+        // Crop Blocks
+        cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CANDLE_ALTAR, 
+            "lighting/candle_altar/lit1");
+        cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_CARROTS, 
+            "carrots/carrots_stage_0");
+        cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_PEAS, 
+            "peas/peas_stage_0");
+        cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_TURNIPS, 
+            "turnips/turnips_stage_0");
+        cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_WHEAT, 
+            "wheat/wheat_stage_0");
+        cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SEAGRASS, 
+            "seagrass/side1");
+
+        // Web Blocks
+        crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ALYSSAS_TEARS_MIST_ONE, 
+            "alyssas_tears_mist/mist1", true, 4);
+        crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ALYSSAS_TEARS_MIST_TWO, 
+            "alyssas_tears_mist/mist2", true, 4);
+        crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ALYSSAS_TEARS_MIST_THREE, 
+            "alyssas_tears_mist/mist3", true, 4);
+        crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ALYSSAS_TEARS_MIST_FOUR, 
+            "alyssas_tears_mist/mist4", true, 4);
+        crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLACK_BRICICLE, 
+            "ashlar_melted/black/bricicle/side", true, 4);
+                crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BEES,
+            "web_block/bug_bees", true, 4);
+
+        // Additional web blocks
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BUSHEL_OF_HERBS,
+            "web_block/food_herbs");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BUSHEL_OF_SOURLEAF,
+            "web_block/food_sourleaf");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BUTTERFLY_BLUE,
+            "web_block/bug_butterfly_blue");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BUTTERFLY_ORANGE,
+            "web_block/bug_butterfly_orange");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BUTTERFLY_RED,
+            "web_block/bug_butterfly_red");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BUTTERFLY_WHITE,
+            "web_block/bug_butterfly_white");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BUTTERFLY_YELLOW,
+            "web_block/bug_butterfly_yellow");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CATTAILS,
+            "cattails/side1");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CHAIN_BLOCK_HARNESS,
+            "web_block/chain_blockharness");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CHILI_RISTRA,
+            "web_block/food_chili_ristra");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.COBWEB,
+            "cobweb/side1");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DEAD_FISH,
+            "dead_fish/fish_dead1");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DEAD_FOWL,
+            "dead_fowl/fowl");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DEAD_FROG,
+            "dead_frog/toad_dead1");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DEAD_HARE,
+            "dead_hare/rabbit_dead1");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DEAD_JUNGLE_TALL_GRASS,
+            "dead_jungle_tall_grass/down_side1");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DEAD_RAT,
+            "dead_rat/rat1");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DEAD_SAVANNA_TALL_GRASS,
+            "dead_savanna_tall_grass/dead_savanna_tall_grass");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DRAGONFLY,
+            "web_block/bug_dragonfly");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FLIES,
+            "web_block/bug_flies");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.GARLIC_STRAND,
+            "web_block/food_garlic_strand");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ICICLE,
+            "icicle/side");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.IRON_THRONE_RANDOM_BLADES,
+            "blades_random/side1");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.JUNGLE_TALL_FERN,
+            "jungle_tall_fern/side");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.JUNGLE_TALL_GRASS,
+            "jungle_tall_grass/down_side1");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ROPE_BLOCK_HARNESS,
+            "web_block/rope_blockharness");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SAUSAGES_LEG_OF_HAM,
+            "sausages_leg_of_ham/default");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SAVANNA_TALL_GRASS,
+            "savanna_tall_grass/savanna_tall_grass");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SMOKE,
+            "smoke/smoke1");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.VERTICAL_CHAIN,
+            "web_block/chain_vertical");
+        webExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.VERTICAL_ROPE,
+            "web_block/rope_vertical");
     }
 
     public static void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -920,5 +1014,54 @@ public class ModModelProvider2 {
         flowerPotExporter.generateItemModels(itemModelGenerator, ModBlocks2.POTTED_YELLOW_SUNFLOWER);
         flowerPotExporter.generateItemModels(itemModelGenerator, ModBlocks2.POTTED_YELLOW_TANSY);
         flowerPotExporter.generateItemModels(itemModelGenerator, ModBlocks2.POTTED_YELLOW_WILDFLOWERS);
+
+        // Crop Blocks
+        cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CANDLE_ALTAR, "lighting/candle_altar/lit1");
+        cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_CARROTS, "carrots/carrots_stage_0");
+        cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_PEAS, "peas/peas_stage_0");
+        cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_TURNIPS, "turnips/turnips_stage_0");
+        cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_WHEAT, "wheat/wheat_stage_0");
+        cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.SEAGRASS, "seagrass/side1");
+
+        // Web Blocks
+        crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.ALYSSAS_TEARS_MIST_ONE, "alyssas_tears_mist/mist1");
+        crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.ALYSSAS_TEARS_MIST_TWO, "alyssas_tears_mist/mist2");
+        crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.ALYSSAS_TEARS_MIST_THREE, "alyssas_tears_mist/mist3");
+        crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.ALYSSAS_TEARS_MIST_FOUR, "alyssas_tears_mist/mist4");
+        crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.BLACK_BRICICLE, "ashlar_melted/black/bricicle/side");
+        crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.BEES, "web_block/bug_bees");
+
+        // Additional web blocks item models
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.BUSHEL_OF_HERBS, "web_block/food_herbs");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.BUSHEL_OF_SOURLEAF, "web_block/food_sourleaf");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.BUTTERFLY_BLUE, "web_block/bug_butterfly_blue");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.BUTTERFLY_ORANGE, "web_block/bug_butterfly_orange");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.BUTTERFLY_RED, "web_block/bug_butterfly_red");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.BUTTERFLY_WHITE, "web_block/bug_butterfly_white");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.BUTTERFLY_YELLOW, "web_block/bug_butterfly_yellow");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.CATTAILS, "cattails/side1");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.CHAIN_BLOCK_HARNESS, "web_block/chain_blockharness");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.CHILI_RISTRA, "web_block/food_chili_ristra");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.COBWEB, "cobweb/side1");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.DEAD_FISH, "dead_fish/fish_dead1");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.DEAD_FOWL, "dead_fowl/fowl");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.DEAD_FROG, "dead_frog/toad_dead1");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.DEAD_HARE, "dead_hare/rabbit_dead1");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.DEAD_JUNGLE_TALL_GRASS, "dead_jungle_tall_grass/down_side1");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.DEAD_RAT, "dead_rat/rat1");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.DEAD_SAVANNA_TALL_GRASS, "dead_savanna_tall_grass/dead_savanna_tall_grass");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.DRAGONFLY, "web_block/bug_dragonfly");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.FLIES, "web_block/bug_flies");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.GARLIC_STRAND, "web_block/food_garlic_strand");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.ICICLE, "icicle/side");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.IRON_THRONE_RANDOM_BLADES, "blades_random/side1");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.JUNGLE_TALL_FERN, "jungle_tall_fern/side");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.JUNGLE_TALL_GRASS, "jungle_tall_grass/down_side1");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.ROPE_BLOCK_HARNESS, "web_block/rope_blockharness");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.SAUSAGES_LEG_OF_HAM, "sausages_leg_of_ham/default");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.SAVANNA_TALL_GRASS, "savanna_tall_grass/savanna_tall_grass");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.SMOKE, "smoke/smoke1");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.VERTICAL_CHAIN, "web_block/chain_vertical");
+        webExporter.generateItemModels(itemModelGenerator, ModBlocks2.VERTICAL_ROPE, "web_block/rope_vertical");
     }
 } 

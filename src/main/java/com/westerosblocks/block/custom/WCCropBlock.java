@@ -15,7 +15,7 @@ import net.minecraft.text.Text;
 import java.util.List;
 import java.util.Map;
 
-public class WCCropBlock extends WCPlantBlock implements ModBlockLifecycle {
+public class WCCropBlock extends OldWCPlantBlock implements ModBlockLifecycle {
     public static class Factory extends ModBlockFactory {
         @Override
         public Block buildBlockClass(ModBlock def) {

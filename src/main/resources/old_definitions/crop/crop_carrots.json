@@ -1,5 +1,5 @@
 {
-    "blockName": "crop_carrots",
+    "blockName": "crop_carrots_old",
     "blockType": "crop",
     "hardness": 5,
     "stepSound": "grass",

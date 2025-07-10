@@ -10,6 +10,7 @@ import com.westerosblocks.block.custom.WCWallFanBlock;
 import com.westerosblocks.block.custom.WCVinesBlock;
 import com.westerosblocks.block.custom.WCHalfDoorBlock;
 import com.westerosblocks.block.custom.WCFlowerPotBlock;
+import com.westerosblocks.block.custom.StandaloneWCWebBlock;
 import com.westerosblocks.util.ModWoodType;
 import com.westerosblocks.util.ModBlockSoundGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -909,7 +910,11 @@ public class BlockBuilder {
             case PLANT -> {
                 yield new WCPlantBlock(settings, name, creativeTab, layerSensitive, toggleOnUse);
             }
+            case CROP -> {
+                yield new WCCropBlockNew(settings, name, creativeTab, layerSensitive, toggleOnUse);
+            }
             case FLOWER_POT -> new WCFlowerPotBlock(plantContent != null ? plantContent : Blocks.AIR, settings);
+            case WEB -> new StandaloneWCWebBlock(settings, name, creativeTab, layerSensitive, toggleOnUse, false, tooltips);
         };
     }
 
@@ -946,7 +951,11 @@ public class BlockBuilder {
         VINES,
         /** Plant blocks for flowers and vegetation */
         PLANT,
+        /** Crop blocks for agricultural purposes */
+        CROP,
         /** Flower pot blocks for decorative plants */
-        FLOWER_POT
+        FLOWER_POT,
+        /** Web blocks for decorative and functional purposes */
+        WEB
     }
 } 

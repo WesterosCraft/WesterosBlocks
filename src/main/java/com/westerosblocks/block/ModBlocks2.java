@@ -10,9 +10,6 @@ import net.minecraft.block.WoodType;
  * using the BlockBuilder pattern with sensible defaults.
  */
 public class ModBlocks2 {
-
-    // CLEAN BLOCK REGISTRATION USING BUILDER PATTERN WITH DEFAULTS
-
     public static final Block ARBOR_BRICK_ARROW_SLIT = registerArrowSlitBlock(
         "arbor_brick_arrow_slit",
         builder -> builder
@@ -1907,6 +1904,88 @@ public class ModBlocks2 {
     public static final Block YELLOW_SUNFLOWER = registerPlantBlock("yellow_sunflower", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_sunflower1"));
     public static final Block YELLOW_TANSY = registerPlantBlock("yellow_tansy", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_tansy"));
     public static final Block YELLOW_WILDFLOWERS = registerPlantBlock("yellow_wildflowers", builder -> builder.creativeTab("westeros_flowers_tab").hardness(0.0f).resistance(0.0f).noCollision().breakInstantly().soundType("grass").nonOpaque().layerSensitive().boundingBox(4.8, 11.2, 0, 9.6, 4.8, 11.2).texture("flowers/yellow_sunflower/side1"));
+
+    // CROP BLOCKS
+    public static final Block CANDLE_ALTAR = registerCropBlock("candle_altar", builder -> builder
+        .creativeTab("westeros_lighting_tab")
+        .hardness(0.0f)
+        .resistance(0.0f)
+        .noCollision()
+        .breakInstantly()
+        .soundType("powder")
+        .nonOpaque()
+        .toggleOnUse()
+        .boundingBox(0.125, 0.875, 0, 1, 0.125, 0.875)
+        .lightLevel(10)
+        .texture("lighting/candle_altar/lit1"));
+
+    public static final Block CROP_CARROTS = registerCropBlock("crop_carrots", builder -> builder
+        .creativeTab("westeros_crops_herbs_tab")
+        .hardness(5.0f)
+        .resistance(4.0f)
+        .noCollision()
+        .breakInstantly()
+        .soundType("grass")
+        .nonOpaque()
+        .layerSensitive()
+        .toggleOnUse()
+        .harvestLevel(3)
+        .requiresPickaxe()
+        .texture("carrots/carrots_stage_0"));
+
+    public static final Block CROP_PEAS = registerCropBlock("crop_peas", builder -> builder
+        .creativeTab("westeros_crops_herbs_tab")
+        .hardness(5.0f)
+        .resistance(4.0f)
+        .noCollision()
+        .breakInstantly()
+        .soundType("grass")
+        .nonOpaque()
+        .layerSensitive()
+        .toggleOnUse()
+        .harvestLevel(3)
+        .requiresPickaxe()
+        .texture("peas/peas_stage_0"));
+
+    public static final Block CROP_TURNIPS = registerCropBlock("crop_turnips", builder -> builder
+        .creativeTab("westeros_crops_herbs_tab")
+        .hardness(5.0f)
+        .resistance(4.0f)
+        .noCollision()
+        .breakInstantly()
+        .soundType("grass")
+        .nonOpaque()
+        .layerSensitive()
+        .toggleOnUse()
+        .harvestLevel(3)
+        .requiresPickaxe()
+        .texture("turnips/turnips_stage_0"));
+
+    public static final Block CROP_WHEAT = registerCropBlock("crop_wheat", builder -> builder
+        .creativeTab("westeros_crops_herbs_tab")
+        .hardness(5.0f)
+        .resistance(4.0f)
+        .noCollision()
+        .breakInstantly()
+        .soundType("grass")
+        .nonOpaque()
+        .layerSensitive()
+        .toggleOnUse()
+        .harvestLevel(3)
+        .requiresPickaxe()
+        .texture("wheat/wheat_stage_0"));
+
+    public static final Block SEAGRASS = registerCropBlock("seagrass", builder -> builder
+        .creativeTab("westeros_water_air_tab")
+        .hardness(0.0f)
+        .resistance(0.0f)
+        .noCollision()
+        .breakInstantly()
+        .soundType("grass")
+        .nonOpaque()
+        .layerSensitive()
+        .texture("seagrass/side1"));
+
     // FLOWER POT BLOCKS
     public static final Block POTTED_BLUE_BELLS = registerFlowerPotBlock(
         "potted_blue_bells",
@@ -2557,6 +2636,496 @@ public class ModBlocks2 {
             .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_wildflowers1")
     );
 
+    // WEB BLOCKS
+    public static final Block ALYSSAS_TEARS_MIST_ONE = registerWebBlock(
+        "alyssas_tears_mist_one",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("alyssas_tears_mist/mist1")
+    );
+
+    public static final Block ALYSSAS_TEARS_MIST_TWO = registerWebBlock(
+        "alyssas_tears_mist_two",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("alyssas_tears_mist/mist2")
+    );
+
+    public static final Block ALYSSAS_TEARS_MIST_THREE = registerWebBlock(
+        "alyssas_tears_mist_three",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("alyssas_tears_mist/mist3")
+    );
+
+    public static final Block ALYSSAS_TEARS_MIST_FOUR = registerWebBlock(
+        "alyssas_tears_mist_four",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("alyssas_tears_mist/mist4")
+    );
+
+    public static final Block BLACK_BRICICLE = registerWebBlock(
+        "black_bricicle",
+        builder -> builder
+            .creativeTab("westeros_misc_tab")
+            .hardness(2.0f)
+            .resistance(6.0f)
+            .harvestLevel(1)
+            .requiresPickaxe()
+            .soundType("stone")
+            .texture("ashlar_melted/black/bricicle/side")
+    );
+
+    public static final Block BEES = registerWebBlock(
+        "bees",
+        builder -> builder
+            .creativeTab("westeros_misc_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/bug_bees")
+    );
+
+    // Additional web blocks from JSON definitions
+    public static final Block BUSHEL_OF_HERBS = registerWebBlock(
+        "bushel_of_herbs",
+        builder -> builder
+            .creativeTab("westeros_food_blocks_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/food_herbs")
+    );
+
+    public static final Block BUSHEL_OF_SOURLEAF = registerWebBlock(
+        "bushel_of_sourleaf",
+        builder -> builder
+            .creativeTab("westeros_crops_herbs_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/food_sourleaf")
+    );
+
+    public static final Block BUTTERFLY_BLUE = registerWebBlock(
+        "butterfly_blue",
+        builder -> builder
+            .creativeTab("westeros_misc_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/bug_butterfly_blue")
+    );
+
+    public static final Block BUTTERFLY_ORANGE = registerWebBlock(
+        "butterfly_orange",
+        builder -> builder
+            .creativeTab("westeros_misc_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/bug_butterfly_orange")
+    );
+
+    public static final Block BUTTERFLY_RED = registerWebBlock(
+        "butterfly_red",
+        builder -> builder
+            .creativeTab("westeros_misc_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/bug_butterfly_red")
+    );
+
+    public static final Block BUTTERFLY_WHITE = registerWebBlock(
+        "butterfly_white",
+        builder -> builder
+            .creativeTab("westeros_misc_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/bug_butterfly_white")
+    );
+
+    public static final Block BUTTERFLY_YELLOW = registerWebBlock(
+        "butterfly_yellow",
+        builder -> builder
+            .creativeTab("westeros_misc_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/bug_butterfly_yellow")
+    );
+
+    public static final Block CATTAILS = registerWebBlock(
+        "cattails",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .soundType("grass")
+            .nonOpaque()
+            .alphaRender()
+            .layerSensitive()
+            .texture("cattails/side1")
+    );
+
+    public static final Block CHAIN_BLOCK_HARNESS = registerWebBlock(
+        "chain_block_harness",
+        builder -> builder
+            .creativeTab("westeros_metal_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/chain_blockharness")
+    );
+
+    public static final Block CHILI_RISTRA = registerWebBlock(
+        "chili_ristra",
+        builder -> builder
+            .creativeTab("westeros_food_blocks_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/food_chili_ristra")
+    );
+
+    public static final Block COBWEB = registerWebBlock(
+        "cobweb",
+        builder -> builder
+            .creativeTab("westeros_decor_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .toggleOnUse()
+            .texture("cobweb/side1")
+    );
+
+    public static final Block DEAD_FISH = registerWebBlock(
+        "dead_fish",
+        builder -> builder
+            .creativeTab("westeros_food_blocks_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("dead_fish/fish_dead1")
+    );
+
+    public static final Block DEAD_FOWL = registerWebBlock(
+        "dead_fowl",
+        builder -> builder
+            .creativeTab("westeros_food_blocks_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("dead_fowl/fowl")
+    );
+
+    public static final Block DEAD_FROG = registerWebBlock(
+        "dead_frog",
+        builder -> builder
+            .creativeTab("westeros_food_blocks_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("dead_frog/toad_dead1")
+    );
+
+    public static final Block DEAD_HARE = registerWebBlock(
+        "dead_hare",
+        builder -> builder
+            .creativeTab("westeros_food_blocks_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("dead_hare/rabbit_dead1")
+    );
+
+    public static final Block DEAD_JUNGLE_TALL_GRASS = registerWebBlock(
+        "dead_jungle_tall_grass",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .soundType("grass")
+            .nonOpaque()
+            .alphaRender()
+            .layerSensitive()
+            .texture("dead_jungle_tall_grass/down_side1")
+    );
+
+    public static final Block DEAD_RAT = registerWebBlock(
+        "dead_rat",
+        builder -> builder
+            .creativeTab("westeros_food_blocks_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("dead_rat/rat1")
+    );
+
+    public static final Block DEAD_SAVANNA_TALL_GRASS = registerWebBlock(
+        "dead_savanna_tall_grass",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .soundType("grass")
+            .nonOpaque()
+            .alphaRender()
+            .layerSensitive()
+            .texture("dead_savanna_tall_grass/dead_savanna_tall_grass")
+    );
+
+    public static final Block DRAGONFLY = registerWebBlock(
+        "dragonfly",
+        builder -> builder
+            .creativeTab("westeros_misc_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/bug_dragonfly")
+    );
+
+    public static final Block FLIES = registerWebBlock(
+        "flies",
+        builder -> builder
+            .creativeTab("westeros_misc_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/bug_flies")
+    );
+
+    public static final Block GARLIC_STRAND = registerWebBlock(
+        "garlic_strand",
+        builder -> builder
+            .creativeTab("westeros_food_blocks_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/food_garlic_strand")
+    );
+
+    public static final Block ICICLE = registerWebBlock(
+        "icicle",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("icicle/side")
+    );
+
+    public static final Block IRON_THRONE_RANDOM_BLADES = registerWebBlock(
+        "iron_throne_random_blades",
+        builder -> builder
+            .creativeTab("westeros_metal_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("blades_random/side1")
+    );
+
+    public static final Block JUNGLE_TALL_FERN = registerWebBlock(
+        "jungle_tall_fern",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .soundType("grass")
+            .nonOpaque()
+            .alphaRender()
+            .layerSensitive()
+            .texture("jungle_tall_fern/side")
+    );
+
+    public static final Block JUNGLE_TALL_GRASS = registerWebBlock(
+        "jungle_tall_grass",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .soundType("grass")
+            .nonOpaque()
+            .alphaRender()
+            .layerSensitive()
+            .texture("jungle_tall_grass/down_side1")
+    );
+
+    public static final Block ROPE_BLOCK_HARNESS = registerWebBlock(
+        "rope_block_harness",
+        builder -> builder
+            .creativeTab("westeros_cloth_fibers_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/rope_blockharness")
+    );
+
+    public static final Block SAUSAGES_LEG_OF_HAM = registerWebBlock(
+        "sausages_leg_of_ham",
+        builder -> builder
+            .creativeTab("westeros_food_blocks_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("sausages_leg_of_ham/default")
+    );
+
+    public static final Block SAVANNA_TALL_GRASS = registerWebBlock(
+        "savanna_tall_grass",
+        builder -> builder
+            .creativeTab("westeros_grasses_shrubs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .soundType("grass")
+            .nonOpaque()
+            .alphaRender()
+            .layerSensitive()
+            .texture("savanna_tall_grass/savanna_tall_grass")
+    );
+
+    public static final Block SMOKE = registerWebBlock(
+        "smoke",
+        builder -> builder
+            .creativeTab("westeros_water_air_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .toggleOnUse()
+            .texture("smoke/smoke1")
+    );
+
+    public static final Block VERTICAL_CHAIN = registerWebBlock(
+        "vertical_chain",
+        builder -> builder
+            .creativeTab("westeros_metal_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/chain_vertical")
+    );
+
+    public static final Block VERTICAL_ROPE = registerWebBlock(
+        "vertical_rope",
+        builder -> builder
+            .creativeTab("westeros_cloth_fibers_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/rope_vertical")
+    );
+
     @FunctionalInterface
     public interface BlockBuilderConfigurator {
         BlockBuilder configure(BlockBuilder builder);
@@ -2744,6 +3313,21 @@ public class ModBlocks2 {
         return configurator.configure(builder).register();
     }
 
+    public static Block registerCropBlock(String name, BlockBuilderConfigurator configurator) {
+        BlockBuilder builder = new BlockBuilder(name)
+            .creativeTab("westeros_crops_herbs_tab")
+            .hardness(0.0f)
+            .resistance(0.0f)
+            .noCollision()
+            .breakInstantly()
+            .soundType("grass")
+            .nonOpaque()
+            .texture("crops/crop"); // Default texture
+
+        builder.setBlockType(BlockBuilder.BlockType.CROP);
+        return configurator.configure(builder).register();
+    }
+
     public static Block registerFlowerPotBlock(String name, BlockBuilderConfigurator configurator) {
         BlockBuilder builder = new BlockBuilder(name)
             .creativeTab("westeros_flowers_tab")
@@ -2754,6 +3338,21 @@ public class ModBlocks2 {
             .texture("flower_pot"); // Default texture
 
         builder.setBlockType(BlockBuilder.BlockType.FLOWER_POT);
+        return configurator.configure(builder).register();
+    }
+
+    public static Block registerWebBlock(String name, BlockBuilderConfigurator configurator) {
+        BlockBuilder builder = new BlockBuilder(name)
+            .creativeTab("westeros_misc_tab")
+            .hardness(0.8f)
+            .resistance(0.8f)
+            .noCollision()
+            .soundType("cloth")
+            .nonOpaque()
+            .alphaRender()
+            .texture("web_block/web"); // Default texture
+
+        builder.setBlockType(BlockBuilder.BlockType.WEB);
         return configurator.configure(builder).register();
     }
 

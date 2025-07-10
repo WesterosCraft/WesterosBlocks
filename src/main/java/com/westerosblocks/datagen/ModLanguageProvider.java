@@ -376,6 +376,55 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.coral_horn_web", "Coral Horn Web");
         translationBuilder.add("block.westerosblocks.coral_tube_web", "Coral Tube Web");
 
+        // Web Blocks
+        translationBuilder.add("block.westerosblocks.alyssas_tears_mist_one", "Alyssa's Tears Mist One");
+        translationBuilder.add("block.westerosblocks.alyssas_tears_mist_two", "Alyssa's Tears Mist Two");
+        translationBuilder.add("block.westerosblocks.alyssas_tears_mist_three", "Alyssa's Tears Mist Three");
+        translationBuilder.add("block.westerosblocks.alyssas_tears_mist_four", "Alyssa's Tears Mist Four");
+        translationBuilder.add("block.westerosblocks.black_bricicle", "Black Bricicle");
+        translationBuilder.add("block.westerosblocks.bees", "Bees");
+
+        // Additional web blocks
+        translationBuilder.add("block.westerosblocks.bushel_of_herbs", "Bushel of Herbs");
+        translationBuilder.add("block.westerosblocks.bushel_of_sourleaf", "Bushel of Sourleaf");
+        translationBuilder.add("block.westerosblocks.butterfly_blue", "Northern Blue Butterfly");
+        translationBuilder.add("block.westerosblocks.butterfly_orange", "Southern Orange Butterfly");
+        translationBuilder.add("block.westerosblocks.butterfly_red", "Eastern Red Butterfly");
+        translationBuilder.add("block.westerosblocks.butterfly_white", "Central White Butterfly");
+        translationBuilder.add("block.westerosblocks.butterfly_yellow", "Western Yellow Butterfly");
+        translationBuilder.add("block.westerosblocks.cattails", "Cattails");
+        translationBuilder.add("block.westerosblocks.chain_block_harness", "Chain Block Harness");
+        translationBuilder.add("block.westerosblocks.chili_ristra", "Chili Ristra");
+        translationBuilder.add("block.westerosblocks.cobweb", "Cobweb");
+        translationBuilder.add("block.westerosblocks.dead_fish", "Dead Fish");
+        translationBuilder.add("block.westerosblocks.dead_fowl", "Dead Fowl");
+        translationBuilder.add("block.westerosblocks.dead_frog", "Dead Frog");
+        translationBuilder.add("block.westerosblocks.dead_hare", "Dead Hare");
+        translationBuilder.add("block.westerosblocks.dead_jungle_tall_grass", "Dead Jungle Tall Grass");
+        translationBuilder.add("block.westerosblocks.dead_rat", "Dead Rat");
+        translationBuilder.add("block.westerosblocks.dead_savanna_tall_grass", "Dead Savanna Tall Grass");
+        translationBuilder.add("block.westerosblocks.dragonfly", "Dragonfly");
+        translationBuilder.add("block.westerosblocks.flies", "Flies");
+        translationBuilder.add("block.westerosblocks.garlic_strand", "Garlic Strand");
+        translationBuilder.add("block.westerosblocks.icicle", "Icicle");
+        translationBuilder.add("block.westerosblocks.iron_throne_random_blades", "Iron Throne Random Blades");
+        translationBuilder.add("block.westerosblocks.jungle_tall_fern", "Jungle Tall Fern");
+        translationBuilder.add("block.westerosblocks.jungle_tall_grass", "Jungle Tall Grass");
+        translationBuilder.add("block.westerosblocks.rope_block_harness", "Rope Block Harness");
+        translationBuilder.add("block.westerosblocks.sausages_leg_of_ham", "Sausages Leg of Ham");
+        translationBuilder.add("block.westerosblocks.savanna_tall_grass", "Savanna Tall Grass");
+        translationBuilder.add("block.westerosblocks.smoke", "Smoke");
+        translationBuilder.add("block.westerosblocks.vertical_chain", "Vertical Chain");
+        translationBuilder.add("block.westerosblocks.vertical_rope", "Vertical Rope");
+
+        // Crop Blocks
+        translationBuilder.add("block.westerosblocks.candle_altar", "Candle Altar");
+        translationBuilder.add("block.westerosblocks.crop_carrots", "Carrots");
+        translationBuilder.add("block.westerosblocks.crop_peas", "Peas");
+        translationBuilder.add("block.westerosblocks.crop_turnips", "Turnips");
+        translationBuilder.add("block.westerosblocks.crop_wheat", "Wheat");
+        translationBuilder.add("block.westerosblocks.seagrass", "Seagrass");
+
         // The format desired is tag.item.<namespace>.<path> for the translation key with slashes in path turned into periods."
         translationBuilder.add("tag.item.c.shield", "Shield");
     }

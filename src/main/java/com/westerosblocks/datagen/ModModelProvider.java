@@ -21,10 +21,10 @@ public class ModModelProvider extends FabricModelProvider {
             Map.entry("stair", StairBlockExport::new),
             Map.entry("leaves", LeavesBlockExport::new),
             // Map.entry("log", LogBlockExport::new),
-            Map.entry("plant", CrossBlockExport::new),
-            Map.entry("web", CrossBlockExport::new),
+            // Map.entry("plant", CrossBlockExport::new),
+            // Map.entry("web", CrossBlockExport::new),
             Map.entry("pane", PaneBlockExport::new),
-            Map.entry("crop", CropBlockExport::new),
+            // Map.entry("crop", CropBlockExport::new),
 //            Map.entry("door", DoorBlockExport::new),
             Map.entry("slab", SlabBlockExport::new),
             Map.entry("fence", FenceBlockExport::new),
@@ -108,7 +108,7 @@ public class ModModelProvider extends FabricModelProvider {
             Block currentBlock = customBlocks.get(customBlockDef.getBlockName());
             switch (customBlockDef.blockType) {
                 case "soulsand":
-                case "sand":
+                // case "sand":
                 case "solid": {
                     SolidBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
@@ -145,15 +145,15 @@ public class ModModelProvider extends FabricModelProvider {
                     LeavesBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
                 }
-                case "crop": {
-                    CropBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-                    break;
-                }
-                case "plant":
-                case "web": {
-                    CrossBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-                    break;
-                }
+                // case "crop": {
+                //     CropBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                //     break;
+                // }
+                // case "plant":
+                // case "web": {
+                //     CrossBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                //     break;
+                // }
                 case "fencegate": {
                     FenceGateBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;
