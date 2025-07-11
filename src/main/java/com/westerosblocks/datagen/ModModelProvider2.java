@@ -656,15 +656,15 @@ public class ModModelProvider2 {
                 cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CANDLE_ALTAR,
                                 "lighting/candle_altar/lit1");
                 cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_CARROTS,
-                                "carrots/carrots_stage_0");
+                                "carrots/carrots_stage_0", true, 1);
                 cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_PEAS,
-                                "peas/peas_stage_0");
+                                "peas/peas_stage_0", true, 1);
                 cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_TURNIPS,
-                                "turnips/turnips_stage_0");
+                                "turnips/turnips_stage_0", true, 1);
                 cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_WHEAT,
-                                "wheat/wheat_stage_0");
+                                "wheat/wheat_stage_0", true, 1);
                 cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SEAGRASS,
-                                "seagrass/side1");
+                                "seagrass/side1", false, 1);
 
                 // Web Blocks
                 crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ALYSSAS_TEARS_MIST_ONE,
