@@ -27,13 +27,11 @@ import java.util.List;
  * Standalone fan block that doesn't depend on the def system.
  * Provides the same functionality as WCFanBlock but with direct configuration.
  */
-public class WCFanBlock extends Block implements Waterloggable {
+public class WCFanBlock extends WCBaseBlock implements Waterloggable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     
     private final boolean allowUnsupported;
     private final Block wallBlock;
-    private final String translationKey;
-    private final List<String> tooltips;
     private static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 4.0, 14.0);
 
     /**
@@ -47,11 +45,9 @@ public class WCFanBlock extends Block implements Waterloggable {
      */
     public WCFanBlock(AbstractBlock.Settings settings, Block wallBlock,
                       boolean allowUnsupported, String translationKey, List<String> tooltips) {
-        super(settings);
+        super(settings, "fan", "westeros_decor_tab", translationKey, tooltips);
         this.wallBlock = wallBlock;
         this.allowUnsupported = allowUnsupported;
-        this.translationKey = translationKey;
-        this.tooltips = tooltips;
 
         this.setDefaultState(this.getStateManager().getDefaultState()
                 .with(WATERLOGGED, false));
@@ -132,18 +128,5 @@ public class WCFanBlock extends Block implements Waterloggable {
         };
     }
 
-    @Override
-    public String getTranslationKey() {
-        return translationKey;
-    }
 
-    @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        if (tooltips != null && !tooltips.isEmpty()) {
-            for (String tooltipText : tooltips) {
-                tooltip.add(Text.literal(tooltipText));
-            }
-        }
-        super.appendTooltip(stack, context, tooltip, options);
-    }
 } 

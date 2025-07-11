@@ -79,14 +79,4 @@ public class WCWallTorchBlock extends WallTorchBlock {
     public String getTranslationKey() {
         return translationKey;
     }
-
-    @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        if (tooltips != null && !tooltips.isEmpty()) {
-            for (String tooltipText : tooltips) {
-                tooltip.add(Text.literal(tooltipText));
-            }
-        }
-        super.appendTooltip(stack, context, tooltip, options);
-    }
 } 

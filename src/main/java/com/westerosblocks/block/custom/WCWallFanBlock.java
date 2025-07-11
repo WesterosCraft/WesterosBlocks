@@ -33,13 +33,11 @@ import java.util.Map;
  * Standalone wall fan block that doesn't depend on the def system.
  * Provides the same functionality as WCWallFanBlock but with direct configuration.
  */
-public class WCWallFanBlock extends Block implements Waterloggable {
+public class WCWallFanBlock extends WCBaseBlock implements Waterloggable {
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     private final boolean allowUnsupported;
-    private final String translationKey;
-    private final List<String> tooltips;
 
     private static final Map<Direction, VoxelShape> SHAPES = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.createCuboidShape(0.0, 4.0, 5.0, 16.0, 12.0, 16.0),
@@ -58,10 +56,8 @@ public class WCWallFanBlock extends Block implements Waterloggable {
      */
     public WCWallFanBlock(AbstractBlock.Settings settings,
                           boolean allowUnsupported, String translationKey, List<String> tooltips) {
-        super(settings);
+        super(settings, "wall_fan", "westeros_decor_tab", translationKey, tooltips);
         this.allowUnsupported = allowUnsupported;
-        this.translationKey = translationKey;
-        this.tooltips = tooltips;
 
         setDefaultState(getStateManager().getDefaultState()
                 .with(FACING, Direction.NORTH)
@@ -149,18 +145,5 @@ public class WCWallFanBlock extends Block implements Waterloggable {
         };
     }
 
-    @Override
-    public String getTranslationKey() {
-        return translationKey;
-    }
 
-    @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        if (tooltips != null && !tooltips.isEmpty()) {
-            for (String tooltipText : tooltips) {
-                tooltip.add(Text.literal(tooltipText));
-            }
-        }
-        super.appendTooltip(stack, context, tooltip, options);
-    }
 } 

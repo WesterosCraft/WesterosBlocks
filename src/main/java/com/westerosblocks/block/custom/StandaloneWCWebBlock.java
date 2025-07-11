@@ -46,7 +46,7 @@ import java.util.Optional;
  * new StandaloneWCWebBlock(settings, "spider_web", "westeros_decor_tab", true, false, false);
  * }</pre>
  */
-public class StandaloneWCWebBlock extends Block {
+public class StandaloneWCWebBlock extends WCBaseBlock {
 
     /**
      * Simple state property for toggle functionality.
@@ -80,12 +80,9 @@ public class StandaloneWCWebBlock extends Block {
     // Support waterlogged on these blocks
     public static final BooleanProperty WATERLOGGED = BooleanProperty.of("waterlogged");
 
-    private final String blockName;
-    private final String creativeTab;
     private final boolean layerSensitive;
     private final boolean toggleOnUse;
     private final boolean noInWeb;
-    private final List<String> tooltips;
     
     // State properties (set during initialization)
     private IntProperty LAYERS;
@@ -124,25 +121,14 @@ public class StandaloneWCWebBlock extends Block {
      */
     public StandaloneWCWebBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, 
                                boolean layerSensitive, boolean toggleOnUse, boolean noInWeb, List<String> tooltips) {
-        super(settings);
-        this.blockName = blockName;
-        this.creativeTab = creativeTab;
+        super(settings, blockName, creativeTab, tooltips);
         this.layerSensitive = layerSensitive;
         this.toggleOnUse = toggleOnUse;
         this.noInWeb = noInWeb;
-        this.tooltips = tooltips;
         
         // Set default state - only set WATERLOGGED here, layers will be handled in getPlacementState
         BlockState bsdef = this.getDefaultState().with(WATERLOGGED, false);
         setDefaultState(bsdef);
-    }
-
-    public String getBlockName() {
-        return blockName;
-    }
-
-    public String getCreativeTab() {
-        return creativeTab;
     }
 
     public boolean isLayerSensitive() {
@@ -244,13 +230,5 @@ public class StandaloneWCWebBlock extends Block {
         }
     }
 
-    @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        if (tooltips != null && !tooltips.isEmpty()) {
-            for (String tooltipText : tooltips) {
-                tooltip.add(Text.literal(tooltipText));
-            }
-        }
-        super.appendTooltip(stack, context, tooltip, options);
-    }
+
 } 

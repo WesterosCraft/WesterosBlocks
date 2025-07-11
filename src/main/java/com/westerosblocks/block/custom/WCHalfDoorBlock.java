@@ -36,7 +36,7 @@ import java.util.List;
  * This class provides the same functionality as WCHalfDoorBlock but with simplified
  * parameter handling for the builder-based registration system.
  */
-public class WCHalfDoorBlock extends Block {
+public class WCHalfDoorBlock extends WCBaseBlock {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = Properties.OPEN;
     public static final EnumProperty<DoorHinge> HINGE = Properties.DOOR_HINGE;
@@ -49,7 +49,6 @@ public class WCHalfDoorBlock extends Block {
 
     private final boolean locked;
     private final boolean allowUnsupported;
-    private final String translationKey;
 
     /**
      * Creates a new standalone half door block.
@@ -60,10 +59,9 @@ public class WCHalfDoorBlock extends Block {
      * @param translationKey The translation key for this block
      */
     public WCHalfDoorBlock(AbstractBlock.Settings settings, boolean locked, boolean allowUnsupported, String translationKey) {
-        super(settings);
+        super(settings, "half_door", "westeros_decor_tab", translationKey, null);
         this.locked = locked;
         this.allowUnsupported = allowUnsupported;
-        this.translationKey = translationKey;
 
         this.setDefaultState(this.stateManager.getDefaultState()
                 .with(FACING, Direction.NORTH)
@@ -208,13 +206,5 @@ public class WCHalfDoorBlock extends Block {
                 state.rotate(mirror.getRotation(state.get(FACING))).cycle(HINGE);
     }
 
-    @Override
-    public String getTranslationKey() {
-        return translationKey;
-    }
 
-    @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        super.appendTooltip(stack, context, tooltip, options);
-    }
 } 
