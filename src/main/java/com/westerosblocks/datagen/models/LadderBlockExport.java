@@ -1,69 +1,69 @@
 package com.westerosblocks.datagen.models;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.datagen.ModelExport;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
-import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
-import static com.westerosblocks.datagen.models.ModModels.WC_LADDER;
+/**
+ * LadderBlockExport that extends ModelExport2 for consistent model generation
+ * patterns.
+ * Handles ladder blocks with cardinal direction variants using
+ * BlockStateVariantMap.
+ */
+public class LadderBlockExport extends ModelExport2 {
 
-public class LadderBlockExport extends ModelExport {
-    private final BlockStateModelGenerator generator;
-    private final Block block;
-    private static ModBlock def;
-    static final String[] FACES = {"north", "south", "east", "west"};
-    static final int[] Y_ROTATIONS = {0, 180, 90, 270};
+    @Override
+    public void generateBlockStateModels(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // Create the ladder model with proper texture mapping
+        Identifier ladderModelId = createLadderModel(generator, block, texturePath);
 
-    public LadderBlockExport(BlockStateModelGenerator generator, Block block, ModBlock def) {
-        super(generator, block, def);
-        this.generator = generator;
-        this.block = block;
-        this.def = def;
+        // Create block state variants using BlockStateVariantMap with the FACING
+        // property
+        BlockStateVariantMap variants = BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
+                .register(Direction.NORTH, createVariant(ladderModelId))
+                .register(Direction.EAST, createVariant(ladderModelId, 90))
+                .register(Direction.SOUTH, createVariant(ladderModelId, 180))
+                .register(Direction.WEST, createVariant(ladderModelId, 270));
+
+        // Register the block state using the utility method
+        registerBlockState(generator, block, variants);
     }
 
-    public static Identifier modelFileName(int setidx, boolean isCustomModel) {
-        return WesterosBlocks.id(getModelName(def,"base", setidx)).withPrefixedPath(isCustomModel ? CUSTOM_PATH : GENERATED_PATH);
-    }
+    private Identifier createLadderModel(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // Create texture map with the correct texture keys for the untinted ladder
+        // parent
+        TextureMap textureMap = new TextureMap()
+                .put(TextureKey.TEXTURE, createBlockIdentifier(texturePath))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(texturePath));
 
-    public void generateBlockStateModels() {
-        BlockStateBuilder blockStateBuilder = new BlockStateBuilder(block);
-        final Map<String, List<BlockStateVariant>> variants = blockStateBuilder.getVariants();
+        // Create model ID
+        Identifier modelId = WesterosBlocks.id(
+                "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", "") + "_ladder");
 
-        if (!def.isCustomModel()) {
-            for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-                Identifier modelId =  modelFileName(setIdx, false);
-                generateLadderModel(generator, set, modelId);
-            }
-        }
-
-        for (int faceIdx = 0; faceIdx < 4; faceIdx++) {
-
-            for (int setIdx = 0; setIdx < def.getRandomTextureSetCount(); setIdx++) {
-                ModBlock.RandomTextureSet set = def.getRandomTextureSet(setIdx);
-                Identifier modId = modelFileName(setIdx, def.isCustomModel());
-                BlockStateVariant variant = VariantBuilder.createWithRotation(modId, set, Y_ROTATIONS[faceIdx]);
-                blockStateBuilder.addVariant("facing=" + FACES[faceIdx], variant, null, variants);
-            }
-        }
-
-        generateBlockStateFiles(generator, block, variants);
-    }
-
-    protected static void generateLadderModel(BlockStateModelGenerator generator, ModBlock.RandomTextureSet set, Identifier modelId) {
-        TextureMap textureMap = new TextureMap().put(ModTextureKey.LADDER, createBlockIdentifier(set.getTextureByIndex(0)));
-        Identifier parentId = WesterosBlocks.id("untinted/ladder");
-        Model model = WC_LADDER(parentId.getPath(), def);
+        // Create and upload the model using the untinted ladder parent
+        Model model = new Model(
+                Optional.of(Identifier.of("westerosblocks", "block/untinted/ladder")),
+                Optional.empty(),
+                TextureKey.TEXTURE,
+                TextureKey.PARTICLE);
         model.upload(modelId, textureMap, generator.modelCollector);
+
+        return modelId;
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Block block, ModBlock blockDefinition) {
-        generateBlockBasedItemModel(itemModelGenerator, block, blockDefinition);
+    @Override
+    public void generateItemModels(ItemModelGenerator generator, Block block) {
+        // Create a simple item model that inherits from the block model
+        String modelPath = "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", "")
+                + "_ladder";
+        Model model = new Model(
+                Optional.of(Identifier.of("westerosblocks", modelPath)),
+                Optional.empty());
+        generator.register(block.asItem(), model);
     }
 }

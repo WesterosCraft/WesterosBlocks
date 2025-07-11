@@ -1,0 +1,11 @@
+{
+  "blockName": "iron_rungs_broken_old",
+  "blockType": "ladder",
+  "stepSound": "ladder",
+  "material": "iron",
+  "creativeTab": "westeros_metal_tab",
+  "label": "Iron Rungs Broken",
+  "randomTextures": [{}, {}, {}, {}, {}, {}],
+  "type": "allow-unsupported",
+  "isCustomModel": true
+}

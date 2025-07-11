@@ -1,0 +1,11 @@
+{
+  "blockName": "iron_rungs_old",
+  "blockType": "ladder",
+  "stepSound": "ladder",
+  "material": "iron",
+  "creativeTab": "westeros_metal_tab",
+  "label": "Iron Rungs",
+  "textures": ["iron_rungs/ladder"],
+  "type": "allow-unsupported",
+  "isCustomModel": true
+}

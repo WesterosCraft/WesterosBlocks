@@ -10,7 +10,8 @@ import com.westerosblocks.block.custom.WCWallFanBlock;
 import com.westerosblocks.block.custom.WCVinesBlock;
 import com.westerosblocks.block.custom.WCHalfDoorBlock;
 import com.westerosblocks.block.custom.WCFlowerPotBlock;
-import com.westerosblocks.block.custom.StandaloneWCWebBlock;
+import com.westerosblocks.block.custom.WCWebBlock;
+import com.westerosblocks.block.custom.WCLadderBlock;
 import com.westerosblocks.util.ModWoodType;
 import com.westerosblocks.util.ModBlockSoundGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -680,6 +681,19 @@ public class BlockBuilder {
     }
 
     /**
+     * Creates a ladder block with the specified properties.
+     * 
+     * <p>Ladders are climbable blocks that can be attached to walls.
+     * They can optionally be placed without support and made non-climbable.
+     * 
+     * @return this builder for method chaining
+     */
+    public BlockBuilder ladder() {
+        this.blockType = BlockType.LADDER;
+        return this;
+    }
+
+    /**
      * Sets the block type (called internally by registration methods).
      * 
      * @param blockType The type of custom block to create
@@ -911,10 +925,11 @@ public class BlockBuilder {
                 yield new WCPlantBlock(settings, name, creativeTab, layerSensitive, toggleOnUse);
             }
             case CROP -> {
-                yield new WCCropBlockNew(settings, name, creativeTab, layerSensitive, toggleOnUse);
+                yield new WCCropBlock(settings, name, creativeTab, layerSensitive, toggleOnUse);
             }
             case FLOWER_POT -> new WCFlowerPotBlock(plantContent != null ? plantContent : Blocks.AIR, settings);
-            case WEB -> new StandaloneWCWebBlock(settings, name, creativeTab, layerSensitive, toggleOnUse, false, tooltips);
+            case WEB -> new WCWebBlock(settings, name, creativeTab, layerSensitive, toggleOnUse, false, tooltips);
+            case LADDER -> new WCLadderBlock(settings, name, creativeTab, allowUnsupported, false, tooltips);
         };
     }
 
@@ -956,6 +971,8 @@ public class BlockBuilder {
         /** Flower pot blocks for decorative plants */
         FLOWER_POT,
         /** Web blocks for decorative and functional purposes */
-        WEB
+        WEB,
+        /** Ladder blocks for climbing */
+        LADDER
     }
 } 
