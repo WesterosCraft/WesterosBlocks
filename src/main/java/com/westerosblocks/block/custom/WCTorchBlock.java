@@ -5,52 +5,39 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.TorchBlock;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.particle.SimpleParticleType;
-import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-import java.util.List;
-
-/**
- * Standalone torch block that doesn't depend on the def system.
- * Provides the same functionality as WCTorchBlock but with direct configuration.
- */
 public class WCTorchBlock extends TorchBlock {
 
     private final boolean allowUnsupported;
     private final boolean noParticle;
     private final Block wallBlock;
     private final String translationKey;
-    private final List<String> tooltips;
 
     /**
      * Creates a new standalone torch block.
      * 
-     * @param settings Block settings
-     * @param wallBlock The corresponding wall torch block
+     * @param settings         Block settings
+     * @param wallBlock        The corresponding wall torch block
      * @param allowUnsupported Whether this torch can be placed without support
-     * @param noParticle Whether this torch should emit particles
-     * @param translationKey The translation key for this block
-     * @param tooltips Optional tooltips to display
+     * @param noParticle       Whether this torch should emit particles
+     * @param translationKey   The translation key for this block
      */
-    public WCTorchBlock(AbstractBlock.Settings settings, Block wallBlock, 
-                               boolean allowUnsupported, boolean noParticle,
-                               String translationKey, List<String> tooltips) {
+    public WCTorchBlock(AbstractBlock.Settings settings, Block wallBlock,
+            boolean allowUnsupported, boolean noParticle,
+            String translationKey) {
         super(getParticle(noParticle), settings);
         this.wallBlock = wallBlock;
         this.allowUnsupported = allowUnsupported;
         this.noParticle = noParticle;
         this.translationKey = translationKey;
-        this.tooltips = tooltips;
     }
 
     private static SimpleParticleType getParticle(boolean noParticle) {
@@ -101,4 +88,4 @@ public class WCTorchBlock extends TorchBlock {
     public String getTranslationKey() {
         return translationKey;
     }
-} 
+}

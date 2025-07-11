@@ -1,21 +1,16 @@
 package com.westerosblocks.block.custom;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.SlabType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -27,28 +22,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
-import java.util.List;
-
-/**
- * Standalone plant block that recreates WCPlantBlock functionality without definition system dependency.
- * 
- * <p>This class provides the same features as WCPlantBlock:
- * <ul>
- *   <li>Waterlogging support</li>
- *   <li>Layer-sensitive placement (for snow layers)</li>
- *   <li>Toggle functionality for creative mode</li>
- *   <li>Custom bounding box shapes</li>
- *   <li>Tooltip support</li>
- * </ul>
- * 
- * <p>Usage example:
- * <pre>{@code
- * new StandaloneWCPlantBlock(settings, "blue_bells", "westeros_flowers_tab", true, false);
- * }</pre>
- */
 public class WCPlantBlock extends Block {
-
-    // Support waterlogged on these blocks
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     private final String blockName;
@@ -57,7 +31,7 @@ public class WCPlantBlock extends Block {
     private final boolean toggleOnUse;
     private IntProperty LAYERS;
 
-    public static final VoxelShape[] SHAPE_BY_LAYER = new VoxelShape[]{
+    public static final VoxelShape[] SHAPE_BY_LAYER = new VoxelShape[] {
             VoxelShapes.empty(),
             Block.createCuboidShape(0.0D, -14.0D, 0.0D, 16.0D, 2.0D, 16.0D),
             Block.createCuboidShape(0.0D, -12.0D, 0.0D, 16.0D, 4.0D, 16.0D),
@@ -69,43 +43,22 @@ public class WCPlantBlock extends Block {
             Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)
     };
 
-    /**
-     * Creates a new StandaloneWCPlantBlock with default settings.
-     * 
-     * @param settings The block settings
-     */
     public WCPlantBlock(AbstractBlock.Settings settings) {
         this(settings, "plant", "building_blocks", false, false);
     }
 
-    /**
-     * Creates a new StandaloneWCPlantBlock with basic configuration.
-     * 
-     * @param settings The block settings
-     * @param blockName The block name
-     * @param creativeTab The creative tab
-     */
     public WCPlantBlock(AbstractBlock.Settings settings, String blockName, String creativeTab) {
         this(settings, blockName, creativeTab, false, false);
     }
 
-    /**
-     * Creates a new StandaloneWCPlantBlock with full configuration.
-     * 
-     * @param settings The block settings
-     * @param blockName The block name
-     * @param creativeTab The creative tab
-     * @param layerSensitive Whether this block is sensitive to layer placement
-     * @param toggleOnUse Whether this block can be toggled in creative mode
-     */
-    public WCPlantBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, boolean layerSensitive, boolean toggleOnUse) {
+    public WCPlantBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, boolean layerSensitive,
+            boolean toggleOnUse) {
         super(settings);
         this.blockName = blockName;
         this.creativeTab = creativeTab;
         this.layerSensitive = layerSensitive;
         this.toggleOnUse = toggleOnUse;
-        
-        // Set default state - don't set LAYERS here, it will be set in appendProperties
+
         BlockState defbs = this.getDefaultState().with(WATERLOGGED, false);
         this.setDefaultState(defbs);
     }
@@ -129,23 +82,23 @@ public class WCPlantBlock extends Block {
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         BlockState bs = super.getPlacementState(ctx);
-        if (bs == null) return null;
-        
+        if (bs == null)
+            return null;
+
         FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
         bs = bs.with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
-        
+
         if (layerSensitive && LAYERS != null) {
             BlockState below = ctx.getWorld().getBlockState(ctx.getBlockPos().offset(Direction.DOWN));
             if (below.contains(Properties.LAYERS)) {
                 Block blk = below.getBlock();
                 int layer = below.get(Properties.LAYERS);
                 // See if soft layer
-                if ((blk instanceof SnowBlock) || ((blk instanceof WCLayerBlock) && ((WCLayerBlock)blk).softLayer)) {
+                if ((blk instanceof SnowBlock) || ((blk instanceof WCLayerBlock) && ((WCLayerBlock) blk).softLayer)) {
                     layer = (layer > 2) ? layer - 2 : 1;
                 }
                 bs = bs.with(LAYERS, layer);
-            }
-            else if (below.getBlock() instanceof SlabBlock) {
+            } else if (below.getBlock() instanceof SlabBlock) {
                 if (below.get(Properties.SLAB_TYPE) == SlabType.BOTTOM) {
                     bs = bs.with(LAYERS, 4);
                 }
@@ -160,13 +113,8 @@ public class WCPlantBlock extends Block {
     }
 
     @Override
-    protected MapCodec<? extends PlantBlock> getCodec() {
-        return null;
-    }
-
-    @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
-                                                WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+            WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
@@ -186,8 +134,6 @@ public class WCPlantBlock extends Block {
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         Hand hand = player.getActiveHand();
         if (this.toggleOnUse && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
-            // For standalone version, we don't have state properties to cycle
-            // This is a simplified version - you could add custom state properties if needed
             world.syncWorldEvent(player, 1006, pos, 0);
             return ActionResult.success(world.isClient);
         }
@@ -201,12 +147,4 @@ public class WCPlantBlock extends Block {
         }
         return VoxelShapes.fullCube();
     }
-
-    @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        // Add custom tooltip if needed
-        tooltip.add(Text.translatable("tooltip.westerosblocks.plant." + blockName)
-            .formatted(net.minecraft.util.Formatting.GRAY));
-        super.appendTooltip(stack, context, tooltip, options);
-    }
-} 
+}

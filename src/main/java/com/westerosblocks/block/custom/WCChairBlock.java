@@ -21,7 +21,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.block.WoodType;
@@ -40,7 +39,8 @@ public class WCChairBlock extends HorizontalFacingBlock {
     public static final IntProperty ROTATION = IntProperty.of("rotation", 0, 7);
 
     // Simple single VoxelShape that encompasses the entire chair
-    // Covers from ground level (0) to backrest height (21), and spans the full width
+    // Covers from ground level (0) to backrest height (21), and spans the full
+    // width
     private static final VoxelShape CHAIR_SHAPE = Block.createCuboidShape(0, 0, 0, 16, 21, 16);
 
     private final String blockName;
@@ -81,10 +81,10 @@ public class WCChairBlock extends HorizontalFacingBlock {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        if(!world.isClient()) {
+        if (!world.isClient()) {
             Entity entity = null;
             List<ChairEntity> entities = world.getEntitiesByType(ModEntities.CHAIR, new Box(pos), chair -> true);
-            if(entities.isEmpty()) {
+            if (entities.isEmpty()) {
                 entity = ModEntities.CHAIR.spawn((ServerWorld) world, pos, SpawnReason.TRIGGERED);
             } else {
                 entity = entities.get(0);
@@ -106,11 +106,12 @@ public class WCChairBlock extends HorizontalFacingBlock {
         // Use the same approach as cuboid blocks for 8-directional rotation
         // But adjust the rotation so the chair faces the player
         int rotation = MathHelper.floor((double) (ctx.getPlayerYaw() * 8.0F / 360.0F) + 0.5D) & 7;
-        
+
         // Adjust rotation so chair faces the player (backrest towards player)
         rotation = (rotation + 4) % 8;
-        
-        return this.getDefaultState().with(ROTATION, rotation).with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+
+        return this.getDefaultState().with(ROTATION, rotation).with(FACING,
+                ctx.getHorizontalPlayerFacing().getOpposite());
     }
 
     @Override
@@ -127,4 +128,4 @@ public class WCChairBlock extends HorizontalFacingBlock {
         // Return the same simple shape regardless of rotation
         return CHAIR_SHAPE;
     }
-} 
+}

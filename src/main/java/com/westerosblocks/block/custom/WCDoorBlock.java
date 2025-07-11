@@ -2,7 +2,6 @@ package com.westerosblocks.block.custom;
 
 import com.westerosblocks.util.ModBlockSetType;
 import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.DoorBlock;
 import net.minecraft.block.enums.DoubleBlockHalf;
@@ -33,16 +32,18 @@ public class WCDoorBlock extends DoorBlock {
     /**
      * Creates a new standalone door block.
      *
-     * @param settings Block settings
-     * @param woodType The wood type for this door (affects sounds and behavior)
-     * @param locked Whether this door is locked (prevents opening)
-     * @param allowUnsupported Whether this door can be placed without proper support
-     * @param translationKey The translation key for this block
-     * @param tooltips Optional tooltips to display
+     * @param settings         Block settings
+     * @param woodType         The wood type for this door (affects sounds and
+     *                         behavior)
+     * @param locked           Whether this door is locked (prevents opening)
+     * @param allowUnsupported Whether this door can be placed without proper
+     *                         support
+     * @param translationKey   The translation key for this block
+     * @param tooltips         Optional tooltips to display
      */
     public WCDoorBlock(AbstractBlock.Settings settings, String woodType,
-                              boolean locked, boolean allowUnsupported,
-                              String translationKey, List<String> tooltips) {
+            boolean locked, boolean allowUnsupported,
+            String translationKey, List<String> tooltips) {
         super(ModBlockSetType.getBlockSetType(woodType), settings);
         this.locked = locked;
         this.allowUnsupported = allowUnsupported;
@@ -53,8 +54,8 @@ public class WCDoorBlock extends DoorBlock {
     /**
      * Creates a new standalone door block with default settings.
      *
-     * @param settings Block settings
-     * @param woodType The wood type for this door
+     * @param settings       Block settings
+     * @param woodType       The wood type for this door
      * @param translationKey The translation key for this block
      */
     public WCDoorBlock(AbstractBlock.Settings settings, String woodType, String translationKey) {
@@ -110,4 +111,4 @@ public class WCDoorBlock extends DoorBlock {
     public boolean allowsUnsupported() {
         return allowUnsupported;
     }
-} 
+}

@@ -889,8 +889,7 @@ public class BlockBuilder {
                     wallTorch,
                     allowUnsupported,
                     noParticle,
-                    "block." + WesterosBlocks.MOD_ID + "." + name,
-                    tooltips
+                    "block." + WesterosBlocks.MOD_ID + "." + name
                 );
 
                 // Store wall torch for registration in register() method

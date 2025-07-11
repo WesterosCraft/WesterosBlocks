@@ -8,22 +8,10 @@ import net.minecraft.text.Text;
 
 import java.util.List;
 
-/**
- * Crop block that extends the refactored WCPlantBlock.
- * Provides crop-specific functionality while maintaining compatibility with the new plant block system.
- * 
- * <p>This class is designed to work with the builder-based registration system in ModBlocks2.
- * It provides the same functionality as the original WCCropBlock but without the definition system dependency.
- */
 public class WCCropBlock extends WCPlantBlock {
-    
-    private static final String[] TAGS = {"crops"};
 
-    /**
-     * Creates a new crop block with default settings.
-     * 
-     * @param settings The block settings
-     */
+    private static final String[] TAGS = { "crops" };
+
     public WCCropBlock(AbstractBlock.Settings settings) {
         super(settings, "crop", "westeros_crops_tab", false, false);
     }
@@ -31,22 +19,22 @@ public class WCCropBlock extends WCPlantBlock {
     /**
      * Creates a new crop block with custom configuration.
      * 
-     * @param settings The block settings
-     * @param blockName The block name
-     * @param creativeTab The creative tab
+     * @param settings       The block settings
+     * @param blockName      The block name
+     * @param creativeTab    The creative tab
      * @param layerSensitive Whether this crop is sensitive to layer placement
-     * @param toggleOnUse Whether this crop can be toggled in creative mode
+     * @param toggleOnUse    Whether this crop can be toggled in creative mode
      */
     public WCCropBlock(AbstractBlock.Settings settings, String blockName, String creativeTab,
-                       boolean layerSensitive, boolean toggleOnUse) {
+            boolean layerSensitive, boolean toggleOnUse) {
         super(settings, blockName, creativeTab, layerSensitive, toggleOnUse);
     }
 
     /**
      * Creates a new crop block with basic configuration.
      * 
-     * @param settings The block settings
-     * @param blockName The block name
+     * @param settings    The block settings
+     * @param blockName   The block name
      * @param creativeTab The creative tab
      */
     public WCCropBlock(AbstractBlock.Settings settings, String blockName, String creativeTab) {
@@ -66,7 +54,7 @@ public class WCCropBlock extends WCPlantBlock {
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
         // Add custom crop tooltip
         tooltip.add(Text.translatable("tooltip.westerosblocks.crop." + getBlockName())
-            .formatted(net.minecraft.util.Formatting.GREEN));
+                .formatted(net.minecraft.util.Formatting.GREEN));
         super.appendTooltip(stack, context, tooltip, options);
     }
-} 
+}
