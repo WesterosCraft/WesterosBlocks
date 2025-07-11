@@ -14,40 +14,8 @@ import java.util.List;
  * without the definition-based system dependencies.
  */
 public class WCFlowerPotBlock extends FlowerPotBlock {
-
-    /**
-     * Creates a flower pot block with the specified content block.
-     * 
-     * @param content The block that will be placed inside the flower pot
-     * @param settings The block settings
-     */
     public WCFlowerPotBlock(Block content, AbstractBlock.Settings settings) {
         super(content, settings);
-    }
-
-    /**
-     * Creates an empty flower pot block.
-     * 
-     * @param settings The block settings
-     */
-    public WCFlowerPotBlock(AbstractBlock.Settings settings) {
-        super(Blocks.AIR, settings);
-    }
-
-    /**
-     * Override this method to add custom tooltips to the flower pot.
-     * The default implementation does nothing.
-     * 
-     * @param tooltip The tooltip list to add to
-     */
-    protected void addCustomTooltip(List<Text> tooltip) {
-        // Override in subclasses to add custom tooltips
-    }
-
-    @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        addCustomTooltip(tooltip);
-        super.appendTooltip(stack, context, tooltip, options);
     }
 
     /**

@@ -1,6 +1,8 @@
 package com.westerosblocks.block.custom;
 
+import com.google.common.collect.ImmutableMap;
 import java.util.List;
+import java.util.Map;
 
 import com.mojang.serialization.MapCodec;
 import com.westerosblocks.entity.ModEntities;
@@ -37,11 +39,10 @@ public class WCChairBlock extends HorizontalFacingBlock {
     }
 
     public static final IntProperty ROTATION = IntProperty.of("rotation", 0, 7);
-
-    // Simple single VoxelShape that encompasses the entire chair
-    // Covers from ground level (0) to backrest height (21), and spans the full
-    // width
     private static final VoxelShape CHAIR_SHAPE = Block.createCuboidShape(0, 0, 0, 16, 21, 16);
+
+    // Pre-computed shape maps for efficient lookups
+    private final Map<BlockState, VoxelShape> shapeByIndex;
 
     private final String blockName;
     private final String creativeTab;
@@ -49,10 +50,6 @@ public class WCChairBlock extends HorizontalFacingBlock {
 
     public WCChairBlock(AbstractBlock.Settings settings) {
         this(settings, "chair", "building_blocks", "oak");
-    }
-
-    public WCChairBlock(AbstractBlock.Settings settings, String blockName, String creativeTab) {
-        this(settings, blockName, creativeTab, "oak");
     }
 
     public WCChairBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, String woodType) {
@@ -65,18 +62,28 @@ public class WCChairBlock extends HorizontalFacingBlock {
         this.creativeTab = creativeTab;
         this.woodType = woodType;
         setDefaultState(getDefaultState().with(ROTATION, 0));
+
+        // Pre-compute all possible shape combinations
+        this.shapeByIndex = this.makeShapes();
     }
 
-    public String getBlockName() {
-        return blockName;
-    }
+    private Map<BlockState, VoxelShape> makeShapes() {
+        ImmutableMap.Builder<BlockState, VoxelShape> builder = ImmutableMap.builder();
 
-    public String getCreativeTab() {
-        return creativeTab;
-    }
+        // Generate all possible state combinations
+        for (int rotation = 0; rotation < 8; rotation++) {
+            for (net.minecraft.util.math.Direction facing : net.minecraft.util.math.Direction.Type.HORIZONTAL) {
+                VoxelShape shape = CHAIR_SHAPE; // All states use the same shape
 
-    public WoodType getWoodType() {
-        return woodType;
+                BlockState state = this.getDefaultState()
+                        .with(ROTATION, rotation)
+                        .with(FACING, facing);
+
+                builder.put(state, shape);
+            }
+        }
+
+        return builder.build();
     }
 
     @Override
@@ -116,16 +123,11 @@ public class WCChairBlock extends HorizontalFacingBlock {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return getShapeForState(state);
+        return this.shapeByIndex.get(state);
     }
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return getShapeForState(state);
-    }
-
-    private VoxelShape getShapeForState(BlockState state) {
-        // Return the same simple shape regardless of rotation
-        return CHAIR_SHAPE;
+        return this.shapeByIndex.get(state);
     }
 }

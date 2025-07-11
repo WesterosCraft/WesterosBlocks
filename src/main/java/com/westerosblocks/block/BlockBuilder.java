@@ -862,9 +862,7 @@ public class BlockBuilder {
                 settings,
                 woodType.toString().toLowerCase(),
                 locked,
-                allowUnsupported,
-                "block." + WesterosBlocks.MOD_ID + "." + name,
-                tooltips
+                allowUnsupported
             );
             case HALF_DOOR -> new WCHalfDoorBlock(
                 settings,

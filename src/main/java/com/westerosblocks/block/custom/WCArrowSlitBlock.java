@@ -38,7 +38,6 @@ public class WCArrowSlitBlock extends Block {
     private static final VoxelShape TOP_LEDGE_LEFT = Block.createCuboidShape(0, 0, 3, 3, 1, 13);
     private static final VoxelShape TOP_LEDGE_RIGHT = Block.createCuboidShape(13, 0, 3, 16, 1, 13);
 
-    // Pre-computed shape maps for efficient lookups
     private final Map<BlockState, VoxelShape> shapeByIndex;
 
     private final String blockName;
@@ -52,7 +51,6 @@ public class WCArrowSlitBlock extends Block {
                 .with(TYPE, ArrowSlitType.SINGLE)
                 .with(FACING, Direction.NORTH));
 
-        // Pre-compute all possible shape combinations
         this.shapeByIndex = this.makeShapes();
     }
 
@@ -192,14 +190,6 @@ public class WCArrowSlitBlock extends Block {
                     Block.createCuboidShape(3, 2, 3, 13, 14, 6),
                     Block.createCuboidShape(3, 2, 10, 13, 14, 13));
         };
-    }
-
-    public String getBlockName() {
-        return blockName;
-    }
-
-    public String getCreativeTab() {
-        return creativeTab;
     }
 
     @Override

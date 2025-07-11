@@ -4,15 +4,11 @@ import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
@@ -23,10 +19,6 @@ import net.minecraft.world.WorldView;
 
 import java.util.List;
 
-/**
- * Standalone fan block that doesn't depend on the def system.
- * Provides the same functionality as WCFanBlock but with direct configuration.
- */
 public class WCFanBlock extends WCBaseBlock implements Waterloggable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     
@@ -34,15 +26,6 @@ public class WCFanBlock extends WCBaseBlock implements Waterloggable {
     private final Block wallBlock;
     private static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 4.0, 14.0);
 
-    /**
-     * Creates a new standalone fan block.
-     * 
-     * @param settings Block settings
-     * @param wallBlock The corresponding wall fan block
-     * @param allowUnsupported Whether this fan can be placed without support
-     * @param translationKey The translation key for this block
-     * @param tooltips Optional tooltips to display
-     */
     public WCFanBlock(AbstractBlock.Settings settings, Block wallBlock,
                       boolean allowUnsupported, String translationKey, List<String> tooltips) {
         super(settings, "fan", "westeros_decor_tab", translationKey, tooltips);
@@ -127,6 +110,4 @@ public class WCFanBlock extends WCBaseBlock implements Waterloggable {
             case AIR -> false;
         };
     }
-
-
 } 
