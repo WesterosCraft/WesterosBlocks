@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.google.common.collect.ImmutableMap;
 import com.westerosblocks.util.ModUtils;
 import com.westerosblocks.util.ModWoodType;
 import net.minecraft.block.AbstractBlock;
@@ -21,6 +22,8 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.block.WoodType;
 
+import java.util.Map;
+
 public class WCTableBlock extends Block {
     public static final BooleanProperty NORTH = Properties.NORTH;
     public static final BooleanProperty EAST = Properties.EAST;
@@ -33,103 +36,8 @@ public class WCTableBlock extends Block {
     private static final VoxelShape TABLE_TOP_INNER = Block.createCuboidShape(1, 11, 1, 15, 14, 15);
     private static final VoxelShape TABLE_LEG = Block.createCuboidShape(1, 0, 1, 4, 11, 4);
 
-    // Define shapes for each table variant
-    // Single table (no connections)
-    private static final VoxelShape SINGLE_SHAPE = VoxelShapes.union(
-        TABLE_TOP,
-        TABLE_TOP_INNER,
-        TABLE_LEG, // Front-left leg
-        Block.createCuboidShape(1, 0, 12, 4, 11, 15), // Front-right leg
-        Block.createCuboidShape(12, 0, 12, 15, 11, 15), // Back-right leg
-        Block.createCuboidShape(12, 0, 1, 15, 11, 4) // Back-left leg
-    );
-
-    // Double table (connected on one side)
-    private static final VoxelShape DOUBLE_SHAPE = VoxelShapes.union(
-        TABLE_TOP,
-        Block.createCuboidShape(1, 11, 1, 15, 14, 16), // Extended inner top
-        TABLE_LEG, // Left leg
-        Block.createCuboidShape(12, 0, 1, 15, 11, 4) // Right leg
-    );
-
-    // Double table for east/west connections (rotated 90 degrees)
-    private static final VoxelShape DOUBLE_SHAPE_EAST_WEST = VoxelShapes.union(
-        TABLE_TOP,
-        Block.createCuboidShape(1, 11, 1, 16, 14, 15), // Extended inner top (rotated)
-        Block.createCuboidShape(1, 0, 1, 4, 11, 4), // Front leg
-        Block.createCuboidShape(1, 0, 12, 4, 11, 15) // Back leg
-    );
-
-    // Double table for west connections (mirrored from east/west)
-    private static final VoxelShape DOUBLE_SHAPE_WEST = VoxelShapes.union(
-        TABLE_TOP,
-        Block.createCuboidShape(0, 11, 1, 15, 14, 15), // Extended inner top (mirrored)
-        Block.createCuboidShape(12, 0, 1, 15, 11, 4), // Front leg
-        Block.createCuboidShape(12, 0, 12, 15, 11, 15) // Back leg
-    );
-
-    // Double table for north connections (flipped 180 from south)
-    private static final VoxelShape DOUBLE_SHAPE_NORTH = VoxelShapes.union(
-        TABLE_TOP,
-        Block.createCuboidShape(1, 11, 0, 15, 14, 15), // Extended inner top (flipped)
-        Block.createCuboidShape(1, 0, 12, 4, 11, 15), // Front leg
-        Block.createCuboidShape(12, 0, 12, 15, 11, 15) // Back leg
-    );
-
-    // Corner table (connected on two adjacent sides)
-    private static final VoxelShape CORNER_SHAPE = VoxelShapes.union(
-        TABLE_TOP,
-        Block.createCuboidShape(1, 11, 1, 16, 14, 16), // Extended inner top
-        TABLE_LEG // Single corner leg
-    );
-
-    // Corner shapes for different orientations
-    // South-East corner (south and east connected)
-    private static final VoxelShape CORNER_SHAPE_SOUTH_EAST = VoxelShapes.union(
-        TABLE_TOP,
-        Block.createCuboidShape(1, 11, 1, 16, 14, 16), // Extended inner top
-        TABLE_LEG // Single corner leg
-    );
-
-    // South-West corner (south and west connected)
-    private static final VoxelShape CORNER_SHAPE_SOUTH_WEST = VoxelShapes.union(
-        TABLE_TOP,
-        Block.createCuboidShape(0, 11, 1, 15, 14, 16), // Extended inner top
-        Block.createCuboidShape(12, 0, 1, 15, 11, 4) // Single corner leg
-    );
-
-    // North-East corner (north and east connected)
-    private static final VoxelShape CORNER_SHAPE_NORTH_EAST = VoxelShapes.union(
-        TABLE_TOP,
-        Block.createCuboidShape(1, 11, 0, 16, 14, 15), // Extended inner top
-        Block.createCuboidShape(1, 0, 12, 4, 11, 15) // Single corner leg
-    );
-
-    // North-West corner (north and west connected)
-    private static final VoxelShape CORNER_SHAPE_NORTH_WEST = VoxelShapes.union(
-        TABLE_TOP,
-        Block.createCuboidShape(0, 11, 0, 15, 14, 15), // Extended inner top
-        Block.createCuboidShape(12, 0, 12, 15, 11, 15) // Single corner leg
-    );
-
-    // Center table (connected on opposite sides)
-    private static final VoxelShape CENTER_SHAPE = VoxelShapes.union(
-        TABLE_TOP,
-        Block.createCuboidShape(1, 11, 0, 15, 14, 16) // Full width inner top
-    );
-
-    // Center shapes for different orientations
-    // North-South center (north and south connected)
-    private static final VoxelShape CENTER_SHAPE_NORTH_SOUTH = VoxelShapes.union(
-        TABLE_TOP,
-        Block.createCuboidShape(1, 11, 0, 15, 14, 16) // Full width inner top (north/south)
-    );
-
-    // East-West center (east and west connected)
-    private static final VoxelShape CENTER_SHAPE_EAST_WEST = VoxelShapes.union(
-        TABLE_TOP,
-        Block.createCuboidShape(0, 11, 1, 16, 14, 15) // Full width inner top (east/west)
-    );
+    // Pre-computed shape maps for efficient lookups
+    private final Map<BlockState, VoxelShape> shapeByIndex;
 
     private final String blockName;
     private final String creativeTab;
@@ -154,6 +62,161 @@ public class WCTableBlock extends Block {
                 .with(SOUTH, false)
                 .with(WEST, false)
                 .with(WATERLOGGED, false));
+
+        // Pre-compute all possible shape combinations
+        this.shapeByIndex = this.makeShapes();
+    }
+
+    private Map<BlockState, VoxelShape> makeShapes() {
+        ImmutableMap.Builder<BlockState, VoxelShape> builder = ImmutableMap.builder();
+
+        // Generate all possible state combinations
+        for (boolean north : new boolean[] { false, true }) {
+            for (boolean east : new boolean[] { false, true }) {
+                for (boolean south : new boolean[] { false, true }) {
+                    for (boolean west : new boolean[] { false, true }) {
+                        VoxelShape shape = this.getShapeForConnections(north, east, south, west);
+
+                        // Add both waterlogged and non-waterlogged states
+                        BlockState state = this.getDefaultState()
+                                .with(NORTH, north)
+                                .with(EAST, east)
+                                .with(SOUTH, south)
+                                .with(WEST, west);
+
+                        builder.put(state.with(WATERLOGGED, false), shape);
+                        builder.put(state.with(WATERLOGGED, true), shape);
+                    }
+                }
+            }
+        }
+
+        return builder.build();
+    }
+
+    private VoxelShape getShapeForConnections(boolean north, boolean east, boolean south, boolean west) {
+        // Count connections
+        int connections = (north ? 1 : 0) + (east ? 1 : 0) + (south ? 1 : 0) + (west ? 1 : 0);
+
+        return switch (connections) {
+            case 0 -> getSingleShape();
+            case 1 -> getDoubleShape(north, east, south, west);
+            case 2 -> getCornerOrCenterShape(north, east, south, west);
+            case 3, 4 -> getComplexShape(north, east, south, west);
+            default -> getSingleShape();
+        };
+    }
+
+    private VoxelShape getSingleShape() {
+        return VoxelShapes.union(
+                TABLE_TOP,
+                TABLE_TOP_INNER,
+                TABLE_LEG, // Front-left leg
+                Block.createCuboidShape(1, 0, 12, 4, 11, 15), // Front-right leg
+                Block.createCuboidShape(12, 0, 12, 15, 11, 15), // Back-right leg
+                Block.createCuboidShape(12, 0, 1, 15, 11, 4) // Back-left leg
+        );
+    }
+
+    private VoxelShape getDoubleShape(boolean north, boolean east, boolean south, boolean west) {
+        if (north) {
+            return VoxelShapes.union(
+                    TABLE_TOP,
+                    Block.createCuboidShape(1, 11, 0, 15, 14, 15), // Extended inner top (flipped)
+                    Block.createCuboidShape(1, 0, 12, 4, 11, 15), // Front leg
+                    Block.createCuboidShape(12, 0, 12, 15, 11, 15) // Back leg
+            );
+        } else if (south) {
+            return VoxelShapes.union(
+                    TABLE_TOP,
+                    Block.createCuboidShape(1, 11, 1, 15, 14, 16), // Extended inner top
+                    TABLE_LEG, // Left leg
+                    Block.createCuboidShape(12, 0, 1, 15, 11, 4) // Right leg
+            );
+        } else if (east) {
+            return VoxelShapes.union(
+                    TABLE_TOP,
+                    Block.createCuboidShape(1, 11, 1, 16, 14, 15), // Extended inner top (rotated)
+                    Block.createCuboidShape(1, 0, 1, 4, 11, 4), // Front leg
+                    Block.createCuboidShape(1, 0, 12, 4, 11, 15) // Back leg
+            );
+        } else { // west
+            return VoxelShapes.union(
+                    TABLE_TOP,
+                    Block.createCuboidShape(0, 11, 1, 15, 14, 15), // Extended inner top (mirrored)
+                    Block.createCuboidShape(12, 0, 1, 15, 11, 4), // Front leg
+                    Block.createCuboidShape(12, 0, 12, 15, 11, 15) // Back leg
+            );
+        }
+    }
+
+    private VoxelShape getCornerOrCenterShape(boolean north, boolean east, boolean south, boolean west) {
+        // Check if it's adjacent connections (corner) or opposite connections (center)
+        if ((north && south) || (east && west)) {
+            // Center shape - connected on opposite sides
+            if (north && south) {
+                return VoxelShapes.union(
+                        TABLE_TOP,
+                        Block.createCuboidShape(1, 11, 0, 15, 14, 16) // Full width inner top (north/south)
+                );
+            } else {
+                return VoxelShapes.union(
+                        TABLE_TOP,
+                        Block.createCuboidShape(0, 11, 1, 16, 14, 15) // Full width inner top (east/west)
+                );
+            }
+        } else {
+            // Corner shape - connected on adjacent sides
+            if (south && east) {
+                return VoxelShapes.union(
+                        TABLE_TOP,
+                        Block.createCuboidShape(1, 11, 1, 16, 14, 16), // Extended inner top
+                        TABLE_LEG // Single corner leg
+                );
+            } else if (south && west) {
+                return VoxelShapes.union(
+                        TABLE_TOP,
+                        Block.createCuboidShape(0, 11, 1, 15, 14, 16), // Extended inner top
+                        Block.createCuboidShape(12, 0, 1, 15, 11, 4) // Single corner leg
+                );
+            } else if (north && east) {
+                return VoxelShapes.union(
+                        TABLE_TOP,
+                        Block.createCuboidShape(1, 11, 0, 16, 14, 15), // Extended inner top
+                        Block.createCuboidShape(1, 0, 12, 4, 11, 15) // Single corner leg
+                );
+            } else { // north && west
+                return VoxelShapes.union(
+                        TABLE_TOP,
+                        Block.createCuboidShape(0, 11, 0, 15, 14, 15), // Extended inner top
+                        Block.createCuboidShape(12, 0, 12, 15, 11, 15) // Single corner leg
+                );
+            }
+        }
+    }
+
+    private VoxelShape getComplexShape(boolean north, boolean east, boolean south, boolean west) {
+        // For multiple connections, determine the primary orientation
+        if ((north && south) || (east && west)) {
+            // If we have opposite connections, use the appropriate center shape
+            if (north && south) {
+                return VoxelShapes.union(
+                        TABLE_TOP,
+                        Block.createCuboidShape(1, 11, 0, 15, 14, 16) // Full width inner top (north/south)
+                );
+            } else {
+                return VoxelShapes.union(
+                        TABLE_TOP,
+                        Block.createCuboidShape(0, 11, 1, 16, 14, 15) // Full width inner top (east/west)
+                );
+            }
+        } else {
+            // Default to north-south center for complex connections
+            return VoxelShapes.union(
+                    TABLE_TOP,
+                    Block.createCuboidShape(1, 11, 0, 15, 14, 16) // Full width inner top (north/south)
+            );
+        }
     }
 
     public String getBlockName() {
@@ -182,7 +245,7 @@ public class WCTableBlock extends Block {
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
-                                              WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+            WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
@@ -207,74 +270,11 @@ public class WCTableBlock extends Block {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return getShapeForState(state);
+        return this.shapeByIndex.get(state);
     }
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return getShapeForState(state);
+        return this.shapeByIndex.get(state);
     }
-
-    private VoxelShape getShapeForState(BlockState state) {
-        boolean north = state.get(NORTH);
-        boolean east = state.get(EAST);
-        boolean south = state.get(SOUTH);
-        boolean west = state.get(WEST);
-
-        // Count connections
-        int connections = (north ? 1 : 0) + (east ? 1 : 0) + (south ? 1 : 0) + (west ? 1 : 0);
-
-        return switch (connections) {
-            case 0 -> SINGLE_SHAPE;
-            case 1 -> {
-                // Determine which double shape to use based on connection direction
-                if (north) {
-                    yield DOUBLE_SHAPE_NORTH;
-                } else if (south) {
-                    yield DOUBLE_SHAPE;
-                } else if (east) {
-                    yield DOUBLE_SHAPE_EAST_WEST;
-                } else {
-                    yield DOUBLE_SHAPE_WEST;
-                }
-            }
-            case 2 -> {
-                // Check if it's adjacent connections (corner) or opposite connections (center)
-                if ((north && south) || (east && west)) {
-                    // Determine which center shape to use based on connected sides
-                    if (north && south) {
-                        yield CENTER_SHAPE_NORTH_SOUTH;
-                    } else {
-                        yield CENTER_SHAPE_EAST_WEST;
-                    }
-                } else {
-                    // Determine which corner shape to use based on connected sides
-                    if (south && east) {
-                        yield CORNER_SHAPE_SOUTH_EAST;
-                    } else if (south && west) {
-                        yield CORNER_SHAPE_SOUTH_WEST;
-                    } else if (north && east) {
-                        yield CORNER_SHAPE_NORTH_EAST;
-                    } else {
-                        yield CORNER_SHAPE_NORTH_WEST;
-                    }
-                }
-            }
-            case 3, 4 -> {
-                // For multiple connections, determine the primary orientation
-                if ((north && south) || (east && west)) {
-                    // If we have opposite connections, use the appropriate center shape
-                    if (north && south) {
-                        yield CENTER_SHAPE_NORTH_SOUTH;
-                    } else {
-                        yield CENTER_SHAPE_EAST_WEST;
-                    }
-                } else {
-                    // Default to north-south center for complex connections
-                    yield CENTER_SHAPE_NORTH_SOUTH;
-                }
-            }
-            default -> SINGLE_SHAPE;
-        };
-    }
-} 
+}
