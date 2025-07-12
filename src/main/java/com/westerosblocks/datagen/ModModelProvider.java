@@ -45,7 +45,7 @@ public class ModModelProvider extends FabricModelProvider {
             Map.entry("cuboid-nsew-stack", CuboidNSEWStackBlockExport::new),
             Map.entry("cuboid-nsewud", CuboidNSEWUDBlockExport::new),
             Map.entry("layer", LayerBlockExport::new),
-            Map.entry("rail", RailBlockExport::new),
+            // Map.entry("rail", RailBlockExport::new),
             //  Map.entry("halfdoor", HalfDoorBlockExport::new),
             
             Map.entry("furnace", FurnaceBlockExport::new),
@@ -129,10 +129,10 @@ public class ModModelProvider extends FabricModelProvider {
                 //     LogBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                 //     break;
                 // }
-                case "rail": {
-                    RailBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-                    break;
-                }
+                // case "rail": {
+                //     RailBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                //     break;
+                // }
                 // case "trapdoor": {
                 //     TrapDoorBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                 //     break;

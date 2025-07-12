@@ -23,6 +23,7 @@ public class ModModelProvider2 {
         static CropBlockExport2 cropExporter = new CropBlockExport2();
         static LadderBlockExport ladderExporter = new LadderBlockExport();
         static StandalonePaneBlockExport paneExporter = new StandalonePaneBlockExport();
+        static RailBlockExport2 railExporter = new RailBlockExport2();
 
         public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
                 // Arrow Slits
@@ -198,6 +199,14 @@ public class ModModelProvider2 {
                                 "bars_iron_block/bars_iron_oxidized_crossbars");
                 paneExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.IRON_CROSSBAR,
                                 "bars_iron_block/bars_iron_crossbars");
+
+                // Rail Blocks
+                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FANCY_BLUE_CARPET, "carpet/fancy_blue_carpet");
+                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FANCY_RED_CARPET, "carpet/fancy_red_carpet");
+                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HORIZONTAL_CHAIN, "rail_block/chain");
+                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HORIZONTAL_NET, "rail_block/net_large");
+                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HORIZONTAL_ROPE, "rail_block/rope");
+                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.PACKED_SNOW, "rail_block/packed_snow");
                 paneExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OXIDIZED_IRON_BARS,
                                 "bars_iron_block/bars_iron_oxidized");
 
@@ -845,6 +854,14 @@ public class ModModelProvider2 {
                                 "bars_iron_block/bars_iron_crossbars");
                 paneExporter.generateItemModels(itemModelGenerator, ModBlocks2.OXIDIZED_IRON_BARS,
                                 "bars_iron_block/bars_iron_oxidized");
+
+                // Rail Blocks
+                railExporter.generateItemModels(itemModelGenerator, ModBlocks2.FANCY_BLUE_CARPET, "carpet/fancy_blue_carpet");
+                railExporter.generateItemModels(itemModelGenerator, ModBlocks2.FANCY_RED_CARPET, "carpet/fancy_red_carpet");
+                railExporter.generateItemModels(itemModelGenerator, ModBlocks2.HORIZONTAL_CHAIN, "rail_block/chain");
+                railExporter.generateItemModels(itemModelGenerator, ModBlocks2.HORIZONTAL_NET, "rail_block/net_large");
+                railExporter.generateItemModels(itemModelGenerator, ModBlocks2.HORIZONTAL_ROPE, "rail_block/rope");
+                railExporter.generateItemModels(itemModelGenerator, ModBlocks2.PACKED_SNOW, "rail_block/packed_snow");
 
                 // Door Blocks
                 doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.WHITE_WOOD_DOOR,

@@ -1,9 +1,5 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.block.ModBlock;
-import com.westerosblocks.block.ModBlockFactory;
-import com.westerosblocks.block.ModBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -18,68 +14,73 @@ import net.minecraft.world.WorldView;
 
 import java.util.List;
 
-public class WCRailBlock extends RailBlock implements ModBlockLifecycle {
+public class WCRailBlock extends RailBlock {
 
-    public static class Factory extends ModBlockFactory {
-        @Override
-        public Block buildBlockClass(ModBlock def) {
-            AbstractBlock.Settings settings = def.applyCustomProperties().nonOpaque().noCollision();
+    private final String blockName;
+    private final String creativeTab;
+    private final boolean allowUnsupported;
+    private final List<String> tooltips;
 
-            Block blk = new WCRailBlock(settings, def);
-            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
-        }
-    }
-
-    private final ModBlock def;
-    private boolean allow_unsupported = false;
-
-    protected WCRailBlock(AbstractBlock.Settings settings, ModBlock def) {
+    public WCRailBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, 
+                      boolean allowUnsupported, List<String> tooltips) {
         super(settings);
-        this.def = def;
-        String t = def.getType();
-        if (t != null) {
-            String[] toks = t.split(",");
-            for (String tok : toks) {
-                if (tok.equals("allow-unsupported")) {
-                    allow_unsupported = true;
-                    break;
-                }
-            }
-        }
-
+        this.blockName = blockName;
+        this.creativeTab = creativeTab;
+        this.allowUnsupported = allowUnsupported;
+        this.tooltips = tooltips;
     }
 
-    @Override
-    public ModBlock getWBDefinition() {
-        return def;
+    /**
+     * Gets the block name.
+     * 
+     * @return The block name
+     */
+    public String getBlockName() {
+        return blockName;
+    }
+
+    /**
+     * Gets the creative tab.
+     * 
+     * @return The creative tab
+     */
+    public String getCreativeTab() {
+        return creativeTab;
+    }
+
+    /**
+     * Gets whether this rail allows unsupported placement.
+     * 
+     * @return True if unsupported placement is allowed
+     */
+    public boolean isAllowUnsupported() {
+        return allowUnsupported;
     }
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        if (this.allow_unsupported) return true;
+        if (this.allowUnsupported) return true;
         return super.canPlaceAt(state, world, pos);
     }
 
     @Override
     protected void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos,
                                   boolean notify) {
-        if (!this.allow_unsupported) {
+        if (!this.allowUnsupported) {
             super.neighborUpdate(state, world, pos, sourceBlock, sourcePos, notify);
         } else if (!world.isClient && world.getBlockState(pos).isOf(this)) {
             this.updateBlockState(state, world, pos, sourceBlock);
         }
     }
 
-    private static final String[] TAGS = {"rails"};
-
-    @Override
-    public String[] getBlockTags() {
-        return TAGS;
-    }
-
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        addCustomTooltip(tooltip);
+        // Add custom tooltips if provided
+        if (tooltips != null) {
+            for (String tooltipText : tooltips) {
+                tooltip.add(Text.translatable(tooltipText));
+            }
+        }
         super.appendTooltip(stack, context, tooltip, options);
     }
 }

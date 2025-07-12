@@ -23,6 +23,67 @@ public class ModBlocks2 {
                     .creativeTab("westeros_decor_tab")
                     .texture("ashlar_third/black/all"));
 
+    // Rail Blocks
+    public static final Block FANCY_BLUE_CARPET = registerRailBlock(
+            "fancy_blue_carpet",
+            builder -> builder
+                    .creativeTab("westeros_cloth_fibers_tab")
+                    .hardness(0.1f)
+                    .resistance(0.1f)
+                    .soundType("cloth")
+                    .allowUnsupported()
+                    .texture("carpet/fancy_blue_carpet"));
+
+    public static final Block FANCY_RED_CARPET = registerRailBlock(
+            "fancy_red_carpet",
+            builder -> builder
+                    .creativeTab("westeros_cloth_fibers_tab")
+                    .hardness(0.1f)
+                    .resistance(0.1f)
+                    .soundType("cloth")
+                    .allowUnsupported()
+                    .texture("carpet/fancy_red_carpet"));
+
+    public static final Block HORIZONTAL_CHAIN = registerRailBlock(
+            "horizontal_chain",
+            builder -> builder
+                    .creativeTab("westeros_metal_tab")
+                    .hardness(1.0f)
+                    .resistance(5.0f)
+                    .soundType("metal")
+                    .allowUnsupported()
+                    .textures("rail_block/chain", "rail_block/chain_turned"));
+
+    public static final Block HORIZONTAL_NET = registerRailBlock(
+            "horizontal_net",
+            builder -> builder
+                    .creativeTab("westeros_cloth_fibers_tab")
+                    .hardness(0.5f)
+                    .resistance(2.0f)
+                    .soundType("cloth")
+                    .allowUnsupported()
+                    .textures("rail_block/net_large", "rail_block/net_large_turned"));
+
+    public static final Block HORIZONTAL_ROPE = registerRailBlock(
+            "horizontal_rope",
+            builder -> builder
+                    .creativeTab("westeros_cloth_fibers_tab")
+                    .hardness(0.5f)
+                    .resistance(2.0f)
+                    .soundType("cloth")
+                    .allowUnsupported()
+                    .textures("rail_block/rope", "rail_block/rope_turned"));
+
+    public static final Block PACKED_SNOW = registerRailBlock(
+            "packed_snow",
+            builder -> builder
+                    .creativeTab("westeros_water_air_tab")
+                    .hardness(0.2f)
+                    .resistance(0.2f)
+                    .soundType("snow")
+                    .allowUnsupported()
+                    .textures("rail_block/packed_snow", "rail_block/packed_snow_turned"));
+
     // Tables
 
     public static final Block OAK_TABLE = registerTableBlock(
@@ -3443,6 +3504,20 @@ public class ModBlocks2 {
                 .texture("vertical_net/vertical_net1");
 
         builder.setBlockType(BlockBuilder.BlockType.PANE);
+        return configurator.configure(builder).register();
+    }
+
+    public static Block registerRailBlock(String name, BlockBuilderConfigurator configurator) {
+        BlockBuilder builder = new BlockBuilder(name)
+                .creativeTab("westeros_cloth_fibers_tab")
+                .hardness(0.7f)
+                .resistance(3.5f)
+                .soundType("metal")
+                .nonOpaque()
+                .noCollision()
+                .texture("rail/rail"); // Default texture
+
+        builder.setBlockType(BlockBuilder.BlockType.RAIL);
         return configurator.configure(builder).register();
     }
 

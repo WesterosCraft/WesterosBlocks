@@ -942,6 +942,7 @@ public class BlockBuilder {
             case WEB -> new WCWebBlock(settings, name, creativeTab, layerSensitive, toggleOnUse, false, tooltips);
             case LADDER -> new WCLadderBlock(settings, name, creativeTab, allowUnsupported, false, tooltips);
             case PANE -> new WCStandalonePaneBlock(settings, unconnect);
+            case RAIL -> new WCRailBlock(settings, name, creativeTab, allowUnsupported, tooltips);
         };
     }
 
@@ -987,6 +988,8 @@ public class BlockBuilder {
         /** Ladder blocks for climbing */
         LADDER,
         /** Pane blocks for glass-like structures */
-        PANE
+        PANE,
+        /** Rail blocks for transportation */
+        RAIL
     }
 } 
