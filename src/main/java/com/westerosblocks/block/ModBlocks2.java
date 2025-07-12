@@ -3119,6 +3119,77 @@ public class ModBlocks2 {
                     .allowUnsupported()
                     .texture("wood_ladder/side"));
 
+    // Pane Blocks
+    public static final Block VERTICAL_NET = registerPaneBlock(
+            "vertical_net",
+            builder -> builder
+                    .creativeTab("westeros_cloth_fibers_tab")
+                    .hardness(1.0f)
+                    .resistance(3.0f)
+                    .soundType("glass")
+                    .unconnect(false)
+                    .texture("vertical_net/vertical_net1"));
+
+    public static final Block DORNE_CARVED_STONE_WINDOW = registerPaneBlock(
+            "dorne_carved_stone_window",
+            builder -> builder
+                    .creativeTab("westeros_windows_glass_tab")
+                    .hardness(1.0f)
+                    .resistance(3.0f)
+                    .soundType("stone")
+                    .unconnect(false)
+                    .texture("pane_block/moorish_stone_window_pane"));
+
+    public static final Block DORNE_CARVED_WOODEN_WINDOW = registerPaneBlock(
+            "dorne_carved_wooden_window",
+            builder -> builder
+                    .creativeTab("westeros_windows_glass_tab")
+                    .hardness(1.0f)
+                    .resistance(3.0f)
+                    .soundType("stone")
+                    .unconnect(false)
+                    .texture("pane_block/moorish_wood_window_pane"));
+
+    public static final Block IRON_BARS = registerPaneBlock(
+            "iron_bars",
+            builder -> builder
+                    .creativeTab("westeros_metal_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("metal")
+                    .unconnect(false)
+                    .texture("bars_iron_block/iron_bars"));
+
+    public static final Block OXIDIZED_IRON_CROSSBAR = registerPaneBlock(
+            "oxidized_iron_crossbar",
+            builder -> builder
+                    .creativeTab("westeros_metal_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("metal")
+                    .unconnect(false)
+                    .texture("bars_iron_block/bars_iron_oxidized_crossbars"));
+
+    public static final Block IRON_CROSSBAR = registerPaneBlock(
+            "iron_crossbar",
+            builder -> builder
+                    .creativeTab("westeros_metal_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("metal")
+                    .unconnect(false)
+                    .texture("bars_iron_block/bars_iron_crossbars"));
+
+    public static final Block OXIDIZED_IRON_BARS = registerPaneBlock(
+            "oxidized_iron_bars",
+            builder -> builder
+                    .creativeTab("westeros_metal_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("metal")
+                    .unconnect(false)
+                    .texture("bars_iron_block/bars_iron_oxidized"));
+
     @FunctionalInterface
     public interface BlockBuilderConfigurator {
         BlockBuilder configure(BlockBuilder builder);
@@ -3359,6 +3430,19 @@ public class ModBlocks2 {
                 .texture("ladder"); // Default texture
 
         builder.setBlockType(BlockBuilder.BlockType.LADDER);
+        return configurator.configure(builder).register();
+    }
+
+    public static Block registerPaneBlock(String name, BlockBuilderConfigurator configurator) {
+        BlockBuilder builder = new BlockBuilder(name)
+                .creativeTab("westeros_windows_glass_tab")
+                .hardness(1.0f)
+                .resistance(3.0f)
+                .soundType("glass")
+                .nonOpaque()
+                .texture("vertical_net/vertical_net1");
+
+        builder.setBlockType(BlockBuilder.BlockType.PANE);
         return configurator.configure(builder).register();
     }
 

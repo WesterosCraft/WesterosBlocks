@@ -417,6 +417,15 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.vertical_chain", "Vertical Chain");
         translationBuilder.add("block.westerosblocks.vertical_rope", "Vertical Rope");
 
+        // Pane Blocks
+        translationBuilder.add("block.westerosblocks.vertical_net", "Vertical Net");
+        translationBuilder.add("block.westerosblocks.dorne_carved_stone_window", "Dorne Carved Stone Window");
+        translationBuilder.add("block.westerosblocks.dorne_carved_wooden_window", "Dorne Carved Wooden Window");
+        translationBuilder.add("block.westerosblocks.iron_bars", "Iron Bars");
+        translationBuilder.add("block.westerosblocks.oxidized_iron_crossbar", "Oxidized Iron Crossbar");
+        translationBuilder.add("block.westerosblocks.iron_crossbar", "Iron Crossbar");
+        translationBuilder.add("block.westerosblocks.oxidized_iron_bars", "Oxidized Iron Bars");
+
         // Crop Blocks
         translationBuilder.add("block.westerosblocks.candle_altar", "Candle Altar");
         translationBuilder.add("block.westerosblocks.crop_carrots", "Carrots");

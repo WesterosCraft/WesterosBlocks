@@ -12,6 +12,7 @@ import com.westerosblocks.block.custom.WCHalfDoorBlock;
 import com.westerosblocks.block.custom.WCFlowerPotBlock;
 import com.westerosblocks.block.custom.WCWebBlock;
 import com.westerosblocks.block.custom.WCLadderBlock;
+import com.westerosblocks.block.custom.WCStandalonePaneBlock;
 import com.westerosblocks.util.ModWoodType;
 import com.westerosblocks.util.ModBlockSoundGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -122,6 +123,7 @@ public class BlockBuilder {
     private boolean toggleOnUse = false;
     private double[] boundingBox = null; // [xMin, xMax, yMin, yMax, zMin, zMax]
     private Block plantContent = null; // For flower pot blocks
+    private boolean unconnect = false;
 
     /**
      * Creates a new BlockBuilder with the specified name.
@@ -693,6 +695,18 @@ public class BlockBuilder {
         return this;
     }
 
+
+    /**
+     * Sets whether a block can be disconnected from neighbors.
+     * 
+     * @param unconnect Whether the block can be disconnected
+     * @return this builder for method chaining
+     */
+    public BlockBuilder unconnect(boolean unconnect) {
+        this.unconnect = unconnect;
+        return this;
+    }
+
     /**
      * Sets the block type (called internally by registration methods).
      * 
@@ -927,6 +941,7 @@ public class BlockBuilder {
             case FLOWER_POT -> new WCFlowerPotBlock(plantContent != null ? plantContent : Blocks.AIR, settings);
             case WEB -> new WCWebBlock(settings, name, creativeTab, layerSensitive, toggleOnUse, false, tooltips);
             case LADDER -> new WCLadderBlock(settings, name, creativeTab, allowUnsupported, false, tooltips);
+            case PANE -> new WCStandalonePaneBlock(settings, unconnect);
         };
     }
 
@@ -970,6 +985,8 @@ public class BlockBuilder {
         /** Web blocks for decorative and functional purposes */
         WEB,
         /** Ladder blocks for climbing */
-        LADDER
+        LADDER,
+        /** Pane blocks for glass-like structures */
+        PANE
     }
 } 

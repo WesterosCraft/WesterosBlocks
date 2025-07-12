@@ -22,6 +22,7 @@ public class ModModelProvider2 {
         static FlowerPotBlockExport flowerPotExporter = new FlowerPotBlockExport();
         static CropBlockExport2 cropExporter = new CropBlockExport2();
         static LadderBlockExport ladderExporter = new LadderBlockExport();
+        static StandalonePaneBlockExport paneExporter = new StandalonePaneBlockExport();
 
         public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
                 // Arrow Slits
@@ -183,6 +184,22 @@ public class ModModelProvider2 {
                                 "winterfell_stone_ladder/side1");
                 ladderExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WOOD_LADDER,
                                 "wood_ladder/side");
+
+                // Pane Blocks
+                paneExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.VERTICAL_NET,
+                                "vertical_net/vertical_net1");
+                paneExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DORNE_CARVED_STONE_WINDOW,
+                                "pane_block/moorish_stone_window_pane");
+                paneExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DORNE_CARVED_WOODEN_WINDOW,
+                                "pane_block/moorish_wood_window_pane");
+                paneExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.IRON_BARS,
+                                "bars_iron_block/iron_bars");
+                paneExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OXIDIZED_IRON_CROSSBAR,
+                                "bars_iron_block/bars_iron_oxidized_crossbars");
+                paneExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.IRON_CROSSBAR,
+                                "bars_iron_block/bars_iron_crossbars");
+                paneExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OXIDIZED_IRON_BARS,
+                                "bars_iron_block/bars_iron_oxidized");
 
                 // Sand Blocks
                 sandExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SAND_SKELETON,
@@ -812,6 +829,22 @@ public class ModModelProvider2 {
                 ladderExporter.generateItemModels(itemModelGenerator, ModBlocks2.VINE_JASMINE);
                 ladderExporter.generateItemModels(itemModelGenerator, ModBlocks2.WINTERFELL_STONE_LADDER);
                 ladderExporter.generateItemModels(itemModelGenerator, ModBlocks2.WOOD_LADDER);
+
+                // Pane Blocks
+                paneExporter.generateItemModels(itemModelGenerator, ModBlocks2.VERTICAL_NET,
+                                "vertical_net/vertical_net1");
+                paneExporter.generateItemModels(itemModelGenerator, ModBlocks2.DORNE_CARVED_STONE_WINDOW,
+                                "pane_block/moorish_stone_window_pane");
+                paneExporter.generateItemModels(itemModelGenerator, ModBlocks2.DORNE_CARVED_WOODEN_WINDOW,
+                                "pane_block/moorish_wood_window_pane");
+                paneExporter.generateItemModels(itemModelGenerator, ModBlocks2.IRON_BARS,
+                                "bars_iron_block/iron_bars");
+                paneExporter.generateItemModels(itemModelGenerator, ModBlocks2.OXIDIZED_IRON_CROSSBAR,
+                                "bars_iron_block/bars_iron_oxidized_crossbars");
+                paneExporter.generateItemModels(itemModelGenerator, ModBlocks2.IRON_CROSSBAR,
+                                "bars_iron_block/bars_iron_crossbars");
+                paneExporter.generateItemModels(itemModelGenerator, ModBlocks2.OXIDIZED_IRON_BARS,
+                                "bars_iron_block/bars_iron_oxidized");
 
                 // Door Blocks
                 doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.WHITE_WOOD_DOOR,
