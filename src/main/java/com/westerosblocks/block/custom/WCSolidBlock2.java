@@ -59,7 +59,8 @@ public class WCSolidBlock2 extends Block {
 
     public WCSolidBlock2(AbstractBlock.Settings settings, String name, String creativeTab, 
                         boolean toggleOnUse, double[] boundingBox, List<String> tooltips,
-                        List<String> stateValues, String stateDefaultValue, Map<String, String> stateTextures) {
+                        List<String> stateValues, String stateDefaultValue, Map<String, String> stateTextures,
+                        boolean hasConnectState, boolean hasSymmetrical, Boolean symmetricalDefault) {
         super(settings);
         this.name = name;
         this.creativeTab = creativeTab;
@@ -69,9 +70,9 @@ public class WCSolidBlock2 extends Block {
         this.stateTextures = stateTextures != null ? stateTextures : new HashMap<>();
         
         // Initialize state properties based on builder configuration
-        this.hasConnectState = false; // Can be configured via builder
-        this.hasSymmetrical = false; // Can be configured via builder
-        this.symmetricalDefault = false;
+        this.hasConnectState = hasConnectState;
+        this.hasSymmetrical = hasSymmetrical;
+        this.symmetricalDefault = symmetricalDefault != null ? symmetricalDefault : false;
         
         // Initialize state property if provided
         if (stateValues != null && !stateValues.isEmpty()) {
@@ -92,19 +93,6 @@ public class WCSolidBlock2 extends Block {
             this.collisionBox = VoxelShapes.fullCube();
         }
         this.supportBox = this.collisionBox;
-        
-        // Set default state
-        BlockState defaultState = this.getDefaultState();
-        if (hasConnectState) {
-            defaultState = defaultState.with(CONNECTSTATE, 0);
-        }
-        if (hasSymmetrical) {
-            defaultState = defaultState.with(SYMMETRICAL, symmetricalDefault);
-        }
-        if (stateProperty != null) {
-            defaultState = defaultState.with(stateProperty, stateDefault);
-        }
-        this.setDefaultState(defaultState);
     }
 
     @Override
@@ -120,6 +108,8 @@ public class WCSolidBlock2 extends Block {
         }
         super.appendProperties(builder);
     }
+
+
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
@@ -157,8 +147,16 @@ public class WCSolidBlock2 extends Block {
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         BlockState bs = super.getPlacementState(ctx);
-        if (stateProperty != null && bs != null && bs.contains(stateProperty)) {
-            bs = bs.with(stateProperty, stateDefault);
+        if (bs != null) {
+            if (hasConnectState && bs.contains(CONNECTSTATE)) {
+                bs = bs.with(CONNECTSTATE, 0);
+            }
+            if (hasSymmetrical && bs.contains(SYMMETRICAL)) {
+                bs = bs.with(SYMMETRICAL, symmetricalDefault);
+            }
+            if (stateProperty != null && bs.contains(stateProperty)) {
+                bs = bs.with(stateProperty, stateDefault);
+            }
         }
         return bs;
     }

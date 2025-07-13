@@ -426,6 +426,54 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.iron_crossbar", "Iron Crossbar");
         translationBuilder.add("block.westerosblocks.oxidized_iron_bars", "Oxidized Iron Bars");
 
+        // Solid Blocks
+        translationBuilder.add("block.westerosblocks.six_sided_birch", "Six Sided Birch");
+        translationBuilder.add("block.westerosblocks.apple_basket", "Apple Basket");
+        translationBuilder.add("block.westerosblocks.apple_crate", "Apple Crate");
+        translationBuilder.add("block.westerosblocks.approval_utility_block", "Approval Utility Block");
+        translationBuilder.add("block.westerosblocks.apricot_basket", "Apricot Basket");
+        translationBuilder.add("block.westerosblocks.six_sided_jungle", "Six Sided Jungle");
+        translationBuilder.add("block.westerosblocks.six_sided_oak", "Six Sided Oak");
+        translationBuilder.add("block.westerosblocks.six_sided_spruce", "Six Sided Spruce");
+        translationBuilder.add("block.westerosblocks.six_sided_stone_slab", "Six Sided Stone Slab");
+
+        // Additional Solid Blocks from JSON definitions
+        translationBuilder.add("block.westerosblocks.arbor_brick_ornate", "Arbor Brick Ornate");
+        translationBuilder.add("block.westerosblocks.bench_butcher_knives", "Bench with Butcher Knives");
+        translationBuilder.add("block.westerosblocks.bench_carpentry_hammer_saw", "Bench with Carpentry Tools");
+        translationBuilder.add("block.westerosblocks.bench_drawers", "Bench with Drawers");
+        translationBuilder.add("block.westerosblocks.bench_kitchen_knives", "Bench with Kitchen Knives");
+        translationBuilder.add("block.westerosblocks.bench_kitchen_pans", "Bench with Kitchen Pans");
+        translationBuilder.add("block.westerosblocks.bench_mason_hammer_mallet", "Bench with Masonry Tools");
+        translationBuilder.add("block.westerosblocks.berry_basket", "Berry Basket");
+        translationBuilder.add("block.westerosblocks.berry_crate", "Berry Crate");
+        translationBuilder.add("block.westerosblocks.black_brick_engraved", "Black Brick Engraved");
+        translationBuilder.add("block.westerosblocks.bluegreen_carved_sandstone", "Blue-Green Carved Sandstone");
+
+        // Additional Solid Blocks from JSON definitions - Part 2
+        translationBuilder.add("block.westerosblocks.bone_dirt", "Bone Dirt");
+        translationBuilder.add("block.westerosblocks.bookshelf_abandoned", "Abandoned Bookshelf");
+        translationBuilder.add("block.westerosblocks.bookshelf_library", "Library Bookshelf");
+        translationBuilder.add("block.westerosblocks.broken_cabinet", "Broken Cabinet");
+        translationBuilder.add("block.westerosblocks.bookshelf_maester", "Maester Bookshelf");
+        translationBuilder.add("block.westerosblocks.brown_grey_brick_engraved", "Brown Grey Brick Engraved");
+        translationBuilder.add("block.westerosblocks.cabinet_drawer", "Cabinet Drawer");
+        translationBuilder.add("block.westerosblocks.cage", "Cage");
+        translationBuilder.add("block.westerosblocks.carrot_basket", "Carrot Basket");
+        translationBuilder.add("block.westerosblocks.carrot_crate", "Carrot Crate");
+        translationBuilder.add("block.westerosblocks.closed_basket", "Closed Basket");
+        translationBuilder.add("block.westerosblocks.closed_cabinet", "Closed Cabinet");
+        translationBuilder.add("block.westerosblocks.coarse_dark_red_carved_sandstone", "Coarse Dark Red Carved Sandstone");
+        translationBuilder.add("block.westerosblocks.coarse_red_carved_sandstone", "Coarse Red Carved Sandstone");
+        translationBuilder.add("block.westerosblocks.cobble_keystone", "Cobblestone Keystone");
+        translationBuilder.add("block.westerosblocks.coloured_sept_window", "Coloured Sept Window");
+        translationBuilder.add("block.westerosblocks.crate", "Crate One");
+        translationBuilder.add("block.westerosblocks.crate2", "Crate Two");
+        translationBuilder.add("block.westerosblocks.crate3", "Crate Three");
+        translationBuilder.add("block.westerosblocks.dark_grey_brick_engraved", "Dark Grey Brick Engraved");
+        translationBuilder.add("block.westerosblocks.date_basket", "Date Basket");
+        translationBuilder.add("block.westerosblocks.dates", "Dates");
+
         // Crop Blocks
         translationBuilder.add("block.westerosblocks.candle_altar", "Candle Altar");
         translationBuilder.add("block.westerosblocks.crop_carrots", "Carrots");

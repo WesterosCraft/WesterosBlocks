@@ -129,6 +129,9 @@ public class BlockBuilder {
     private List<String> stateValues = null;
     private String stateDefaultValue = null;
     private Map<String, String> stateTextures = null;
+    private boolean hasConnectState = false;
+    private boolean hasSymmetrical = false;
+    private Boolean symmetricalDefault = false;
 
     /**
      * Creates a new BlockBuilder with the specified name.
@@ -775,6 +778,29 @@ public class BlockBuilder {
     }
 
     /**
+     * Enables the connectstate property for this block.
+     * This adds an integer property with values 0-3.
+     * 
+     * @return This builder instance
+     */
+    public BlockBuilder withConnectState() {
+        this.hasConnectState = true;
+        return this;
+    }
+
+    /**
+     * Enables the symmetrical property for this block.
+     * 
+     * @param defaultValue The default value for the symmetrical property
+     * @return This builder instance
+     */
+    public BlockBuilder withSymmetrical(boolean defaultValue) {
+        this.hasSymmetrical = true;
+        this.symmetricalDefault = defaultValue;
+        return this;
+    }
+
+    /**
      * Sets the block type (called internally by registration methods).
      * 
      * @param blockType The type of custom block to create
@@ -1010,7 +1036,7 @@ public class BlockBuilder {
             case LADDER -> new WCLadderBlock(settings, name, creativeTab, allowUnsupported, false, tooltips);
             case PANE -> new WCStandalonePaneBlock(settings, unconnect);
             case RAIL -> new WCRailBlock(settings, name, creativeTab, allowUnsupported, tooltips);
-            case SOLID -> new WCSolidBlock2(settings, name, creativeTab, toggleOnUse, boundingBox, tooltips, stateValues, stateDefaultValue, stateTextures);
+            case SOLID -> new WCSolidBlock2(settings, name, creativeTab, toggleOnUse, boundingBox, tooltips, stateValues, stateDefaultValue, stateTextures, hasConnectState, hasSymmetrical, symmetricalDefault);
         };
     }
 

@@ -224,6 +224,39 @@ public class ModModelProvider2 {
                 solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SIX_SIDED_OAK, "bark/oak/side");
                 solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SIX_SIDED_SPRUCE, "bark/spruce/side");
                 solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SIX_SIDED_STONE_SLAB, "ashlar_half/white/tile");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ARBOR_BRICK_ORNATE, "ashlar_engraved/arbor/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BENCH_BUTCHER_KNIVES, "bench_block/spruce_top", "bench_block/crafting_table_top", "bench_block/bench_butcher_knives");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BENCH_CARPENTRY_HAMMER_SAW, "bench_block/spruce_top", "bench_block/crafting_table_top", "bench_block/bench_carpentry_hammer_saw");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BENCH_DRAWERS, "bench_block/spruce_top", "bench_block/crafting_table_top", "bench_block/bench_drawers");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BENCH_KITCHEN_KNIVES, "bench_block/spruce_top", "bench_block/crafting_table_top", "bench_block/bench_kitchen_knives");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BENCH_KITCHEN_PANS, "bench_block/spruce_top", "bench_block/crafting_table_top", "bench_block/bench_kitchen_pans");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BENCH_MASON_HAMMER_MALLET, "bench_block/spruce_top", "bench_block/crafting_table_top", "bench_block/bench_mason_hammer_mallet");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BERRY_BASKET, "crate_block/basket_bottom", "crate_block/basket_berry", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BERRY_CRATE, "crate_block/side_bot1", "crate_block/crate_top_berry", "crate_block/side_bot1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLACK_BRICK_ENGRAVED, "ashlar_engraved/black/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BLUEGREEN_CARVED_SANDSTONE, "bluegreen_carved_sandstone/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BONE_DIRT, "dirt/bone");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BOOKSHELF_ABANDONED, "bench_block/spruce_top", "bench_block/spruce_top", "bookshelf_abandoned/side1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BOOKSHELF_LIBRARY, "bench_block/spruce_top", "bench_block/spruce_top", "bookshelf_library/side1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BROKEN_CABINET, "cabinet/top_bottom", "cabinet/top_bottom", "bench_block/cabinet_broken");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BOOKSHELF_MAESTER, "bench_block/spruce_top", "bench_block/spruce_top", "bookshelf_maester/side1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BROWN_GREY_BRICK_ENGRAVED, "ashlar_engraved/brown_grey/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CABINET_DRAWER, "cabinet/top_bottom", "cabinet/top_bottom", "cabinet/drawer/side1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CAGE, "cage/bottom", "cage/top", "cage/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CARROT_BASKET, "crate_block/basket_bottom", "crate_block/basket_carrot", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CARROT_CRATE, "crate_block/side_bot1", "crate_block/crate_top_carrot", "crate_block/side_bot1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CLOSED_BASKET, "crate_block/basket_bottom", "crate_block/basket_top_closed", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CLOSED_CABINET, "cabinet/top_bottom", "cabinet/top_bottom", "cabinet/closed/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.COARSE_DARK_RED_CARVED_SANDSTONE, "ashlar_engraved/pale_dark_red/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.COARSE_RED_CARVED_SANDSTONE, "ashlar_engraved/pale_red/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.COBBLE_KEYSTONE, "cobblestone/grey/keystone/top_bottom", "cobblestone/grey/keystone/top_bottom", "cobblestone/grey/keystone/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.COLOURED_SEPT_WINDOW, "glass/sept/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CRATE, "crate_block/side_bot1", "crate_block/crate_side_crossbar_right", "crate_block/side_bot1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CRATE2, "crate_block/side_bot1", "crate_block/crate_side_crossbar_left", "crate_block/side_bot1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CRATE3, "crate_block/side_bot1", "crate_block/crate_side_crossbar_crossed", "crate_block/side_bot1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DARK_GREY_BRICK_ENGRAVED, "ashlar_engraved/dark_grey/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DATE_BASKET, "crate_block/basket_bottom", "crate_block/basket_dates", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DATES, "dates/bottom", "dates/top", "dates/side");
 
                 // Sand Blocks
                 sandExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SAND_SKELETON,
@@ -880,6 +913,43 @@ public class ModModelProvider2 {
                 solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SIX_SIDED_OAK, "bark/oak/side");
                 solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SIX_SIDED_SPRUCE, "bark/spruce/side");
                 solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SIX_SIDED_STONE_SLAB, "ashlar_half/white/tile");
+
+                // Additional Solid Blocks from JSON definitions
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.ARBOR_BRICK_ORNATE, "ashlar_engraved/arbor/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BENCH_BUTCHER_KNIVES, "bench_block/bench_butcher_knives");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BENCH_CARPENTRY_HAMMER_SAW, "bench_block/bench_carpentry_hammer_saw");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BENCH_DRAWERS, "bench_block/bench_drawers");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BENCH_KITCHEN_KNIVES, "bench_block/bench_kitchen_knives");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BENCH_KITCHEN_PANS, "bench_block/bench_kitchen_pans");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BENCH_MASON_HAMMER_MALLET, "bench_block/bench_mason_hammer_mallet");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BERRY_BASKET, "crate_block/basket_berry");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BERRY_CRATE, "crate_block/crate_top_berry");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BLACK_BRICK_ENGRAVED, "ashlar_engraved/black/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BLUEGREEN_CARVED_SANDSTONE, "bluegreen_carved_sandstone/side");
+
+                // Additional Solid Blocks from JSON definitions - Part 2
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BONE_DIRT, "dirt/bone");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BOOKSHELF_ABANDONED, "bookshelf_abandoned/side1");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BOOKSHELF_LIBRARY, "bookshelf_library/side1");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BROKEN_CABINET, "bench_block/cabinet_broken");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BOOKSHELF_MAESTER, "bookshelf_maester/side1");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.BROWN_GREY_BRICK_ENGRAVED, "ashlar_engraved/brown_grey/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.CABINET_DRAWER, "cabinet/drawer/side1");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.CAGE, "cage/side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.CARROT_BASKET, "crate_block/basket_carrot");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.CARROT_CRATE, "crate_block/crate_top_carrot");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.CLOSED_BASKET, "crate_block/basket_top_closed");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.CLOSED_CABINET, "cabinet/closed/side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.COARSE_DARK_RED_CARVED_SANDSTONE, "ashlar_engraved/pale_dark_red/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.COARSE_RED_CARVED_SANDSTONE, "ashlar_engraved/pale_red/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.COBBLE_KEYSTONE, "cobblestone/grey/keystone/side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.COLOURED_SEPT_WINDOW, "glass/sept/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.CRATE, "crate_block/crate_side_crossbar_right");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.CRATE2, "crate_block/crate_side_crossbar_left");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.CRATE3, "crate_block/crate_side_crossbar_crossed");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.DARK_GREY_BRICK_ENGRAVED, "ashlar_engraved/dark_grey/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.DATE_BASKET, "crate_block/basket_dates");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.DATES, "dates/top");
 
                 // Rail Blocks
                 railExporter.generateItemModels(itemModelGenerator, ModBlocks2.FANCY_BLUE_CARPET, "carpet/fancy_blue_carpet");
