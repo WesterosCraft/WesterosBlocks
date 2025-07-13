@@ -24,6 +24,7 @@ public class ModModelProvider2 {
         static LadderBlockExport ladderExporter = new LadderBlockExport();
         static StandalonePaneBlockExport paneExporter = new StandalonePaneBlockExport();
         static RailBlockExport2 railExporter = new RailBlockExport2();
+        static SolidBlockExport2 solidExporter = new SolidBlockExport2();
 
         public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
                 // Arrow Slits
@@ -209,6 +210,20 @@ public class ModModelProvider2 {
                 railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.PACKED_SNOW, "rail_block/packed_snow");
                 paneExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OXIDIZED_IRON_BARS,
                                 "bars_iron_block/bars_iron_oxidized");
+
+                // Solid Blocks
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SIX_SIDED_BIRCH, "bark/birch/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.APPLE_BASKET, 
+                    "crate_block/basket_bottom", "crate_block/basket_apple", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.APPLE_CRATE, 
+                    "crate_block/side_bot1", "crate_block/crate_top_apples", "crate_block/side_bot1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.APPROVAL_UTILITY_BLOCK, "utility_block/approved");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.APRICOT_BASKET, 
+                    "crate_block/basket_bottom", "crate_block/basket_apricot", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SIX_SIDED_JUNGLE, "bark/jungle/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SIX_SIDED_OAK, "bark/oak/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SIX_SIDED_SPRUCE, "bark/spruce/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SIX_SIDED_STONE_SLAB, "ashlar_half/white/tile");
 
                 // Sand Blocks
                 sandExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SAND_SKELETON,
@@ -854,6 +869,17 @@ public class ModModelProvider2 {
                                 "bars_iron_block/bars_iron_crossbars");
                 paneExporter.generateItemModels(itemModelGenerator, ModBlocks2.OXIDIZED_IRON_BARS,
                                 "bars_iron_block/bars_iron_oxidized");
+
+                // Solid Blocks
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SIX_SIDED_BIRCH, "bark/birch/side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.APPLE_BASKET, "crate_block/basket_apple");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.APPLE_CRATE, "crate_block/crate_top_apples");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.APPROVAL_UTILITY_BLOCK, "utility_block/approved");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.APRICOT_BASKET, "crate_block/basket_apricot");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SIX_SIDED_JUNGLE, "bark/jungle/side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SIX_SIDED_OAK, "bark/oak/side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SIX_SIDED_SPRUCE, "bark/spruce/side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SIX_SIDED_STONE_SLAB, "ashlar_half/white/tile");
 
                 // Rail Blocks
                 railExporter.generateItemModels(itemModelGenerator, ModBlocks2.FANCY_BLUE_CARPET, "carpet/fancy_blue_carpet");

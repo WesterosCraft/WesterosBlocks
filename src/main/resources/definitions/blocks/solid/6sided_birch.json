@@ -1,12 +1,12 @@
 {
-    "blockName": "6sided_birch",
+    "blockName": "6sided_birch_old",
     "blockType": "solid",
     "hardness": 2,
     "stepSound": "wood",
     "material": "wood",
     "resistance": 5,
     "creativeTab": "westeros_logs_tab",
-    "label": "6-Sided Birch",
+    "label": "6-Sided Birch Old",
     "textures": [
         "bark/birch/side"
     ]

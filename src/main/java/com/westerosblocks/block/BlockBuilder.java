@@ -29,7 +29,9 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.DyeColor;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * A fluent builder class for creating and registering custom blocks in WesterosBlocks.
@@ -124,6 +126,9 @@ public class BlockBuilder {
     private double[] boundingBox = null; // [xMin, xMax, yMin, yMax, zMin, zMax]
     private Block plantContent = null; // For flower pot blocks
     private boolean unconnect = false;
+    private List<String> stateValues = null;
+    private String stateDefaultValue = null;
+    private Map<String, String> stateTextures = null;
 
     /**
      * Creates a new BlockBuilder with the specified name.
@@ -708,6 +713,68 @@ public class BlockBuilder {
     }
 
     /**
+     * Adds a state property with multiple string values.
+     * 
+     * @param values List of possible state values
+     * @return This builder for chaining
+     */
+    public BlockBuilder withStateProperty(List<String> values) {
+        this.stateValues = values;
+        this.stateDefaultValue = values.isEmpty() ? null : values.get(0);
+        return this;
+    }
+
+    /**
+     * Adds a state property with multiple string values and a custom default.
+     * 
+     * @param values List of possible state values
+     * @param defaultValue The default value (must be in the values list)
+     * @return This builder for chaining
+     */
+    public BlockBuilder withStateProperty(List<String> values, String defaultValue) {
+        this.stateValues = values;
+        this.stateDefaultValue = values.contains(defaultValue) ? defaultValue : values.get(0);
+        return this;
+    }
+
+    /**
+     * Adds a state property with multiple string values and corresponding textures.
+     * 
+     * @param values List of possible state values
+     * @param textures List of textures corresponding to each state value
+     * @return This builder for chaining
+     */
+    public BlockBuilder withStateProperty(List<String> values, List<String> textures) {
+        this.stateValues = values;
+        this.stateDefaultValue = values.isEmpty() ? null : values.get(0);
+        this.stateTextures = new HashMap<>();
+        
+        for (int i = 0; i < Math.min(values.size(), textures.size()); i++) {
+            this.stateTextures.put(values.get(i), textures.get(i));
+        }
+        return this;
+    }
+
+    /**
+     * Adds a state property with multiple string values, textures, and a custom default.
+     * 
+     * @param values List of possible state values
+     * @param textures List of textures corresponding to each state value
+     * @param defaultValue The default value (must be in the values list)
+     * @return This builder for chaining
+     */
+    public BlockBuilder withStateProperty(List<String> values, List<String> textures, String defaultValue) {
+        this.stateValues = values;
+        this.stateDefaultValue = values.contains(defaultValue) ? defaultValue : values.get(0);
+        this.stateTextures = new HashMap<>();
+        
+        for (int i = 0; i < Math.min(values.size(), textures.size()); i++) {
+            this.stateTextures.put(values.get(i), textures.get(i));
+        }
+        return this;
+    }
+
+    /**
      * Sets the block type (called internally by registration methods).
      * 
      * @param blockType The type of custom block to create
@@ -943,6 +1010,7 @@ public class BlockBuilder {
             case LADDER -> new WCLadderBlock(settings, name, creativeTab, allowUnsupported, false, tooltips);
             case PANE -> new WCStandalonePaneBlock(settings, unconnect);
             case RAIL -> new WCRailBlock(settings, name, creativeTab, allowUnsupported, tooltips);
+            case SOLID -> new WCSolidBlock2(settings, name, creativeTab, toggleOnUse, boundingBox, tooltips, stateValues, stateDefaultValue, stateTextures);
         };
     }
 
@@ -990,6 +1058,8 @@ public class BlockBuilder {
         /** Pane blocks for glass-like structures */
         PANE,
         /** Rail blocks for transportation */
-        RAIL
+        RAIL,
+        /** Solid blocks for basic building blocks */
+        SOLID
     }
 } 

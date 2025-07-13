@@ -1,5 +1,5 @@
 {
-    "blockName": "6sided_stone_slab",
+    "blockName": "6sided_stone_slab_old",
     "blockType": "solid",
     "hardness": 2,
     "stepSound": "stone",

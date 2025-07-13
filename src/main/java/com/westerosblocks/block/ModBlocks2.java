@@ -3251,6 +3251,92 @@ public class ModBlocks2 {
                     .unconnect(false)
                     .texture("bars_iron_block/bars_iron_oxidized"));
 
+
+    // Solid Block Examples
+    public static final Block SIX_SIDED_BIRCH = registerSolidBlock(
+            "6sided_birch",
+            builder -> builder
+                    .creativeTab("westeros_logs_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .texture("bark/birch/side"));
+
+    // Additional Solid Blocks from JSON definitions
+    public static final Block APPLE_BASKET = registerSolidBlock(
+            "apple_basket",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("cloth")
+                    .textures("crate_block/basket_bottom", "crate_block/basket_apple", "crate_block/basket_side"));
+
+    public static final Block APPLE_CRATE = registerSolidBlock(
+            "apple_crate",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("crate_block/side_bot1", "crate_block/crate_top_apples", "crate_block/side_bot1"));
+
+    public static final Block APPROVAL_UTILITY_BLOCK = registerSolidBlock(
+            "approval_utility_block",
+            builder -> builder
+                    .creativeTab("westeros_utility_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("metal")
+                    .harvestLevel(3)
+                    .texture("utility_block/approved"));
+
+    public static final Block APRICOT_BASKET = registerSolidBlock(
+            "apricot_basket",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("cloth")
+                    .textures("crate_block/basket_bottom", "crate_block/basket_apricot", "crate_block/basket_side"));
+
+    // Additional 6-Sided Solid Blocks from JSON definitions
+    public static final Block SIX_SIDED_JUNGLE = registerSolidBlock(
+            "6sided_jungle",
+            builder -> builder
+                    .creativeTab("westeros_logs_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .texture("bark/jungle/side"));
+
+    public static final Block SIX_SIDED_OAK = registerSolidBlock(
+            "6sided_oak",
+            builder -> builder
+                    .creativeTab("westeros_logs_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .texture("bark/oak/side"));
+
+    public static final Block SIX_SIDED_SPRUCE = registerSolidBlock(
+            "6sided_spruce",
+            builder -> builder
+                    .creativeTab("westeros_logs_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .texture("bark/spruce/side"));
+
+    public static final Block SIX_SIDED_STONE_SLAB = registerSolidBlock(
+            "6sided_stone_slab",
+            builder -> builder
+                    .creativeTab("westeros_half_ashlar_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .texture("ashlar_half/white/tile"));
+
     @FunctionalInterface
     public interface BlockBuilderConfigurator {
         BlockBuilder configure(BlockBuilder builder);
@@ -3520,6 +3606,19 @@ public class ModBlocks2 {
         builder.setBlockType(BlockBuilder.BlockType.RAIL);
         return configurator.configure(builder).register();
     }
+
+    public static Block registerSolidBlock(String name, BlockBuilderConfigurator configurator) {
+        BlockBuilder builder = new BlockBuilder(name)
+                .creativeTab("westeros_decor_tab")
+                .hardness(2.0f)
+                .resistance(6.0f)
+                .soundType("stone")
+                .texture("stone/stone"); // Default texture
+
+        builder.setBlockType(BlockBuilder.BlockType.SOLID);
+        return configurator.configure(builder).register();
+    }
+
 
     /**
      * Initialize all builder-based blocks
