@@ -4,6 +4,7 @@ import com.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.WoodType;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Builder-based block registration for WesterosBlocks.
@@ -3639,6 +3640,1171 @@ public class ModBlocks2 {
                     .resistance(2.0f)
                     .soundType("grass")
                     .textures("dates/bottom", "dates/top", "dates/side"));
+
+    // Additional Solid Blocks from JSON definitions - Part 3
+    public static final Block DESERT_SANDSTONE_ENGRAVED = registerSolidBlock(
+            "desert_sandstone_engraved",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(3.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_engraved/sandstone/all"));
+
+    public static final Block DOMESTIC_UTILITY_BLOCK = registerSolidBlock(
+            "domestic_utility_block",
+            builder -> builder
+                    .creativeTab("westeros_utility_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("metal")
+                    .requiresPickaxe(3)
+                    .texture("utility_block/domestic"));
+
+    public static final Block DONE_UTILITY_BLOCK = registerSolidBlock(
+            "done_utility_block",
+            builder -> builder
+                    .creativeTab("westeros_utility_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("metal")
+                    .requiresPickaxe(3)
+                    .texture("utility_block/done"));
+
+    public static final Block DRAGON_CARVING = registerSolidBlock(
+            "dragon_carving",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .texture("dragon_carving/side1"));
+
+    public static final Block EMPTY_BARREL = registerSolidBlock(
+            "empty_barrel",
+            builder -> builder
+                    .creativeTab("westeros_decor_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("barrel_closed/barrel_top_closed", "crate_block/barrel_top_empty", "barrel_sides/side0"));
+
+    public static final Block EMPTY_CABINET = registerSolidBlock(
+            "empty_cabinet",
+            builder -> builder
+                    .creativeTab("westeros_furniture_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("cabinet/top_bottom", "cabinet/top_bottom", "cabinet/empty/side"));
+
+    public static final Block FAITH_CARVED_ARBOR_BRICK = registerSolidBlock(
+            "faith_carved_arbor_brick",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_third/arbor/faith_carved"));
+
+    public static final Block FAITH_CARVED_BLACK_BRICK = registerSolidBlock(
+            "faith_carved_black_brick",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .texture("ashlar_quarter/black/faith_carved"));
+
+    public static final Block FAITH_CARVED_BROWN_GREY_BRICK = registerSolidBlock(
+            "faith_carved_brown_grey_brick",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .texture("ashlar_quarter/brown_grey/faith_carved"));
+
+    public static final Block FAITH_CARVED_COARSE_RED_BRICK = registerSolidBlock(
+            "faith_carved_coarse_red_brick",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .texture("ashlar_third/pale_red/faith_carved"));
+
+    public static final Block FAITH_CARVED_DARK_GREY_BRICK = registerSolidBlock(
+            "faith_carved_dark_grey_brick",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .texture("ashlar_quarter/dark_grey/faith_carved"));
+
+    public static final Block FAITH_CARVED_DUN_BRICK = registerSolidBlock(
+            "faith_carved_dun_brick",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_third/dun/faith_carved"));
+
+    public static final Block FAITH_CARVED_GREY_BRICK = registerSolidBlock(
+            "faith_carved_grey_brick",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .texture("ashlar_third/grey/faith_carved"));
+
+    public static final Block FAITH_CARVED_OLDTOWN_BRICK = registerSolidBlock(
+            "faith_carved_oldtown_brick",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .texture("ashlar_quarter_rounded/light_oldtown/faith_carved"));
+
+    public static final Block FAITH_CARVED_PINK_SANDSTONE = registerSolidBlock(
+            "faith_carved_pink_sandstone",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_third/sandy_pink/faith_carved"));
+
+    public static final Block FAITH_CARVED_REACH_BRICK = registerSolidBlock(
+            "faith_carved_reach_brick",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .texture("ashlar_quarter_rounded/reach/faith_carved"));
+
+    public static final Block FAITH_CARVED_SMALL_STONE_BRICK = registerSolidBlock(
+            "faith_carved_small_stone_brick",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .texture("ashlar_quarter/green_grey/faith_carved"));
+
+    public static final Block FAITH_CARVED_STONE_BRICK = registerSolidBlock(
+            "faith_carved_stone_brick",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .texture("ashlar_half/white/faith_carved"));
+
+    public static final Block FAITH_CARVED_STORMLANDS_BRICK = registerSolidBlock(
+            "faith_carved_stormlands_brick",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_quarter/stormlands/faith_carved"));
+
+    public static final Block FAITH_CARVED_WESTERLANDS_BRICK = registerSolidBlock(
+            "faith_carved_westerlands_brick",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .texture("ashlar_quarter/westerlands/faith_carved"));
+
+    public static final Block FISH_BARREL = registerSolidBlock(
+            "fish_barrel",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("barrel_closed/barrel_top_closed", "crate_block/barrel_top_fish", "barrel_sides/side0"));
+
+    public static final Block FISH_BASKET = registerSolidBlock(
+            "fish_basket",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("cloth")
+                    .textures("crate_block/basket_bottom", "crate_block/basket_fish", "crate_block/basket_side"));
+
+    public static final Block FISH_TRAP = registerSolidBlock(
+            "fish_trap",
+            builder -> builder
+                    .creativeTab("westeros_decor_tab")
+                    .hardness(2.0f)
+                    .resistance(10.0f)
+                    .soundType("wood")
+                    .nonOpaque()
+                    .texture("fish_trap/side1"));
+
+    public static final Block FLAGSTONE = registerSolidBlock(
+            "flagstone",
+            builder -> builder
+                    .creativeTab("westeros_cobblestone_tab")
+                    .hardness(2.0f)
+                    .resistance(2.0f)
+                    .soundType("stone")
+                    .texture("stone_block/flagstone"));
+
+    public static final Block FULL_CABINET = registerSolidBlock(
+            "full_cabinet",
+            builder -> builder
+                    .creativeTab("westeros_furniture_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("cabinet/top_bottom", "cabinet/top_bottom", "cabinet/full/side"));
+
+    public static final Block GLOWING_EMBERS = registerSolidBlock(
+            "glowing_embers",
+            builder -> builder
+                    .creativeTab("westeros_lighting_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .lightLevel(2)
+                    .texture("lighting/coals_glowing"));
+
+    public static final Block GRAIN_BASKET = registerSolidBlock(
+            "grain_basket",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("cloth")
+                    .textures("crate_block/basket_bottom", "crate_block/basket_grain", "crate_block/basket_side"));
+
+    public static final Block GRAIN_CRATE = registerSolidBlock(
+            "grain_crate",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("crate_block/side_bot1", "crate_block/crate_top_grain", "crate_block/side_bot1"));
+
+    public static final Block GREEN_GREY_BRICK_ENGRAVED = registerSolidBlock(
+            "green_grey_brick_engraved",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_engraved/green_grey/all"));
+
+    public static final Block GREY_BRICK_ENGRAVED = registerSolidBlock(
+            "grey_brick_engraved",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_engraved/grey/all"));
+
+    public static final Block GREY_KEYSTONE = registerSolidBlock(
+            "grey_keystone",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(3.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("stone_block/keystone_grey"));
+
+    public static final Block HIGH_CLASS_UTILITY_BLOCK = registerSolidBlock(
+            "high_class_utility_block",
+            builder -> builder
+                    .creativeTab("westeros_utility_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("metal")
+                    .requiresPickaxe(3)
+                    .texture("utility_block/highclass"));
+
+    public static final Block HOP_BASKET = registerSolidBlock(
+            "hop_basket",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("cloth")
+                    .textures("crate_block/basket_bottom", "crate_block/basket_hop", "crate_block/basket_side"));
+
+    public static final Block HOP_CRATE = registerSolidBlock(
+            "hop_crate",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("crate_block/crate_side_crossbar_right", "crate_block/crate_hops", "crate_block/crate_side_crossbar_left"));
+
+    public static final Block HOUSE_COUNT_UTILITY_BLOCK = registerSolidBlock(
+            "house_count_utility_block",
+            builder -> builder
+                    .creativeTab("westeros_utility_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("metal")
+                    .requiresPickaxe(3)
+                    .texture("utility_block/housecount"));
+
+    public static final Block INDUSTRY_UTILITY_BLOCK = registerSolidBlock(
+            "industry_utility_block",
+            builder -> builder
+                    .creativeTab("westeros_utility_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("metal")
+                    .requiresPickaxe(3)
+                    .texture("utility_block/industry"));
+
+    public static final Block IRON_CRATE = registerSolidBlock(
+            "iron_crate",
+            builder -> builder
+                    .creativeTab("westeros_decor_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("crate_block/side_bot1", "crate_block/crate_top_iron", "crate_block/side_bot1"));
+
+    public static final Block KL_DUN_CARVED_BRICK = registerSolidBlock(
+            "kl_dun_carved_brick",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_engraved/dun/all"));
+
+    public static final Block LANNISPORT_KEYSTONE_ORANGE_PLASTER = registerSolidBlock(
+            "lannisport_keystone_orange_plaster",
+            builder -> builder
+                    .creativeTab("westeros_marble_plaster_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .textures("fieldstone/westerlands/all", "fieldstone/westerlands/all", "plaster/smooth/lannisport_orange/all"));
+
+    public static final Block LANNISPORT_KEYSTONE_YELLOW_PLASTER = registerSolidBlock(
+            "lannisport_keystone_yellow_plaster",
+            builder -> builder
+                    .creativeTab("westeros_marble_plaster_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .textures("fieldstone/westerlands/all", "fieldstone/westerlands/all", "plaster/smooth/lannisport_yellow/all"));
+
+    public static final Block LARGE_CLAY_POT_SOLID = registerSolidBlock(
+            "large_clay_pot_solid",
+            builder -> builder
+                    .creativeTab("westeros_decor_tab")
+                    .hardness(5.0f)
+                    .resistance(4.0f)
+                    .soundType("wood")
+                    .requiresPickaxe(3)
+                    .textures("wood/oak/all", "clay_pot/solid", "clay_pot/solid"));
+
+    public static final Block LAVENDER_BASKET = registerSolidBlock(
+            "lavender_basket",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("cloth")
+                    .textures("crate_block/basket_bottom", "crate_block/basket_lavender", "crate_block/basket_side"));
+
+    public static final Block LAVENDER_CRATE = registerSolidBlock(
+            "lavender_crate",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("crate_block/crate_side_crossbar_right", "crate_block/crate_lavender", "crate_block/crate_side_crossbar_crossed"));
+
+    public static final Block LEMON_BASKET = registerSolidBlock(
+            "lemon_basket",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("cloth")
+                    .textures("crate_block/basket_bottom", "crate_block/basket_lemons", "crate_block/basket_side"));
+
+    public static final Block LIGHT_GREY_BRICK_ENGRAVED = registerSolidBlock(
+            "light_grey_brick_engraved",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_engraved/light_grey/all"));
+
+    public static final Block LIGHT_GREY_STONE_WHITE_PLASTER = registerSolidBlock(
+            "light_grey_stone_white_plaster",
+            builder -> builder
+                    .creativeTab("westeros_marble_plaster_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .textures("fieldstone/grey/all", "fieldstone/grey/all", "plaster/smooth/white/all"));
+
+    public static final Block LIGHT_OLDTOWN_BRICK_ENGRAVED = registerSolidBlock(
+            "light_oldtown_brick_engraved",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_engraved/light_oldtown/all"));
+
+    public static final Block LIME_BASKET = registerSolidBlock(
+            "lime_basket",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("cloth")
+                    .textures("crate_block/basket_bottom", "crate_block/basket_limes", "crate_block/basket_side"));
+
+    public static final Block LOW_CLASS_UTILITY_BLOCK = registerSolidBlock(
+            "low_class_utility_block",
+            builder -> builder
+                    .creativeTab("westeros_utility_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("metal")
+                    .requiresPickaxe(3)
+                    .texture("utility_block/lowclass"));
+
+    public static final Block MIDDLE_CLASS_UTILITY_BLOCK = registerSolidBlock(
+            "middle_class_utility_block",
+            builder -> builder
+                    .creativeTab("westeros_utility_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("metal")
+                    .requiresPickaxe(3)
+                    .texture("utility_block/middleclass"));
+
+    public static final Block MIRROR_BLOCK = registerSolidBlock(
+            "mirror_block",
+            builder -> builder
+                    .creativeTab("westeros_furniture_tab")
+                    .hardness(3.0f)
+                    .resistance(10.0f)
+                    .soundType("wood")
+                    .textures("mirror/top_bottom", "mirror/top_bottom", "mirror/side"));
+
+    public static final Block MONOCHROME_DARK_SANDSTONE_ENGRAVED = registerSolidBlock(
+            "monochrome_dark_sandstone_engraved",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_engraved/light_brown/all"));
+
+    public static final Block MONOCHROME_SANDSTONE_ENGRAVED = registerSolidBlock(
+            "monochrome_sandstone_engraved",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_engraved/westerlands/all"));
+
+    public static final Block NETHER_BRICK_KEYSTONE = registerSolidBlock(
+            "nether_brick_keystone",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(3.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_half/black/embellished"));
+
+    public static final Block NORTHERN_CARVINGS = registerSolidBlock(
+            "northern_carvings",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("wood/spruce/carving/top_bottom", "wood/spruce/carving/top_bottom", "wood/spruce/carving/side"));
+
+    public static final Block NOTE_UTILITY_BLOCK = registerSolidBlock(
+            "note_utility_block",
+            builder -> builder
+                    .creativeTab("westeros_utility_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("metal")
+                    .requiresPickaxe(3)
+                    .texture("utility_block/note"));
+
+    public static final Block OLIVE_BASKET = registerSolidBlock(
+            "olive_basket",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("cloth")
+                    .textures("crate_block/basket_bottom", "crate_block/basket_olives", "crate_block/basket_side"));
+
+    public static final Block OPEN_BASKET = registerSolidBlock(
+            "open_basket",
+            builder -> builder
+                    .creativeTab("westeros_decor_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("cloth")
+                    .textures("crate_block/basket_bottom", "crate_block/basket_top", "crate_block/basket_side"));
+
+    public static final Block OPEN_CRATE = registerSolidBlock(
+            "open_crate",
+            builder -> builder
+                    .creativeTab("westeros_decor_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("crate_block/side_bot1", "crate_block/crate_top_empty", "crate_block/side_bot1"));
+
+    public static final Block ORANGE_BASKET = registerSolidBlock(
+            "orange_basket",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("cloth")
+                    .textures("crate_block/basket_bottom", "crate_block/basket_oranges", "crate_block/basket_side"));
+
+    public static final Block ORANGE_BRICK_ARCH_SINGLE = registerSolidBlock(
+            "orange_brick_arch_single",
+            builder -> builder
+                    .creativeTab("westeros_brick_tab")
+                    .hardness(3.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .withConnectState()
+                    .textures("brick/orange/all1", "brick/orange/all1", "brick/orange/arch_single"));
+
+    public static final Block ORANGE_BRICK_ARCH_DOUBLE = registerSolidBlock(
+            "orange_brick_arch_double",
+            builder -> builder
+                    .creativeTab("westeros_brick_tab")
+                    .hardness(3.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .withConnectState()
+                    .textures("brick/orange/all1", "brick/orange/all1", "brick/orange/arch_double"));
+
+    public static final Block ORANGE_BRICK_DENTIL = registerSolidBlock(
+            "orange_brick_dentil",
+            builder -> builder
+                    .creativeTab("westeros_brick_tab")
+                    .hardness(3.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .textures("brick/orange/all1", "brick/orange/all1", "brick/orange/dentil"));
+
+    public static final Block ORNATE_MARBLE = registerSolidBlock(
+            "ornate_marble",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("marble/quartz/ornate/side"));
+
+    public static final Block ORANGE_BRICK_ROWLOCK = registerSolidBlock(
+            "orange_brick_rowlock",
+            builder -> builder
+                    .creativeTab("westeros_brick_tab")
+                    .hardness(3.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .textures("brick/orange/all1", "brick/orange/all1", "brick/orange/rowlock1"));
+
+    public static final Block ORNATE_SANDSTONE = registerSolidBlock(
+            "ornate_sandstone",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_third/sandstone/ornate/side"));
+
+    public static final Block PARQUET_FLOOR = registerSolidBlock(
+            "parquet_floor",
+            builder -> builder
+                    .creativeTab("westeros_wood_planks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .texture("wood/oak/ornate"));
+
+    public static final Block PILED_BONES = registerSolidBlock(
+            "piled_bones",
+            builder -> builder
+                    .creativeTab("westeros_misc_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("piled_bones/side"));
+
+    public static final Block PINK_SANDSTONE_ENGRAVED = registerSolidBlock(
+            "pink_sandstone_engraved",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_engraved/sandy_pink/all"));
+
+    public static final Block PISTON_TOP = registerSolidBlock(
+            "piston_top",
+            builder -> builder
+                    .creativeTab("westeros_tool_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .texture("wood/oak/studded"));
+
+    public static final Block POMEGRANATE_BASKET = registerSolidBlock(
+            "pomegranate_basket",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("cloth")
+                    .textures("crate_block/basket_bottom", "crate_block/basket_pomegranates", "crate_block/basket_side"));
+
+    public static final Block PURPLE_GRAPE_BASKET = registerSolidBlock(
+            "purple_grape_basket",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("cloth")
+                    .textures("crate_block/basket_bottom", "crate_block/basket_grape_purple", "crate_block/basket_side"));
+
+    public static final Block PURPLE_GRAPE_CRATE = registerSolidBlock(
+            "purple_grape_crate",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("crate_block/crate_side_crossbar_right", "crate_block/crate_top_grape_purple", "crate_block/crate_side_crossbar_crossed"));
+
+    public static final Block REACH_BRICK_ENGRAVED = registerSolidBlock(
+            "reach_brick_engraved",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_engraved/reach/all"));
+
+    public static final Block REACH_OAK_WOOD_PANELLING = registerSolidBlock(
+            "reach_oak_wood_panelling",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("wood")
+                    .textures("wood/oak/panelling/top_bottom", "wood/oak/panelling/top_bottom", "wood/oak/panelling/side1"));
+
+    public static final Block RED_LANTERN2 = registerSolidBlock(
+            "red_lantern2",
+            builder -> builder
+                    .creativeTab("westeros_lighting_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .lightLevel(7)
+                    .textures("lighting/lantern_red_bottom", "lighting/lantern_red_top", "lighting/lantern_red_side"));
+
+    public static final Block REACH_SPRUCE_WOOD_PANELLING = registerSolidBlock(
+            "reach_spruce_wood_panelling",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("wood")
+                    .textures("wood/spruce/panelling/top_bottom", "wood/spruce/panelling/top_bottom", "wood/spruce/panelling/side1"));
+
+    public static final Block REDORANGE_CARVED_SANDSTONE = registerSolidBlock(
+            "redorange_carved_sandstone",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("redorange_carved_sandstone/side"));
+
+    public static final Block SALT_CRATE = registerSolidBlock(
+            "salt_crate",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("crate_block/side_bot1", "crate_block/crate_top_salt", "crate_block/side_bot1"));
+
+    public static final Block SANDY_STONE_SLABS = registerSolidBlock(
+            "sandy_stone_slabs",
+            builder -> builder
+                    .creativeTab("westeros_cobblestone_tab")
+                    .hardness(3.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("sandy_stone/sandy_stone_0"));
+
+    public static final Block SEPT_CRYSTAL_LARGE = registerSolidBlock(
+            "sept_crystal_large",
+            builder -> builder
+                    .creativeTab("westeros_windows_glass_tab")
+                    .hardness(2.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .nonOpaque()
+                    .alphaRender()
+                    .texture("crystal/all"));
+
+    public static final Block SHOP_UTILITY_BLOCK = registerSolidBlock(
+            "shop_utility_block",
+            builder -> builder
+                    .creativeTab("westeros_utility_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("metal")
+                    .requiresPickaxe(3)
+                    .texture("utility_block/shop"));
+
+    public static final Block SILVER_TIN_CRATE = registerSolidBlock(
+            "silver_tin_crate",
+            builder -> builder
+                    .creativeTab("westeros_decor_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("crate_block/crate_side_crossbar_right", "crate_block/crate_top_tin", "crate_block/crate_side_crossbar_crossed"));
+
+    public static final Block SMALL_ORANGE_BRICKS_ORNATE_TOP = registerSolidBlock(
+            "small_orange_bricks_ornate_top",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(3.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .textures("brick/orange/ornate/top_bottom", "brick/orange/ornate/top_bottom", "brick/orange/all1"));
+
+    public static final Block SMALL_ORANGE_BRICKS_ORNATE = registerSolidBlock(
+            "small_orange_bricks_ornate",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(3.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("brick/orange/ornate/top_bottom"));
+
+    public static final Block SMALL_SMOOTH_STONE_BRICK_BLUE_PLASTER = registerSolidBlock(
+            "small_smooth_stone_brick_blue_plaster",
+            builder -> builder
+                    .creativeTab("westeros_marble_plaster_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .textures("ashlar_quarter_rounded/grey/all", "ashlar_quarter_rounded/grey/all", "plaster/smooth/blue/all"));
+
+    public static final Block SMALL_SMOOTH_STONE_BRICK_WHITE_PLASTER = registerSolidBlock(
+            "small_smooth_stone_brick_white_plaster",
+            builder -> builder
+                    .creativeTab("westeros_marble_plaster_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .textures("ashlar_quarter_rounded/grey/all", "ashlar_quarter_rounded/grey/all", "plaster/smooth/brown_white/all"));
+
+    public static final Block SMALL_STONE_BRICK_WHITE_PLASTER = registerSolidBlock(
+            "small_stone_brick_white_plaster",
+            builder -> builder
+                    .creativeTab("westeros_marble_plaster_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .textures("ashlar_quarter/green_grey/all", "ashlar_quarter/green_grey/all", "plaster/smooth/white/all"));
+
+    public static final Block SMALL_WHITE_BRICK_BROWNISH_WHITE_PLASTER = registerSolidBlock(
+            "small_white_brick_brownish_white_plaster",
+            builder -> builder
+                    .creativeTab("westeros_marble_plaster_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .textures("ashlar_quarter_rounded/white/all", "ashlar_quarter_rounded/white/all", "plaster/smooth/brown_white/all"));
+
+    public static final Block SMALL_WHITE_BRICK_WHITE_PLASTER = registerSolidBlock(
+            "small_white_brick_white_plaster",
+            builder -> builder
+                    .creativeTab("westeros_marble_plaster_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .textures("ashlar_quarter_rounded/white/all", "ashlar_quarter_rounded/white/all", "plaster/smooth/white/all"));
+
+    public static final Block SOURLEAF_BASKET = registerSolidBlock(
+            "sourleaf_basket",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("cloth")
+                    .textures("crate_block/basket_bottom", "crate_block/basket_sourleaf", "crate_block/basket_side"));
+
+    public static final Block SOURLEAF_CRATE = registerSolidBlock(
+            "sourleaf_crate",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("crate_block/crate_side_crossbar_right", "crate_block/crate_sourleaf", "crate_block/crate_side_crossbar_crossed"));
+
+    public static final Block SOUTHERN_BRICK_ARCH_FLAT = registerSolidBlock(
+            "southern_brick_arch_flat",
+            builder -> builder
+                    .creativeTab("westeros_brick_tab")
+                    .hardness(3.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .withConnectState()
+                    .textures("brick/southern/all1", "brick/southern/all1", "brick/southern/arch_flat"));
+
+    public static final Block SOUTHERN_BRICK_ARCH = registerSolidBlock(
+            "southern_brick_arch",
+            builder -> builder
+                    .creativeTab("westeros_brick_tab")
+                    .hardness(3.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .withConnectState()
+                    .textures("brick/southern/all1", "brick/southern/all1", "brick/southern/arch"));
+
+    public static final Block SOUTHERN_BRICK_LINTEL = registerSolidBlock(
+            "southern_brick_lintel",
+            builder -> builder
+                    .creativeTab("westeros_brick_tab")
+                    .hardness(3.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .textures("brick/southern/all1", "brick/southern/all1", "brick/southern/lintel"));
+
+    public static final Block SPECIAL_UTILITY_BLOCK = registerSolidBlock(
+            "special_utility_block",
+            builder -> builder
+                    .creativeTab("westeros_utility_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("metal")
+                    .requiresPickaxe(3)
+                    .texture("utility_block/special"));
+
+    public static final Block SPIT_ROAST = registerSolidBlock(
+            "spit_roast",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(2.0f)
+                    .soundType("grass")
+                    .texture("meat_spitroast/all"));
+
+    public static final Block SQUASH = registerSolidBlock(
+            "squash",
+            builder -> builder
+                    .creativeTab("westeros_food_blocks_tab")
+                    .hardness(2.0f)
+                    .resistance(2.0f)
+                    .soundType("grass")
+                    .textures("squash/top", "squash/top", "squash/side"));
+
+    public static final Block STACKED_BONES_SOLID = registerSolidBlock(
+            "stacked_bones_solid",
+            builder -> builder
+                    .creativeTab("westeros_misc_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("stone")
+                    .requiresAxe(1)
+                    .textures("stacked_bones/bone_stacked_front", "stacked_bones/bone_stacked_front", "stacked_bones/bone_stacked_rotated"));
+
+    public static final Block STORMLANDS_BRICK_ENGRAVED = registerSolidBlock(
+            "stormlands_brick_engraved",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(5.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_engraved/stormlands/all"));
+
+    public static final Block TABLE_BOOKS = registerSolidBlock(
+            "table_books",
+            builder -> builder
+                    .creativeTab("westeros_furniture_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("bench_block/spruce_top", "bench_block/table_top", "bench_block/table_drawer_books_side"));
+
+    public static final Block TABLE_DRAWERS = registerSolidBlock(
+            "table_drawers",
+            builder -> builder
+                    .creativeTab("westeros_furniture_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("bench_block/spruce_top", "bench_block/table_top", "bench_block/table_drawers_side"));
+
+    public static final Block TABLE_WIDGETS = registerSolidBlock(
+            "table_widgets",
+            builder -> builder
+                    .creativeTab("westeros_furniture_tab")
+                    .hardness(2.0f)
+                    .resistance(5.0f)
+                    .soundType("wood")
+                    .textures("bench_block/spruce_top", "bench_block/table_top", "bench_block/table_drawer_widgets_side"));
+
+    public static final Block TERRACOTTA_ENGRAVED = registerSolidBlock(
+            "terracotta_engraved",
+            builder -> builder
+                    .creativeTab("westeros_panelling_carvings_tab")
+                    .hardness(3.0f)
+                    .resistance(10.0f)
+                    .soundType("stone")
+                    .texture("ashlar_engraved/terracotta/all"));
+
+    public static final Block THICK_GRASS_BLOCK = registerSolidBlock(
+            "thick_grass_block",
+            builder -> builder
+                    .creativeTab("westeros_grass_dirt_tab")
+                    .hardness(5.0f)
+                    .resistance(5.0f)
+                    .soundType("grass")
+                    .requiresShovel(3)
+                    .texture("grass_block/forest_top1"));
+
+    // Food blocks
+    public static final Block TURNIP_BASKET = registerSolidBlock(
+        "turnip_basket",
+        builder -> builder
+            .creativeTab("westeros_food_blocks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .soundType("cloth")
+            .textures("crate_block/basket_bottom", "crate_block/basket_turnip", "crate_block/basket_side")
+    );
+
+    public static final Block TURNIP_CRATE = registerSolidBlock(
+        "turnip_crate",
+        builder -> builder
+            .creativeTab("westeros_food_blocks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .soundType("wood")
+            .textures("crate_block/side_bot1", "crate_block/crate_top_turnip", "crate_block/side_bot1")
+    );
+
+    // Plaster blocks
+    public static final Block UNUSED_BROWN_PLASTER = registerSolidBlock(
+        "unused_brown_plaster",
+        builder -> builder
+            .creativeTab("westeros_marble_plaster_tab")
+            .hardness(5.0f)
+            .resistance(10.0f)
+            .soundType("stone")
+            .textures("ashlar_quarter_rounded/light_brown/all", "ashlar_quarter_rounded/light_brown/all", "plaster/smooth/brown_white/all")
+    );
+
+    public static final Block UNUSED_PURPLE_PLASTER = registerSolidBlock(
+        "unused_purple_plaster",
+        builder -> builder
+            .creativeTab("westeros_marble_plaster_tab")
+            .hardness(5.0f)
+            .resistance(10.0f)
+            .soundType("stone")
+            .textures("ashlar_quarter_rounded/dark_red/all", "ashlar_quarter_rounded/dark_red/all", "plaster/smooth/brown_white/all")
+    );
+
+    // Engraved blocks
+    public static final Block VIVID_DARK_SANDSTONE_ENGRAVED = registerSolidBlock(
+        "vivid_dark_sandstone_engraved",
+        builder -> builder
+            .creativeTab("westeros_panelling_carvings_tab")
+            .hardness(5.0f)
+            .resistance(10.0f)
+            .soundType("stone")
+            .texture("ashlar_engraved/dark_tan/all")
+    );
+
+    public static final Block VIVID_SANDSTONE_ENGRAVED = registerSolidBlock(
+        "vivid_sandstone_engraved",
+        builder -> builder
+            .creativeTab("westeros_panelling_carvings_tab")
+            .hardness(5.0f)
+            .resistance(10.0f)
+            .soundType("stone")
+            .texture("ashlar_engraved/tan/all")
+    );
+
+    // Barrel block
+    public static final Block WATER_BARREL = registerSolidBlock(
+        "water_barrel",
+        builder -> builder
+            .creativeTab("westeros_decor_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .soundType("wood")
+            .textures("barrel_closed/barrel_top_closed", "crate_block/barrel_top_water", "barrel_sides/side0")
+    );
+
+    // Engraved white brick
+    public static final Block WHITE_BRICK_ENGRAVED = registerSolidBlock(
+        "white_brick_engraved",
+        builder -> builder
+            .creativeTab("westeros_panelling_carvings_tab")
+            .hardness(5.0f)
+            .resistance(10.0f)
+            .soundType("stone")
+            .texture("ashlar_engraved/white/all")
+    );
+
+    // Grape baskets and crates
+    public static final Block WHITE_GRAPE_BASKET = registerSolidBlock(
+        "white_grape_basket",
+        builder -> builder
+            .creativeTab("westeros_food_blocks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .soundType("cloth")
+            .textures("crate_block/basket_bottom", "crate_block/basket_grape_white", "crate_block/basket_side")
+    );
+
+    public static final Block WHITE_GRAPE_CRATE = registerSolidBlock(
+        "white_grape_crate",
+        builder -> builder
+            .creativeTab("westeros_food_blocks_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .soundType("wood")
+            .textures("crate_block/crate_side_crossbar_right", "crate_block/crate_top_grape_white", "crate_block/crate_side_crossbar_crossed")
+    );
+
+    // Carving block
+    public static final Block WINTERFELL_CARVING = registerSolidBlock(
+        "winterfell_carving",
+        builder -> builder
+            .creativeTab("westeros_panelling_carvings_tab")
+            .hardness(5.0f)
+            .resistance(10.0f)
+            .soundType("stone")
+            .texture("ashlar_third/dark_grey/carving/side")
+    );
+
+    // Utility blocks
+    public static final Block WIP_UTILITY_BLOCK = registerSolidBlock(
+        "wip_utility_block",
+        builder -> builder
+            .creativeTab("westeros_utility_tab")
+            .hardness(5.0f)
+            .resistance(10.0f)
+            .soundType("metal")
+            .requiresPickaxe(3)
+            .lightLevel(0)
+            .texture("utility_block/wip")
+    );
+
+    public static final Block WORKSHOP_UTILITY_BLOCK = registerSolidBlock(
+        "workshop_utility_block",
+        builder -> builder
+            .creativeTab("westeros_utility_tab")
+            .hardness(5.0f)
+            .resistance(10.0f)
+            .soundType("metal")
+            .requiresPickaxe(3)
+            .lightLevel(0)
+            .texture("utility_block/workshop")
+    );
+
+    public static final Block YARD_UTILITY_BLOCK = registerSolidBlock(
+        "yard_utility_block",
+        builder -> builder
+            .creativeTab("westeros_utility_tab")
+            .hardness(5.0f)
+            .resistance(10.0f)
+            .soundType("metal")
+            .requiresPickaxe(3)
+            .lightLevel(0)
+            .texture("utility_block/yard")
+    );
+
+    // Timber block with multi-texture states and overlay textures
+    public static final Block TIMBER_NORTHERN_BLUE_BRESSUMMER = registerSolidBlock(
+        "timber_northern_blue_bressummer",
+        builder -> builder
+            .creativeTab("westeros_timber_frame_tab")
+            .hardness(2.0f)
+            .resistance(5.0f)
+            .soundType("wood")
+            .withConnectState()
+            .toggleOnUse()
+            .withMultiTextureStateProperty(
+                List.of("state_0", "state_1", "state_2", "state_3", "state_4"),
+                Map.of(
+                    "state_0", new String[]{"plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all"},
+                    "state_1", new String[]{"plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all"},
+                    "state_2", new String[]{"plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all"},
+                    "state_3", new String[]{"plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1"},
+                    "state_4", new String[]{"plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all"}
+                ),
+                "state_0"
+            )
+            .withOverlayTextures(
+                Map.of(
+                    "state_0", new String[]{"timber/northern/bottom", "transparent", "timber/northern/bressummer"},
+                    "state_1", new String[]{"timber/northern/bottom", "transparent", "timber/northern/bressummer"},
+                    "state_2", new String[]{"timber/northern/bottom", "transparent", "timber/northern/bressummer"},
+                    "state_3", new String[]{"timber/northern/bottom", "transparent", "timber/northern/bressummer"},
+                    "state_4", new String[]{"timber/northern/bottom", "transparent", "timber/northern/bressummer"}
+                )
+            )
+    );
+
+    // Clay block
+    public static final Block YELLOW_STAINED_CLAY = registerSolidBlock(
+        "yellow_stained_clay",
+        builder -> builder
+            .creativeTab("westeros_sand_gravel_tab")
+            .hardness(5.0f)
+            .resistance(5.0f)
+            .soundType("grass")
+            .texture("clay/yellow_stained_clay")
+    );
 
     @FunctionalInterface
     public interface BlockBuilderConfigurator {

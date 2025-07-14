@@ -257,6 +257,157 @@ public class ModModelProvider2 {
                 solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DARK_GREY_BRICK_ENGRAVED, "ashlar_engraved/dark_grey/all");
                 solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DATE_BASKET, "crate_block/basket_bottom", "crate_block/basket_dates", "crate_block/basket_side");
                 solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DATES, "dates/bottom", "dates/top", "dates/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DESERT_SANDSTONE_ENGRAVED, "ashlar_engraved/sandstone/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DOMESTIC_UTILITY_BLOCK, "utility_block/domestic");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DONE_UTILITY_BLOCK, "utility_block/done");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.DRAGON_CARVING, "dragon_carving/side1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.EMPTY_BARREL, "barrel_closed/barrel_top_closed", "crate_block/barrel_top_empty", "barrel_sides/side0");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.EMPTY_CABINET, "cabinet/top_bottom", "cabinet/top_bottom", "cabinet/empty/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FAITH_CARVED_ARBOR_BRICK, "ashlar_third/arbor/faith_carved");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FAITH_CARVED_BLACK_BRICK, "ashlar_quarter/black/faith_carved");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FAITH_CARVED_BROWN_GREY_BRICK, "ashlar_quarter/brown_grey/faith_carved");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FAITH_CARVED_COARSE_RED_BRICK, "ashlar_third/pale_red/faith_carved");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FAITH_CARVED_DARK_GREY_BRICK, "ashlar_quarter/dark_grey/faith_carved");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FAITH_CARVED_DUN_BRICK, "ashlar_third/dun/faith_carved");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FAITH_CARVED_GREY_BRICK, "ashlar_third/grey/faith_carved");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FAITH_CARVED_OLDTOWN_BRICK, "ashlar_quarter_rounded/light_oldtown/faith_carved");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FAITH_CARVED_PINK_SANDSTONE, "ashlar_third/sandy_pink/faith_carved");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FAITH_CARVED_REACH_BRICK, "ashlar_quarter_rounded/reach/faith_carved");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FAITH_CARVED_SMALL_STONE_BRICK, "ashlar_quarter/green_grey/faith_carved");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FAITH_CARVED_STONE_BRICK, "ashlar_half/white/faith_carved");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FAITH_CARVED_STORMLANDS_BRICK, "ashlar_quarter/stormlands/faith_carved");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FAITH_CARVED_WESTERLANDS_BRICK, "ashlar_quarter/westerlands/faith_carved");
+
+                // Additional Solid Blocks from JSON definitions - Part 4
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FISH_BARREL, "barrel_closed/barrel_top_closed", "crate_block/barrel_top_fish", "barrel_sides/side0");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FISH_BASKET, "crate_block/basket_bottom", "crate_block/basket_fish", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FISH_TRAP, "fish_trap/side1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FLAGSTONE, "stone_block/flagstone");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FULL_CABINET, "cabinet/top_bottom", "cabinet/top_bottom", "cabinet/full/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.GLOWING_EMBERS, "lighting/coals_glowing");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.GRAIN_BASKET, "crate_block/basket_bottom", "crate_block/basket_grain", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.GRAIN_CRATE, "crate_block/side_bot1", "crate_block/crate_top_grain", "crate_block/side_bot1");
+
+                // Additional Solid Blocks from JSON definitions - Part 5
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.GREEN_GREY_BRICK_ENGRAVED, "ashlar_engraved/green_grey/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.GREY_BRICK_ENGRAVED, "ashlar_engraved/grey/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.GREY_KEYSTONE, "stone_block/keystone_grey");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HIGH_CLASS_UTILITY_BLOCK, "utility_block/highclass");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HOP_BASKET, "crate_block/basket_bottom", "crate_block/basket_hop", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HOP_CRATE, "crate_block/crate_side_crossbar_right", "crate_block/crate_hops", "crate_block/crate_side_crossbar_left");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HOUSE_COUNT_UTILITY_BLOCK, "utility_block/housecount");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.INDUSTRY_UTILITY_BLOCK, "utility_block/industry");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.IRON_CRATE, "crate_block/side_bot1", "crate_block/crate_top_iron", "crate_block/side_bot1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.KL_DUN_CARVED_BRICK, "ashlar_engraved/dun/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LANNISPORT_KEYSTONE_ORANGE_PLASTER, "fieldstone/westerlands/all", "fieldstone/westerlands/all", "plaster/smooth/lannisport_orange/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LANNISPORT_KEYSTONE_YELLOW_PLASTER, "fieldstone/westerlands/all", "fieldstone/westerlands/all", "plaster/smooth/lannisport_yellow/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LARGE_CLAY_POT_SOLID, "wood/oak/all", "clay_pot/solid", "clay_pot/solid");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LAVENDER_BASKET, "crate_block/basket_bottom", "crate_block/basket_lavender", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LAVENDER_CRATE, "crate_block/crate_side_crossbar_right", "crate_block/crate_lavender", "crate_block/crate_side_crossbar_crossed");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LEMON_BASKET, "crate_block/basket_bottom", "crate_block/basket_lemons", "crate_block/basket_side");
+
+                // Additional Solid Blocks from JSON definitions - Part 6
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LIGHT_GREY_BRICK_ENGRAVED, "ashlar_engraved/light_grey/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LIGHT_GREY_STONE_WHITE_PLASTER, "fieldstone/grey/all", "fieldstone/grey/all", "plaster/smooth/white/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LIGHT_OLDTOWN_BRICK_ENGRAVED, "ashlar_engraved/light_oldtown/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LIME_BASKET, "crate_block/basket_bottom", "crate_block/basket_limes", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.LOW_CLASS_UTILITY_BLOCK, "utility_block/lowclass");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MIDDLE_CLASS_UTILITY_BLOCK, "utility_block/middleclass");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MIRROR_BLOCK, "mirror/top_bottom", "mirror/top_bottom", "mirror/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MONOCHROME_DARK_SANDSTONE_ENGRAVED, "ashlar_engraved/light_brown/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.MONOCHROME_SANDSTONE_ENGRAVED, "ashlar_engraved/westerlands/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.NETHER_BRICK_KEYSTONE, "ashlar_half/black/embellished");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.NORTHERN_CARVINGS, "wood/spruce/carving/top_bottom", "wood/spruce/carving/top_bottom", "wood/spruce/carving/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.NOTE_UTILITY_BLOCK, "utility_block/note");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OLIVE_BASKET, "crate_block/basket_bottom", "crate_block/basket_olives", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OPEN_BASKET, "crate_block/basket_bottom", "crate_block/basket_top", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OPEN_CRATE, "crate_block/side_bot1", "crate_block/crate_top_empty", "crate_block/side_bot1");
+
+                // Additional Solid Blocks from JSON definitions - Part 7
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ORANGE_BASKET, "crate_block/basket_bottom", "crate_block/basket_oranges", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ORANGE_BRICK_ARCH_SINGLE, "brick/orange/all1", "brick/orange/all1", "brick/orange/arch_single");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ORANGE_BRICK_ARCH_DOUBLE, "brick/orange/all1", "brick/orange/all1", "brick/orange/arch_double");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ORANGE_BRICK_DENTIL, "brick/orange/all1", "brick/orange/all1", "brick/orange/dentil");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ORNATE_MARBLE, "marble/quartz/ornate/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ORANGE_BRICK_ROWLOCK, "brick/orange/all1", "brick/orange/all1", "brick/orange/rowlock1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ORNATE_SANDSTONE, "ashlar_third/sandstone/ornate/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.PARQUET_FLOOR, "wood/oak/ornate");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.PILED_BONES, "piled_bones/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.PINK_SANDSTONE_ENGRAVED, "ashlar_engraved/sandy_pink/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.PISTON_TOP, "wood/oak/studded");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.POMEGRANATE_BASKET, "crate_block/basket_bottom", "crate_block/basket_pomegranates", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.PURPLE_GRAPE_BASKET, "crate_block/basket_bottom", "crate_block/basket_grape_purple", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.PURPLE_GRAPE_CRATE, "crate_block/crate_side_crossbar_right", "crate_block/crate_top_grape_purple", "crate_block/crate_side_crossbar_crossed");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.REACH_BRICK_ENGRAVED, "ashlar_engraved/reach/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.REACH_OAK_WOOD_PANELLING, "wood/oak/panelling/top_bottom", "wood/oak/panelling/top_bottom", "wood/oak/panelling/side1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.RED_LANTERN2, "lighting/lantern_red_bottom", "lighting/lantern_red_top", "lighting/lantern_red_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.REACH_SPRUCE_WOOD_PANELLING, "wood/spruce/panelling/top_bottom", "wood/spruce/panelling/top_bottom", "wood/spruce/panelling/side1");
+
+                // Additional Solid Blocks from JSON definitions - Part 8
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.REDORANGE_CARVED_SANDSTONE, "redorange_carved_sandstone/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SALT_CRATE, "crate_block/side_bot1", "crate_block/crate_top_salt", "crate_block/side_bot1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SANDY_STONE_SLABS, "sandy_stone/sandy_stone_0");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SEPT_CRYSTAL_LARGE, "crystal/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SHOP_UTILITY_BLOCK, "utility_block/shop");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SILVER_TIN_CRATE, "crate_block/crate_side_crossbar_right", "crate_block/crate_top_tin", "crate_block/crate_side_crossbar_crossed");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SMALL_ORANGE_BRICKS_ORNATE_TOP, "brick/orange/ornate/top_bottom", "brick/orange/ornate/top_bottom", "brick/orange/all1");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SMALL_ORANGE_BRICKS_ORNATE, "brick/orange/ornate/top_bottom");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SMALL_SMOOTH_STONE_BRICK_BLUE_PLASTER, "ashlar_quarter_rounded/grey/all", "ashlar_quarter_rounded/grey/all", "plaster/smooth/blue/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SMALL_SMOOTH_STONE_BRICK_WHITE_PLASTER, "ashlar_quarter_rounded/grey/all", "ashlar_quarter_rounded/grey/all", "plaster/smooth/brown_white/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SMALL_STONE_BRICK_WHITE_PLASTER, "ashlar_quarter/green_grey/all", "ashlar_quarter/green_grey/all", "plaster/smooth/white/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SMALL_WHITE_BRICK_BROWNISH_WHITE_PLASTER, "ashlar_quarter_rounded/white/all", "ashlar_quarter_rounded/white/all", "plaster/smooth/brown_white/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SMALL_WHITE_BRICK_WHITE_PLASTER, "ashlar_quarter_rounded/white/all", "ashlar_quarter_rounded/white/all", "plaster/smooth/white/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SOURLEAF_BASKET, "crate_block/basket_bottom", "crate_block/basket_sourleaf", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SOURLEAF_CRATE, "crate_block/crate_side_crossbar_right", "crate_block/crate_sourleaf", "crate_block/crate_side_crossbar_crossed");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SOUTHERN_BRICK_ARCH_FLAT, "brick/southern/all1", "brick/southern/all1", "brick/southern/arch_flat");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SOUTHERN_BRICK_ARCH, "brick/southern/all1", "brick/southern/all1", "brick/southern/arch");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SOUTHERN_BRICK_LINTEL, "brick/southern/all1", "brick/southern/all1", "brick/southern/lintel");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPECIAL_UTILITY_BLOCK, "utility_block/special");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPIT_ROAST, "meat_spitroast/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SQUASH, "squash/top", "squash/top", "squash/side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.STACKED_BONES_SOLID, "stacked_bones/bone_stacked_front", "stacked_bones/bone_stacked_front", "stacked_bones/bone_stacked_rotated");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.STORMLANDS_BRICK_ENGRAVED, "ashlar_engraved/stormlands/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TABLE_BOOKS, "bench_block/spruce_top", "bench_block/table_top", "bench_block/table_drawer_books_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TABLE_DRAWERS, "bench_block/spruce_top", "bench_block/table_top", "bench_block/table_drawers_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TABLE_WIDGETS, "bench_block/spruce_top", "bench_block/table_top", "bench_block/table_drawer_widgets_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TERRACOTTA_ENGRAVED, "ashlar_engraved/terracotta/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.THICK_GRASS_BLOCK, "grass_block/forest_top1");
+
+                // Food blocks
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TURNIP_BASKET, "crate_block/basket_bottom", "crate_block/basket_turnip", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TURNIP_CRATE, "crate_block/side_bot1", "crate_block/crate_top_turnip", "crate_block/side_bot1");
+
+                // Plaster blocks
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.UNUSED_BROWN_PLASTER, "ashlar_quarter_rounded/light_brown/all", "ashlar_quarter_rounded/light_brown/all", "plaster/smooth/brown_white/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.UNUSED_PURPLE_PLASTER, "ashlar_quarter_rounded/dark_red/all", "ashlar_quarter_rounded/dark_red/all", "plaster/smooth/brown_white/all");
+
+                // Engraved blocks
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.VIVID_DARK_SANDSTONE_ENGRAVED, "ashlar_engraved/dark_tan/all");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.VIVID_SANDSTONE_ENGRAVED, "ashlar_engraved/tan/all");
+
+                // Barrel block
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WATER_BARREL, "barrel_closed/barrel_top_closed", "crate_block/barrel_top_water", "barrel_sides/side0");
+
+                // Engraved white brick
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WHITE_BRICK_ENGRAVED, "ashlar_engraved/white/all");
+
+                // Grape baskets and crates
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WHITE_GRAPE_BASKET, "crate_block/basket_bottom", "crate_block/basket_grape_white", "crate_block/basket_side");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WHITE_GRAPE_CRATE, "crate_block/crate_side_crossbar_right", "crate_block/crate_top_grape_white", "crate_block/crate_side_crossbar_crossed");
+
+                // Carving block
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WINTERFELL_CARVING, "ashlar_third/dark_grey/carving/side");
+
+                // Utility blocks
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WIP_UTILITY_BLOCK, "utility_block/wip");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WORKSHOP_UTILITY_BLOCK, "utility_block/workshop");
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.YARD_UTILITY_BLOCK, "utility_block/yard");
+
+                // Timber blocks
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.TIMBER_NORTHERN_BLUE_BRESSUMMER);
+
+                // Clay block
+                solidExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.YELLOW_STAINED_CLAY, "clay/yellow_stained_clay");
 
                 // Sand Blocks
                 sandExport.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SAND_SKELETON,
@@ -950,6 +1101,159 @@ public class ModModelProvider2 {
                 solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.DARK_GREY_BRICK_ENGRAVED, "ashlar_engraved/dark_grey/all");
                 solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.DATE_BASKET, "crate_block/basket_dates");
                 solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.DATES, "dates/top");
+
+                // Additional Solid Blocks from JSON definitions - Part 3
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.DESERT_SANDSTONE_ENGRAVED, "ashlar_engraved/sandstone/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.DOMESTIC_UTILITY_BLOCK, "utility_block/domestic");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.DONE_UTILITY_BLOCK, "utility_block/done");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.DRAGON_CARVING, "dragon_carving/side1");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.EMPTY_BARREL, "barrel_closed/barrel_top_closed");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.EMPTY_CABINET, "cabinet/top_bottom");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FAITH_CARVED_ARBOR_BRICK, "ashlar_third/arbor/faith_carved");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FAITH_CARVED_BLACK_BRICK, "ashlar_quarter/black/faith_carved");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FAITH_CARVED_BROWN_GREY_BRICK, "ashlar_quarter/brown_grey/faith_carved");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FAITH_CARVED_COARSE_RED_BRICK, "ashlar_third/pale_red/faith_carved");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FAITH_CARVED_DARK_GREY_BRICK, "ashlar_quarter/dark_grey/faith_carved");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FAITH_CARVED_DUN_BRICK, "ashlar_third/dun/faith_carved");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FAITH_CARVED_GREY_BRICK, "ashlar_third/grey/faith_carved");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FAITH_CARVED_OLDTOWN_BRICK, "ashlar_quarter_rounded/light_oldtown/faith_carved");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FAITH_CARVED_PINK_SANDSTONE, "ashlar_third/sandy_pink/faith_carved");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FAITH_CARVED_REACH_BRICK, "ashlar_quarter_rounded/reach/faith_carved");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FAITH_CARVED_SMALL_STONE_BRICK, "ashlar_quarter/green_grey/faith_carved");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FAITH_CARVED_STONE_BRICK, "ashlar_half/white/faith_carved");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FAITH_CARVED_STORMLANDS_BRICK, "ashlar_quarter/stormlands/faith_carved");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FAITH_CARVED_WESTERLANDS_BRICK, "ashlar_quarter/westerlands/faith_carved");
+
+                // Additional Solid Blocks from JSON definitions - Part 4
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FISH_BARREL, "barrel_closed/barrel_top_closed");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FISH_BASKET, "crate_block/basket_fish");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FISH_TRAP, "fish_trap/side1");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FLAGSTONE, "stone_block/flagstone");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.FULL_CABINET, "cabinet/top_bottom");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.GLOWING_EMBERS, "lighting/coals_glowing");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.GRAIN_BASKET, "crate_block/basket_grain");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.GRAIN_CRATE, "crate_block/crate_top_grain");
+
+                // Additional Solid Blocks from JSON definitions - Part 5
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.GREEN_GREY_BRICK_ENGRAVED, "ashlar_engraved/green_grey/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.GREY_BRICK_ENGRAVED, "ashlar_engraved/grey/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.GREY_KEYSTONE, "stone_block/keystone_grey");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.HIGH_CLASS_UTILITY_BLOCK, "utility_block/highclass");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.HOP_BASKET, "crate_block/basket_hop");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.HOP_CRATE, "crate_block/crate_hops");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.HOUSE_COUNT_UTILITY_BLOCK, "utility_block/housecount");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.INDUSTRY_UTILITY_BLOCK, "utility_block/industry");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.IRON_CRATE, "crate_block/crate_top_iron");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.KL_DUN_CARVED_BRICK, "ashlar_engraved/dun/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.LANNISPORT_KEYSTONE_ORANGE_PLASTER, "fieldstone/westerlands/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.LANNISPORT_KEYSTONE_YELLOW_PLASTER, "fieldstone/westerlands/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.LARGE_CLAY_POT_SOLID, "clay_pot/solid");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.LAVENDER_BASKET, "crate_block/basket_lavender");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.LAVENDER_CRATE, "crate_block/crate_lavender");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.LEMON_BASKET, "crate_block/basket_lemons");
+
+                // Additional Solid Blocks from JSON definitions - Part 6
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.LIGHT_GREY_BRICK_ENGRAVED, "ashlar_engraved/light_grey/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.LIGHT_GREY_STONE_WHITE_PLASTER, "fieldstone/grey/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.LIGHT_OLDTOWN_BRICK_ENGRAVED, "ashlar_engraved/light_oldtown/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.LIME_BASKET, "crate_block/basket_limes");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.LOW_CLASS_UTILITY_BLOCK, "utility_block/lowclass");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.MIDDLE_CLASS_UTILITY_BLOCK, "utility_block/middleclass");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.MIRROR_BLOCK, "mirror/top_bottom");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.MONOCHROME_DARK_SANDSTONE_ENGRAVED, "ashlar_engraved/light_brown/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.MONOCHROME_SANDSTONE_ENGRAVED, "ashlar_engraved/westerlands/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.NETHER_BRICK_KEYSTONE, "ashlar_half/black/embellished");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.NORTHERN_CARVINGS, "wood/spruce/carving/side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.NOTE_UTILITY_BLOCK, "utility_block/note");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.OLIVE_BASKET, "crate_block/basket_olives");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.OPEN_BASKET, "crate_block/basket_top");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.OPEN_CRATE, "crate_block/crate_top_empty");
+
+                // Additional Solid Blocks from JSON definitions - Part 7
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.ORANGE_BASKET, "crate_block/basket_oranges");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.ORANGE_BRICK_ARCH_SINGLE, "brick/orange/arch_single");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.ORANGE_BRICK_ARCH_DOUBLE, "brick/orange/arch_double");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.ORANGE_BRICK_DENTIL, "brick/orange/dentil");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.ORNATE_MARBLE, "marble/quartz/ornate/side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.ORANGE_BRICK_ROWLOCK, "brick/orange/rowlock1");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.ORNATE_SANDSTONE, "ashlar_third/sandstone/ornate/side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.PARQUET_FLOOR, "wood/oak/ornate");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.PILED_BONES, "piled_bones/side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.PINK_SANDSTONE_ENGRAVED, "ashlar_engraved/sandy_pink/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.PISTON_TOP, "wood/oak/studded");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.POMEGRANATE_BASKET, "crate_block/basket_pomegranates");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.PURPLE_GRAPE_BASKET, "crate_block/basket_grape_purple");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.PURPLE_GRAPE_CRATE, "crate_block/crate_top_grape_purple");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.REACH_BRICK_ENGRAVED, "ashlar_engraved/reach/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.REACH_OAK_WOOD_PANELLING, "wood/oak/panelling/side1");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.RED_LANTERN2, "lighting/lantern_red_side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.REACH_SPRUCE_WOOD_PANELLING, "wood/spruce/panelling/side1");
+
+                // Additional Solid Blocks from JSON definitions - Part 8
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.REDORANGE_CARVED_SANDSTONE, "redorange_carved_sandstone/side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SALT_CRATE, "crate_block/crate_top_salt");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SANDY_STONE_SLABS, "sandy_stone/sandy_stone_0");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SEPT_CRYSTAL_LARGE, "crystal/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SHOP_UTILITY_BLOCK, "utility_block/shop");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SILVER_TIN_CRATE, "crate_block/crate_top_tin");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SMALL_ORANGE_BRICKS_ORNATE_TOP, "brick/orange/all1");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SMALL_ORANGE_BRICKS_ORNATE, "brick/orange/ornate/top_bottom");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SMALL_SMOOTH_STONE_BRICK_BLUE_PLASTER, "ashlar_quarter_rounded/grey/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SMALL_SMOOTH_STONE_BRICK_WHITE_PLASTER, "ashlar_quarter_rounded/grey/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SMALL_STONE_BRICK_WHITE_PLASTER, "ashlar_quarter/green_grey/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SMALL_WHITE_BRICK_BROWNISH_WHITE_PLASTER, "ashlar_quarter_rounded/white/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SMALL_WHITE_BRICK_WHITE_PLASTER, "ashlar_quarter_rounded/white/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SOURLEAF_BASKET, "crate_block/basket_sourleaf");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SOURLEAF_CRATE, "crate_block/crate_sourleaf");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SOUTHERN_BRICK_ARCH_FLAT, "brick/southern/arch_flat");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SOUTHERN_BRICK_ARCH, "brick/southern/arch");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SOUTHERN_BRICK_LINTEL, "brick/southern/lintel");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SPECIAL_UTILITY_BLOCK, "utility_block/special");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SPIT_ROAST, "meat_spitroast/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.SQUASH, "squash/top");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.STACKED_BONES_SOLID, "stacked_bones/bone_stacked_front");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.STORMLANDS_BRICK_ENGRAVED, "ashlar_engraved/stormlands/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.TABLE_BOOKS, "bench_block/table_drawer_books_side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.TABLE_DRAWERS, "bench_block/table_drawers_side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.TABLE_WIDGETS, "bench_block/table_drawer_widgets_side");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.TERRACOTTA_ENGRAVED, "ashlar_engraved/terracotta/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.THICK_GRASS_BLOCK, "grass_block/forest_top1");
+
+                // Food blocks
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.TURNIP_BASKET, "crate_block/basket_turnip");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.TURNIP_CRATE, "crate_block/crate_top_turnip");
+
+                // Plaster blocks
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.UNUSED_BROWN_PLASTER, "ashlar_quarter_rounded/light_brown/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.UNUSED_PURPLE_PLASTER, "ashlar_quarter_rounded/dark_red/all");
+
+                // Engraved blocks
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.VIVID_DARK_SANDSTONE_ENGRAVED, "ashlar_engraved/dark_tan/all");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.VIVID_SANDSTONE_ENGRAVED, "ashlar_engraved/tan/all");
+
+                // Barrel block
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.WATER_BARREL, "barrel_closed/barrel_top_closed");
+
+                // Engraved white brick
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.WHITE_BRICK_ENGRAVED, "ashlar_engraved/white/all");
+
+                // Grape baskets and crates
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.WHITE_GRAPE_BASKET, "crate_block/basket_grape_white");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.WHITE_GRAPE_CRATE, "crate_block/crate_top_grape_white");
+
+                // Carving block
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.WINTERFELL_CARVING, "ashlar_third/dark_grey/carving/side");
+
+                // Utility blocks
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.WIP_UTILITY_BLOCK, "utility_block/wip");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.WORKSHOP_UTILITY_BLOCK, "utility_block/workshop");
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.YARD_UTILITY_BLOCK, "utility_block/yard");
+
+                // Timber blocks
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.TIMBER_NORTHERN_BLUE_BRESSUMMER, "plaster/smooth/gulltown_blue/all");
+
+                // Clay block
+                solidExporter.generateItemModels(itemModelGenerator, ModBlocks2.YELLOW_STAINED_CLAY, "clay/yellow_stained_clay");
 
                 // Rail Blocks
                 railExporter.generateItemModels(itemModelGenerator, ModBlocks2.FANCY_BLUE_CARPET, "carpet/fancy_blue_carpet");

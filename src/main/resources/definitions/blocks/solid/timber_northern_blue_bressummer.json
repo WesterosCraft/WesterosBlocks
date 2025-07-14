@@ -1,12 +1,12 @@
 {
-    "blockName": "timber_northern_blue_bressummer",
+    "blockName": "timber_northern_blue_bressummer_old",
     "blockType": "solid",
     "hardness": 2,
     "stepSound": "wood",
     "material": "wood",
     "resistance": 5,
     "creativeTab": "westeros_timber_frame_tab",
-    "label": "Timber Northern Blue Bressummer",
+    "label": "Timber Northern Blue Bressummer Old",
     "type": "connectstate:true,toggleOnUse",
     "states": [
         {

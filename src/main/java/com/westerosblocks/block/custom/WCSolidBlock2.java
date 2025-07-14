@@ -52,6 +52,8 @@ public class WCSolidBlock2 extends Block {
     public final Property<String> stateProperty;
     protected final String stateDefault;
     protected final Map<String, String> stateTextures;
+    protected final Map<String, String[]> stateMultiTextures; // Support for multiple textures per state
+    protected final Map<String, String[]> stateOverlayTextures; // Support for overlay textures per state
     
     // Voxel shapes
     protected final VoxelShape collisionBox;
@@ -60,6 +62,7 @@ public class WCSolidBlock2 extends Block {
     public WCSolidBlock2(AbstractBlock.Settings settings, String name, String creativeTab, 
                         boolean toggleOnUse, double[] boundingBox, List<String> tooltips,
                         List<String> stateValues, String stateDefaultValue, Map<String, String> stateTextures,
+                        Map<String, String[]> stateMultiTextures, Map<String, String[]> stateOverlayTextures, 
                         boolean hasConnectState, boolean hasSymmetrical, Boolean symmetricalDefault) {
         super(settings);
         this.name = name;
@@ -68,6 +71,8 @@ public class WCSolidBlock2 extends Block {
         this.boundingBox = boundingBox;
         this.tooltips = tooltips;
         this.stateTextures = stateTextures != null ? stateTextures : new HashMap<>();
+        this.stateMultiTextures = stateMultiTextures != null ? stateMultiTextures : new HashMap<>();
+        this.stateOverlayTextures = stateOverlayTextures != null ? stateOverlayTextures : new HashMap<>();
         
         // Initialize state properties based on builder configuration
         this.hasConnectState = hasConnectState;
@@ -221,6 +226,62 @@ public class WCSolidBlock2 extends Block {
      */
     public Map<String, String> getStateTextures() {
         return new HashMap<>(stateTextures);
+    }
+
+    /**
+     * Gets the multiple textures for a specific state value.
+     * 
+     * @param stateValue The state value
+     * @return Array of texture paths for the state, or null if not found
+     */
+    public String[] getMultiTexturesForState(String stateValue) {
+        return stateMultiTextures.get(stateValue);
+    }
+
+    /**
+     * Gets all available multi-texture state mappings.
+     * 
+     * @return Map of state values to arrays of texture paths
+     */
+    public Map<String, String[]> getStateMultiTextures() {
+        return new HashMap<>(stateMultiTextures);
+    }
+
+    /**
+     * Checks if this block uses multi-texture states.
+     * 
+     * @return true if multi-texture states are configured
+     */
+    public boolean hasMultiTextureStates() {
+        return !stateMultiTextures.isEmpty();
+    }
+
+    /**
+     * Gets the overlay textures for a specific state value.
+     * 
+     * @param stateValue The state value
+     * @return Array of overlay texture paths for the state, or null if not found
+     */
+    public String[] getOverlayTexturesForState(String stateValue) {
+        return stateOverlayTextures.get(stateValue);
+    }
+
+    /**
+     * Gets all available overlay texture state mappings.
+     * 
+     * @return Map of state values to arrays of overlay texture paths
+     */
+    public Map<String, String[]> getStateOverlayTextures() {
+        return new HashMap<>(stateOverlayTextures);
+    }
+
+    /**
+     * Checks if this block uses overlay textures.
+     * 
+     * @return true if overlay textures are configured
+     */
+    public boolean hasOverlayTextures() {
+        return !stateOverlayTextures.isEmpty();
     }
 
     /**

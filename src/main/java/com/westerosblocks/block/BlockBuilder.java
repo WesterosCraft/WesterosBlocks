@@ -129,6 +129,8 @@ public class BlockBuilder {
     private List<String> stateValues = null;
     private String stateDefaultValue = null;
     private Map<String, String> stateTextures = null;
+    private Map<String, String[]> stateMultiTextures = null; // Support for multiple textures per state
+    private Map<String, String[]> stateOverlayTextures = null; // Support for overlay textures per state
     private boolean hasConnectState = false;
     private boolean hasSymmetrical = false;
     private Boolean symmetricalDefault = false;
@@ -778,6 +780,48 @@ public class BlockBuilder {
     }
 
     /**
+     * Adds a state property with multiple string values and multiple textures per state.
+     * This is useful for complex blocks like timber blocks that have multiple texture layers.
+     * 
+     * @param values List of possible state values
+     * @param multiTextures Map of state values to arrays of textures (e.g., top, middle, bottom)
+     * @return This builder for chaining
+     */
+    public BlockBuilder withMultiTextureStateProperty(List<String> values, Map<String, String[]> multiTextures) {
+        this.stateValues = values;
+        this.stateDefaultValue = values.isEmpty() ? null : values.get(0);
+        this.stateMultiTextures = new HashMap<>(multiTextures);
+        return this;
+    }
+
+    /**
+     * Adds a state property with multiple string values, multiple textures per state, and a custom default.
+     * 
+     * @param values List of possible state values
+     * @param multiTextures Map of state values to arrays of textures (e.g., top, middle, bottom)
+     * @param defaultValue The default value (must be in the values list)
+     * @return This builder for chaining
+     */
+    public BlockBuilder withMultiTextureStateProperty(List<String> values, Map<String, String[]> multiTextures, String defaultValue) {
+        this.stateValues = values;
+        this.stateDefaultValue = values.contains(defaultValue) ? defaultValue : values.get(0);
+        this.stateMultiTextures = new HashMap<>(multiTextures);
+        return this;
+    }
+
+    /**
+     * Adds overlay textures for state properties.
+     * This allows additional texture layers on top of the base textures.
+     * 
+     * @param overlayTextures Map of state values to arrays of overlay textures
+     * @return This builder for chaining
+     */
+    public BlockBuilder withOverlayTextures(Map<String, String[]> overlayTextures) {
+        this.stateOverlayTextures = new HashMap<>(overlayTextures);
+        return this;
+    }
+
+    /**
      * Enables the connectstate property for this block.
      * This adds an integer property with values 0-3.
      * 
@@ -1036,7 +1080,7 @@ public class BlockBuilder {
             case LADDER -> new WCLadderBlock(settings, name, creativeTab, allowUnsupported, false, tooltips);
             case PANE -> new WCStandalonePaneBlock(settings, unconnect);
             case RAIL -> new WCRailBlock(settings, name, creativeTab, allowUnsupported, tooltips);
-            case SOLID -> new WCSolidBlock2(settings, name, creativeTab, toggleOnUse, boundingBox, tooltips, stateValues, stateDefaultValue, stateTextures, hasConnectState, hasSymmetrical, symmetricalDefault);
+            case SOLID -> new WCSolidBlock2(settings, name, creativeTab, toggleOnUse, boundingBox, tooltips, stateValues, stateDefaultValue, stateTextures, stateMultiTextures, stateOverlayTextures, hasConnectState, hasSymmetrical, symmetricalDefault);
         };
     }
 
