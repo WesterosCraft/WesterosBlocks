@@ -158,9 +158,9 @@ public class SolidBlockExport2 {
         String texturePath = String.format("block/%s", texture);
         Identifier textureId = WesterosBlocks.id(texturePath);
 
-        Models.GENERATED.upload(
+        Models.CUBE_ALL.upload(
                 ModelIds.getItemModelId(block.asItem()),
-                TextureMap.layer0(textureId),
+                TextureMap.all(textureId),
                 itemModelGenerator.writer
         );
     }
