@@ -86,6 +86,23 @@ public class ModBlocks2 {
                     .allowUnsupported()
                     .textures("rail_block/packed_snow", "rail_block/packed_snow_turned"));
 
+    // Fire Blocks
+    public static final Block SAFE_FIRE = registerFireBlock(
+            "safe_fire",
+            builder -> builder
+                    .creativeTab("westeros_lighting_tab")
+                    .lightLevel(1)
+                    .textures("safe_fire/fire_layer_0", "safe_fire/fire_layer_1"));
+
+    public static final Block WILDFIRE = registerFireBlock(
+            "wildfire",
+            builder -> builder
+                    .creativeTab("westeros_lighting_tab")
+                    .lightLevel(9)
+                    .particleType("wildfire")
+                    .tooltips(List.of("Very hot fire", "no fr its hot!"))
+                    .textures("wildfire/wildfire_layer_0", "wildfire/wildfire_layer_1"));
+
     // Tables
 
     public static final Block OAK_TABLE = registerTableBlock(
@@ -5085,6 +5102,22 @@ public class ModBlocks2 {
                 .texture("stone/stone"); // Default texture
 
         builder.setBlockType(BlockBuilder.BlockType.SOLID);
+        return configurator.configure(builder).register();
+    }
+
+    public static Block registerFireBlock(String name, BlockBuilderConfigurator configurator) {
+        BlockBuilder builder = new BlockBuilder(name)
+                .creativeTab("westeros_fire_tab")
+                .hardness(0.0f)
+                .resistance(0.0f)
+                .noCollision()
+                .breakInstantly()
+                .soundType("fire")
+                .nonOpaque()
+                .alphaRender()
+                .texture("fire/fire"); // Default texture
+
+        builder.setBlockType(BlockBuilder.BlockType.FIRE);
         return configurator.configure(builder).register();
     }
 

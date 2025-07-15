@@ -14,7 +14,6 @@ import java.util.Map;
 
 public class ModModelProvider extends FabricModelProvider {
     private static final Map<String, BlockExportFactory> BLOCK_EXPORTERS = Map.ofEntries(
-            Map.entry("soulsand", SolidBlockExport::new),
             // Map.entry("sand", SolidBlockExport::new),
             Map.entry("solid", SolidBlockExport::new),
             Map.entry("sound", SoundBlockExport::new),
@@ -33,7 +32,7 @@ public class ModModelProvider extends FabricModelProvider {
             // Map.entry("torch", TorchBlockExport::new),
             // Map.entry("fan", FanBlockExport::new),
 //            Map.entry("ladder", LadderBlockExport::new),
-            Map.entry("fire", FireBlockExport::new),
+            // Map.entry("fire", FireBlockExport::new),
             Map.entry("bed", BedBlockExport::new),
             Map.entry("cuboid", CuboidBlockExport::new),
             Map.entry("beacon", CuboidBlockExport::new),
@@ -107,7 +106,7 @@ public class ModModelProvider extends FabricModelProvider {
             }
             Block currentBlock = customBlocks.get(customBlockDef.getBlockName());
             switch (customBlockDef.blockType) {
-                case "soulsand":
+             
                 // case "sand":
                 case "solid": {
                     SolidBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
@@ -174,10 +173,10 @@ public class ModModelProvider extends FabricModelProvider {
                 //     FanBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                 //     break;
                 // }
-                case "fire": {
-                    FireBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
-                    break;
-                }
+                // case "fire": {
+                //     FireBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
+                //     break;
+                // }
                 case "layer": {
                     LayerBlockExport.generateItemModels(itemModelGenerator, currentBlock, customBlockDef);
                     break;

@@ -600,11 +600,10 @@ public class ModBlock extends ModBlockStateRecord {
         typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
         typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
 //        typeTable.put("door", new WCDoorBlock.Factory());
-        typeTable.put("fire", new WCFireBlock.Factory());
+        // typeTable.put("fire", new WCFireBlock.Factory());
         typeTable.put("leaves", new WCLeavesBlock.Factory());
         typeTable.put("pane", new WCPaneBlock.Factory());
         typeTable.put("layer", new WCLayerBlock.Factory());
-        typeTable.put("soulsand", new WCSoulSandBlock.Factory());
         // typeTable.put("rail", new WCRailBlock.Factory());
         typeTable.put("bed", new WCBedBlock.Factory());
         // typeTable.put("sand", new WCSandBlock.Factory());

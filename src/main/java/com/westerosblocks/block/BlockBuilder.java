@@ -134,6 +134,7 @@ public class BlockBuilder {
     private boolean hasConnectState = false;
     private boolean hasSymmetrical = false;
     private Boolean symmetricalDefault = false;
+    private String particleType = null;
 
     /**
      * Creates a new BlockBuilder with the specified name.
@@ -844,6 +845,11 @@ public class BlockBuilder {
         return this;
     }
 
+    public BlockBuilder particleType(String particleType) {
+        this.particleType = particleType;
+        return this;
+    }
+
     /**
      * Sets the block type (called internally by registration methods).
      * 
@@ -1080,6 +1086,7 @@ public class BlockBuilder {
             case LADDER -> new WCLadderBlock(settings, name, creativeTab, allowUnsupported, false, tooltips);
             case PANE -> new WCStandalonePaneBlock(settings, unconnect);
             case RAIL -> new WCRailBlock(settings, name, creativeTab, allowUnsupported, tooltips);
+            case FIRE -> new WCFireBlock2(settings, particleType, tooltips);
             case SOLID -> new WCSolidBlock2(settings, name, creativeTab, toggleOnUse, boundingBox, tooltips, stateValues, stateDefaultValue, stateTextures, stateMultiTextures, stateOverlayTextures, hasConnectState, hasSymmetrical, symmetricalDefault);
         };
     }
@@ -1130,6 +1137,8 @@ public class BlockBuilder {
         /** Rail blocks for transportation */
         RAIL,
         /** Solid blocks for basic building blocks */
-        SOLID
+        SOLID,
+        /** Fire blocks for decorative and functional fire */
+        FIRE
     }
 } 

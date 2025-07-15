@@ -24,6 +24,7 @@ public class ModModelProvider2 {
         static LadderBlockExport ladderExporter = new LadderBlockExport();
         static StandalonePaneBlockExport paneExporter = new StandalonePaneBlockExport();
         static RailBlockExport2 railExporter = new RailBlockExport2();
+        static FireBlockExport2 fireExporter = new FireBlockExport2();
         static SolidBlockExport2 solidExporter = new SolidBlockExport2();
 
         public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
@@ -208,6 +209,11 @@ public class ModModelProvider2 {
                 railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HORIZONTAL_NET, "rail_block/net_large");
                 railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HORIZONTAL_ROPE, "rail_block/rope");
                 railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.PACKED_SNOW, "rail_block/packed_snow");
+
+                // Fire Blocks
+                fireExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SAFE_FIRE, "safe_fire/fire_layer_0", "safe_fire/fire_layer_1");
+                fireExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WILDFIRE, "wildfire/wildfire_layer_0", "wildfire/wildfire_layer_1");
+
                 paneExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OXIDIZED_IRON_BARS,
                                 "bars_iron_block/bars_iron_oxidized");
 
@@ -1262,6 +1268,10 @@ public class ModModelProvider2 {
                 railExporter.generateItemModels(itemModelGenerator, ModBlocks2.HORIZONTAL_NET, "rail_block/net_large");
                 railExporter.generateItemModels(itemModelGenerator, ModBlocks2.HORIZONTAL_ROPE, "rail_block/rope");
                 railExporter.generateItemModels(itemModelGenerator, ModBlocks2.PACKED_SNOW, "rail_block/packed_snow");
+
+                // Fire Blocks
+                fireExporter.generateItemModels(itemModelGenerator, ModBlocks2.SAFE_FIRE, "safe_fire/fire_layer_0");
+                fireExporter.generateItemModels(itemModelGenerator, ModBlocks2.WILDFIRE, "wildfire/wildfire_layer_0");
 
                 // Door Blocks
                 doorExporter.generateItemModels(itemModelGenerator, ModBlocks2.WHITE_WOOD_DOOR,
