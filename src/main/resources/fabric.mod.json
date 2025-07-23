@@ -1,41 +1,32 @@
 {
-	"schemaVersion": 1,
-	"id": "westerosblocks",
-	"version": "${version}",
-	"name": "WesterosBlocks",
-	"description": "A custom block mod for the WesterosCraft project.",
-	"authors": [
-		"mikeprimm", "Emoticone11", "geeberry"
-	],
-	"contact": {
-		"homepage": "https://westeroscraft.com/",
-		"sources": "https://github.com/WesterosCraft/WesterosBlocks"
-	},
-	"license": "Apache Public License v2",
-	"icon": "assets/westerosblocks/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"com.westerosblocks.WesterosBlocks"
-		],
-		"fabric-datagen": [
-			"com.westerosblocks.WesterosBlocksDataGenerator"
-		],
-		"client": [
-			"com.westerosblocks.WesterosBlocksClient"
-		],
-		"modmenu": [
-			"com.westerosblocks.config.ModMenuIntegration"
-		]
-	},
-	"mixins": [
-		"westerosblocks.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.21.1",
-		"java": ">=21",
-		"fabric-api": "*",
-		"cloth-config": ">=11.0.99"
-	}
+  "schemaVersion": 1,
+  "id": "westerosblocks",
+  "version": "${version}",
+  "name": "WesterosBlocks",
+  "description": "A custom block mod for the WesterosCraft project.",
+  "authors": ["mikeprimm", "Emoticone11", "geeberry"],
+  "contact": {
+    "homepage": "https://westeroscraft.com/",
+    "sources": "https://github.com/WesterosCraft/WesterosBlocks"
+  },
+  "license": "Apache Public License v2",
+  "icon": "assets/westerosblocks/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.westerosblocks.WesterosBlocks"],
+    "fabric-datagen": ["com.westerosblocks.WesterosBlocksDataGenerator"],
+    "client": ["com.westerosblocks.WesterosBlocksClient"],
+    "modmenu": ["com.westerosblocks.config.ModMenuIntegration"]
+  },
+  "mixins": ["westerosblocks.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*",
+    "cloth-config": ">=11.0.99"
+  },
+  "suggests": {
+    "continuity": "*"
+  }
 }

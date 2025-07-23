@@ -8,7 +8,8 @@ public class ModBlockSet {
 
     public String baseBlockName; // Unique name to be used as a base for all the generated block names
     public String baseLabel = null; // Base label associated with blocks in set
-    public List<String> variants = null; // List of supported variants to create (solid, stair, slab, wall, fence, hopper)
+    public List<String> variants = null; // List of supported variants to create (solid, stair, slab, wall, fence,
+                                         // hopper)
     // By default, all of the above variants will be created
 
     public Map<String, String> altNames = null; // Alternative names to use for particular variants (optional)
@@ -26,21 +27,24 @@ public class ModBlockSet {
     public int flamability = 0; // Flamability
     public String creativeTab = null; // Creative tab for items
 
-    public List<String> customTags = null;    // If block should add any custom tags
+    public List<String> customTags = null; // If block should add any custom tags
     public Map<String, List<String>> altCustomTags = null; // Allows idiosyncratic tags for particular variants
 
     public Map<String, String> types = null; // Map of type attributes for each variant
 
     public boolean alphaRender = false; // If true, do render on pass 2 (for alpha blending)
     public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
-    public boolean nonOpaque = false; // If true, does not block visibility of shared faces (solid blocks) and doesn't allow torches
+    public boolean nonOpaque = false; // If true, does not block visibility of shared faces (solid blocks) and doesn't
+                                      // allow torches
 
     public Map<String, List<String>> altTextures = null; // Allows idiosyncratic textures for particular variants
-    public Map<String, List<ModBlock.RandomTextureSet>> altRandomTextures = null;    // Allows idiosyncratic randomTextures for particular variants
-    public Map<String, List<String>> altOverlayTextures = null; // Allows idiosyncratic overlayTextures for particular variants
+    public Map<String, List<ModBlock.RandomTextureSet>> altRandomTextures = null; // Allows idiosyncratic randomTextures
+                                                                                  // for particular variants
+    public Map<String, List<String>> altOverlayTextures = null; // Allows idiosyncratic overlayTextures for particular
+                                                                // variants
 
     public Map<String, String> textures = null; // Map of textures to use for each variant (for single texture set)
-    public List<RandomTextureMap> randomTextures = null;    // Defines sets of textures used for additional random models,
+    public List<RandomTextureMap> randomTextures = null; // Defines sets of textures used for additional random models,
     // for each variant (if supported)
     public Map<String, String> overlayTextures = null; // Map of overlay textures (for types supporting overlays)
 
@@ -49,15 +53,18 @@ public class ModBlockSet {
 
     public List<StateRecord> states = null;
 
-    public static final List<String> DEFAULT_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper");
-    public static final List<String> SUPPORTED_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper", "tip",
+    public static final List<String> DEFAULT_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence",
+            "hopper");
+    public static final List<String> SUPPORTED_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence",
+            "hopper", "tip",
             "carpet", "fence_gate", "half_door", "cover", "hollow_hopper",
             "log", "directional", "layer", "pane", "sand", "path",
             "window_frame", "window_frame_mullion",
             "arrow_slit", "arrow_slit_window", "arrow_slit_ornate");
     public static final Map<String, String> VARIANT_TYPES = new HashMap<>();
 
-    // For any variant not listed here, it is assumed that the type is the same as the variant string
+    // For any variant not listed here, it is assumed that the type is the same as
+    // the variant string
     static {
         VARIANT_TYPES.put("stairs", "stair");
         VARIANT_TYPES.put("hopper", "cuboid");
@@ -65,7 +72,7 @@ public class ModBlockSet {
         VARIANT_TYPES.put("carpet", "cuboid");
         VARIANT_TYPES.put("fence_gate", "fencegate");
         VARIANT_TYPES.put("half_door", "cuboid-nsew");
-        VARIANT_TYPES.put("cover", "solid");
+        VARIANT_TYPES.put("cover", "rail");
         VARIANT_TYPES.put("hollow_hopper", "cuboid");
         VARIANT_TYPES.put("directional", "cuboid-nsew");
         VARIANT_TYPES.put("path", "cuboid");
@@ -79,34 +86,37 @@ public class ModBlockSet {
     public static final Map<String, String[]> VARIANT_TEXTURES = new HashMap<>();
 
     static {
-        VARIANT_TEXTURES.put("solid", new String[]{"bottom", "top", "west", "east", "south", "north"});
-        VARIANT_TEXTURES.put("stairs", new String[]{"bottom", "top", "sides"});
-        VARIANT_TEXTURES.put("slab", new String[]{"bottom", "top", "sides"});
-        VARIANT_TEXTURES.put("wall", new String[]{"bottom", "top", "sides"});
-        VARIANT_TEXTURES.put("fence", new String[]{"bottom", "top", "sides"});
-        VARIANT_TEXTURES.put("hopper", new String[]{"sides"});
-        VARIANT_TEXTURES.put("tip", new String[]{"sides"});
-        VARIANT_TEXTURES.put("carpet", new String[]{"sides"});
-        VARIANT_TEXTURES.put("fence_gate", new String[]{"sides"});
-        VARIANT_TEXTURES.put("half_door", new String[]{"sides"});
-        VARIANT_TEXTURES.put("cover", new String[]{"cover"});
-        VARIANT_TEXTURES.put("hollow_hopper", new String[]{"sides"});
-        VARIANT_TEXTURES.put("log", new String[]{"bottom", "top", "sides"});
-        VARIANT_TEXTURES.put("directional", new String[]{"bottom", "top", "west", "east", "south", "north"});
-        VARIANT_TEXTURES.put("layer", new String[]{"sides"});
-        VARIANT_TEXTURES.put("pane", new String[]{"sides", "top"});
-        VARIANT_TEXTURES.put("sand", new String[]{"bottom", "top", "west", "east", "south", "north"});
-        VARIANT_TEXTURES.put("path", new String[]{"sides"});
-        VARIANT_TEXTURES.put("window_frame", new String[]{"window-topbottom", "window-topbottom", "window-frame"});
-        VARIANT_TEXTURES.put("window_frame_mullion", new String[]{"window-topbottom", "window-topbottom", "window-frame-mullion"});
-        VARIANT_TEXTURES.put("arrow_slit", new String[]{"window-topbottom", "window-topbottom", "arrow-slit"});
-        VARIANT_TEXTURES.put("arrow_slit_window", new String[]{"window-topbottom", "window-topbottom", "arrow-slit-window"});
-        VARIANT_TEXTURES.put("arrow_slit_ornate", new String[]{"window-topbottom", "window-topbottom", "arrow-slit-ornate"});
+        VARIANT_TEXTURES.put("solid", new String[] { "bottom", "top", "west", "east", "south", "north" });
+        VARIANT_TEXTURES.put("stairs", new String[] { "bottom", "top", "sides" });
+        VARIANT_TEXTURES.put("slab", new String[] { "bottom", "top", "sides" });
+        VARIANT_TEXTURES.put("wall", new String[] { "bottom", "top", "sides" });
+        VARIANT_TEXTURES.put("fence", new String[] { "bottom", "top", "sides" });
+        VARIANT_TEXTURES.put("hopper", new String[] { "sides" });
+        VARIANT_TEXTURES.put("tip", new String[] { "sides" });
+        VARIANT_TEXTURES.put("carpet", new String[] { "sides" });
+        VARIANT_TEXTURES.put("fence_gate", new String[] { "sides" });
+        VARIANT_TEXTURES.put("half_door", new String[] { "sides" });
+        VARIANT_TEXTURES.put("cover", new String[] { "cover" });
+        VARIANT_TEXTURES.put("hollow_hopper", new String[] { "sides" });
+        VARIANT_TEXTURES.put("log", new String[] { "bottom", "top", "sides" });
+        VARIANT_TEXTURES.put("directional", new String[] { "bottom", "top", "west", "east", "south", "north" });
+        VARIANT_TEXTURES.put("layer", new String[] { "sides" });
+        VARIANT_TEXTURES.put("pane", new String[] { "sides", "top" });
+        VARIANT_TEXTURES.put("sand", new String[] { "bottom", "top", "west", "east", "south", "north" });
+        VARIANT_TEXTURES.put("path", new String[] { "sides" });
+        VARIANT_TEXTURES.put("window_frame", new String[] { "window-topbottom", "window-topbottom", "window-frame" });
+        VARIANT_TEXTURES.put("window_frame_mullion",
+                new String[] { "window-topbottom", "window-topbottom", "window-frame-mullion" });
+        VARIANT_TEXTURES.put("arrow_slit", new String[] { "window-topbottom", "window-topbottom", "arrow-slit" });
+        VARIANT_TEXTURES.put("arrow_slit_window",
+                new String[] { "window-topbottom", "window-topbottom", "arrow-slit-window" });
+        VARIANT_TEXTURES.put("arrow_slit_ornate",
+                new String[] { "window-topbottom", "window-topbottom", "arrow-slit-ornate" });
     }
 
     public static class RandomTextureMap {
         public Map<String, String> textures = null; // List of textures (for single texture set)
-        public Integer weight = null;        // Weight for texture set (default = 1)
+        public Integer weight = null; // Weight for texture set (default = 1)
     }
 
     // Used for sets that support multiple blockstates
@@ -210,34 +220,37 @@ public class ModBlockSet {
             // Process blocktypes with special attributes
             if (variant.equals("hopper")) {
                 ModBlock.Cuboid[] cuboids = {
-                        new ModBlock.Cuboid(0.3755f, 0f, 0.3755f, 0.6245f, 0.275f, 0.6245f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new ModBlock.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new ModBlock.Cuboid(0f, 0.625f, 0f, 1f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new ModBlock.Cuboid(0.3755f, 0f, 0.3755f, 0.6245f, 0.275f, 0.6245f,
+                                new int[] { 0, 0, 0, 0, 0, 0 }),
+                        new ModBlock.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[] { 0, 0, 0, 0, 0, 0 }),
+                        new ModBlock.Cuboid(0f, 0.625f, 0f, 1f, 1f, 1f, new int[] { 0, 0, 0, 0, 0, 0 }),
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
             } else if (variant.equals("tip")) {
                 ModBlock.Cuboid[] cuboids = {
-                        new ModBlock.Cuboid(0.3755f, 0.625f, 0.3755f, 0.6245f, 1f, 0.6245f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new ModBlock.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new ModBlock.Cuboid(0f, 0f, 0f, 1f, 0.275f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new ModBlock.Cuboid(0.3755f, 0.625f, 0.3755f, 0.6245f, 1f, 0.6245f,
+                                new int[] { 0, 0, 0, 0, 0, 0 }),
+                        new ModBlock.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[] { 0, 0, 0, 0, 0, 0 }),
+                        new ModBlock.Cuboid(0f, 0f, 0f, 1f, 0.275f, 1f, new int[] { 0, 0, 0, 0, 0, 0 }),
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
             } else if (variant.equals("carpet")) {
                 ModBlock.Cuboid[] cuboids = {
-                        new ModBlock.Cuboid(0f, 0f, 0f, 1f, 0.0625f, 1f, new int[]{0, 0, 0, 0, 0, 0})
+                        new ModBlock.Cuboid(0f, 0f, 0f, 1f, 0.0625f, 1f, new int[] { 0, 0, 0, 0, 0, 0 })
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
             } else if (variant.equals("half_door")) {
                 variantDef.boundingBox = new ModBlock.BoundingBox(0f, 0f, 0f, 0.1875f, 1f, 1f);
             } else if (variant.equals("hollow_hopper")) {
                 ModBlock.Cuboid[] cuboids = {
-                        new ModBlock.Cuboid(0.3755f, 0.16f, 0.3755f, 0.6245f, 0.275f, 0.6245f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new ModBlock.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new ModBlock.Cuboid(0f, 0.625f, 0f, 1f, 0.65f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new ModBlock.Cuboid(0f, 0.625f, 0f, 0.125f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new ModBlock.Cuboid(0.875f, 0.625f, 0f, 1f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new ModBlock.Cuboid(0f, 0.625f, 0f, 1f, 1f, 0.125f, new int[]{0, 0, 0, 0, 0, 0}),
-                        new ModBlock.Cuboid(0f, 0.625f, 0.875f, 1f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new ModBlock.Cuboid(0.3755f, 0.16f, 0.3755f, 0.6245f, 0.275f, 0.6245f,
+                                new int[] { 0, 0, 0, 0, 0, 0 }),
+                        new ModBlock.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[] { 0, 0, 0, 0, 0, 0 }),
+                        new ModBlock.Cuboid(0f, 0.625f, 0f, 1f, 0.65f, 1f, new int[] { 0, 0, 0, 0, 0, 0 }),
+                        new ModBlock.Cuboid(0f, 0.625f, 0f, 0.125f, 1f, 1f, new int[] { 0, 0, 0, 0, 0, 0 }),
+                        new ModBlock.Cuboid(0.875f, 0.625f, 0f, 1f, 1f, 1f, new int[] { 0, 0, 0, 0, 0, 0 }),
+                        new ModBlock.Cuboid(0f, 0.625f, 0f, 1f, 1f, 0.125f, new int[] { 0, 0, 0, 0, 0, 0 }),
+                        new ModBlock.Cuboid(0f, 0.625f, 0.875f, 1f, 1f, 1f, new int[] { 0, 0, 0, 0, 0, 0 }),
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
             } else if (variant.equals("directional")) {
@@ -247,7 +260,7 @@ public class ModBlockSet {
                 variantDef.cuboids = Arrays.asList(cuboids);
             } else if (variant.equals("path")) {
                 ModBlock.Cuboid[] cuboids = {
-                        new ModBlock.Cuboid(0f, 0f, 0f, 1f, 0.9375f, 1f, new int[]{0, 0, 0, 0, 0, 0})
+                        new ModBlock.Cuboid(0f, 0f, 0f, 1f, 0.9375f, 1f, new int[] { 0, 0, 0, 0, 0, 0 })
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
             } else if (variant.contains("arrow_slit") || variant.contains("window_frame")) {
@@ -266,7 +279,8 @@ public class ModBlockSet {
                 variantDef.supportBoxes = Arrays.asList(supportBoxes);
             }
 
-            // If a variant has an alt texture list defined, use it, otherwise create texture lists for this variant type
+            // If a variant has an alt texture list defined, use it, otherwise create
+            // texture lists for this variant type
             variantDef.textures = pickVariantTextures(this.textures, this.altTextures, variant);
             variantDef.randomTextures = pickVariantRandomTextures(this.randomTextures, this.altRandomTextures, variant);
             variantDef.overlayTextures = pickVariantTextures(this.overlayTextures, this.altOverlayTextures, variant);
@@ -281,7 +295,8 @@ public class ModBlockSet {
                         newsr.lightValue = sr.lightValue;
                         newsr.colorMult = sr.colorMult;
                         newsr.textures = pickVariantTextures(sr.textures, sr.altTextures, variant);
-                        newsr.randomTextures = pickVariantRandomTextures(sr.randomTextures, sr.altRandomTextures, variant);
+                        newsr.randomTextures = pickVariantRandomTextures(sr.randomTextures, sr.altRandomTextures,
+                                variant);
                         newsr.overlayTextures = pickVariantTextures(sr.overlayTextures, sr.altOverlayTextures, variant);
                         states.add(newsr);
                     }
@@ -291,7 +306,8 @@ public class ModBlockSet {
             }
             // By default, turn on toggleOnUse if block set has multistate
             if (variantDef.states != null && (this.types == null || !this.types.containsKey(variant))) {
-                variantDef.type = (variantDef.type == null || variantDef.type.isEmpty()) ? "toggleOnUse" : variantDef.type + ",toggleOnUse";
+                variantDef.type = (variantDef.type == null || variantDef.type.isEmpty()) ? "toggleOnUse"
+                        : variantDef.type + ",toggleOnUse";
             }
 
             blockDefs.add(variantDef);
@@ -300,7 +316,8 @@ public class ModBlockSet {
         return blockDefs;
     }
 
-    public static List<String> pickVariantTextures(Map<String, String> textures, Map<String, List<String>> altTextures, String variant) {
+    public static List<String> pickVariantTextures(Map<String, String> textures, Map<String, List<String>> altTextures,
+            String variant) {
         if (altTextures != null && altTextures.containsKey(variant))
             return altTextures.get(variant);
         else
@@ -308,7 +325,7 @@ public class ModBlockSet {
     }
 
     public static List<ModBlock.RandomTextureSet> pickVariantRandomTextures(List<RandomTextureMap> randomTextures,
-                                                                            Map<String, List<ModBlock.RandomTextureSet>> altRandomTextures, String variant) {
+            Map<String, List<ModBlock.RandomTextureSet>> altRandomTextures, String variant) {
         if (altRandomTextures != null && altRandomTextures.containsKey(variant))
             return altRandomTextures.get(variant);
         else
@@ -316,7 +333,8 @@ public class ModBlockSet {
     }
 
     /**
-     * Allow for multiple variants to be provided in one map entry, separated by commas
+     * Allow for multiple variants to be provided in one map entry, separated by
+     * commas
      */
     public static <T> Map<String, T> preprocessVariantMap(Map<String, T> map) {
         if (map == null)
@@ -374,8 +392,9 @@ public class ModBlockSet {
             textureMap.put("sides", textureMap.get("bottom"));
 
         // other variant-specific fallback rules
-        // if (!textureMap.containsKey("window-topbottom") && textureMap.containsKey("bottom"))
-        //   textureMap.put("window-topbottom", textureMap.get("bottom"));
+        // if (!textureMap.containsKey("window-topbottom") &&
+        // textureMap.containsKey("bottom"))
+        // textureMap.put("window-topbottom", textureMap.get("bottom"));
         if (!textureMap.containsKey("window-topbottom"))
             textureMap.put("window-topbottom", "transparent");
 
@@ -404,13 +423,15 @@ public class ModBlockSet {
         List<String> textureList = new LinkedList<>();
 
         for (String texture : ModBlockSet.VARIANT_TEXTURES.get(variant)) {
-            if (textureMap.containsKey(texture)) textureList.add(textureMap.get(texture));
+            if (textureMap.containsKey(texture))
+                textureList.add(textureMap.get(texture));
         }
 
         return (!textureList.isEmpty()) ? textureList : null;
     }
 
-    public static List<ModBlock.RandomTextureSet> getRandomTexturesForVariant(List<RandomTextureMap> randomTextureMaps, String variant) {
+    public static List<ModBlock.RandomTextureSet> getRandomTexturesForVariant(List<RandomTextureMap> randomTextureMaps,
+            String variant) {
         if (randomTextureMaps == null)
             return null;
 
