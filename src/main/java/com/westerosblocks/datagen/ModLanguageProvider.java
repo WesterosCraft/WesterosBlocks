@@ -427,12 +427,12 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.oxidized_iron_bars", "Oxidized Iron Bars");
 
         // Crop Blocks
-        translationBuilder.add("block.westerosblocks.candle_altar", "Candle Altar");
-        translationBuilder.add("block.westerosblocks.crop_carrots", "Carrots");
-        translationBuilder.add("block.westerosblocks.crop_peas", "Peas");
-        translationBuilder.add("block.westerosblocks.crop_turnips", "Turnips");
-        translationBuilder.add("block.westerosblocks.crop_wheat", "Wheat");
-        translationBuilder.add("block.westerosblocks.seagrass", "Seagrass");
+//        translationBuilder.add("block.westerosblocks.candle_altar", "Candle Altar");
+//        translationBuilder.add("block.westerosblocks.crop_carrots", "Carrots");
+//        translationBuilder.add("block.westerosblocks.crop_peas", "Peas");
+//        translationBuilder.add("block.westerosblocks.crop_turnips", "Turnips");
+//        translationBuilder.add("block.westerosblocks.crop_wheat", "Wheat");
+//        translationBuilder.add("block.westerosblocks.seagrass", "Seagrass");
 
         // The format desired is tag.item.<namespace>.<path> for the translation key with slashes in path turned into periods."
         translationBuilder.add("tag.item.c.shield", "Shield");

@@ -17,7 +17,6 @@ public class ModParticles {
     private static final Map<String, ParticleEffect> PARTICLE_EFFECTS = new HashMap<>();
     public static final SimpleParticleType WILDFIRE = FabricParticleTypes.simple(false);
     public static final SimpleParticleType CASCADE = FabricParticleTypes.simple(true);
-    public static final SimpleParticleType MIST = FabricParticleTypes.simple(true);
     public static final SimpleParticleType COSY_SMOKE = FabricParticleTypes.simple(true);
     public static final SimpleParticleType SIGNAL_SMOKE = FabricParticleTypes.simple(true);
 
@@ -59,13 +58,11 @@ public class ModParticles {
         registerParticle("cosy_smoke", COSY_SMOKE);
         registerParticle("wildfire", WILDFIRE);
         registerParticle("cascade", CASCADE);
-        registerParticle("mist", MIST);
     }
 
     public static void initializeClient() {
         ParticleFactoryRegistry.getInstance().register(WILDFIRE, FlameParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(CASCADE, WaterSplashParticle.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(MIST, WaterSplashParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(COSY_SMOKE, CampfireSmokeParticle.CosySmokeFactory::new);
         ParticleFactoryRegistry.getInstance().register(SIGNAL_SMOKE, CampfireSmokeParticle.SignalSmokeFactory::new);
     }

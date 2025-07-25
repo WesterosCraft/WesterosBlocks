@@ -48,10 +48,6 @@ public class ModModelProvider2 {
                 chairExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPRUCE_CHAIR,
                                 "westerosblocks:block/wood/spruce/all");
 
-                // way signs
-                waySignExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_WAY_SIGN,
-                                "westerosblocks:block/wood/oak/all");
-
                 // trap doors
                 trapDoorExporter.generateBlockStateModels(blockStateModelGenerator,
                                 ModBlocks2.KINGS_LANDING_SEWER_MANHOLE,
@@ -679,18 +675,18 @@ public class ModModelProvider2 {
                                 "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_wildflowers");
 
                 // Crop Blocks
-                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CANDLE_ALTAR,
-                                "lighting/candle_altar/lit1");
-                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_CARROTS,
-                                "carrots/carrots_stage_0", true, 1);
-                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_PEAS,
-                                "peas/peas_stage_0", true, 1);
-                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_TURNIPS,
-                                "turnips/turnips_stage_0", true, 1);
-                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_WHEAT,
-                                "wheat/wheat_stage_0", true, 1);
-                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SEAGRASS,
-                                "seagrass/side1", false, 1);
+//                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CANDLE_ALTAR,
+//                                "lighting/candle_altar/lit1");
+//                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_CARROTS,
+//                                "carrots/carrots_stage_0", true, 1);
+//                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_PEAS,
+//                                "peas/peas_stage_0", true, 1);
+//                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_TURNIPS,
+//                                "turnips/turnips_stage_0", true, 1);
+//                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_WHEAT,
+//                                "wheat/wheat_stage_0", true, 1);
+//                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SEAGRASS,
+//                                "seagrass/side1", false, 1);
 
                 // Web Blocks
                 crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ALYSSAS_TEARS_MIST_ONE,
@@ -785,9 +781,6 @@ public class ModModelProvider2 {
                 chairExporter.generateItemModels(itemModelGenerator, ModBlocks2.OAK_CHAIR);
                 chairExporter.generateItemModels(itemModelGenerator, ModBlocks2.BIRCH_CHAIR);
                 chairExporter.generateItemModels(itemModelGenerator, ModBlocks2.SPRUCE_CHAIR);
-
-                // Way Sign Blocks
-                waySignExporter.generateItemModels(itemModelGenerator, ModBlocks2.OAK_WAY_SIGN);
 
                 // TrapDoor Blocks
                 trapDoorExporter.generateItemModels(itemModelGenerator, ModBlocks2.KINGS_LANDING_SEWER_MANHOLE);
@@ -1222,13 +1215,13 @@ public class ModModelProvider2 {
                 flowerPotExporter.generateItemModels(itemModelGenerator, ModBlocks2.POTTED_YELLOW_WILDFLOWERS);
 
                 // Crop Blocks
-                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CANDLE_ALTAR,
-                                "lighting/candle_altar/lit1");
-                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_CARROTS, "carrots/carrots_stage_0");
-                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_PEAS, "peas/peas_stage_0");
-                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_TURNIPS, "turnips/turnips_stage_0");
-                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_WHEAT, "wheat/wheat_stage_0");
-                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.SEAGRASS, "seagrass/side1");
+//                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CANDLE_ALTAR,
+//                                "lighting/candle_altar/lit1");
+//                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_CARROTS, "carrots/carrots_stage_0");
+//                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_PEAS, "peas/peas_stage_0");
+//                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_TURNIPS, "turnips/turnips_stage_0");
+//                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_WHEAT, "wheat/wheat_stage_0");
+//                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.SEAGRASS, "seagrass/side1");
 
                 // Web Blocks
                 crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.ALYSSAS_TEARS_MIST_ONE,

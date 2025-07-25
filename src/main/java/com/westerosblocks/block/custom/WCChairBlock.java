@@ -39,14 +39,10 @@ public class WCChairBlock extends HorizontalFacingBlock {
     }
 
     public static final IntProperty ROTATION = IntProperty.of("rotation", 0, 7);
-    private static final VoxelShape CHAIR_SHAPE = Block.createCuboidShape(0, 0, 0, 16, 21, 16);
+    private static final VoxelShape CHAIR_SHAPE = Block.createCuboidShape(2, 0, 2, 14, 18, 14);
 
     // Pre-computed shape maps for efficient lookups
     private final Map<BlockState, VoxelShape> shapeByIndex;
-
-    private final String blockName;
-    private final String creativeTab;
-    private final WoodType woodType;
 
     public WCChairBlock(AbstractBlock.Settings settings) {
         this(settings, "chair", "building_blocks", "oak");
@@ -58,9 +54,7 @@ public class WCChairBlock extends HorizontalFacingBlock {
 
     public WCChairBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, WoodType woodType) {
         super(settings);
-        this.blockName = blockName;
-        this.creativeTab = creativeTab;
-        this.woodType = woodType;
+
         setDefaultState(getDefaultState().with(ROTATION, 0));
 
         // Pre-compute all possible shape combinations
@@ -111,12 +105,11 @@ public class WCChairBlock extends HorizontalFacingBlock {
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         // Use the same approach as cuboid blocks for 8-directional rotation
-        // But adjust the rotation so the chair faces the player
+        // Adjust the rotation so the chair faces the player (front of chair towards
+        // player)
         int rotation = MathHelper.floor((double) (ctx.getPlayerYaw() * 8.0F / 360.0F) + 0.5D) & 7;
 
-        // Adjust rotation so chair faces the player (backrest towards player)
-        rotation = (rotation + 4) % 8;
-
+        // No adjustment needed - chair will face the player directly
         return this.getDefaultState().with(ROTATION, rotation).with(FACING,
                 ctx.getHorizontalPlayerFacing().getOpposite());
     }
