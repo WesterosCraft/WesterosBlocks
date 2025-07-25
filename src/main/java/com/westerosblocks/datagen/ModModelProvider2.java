@@ -42,11 +42,11 @@ public class ModModelProvider2 {
 
                 // Chairs
                 chairExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_CHAIR,
-                                "westerosblocks:block/wood/oak/all");
+                                "westerosblocks:block/bark/oak/side");
                 chairExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.BIRCH_CHAIR,
-                                "westerosblocks:block/wood/birch/all");
+                                "westerosblocks:block/bark/birch/side");
                 chairExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SPRUCE_CHAIR,
-                                "westerosblocks:block/wood/spruce/all");
+                                "westerosblocks:block/bark/spruce/side");
 
                 // trap doors
                 trapDoorExporter.generateBlockStateModels(blockStateModelGenerator,
