@@ -526,6 +526,20 @@ public class ModBlocks2 {
                                         .soundType("wood")
                                         .textures("bark/weirwood/scars", "bark/weirwood/scars", "bark/weirwood/side"));
 
+        // BRANCH BLOCKS
+        public static final Block OAK_BRANCH = registerBranchBlock(
+                        "oak_branch",
+                        builder -> builder
+                                        .creativeTab("westeros_logs_tab")
+                                        .hardness(2.0f)
+                                        .resistance(6.0f)
+                                        .harvestLevel(1)
+                                        .requiresAxe()
+                                        .woodType("oak")
+                                        .soundType("wood")
+                                        .texture("bark/oak/side")
+                                        .boundingBox(0.25, 0.75, 0.0, 1.0, 0.25, 0.75));
+
         // TORCH BLOCKS
         public static final Block TORCH = registerTorchBlock(
                         "torch",
@@ -3681,6 +3695,21 @@ public class ModBlocks2 {
                                 .texture("rail/rail"); // Default texture
 
                 builder.setBlockType(BlockBuilder.BlockType.RAIL);
+                return configurator.configure(builder).register();
+        }
+
+        public static Block registerBranchBlock(String name, BlockBuilderConfigurator configurator) {
+                BlockBuilder builder = new BlockBuilder(name)
+                                .creativeTab("westeros_branches_tab")
+                                .hardness(2.0f)
+                                .resistance(6.0f)
+                                .harvestLevel(1)
+                                .requiresAxe()
+                                .woodType(WoodType.OAK)
+                                .soundType("wood")
+                                .texture("oak_branch"); // Default texture
+
+                builder.setBlockType(BlockBuilder.BlockType.BRANCH);
                 return configurator.configure(builder).register();
         }
 

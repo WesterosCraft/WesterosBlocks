@@ -16,15 +16,18 @@ public class ModLanguageProvider extends FabricLanguageProvider {
     Map<String, Block> customBlocks = ModBlocks.getCustomBlocks();
     ModBlock[] customBlockDefs = WesterosBlocksDefLoader.getCustomBlockDefs();
 
-    public ModLanguageProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+    public ModLanguageProvider(FabricDataOutput dataOutput,
+            CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
         super(dataOutput, "en_us", registryLookup);
     }
 
     @Override
-    public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
+    public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup,
+            TranslationBuilder translationBuilder) {
         // do custom block translations
         for (ModBlock customBlockDef : customBlockDefs) {
-            if (customBlockDef == null) continue;
+            if (customBlockDef == null)
+                continue;
             Block currentBlock = customBlocks.get(customBlockDef.blockName);
 
             translationBuilder.add(currentBlock, customBlockDef.label);
@@ -35,9 +38,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
                 for (int i = 0; i < customBlockDef.tooltips.size(); i++) {
                     translationBuilder.add(String.format("tooltip.%s.%s.tooltip%s",
-                                    WesterosBlocks.MOD_ID,
-                                    customBlockDef.blockName,
-                                    hasMultipleTooltips ? "." + i : ""),
+                            WesterosBlocks.MOD_ID,
+                            customBlockDef.blockName,
+                            hasMultipleTooltips ? "." + i : ""),
                             customBlockDef.tooltips.get(i));
                 }
             }
@@ -46,7 +49,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         // Items
         translationBuilder.add("item.westerosblocks.longclaw", "Longclaw");
         translationBuilder.add("item.westerosblocks.valyrian_steel_ingot", "Valyrian Steel Ingot");
-//        translationBuilder.add("item.westerosblocks.lannister_shield", "Lannister Shield");
+        // translationBuilder.add("item.westerosblocks.lannister_shield", "Lannister
+        // Shield");
         translationBuilder.add("item.westerosblocks.stark_kite_shield", "Stark Kite Shield");
         translationBuilder.add("item.westerosblocks.tully_heater_shield", "Tully Heater Shield");
         translationBuilder.add("item.westerosblocks.hedge_knight_heater_shield", "Hedge Knight Heater Shield");
@@ -63,19 +67,27 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("text.autoconfig.westerosblocks.category.doors", "Doors");
         translationBuilder.add("text.autoconfig.westerosblocks.category.world", "World");
         translationBuilder.add("text.autoconfig.westerosblocks.option.snowInTaiga", "Snow in Taiga");
-        translationBuilder.add("text.autoconfig.westerosblocks.option.snowInTaiga.@Tooltip[0]", "Enable snow in taiga biome");
+        translationBuilder.add("text.autoconfig.westerosblocks.option.snowInTaiga.@Tooltip[0]",
+                "Enable snow in taiga biome");
         translationBuilder.add("text.autoconfig.westerosblocks.option.blockDevMode", "Block Dev Mode");
-        translationBuilder.add("text.autoconfig.westerosblocks.option.blockDevMode.@Tooltip[0]", "Block development mode");
+        translationBuilder.add("text.autoconfig.westerosblocks.option.blockDevMode.@Tooltip[0]",
+                "Block development mode");
         translationBuilder.add("text.autoconfig.westerosblocks.option.autoRestoreTime", "Auto Restore Time");
-        translationBuilder.add("text.autoconfig.westerosblocks.option.autoRestoreTime.@Tooltip[0]", "Number of seconds before auto-restore");
-        translationBuilder.add("text.autoconfig.westerosblocks.option.autoRestoreAllHalfDoors", "Auto Restore All Half-Doors");
-        translationBuilder.add("text.autoconfig.westerosblocks.option.autoRestoreAllHalfDoors.@Tooltip[0]", "Auto restore all half-door blocks");
+        translationBuilder.add("text.autoconfig.westerosblocks.option.autoRestoreTime.@Tooltip[0]",
+                "Number of seconds before auto-restore");
+        translationBuilder.add("text.autoconfig.westerosblocks.option.autoRestoreAllHalfDoors",
+                "Auto Restore All Half-Doors");
+        translationBuilder.add("text.autoconfig.westerosblocks.option.autoRestoreAllHalfDoors.@Tooltip[0]",
+                "Auto restore all half-door blocks");
         translationBuilder.add("text.autoconfig.westerosblocks.option.doorSurviveAny", "Door Survive Any");
-        translationBuilder.add("text.autoconfig.westerosblocks.option.doorSurviveAny.@Tooltip[0]", "Allow door to survive on any surface");
+        translationBuilder.add("text.autoconfig.westerosblocks.option.doorSurviveAny.@Tooltip[0]",
+                "Allow door to survive on any surface");
         translationBuilder.add("text.autoconfig.westerosblocks.option.doorNoConnect", "Door No Connect");
-        translationBuilder.add("text.autoconfig.westerosblocks.option.doorNoConnect.@Tooltip[0]", "Avoid doors connecting to walls/panes/etc");
+        translationBuilder.add("text.autoconfig.westerosblocks.option.doorNoConnect.@Tooltip[0]",
+                "Avoid doors connecting to walls/panes/etc");
         translationBuilder.add("text.autoconfig.westerosblocks.option.seaLevelOverride", "Sea Level Override");
-        translationBuilder.add("text.autoconfig.westerosblocks.option.seaLevelOverride.@Tooltip[0]", "Override sea level (default for Westeros=33, 0=disable override)");
+        translationBuilder.add("text.autoconfig.westerosblocks.option.seaLevelOverride.@Tooltip[0]",
+                "Override sea level (default for Westeros=33, 0=disable override)");
 
         // Block translations
 
@@ -131,7 +143,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.weirwood_scars", "Weirwood Scars");
 
         // Standalone torch block translations
-        // Note: Only standing torch variants are translated since wall variants aren't in creative tab
+        // Note: Only standing torch variants are translated since wall variants aren't
+        // in creative tab
         translationBuilder.add("block.westerosblocks.torch", "Torch");
         translationBuilder.add("block.westerosblocks.torch_unlit", "Unlit Torch");
         translationBuilder.add("block.westerosblocks.candle", "Candle");
@@ -178,7 +191,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         // Half door block translations
         translationBuilder.add("block.westerosblocks.birch_window_shutters", "Birch Window Shutters");
         translationBuilder.add("block.westerosblocks.dorne_red_window_shutters", "Dorne Red Window Shutters");
-        translationBuilder.add("block.westerosblocks.green_lannisport_window_shutters", "Green Lannisport Window Shutters");
+        translationBuilder.add("block.westerosblocks.green_lannisport_window_shutters",
+                "Green Lannisport Window Shutters");
         translationBuilder.add("block.westerosblocks.grey_wood_window_shutters", "Grey Wood Window Shutters");
         translationBuilder.add("block.westerosblocks.jungle_window_shutters", "Jungle Window Shutters");
         translationBuilder.add("block.westerosblocks.northern_wood_window_shutters", "Northern Wood Window Shutters");
@@ -327,7 +341,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.potted_pink_thistle", "Potted Pink Thistle");
         translationBuilder.add("block.westerosblocks.potted_pink_tulips", "Potted Pink Tulips");
         translationBuilder.add("block.westerosblocks.potted_pink_wildflowers", "Potted Pink Wildflowers");
-        translationBuilder.add("block.westerosblocks.potted_purple_alpine_sowthistle", "Potted Purple Alpine Sowthistle");
+        translationBuilder.add("block.westerosblocks.potted_purple_alpine_sowthistle",
+                "Potted Purple Alpine Sowthistle");
         translationBuilder.add("block.westerosblocks.potted_purple_foxglove", "Potted Purple Foxglove");
         translationBuilder.add("block.westerosblocks.potted_purple_lavender", "Potted Purple Lavender");
         translationBuilder.add("block.westerosblocks.potted_purple_pansies", "Potted Purple Pansies");
@@ -338,7 +353,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.potted_red_chrysanthemum", "Potted Red Chrysanthemum");
         translationBuilder.add("block.westerosblocks.potted_red_dark_roses", "Potted Red Dark Roses");
         translationBuilder.add("block.westerosblocks.potted_red_fern", "Potted Red Fern");
-        translationBuilder.add("block.westerosblocks.potted_red_flowering_spiny_herb", "Potted Red Flowering Spiny Herb");
+        translationBuilder.add("block.westerosblocks.potted_red_flowering_spiny_herb",
+                "Potted Red Flowering Spiny Herb");
         translationBuilder.add("block.westerosblocks.potted_red_mushroom_1", "Potted Red Mushroom 1");
         translationBuilder.add("block.westerosblocks.potted_red_mushroom_2", "Potted Red Mushroom 2");
         translationBuilder.add("block.westerosblocks.potted_red_mushroom_3", "Potted Red Mushroom 3");
@@ -426,15 +442,19 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.iron_crossbar", "Iron Crossbar");
         translationBuilder.add("block.westerosblocks.oxidized_iron_bars", "Oxidized Iron Bars");
 
-        // Crop Blocks
-//        translationBuilder.add("block.westerosblocks.candle_altar", "Candle Altar");
-//        translationBuilder.add("block.westerosblocks.crop_carrots", "Carrots");
-//        translationBuilder.add("block.westerosblocks.crop_peas", "Peas");
-//        translationBuilder.add("block.westerosblocks.crop_turnips", "Turnips");
-//        translationBuilder.add("block.westerosblocks.crop_wheat", "Wheat");
-//        translationBuilder.add("block.westerosblocks.seagrass", "Seagrass");
+        // Branch Blocks
+        translationBuilder.add("block.westerosblocks.oak_branch", "Oak Branch");
 
-        // The format desired is tag.item.<namespace>.<path> for the translation key with slashes in path turned into periods."
+        // Crop Blocks
+        // translationBuilder.add("block.westerosblocks.candle_altar", "Candle Altar");
+        // translationBuilder.add("block.westerosblocks.crop_carrots", "Carrots");
+        // translationBuilder.add("block.westerosblocks.crop_peas", "Peas");
+        // translationBuilder.add("block.westerosblocks.crop_turnips", "Turnips");
+        // translationBuilder.add("block.westerosblocks.crop_wheat", "Wheat");
+        // translationBuilder.add("block.westerosblocks.seagrass", "Seagrass");
+
+        // The format desired is tag.item.<namespace>.<path> for the translation key
+        // with slashes in path turned into periods."
         translationBuilder.add("tag.item.c.shield", "Shield");
     }
 }

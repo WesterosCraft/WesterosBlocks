@@ -1,0 +1,26 @@
+{
+    "blockName": "weirwood_face_0",
+    "blockType": "log",
+    "stepSound": "wood",
+    "material": "wood",
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Weirwood Face 0",
+    "textures": [
+        "bark/weirwood/face_0",
+        "bark/weirwood/face_0",
+        "bark/weirwood/side"
+    ],
+    "display": {
+        "gui": {
+            "rotation": [ -70, 0, 150 ],
+            "translation": [ 0, 0, 0],
+            "scale":[ 0.625, 0.625, 0.625 ]
+        }
+    }
+}

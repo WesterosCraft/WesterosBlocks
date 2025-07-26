@@ -24,6 +24,7 @@ public class ModModelProvider2 {
         static LadderBlockExport ladderExporter = new LadderBlockExport();
         static StandalonePaneBlockExport paneExporter = new StandalonePaneBlockExport();
         static RailBlockExport2 railExporter = new RailBlockExport2();
+        static BranchBlockExport branchExporter = new BranchBlockExport();
 
         public static void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
                 // Arrow Slits
@@ -123,6 +124,10 @@ public class ModModelProvider2 {
                 logExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WEIRWOOD_SCARS,
                                 "bark/weirwood/scars", "bark/weirwood/scars", "bark/weirwood/side");
 
+                // Branch blocks
+                branchExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OAK_BRANCH,
+                                "bark/oak/side");
+
                 // Door blocks
                 doorExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.WHITE_WOOD_DOOR,
                                 "wood/white/door_top", "wood/white/door_bottom");
@@ -197,12 +202,18 @@ public class ModModelProvider2 {
                                 "bars_iron_block/bars_iron_crossbars");
 
                 // Rail Blocks
-                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FANCY_BLUE_CARPET, "carpet/fancy_blue_carpet");
-                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FANCY_RED_CARPET, "carpet/fancy_red_carpet");
-                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HORIZONTAL_CHAIN, "rail_block/chain");
-                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HORIZONTAL_NET, "rail_block/net_large");
-                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HORIZONTAL_ROPE, "rail_block/rope");
-                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.PACKED_SNOW, "rail_block/packed_snow");
+                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FANCY_BLUE_CARPET,
+                                "carpet/fancy_blue_carpet");
+                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.FANCY_RED_CARPET,
+                                "carpet/fancy_red_carpet");
+                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HORIZONTAL_CHAIN,
+                                "rail_block/chain");
+                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HORIZONTAL_NET,
+                                "rail_block/net_large");
+                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.HORIZONTAL_ROPE,
+                                "rail_block/rope");
+                railExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.PACKED_SNOW,
+                                "rail_block/packed_snow");
                 paneExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.OXIDIZED_IRON_BARS,
                                 "bars_iron_block/bars_iron_oxidized");
 
@@ -675,18 +686,24 @@ public class ModModelProvider2 {
                                 "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_wildflowers");
 
                 // Crop Blocks
-//                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CANDLE_ALTAR,
-//                                "lighting/candle_altar/lit1");
-//                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_CARROTS,
-//                                "carrots/carrots_stage_0", true, 1);
-//                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_PEAS,
-//                                "peas/peas_stage_0", true, 1);
-//                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_TURNIPS,
-//                                "turnips/turnips_stage_0", true, 1);
-//                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.CROP_WHEAT,
-//                                "wheat/wheat_stage_0", true, 1);
-//                cropExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.SEAGRASS,
-//                                "seagrass/side1", false, 1);
+                // cropExporter.generateBlockStateModels(blockStateModelGenerator,
+                // ModBlocks2.CANDLE_ALTAR,
+                // "lighting/candle_altar/lit1");
+                // cropExporter.generateBlockStateModels(blockStateModelGenerator,
+                // ModBlocks2.CROP_CARROTS,
+                // "carrots/carrots_stage_0", true, 1);
+                // cropExporter.generateBlockStateModels(blockStateModelGenerator,
+                // ModBlocks2.CROP_PEAS,
+                // "peas/peas_stage_0", true, 1);
+                // cropExporter.generateBlockStateModels(blockStateModelGenerator,
+                // ModBlocks2.CROP_TURNIPS,
+                // "turnips/turnips_stage_0", true, 1);
+                // cropExporter.generateBlockStateModels(blockStateModelGenerator,
+                // ModBlocks2.CROP_WHEAT,
+                // "wheat/wheat_stage_0", true, 1);
+                // cropExporter.generateBlockStateModels(blockStateModelGenerator,
+                // ModBlocks2.SEAGRASS,
+                // "seagrass/side1", false, 1);
 
                 // Web Blocks
                 crossExporter.generateBlockStateModels(blockStateModelGenerator, ModBlocks2.ALYSSAS_TEARS_MIST_ONE,
@@ -818,6 +835,9 @@ public class ModModelProvider2 {
                 logExporter.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_FACE_8);
                 logExporter.generateItemModels(itemModelGenerator, ModBlocks2.WEIRWOOD_SCARS);
 
+                // Branch Blocks
+                branchExporter.generateItemModels(itemModelGenerator, ModBlocks2.OAK_BRANCH);
+
                 // Torch Blocks
                 torchExporter.generateItemModels(itemModelGenerator, ModBlocks2.TORCH);
                 torchExporter.generateItemModels(itemModelGenerator, ModBlocks2.TORCH_UNLIT);
@@ -849,8 +869,10 @@ public class ModModelProvider2 {
                                 "bars_iron_block/bars_iron_oxidized");
 
                 // Rail Blocks
-                railExporter.generateItemModels(itemModelGenerator, ModBlocks2.FANCY_BLUE_CARPET, "carpet/fancy_blue_carpet");
-                railExporter.generateItemModels(itemModelGenerator, ModBlocks2.FANCY_RED_CARPET, "carpet/fancy_red_carpet");
+                railExporter.generateItemModels(itemModelGenerator, ModBlocks2.FANCY_BLUE_CARPET,
+                                "carpet/fancy_blue_carpet");
+                railExporter.generateItemModels(itemModelGenerator, ModBlocks2.FANCY_RED_CARPET,
+                                "carpet/fancy_red_carpet");
                 railExporter.generateItemModels(itemModelGenerator, ModBlocks2.HORIZONTAL_CHAIN, "rail_block/chain");
                 railExporter.generateItemModels(itemModelGenerator, ModBlocks2.HORIZONTAL_NET, "rail_block/net_large");
                 railExporter.generateItemModels(itemModelGenerator, ModBlocks2.HORIZONTAL_ROPE, "rail_block/rope");
@@ -1215,13 +1237,18 @@ public class ModModelProvider2 {
                 flowerPotExporter.generateItemModels(itemModelGenerator, ModBlocks2.POTTED_YELLOW_WILDFLOWERS);
 
                 // Crop Blocks
-//                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CANDLE_ALTAR,
-//                                "lighting/candle_altar/lit1");
-//                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_CARROTS, "carrots/carrots_stage_0");
-//                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_PEAS, "peas/peas_stage_0");
-//                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_TURNIPS, "turnips/turnips_stage_0");
-//                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_WHEAT, "wheat/wheat_stage_0");
-//                cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.SEAGRASS, "seagrass/side1");
+                // cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CANDLE_ALTAR,
+                // "lighting/candle_altar/lit1");
+                // cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_CARROTS,
+                // "carrots/carrots_stage_0");
+                // cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_PEAS,
+                // "peas/peas_stage_0");
+                // cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_TURNIPS,
+                // "turnips/turnips_stage_0");
+                // cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.CROP_WHEAT,
+                // "wheat/wheat_stage_0");
+                // cropExporter.generateItemModels(itemModelGenerator, ModBlocks2.SEAGRASS,
+                // "seagrass/side1");
 
                 // Web Blocks
                 crossExporter.generateItemModels(itemModelGenerator, ModBlocks2.ALYSSAS_TEARS_MIST_ONE,

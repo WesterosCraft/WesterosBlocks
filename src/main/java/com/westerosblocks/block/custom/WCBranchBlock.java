@@ -11,19 +11,27 @@ import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.state.StateManager;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.block.ShapeContext;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
 
 import java.util.List;
 
-public class WCLogBlock extends PillarBlock {
+public class WCBranchBlock extends PillarBlock {
     private final String blockName;
     private final String creativeTab;
     private final String woodType;
+    private final String branchType;
 
-    public WCLogBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, String woodType) {
+    public WCBranchBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, String woodType,
+            String branchType) {
         super(settings);
         this.blockName = blockName;
         this.creativeTab = creativeTab;
         this.woodType = woodType;
+        this.branchType = branchType;
     }
 
     public String getBlockName() {
@@ -38,6 +46,10 @@ public class WCLogBlock extends PillarBlock {
         return woodType;
     }
 
+    public String getBranchType() {
+        return branchType;
+    }
+
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         return this.getDefaultState().with(AXIS, ctx.getSide().getAxis());
@@ -46,8 +58,8 @@ public class WCLogBlock extends PillarBlock {
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
         // Add custom tooltip if needed
-        tooltip.add(Text.translatable("tooltip.westerosblocks.log." + woodType)
-            .formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("tooltip.westerosblocks.branch." + woodType + "." + branchType)
+                .formatted(Formatting.GRAY));
         super.appendTooltip(stack, context, tooltip, options);
     }
 
@@ -55,4 +67,13 @@ public class WCLogBlock extends PillarBlock {
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(AXIS);
     }
-} 
+
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        // Based on the model: from [4, 0, 4] to [12, 16, 12] with rotation around Y
+        // axis at [11, 7, 11]
+        // Convert from 16x16 texture coordinates to 16x16 block coordinates
+        // The model shows a rotated cube that's offset from center
+        return VoxelShapes.cuboid(0.25, 0.0, 0.25, 0.75, 1.0, 0.75);
+    }
+}

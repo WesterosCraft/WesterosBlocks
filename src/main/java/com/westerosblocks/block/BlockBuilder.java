@@ -32,87 +32,112 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import java.util.List;
 
 /**
- * A fluent builder class for creating and registering custom blocks in WesterosBlocks.
+ * A fluent builder class for creating and registering custom blocks in
+ * WesterosBlocks.
  * 
- * <p>This builder provides a convenient way to configure block properties including:
+ * <p>
+ * This builder provides a convenient way to configure block properties
+ * including:
  * <ul>
- *   <li>Physical properties (hardness, resistance, harvest requirements)</li>
- *   <li>Visual properties (textures, map colors, opacity)</li>
- *   <li>Behavioral properties (burnable, collision, drops)</li>
- *   <li>Creative tab placement</li>
+ * <li>Physical properties (hardness, resistance, harvest requirements)</li>
+ * <li>Visual properties (textures, map colors, opacity)</li>
+ * <li>Behavioral properties (burnable, collision, drops)</li>
+ * <li>Creative tab placement</li>
  * </ul>
  * 
- * <p>Usage example:
+ * <p>
+ * Usage example:
+ * 
  * <pre>{@code
  * new BlockBuilder("oak_table")
- *     .hardness(2.0f)
- *     .resistance(6.0f)
- *     .requiresAxe()
- *     .texture("oak_table")
- *     .woodType("oak")
- *     .register();
+ *         .hardness(2.0f)
+ *         .resistance(6.0f)
+ *         .requiresAxe()
+ *         .texture("oak_table")
+ *         .woodType("oak")
+ *         .register();
  * }</pre>
  * 
  */
 public class BlockBuilder {
-    /** The unique identifier for this block (used for registry and texture paths) */
+    /**
+     * The unique identifier for this block (used for registry and texture paths)
+     */
     private final String name;
-    
-    /** The creative tab where this block will be placed (default: "westeros_decor_tab") */
+
+    /**
+     * The creative tab where this block will be placed (default:
+     * "westeros_decor_tab")
+     */
     private String creativeTab = "westeros_decor_tab";
-    
-    /** Block hardness - affects mining speed and tool requirements (default: 2.0f) */
+
+    /**
+     * Block hardness - affects mining speed and tool requirements (default: 2.0f)
+     */
     private float hardness = 2.0f;
-    
+
     /** Block resistance - affects explosion resistance (default: 6.0f) */
     private float resistance = 6.0f;
-    
-    /** Minimum tool tier required to harvest this block (0 = any tool, 1 = stone, 2 = iron, etc.) */
+
+    /**
+     * Minimum tool tier required to harvest this block (0 = any tool, 1 = stone, 2
+     * = iron, etc.)
+     */
     private int harvestLevel = 0;
-    
-    /** Path to the block's texture file (relative to assets/westerosblocks/textures/block/) */
+
+    /**
+     * Path to the block's texture file (relative to
+     * assets/westerosblocks/textures/block/)
+     */
     private String texturePath;
-    
-    /** Multiple texture paths for blocks that need different textures on different faces */
+
+    /**
+     * Multiple texture paths for blocks that need different textures on different
+     * faces
+     */
     private String[] texturePaths;
-    
+
     /** Wood type for wooden blocks (affects sounds, textures, and behavior) */
     private WoodType woodType = WoodType.OAK;
-    
+
     /** Sound type for block interactions (e.g., "wood", "stone", "metal") */
     private String soundType = "wood";
-    
+
     /** Whether this block is locked (affects trapdoor behavior) */
     private boolean locked = false;
-    
+
     /** Whether this block is non-opaque (allows light to pass through) */
     private boolean nonOpaque = false;
-    
+
     /** Whether this block can be burned by fire */
     private boolean burnable = false;
-    
+
     /** Whether this block has no collision box (entities can pass through) */
     private boolean noCollision = false;
-    
+
     /** Whether this block drops nothing when broken */
     private boolean dropsNothing = false;
-    
+
     /** Whether this block is transparent for alpha blending */
     private boolean alphaRender = false;
-    
+
     /** Map color for this block (affects how it appears on maps) */
     private MapColor mapColor = null;
-    
-    /** The type of custom block to create (set internally by registration methods) */
+
+    /**
+     * The type of custom block to create (set internally by registration methods)
+     */
     private BlockType blockType;
-    
-    /** The tool type required to harvest this block (e.g., "pickaxe", "axe", "shovel") */
+
+    /**
+     * The tool type required to harvest this block (e.g., "pickaxe", "axe",
+     * "shovel")
+     */
     private String harvestTool;
-    
+
     /** Dye color for colored blocks (like beds) */
     private DyeColor dyeColor = DyeColor.RED;
-    
-    
+
     private boolean allowUnsupported = false;
     private boolean noParticle = false;
     private boolean canGrowDownward = false;
@@ -128,7 +153,8 @@ public class BlockBuilder {
     /**
      * Creates a new BlockBuilder with the specified name.
      * 
-     * @param name The unique identifier for this block (used for registry and texture paths)
+     * @param name The unique identifier for this block (used for registry and
+     *             texture paths)
      * @throws IllegalArgumentException if name is null or empty
      */
     public BlockBuilder(String name) {
@@ -152,11 +178,12 @@ public class BlockBuilder {
     /**
      * Sets the block's hardness value.
      * 
-     * <p>Hardness affects:
+     * <p>
+     * Hardness affects:
      * <ul>
-     *   <li>How long it takes to break the block</li>
-     *   <li>Minimum tool tier requirements</li>
-     *   <li>Explosion resistance (when combined with resistance)</li>
+     * <li>How long it takes to break the block</li>
+     * <li>Minimum tool tier requirements</li>
+     * <li>Explosion resistance (when combined with resistance)</li>
      * </ul>
      * 
      * @param hardness The hardness value (higher = harder to break)
@@ -170,10 +197,11 @@ public class BlockBuilder {
     /**
      * Sets the block's resistance value.
      * 
-     * <p>Resistance affects:
+     * <p>
+     * Resistance affects:
      * <ul>
-     *   <li>Explosion resistance</li>
-     *   <li>Piston pushability</li>
+     * <li>Explosion resistance</li>
+     * <li>Piston pushability</li>
      * </ul>
      * 
      * @param resistance The resistance value (higher = more resistant)
@@ -187,13 +215,14 @@ public class BlockBuilder {
     /**
      * Sets the minimum tool tier required to harvest this block.
      * 
-     * <p>Harvest levels:
+     * <p>
+     * Harvest levels:
      * <ul>
-     *   <li>0: Any tool (or no tool)</li>
-     *   <li>1: Stone tier (wooden tools)</li>
-     *   <li>2: Iron tier (stone tools)</li>
-     *   <li>3: Diamond tier (iron tools)</li>
-     *   <li>4: Netherite tier (diamond tools)</li>
+     * <li>0: Any tool (or no tool)</li>
+     * <li>1: Stone tier (wooden tools)</li>
+     * <li>2: Iron tier (stone tools)</li>
+     * <li>3: Diamond tier (iron tools)</li>
+     * <li>4: Netherite tier (diamond tools)</li>
      * </ul>
      * 
      * @param harvestLevel The minimum tool tier required
@@ -218,7 +247,7 @@ public class BlockBuilder {
     /**
      * Sets both the tool type and harvest level required to harvest this block.
      * 
-     * @param tool The tool type ("pickaxe", "axe", "shovel", "hoe", or "shears")
+     * @param tool  The tool type ("pickaxe", "axe", "shovel", "hoe", or "shears")
      * @param level The minimum tool tier required
      * @return this builder for method chaining
      */
@@ -309,11 +338,13 @@ public class BlockBuilder {
     /**
      * Sets the texture path for this block.
      * 
-     * <p>The texture path will be automatically prefixed with "westerosblocks:block/".
+     * <p>
+     * The texture path will be automatically prefixed with "westerosblocks:block/".
      * For example, calling {@code texture("oak_table")} will use the texture at
      * {@code assets/westerosblocks/textures/block/oak_table.png}.
      * 
-     * @param texturePath The texture path (without the "westerosblocks:block/" prefix)
+     * @param texturePath The texture path (without the "westerosblocks:block/"
+     *                    prefix)
      * @return this builder for method chaining
      */
     public BlockBuilder texture(String texturePath) {
@@ -322,10 +353,13 @@ public class BlockBuilder {
     }
 
     /**
-     * Sets multiple texture paths for blocks that need different textures on different faces.
+     * Sets multiple texture paths for blocks that need different textures on
+     * different faces.
      * 
-     * <p>For log blocks, the order is typically [bottom, top, side].
-     * For other block types, the order depends on the specific block implementation.
+     * <p>
+     * For log blocks, the order is typically [bottom, top, side].
+     * For other block types, the order depends on the specific block
+     * implementation.
      * 
      * @param texturePaths Array of texture paths (without .png extension)
      * @return this builder for method chaining
@@ -451,7 +485,9 @@ public class BlockBuilder {
     /**
      * Sets the wood type for this block using a string identifier.
      * 
-     * <p>Supported wood types: "oak", "spruce", "birch", "jungle", "acacia", "dark_oak",
+     * <p>
+     * Supported wood types: "oak", "spruce", "birch", "jungle", "acacia",
+     * "dark_oak",
      * "mangrove", "cherry", "bamboo", "crimson", "warped"
      * 
      * @param woodType The wood type string identifier
@@ -465,7 +501,9 @@ public class BlockBuilder {
     /**
      * Sets the sound type for this block.
      * 
-     * <p>Common sound types: "wood", "stone", "metal", "glass", "cloth", "sand", "gravel"
+     * <p>
+     * Common sound types: "wood", "stone", "metal", "glass", "cloth", "sand",
+     * "gravel"
      * 
      * @param soundType The sound type identifier
      * @return this builder for method chaining
@@ -549,7 +587,8 @@ public class BlockBuilder {
     /**
      * Sets the map color for this block.
      * 
-     * <p>Map colors affect how the block appears on maps and item frames.
+     * <p>
+     * Map colors affect how the block appears on maps and item frames.
      * 
      * @param mapColor The map color to use
      * @return this builder for method chaining
@@ -603,7 +642,8 @@ public class BlockBuilder {
     /**
      * Creates a door block with the specified properties.
      * 
-     * <p>Doors are double-height blocks that can be opened and closed.
+     * <p>
+     * Doors are double-height blocks that can be opened and closed.
      * They require proper support blocks above and below when placed.
      * 
      * @return this builder for method chaining
@@ -636,7 +676,8 @@ public class BlockBuilder {
     }
 
     /**
-     * Sets whether this plant block is sensitive to layer placement (for snow layers).
+     * Sets whether this plant block is sensitive to layer placement (for snow
+     * layers).
      * 
      * @return this builder for method chaining
      */
@@ -667,7 +708,7 @@ public class BlockBuilder {
      * @return this builder for method chaining
      */
     public BlockBuilder boundingBox(double xMin, double xMax, double yMin, double yMax, double zMin, double zMax) {
-        this.boundingBox = new double[]{xMin, xMax, yMin, yMax, zMin, zMax};
+        this.boundingBox = new double[] { xMin, xMax, yMin, yMax, zMin, zMax };
         return this;
     }
 
@@ -685,7 +726,8 @@ public class BlockBuilder {
     /**
      * Creates a ladder block with the specified properties.
      * 
-     * <p>Ladders are climbable blocks that can be attached to walls.
+     * <p>
+     * Ladders are climbable blocks that can be attached to walls.
      * They can optionally be placed without support and made non-climbable.
      * 
      * @return this builder for method chaining
@@ -694,7 +736,6 @@ public class BlockBuilder {
         this.blockType = BlockType.LADDER;
         return this;
     }
-
 
     /**
      * Sets whether a block can be disconnected from neighbors.
@@ -720,7 +761,7 @@ public class BlockBuilder {
      * Helper method to register a wall block variant.
      * 
      * @param wallBlock The wall block to register
-     * @param wallName The name for the wall block
+     * @param wallName  The name for the wall block
      * @return The registered wall block
      */
     private Block registerWallBlock(Block wallBlock, String wallName) {
@@ -730,27 +771,29 @@ public class BlockBuilder {
         } else if (nonOpaque) {
             BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, RenderLayer.getCutout());
         }
-        
+
         Registry.register(Registries.BLOCK, WesterosBlocks.id(wallName), wallBlock);
-        Registry.register(Registries.ITEM, WesterosBlocks.id(wallName), 
-            new BlockItem(wallBlock, new Item.Settings()));
-        
+        Registry.register(Registries.ITEM, WesterosBlocks.id(wallName),
+                new BlockItem(wallBlock, new Item.Settings()));
+
         // Note: Wall torch blocks are NOT added to creative tab
         // They are automatically created when placing standing torches against walls
-        
+
         return wallBlock;
     }
 
     /**
-     * Registers this block with the game registry and creates the appropriate block instance.
+     * Registers this block with the game registry and creates the appropriate block
+     * instance.
      * 
-     * <p>This method:
+     * <p>
+     * This method:
      * <ul>
-     *   <li>Validates that required properties are set</li>
-     *   <li>Creates the block with the configured settings</li>
-     *   <li>Registers the block with the game registry</li>
-     *   <li>Creates and registers the corresponding item</li>
-     *   <li>Adds the block to the specified creative tab</li>
+     * <li>Validates that required properties are set</li>
+     * <li>Creates the block with the configured settings</li>
+     * <li>Registers the block with the game registry</li>
+     * <li>Creates and registers the corresponding item</li>
+     * <li>Adds the block to the specified creative tab</li>
      * </ul>
      * 
      * @return The registered block instance
@@ -767,8 +810,8 @@ public class BlockBuilder {
 
         // Create base block settings
         AbstractBlock.Settings settings = AbstractBlock.Settings.create()
-            .strength(hardness, resistance)
-            .sounds(ModBlockSoundGroup.getBlockSoundGroup(soundType));
+                .strength(hardness, resistance)
+                .sounds(ModBlockSoundGroup.getBlockSoundGroup(soundType));
 
         // Apply light level if specified
         if (lightLevel > 0) {
@@ -784,10 +827,10 @@ public class BlockBuilder {
         if (harvestLevel > 0) {
             // Ensure minimum hardness for harvest level requirements
             float minHardness = switch (harvestLevel) {
-                case 1 -> 1.5f;  // Stone level (wooden tools)
-                case 2 -> 3.0f;  // Iron level (stone tools)
-                case 3 -> 5.0f;  // Diamond level (iron tools)
-                case 4 -> 6.0f;  // Netherite level (diamond tools)
+                case 1 -> 1.5f; // Stone level (wooden tools)
+                case 2 -> 3.0f; // Iron level (stone tools)
+                case 3 -> 5.0f; // Diamond level (iron tools)
+                case 4 -> 6.0f; // Netherite level (diamond tools)
                 default -> hardness;
             };
 
@@ -830,11 +873,12 @@ public class BlockBuilder {
         if (block instanceof WCWaySignBlock waySignBlock) {
             // Special handling for way signs
             Registry.register(Registries.ITEM, WesterosBlocks.id(name),
-                new com.westerosblocks.item.WCWaySignItem(block, new Item.Settings(), waySignBlock.getWoodType().toString()));
+                    new com.westerosblocks.item.WCWaySignItem(block, new Item.Settings(),
+                            waySignBlock.getWoodType().toString()));
         } else {
             // Standard block item registration
             Registry.register(Registries.ITEM, WesterosBlocks.id(name),
-                new BlockItem(block, new Item.Settings()));
+                    new BlockItem(block, new Item.Settings()));
         }
 
         // Add to creative tab
@@ -862,47 +906,47 @@ public class BlockBuilder {
             case TABLE -> new WCTableBlock(settings, name, creativeTab, woodType);
             case CHAIR -> new WCChairBlock(settings, name, creativeTab, woodType);
             case WAY_SIGN -> {
-//                // Register wall variant too
-//                Block wallBlock = new WCWaySignWallBlock(settings, "wall_" + name, creativeTab, woodType);
-//                Registry.register(Registries.BLOCK, WesterosBlocks.id("wall_" + name), wallBlock);
-//                Registry.register(Registries.ITEM, WesterosBlocks.id("wall_" + name), new BlockItem(wallBlock, new Item.Settings()));
-//                ItemGroupEvents.modifyEntriesEvent(WesterosCreativeModeTabs.TABS.get(creativeTab)).register(entries -> {
-//                    entries.add(wallBlock);
-//                });
+                // // Register wall variant too
+                // Block wallBlock = new WCWaySignWallBlock(settings, "wall_" + name,
+                // creativeTab, woodType);
+                // Registry.register(Registries.BLOCK, WesterosBlocks.id("wall_" + name),
+                // wallBlock);
+                // Registry.register(Registries.ITEM, WesterosBlocks.id("wall_" + name), new
+                // BlockItem(wallBlock, new Item.Settings()));
+                // ItemGroupEvents.modifyEntriesEvent(WesterosCreativeModeTabs.TABS.get(creativeTab)).register(entries
+                // -> {
+                // entries.add(wallBlock);
+                // });
                 yield new WCWaySignBlock(settings, name, creativeTab, woodType);
             }
             case TRAPDOOR -> new WCTrapDoorBlock(settings, name, creativeTab, woodType, locked, soundType);
             case DOOR -> new WCDoorBlock(
-                settings,
-                woodType.toString().toLowerCase(),
-                locked,
-                allowUnsupported
-            );
+                    settings,
+                    woodType.toString().toLowerCase(),
+                    locked,
+                    allowUnsupported);
             case HALF_DOOR -> new WCHalfDoorBlock(
-                settings,
-                locked,
-                allowUnsupported,
-                "block." + WesterosBlocks.MOD_ID + "." + name
-            );
-            case LOG -> new WCLogBlock(settings, name, creativeTab, woodType.toString().toLowerCase(), texturePaths);
+                    settings,
+                    locked,
+                    allowUnsupported,
+                    "block." + WesterosBlocks.MOD_ID + "." + name);
+            case LOG -> new WCLogBlock(settings, name, creativeTab, woodType.toString().toLowerCase());
             case TORCH -> {
                 // Create wall torch first
                 WCWallTorchBlock wallTorch = new WCWallTorchBlock(
-                    settings,
-                    allowUnsupported,
-                    noParticle,
-                    "block." + WesterosBlocks.MOD_ID + ".wall_" + name,
-                    tooltips
-                );
+                        settings,
+                        allowUnsupported,
+                        noParticle,
+                        "block." + WesterosBlocks.MOD_ID + ".wall_" + name,
+                        tooltips);
 
                 // Create and return standing torch
                 WCTorchBlock standingTorch = new WCTorchBlock(
-                    settings,
-                    wallTorch,
-                    allowUnsupported,
-                    noParticle,
-                    "block." + WesterosBlocks.MOD_ID + "." + name
-                );
+                        settings,
+                        wallTorch,
+                        allowUnsupported,
+                        noParticle,
+                        "block." + WesterosBlocks.MOD_ID + "." + name);
 
                 // Store wall torch for registration in register() method
                 this.wallBlock = wallTorch;
@@ -912,20 +956,18 @@ public class BlockBuilder {
             case FAN -> {
                 // Create wall fan first
                 WCWallFanBlock wallFan = new WCWallFanBlock(
-                    settings,
-                    allowUnsupported,
-                    "block." + WesterosBlocks.MOD_ID + ".wall_" + name,
-                    tooltips
-                );
+                        settings,
+                        allowUnsupported,
+                        "block." + WesterosBlocks.MOD_ID + ".wall_" + name,
+                        tooltips);
 
                 // Create and return standing fan
                 WCFanBlock standingFan = new WCFanBlock(
-                    settings,
-                    wallFan,
-                    allowUnsupported,
-                    "block." + WesterosBlocks.MOD_ID + "." + name,
-                    tooltips
-                );
+                        settings,
+                        wallFan,
+                        allowUnsupported,
+                        "block." + WesterosBlocks.MOD_ID + "." + name,
+                        tooltips);
 
                 // Store wall fan for registration in register() method
                 this.wallBlock = wallFan;
@@ -943,13 +985,16 @@ public class BlockBuilder {
             case LADDER -> new WCLadderBlock(settings, name, creativeTab, allowUnsupported, false, tooltips);
             case PANE -> new WCStandalonePaneBlock(settings, unconnect);
             case RAIL -> new WCRailBlock(settings, name, creativeTab, allowUnsupported, tooltips);
+            case BRANCH ->
+                new WCBranchBlock(settings, name, creativeTab, woodType.toString().toLowerCase(), "large_branch");
         };
     }
 
     /**
      * Enumeration of supported custom block types.
      * 
-     * <p>Each type corresponds to a specific custom block class that provides
+     * <p>
+     * Each type corresponds to a specific custom block class that provides
      * specialized behavior and rendering.
      */
     public enum BlockType {
@@ -990,6 +1035,8 @@ public class BlockBuilder {
         /** Pane blocks for glass-like structures */
         PANE,
         /** Rail blocks for transportation */
-        RAIL
+        RAIL,
+        /** Branch blocks for wooden branches */
+        BRANCH
     }
-} 
+}
