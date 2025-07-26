@@ -27,8 +27,9 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.DyeColor;
+import net.fabricmc.api.EnvType;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-
+import net.fabricmc.loader.api.FabricLoader;
 import java.util.List;
 
 /**
@@ -766,10 +767,12 @@ public class BlockBuilder {
      */
     private Block registerWallBlock(Block wallBlock, String wallName) {
         // Register render type for transparency if needed (same as main block)
-        if (alphaRender) {
-            BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, RenderLayer.getTranslucent());
-        } else if (nonOpaque) {
-            BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, RenderLayer.getCutout());
+        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
+            if (alphaRender) {
+                BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, RenderLayer.getTranslucent());
+            } else if (nonOpaque) {
+                BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, RenderLayer.getCutout());
+            }
         }
 
         Registry.register(Registries.BLOCK, WesterosBlocks.id(wallName), wallBlock);
@@ -860,10 +863,12 @@ public class BlockBuilder {
         Block block = createBlock(settings);
 
         // Register render type for transparency if needed
-        if (alphaRender) {
-            BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getTranslucent());
-        } else if (nonOpaque) {
-            BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
+        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
+            if (alphaRender) {
+                BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getTranslucent());
+            } else if (nonOpaque) {
+                BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
+            }
         }
 
         // Register the block with the game registry

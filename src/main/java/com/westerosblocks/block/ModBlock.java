@@ -26,9 +26,11 @@ public class ModBlock extends ModBlockStateRecord {
     public static final String LAYER_SENSITIVE = "layerSensitive";
     public String blockName; // Locally unique block name
     public String blockType = "solid"; // Block type ('solid', 'liquid', 'plant', 'log', 'stairs', etc)
-    public float hardness = DEF_FLOAT;  // Block hardness
-    public String stepSound = null; // Step sound (powder, wood, gravel, grass, stone, metal, glass, cloth, sand, snow, ladder, anvil)
-    public String material = null; // Generic material (air, grass, ground, wood, rock, iron, anvil, water, lava, leaves, plants, vine, sponge, etc.)
+    public float hardness = DEF_FLOAT; // Block hardness
+    public String stepSound = null; // Step sound (powder, wood, gravel, grass, stone, metal, glass, cloth, sand,
+                                    // snow, ladder, anvil)
+    public String material = null; // Generic material (air, grass, ground, wood, rock, iron, anvil, water, lava,
+                                   // leaves, plants, vine, sponge, etc.)
     public float resistance = DEF_FLOAT; // Explosion resistance
     public int lightOpacity = DEF_INT;
     public List<HarvestLevel> harvestLevel = null; // List of harvest levels
@@ -39,13 +41,14 @@ public class ModBlock extends ModBlockStateRecord {
     public String type = ""; // Type field (used for plant types or other block type specific values)
     public boolean alphaRender = false; // If true, do render on pass 2 (for alpha blending)
     public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
-    public boolean nonOpaque = false; // If true, does not block visibility of shared faces (solid blocks) and doesn't allow torches
+    public boolean nonOpaque = false; // If true, does not block visibility of shared faces (solid blocks) and doesn't
+                                      // allow torches
     public String label; // Label for item associated with block
     public String itemTexture = null; // Item texture, if any
     public int itemTextureIndex = 0; // Index of texture for item icon
     public List<String> soundList = null; // List of custom sound names or sound IDs (for 'sound' blocks)
     public List<String> tooltips; // the block tooltips
-    public List<ModBlockStateRecord> stack = null;  // List of elements for a stack, first is bottom-most (for *-stack)
+    public List<ModBlockStateRecord> stack = null; // List of elements for a stack, first is bottom-most (for *-stack)
     public List<ModBlockStateRecord> states = null;
     private StateProperty stateProp = null;
     public static final String SHAPE_BOX = "box"; // Shape for normal cuboid (box)
@@ -75,7 +78,7 @@ public class ModBlock extends ModBlockStateRecord {
 
     public static class RandomTextureSet {
         public List<String> textures = null; // List of textures (for single texture set)
-        public Integer weight = null;        // Weight for texture set (default = 1)
+        public Integer weight = null; // Weight for texture set (default = 1)
 
         public int getTextureCount() {
             return textures != null ? textures.size() : 0;
@@ -97,7 +100,6 @@ public class ModBlock extends ModBlockStateRecord {
         public float yMax = 1.0F;
         public float zMin = 0.0F;
         public float zMax = 1.0F;
-
 
         public BoundingBox() {
         }
@@ -238,16 +240,16 @@ public class ModBlock extends ModBlockStateRecord {
     }
 
     public enum CuboidRotation {
-        NONE(0, 0, 0, new int[]{0, 1, 2, 3, 4, 5}, new int[]{0, 0, 0, 0, 0, 0}),
-        ROTY45(0, 45, 0, new int[]{0, 1, 4, 5, 2, 3}, new int[]{315, 45, 0, 0, 0, 0}),
-        ROTY90(0, 90, 0, new int[]{0, 1, 4, 5, 3, 2}, new int[]{270, 90, 0, 0, 0, 0}),
-        ROTY135(0, 135, 0, new int[]{0, 1, 3, 2, 4, 5}, new int[]{225, 135, 0, 0, 0, 0}),
-        ROTY180(0, 180, 0, new int[]{0, 1, 3, 2, 5, 4}, new int[]{180, 180, 0, 0, 0, 0}),
-        ROTY225(0, 225, 0, new int[]{0, 1, 5, 4, 3, 2}, new int[]{135, 225, 0, 0, 0, 0}),
-        ROTY270(0, 270, 0, new int[]{0, 1, 5, 4, 2, 3}, new int[]{90, 270, 0, 0, 0, 0}),
-        ROTY315(0, 315, 0, new int[]{0, 1, 2, 3, 5, 4}, new int[]{45, 315, 0, 0, 0, 0}),
-        ROTZ90(0, 0, 90, new int[]{5, 4, 2, 3, 0, 1}, new int[]{270, 90, 270, 90, 90, 90}),
-        ROTZ270(0, 0, 270, new int[]{4, 5, 2, 3, 1, 0}, new int[]{90, 270, 90, 270, 270, 270});
+        NONE(0, 0, 0, new int[] { 0, 1, 2, 3, 4, 5 }, new int[] { 0, 0, 0, 0, 0, 0 }),
+        ROTY45(0, 45, 0, new int[] { 0, 1, 4, 5, 2, 3 }, new int[] { 315, 45, 0, 0, 0, 0 }),
+        ROTY90(0, 90, 0, new int[] { 0, 1, 4, 5, 3, 2 }, new int[] { 270, 90, 0, 0, 0, 0 }),
+        ROTY135(0, 135, 0, new int[] { 0, 1, 3, 2, 4, 5 }, new int[] { 225, 135, 0, 0, 0, 0 }),
+        ROTY180(0, 180, 0, new int[] { 0, 1, 3, 2, 5, 4 }, new int[] { 180, 180, 0, 0, 0, 0 }),
+        ROTY225(0, 225, 0, new int[] { 0, 1, 5, 4, 3, 2 }, new int[] { 135, 225, 0, 0, 0, 0 }),
+        ROTY270(0, 270, 0, new int[] { 0, 1, 5, 4, 2, 3 }, new int[] { 90, 270, 0, 0, 0, 0 }),
+        ROTY315(0, 315, 0, new int[] { 0, 1, 2, 3, 5, 4 }, new int[] { 45, 315, 0, 0, 0, 0 }),
+        ROTZ90(0, 0, 90, new int[] { 5, 4, 2, 3, 0, 1 }, new int[] { 270, 90, 270, 90, 90, 90 }),
+        ROTZ270(0, 0, 270, new int[] { 4, 5, 2, 3, 1, 0 }, new int[] { 90, 270, 90, 270, 270, 270 });
 
         final int xrot, yrot, zrot;
         final int[] txtidx;
@@ -264,10 +266,9 @@ public class ModBlock extends ModBlockStateRecord {
 
     public static class Cuboid extends BoundingBox {
         public int[] sideTextures = null;
-        public int[] sideRotations = {0, 0, 0, 0, 0, 0};
+        public int[] sideRotations = { 0, 0, 0, 0, 0, 0 };
         public String shape = SHAPE_BOX; // "box" = normal cuboid, "crossed" = plant-style crossed (texture 0)
         public boolean[] noTint;
-
 
         public Cuboid rotateCuboid(CuboidRotation rot) {
             Cuboid c = new Cuboid();
@@ -319,7 +320,8 @@ public class ModBlock extends ModBlockStateRecord {
             this(x0, y0, z0, x1, y1, z1, sidetextures, null);
         }
 
-        public Cuboid(float x0, float y0, float z0, float x1, float y1, float z1, int[] sidetextures, boolean[] noTint) {
+        public Cuboid(float x0, float y0, float z0, float x1, float y1, float z1, int[] sidetextures,
+                boolean[] noTint) {
             this.xMin = x0;
             this.xMax = x1;
             this.yMin = y0;
@@ -348,7 +350,8 @@ public class ModBlock extends ModBlockStateRecord {
 
     public String getTypeValue(String key, String defval) {
         String v = getMappedType().get(key);
-        if (v == null) v = defval;
+        if (v == null)
+            v = defval;
         return v;
     }
 
@@ -373,16 +376,26 @@ public class ModBlock extends ModBlockStateRecord {
             this.nonOpaque = true;
         }
         for (ModBlockStateRecord rec : this.states) {
-            // if states array, allow attributes to be inherited from base def if not specified
-            if (rec.boundingBox == null) rec.boundingBox = this.boundingBox;
-            if (rec.cuboids == null) rec.cuboids = this.cuboids;
-            if (rec.collisionBoxes == null) rec.collisionBoxes = this.collisionBoxes;
-            if (rec.supportBoxes == null) rec.supportBoxes = this.supportBoxes;
-            if (rec.textures == null) rec.textures = this.textures;
-            if (rec.randomTextures == null) rec.randomTextures = this.randomTextures;
-            if (rec.overlayTextures == null) rec.overlayTextures = this.overlayTextures;
-            if (rec.colorMult.equals("#FFFFFF")) rec.colorMult = this.colorMult;
-            if (rec.colorMults == null) rec.colorMults = this.colorMults;
+            // if states array, allow attributes to be inherited from base def if not
+            // specified
+            if (rec.boundingBox == null)
+                rec.boundingBox = this.boundingBox;
+            if (rec.cuboids == null)
+                rec.cuboids = this.cuboids;
+            if (rec.collisionBoxes == null)
+                rec.collisionBoxes = this.collisionBoxes;
+            if (rec.supportBoxes == null)
+                rec.supportBoxes = this.supportBoxes;
+            if (rec.textures == null)
+                rec.textures = this.textures;
+            if (rec.randomTextures == null)
+                rec.randomTextures = this.randomTextures;
+            if (rec.overlayTextures == null)
+                rec.overlayTextures = this.overlayTextures;
+            if (rec.colorMult.equals("#FFFFFF"))
+                rec.colorMult = this.colorMult;
+            if (rec.colorMults == null)
+                rec.colorMults = this.colorMults;
             rec.doStateRecordInit();
 
             // If any state has overlay textures, set nonOpaque to true
@@ -439,7 +452,8 @@ public class ModBlock extends ModBlockStateRecord {
 
     public static void dumpBlockPerf() {
         WesterosBlocks.LOGGER.info("Block Creation Performance Statistics:");
-        WesterosBlocks.LOGGER.info(String.format("%-20s %-10s %-15s %-15s", "Block Type", "Count", "Total (ms)", "Avg (ms)"));
+        WesterosBlocks.LOGGER
+                .info(String.format("%-20s %-10s %-15s %-15s", "Block Type", "Count", "Total (ms)", "Avg (ms)"));
         WesterosBlocks.LOGGER.info("-".repeat(60));
 
         perfCounts.entrySet().stream()
@@ -500,7 +514,7 @@ public class ModBlock extends ModBlockStateRecord {
                     return 0;
                 });
             }
-        // handle simple light level
+            // handle simple light level
         } else if (this.lightValue > 0 || !this.states.isEmpty() && this.states.getFirst().lightValue > 0.0F) {
             float lightLevel = Math.max(lightValue, this.states.isEmpty() ? 0 : this.states.getFirst().lightValue);
             settings.luminance((state) -> (int) (lightLevel));
@@ -537,7 +551,7 @@ public class ModBlock extends ModBlockStateRecord {
     // Get customized collision box for default solid block
     public VoxelShape makeCollisionBoxShape() {
         if (collisionBoxes == null) {
-            return VoxelShapes.fullCube();  // Default to solid block
+            return VoxelShapes.fullCube(); // Default to solid block
         }
         VoxelShape s = VoxelShapes.empty();
         for (BoundingBox b : collisionBoxes) {
@@ -568,44 +582,50 @@ public class ModBlock extends ModBlockStateRecord {
         stepSoundTable.put("slime", BlockSoundGroup.FUNGUS);
 
         // Tab table
-//        tabTable.put("buildingBlocks", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.BUILDING_BLOCKS));
-        //tabTable.put("decorations", CreativeModeTabs.DECORATIONS);
-//        tabTable.put("redstone", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.REDSTONE_BLOCKS));
-        //tabTable.put("transportation", CreativeModeTabs.TRANSPORTATION);
-        //tabTable.put("misc", CreativeModeTabs.MISC);
-//        tabTable.put("food", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.FOOD_AND_DRINKS));
-//        tabTable.put("tools", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.TOOLS_AND_UTILITIES));
-//        tabTable.put("combat", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.COMBAT));
-        //tabTable.put("brewing", CreativeModeTabs.BREWING);
-//        tabTable.put("materials", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.INGREDIENTS));
+        // tabTable.put("buildingBlocks",
+        // BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.BUILDING_BLOCKS));
+        // tabTable.put("decorations", CreativeModeTabs.DECORATIONS);
+        // tabTable.put("redstone",
+        // BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.REDSTONE_BLOCKS));
+        // tabTable.put("transportation", CreativeModeTabs.TRANSPORTATION);
+        // tabTable.put("misc", CreativeModeTabs.MISC);
+        // tabTable.put("food",
+        // BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.FOOD_AND_DRINKS));
+        // tabTable.put("tools",
+        // BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.TOOLS_AND_UTILITIES));
+        // tabTable.put("combat",
+        // BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.COMBAT));
+        // tabTable.put("brewing", CreativeModeTabs.BREWING);
+        // tabTable.put("materials",
+        // BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.INGREDIENTS));
 
         // Standard block types
         typeTable.put("solid", new WCSolidBlock.Factory());
         typeTable.put("stair", new WCStairBlock.Factory());
         // typeTable.put("log", new WCLogBlock.Factory());
-//        typeTable.put("plant", new WCPlantBlock.Factory());
-         typeTable.put("crop", new WCCropBlockOld.Factory());
+        // typeTable.put("plant", new WCPlantBlock.Factory());
+        typeTable.put("crop", new WCCropBlockOld.Factory());
         typeTable.put("slab", new WCSlabBlock.Factory());
         typeTable.put("wall", new WCWallBlock.Factory());
         typeTable.put("fence", new WCFenceBlock.Factory());
         // typeTable.put("web", new WCWebBlock.Factory());
         // typeTable.put("torch", new WCTorchBlock.Factory());
         // typeTable.put("fan", new WCFanBlock.Factory());
-//        typeTable.put("ladder", new WCLadderBlock.Factory());
+        // typeTable.put("ladder", new WCLadderBlock.Factory());
         typeTable.put("cuboid", new WCCuboidBlock.Factory());
         typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
         typeTable.put("cuboid-16way", new WCCuboid16WayBlock.Factory());
-//        typeTable.put("cuboid-wall-16way", new WCCuboidWall16WayBlock.Factory());
+        // typeTable.put("cuboid-wall-16way", new WCCuboidWall16WayBlock.Factory());
         typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
         typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
         typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
-//        typeTable.put("door", new WCDoorBlock.Factory());
+        // typeTable.put("door", new WCDoorBlock.Factory());
         typeTable.put("fire", new WCFireBlock.Factory());
         typeTable.put("leaves", new WCLeavesBlock.Factory());
         typeTable.put("pane", new WCPaneBlock.Factory());
         typeTable.put("layer", new WCLayerBlock.Factory());
         typeTable.put("soulsand", new WCSoulSandBlock.Factory());
-         typeTable.put("rail", new WCRailBlockOld.Factory());
+        typeTable.put("rail", new WCRailBlockOld.Factory());
         typeTable.put("bed", new WCBedBlock.Factory());
         // typeTable.put("sand", new WCSandBlock.Factory());
         // typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
@@ -613,7 +633,7 @@ public class ModBlock extends ModBlockStateRecord {
         typeTable.put("sound", new WCSoundBlock.Factory());
         typeTable.put("beacon", new WCBeaconBlock.Factory());
         // typeTable.put("vines", new WCVinesBlock.Factory());
-//        typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
+        // typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
         typeTable.put("fencegate", new WCFenceGateBlock.Factory());
         typeTable.put("particle", new WCParticleEmitterBlock.Factory());
         typeTable.put("cuboid-8way", new WCCuboid8WayBlock.Factory());
