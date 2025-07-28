@@ -36,6 +36,7 @@ public class BranchBlockExport extends ModelExport2 {
         // Create models for different connection states
         Identifier baseModelId = createBranchModel(generator, block, branchType, texturePaths, "base");
         Identifier connectedModelId = createBranchModel(generator, block, branchType, texturePaths, "connected");
+        Identifier connectedTwoModelId = createBranchModel(generator, block, branchType, texturePaths, "connected_two");
 
         // Use MultipartBlockStateSupplier for more efficient state generation
         MultipartBlockStateSupplier stateSupplier = MultipartBlockStateSupplier.create(block);
@@ -81,14 +82,14 @@ public class BranchBlockExport extends ModelExport2 {
                 .set(WCBranchBlock.WEST, true);
         stateSupplier.with(westCondition, createVariant(connectedModelId, 270));
 
-        // Two adjacent connections (corner variants)
+        // Two adjacent connections (corner variants) - use connected_two model
         // North-West corner
         When.PropertyCondition northWestCondition = When.create()
                 .set(WCBranchBlock.NORTH, true)
                 .set(WCBranchBlock.EAST, false)
                 .set(WCBranchBlock.SOUTH, false)
                 .set(WCBranchBlock.WEST, true);
-        stateSupplier.with(northWestCondition, createVariant(connectedModelId, 270));
+        stateSupplier.with(northWestCondition, createVariant(connectedTwoModelId, 270));
 
         // North-East corner
         When.PropertyCondition northEastCondition = When.create()
@@ -96,7 +97,7 @@ public class BranchBlockExport extends ModelExport2 {
                 .set(WCBranchBlock.EAST, true)
                 .set(WCBranchBlock.SOUTH, false)
                 .set(WCBranchBlock.WEST, false);
-        stateSupplier.with(northEastCondition, createVariant(connectedModelId, 90));
+        stateSupplier.with(northEastCondition, createVariant(connectedTwoModelId, 90));
 
         // South-West corner
         When.PropertyCondition southWestCondition = When.create()
@@ -104,7 +105,7 @@ public class BranchBlockExport extends ModelExport2 {
                 .set(WCBranchBlock.EAST, false)
                 .set(WCBranchBlock.SOUTH, true)
                 .set(WCBranchBlock.WEST, true);
-        stateSupplier.with(southWestCondition, createVariant(connectedModelId, 180));
+        stateSupplier.with(southWestCondition, createVariant(connectedTwoModelId, 180));
 
         // South-East corner
         When.PropertyCondition southEastCondition = When.create()
@@ -112,16 +113,16 @@ public class BranchBlockExport extends ModelExport2 {
                 .set(WCBranchBlock.EAST, true)
                 .set(WCBranchBlock.SOUTH, true)
                 .set(WCBranchBlock.WEST, false);
-        stateSupplier.with(southEastCondition, createVariant(connectedModelId, 180));
+        stateSupplier.with(southEastCondition, createVariant(connectedTwoModelId, 180));
 
-        // Opposite connections (center variants)
+        // Opposite connections (center variants) - use connected_two model
         // North-South center
         When.PropertyCondition northSouthCondition = When.create()
                 .set(WCBranchBlock.NORTH, true)
                 .set(WCBranchBlock.EAST, false)
                 .set(WCBranchBlock.SOUTH, true)
                 .set(WCBranchBlock.WEST, false);
-        stateSupplier.with(northSouthCondition, createVariant(connectedModelId, 180));
+        stateSupplier.with(northSouthCondition, createVariant(connectedTwoModelId, 0)); // No rotation needed
 
         // East-West center
         When.PropertyCondition eastWestCondition = When.create()
@@ -129,16 +130,16 @@ public class BranchBlockExport extends ModelExport2 {
                 .set(WCBranchBlock.EAST, true)
                 .set(WCBranchBlock.SOUTH, false)
                 .set(WCBranchBlock.WEST, true);
-        stateSupplier.with(eastWestCondition, createVariant(connectedModelId, 90));
+        stateSupplier.with(eastWestCondition, createVariant(connectedTwoModelId, 90));
 
-        // Three connections
+        // Three connections - use connected_two model with appropriate rotation
         // North-East-West
         When.PropertyCondition northEastWestCondition = When.create()
                 .set(WCBranchBlock.NORTH, true)
                 .set(WCBranchBlock.EAST, true)
                 .set(WCBranchBlock.SOUTH, false)
                 .set(WCBranchBlock.WEST, true);
-        stateSupplier.with(northEastWestCondition, createVariant(connectedModelId, 90));
+        stateSupplier.with(northEastWestCondition, createVariant(connectedTwoModelId, 90));
 
         // North-East-South
         When.PropertyCondition northEastSouthCondition = When.create()
@@ -146,7 +147,7 @@ public class BranchBlockExport extends ModelExport2 {
                 .set(WCBranchBlock.EAST, true)
                 .set(WCBranchBlock.SOUTH, true)
                 .set(WCBranchBlock.WEST, false);
-        stateSupplier.with(northEastSouthCondition, createVariant(connectedModelId, 180));
+        stateSupplier.with(northEastSouthCondition, createVariant(connectedTwoModelId, 0)); // No rotation needed
 
         // North-South-West
         When.PropertyCondition northSouthWestCondition = When.create()
@@ -154,7 +155,7 @@ public class BranchBlockExport extends ModelExport2 {
                 .set(WCBranchBlock.EAST, false)
                 .set(WCBranchBlock.SOUTH, true)
                 .set(WCBranchBlock.WEST, true);
-        stateSupplier.with(northSouthWestCondition, createVariant(connectedModelId, 180));
+        stateSupplier.with(northSouthWestCondition, createVariant(connectedTwoModelId, 0)); // No rotation needed
 
         // East-South-West
         When.PropertyCondition eastSouthWestCondition = When.create()
@@ -162,15 +163,15 @@ public class BranchBlockExport extends ModelExport2 {
                 .set(WCBranchBlock.EAST, true)
                 .set(WCBranchBlock.SOUTH, true)
                 .set(WCBranchBlock.WEST, true);
-        stateSupplier.with(eastSouthWestCondition, createVariant(connectedModelId, 90));
+        stateSupplier.with(eastSouthWestCondition, createVariant(connectedTwoModelId, 90));
 
-        // All connections
+        // All connections - use connected_two model
         When.PropertyCondition allConnectionsCondition = When.create()
                 .set(WCBranchBlock.NORTH, true)
                 .set(WCBranchBlock.EAST, true)
                 .set(WCBranchBlock.SOUTH, true)
                 .set(WCBranchBlock.WEST, true);
-        stateSupplier.with(allConnectionsCondition, createVariant(connectedModelId, 180));
+        stateSupplier.with(allConnectionsCondition, createVariant(connectedTwoModelId, 0)); // No rotation needed
 
         // Register the block state using the utility method from ModelExport2
         registerMultipartBlockState(generator, stateSupplier);
@@ -195,6 +196,9 @@ public class BranchBlockExport extends ModelExport2 {
                     break;
                 case "connected":
                     parentModel = Optional.of(WesterosBlocks.id("block/custom/branches/large_branch_connected"));
+                    break;
+                case "connected_two":
+                    parentModel = Optional.of(WesterosBlocks.id("block/custom/branches/large_branch_connected_two"));
                     break;
                 default:
                     parentModel = Optional.of(WesterosBlocks.id("block/custom/branches/large_branch"));
