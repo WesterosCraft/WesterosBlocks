@@ -145,7 +145,8 @@ public class BranchBlockExport extends ModelExport2 {
                 .set(WCBranchBlock.EAST, true)
                 .set(WCBranchBlock.SOUTH, false)
                 .set(WCBranchBlock.WEST, true);
-        stateSupplier.with(northEastWestCondition, createVariant(connectedThreeModelId, 90));
+        stateSupplier.with(northEastWestCondition, createVariant(connectedThreeModelId, 270)); // Rotate 270° to align
+                                                                                               // extensions
 
         // North-East-South
         When.PropertyCondition northEastSouthCondition = When.create()
@@ -161,7 +162,8 @@ public class BranchBlockExport extends ModelExport2 {
                 .set(WCBranchBlock.EAST, false)
                 .set(WCBranchBlock.SOUTH, true)
                 .set(WCBranchBlock.WEST, true);
-        stateSupplier.with(northSouthWestCondition, createVariant(connectedThreeModelId, 0)); // No rotation needed
+        stateSupplier.with(northSouthWestCondition, createVariant(connectedThreeModelId, 180)); // Rotate 180° to align
+                                                                                                // extensions
 
         // East-South-West
         When.PropertyCondition eastSouthWestCondition = When.create()

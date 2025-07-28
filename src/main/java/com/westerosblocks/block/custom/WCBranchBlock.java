@@ -33,6 +33,7 @@ public class WCBranchBlock extends Block implements Waterloggable {
     public static final BooleanProperty EAST = Properties.EAST;
     public static final BooleanProperty SOUTH = Properties.SOUTH;
     public static final BooleanProperty WEST = Properties.WEST;
+    public static final BooleanProperty UP = Properties.UP;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     // Define base shapes for branch components
@@ -62,6 +63,7 @@ public class WCBranchBlock extends Block implements Waterloggable {
                 .with(EAST, false)
                 .with(SOUTH, false)
                 .with(WEST, false)
+                .with(UP, false)
                 .with(WATERLOGGED, false));
 
         // Pre-compute all possible shape combinations
@@ -76,17 +78,20 @@ public class WCBranchBlock extends Block implements Waterloggable {
             for (boolean east : new boolean[] { false, true }) {
                 for (boolean south : new boolean[] { false, true }) {
                     for (boolean west : new boolean[] { false, true }) {
-                        VoxelShape shape = this.getShapeForConnections(north, east, south, west);
+                        for (boolean up : new boolean[] { false, true }) {
+                            VoxelShape shape = this.getShapeForConnections(north, east, south, west, up);
 
-                        // Add both waterlogged and non-waterlogged states
-                        BlockState state = this.getDefaultState()
-                                .with(NORTH, north)
-                                .with(EAST, east)
-                                .with(SOUTH, south)
-                                .with(WEST, west);
+                            // Add both waterlogged and non-waterlogged states
+                            BlockState state = this.getDefaultState()
+                                    .with(NORTH, north)
+                                    .with(EAST, east)
+                                    .with(SOUTH, south)
+                                    .with(WEST, west)
+                                    .with(UP, up);
 
-                        builder.put(state.with(WATERLOGGED, false), shape);
-                        builder.put(state.with(WATERLOGGED, true), shape);
+                            builder.put(state.with(WATERLOGGED, false), shape);
+                            builder.put(state.with(WATERLOGGED, true), shape);
+                        }
                     }
                 }
             }
@@ -95,7 +100,7 @@ public class WCBranchBlock extends Block implements Waterloggable {
         return builder.build();
     }
 
-    private VoxelShape getShapeForConnections(boolean north, boolean east, boolean south, boolean west) {
+    private VoxelShape getShapeForConnections(boolean north, boolean east, boolean south, boolean west, boolean up) {
         VoxelShape shape = BRANCH_CENTER;
 
         if (north) {
@@ -109,6 +114,10 @@ public class WCBranchBlock extends Block implements Waterloggable {
         }
         if (west) {
             shape = VoxelShapes.union(shape, BRANCH_WEST);
+        }
+        if (up) {
+            // Add vertical extension for UP connection
+            shape = VoxelShapes.union(shape, Block.createCuboidShape(4, 16, 4, 12, 20, 12));
         }
 
         return shape;
@@ -147,6 +156,9 @@ public class WCBranchBlock extends Block implements Waterloggable {
         if (direction.getAxis().isHorizontal()) {
             boolean isConnected = neighborState.isOf(this);
             return state.with(getPropertyForDirection(direction), isConnected);
+        } else if (direction == Direction.UP) {
+            boolean isConnected = neighborState.isOf(this);
+            return state.with(UP, isConnected);
         }
 
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
@@ -172,7 +184,7 @@ public class WCBranchBlock extends Block implements Waterloggable {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(NORTH, EAST, SOUTH, WEST, WATERLOGGED);
+        builder.add(NORTH, EAST, SOUTH, WEST, UP, WATERLOGGED);
     }
 
     @Override
