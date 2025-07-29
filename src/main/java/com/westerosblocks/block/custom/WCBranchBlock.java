@@ -3,7 +3,6 @@ package com.westerosblocks.block.custom;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.Waterloggable;
@@ -104,8 +103,7 @@ public class WCBranchBlock extends Block implements Waterloggable {
     private VoxelShape getShapeForConnections(boolean north, boolean east, boolean south, boolean west, boolean up) {
         // If UP is false and there are horizontal connections, use horizontal shape
         if (!up && (north || east || south || west)) {
-            // Horizontal model extends from z=0 to z=16 at y=8-16, but don't interfere with
-            // blocks below
+            // Horizontal model extends from z=0 to z=16 at y=8-16
             return Block.createCuboidShape(4, 8, 0, 12, 16, 16);
         }
 
@@ -234,19 +232,4 @@ public class WCBranchBlock extends Block implements Waterloggable {
     public FluidState getFluidState(BlockState state) {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
-
-    @Override
-    public boolean isSideInvisible(BlockState state, BlockState neighborState, Direction direction) {
-        // Don't hide the block below when looking up
-        if (direction == Direction.DOWN) {
-            return false;
-        }
-        return super.isSideInvisible(state, neighborState, direction);
-    }
-
-    @Override
-    public BlockRenderType getRenderType(BlockState state) {
-        return BlockRenderType.MODEL;
-    }
-
 }
