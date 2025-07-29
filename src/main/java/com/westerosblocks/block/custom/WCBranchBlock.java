@@ -115,10 +115,8 @@ public class WCBranchBlock extends Block implements Waterloggable {
         if (west) {
             shape = VoxelShapes.union(shape, BRANCH_WEST);
         }
-        if (up) {
-            // Add vertical extension for UP connection
-            shape = VoxelShapes.union(shape, Block.createCuboidShape(4, 16, 4, 12, 20, 12));
-        }
+        // UP connection doesn't change the visual shape - it's just a state property
+        // The model remains the same height regardless of UP connection
 
         return shape;
     }
@@ -141,9 +139,31 @@ public class WCBranchBlock extends Block implements Waterloggable {
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
-        return this.getDefaultState()
+        BlockPos pos = ctx.getBlockPos();
+        WorldAccess world = ctx.getWorld();
+        FluidState fluidstate = world.getFluidState(pos);
+
+        BlockState state = this.getDefaultState()
                 .with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
+
+        // Check all directions for existing branch blocks
+        BlockState northState = world.getBlockState(pos.north());
+        BlockState eastState = world.getBlockState(pos.east());
+        BlockState southState = world.getBlockState(pos.south());
+        BlockState westState = world.getBlockState(pos.west());
+        BlockState upState = world.getBlockState(pos.up());
+        BlockState downState = world.getBlockState(pos.down());
+
+        // UP is true if there's a branch block above OR if we're sitting on a solid
+        // block
+        boolean upConnected = upState.isOf(this) || downState.isSolidBlock(world, pos.down());
+
+        return state
+                .with(NORTH, northState.isOf(this))
+                .with(EAST, eastState.isOf(this))
+                .with(SOUTH, southState.isOf(this))
+                .with(WEST, westState.isOf(this))
+                .with(UP, upConnected);
     }
 
     @Override
@@ -159,6 +179,11 @@ public class WCBranchBlock extends Block implements Waterloggable {
         } else if (direction == Direction.UP) {
             boolean isConnected = neighborState.isOf(this);
             return state.with(UP, isConnected);
+        } else if (direction == Direction.DOWN) {
+            // When the block below changes, check if we should update UP connection
+            boolean upConnected = world.getBlockState(pos.up()).isOf(this)
+                    || neighborState.isSolidBlock(world, pos.down());
+            return state.with(UP, upConnected);
         }
 
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
