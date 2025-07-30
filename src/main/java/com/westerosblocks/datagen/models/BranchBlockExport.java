@@ -135,6 +135,25 @@ public class BranchBlockExport extends ModelExport2 {
                                 .set(WCBranchBlock.UP, false);
                 stateSupplier.with(southEastHorizontalCondition, createVariant(horizontalModelId, 90));
 
+                // Two opposite horizontal connections (North-South and East-West)
+                // North-South opposite (horizontal)
+                When.PropertyCondition northSouthHorizontalCondition = When.create()
+                                .set(WCBranchBlock.NORTH, true)
+                                .set(WCBranchBlock.EAST, false)
+                                .set(WCBranchBlock.SOUTH, true)
+                                .set(WCBranchBlock.WEST, false)
+                                .set(WCBranchBlock.UP, false);
+                stateSupplier.with(northSouthHorizontalCondition, createVariant(horizontalModelId, 0));
+
+                // East-West opposite (horizontal)
+                When.PropertyCondition eastWestHorizontalCondition = When.create()
+                                .set(WCBranchBlock.NORTH, false)
+                                .set(WCBranchBlock.EAST, true)
+                                .set(WCBranchBlock.SOUTH, false)
+                                .set(WCBranchBlock.WEST, true)
+                                .set(WCBranchBlock.UP, false);
+                stateSupplier.with(eastWestHorizontalCondition, createVariant(horizontalModelId, 90));
+
                 // Three horizontal connections
                 // North-East-West (horizontal)
                 When.PropertyCondition northEastWestHorizontalCondition = When.create()

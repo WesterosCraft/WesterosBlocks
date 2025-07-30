@@ -16,14 +16,12 @@
         "north": {
           "uv": [4, 4, 12, 12],
           "rotation": 180,
-          "texture": "#all",
-          "cullface": "up"
+          "texture": "#all"
         },
         "east": { "uv": [4, 0, 12, 16], "rotation": 90, "texture": "#all" },
         "south": {
           "uv": [4, 4, 12, 12],
-          "texture": "#all",
-          "cullface": "down"
+          "texture": "#all"
         },
         "west": { "uv": [4, 0, 12, 16], "rotation": 270, "texture": "#all" },
         "up": { "uv": [4, 0, 12, 16], "texture": "#all" },

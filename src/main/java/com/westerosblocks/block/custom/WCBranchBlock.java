@@ -43,7 +43,7 @@ public class WCBranchBlock extends Block implements Waterloggable {
     private static final VoxelShape BRANCH_EAST = Block.createCuboidShape(8, 8, 4, 16, 12, 12);
     private static final VoxelShape BRANCH_SOUTH = Block.createCuboidShape(4, 8, 8, 12, 12, 16);
     private static final VoxelShape BRANCH_WEST = Block.createCuboidShape(0, 8, 4, 8, 12, 12);
-    private static final VoxelShape BRANCH_UP = Block.createCuboidShape(4, 16, 4, 12, 20, 12);
+    private static final VoxelShape BRANCH_UP = Block.createCuboidShape(4, 16, 4, 12, 16, 12);
 
     // Pre-computed shape maps for efficient lookups
     private final Map<BlockState, VoxelShape> shapeByIndex;
@@ -124,10 +124,10 @@ public class WCBranchBlock extends Block implements Waterloggable {
         if (west) {
             shape = VoxelShapes.union(shape, BRANCH_WEST);
         }
-        if (up) {
-            // Add vertical extension for UP connection
-            shape = VoxelShapes.union(shape, BRANCH_UP);
-        }
+        // Note: We don't add BRANCH_UP for collision/outline shapes as it extends above
+        // the block
+        // The visual model will show the UP extension, but collision stays within
+        // bounds
 
         return shape;
     }
