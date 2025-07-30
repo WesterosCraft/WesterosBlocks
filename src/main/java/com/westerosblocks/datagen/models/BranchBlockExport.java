@@ -39,6 +39,8 @@ public class BranchBlockExport extends ModelExport2 {
                                 "horizontal");
                 Identifier connectedModelId = createBranchModel(generator, block, branchType, texturePaths,
                                 "connected");
+                Identifier horizontalConnectedModelId = createBranchModel(generator, block, branchType, texturePaths,
+                                "horizontal_connected");
                 Identifier connectedTwoModelId = createBranchModel(generator, block, branchType, texturePaths,
                                 "connected_two");
                 Identifier connectedTwoCornerModelId = createBranchModel(generator, block, branchType, texturePaths,
@@ -61,7 +63,7 @@ public class BranchBlockExport extends ModelExport2 {
                                 .set(WCBranchBlock.UP, false);
                 stateSupplier.with(singleCondition, createVariant(horizontalModelId));
 
-                // Single connection variants (horizontal)
+                // Single connection variants (horizontal) - use horizontal connected model
                 // North connection only (horizontal)
                 When.PropertyCondition northHorizontalCondition = When.create()
                                 .set(WCBranchBlock.NORTH, true)
@@ -69,7 +71,7 @@ public class BranchBlockExport extends ModelExport2 {
                                 .set(WCBranchBlock.SOUTH, false)
                                 .set(WCBranchBlock.WEST, false)
                                 .set(WCBranchBlock.UP, false);
-                stateSupplier.with(northHorizontalCondition, createVariant(horizontalModelId));
+                stateSupplier.with(northHorizontalCondition, createVariant(horizontalConnectedModelId, 0));
 
                 // South connection only (horizontal)
                 When.PropertyCondition southHorizontalCondition = When.create()
@@ -78,7 +80,7 @@ public class BranchBlockExport extends ModelExport2 {
                                 .set(WCBranchBlock.SOUTH, true)
                                 .set(WCBranchBlock.WEST, false)
                                 .set(WCBranchBlock.UP, false);
-                stateSupplier.with(southHorizontalCondition, createVariant(horizontalModelId, 180));
+                stateSupplier.with(southHorizontalCondition, createVariant(horizontalConnectedModelId, 180));
 
                 // East connection only (horizontal)
                 When.PropertyCondition eastHorizontalCondition = When.create()
@@ -87,7 +89,7 @@ public class BranchBlockExport extends ModelExport2 {
                                 .set(WCBranchBlock.SOUTH, false)
                                 .set(WCBranchBlock.WEST, false)
                                 .set(WCBranchBlock.UP, false);
-                stateSupplier.with(eastHorizontalCondition, createVariant(horizontalModelId, 90));
+                stateSupplier.with(eastHorizontalCondition, createVariant(horizontalConnectedModelId, 90));
 
                 // West connection only (horizontal)
                 When.PropertyCondition westHorizontalCondition = When.create()
@@ -96,7 +98,7 @@ public class BranchBlockExport extends ModelExport2 {
                                 .set(WCBranchBlock.SOUTH, false)
                                 .set(WCBranchBlock.WEST, true)
                                 .set(WCBranchBlock.UP, false);
-                stateSupplier.with(westHorizontalCondition, createVariant(horizontalModelId, 270));
+                stateSupplier.with(westHorizontalCondition, createVariant(horizontalConnectedModelId, 270));
 
                 // Two horizontal connections (corner variants)
                 // North-West corner (horizontal)
@@ -386,6 +388,10 @@ public class BranchBlockExport extends ModelExport2 {
                                 case "connected":
                                         parentModel = Optional.of(WesterosBlocks
                                                         .id("block/custom/branches/large_branch_connected"));
+                                        break;
+                                case "horizontal_connected":
+                                        parentModel = Optional.of(WesterosBlocks
+                                                        .id("block/custom/branches/large_branch_horizontal_connected"));
                                         break;
                                 case "connected_two":
                                         parentModel = Optional.of(WesterosBlocks
