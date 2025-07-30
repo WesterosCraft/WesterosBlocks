@@ -51,15 +51,17 @@ public class BranchBlockExport extends ModelExport2 {
                 // Use MultipartBlockStateSupplier for more efficient state generation
                 MultipartBlockStateSupplier stateSupplier = MultipartBlockStateSupplier.create(block);
 
+                // UP = false: Use horizontal models (no branch below)
                 // Single branch (no connections)
                 When.PropertyCondition singleCondition = When.create()
                                 .set(WCBranchBlock.NORTH, false)
                                 .set(WCBranchBlock.EAST, false)
                                 .set(WCBranchBlock.SOUTH, false)
-                                .set(WCBranchBlock.WEST, false);
-                stateSupplier.with(singleCondition, createVariant(baseModelId));
+                                .set(WCBranchBlock.WEST, false)
+                                .set(WCBranchBlock.UP, false);
+                stateSupplier.with(singleCondition, createVariant(horizontalModelId));
 
-                // Horizontal model when UP is false and there are horizontal connections
+                // Single connection variants (horizontal)
                 // North connection only (horizontal)
                 When.PropertyCondition northHorizontalCondition = When.create()
                                 .set(WCBranchBlock.NORTH, true)
@@ -179,7 +181,17 @@ public class BranchBlockExport extends ModelExport2 {
                                 .set(WCBranchBlock.UP, false);
                 stateSupplier.with(allHorizontalCondition, createVariant(horizontalModelId, 0));
 
-                // Single connection variants (when UP is true)
+                // UP = true: Use vertical models (has branch below)
+                // Single branch (no connections)
+                When.PropertyCondition singleVerticalCondition = When.create()
+                                .set(WCBranchBlock.NORTH, false)
+                                .set(WCBranchBlock.EAST, false)
+                                .set(WCBranchBlock.SOUTH, false)
+                                .set(WCBranchBlock.WEST, false)
+                                .set(WCBranchBlock.UP, true);
+                stateSupplier.with(singleVerticalCondition, createVariant(baseModelId));
+
+                // Single connection variants (vertical)
                 // North connection
                 When.PropertyCondition northCondition = When.create()
                                 .set(WCBranchBlock.NORTH, true)

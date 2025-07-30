@@ -103,13 +103,13 @@ public class WCBranchBlock extends Block implements Waterloggable {
     }
 
     private VoxelShape getShapeForConnections(boolean north, boolean east, boolean south, boolean west, boolean up) {
-        // If UP is false and there are horizontal connections, use horizontal shape
-        if (!up && (north || east || south || west)) {
+        // If UP is false (no branch below), use horizontal shape
+        if (!up) {
             // Horizontal model extends from z=0 to z=16 at y=8-16
             return Block.createCuboidShape(4, 8, 0, 12, 16, 16);
         }
 
-        // Otherwise use the standard vertical shape
+        // Otherwise use the standard vertical shape (UP is true, has branch below)
         VoxelShape shape = BRANCH_CENTER;
 
         if (north) {
@@ -151,34 +151,20 @@ public class WCBranchBlock extends Block implements Waterloggable {
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
-        BlockState defaultState = this.getDefaultState()
-                .with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
-
-        // Check connections in all directions
-        BlockView world = ctx.getWorld();
         BlockPos pos = ctx.getBlockPos();
 
-        boolean north = this.canConnect(world.getBlockState(pos.north()),
-                world.getBlockState(pos.north()).isSideSolidFullSquare(world, pos.north(), Direction.SOUTH),
-                Direction.SOUTH);
-        boolean east = this.canConnect(world.getBlockState(pos.east()),
-                world.getBlockState(pos.east()).isSideSolidFullSquare(world, pos.east(), Direction.WEST),
-                Direction.WEST);
-        boolean south = this.canConnect(world.getBlockState(pos.south()),
-                world.getBlockState(pos.south()).isSideSolidFullSquare(world, pos.south(), Direction.NORTH),
-                Direction.NORTH);
-        boolean west = this.canConnect(world.getBlockState(pos.west()),
-                world.getBlockState(pos.west()).isSideSolidFullSquare(world, pos.west(), Direction.EAST),
-                Direction.EAST);
-        boolean up = this.canConnect(world.getBlockState(pos.up()),
-                world.getBlockState(pos.up()).isSideSolidFullSquare(world, pos.up(), Direction.DOWN), Direction.DOWN);
+        // Check if there's a branch block below (vertical connection)
+        boolean hasBranchBelow = ctx.getWorld().getBlockState(pos.down()).isOf(this);
+        // Check if there's a solid block below (not in air)
+        boolean hasSolidBlockBelow = !ctx.getWorld().getBlockState(pos.down()).isAir();
 
-        return defaultState
-                .with(NORTH, north)
-                .with(EAST, east)
-                .with(SOUTH, south)
-                .with(WEST, west)
-                .with(UP, up);
+        // UP should be true if there's a solid block below (including branches), false
+        // only if in air
+        boolean shouldBeUp = hasSolidBlockBelow;
+
+        return this.getDefaultState()
+                .with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER))
+                .with(UP, shouldBeUp);
     }
 
     @Override
@@ -194,9 +180,17 @@ public class WCBranchBlock extends Block implements Waterloggable {
                     direction.getOpposite());
             return state.with(getPropertyForDirection(direction), isConnected);
         } else if (direction == Direction.UP) {
-            boolean isConnected = this.canConnect(neighborState,
-                    neighborState.isSideSolidFullSquare(world, neighborPos, Direction.DOWN), Direction.DOWN);
+            boolean isConnected = neighborState.isOf(this);
             return state.with(UP, isConnected);
+        } else if (direction == Direction.DOWN) {
+            // Check if there's a branch block below (vertical connection)
+            boolean hasBranchBelow = neighborState.isOf(this);
+            // Check if there's a solid block below (not in air)
+            boolean hasSolidBlockBelow = !neighborState.isAir();
+
+            // UP should be true if there's a solid block below (including branches), false
+            // only if in air
+            return state.with(UP, hasSolidBlockBelow);
         }
 
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
