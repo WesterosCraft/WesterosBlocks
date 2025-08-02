@@ -34,6 +34,35 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.berry_basket", "Berry Basket");
         translationBuilder.add("block.westerosblocks.berry_crate", "Berry Crate");
         translationBuilder.add("block.westerosblocks.apricot_basket", "Apricot Basket");
+        translationBuilder.add("block.westerosblocks.black_brick_engraved", "Ashlar Engraved Black");
+        translationBuilder.add("block.westerosblocks.bluegreen_carved_sandstone", "Blue/Green Carved Sandstone");
+        translationBuilder.add("block.westerosblocks.bone_dirt", "Bone Dirt");
+        translationBuilder.add("block.westerosblocks.bookshelf_abandoned", "Bookshelf Abandoned");
+        translationBuilder.add("block.westerosblocks.bookshelf_library", "Bookshelf Library");
+        translationBuilder.add("block.westerosblocks.bookshelf_maester", "Bookshelf Maester");
+        translationBuilder.add("block.westerosblocks.broken_cabinet", "Broken Cabinet");
+        translationBuilder.add("block.westerosblocks.brown_grey_brick_engraved", "Ashlar Engraved Brown Grey");
+        translationBuilder.add("block.westerosblocks.cabinet_drawer", "Cabinet Drawer");
+        translationBuilder.add("block.westerosblocks.cage", "Cage");
+        translationBuilder.add("block.westerosblocks.carrot_basket", "Carrot Basket");
+        translationBuilder.add("block.westerosblocks.carrot_crate", "Carrot Crate");
+        translationBuilder.add("block.westerosblocks.closed_basket", "Closed Basket");
+        translationBuilder.add("block.westerosblocks.closed_cabinet", "Closed Cabinet");
+        translationBuilder.add("block.westerosblocks.coarse_dark_red_carved_sandstone",
+                "Ashlar Engraved Pale Dark Red");
+        translationBuilder.add("block.westerosblocks.coarse_red_carved_sandstone", "Ashlar Engraved Pale Red");
+        translationBuilder.add("block.westerosblocks.cobble_keystone", "Cobblestone Keystone Grey");
+        translationBuilder.add("block.westerosblocks.coloured_sept_window", "Coloured Sept Window");
+        translationBuilder.add("block.westerosblocks.crate", "Crate One");
+        translationBuilder.add("block.westerosblocks.crate2", "Crate Two");
+        translationBuilder.add("block.westerosblocks.crate3", "Crate Three");
+        translationBuilder.add("block.westerosblocks.dark_grey_brick_engraved", "Ashlar Engraved Dark Grey");
+        translationBuilder.add("block.westerosblocks.date_basket", "Date Basket");
+        translationBuilder.add("block.westerosblocks.dates", "Dates");
+        translationBuilder.add("block.westerosblocks.desert_sandstone_engraved", "Ashlar Engraved Sandstone");
+        translationBuilder.add("block.westerosblocks.domestic_utility_block", "'Domestic' Utility Block");
+        translationBuilder.add("block.westerosblocks.done_utility_block", "'Done' Utility Block");
+        translationBuilder.add("block.westerosblocks.dragon_carving", "Dragon Carving");
         translationBuilder.add("block.westerosblocks.archery_target", "Archery Target");
         translationBuilder.add("block.westerosblocks.apple_basket_slab", "Apple Basket Slab");
     }
