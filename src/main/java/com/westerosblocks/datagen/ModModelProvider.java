@@ -324,6 +324,147 @@ public class ModModelProvider extends FabricModelProvider {
                                 .randomTexture("dragon_carving/side3")
                                 .build();
 
+                registerCustomSolidBlock(bsmg, ModBlocks.EMPTY_BARREL)
+                                .randomTexture(
+                                                "barrel_closed/barrel_top_closed",
+                                                "crate_block/barrel_top_empty",
+                                                "barrel_sides/side0")
+                                .randomTexture(
+                                                "barrel_closed/barrel_top_closed",
+                                                "crate_block/barrel_top_empty",
+                                                "barrel_sides/side1")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.EMPTY_CABINET).textures(
+                                "cabinet/top_bottom",
+                                "cabinet/top_bottom",
+                                "cabinet/empty/side").build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_ARBOR_BRICK)
+                                .texture("ashlar_third/arbor/faith_carved")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_BLACK_BRICK)
+                                .texture("ashlar_quarter/black/faith_carved")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_BROWN_GREY_BRICK)
+                                .texture("ashlar_quarter/brown_grey/faith_carved")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_COARSE_RED_BRICK)
+                                .texture("ashlar_third/pale_red/faith_carved")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_DARK_GREY_BRICK)
+                                .texture("ashlar_quarter/dark_grey/faith_carved")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_DUN_BRICK)
+                                .texture("ashlar_third/dun/faith_carved")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_GREY_BRICK)
+                                .texture("ashlar_third/grey/faith_carved")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_OLDTOWN_BRICK)
+                                .texture("ashlar_quarter_rounded/light_oldtown/faith_carved")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_PINK_SANDSTONE)
+                                .texture("ashlar_third/sandy_pink/faith_carved")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_REACH_BRICK)
+                                .texture("ashlar_quarter_rounded/reach/faith_carved")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_SMALL_STONE_BRICK)
+                                .texture("ashlar_quarter/green_grey/faith_carved")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_STONE_BRICK)
+                                .texture("ashlar_half/white/faith_carved")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_STORMLANDS_BRICK)
+                                .texture("ashlar_quarter/stormlands/faith_carved")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_WESTERLANDS_BRICK)
+                                .texture("ashlar_quarter/westerlands/faith_carved")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FISH_BARREL)
+                                .randomTexture(
+                                                "barrel_closed/barrel_top_closed",
+                                                "crate_block/barrel_top_fish",
+                                                "barrel_sides/side0")
+                                .randomTexture(
+                                                "barrel_closed/barrel_top_closed",
+                                                "crate_block/barrel_top_fish",
+                                                "barrel_sides/side1")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FISH_BASKET).textures(
+                                "crate_block/basket_bottom",
+                                "crate_block/basket_fish",
+                                "crate_block/basket_side").build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FISH_TRAP)
+                                .randomTexture("fish_trap/side1")
+                                .randomTexture("fish_trap/side2")
+                                .randomTexture("fish_trap/side3")
+                                .randomTexture("fish_trap/side4")
+                                .randomTexture("fish_trap/side5")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FLAGSTONE)
+                                .texture("stone_block/flagstone")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.FULL_CABINET).textures(
+                                "cabinet/top_bottom",
+                                "cabinet/top_bottom",
+                                "cabinet/full/side").build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.GLOWING_EMBERS)
+                                .texture("lighting/coals_glowing")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.GRAIN_BASKET).textures(
+                                "crate_block/basket_bottom",
+                                "crate_block/basket_grain",
+                                "crate_block/basket_side").build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.GRAIN_CRATE)
+                                .randomTexture(
+                                                "crate_block/side_bot1",
+                                                "crate_block/crate_top_grain",
+                                                "crate_block/side_bot1")
+                                .randomTexture(
+                                                "crate_block/side_bot2",
+                                                "crate_block/crate_top_grain",
+                                                "crate_block/side_bot2")
+                                .randomTexture(
+                                                "crate_block/side_bot3",
+                                                "crate_block/crate_top_grain",
+                                                "crate_block/side_bot3")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.GREEN_GREY_BRICK_ENGRAVED)
+                                .texture("ashlar_engraved/green_grey/all")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.GREY_BRICK_ENGRAVED)
+                                .texture("ashlar_engraved/grey/all")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.GREY_KEYSTONE)
+                                .texture("stone_block/keystone_grey")
+                                .build();
+
                 // Log Blocks
                 registerCustomLogBlock(bsmg, ModBlocks.ARCHERY_TARGET)
                                 .textures("archery_target/side", "archery_target/front").build();

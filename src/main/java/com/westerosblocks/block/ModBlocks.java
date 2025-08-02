@@ -249,6 +249,142 @@ public class ModBlocks {
                         new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.STONE)));
 
+        public static final Block EMPTY_BARREL = registerBlock(
+                        "empty_barrel",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block EMPTY_CABINET = registerBlock(
+                        "empty_cabinet",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block FAITH_CARVED_ARBOR_BRICK = registerBlock(
+                        "faith_carved_arbor_brick",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block FAITH_CARVED_BLACK_BRICK = registerBlock(
+                        "faith_carved_black_brick",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block FAITH_CARVED_BROWN_GREY_BRICK = registerBlock(
+                        "faith_carved_brown_grey_brick",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block FAITH_CARVED_COARSE_RED_BRICK = registerBlock(
+                        "faith_carved_coarse_red_brick",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block FAITH_CARVED_DARK_GREY_BRICK = registerBlock(
+                        "faith_carved_dark_grey_brick",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block FAITH_CARVED_DUN_BRICK = registerBlock(
+                        "faith_carved_dun_brick",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block FAITH_CARVED_GREY_BRICK = registerBlock(
+                        "faith_carved_grey_brick",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block FAITH_CARVED_OLDTOWN_BRICK = registerBlock(
+                        "faith_carved_oldtown_brick",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block FAITH_CARVED_PINK_SANDSTONE = registerBlock(
+                        "faith_carved_pink_sandstone",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block FAITH_CARVED_REACH_BRICK = registerBlock(
+                        "faith_carved_reach_brick",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block FAITH_CARVED_SMALL_STONE_BRICK = registerBlock(
+                        "faith_carved_small_stone_brick",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block FAITH_CARVED_STONE_BRICK = registerBlock(
+                        "faith_carved_stone_brick",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block FAITH_CARVED_STORMLANDS_BRICK = registerBlock(
+                        "faith_carved_stormlands_brick",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block FAITH_CARVED_WESTERLANDS_BRICK = registerBlock(
+                        "faith_carved_westerlands_brick",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block FISH_BARREL = registerBlock(
+                        "fish_barrel",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block FISH_BASKET = registerBlock(
+                        "fish_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block FISH_TRAP = registerBlock(
+                        "fish_trap",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD).nonOpaque()));
+
+        public static final Block FLAGSTONE = registerBlock(
+                        "flagstone",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block FULL_CABINET = registerBlock(
+                        "full_cabinet",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block GLOWING_EMBERS = registerBlock(
+                        "glowing_embers",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)
+                                        .luminance(state -> 2)));
+
+        public static final Block GRAIN_BASKET = registerBlock(
+                        "grain_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block GRAIN_CRATE = registerBlock(
+                        "grain_crate",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block GREEN_GREY_BRICK_ENGRAVED = registerBlock(
+                        "green_grey_brick_engraved",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block GREY_BRICK_ENGRAVED = registerBlock(
+                        "grey_brick_engraved",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block GREY_KEYSTONE = registerBlock(
+                        "grey_keystone",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
         // Log blocks
         public static final Block ARCHERY_TARGET = registerBlock(
                         "archery_target",
@@ -314,6 +450,33 @@ public class ModBlocks {
                         entries.add(ModBlocks.DOMESTIC_UTILITY_BLOCK);
                         entries.add(ModBlocks.DONE_UTILITY_BLOCK);
                         entries.add(ModBlocks.DRAGON_CARVING);
+                        entries.add(ModBlocks.EMPTY_BARREL);
+                        entries.add(ModBlocks.EMPTY_CABINET);
+                        entries.add(ModBlocks.FAITH_CARVED_ARBOR_BRICK);
+                        entries.add(ModBlocks.FAITH_CARVED_BLACK_BRICK);
+                        entries.add(ModBlocks.FAITH_CARVED_BROWN_GREY_BRICK);
+                        entries.add(ModBlocks.FAITH_CARVED_COARSE_RED_BRICK);
+                        entries.add(ModBlocks.FAITH_CARVED_DARK_GREY_BRICK);
+                        entries.add(ModBlocks.FAITH_CARVED_DUN_BRICK);
+                        entries.add(ModBlocks.FAITH_CARVED_GREY_BRICK);
+                        entries.add(ModBlocks.FAITH_CARVED_OLDTOWN_BRICK);
+                        entries.add(ModBlocks.FAITH_CARVED_PINK_SANDSTONE);
+                        entries.add(ModBlocks.FAITH_CARVED_REACH_BRICK);
+                        entries.add(ModBlocks.FAITH_CARVED_SMALL_STONE_BRICK);
+                        entries.add(ModBlocks.FAITH_CARVED_STONE_BRICK);
+                        entries.add(ModBlocks.FAITH_CARVED_STORMLANDS_BRICK);
+                        entries.add(ModBlocks.FAITH_CARVED_WESTERLANDS_BRICK);
+                        entries.add(ModBlocks.FISH_BARREL);
+                        entries.add(ModBlocks.FISH_BASKET);
+                        entries.add(ModBlocks.FISH_TRAP);
+                        entries.add(ModBlocks.FLAGSTONE);
+                        entries.add(ModBlocks.FULL_CABINET);
+                        entries.add(ModBlocks.GLOWING_EMBERS);
+                        entries.add(ModBlocks.GRAIN_BASKET);
+                        entries.add(ModBlocks.GRAIN_CRATE);
+                        entries.add(ModBlocks.GREEN_GREY_BRICK_ENGRAVED);
+                        entries.add(ModBlocks.GREY_BRICK_ENGRAVED);
+                        entries.add(ModBlocks.GREY_KEYSTONE);
                         entries.add(ModBlocks.ARCHERY_TARGET);
                         entries.add(ModBlocks.APPLE_BASKET_SLAB);
                 });

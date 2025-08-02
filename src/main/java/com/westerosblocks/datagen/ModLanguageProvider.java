@@ -63,6 +63,34 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.domestic_utility_block", "'Domestic' Utility Block");
         translationBuilder.add("block.westerosblocks.done_utility_block", "'Done' Utility Block");
         translationBuilder.add("block.westerosblocks.dragon_carving", "Dragon Carving");
+        translationBuilder.add("block.westerosblocks.empty_barrel", "Empty Barrel");
+        translationBuilder.add("block.westerosblocks.empty_cabinet", "Empty Cabinet");
+        translationBuilder.add("block.westerosblocks.faith_carved_arbor_brick", "Ashlar Faith Carved Arbor");
+        translationBuilder.add("block.westerosblocks.faith_carved_black_brick", "Ashlar Faith Carved Black");
+        translationBuilder.add("block.westerosblocks.faith_carved_brown_grey_brick", "Ashlar Faith Carved Brown Grey");
+        translationBuilder.add("block.westerosblocks.faith_carved_coarse_red_brick", "Ashlar Faith Carved Pale Red");
+        translationBuilder.add("block.westerosblocks.faith_carved_dark_grey_brick", "Ashlar Faith Carved Dark Grey");
+        translationBuilder.add("block.westerosblocks.faith_carved_dun_brick", "Ashlar Faith Carved Dun");
+        translationBuilder.add("block.westerosblocks.faith_carved_grey_brick", "Ashlar Faith Carved Normal Grey");
+        translationBuilder.add("block.westerosblocks.faith_carved_oldtown_brick", "Ashlar Faith Carved Light Oldtown");
+        translationBuilder.add("block.westerosblocks.faith_carved_pink_sandstone", "Ashlar Faith Carved Sandy Pink");
+        translationBuilder.add("block.westerosblocks.faith_carved_reach_brick", "Ashlar Faith Carved Reach");
+        translationBuilder.add("block.westerosblocks.faith_carved_small_stone_brick", "Ashlar Faith Carved Green Grey");
+        translationBuilder.add("block.westerosblocks.faith_carved_stone_brick", "Ashlar Faith Carved White");
+        translationBuilder.add("block.westerosblocks.faith_carved_stormlands_brick", "Ashlar Faith Carved Stormlands");
+        translationBuilder.add("block.westerosblocks.faith_carved_westerlands_brick",
+                "Ashlar Faith Carved Westerlands");
+        translationBuilder.add("block.westerosblocks.fish_barrel", "Fish Barrel");
+        translationBuilder.add("block.westerosblocks.fish_basket", "Fish Basket");
+        translationBuilder.add("block.westerosblocks.fish_trap", "Fish Trap");
+        translationBuilder.add("block.westerosblocks.flagstone", "Flagstone");
+        translationBuilder.add("block.westerosblocks.full_cabinet", "Full Cabinet");
+        translationBuilder.add("block.westerosblocks.glowing_embers", "Glowing Embers");
+        translationBuilder.add("block.westerosblocks.grain_basket", "Grain Basket");
+        translationBuilder.add("block.westerosblocks.grain_crate", "Grain Crate");
+        translationBuilder.add("block.westerosblocks.green_grey_brick_engraved", "Ashlar Engraved Green Grey");
+        translationBuilder.add("block.westerosblocks.grey_brick_engraved", "Ashlar Engraved Normal Grey");
+        translationBuilder.add("block.westerosblocks.grey_keystone", "Grey Keystone");
         translationBuilder.add("block.westerosblocks.archery_target", "Archery Target");
         translationBuilder.add("block.westerosblocks.apple_basket_slab", "Apple Basket Slab");
     }
