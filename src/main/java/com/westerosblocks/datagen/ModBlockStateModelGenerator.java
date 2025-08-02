@@ -10,9 +10,79 @@ import net.minecraft.data.client.VariantSettings;
 import net.minecraft.data.client.VariantsBlockStateSupplier;
 import net.minecraft.util.Identifier;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class ModBlockStateModelGenerator {
 
         public ModBlockStateModelGenerator() {
+        }
+
+        /**
+         * Builder class for custom solid blocks
+         */
+        public static class CustomBlockBuilder {
+                private final BlockStateModelGenerator generator;
+                private final Block block;
+                private String[] textures = new String[0];
+                private List<String[]> randomTextures = new ArrayList<>();
+                private boolean isSimple = false;
+
+                public CustomBlockBuilder(BlockStateModelGenerator generator, Block block) {
+                        this.generator = generator;
+                        this.block = block;
+                }
+
+                /**
+                 * Set a single texture for all sides (simple block)
+                 */
+                public CustomBlockBuilder texture(String texturePath) {
+                        this.textures = new String[] { texturePath };
+                        this.isSimple = true;
+                        return this;
+                }
+
+                /**
+                 * Set multiple textures for different sides
+                 * Texture order: down, up, north, south, east, west
+                 */
+                public CustomBlockBuilder textures(String... texturePaths) {
+                        this.textures = texturePaths;
+                        this.isSimple = false;
+                        return this;
+                }
+
+                /**
+                 * Add a random texture variant
+                 * Texture order: down, up, north, south, east, west
+                 */
+                public CustomBlockBuilder randomTexture(String... texturePaths) {
+                        this.randomTextures.add(texturePaths);
+                        this.isSimple = false;
+                        return this;
+                }
+
+                /**
+                 * Build and register the block
+                 */
+                public void build() {
+                        if (!randomTextures.isEmpty()) {
+                                String[][] textureArrays = randomTextures.toArray(new String[0][0]);
+                                registerCustomSolidBlockWithRandomTextures(generator, block, textureArrays);
+                        } else if (isSimple) {
+                                registerSimpleCustomSolidBlock(generator, block, textures[0]);
+                        } else {
+                                registerCustomSolidBlock(generator, block, textures);
+                        }
+                }
+        }
+
+        /**
+         * Start building a custom solid block
+         */
+        public static CustomBlockBuilder registerCustomSolidBlock(BlockStateModelGenerator generator, Block block) {
+                return new CustomBlockBuilder(generator, block);
         }
 
         /**
@@ -54,19 +124,7 @@ public class ModBlockStateModelGenerator {
                         }
                 }
 
-                TextureMap textureMap = new TextureMap()
-                                .put(TextureKey.DOWN, Identifier.of("westerosblocks", "block/" + filledTextures[0]))
-                                .put(TextureKey.UP, Identifier.of("westerosblocks", "block/" + filledTextures[1]))
-                                .put(TextureKey.NORTH, Identifier.of("westerosblocks", "block/" + filledTextures[2]))
-                                .put(TextureKey.SOUTH, Identifier.of("westerosblocks", "block/" + filledTextures[3]))
-                                .put(TextureKey.EAST, Identifier.of("westerosblocks", "block/" + filledTextures[4]))
-                                .put(TextureKey.WEST, Identifier.of("westerosblocks", "block/" + filledTextures[5]))
-                                .put(TextureKey.PARTICLE,
-                                                Identifier.of("westerosblocks", "block/" + filledTextures[0])); // Use
-                                                                                                                // down
-                                                                                                                // texture
-                                                                                                                // as
-                                                                                                                // particle
+                TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
 
                 // Get the block name for nested folder structure
                 String blockName = getBlockName(block);
@@ -77,6 +135,62 @@ public class ModBlockStateModelGenerator {
                 generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block,
                                 BlockStateVariant.create().put(VariantSettings.MODEL, modelId)));
                 generator.registerParentedItemModel(block, modelId);
+        }
+
+        /**
+         * Registers a custom solid block with random texture variants
+         * Each inner array should contain texture paths in order: down, up, north,
+         * south, east, west
+         * Generates multiple model variants for random selection
+         */
+        public static void registerCustomSolidBlockWithRandomTextures(BlockStateModelGenerator generator, Block block,
+                        String[][] textureArrays) {
+                if (textureArrays.length == 0) {
+                        throw new IllegalArgumentException("At least one texture array is required");
+                }
+
+                String blockName = getBlockName(block);
+                List<Identifier> modelIds = new ArrayList<>();
+
+                // Generate a model for each texture array
+                for (int i = 0; i < textureArrays.length; i++) {
+                        String[] texturePaths = textureArrays[i];
+                        if (texturePaths.length == 0) {
+                                throw new IllegalArgumentException(
+                                                "At least one texture path is required in array " + i);
+                        }
+
+                        // Fill remaining slots with the last texture if less than 6 provided
+                        String[] filledTextures = new String[6];
+                        for (int j = 0; j < 6; j++) {
+                                if (j < texturePaths.length) {
+                                        filledTextures[j] = texturePaths[j];
+                                } else {
+                                        filledTextures[j] = texturePaths[texturePaths.length - 1];
+                                }
+                        }
+
+                        TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
+
+                        // Create model with version suffix
+                        Identifier nestedModelId = Identifier.of("westerosblocks",
+                                        "block/" + blockName + "/base_v" + (i + 1));
+                        Identifier modelId = Models.CUBE.upload(nestedModelId, textureMap, generator.modelCollector);
+                        modelIds.add(modelId);
+                }
+
+                // Create blockstate with multiple variants
+                List<BlockStateVariant> variants = modelIds.stream()
+                                .map(modelId -> BlockStateVariant.create().put(VariantSettings.MODEL, modelId))
+                                .collect(Collectors.toList());
+
+                generator.blockStateCollector.accept(
+                                VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0])));
+
+                // Register item model using the first variant
+                if (!modelIds.isEmpty()) {
+                        generator.registerParentedItemModel(block, modelIds.get(0));
+                }
         }
 
         /**

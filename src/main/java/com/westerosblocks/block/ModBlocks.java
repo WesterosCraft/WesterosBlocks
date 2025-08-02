@@ -47,6 +47,31 @@ public class ModBlocks {
                         new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
+        public static final Block APPLE_CRATE = registerBlock(
+                        "apple_crate",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block APPROVAL_UTILITY_BLOCK = registerBlock(
+                        "approval_utility_block",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+        public static final Block ARBOR_BRICK_ORNATE = registerBlock(
+                        "arbor_brick_ornate",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block BENCH_BUTCHER_KNIVES = registerBlock(
+                        "bench_butcher_knives",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block BENCH_CARPENTRY_HAMMER_SAW = registerBlock(
+                        "bench_carpentry_hammer_saw",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
         /**
          * Initialize all blocks
          */
@@ -60,6 +85,11 @@ public class ModBlocks {
                         entries.add(ModBlocks.SIX_SIDED_SPRUCE);
                         entries.add(ModBlocks.SIX_SIDED_STONE_SLAB);
                         entries.add(ModBlocks.APPLE_BASKET);
+                        entries.add(ModBlocks.APPLE_CRATE);
+                        entries.add(ModBlocks.APPROVAL_UTILITY_BLOCK);
+                        entries.add(ModBlocks.ARBOR_BRICK_ORNATE);
+                        entries.add(ModBlocks.BENCH_BUTCHER_KNIVES);
+                        entries.add(ModBlocks.BENCH_CARPENTRY_HAMMER_SAW);
                 });
         }
 

@@ -22,6 +22,11 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.6sided_spruce", "Six-Sided Spruce");
         translationBuilder.add("block.westerosblocks.6sided_stone_slab", "Six-Sided Stone Slab");
         translationBuilder.add("block.westerosblocks.apple_basket", "Apple Basket");
+        translationBuilder.add("block.westerosblocks.apple_crate", "Apple Crate");
+        translationBuilder.add("block.westerosblocks.approval_utility_block", "'Approval' Utility Block");
+        translationBuilder.add("block.westerosblocks.arbor_brick_ornate", "Ashlar Engraved Arbor");
+        translationBuilder.add("block.westerosblocks.bench_butcher_knives", "Bench Butcher Knives");
+        translationBuilder.add("block.westerosblocks.bench_carpentry_hammer_saw", "Bench Carpentry Hammer Saw");
     }
 
 }

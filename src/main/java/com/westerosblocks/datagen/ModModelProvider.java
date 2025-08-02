@@ -21,20 +21,55 @@ public class ModModelProvider extends FabricModelProvider {
         @Override
         public void generateBlockStateModels(BlockStateModelGenerator bsmg) {
                 // Solid Blocks
-                registerSimpleCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_BIRCH,
-                                "bark/birch/side");
-                registerSimpleCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_JUNGLE,
-                                "bark/jungle/side");
-                registerSimpleCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_OAK,
-                                "bark/oak/side");
-                registerSimpleCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_SPRUCE,
-                                "bark/spruce/side");
-                registerSimpleCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_STONE_SLAB,
-                                "ashlar_half/white/tile");
-                registerCustomSolidBlock(bsmg, ModBlocks.APPLE_BASKET,
-                                "crate_block/basket_bottom",
-                                "crate_block/basket_apple",
-                                "crate_block/basket_side");
+                registerCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_BIRCH).texture("bark/birch/side").build();
+                registerCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_JUNGLE).texture("bark/jungle/side").build();
+                registerCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_OAK)
+                                .texture("bark/oak/side")
+                                .build();
+                registerCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_SPRUCE)
+                                .texture("bark/spruce/side")
+                                .build();
+                registerCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_STONE_SLAB)
+                                .texture("ashlar_half/white/tile")
+                                .build();
+                registerCustomSolidBlock(bsmg, ModBlocks.APPLE_BASKET)
+                                .textures(
+                                                "crate_block/basket_bottom",
+                                                "crate_block/basket_apple",
+                                                "crate_block/basket_side")
+                                .build();
+                registerCustomSolidBlock(bsmg, ModBlocks.APPLE_CRATE)
+                                .randomTexture(
+                                                "crate_block/side_bot1",
+                                                "crate_block/crate_top_apples",
+                                                "crate_block/side_bot1")
+                                .randomTexture(
+                                                "crate_block/side_bot2",
+                                                "crate_block/crate_top_apples",
+                                                "crate_block/side_bot2")
+                                .randomTexture(
+                                                "crate_block/side_bot3",
+                                                "crate_block/crate_top_apples",
+                                                "crate_block/side_bot3")
+                                .build();
+                registerCustomSolidBlock(bsmg, ModBlocks.APPROVAL_UTILITY_BLOCK)
+                                .texture("utility_block/approved")
+                                .build();
+                registerCustomSolidBlock(bsmg, ModBlocks.ARBOR_BRICK_ORNATE)
+                                .texture("ashlar_engraved/arbor/all")
+                                .build();
+                registerCustomSolidBlock(bsmg, ModBlocks.BENCH_BUTCHER_KNIVES)
+                                .textures(
+                                                "bench_block/spruce_top",
+                                                "bench_block/crafting_table_top",
+                                                "bench_block/bench_butcher_knives")
+                                .build();
+                registerCustomSolidBlock(bsmg, ModBlocks.BENCH_CARPENTRY_HAMMER_SAW)
+                                .textures(
+                                                "bench_block/spruce_top",
+                                                "bench_block/crafting_table_top",
+                                                "bench_block/bench_carpentry_hammer_saw")
+                                .build();
         }
 
         @Override
