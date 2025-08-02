@@ -5,5 +5,9 @@
   "block.westerosblocks.6sided_spruce": "Six-Sided Spruce",
   "block.westerosblocks.6sided_stone_slab": "Six-Sided Stone Slab",
   "block.westerosblocks.apple_basket": "Apple Basket",
-  "block.westerosblocks.apple_crate": "Apple Crate"
+  "block.westerosblocks.apple_crate": "Apple Crate",
+  "block.westerosblocks.approval_utility_block": "'Approval' Utility Block",
+  "block.westerosblocks.arbor_brick_ornate": "Ashlar Engraved Arbor",
+  "block.westerosblocks.bench_butcher_knives": "Bench Butcher Knives",
+  "block.westerosblocks.bench_carpentry_hammer_saw": "Bench Carpentry Hammer Saw"
 }
