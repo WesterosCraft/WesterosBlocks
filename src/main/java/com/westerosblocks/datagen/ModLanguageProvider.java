@@ -21,6 +21,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.6sided_oak", "Six-Sided Oak");
         translationBuilder.add("block.westerosblocks.6sided_spruce", "Six-Sided Spruce");
         translationBuilder.add("block.westerosblocks.6sided_stone_slab", "Six-Sided Stone Slab");
+        translationBuilder.add("block.westerosblocks.apple_basket", "Apple Basket");
     }
 
 }

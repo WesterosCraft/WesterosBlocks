@@ -20,9 +20,21 @@ public class ModModelProvider extends FabricModelProvider {
 
         @Override
         public void generateBlockStateModels(BlockStateModelGenerator bsmg) {
-                // Register SIX_SIDED_BIRCH with custom texture path using the new pattern
-                registerCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_BIRCH,
+                // Solid Blocks
+                registerSimpleCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_BIRCH,
                                 "bark/birch/side");
+                registerSimpleCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_JUNGLE,
+                                "bark/jungle/side");
+                registerSimpleCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_OAK,
+                                "bark/oak/side");
+                registerSimpleCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_SPRUCE,
+                                "bark/spruce/side");
+                registerSimpleCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_STONE_SLAB,
+                                "ashlar_half/white/tile");
+                registerCustomSolidBlock(bsmg, ModBlocks.APPLE_BASKET,
+                                "crate_block/basket_bottom",
+                                "crate_block/basket_apple",
+                                "crate_block/basket_side");
         }
 
         @Override
