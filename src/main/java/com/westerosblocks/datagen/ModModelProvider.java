@@ -465,6 +465,43 @@ public class ModModelProvider extends FabricModelProvider {
                                 .texture("stone_block/keystone_grey")
                                 .build();
 
+                registerCustomSolidBlock(bsmg, ModBlocks.HIGH_CLASS_UTILITY_BLOCK)
+                                .texture("utility_block/highclass")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.HOP_BASKET).textures(
+                                "crate_block/basket_bottom",
+                                "crate_block/basket_hop",
+                                "crate_block/basket_side").build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.HOP_CRATE).textures(
+                                "crate_block/crate_side_crossbar_right",
+                                "crate_block/crate_hops",
+                                "crate_block/crate_side_crossbar_left").build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.HOUSE_COUNT_UTILITY_BLOCK)
+                                .texture("utility_block/housecount")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.INDUSTRY_UTILITY_BLOCK)
+                                .texture("utility_block/industry")
+                                .build();
+
+                registerCustomSolidBlock(bsmg, ModBlocks.IRON_CRATE)
+                                .randomTexture(
+                                                "crate_block/side_bot1",
+                                                "crate_block/crate_top_iron",
+                                                "crate_block/side_bot1")
+                                .randomTexture(
+                                                "crate_block/side_bot2",
+                                                "crate_block/crate_top_iron",
+                                                "crate_block/side_bot2")
+                                .randomTexture(
+                                                "crate_block/side_bot3",
+                                                "crate_block/crate_top_iron",
+                                                "crate_block/side_bot3")
+                                .build();
+
                 // Log Blocks
                 registerCustomLogBlock(bsmg, ModBlocks.ARCHERY_TARGET)
                                 .textures("archery_target/side", "archery_target/front").build();

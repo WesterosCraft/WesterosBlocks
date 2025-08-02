@@ -73,5 +73,11 @@
   "block.westerosblocks.grain_crate": "Grain Crate",
   "block.westerosblocks.green_grey_brick_engraved": "Ashlar Engraved Green Grey",
   "block.westerosblocks.grey_brick_engraved": "Ashlar Engraved Normal Grey",
-  "block.westerosblocks.grey_keystone": "Grey Keystone"
+  "block.westerosblocks.grey_keystone": "Grey Keystone",
+  "block.westerosblocks.high_class_utility_block": "'High Class' Utility Block",
+  "block.westerosblocks.hop_basket": "Hop Basket",
+  "block.westerosblocks.hop_crate": "Hop Crate",
+  "block.westerosblocks.house_count_utility_block": "'House Count' Utility Block",
+  "block.westerosblocks.industry_utility_block": "'Industry' Utility Block",
+  "block.westerosblocks.iron_crate": "Iron Crate"
 }

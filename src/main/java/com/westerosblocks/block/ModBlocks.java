@@ -385,6 +385,36 @@ public class ModBlocks {
                         new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
                                         .requiresTool().sounds(BlockSoundGroup.STONE)));
 
+        public static final Block HIGH_CLASS_UTILITY_BLOCK = registerBlock(
+                        "high_class_utility_block",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+        public static final Block HOP_BASKET = registerBlock(
+                        "hop_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block HOP_CRATE = registerBlock(
+                        "hop_crate",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block HOUSE_COUNT_UTILITY_BLOCK = registerBlock(
+                        "house_count_utility_block",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+        public static final Block INDUSTRY_UTILITY_BLOCK = registerBlock(
+                        "industry_utility_block",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+        public static final Block IRON_CRATE = registerBlock(
+                        "iron_crate",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
         // Log blocks
         public static final Block ARCHERY_TARGET = registerBlock(
                         "archery_target",
@@ -477,6 +507,12 @@ public class ModBlocks {
                         entries.add(ModBlocks.GREEN_GREY_BRICK_ENGRAVED);
                         entries.add(ModBlocks.GREY_BRICK_ENGRAVED);
                         entries.add(ModBlocks.GREY_KEYSTONE);
+                        entries.add(ModBlocks.HIGH_CLASS_UTILITY_BLOCK);
+                        entries.add(ModBlocks.HOP_BASKET);
+                        entries.add(ModBlocks.HOP_CRATE);
+                        entries.add(ModBlocks.HOUSE_COUNT_UTILITY_BLOCK);
+                        entries.add(ModBlocks.INDUSTRY_UTILITY_BLOCK);
+                        entries.add(ModBlocks.IRON_CRATE);
                         entries.add(ModBlocks.ARCHERY_TARGET);
                         entries.add(ModBlocks.APPLE_BASKET_SLAB);
                 });

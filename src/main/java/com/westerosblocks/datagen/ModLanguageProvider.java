@@ -91,6 +91,12 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.green_grey_brick_engraved", "Ashlar Engraved Green Grey");
         translationBuilder.add("block.westerosblocks.grey_brick_engraved", "Ashlar Engraved Normal Grey");
         translationBuilder.add("block.westerosblocks.grey_keystone", "Grey Keystone");
+        translationBuilder.add("block.westerosblocks.high_class_utility_block", "'High Class' Utility Block");
+        translationBuilder.add("block.westerosblocks.hop_basket", "Hop Basket");
+        translationBuilder.add("block.westerosblocks.hop_crate", "Hop Crate");
+        translationBuilder.add("block.westerosblocks.house_count_utility_block", "'House Count' Utility Block");
+        translationBuilder.add("block.westerosblocks.industry_utility_block", "'Industry' Utility Block");
+        translationBuilder.add("block.westerosblocks.iron_crate", "Iron Crate");
         translationBuilder.add("block.westerosblocks.archery_target", "Archery Target");
         translationBuilder.add("block.westerosblocks.apple_basket_slab", "Apple Basket Slab");
     }
