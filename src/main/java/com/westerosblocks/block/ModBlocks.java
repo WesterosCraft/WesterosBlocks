@@ -415,6 +415,348 @@ public class ModBlocks {
                         new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
+        public static final Block KL_DUN_CARVED_BRICK = registerBlock(
+                        "kl_dun_carved_brick",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block LANNISPORT_KEYSTONE_ORANGE_PLASTER = registerBlock(
+                        "lannisport_keystone_orange_plaster",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block LANNISPORT_KEYSTONE_YELLOW_PLASTER = registerBlock(
+                        "lannisport_keystone_yellow_plaster",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block LARGE_CLAY_POT_SOLID = registerBlock(
+                        "large_clay_pot_solid",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block LAVENDER_BASKET = registerBlock(
+                        "lavender_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block LAVENDER_CRATE = registerBlock(
+                        "lavender_crate",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block LEMON_BASKET = registerBlock(
+                        "lemon_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block LIGHT_GREY_BRICK_ENGRAVED = registerBlock(
+                        "light_grey_brick_engraved",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block LIGHT_GREY_STONE_WHITE_PLASTER = registerBlock(
+                        "light_grey_stone_white_plaster",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block LIGHT_OLDTOWN_BRICK_ENGRAVED = registerBlock(
+                        "light_oldtown_brick_engraved",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block LIME_BASKET = registerBlock(
+                        "lime_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block LOW_CLASS_UTILITY_BLOCK = registerBlock(
+                        "low_class_utility_block",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+        public static final Block MIDDLE_CLASS_UTILITY_BLOCK = registerBlock(
+                        "middle_class_utility_block",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+        public static final Block MIRROR_BLOCK = registerBlock(
+                        "mirror_block",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block MONOCHROME_DARK_SANDSTONE_ENGRAVED = registerBlock(
+                        "monochrome_dark_sandstone_engraved",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block MONOCHROME_SANDSTONE_ENGRAVED = registerBlock(
+                        "monochrome_sandstone_engraved",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block NETHER_BRICK_KEYSTONE = registerBlock(
+                        "nether_brick_keystone",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block NORTHERN_CARVINGS = registerBlock(
+                        "northern_carvings",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block NOTE_UTILITY_BLOCK = registerBlock(
+                        "note_utility_block",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+        public static final Block OLIVE_BASKET = registerBlock(
+                        "olive_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block OPEN_BASKET = registerBlock(
+                        "open_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block OPEN_CRATE = registerBlock(
+                        "open_crate",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block ORANGE_BASKET = registerBlock(
+                        "orange_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block ORANGE_BRICK_ARCH_DOUBLE = registerBlock(
+                        "orange_brick_arch_double",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block ORANGE_BRICK_ARCH_SINGLE = registerBlock(
+                        "orange_brick_arch_single",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block ORANGE_BRICK_DENTIL = registerBlock(
+                        "orange_brick_dentil",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block ORANGE_BRICK_ROWLOCK = registerBlock(
+                        "orange_brick_rowlock",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block ORNATE_MARBLE = registerBlock(
+                        "ornate_marble",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block ORNATE_SANDSTONE = registerBlock(
+                        "ornate_sandstone",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block PARQUET_FLOOR = registerBlock(
+                        "parquet_floor",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block PILED_BONES = registerBlock(
+                        "piled_bones",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block PINK_SANDSTONE_ENGRAVED = registerBlock(
+                        "pink_sandstone_engraved",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block PISTON_TOP = registerBlock(
+                        "piston_top",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block POMEGRANATE_BASKET = registerBlock(
+                        "pomegranate_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block PURPLE_GRAPE_BASKET = registerBlock(
+                        "purple_grape_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block PURPLE_GRAPE_CRATE = registerBlock(
+                        "purple_grape_crate",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block REACH_BRICK_ENGRAVED = registerBlock(
+                        "reach_brick_engraved",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block REACH_OAK_WOOD_PANELLING = registerBlock(
+                        "reach_oak_wood_panelling",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block REDORANGE_CARVED_SANDSTONE = registerBlock(
+                        "redorange_carved_sandstone",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block RED_LANTERN2 = registerBlock(
+                        "red_lantern2",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)
+                                        .luminance(state -> 7)));
+
+        public static final Block REACH_SPRUCE_WOOD_PANELLING = registerBlock(
+                        "reach_spruce_wood_panelling",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block SALT_CRATE = registerBlock(
+                        "salt_crate",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block SANDY_STONE_SLABS = registerBlock(
+                        "sandy_stone_slabs",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block SEPT_CRYSTAL_LARGE = registerBlock(
+                        "sept_crystal_large",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)
+                                        .nonOpaque()));
+
+        public static final Block SHOP_UTILITY_BLOCK = registerBlock(
+                        "shop_utility_block",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+        public static final Block SILVER_TIN_CRATE = registerBlock(
+                        "silver_tin_crate",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block SMALL_ORANGE_BRICKS_ORNATE_TOP = registerBlock(
+                        "small_orange_bricks_ornate_top",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block SMALL_ORANGE_BRICKS_ORNATE = registerBlock(
+                        "small_orange_bricks_ornate",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block SMALL_SMOOTH_STONE_BRICK_BLUE_PLASTER = registerBlock(
+                        "small_smooth_stone_brick_blue_plaster",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block SMALL_SMOOTH_STONE_BRICK_WHITE_PLASTER = registerBlock(
+                        "small_smooth_stone_brick_white_plaster",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block SMALL_STONE_BRICK_WHITE_PLASTER = registerBlock(
+                        "small_stone_brick_white_plaster",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block SMALL_WHITE_BRICK_BROWNISH_WHITE_PLASTER = registerBlock(
+                        "small_white_brick_brownish_white_plaster",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block SMALL_WHITE_BRICK_WHITE_PLASTER = registerBlock(
+                        "small_white_brick_white_plaster",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block SOURLEAF_BASKET = registerBlock(
+                        "sourleaf_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block SOURLEAF_CRATE = registerBlock(
+                        "sourleaf_crate",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block SOUTHERN_BRICK_ARCH_FLAT = registerBlock(
+                        "southern_brick_arch_flat",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block SOUTHERN_BRICK_ARCH = registerBlock(
+                        "southern_brick_arch",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block SOUTHERN_BRICK_LINTEL = registerBlock(
+                        "southern_brick_lintel",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block SPECIAL_UTILITY_BLOCK = registerBlock(
+                        "special_utility_block",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+        public static final Block SPIT_ROAST = registerBlock(
+                        "spit_roast",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block SQUASH = registerBlock(
+                        "squash",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.GRASS)));
+
+        public static final Block STACKED_BONES_SOLID = registerBlock(
+                        "stacked_bones_solid",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block STORMLANDS_BRICK_ENGRAVED = registerBlock(
+                        "stormlands_brick_engraved",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block TABLE_BOOKS = registerBlock(
+                        "table_books",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block TABLE_DRAWERS = registerBlock(
+                        "table_drawers",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block THICK_GRASS_BLOCK = registerBlock(
+                        "thick_grass_block",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.GRASS)));
+
+        public static final Block TABLE_WIDGETS = registerBlock(
+                        "table_widgets",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block TERRACOTTA_ENGRAVED = registerBlock(
+                        "terracotta_engraved",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
         // Log blocks
         public static final Block ARCHERY_TARGET = registerBlock(
                         "archery_target",
@@ -513,6 +855,76 @@ public class ModBlocks {
                         entries.add(ModBlocks.HOUSE_COUNT_UTILITY_BLOCK);
                         entries.add(ModBlocks.INDUSTRY_UTILITY_BLOCK);
                         entries.add(ModBlocks.IRON_CRATE);
+                        entries.add(ModBlocks.KL_DUN_CARVED_BRICK);
+                        entries.add(ModBlocks.LANNISPORT_KEYSTONE_ORANGE_PLASTER);
+                        entries.add(ModBlocks.LANNISPORT_KEYSTONE_YELLOW_PLASTER);
+                        entries.add(ModBlocks.LARGE_CLAY_POT_SOLID);
+                        entries.add(ModBlocks.LAVENDER_BASKET);
+                        entries.add(ModBlocks.LAVENDER_CRATE);
+                        entries.add(ModBlocks.LEMON_BASKET);
+                        entries.add(ModBlocks.LIGHT_GREY_BRICK_ENGRAVED);
+                        entries.add(ModBlocks.LIGHT_GREY_STONE_WHITE_PLASTER);
+                        entries.add(ModBlocks.LIGHT_OLDTOWN_BRICK_ENGRAVED);
+                        entries.add(ModBlocks.LIME_BASKET);
+                        entries.add(ModBlocks.LOW_CLASS_UTILITY_BLOCK);
+                        entries.add(ModBlocks.MIDDLE_CLASS_UTILITY_BLOCK);
+                        entries.add(ModBlocks.MIRROR_BLOCK);
+                        entries.add(ModBlocks.MONOCHROME_DARK_SANDSTONE_ENGRAVED);
+                        entries.add(ModBlocks.MONOCHROME_SANDSTONE_ENGRAVED);
+                        entries.add(ModBlocks.NETHER_BRICK_KEYSTONE);
+                        entries.add(ModBlocks.NORTHERN_CARVINGS);
+                        entries.add(ModBlocks.NOTE_UTILITY_BLOCK);
+                        entries.add(ModBlocks.OLIVE_BASKET);
+                        entries.add(ModBlocks.OPEN_BASKET);
+                        entries.add(ModBlocks.OPEN_CRATE);
+                        entries.add(ModBlocks.ORNATE_MARBLE);
+                        entries.add(ModBlocks.ORNATE_SANDSTONE);
+                        entries.add(ModBlocks.ORANGE_BASKET);
+                        entries.add(ModBlocks.ORANGE_BRICK_ARCH_DOUBLE);
+                        entries.add(ModBlocks.ORANGE_BRICK_ARCH_SINGLE);
+                        entries.add(ModBlocks.ORANGE_BRICK_DENTIL);
+                        entries.add(ModBlocks.ORANGE_BRICK_ROWLOCK);
+                        entries.add(ModBlocks.ORNATE_MARBLE);
+                        entries.add(ModBlocks.ORNATE_SANDSTONE);
+                        entries.add(ModBlocks.PARQUET_FLOOR);
+                        entries.add(ModBlocks.PILED_BONES);
+                        entries.add(ModBlocks.PINK_SANDSTONE_ENGRAVED);
+                        entries.add(ModBlocks.PISTON_TOP);
+                        entries.add(ModBlocks.POMEGRANATE_BASKET);
+                        entries.add(ModBlocks.PURPLE_GRAPE_BASKET);
+                        entries.add(ModBlocks.PURPLE_GRAPE_CRATE);
+                        entries.add(ModBlocks.REACH_BRICK_ENGRAVED);
+                        entries.add(ModBlocks.REACH_OAK_WOOD_PANELLING);
+                        entries.add(ModBlocks.REDORANGE_CARVED_SANDSTONE);
+                        entries.add(ModBlocks.RED_LANTERN2);
+                        entries.add(ModBlocks.REACH_SPRUCE_WOOD_PANELLING);
+                        entries.add(ModBlocks.SALT_CRATE);
+                        entries.add(ModBlocks.SANDY_STONE_SLABS);
+                        entries.add(ModBlocks.SEPT_CRYSTAL_LARGE);
+                        entries.add(ModBlocks.SHOP_UTILITY_BLOCK);
+                        entries.add(ModBlocks.SILVER_TIN_CRATE);
+                        entries.add(ModBlocks.SMALL_ORANGE_BRICKS_ORNATE_TOP);
+                        entries.add(ModBlocks.SMALL_ORANGE_BRICKS_ORNATE);
+                        entries.add(ModBlocks.SMALL_SMOOTH_STONE_BRICK_BLUE_PLASTER);
+                        entries.add(ModBlocks.SMALL_SMOOTH_STONE_BRICK_WHITE_PLASTER);
+                        entries.add(ModBlocks.SMALL_STONE_BRICK_WHITE_PLASTER);
+                        entries.add(ModBlocks.SMALL_WHITE_BRICK_BROWNISH_WHITE_PLASTER);
+                        entries.add(ModBlocks.SMALL_WHITE_BRICK_WHITE_PLASTER);
+                        entries.add(ModBlocks.SOURLEAF_BASKET);
+                        entries.add(ModBlocks.SOURLEAF_CRATE);
+                        entries.add(ModBlocks.SOUTHERN_BRICK_ARCH_FLAT);
+                        entries.add(ModBlocks.SOUTHERN_BRICK_ARCH);
+                        entries.add(ModBlocks.SOUTHERN_BRICK_LINTEL);
+                        entries.add(ModBlocks.SPECIAL_UTILITY_BLOCK);
+                        entries.add(ModBlocks.SPIT_ROAST);
+                        entries.add(ModBlocks.SQUASH);
+                        entries.add(ModBlocks.STACKED_BONES_SOLID);
+                        entries.add(ModBlocks.STORMLANDS_BRICK_ENGRAVED);
+                        entries.add(ModBlocks.TABLE_BOOKS);
+                        entries.add(ModBlocks.TABLE_DRAWERS);
+                        entries.add(ModBlocks.THICK_GRASS_BLOCK);
+                        entries.add(ModBlocks.TABLE_WIDGETS);
+                        entries.add(ModBlocks.TERRACOTTA_ENGRAVED);
                         entries.add(ModBlocks.ARCHERY_TARGET);
                         entries.add(ModBlocks.APPLE_BASKET_SLAB);
                 });

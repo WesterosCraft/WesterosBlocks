@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"com.westerosblocks.WesterosBlocksDataGenerator"
+		],
+		"client": [
+			"com.westerosblocks.WesterosBlocksClient"
 		]
 	},
 	"mixins": [
