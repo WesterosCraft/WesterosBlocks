@@ -168,6 +168,21 @@ public class ModModelProvider extends FabricModelProvider {
         registerCustomSolidBlock(bsmg, ModBlocks.THICK_GRASS_BLOCK).randomTexture("grass_block/forest_top1").randomTexture("grass_block/forest_top2").randomTexture("grass_block/forest_top3").build();
         registerCustomSolidBlock(bsmg, ModBlocks.TABLE_WIDGETS).textures("bench_block/spruce_top", "bench_block/table_top", "bench_block/table_drawer_widgets_side").build();
         registerCustomSolidBlock(bsmg, ModBlocks.TERRACOTTA_ENGRAVED).texture("ashlar_engraved/terracotta/all").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.TURNIP_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_turnip", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.TURNIP_CRATE).randomTexture("crate_block/side_bot1", "crate_block/crate_top_turnip", "crate_block/side_bot1").randomTexture("crate_block/side_bot2", "crate_block/crate_top_turnip", "crate_block/side_bot2").randomTexture("crate_block/side_bot3", "crate_block/crate_top_turnip", "crate_block/side_bot3").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.UNUSED_BROWN_PLASTER).textures("ashlar_quarter_rounded/light_brown/all", "ashlar_quarter_rounded/light_brown/all", "plaster/smooth/brown_white/all").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.UNUSED_PURPLE_PLASTER).textures("ashlar_quarter_rounded/dark_red/all", "ashlar_quarter_rounded/dark_red/all", "plaster/smooth/brown_white/all").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.VIVID_DARK_SANDSTONE_ENGRAVED).texture("ashlar_engraved/dark_tan/all").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.VIVID_SANDSTONE_ENGRAVED).texture("ashlar_engraved/tan/all").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.WATER_BARREL).randomTexture("barrel_closed/barrel_top_closed", "crate_block/barrel_top_water", "barrel_sides/side0").randomTexture("barrel_closed/barrel_top_closed", "crate_block/barrel_top_water", "barrel_sides/side1").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.WHITE_BRICK_ENGRAVED).texture("ashlar_engraved/white/all").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.WHITE_GRAPE_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_grape_white", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.WHITE_GRAPE_CRATE).textures("crate_block/crate_side_crossbar_right", "crate_block/crate_top_grape_white", "crate_block/crate_side_crossbar_crossed").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.WINTERFELL_CARVING).texture("ashlar_third/dark_grey/carving/side").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.WIP_UTILITY_BLOCK).texture("utility_block/wip").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.WORKSHOP_UTILITY_BLOCK).texture("utility_block/workshop").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.YARD_UTILITY_BLOCK).texture("utility_block/yard").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.YELLOW_STAINED_CLAY).texture("clay/yellow_stained_clay").build();
 
         // Log Blocks
         registerCustomLogBlock(bsmg, ModBlocks.ARCHERY_TARGET).textures("archery_target/side", "archery_target/front").build();

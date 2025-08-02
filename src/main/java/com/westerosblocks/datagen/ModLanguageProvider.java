@@ -189,6 +189,24 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.thick_grass_block", "Thick Grass Block");
                 translationBuilder.add("block.westerosblocks.table_widgets", "Table Widgets");
                 translationBuilder.add("block.westerosblocks.terracotta_engraved", "Ashlar Engraved Terracotta");
+                translationBuilder.add("block.westerosblocks.turnip_basket", "Turnip Basket");
+                translationBuilder.add("block.westerosblocks.turnip_crate", "Turnip Crate");
+                translationBuilder.add("block.westerosblocks.unused_brown_plaster",
+                                "Smooth Brown Brick Keystone Brownish White Plaster");
+                translationBuilder.add("block.westerosblocks.unused_purple_plaster",
+                                "Smooth Purple Brick Keystone Brownish White Plaster");
+                translationBuilder.add("block.westerosblocks.vivid_dark_sandstone_engraved",
+                                "Ashlar Engraved Dark Tan");
+                translationBuilder.add("block.westerosblocks.vivid_sandstone_engraved", "Ashlar Engraved Tan");
+                translationBuilder.add("block.westerosblocks.water_barrel", "Water Barrel");
+                translationBuilder.add("block.westerosblocks.white_brick_engraved", "Ashlar Engraved White");
+                translationBuilder.add("block.westerosblocks.white_grape_basket", "White Grape Basket");
+                translationBuilder.add("block.westerosblocks.white_grape_crate", "White Grape Crate");
+                translationBuilder.add("block.westerosblocks.winterfell_carving", "Winterfell Carving");
+                translationBuilder.add("block.westerosblocks.wip_utility_block", "'WIP' Utility Block");
+                translationBuilder.add("block.westerosblocks.workshop_utility_block", "'Workshop' Utility Block");
+                translationBuilder.add("block.westerosblocks.yard_utility_block", "'Yard' Utility Block");
+                translationBuilder.add("block.westerosblocks.yellow_stained_clay", "Yellow Stained Clay");
                 translationBuilder.add("block.westerosblocks.archery_target", "Archery Target");
                 translationBuilder.add("block.westerosblocks.apple_basket_slab", "Apple Basket Slab");
         }

@@ -757,6 +757,81 @@ public class ModBlocks {
                         new WCSolidBlock(AbstractBlock.Settings.create().strength(3.0f)
                                         .requiresTool().sounds(BlockSoundGroup.STONE)));
 
+        public static final Block TURNIP_BASKET = registerBlock(
+                        "turnip_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block TURNIP_CRATE = registerBlock(
+                        "turnip_crate",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block UNUSED_BROWN_PLASTER = registerBlock(
+                        "unused_brown_plaster",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block UNUSED_PURPLE_PLASTER = registerBlock(
+                        "unused_purple_plaster",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block VIVID_DARK_SANDSTONE_ENGRAVED = registerBlock(
+                        "vivid_dark_sandstone_engraved",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block VIVID_SANDSTONE_ENGRAVED = registerBlock(
+                        "vivid_sandstone_engraved",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block WATER_BARREL = registerBlock(
+                        "water_barrel",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block WHITE_BRICK_ENGRAVED = registerBlock(
+                        "white_brick_engraved",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block WHITE_GRAPE_BASKET = registerBlock(
+                        "white_grape_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block WHITE_GRAPE_CRATE = registerBlock(
+                        "white_grape_crate",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block WINTERFELL_CARVING = registerBlock(
+                        "winterfell_carving",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block WIP_UTILITY_BLOCK = registerBlock(
+                        "wip_utility_block",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+        public static final Block WORKSHOP_UTILITY_BLOCK = registerBlock(
+                        "workshop_utility_block",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+        public static final Block YARD_UTILITY_BLOCK = registerBlock(
+                        "yard_utility_block",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(5.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+        public static final Block YELLOW_STAINED_CLAY = registerBlock(
+                        "yellow_stained_clay",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
         // Log blocks
         public static final Block ARCHERY_TARGET = registerBlock(
                         "archery_target",
@@ -925,6 +1000,21 @@ public class ModBlocks {
                         entries.add(ModBlocks.THICK_GRASS_BLOCK);
                         entries.add(ModBlocks.TABLE_WIDGETS);
                         entries.add(ModBlocks.TERRACOTTA_ENGRAVED);
+                        entries.add(ModBlocks.TURNIP_BASKET);
+                        entries.add(ModBlocks.TURNIP_CRATE);
+                        entries.add(ModBlocks.UNUSED_BROWN_PLASTER);
+                        entries.add(ModBlocks.UNUSED_PURPLE_PLASTER);
+                        entries.add(ModBlocks.VIVID_DARK_SANDSTONE_ENGRAVED);
+                        entries.add(ModBlocks.VIVID_SANDSTONE_ENGRAVED);
+                        entries.add(ModBlocks.WATER_BARREL);
+                        entries.add(ModBlocks.WHITE_BRICK_ENGRAVED);
+                        entries.add(ModBlocks.WHITE_GRAPE_BASKET);
+                        entries.add(ModBlocks.WHITE_GRAPE_CRATE);
+                        entries.add(ModBlocks.WINTERFELL_CARVING);
+                        entries.add(ModBlocks.WIP_UTILITY_BLOCK);
+                        entries.add(ModBlocks.WORKSHOP_UTILITY_BLOCK);
+                        entries.add(ModBlocks.YARD_UTILITY_BLOCK);
+                        entries.add(ModBlocks.YELLOW_STAINED_CLAY);
                         entries.add(ModBlocks.ARCHERY_TARGET);
                         entries.add(ModBlocks.APPLE_BASKET_SLAB);
                 });

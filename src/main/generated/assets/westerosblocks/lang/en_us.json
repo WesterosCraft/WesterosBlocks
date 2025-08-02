@@ -147,5 +147,20 @@
   "block.westerosblocks.table_drawers": "Table Drawers",
   "block.westerosblocks.table_widgets": "Table Widgets",
   "block.westerosblocks.terracotta_engraved": "Ashlar Engraved Terracotta",
-  "block.westerosblocks.thick_grass_block": "Thick Grass Block"
+  "block.westerosblocks.thick_grass_block": "Thick Grass Block",
+  "block.westerosblocks.turnip_basket": "Turnip Basket",
+  "block.westerosblocks.turnip_crate": "Turnip Crate",
+  "block.westerosblocks.unused_brown_plaster": "Smooth Brown Brick Keystone Brownish White Plaster",
+  "block.westerosblocks.unused_purple_plaster": "Smooth Purple Brick Keystone Brownish White Plaster",
+  "block.westerosblocks.vivid_dark_sandstone_engraved": "Ashlar Engraved Dark Tan",
+  "block.westerosblocks.vivid_sandstone_engraved": "Ashlar Engraved Tan",
+  "block.westerosblocks.water_barrel": "Water Barrel",
+  "block.westerosblocks.white_brick_engraved": "Ashlar Engraved White",
+  "block.westerosblocks.white_grape_basket": "White Grape Basket",
+  "block.westerosblocks.white_grape_crate": "White Grape Crate",
+  "block.westerosblocks.winterfell_carving": "Winterfell Carving",
+  "block.westerosblocks.wip_utility_block": "'WIP' Utility Block",
+  "block.westerosblocks.workshop_utility_block": "'Workshop' Utility Block",
+  "block.westerosblocks.yard_utility_block": "'Yard' Utility Block",
+  "block.westerosblocks.yellow_stained_clay": "Yellow Stained Clay"
 }
