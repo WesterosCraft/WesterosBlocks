@@ -9,7 +9,6 @@ import net.minecraft.data.client.TextureKey;
 import net.minecraft.util.Identifier;
 
 public class ModModels {
-
     // Custom model with cube_all parent and all six face texture keys
     public static final Model CUSTOM_CUBE_ALL = ModModels.block("cube_all",
             TextureKey.DOWN,
@@ -19,8 +18,11 @@ public class ModModels {
             TextureKey.EAST,
             TextureKey.WEST);
 
-    // Six-sided birch model using cube_all parent
-    public static final Model SOLID_CUBE_ALL = ModModels.block("cube_all", TextureKey.ALL);
+    // Custom slab models with all six face texture keys
+    public static final Model SLAB_BOTTOM = ModModels.block("untinted/slab",
+            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST);
+    public static final Model SLAB_TOP = ModModels.block("untinted/slab_top",
+            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST);
 
     // helper method for creating Models
     private static Model block(String parent, TextureKey... requiredTextureKeys) {

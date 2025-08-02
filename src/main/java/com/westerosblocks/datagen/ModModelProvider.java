@@ -70,6 +70,15 @@ public class ModModelProvider extends FabricModelProvider {
                                                 "bench_block/crafting_table_top",
                                                 "bench_block/bench_carpentry_hammer_saw")
                                 .build();
+                registerCustomLogBlock(bsmg, ModBlocks.ARCHERY_TARGET)
+                                .textures("archery_target/side", "archery_target/front")
+                                .build();
+                registerCustomSlabBlock(bsmg, ModBlocks.APPLE_BASKET_SLAB)
+                                .textures(
+                                                "crate_block/basket_bottom",
+                                                "crate_block/basket_apple",
+                                                "crate_block/basket_side_slab")
+                                .build();
         }
 
         @Override

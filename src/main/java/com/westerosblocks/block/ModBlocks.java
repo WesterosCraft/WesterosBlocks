@@ -2,6 +2,8 @@ package com.westerosblocks.block;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.custom.WCSolidBlock;
+import com.westerosblocks.block.custom.WCLogBlock;
+import com.westerosblocks.block.custom.WCSlabBlock;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
@@ -72,6 +74,17 @@ public class ModBlocks {
                         new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
+        // Log blocks
+        public static final Block ARCHERY_TARGET = registerBlock(
+                        "archery_target",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block APPLE_BASKET_SLAB = registerBlock(
+                        "apple_basket_slab",
+                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
         /**
          * Initialize all blocks
          */
@@ -90,6 +103,8 @@ public class ModBlocks {
                         entries.add(ModBlocks.ARBOR_BRICK_ORNATE);
                         entries.add(ModBlocks.BENCH_BUTCHER_KNIVES);
                         entries.add(ModBlocks.BENCH_CARPENTRY_HAMMER_SAW);
+                        entries.add(ModBlocks.ARCHERY_TARGET);
+                        entries.add(ModBlocks.APPLE_BASKET_SLAB);
                 });
         }
 

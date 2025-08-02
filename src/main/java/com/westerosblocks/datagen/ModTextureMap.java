@@ -43,4 +43,32 @@ public class ModTextureMap {
                                                                                                           // texture as
                                                                                                           // particle
     }
+
+    /**
+     * Creates a texture map specifically for slab models
+     * 
+     * @param textures Array of texture paths in order: bottom, top, side
+     * @return TextureMap with bottom, top, and side keys configured
+     */
+    public static TextureMap customSlab(String... textures) {
+        if (textures.length == 0) {
+            throw new IllegalArgumentException("At least one texture path is required");
+        }
+
+        // Fill remaining slots with the last texture if less than 3 provided
+        String[] filledTextures = new String[3];
+        for (int i = 0; i < 3; i++) {
+            if (i < textures.length) {
+                filledTextures[i] = textures[i];
+            } else {
+                filledTextures[i] = textures[textures.length - 1];
+            }
+        }
+
+        return new TextureMap()
+                .put(TextureKey.BOTTOM, Identifier.of("westerosblocks", "block/" + filledTextures[0]))
+                .put(TextureKey.TOP, Identifier.of("westerosblocks", "block/" + filledTextures[1]))
+                .put(TextureKey.SIDE, Identifier.of("westerosblocks", "block/" + filledTextures[2]))
+                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + filledTextures[0])); // particle
+    }
 }

@@ -27,6 +27,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("block.westerosblocks.arbor_brick_ornate", "Ashlar Engraved Arbor");
         translationBuilder.add("block.westerosblocks.bench_butcher_knives", "Bench Butcher Knives");
         translationBuilder.add("block.westerosblocks.bench_carpentry_hammer_saw", "Bench Carpentry Hammer Saw");
+        translationBuilder.add("block.westerosblocks.archery_target", "Archery Target");
+        translationBuilder.add("block.westerosblocks.apple_basket_slab", "Apple Basket Slab");
     }
 
 }
