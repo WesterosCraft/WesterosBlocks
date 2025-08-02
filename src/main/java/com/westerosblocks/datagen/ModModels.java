@@ -19,6 +19,9 @@ public class ModModels {
             TextureKey.EAST,
             TextureKey.WEST);
 
+    // Six-sided birch model using cube_all parent
+    public static final Model SOLID_CUBE_ALL = ModModels.block("cube_all", TextureKey.ALL);
+
     // helper method for creating Models
     private static Model block(String parent, TextureKey... requiredTextureKeys) {
         return new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parent)), Optional.empty(),
