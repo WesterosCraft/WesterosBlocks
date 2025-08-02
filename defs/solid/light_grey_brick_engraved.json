@@ -1,0 +1,13 @@
+{
+    "blockName": "light_grey_brick_engraved",
+    "blockType": "solid",
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ashlar Engraved Light Grey",
+    "textures": [
+        "ashlar_engraved/light_grey/all"
+    ]
+}

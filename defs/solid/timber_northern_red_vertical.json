@@ -1,0 +1,53 @@
+{
+    "blockName": "timber_northern_red_vertical",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Northern Red Vertical",
+    "type": "connectstate:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "plaster/smooth/red/all",
+                "wood/northern/all",
+                "plaster/smooth/red/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/light_red/all",
+                "wood/northern/all",
+                "plaster/smooth/light_red/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/casterly_crimson/all",
+                "wood/northern/all",
+                "plaster/smooth/casterly_crimson/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/rough/red/all1",
+                "wood/northern/all",
+                "plaster/rough/red/all1"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/wattle/red/all",
+                "wood/northern/all",
+                "plaster/wattle/red/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/northern/bottom",
+        "transparent",
+        "timber/northern/vertical"
+    ]
+}

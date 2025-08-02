@@ -18,7 +18,7 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 
-        // Block definitions
+        // Solid Blocks
         public static final Block SIX_SIDED_BIRCH = registerBlock(
                         "6sided_birch",
                         new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
@@ -74,12 +74,48 @@ public class ModBlocks {
                         new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
+        public static final Block BENCH_DRAWERS = registerBlock(
+                        "bench_drawers",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block BENCH_KITCHEN_KNIVES = registerBlock(
+                        "bench_kitchen_knives",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block BENCH_KITCHEN_PANS = registerBlock(
+                        "bench_kitchen_pans",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block BENCH_MASON_HAMMER_MALLET = registerBlock(
+                        "bench_mason_hammer_mallet",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block BERRY_BASKET = registerBlock(
+                        "berry_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block BERRY_CRATE = registerBlock(
+                        "berry_crate",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block APRICOT_BASKET = registerBlock(
+                        "apricot_basket",
+                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
         // Log blocks
         public static final Block ARCHERY_TARGET = registerBlock(
                         "archery_target",
                         new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
+        // Slab blocks
         public static final Block APPLE_BASKET_SLAB = registerBlock(
                         "apple_basket_slab",
                         new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
@@ -103,6 +139,13 @@ public class ModBlocks {
                         entries.add(ModBlocks.ARBOR_BRICK_ORNATE);
                         entries.add(ModBlocks.BENCH_BUTCHER_KNIVES);
                         entries.add(ModBlocks.BENCH_CARPENTRY_HAMMER_SAW);
+                        entries.add(ModBlocks.BENCH_DRAWERS);
+                        entries.add(ModBlocks.BENCH_KITCHEN_KNIVES);
+                        entries.add(ModBlocks.BENCH_KITCHEN_PANS);
+                        entries.add(ModBlocks.BENCH_MASON_HAMMER_MALLET);
+                        entries.add(ModBlocks.BERRY_BASKET);
+                        entries.add(ModBlocks.BERRY_CRATE);
+                        entries.add(ModBlocks.APRICOT_BASKET);
                         entries.add(ModBlocks.ARCHERY_TARGET);
                         entries.add(ModBlocks.APPLE_BASKET_SLAB);
                 });

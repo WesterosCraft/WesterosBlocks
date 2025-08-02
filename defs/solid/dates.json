@@ -1,0 +1,15 @@
+{
+    "blockName": "dates",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Dates",
+    "textures": [
+        "dates/bottom",
+        "dates/top",
+        "dates/side"
+    ]
+}

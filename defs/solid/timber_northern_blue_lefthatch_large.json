@@ -1,0 +1,57 @@
+{
+    "blockName": "timber_northern_blue_lefthatch_large",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Northern Blue Lefthatch Large",
+    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "plaster/smooth/gulltown_blue/all",
+                "wood/northern/all",
+                "plaster/smooth/gulltown_blue/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/light_blue/all",
+                "wood/northern/all",
+                "plaster/smooth/light_blue/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/blue/all",
+                "wood/northern/all",
+                "plaster/smooth/blue/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/rough/gulltown_blue/all1",
+                "wood/northern/all",
+                "plaster/rough/gulltown_blue/all1"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/wattle/gulltown_blue/all",
+                "wood/northern/all",
+                "plaster/wattle/gulltown_blue/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/northern/bottom",
+        "transparent",
+        "timber/northern/lefthatch_large",
+        "timber/northern/lefthatch_large",
+        "timber/northern/lefthatch_large",
+        "timber/northern/lefthatch_large",
+        "timber/northern/righthatch_large"
+    ]
+}

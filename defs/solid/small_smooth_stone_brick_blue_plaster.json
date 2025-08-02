@@ -1,0 +1,20 @@
+{
+    "blockName": "small_smooth_stone_brick_blue_plaster",
+    "blockType": "solid",
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 5,
+    "creativeTab": "westeros_marble_plaster_tab",
+    "label": "Small Smooth Stone Brick Keystone Blue Plaster",
+    "textures": [
+        "ashlar_quarter_rounded/grey/all",
+        "ashlar_quarter_rounded/grey/all",
+        "plaster/smooth/blue/all"
+    ],
+    "overlayTextures": [
+        "transparent",
+        "transparent",
+        "plaster_keystone/ashlar_quarter_rounded_grey/side"
+    ]
+}

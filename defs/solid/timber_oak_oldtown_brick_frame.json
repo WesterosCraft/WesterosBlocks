@@ -1,0 +1,46 @@
+{
+    "blockName": "timber_oak_oldtown_brick_frame",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Oak Fieldstone Oldtown Frame",
+    "type": "connectstate:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "fieldstone/oldtown/all",
+                "wood/oak/all",
+                "fieldstone/oldtown/all"
+            ]
+        },
+        {
+            "textures": [
+                "fieldstone/light_oldtown/all",
+                "wood/oak/all",
+                "fieldstone/light_oldtown/all"
+            ]
+        },
+        {
+            "textures": [
+                "ashlar_smooth/light_oldtown/all_cutout",
+                "wood/oak/all",
+                "ashlar_smooth/light_oldtown/all_cutout"
+            ]
+        },
+        {
+            "textures": [
+                "ashlar_quarter_rounded/light_oldtown/all",
+                "wood/oak/all",
+                "ashlar_quarter_rounded/light_oldtown/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/oak/bottom",
+        "transparent",
+        "timber/oak/frame"
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "blockName": "timber_oak_light_umber_crosshatch",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Oak Light Umber Crosshatch",
+    "type": "connectstate:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "plaster/smooth/light_umber/all",
+                "wood/oak/all",
+                "plaster/smooth/light_umber/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/dark_orange/all",
+                "wood/oak/all",
+                "plaster/smooth/dark_orange/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/umber/all",
+                "wood/oak/all",
+                "plaster/smooth/umber/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/rough/light_umber/all1",
+                "wood/oak/all",
+                "plaster/rough/light_umber/all1"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/wattle/light_umber/all",
+                "wood/oak/all",
+                "plaster/wattle/light_umber/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/oak/bottom",
+        "transparent",
+        "timber/oak/crosshatch"
+    ]
+}

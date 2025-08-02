@@ -1,0 +1,43 @@
+{
+    "blockName": "timber_oak_reach_brick_righthatch_studded",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Oak Fieldstone Reach Righthatch Studded",
+    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "fieldstone/reach/all",
+                "wood/oak/all",
+                "fieldstone/reach/all"
+            ]
+        },
+        {
+            "textures": [
+                "ashlar_smooth/reach/all_cutout",
+                "wood/oak/all",
+                "ashlar_smooth/reach/all_cutout"
+            ]
+        },
+        {
+            "textures": [
+                "ashlar_quarter_rounded/reach/all",
+                "wood/oak/all",
+                "ashlar_quarter_rounded/reach/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/oak/bottom",
+        "transparent",
+        "timber/oak/righthatch_studded",
+        "timber/oak/righthatch_studded",
+        "timber/oak/righthatch_studded",
+        "timber/oak/righthatch_studded",
+        "timber/oak/lefthatch_studded"
+    ]
+}

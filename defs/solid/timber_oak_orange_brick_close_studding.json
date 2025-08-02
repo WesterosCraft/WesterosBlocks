@@ -1,0 +1,39 @@
+{
+    "blockName": "timber_oak_orange_brick_close_studding",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Oak Orange Brick Close Studding",
+    "type": "connectstate:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "brick/orange/all1",
+                "wood/oak/all",
+                "brick/orange/all1"
+            ]
+        },
+        {
+            "textures": [
+                "brick/orange_rough/all1",
+                "wood/oak/all",
+                "brick/orange_rough/all1"
+            ]
+        },
+        {
+            "textures": [
+                "brick/orange_dark/all1",
+                "wood/oak/all",
+                "brick/orange_dark/all1"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/oak/bottom",
+        "transparent",
+        "timber/oak/close_studding"
+    ]
+}

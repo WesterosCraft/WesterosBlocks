@@ -8,8 +8,15 @@
   "block.westerosblocks.apple_basket_slab": "Apple Basket Slab",
   "block.westerosblocks.apple_crate": "Apple Crate",
   "block.westerosblocks.approval_utility_block": "'Approval' Utility Block",
+  "block.westerosblocks.apricot_basket": "Apricot Basket",
   "block.westerosblocks.arbor_brick_ornate": "Ashlar Engraved Arbor",
   "block.westerosblocks.archery_target": "Archery Target",
   "block.westerosblocks.bench_butcher_knives": "Bench Butcher Knives",
-  "block.westerosblocks.bench_carpentry_hammer_saw": "Bench Carpentry Hammer Saw"
+  "block.westerosblocks.bench_carpentry_hammer_saw": "Bench Carpentry Hammer Saw",
+  "block.westerosblocks.bench_drawers": "Bench Drawers",
+  "block.westerosblocks.bench_kitchen_knives": "Bench Kitchen Knives",
+  "block.westerosblocks.bench_kitchen_pans": "Bench Kitchen Pans",
+  "block.westerosblocks.bench_mason_hammer_mallet": "Bench Mason Hammer Mallet",
+  "block.westerosblocks.berry_basket": "Berry Basket",
+  "block.westerosblocks.berry_crate": "Berry Crate"
 }

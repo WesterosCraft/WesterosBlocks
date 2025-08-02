@@ -39,9 +39,7 @@ public class ModTextureMap {
                 .put(TextureKey.SOUTH, Identifier.of("westerosblocks", "block/" + filledTextures[3]))
                 .put(TextureKey.EAST, Identifier.of("westerosblocks", "block/" + filledTextures[4]))
                 .put(TextureKey.WEST, Identifier.of("westerosblocks", "block/" + filledTextures[5]))
-                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + filledTextures[0])); // Use down
-                                                                                                          // texture as
-                                                                                                          // particle
+                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + filledTextures[0]));
     }
 
     /**

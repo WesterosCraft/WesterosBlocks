@@ -1,0 +1,26 @@
+{
+    "blockName": "orange_brick_rowlock",
+    "blockType": "solid",
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_brick_tab",
+    "label": "Orange Brick Rowlock",
+    "randomTextures": [
+        {
+            "textures": [
+                "brick/orange/all1",
+                "brick/orange/all1",
+                "brick/orange/rowlock1"
+            ]
+        },
+        {
+            "textures": [
+                "brick/orange/all1",
+                "brick/orange/all1",
+                "brick/orange/rowlock2"
+            ]
+        }
+    ]
+}

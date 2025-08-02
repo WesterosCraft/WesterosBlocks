@@ -1,0 +1,13 @@
+{
+    "blockName": "6sided_spruce",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_logs_tab",
+    "label": "6-Sided Spruce",
+    "textures": [
+        "bark/spruce/side"
+    ]
+}

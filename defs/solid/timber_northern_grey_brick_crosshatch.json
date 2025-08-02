@@ -1,0 +1,39 @@
+{
+    "blockName": "timber_northern_grey_brick_crosshatch",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Northern Fieldstone Normal Grey Crosshatch",
+    "type": "connectstate:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "fieldstone/grey/all",
+                "wood/northern/all",
+                "fieldstone/grey/all"
+            ]
+        },
+        {
+            "textures": [
+                "ashlar_smooth/grey/all_cutout",
+                "wood/northern/all",
+                "ashlar_smooth/grey/all_cutout"
+            ]
+        },
+        {
+            "textures": [
+                "ashlar_quarter_rounded/grey/all",
+                "wood/northern/all",
+                "ashlar_quarter_rounded/grey/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/northern/bottom",
+        "transparent",
+        "timber/northern/crosshatch"
+    ]
+}

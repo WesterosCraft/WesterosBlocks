@@ -1,0 +1,57 @@
+{
+    "blockName": "timber_oak_orange_lefthatch_large",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Oak Orange Lefthatch Large",
+    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "plaster/smooth/lannisport_orange/all",
+                "wood/oak/all",
+                "plaster/smooth/lannisport_orange/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/orange/all",
+                "wood/oak/all",
+                "plaster/smooth/orange/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/dark_orange/all",
+                "wood/oak/all",
+                "plaster/smooth/dark_orange/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/rough/lannisport_orange/all1",
+                "wood/oak/all",
+                "plaster/rough/lannisport_orange/all1"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/wattle/lannisport_orange/all",
+                "wood/oak/all",
+                "plaster/wattle/lannisport_orange/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/oak/bottom",
+        "transparent",
+        "timber/oak/lefthatch_large",
+        "timber/oak/lefthatch_large",
+        "timber/oak/lefthatch_large",
+        "timber/oak/lefthatch_large",
+        "timber/oak/righthatch_large"
+    ]
+}

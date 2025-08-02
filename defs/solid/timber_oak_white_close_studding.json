@@ -1,0 +1,53 @@
+{
+    "blockName": "timber_oak_white_close_studding",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Oak White Close Studding",
+    "type": "connectstate:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "plaster/smooth/white_daub/all",
+                "wood/oak/all",
+                "plaster/smooth/white_daub/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/brown_white/all",
+                "wood/oak/all",
+                "plaster/smooth/brown_white/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/pale_white/all",
+                "wood/oak/all",
+                "plaster/smooth/pale_white/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/rough/white_daub/all1",
+                "wood/oak/all",
+                "plaster/rough/white_daub/all1"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/wattle/white_daub/all",
+                "wood/oak/all",
+                "plaster/wattle/white_daub/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/oak/bottom",
+        "transparent",
+        "timber/oak/close_studding"
+    ]
+}

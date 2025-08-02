@@ -1,0 +1,13 @@
+{
+    "blockName": "monochrome_dark_sandstone_engraved",
+    "blockType": "solid",
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ashlar Engraved Light Brown",
+    "textures": [
+        "ashlar_engraved/light_brown/all"
+    ]
+}

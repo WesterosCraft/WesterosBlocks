@@ -1,0 +1,42 @@
+{
+    "blockName": "sandy_stone_slabs",
+    "blockType": "solid",
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_cobblestone_tab",
+    "label": "Sandy Stone Slabs",
+    "randomTextures": [
+        {
+            "textures": [
+                "sandy_stone/sandy_stone_0"
+            ]
+        },
+        {
+            "textures": [
+                "sandy_stone/sandy_stone_1"
+            ]
+        },
+        {
+            "textures": [
+                "sandy_stone/sandy_stone_2"
+            ]
+        },
+        {
+            "textures": [
+                "sandy_stone/sandy_stone_3"
+            ]
+        },
+        {
+            "textures": [
+                "sandy_stone/sandy_stone_4"
+            ]
+        },
+        {
+            "textures": [
+                "sandy_stone/sandy_stone_5"
+            ]
+        }
+    ]
+}

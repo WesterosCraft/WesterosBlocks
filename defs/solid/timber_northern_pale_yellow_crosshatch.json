@@ -1,0 +1,53 @@
+{
+    "blockName": "timber_northern_pale_yellow_crosshatch",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Northern Pale Yellow Crosshatch",
+    "type": "connectstate:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "plaster/smooth/pale_yellow/all",
+                "wood/northern/all",
+                "plaster/smooth/pale_yellow/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/mud/all",
+                "wood/northern/all",
+                "plaster/smooth/mud/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/dark_mud/all",
+                "wood/northern/all",
+                "plaster/smooth/dark_mud/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/rough/pale_yellow/all1",
+                "wood/northern/all",
+                "plaster/rough/pale_yellow/all1"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/wattle/pale_yellow/all",
+                "wood/northern/all",
+                "plaster/wattle/pale_yellow/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/northern/bottom",
+        "transparent",
+        "timber/northern/crosshatch"
+    ]
+}

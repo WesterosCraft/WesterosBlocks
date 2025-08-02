@@ -1,0 +1,54 @@
+{
+    "blockName": "bookshelf_maester",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Bookshelf Maester",
+    "randomTextures": [
+        {
+            "textures": [
+                "bench_block/spruce_top",
+                "bench_block/spruce_top",
+                "bookshelf_maester/side1"
+            ]
+        },
+        {
+            "textures": [
+                "bench_block/spruce_top",
+                "bench_block/spruce_top",
+                "bookshelf_maester/side2"
+            ]
+        },
+        {
+            "textures": [
+                "bench_block/spruce_top",
+                "bench_block/spruce_top",
+                "bookshelf_maester/side3"
+            ]
+        },
+        {
+            "textures": [
+                "bench_block/spruce_top",
+                "bench_block/spruce_top",
+                "bookshelf_maester/side4"
+            ]
+        },
+        {
+            "textures": [
+                "bench_block/spruce_top",
+                "bench_block/spruce_top",
+                "bookshelf_maester/side5"
+            ]
+        },
+        {
+            "textures": [
+                "bench_block/spruce_top",
+                "bench_block/spruce_top",
+                "bookshelf_maester/side6"
+            ]
+        }
+    ]
+}

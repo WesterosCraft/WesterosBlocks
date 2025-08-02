@@ -1,0 +1,43 @@
+{
+    "blockName": "timber_northern_orange_brick_righthatch_studded",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Northern Orange Brick Righthatch Studded",
+    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "brick/orange/all1",
+                "wood/northern/all",
+                "brick/orange/all1"
+            ]
+        },
+        {
+            "textures": [
+                "brick/orange_rough/all1",
+                "wood/northern/all",
+                "brick/orange_rough/all1"
+            ]
+        },
+        {
+            "textures": [
+                "brick/orange_dark/all1",
+                "wood/northern/all",
+                "brick/orange_dark/all1"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/northern/bottom",
+        "transparent",
+        "timber/northern/righthatch_studded",
+        "timber/northern/righthatch_studded",
+        "timber/northern/righthatch_studded",
+        "timber/northern/righthatch_studded",
+        "timber/northern/lefthatch_studded"
+    ]
+}

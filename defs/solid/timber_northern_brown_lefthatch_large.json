@@ -1,0 +1,57 @@
+{
+    "blockName": "timber_northern_brown_lefthatch_large",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Northern Brown Lefthatch Large",
+    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "plaster/smooth/brown_daub/all",
+                "wood/northern/all",
+                "plaster/smooth/brown_daub/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/arbor_brown/all",
+                "wood/northern/all",
+                "plaster/smooth/arbor_brown/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/dark_mud/all",
+                "wood/northern/all",
+                "plaster/smooth/dark_mud/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/rough/brown_daub/all1",
+                "wood/northern/all",
+                "plaster/rough/brown_daub/all1"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/wattle/brown_daub_dark/all",
+                "wood/northern/all",
+                "plaster/wattle/brown_daub_dark/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/northern/bottom",
+        "transparent",
+        "timber/northern/lefthatch_large",
+        "timber/northern/lefthatch_large",
+        "timber/northern/lefthatch_large",
+        "timber/northern/lefthatch_large",
+        "timber/northern/righthatch_large"
+    ]
+}

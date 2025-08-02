@@ -1,0 +1,15 @@
+{
+    "blockName": "open_basket",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "cloth",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_decor_tab",
+    "label": "Open Basket",
+    "textures": [
+        "crate_block/basket_bottom",
+        "crate_block/basket_top",
+        "crate_block/basket_side"
+    ]
+}

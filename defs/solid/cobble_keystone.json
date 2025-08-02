@@ -1,0 +1,16 @@
+{
+    "blockName": "cobble_keystone",
+    "blockType": "solid",
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Cobblestone Keystone Grey",
+    "type": "connectstate:true",
+    "textures": [
+        "cobblestone/grey/keystone/top_bottom",
+        "cobblestone/grey/keystone/top_bottom",
+        "cobblestone/grey/keystone/side"
+    ]
+}

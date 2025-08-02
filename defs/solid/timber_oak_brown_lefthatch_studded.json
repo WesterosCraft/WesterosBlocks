@@ -1,0 +1,57 @@
+{
+    "blockName": "timber_oak_brown_lefthatch_studded",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Oak Brown Lefthatch Studded",
+    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "plaster/smooth/brown_daub/all",
+                "wood/oak/all",
+                "plaster/smooth/brown_daub/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/arbor_brown/all",
+                "wood/oak/all",
+                "plaster/smooth/arbor_brown/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/dark_mud/all",
+                "wood/oak/all",
+                "plaster/smooth/dark_mud/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/rough/brown_daub/all1",
+                "wood/oak/all",
+                "plaster/rough/brown_daub/all1"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/wattle/brown_daub/all",
+                "wood/oak/all",
+                "plaster/wattle/brown_daub/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/oak/bottom",
+        "transparent",
+        "timber/oak/lefthatch_studded",
+        "timber/oak/lefthatch_studded",
+        "timber/oak/lefthatch_studded",
+        "timber/oak/lefthatch_studded",
+        "timber/oak/righthatch_studded"
+    ]
+}

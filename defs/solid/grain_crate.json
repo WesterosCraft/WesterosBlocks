@@ -1,0 +1,33 @@
+{
+    "blockName": "grain_crate",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Grain Crate",
+    "randomTextures": [
+        {
+            "textures": [
+                "crate_block/side_bot1",
+                "crate_block/crate_top_grain",
+                "crate_block/side_bot1"
+            ]
+        },
+        {
+            "textures": [
+                "crate_block/side_bot2",
+                "crate_block/crate_top_grain",
+                "crate_block/side_bot2"
+            ]
+        },
+        {
+            "textures": [
+                "crate_block/side_bot3",
+                "crate_block/crate_top_grain",
+                "crate_block/side_bot3"
+            ]
+        }
+    ]
+}

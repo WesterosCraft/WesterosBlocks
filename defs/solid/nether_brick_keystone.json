@@ -1,0 +1,13 @@
+{
+    "blockName": "nether_brick_keystone",
+    "blockType": "solid",
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ashlar Embellished Black",
+    "textures": [
+        "ashlar_half/black/embellished"
+    ]
+}

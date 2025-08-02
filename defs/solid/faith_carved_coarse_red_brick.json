@@ -1,0 +1,13 @@
+{
+    "blockName": "faith_carved_coarse_red_brick",
+    "blockType": "solid",
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 5,
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ashlar Faith Carved Pale Red",
+    "textures": [
+        "ashlar_third/pale_red/faith_carved"
+    ]
+}

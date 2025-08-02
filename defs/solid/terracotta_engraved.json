@@ -1,0 +1,13 @@
+{
+    "blockName": "terracotta_engraved",
+    "blockType": "solid",
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ashlar Engraved Terracotta",
+    "textures": [
+        "ashlar_engraved/terracotta/all"
+    ]
+}

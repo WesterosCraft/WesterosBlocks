@@ -1,0 +1,34 @@
+{
+    "blockName": "thick_grass_block",
+    "blockType": "solid",
+    "hardness": 5,
+    "stepSound": "grass",
+    "material": "plants",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 3
+        }
+    ],
+    "colorMult": "textures/colormap/grass",
+    "creativeTab": "westeros_grass_dirt_tab",
+    "label": "Thick Grass Block",
+    "randomTextures": [
+        {
+            "textures": [
+                "grass_block/forest_top1"
+            ]
+        },
+        {
+            "textures": [
+                "grass_block/forest_top2"
+            ]
+        },
+        {
+            "textures": [
+                "grass_block/forest_top3"
+            ]
+        }
+    ]
+}

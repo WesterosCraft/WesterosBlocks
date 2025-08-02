@@ -1,0 +1,13 @@
+{
+    "blockName": "6sided_stone_slab",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 5,
+    "creativeTab": "westeros_half_ashlar_tab",
+    "label": "6-Sided Stone Slab",
+    "textures": [
+        "ashlar_half/white/tile"
+    ]
+}

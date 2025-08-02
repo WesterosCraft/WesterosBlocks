@@ -1,0 +1,15 @@
+{
+    "blockName": "table_widgets",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Table Widgets",
+    "textures": [
+        "bench_block/spruce_top",
+        "bench_block/table_top",
+        "bench_block/table_drawer_widgets_side"
+    ]
+}

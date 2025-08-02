@@ -1,0 +1,27 @@
+{
+    "blockName": "cage",
+    "blockType": "solid",
+    "creativeTab": "westeros_decor_tab",
+    "nonOpaque": true,
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "lightOpacity": 0,
+    "label": "Cage",
+    "textures": [
+        "cage/bottom",
+        "cage/top",
+        "cage/side"
+    ],
+    "collisionBoxes": [
+        {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0,
+            "zMax": 1
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "blockName": "timber_whitewashed_frame",
+    "blockType": "solid",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_timber_frame_tab",
+    "label": "Timber Whitewashed Frame",
+    "type": "connectstate:true,toggleOnUse",
+    "states": [
+        {
+            "textures": [
+                "plaster/smooth/grey_white/all",
+                "wood/white/all",
+                "plaster/smooth/grey_white/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/white/all",
+                "wood/white/all",
+                "plaster/smooth/white/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/smooth/light_grey/all",
+                "wood/white/all",
+                "plaster/smooth/light_grey/all"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/rough/grey_white/all1",
+                "wood/white/all",
+                "plaster/rough/grey_white/all1"
+            ]
+        },
+        {
+            "textures": [
+                "plaster/wattle/grey_white/all",
+                "wood/white/all",
+                "plaster/wattle/grey_white/all"
+            ]
+        }
+    ],
+    "overlayTextures": [
+        "timber/white/bottom",
+        "transparent",
+        "timber/white/frame"
+    ]
+}
