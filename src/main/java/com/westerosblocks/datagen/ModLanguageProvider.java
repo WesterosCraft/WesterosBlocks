@@ -4,16 +4,23 @@ import java.util.concurrent.CompletableFuture;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.RegistryWrapper.WrapperLookup;
 
 public class ModLanguageProvider extends FabricLanguageProvider {
 
-    protected ModLanguageProvider(FabricDataOutput dataOutput, CompletableFuture<WrapperLookup> registryLookup) {
-        super(dataOutput, registryLookup);
+    public ModLanguageProvider(FabricDataOutput dataOutput,
+            CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+        super(dataOutput, "en_us", registryLookup);
     }
 
     @Override
     public void generateTranslations(WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
+        translationBuilder.add("block.westerosblocks.6sided_birch", "Six-Sided Birch");
+        translationBuilder.add("block.westerosblocks.6sided_jungle", "Six-Sided Jungle");
+        translationBuilder.add("block.westerosblocks.6sided_oak", "Six-Sided Oak");
+        translationBuilder.add("block.westerosblocks.6sided_spruce", "Six-Sided Spruce");
+        translationBuilder.add("block.westerosblocks.6sided_stone_slab", "Six-Sided Stone Slab");
     }
 
 }

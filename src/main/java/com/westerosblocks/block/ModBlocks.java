@@ -17,13 +17,34 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
 
     // Block definitions
-    public static final Block STONE_BRICK = registerBlock(
-            "stone_brick",
-            new Block(AbstractBlock.Settings.create().strength(4f)
+    public static final Block SIX_SIDED_BIRCH = registerBlock(
+            "6sided_birch",
+            new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                    .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block SIX_SIDED_JUNGLE = registerBlock(
+            "6sided_jungle",
+            new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                    .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block SIX_SIDED_OAK = registerBlock(
+            "6sided_oak",
+            new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                    .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block SIX_SIDED_SPRUCE = registerBlock(
+            "6sided_spruce",
+            new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
+                    .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block SIX_SIDED_STONE_SLAB = registerBlock(
+            "6sided_stone_slab",
+            new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
                     .requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block WOODEN_PLANK = registerBlock(
-            "wooden_plank",
-            new Block(AbstractBlock.Settings.create().strength(2.0f)
+
+    public static final Block APPLE_BASKET = registerBlock(
+            "apple_basket",
+            new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
                     .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
     /**
@@ -33,8 +54,7 @@ public class ModBlocks {
         WesterosBlocks.LOGGER.info("Registering Mod Blocks for " + WesterosBlocks.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.STONE_BRICK);
-            entries.add(ModBlocks.WOODEN_PLANK);
+            entries.add(ModBlocks.SIX_SIDED_BIRCH);
         });
     }
 
