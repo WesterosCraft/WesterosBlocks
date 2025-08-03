@@ -183,6 +183,7 @@ public class ModModelProvider extends FabricModelProvider {
         registerCustomSolidBlock(bsmg, ModBlocks.WORKSHOP_UTILITY_BLOCK).texture("utility_block/workshop").build();
         registerCustomSolidBlock(bsmg, ModBlocks.YARD_UTILITY_BLOCK).texture("utility_block/yard").build();
         registerCustomSolidBlock(bsmg, ModBlocks.YELLOW_STAINED_CLAY).texture("clay/yellow_stained_clay").build();
+        registerCustomSolidBlock(bsmg, ModBlocks.TIMBER_NORTH_BLUE_BRESSUMMER).state("plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all").state("plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all").state("plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all").state("plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1").state("plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all").build();
 
         // Log Blocks
         registerCustomLogBlock(bsmg, ModBlocks.ARCHERY_TARGET).textures("archery_target/side", "archery_target/front").build();

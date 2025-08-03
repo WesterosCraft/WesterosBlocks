@@ -209,6 +209,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.yellow_stained_clay", "Yellow Stained Clay");
                 translationBuilder.add("block.westerosblocks.archery_target", "Archery Target");
                 translationBuilder.add("block.westerosblocks.apple_basket_slab", "Apple Basket Slab");
+                translationBuilder.add("block.westerosblocks.timber_northern_blue_bressummer",
+                                "Timber Northern Blue Bressummer");
         }
 
 }

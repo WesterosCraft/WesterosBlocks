@@ -23,6 +23,7 @@ public class ModBlockStateModelGenerator {
                 private final Block block;
                 private String[] textures = new String[0];
                 private List<String[]> randomTextures = new ArrayList<>();
+                private List<String[]> states = new ArrayList<>();
                 private boolean isSimple = false;
 
                 public CustomBlockBuilder(BlockStateModelGenerator generator, Block block) {
@@ -60,10 +61,23 @@ public class ModBlockStateModelGenerator {
                 }
 
                 /**
+                 * Add a random texture variant
+                 * Texture order: down, up, north, south, east, west
+                 */
+                public CustomBlockBuilder state(String... texturePaths) {
+                        this.states.add(texturePaths);
+                        return this;
+                }
+
+                /**
                  * Build and register the block
                  */
                 public void build() {
-                        if (!randomTextures.isEmpty()) {
+                        if (!states.isEmpty()) {
+                                String[][] textureArrays = states.toArray(new String[0][0]);
+                                SolidBlockExporter.registerCustomSolidBlockWithStates(generator, block,
+                                                textureArrays);
+                        } else if (!randomTextures.isEmpty()) {
                                 String[][] textureArrays = randomTextures.toArray(new String[0][0]);
                                 SolidBlockExporter.registerCustomSolidBlockWithRandomTextures(generator, block,
                                                 textureArrays);

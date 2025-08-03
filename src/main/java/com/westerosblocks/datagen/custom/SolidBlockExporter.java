@@ -128,6 +128,63 @@ public class SolidBlockExporter {
     }
 
     /**
+     * Registers a custom solid block with multiple states
+     * Each inner array should contain texture paths in order: down, up, north,
+     * south, east, west
+     * Generates multiple model variants for different states
+     */
+    public static void registerCustomSolidBlockWithStates(BlockStateModelGenerator generator, Block block,
+            String[][] textureArrays) {
+        if (textureArrays.length == 0) {
+            throw new IllegalArgumentException("At least one texture array is required");
+        }
+
+        String blockName = getBlockName(block);
+        List<Identifier> modelIds = new ArrayList<>();
+
+        // Generate a model for each texture array
+        for (int i = 0; i < textureArrays.length; i++) {
+            String[] texturePaths = textureArrays[i];
+            if (texturePaths.length == 0) {
+                throw new IllegalArgumentException(
+                        "At least one texture path is required in array " + i);
+            }
+
+            // Fill remaining slots with the last texture if less than 6 provided
+            String[] filledTextures = new String[6];
+            for (int j = 0; j < 6; j++) {
+                if (j < texturePaths.length) {
+                    filledTextures[j] = texturePaths[j];
+                } else {
+                    filledTextures[j] = texturePaths[texturePaths.length - 1];
+                }
+            }
+
+            TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
+
+            // Create model with state suffix
+            Identifier nestedModelId = Identifier.of(WesterosBlocks.MOD_ID,
+                    "block/" + blockName + "/state_" + (i + 1));
+            Identifier modelId = Models.CUBE.upload(nestedModelId, textureMap, generator.modelCollector);
+            modelIds.add(modelId);
+        }
+
+        // Create blockstate with multiple variants (similar to random textures but for
+        // states)
+        List<BlockStateVariant> variants = modelIds.stream()
+                .map(modelId -> BlockStateVariant.create().put(VariantSettings.MODEL, modelId))
+                .collect(Collectors.toList());
+
+        generator.blockStateCollector.accept(
+                VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0])));
+
+        // Register item model using the first variant
+        if (!modelIds.isEmpty()) {
+            generator.registerParentedItemModel(block, modelIds.get(0));
+        }
+    }
+
+    /**
      * Extracts the block name from the block's registry key
      */
     public static String getBlockName(Block block) {
