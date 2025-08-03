@@ -29,11 +29,9 @@ public class WCSolidBlock extends Block {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            // Extract parameters
             boolean doConnectstate = params.length > 0 && params[0] instanceof Boolean ? (Boolean) params[0] : false;
             boolean doToggleOnUse = params.length > 1 && params[1] instanceof Boolean ? (Boolean) params[1] : false;
 
-            // Process types
             if (doConnectstate) {
                 tempCONNECTSTATE = CONNECTSTATE;
             }
