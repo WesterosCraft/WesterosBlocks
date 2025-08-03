@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/timber_northern_blue_bressummer/state_1"
+      },
+      {
+        "model": "westerosblocks:block/timber_northern_blue_bressummer/state_2"
+      },
+      {
+        "model": "westerosblocks:block/timber_northern_blue_bressummer/state_3"
+      },
+      {
+        "model": "westerosblocks:block/timber_northern_blue_bressummer/state_4"
+      },
+      {
+        "model": "westerosblocks:block/timber_northern_blue_bressummer/state_5"
+      }
+    ]
+  }
+}

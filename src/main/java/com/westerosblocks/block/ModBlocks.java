@@ -832,10 +832,10 @@ public class ModBlocks {
                         new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.STONE)));
 
-        public static final Block TIMBER_NORTH_BLUE_BRESSUMMER = registerBlock(
+        public static final Block TIMBER_NORTHERN_BLUE_BRESSUMMER = registerBlock(
                         "timber_northern_blue_bressummer",
-                        new WCSolidBlock(AbstractBlock.Settings.create().strength(2.0f)
-                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+                        WCSolidBlock.Factory.buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), true, true));
 
         // Log blocks
         public static final Block ARCHERY_TARGET = registerBlock(
@@ -1005,7 +1005,7 @@ public class ModBlocks {
                         entries.add(ModBlocks.THICK_GRASS_BLOCK);
                         entries.add(ModBlocks.TABLE_WIDGETS);
                         entries.add(ModBlocks.TERRACOTTA_ENGRAVED);
-                        entries.add(ModBlocks.TIMBER_NORTH_BLUE_BRESSUMMER);
+                        entries.add(ModBlocks.TIMBER_NORTHERN_BLUE_BRESSUMMER);
                         entries.add(ModBlocks.TURNIP_BASKET);
                         entries.add(ModBlocks.TURNIP_CRATE);
                         entries.add(ModBlocks.UNUSED_BROWN_PLASTER);
