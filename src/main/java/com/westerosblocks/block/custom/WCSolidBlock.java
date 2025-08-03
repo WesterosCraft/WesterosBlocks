@@ -1,5 +1,7 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.utils.ModProperties;
+
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -19,14 +21,18 @@ import net.minecraft.world.World;
 
 public class WCSolidBlock extends Block {
 
-    public static final IntProperty CONNECTSTATE = IntProperty.of("connectstate", 0, 3);
+    public static final IntProperty CONNECTSTATE = ModProperties.CONNECTSTATE;
     protected static IntProperty tempCONNECTSTATE;
     protected boolean connectstate;
     protected boolean toggleOnUse = false;
 
-    public static class Factory {
-        public static Block buildBlockClass(AbstractBlock.Settings settings, boolean doConnectstate,
-                boolean doToggleOnUse) {
+    public static class Factory extends BlockFactory {
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
+            // Extract parameters
+            boolean doConnectstate = params.length > 0 && params[0] instanceof Boolean ? (Boolean) params[0] : false;
+            boolean doToggleOnUse = params.length > 1 && params[1] instanceof Boolean ? (Boolean) params[1] : false;
+
             // Process types
             if (doConnectstate) {
                 tempCONNECTSTATE = CONNECTSTATE;

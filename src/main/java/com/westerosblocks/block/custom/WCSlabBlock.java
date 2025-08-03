@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SlabBlock;
@@ -23,5 +24,11 @@ public class WCSlabBlock extends SlabBlock {
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         super.appendProperties(builder);
+    }
+
+    public static class Factory extends BlockFactory {
+        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
+            return new WCSlabBlock(settings);
+        }
     }
 }
