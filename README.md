@@ -1,0 +1,12 @@
+TODO
+- Solid Block
+  - dynamic 'state' property assignment
+  - isSymmetrical
+- Branch Block
+- Door Block
+- Log Block
+- Pane Block
+- Slab Block
+- Table Block
+- Torch Block
+- Wall Torch Block

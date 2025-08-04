@@ -9,6 +9,7 @@ import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -19,42 +20,76 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-public class WCSolidBlock extends Block {
+import java.util.ArrayList;
 
-    public static final IntProperty CONNECTSTATE = ModProperties.CONNECTSTATE;
-    protected static IntProperty tempCONNECTSTATE;
-    protected boolean connectstate;
+public class WCSolidBlock extends Block {
     protected boolean toggleOnUse = false;
+
+    protected boolean connectState;
+    protected static IntProperty tempCONNECTSTATE;
+    public static final IntProperty CONNECTSTATE = ModProperties.CONNECTSTATE;
+
+    protected static ModProperties.StateProperty tempSTATE;
+    public static ModProperties.StateProperty STATE;
+
+    public boolean symmetrical;
+    protected static BooleanProperty tempSYMMETRICAL;
+    public static BooleanProperty SYMMETRICAL = ModProperties.SYMMETRICAL;
 
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            boolean doConnectstate = params.length > 0 && params[0] instanceof Boolean ? (Boolean) params[0] : false;
+            boolean doConnectState = params.length > 0 && params[0] instanceof Boolean ? (Boolean) params[0] : false;
             boolean doToggleOnUse = params.length > 1 && params[1] instanceof Boolean ? (Boolean) params[1] : false;
+            boolean doAddStates = params.length > 2 && params[2] instanceof Integer && (Integer) params[2] > 0;
+            boolean doSymmetrical = params.length > 3 && params[3] instanceof Boolean ? (Boolean) params[3] : false;
 
-            if (doConnectstate) {
+            if (doConnectState) {
                 tempCONNECTSTATE = CONNECTSTATE;
             }
 
-            Block blk = new WCSolidBlock(settings, doConnectstate, doToggleOnUse);
-            return blk;
+            if (doSymmetrical) {
+                tempSYMMETRICAL = SYMMETRICAL;
+            }
+
+            if (doAddStates) {
+                int numStates = (Integer) params[2];
+                ArrayList<String> stateIds = new ArrayList<>();
+                for (int i = 0; i < numStates; i++) {
+                    stateIds.add("state" + i);
+                }
+                STATE = new ModProperties.StateProperty(stateIds);
+                tempSTATE = STATE;
+            }
+
+            return new WCSolidBlock(settings, doConnectState, doToggleOnUse, doAddStates, doSymmetrical);
         }
     }
 
     public WCSolidBlock(AbstractBlock.Settings settings) {
         super(settings);
-        this.connectstate = false;
-        this.toggleOnUse = false;
         this.setDefaultState(this.getDefaultState());
     }
 
-    public WCSolidBlock(AbstractBlock.Settings settings, boolean connectstate, boolean toggleOnUse) {
+    public WCSolidBlock(AbstractBlock.Settings settings, boolean connectedState, boolean doToggleOnUse,
+            boolean addStates, boolean doSymmetrical) {
         super(settings);
-        this.connectstate = connectstate;
-        this.toggleOnUse = toggleOnUse;
+
+        if (doToggleOnUse) {
+            toggleOnUse = true;
+        }
+
         BlockState defbs = this.getDefaultState();
-        if (connectstate) {
+        this.connectState = connectedState;
+        this.symmetrical = doSymmetrical;
+        if (this.connectState) {
             defbs = defbs.with(CONNECTSTATE, 0);
+        }
+        if (this.symmetrical) {
+            defbs = defbs.with(SYMMETRICAL, symmetrical);
+        }
+        if (addStates && STATE != null) {
+            defbs = defbs.with(STATE, STATE.defValue);
         }
         this.setDefaultState(defbs);
     }
@@ -65,13 +100,21 @@ public class WCSolidBlock extends Block {
             builder.add(tempCONNECTSTATE);
             tempCONNECTSTATE = null;
         }
+        if (tempSYMMETRICAL != null) {
+            builder.add(tempSYMMETRICAL);
+            tempSYMMETRICAL = null;
+        }
+        if (tempSTATE != null) {
+            builder.add(tempSTATE);
+            tempSTATE = null;
+        }
         super.appendProperties(builder);
     }
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         BlockState bs = super.getPlacementState(ctx);
-        if (connectstate && bs != null && bs.contains(CONNECTSTATE)) {
+        if (connectState && bs != null && bs.contains(CONNECTSTATE)) {
             bs = bs.with(CONNECTSTATE, 0);
         }
         return bs;
@@ -80,9 +123,9 @@ public class WCSolidBlock extends Block {
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         Hand hand = player.getActiveHand();
-        if (this.toggleOnUse && connectstate && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
-            if (state.contains(CONNECTSTATE)) {
-                state = state.cycle(CONNECTSTATE);
+        if (this.toggleOnUse && (STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
+            if (state.contains(STATE)) {
+                state = state.cycle(STATE);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);
                 world.syncWorldEvent(player, 1006, pos, 0);
                 return ActionResult.success(world.isClient);

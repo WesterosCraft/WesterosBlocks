@@ -835,7 +835,7 @@ public class ModBlocks {
         public static final Block TIMBER_NORTHERN_BLUE_BRESSUMMER = registerBlock(
                         "timber_northern_blue_bressummer",
                         new WCSolidBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
-                                        .requiresTool().sounds(BlockSoundGroup.WOOD), true, true));
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), false, true, 5, false));
 
         // Log blocks
         public static final Block ARCHERY_TARGET = registerBlock(

@@ -3,6 +3,7 @@ package com.westerosblocks.datagen.custom;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.BlockStateVariant;
+import net.minecraft.data.client.BlockStateVariantMap;
 import net.minecraft.data.client.Models;
 import net.minecraft.data.client.TextureKey;
 import net.minecraft.data.client.TextureMap;
@@ -16,6 +17,14 @@ import java.util.stream.Collectors;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModTextureMap;
+import com.westerosblocks.utils.ModProperties;
+
+import java.io.IOException;
+import com.google.gson.stream.JsonWriter;
+import net.minecraft.data.client.BlockStateSupplier;
+import net.minecraft.block.BlockState;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 
 public class SolidBlockExporter {
 
@@ -116,7 +125,7 @@ public class SolidBlockExporter {
         // Create blockstate with multiple variants
         List<BlockStateVariant> variants = modelIds.stream()
                 .map(modelId -> BlockStateVariant.create().put(VariantSettings.MODEL, modelId))
-                .collect(Collectors.toList());
+                .toList();
 
         generator.blockStateCollector.accept(
                 VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0])));
@@ -162,21 +171,36 @@ public class SolidBlockExporter {
 
             TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
 
-            // Create model with state suffix
+            // Create model with state suffix and proper path structure
             Identifier nestedModelId = Identifier.of(WesterosBlocks.MOD_ID,
-                    "block/" + blockName + "/state_" + (i + 1));
+                    "block/" + blockName + "/state" + i + "_v" + (i + 1));
+
             Identifier modelId = Models.CUBE.upload(nestedModelId, textureMap, generator.modelCollector);
             modelIds.add(modelId);
         }
 
-        // Create blockstate with multiple variants (similar to random textures but for
-        // states)
-        List<BlockStateVariant> variants = modelIds.stream()
-                .map(modelId -> BlockStateVariant.create().put(VariantSettings.MODEL, modelId))
-                .collect(Collectors.toList());
+        // Create a custom blockstate supplier that generates the proper JSON structure
+        generator.blockStateCollector.accept(new BlockStateSupplier() {
+            @Override
+            public Block getBlock() {
+                return block;
+            }
 
-        generator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0])));
+            @Override
+            public JsonElement get() {
+                JsonObject json = new JsonObject();
+                JsonObject variants = new JsonObject();
+
+                for (int i = 0; i < modelIds.size(); i++) {
+                    JsonObject variant = new JsonObject();
+                    variant.addProperty("model", modelIds.get(i).toString());
+                    variants.add("state=state" + i, variant);
+                }
+
+                json.add("variants", variants);
+                return json;
+            }
+        });
 
         // Register item model using the first variant
         if (!modelIds.isEmpty()) {
