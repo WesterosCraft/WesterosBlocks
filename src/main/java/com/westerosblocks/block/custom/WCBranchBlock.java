@@ -97,6 +97,11 @@ public class WCBranchBlock extends Block implements Waterloggable {
     }
 
     private VoxelShape getShapeForConnections(boolean north, boolean east, boolean south, boolean west, boolean up) {
+        // If all neighbors are false, use the large_branch model (just the center)
+        if (!north && !east && !south && !west && !up) {
+            return BRANCH_CENTER;
+        }
+
         // If UP is false (no branch below), use horizontal shape
         if (!up) {
             // Horizontal model extends from z=0 to z=16 at y=8-16

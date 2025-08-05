@@ -68,7 +68,7 @@ public class WCSolidBlock extends Block {
 
     public WCSolidBlock(AbstractBlock.Settings settings) {
         super(settings);
-        this.setDefaultState(this.getDefaultState());
+
     }
 
     public WCSolidBlock(AbstractBlock.Settings settings, boolean connectedState, boolean doToggleOnUse,

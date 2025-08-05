@@ -50,6 +50,8 @@ public class BranchBlockExporter {
                 "horizontal_connected_three");
         Identifier horizontalConnectedFourModelId = createBranchModel(generator, block, branchType, texturePaths,
                 "horizontal_connected_four");
+        Identifier horizontalConnectedUpCornerModelId = createBranchModel(generator, block, branchType, texturePaths,
+                "horizontal_connected_up_corner");
         Identifier connectedTwoModelId = createBranchModel(generator, block, branchType, texturePaths, "connected_two");
         Identifier connectedTwoCornerModelId = createBranchModel(generator, block, branchType, texturePaths,
                 "connected_two_corner");
@@ -62,14 +64,15 @@ public class BranchBlockExporter {
         MultipartBlockStateSupplier stateSupplier = MultipartBlockStateSupplier.create(block);
 
         // UP = false: Use horizontal models (no branch below)
-        // Single branch (no connections)
+        // Single branch (no connections) - use large_branch model when all neighbors
+        // are false
         When.PropertyCondition singleCondition = When.create()
                 .set(WCBranchBlock.NORTH, false)
                 .set(WCBranchBlock.EAST, false)
                 .set(WCBranchBlock.SOUTH, false)
                 .set(WCBranchBlock.WEST, false)
                 .set(WCBranchBlock.UP, false);
-        stateSupplier.with(singleCondition, createVariant(horizontalModelId));
+        stateSupplier.with(singleCondition, createVariant(baseModelId));
 
         // Single connection variants (horizontal) - use horizontal connected model
         // North connection only (horizontal)
@@ -88,7 +91,7 @@ public class BranchBlockExporter {
                 .set(WCBranchBlock.SOUTH, true)
                 .set(WCBranchBlock.WEST, false)
                 .set(WCBranchBlock.UP, false);
-        stateSupplier.with(southHorizontalCondition, createVariant(horizontalConnectedModelId, 180));
+        stateSupplier.with(southHorizontalCondition, createVariant(horizontalConnectedUpCornerModelId, 180));
 
         // East connection only (horizontal)
         When.PropertyCondition eastHorizontalCondition = When.create()
@@ -408,6 +411,10 @@ public class BranchBlockExporter {
                 case "horizontal_connected_four":
                     parentModel = Optional
                             .of(WesterosBlocks.id("block/branches/large_branch_horizontal_connected_four"));
+                    break;
+                case "horizontal_connected_up_corner":
+                    parentModel = Optional
+                            .of(WesterosBlocks.id("block/branches/large_branch_horizontal_connected_up_corner"));
                     break;
                 case "connected_two":
                     parentModel = Optional.of(WesterosBlocks.id("block/branches/large_branch_connected_two"));

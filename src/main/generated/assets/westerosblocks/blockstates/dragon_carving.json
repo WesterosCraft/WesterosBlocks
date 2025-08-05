@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/dragon_carving/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/dragon_carving/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/dragon_carving/base_v3"
+      }
+    ]
+  }
+}

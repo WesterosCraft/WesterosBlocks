@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/cabinet_drawer/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/cabinet_drawer/base_v2"
+      }
+    ]
+  }
+}
