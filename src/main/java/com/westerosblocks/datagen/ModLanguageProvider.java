@@ -213,6 +213,10 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                                 "Timber Northern Blue Bressummer");
                 translationBuilder.add("block.westerosblocks.timber_northern_green_lefthatch",
                                 "Timber Northern Green Lefthatch");
+                translationBuilder.add("block.westerosblocks.oak_branch", "Oak Branch");
+                translationBuilder.add("block.westerosblocks.birch_branch", "Birch Branch");
+
+
         }
 
 }

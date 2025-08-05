@@ -9,6 +9,7 @@ import java.util.List;
 import com.westerosblocks.datagen.custom.SolidBlockExporter;
 import com.westerosblocks.datagen.custom.SlabBlockExporter;
 import com.westerosblocks.datagen.custom.LogBlockExporter;
+import com.westerosblocks.datagen.custom.BranchBlockExporter;
 
 public class ModBlockStateModelGenerator {
 
@@ -212,6 +213,48 @@ public class ModBlockStateModelGenerator {
          */
         public static CustomLogBlockBuilder registerCustomLogBlock(BlockStateModelGenerator generator, Block block) {
                 return new CustomLogBlockBuilder(generator, block);
+        }
+
+        /**
+         * Builder class for custom branch blocks
+         */
+        public static class CustomBranchBlockBuilder {
+                private final BlockStateModelGenerator generator;
+                private final Block block;
+                private String[] textures = new String[0];
+
+                public CustomBranchBlockBuilder(BlockStateModelGenerator generator, Block block) {
+                        this.generator = generator;
+                        this.block = block;
+                }
+
+                /**
+                 * Set a single texture for the branch
+                 */
+                public CustomBranchBlockBuilder texture(String texturePath) {
+                        this.textures = new String[] { texturePath };
+                        return this;
+                }
+
+                /**
+                 * Set multiple textures for the branch
+                 */
+                public CustomBranchBlockBuilder textures(String... texturePaths) {
+                        this.textures = texturePaths;
+                        return this;
+                }
+
+                /**
+                 * Build and register the branch block
+                 */
+                public void build() {
+                        BranchBlockExporter.registerBranchBlock(generator, block, textures);
+                }
+        }
+
+        public static CustomBranchBlockBuilder registerCustomBranchBlock(BlockStateModelGenerator generator,
+                        Block block) {
+                return new CustomBranchBlockBuilder(generator, block);
         }
 
 }
