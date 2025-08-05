@@ -168,17 +168,11 @@ public class WCBranchBlock extends Block implements Waterloggable {
                     neighborState.isSideSolidFullSquare(world, neighborPos, direction.getOpposite()),
                     direction.getOpposite());
             return state.with(getPropertyForDirection(direction), isConnected);
-        } else if (direction == Direction.UP) {
-            boolean isConnected = neighborState.isOf(this);
-            return state.with(UP, isConnected);
         } else if (direction == Direction.DOWN) {
-            // Check if there's a branch block below (vertical connection)
-            boolean hasBranchBelow = neighborState.isOf(this);
             // Check if there's a solid block below (not in air)
             boolean hasSolidBlockBelow = !neighborState.isAir();
 
-            // UP should be true if there's a solid block below (including branches), false
-            // only if in air
+            // UP should be false if there's air below, true if there's a solid block below
             return state.with(UP, hasSolidBlockBelow);
         }
 
