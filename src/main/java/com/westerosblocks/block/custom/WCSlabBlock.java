@@ -25,7 +25,7 @@ public class WCSlabBlock extends SlabBlock {
     public static final IntProperty CONNECTSTATE = ModProperties.CONNECTSTATE;
 
     protected static ModProperties.StateProperty tempSTATE;
-    protected static ModProperties.StateProperty STATE;
+    public static ModProperties.StateProperty STATE;
 
     public static class Factory extends BlockFactory {
         public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
@@ -35,7 +35,6 @@ public class WCSlabBlock extends SlabBlock {
 
             if (doConnectState) {
                 tempCONNECTSTATE = CONNECTSTATE;
-                return new WCSlabBlock(settings);
             }
 
             if (doAddStates) {
@@ -75,8 +74,8 @@ public class WCSlabBlock extends SlabBlock {
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         Hand hand = player.getActiveHand();
-        if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
-            state = state.cycle(this.STATE);
+        if (this.toggleOnUse && (STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
+            state = state.cycle(STATE);
             world.setBlockState(pos, state, 10);
             world.syncWorldEvent(player, 1006, pos, 0);
             return ActionResult.success(world.isClient);
