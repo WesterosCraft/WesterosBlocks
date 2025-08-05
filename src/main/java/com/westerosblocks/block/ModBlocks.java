@@ -855,6 +855,61 @@ public class ModBlocks {
                         new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
+        public static final Block APRICOT_BASKET_SLAB = registerBlock(
+                        "apricot_basket_slab",
+                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block CLOSED_BASKET_SLAB = registerBlock(
+                        "closed_basket_slab",
+                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block BERRY_BASKET_SLAB = registerBlock(
+                        "berry_basket_slab",
+                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block CARROT_BASKET_SLAB = registerBlock(
+                        "carrot_basket_slab",
+                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block CUT_GRAIN_FLOUR_SACK = registerBlock(
+                        "cut_grain_flour_sack",
+                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.GRAVEL)));
+
+        public static final Block DATE_BASKET_SLAB = registerBlock(
+                        "date_basket_slab",
+                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block FIREWOOD_SLAB = registerBlock(
+                        "firewood_slab",
+                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block FISH_BASKET_SLAB = registerBlock(
+                        "fish_basket_slab",
+                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block GRAIN_BASKET_SLAB = registerBlock(
+                        "grain_basket_slab",
+                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block GRAIN_FLOUR_SACK = registerBlock(
+                        "grain_flour_sack",
+                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.GRAVEL)));
+
+        public static final Block HOP_BASKET_SLAB = registerBlock(
+                        "hop_basket_slab",
+                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
         // Branch Blocks
         public static final Block OAK_BRANCH = registerBlock(
                         "oak_branch",
@@ -1041,6 +1096,17 @@ public class ModBlocks {
                         entries.add(ModBlocks.YELLOW_STAINED_CLAY);
                         entries.add(ModBlocks.ARCHERY_TARGET);
                         entries.add(ModBlocks.APPLE_BASKET_SLAB);
+                        entries.add(ModBlocks.APRICOT_BASKET_SLAB);
+                        entries.add(ModBlocks.CLOSED_BASKET_SLAB);
+                        entries.add(ModBlocks.BERRY_BASKET_SLAB);
+                        entries.add(ModBlocks.CARROT_BASKET_SLAB);
+                        entries.add(ModBlocks.CUT_GRAIN_FLOUR_SACK);
+                        entries.add(ModBlocks.DATE_BASKET_SLAB);
+                        entries.add(ModBlocks.FIREWOOD_SLAB);
+                        entries.add(ModBlocks.FISH_BASKET_SLAB);
+                        entries.add(ModBlocks.GRAIN_BASKET_SLAB);
+                        entries.add(ModBlocks.GRAIN_FLOUR_SACK);
+                        entries.add(ModBlocks.HOP_BASKET_SLAB);
                         entries.add(ModBlocks.OAK_BRANCH);
                         entries.add(ModBlocks.BIRCH_BRANCH);
                 });

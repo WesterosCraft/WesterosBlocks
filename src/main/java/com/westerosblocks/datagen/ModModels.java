@@ -20,9 +20,9 @@ public class ModModels {
 
     // Custom slab models with all six face texture keys
     public static final Model SLAB_BOTTOM = ModModels.block("untinted/slab",
-            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST);
+            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST, TextureKey.PARTICLE);
     public static final Model SLAB_TOP = ModModels.block("untinted/slab_top",
-            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST);
+            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST, TextureKey.PARTICLE);
 
     // helper method for creating Models
     private static Model block(String parent, TextureKey... requiredTextureKeys) {

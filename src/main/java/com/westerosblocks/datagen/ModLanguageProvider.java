@@ -209,13 +209,23 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.yellow_stained_clay", "Yellow Stained Clay");
                 translationBuilder.add("block.westerosblocks.archery_target", "Archery Target");
                 translationBuilder.add("block.westerosblocks.apple_basket_slab", "Apple Basket Slab");
+                translationBuilder.add("block.westerosblocks.apricot_basket_slab", "Apricot Basket Slab");
+                translationBuilder.add("block.westerosblocks.closed_basket_slab", "Closed Basket Slab");
+                translationBuilder.add("block.westerosblocks.berry_basket_slab", "Berry Basket Slab");
+                translationBuilder.add("block.westerosblocks.carrot_basket_slab", "Carrot Basket Slab");
+                translationBuilder.add("block.westerosblocks.cut_grain_flour_sack", "Cut Grain Flour Sack");
+                translationBuilder.add("block.westerosblocks.date_basket_slab", "Date Basket Slab");
+                translationBuilder.add("block.westerosblocks.firewood_slab", "Firewood Slab");
+                translationBuilder.add("block.westerosblocks.fish_basket_slab", "Fish Basket Slab");
+                translationBuilder.add("block.westerosblocks.grain_basket_slab", "Grain Basket Slab");
+                translationBuilder.add("block.westerosblocks.grain_flour_sack", "Grain Flour Sack");
+                translationBuilder.add("block.westerosblocks.hop_basket_slab", "Hop Basket Slab");
                 translationBuilder.add("block.westerosblocks.timber_northern_blue_bressummer",
                                 "Timber Northern Blue Bressummer");
                 translationBuilder.add("block.westerosblocks.timber_northern_green_lefthatch",
                                 "Timber Northern Green Lefthatch");
                 translationBuilder.add("block.westerosblocks.oak_branch", "Oak Branch");
                 translationBuilder.add("block.westerosblocks.birch_branch", "Birch Branch");
-
 
         }
 

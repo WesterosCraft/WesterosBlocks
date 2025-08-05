@@ -589,6 +589,60 @@ public class ModModelProvider extends FabricModelProvider {
                                                 "crate_block/basket_side_slab")
                                 .build();
 
+                registerCustomSlabBlock(bsmg, ModBlocks.APRICOT_BASKET_SLAB)
+                                .textures("crate_block/basket_bottom", "crate_block/basket_apricot",
+                                                "crate_block/basket_side_slab")
+                                .build();
+
+                registerCustomSlabBlock(bsmg, ModBlocks.CLOSED_BASKET_SLAB)
+                                .textures("crate_block/basket_bottom", "crate_block/basket_top_closed",
+                                                "crate_block/basket_side_slab")
+                                .build();
+
+                registerCustomSlabBlock(bsmg, ModBlocks.BERRY_BASKET_SLAB)
+                                .textures("crate_block/basket_bottom", "crate_block/basket_berry",
+                                                "crate_block/basket_side_slab")
+                                .build();
+
+                registerCustomSlabBlock(bsmg, ModBlocks.CARROT_BASKET_SLAB)
+                                .textures("crate_block/basket_bottom", "crate_block/basket_carrot",
+                                                "crate_block/basket_side_slab")
+                                .build();
+
+                registerCustomSlabBlock(bsmg, ModBlocks.CUT_GRAIN_FLOUR_SACK)
+                                .textures("grain_sack/all", "grain_sack/cut", "grain_sack/front", "grain_sack/front",
+                                                "grain_sack/side")
+                                .build();
+
+                registerCustomSlabBlock(bsmg, ModBlocks.DATE_BASKET_SLAB)
+                                .textures("crate_block/basket_bottom", "crate_block/basket_dates",
+                                                "crate_block/basket_side_slab")
+                                .build();
+
+                registerCustomSlabBlock(bsmg, ModBlocks.FIREWOOD_SLAB)
+                                .textures("firewood/side", "firewood/side", "firewood/top")
+                                .build();
+
+                registerCustomSlabBlock(bsmg, ModBlocks.FISH_BASKET_SLAB)
+                                .textures("crate_block/basket_bottom", "crate_block/basket_fish",
+                                                "crate_block/basket_side_slab")
+                                .build();
+
+                registerCustomSlabBlock(bsmg, ModBlocks.GRAIN_BASKET_SLAB)
+                                .textures("crate_block/basket_bottom", "crate_block/basket_grain",
+                                                "crate_block/basket_side_slab")
+                                .build();
+
+                registerCustomSlabBlock(bsmg, ModBlocks.GRAIN_FLOUR_SACK)
+                                .textures("grain_sack/all", "grain_sack/all", "grain_sack/front", "grain_sack/front",
+                                                "grain_sack/side")
+                                .build();
+
+                registerCustomSlabBlock(bsmg, ModBlocks.HOP_BASKET_SLAB)
+                                .textures("crate_block/basket_bottom", "crate_block/basket_hop",
+                                                "crate_block/basket_side_slab")
+                                .build();
+
                 // Branch Blocks
                 registerCustomBranchBlock(bsmg, ModBlocks.OAK_BRANCH).texture("bark/oak/side")
                                 .build();
