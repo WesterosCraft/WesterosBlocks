@@ -1,7 +1,0 @@
-{
-  "parent": "westerosblocks:block/branches/large_branch_connected_four",
-  "textures": {
-    "all": "westerosblocks:block/bark/oak/side",
-    "particle": "westerosblocks:block/bark/oak/side"
-  }
-}

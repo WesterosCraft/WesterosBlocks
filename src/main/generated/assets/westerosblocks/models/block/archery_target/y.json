@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "westerosblocks:block/archery_target/front",
-    "side": "westerosblocks:block/archery_target/side"
-  }
-}
