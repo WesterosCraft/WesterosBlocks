@@ -1,0 +1,23 @@
+{
+    "blockName": "stool",
+    "blockType": "slab",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Stool",
+    "lightOpacity": 0,
+    "nonOpaque": true,
+    "textures": [
+        "seat/bottom",
+        "seat/top",
+        "seat/side"
+    ]
+}
