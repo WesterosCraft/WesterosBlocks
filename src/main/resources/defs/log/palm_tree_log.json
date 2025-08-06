@@ -1,0 +1,19 @@
+{
+    "blockName": "palm_tree_log",
+    "blockType": "log",
+    "stepSound": "wood",
+    "material": "wood",
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Palm Tree Log",
+    "textures": [
+        "bark/palm/top",
+        "bark/palm/top",
+        "bark/palm/side"
+    ]
+}

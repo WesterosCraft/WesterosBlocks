@@ -849,6 +849,141 @@ public class ModBlocks {
                         new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
+        public static final Block CLOSED_BARREL = registerBlock(
+                        "closed_barrel",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block FIREWOOD = registerBlock(
+                        "firewood",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block JUNGLE_LOG_CHAIN = registerBlock(
+                        "jungle_log_chain",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block JUNGLE_LOG_ROPE = registerBlock(
+                        "jungle_log_rope",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block MARBLE_PILLAR_VERTICAL_CTM = registerBlock(
+                        "marble_pillar_vertical_ctm",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block MARBLE_PILLAR = registerBlock(
+                        "marble_pillar",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block MOSSY_BIRCH_LOG = registerBlock(
+                        "mossy_birch_log",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block MOSSY_JUNGLE_LOG = registerBlock(
+                        "mossy_jungle_log",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block MOSSY_OAK_LOG = registerBlock(
+                        "mossy_oak_log",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block MOSSY_SPRUCE_LOG = registerBlock(
+                        "mossy_spruce_log",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block OAK_LOG_CHAIN = registerBlock(
+                        "oak_log_chain",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block OAK_LOG_ROPE = registerBlock(
+                        "oak_log_rope",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block PALM_TREE_LOG = registerBlock(
+                        "palm_tree_log",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block SANDSTONE_PILLAR = registerBlock(
+                        "sandstone_pillar",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block SPRUCE_LOG_CHAIN = registerBlock(
+                        "spruce_log_chain",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block SPRUCE_LOG_ROPE = registerBlock(
+                        "spruce_log_rope",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block STACKED_BONES = registerBlock(
+                        "stacked_bones",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+        public static final Block WEIRWOOD_FACE_0 = registerBlock(
+                        "weirwood_face_0",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block WEIRWOOD_FACE_1 = registerBlock(
+                        "weirwood_face_1",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block WEIRWOOD_FACE_2 = registerBlock(
+                        "weirwood_face_2",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block WEIRWOOD_FACE_3 = registerBlock(
+                        "weirwood_face_3",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block WEIRWOOD_FACE_4 = registerBlock(
+                        "weirwood_face_4",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block WEIRWOOD_FACE_5 = registerBlock(
+                        "weirwood_face_5",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block WEIRWOOD_FACE_6 = registerBlock(
+                        "weirwood_face_6",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block WEIRWOOD_FACE_7 = registerBlock(
+                        "weirwood_face_7",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block WEIRWOOD_FACE_8 = registerBlock(
+                        "weirwood_face_8",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
+        public static final Block WEIRWOOD_SCARS = registerBlock(
+                        "weirwood_scars",
+                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
         // Slab blocks
         public static final Block APPLE_BASKET_SLAB = registerBlock(
                         "apple_basket_slab",
@@ -1095,6 +1230,33 @@ public class ModBlocks {
                         entries.add(ModBlocks.YARD_UTILITY_BLOCK);
                         entries.add(ModBlocks.YELLOW_STAINED_CLAY);
                         entries.add(ModBlocks.ARCHERY_TARGET);
+                        entries.add(ModBlocks.CLOSED_BARREL);
+                        entries.add(ModBlocks.FIREWOOD);
+                        entries.add(ModBlocks.JUNGLE_LOG_CHAIN);
+                        entries.add(ModBlocks.JUNGLE_LOG_ROPE);
+                        entries.add(ModBlocks.MARBLE_PILLAR_VERTICAL_CTM);
+                        entries.add(ModBlocks.MARBLE_PILLAR);
+                        entries.add(ModBlocks.MOSSY_BIRCH_LOG);
+                        entries.add(ModBlocks.MOSSY_JUNGLE_LOG);
+                        entries.add(ModBlocks.MOSSY_OAK_LOG);
+                        entries.add(ModBlocks.MOSSY_SPRUCE_LOG);
+                        entries.add(ModBlocks.OAK_LOG_CHAIN);
+                        entries.add(ModBlocks.OAK_LOG_ROPE);
+                        entries.add(ModBlocks.PALM_TREE_LOG);
+                        entries.add(ModBlocks.SANDSTONE_PILLAR);
+                        entries.add(ModBlocks.SPRUCE_LOG_CHAIN);
+                        entries.add(ModBlocks.SPRUCE_LOG_ROPE);
+                        entries.add(ModBlocks.STACKED_BONES);
+                        entries.add(ModBlocks.WEIRWOOD_FACE_0);
+                        entries.add(ModBlocks.WEIRWOOD_FACE_1);
+                        entries.add(ModBlocks.WEIRWOOD_FACE_2);
+                        entries.add(ModBlocks.WEIRWOOD_FACE_3);
+                        entries.add(ModBlocks.WEIRWOOD_FACE_4);
+                        entries.add(ModBlocks.WEIRWOOD_FACE_5);
+                        entries.add(ModBlocks.WEIRWOOD_FACE_6);
+                        entries.add(ModBlocks.WEIRWOOD_FACE_7);
+                        entries.add(ModBlocks.WEIRWOOD_FACE_8);
+                        entries.add(ModBlocks.WEIRWOOD_SCARS);
                         entries.add(ModBlocks.APPLE_BASKET_SLAB);
                         entries.add(ModBlocks.APRICOT_BASKET_SLAB);
                         entries.add(ModBlocks.CLOSED_BASKET_SLAB);

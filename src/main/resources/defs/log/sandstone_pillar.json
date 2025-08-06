@@ -1,0 +1,19 @@
+{
+    "blockName": "sandstone_pillar",
+    "blockType": "log",
+    "stepSound": "stone",
+    "material": "wood",
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Sandstone Pillar",
+    "textures": [
+        "ashlar_third/sandstone/column_top",
+        "ashlar_third/sandstone/column_top",
+        "ashlar_third/sandstone/column_side"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "blockName": "weirwood_scars",
+    "blockType": "log",
+    "stepSound": "wood",
+    "material": "wood",
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Weirwood Scars",
+    "textures": [
+        "bark/weirwood/scars",
+        "bark/weirwood/scars",
+        "bark/weirwood/side"
+    ]
+}

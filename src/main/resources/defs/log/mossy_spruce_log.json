@@ -1,0 +1,19 @@
+{
+    "blockName": "mossy_spruce_log",
+    "blockType": "log",
+    "stepSound": "wood",
+    "material": "wood",
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Mossy Spruce Log",
+    "textures": [
+        "bark/spruce/mossy/bottom",
+        "bark/spruce/mossy/top",
+        "bark/spruce/mossy/side"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "blockName": "oak_log_rope",
+    "blockType": "log",
+    "stepSound": "wood",
+    "material": "wood",
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Oak Log Rope",
+    "textures": [
+        "bark/oak/top",
+        "bark/oak/top",
+        "bark/oak/rope"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "blockName": "closed_barrel",
+    "blockType": "log",
+    "stepSound": "wood",
+    "material": "wood",
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Closed Barrel",
+    "textures": [
+        "barrel_closed/barrel_top_closed",
+        "barrel_closed/barrel_top_closed",
+        "barrel_sides/side1"
+    ]
+}
