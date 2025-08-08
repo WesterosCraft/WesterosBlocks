@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "westerosblocks:block/firewood/x",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "westerosblocks:block/firewood/y"
+    },
+    "axis=z": {
+      "model": "westerosblocks:block/firewood/z",
+      "x": 90
+    }
+  }
+}

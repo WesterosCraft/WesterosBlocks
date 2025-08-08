@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "westerosblocks:block/spruce_log_rope/x",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "westerosblocks:block/spruce_log_rope/y"
+    },
+    "axis=z": {
+      "model": "westerosblocks:block/spruce_log_rope/z",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "westerosblocks:block/bark/jungle/mossy/top",
+    "side": "westerosblocks:block/bark/jungle/mossy/side"
+  }
+}

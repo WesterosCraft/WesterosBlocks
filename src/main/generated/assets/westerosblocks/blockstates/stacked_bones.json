@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "westerosblocks:block/stacked_bones/x",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "westerosblocks:block/stacked_bones/y"
+    },
+    "axis=z": {
+      "model": "westerosblocks:block/stacked_bones/z",
+      "x": 90
+    }
+  }
+}

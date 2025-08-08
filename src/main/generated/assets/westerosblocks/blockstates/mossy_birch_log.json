@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "westerosblocks:block/mossy_birch_log/x",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "westerosblocks:block/mossy_birch_log/y"
+    },
+    "axis=z": {
+      "model": "westerosblocks:block/mossy_birch_log/z",
+      "x": 90
+    }
+  }
+}
