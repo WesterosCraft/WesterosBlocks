@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen;
 
 import com.westerosblocks.block.ModBlocks;
+import com.westerosblocks.datagen.custom.TableBlockExporter;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -503,6 +504,10 @@ public class ModModelProvider extends FabricModelProvider {
                                 .textures("bench_block/spruce_top", "bench_block/table_top",
                                                 "bench_block/table_drawer_widgets_side")
                                 .build();
+
+                // Table Blocks
+                TableBlockExporter.registerCustomTableBlock(bsmg, ModBlocks.OAK_TABLE, "wood/oak/all");
+
                 registerCustomSolidBlock(bsmg, ModBlocks.TERRACOTTA_ENGRAVED).texture("ashlar_engraved/terracotta/all")
                                 .build();
                 registerCustomSolidBlock(bsmg, ModBlocks.TURNIP_BASKET)

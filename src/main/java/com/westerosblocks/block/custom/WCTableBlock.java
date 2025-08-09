@@ -38,15 +38,20 @@ public class WCTableBlock extends Block {
 
     public WCTableBlock(Settings settings) {
         super(settings);
+        this.setDefaultState(this.getDefaultState()
+                .with(NORTH, false)
+                .with(EAST, false)
+                .with(SOUTH, false)
+                .with(WEST, false)
+                .with(WATERLOGGED, false));
         // Pre-compute all possible shape combinations
         this.shapeByIndex = this.makeShapes();
     }
-    // TODO: Implement table block functionality
 
     public static class Factory extends BlockFactory {
+        @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            // TODO: Implement table block creation
-            throw new UnsupportedOperationException("WCTableBlock not yet implemented");
+            return new WCTableBlock(settings);
         }
     }
 
@@ -209,14 +214,26 @@ public class WCTableBlock extends Block {
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
+        BlockPos pos = ctx.getBlockPos();
+        BlockView world = ctx.getWorld();
+        FluidState fluidState = world.getFluidState(pos);
+
+        boolean connectNorth = world.getBlockState(pos.north()).isOf(this);
+        boolean connectEast = world.getBlockState(pos.east()).isOf(this);
+        boolean connectSouth = world.getBlockState(pos.south()).isOf(this);
+        boolean connectWest = world.getBlockState(pos.west()).isOf(this);
+
         return this.getDefaultState()
-                .with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
+                .with(WATERLOGGED, fluidState.isIn(FluidTags.WATER))
+                .with(NORTH, connectNorth)
+                .with(EAST, connectEast)
+                .with(SOUTH, connectSouth)
+                .with(WEST, connectWest);
     }
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
-                                                WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+            WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
@@ -227,6 +244,11 @@ public class WCTableBlock extends Block {
         }
 
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+    }
+
+    @Override
+    public FluidState getFluidState(BlockState state) {
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
     private static BooleanProperty getPropertyForDirection(Direction direction) {

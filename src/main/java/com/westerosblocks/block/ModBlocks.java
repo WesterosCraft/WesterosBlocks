@@ -5,6 +5,7 @@ import com.westerosblocks.block.custom.WCSolidBlock;
 import com.westerosblocks.block.custom.WCBranchBlock;
 import com.westerosblocks.block.custom.WCLogBlock;
 import com.westerosblocks.block.custom.WCSlabBlock;
+import com.westerosblocks.block.custom.WCTableBlock;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
@@ -753,6 +754,11 @@ public class ModBlocks {
                         new WCSolidBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
+        public static final Block OAK_TABLE = registerBlock(
+                        "oak_table",
+                        new WCTableBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD)));
+
         public static final Block TERRACOTTA_ENGRAVED = registerBlock(
                         "terracotta_engraved",
                         new WCSolidBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(3.0f)
@@ -1211,6 +1217,7 @@ public class ModBlocks {
                         entries.add(ModBlocks.TABLE_DRAWERS);
                         entries.add(ModBlocks.THICK_GRASS_BLOCK);
                         entries.add(ModBlocks.TABLE_WIDGETS);
+                        entries.add(ModBlocks.OAK_TABLE);
                         entries.add(ModBlocks.TERRACOTTA_ENGRAVED);
                         entries.add(ModBlocks.TIMBER_NORTHERN_BLUE_BRESSUMMER);
                         entries.add(ModBlocks.TIMBER_NORTHERN_GREEN_LEFTHATCH);
