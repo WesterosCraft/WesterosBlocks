@@ -844,7 +844,7 @@ public class ModBlocks {
         public static final Block BIRCH_DOOR = registerBlock(
                         "birch_door",
                         new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
-                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "birch", false, false));
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "birch", false, true));
 
         public static final Block TIMBER_NORTHERN_BLUE_BRESSUMMER = registerBlock(
                         "timber_northern_blue_bressummer",

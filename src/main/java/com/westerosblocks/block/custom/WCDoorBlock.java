@@ -15,7 +15,7 @@ public class WCDoorBlock extends DoorBlock {
     private final boolean allowUnsupported;
 
     public WCDoorBlock(AbstractBlock.Settings settings, String woodType,
-                       boolean locked, boolean allowUnsupported) {
+            boolean locked, boolean allowUnsupported) {
         super(ModBlockSetType.getBlockSetType(woodType), settings);
         this.locked = locked;
         this.allowUnsupported = allowUnsupported;
@@ -24,7 +24,11 @@ public class WCDoorBlock extends DoorBlock {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            return new WCDoorBlock(settings, (String) params[0], (Boolean) params[1], (Boolean) params[2]);
+            return new WCDoorBlock(settings,
+                    (String) params[0], // woodType
+                    (Boolean) params[1], // locked
+                    (Boolean) params[2] // allowUnsupported
+            );
         }
     }
 
