@@ -6,6 +6,7 @@ import com.westerosblocks.block.custom.WCBranchBlock;
 import com.westerosblocks.block.custom.WCLogBlock;
 import com.westerosblocks.block.custom.WCSlabBlock;
 import com.westerosblocks.block.custom.WCTableBlock;
+import com.westerosblocks.block.custom.WCDoorBlock;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
@@ -839,6 +840,12 @@ public class ModBlocks {
                         new WCSolidBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.STONE)));
 
+        // Door Blocks
+        public static final Block BIRCH_DOOR = registerBlock(
+                        "birch_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "birch", false, false));
+
         public static final Block TIMBER_NORTHERN_BLUE_BRESSUMMER = registerBlock(
                         "timber_northern_blue_bressummer",
                         new WCSolidBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
@@ -1278,6 +1285,7 @@ public class ModBlocks {
                         entries.add(ModBlocks.HOP_BASKET_SLAB);
                         entries.add(ModBlocks.OAK_BRANCH);
                         entries.add(ModBlocks.BIRCH_BRANCH);
+                        entries.add(ModBlocks.BIRCH_DOOR);
                 });
         }
 

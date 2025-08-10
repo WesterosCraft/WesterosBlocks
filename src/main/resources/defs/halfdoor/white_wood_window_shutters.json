@@ -1,0 +1,14 @@
+{
+    "blockName": "white_wood_window_shutters",
+    "blockType": "halfdoor",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "White Wood Window Shutters",
+    "type": "allow-unsupported",
+    "textures": [
+        "wood/white/shutters"
+    ]
+}

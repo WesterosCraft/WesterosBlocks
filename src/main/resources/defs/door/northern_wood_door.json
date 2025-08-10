@@ -1,0 +1,15 @@
+{
+    "blockName": "northern_wood_door",
+    "blockType": "door",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_wood_planks_tab",
+    "label": "Northern Wood Door",
+    "textures": [
+        "wood/northern/door_top",
+        "wood/northern/door_bottom"
+    ],
+    "type": "allow-unsupported"
+}

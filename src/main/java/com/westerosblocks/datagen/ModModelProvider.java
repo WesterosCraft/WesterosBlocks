@@ -2,6 +2,7 @@ package com.westerosblocks.datagen;
 
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.datagen.custom.TableBlockExporter;
+import com.westerosblocks.datagen.custom.DoorBlockExporter;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -760,9 +761,14 @@ public class ModModelProvider extends FabricModelProvider {
                 registerCustomBranchBlock(bsmg, ModBlocks.OAK_BRANCH).texture("bark/oak/side")
                                 .build();
                 registerCustomBranchBlock(bsmg, ModBlocks.BIRCH_BRANCH).texture("bark/birch/side").build();
+
+                // Door Blocks
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.BIRCH_DOOR,
+                                "wood/birch/door_top", "wood/birch/door_bottom");
         }
 
         @Override
         public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+                // Item models are now handled automatically by the block exporters
         }
 }

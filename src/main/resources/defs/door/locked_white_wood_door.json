@@ -1,0 +1,15 @@
+{
+    "blockName": "locked_white_wood_door",
+    "blockType": "door",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_wood_planks_tab",
+    "type": "locked:true,allow-unsupported",
+    "label": "Locked White Wood Door",
+    "textures": [
+        "wood/white/door_locked_top",
+        "wood/white/door_locked_bottom"
+    ]
+}
