@@ -765,6 +765,38 @@ public class ModModelProvider extends FabricModelProvider {
                 // Door Blocks
                 DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.BIRCH_DOOR,
                                 "wood/birch/door_top", "wood/birch/door_bottom");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.EYRIE_WEIRWOOD_DOOR,
+                                "door_block/door_weirwood_top", "door_block/door_weirwood_bottom");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.GREY_WOOD_DOOR,
+                                "wood/grey/door_top", "wood/grey/door_bottom");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.HARRENHAL_SECRET_DOOR,
+                                "ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.JUNGLE_DOOR,
+                                "wood/jungle/door_top", "wood/jungle/door_bottom");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.LOCKED_BIRCH_DOOR,
+                                "wood/birch/door_locked_top", "wood/birch/door_locked_bottom");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.LOCKED_DARK_NORTHERN_WOOD_DOOR,
+                                "wood/northern/door_locked_top", "wood/northern/door_locked_bottom");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.LOCKED_GREY_WOOD_DOOR,
+                                "wood/grey/door_locked_top", "wood/grey/door_locked_bottom");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.LOCKED_JUNGLE_DOOR,
+                                "wood/jungle/door_locked_top", "wood/jungle/door_locked_bottom");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.LOCKED_OAK_DOOR,
+                                "wood/oak/door_locked_top", "wood/oak/door_locked_bottom");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.LOCKED_SPRUCE_DOOR,
+                                "wood/spruce/door_locked_top", "wood/spruce/door_locked_bottom");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.LOCKED_WHITE_WOOD_DOOR,
+                                "wood/white/door_locked_top", "wood/white/door_locked_bottom");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.NORTHERN_WOOD_DOOR,
+                                "wood/northern/door_top", "wood/northern/door_bottom");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.OAK_DOOR,
+                                "wood/oak/door_top", "wood/oak/door_bottom");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.RED_KEEP_SECRET_DOOR,
+                                "ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.SPRUCE_DOOR,
+                                "wood/spruce/door_top", "wood/spruce/door_bottom");
+                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.WHITE_WOOD_DOOR,
+                                "wood/white/door_top", "wood/white/door_bottom");
         }
 
         @Override

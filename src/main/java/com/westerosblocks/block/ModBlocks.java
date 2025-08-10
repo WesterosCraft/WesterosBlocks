@@ -846,6 +846,87 @@ public class ModBlocks {
                         new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD), "birch", false, true));
 
+        public static final Block EYRIE_WEIRWOOD_DOOR = registerBlock(
+                        "eyrie_weirwood_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "weirwood", false, true));
+
+        public static final Block GREY_WOOD_DOOR = registerBlock(
+                        "grey_wood_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "oak", false, true));
+
+        public static final Block HARRENHAL_SECRET_DOOR = registerBlock(
+                        "harrenhal_secret_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "oak", true, true));
+
+        public static final Block JUNGLE_DOOR = registerBlock(
+                        "jungle_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "jungle", false, true));
+
+        public static final Block NORTHERN_WOOD_DOOR = registerBlock(
+                        "northern_wood_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "northern", false, true));
+
+        public static final Block OAK_DOOR = registerBlock(
+                        "oak_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "oak", false, true));
+
+        public static final Block RED_KEEP_SECRET_DOOR = registerBlock(
+                        "red_keep_secret_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "oak", true, true));
+
+        public static final Block SPRUCE_DOOR = registerBlock(
+                        "spruce_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "spruce", false, true));
+
+        public static final Block WHITE_WOOD_DOOR = registerBlock(
+                        "white_wood_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "white", false, true));
+
+        public static final Block LOCKED_BIRCH_DOOR = registerBlock(
+                        "locked_birch_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "birch", true, true));
+
+        public static final Block LOCKED_DARK_NORTHERN_WOOD_DOOR = registerBlock(
+                        "locked_dark_northern_wood_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "northern", true, true));
+
+        public static final Block LOCKED_GREY_WOOD_DOOR = registerBlock(
+                        "locked_grey_wood_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "oak", true, true));
+
+        public static final Block LOCKED_JUNGLE_DOOR = registerBlock(
+                        "locked_jungle_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "jungle", true, true));
+
+        public static final Block LOCKED_OAK_DOOR = registerBlock(
+                        "locked_oak_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "oak", true, true));
+
+        public static final Block LOCKED_SPRUCE_DOOR = registerBlock(
+                        "locked_spruce_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "spruce", true, true));
+
+        public static final Block LOCKED_WHITE_WOOD_DOOR = registerBlock(
+                        "locked_white_wood_door",
+                        new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), "white", true, true));
+
+        // Timber Blocks
         public static final Block TIMBER_NORTHERN_BLUE_BRESSUMMER = registerBlock(
                         "timber_northern_blue_bressummer",
                         new WCSolidBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
@@ -1286,6 +1367,22 @@ public class ModBlocks {
                         entries.add(ModBlocks.OAK_BRANCH);
                         entries.add(ModBlocks.BIRCH_BRANCH);
                         entries.add(ModBlocks.BIRCH_DOOR);
+                        entries.add(ModBlocks.EYRIE_WEIRWOOD_DOOR);
+                        entries.add(ModBlocks.GREY_WOOD_DOOR);
+                        entries.add(ModBlocks.HARRENHAL_SECRET_DOOR);
+                        entries.add(ModBlocks.JUNGLE_DOOR);
+                        entries.add(ModBlocks.NORTHERN_WOOD_DOOR);
+                        entries.add(ModBlocks.OAK_DOOR);
+                        entries.add(ModBlocks.RED_KEEP_SECRET_DOOR);
+                        entries.add(ModBlocks.SPRUCE_DOOR);
+                        entries.add(ModBlocks.WHITE_WOOD_DOOR);
+                        entries.add(ModBlocks.LOCKED_BIRCH_DOOR);
+                        entries.add(ModBlocks.LOCKED_DARK_NORTHERN_WOOD_DOOR);
+                        entries.add(ModBlocks.LOCKED_GREY_WOOD_DOOR);
+                        entries.add(ModBlocks.LOCKED_JUNGLE_DOOR);
+                        entries.add(ModBlocks.LOCKED_OAK_DOOR);
+                        entries.add(ModBlocks.LOCKED_SPRUCE_DOOR);
+                        entries.add(ModBlocks.LOCKED_WHITE_WOOD_DOOR);
                 });
         }
 
