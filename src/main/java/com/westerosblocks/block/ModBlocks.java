@@ -7,6 +7,7 @@ import com.westerosblocks.block.custom.WCLogBlock;
 import com.westerosblocks.block.custom.WCSlabBlock;
 import com.westerosblocks.block.custom.WCTableBlock;
 import com.westerosblocks.block.custom.WCDoorBlock;
+import com.westerosblocks.block.custom.WCHalfDoorBlock;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
@@ -926,6 +927,17 @@ public class ModBlocks {
                         new WCDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD), "white", true, true));
 
+        // Half Door Blocks (Shutters)
+        public static final Block BIRCH_WINDOW_SHUTTERS = registerBlock(
+                        "birch_window_shutters",
+                        new WCHalfDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), false, true));
+
+        public static final Block DORNE_RED_WINDOW_SHUTTERS = registerBlock(
+                        "dorne_red_window_shutters",
+                        new WCHalfDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
+                                        .requiresTool().sounds(BlockSoundGroup.WOOD), false, true));
+
         // Timber Blocks
         public static final Block TIMBER_NORTHERN_BLUE_BRESSUMMER = registerBlock(
                         "timber_northern_blue_bressummer",
@@ -940,203 +952,203 @@ public class ModBlocks {
         // Log blocks
         public static final Block ARCHERY_TARGET = registerBlock(
                         "archery_target",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block CLOSED_BARREL = registerBlock(
                         "closed_barrel",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block FIREWOOD = registerBlock(
                         "firewood",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block JUNGLE_LOG_CHAIN = registerBlock(
                         "jungle_log_chain",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block JUNGLE_LOG_ROPE = registerBlock(
                         "jungle_log_rope",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block MARBLE_PILLAR_VERTICAL_CTM = registerBlock(
                         "marble_pillar_vertical_ctm",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.STONE)));
 
         public static final Block MARBLE_PILLAR = registerBlock(
                         "marble_pillar",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.STONE)));
 
         public static final Block MOSSY_BIRCH_LOG = registerBlock(
                         "mossy_birch_log",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block MOSSY_JUNGLE_LOG = registerBlock(
                         "mossy_jungle_log",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block MOSSY_OAK_LOG = registerBlock(
                         "mossy_oak_log",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block MOSSY_SPRUCE_LOG = registerBlock(
                         "mossy_spruce_log",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block OAK_LOG_CHAIN = registerBlock(
                         "oak_log_chain",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block OAK_LOG_ROPE = registerBlock(
                         "oak_log_rope",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block PALM_TREE_LOG = registerBlock(
                         "palm_tree_log",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block SANDSTONE_PILLAR = registerBlock(
                         "sandstone_pillar",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.STONE)));
 
         public static final Block SPRUCE_LOG_CHAIN = registerBlock(
                         "spruce_log_chain",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block SPRUCE_LOG_ROPE = registerBlock(
                         "spruce_log_rope",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block STACKED_BONES = registerBlock(
                         "stacked_bones",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.STONE)));
 
         public static final Block WEIRWOOD_FACE_0 = registerBlock(
                         "weirwood_face_0",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block WEIRWOOD_FACE_1 = registerBlock(
                         "weirwood_face_1",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block WEIRWOOD_FACE_2 = registerBlock(
                         "weirwood_face_2",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block WEIRWOOD_FACE_3 = registerBlock(
                         "weirwood_face_3",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block WEIRWOOD_FACE_4 = registerBlock(
                         "weirwood_face_4",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block WEIRWOOD_FACE_5 = registerBlock(
                         "weirwood_face_5",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block WEIRWOOD_FACE_6 = registerBlock(
                         "weirwood_face_6",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block WEIRWOOD_FACE_7 = registerBlock(
                         "weirwood_face_7",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block WEIRWOOD_FACE_8 = registerBlock(
                         "weirwood_face_8",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block WEIRWOOD_SCARS = registerBlock(
                         "weirwood_scars",
-                        new WCLogBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCLogBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         // Slab blocks
         public static final Block APPLE_BASKET_SLAB = registerBlock(
                         "apple_basket_slab",
-                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCSlabBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block APRICOT_BASKET_SLAB = registerBlock(
                         "apricot_basket_slab",
-                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCSlabBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block CLOSED_BASKET_SLAB = registerBlock(
                         "closed_basket_slab",
-                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCSlabBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block BERRY_BASKET_SLAB = registerBlock(
                         "berry_basket_slab",
-                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCSlabBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block CARROT_BASKET_SLAB = registerBlock(
                         "carrot_basket_slab",
-                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCSlabBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block CUT_GRAIN_FLOUR_SACK = registerBlock(
                         "cut_grain_flour_sack",
-                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCSlabBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.GRAVEL)));
 
         public static final Block DATE_BASKET_SLAB = registerBlock(
                         "date_basket_slab",
-                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCSlabBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block FIREWOOD_SLAB = registerBlock(
                         "firewood_slab",
-                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCSlabBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block FISH_BASKET_SLAB = registerBlock(
                         "fish_basket_slab",
-                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCSlabBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block GRAIN_BASKET_SLAB = registerBlock(
                         "grain_basket_slab",
-                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCSlabBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         public static final Block GRAIN_FLOUR_SACK = registerBlock(
                         "grain_flour_sack",
-                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCSlabBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.GRAVEL)));
 
         public static final Block HOP_BASKET_SLAB = registerBlock(
                         "hop_basket_slab",
-                        new WCSlabBlock(AbstractBlock.Settings.create().strength(2.0f)
+                        new WCSlabBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
                                         .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
         // Branch Blocks
@@ -1383,6 +1395,8 @@ public class ModBlocks {
                         entries.add(ModBlocks.LOCKED_OAK_DOOR);
                         entries.add(ModBlocks.LOCKED_SPRUCE_DOOR);
                         entries.add(ModBlocks.LOCKED_WHITE_WOOD_DOOR);
+                        entries.add(ModBlocks.BIRCH_WINDOW_SHUTTERS);
+                        entries.add(ModBlocks.DORNE_RED_WINDOW_SHUTTERS);
                 });
         }
 

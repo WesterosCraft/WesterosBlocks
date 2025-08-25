@@ -3,6 +3,7 @@ package com.westerosblocks.datagen;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.datagen.custom.TableBlockExporter;
 import com.westerosblocks.datagen.custom.DoorBlockExporter;
+import com.westerosblocks.datagen.custom.HalfDoorBlockExporter;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -797,6 +798,12 @@ public class ModModelProvider extends FabricModelProvider {
                                 "wood/spruce/door_top", "wood/spruce/door_bottom");
                 DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.WHITE_WOOD_DOOR,
                                 "wood/white/door_top", "wood/white/door_bottom");
+
+                // Half Door Blocks (Shutters)
+                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.BIRCH_WINDOW_SHUTTERS,
+                                "wood/birch/shutters");
+                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.DORNE_RED_WINDOW_SHUTTERS,
+                                "shutter_block/shutters_dorne");
         }
 
         @Override

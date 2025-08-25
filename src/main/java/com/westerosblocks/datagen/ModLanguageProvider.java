@@ -272,6 +272,10 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.red_keep_secret_door", "Red Keep Secret Door");
                 translationBuilder.add("block.westerosblocks.spruce_door", "Spruce Door");
                 translationBuilder.add("block.westerosblocks.white_wood_door", "White Wood Door");
+                
+                // Half Door Blocks (Shutters)
+                translationBuilder.add("block.westerosblocks.birch_window_shutters", "Birch Window Shutters");
+                translationBuilder.add("block.westerosblocks.dorne_red_window_shutters", "Dorne Red Window Shutters");
         }
 
 }
