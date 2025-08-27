@@ -10,6 +10,7 @@
                 "up":    { "texture": "#top", "cullface": "up"},
                 "north": { "texture": "#side", "cullface": "north" },
                 "west":  { "texture": "#side" },
+                "south": { "texture": "#side" },
                 "east":  { "texture": "#side" }
             }
         },
@@ -20,6 +21,7 @@
                 "up":    { "texture": "#top_ov", "cullface": "up"},
                 "north": { "texture": "#side_ov", "cullface": "north" },
                 "west":  { "texture": "#side_ov" },
+                "south": { "texture": "#side_ov" },
                 "east":  { "texture": "#side_ov" }
             }
         }

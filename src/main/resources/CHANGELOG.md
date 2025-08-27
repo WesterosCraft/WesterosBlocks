@@ -1,3 +1,6 @@
+# 26 Aug 2025:
+- Fixed transparent face in wall models when "up" blockstate is set to false.
+
 # 6 Sep 2024:
 - Added additional polished stone variants.
 - Added CTM and connectstate to polished stone, allowing for creation of arbitrary block sizes using data cycler tool.
