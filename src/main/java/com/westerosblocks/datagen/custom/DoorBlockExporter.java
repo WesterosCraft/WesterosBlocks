@@ -137,8 +137,10 @@ public class DoorBlockExporter {
         // Register the block state with the generator
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
 
-        // Register item model using the bottom_left variant (standard for doors)
-        generator.registerParentedItemModel(block, bottomLeftModelId);
+        // Create 2D item model using the bottom texture
+        Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
+        TextureMap itemTextureMap = TextureMap.layer0(createBlockIdentifier(bottomTexture));
+        Models.GENERATED.upload(itemModelId, itemTextureMap, generator.modelCollector);
     }
 
     /**

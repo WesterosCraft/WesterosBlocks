@@ -8,6 +8,8 @@ import com.westerosblocks.block.custom.WCSlabBlock;
 import com.westerosblocks.block.custom.WCTableBlock;
 import com.westerosblocks.block.custom.WCDoorBlock;
 import com.westerosblocks.block.custom.WCHalfDoorBlock;
+import com.westerosblocks.block.custom.WCPaneBlock;
+import com.westerosblocks.block.custom.BlockBuilder;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
@@ -930,13 +932,147 @@ public class ModBlocks {
         // Half Door Blocks (Shutters)
         public static final Block BIRCH_WINDOW_SHUTTERS = registerBlock(
                         "birch_window_shutters",
-                        new WCHalfDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
-                                        .requiresTool().sounds(BlockSoundGroup.WOOD), false, true));
+                        BlockBuilder.halfDoor()
+                                .strength(2.0f)
+                                .requiresTool()
+                                .sounds(BlockSoundGroup.WOOD)
+                                .locked(false)
+                                .allowUnsupported(true)
+                                .build());
 
         public static final Block DORNE_RED_WINDOW_SHUTTERS = registerBlock(
                         "dorne_red_window_shutters",
-                        new WCHalfDoorBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(2.0f)
-                                        .requiresTool().sounds(BlockSoundGroup.WOOD), false, true));
+                        BlockBuilder.halfDoor()
+                                .strength(2.0f)
+                                .requiresTool()
+                                .sounds(BlockSoundGroup.WOOD)
+                                .locked(false)
+                                .allowUnsupported(true)
+                                .build());
+
+        public static final Block GREEN_LANNISPORT_WINDOW_SHUTTERS = registerBlock(
+                        "green_lannisport_window_shutters",
+                        BlockBuilder.halfDoor()
+                                .strength(2.0f)
+                                .resistance(5.0f)
+                                .requiresTool()
+                                .sounds(BlockSoundGroup.WOOD)
+                                .locked(false)
+                                .allowUnsupported(true)
+                                .build());
+
+        public static final Block GREY_WOOD_WINDOW_SHUTTERS = registerBlock(
+                        "grey_wood_window_shutters",
+                        BlockBuilder.halfDoor()
+                                .strength(2.0f)
+                                .resistance(5.0f)
+                                .requiresTool()
+                                .sounds(BlockSoundGroup.WOOD)
+                                .locked(false)
+                                .allowUnsupported(true)
+                                .build());
+
+        public static final Block JUNGLE_WINDOW_SHUTTERS = registerBlock(
+                        "jungle_window_shutters",
+                        BlockBuilder.halfDoor()
+                                .strength(2.0f)
+                                .resistance(5.0f)
+                                .requiresTool()
+                                .sounds(BlockSoundGroup.WOOD)
+                                .locked(false)
+                                .allowUnsupported(true)
+                                .build());
+
+        public static final Block NORTHERN_WOOD_WINDOW_SHUTTERS = registerBlock(
+                        "northern_wood_window_shutters",
+                        BlockBuilder.halfDoor()
+                                .strength(2.0f)
+                                .resistance(5.0f)
+                                .requiresTool()
+                                .sounds(BlockSoundGroup.WOOD)
+                                .locked(false)
+                                .allowUnsupported(true)
+                                .build());
+
+        public static final Block OAK_WINDOW_SHUTTERS = registerBlock(
+                        "oak_window_shutters",
+                        BlockBuilder.halfDoor()
+                                .strength(2.0f)
+                                .resistance(5.0f)
+                                .requiresTool()
+                                .sounds(BlockSoundGroup.WOOD)
+                                .locked(false)
+                                .allowUnsupported(true)
+                                .build());
+
+        public static final Block REACH_BLUE_WINDOW_SHUTTERS = registerBlock(
+                        "reach_blue_window_shutters",
+                        BlockBuilder.halfDoor()
+                                .strength(2.0f)
+                                .resistance(5.0f)
+                                .requiresTool()
+                                .sounds(BlockSoundGroup.WOOD)
+                                .locked(false)
+                                .allowUnsupported(true)
+                                .build());
+
+        public static final Block SPRUCE_WINDOW_SHUTTERS = registerBlock(
+                        "spruce_window_shutters",
+                        BlockBuilder.halfDoor()
+                                .strength(2.0f)
+                                .resistance(5.0f)
+                                .requiresTool()
+                                .sounds(BlockSoundGroup.WOOD)
+                                .locked(false)
+                                .allowUnsupported(true)
+                                .build());
+
+        public static final Block WHITE_WOOD_WINDOW_SHUTTERS = registerBlock(
+                        "white_wood_window_shutters",
+                        BlockBuilder.halfDoor()
+                                .strength(2.0f)
+                                .resistance(5.0f)
+                                .requiresTool()
+                                .sounds(BlockSoundGroup.WOOD)
+                                .locked(false)
+                                .allowUnsupported(true)
+                                .build());
+
+        // Pane Blocks
+        public static final Block DORNE_CARVED_STONE_WINDOW = registerBlock(
+                        "dorne_carved_stone_window",
+                        new WCPaneBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(1.0f)
+                                        .resistance(3.0f).requiresTool().sounds(BlockSoundGroup.STONE).nonOpaque(), "legacy-model,unconnect:false"));
+
+        public static final Block DORNE_CARVED_WOODEN_WINDOW = registerBlock(
+                        "dorne_carved_wooden_window",
+                        new WCPaneBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(1.0f)
+                                        .resistance(3.0f).requiresTool().sounds(BlockSoundGroup.STONE).nonOpaque(), "legacy-model,unconnect:false"));
+
+        public static final Block IRON_BARS = registerBlock(
+                        "iron_bars",
+                        new WCPaneBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(5.0f)
+                                        .resistance(10.0f).requiresTool().sounds(BlockSoundGroup.METAL).nonOpaque(), "bars-model,unconnect:false"));
+
+        public static final Block IRON_CROSSBAR = registerBlock(
+                        "iron_crossbar",
+                        new WCPaneBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(5.0f)
+                                        .resistance(10.0f).requiresTool().sounds(BlockSoundGroup.METAL).nonOpaque(), "bars-model,unconnect:false"));
+
+        public static final Block OXIDIZED_IRON_BARS = registerBlock(
+                        "oxidized_iron_bars",
+                        new WCPaneBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(5.0f)
+                                        .resistance(10.0f).requiresTool().sounds(BlockSoundGroup.METAL).nonOpaque(), "bars-model,unconnect:false"));
+
+        public static final Block OXIDIZED_IRON_CROSSBAR = registerBlock(
+                        "oxidized_iron_crossbar",
+                        new WCPaneBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(5.0f)
+                                        .resistance(10.0f).requiresTool().sounds(BlockSoundGroup.METAL).nonOpaque(), "bars-model,unconnect:false"));
+
+        public static final Block VERTICAL_NET = registerBlock(
+                        "vertical_net",
+                        new WCPaneBlock.Factory().buildBlockClass(AbstractBlock.Settings.create().strength(1.0f)
+                                        .resistance(3.0f).sounds(BlockSoundGroup.GLASS).nonOpaque(), "legacy-model,unconnect:false"));
 
         // Timber Blocks
         public static final Block TIMBER_NORTHERN_BLUE_BRESSUMMER = registerBlock(
@@ -1397,6 +1533,21 @@ public class ModBlocks {
                         entries.add(ModBlocks.LOCKED_WHITE_WOOD_DOOR);
                         entries.add(ModBlocks.BIRCH_WINDOW_SHUTTERS);
                         entries.add(ModBlocks.DORNE_RED_WINDOW_SHUTTERS);
+                        entries.add(ModBlocks.GREEN_LANNISPORT_WINDOW_SHUTTERS);
+                        entries.add(ModBlocks.GREY_WOOD_WINDOW_SHUTTERS);
+                        entries.add(ModBlocks.JUNGLE_WINDOW_SHUTTERS);
+                        entries.add(ModBlocks.NORTHERN_WOOD_WINDOW_SHUTTERS);
+                        entries.add(ModBlocks.OAK_WINDOW_SHUTTERS);
+                        entries.add(ModBlocks.REACH_BLUE_WINDOW_SHUTTERS);
+                        entries.add(ModBlocks.SPRUCE_WINDOW_SHUTTERS);
+                        entries.add(ModBlocks.WHITE_WOOD_WINDOW_SHUTTERS);
+                        entries.add(ModBlocks.DORNE_CARVED_STONE_WINDOW);
+                        entries.add(ModBlocks.DORNE_CARVED_WOODEN_WINDOW);
+                        entries.add(ModBlocks.IRON_BARS);
+                        entries.add(ModBlocks.IRON_CROSSBAR);
+                        entries.add(ModBlocks.OXIDIZED_IRON_BARS);
+                        entries.add(ModBlocks.OXIDIZED_IRON_CROSSBAR);
+                        entries.add(ModBlocks.VERTICAL_NET);
                 });
         }
 

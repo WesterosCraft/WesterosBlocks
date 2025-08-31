@@ -10,6 +10,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
+import java.util.Map;
+
 public class WCDoorBlock extends DoorBlock {
     private final boolean locked;
     private final boolean allowUnsupported;
@@ -24,6 +26,15 @@ public class WCDoorBlock extends DoorBlock {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
+            if (params.length > 0 && params[0] instanceof Map) {
+                @SuppressWarnings("unchecked")
+                Map<String, Object> paramMap = (Map<String, Object>) params[0];
+                String woodType = (String) paramMap.getOrDefault("woodType", "oak");
+                boolean locked = (Boolean) paramMap.getOrDefault("locked", false);
+                boolean allowUnsupported = (Boolean) paramMap.getOrDefault("allowUnsupported", false);
+                return new WCDoorBlock(settings, woodType, locked, allowUnsupported);
+            }
+            // Fallback for legacy parameter style
             return new WCDoorBlock(settings,
                     (String) params[0], // woodType
                     (Boolean) params[1], // locked

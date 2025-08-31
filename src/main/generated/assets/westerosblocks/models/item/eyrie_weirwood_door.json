@@ -1,3 +1,6 @@
 {
-  "parent": "westerosblocks:block/eyrie_weirwood_door/bottom_left"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/door_block/door_weirwood_bottom"
+  }
 }

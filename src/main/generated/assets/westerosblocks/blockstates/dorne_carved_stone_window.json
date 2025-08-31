@@ -1,0 +1,77 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_stone_window_post"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_stone_window_side"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_stone_window_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_stone_window_side_alt"
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_stone_window_side_alt",
+        "y": 90
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_stone_window_noside"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_stone_window_noside",
+        "y": 90
+      },
+      "when": {
+        "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_stone_window_noside_alt"
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_stone_window_noside_alt",
+        "y": 90
+      },
+      "when": {
+        "west": "false"
+      }
+    }
+  ]
+}

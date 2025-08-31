@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_glass_pane_noside_alt",
+  "textures": {
+    "pane": "westerosblocks:block/bars_iron_block/iron_bars"
+  }
+}

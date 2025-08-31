@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side",
+  "textures": {
+    "edge": "westerosblocks:block/pane_block/moorish_wood_window_pane",
+    "pane": "westerosblocks:block/pane_block/moorish_wood_window_pane"
+  }
+}

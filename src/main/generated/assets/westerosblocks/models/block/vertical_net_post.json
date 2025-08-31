@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_post",
+  "textures": {
+    "edge": "westerosblocks:block/vertical_net/vertical_net1",
+    "pane": "westerosblocks:block/vertical_net/vertical_net1"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_glass_pane_noside",
+  "textures": {
+    "pane": "westerosblocks:block/vertical_net/vertical_net1"
+  }
+}

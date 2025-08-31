@@ -276,6 +276,23 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 // Half Door Blocks (Shutters)
                 translationBuilder.add("block.westerosblocks.birch_window_shutters", "Birch Window Shutters");
                 translationBuilder.add("block.westerosblocks.dorne_red_window_shutters", "Dorne Red Window Shutters");
+                translationBuilder.add("block.westerosblocks.green_lannisport_window_shutters", "Green Lannisport Window Shutters");
+                translationBuilder.add("block.westerosblocks.grey_wood_window_shutters", "Grey Wood Window Shutters");
+                translationBuilder.add("block.westerosblocks.jungle_window_shutters", "Jungle Window Shutters");
+                translationBuilder.add("block.westerosblocks.northern_wood_window_shutters", "Northern Wood Window Shutters");
+                translationBuilder.add("block.westerosblocks.oak_window_shutters", "Oak Window Shutters");
+                translationBuilder.add("block.westerosblocks.reach_blue_window_shutters", "Reach Blue Window Shutters");
+                translationBuilder.add("block.westerosblocks.spruce_window_shutters", "Spruce Window Shutters");
+                translationBuilder.add("block.westerosblocks.white_wood_window_shutters", "White Wood Window Shutters");
+                
+                // Pane Blocks
+                translationBuilder.add("block.westerosblocks.dorne_carved_stone_window", "Dorne Carved Stone Window");
+                translationBuilder.add("block.westerosblocks.dorne_carved_wooden_window", "Dorne Carved Wooden Window");
+                translationBuilder.add("block.westerosblocks.iron_bars", "Iron Bars");
+                translationBuilder.add("block.westerosblocks.iron_crossbar", "Iron Crossbar");
+                translationBuilder.add("block.westerosblocks.oxidized_iron_bars", "Oxidized Iron Bars");
+                translationBuilder.add("block.westerosblocks.oxidized_iron_crossbar", "Oxidized Iron Crossbar");
+                translationBuilder.add("block.westerosblocks.vertical_net", "Vertical Net");
         }
 
 }

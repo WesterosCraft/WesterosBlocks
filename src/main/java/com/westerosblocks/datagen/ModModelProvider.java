@@ -4,6 +4,7 @@ import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.datagen.custom.TableBlockExporter;
 import com.westerosblocks.datagen.custom.DoorBlockExporter;
 import com.westerosblocks.datagen.custom.HalfDoorBlockExporter;
+import com.westerosblocks.datagen.custom.PaneBlockExporter;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -804,6 +805,40 @@ public class ModModelProvider extends FabricModelProvider {
                                 "wood/birch/shutters");
                 HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.DORNE_RED_WINDOW_SHUTTERS,
                                 "shutter_block/shutters_dorne");
+                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.GREEN_LANNISPORT_WINDOW_SHUTTERS,
+                                "shutter_block/shutters_lannisport");
+                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.GREY_WOOD_WINDOW_SHUTTERS,
+                                "wood/grey/shutters");
+                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.JUNGLE_WINDOW_SHUTTERS,
+                                "wood/jungle/shutters");
+                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.NORTHERN_WOOD_WINDOW_SHUTTERS,
+                                "wood/northern/shutters");
+                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.OAK_WINDOW_SHUTTERS,
+                                "wood/oak/shutters");
+                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.REACH_BLUE_WINDOW_SHUTTERS,
+                                "shutter_block/shutters_reach");
+                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.SPRUCE_WINDOW_SHUTTERS,
+                                "wood/spruce/shutters");
+                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.WHITE_WOOD_WINDOW_SHUTTERS,
+                                "wood/white/shutters");
+
+                // Pane Blocks
+                PaneBlockExporter.registerPaneBlock(bsmg, ModBlocks.DORNE_CARVED_STONE_WINDOW,
+                                "pane_block/moorish_stone_window_pane");
+                PaneBlockExporter.registerPaneBlock(bsmg, ModBlocks.DORNE_CARVED_WOODEN_WINDOW,
+                                "pane_block/moorish_wood_window_pane");
+                PaneBlockExporter.registerPaneBlock(bsmg, ModBlocks.IRON_BARS,
+                                "bars_iron_block/iron_bars");
+                PaneBlockExporter.registerPaneBlock(bsmg, ModBlocks.IRON_CROSSBAR,
+                                "bars_iron_block/bars_iron_crossbars");
+                PaneBlockExporter.registerPaneBlock(bsmg, ModBlocks.OXIDIZED_IRON_BARS,
+                                "bars_iron_block/bars_iron_oxidized");
+                PaneBlockExporter.registerPaneBlock(bsmg, ModBlocks.OXIDIZED_IRON_CROSSBAR,
+                                "bars_iron_block/bars_iron_oxidized_crossbars");
+                PaneBlockExporter.registerPaneBlockWithRandomTextures(bsmg, ModBlocks.VERTICAL_NET,
+                                new String[]{"vertical_net/vertical_net1", "vertical_net/vertical_net2", 
+                                           "vertical_net/vertical_net3", "vertical_net/vertical_net4", 
+                                           "vertical_net/vertical_net5"});
         }
 
         @Override

@@ -1,0 +1,14 @@
+{
+    "blockName": "dorne_carved_stone_window",
+    "blockType": "pane",
+    "hardness": 1,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 3,
+    "creativeTab": "westeros_windows_glass_tab",
+    "type": "legacy-model,unconnect:false",
+    "label": "Dorne Carved Stone Window",
+    "textures": [
+        "pane_block/moorish_stone_window_pane"
+    ]
+}

@@ -1,3 +1,6 @@
 {
-  "parent": "westerosblocks:block/spruce_door/bottom_left"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/wood/spruce/door_bottom"
+  }
 }

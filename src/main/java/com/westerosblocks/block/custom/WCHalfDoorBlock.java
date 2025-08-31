@@ -25,6 +25,8 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
 
+import java.util.Map;
+
 public class WCHalfDoorBlock extends Block {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = Properties.OPEN;
@@ -54,12 +56,12 @@ public class WCHalfDoorBlock extends Block {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(Settings settings, Object... params) {
-            return new WCHalfDoorBlock(settings,
-                    (boolean) params[0], // locked
-                    (boolean) params[1]); // allowUnsupported
-        }
-
-
+                @SuppressWarnings("unchecked")
+                Map<String, Object> paramMap = (Map<String, Object>) params[0];
+                boolean locked = (Boolean) paramMap.getOrDefault("locked", false);
+                boolean allowUnsupported = (Boolean) paramMap.getOrDefault("allowUnsupported", false);
+                return new WCHalfDoorBlock(settings, locked, allowUnsupported);
+            }
     }
 
     @Override
