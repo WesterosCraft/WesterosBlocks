@@ -293,6 +293,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.oxidized_iron_bars", "Oxidized Iron Bars");
                 translationBuilder.add("block.westerosblocks.oxidized_iron_crossbar", "Oxidized Iron Crossbar");
                 translationBuilder.add("block.westerosblocks.vertical_net", "Vertical Net");
+
+                // Chair Blocks
+                translationBuilder.add("block.westerosblocks.oak_chair", "Oak Chair");
         }
 
 }

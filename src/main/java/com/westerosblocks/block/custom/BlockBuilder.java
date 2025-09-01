@@ -56,6 +56,10 @@ public class BlockBuilder<T extends Block> {
     public static BlockBuilder<WCBranchBlock> branch() {
         return new BlockBuilder<>(new WCBranchBlock.Factory());
     }
+
+    public static BlockBuilder<WCChairBlock> chair() {
+        return new BlockBuilder<>(new WCChairBlock.Factory());
+    }
     
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;

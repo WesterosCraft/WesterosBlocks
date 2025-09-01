@@ -56,6 +56,17 @@ public class WCChairBlock extends HorizontalFacingBlock {
         this.shapeByIndex = this.makeShapes();
     }
 
+    public static class Factory extends BlockFactory {
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
+            String blockName = params.length > 0 && params[0] instanceof String ? (String) params[0] : "chair";
+            String creativeTab = params.length > 1 && params[1] instanceof String ? (String) params[1] : "building_blocks";
+            String woodType = params.length > 2 && params[2] instanceof String ? (String) params[2] : "oak";
+            
+            return new WCChairBlock(settings, blockName, creativeTab, woodType);
+        }
+    }
+
     private Map<BlockState, VoxelShape> makeShapes() {
         ImmutableMap.Builder<BlockState, VoxelShape> builder = ImmutableMap.builder();
 

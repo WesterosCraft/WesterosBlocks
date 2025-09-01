@@ -5,6 +5,7 @@ import com.westerosblocks.block.custom.BlockBuilder;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
+import net.minecraft.block.WoodType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -2066,6 +2067,17 @@ public class ModBlocks {
                                 .sounds(BlockSoundGroup.WOOD)
                                 .build());
 
+        // Chair Blocks
+        public static final Block OAK_CHAIR = registerBlock(
+                "oak_chair",
+                BlockBuilder.chair()
+                        .strength(2.0f)
+                        .requiresTool()
+                        .sounds(BlockSoundGroup.WOOD)
+                        .woodType("oak")
+                        .build());
+
+
         /**
          * Initialize all blocks
          */
@@ -2316,6 +2328,7 @@ public class ModBlocks {
                         entries.add(ModBlocks.OXIDIZED_IRON_BARS);
                         entries.add(ModBlocks.OXIDIZED_IRON_CROSSBAR);
                         entries.add(ModBlocks.VERTICAL_NET);
+                        entries.add(ModBlocks.OAK_CHAIR);
                 });
         }
 

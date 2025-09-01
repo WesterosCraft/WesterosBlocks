@@ -1,10 +1,7 @@
 package com.westerosblocks.datagen;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.datagen.custom.TableBlockExporter;
-import com.westerosblocks.datagen.custom.DoorBlockExporter;
-import com.westerosblocks.datagen.custom.HalfDoorBlockExporter;
-import com.westerosblocks.datagen.custom.PaneBlockExporter;
+import com.westerosblocks.datagen.custom.*;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -839,6 +836,9 @@ public class ModModelProvider extends FabricModelProvider {
                                 new String[]{"vertical_net/vertical_net1", "vertical_net/vertical_net2", 
                                            "vertical_net/vertical_net3", "vertical_net/vertical_net4", 
                                            "vertical_net/vertical_net5"});
+
+                // Chair Blocks
+                ChairBlockExporter.registerChairBlock(bsmg, ModBlocks.OAK_CHAIR, "bark/oak/side");
         }
 
         @Override
