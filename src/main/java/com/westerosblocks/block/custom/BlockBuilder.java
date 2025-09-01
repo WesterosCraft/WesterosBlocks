@@ -4,8 +4,11 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.sound.BlockSoundGroup;
 
+import java.util.function.ToIntFunction;
 import java.util.HashMap;
 import java.util.Map;
+
+import net.minecraft.block.BlockState;
 
 public class BlockBuilder<T extends Block> {
     private AbstractBlock.Settings settings;
@@ -50,6 +53,10 @@ public class BlockBuilder<T extends Block> {
         return new BlockBuilder<>(new WCTableBlock.Factory());
     }
     
+    public static BlockBuilder<WCBranchBlock> branch() {
+        return new BlockBuilder<>(new WCBranchBlock.Factory());
+    }
+    
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
         return this;
@@ -72,6 +79,11 @@ public class BlockBuilder<T extends Block> {
     
     public BlockBuilder<T> sounds(BlockSoundGroup soundGroup) {
         this.settings = this.settings.sounds(soundGroup);
+        return this;
+    }
+    
+    public BlockBuilder<T> luminance(ToIntFunction<BlockState> luminanceFunction) {
+        this.settings = this.settings.luminance(luminanceFunction);
         return this;
     }
     
@@ -118,6 +130,26 @@ public class BlockBuilder<T extends Block> {
     // For the pane block, to switch between models
     public BlockBuilder<T> barsModel(boolean barsModel) {
         parameters.put("barsModel", barsModel);
+        return this;
+    }
+    
+    public BlockBuilder<T> connectState(boolean connectState) {
+        parameters.put("connectState", connectState);
+        return this;
+    }
+    
+    public BlockBuilder<T> toggleOnUse(boolean toggleOnUse) {
+        parameters.put("toggleOnUse", toggleOnUse);
+        return this;
+    }
+    
+    public BlockBuilder<T> states(int numStates) {
+        parameters.put("states", numStates);
+        return this;
+    }
+    
+    public BlockBuilder<T> symmetrical(boolean symmetrical) {
+        parameters.put("symmetrical", symmetrical);
         return this;
     }
     

@@ -63,7 +63,7 @@ Extensive OptiFine CTM (Connected Texture Mod) support with properties files in 
 
 ## Key Implementation Patterns
 
-### Block Factory Usage
+### Block Factory Usage (Legacy)
 ```java
 public static final Block EXAMPLE_BLOCK = registerBlock(
     "block_name",
@@ -76,6 +76,47 @@ public static final Block EXAMPLE_BLOCK = registerBlock(
 );
 ```
 
+### Block Builder Pattern (Preferred)
+Use the BlockBuilder pattern for cleaner, self-documenting block registration:
+
+```java
+public static final Block EXAMPLE_BLOCK = registerBlock(
+    "block_name",
+    BlockBuilder.solid()
+        .strength(2.0f)
+        .requiresTool()
+        .sounds(BlockSoundGroup.WOOD)
+        .build()
+);
+```
+
+**Available Block Types:**
+- `BlockBuilder.solid()` - For WCSolidBlock
+- `BlockBuilder.halfDoor()` - For WCHalfDoorBlock (shutters)
+- `BlockBuilder.door()` - For WCDoorBlock
+- `BlockBuilder.pane()` - For WCPaneBlock
+- `BlockBuilder.slab()` - For WCSlabBlock
+- `BlockBuilder.log()` - For WCLogBlock
+- `BlockBuilder.table()` - For WCTableBlock
+
+**Common Settings Methods:**
+- `.strength(float)` - Block hardness
+- `.resistance(float)` - Explosion resistance
+- `.requiresTool()` - Requires proper tool to break
+- `.sounds(BlockSoundGroup)` - Sound effects
+- `.nonOpaque()` - For transparent blocks
+- `.noCollision()` - For non-solid blocks
+
+**Block-Specific Parameters:**
+- `.locked(boolean)` - For doors/shutters that can't be opened
+- `.allowUnsupported(boolean)` - For blocks that can float
+- `.woodType(String)` - For doors requiring wood type
+- `.hasRecipe(boolean)` - For recipe generation
+- `.unconnect(boolean)` - For pane blocks
+- `.legacyModel(boolean)` - For pane model variants
+- `.barsModel(boolean)` - For pane bar models
+- `.parameter(String, Object)` - Generic parameter setter
+
 ### Data Generation Builder Pattern
 ```java
 registerCustomSolidBlock(bsmg, ModBlocks.EXAMPLE_BLOCK)
@@ -87,13 +128,34 @@ registerCustomSolidBlock(bsmg, ModBlocks.EXAMPLE_BLOCK)
 ### Door Block Registration
 Door blocks require wood type, lock state, and recipe generation parameters:
 ```java
+// Legacy approach
 new WCDoorBlock.Factory().buildBlockClass(settings, "woodType", isLocked, hasRecipe)
+
+// Preferred BlockBuilder approach
+BlockBuilder.door()
+    .strength(2.0f)
+    .requiresTool()
+    .sounds(BlockSoundGroup.WOOD)
+    .woodType("oak")
+    .locked(false)
+    .hasRecipe(true)
+    .build()
 ```
 
 ### Half Door Block Registration
 Half door blocks (shutters) require locked state and unsupported allowance parameters:
 ```java
+// Legacy approach
 new WCHalfDoorBlock.Factory().buildBlockClass(settings, isLocked, allowUnsupported)
+
+// Preferred BlockBuilder approach
+BlockBuilder.halfDoor()
+    .strength(2.0f)
+    .requiresTool()
+    .sounds(BlockSoundGroup.WOOD)
+    .locked(false)
+    .allowUnsupported(true)
+    .build()
 ```
 
 ## Important Development Notes
@@ -125,18 +187,27 @@ When implementing any new block from definition files, follow these steps:
 
 ### 1. Block Registration (ModBlocks.java)
 ```java
-// Add appropriate import
+// Add appropriate imports
 import com.westerosblocks.block.custom.WC[BlockType]Block;
+import com.westerosblocks.block.custom.BlockBuilder;
 
-// Register block with factory pattern
+// Register block with BlockBuilder pattern (preferred)
 public static final Block BLOCK_NAME = registerBlock(
     "block_name", // Must match definition file blockName
+    BlockBuilder.[blockType]()
+        .strength([hardness]f)
+        .resistance([resistance]f)
+        .requiresTool()
+        .sounds(BlockSoundGroup.[SOUND_TYPE]) // From stepSound field
+        .[parameter](value) // Block-specific parameters with clear names
+        .build()
+);
+
+// Legacy factory pattern (still supported)
+public static final Block BLOCK_NAME = registerBlock(
+    "block_name",
     new WC[BlockType]Block.Factory().buildBlockClass(
-        AbstractBlock.Settings.create()
-            .strength([hardness]f)
-            .resistance([resistance]f)
-            .requiresTool()
-            .sounds(BlockSoundGroup.[SOUND_TYPE]), // From stepSound field
+        AbstractBlock.Settings.create().strength([hardness]f).sounds([SOUND_TYPE]),
         [additional_parameters] // Varies by block type
     )
 );
