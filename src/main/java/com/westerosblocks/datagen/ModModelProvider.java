@@ -837,6 +837,12 @@ public class ModModelProvider extends FabricModelProvider {
                                            "vertical_net/vertical_net3", "vertical_net/vertical_net4", 
                                            "vertical_net/vertical_net5"});
 
+                // Torch Blocks
+                TorchBlockExporter.registerTorchBlock(bsmg, ModBlocks.TORCH, "lighting/torch");
+                TorchBlockExporter.registerTorchBlock(bsmg, ModBlocks.TORCH_UNLIT, "lighting/torch_unlit");
+                TorchBlockExporter.registerTorchBlock(bsmg, ModBlocks.CANDLE, "lighting/candle");
+                TorchBlockExporter.registerTorchBlock(bsmg, ModBlocks.CANDLE_UNLIT, "lighting/candle_unlit");
+
                 // Chair Blocks
                 ChairBlockExporter.registerChairBlock(bsmg, ModBlocks.OAK_CHAIR, "bark/oak/side");
         }

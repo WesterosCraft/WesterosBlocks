@@ -2,6 +2,8 @@ package com.westerosblocks.block;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.custom.BlockBuilder;
+import com.westerosblocks.block.custom.WCTorchBlock;
+import com.westerosblocks.block.custom.WCWallTorchBlock;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
@@ -1332,6 +1334,107 @@ public class ModBlocks {
                                         .sounds(BlockSoundGroup.STONE)
                                         .build());
 
+        // Torch Blocks
+        public static final Block WALL_TORCH = registerBlockWithoutBlockItem(
+                        "wall_torch",
+                        BlockBuilder.wallTorch()
+                                .strength(0.0f)
+                                .sounds(BlockSoundGroup.METAL)
+                                .luminance(state -> 13)
+                                .nonOpaque()
+                                .noCollision()
+                                .allowUnsupported(true)
+                                .noParticle(false)
+                                .build());
+
+        public static final Block TORCH = registerBlock(
+                        "torch",
+                        BlockBuilder.torch()
+                                .strength(0.0f)
+                                .sounds(BlockSoundGroup.METAL)
+                                .luminance(state -> 13)
+                                .nonOpaque()
+                                .noCollision()
+                                .wallBlock(WALL_TORCH)
+                                .allowUnsupported(true)
+                                .noParticle(false)
+                                .build());
+
+        public static final Block WALL_TORCH_UNLIT = registerBlockWithoutBlockItem(
+                        "wall_torch_unlit",
+                        BlockBuilder.wallTorch()
+                                .strength(0.0f)
+                                .sounds(BlockSoundGroup.METAL)
+                                .luminance(state -> 0)
+                                .nonOpaque()
+                                .noCollision()
+                                .allowUnsupported(true)
+                                .noParticle(true)
+                                .build());
+
+        public static final Block TORCH_UNLIT = registerBlock(
+                        "torch_unlit",
+                        BlockBuilder.torch()
+                                .strength(0.0f)
+                                .sounds(BlockSoundGroup.METAL)
+                                .luminance(state -> 0)
+                                .nonOpaque()
+                                .noCollision()
+                                .wallBlock(WALL_TORCH_UNLIT)
+                                .allowUnsupported(true)
+                                .noParticle(true)
+                                .build());
+
+        public static final Block WALL_CANDLE = registerBlockWithoutBlockItem(
+                        "wall_candle",
+                        BlockBuilder.wallTorch()
+                                .strength(0.0f)
+                                .sounds(BlockSoundGroup.CANDLE)
+                                .luminance(state -> 10)
+                                .nonOpaque()
+                                .noCollision()
+                                .allowUnsupported(true)
+                                .noParticle(false)
+                                .build());
+
+        public static final Block CANDLE = registerBlock(
+                        "candle",
+                        BlockBuilder.torch()
+                                .strength(0.0f)
+                                .sounds(BlockSoundGroup.CANDLE)
+                                .luminance(state -> 10)
+                                .nonOpaque()
+                                .noCollision()
+                                .wallBlock(WALL_CANDLE)
+                                .allowUnsupported(true)
+                                .noParticle(false)
+                                .build());
+
+        public static final Block WALL_CANDLE_UNLIT = registerBlockWithoutBlockItem(
+                        "wall_candle_unlit",
+                        BlockBuilder.wallTorch()
+                                .strength(0.0f)
+                                .sounds(BlockSoundGroup.CANDLE)
+                                .luminance(state -> 0)
+                                .nonOpaque()
+                                .noCollision()
+                                .allowUnsupported(true)
+                                .noParticle(true)
+                                .build());
+
+        public static final Block CANDLE_UNLIT = registerBlock(
+                        "candle_unlit",
+                        BlockBuilder.torch()
+                                .strength(0.0f)
+                                .sounds(BlockSoundGroup.CANDLE)
+                                .luminance(state -> 0)
+                                .nonOpaque()
+                                .noCollision()
+                                .wallBlock(WALL_CANDLE_UNLIT)
+                                .allowUnsupported(true)
+                                .noParticle(true)
+                                .build());
+
         // Door Blocks
         public static final Block BIRCH_DOOR = registerBlock(
                         "birch_door",
@@ -2329,6 +2432,10 @@ public class ModBlocks {
                         entries.add(ModBlocks.OXIDIZED_IRON_CROSSBAR);
                         entries.add(ModBlocks.VERTICAL_NET);
                         entries.add(ModBlocks.OAK_CHAIR);
+                        entries.add(ModBlocks.TORCH);
+                        entries.add(ModBlocks.TORCH_UNLIT);
+                        entries.add(ModBlocks.CANDLE);
+                        entries.add(ModBlocks.CANDLE_UNLIT);
                 });
         }
 

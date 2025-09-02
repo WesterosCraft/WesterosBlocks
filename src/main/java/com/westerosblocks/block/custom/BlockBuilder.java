@@ -61,6 +61,14 @@ public class BlockBuilder<T extends Block> {
         return new BlockBuilder<>(new WCChairBlock.Factory());
     }
     
+    public static BlockBuilder<WCTorchBlock> torch() {
+        return new BlockBuilder<>(new WCTorchBlock.Factory());
+    }
+    
+    public static BlockBuilder<WCWallTorchBlock> wallTorch() {
+        return new BlockBuilder<>(new WCWallTorchBlock.Factory());
+    }
+    
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
         return this;
@@ -154,6 +162,16 @@ public class BlockBuilder<T extends Block> {
     
     public BlockBuilder<T> symmetrical(boolean symmetrical) {
         parameters.put("symmetrical", symmetrical);
+        return this;
+    }
+    
+    public BlockBuilder<T> wallBlock(Block wallBlock) {
+        parameters.put("wallBlock", wallBlock);
+        return this;
+    }
+    
+    public BlockBuilder<T> noParticle(boolean noParticle) {
+        parameters.put("noParticle", noParticle);
         return this;
     }
     

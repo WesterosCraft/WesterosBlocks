@@ -64,7 +64,8 @@ public class ChairBlockExporter {
 
         // Create texture map
         TextureMap textureMap = new TextureMap()
-                .put(TextureKey.ALL, createBlockIdentifier(texturePath)).put(TextureKey.PARTICLE, createBlockIdentifier(texturePath));
+                .put(TextureKey.ALL, createBlockIdentifier(texturePath))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(texturePath));
 
         // Determine the parent model based on the variant
         String parentModelPath = getParentModelName(variant);
