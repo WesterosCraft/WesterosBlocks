@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "westerosblocks:block/marble/quartz/column_topbottom",
-    "side": "westerosblocks:block/marble/quartz/column_side_ctm"
-  }
-}

@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.block.custom.WCChairBlock;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -23,9 +24,9 @@ public class ChairBlockExporter {
      * @param texturePath The texture path for the chair
      */
     public static void registerChairBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
-        // Create the base models for each chair variant
-        Identifier cardinalModelId = createChairModel(generator, block, texturePath, "cardinal");
-        Identifier diagonalModelId = createChairModel(generator, block, texturePath, "diagonal");
+        // Create the base models for each chair variant using predefined ModModels
+        Identifier cardinalModelId = createChairModel(generator, block, texturePath, "cardinal", ModModels.CHAIR);
+        Identifier diagonalModelId = createChairModel(generator, block, texturePath, "diagonal", ModModels.CHAIR_45);
 
         // Create variants for all chair rotations using BlockStateModelGenerator patterns
         BlockStateVariantMap variants = BlockStateVariantMap.create(WCChairBlock.ROTATION)
@@ -48,51 +49,31 @@ public class ChairBlockExporter {
     }
 
     /**
-     * Creates a chair model with the specified variant.
+     * Creates a chair model with the specified variant using predefined ModModels.
      * 
      * @param generator   The BlockStateModelGenerator to register the model with
      * @param block       The block this model is for
      * @param texturePath The texture path to use
      * @param variant     The variant name (e.g., "cardinal", "diagonal")
+     * @param model       The predefined model from ModModels to use
      * @return The created model Identifier
      */
-    private static Identifier createChairModel(BlockStateModelGenerator generator, Block block, String texturePath, String variant) {
+    private static Identifier createChairModel(BlockStateModelGenerator generator, Block block, String texturePath, String variant, Model model) {
         // Create a unique model ID for this block and variant
         String blockName = getBlockName(block);
         String modelPath = "block/" + blockName + "/" + variant;
         Identifier modelId = WesterosBlocks.id(modelPath);
 
-        // Create texture map
+        // Create texture map using ALL key (as used by chair model JSON files)
         TextureMap textureMap = new TextureMap()
-                .put(TextureKey.ALL, createBlockIdentifier(texturePath))
-                .put(TextureKey.PARTICLE, createBlockIdentifier(texturePath));
+                .put(TextureKey.ALL, createBlockIdentifier(texturePath));
 
-        // Determine the parent model based on the variant
-        String parentModelPath = getParentModelName(variant);
-
-        // Create and upload the model
-        Model chairModel = new Model(
-                Optional.of(Identifier.of(parentModelPath)),
-                Optional.empty(),
-                TextureKey.ALL);
-        chairModel.upload(modelId, textureMap, generator.modelCollector);
+        // Upload the model using the predefined ModModels model
+        model.upload(modelId, textureMap, generator.modelCollector);
 
         return modelId;
     }
 
-    /**
-     * Maps chair variants to their parent model names.
-     * 
-     * @param variant The chair variant
-     * @return The parent model name
-     */
-    private static String getParentModelName(String variant) {
-        return switch (variant) {
-            case "cardinal" -> "westerosblocks:block/chair/simple_chair";
-            case "diagonal" -> "westerosblocks:block/chair/simple_chair_45";
-            default -> throw new IllegalArgumentException("Unknown chair variant: " + variant);
-        };
-    }
 
     /**
      * Creates an identifier for block textures, handling namespaces properly.

@@ -16,23 +16,6 @@
       "when": {
         "east": "true"
       }
-    },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oxidized_iron_bars_side_alt"
-      },
-      "when": {
-        "south": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oxidized_iron_bars_side_alt",
-        "y": 90
-      },
-      "when": {
-        "west": "true"
-      }
     }
   ]
 }

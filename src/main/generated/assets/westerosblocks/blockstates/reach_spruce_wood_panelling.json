@@ -2,13 +2,13 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/reach_spruce_wood_panelling/base_v1"
+        "model": "westerosblocks:block/reach_spruce_wood_panelling/variant_1"
       },
       {
-        "model": "westerosblocks:block/reach_spruce_wood_panelling/base_v2"
+        "model": "westerosblocks:block/reach_spruce_wood_panelling/variant_2"
       },
       {
-        "model": "westerosblocks:block/reach_spruce_wood_panelling/base_v3"
+        "model": "westerosblocks:block/reach_spruce_wood_panelling/variant_3"
       }
     ]
   }

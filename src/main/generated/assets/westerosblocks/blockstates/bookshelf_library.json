@@ -2,13 +2,13 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/bookshelf_library/base_v1"
+        "model": "westerosblocks:block/bookshelf_library/variant_1"
       },
       {
-        "model": "westerosblocks:block/bookshelf_library/base_v2"
+        "model": "westerosblocks:block/bookshelf_library/variant_2"
       },
       {
-        "model": "westerosblocks:block/bookshelf_library/base_v3"
+        "model": "westerosblocks:block/bookshelf_library/variant_3"
       }
     ]
   }

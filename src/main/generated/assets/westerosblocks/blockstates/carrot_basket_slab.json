@@ -1,13 +1,13 @@
 {
   "variants": {
     "type=bottom": {
-      "model": "westerosblocks:block/carrot_basket_slab/carrot_basket_slab_bottom"
+      "model": "westerosblocks:block/carrot_basket_slab/bottom"
     },
     "type=double": {
-      "model": "westerosblocks:block/carrot_basket_slab/carrot_basket_slab_double"
+      "model": "westerosblocks:block/carrot_basket_slab/double"
     },
     "type=top": {
-      "model": "westerosblocks:block/carrot_basket_slab/carrot_basket_slab_top"
+      "model": "westerosblocks:block/carrot_basket_slab/top"
     }
   }
 }

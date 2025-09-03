@@ -117,11 +117,82 @@ public static final Block EXAMPLE_BLOCK = registerBlock(
 - `.barsModel(boolean)` - For pane bar models
 - `.parameter(String, Object)` - Generic parameter setter
 
-### Data Generation Builder Pattern
+### Data Generation Builder Pattern (Unified)
+All block types now use a consistent unified builder pattern following block-models.md conventions:
+
 ```java
+// Solid blocks - single texture
 registerCustomSolidBlock(bsmg, ModBlocks.EXAMPLE_BLOCK)
     .texture("texture/path")
+    .build();
+
+// Solid blocks - multiple textures (down, up, north, south, east, west)
+registerCustomSolidBlock(bsmg, ModBlocks.EXAMPLE_BLOCK)
+    .textures("bottom", "top", "side")
+    .build();
+
+// Solid blocks - random texture variants
+registerCustomSolidBlock(bsmg, ModBlocks.EXAMPLE_BLOCK)
     .randomTexture("variant1", "variant2", "variant3")
+    .randomTexture("variant4", "variant5", "variant6")
+    .build();
+
+// Solid blocks - state variants
+registerCustomSolidBlock(bsmg, ModBlocks.EXAMPLE_BLOCK)
+    .state("state1_bottom", "state1_top", "state1_side")
+    .state("state2_bottom", "state2_top", "state2_side")
+    .build();
+
+// Door blocks
+registerCustomDoorBlock(bsmg, ModBlocks.EXAMPLE_DOOR)
+    .textures("door_top", "door_bottom")
+    .build();
+
+// Half door blocks (shutters)
+registerCustomHalfDoorBlock(bsmg, ModBlocks.EXAMPLE_SHUTTERS)
+    .texture("shutters_texture")
+    .build();
+
+// Log blocks
+registerCustomLogBlock(bsmg, ModBlocks.EXAMPLE_LOG)
+    .textures("log_side", "log_end")
+    .build();
+
+// Slab blocks
+registerCustomSlabBlock(bsmg, ModBlocks.EXAMPLE_SLAB)
+    .textures("bottom", "top", "side")
+    .build();
+
+// Pane blocks
+registerCustomPaneBlock(bsmg, ModBlocks.EXAMPLE_PANE)
+    .texture("pane_texture")
+    .build();
+
+// Pane blocks with random textures
+registerCustomPaneBlock(bsmg, ModBlocks.EXAMPLE_NET)
+    .randomTexture("net1")
+    .randomTexture("net2")
+    .randomTexture("net3")
+    .build();
+
+// Branch blocks
+registerCustomBranchBlock(bsmg, ModBlocks.EXAMPLE_BRANCH)
+    .texture("branch_texture")
+    .build();
+
+// Torch blocks
+registerCustomTorchBlock(bsmg, ModBlocks.EXAMPLE_TORCH)
+    .texture("torch_texture")
+    .build();
+
+// Chair blocks
+registerCustomChairBlock(bsmg, ModBlocks.EXAMPLE_CHAIR)
+    .texture("chair_texture")
+    .build();
+
+// Table blocks
+registerCustomTableBlock(bsmg, ModBlocks.EXAMPLE_TABLE)
+    .texture("table_texture")
     .build();
 ```
 
@@ -218,11 +289,25 @@ entries.add(ModBlocks.BLOCK_NAME);
 
 ### 2. Data Generation (ModModelProvider.java)
 ```java
-// Add appropriate exporter import
-import com.westerosblocks.datagen.custom.[BlockType]BlockExporter;
+// Import the unified builder
+import static com.westerosblocks.datagen.ModBlockStateModelGenerator.*;
 
-// Register in generateBlockStateModels() method
-[BlockType]BlockExporter.register[BlockType]Block(bsmg, ModBlocks.BLOCK_NAME, "texture/path");
+// Register in generateBlockStateModels() method using unified builder pattern
+registerCustom[BlockType]Block(bsmg, ModBlocks.BLOCK_NAME)
+    .texture("texture/path")
+    .build();
+
+// Examples for different block types:
+registerCustomSolidBlock(bsmg, ModBlocks.SOLID_BLOCK).texture("texture_path").build();
+registerCustomDoorBlock(bsmg, ModBlocks.DOOR_BLOCK).textures("top_texture", "bottom_texture").build();
+registerCustomSlabBlock(bsmg, ModBlocks.SLAB_BLOCK).textures("bottom", "top", "side").build();
+registerCustomLogBlock(bsmg, ModBlocks.LOG_BLOCK).textures("side_texture", "end_texture").build();
+registerCustomPaneBlock(bsmg, ModBlocks.PANE_BLOCK).texture("pane_texture").build();
+registerCustomHalfDoorBlock(bsmg, ModBlocks.SHUTTER_BLOCK).texture("shutter_texture").build();
+registerCustomTorchBlock(bsmg, ModBlocks.TORCH_BLOCK).texture("torch_texture").build();
+registerCustomChairBlock(bsmg, ModBlocks.CHAIR_BLOCK).texture("chair_texture").build();
+registerCustomTableBlock(bsmg, ModBlocks.TABLE_BLOCK).texture("table_texture").build();
+registerCustomBranchBlock(bsmg, ModBlocks.BRANCH_BLOCK).texture("branch_texture").build();
 ```
 
 ### 3. Language Generation (ModLanguageProvider.java)
@@ -240,8 +325,28 @@ translationBuilder.add("block.westerosblocks.block_name", "Display Name"); // Fr
 - Always run `./gradlew runDatagen` after registration to generate models and assets
 
 ### 5. Block Type Specific Notes
-- **Solid blocks**: Use `SolidBlockExporter.registerCustomSolidBlock()`
-- **Door blocks**: Require wood type, lock state, recipe parameters
-- **Half doors**: Require lock state, unsupported allowance parameters  
-- **Slab blocks**: Use `SlabBlockExporter.registerSlabBlock()`
-- **Log blocks**: Use `LogBlockExporter.registerLogBlock()`
+
+**All block types now use unified builder pattern methods:**
+
+- **Solid blocks**: `registerCustomSolidBlock(bsmg, block).texture("path").build()`
+- **Door blocks**: `registerCustomDoorBlock(bsmg, block).textures("top", "bottom").build()`
+- **Half doors**: `registerCustomHalfDoorBlock(bsmg, block).texture("shutter_texture").build()`
+- **Slab blocks**: `registerCustomSlabBlock(bsmg, block).textures("bottom", "top", "side").build()`
+- **Log blocks**: `registerCustomLogBlock(bsmg, block).textures("side", "end").build()`
+- **Pane blocks**: `registerCustomPaneBlock(bsmg, block).texture("pane_texture").build()`
+- **Torch blocks**: `registerCustomTorchBlock(bsmg, block).texture("torch_texture").build()`
+- **Chair blocks**: `registerCustomChairBlock(bsmg, block).texture("chair_texture").build()`
+- **Table blocks**: `registerCustomTableBlock(bsmg, block).texture("table_texture").build()`
+- **Branch blocks**: `registerCustomBranchBlock(bsmg, block).texture("branch_texture").build()`
+
+**Builder Methods Available:**
+- `.texture(String)` - Single texture for all sides
+- `.textures(String...)` - Multiple textures for different sides
+- `.randomTexture(String...)` - Add random texture variants (solid/pane blocks)
+- `.state(String...)` - Add state variants (solid blocks only)
+
+**Important:** 
+- Always use the unified builder pattern - DO NOT call exporters directly
+- All builders require `.build()` at the end
+- The system automatically handles model creation, blockstate generation, and item model registration
+- Complex block logic is handled internally by specialized exporters

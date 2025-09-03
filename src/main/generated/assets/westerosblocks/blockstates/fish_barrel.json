@@ -2,10 +2,10 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/fish_barrel/base_v1"
+        "model": "westerosblocks:block/fish_barrel/variant_1"
       },
       {
-        "model": "westerosblocks:block/fish_barrel/base_v2"
+        "model": "westerosblocks:block/fish_barrel/variant_2"
       }
     ]
   }

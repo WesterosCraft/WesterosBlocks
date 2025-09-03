@@ -25,7 +25,7 @@ public class LogBlockExporter {
                         throw new IllegalArgumentException("Side and end textures are required for log blocks");
                 }
 
-                String blockName = SolidBlockExporter.getBlockName(block);
+                String blockName = BaseBlockExporter.getBlockName(block);
 
                 // Create texture maps for side and end
                 TextureMap sideTextureMap = new TextureMap()

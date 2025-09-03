@@ -5,42 +5,36 @@ import net.minecraft.data.client.*;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.datagen.ModModels;
+import com.westerosblocks.datagen.ModTextureKey;
 import com.westerosblocks.block.custom.WCPaneBlock;
 
 public class PaneBlockExporter {
 
     public static void registerPaneBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
         WCPaneBlock paneBlock = (WCPaneBlock) block;
-        String blockName = getBlockName(block);
-        
+        String blockName = BaseBlockExporter.getBlockName(block);
+
         // Create texture map for pane models
         TextureMap paneTextureMap = new TextureMap()
-                .put(TextureKey.PANE, Identifier.of(WesterosBlocks.MOD_ID, "block/" + texturePath))
-                .put(TextureKey.EDGE, Identifier.of(WesterosBlocks.MOD_ID, "block/" + texturePath));
+                .put(TextureKey.SIDE, Identifier.of(WesterosBlocks.MOD_ID, "block/" + texturePath))
+                .put(ModTextureKey.CAP, Identifier.of(WesterosBlocks.MOD_ID, "block/" + texturePath));
 
-        // Generate models
-        Identifier postModelId = Models.TEMPLATE_GLASS_PANE_POST.upload(
+        // Generate models using ModModels
+        Identifier postModelId = ModModels.PANE_POST.upload(
                 Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "_post"),
                 paneTextureMap,
                 generator.modelCollector);
 
-        Identifier sideModelId = Models.TEMPLATE_GLASS_PANE_SIDE.upload(
+        Identifier sideModelId = ModModels.PANE_SIDE.upload(
                 Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "_side"),
                 paneTextureMap,
                 generator.modelCollector);
 
-        Identifier sideAltModelId = Models.TEMPLATE_GLASS_PANE_SIDE_ALT.upload(
-                Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "_side_alt"),
-                paneTextureMap,
-                generator.modelCollector);
 
-        Identifier nosideModelId = Models.TEMPLATE_GLASS_PANE_NOSIDE.upload(
+
+        Identifier nosideModelId = ModModels.PANE_NOSIDE.upload(
                 Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "_noside"),
-                paneTextureMap,
-                generator.modelCollector);
-
-        Identifier nosideAltModelId = Models.TEMPLATE_GLASS_PANE_NOSIDE_ALT.upload(
-                Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "_noside_alt"),
                 paneTextureMap,
                 generator.modelCollector);
 
@@ -57,10 +51,6 @@ public class PaneBlockExporter {
                 BlockStateVariant.create().put(VariantSettings.MODEL, sideModelId));
         supplier = supplier.with(When.create().set(Properties.EAST, true),
                 BlockStateVariant.create().put(VariantSettings.MODEL, sideModelId).put(VariantSettings.Y, VariantSettings.Rotation.R90));
-        supplier = supplier.with(When.create().set(Properties.SOUTH, true),
-                BlockStateVariant.create().put(VariantSettings.MODEL, sideAltModelId));
-        supplier = supplier.with(When.create().set(Properties.WEST, true),
-                BlockStateVariant.create().put(VariantSettings.MODEL, sideAltModelId).put(VariantSettings.Y, VariantSettings.Rotation.R90));
 
         // No-side connections for non-bars models
         if (!paneBlock.isBarsModel()) {
@@ -68,10 +58,6 @@ public class PaneBlockExporter {
                     BlockStateVariant.create().put(VariantSettings.MODEL, nosideModelId));
             supplier = supplier.with(When.create().set(Properties.EAST, false),
                     BlockStateVariant.create().put(VariantSettings.MODEL, nosideModelId).put(VariantSettings.Y, VariantSettings.Rotation.R90));
-            supplier = supplier.with(When.create().set(Properties.SOUTH, false),
-                    BlockStateVariant.create().put(VariantSettings.MODEL, nosideAltModelId));
-            supplier = supplier.with(When.create().set(Properties.WEST, false),
-                    BlockStateVariant.create().put(VariantSettings.MODEL, nosideAltModelId).put(VariantSettings.Y, VariantSettings.Rotation.R90));
         }
 
         generator.blockStateCollector.accept(supplier);
@@ -93,14 +79,5 @@ public class PaneBlockExporter {
         registerPaneBlock(generator, block, texturePaths[0]);
     }
 
-    /**
-     * Extracts the block name from the block's registry key
-     */
-    public static String getBlockName(Block block) {
-        String blockString = block.toString();
-        if (blockString.contains(":")) {
-            return blockString.split(":")[1].replace("}", "");
-        }
-        return blockString.toLowerCase().replace("block{", "").replace("}", "");
-    }
+
 }

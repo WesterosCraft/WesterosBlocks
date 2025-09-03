@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "westerosblocks:block/mossy_jungle_log/x",
+      "model": "westerosblocks:block/mossy_jungle_log/horizontal",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "westerosblocks:block/mossy_jungle_log/y"
+      "model": "westerosblocks:block/mossy_jungle_log/mossy_jungle_log"
     },
     "axis=z": {
-      "model": "westerosblocks:block/mossy_jungle_log/z",
+      "model": "westerosblocks:block/mossy_jungle_log/horizontal",
       "x": 90
     }
   }

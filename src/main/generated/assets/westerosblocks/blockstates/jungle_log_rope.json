@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "westerosblocks:block/jungle_log_rope/x",
+      "model": "westerosblocks:block/jungle_log_rope/horizontal",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "westerosblocks:block/jungle_log_rope/y"
+      "model": "westerosblocks:block/jungle_log_rope/jungle_log_rope"
     },
     "axis=z": {
-      "model": "westerosblocks:block/jungle_log_rope/z",
+      "model": "westerosblocks:block/jungle_log_rope/horizontal",
       "x": 90
     }
   }

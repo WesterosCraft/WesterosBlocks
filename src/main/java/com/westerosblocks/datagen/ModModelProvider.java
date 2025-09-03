@@ -1,7 +1,6 @@
 package com.westerosblocks.datagen;
 
 import com.westerosblocks.block.ModBlocks;
-import com.westerosblocks.datagen.custom.*;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -506,7 +505,7 @@ public class ModModelProvider extends FabricModelProvider {
                                 .build();
 
                 // Table Blocks
-                TableBlockExporter.registerCustomTableBlock(bsmg, ModBlocks.OAK_TABLE, "wood/oak/all");
+                registerCustomTableBlock(bsmg, ModBlocks.OAK_TABLE).texture("wood/oak/all").build();
 
                 registerCustomSolidBlock(bsmg, ModBlocks.TERRACOTTA_ENGRAVED).texture("ashlar_engraved/terracotta/all")
                                 .build();
@@ -762,89 +761,92 @@ public class ModModelProvider extends FabricModelProvider {
                 registerCustomBranchBlock(bsmg, ModBlocks.BIRCH_BRANCH).texture("bark/birch/side").build();
 
                 // Door Blocks
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.BIRCH_DOOR,
-                                "wood/birch/door_top", "wood/birch/door_bottom");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.EYRIE_WEIRWOOD_DOOR,
-                                "door_block/door_weirwood_top", "door_block/door_weirwood_bottom");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.GREY_WOOD_DOOR,
-                                "wood/grey/door_top", "wood/grey/door_bottom");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.HARRENHAL_SECRET_DOOR,
-                                "ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.JUNGLE_DOOR,
-                                "wood/jungle/door_top", "wood/jungle/door_bottom");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.LOCKED_BIRCH_DOOR,
-                                "wood/birch/door_locked_top", "wood/birch/door_locked_bottom");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.LOCKED_DARK_NORTHERN_WOOD_DOOR,
-                                "wood/northern/door_locked_top", "wood/northern/door_locked_bottom");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.LOCKED_GREY_WOOD_DOOR,
-                                "wood/grey/door_locked_top", "wood/grey/door_locked_bottom");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.LOCKED_JUNGLE_DOOR,
-                                "wood/jungle/door_locked_top", "wood/jungle/door_locked_bottom");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.LOCKED_OAK_DOOR,
-                                "wood/oak/door_locked_top", "wood/oak/door_locked_bottom");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.LOCKED_SPRUCE_DOOR,
-                                "wood/spruce/door_locked_top", "wood/spruce/door_locked_bottom");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.LOCKED_WHITE_WOOD_DOOR,
-                                "wood/white/door_locked_top", "wood/white/door_locked_bottom");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.NORTHERN_WOOD_DOOR,
-                                "wood/northern/door_top", "wood/northern/door_bottom");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.OAK_DOOR,
-                                "wood/oak/door_top", "wood/oak/door_bottom");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.RED_KEEP_SECRET_DOOR,
-                                "ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.SPRUCE_DOOR,
-                                "wood/spruce/door_top", "wood/spruce/door_bottom");
-                DoorBlockExporter.registerDoorBlock(bsmg, ModBlocks.WHITE_WOOD_DOOR,
-                                "wood/white/door_top", "wood/white/door_bottom");
+                registerCustomDoorBlock(bsmg, ModBlocks.BIRCH_DOOR)
+                                .textures("wood/birch/door_top", "wood/birch/door_bottom").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.EYRIE_WEIRWOOD_DOOR)
+                                .textures("door_block/door_weirwood_top", "door_block/door_weirwood_bottom").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.GREY_WOOD_DOOR)
+                                .textures("wood/grey/door_top", "wood/grey/door_bottom").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.HARRENHAL_SECRET_DOOR)
+                                .textures("ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.JUNGLE_DOOR)
+                                .textures("wood/jungle/door_top", "wood/jungle/door_bottom").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_BIRCH_DOOR)
+                                .textures("wood/birch/door_locked_top", "wood/birch/door_locked_bottom").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_DARK_NORTHERN_WOOD_DOOR)
+                                .textures("wood/northern/door_locked_top", "wood/northern/door_locked_bottom").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_GREY_WOOD_DOOR)
+                                .textures("wood/grey/door_locked_top", "wood/grey/door_locked_bottom").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_JUNGLE_DOOR)
+                                .textures("wood/jungle/door_locked_top", "wood/jungle/door_locked_bottom").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_OAK_DOOR)
+                                .textures("wood/oak/door_locked_top", "wood/oak/door_locked_bottom").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_SPRUCE_DOOR)
+                                .textures("wood/spruce/door_locked_top", "wood/spruce/door_locked_bottom").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_WHITE_WOOD_DOOR)
+                                .textures("wood/white/door_locked_top", "wood/white/door_locked_bottom").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.NORTHERN_WOOD_DOOR)
+                                .textures("wood/northern/door_top", "wood/northern/door_bottom").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.OAK_DOOR)
+                                .textures("wood/oak/door_top", "wood/oak/door_bottom").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.RED_KEEP_SECRET_DOOR)
+                                .textures("ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.SPRUCE_DOOR)
+                                .textures("wood/spruce/door_top", "wood/spruce/door_bottom").build();
+                registerCustomDoorBlock(bsmg, ModBlocks.WHITE_WOOD_DOOR)
+                                .textures("wood/white/door_top", "wood/white/door_bottom").build();
 
                 // Half Door Blocks (Shutters)
-                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.BIRCH_WINDOW_SHUTTERS,
-                                "wood/birch/shutters");
-                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.DORNE_RED_WINDOW_SHUTTERS,
-                                "shutter_block/shutters_dorne");
-                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.GREEN_LANNISPORT_WINDOW_SHUTTERS,
-                                "shutter_block/shutters_lannisport");
-                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.GREY_WOOD_WINDOW_SHUTTERS,
-                                "wood/grey/shutters");
-                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.JUNGLE_WINDOW_SHUTTERS,
-                                "wood/jungle/shutters");
-                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.NORTHERN_WOOD_WINDOW_SHUTTERS,
-                                "wood/northern/shutters");
-                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.OAK_WINDOW_SHUTTERS,
-                                "wood/oak/shutters");
-                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.REACH_BLUE_WINDOW_SHUTTERS,
-                                "shutter_block/shutters_reach");
-                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.SPRUCE_WINDOW_SHUTTERS,
-                                "wood/spruce/shutters");
-                HalfDoorBlockExporter.registerHalfDoorBlock(bsmg, ModBlocks.WHITE_WOOD_WINDOW_SHUTTERS,
-                                "wood/white/shutters");
+                registerCustomHalfDoorBlock(bsmg, ModBlocks.BIRCH_WINDOW_SHUTTERS)
+                                .texture("wood/birch/shutters").build();
+                registerCustomHalfDoorBlock(bsmg, ModBlocks.DORNE_RED_WINDOW_SHUTTERS)
+                                .texture("shutter_block/shutters_dorne").build();
+                registerCustomHalfDoorBlock(bsmg, ModBlocks.GREEN_LANNISPORT_WINDOW_SHUTTERS)
+                                .texture("shutter_block/shutters_lannisport").build();
+                registerCustomHalfDoorBlock(bsmg, ModBlocks.GREY_WOOD_WINDOW_SHUTTERS)
+                                .texture("wood/grey/shutters").build();
+                registerCustomHalfDoorBlock(bsmg, ModBlocks.JUNGLE_WINDOW_SHUTTERS)
+                                .texture("wood/jungle/shutters").build();
+                registerCustomHalfDoorBlock(bsmg, ModBlocks.NORTHERN_WOOD_WINDOW_SHUTTERS)
+                                .texture("wood/northern/shutters").build();
+                registerCustomHalfDoorBlock(bsmg, ModBlocks.OAK_WINDOW_SHUTTERS)
+                                .texture("wood/oak/shutters").build();
+                registerCustomHalfDoorBlock(bsmg, ModBlocks.REACH_BLUE_WINDOW_SHUTTERS)
+                                .texture("shutter_block/shutters_reach").build();
+                registerCustomHalfDoorBlock(bsmg, ModBlocks.SPRUCE_WINDOW_SHUTTERS)
+                                .texture("wood/spruce/shutters").build();
+                registerCustomHalfDoorBlock(bsmg, ModBlocks.WHITE_WOOD_WINDOW_SHUTTERS)
+                                .texture("wood/white/shutters").build();
 
                 // Pane Blocks
-                PaneBlockExporter.registerPaneBlock(bsmg, ModBlocks.DORNE_CARVED_STONE_WINDOW,
-                                "pane_block/moorish_stone_window_pane");
-                PaneBlockExporter.registerPaneBlock(bsmg, ModBlocks.DORNE_CARVED_WOODEN_WINDOW,
-                                "pane_block/moorish_wood_window_pane");
-                PaneBlockExporter.registerPaneBlock(bsmg, ModBlocks.IRON_BARS,
-                                "bars_iron_block/iron_bars");
-                PaneBlockExporter.registerPaneBlock(bsmg, ModBlocks.IRON_CROSSBAR,
-                                "bars_iron_block/bars_iron_crossbars");
-                PaneBlockExporter.registerPaneBlock(bsmg, ModBlocks.OXIDIZED_IRON_BARS,
-                                "bars_iron_block/bars_iron_oxidized");
-                PaneBlockExporter.registerPaneBlock(bsmg, ModBlocks.OXIDIZED_IRON_CROSSBAR,
-                                "bars_iron_block/bars_iron_oxidized_crossbars");
-                PaneBlockExporter.registerPaneBlockWithRandomTextures(bsmg, ModBlocks.VERTICAL_NET,
-                                new String[]{"vertical_net/vertical_net1", "vertical_net/vertical_net2", 
-                                           "vertical_net/vertical_net3", "vertical_net/vertical_net4", 
-                                           "vertical_net/vertical_net5"});
+                registerCustomPaneBlock(bsmg, ModBlocks.DORNE_CARVED_STONE_WINDOW)
+                                .texture("pane_block/moorish_stone_window_pane").build();
+                registerCustomPaneBlock(bsmg, ModBlocks.DORNE_CARVED_WOODEN_WINDOW)
+                                .texture("pane_block/moorish_wood_window_pane").build();
+                registerCustomPaneBlock(bsmg, ModBlocks.IRON_BARS)
+                                .texture("bars_iron_block/iron_bars").build();
+                registerCustomPaneBlock(bsmg, ModBlocks.IRON_CROSSBAR)
+                                .texture("bars_iron_block/bars_iron_crossbars").build();
+                registerCustomPaneBlock(bsmg, ModBlocks.OXIDIZED_IRON_BARS)
+                                .texture("bars_iron_block/bars_iron_oxidized").build();
+                registerCustomPaneBlock(bsmg, ModBlocks.OXIDIZED_IRON_CROSSBAR)
+                                .texture("bars_iron_block/bars_iron_oxidized_crossbars").build();
+                registerCustomPaneBlock(bsmg, ModBlocks.VERTICAL_NET)
+                                .randomTexture("vertical_net/vertical_net1")
+                                .randomTexture("vertical_net/vertical_net2")
+                                .randomTexture("vertical_net/vertical_net3")
+                                .randomTexture("vertical_net/vertical_net4")
+                                .randomTexture("vertical_net/vertical_net5")
+                                .build();
 
                 // Torch Blocks
-                TorchBlockExporter.registerTorchBlock(bsmg, ModBlocks.TORCH, "lighting/torch");
-                TorchBlockExporter.registerTorchBlock(bsmg, ModBlocks.TORCH_UNLIT, "lighting/torch_unlit");
-                TorchBlockExporter.registerTorchBlock(bsmg, ModBlocks.CANDLE, "lighting/candle");
-                TorchBlockExporter.registerTorchBlock(bsmg, ModBlocks.CANDLE_UNLIT, "lighting/candle_unlit");
+                registerCustomTorchBlock(bsmg, ModBlocks.TORCH).texture("lighting/torch").build();
+                registerCustomTorchBlock(bsmg, ModBlocks.TORCH_UNLIT).texture("lighting/torch_unlit").build();
+                registerCustomTorchBlock(bsmg, ModBlocks.CANDLE).texture("lighting/candle").build();
+                registerCustomTorchBlock(bsmg, ModBlocks.CANDLE_UNLIT).texture("lighting/candle_unlit").build();
 
                 // Chair Blocks
-                ChairBlockExporter.registerChairBlock(bsmg, ModBlocks.OAK_CHAIR, "bark/oak/side");
+                registerCustomChairBlock(bsmg, ModBlocks.OAK_CHAIR).texture("bark/oak/side").build();
         }
 
         @Override

@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.block.custom.WCHalfDoorBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.DoorHinge;
@@ -9,12 +10,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.data.client.VariantSettings.Rotation;
 
-import java.util.Optional;
-
-/**
- * Half door block exporter for generating block states and models.
- * This class follows the same pattern as other exporters in the codebase.
- */
 public class HalfDoorBlockExporter {
 
     /**
@@ -26,12 +21,12 @@ public class HalfDoorBlockExporter {
      */
     public static void registerHalfDoorBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
         // Create the base models for each half door variant
-        Identifier bottomLeftModelId = createHalfDoorModel(generator, block, texturePath, "bottom_left");
-        Identifier bottomRightModelId = createHalfDoorModel(generator, block, texturePath, "bottom_right");
-        Identifier bottomLeftOpenModelId = createHalfDoorModel(generator, block, texturePath, "bottom_left_open");
-        Identifier bottomRightOpenModelId = createHalfDoorModel(generator, block, texturePath, "bottom_right_open");
+        Identifier bottomLeftModelId = createHalfDoorModel(generator, block, texturePath, "left", ModModels.HALF_DOOR_LEFT);
+        Identifier bottomRightModelId = createHalfDoorModel(generator, block, texturePath, "right", ModModels.HALF_DOOR_RIGHT);
+        Identifier bottomLeftOpenModelId = createHalfDoorModel(generator, block, texturePath, "left_open", ModModels.HALF_DOOR_LEFT_OPEN);
+        Identifier bottomRightOpenModelId = createHalfDoorModel(generator, block, texturePath, "right_open", ModModels.HALF_DOOR_RIGHT_OPEN);
 
-        // Create variants for all half door states using BlockStateModelGenerator patterns
+        // Create variants for all half door states
         BlockStateVariantMap variants = BlockStateVariantMap.create(
             WCHalfDoorBlock.FACING,
             WCHalfDoorBlock.HINGE,
@@ -71,30 +66,29 @@ public class HalfDoorBlockExporter {
     }
 
     /**
-     * Creates a half door model with the specified variant.
+     * Creates a half door model with the specified variant using the same approach as the working old code.
      * 
      * @param generator   The BlockStateModelGenerator to register the model with
      * @param block       The block this model is for
      * @param texturePath The texture path to use
-     * @param variant     The variant name (e.g., "bottom_left", "bottom_right_open")
+     * @param variant     The variant name (e.g., "left", "right_open")
+     * @param model       The predefined model from ModModels to use
      * @return The created model Identifier
      */
-    private static Identifier createHalfDoorModel(BlockStateModelGenerator generator, Block block, String texturePath, String variant) {
-        // Create a unique model ID for this block and variant using old structure
-        String modelPath = "block/generated/" + block.getTranslationKey().replace("block.westerosblocks.", "") + "_" + variant;
+    private static Identifier createHalfDoorModel(BlockStateModelGenerator generator, Block block, String texturePath, String variant, Model model) {
+        String modelPath = "block/" + block.getTranslationKey().replace("block.westerosblocks.", "") + "/" + block.getTranslationKey().replace("block.westerosblocks.", "") + "_" + variant;
         Identifier modelId = WesterosBlocks.id(modelPath);
 
-        // Create texture map with bottom texture (parent models only use #bottom)
+        // Create texture map with bottom texture (matching the working old code approach)
         TextureMap textureMap = new TextureMap()
             .put(TextureKey.BOTTOM, createBlockIdentifier(texturePath));
 
-        // Determine the parent model based on the variant
+        // Create custom model with parent model path (matching old working approach)
         String parentModelPath = "block/untinted/" + getParentModelName(variant);
-
-        // Create and upload the model
+        
         Model doorModel = new Model(
-            Optional.of(Identifier.of(WesterosBlocks.MOD_ID, parentModelPath)),
-            Optional.empty(),
+            java.util.Optional.of(WesterosBlocks.id(parentModelPath)),
+            java.util.Optional.empty(),
             TextureKey.BOTTOM
         );
         doorModel.upload(modelId, textureMap, generator.modelCollector);
@@ -103,20 +97,21 @@ public class HalfDoorBlockExporter {
     }
 
     /**
-     * Maps half door variants to their parent model names.
+     * Maps half door variants to their parent model names (matching old working code).
      * 
      * @param variant The half door variant
      * @return The parent model name
      */
     private static String getParentModelName(String variant) {
         return switch (variant) {
-            case "bottom_left" -> "half_door_left";
-            case "bottom_right" -> "half_door_right";
-            case "bottom_left_open" -> "half_door_left_open";
-            case "bottom_right_open" -> "half_door_right_open";
+            case "left" -> "half_door_left";
+            case "right" -> "half_door_right";
+            case "left_open" -> "half_door_left_open";
+            case "right_open" -> "half_door_right_open";
             default -> throw new IllegalArgumentException("Unknown half door variant: " + variant);
         };
     }
+
 
     /**
      * Creates an identifier for block textures, handling namespaces properly.

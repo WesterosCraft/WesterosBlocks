@@ -2,13 +2,13 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/grain_crate/base_v1"
+        "model": "westerosblocks:block/grain_crate/variant_1"
       },
       {
-        "model": "westerosblocks:block/grain_crate/base_v2"
+        "model": "westerosblocks:block/grain_crate/variant_2"
       },
       {
-        "model": "westerosblocks:block/grain_crate/base_v3"
+        "model": "westerosblocks:block/grain_crate/variant_3"
       }
     ]
   }

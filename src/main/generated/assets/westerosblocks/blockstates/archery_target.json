@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "westerosblocks:block/archery_target/x",
+      "model": "westerosblocks:block/archery_target/horizontal",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "westerosblocks:block/archery_target/y"
+      "model": "westerosblocks:block/archery_target/archery_target"
     },
     "axis=z": {
-      "model": "westerosblocks:block/archery_target/z",
+      "model": "westerosblocks:block/archery_target/horizontal",
       "x": 90
     }
   }

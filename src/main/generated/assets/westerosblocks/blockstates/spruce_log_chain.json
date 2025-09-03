@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "westerosblocks:block/spruce_log_chain/x",
+      "model": "westerosblocks:block/spruce_log_chain/horizontal",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "westerosblocks:block/spruce_log_chain/y"
+      "model": "westerosblocks:block/spruce_log_chain/spruce_log_chain"
     },
     "axis=z": {
-      "model": "westerosblocks:block/spruce_log_chain/z",
+      "model": "westerosblocks:block/spruce_log_chain/horizontal",
       "x": 90
     }
   }

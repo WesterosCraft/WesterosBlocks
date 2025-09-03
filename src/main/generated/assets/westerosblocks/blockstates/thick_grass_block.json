@@ -2,13 +2,13 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/thick_grass_block/base_v1"
+        "model": "westerosblocks:block/thick_grass_block/variant_1"
       },
       {
-        "model": "westerosblocks:block/thick_grass_block/base_v2"
+        "model": "westerosblocks:block/thick_grass_block/variant_2"
       },
       {
-        "model": "westerosblocks:block/thick_grass_block/base_v3"
+        "model": "westerosblocks:block/thick_grass_block/variant_3"
       }
     ]
   }

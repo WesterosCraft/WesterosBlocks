@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.datagen.ModModels;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.registry.Registries;
@@ -54,13 +55,8 @@ public class TorchBlockExporter {
         // Create model identifier
         Identifier modelId = createModelId(block);
 
-        // Create and upload the model using the template
-        Model model = new Model(
-            Optional.of(WesterosBlocks.id("block/untinted/template_torch")),
-            Optional.empty(),
-            TextureKey.TORCH
-        );
-        model.upload(modelId, textureMap, generator.modelCollector);
+        // Use predefined ModModels torch model
+        ModModels.TORCH.upload(modelId, textureMap, generator.modelCollector);
 
         return modelId;
     }
@@ -73,13 +69,8 @@ public class TorchBlockExporter {
         // Create model identifier
         Identifier modelId = createModelId(block);
 
-        // Create and upload the model using the template
-        Model model = new Model(
-            Optional.of(WesterosBlocks.id("block/untinted/template_torch_wall")),
-            Optional.empty(),
-            TextureKey.TORCH
-        );
-        model.upload(modelId, textureMap, generator.modelCollector);
+        // Use predefined ModModels wall torch model
+        ModModels.TORCH_WALL.upload(modelId, textureMap, generator.modelCollector);
 
         return modelId;
     }
@@ -108,7 +99,7 @@ public class TorchBlockExporter {
 
     private static Identifier createModelId(Block block) {
         String blockName = getBlockName(block);
-        return WesterosBlocks.id("block/" + blockName + "/" + blockName);
+        return WesterosBlocks.id("block/" + blockName);
     }
 
     private static Identifier createBlockIdentifier(String texturePath) {

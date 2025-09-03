@@ -2,13 +2,13 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/crate3/base_v1"
+        "model": "westerosblocks:block/crate3/variant_1"
       },
       {
-        "model": "westerosblocks:block/crate3/base_v2"
+        "model": "westerosblocks:block/crate3/variant_2"
       },
       {
-        "model": "westerosblocks:block/crate3/base_v3"
+        "model": "westerosblocks:block/crate3/variant_3"
       }
     ]
   }
