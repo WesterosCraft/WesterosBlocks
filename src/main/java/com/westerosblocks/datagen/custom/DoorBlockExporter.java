@@ -13,7 +13,7 @@ import net.minecraft.data.client.VariantSettings.Rotation;
 
 import java.util.Optional;
 
-public class DoorBlockExporter {
+public class DoorBlockExporter extends BaseBlockExporter {
 
     /**
      * Generates block state models for a door block with separate top and bottom
@@ -140,7 +140,7 @@ public class DoorBlockExporter {
     private static Identifier createDoorModel(BlockStateModelGenerator generator, Block block, String topTexture,
             String bottomTexture, String variant, Model model) {
         // Create a unique model ID for this block and variant
-        String blockName = BaseBlockExporter.getBlockName(block);
+        String blockName = getBlockName(block);
         String modelPath = "block/" + blockName + "/" + variant;
         Identifier modelId = WesterosBlocks.id(modelPath);
 
@@ -152,53 +152,5 @@ public class DoorBlockExporter {
         model.upload(modelId, textureMap, generator.modelCollector);
 
         return modelId;
-    }
-
-
-    /**
-     * Creates an identifier for block textures, handling namespaces properly.
-     * 
-     * @param texturePath The texture path (can include namespace like
-     *                    "westerosblocks:block/white_door")
-     * @return The identifier for the block texture
-     */
-    private static Identifier createBlockIdentifier(String texturePath) {
-        // If the texture path includes a namespace
-        if (texturePath != null && texturePath.contains(":")) {
-            String namespace = texturePath.substring(0, texturePath.indexOf(':'));
-            String path = texturePath.substring(texturePath.indexOf(':') + 1);
-            return Identifier.of(namespace, path);
-        }
-        // No namespace, use mod ID and prepend "block/"
-        return WesterosBlocks.id("block/" + texturePath);
-    }
-
-    /**
-     * Creates a variant with optional rotation.
-     * 
-     * @param modelId  The model identifier
-     * @param rotation The rotation in degrees (0, 90, 180, 270)
-     * @return The block state variant
-     */
-    private static BlockStateVariant createVariant(Identifier modelId, int rotation) {
-        Rotation rotationEnum = switch (rotation) {
-            case 0 -> Rotation.R0;
-            case 90 -> Rotation.R90;
-            case 180 -> Rotation.R180;
-            case 270 -> Rotation.R270;
-            default ->
-                throw new IllegalArgumentException("Invalid rotation: " + rotation + ". Must be 0, 90, 180, or 270.");
-        };
-        return BlockStateVariant.create().put(VariantSettings.MODEL, modelId).put(VariantSettings.Y, rotationEnum);
-    }
-
-    /**
-     * Creates a variant without rotation.
-     *
-     * @param modelId The model identifier
-     * @return The block state variant
-     */
-    private static BlockStateVariant createVariant(Identifier modelId) {
-        return BlockStateVariant.create().put(VariantSettings.MODEL, modelId);
     }
 }

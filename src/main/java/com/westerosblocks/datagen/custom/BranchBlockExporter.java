@@ -15,7 +15,7 @@ import com.westerosblocks.block.custom.WCBranchBlock;
 
 import java.util.Optional;
 
-public class BranchBlockExporter {
+public class BranchBlockExporter extends BaseBlockExporter {
 
     /**
      * Registers a branch block with cardinal direction connections
@@ -446,51 +446,5 @@ public class BranchBlockExporter {
         model.upload(modelId, textureMap, generator.modelCollector);
 
         return modelId;
-    }
-
-    /**
-     * Creates a variant with optional rotation
-     */
-    private static BlockStateVariant createVariant(Identifier modelId) {
-        return createVariant(modelId, 0);
-    }
-
-    /**
-     * Creates a variant with rotation
-     */
-    private static BlockStateVariant createVariant(Identifier modelId, int rotation) {
-        BlockStateVariant variant = BlockStateVariant.create().put(VariantSettings.MODEL, modelId);
-        if (rotation != 0) {
-            switch (rotation) {
-                case 90:
-                    variant.put(VariantSettings.Y, VariantSettings.Rotation.R90);
-                    break;
-                case 180:
-                    variant.put(VariantSettings.Y, VariantSettings.Rotation.R180);
-                    break;
-                case 270:
-                    variant.put(VariantSettings.Y, VariantSettings.Rotation.R270);
-                    break;
-            }
-        }
-        return variant;
-    }
-
-    /**
-     * Creates a block identifier for textures
-     */
-    private static Identifier createBlockIdentifier(String texturePath) {
-        return Identifier.of(WesterosBlocks.MOD_ID, "block/" + texturePath);
-    }
-
-    /**
-     * Extracts the block name from the block's registry key
-     */
-    public static String getBlockName(Block block) {
-        String blockString = block.toString();
-        if (blockString.contains(":")) {
-            return blockString.split(":")[1].replace("}", "");
-        }
-        return blockString.toLowerCase().replace("block{", "").replace("}", "");
     }
 }

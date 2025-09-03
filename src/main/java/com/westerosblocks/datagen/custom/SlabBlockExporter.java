@@ -16,7 +16,7 @@ import net.minecraft.data.client.VariantsBlockStateSupplier;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
-public class SlabBlockExporter {
+public class SlabBlockExporter extends BaseBlockExporter {
 
         /**
          * Uploads a custom model with the slab parent
@@ -39,21 +39,12 @@ public class SlabBlockExporter {
          */
         public static void registerCustomSlabBlock(BlockStateModelGenerator generator, Block block,
                         String... texturePaths) {
-                if (texturePaths.length == 0) {
-                        throw new IllegalArgumentException("At least one texture path is required");
-                }
+                validateTexturePaths(texturePaths, 1);
 
                 // Fill remaining slots with the last texture if less than 6 provided
-                String[] filledTextures = new String[6];
-                for (int i = 0; i < 6; i++) {
-                        if (i < texturePaths.length) {
-                                filledTextures[i] = texturePaths[i];
-                        } else {
-                                filledTextures[i] = texturePaths[texturePaths.length - 1];
-                        }
-                }
+                String[] filledTextures = fillTextureArray(texturePaths);
 
-                String blockName = SolidBlockExporter.getBlockName(block);
+                String blockName = getBlockName(block);
 
                 // Create texture maps using ModTextureMap utility for all 6 sides
                 TextureMap bottomTextureMap = ModTextureMap.customAllSides(filledTextures);

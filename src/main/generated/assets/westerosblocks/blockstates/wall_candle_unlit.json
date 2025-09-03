@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "westerosblocks:block/wall_candle_unlit",
+      "model": "westerosblocks:block/wall_candle_unlit/wall_candle_unlit",
       "y": 90
     },
     "facing=north": {
-      "model": "westerosblocks:block/wall_candle_unlit"
+      "model": "westerosblocks:block/wall_candle_unlit/wall_candle_unlit"
     },
     "facing=south": {
-      "model": "westerosblocks:block/wall_candle_unlit",
+      "model": "westerosblocks:block/wall_candle_unlit/wall_candle_unlit",
       "y": 180
     },
     "facing=west": {
-      "model": "westerosblocks:block/wall_candle_unlit",
+      "model": "westerosblocks:block/wall_candle_unlit/wall_candle_unlit",
       "y": 270
     }
   }

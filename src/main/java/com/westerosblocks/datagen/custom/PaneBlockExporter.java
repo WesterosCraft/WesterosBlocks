@@ -9,11 +9,11 @@ import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
 import com.westerosblocks.block.custom.WCPaneBlock;
 
-public class PaneBlockExporter {
+public class PaneBlockExporter extends BaseBlockExporter {
 
     public static void registerPaneBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
         WCPaneBlock paneBlock = (WCPaneBlock) block;
-        String blockName = BaseBlockExporter.getBlockName(block);
+        String blockName = getBlockName(block);
 
         // Create texture map for pane models
         TextureMap paneTextureMap = new TextureMap()
@@ -71,9 +71,7 @@ public class PaneBlockExporter {
     }
 
     public static void registerPaneBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, String[] texturePaths) {
-        if (texturePaths.length == 0) {
-            throw new IllegalArgumentException("At least one texture path is required");
-        }
+        validateTexturePaths(texturePaths, 1);
         
         // For random textures, use the first texture for block models and item model
         registerPaneBlock(generator, block, texturePaths[0]);

@@ -14,14 +14,14 @@ import net.minecraft.data.client.VariantSettings;
 import net.minecraft.data.client.When;
 import net.minecraft.util.Identifier;
 
-public class TableBlockExporter {
+public class TableBlockExporter extends BaseBlockExporter {
 
         /**
          * Registers a custom table block with connection-based state generation
          */
         public static void registerCustomTableBlock(BlockStateModelGenerator generator, Block block,
                         String texturePath) {
-                String blockName = SolidBlockExporter.getBlockName(block);
+                String blockName = getBlockName(block);
 
                 // Key used by the custom Blockbench table models
                 TextureKey KEY1 = TextureKey.of("1");

@@ -1,3 +1,6 @@
 {
-  "parent": "westerosblocks:block/torch_unlit"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/lighting/torch_unlit"
+  }
 }

@@ -12,7 +12,7 @@ import net.minecraft.data.client.VariantSettings.Rotation;
 
 import java.util.Optional;
 
-public class TorchBlockExporter {
+public class TorchBlockExporter extends BaseBlockExporter {
 
     public static void registerTorchBlock(BlockStateModelGenerator generator, Block standingTorch, String texturePath) {
         Block wallTorch = Registries.BLOCK.get(WesterosBlocks.id("wall_" + standingTorch.getTranslationKey().replace("block.westerosblocks.", "")));
@@ -21,6 +21,8 @@ public class TorchBlockExporter {
         generateStandingTorchBlockState(generator, standingTorch, texturePath);
         // Generate wall torch block state
         generateWallTorchBlockState(generator, wallTorch, texturePath);
+        // Generate item model for standing torch only (wall torch has no item)
+        generateStandingTorchItemModel(generator, standingTorch, texturePath);
     }
 
     private static void generateStandingTorchBlockState(BlockStateModelGenerator generator, Block block, String texturePath) {
@@ -75,16 +77,17 @@ public class TorchBlockExporter {
         return modelId;
     }
 
-    public static void generateItemModelsAuto(ItemModelGenerator generator, Block standingTorch, Block wallTorch) {
-        // Generate item models for both standing and wall torch blocks
+    public static void generateItemModels(ItemModelGenerator generator, Block standingTorch) {
+        // Only generate item model for the standing torch (wall torch has no item)
         generateItemModel(generator, standingTorch);
-        generateItemModel(generator, wallTorch);
     }
 
-    public static void generateItemModels(ItemModelGenerator generator, Block block) {
-        // Generate item model for a single block
-        Block wallTorch = Registries.BLOCK.get(WesterosBlocks.id("wall_" + block.getTranslationKey().replace("block.westerosblocks.", "")));
-        generateItemModelsAuto(generator, block, wallTorch);
+    private static void generateStandingTorchItemModel(BlockStateModelGenerator generator, Block block, String texturePath) {
+        // Create texture map for the item model
+        TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(texturePath));
+        // Generate item model using the generator's registerParentedItemModel method
+        Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
+        Models.GENERATED.upload(itemModelId, textureMap, generator.modelCollector);
     }
 
     // Utility methods
@@ -97,40 +100,10 @@ public class TorchBlockExporter {
             .register(Direction.WEST, createVariant(modelId, 270));
     }
 
-    private static Identifier createModelId(Block block) {
-        String blockName = getBlockName(block);
-        return WesterosBlocks.id("block/" + blockName);
-    }
-
-    private static Identifier createBlockIdentifier(String texturePath) {
-        if (texturePath != null && texturePath.contains(":")) {
-            String namespace = texturePath.substring(0, texturePath.indexOf(':'));
-            String path = texturePath.substring(texturePath.indexOf(':') + 1);
-            return Identifier.of(namespace, path);
-        }
-        return WesterosBlocks.id("block/" + texturePath);
-    }
-
-    private static BlockStateVariant createVariant(Identifier modelId, int rotation) {
-        Rotation rotationEnum = switch (rotation) {
-            case 0 -> Rotation.R0;
-            case 90 -> Rotation.R90;
-            case 180 -> Rotation.R180;
-            case 270 -> Rotation.R270;
-            default -> throw new IllegalArgumentException("Invalid rotation: " + rotation);
-        };
-        return BlockStateVariant.create().put(VariantSettings.MODEL, modelId).put(VariantSettings.Y, rotationEnum);
-    }
-
-    private static BlockStateVariant createVariant(Identifier modelId) {
-        return BlockStateVariant.create().put(VariantSettings.MODEL, modelId);
-    }
-
     private static void generateItemModel(ItemModelGenerator generator, Block block) {
-        Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
         String texturePath = getTexturePath(block);
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(texturePath));
-        Models.GENERATED.upload(itemModelId, textureMap, generator.writer);
+        Models.GENERATED.upload(ModelIds.getItemModelId(block.asItem()), textureMap, generator.writer);
     }
 
     private static String getTexturePath(Block block) {
@@ -149,11 +122,4 @@ public class TorchBlockExporter {
         };
     }
 
-    private static String getBlockName(Block block) {
-        String blockString = block.toString();
-        if (blockString.contains(":")) {
-            return blockString.split(":")[1].replace("}", "");
-        }
-        return blockString.toLowerCase().replace("block{", "").replace("}", "");
-    }
 }

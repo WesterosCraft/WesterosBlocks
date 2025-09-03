@@ -14,7 +14,7 @@ import java.util.Optional;
  * Chair block exporter for generating block states and models.
  * This class follows the same pattern as other exporters in the codebase.
  */
-public class ChairBlockExporter {
+public class ChairBlockExporter extends BaseBlockExporter {
 
     /**
      * Generates block state models for a chair block.
@@ -72,65 +72,5 @@ public class ChairBlockExporter {
         model.upload(modelId, textureMap, generator.modelCollector);
 
         return modelId;
-    }
-
-
-    /**
-     * Creates an identifier for block textures, handling namespaces properly.
-     * 
-     * @param texturePath The texture path (can include namespace like "westerosblocks:block/texture")
-     * @return The identifier for the block texture
-     */
-    private static Identifier createBlockIdentifier(String texturePath) {
-        // If the texture path includes a namespace
-        if (texturePath != null && texturePath.contains(":")) {
-            String namespace = texturePath.substring(0, texturePath.indexOf(':'));
-            String path = texturePath.substring(texturePath.indexOf(':') + 1);
-            return Identifier.of(namespace, path);
-        }
-        // No namespace, use mod ID and prepend "block/"
-        return WesterosBlocks.id("block/" + texturePath);
-    }
-
-    /**
-     * Creates a variant with optional rotation.
-     * 
-     * @param modelId  The model identifier
-     * @param rotation The rotation in degrees (0, 90, 180, 270)
-     * @return The block state variant
-     */
-    private static BlockStateVariant createVariant(Identifier modelId, int rotation) {
-        Rotation rotationEnum = switch (rotation) {
-            case 0 -> Rotation.R0;
-            case 90 -> Rotation.R90;
-            case 180 -> Rotation.R180;
-            case 270 -> Rotation.R270;
-            default -> throw new IllegalArgumentException("Invalid rotation: " + rotation + ". Must be 0, 90, 180, or 270.");
-        };
-        return BlockStateVariant.create().put(VariantSettings.MODEL, modelId).put(VariantSettings.Y, rotationEnum);
-    }
-
-    /**
-     * Creates a variant without rotation.
-     * 
-     * @param modelId The model identifier
-     * @return The block state variant
-     */
-    private static BlockStateVariant createVariant(Identifier modelId) {
-        return BlockStateVariant.create().put(VariantSettings.MODEL, modelId);
-    }
-
-    /**
-     * Extracts the block name from the block's registry key.
-     * 
-     * @param block The block
-     * @return The block name
-     */
-    private static String getBlockName(Block block) {
-        String blockString = block.toString();
-        if (blockString.contains(":")) {
-            return blockString.split(":")[1].replace("}", "");
-        }
-        return blockString.toLowerCase().replace("block{", "").replace("}", "");
     }
 }

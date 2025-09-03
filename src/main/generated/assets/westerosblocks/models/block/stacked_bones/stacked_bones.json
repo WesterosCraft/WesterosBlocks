@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "westerosblocks:block/stacked_bones/bone_stacked_front",
+    "side": "westerosblocks:block/stacked_bones/bone_stacked_side"
+  }
+}

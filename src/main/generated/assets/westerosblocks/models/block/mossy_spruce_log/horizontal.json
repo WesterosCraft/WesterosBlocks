@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "westerosblocks:block/bark/spruce/mossy/top",
+    "side": "westerosblocks:block/bark/spruce/mossy/side"
+  }
+}

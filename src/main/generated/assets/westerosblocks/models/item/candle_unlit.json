@@ -1,3 +1,6 @@
 {
-  "parent": "westerosblocks:block/candle_unlit"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/lighting/candle_unlit"
+  }
 }

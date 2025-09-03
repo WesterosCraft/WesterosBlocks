@@ -27,7 +27,7 @@ import net.minecraft.block.BlockState;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-public class SolidBlockExporter {
+public class SolidBlockExporter extends BaseBlockExporter {
 
     /**
      * Generates model name with symmetrical/asymmetrical directory structure
@@ -97,14 +97,7 @@ public class SolidBlockExporter {
             generateSymmetricalBlockState(generator, block, texturePaths);
         } else {
             // Standard registration for non-symmetrical blocks
-            String[] filledTextures = new String[6];
-            for (int i = 0; i < 6; i++) {
-                if (i < texturePaths.length) {
-                    filledTextures[i] = texturePaths[i];
-                } else {
-                    filledTextures[i] = texturePaths[texturePaths.length - 1];
-                }
-            }
+            String[] filledTextures = fillTextureArray(texturePaths);
 
             TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
 
@@ -147,14 +140,7 @@ public class SolidBlockExporter {
                             "At least one texture path is required in array " + i);
                 }
 
-                String[] filledTextures = new String[6];
-                for (int j = 0; j < 6; j++) {
-                    if (j < texturePaths.length) {
-                        filledTextures[j] = texturePaths[j];
-                    } else {
-                        filledTextures[j] = texturePaths[texturePaths.length - 1];
-                    }
-                }
+                String[] filledTextures = fillTextureArray(texturePaths);
 
                 TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
 
@@ -206,14 +192,7 @@ public class SolidBlockExporter {
                             "At least one texture path is required in array " + i);
                 }
 
-                String[] filledTextures = new String[6];
-                for (int j = 0; j < 6; j++) {
-                    if (j < texturePaths.length) {
-                        filledTextures[j] = texturePaths[j];
-                    } else {
-                        filledTextures[j] = texturePaths[texturePaths.length - 1];
-                    }
-                }
+                String[] filledTextures = fillTextureArray(texturePaths);
 
                 TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
 
@@ -305,14 +284,7 @@ public class SolidBlockExporter {
      */
     private static void generateSymmetricalBlockState(BlockStateModelGenerator generator, Block block,
             String[] texturePaths) {
-        String[] filledTextures = new String[6];
-        for (int i = 0; i < 6; i++) {
-            if (i < texturePaths.length) {
-                filledTextures[i] = texturePaths[i];
-            } else {
-                filledTextures[i] = texturePaths[texturePaths.length - 1];
-            }
-        }
+        String[] filledTextures = fillTextureArray(texturePaths);
 
         TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
 
@@ -371,14 +343,7 @@ public class SolidBlockExporter {
                         "At least one texture path is required in array " + i);
             }
 
-            String[] filledTextures = new String[6];
-            for (int j = 0; j < 6; j++) {
-                if (j < texturePaths.length) {
-                    filledTextures[j] = texturePaths[j];
-                } else {
-                    filledTextures[j] = texturePaths[texturePaths.length - 1];
-                }
-            }
+            String[] filledTextures = fillTextureArray(texturePaths);
 
             TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
 
@@ -448,14 +413,7 @@ public class SolidBlockExporter {
                         "At least one texture path is required in array " + i);
             }
 
-            String[] filledTextures = new String[6];
-            for (int j = 0; j < 6; j++) {
-                if (j < texturePaths.length) {
-                    filledTextures[j] = texturePaths[j];
-                } else {
-                    filledTextures[j] = texturePaths[texturePaths.length - 1];
-                }
-            }
+            String[] filledTextures = fillTextureArray(texturePaths);
 
             TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
 
@@ -510,14 +468,4 @@ public class SolidBlockExporter {
         }
     }
 
-    /**
-     * Extracts the block name from the block's registry key
-     */
-    public static String getBlockName(Block block) {
-        String blockString = block.toString();
-        if (blockString.contains(":")) {
-            return blockString.split(":")[1].replace("}", "");
-        }
-        return blockString.toLowerCase().replace("block{", "").replace("}", "");
-    }
 }

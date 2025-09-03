@@ -14,7 +14,7 @@ import net.minecraft.data.client.VariantsBlockStateSupplier;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction.Axis;
 
-public class LogBlockExporter {
+public class LogBlockExporter extends BaseBlockExporter {
         /**
          * Registers a custom log block with separate textures for side and end, and
          * optional UV locking
@@ -25,7 +25,7 @@ public class LogBlockExporter {
                         throw new IllegalArgumentException("Side and end textures are required for log blocks");
                 }
 
-                String blockName = BaseBlockExporter.getBlockName(block);
+                String blockName = getBlockName(block);
 
                 // Create texture maps for side and end
                 TextureMap sideTextureMap = new TextureMap()
