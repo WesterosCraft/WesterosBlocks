@@ -2180,6 +2180,15 @@ public class ModBlocks {
                         .woodType("oak")
                         .build());
 
+        // Arrow Slit Blocks
+        public static final Block ARBOR_BRICK_ARROW_SLIT = registerBlock(
+                "arbor_brick_arrow_slit",
+                BlockBuilder.arrowSlit()
+                        .strength(2.0f)
+                        .requiresTool()
+                        .sounds(BlockSoundGroup.STONE)
+                        .build());
+
 
         /**
          * Initialize all blocks
@@ -2436,6 +2445,7 @@ public class ModBlocks {
                         entries.add(ModBlocks.TORCH_UNLIT);
                         entries.add(ModBlocks.CANDLE);
                         entries.add(ModBlocks.CANDLE_UNLIT);
+                        entries.add(ModBlocks.ARBOR_BRICK_ARROW_SLIT);
                 });
         }
 

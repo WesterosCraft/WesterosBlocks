@@ -302,6 +302,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
                 // Chair Blocks
                 translationBuilder.add("block.westerosblocks.oak_chair", "Oak Chair");
+
+                // Arrow Slit Blocks
+                translationBuilder.add("block.westerosblocks.arbor_brick_arrow_slit", "Arbor Brick Arrow Slit");
         }
 
 }

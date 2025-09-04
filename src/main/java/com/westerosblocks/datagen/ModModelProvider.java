@@ -847,6 +847,9 @@ public class ModModelProvider extends FabricModelProvider {
 
                 // Chair Blocks
                 registerCustomChairBlock(bsmg, ModBlocks.OAK_CHAIR).texture("bark/oak/side").build();
+
+                // Arrow Slit Blocks
+                registerCustomArrowSlitBlock(bsmg, ModBlocks.ARBOR_BRICK_ARROW_SLIT).texture("ashlar_third/arbor/all").build();
         }
 
         @Override

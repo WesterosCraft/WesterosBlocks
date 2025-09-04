@@ -69,6 +69,10 @@ public class BlockBuilder<T extends Block> {
         return new BlockBuilder<>(new WCWallTorchBlock.Factory());
     }
     
+    public static BlockBuilder<WCArrowSlitBlock> arrowSlit() {
+        return new BlockBuilder<>(new WCArrowSlitBlock.Factory());
+    }
+    
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
         return this;

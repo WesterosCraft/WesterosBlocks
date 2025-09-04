@@ -66,6 +66,7 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 case "torch" -> buildTorch();
                                 case "chair" -> buildChair();
                                 case "table" -> buildTable();
+                                case "arrow_slit" -> buildArrowSlit();
                                 default -> throw new IllegalArgumentException("Unknown block type: " + blockType);
                         }
                 }
@@ -135,6 +136,10 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
                 private void buildTable() {
                         generateTable(generator, block, !texture.isEmpty() ? texture : textures[0]);
+                }
+
+                private void buildArrowSlit() {
+                        generateArrowSlit(generator, block, !texture.isEmpty() ? texture : textures[0]);
                 }
         }
 
@@ -257,6 +262,10 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                 TableBlockExporter.registerCustomTableBlock(generator, block, texturePath);
         }
 
+        private static void generateArrowSlit(BlockStateModelGenerator generator, Block block, String texturePath) {
+                ArrowSlitBlockExporter.registerArrowSlitBlock(generator, block, texturePath);
+        }
+
         // Factory methods for each block type
 
         public static CustomBlockBuilder registerCustomSolidBlock(BlockStateModelGenerator generator, Block block) {
@@ -297,5 +306,9 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
         public static CustomBlockBuilder registerCustomTableBlock(BlockStateModelGenerator generator, Block block) {
                 return new CustomBlockBuilder(generator, block, "table");
+        }
+
+        public static CustomBlockBuilder registerCustomArrowSlitBlock(BlockStateModelGenerator generator, Block block) {
+                return new CustomBlockBuilder(generator, block, "arrow_slit");
         }
 }

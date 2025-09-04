@@ -2,11 +2,9 @@ package com.westerosblocks.datagen.custom;
 
 import net.minecraft.block.Block;
 import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.BlockStateVariant;
 import net.minecraft.data.client.MultipartBlockStateSupplier;
 import net.minecraft.data.client.TextureKey;
 import net.minecraft.data.client.TextureMap;
-import net.minecraft.data.client.VariantSettings;
 import net.minecraft.data.client.When;
 import net.minecraft.util.Identifier;
 

@@ -22,6 +22,8 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.Map;
 
+import com.westerosblocks.block.custom.BlockFactory;
+
 public class WCArrowSlitBlock extends Block {
     public static final EnumProperty<ArrowSlitType> TYPE = EnumProperty.of("type", ArrowSlitType.class);
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
@@ -256,6 +258,17 @@ public class WCArrowSlitBlock extends Block {
         @Override
         public String asString() {
             return this.name;
+        }
+    }
+
+    public static class Factory extends BlockFactory {
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
+            @SuppressWarnings("unchecked")
+            Map<String, Object> paramMap = (Map<String, Object>) params[0];
+            String blockName = (String) paramMap.getOrDefault("blockName", "arrow_slit");
+            String creativeTab = (String) paramMap.getOrDefault("creativeTab", "building_blocks");
+            return new WCArrowSlitBlock(settings, blockName, creativeTab);
         }
     }
 }
