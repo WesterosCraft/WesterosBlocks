@@ -43,6 +43,7 @@ public class ModTextureKey {
     public static final TextureKey BED_SIDE2 = TextureKey.of("bedside2");
     public static final TextureKey CAP = TextureKey.of("cap");
     public static final TextureKey INSIDE = TextureKey.of("inside");
+    public static final TextureKey FAN = TextureKey.of("fan");
 
     private static final TextureKey[] TXT_N_KEYS = new TextureKey[18];
     static {

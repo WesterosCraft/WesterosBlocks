@@ -70,6 +70,10 @@ public class ModModels {
     public static final Model TEMPLATE_RAIL_RAISED_NE = vanillaBlock("template_rail_raised_ne", TextureKey.RAIL);
     public static final Model TEMPLATE_RAIL_RAISED_SW = vanillaBlock("template_rail_raised_sw", TextureKey.RAIL);
 
+    // Fan models
+    public static final Model FAN = ModModels.block("untinted/fan", ModTextureKey.FAN);
+    public static final Model WALL_FAN = ModModels.block("untinted/wall_fan", ModTextureKey.FAN);
+
     // helper method for creating Models
     private static Model block(String parent, TextureKey... requiredTextureKeys) {
         return new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parent)), Optional.empty(),

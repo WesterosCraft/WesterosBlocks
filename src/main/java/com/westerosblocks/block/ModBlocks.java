@@ -2,12 +2,9 @@ package com.westerosblocks.block;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.custom.BlockBuilder;
-import com.westerosblocks.block.custom.WCTorchBlock;
-import com.westerosblocks.block.custom.WCWallTorchBlock;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
-import net.minecraft.block.WoodType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -2245,6 +2242,112 @@ public class ModBlocks {
                         .sounds(BlockSoundGroup.STONE)
                         .build());
 
+        // Fan Blocks
+        public static final Block WALL_CORAL_TUBE_FAN = registerBlockWithoutBlockItem(
+                "wall_coral_tube_fan",
+                BlockBuilder.wallFan()
+                        .strength(1.0f)
+                        .sounds(BlockSoundGroup.STONE)
+                        .nonOpaque()
+                        .noCollision()
+                        .allowUnsupported(true)
+                        .build());
+
+        public static final Block CORAL_TUBE_FAN = registerBlock(
+                "coral_tube_fan",
+                BlockBuilder.fan()
+                        .strength(1.0f)
+                        .sounds(BlockSoundGroup.STONE)
+                        .wallBlock(WALL_CORAL_TUBE_FAN)
+                        .allowUnsupported(true)
+                        .nonOpaque()
+                        .noCollision()
+                        .build());
+
+        public static final Block WALL_CORAL_BRAIN_FAN = registerBlockWithoutBlockItem(
+                "wall_coral_brain_fan",
+                BlockBuilder.wallFan()
+                        .strength(1.0f)
+                        .sounds(BlockSoundGroup.STONE)
+                        .nonOpaque()
+                        .noCollision()
+                        .allowUnsupported(true)
+                        .build());
+
+        public static final Block CORAL_BRAIN_FAN = registerBlock(
+                "coral_brain_fan",
+                BlockBuilder.fan()
+                        .strength(1.0f)
+                        .sounds(BlockSoundGroup.STONE)
+                        .wallBlock(WALL_CORAL_BRAIN_FAN)
+                        .allowUnsupported(true)
+                        .nonOpaque()
+                        .noCollision()
+                        .build());
+
+        public static final Block WALL_CORAL_BUBBLE_FAN = registerBlockWithoutBlockItem(
+                "wall_coral_bubble_fan",
+                BlockBuilder.wallFan()
+                        .strength(1.0f)
+                        .sounds(BlockSoundGroup.STONE)
+                        .nonOpaque()
+                        .noCollision()
+                        .allowUnsupported(true)
+                        .build());
+
+        public static final Block CORAL_BUBBLE_FAN = registerBlock(
+                "coral_bubble_fan",
+                BlockBuilder.fan()
+                        .strength(1.0f)
+                        .sounds(BlockSoundGroup.STONE)
+                        .wallBlock(WALL_CORAL_BUBBLE_FAN)
+                        .allowUnsupported(true)
+                        .nonOpaque()
+                        .noCollision()
+                        .build());
+
+        public static final Block WALL_CORAL_FIRE_FAN = registerBlockWithoutBlockItem(
+                "wall_coral_fire_fan",
+                BlockBuilder.wallFan()
+                        .strength(1.0f)
+                        .sounds(BlockSoundGroup.STONE)
+                        .nonOpaque()
+                        .noCollision()
+                        .allowUnsupported(true)
+                        .build());
+
+        public static final Block CORAL_FIRE_FAN = registerBlock(
+                "coral_fire_fan",
+                BlockBuilder.fan()
+                        .strength(1.0f)
+                        .sounds(BlockSoundGroup.STONE)
+                        .wallBlock(WALL_CORAL_FIRE_FAN)
+                        .allowUnsupported(true)
+                        .nonOpaque()
+                        .noCollision()
+                        .build());
+
+        public static final Block WALL_CORAL_HORN_FAN = registerBlockWithoutBlockItem(
+                "wall_coral_horn_fan",
+                BlockBuilder.wallFan()
+                        .strength(1.0f)
+                        .sounds(BlockSoundGroup.STONE)
+                        .nonOpaque()
+                        .noCollision()
+                        .allowUnsupported(true)
+                        .build());
+
+        public static final Block CORAL_HORN_FAN = registerBlock(
+                "coral_horn_fan",
+                BlockBuilder.fan()
+                        .strength(1.0f)
+                        .sounds(BlockSoundGroup.STONE)
+                        .wallBlock(WALL_CORAL_HORN_FAN)
+                        .allowUnsupported(true)
+                        .nonOpaque()
+                        .noCollision()
+                        .build());
+
 
         /**
          * Initialize all blocks
@@ -2502,6 +2605,11 @@ public class ModBlocks {
                         entries.add(ModBlocks.CANDLE);
                         entries.add(ModBlocks.CANDLE_UNLIT);
                         entries.add(ModBlocks.ARBOR_BRICK_ARROW_SLIT);
+                        entries.add(ModBlocks.CORAL_TUBE_FAN);
+                        entries.add(ModBlocks.CORAL_BRAIN_FAN);
+                        entries.add(ModBlocks.CORAL_BUBBLE_FAN);
+                        entries.add(ModBlocks.CORAL_FIRE_FAN);
+                        entries.add(ModBlocks.CORAL_HORN_FAN);
                         entries.add(ModBlocks.FANCY_BLUE_CARPET);
                         entries.add(ModBlocks.FANCY_RED_CARPET);
                         entries.add(ModBlocks.HORIZONTAL_CHAIN);

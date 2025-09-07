@@ -29,26 +29,14 @@ public class WCRailBlock extends RailBlock {
                 
                 return new WCRailBlock(settings, allowUnsupported);
             }
-            
-            // Fallback for legacy parameter style
-            boolean allowUnsupported = params.length > 0 && params[0] instanceof Boolean ? (Boolean) params[0] : false;
-            
-            return new WCRailBlock(settings, allowUnsupported);
+
+            return new WCRailBlock(settings, false);
         }
     }
 
     public WCRailBlock(AbstractBlock.Settings settings, boolean allowUnsupported) {
         super(settings);
         this.allowUnsupported = allowUnsupported;
-    }
-
-    /**
-     * Gets whether this rail allows unsupported placement.
-     * 
-     * @return True if unsupported placement is allowed
-     */
-    public boolean isAllowUnsupported() {
-        return allowUnsupported;
     }
 
     @Override

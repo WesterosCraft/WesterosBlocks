@@ -77,6 +77,14 @@ public class BlockBuilder<T extends Block> {
         return new BlockBuilder<>(new WCRailBlock.Factory());
     }
     
+    public static BlockBuilder<WCFanBlock> fan() {
+        return new BlockBuilder<>(new WCFanBlock.Factory());
+    }
+    
+    public static BlockBuilder<WCWallFanBlock> wallFan() {
+        return new BlockBuilder<>(new WCWallFanBlock.Factory());
+    }
+    
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
         return this;

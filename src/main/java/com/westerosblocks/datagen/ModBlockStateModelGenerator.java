@@ -68,6 +68,7 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 case "table" -> buildTable();
                                 case "arrow_slit" -> buildArrowSlit();
                                 case "rail" -> buildRail();
+                                case "fan" -> buildFan();
                                 default -> throw new IllegalArgumentException("Unknown block type: " + blockType);
                         }
                 }
@@ -155,6 +156,16 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 }
                         }
                         generateRail(generator, block, textureList);
+                }
+
+                private void buildFan() {
+                        if (!randomTextures.isEmpty()) {
+                                generateFanWithRandomTextures(generator, block, randomTextures.toArray(new String[0][0]));
+                        } else if (!texture.isEmpty()) {
+                                generateFan(generator, block, texture);
+                        } else if (textures.length > 0) {
+                                generateFan(generator, block, textures[0]);
+                        }
                 }
         }
 
@@ -289,6 +300,17 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                 }
         }
 
+        private static void generateFan(BlockStateModelGenerator generator, Block block, String texturePath) {
+                FanBlockExporter.registerFanBlock(generator, block, texturePath);
+        }
+
+        private static void generateFanWithRandomTextures(BlockStateModelGenerator generator, Block block, String[][] randomTexturePaths) {
+                // For random textures, use the first texture of the first set as the primary texture
+                String primaryTexture = randomTexturePaths.length > 0 && randomTexturePaths[0].length > 0 
+                        ? randomTexturePaths[0][0] : "coral/tube/fan1";
+                FanBlockExporter.registerFanBlock(generator, block, primaryTexture);
+        }
+
         // Factory methods for each block type
 
         public static CustomBlockBuilder registerCustomSolidBlock(BlockStateModelGenerator generator, Block block) {
@@ -337,5 +359,9 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
         public static CustomBlockBuilder registerCustomRailBlock(BlockStateModelGenerator generator, Block block) {
                 return new CustomBlockBuilder(generator, block, "rail");
+        }
+
+        public static CustomBlockBuilder registerCustomFanBlock(BlockStateModelGenerator generator, Block block) {
+                return new CustomBlockBuilder(generator, block, "fan");
         }
 }
