@@ -2056,6 +2056,62 @@ public class ModBlocks {
                                 .sounds(BlockSoundGroup.WOOD)
                                 .build());
 
+        // Rail blocks
+        public static final Block FANCY_BLUE_CARPET = registerBlock(
+                        "fancy_blue_carpet",
+                        BlockBuilder.rail()
+                                .strength(0.1f)
+                                .sounds(BlockSoundGroup.WOOL)
+                                .allowUnsupported(true)
+                                .nonOpaque()
+                                .build());
+
+        public static final Block FANCY_RED_CARPET = registerBlock(
+                        "fancy_red_carpet",
+                        BlockBuilder.rail()
+                                .strength(0.1f)
+                                .sounds(BlockSoundGroup.WOOL)
+                                .allowUnsupported(true)
+                                .nonOpaque()
+                                .build());
+
+        public static final Block HORIZONTAL_CHAIN = registerBlock(
+                        "horizontal_chain",
+                        BlockBuilder.rail()
+                                .strength(1.0f)
+                                .requiresTool()
+                                .sounds(BlockSoundGroup.METAL)
+                                .allowUnsupported(true)
+                                .nonOpaque()
+                                .build());
+
+        public static final Block HORIZONTAL_NET = registerBlock(
+                        "horizontal_net",
+                        BlockBuilder.rail()
+                                .strength(0.5f)
+                                .sounds(BlockSoundGroup.WOOL)
+                                .allowUnsupported(true)
+                                .nonOpaque()
+                                .build());
+
+        public static final Block HORIZONTAL_ROPE = registerBlock(
+                        "horizontal_rope",
+                        BlockBuilder.rail()
+                                .strength(0.5f)
+                                .sounds(BlockSoundGroup.WOOL)
+                                .allowUnsupported(true)
+                                .nonOpaque()
+                                .build());
+
+        public static final Block PACKED_SNOW = registerBlock(
+                        "packed_snow",
+                        BlockBuilder.rail()
+                                .strength(0.2f)
+                                .sounds(BlockSoundGroup.SNOW)
+                                .allowUnsupported(true)
+                                .nonOpaque()
+                                .build());
+
         // Slab blocks
         public static final Block APPLE_BASKET_SLAB = registerBlock(
                         "apple_basket_slab",
@@ -2446,6 +2502,12 @@ public class ModBlocks {
                         entries.add(ModBlocks.CANDLE);
                         entries.add(ModBlocks.CANDLE_UNLIT);
                         entries.add(ModBlocks.ARBOR_BRICK_ARROW_SLIT);
+                        entries.add(ModBlocks.FANCY_BLUE_CARPET);
+                        entries.add(ModBlocks.FANCY_RED_CARPET);
+                        entries.add(ModBlocks.HORIZONTAL_CHAIN);
+                        entries.add(ModBlocks.HORIZONTAL_NET);
+                        entries.add(ModBlocks.HORIZONTAL_ROPE);
+                        entries.add(ModBlocks.PACKED_SNOW);
                 });
         }
 

@@ -7,11 +7,9 @@ import net.minecraft.block.Block;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.BlockStateVariantMap;
 import net.minecraft.data.client.Model;
-import net.minecraft.data.client.Models;
 import net.minecraft.data.client.TextureKey;
 import net.minecraft.data.client.TextureMap;
 import net.minecraft.data.client.VariantsBlockStateSupplier;
-import net.minecraft.data.client.ModelIds;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 

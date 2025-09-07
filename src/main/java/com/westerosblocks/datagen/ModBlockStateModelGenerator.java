@@ -67,6 +67,7 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 case "chair" -> buildChair();
                                 case "table" -> buildTable();
                                 case "arrow_slit" -> buildArrowSlit();
+                                case "rail" -> buildRail();
                                 default -> throw new IllegalArgumentException("Unknown block type: " + blockType);
                         }
                 }
@@ -140,6 +141,20 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
                 private void buildArrowSlit() {
                         generateArrowSlit(generator, block, !texture.isEmpty() ? texture : textures[0]);
+                }
+
+                private void buildRail() {
+                        List<String> textureList = new ArrayList<>();
+                        if (!texture.isEmpty()) {
+                                textureList.add(texture);
+                        } else if (textures.length > 0) {
+                                textureList.addAll(List.of(textures));
+                        } else if (!randomTextures.isEmpty()) {
+                                for (String[] randomSet : randomTextures) {
+                                        textureList.addAll(List.of(randomSet));
+                                }
+                        }
+                        generateRail(generator, block, textureList);
                 }
         }
 
@@ -266,6 +281,14 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                 ArrowSlitBlockExporter.registerArrowSlitBlock(generator, block, texturePath);
         }
 
+        private static void generateRail(BlockStateModelGenerator generator, Block block, List<String> texturePaths) {
+                if (texturePaths.size() == 1) {
+                        RailBlockExporter.registerRailBlock(generator, block, texturePaths.get(0));
+                } else {
+                        RailBlockExporter.registerRailBlock(generator, block, texturePaths.toArray(new String[0]));
+                }
+        }
+
         // Factory methods for each block type
 
         public static CustomBlockBuilder registerCustomSolidBlock(BlockStateModelGenerator generator, Block block) {
@@ -310,5 +333,9 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
         public static CustomBlockBuilder registerCustomArrowSlitBlock(BlockStateModelGenerator generator, Block block) {
                 return new CustomBlockBuilder(generator, block, "arrow_slit");
+        }
+
+        public static CustomBlockBuilder registerCustomRailBlock(BlockStateModelGenerator generator, Block block) {
+                return new CustomBlockBuilder(generator, block, "rail");
         }
 }

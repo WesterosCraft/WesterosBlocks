@@ -73,6 +73,10 @@ public class BlockBuilder<T extends Block> {
         return new BlockBuilder<>(new WCArrowSlitBlock.Factory());
     }
     
+    public static BlockBuilder<WCRailBlock> rail() {
+        return new BlockBuilder<>(new WCRailBlock.Factory());
+    }
+    
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
         return this;

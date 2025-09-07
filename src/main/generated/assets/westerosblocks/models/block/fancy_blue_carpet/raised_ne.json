@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_rail_raised_ne",
+  "textures": {
+    "rail": "westerosblocks:block/carpet/fancy_blue_carpet"
+  }
+}

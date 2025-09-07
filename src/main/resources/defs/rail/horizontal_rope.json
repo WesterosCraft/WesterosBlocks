@@ -1,0 +1,12 @@
+{
+    "blockName": "horizontal_rope",
+    "blockType": "rail",
+    "material": "cloth",
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "label": "Horizontal Rope",
+    "textures": [
+        "rail_block/rope",
+        "rail_block/rope_turned"
+    ],
+    "type": "allow-unsupported"
+}

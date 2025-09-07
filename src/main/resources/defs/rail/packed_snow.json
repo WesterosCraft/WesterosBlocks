@@ -1,0 +1,12 @@
+{
+    "blockName": "packed_snow",
+    "blockType": "rail",
+    "material": "snow",
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Packed Snow",
+    "textures": [
+        "rail_block/packed_snow",
+        "rail_block/packed_snow_turned"
+    ],
+    "type": "allow-unsupported"
+}

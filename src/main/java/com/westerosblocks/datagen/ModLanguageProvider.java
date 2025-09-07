@@ -305,6 +305,14 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
                 // Arrow Slit Blocks
                 translationBuilder.add("block.westerosblocks.arbor_brick_arrow_slit", "Arbor Brick Arrow Slit");
+
+                // Rail Blocks
+                translationBuilder.add("block.westerosblocks.fancy_blue_carpet", "Fancy Blue Carpet");
+                translationBuilder.add("block.westerosblocks.fancy_red_carpet", "Fancy Red Carpet");
+                translationBuilder.add("block.westerosblocks.horizontal_chain", "Horizontal Chain");
+                translationBuilder.add("block.westerosblocks.horizontal_net", "Horizontal Net");
+                translationBuilder.add("block.westerosblocks.horizontal_rope", "Horizontal Rope");
+                translationBuilder.add("block.westerosblocks.packed_snow", "Packed Snow");
         }
 
 }

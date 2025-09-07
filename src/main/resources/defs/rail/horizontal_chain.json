@@ -1,0 +1,12 @@
+{
+    "blockName": "horizontal_chain",
+    "blockType": "rail",
+    "creativeTab": "westeros_metal_tab",
+    "label": "Horizontal Chain",
+    "material": "iron",
+    "textures": [
+        "rail_block/chain",
+        "rail_block/chain_turned"
+    ],
+    "type": "allow-unsupported"
+}

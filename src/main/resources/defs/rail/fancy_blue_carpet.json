@@ -1,0 +1,12 @@
+{
+    "blockName": "fancy_blue_carpet",
+    "blockType": "rail",
+    "stepSound": "cloth",
+    "material": "cloth",
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "label": "Fancy Blue Carpet",
+    "type": "allow-unsupported",
+    "textures": [
+        "carpet/fancy_blue_carpet"
+    ]
+}

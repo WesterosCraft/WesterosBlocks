@@ -1,0 +1,12 @@
+{
+    "blockName": "horizontal_net",
+    "blockType": "rail",
+    "material": "cloth",
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "label": "Horizontal Net",
+    "textures": [
+        "rail_block/net_large",
+        "rail_block/net_large_turned"
+    ],
+    "type": "allow-unsupported"
+}

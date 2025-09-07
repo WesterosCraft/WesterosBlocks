@@ -64,6 +64,12 @@ public class ModModels {
     // Table models
     public static final Model TABLE = ModModels.block("tables/table", TextureKey.TEXTURE);
 
+    // Rail models
+    public static final Model RAIL_FLAT = vanillaBlock("rail_flat", TextureKey.RAIL);
+    public static final Model RAIL_CURVED = vanillaBlock("rail_curved", TextureKey.RAIL);
+    public static final Model TEMPLATE_RAIL_RAISED_NE = vanillaBlock("template_rail_raised_ne", TextureKey.RAIL);
+    public static final Model TEMPLATE_RAIL_RAISED_SW = vanillaBlock("template_rail_raised_sw", TextureKey.RAIL);
+
     // helper method for creating Models
     private static Model block(String parent, TextureKey... requiredTextureKeys) {
         return new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parent)), Optional.empty(),
