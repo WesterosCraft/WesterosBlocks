@@ -85,6 +85,10 @@ public class BlockBuilder<T extends Block> {
         return new BlockBuilder<>(new WCWallFanBlock.Factory());
     }
     
+    public static BlockBuilder<WCFenceBlock> fence() {
+        return new BlockBuilder<>(new WCFenceBlock.Factory());
+    }
+    
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
         return this;
