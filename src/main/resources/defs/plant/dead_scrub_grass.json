@@ -1,0 +1,72 @@
+{
+    "blockName": "dead_scrub_grass",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "material": "plants",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "Dead Scrub Grass",
+    "randomTextures": [
+        {
+            "textures": [
+                "flowers/dead_scrub_grass1"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "flowers/dead_scrub_grass2"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "flowers/dead_scrub_grass3"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "flowers/dead_scrub_grass4"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "flowers/dead_scrub_grass5"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "flowers/dead_scrub_grass6"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "flowers/dead_scrub_grass7"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "flowers/dead_scrub_grass8"
+            ],
+            "weight": 15
+        },
+        {
+            "textures": [
+                "flowers/dead_scrub_grass9"
+            ],
+            "weight": 15
+        }
+    ]
+}

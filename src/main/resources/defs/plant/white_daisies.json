@@ -1,0 +1,38 @@
+{
+    "blockName": "white_daisies",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "material": "plants",
+    "creativeTab": "westeros_flowers_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "White Daisies",
+    "randomTextures": [
+        {
+            "textures": [
+                "flowers/white_daisies1"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/white_daisies2"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/white_daisies3"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/white_daisies4"
+            ]
+        }
+    ]
+}

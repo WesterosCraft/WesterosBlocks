@@ -14,7 +14,7 @@ public class BlockBuilder<T extends Block> {
     private AbstractBlock.Settings settings;
     private Map<String, Object> parameters = new HashMap<>();
     private BlockFactory factory;
-    
+
     public BlockBuilder() {
         this.settings = AbstractBlock.Settings.create();
     }
@@ -87,6 +87,14 @@ public class BlockBuilder<T extends Block> {
     
     public static BlockBuilder<WCFenceBlock> fence() {
         return new BlockBuilder<>(new WCFenceBlock.Factory());
+    }
+    
+    public static BlockBuilder<WCLayerBlock> layer() {
+        return new BlockBuilder<>(new WCLayerBlock.Factory());
+    }
+    
+    public static BlockBuilder<WCPlantBlock> plant() {
+        return new BlockBuilder<>(new WCPlantBlock.Factory());
     }
     
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
@@ -192,6 +200,11 @@ public class BlockBuilder<T extends Block> {
     
     public BlockBuilder<T> noParticle(boolean noParticle) {
         parameters.put("noParticle", noParticle);
+        return this;
+    }
+    
+    public BlockBuilder<T> layerSensitive(boolean layerSensitive) {
+        parameters.put("layerSensitive", layerSensitive);
         return this;
     }
     

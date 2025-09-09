@@ -69,6 +69,8 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 case "arrow_slit" -> buildArrowSlit();
                                 case "rail" -> buildRail();
                                 case "fan" -> buildFan();
+                                case "plant" -> buildPlant();
+                                case "cross" -> buildPlant(); // Alias for plant
                                 default -> throw new IllegalArgumentException("Unknown block type: " + blockType);
                         }
                 }
@@ -165,6 +167,19 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 generateFan(generator, block, texture);
                         } else if (textures.length > 0) {
                                 generateFan(generator, block, textures[0]);
+                        }
+                }
+
+                private void buildPlant() {
+                        if (!randomTextures.isEmpty()) {
+                                String[] textureArray = randomTextures.stream()
+                                        .map(arr -> arr[0])
+                                        .toArray(String[]::new);
+                                generatePlantWithRandomTextures(generator, block, textureArray);
+                        } else if (!texture.isEmpty()) {
+                                generatePlant(generator, block, texture);
+                        } else if (textures.length > 0) {
+                                generatePlant(generator, block, textures[0]);
                         }
                 }
         }
@@ -311,6 +326,14 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                 FanBlockExporter.registerFanBlock(generator, block, primaryTexture);
         }
 
+        private static void generatePlant(BlockStateModelGenerator generator, Block block, String texturePath) {
+                CrossBlockExporter.generateCross(generator, block, texturePath);
+        }
+
+        private static void generatePlantWithRandomTextures(BlockStateModelGenerator generator, Block block, String[] texturePaths) {
+                CrossBlockExporter.generateCrossWithRandomTextures(generator, block, texturePaths);
+        }
+
         // Factory methods for each block type
 
         public static CustomBlockBuilder registerCustomSolidBlock(BlockStateModelGenerator generator, Block block) {
@@ -363,5 +386,9 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
         public static CustomBlockBuilder registerCustomFanBlock(BlockStateModelGenerator generator, Block block) {
                 return new CustomBlockBuilder(generator, block, "fan");
+        }
+
+        public static CustomBlockBuilder registerCustomPlantBlock(BlockStateModelGenerator generator, Block block) {
+                return new CustomBlockBuilder(generator, block, "plant");
         }
 }

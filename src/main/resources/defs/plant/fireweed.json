@@ -1,0 +1,39 @@
+{
+    "blockName": "fireweed",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "Fireweed",
+    "randomTextures": [
+        {
+            "textures": [
+                "fireweed/side1"
+            ]
+        },
+        {
+            "textures": [
+                "fireweed/side2"
+            ]
+        },
+        {
+            "textures": [
+                "fireweed/side3"
+            ]
+        },
+        {
+            "textures": [
+                "fireweed/side4"
+            ]
+        }
+    ]
+}

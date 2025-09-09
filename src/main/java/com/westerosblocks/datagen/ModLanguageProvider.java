@@ -320,6 +320,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.horizontal_net", "Horizontal Net");
                 translationBuilder.add("block.westerosblocks.horizontal_rope", "Horizontal Rope");
                 translationBuilder.add("block.westerosblocks.packed_snow", "Packed Snow");
+                
+                // Plant Blocks
+                translationBuilder.add("block.westerosblocks.blue_bells", "Blue Bells");
         }
 
 }

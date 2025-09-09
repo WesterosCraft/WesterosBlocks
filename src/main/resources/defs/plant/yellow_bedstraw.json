@@ -1,0 +1,33 @@
+{
+    "blockName": "yellow_bedstraw",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "material": "plants",
+    "creativeTab": "westeros_flowers_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "Yellow Bedstraw",
+    "randomTextures": [
+        {
+            "textures": [
+                "flowers/yellow_bedstraw/side1"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/yellow_bedstraw/side2"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/yellow_bedstraw/side3"
+            ]
+        }
+    ]
+}

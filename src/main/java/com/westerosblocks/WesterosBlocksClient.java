@@ -57,5 +57,8 @@ public class WesterosBlocksClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WALL_CORAL_FIRE_FAN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CORAL_HORN_FAN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WALL_CORAL_HORN_FAN, RenderLayer.getCutout());
+
+        // Plant Blocks
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLUE_BELLS, RenderLayer.getCutout());
     }
 }

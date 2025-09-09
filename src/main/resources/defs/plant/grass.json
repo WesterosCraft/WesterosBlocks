@@ -1,0 +1,68 @@
+{
+    "blockName": "grass",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "Grass",
+    "colorMult": "textures/colormap/grass",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/fern/fern1"
+            ],
+            "weight": 5
+        },
+        {
+            "textures": [
+                "minecraft:block/fern/fern2"
+            ],
+            "weight": 5
+        },
+        {
+            "textures": [
+                "minecraft:block/fern/fern3"
+            ],
+            "weight": 15
+        },
+        {
+            "textures": [
+                "minecraft:block/fern/fern4"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "minecraft:block/fern/fern5"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "minecraft:block/fern/fern6"
+            ],
+            "weight": 15
+        },
+        {
+            "textures": [
+                "minecraft:block/fern/fern7"
+            ],
+            "weight": 25
+        },
+        {
+            "textures": [
+                "minecraft:block/fern/fern8"
+            ],
+            "weight": 15
+        }
+    ]
+}

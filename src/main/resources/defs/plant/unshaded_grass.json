@@ -1,0 +1,59 @@
+{
+    "blockName": "unshaded_grass",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "Unshaded Grass",
+    "randomTextures": [
+        {
+            "textures": [
+                "deadbush/side1"
+            ]
+        },
+        {
+            "textures": [
+                "deadbush/side2"
+            ]
+        },
+        {
+            "textures": [
+                "deadbush/side3"
+            ]
+        },
+        {
+            "textures": [
+                "deadbush/side4"
+            ]
+        },
+        {
+            "textures": [
+                "deadbush/side5"
+            ]
+        },
+        {
+            "textures": [
+                "deadbush/side6"
+            ]
+        },
+        {
+            "textures": [
+                "deadbush/side7"
+            ]
+        },
+        {
+            "textures": [
+                "deadbush/side8"
+            ]
+        }
+    ]
+}

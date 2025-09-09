@@ -1,0 +1,43 @@
+{
+    "blockName": "green_spiny_herb",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "material": "plants",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "Green Spiny Herb",
+    "randomTextures": [
+        {
+            "textures": [
+                "flowers/green_spiny_herb1"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/green_spiny_herb2"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/green_spiny_herb3"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/green_spiny_herb4"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/green_spiny_herb5"
+            ]
+        }
+    ]
+}

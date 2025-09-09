@@ -884,6 +884,9 @@ public class ModModelProvider extends FabricModelProvider {
                 registerCustomRailBlock(bsmg, ModBlocks.HORIZONTAL_NET).textures("rail_block/net_large", "rail_block/net_large_turned").build();
                 registerCustomRailBlock(bsmg, ModBlocks.HORIZONTAL_ROPE).textures("rail_block/rope", "rail_block/rope_turned").build();
                 registerCustomRailBlock(bsmg, ModBlocks.PACKED_SNOW).textures("rail_block/packed_snow", "rail_block/packed_snow_turned").build();
+                
+                // Plant Blocks
+                registerCustomPlantBlock(bsmg, ModBlocks.BLUE_BELLS).texture("flowers/blue_bells").build();
         }
 
         @Override

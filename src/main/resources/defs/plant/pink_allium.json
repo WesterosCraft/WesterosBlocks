@@ -1,0 +1,39 @@
+{
+    "blockName": "pink_allium",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_flowers_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "Pink Allium",
+    "randomTextures": [
+        {
+            "textures": [
+                "flowers/pink_allium1"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/pink_allium2"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/pink_allium3"
+            ]
+        },
+        {
+            "textures": [
+                "flowers/pink_allium4"
+            ]
+        }
+    ]
+}

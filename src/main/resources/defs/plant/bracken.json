@@ -1,0 +1,59 @@
+{
+    "blockName": "bracken",
+    "blockType": "plant",
+    "type": "layerSensitive",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+    },
+    "label": "Bracken",
+    "randomTextures": [
+        {
+            "textures": [
+                "bracken/side1"
+            ]
+        },
+        {
+            "textures": [
+                "bracken/side2"
+            ]
+        },
+        {
+            "textures": [
+                "bracken/side3"
+            ]
+        },
+        {
+            "textures": [
+                "bracken/side4"
+            ]
+        },
+        {
+            "textures": [
+                "bracken/side5"
+            ]
+        },
+        {
+            "textures": [
+                "bracken/side6"
+            ]
+        },
+        {
+            "textures": [
+                "bracken/side7"
+            ]
+        },
+        {
+            "textures": [
+                "bracken/side8"
+            ]
+        }
+    ]
+}

@@ -2348,6 +2348,17 @@ public class ModBlocks {
                         .noCollision()
                         .build());
 
+        // Plant Blocks
+        public static final Block BLUE_BELLS = registerBlock(
+                        "blue_bells",
+                        BlockBuilder.plant()
+                                .strength(0.0f)
+                                .sounds(BlockSoundGroup.GRASS)
+                                .nonOpaque()
+                                .noCollision()
+                                .layerSensitive(true)
+                                .build());
+
 
         /**
          * Initialize all blocks
@@ -2616,6 +2627,7 @@ public class ModBlocks {
                         entries.add(ModBlocks.HORIZONTAL_NET);
                         entries.add(ModBlocks.HORIZONTAL_ROPE);
                         entries.add(ModBlocks.PACKED_SNOW);
+                        entries.add(ModBlocks.BLUE_BELLS);
                 });
         }
 
