@@ -147,6 +147,11 @@ public class BlockBuilder<T extends Block> {
         return this;
     }
     
+    public BlockBuilder<T> allowUnsupported() {
+        parameters.put("allowUnsupported", true);
+        return this;
+    }
+    
     public BlockBuilder<T> woodType(String woodType) {
         parameters.put("woodType", woodType);
         return this;
@@ -183,6 +188,11 @@ public class BlockBuilder<T extends Block> {
         return this;
     }
     
+    public BlockBuilder<T> toggleOnUse() {
+        parameters.put("toggleOnUse", true);
+        return this;
+    }
+    
     public BlockBuilder<T> states(int numStates) {
         parameters.put("states", numStates);
         return this;
@@ -205,6 +215,11 @@ public class BlockBuilder<T extends Block> {
     
     public BlockBuilder<T> layerSensitive(boolean layerSensitive) {
         parameters.put("layerSensitive", layerSensitive);
+        return this;
+    }
+    
+    public BlockBuilder<T> layerSensitive() {
+        parameters.put("layerSensitive", true);
         return this;
     }
     

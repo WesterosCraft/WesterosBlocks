@@ -1596,7 +1596,7 @@ public class ModBlocks {
                                 .sounds(BlockSoundGroup.WOOD)
                                 .woodType("spruce")
                                 .locked(true)
-                                .allowUnsupported(true)
+                                .allowUnsupported()
                                 .build());
 
         public static final Block LOCKED_WHITE_WOOD_DOOR = registerBlock(
@@ -1607,7 +1607,7 @@ public class ModBlocks {
                                 .sounds(BlockSoundGroup.WOOD)
                                 .woodType("white")
                                 .locked(true)
-                                .allowUnsupported(true)
+                                .allowUnsupported()
                                 .build());
 
         // Half Door Blocks (Shutters)
@@ -1617,8 +1617,7 @@ public class ModBlocks {
                                 .strength(2.0f)
                                 .requiresTool()
                                 .sounds(BlockSoundGroup.WOOD)
-                                .locked(false)
-                                .allowUnsupported(true)
+                                .allowUnsupported()
                                 .build());
 
         public static final Block DORNE_RED_WINDOW_SHUTTERS = registerBlock(
@@ -1627,8 +1626,7 @@ public class ModBlocks {
                                 .strength(2.0f)
                                 .requiresTool()
                                 .sounds(BlockSoundGroup.WOOD)
-                                .locked(false)
-                                .allowUnsupported(true)
+                                .allowUnsupported()
                                 .build());
 
         public static final Block GREEN_LANNISPORT_WINDOW_SHUTTERS = registerBlock(
@@ -1638,8 +1636,7 @@ public class ModBlocks {
                                 .resistance(5.0f)
                                 .requiresTool()
                                 .sounds(BlockSoundGroup.WOOD)
-                                .locked(false)
-                                .allowUnsupported(true)
+                                .allowUnsupported()
                                 .build());
 
         public static final Block GREY_WOOD_WINDOW_SHUTTERS = registerBlock(
@@ -1649,8 +1646,7 @@ public class ModBlocks {
                                 .resistance(5.0f)
                                 .requiresTool()
                                 .sounds(BlockSoundGroup.WOOD)
-                                .locked(false)
-                                .allowUnsupported(true)
+                                .allowUnsupported()
                                 .build());
 
         public static final Block JUNGLE_WINDOW_SHUTTERS = registerBlock(
@@ -1660,8 +1656,7 @@ public class ModBlocks {
                                 .resistance(5.0f)
                                 .requiresTool()
                                 .sounds(BlockSoundGroup.WOOD)
-                                .locked(false)
-                                .allowUnsupported(true)
+                                .allowUnsupported()
                                 .build());
 
         public static final Block NORTHERN_WOOD_WINDOW_SHUTTERS = registerBlock(
@@ -1671,8 +1666,7 @@ public class ModBlocks {
                                 .resistance(5.0f)
                                 .requiresTool()
                                 .sounds(BlockSoundGroup.WOOD)
-                                .locked(false)
-                                .allowUnsupported(true)
+                                .allowUnsupported()
                                 .build());
 
         public static final Block OAK_WINDOW_SHUTTERS = registerBlock(
@@ -1682,8 +1676,7 @@ public class ModBlocks {
                                 .resistance(5.0f)
                                 .requiresTool()
                                 .sounds(BlockSoundGroup.WOOD)
-                                .locked(false)
-                                .allowUnsupported(true)
+                                .allowUnsupported()
                                 .build());
 
         public static final Block REACH_BLUE_WINDOW_SHUTTERS = registerBlock(
@@ -1693,8 +1686,7 @@ public class ModBlocks {
                                 .resistance(5.0f)
                                 .requiresTool()
                                 .sounds(BlockSoundGroup.WOOD)
-                                .locked(false)
-                                .allowUnsupported(true)
+                                .allowUnsupported()
                                 .build());
 
         public static final Block SPRUCE_WINDOW_SHUTTERS = registerBlock(
@@ -1704,8 +1696,7 @@ public class ModBlocks {
                                 .resistance(5.0f)
                                 .requiresTool()
                                 .sounds(BlockSoundGroup.WOOD)
-                                .locked(false)
-                                .allowUnsupported(true)
+                                .allowUnsupported()
                                 .build());
 
         public static final Block WHITE_WOOD_WINDOW_SHUTTERS = registerBlock(
@@ -2356,8 +2347,8 @@ public class ModBlocks {
                                 .sounds(BlockSoundGroup.GRASS)
                                 .nonOpaque()
                                 .noCollision()
-                                .layerSensitive(true)
-                                .toggleOnUse(true)
+                                .layerSensitive()
+                                .toggleOnUse()
                                 .build());
 
         public static final Block BLUE_CHICORY = registerBlock(
@@ -2367,8 +2358,8 @@ public class ModBlocks {
                         .sounds(BlockSoundGroup.GRASS)
                         .nonOpaque()
                         .noCollision()
-                        .layerSensitive(true)
-                        .toggleOnUse(true)
+                        .layerSensitive()
+                        .toggleOnUse()
                         .build());
 
         public static final Block BLUE_FORGETMENOTS = registerBlock(
@@ -2378,8 +2369,8 @@ public class ModBlocks {
                         .sounds(BlockSoundGroup.GRASS)
                         .nonOpaque()
                         .noCollision()
-                        .layerSensitive(true)
-                        .toggleOnUse(true)
+                        .layerSensitive()
+                        .toggleOnUse()
                         .build());
 
         public static final Block BLUE_FLAX = registerBlock(
@@ -2389,8 +2380,8 @@ public class ModBlocks {
                         .sounds(BlockSoundGroup.WOOD)
                         .nonOpaque()
                         .noCollision()
-                        .layerSensitive(true)
-                        .toggleOnUse(true)
+                        .layerSensitive()
+                        .toggleOnUse()
                         .build());
 
         public static final Block BLUE_HYACINTH = registerBlock(
@@ -2400,8 +2391,8 @@ public class ModBlocks {
                         .sounds(BlockSoundGroup.GRASS)
                         .nonOpaque()
                         .noCollision()
-                        .layerSensitive(true)
-                        .toggleOnUse(true)
+                        .layerSensitive()
+                        .toggleOnUse()
                         .build());
 
         public static final Block BLUE_ORCHID = registerBlock(
@@ -2411,8 +2402,8 @@ public class ModBlocks {
                         .sounds(BlockSoundGroup.GRASS)
                         .nonOpaque()
                         .noCollision()
-                        .layerSensitive(true)
-                        .toggleOnUse(true)
+                        .layerSensitive()
+                        .toggleOnUse()
                         .build());
 
         public static final Block BLUE_SWAMP_BELLS = registerBlock(
@@ -2422,8 +2413,8 @@ public class ModBlocks {
                         .sounds(BlockSoundGroup.GRASS)
                         .nonOpaque()
                         .noCollision()
-                        .layerSensitive(true)
-                        .toggleOnUse(true)
+                        .layerSensitive()
+                        .toggleOnUse()
                         .build());
 
 
