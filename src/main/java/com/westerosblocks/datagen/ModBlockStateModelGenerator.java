@@ -27,6 +27,7 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                 private String[] textures = new String[0];
                 private List<String[]> randomTextures = new ArrayList<>();
                 private List<String[]> states = new ArrayList<>();
+                private boolean isTinted = false;
 
                 public CustomBlockBuilder(BlockStateModelGenerator generator, Block block, String blockType) {
                         this.generator = generator;
@@ -51,6 +52,11 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
                 public CustomBlockBuilder state(String... texturePaths) {
                         this.states.add(texturePaths);
+                        return this;
+                }
+
+                public CustomBlockBuilder isTinted(boolean tinted) {
+                        this.isTinted = tinted;
                         return this;
                 }
 
@@ -175,11 +181,11 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 String[] textureArray = randomTextures.stream()
                                         .map(arr -> arr[0])
                                         .toArray(String[]::new);
-                                generatePlantWithRandomTextures(generator, block, textureArray);
+                                generatePlantWithRandomTextures(generator, block, textureArray, isTinted);
                         } else if (!texture.isEmpty()) {
-                                generatePlant(generator, block, texture);
+                                generatePlant(generator, block, texture, isTinted);
                         } else if (textures.length > 0) {
-                                generatePlant(generator, block, textures[0]);
+                                generatePlant(generator, block, textures[0], isTinted);
                         }
                 }
         }
@@ -326,22 +332,22 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                 FanBlockExporter.registerFanBlock(generator, block, primaryTexture);
         }
 
-        private static void generatePlant(BlockStateModelGenerator generator, Block block, String texturePath) {
+        private static void generatePlant(BlockStateModelGenerator generator, Block block, String texturePath, boolean isTinted) {
                 // Check if this is a layer-sensitive plant
                 if (block instanceof com.westerosblocks.block.custom.WCPlantBlock && 
                     ((com.westerosblocks.block.custom.WCPlantBlock) block).isLayerSensitive()) {
-                        CrossBlockExporter.generateLayerSensitiveCross(generator, block, texturePath);
+                        CrossBlockExporter.generateLayerSensitiveCross(generator, block, texturePath, isTinted, 1);
                 } else {
-                        CrossBlockExporter.generateCross(generator, block, texturePath);
+                        CrossBlockExporter.generateCross(generator, block, texturePath, isTinted, 1);
                 }
         }
 
-        private static void generatePlantWithRandomTextures(BlockStateModelGenerator generator, Block block, String[] texturePaths) {
+        private static void generatePlantWithRandomTextures(BlockStateModelGenerator generator, Block block, String[] texturePaths, boolean isTinted) {
                 if (block instanceof com.westerosblocks.block.custom.WCPlantBlock && 
                     ((com.westerosblocks.block.custom.WCPlantBlock) block).isLayerSensitive()) {
-                        CrossBlockExporter.generateLayerSensitiveCrossWithRandomTextures(generator, block, texturePaths);
+                        CrossBlockExporter.generateLayerSensitiveCrossWithRandomTextures(generator, block, texturePaths, isTinted, 1);
                 } else {
-                        CrossBlockExporter.generateCrossWithRandomTextures(generator, block, texturePaths);
+                        CrossBlockExporter.generateCrossWithRandomTextures(generator, block, texturePaths, isTinted, 1);
                 }
         }
 
@@ -401,5 +407,9 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
         public static CustomBlockBuilder registerCustomPlantBlock(BlockStateModelGenerator generator, Block block) {
                 return new CustomBlockBuilder(generator, block, "plant");
+        }
+
+        public static CustomBlockBuilder registerCustomCrossBlock(BlockStateModelGenerator generator, Block block) {
+                return new CustomBlockBuilder(generator, block, "cross");
         }
 }

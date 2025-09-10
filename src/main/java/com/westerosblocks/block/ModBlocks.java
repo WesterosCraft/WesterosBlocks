@@ -2417,6 +2417,417 @@ public class ModBlocks {
                         .toggleOnUse()
                         .build());
 
+        public static final Block BRACKEN = registerBlock(
+                "bracken",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .toggleOnUse()
+                        .build());
+
+        public static final Block BROWN_MUSHROOM_1 = registerBlock(
+                "brown_mushroom_1",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block BROWN_MUSHROOM_2 = registerBlock(
+                "brown_mushroom_2",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block BROWN_MUSHROOM_3 = registerBlock(
+                "brown_mushroom_3",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block BROWN_MUSHROOM_4 = registerBlock(
+                "brown_mushroom_4",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block BROWN_MUSHROOM_5 = registerBlock(
+                "brown_mushroom_5",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block BROWN_MUSHROOM_6 = registerBlock(
+                "brown_mushroom_6",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block BROWN_MUSHROOM_7 = registerBlock(
+                "brown_mushroom_7",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block BROWN_MUSHROOM_8 = registerBlock(
+                "brown_mushroom_8",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block BROWN_MUSHROOM_9 = registerBlock(
+                "brown_mushroom_9",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block BROWN_MUSHROOM_10 = registerBlock(
+                "brown_mushroom_10",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block BROWN_MUSHROOM_11 = registerBlock(
+                "brown_mushroom_11",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block BROWN_MUSHROOM_12 = registerBlock(
+                "brown_mushroom_12",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block BROWN_MUSHROOM_13 = registerBlock(
+                "brown_mushroom_13",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block CORAL_BRAIN_WEB = registerBlock(
+                "coral_brain_web",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.STONE)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block CORAL_BUBBLE_WEB = registerBlock(
+                "coral_bubble_web",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.STONE)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block CORAL_FIRE_WEB = registerBlock(
+                "coral_fire_web",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.STONE)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block CORAL_HORN_WEB = registerBlock(
+                "coral_horn_web",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.STONE)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block CORAL_TUBE_WEB = registerBlock(
+                "coral_tube_web",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.STONE)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block COW_PARSELY = registerBlock(
+                "cow_parsely",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block CRANBERRY_BUSH = registerBlock(
+                "cranberry_bush",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block DEAD_BRACKEN = registerBlock(
+                "dead_bracken",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block DEAD_BUSH = registerBlock(
+                "dead_bush",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block DEAD_SCRUB_GRASS = registerBlock(
+                "dead_scrub_grass",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block DOCK_LEAF = registerBlock(
+                "dock_leaf",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block FIREWEED = registerBlock(
+                "fireweed",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block GRASS = registerBlock(
+                "grass",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block GREEN_LEAFY_HERB = registerBlock(
+                "green_leafy_herb",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block GREEN_SCRUB_GRASS = registerBlock(
+                "green_scrub_grass",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block GREEN_SPINY_HERB = registerBlock(
+                "green_spiny_herb",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block HEATHER = registerBlock(
+                "heather",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block KELP = registerBlock(
+                "kelp",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block LADY_FERN = registerBlock(
+                "lady_fern",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block MAGENTA_ROSES = registerBlock(
+                "magenta_roses",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block MEADOW_FESCUE = registerBlock(
+                "meadow_fescue",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block NETTLE = registerBlock(
+                "nettle",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block ORANGE_BELLS = registerBlock(
+                "orange_bells",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block ORANGE_BOG_ASPHODEL = registerBlock(
+                "orange_bog_asphodel",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block ORANGE_MARIGOLDS = registerBlock(
+                "orange_marigolds",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block ORANGE_SUN_STAR = registerBlock(
+                "orange_sun_star",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block ORANGE_TROLLIUS = registerBlock(
+                "orange_trollius",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
 
         /**
          * Initialize all blocks
@@ -2692,6 +3103,47 @@ public class ModBlocks {
                         entries.add(ModBlocks.BLUE_HYACINTH);
                         entries.add(ModBlocks.BLUE_ORCHID);
                         entries.add(ModBlocks.BLUE_SWAMP_BELLS);
+                        entries.add(ModBlocks.BRACKEN);
+                        entries.add(ModBlocks.BROWN_MUSHROOM_1);
+                        entries.add(ModBlocks.BROWN_MUSHROOM_2);
+                        entries.add(ModBlocks.BROWN_MUSHROOM_3);
+                        entries.add(ModBlocks.BROWN_MUSHROOM_4);
+                        entries.add(ModBlocks.BROWN_MUSHROOM_5);
+                        entries.add(ModBlocks.BROWN_MUSHROOM_6);
+                        entries.add(ModBlocks.BROWN_MUSHROOM_7);
+                        entries.add(ModBlocks.BROWN_MUSHROOM_8);
+                        entries.add(ModBlocks.BROWN_MUSHROOM_9);
+                        entries.add(ModBlocks.BROWN_MUSHROOM_10);
+                        entries.add(ModBlocks.BROWN_MUSHROOM_11);
+                        entries.add(ModBlocks.BROWN_MUSHROOM_12);
+                        entries.add(ModBlocks.BROWN_MUSHROOM_13);
+                        entries.add(ModBlocks.CORAL_BRAIN_WEB);
+                        entries.add(ModBlocks.CORAL_BUBBLE_WEB);
+                        entries.add(ModBlocks.CORAL_FIRE_WEB);
+                        entries.add(ModBlocks.CORAL_HORN_WEB);
+                        entries.add(ModBlocks.CORAL_TUBE_WEB);
+                        entries.add(ModBlocks.COW_PARSELY);
+                        entries.add(ModBlocks.CRANBERRY_BUSH);
+                        entries.add(ModBlocks.DEAD_BRACKEN);
+                        entries.add(ModBlocks.DEAD_BUSH);
+                        entries.add(ModBlocks.DEAD_SCRUB_GRASS);
+                        entries.add(ModBlocks.DOCK_LEAF);
+                        entries.add(ModBlocks.FIREWEED);
+                        entries.add(ModBlocks.GRASS);
+                        entries.add(ModBlocks.GREEN_LEAFY_HERB);
+                        entries.add(ModBlocks.GREEN_SCRUB_GRASS);
+                        entries.add(ModBlocks.GREEN_SPINY_HERB);
+                        entries.add(ModBlocks.HEATHER);
+                        entries.add(ModBlocks.KELP);
+                        entries.add(ModBlocks.LADY_FERN);
+                        entries.add(ModBlocks.MAGENTA_ROSES);
+                        entries.add(ModBlocks.MEADOW_FESCUE);
+                        entries.add(ModBlocks.NETTLE);
+                        entries.add(ModBlocks.ORANGE_BELLS);
+                        entries.add(ModBlocks.ORANGE_BOG_ASPHODEL);
+                        entries.add(ModBlocks.ORANGE_MARIGOLDS);
+                        entries.add(ModBlocks.ORANGE_SUN_STAR);
+                        entries.add(ModBlocks.ORANGE_TROLLIUS);
                 });
         }
 

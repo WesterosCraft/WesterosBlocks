@@ -329,6 +329,47 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.blue_hyacinth", "Blue Hyacinth");
                 translationBuilder.add("block.westerosblocks.blue_orchid", "Blue Orchid");
                 translationBuilder.add("block.westerosblocks.blue_swamp_bells", "Blue Swamp Bells");
+                translationBuilder.add("block.westerosblocks.bracken", "Bracken");
+                translationBuilder.add("block.westerosblocks.brown_mushroom_1", "Brown Mushroom 1");
+                translationBuilder.add("block.westerosblocks.brown_mushroom_2", "Brown Mushroom 2");
+                translationBuilder.add("block.westerosblocks.brown_mushroom_3", "Brown Mushroom 3");
+                translationBuilder.add("block.westerosblocks.brown_mushroom_4", "Brown Mushroom 4");
+                translationBuilder.add("block.westerosblocks.brown_mushroom_5", "Brown Mushroom 5");
+                translationBuilder.add("block.westerosblocks.brown_mushroom_6", "Brown Mushroom 6");
+                translationBuilder.add("block.westerosblocks.brown_mushroom_7", "Brown Mushroom 7");
+                translationBuilder.add("block.westerosblocks.brown_mushroom_8", "Brown Mushroom 8");
+                translationBuilder.add("block.westerosblocks.brown_mushroom_9", "Brown Mushroom 9");
+                translationBuilder.add("block.westerosblocks.brown_mushroom_10", "Brown Mushroom 10");
+                translationBuilder.add("block.westerosblocks.brown_mushroom_11", "Brown Mushroom 11");
+                translationBuilder.add("block.westerosblocks.brown_mushroom_12", "Brown Mushroom 12");
+                translationBuilder.add("block.westerosblocks.brown_mushroom_13", "Brown Mushroom 13");
+                translationBuilder.add("block.westerosblocks.coral_brain_web", "Brain Coral Web");
+                translationBuilder.add("block.westerosblocks.coral_bubble_web", "Bubble Coral Web");
+                translationBuilder.add("block.westerosblocks.coral_fire_web", "Fire Coral Web");
+                translationBuilder.add("block.westerosblocks.coral_horn_web", "Horn Coral Web");
+                translationBuilder.add("block.westerosblocks.coral_tube_web", "Tube Coral Web");
+                translationBuilder.add("block.westerosblocks.cow_parsely", "Cow Parsely");
+                translationBuilder.add("block.westerosblocks.cranberry_bush", "Cranberry Bush");
+                translationBuilder.add("block.westerosblocks.dead_bracken", "Dead Bracken");
+                translationBuilder.add("block.westerosblocks.dead_bush", "Dead Bush");
+                translationBuilder.add("block.westerosblocks.dead_scrub_grass", "Dead Scrub Grass");
+                translationBuilder.add("block.westerosblocks.dock_leaf", "Dock Leaf");
+                translationBuilder.add("block.westerosblocks.fireweed", "Fireweed");
+                translationBuilder.add("block.westerosblocks.grass", "Grass");
+                translationBuilder.add("block.westerosblocks.green_leafy_herb", "Green Leafy Herb");
+                translationBuilder.add("block.westerosblocks.green_scrub_grass", "Green Scrub Grass");
+                translationBuilder.add("block.westerosblocks.green_spiny_herb", "Green Spiny Herb");
+                translationBuilder.add("block.westerosblocks.heather", "Heather");
+                translationBuilder.add("block.westerosblocks.kelp", "Kelp");
+                translationBuilder.add("block.westerosblocks.lady_fern", "Lady Fern");
+                translationBuilder.add("block.westerosblocks.magenta_roses", "Magenta Roses");
+                translationBuilder.add("block.westerosblocks.meadow_fescue", "Meadow Fescue");
+                translationBuilder.add("block.westerosblocks.nettle", "Nettle");
+                translationBuilder.add("block.westerosblocks.orange_bells", "Orange Bells");
+                translationBuilder.add("block.westerosblocks.orange_bog_asphodel", "Orange Bog Asphodel");
+                translationBuilder.add("block.westerosblocks.orange_marigolds", "Orange Marigolds");
+                translationBuilder.add("block.westerosblocks.orange_sun_star", "Orange Sun Star");
+                translationBuilder.add("block.westerosblocks.orange_trollius", "Orange Trollius");
         }
 
 }
