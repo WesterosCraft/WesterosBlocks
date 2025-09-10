@@ -2828,6 +2828,486 @@ public class ModBlocks {
                         .layerSensitive()
                         .build());
 
+        public static final Block PINK_ALLIUM = registerBlock(
+                "pink_allium",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block PINK_PRIMROSE = registerBlock(
+                "pink_primrose",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block PINK_ROSES = registerBlock(
+                "pink_roses",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block PINK_SWEET_PEAS = registerBlock(
+                "pink_sweet_peas",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block PINK_THISTLE = registerBlock(
+                "pink_thistle",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block PINK_TULIPS = registerBlock(
+                "pink_tulips",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block PINK_WILDFLOWERS = registerBlock(
+                "pink_wildflowers",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_ASTER = registerBlock(
+                "red_aster",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_CARNATIONS = registerBlock(
+                "red_carnations",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_CHRYSANTHEMUM = registerBlock(
+                "red_chrysanthemum",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_DARK_ROSES = registerBlock(
+                "red_dark_roses",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_FERN = registerBlock(
+                "red_fern",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_FLOWERING_SPINY_HERB = registerBlock(
+                "red_flowering_spiny_herb",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_MUSHROOM_1 = registerBlock(
+                "red_mushroom_1",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_MUSHROOM_2 = registerBlock(
+                "red_mushroom_2",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_MUSHROOM_3 = registerBlock(
+                "red_mushroom_3",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_MUSHROOM_4 = registerBlock(
+                "red_mushroom_4",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_MUSHROOM_5 = registerBlock(
+                "red_mushroom_5",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_MUSHROOM_6 = registerBlock(
+                "red_mushroom_6",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_MUSHROOM_7 = registerBlock(
+                "red_mushroom_7",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_MUSHROOM_8 = registerBlock(
+                "red_mushroom_8",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_MUSHROOM_9 = registerBlock(
+                "red_mushroom_9",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_POPPIES = registerBlock(
+                "red_poppies",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_ROSES = registerBlock(
+                "red_roses",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_SORREL = registerBlock(
+                "red_sorrel",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_SOURLEAF_BUSH = registerBlock(
+                "red_sourleaf_bush",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block RED_TULIPS = registerBlock(
+                "red_tulips",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block STRAWBERRY_BUSH = registerBlock(
+                "strawberry_bush",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block THICK_GRASS = registerBlock(
+                "thick_grass",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block UNSHADED_GRASS = registerBlock(
+                "unshaded_grass",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block WHITE_CHAMOMILE = registerBlock(
+                "white_chamomile",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block WHITE_DAISIES = registerBlock(
+                "white_daisies",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block WHITE_LILYOFTHEVALLEY = registerBlock(
+                "white_lilyofthevalley",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block WHITE_PEONY = registerBlock(
+                "white_peony",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block WHITE_ROSES = registerBlock(
+                "white_roses",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block YELLOW_BEDSTRAW = registerBlock(
+                "yellow_bedstraw",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block YELLOW_BELLS = registerBlock(
+                "yellow_bells",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block YELLOW_BUTTERCUPS = registerBlock(
+                "yellow_buttercups",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block YELLOW_DAFFODILS = registerBlock(
+                "yellow_daffodils",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block YELLOW_DAISIES = registerBlock(
+                "yellow_daisies",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block YELLOW_DANDELIONS = registerBlock(
+                "yellow_dandelions",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block YELLOW_HELLEBORE = registerBlock(
+                "yellow_hellebore",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block YELLOW_LUPINE = registerBlock(
+                "yellow_lupine",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block YELLOW_ROSES = registerBlock(
+                "yellow_roses",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block YELLOW_RUDBECKIA = registerBlock(
+                "yellow_rudbeckia",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block YELLOW_SUNFLOWER = registerBlock(
+                "yellow_sunflower",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block YELLOW_TANSY = registerBlock(
+                "yellow_tansy",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
+        public static final Block YELLOW_WILDFLOWERS = registerBlock(
+                "yellow_wildflowers",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive()
+                        .build());
+
 
         /**
          * Initialize all blocks
@@ -3144,6 +3624,54 @@ public class ModBlocks {
                         entries.add(ModBlocks.ORANGE_MARIGOLDS);
                         entries.add(ModBlocks.ORANGE_SUN_STAR);
                         entries.add(ModBlocks.ORANGE_TROLLIUS);
+                        entries.add(ModBlocks.PINK_ALLIUM);
+                        entries.add(ModBlocks.PINK_PRIMROSE);
+                        entries.add(ModBlocks.PINK_ROSES);
+                        entries.add(ModBlocks.PINK_SWEET_PEAS);
+                        entries.add(ModBlocks.PINK_THISTLE);
+                        entries.add(ModBlocks.PINK_TULIPS);
+                        entries.add(ModBlocks.PINK_WILDFLOWERS);
+                        entries.add(ModBlocks.RED_ASTER);
+                        entries.add(ModBlocks.RED_CARNATIONS);
+                        entries.add(ModBlocks.RED_CHRYSANTHEMUM);
+                        entries.add(ModBlocks.RED_DARK_ROSES);
+                        entries.add(ModBlocks.RED_FERN);
+                        entries.add(ModBlocks.RED_FLOWERING_SPINY_HERB);
+                        entries.add(ModBlocks.RED_MUSHROOM_1);
+                        entries.add(ModBlocks.RED_MUSHROOM_2);
+                        entries.add(ModBlocks.RED_MUSHROOM_3);
+                        entries.add(ModBlocks.RED_MUSHROOM_4);
+                        entries.add(ModBlocks.RED_MUSHROOM_5);
+                        entries.add(ModBlocks.RED_MUSHROOM_6);
+                        entries.add(ModBlocks.RED_MUSHROOM_7);
+                        entries.add(ModBlocks.RED_MUSHROOM_8);
+                        entries.add(ModBlocks.RED_MUSHROOM_9);
+                        entries.add(ModBlocks.RED_POPPIES);
+                        entries.add(ModBlocks.RED_ROSES);
+                        entries.add(ModBlocks.RED_SORREL);
+                        entries.add(ModBlocks.RED_SOURLEAF_BUSH);
+                        entries.add(ModBlocks.RED_TULIPS);
+                        entries.add(ModBlocks.STRAWBERRY_BUSH);
+                        entries.add(ModBlocks.THICK_GRASS);
+                        entries.add(ModBlocks.UNSHADED_GRASS);
+                        entries.add(ModBlocks.WHITE_CHAMOMILE);
+                        entries.add(ModBlocks.WHITE_DAISIES);
+                        entries.add(ModBlocks.WHITE_LILYOFTHEVALLEY);
+                        entries.add(ModBlocks.WHITE_PEONY);
+                        entries.add(ModBlocks.WHITE_ROSES);
+                        entries.add(ModBlocks.YELLOW_BEDSTRAW);
+                        entries.add(ModBlocks.YELLOW_BELLS);
+                        entries.add(ModBlocks.YELLOW_BUTTERCUPS);
+                        entries.add(ModBlocks.YELLOW_DAFFODILS);
+                        entries.add(ModBlocks.YELLOW_DAISIES);
+                        entries.add(ModBlocks.YELLOW_DANDELIONS);
+                        entries.add(ModBlocks.YELLOW_HELLEBORE);
+                        entries.add(ModBlocks.YELLOW_LUPINE);
+                        entries.add(ModBlocks.YELLOW_ROSES);
+                        entries.add(ModBlocks.YELLOW_RUDBECKIA);
+                        entries.add(ModBlocks.YELLOW_SUNFLOWER);
+                        entries.add(ModBlocks.YELLOW_TANSY);
+                        entries.add(ModBlocks.YELLOW_WILDFLOWERS);
                 });
         }
 

@@ -1120,6 +1120,248 @@ public class ModModelProvider extends FabricModelProvider {
                 .randomTexture("flowers/orange_trollius1")
                 .randomTexture("flowers/orange_trollius2")
                 .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.PINK_ALLIUM)
+                .randomTexture("flowers/pink_allium1")
+                .randomTexture("flowers/pink_allium2")
+                .randomTexture("flowers/pink_allium3")
+                .randomTexture("flowers/pink_allium4")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.PINK_PRIMROSE)
+                .randomTexture("flowers/pink_primrose1")
+                .randomTexture("flowers/pink_primrose2")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.PINK_ROSES)
+                .randomTexture("flowers/pink_roses1")
+                .randomTexture("flowers/pink_roses2")
+                .randomTexture("flowers/pink_roses3")
+                .randomTexture("flowers/pink_roses4")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.PINK_SWEET_PEAS)
+                .texture("flowers/pink_sweet_peas1")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.PINK_THISTLE)
+                .randomTexture("flowers/pink_thistle/side1")
+                .randomTexture("flowers/pink_thistle/side2")
+                .randomTexture("flowers/pink_thistle/side3")
+                .randomTexture("flowers/pink_thistle/side4")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.PINK_TULIPS)
+                .randomTexture("flowers/pink_tulips1")
+                .randomTexture("flowers/pink_tulips2")
+                .randomTexture("flowers/pink_tulips3")
+                .randomTexture("flowers/pink_tulips4")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.PINK_WILDFLOWERS)
+                .texture("flowers/pink_wildflowers")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_ASTER)
+                .randomTexture("flowers/red_aster1")
+                .randomTexture("flowers/red_aster2")
+                .randomTexture("flowers/red_aster3")
+                .randomTexture("flowers/red_aster4")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_CARNATIONS)
+                .randomTexture("flowers/red_carnations1")
+                .randomTexture("flowers/red_carnations2")
+                .randomTexture("flowers/red_carnations3")
+                .randomTexture("flowers/red_carnations4")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_CHRYSANTHEMUM)
+                .texture("flowers/red_chrysanthemum1")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_DARK_ROSES)
+                .randomTexture("flowers/red_dark_roses1")
+                .randomTexture("flowers/red_dark_roses2")
+                .randomTexture("flowers/red_dark_roses3")
+                .randomTexture("flowers/red_dark_roses4")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_FERN)
+                .randomTexture("red_fern/side1")
+                .randomTexture("red_fern/side2")
+                .randomTexture("red_fern/side3")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_FLOWERING_SPINY_HERB)
+                .texture("flowers/red_flowering_spiny_herb1")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_1).texture("red_mushroom_block/mushroom_red_0").build();
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_2).texture("red_mushroom_block/mushroom_red_1").build();
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_3).texture("red_mushroom_block/mushroom_red_2").build();
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_4).texture("red_mushroom_block/mushroom_red_3").build();
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_5).texture("red_mushroom_block/mushroom_red_4").build();
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_6).texture("red_mushroom_block/mushroom_red_5").build();
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_7).texture("red_mushroom_block/mushroom_red_6").build();
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_8).texture("red_mushroom_block/mushroom_red_7").build();
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_9).texture("red_mushroom_block/mushroom_red_8").build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_POPPIES)
+                .randomTexture("flowers/red_poppies1")
+                .randomTexture("flowers/red_poppies2")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_ROSES)
+                .randomTexture("flowers/red_roses1")
+                .randomTexture("flowers/red_roses2")
+                .randomTexture("flowers/red_roses3")
+                .randomTexture("flowers/red_roses4")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_SORREL)
+                .texture("flowers/red_sorrel1")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_SOURLEAF_BUSH)
+                .randomTexture("flowers/red_sourleaf_bush1")
+                .randomTexture("flowers/red_sourleaf_bush2")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.RED_TULIPS)
+                .randomTexture("flowers/red_tulips1")
+                .randomTexture("flowers/red_tulips2")
+                .randomTexture("flowers/red_tulips3")
+                .randomTexture("flowers/red_tulips4")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.STRAWBERRY_BUSH)
+                .texture("flowers/strawberry")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.THICK_GRASS)
+                .randomTexture("minecraft:block/grass/grass1")
+                .randomTexture("minecraft:block/grass/grass2")
+                .randomTexture("minecraft:block/grass/grass3")
+                .randomTexture("minecraft:block/grass/grass4")
+                .randomTexture("minecraft:block/grass/grass5")
+                .randomTexture("minecraft:block/grass/grass6")
+                .randomTexture("minecraft:block/grass/grass7")
+                .randomTexture("minecraft:block/grass/grass8")
+                .randomTexture("minecraft:block/grass/grass9")
+                .randomTexture("minecraft:block/grass/grass10")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.UNSHADED_GRASS)
+                .randomTexture("deadbush/side1")
+                .randomTexture("deadbush/side2")
+                .randomTexture("deadbush/side3")
+                .randomTexture("deadbush/side4")
+                .randomTexture("deadbush/side5")
+                .randomTexture("deadbush/side6")
+                .randomTexture("deadbush/side7")
+                .randomTexture("deadbush/side8")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.WHITE_CHAMOMILE)
+                .randomTexture("flowers/white_chamomile1")
+                .randomTexture("flowers/white_chamomile2")
+                .randomTexture("flowers/white_chamomile3")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.WHITE_DAISIES)
+                .randomTexture("flowers/white_daisies1")
+                .randomTexture("flowers/white_daisies2")
+                .randomTexture("flowers/white_daisies3")
+                .randomTexture("flowers/white_daisies4")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.WHITE_LILYOFTHEVALLEY)
+                .texture("flowers/white_lily_valley1")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.WHITE_PEONY)
+                .texture("flowers/white_peony1")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.WHITE_ROSES)
+                .randomTexture("flowers/white_roses1")
+                .randomTexture("flowers/white_roses2")
+                .randomTexture("flowers/white_roses3")
+                .randomTexture("flowers/white_roses4")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_BEDSTRAW)
+                .randomTexture("flowers/yellow_bedstraw/side1")
+                .randomTexture("flowers/yellow_bedstraw/side2")
+                .randomTexture("flowers/yellow_bedstraw/side3")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_BELLS)
+                .texture("flowers/yellow_bells1")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_BUTTERCUPS)
+                .randomTexture("flowers/yellow_buttercups1")
+                .randomTexture("flowers/yellow_buttercups2")
+                .randomTexture("flowers/yellow_buttercups3")
+                .randomTexture("flowers/yellow_buttercups4")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_DAFFODILS)
+                .randomTexture("flowers/yellow_daffodils1")
+                .randomTexture("flowers/yellow_daffodils2")
+                .randomTexture("flowers/yellow_daffodils3")
+                .randomTexture("flowers/yellow_daffodils4")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_DAISIES)
+                .randomTexture("flowers/yellow_daisies1")
+                .randomTexture("flowers/yellow_daisies2")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_DANDELIONS)
+                .randomTexture("flowers/yellow_dandelions1")
+                .randomTexture("flowers/yellow_dandelions2")
+                .randomTexture("flowers/yellow_dandelions3")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_HELLEBORE)
+                .randomTexture("flowers/yellow_hellebore1")
+                .randomTexture("flowers/yellow_hellebore2")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_LUPINE)
+                .randomTexture("flowers/yellow_lupine1")
+                .randomTexture("flowers/yellow_lupine2")
+                .randomTexture("flowers/yellow_lupine3")
+                .randomTexture("flowers/yellow_lupine4")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_ROSES)
+                .randomTexture("flowers/yellow_roses1")
+                .randomTexture("flowers/yellow_roses2")
+                .randomTexture("flowers/yellow_roses3")
+                .randomTexture("flowers/yellow_roses4")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_RUDBECKIA)
+                .texture("flowers/yellow_rudbeckia1")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_SUNFLOWER)
+                .randomTexture("flowers/yellow_sunflower/side1")
+                .randomTexture("flowers/yellow_sunflower/side2")
+                .randomTexture("flowers/yellow_sunflower/side3")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_TANSY)
+                .texture("flowers/yellow_tansy")
+                .build();
+
+        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_WILDFLOWERS)
+                .texture("flowers/yellow_wildflowers")
+                .build();
     }
 
     @Override
