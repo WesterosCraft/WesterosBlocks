@@ -887,6 +887,36 @@ public class ModModelProvider extends FabricModelProvider {
                 
                 // Plant Blocks
                 registerCustomPlantBlock(bsmg, ModBlocks.BLUE_BELLS).texture("flowers/blue_bells").build();
+                registerCustomPlantBlock(bsmg, ModBlocks.BLUE_CHICORY)
+                        .randomTexture("flowers/blue_chicory/side1")
+                        .randomTexture("flowers/blue_chicory/side2")
+                        .randomTexture("flowers/blue_chicory/side3")
+                        .randomTexture("flowers/blue_chicory/side4")
+                        .build();
+                registerCustomPlantBlock(bsmg, ModBlocks.BLUE_FORGETMENOTS)
+                        .randomTexture("flowers/blue_forgetmenots1")
+                        .randomTexture("flowers/blue_forgetmenots2")
+                        .randomTexture("flowers/blue_forgetmenots3")
+                        .randomTexture("flowers/blue_forgetmenots4")
+                        .build();
+                registerCustomPlantBlock(bsmg, ModBlocks.BLUE_FLAX)
+                        .randomTexture("flowers/blue_flax1")
+                        .randomTexture("flowers/blue_flax2")
+                        .randomTexture("flowers/blue_flax3")
+                        .randomTexture("flowers/blue_flax4")
+                        .build();
+                registerCustomPlantBlock(bsmg, ModBlocks.BLUE_HYACINTH)
+                        .randomTexture("flowers/blue_hyacinth1")
+                        .randomTexture("flowers/blue_hyacinth2")
+                        .randomTexture("flowers/blue_hyacinth3")
+                        .randomTexture("flowers/blue_hyacinth4")
+                        .build();
+                registerCustomPlantBlock(bsmg, ModBlocks.BLUE_ORCHID)
+                        .randomTexture("flowers/blue_orchid1")
+                        .randomTexture("flowers/blue_orchid2")
+                        .randomTexture("flowers/blue_orchid3")
+                        .build();
+                registerCustomPlantBlock(bsmg, ModBlocks.BLUE_SWAMP_BELLS).texture("flowers/blue_swamp_bells1").build();
         }
 
         @Override

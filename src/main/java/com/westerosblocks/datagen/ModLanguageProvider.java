@@ -323,6 +323,12 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 
                 // Plant Blocks
                 translationBuilder.add("block.westerosblocks.blue_bells", "Blue Bells");
+                translationBuilder.add("block.westerosblocks.blue_chicory", "Blue Chicory");
+                translationBuilder.add("block.westerosblocks.blue_forgetmenots", "Blue Forget-me-nots");
+                translationBuilder.add("block.westerosblocks.blue_flax", "Blue Flax");
+                translationBuilder.add("block.westerosblocks.blue_hyacinth", "Blue Hyacinth");
+                translationBuilder.add("block.westerosblocks.blue_orchid", "Blue Orchid");
+                translationBuilder.add("block.westerosblocks.blue_swamp_bells", "Blue Swamp Bells");
         }
 
 }

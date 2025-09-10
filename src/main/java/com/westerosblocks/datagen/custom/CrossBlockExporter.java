@@ -179,6 +179,111 @@ public class CrossBlockExporter extends BaseBlockExporter {
     }
 
     /**
+     * Generates block state models for layer-sensitive cross blocks with multiple random textures.
+     * Creates array-based blockstate variants for each layer with all texture variants.
+     * 
+     * @param generator The BlockStateModelGenerator to use
+     * @param block The layer-sensitive plant block to generate models for
+     * @param texturePaths Array of texture paths for random variants
+     */
+    public static void generateLayerSensitiveCrossWithRandomTextures(BlockStateModelGenerator generator, Block block, String[] texturePaths) {
+        generateLayerSensitiveCrossWithRandomTextures(generator, block, texturePaths, false, 1);
+    }
+
+    /**
+     * Generates block state models for layer-sensitive cross blocks with multiple random textures and rotations.
+     * Creates array-based blockstate variants for each layer with all texture variants.
+     * 
+     * @param generator The BlockStateModelGenerator to use
+     * @param block The layer-sensitive plant block to generate models for
+     * @param texturePaths Array of texture paths for random variants
+     * @param isTinted Whether the block should be tinted
+     * @param rotationCount Number of random rotations per texture (1 or 4)
+     */
+    public static void generateLayerSensitiveCrossWithRandomTextures(BlockStateModelGenerator generator, Block block, String[] texturePaths, boolean isTinted, int rotationCount) {
+        if (texturePaths.length == 0) {
+            throw new IllegalArgumentException("At least one texture path is required");
+        }
+
+        // Verify this is actually a layer-sensitive plant
+        if (!(block instanceof WCPlantBlock) || !((WCPlantBlock) block).isLayerSensitive()) {
+            // Fall back to regular cross generation with random textures
+            generateCrossWithRandomTextures(generator, block, texturePaths, isTinted, rotationCount);
+            return;
+        }
+
+        String blockName = getBlockName(block);
+        
+        // Create models for each layer (1-8) and each texture variant
+        Identifier[][] layerTextureModels = new Identifier[9][texturePaths.length]; // [layer][textureIndex]
+        
+        for (int layer = 1; layer <= 8; layer++) {
+            for (int textureIndex = 0; textureIndex < texturePaths.length; textureIndex++) {
+                String layerSuffix = (layer == 8) ? "" : "_layer" + layer;
+                String textureSuffix = "_v" + (textureIndex + 1);
+                String parentPath;
+                
+                // Layer 8 (full height) uses the regular cross template, not cross_layer8
+                if (layer == 8) {
+                    parentPath = isTinted ? "block/tinted/cross" : "block/untinted/cross";
+                } else {
+                    parentPath = isTinted ? "block/tinted/cross_layer" + layer : "block/untinted/cross_layer" + layer;
+                }
+                
+                Identifier modelId = WesterosBlocks.id("block/" + blockName + "/base" + layerSuffix + textureSuffix);
+                Identifier textureId = createBlockIdentifier(texturePaths[textureIndex]);
+                
+                TextureMap textureMap = new TextureMap()
+                    .put(TextureKey.CROSS, textureId);
+                
+                Model model = new Model(
+                    Optional.of(WesterosBlocks.id(parentPath)),
+                    Optional.empty(),
+                    TextureKey.CROSS
+                );
+                
+                model.upload(modelId, textureMap, generator.modelCollector);
+                layerTextureModels[layer][textureIndex] = modelId;
+            }
+        }
+        
+        // Create blockstate with layer variants as arrays
+        BlockStateVariantMap layerMap = BlockStateVariantMap.create(Properties.LAYERS);
+        
+        for (int layer = 1; layer <= 8; layer++) {
+            // Create array of variants for this layer (all texture variants with rotations)
+            BlockStateVariant[] allVariantsForLayer = new BlockStateVariant[texturePaths.length * rotationCount];
+            int variantIndex = 0;
+            
+            for (int textureIndex = 0; textureIndex < texturePaths.length; textureIndex++) {
+                Identifier modelId = layerTextureModels[layer][textureIndex];
+                
+                for (int rotation = 0; rotation < rotationCount; rotation++) {
+                    BlockStateVariant variant = BlockStateVariant.create()
+                        .put(VariantSettings.MODEL, modelId);
+                    
+                    if (rotation > 0) {
+                        variant = variant.put(VariantSettings.Y, VariantSettings.Rotation.valueOf("R" + (rotation * 90)));
+                    }
+                    
+                    allVariantsForLayer[variantIndex] = variant;
+                    variantIndex++;
+                }
+            }
+            
+            ((BlockStateVariantMap.SingleProperty<Integer>) layerMap).register(layer, Arrays.asList(allVariantsForLayer));
+        }
+        
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block)
+                .coordinate(layerMap)
+        );
+
+        // Register item model using the first texture variant at full height (layer 8)
+        generator.registerParentedItemModel(block, layerTextureModels[8][0]);
+    }
+
+    /**
      * Generates block state models for layer-sensitive cross blocks with rotation variants.
      * 
      * @param generator The BlockStateModelGenerator to use

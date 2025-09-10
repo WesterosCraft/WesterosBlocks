@@ -2360,6 +2360,72 @@ public class ModBlocks {
                                 .toggleOnUse(true)
                                 .build());
 
+        public static final Block BLUE_CHICORY = registerBlock(
+                "blue_chicory",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive(true)
+                        .toggleOnUse(true)
+                        .build());
+
+        public static final Block BLUE_FORGETMENOTS = registerBlock(
+                "blue_forgetmenots",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive(true)
+                        .toggleOnUse(true)
+                        .build());
+
+        public static final Block BLUE_FLAX = registerBlock(
+                "blue_flax",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.WOOD)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive(true)
+                        .toggleOnUse(true)
+                        .build());
+
+        public static final Block BLUE_HYACINTH = registerBlock(
+                "blue_hyacinth",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive(true)
+                        .toggleOnUse(true)
+                        .build());
+
+        public static final Block BLUE_ORCHID = registerBlock(
+                "blue_orchid",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive(true)
+                        .toggleOnUse(true)
+                        .build());
+
+        public static final Block BLUE_SWAMP_BELLS = registerBlock(
+                "blue_swamp_bells",
+                BlockBuilder.plant()
+                        .strength(0.0f)
+                        .sounds(BlockSoundGroup.GRASS)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive(true)
+                        .toggleOnUse(true)
+                        .build());
+
 
         /**
          * Initialize all blocks
@@ -2629,6 +2695,12 @@ public class ModBlocks {
                         entries.add(ModBlocks.HORIZONTAL_ROPE);
                         entries.add(ModBlocks.PACKED_SNOW);
                         entries.add(ModBlocks.BLUE_BELLS);
+                        entries.add(ModBlocks.BLUE_CHICORY);
+                        entries.add(ModBlocks.BLUE_FORGETMENOTS);
+                        entries.add(ModBlocks.BLUE_FLAX);
+                        entries.add(ModBlocks.BLUE_HYACINTH);
+                        entries.add(ModBlocks.BLUE_ORCHID);
+                        entries.add(ModBlocks.BLUE_SWAMP_BELLS);
                 });
         }
 

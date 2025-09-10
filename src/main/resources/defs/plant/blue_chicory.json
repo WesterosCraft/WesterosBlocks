@@ -13,7 +13,7 @@
     "zMin": 0.3,
     "zMax": 0.7
   },
-  "label": "Blue Chicory Old",
+  "label": "Blue Chicory",
   "randomTextures": [
     {
       "textures": ["flowers/blue_chicory/side1"]

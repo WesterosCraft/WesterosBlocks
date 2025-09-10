@@ -15,30 +15,27 @@ public class PaneBlockExporter extends BaseBlockExporter {
         WCPaneBlock paneBlock = (WCPaneBlock) block;
         String blockName = getBlockName(block);
 
-        // Create texture map for pane models
         TextureMap paneTextureMap = new TextureMap()
                 .put(TextureKey.SIDE, Identifier.of(WesterosBlocks.MOD_ID, "block/" + texturePath))
                 .put(ModTextureKey.CAP, Identifier.of(WesterosBlocks.MOD_ID, "block/" + texturePath));
 
-        // Generate models using ModModels
         Identifier postModelId = ModModels.PANE_POST.upload(
-                Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "_post"),
+                Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "/" + blockName + "_post"),
                 paneTextureMap,
                 generator.modelCollector);
 
         Identifier sideModelId = ModModels.PANE_SIDE.upload(
-                Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "_side"),
+                Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "/" + blockName + "_side"),
                 paneTextureMap,
                 generator.modelCollector);
 
 
 
         Identifier nosideModelId = ModModels.PANE_NOSIDE.upload(
-                Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "_noside"),
+                Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "/" + blockName + "_noside"),
                 paneTextureMap,
                 generator.modelCollector);
 
-        // Create multipart block state
         MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
 
         // Post model (always present for non-bars models)
@@ -62,7 +59,6 @@ public class PaneBlockExporter extends BaseBlockExporter {
 
         generator.blockStateCollector.accept(supplier);
 
-        // Register item model using generated model with layer0 texture for transparency
         TextureMap itemTextureMap = TextureMap.layer0(Identifier.of(WesterosBlocks.MOD_ID, "block/" + texturePath));
         Models.GENERATED.upload(
                 ModelIds.getItemModelId(block.asItem()),
@@ -72,10 +68,6 @@ public class PaneBlockExporter extends BaseBlockExporter {
 
     public static void registerPaneBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, String[] texturePaths) {
         validateTexturePaths(texturePaths, 1);
-        
-        // For random textures, use the first texture for block models and item model
         registerPaneBlock(generator, block, texturePaths[0]);
     }
-
-
 }
