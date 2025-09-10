@@ -2357,6 +2357,7 @@ public class ModBlocks {
                                 .nonOpaque()
                                 .noCollision()
                                 .layerSensitive(true)
+                                .toggleOnUse(true)
                                 .build());
 
 

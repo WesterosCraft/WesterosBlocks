@@ -1,14 +1,13 @@
 package com.westerosblocks.datagen.custom;
 
 import net.minecraft.block.Block;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.BlockStateVariant;
-import net.minecraft.data.client.Models;
-import net.minecraft.data.client.TextureKey;
-import net.minecraft.data.client.TextureMap;
-import net.minecraft.data.client.VariantsBlockStateSupplier;
+import net.minecraft.data.client.*;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.block.custom.WCPlantBlock;
+
+import java.util.Arrays;
 import java.util.Optional;
 
 /**
@@ -165,5 +164,101 @@ public class CrossBlockExporter extends BaseBlockExporter {
         
         model.upload(modelId, textureMap, generator.modelCollector);
         return modelId;
+    }
+
+    /**
+     * Generates block state models for layer-sensitive cross blocks.
+     * Creates variants for each layer (1-8) to support placement on slabs and other height variations.
+     * 
+     * @param generator The BlockStateModelGenerator to use
+     * @param block The layer-sensitive plant block to generate models for
+     * @param texturePath The texture path to use
+     */
+    public static void generateLayerSensitiveCross(BlockStateModelGenerator generator, Block block, String texturePath) {
+        generateLayerSensitiveCross(generator, block, texturePath, false, 1);
+    }
+
+    /**
+     * Generates block state models for layer-sensitive cross blocks with rotation variants.
+     * 
+     * @param generator The BlockStateModelGenerator to use
+     * @param block The layer-sensitive plant block to generate models for
+     * @param texturePath The texture path to use
+     * @param isTinted Whether the block should be tinted
+     * @param rotationCount Number of random rotations (1 or 4)
+     */
+    public static void generateLayerSensitiveCross(BlockStateModelGenerator generator, Block block, String texturePath, boolean isTinted, int rotationCount) {
+        // Verify this is actually a layer-sensitive plant
+        if (!(block instanceof WCPlantBlock) || !((WCPlantBlock) block).isLayerSensitive()) {
+            // Fall back to regular cross generation
+            generateCross(generator, block, texturePath, isTinted, rotationCount);
+            return;
+        }
+
+        String blockName = getBlockName(block);
+        
+        // Create models for each layer (1-8)
+        Identifier[] layerModels = new Identifier[9]; // Index 0 unused, 1-8 for layers
+        
+        for (int layer = 1; layer <= 8; layer++) {
+            String layerSuffix = "_layer" + layer;
+            String parentPath;
+            
+            // Layer 8 (full height) uses the regular cross template, not cross_layer8
+            if (layer == 8) {
+                parentPath = isTinted ? "block/tinted/cross" : "block/untinted/cross";
+            } else {
+                parentPath = isTinted ? "block/tinted/cross_layer" + layer : "block/untinted/cross_layer" + layer;
+            }
+            
+            Identifier modelId = WesterosBlocks.id("block/" + blockName + "/" + blockName + layerSuffix);
+            Identifier textureId = createBlockIdentifier(texturePath);
+            
+            TextureMap textureMap = new TextureMap()
+                .put(TextureKey.CROSS, textureId);
+            
+            Model model = new Model(
+                Optional.of(WesterosBlocks.id(parentPath)),
+                Optional.empty(),
+                TextureKey.CROSS
+            );
+            
+            model.upload(modelId, textureMap, generator.modelCollector);
+            layerModels[layer] = modelId;
+        }
+        
+        // Create blockstate with layer variants
+        BlockStateVariantMap layerMap = BlockStateVariantMap.create(Properties.LAYERS);
+        
+        for (int layer = 1; layer <= 8; layer++) {
+            if (rotationCount == 1) {
+                // Single variant per layer
+                ((BlockStateVariantMap.SingleProperty<Integer>) layerMap).register(layer, 
+                    BlockStateVariant.create().put(VariantSettings.MODEL, layerModels[layer])
+                );
+            } else {
+                // Multiple rotations per layer
+                BlockStateVariant[] rotationVariants = new BlockStateVariant[rotationCount];
+                for (int rotation = 0; rotation < rotationCount; rotation++) {
+                    BlockStateVariant variant = BlockStateVariant.create()
+                        .put(VariantSettings.MODEL, layerModels[layer]);
+                    
+                    if (rotation > 0) {
+                        variant = variant.put(VariantSettings.Y, VariantSettings.Rotation.valueOf("R" + (rotation * 90)));
+                    }
+                    
+                    rotationVariants[rotation] = variant;
+                }
+                ((BlockStateVariantMap.SingleProperty<Integer>) layerMap).register(layer, Arrays.asList(rotationVariants));
+            }
+        }
+        
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block)
+                .coordinate(layerMap)
+        );
+
+        // Register item model using layer 8 (full height)
+        generator.registerParentedItemModel(block, layerModels[8]);
     }
 }

@@ -28,6 +28,9 @@ public class WCPlantBlock extends Block {
     private final boolean layerSensitive;
     private final boolean toggleOnUse;
     private IntProperty LAYERS;
+    
+    // Static fields to handle property transfer during construction
+    protected static IntProperty tempLAYERS;
 
     public static final VoxelShape[] SHAPE_BY_LAYER = new VoxelShape[] {
             VoxelShapes.empty(),
@@ -47,6 +50,9 @@ public class WCPlantBlock extends Block {
         this.toggleOnUse = toggleOnUse;
 
         BlockState defbs = this.getDefaultState().with(WATERLOGGED, false);
+        if (layerSensitive && LAYERS != null) {
+            defbs = defbs.with(LAYERS, 8); // Default to full height
+        }
         this.setDefaultState(defbs);
     }
 
@@ -77,9 +83,14 @@ public class WCPlantBlock extends Block {
                 }
                 bs = bs.with(LAYERS, layer);
             } else if (below.getBlock() instanceof SlabBlock) {
-                if (below.get(Properties.SLAB_TYPE) == SlabType.BOTTOM) {
-                    bs = bs.with(LAYERS, 4);
+                SlabType slabType = below.get(Properties.SLAB_TYPE);
+                if (slabType == SlabType.BOTTOM) {
+                    bs = bs.with(LAYERS, 4); // Half height for bottom slabs
+                } else {
+                    bs = bs.with(LAYERS, 8); // Full height for top/double slabs
                 }
+            } else {
+                bs = bs.with(LAYERS, 8); // Default full height
             }
         }
         return bs;
@@ -101,11 +112,12 @@ public class WCPlantBlock extends Block {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        if (layerSensitive) {
-            LAYERS = Properties.LAYERS;
+        builder.add(WATERLOGGED);
+        if (tempLAYERS != null) {
+            LAYERS = tempLAYERS;
+            tempLAYERS = null;
             builder.add(LAYERS);
         }
-        builder.add(WATERLOGGED);
     }
 
     @Override
@@ -141,6 +153,9 @@ public class WCPlantBlock extends Block {
         }
 
         public WCPlantBlock buildBlockClass(AbstractBlock.Settings settings) {
+            if (layerSensitive) {
+                tempLAYERS = Properties.LAYERS;
+            }
             return new WCPlantBlock(settings, layerSensitive, toggleOnUse);
         }
 
@@ -151,11 +166,17 @@ public class WCPlantBlock extends Block {
                 java.util.Map<String, Object> parameters = (java.util.Map<String, Object>) params[0];
                 boolean layerSensitive = (Boolean) parameters.getOrDefault("layerSensitive", false);
                 boolean toggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
+                if (layerSensitive) {
+                    tempLAYERS = Properties.LAYERS;
+                }
                 return new WCPlantBlock(settings, layerSensitive, toggleOnUse);
             }
             // Fallback for direct parameters
             boolean layerSensitive = params.length > 0 ? (Boolean) params[0] : false;
             boolean toggleOnUse = params.length > 1 ? (Boolean) params[1] : false;
+            if (layerSensitive) {
+                tempLAYERS = Properties.LAYERS;
+            }
             return new WCPlantBlock(settings, layerSensitive, toggleOnUse);
         }
     }

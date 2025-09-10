@@ -327,11 +327,24 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
         }
 
         private static void generatePlant(BlockStateModelGenerator generator, Block block, String texturePath) {
-                CrossBlockExporter.generateCross(generator, block, texturePath);
+                // Check if this is a layer-sensitive plant
+                if (block instanceof com.westerosblocks.block.custom.WCPlantBlock && 
+                    ((com.westerosblocks.block.custom.WCPlantBlock) block).isLayerSensitive()) {
+                        CrossBlockExporter.generateLayerSensitiveCross(generator, block, texturePath);
+                } else {
+                        CrossBlockExporter.generateCross(generator, block, texturePath);
+                }
         }
 
         private static void generatePlantWithRandomTextures(BlockStateModelGenerator generator, Block block, String[] texturePaths) {
-                CrossBlockExporter.generateCrossWithRandomTextures(generator, block, texturePaths);
+                // For now, random textures with layer-sensitive plants use the first texture
+                // This could be enhanced later to support random textures with layers
+                if (block instanceof com.westerosblocks.block.custom.WCPlantBlock && 
+                    ((com.westerosblocks.block.custom.WCPlantBlock) block).isLayerSensitive()) {
+                        CrossBlockExporter.generateLayerSensitiveCross(generator, block, texturePaths[0]);
+                } else {
+                        CrossBlockExporter.generateCrossWithRandomTextures(generator, block, texturePaths);
+                }
         }
 
         // Factory methods for each block type

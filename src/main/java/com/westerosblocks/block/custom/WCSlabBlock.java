@@ -87,6 +87,12 @@ public class WCSlabBlock extends SlabBlock {
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         super.appendProperties(builder);
+        if (this.connectState) {
+            builder.add(CONNECTSTATE);
+        }
+        if (STATE != null) {
+            builder.add(STATE);
+        }
     }
 
 }
