@@ -17,6 +17,7 @@ public class WesterosBlocks implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        WesterosCreativeModeTabs.registerCreativeModeTabs();
         ModBlocks.registerModBlocks();
     }
 
