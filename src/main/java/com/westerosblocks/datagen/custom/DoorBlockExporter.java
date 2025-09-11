@@ -9,16 +9,13 @@ import net.minecraft.block.enums.DoorHinge;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
-import net.minecraft.data.client.VariantSettings.Rotation;
-
-import java.util.Optional;
 
 public class DoorBlockExporter extends BaseBlockExporter {
 
     /**
      * Generates block state models for a door block with separate top and bottom
      * textures.
-     * 
+     *
      * @param generator    The BlockStateModelGenerator to register models with
      * @param block        The door block to generate models for
      * @param texturePaths Variable number of texture paths [top, bottom] for the
@@ -126,25 +123,12 @@ public class DoorBlockExporter extends BaseBlockExporter {
         Models.GENERATED.upload(itemModelId, itemTextureMap, generator.modelCollector);
     }
 
-    /**
-     * Creates a door model with the specified variant using predefined ModModels.
-     * 
-     * @param generator     The BlockStateModelGenerator to register the model with
-     * @param block         The block this model is for
-     * @param topTexture    The top texture path to use
-     * @param bottomTexture The bottom texture path to use
-     * @param variant       The variant name (e.g., "bottom_left", "top_right_open")
-     * @param model         The predefined model from ModModels to use
-     * @return The created model Identifier
-     */
     private static Identifier createDoorModel(BlockStateModelGenerator generator, Block block, String topTexture,
-            String bottomTexture, String variant, Model model) {
-        // Create a unique model ID for this block and variant
+                                              String bottomTexture, String variant, Model model) {
         String blockName = getBlockName(block);
         String modelPath = "block/" + blockName + "/" + variant;
         Identifier modelId = WesterosBlocks.id(modelPath);
 
-        // Create texture map with separate top and bottom textures
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.TOP, createBlockIdentifier(topTexture))
                 .put(TextureKey.BOTTOM, createBlockIdentifier(bottomTexture));

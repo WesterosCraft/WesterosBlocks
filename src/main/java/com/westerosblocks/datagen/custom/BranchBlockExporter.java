@@ -14,17 +14,9 @@ import com.westerosblocks.block.custom.WCBranchBlock;
 import java.util.Optional;
 
 public class BranchBlockExporter extends BaseBlockExporter {
-
-    /**
-     * Registers a branch block with cardinal direction connections
-     */
     public static void registerBranchBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
         registerBranchBlock(generator, block, new String[] { texturePath });
     }
-
-    /**
-     * Registers a branch block with multiple textures
-     */
     public static void registerBranchBlock(BlockStateModelGenerator generator, Block block, String... texturePaths) {
         if (texturePaths.length == 0) {
             throw new IllegalArgumentException("At least one texture path is required");
@@ -361,10 +353,8 @@ public class BranchBlockExporter extends BaseBlockExporter {
                 .set(WCBranchBlock.UP, true);
         stateSupplier.with(allConnectionsCondition, createVariant(connectedFourModelId, 0));
 
-        // Register the block state
-        generator.blockStateCollector.accept(stateSupplier);
 
-        // Register item model using the base model
+        generator.blockStateCollector.accept(stateSupplier);
         generator.registerParentedItemModel(block, baseModelId);
     }
 

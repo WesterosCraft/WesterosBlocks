@@ -10,22 +10,10 @@ import com.westerosblocks.block.custom.WCPlantBlock;
 import java.util.Arrays;
 import java.util.Optional;
 
-/**
- * Exporter for cross/plant blocks following the unified builder pattern.
- * Generates cross models for decorative plants and vegetation blocks.
- */
+
 public class CrossBlockExporter extends BaseBlockExporter {
 
-    /**
-     * Generates block state models for cross blocks with a single texture.
-     * 
-     * @param generator The BlockStateModelGenerator to use
-     * @param block The block to generate models for
-     * @param texturePath The texture path to use
-     */
-    public static void generateCross(BlockStateModelGenerator generator, Block block, String texturePath) {
-        generateCross(generator, block, texturePath, false, 1);
-    }
+
 
     /**
      * Generates block state models for cross blocks with rotation variants.
@@ -62,26 +50,6 @@ public class CrossBlockExporter extends BaseBlockExporter {
         generator.registerParentedItemModel(block, modelId);
     }
 
-    /**
-     * Generates block state models for cross blocks with multiple random texture variants.
-     * 
-     * @param generator The BlockStateModelGenerator to use
-     * @param block The block to generate models for
-     * @param texturePaths Array of texture paths for random variants
-     */
-    public static void generateCrossWithRandomTextures(BlockStateModelGenerator generator, Block block, String[] texturePaths) {
-        generateCrossWithRandomTextures(generator, block, texturePaths, false, 1);
-    }
-
-    /**
-     * Generates block state models for cross blocks with multiple random texture variants and rotations.
-     * 
-     * @param generator The BlockStateModelGenerator to use
-     * @param block The block to generate models for
-     * @param texturePaths Array of texture paths for random variants
-     * @param isTinted Whether the block should be tinted
-     * @param rotationCount Number of random rotations per texture (1 or 4)
-     */
     public static void generateCrossWithRandomTextures(BlockStateModelGenerator generator, Block block, String[] texturePaths, boolean isTinted, int rotationCount) {
         if (texturePaths.length == 0) {
             throw new IllegalArgumentException("At least one texture path is required");
@@ -126,29 +94,12 @@ public class CrossBlockExporter extends BaseBlockExporter {
         }
     }
 
-    /**
-     * Creates a cross model with the specified texture.
-     * 
-     * @param generator The BlockStateModelGenerator to use
-     * @param block The block to create a model for
-     * @param texturePath The texture path to use
-     * @param isTinted Whether the block should be tinted
-     * @return The created model identifier
-     */
+
     private static Identifier createCrossModel(BlockStateModelGenerator generator, Block block, String texturePath, boolean isTinted) {
         Identifier modelId = createModelId(block);
         return createCrossModelWithId(generator, modelId, texturePath, isTinted);
     }
 
-    /**
-     * Creates a cross model with the specified model ID and texture.
-     * 
-     * @param generator The BlockStateModelGenerator to use
-     * @param modelId The model identifier to use
-     * @param texturePath The texture path to use
-     * @param isTinted Whether the block should be tinted
-     * @return The created model identifier
-     */
     private static Identifier createCrossModelWithId(BlockStateModelGenerator generator, Identifier modelId, String texturePath, boolean isTinted) {
         String parentPath = isTinted ? "block/tinted/cross" : "block/untinted/cross";
         Identifier textureId = createBlockIdentifier(texturePath);
@@ -164,30 +115,6 @@ public class CrossBlockExporter extends BaseBlockExporter {
         
         model.upload(modelId, textureMap, generator.modelCollector);
         return modelId;
-    }
-
-    /**
-     * Generates block state models for layer-sensitive cross blocks.
-     * Creates variants for each layer (1-8) to support placement on slabs and other height variations.
-     * 
-     * @param generator The BlockStateModelGenerator to use
-     * @param block The layer-sensitive plant block to generate models for
-     * @param texturePath The texture path to use
-     */
-    public static void generateLayerSensitiveCross(BlockStateModelGenerator generator, Block block, String texturePath) {
-        generateLayerSensitiveCross(generator, block, texturePath, false, 1);
-    }
-
-    /**
-     * Generates block state models for layer-sensitive cross blocks with multiple random textures.
-     * Creates array-based blockstate variants for each layer with all texture variants.
-     * 
-     * @param generator The BlockStateModelGenerator to use
-     * @param block The layer-sensitive plant block to generate models for
-     * @param texturePaths Array of texture paths for random variants
-     */
-    public static void generateLayerSensitiveCrossWithRandomTextures(BlockStateModelGenerator generator, Block block, String[] texturePaths) {
-        generateLayerSensitiveCrossWithRandomTextures(generator, block, texturePaths, false, 1);
     }
 
     /**

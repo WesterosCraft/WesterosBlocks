@@ -10,25 +10,11 @@ import net.minecraft.data.client.VariantSettings.Rotation;
 
 import java.util.Optional;
 
-/**
- * Chair block exporter for generating block states and models.
- * This class follows the same pattern as other exporters in the codebase.
- */
 public class ChairBlockExporter extends BaseBlockExporter {
-
-    /**
-     * Generates block state models for a chair block.
-     * 
-     * @param generator   The BlockStateModelGenerator to register models with
-     * @param block       The chair block to generate models for
-     * @param texturePath The texture path for the chair
-     */
     public static void registerChairBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
-        // Create the base models for each chair variant using predefined ModModels
         Identifier cardinalModelId = createChairModel(generator, block, texturePath, "cardinal", ModModels.CHAIR);
         Identifier diagonalModelId = createChairModel(generator, block, texturePath, "diagonal", ModModels.CHAIR_45);
 
-        // Create variants for all chair rotations using BlockStateModelGenerator patterns
         BlockStateVariantMap variants = BlockStateVariantMap.create(WCChairBlock.ROTATION)
                 // Cardinal directions (0, 2, 4, 6) use the base model with rotations
                 .register(0, createVariant(cardinalModelId))
@@ -41,34 +27,19 @@ public class ChairBlockExporter extends BaseBlockExporter {
                 .register(5, createVariant(diagonalModelId, 180))
                 .register(7, createVariant(diagonalModelId, 270));
 
-        // Register the block state with the generator
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
 
-        // Register item model using the cardinal variant
         generator.registerParentedItemModel(block, cardinalModelId);
     }
 
-    /**
-     * Creates a chair model with the specified variant using predefined ModModels.
-     * 
-     * @param generator   The BlockStateModelGenerator to register the model with
-     * @param block       The block this model is for
-     * @param texturePath The texture path to use
-     * @param variant     The variant name (e.g., "cardinal", "diagonal")
-     * @param model       The predefined model from ModModels to use
-     * @return The created model Identifier
-     */
     private static Identifier createChairModel(BlockStateModelGenerator generator, Block block, String texturePath, String variant, Model model) {
-        // Create a unique model ID for this block and variant
         String blockName = getBlockName(block);
         String modelPath = "block/" + blockName + "/" + variant;
         Identifier modelId = WesterosBlocks.id(modelPath);
 
-        // Create texture map using ALL key (as used by chair model JSON files)
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.ALL, createBlockIdentifier(texturePath));
 
-        // Upload the model using the predefined ModModels model
         model.upload(modelId, textureMap, generator.modelCollector);
 
         return modelId;
