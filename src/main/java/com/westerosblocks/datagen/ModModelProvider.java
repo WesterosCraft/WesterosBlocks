@@ -1367,6 +1367,156 @@ public class ModModelProvider extends FabricModelProvider {
         registerCustomCrossBlock(bsmg, ModBlocks.BEES)
                 .texture("web_block/bug_bees")
                 .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.ALYSSAS_TEARS_MIST_ONE)
+                .texture("alyssas_tears_mist/mist1")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.ALYSSAS_TEARS_MIST_TWO)
+                .texture("alyssas_tears_mist/mist2")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.ALYSSAS_TEARS_MIST_THREE)
+                .texture("alyssas_tears_mist/mist3")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.ALYSSAS_TEARS_MIST_FOUR)
+                .texture("alyssas_tears_mist/mist4")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.BLACK_BRICICLE)
+                .texture("ashlar_melted/black/bricicle/side")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.BUSHEL_OF_HERBS)
+                .texture("web_block/food_herbs")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.BUSHEL_OF_SOURLEAF)
+                .texture("web_block/food_sourleaf")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.BUTTERFLY_BLUE)
+                .texture("web_block/bug_butterfly_blue")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.BUTTERFLY_ORANGE)
+                .texture("web_block/bug_butterfly_orange")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.BUTTERFLY_RED)
+                .texture("web_block/bug_butterfly_red")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.BUTTERFLY_WHITE)
+                .texture("web_block/bug_butterfly_white")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.BUTTERFLY_YELLOW)
+                .texture("web_block/bug_butterfly_yellow")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.CATTAILS)
+                .randomTexture("cattails/side1")
+                .randomTexture("cattails/side2")
+                .randomTexture("cattails/side3")
+                .randomTexture("cattails/side4")
+                .randomTexture("cattails/side5")
+                .randomTexture("cattails/side6")
+                .randomTexture("cattails/side7")
+                .randomTexture("cattails/side8")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.CHAIN_BLOCK_HARNESS)
+                .texture("web_block/chain_blockharness")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.CHILI_RISTRA)
+                .texture("web_block/food_chili_ristra")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.COBWEB)
+                .randomTexture("cobweb/side1")
+                .randomTexture("cobweb/side2")
+                .randomTexture("cobweb/side3")
+                .randomTexture("cobweb/side4")
+                .randomTexture("cobweb/side5")
+                .randomTexture("cobweb/side6")
+                .randomTexture("cobweb/side7")
+                .randomTexture("cobweb/side8")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.DEAD_FISH)
+                .randomTexture("dead_fish/fish_dead1")
+                .randomTexture("dead_fish/fish_dead2")
+                .randomTexture("dead_fish/fish_dead3")
+                .randomTexture("dead_fish/fish_dead4")
+                .randomTexture("dead_fish/fish_dead5")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.DEAD_FOWL)
+                .randomTexture("dead_fowl/fowl")
+                .randomTexture("dead_fowl/fowl2")
+                .randomTexture("dead_fowl/gooseplains")
+                .randomTexture("dead_fowl/gooseplains2")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.DEAD_FROG)
+                .randomTexture("dead_frog/toad_dead1")
+                .randomTexture("dead_frog/toad_dead2")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.DEAD_HARE)
+                .randomTexture("dead_hare/rabbit_dead1")
+                .randomTexture("dead_hare/rabbit_dead2")
+                .randomTexture("dead_hare/rabbit_dead3")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.DEAD_JUNGLE_TALL_GRASS)
+                .texture("dead_jungle_tall_grass/down_side1")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.DEAD_RAT)
+                .randomTexture("dead_rat/rat1")
+                .randomTexture("dead_rat/rat2")
+                .randomTexture("dead_rat/rat3")
+                .randomTexture("dead_rat/rat4")
+                .randomTexture("dead_rat/rat5")
+                .randomTexture("dead_rat/rat6")
+                .randomTexture("dead_rat/rat7")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.DEAD_SAVANNA_TALL_GRASS)
+                .texture("dead_savanna_tall_grass/dead_savanna_tall_grass")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.DRAGONFLY)
+                .texture("web_block/bug_dragonfly")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.FLIES)
+                .texture("web_block/bug_flies")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.GARLIC_STRAND)
+                .texture("web_block/food_garlic_strand")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.ICICLE)
+                .texture("icicle/side")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.IRON_THRONE_RANDOM_BLADES)
+                .randomTexture("blades_random/side1")
+                .randomTexture("blades_random/side2")
+                .randomTexture("blades_random/side3")
+                .randomTexture("blades_random/side4")
+                .randomTexture("blades_random/side5")
+                .randomTexture("blades_random/side6")
+                .randomTexture("blades_random/side7")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.JUNGLE_TALL_FERN)
+                .texture("jungle_tall_fern/side")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.JUNGLE_TALL_GRASS)
+                .texture("jungle_tall_grass/down_side1")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.ROPE_BLOCK_HARNESS)
+                .texture("web_block/rope_blockharness")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.SAUSAGES_LEG_OF_HAM)
+                .texture("sausages_leg_of_ham/default")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.SAVANNA_TALL_GRASS)
+                .texture("savanna_tall_grass/savanna_tall_grass")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.SMOKE)
+                .state("smoke/smoke1")
+                .state("smoke/smoke2")
+                .state("smoke/smoke3")
+                .state("smoke/smoke4")
+                .state("smoke/smoke5")
+                .state("smoke/smoke6")
+                .state("smoke/smoke7")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.VERTICAL_CHAIN)
+                .texture("web_block/chain_vertical")
+                .build();
+        registerCustomCrossBlock(bsmg, ModBlocks.VERTICAL_ROPE)
+                .texture("web_block/rope_vertical")
+                .build();
     }
 
     @Override

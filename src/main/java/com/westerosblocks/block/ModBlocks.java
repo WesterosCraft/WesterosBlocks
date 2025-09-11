@@ -2351,6 +2351,377 @@ public class ModBlocks {
                     .noInWeb()
                     .build());
 
+    public static final Block ALYSSAS_TEARS_MIST_ONE = registerBlock(
+            "alyssas_tears_mist_one",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block ALYSSAS_TEARS_MIST_TWO = registerBlock(
+            "alyssas_tears_mist_two",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .connectState(true)
+                    .build());
+
+    public static final Block ALYSSAS_TEARS_MIST_THREE = registerBlock(
+            "alyssas_tears_mist_three",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .connectState(true)
+                    .build());
+
+    public static final Block ALYSSAS_TEARS_MIST_FOUR = registerBlock(
+            "alyssas_tears_mist_four",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .connectState(true)
+                    .build());
+
+    public static final Block BLACK_BRICICLE = registerBlock(
+            "black_bricicle",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.STONE)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block BUSHEL_OF_HERBS = registerBlock(
+            "bushel_of_herbs",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block BUSHEL_OF_SOURLEAF = registerBlock(
+            "bushel_of_sourleaf",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block BUTTERFLY_BLUE = registerBlock(
+            "butterfly_blue",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block BUTTERFLY_ORANGE = registerBlock(
+            "butterfly_orange",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block BUTTERFLY_RED = registerBlock(
+            "butterfly_red",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block BUTTERFLY_WHITE = registerBlock(
+            "butterfly_white",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block BUTTERFLY_YELLOW = registerBlock(
+            "butterfly_yellow",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block CATTAILS = registerBlock(
+            "cattails",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .layerSensitive()
+                    .build());
+
+    public static final Block CHAIN_BLOCK_HARNESS = registerBlock(
+            "chain_block_harness",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block CHILI_RISTRA = registerBlock(
+            "chili_ristra",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block COBWEB = registerBlock(
+            "cobweb",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .toggleOnUse()
+                    .build());
+
+    public static final Block DEAD_FISH = registerBlock(
+            "dead_fish",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block DEAD_FOWL = registerBlock(
+            "dead_fowl",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block DEAD_FROG = registerBlock(
+            "dead_frog",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block DEAD_HARE = registerBlock(
+            "dead_hare",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block DEAD_JUNGLE_TALL_GRASS = registerBlock(
+            "dead_jungle_tall_grass",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .layerSensitive()
+                    .build());
+
+    public static final Block DEAD_RAT = registerBlock(
+            "dead_rat",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block DEAD_SAVANNA_TALL_GRASS = registerBlock(
+            "dead_savanna_tall_grass",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .layerSensitive()
+                    .build());
+
+    public static final Block DRAGONFLY = registerBlock(
+            "dragonfly",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block FLIES = registerBlock(
+            "flies",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block GARLIC_STRAND = registerBlock(
+            "garlic_strand",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block ICICLE = registerBlock(
+            "icicle",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block IRON_THRONE_RANDOM_BLADES = registerBlock(
+            "iron_throne_random_blades",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block JUNGLE_TALL_FERN = registerBlock(
+            "jungle_tall_fern",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .layerSensitive()
+                    .build());
+
+    public static final Block JUNGLE_TALL_GRASS = registerBlock(
+            "jungle_tall_grass",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .layerSensitive()
+                    .build());
+
+    public static final Block ROPE_BLOCK_HARNESS = registerBlock(
+            "rope_block_harness",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block SAUSAGES_LEG_OF_HAM = registerBlock(
+            "sausages_leg_of_ham",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block SAVANNA_TALL_GRASS = registerBlock(
+            "savanna_tall_grass",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .layerSensitive()
+                    .build());
+
+    public static final Block SMOKE = registerBlock(
+            "smoke",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .toggleOnUse()
+                    .build());
+
+    public static final Block VERTICAL_CHAIN = registerBlock(
+            "vertical_chain",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
+    public static final Block VERTICAL_ROPE = registerBlock(
+            "vertical_rope",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
     // Plant Blocks
     public static final Block BLUE_BELLS = registerBlock(
             "blue_bells",
@@ -3366,7 +3737,10 @@ public class ModBlocks {
                 ModBlocks.RED_MUSHROOM_8,
                 ModBlocks.RED_MUSHROOM_9,
                 ModBlocks.THICK_GRASS,
-                ModBlocks.UNSHADED_GRASS
+                ModBlocks.UNSHADED_GRASS,
+                ModBlocks.CATTAILS,
+                ModBlocks.DEAD_JUNGLE_TALL_GRASS,
+                ModBlocks.DEAD_SAVANNA_TALL_GRASS
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_water_air_tab",
@@ -3375,14 +3749,25 @@ public class ModBlocks {
                 ModBlocks.CORAL_FIRE_WEB,
                 ModBlocks.CORAL_HORN_WEB,
                 ModBlocks.CORAL_TUBE_WEB,
-                ModBlocks.KELP
+                ModBlocks.KELP,
+                ModBlocks.CORAL_TUBE_FAN,
+                ModBlocks.CORAL_BRAIN_FAN,
+                ModBlocks.CORAL_BUBBLE_FAN,
+                ModBlocks.CORAL_FIRE_FAN,
+                ModBlocks.CORAL_HORN_FAN,
+                ModBlocks.PACKED_SNOW,
+                ModBlocks.ALYSSAS_TEARS_MIST_ONE,
+                ModBlocks.ALYSSAS_TEARS_MIST_TWO,
+                ModBlocks.ALYSSAS_TEARS_MIST_THREE,
+                ModBlocks.ALYSSAS_TEARS_MIST_FOUR
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_crops_herbs_tab",
                 ModBlocks.CRANBERRY_BUSH,
                 ModBlocks.DOCK_LEAF,
                 ModBlocks.RED_SOURLEAF_BUSH,
-                ModBlocks.STRAWBERRY_BUSH
+                ModBlocks.STRAWBERRY_BUSH,
+                ModBlocks.BUSHEL_OF_SOURLEAF
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_flowers_tab",
@@ -3450,7 +3835,18 @@ public class ModBlocks {
                 ModBlocks.WEIRWOOD_FACE_8,
                 ModBlocks.WEIRWOOD_SCARS,
                 ModBlocks.OAK_BRANCH,
-                ModBlocks.BIRCH_BRANCH
+                ModBlocks.BIRCH_BRANCH,
+                ModBlocks.JUNGLE_LOG_CHAIN,
+                ModBlocks.JUNGLE_LOG_ROPE,
+                ModBlocks.MOSSY_BIRCH_LOG,
+                ModBlocks.MOSSY_JUNGLE_LOG,
+                ModBlocks.MOSSY_OAK_LOG,
+                ModBlocks.MOSSY_SPRUCE_LOG,
+                ModBlocks.OAK_LOG_CHAIN,
+                ModBlocks.OAK_LOG_ROPE,
+                ModBlocks.PALM_TREE_LOG,
+                ModBlocks.SPRUCE_LOG_CHAIN,
+                ModBlocks.SPRUCE_LOG_ROPE
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_half_ashlar_tab",
@@ -3486,7 +3882,30 @@ public class ModBlocks {
                 ModBlocks.CUT_GRAIN_FLOUR_SACK,
                 ModBlocks.DATE_BASKET_SLAB,
                 ModBlocks.OLIVE_BASKET,
-                ModBlocks.ORANGE_BASKET
+                ModBlocks.ORANGE_BASKET,
+                ModBlocks.POMEGRANATE_BASKET,
+                ModBlocks.PURPLE_GRAPE_BASKET,
+                ModBlocks.PURPLE_GRAPE_CRATE,
+                ModBlocks.SALT_CRATE,
+                ModBlocks.SOURLEAF_BASKET,
+                ModBlocks.SOURLEAF_CRATE,
+                ModBlocks.SPIT_ROAST,
+                ModBlocks.SQUASH,
+                ModBlocks.TURNIP_BASKET,
+                ModBlocks.TURNIP_CRATE,
+                ModBlocks.WHITE_GRAPE_BASKET,
+                ModBlocks.WHITE_GRAPE_CRATE,
+                ModBlocks.FISH_BASKET_SLAB,
+                ModBlocks.GRAIN_BASKET_SLAB,
+                ModBlocks.GRAIN_FLOUR_SACK,
+                ModBlocks.HOP_BASKET_SLAB,
+                ModBlocks.BUSHEL_OF_HERBS,
+                ModBlocks.CHILI_RISTRA,
+                ModBlocks.DEAD_FISH,
+                ModBlocks.DEAD_FOWL,
+                ModBlocks.DEAD_FROG,
+                ModBlocks.DEAD_HARE,
+                ModBlocks.DEAD_RAT
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_utility_tab",
@@ -3498,7 +3917,12 @@ public class ModBlocks {
                 ModBlocks.INDUSTRY_UTILITY_BLOCK,
                 ModBlocks.LOW_CLASS_UTILITY_BLOCK,
                 ModBlocks.MIDDLE_CLASS_UTILITY_BLOCK,
-                ModBlocks.NOTE_UTILITY_BLOCK
+                ModBlocks.NOTE_UTILITY_BLOCK,
+                ModBlocks.SHOP_UTILITY_BLOCK,
+                ModBlocks.SPECIAL_UTILITY_BLOCK,
+                ModBlocks.WIP_UTILITY_BLOCK,
+                ModBlocks.WORKSHOP_UTILITY_BLOCK,
+                ModBlocks.YARD_UTILITY_BLOCK
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_panelling_carvings_tab",
@@ -3537,7 +3961,21 @@ public class ModBlocks {
                 ModBlocks.NETHER_BRICK_KEYSTONE,
                 ModBlocks.NORTHERN_CARVINGS,
                 ModBlocks.ORNATE_MARBLE,
-                ModBlocks.ORNATE_SANDSTONE
+                ModBlocks.ORNATE_SANDSTONE,
+                ModBlocks.PINK_SANDSTONE_ENGRAVED,
+                ModBlocks.REACH_BRICK_ENGRAVED,
+                ModBlocks.REACH_OAK_WOOD_PANELLING,
+                ModBlocks.REACH_SPRUCE_WOOD_PANELLING,
+                ModBlocks.REDORANGE_CARVED_SANDSTONE,
+                ModBlocks.SMALL_ORANGE_BRICKS_ORNATE_TOP,
+                ModBlocks.SMALL_ORANGE_BRICKS_ORNATE,
+                ModBlocks.STORMLANDS_BRICK_ENGRAVED,
+                ModBlocks.TERRACOTTA_ENGRAVED,
+                ModBlocks.VIVID_DARK_SANDSTONE_ENGRAVED,
+                ModBlocks.VIVID_SANDSTONE_ENGRAVED,
+                ModBlocks.WHITE_BRICK_ENGRAVED,
+                ModBlocks.WINTERFELL_CARVING,
+                ModBlocks.SANDSTONE_PILLAR
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_furniture_tab",
@@ -3556,11 +3994,15 @@ public class ModBlocks {
                 ModBlocks.FULL_CABINET,
                 ModBlocks.MIRROR_BLOCK,
                 ModBlocks.OAK_TABLE,
-                ModBlocks.OAK_CHAIR
+                ModBlocks.OAK_CHAIR,
+                ModBlocks.TABLE_BOOKS,
+                ModBlocks.TABLE_DRAWERS,
+                ModBlocks.TABLE_WIDGETS
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_grass_dirt_tab",
-                ModBlocks.BONE_DIRT
+                ModBlocks.BONE_DIRT,
+                ModBlocks.THICK_GRASS_BLOCK
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_decor_tab",
@@ -3574,7 +4016,13 @@ public class ModBlocks {
                 ModBlocks.IRON_CRATE,
                 ModBlocks.LARGE_CLAY_POT_SOLID,
                 ModBlocks.OPEN_BASKET,
-                ModBlocks.OPEN_CRATE
+                ModBlocks.OPEN_CRATE,
+                ModBlocks.SILVER_TIN_CRATE,
+                ModBlocks.WATER_BARREL,
+                ModBlocks.CLOSED_BARREL,
+                ModBlocks.FIREWOOD,
+                ModBlocks.FIREWOOD_SLAB,
+                ModBlocks.COBWEB
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_cobblestone_tab",
@@ -3601,41 +4049,7 @@ public class ModBlocks {
                 ModBlocks.LOCKED_WHITE_WOOD_DOOR
         );
 
-        WesterosCreativeModeTabs.addToTab("westeros_food_blocks_tab",
-                ModBlocks.POMEGRANATE_BASKET,
-                ModBlocks.PURPLE_GRAPE_BASKET,
-                ModBlocks.PURPLE_GRAPE_CRATE,
-                ModBlocks.SALT_CRATE,
-                ModBlocks.SOURLEAF_BASKET,
-                ModBlocks.SOURLEAF_CRATE,
-                ModBlocks.SPIT_ROAST,
-                ModBlocks.SQUASH,
-                ModBlocks.TURNIP_BASKET,
-                ModBlocks.TURNIP_CRATE,
-                ModBlocks.WHITE_GRAPE_BASKET,
-                ModBlocks.WHITE_GRAPE_CRATE,
-                ModBlocks.FISH_BASKET_SLAB,
-                ModBlocks.GRAIN_BASKET_SLAB,
-                ModBlocks.GRAIN_FLOUR_SACK,
-                ModBlocks.HOP_BASKET_SLAB
-        );
 
-        WesterosCreativeModeTabs.addToTab("westeros_panelling_carvings_tab",
-                ModBlocks.PINK_SANDSTONE_ENGRAVED,
-                ModBlocks.REACH_BRICK_ENGRAVED,
-                ModBlocks.REACH_OAK_WOOD_PANELLING,
-                ModBlocks.REACH_SPRUCE_WOOD_PANELLING,
-                ModBlocks.REDORANGE_CARVED_SANDSTONE,
-                ModBlocks.SMALL_ORANGE_BRICKS_ORNATE_TOP,
-                ModBlocks.SMALL_ORANGE_BRICKS_ORNATE,
-                ModBlocks.STORMLANDS_BRICK_ENGRAVED,
-                ModBlocks.TERRACOTTA_ENGRAVED,
-                ModBlocks.VIVID_DARK_SANDSTONE_ENGRAVED,
-                ModBlocks.VIVID_SANDSTONE_ENGRAVED,
-                ModBlocks.WHITE_BRICK_ENGRAVED,
-                ModBlocks.WINTERFELL_CARVING,
-                ModBlocks.SANDSTONE_PILLAR
-        );
 
         WesterosCreativeModeTabs.addToTab("westeros_windows_glass_tab",
                 ModBlocks.COLOURED_SEPT_WINDOW,
@@ -3654,19 +4068,6 @@ public class ModBlocks {
                 ModBlocks.DORNE_CARVED_WOODEN_WINDOW
         );
 
-        WesterosCreativeModeTabs.addToTab("westeros_logs_tab",
-                ModBlocks.JUNGLE_LOG_CHAIN,
-                ModBlocks.JUNGLE_LOG_ROPE,
-                ModBlocks.MOSSY_BIRCH_LOG,
-                ModBlocks.MOSSY_JUNGLE_LOG,
-                ModBlocks.MOSSY_OAK_LOG,
-                ModBlocks.MOSSY_SPRUCE_LOG,
-                ModBlocks.OAK_LOG_CHAIN,
-                ModBlocks.OAK_LOG_ROPE,
-                ModBlocks.PALM_TREE_LOG,
-                ModBlocks.SPRUCE_LOG_CHAIN,
-                ModBlocks.SPRUCE_LOG_ROPE
-        );
 
         WesterosCreativeModeTabs.addToTab("westeros_brick_tab",
                 ModBlocks.ORANGE_BRICK_ARCH_DOUBLE,
@@ -3704,29 +4105,11 @@ public class ModBlocks {
                 ModBlocks.YELLOW_STAINED_CLAY
         );
 
-        WesterosCreativeModeTabs.addToTab("westeros_grass_dirt_tab",
-                ModBlocks.THICK_GRASS_BLOCK
-        );
-
-        WesterosCreativeModeTabs.addToTab("westeros_utility_tab",
-                ModBlocks.SHOP_UTILITY_BLOCK,
-                ModBlocks.SPECIAL_UTILITY_BLOCK,
-                ModBlocks.WIP_UTILITY_BLOCK,
-                ModBlocks.WORKSHOP_UTILITY_BLOCK,
-                ModBlocks.YARD_UTILITY_BLOCK
-        );
 
         WesterosCreativeModeTabs.addToTab("westeros_tool_blocks_tab",
                 ModBlocks.PISTON_TOP
         );
 
-        WesterosCreativeModeTabs.addToTab("westeros_decor_tab",
-                ModBlocks.SILVER_TIN_CRATE,
-                ModBlocks.WATER_BARREL,
-                ModBlocks.CLOSED_BARREL,
-                ModBlocks.FIREWOOD,
-                ModBlocks.FIREWOOD_SLAB
-        );
 
         WesterosCreativeModeTabs.addToTab("westeros_misc_tab",
                 ModBlocks.PILED_BONES,
@@ -3735,14 +4118,15 @@ public class ModBlocks {
                 ModBlocks.RED_KEEP_SECRET_DOOR,
                 ModBlocks.ARCHERY_TARGET,
                 ModBlocks.STACKED_BONES,
-                ModBlocks.BEES
+                ModBlocks.BEES,
+                ModBlocks.BLACK_BRICICLE,
+                ModBlocks.BUTTERFLY_BLUE,
+                ModBlocks.BUTTERFLY_ORANGE,
+                ModBlocks.BUTTERFLY_RED,
+                ModBlocks.BUTTERFLY_WHITE,
+                ModBlocks.BUTTERFLY_YELLOW
         );
 
-        WesterosCreativeModeTabs.addToTab("westeros_furniture_tab",
-                ModBlocks.TABLE_BOOKS,
-                ModBlocks.TABLE_DRAWERS,
-                ModBlocks.TABLE_WIDGETS
-        );
 
         WesterosCreativeModeTabs.addToTab("westeros_lighting_tab",
                 ModBlocks.GLOWING_EMBERS,
@@ -3758,7 +4142,8 @@ public class ModBlocks {
                 ModBlocks.IRON_CROSSBAR,
                 ModBlocks.OXIDIZED_IRON_BARS,
                 ModBlocks.OXIDIZED_IRON_CROSSBAR,
-                ModBlocks.HORIZONTAL_CHAIN
+                ModBlocks.HORIZONTAL_CHAIN,
+                ModBlocks.CHAIN_BLOCK_HARNESS
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_cloth_fibers_tab",
@@ -3767,15 +4152,6 @@ public class ModBlocks {
                 ModBlocks.FANCY_RED_CARPET,
                 ModBlocks.HORIZONTAL_NET,
                 ModBlocks.HORIZONTAL_ROPE
-        );
-
-        WesterosCreativeModeTabs.addToTab("westeros_water_air_tab",
-                ModBlocks.CORAL_TUBE_FAN,
-                ModBlocks.CORAL_BRAIN_FAN,
-                ModBlocks.CORAL_BUBBLE_FAN,
-                ModBlocks.CORAL_FIRE_FAN,
-                ModBlocks.CORAL_HORN_FAN,
-                ModBlocks.PACKED_SNOW
         );
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
