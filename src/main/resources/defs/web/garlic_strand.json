@@ -1,0 +1,12 @@
+{
+    "blockName": "garlic_strand",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Garlic Strand",
+    "textures": [
+        "web_block/food_garlic_strand"
+    ],
+    "type": "no-in-web"
+}

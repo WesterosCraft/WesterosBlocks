@@ -1,0 +1,12 @@
+{
+    "blockName": "black_bricicle",
+    "blockType": "web",
+    "stepSound": "stone",
+    "material": "rock",
+    "creativeTab": "westeros_misc_tab",
+    "label": "Melted Ashlar Black Bricicle",
+    "textures": [
+        "ashlar_melted/black/bricicle/side"
+    ],
+    "type": "no-in-web"
+}

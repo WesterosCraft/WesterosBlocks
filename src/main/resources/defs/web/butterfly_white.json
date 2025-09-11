@@ -1,0 +1,12 @@
+{
+    "blockName": "butterfly_white",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_misc_tab",
+    "label": "Central White Butterfly",
+    "textures": [
+        "web_block/bug_butterfly_white"
+    ],
+    "type": "no-in-web"
+}

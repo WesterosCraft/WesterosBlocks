@@ -1,0 +1,12 @@
+{
+    "blockName": "rope_block_harness",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "label": "Rope Block Harness",
+    "textures": [
+        "web_block/rope_blockharness"
+    ],
+    "type": "no-in-web"
+}

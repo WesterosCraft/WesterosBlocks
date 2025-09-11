@@ -1362,6 +1362,11 @@ public class ModModelProvider extends FabricModelProvider {
         registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_WILDFLOWERS)
                 .texture("flowers/yellow_wildflowers")
                 .build();
+        
+        // Web Blocks
+        registerCustomCrossBlock(bsmg, ModBlocks.BEES)
+                .texture("web_block/bug_bees")
+                .build();
     }
 
     @Override

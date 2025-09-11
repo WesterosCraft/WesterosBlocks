@@ -1,0 +1,12 @@
+{
+    "blockName": "butterfly_red",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_misc_tab",
+    "label": "Eastern Red Butterfly",
+    "textures": [
+        "web_block/bug_butterfly_red"
+    ],
+    "type": "no-in-web"
+}

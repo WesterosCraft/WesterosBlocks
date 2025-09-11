@@ -1,0 +1,12 @@
+{
+    "blockName": "vertical_chain",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_metal_tab",
+    "label": "Vertical Chain",
+    "textures": [
+        "web_block/chain_vertical"
+    ],
+    "type": "no-in-web"
+}

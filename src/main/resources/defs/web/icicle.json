@@ -1,0 +1,12 @@
+{
+    "blockName": "icicle",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Icicle",
+    "textures": [
+        "icicle/side"
+    ],
+    "type": "no-in-web"
+}

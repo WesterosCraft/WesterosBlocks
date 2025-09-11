@@ -1,0 +1,21 @@
+{
+    "blockName": "dead_frog",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Dead Frog",
+    "randomTextures": [
+        {
+            "textures": [
+                "dead_frog/toad_dead1"
+            ]
+        },
+        {
+            "textures": [
+                "dead_frog/toad_dead2"
+            ]
+        }
+    ],
+    "type": "no-in-web"
+}

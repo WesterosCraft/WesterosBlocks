@@ -1,0 +1,12 @@
+{
+    "blockName": "dead_jungle_tall_grass",
+    "blockType": "web",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Dead Jungle Tall Grass",
+    "textures": [
+        "dead_jungle_tall_grass/down_side1"
+    ],
+    "type": "no-in-web,layerSensitive"
+}

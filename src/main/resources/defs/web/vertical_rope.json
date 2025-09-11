@@ -1,0 +1,12 @@
+{
+    "blockName": "vertical_rope",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "label": "Vertical Rope",
+    "textures": [
+        "web_block/rope_vertical"
+    ],
+    "type": "no-in-web"
+}

@@ -1,0 +1,12 @@
+{
+    "blockName": "dead_savanna_tall_grass",
+    "blockType": "web",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Dead Savanna Tall Grass",
+    "textures": [
+        "dead_savanna_tall_grass/dead_savanna_tall_grass"
+    ],
+    "type": "no-in-web,layerSensitive"
+}

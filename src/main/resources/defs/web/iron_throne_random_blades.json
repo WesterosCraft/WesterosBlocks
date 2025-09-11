@@ -1,0 +1,46 @@
+{
+    "blockName": "iron_throne_random_blades",
+    "blockType": "web",
+    "stepSound": "cloth",
+    "material": "web",
+    "creativeTab": "westeros_metal_tab",
+    "label": "Iron Throne Random Blades",
+    "randomTextures": [
+        {
+            "textures": [
+                "blades_random/side1"
+            ]
+        },
+        {
+            "textures": [
+                "blades_random/side2"
+            ]
+        },
+        {
+            "textures": [
+                "blades_random/side3"
+            ]
+        },
+        {
+            "textures": [
+                "blades_random/side4"
+            ]
+        },
+        {
+            "textures": [
+                "blades_random/side5"
+            ]
+        },
+        {
+            "textures": [
+                "blades_random/side6"
+            ]
+        },
+        {
+            "textures": [
+                "blades_random/side7"
+            ]
+        }
+    ],
+    "type": "no-in-web"
+}

@@ -97,6 +97,10 @@ public class BlockBuilder<T extends Block> {
         return new BlockBuilder<>(new WCPlantBlock.Factory());
     }
     
+    public static BlockBuilder<WCWebBlock> web() {
+        return new BlockBuilder<>(new WCWebBlock.Factory());
+    }
+    
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
         return this;
@@ -154,11 +158,6 @@ public class BlockBuilder<T extends Block> {
     
     public BlockBuilder<T> woodType(String woodType) {
         parameters.put("woodType", woodType);
-        return this;
-    }
-    
-    public BlockBuilder<T> hasRecipe(boolean hasRecipe) {
-        parameters.put("hasRecipe", hasRecipe);
         return this;
     }
     
@@ -220,6 +219,16 @@ public class BlockBuilder<T extends Block> {
     
     public BlockBuilder<T> layerSensitive() {
         parameters.put("layerSensitive", true);
+        return this;
+    }
+    
+    public BlockBuilder<T> noInWeb(boolean noInWeb) {
+        parameters.put("noInWeb", noInWeb);
+        return this;
+    }
+    
+    public BlockBuilder<T> noInWeb() {
+        parameters.put("noInWeb", true);
         return this;
     }
     

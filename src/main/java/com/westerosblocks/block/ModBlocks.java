@@ -2340,6 +2340,17 @@ public class ModBlocks {
                     .noCollision()
                     .build());
 
+    // Web Blocks
+    public static final Block BEES = registerBlock(
+            "bees",
+            BlockBuilder.web()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .noCollision()
+                    .noInWeb()
+                    .build());
+
     // Plant Blocks
     public static final Block BLUE_BELLS = registerBlock(
             "blue_bells",
@@ -3723,7 +3734,8 @@ public class ModBlocks {
                 ModBlocks.HARRENHAL_SECRET_DOOR,
                 ModBlocks.RED_KEEP_SECRET_DOOR,
                 ModBlocks.ARCHERY_TARGET,
-                ModBlocks.STACKED_BONES
+                ModBlocks.STACKED_BONES,
+                ModBlocks.BEES
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_furniture_tab",
