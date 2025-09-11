@@ -3566,29 +3566,9 @@ public class ModBlocks {
                 ModBlocks.OPEN_CRATE
         );
 
-        WesterosCreativeModeTabs.addToTab("westeros_windows_glass_tab",
-                ModBlocks.COLOURED_SEPT_WINDOW
-        );
-
         WesterosCreativeModeTabs.addToTab("westeros_cobblestone_tab",
-                ModBlocks.FLAGSTONE
-        );
-
-        WesterosCreativeModeTabs.addToTab("westeros_lighting_tab",
-                ModBlocks.GLOWING_EMBERS
-        );
-
-        WesterosCreativeModeTabs.addToTab("westeros_marble_plaster_tab",
-                ModBlocks.LANNISPORT_KEYSTONE_ORANGE_PLASTER,
-                ModBlocks.LANNISPORT_KEYSTONE_YELLOW_PLASTER,
-                ModBlocks.LIGHT_GREY_STONE_WHITE_PLASTER
-        );
-
-        WesterosCreativeModeTabs.addToTab("westeros_brick_tab",
-                ModBlocks.ORANGE_BRICK_ARCH_DOUBLE,
-                ModBlocks.ORANGE_BRICK_ARCH_SINGLE,
-                ModBlocks.ORANGE_BRICK_DENTIL,
-                ModBlocks.ORANGE_BRICK_ROWLOCK
+                ModBlocks.FLAGSTONE,
+                ModBlocks.SANDY_STONE_SLABS
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_wood_planks_tab",
@@ -3647,6 +3627,7 @@ public class ModBlocks {
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_windows_glass_tab",
+                ModBlocks.COLOURED_SEPT_WINDOW,
                 ModBlocks.SEPT_CRYSTAL_LARGE,
                 ModBlocks.BIRCH_WINDOW_SHUTTERS,
                 ModBlocks.DORNE_RED_WINDOW_SHUTTERS,
@@ -3706,9 +3687,7 @@ public class ModBlocks {
                 ModBlocks.MARBLE_PILLAR
         );
 
-        WesterosCreativeModeTabs.addToTab("westeros_cobblestone_tab",
-                ModBlocks.SANDY_STONE_SLABS
-        );
+
 
         WesterosCreativeModeTabs.addToTab("westeros_sand_gravel_tab",
                 ModBlocks.YELLOW_STAINED_CLAY

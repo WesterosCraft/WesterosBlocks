@@ -1,15 +1,16 @@
 package com.westerosblocks.datagen.custom;
 
 import net.minecraft.block.Block;
+import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
-import net.minecraft.data.client.BlockStateVariant;
-import net.minecraft.data.client.VariantSettings;
+
 import net.minecraft.data.client.VariantSettings.Rotation;
 import com.westerosblocks.WesterosBlocks;
 
 /**
  * Base class providing shared utilities for all block exporters.
  * Centralizes common functionality to eliminate code duplication.
+ * Follows block-models.md patterns for clean, consistent code.
  */
 public abstract class BaseBlockExporter {
 
@@ -25,6 +26,30 @@ public abstract class BaseBlockExporter {
             return blockString.split(":")[1].replace("}", "");
         }
         return blockString.toLowerCase().replace("block{", "").replace("}", "");
+    }
+
+    /**
+     * Creates a nested model identifier following the pattern: block/blockName/variant
+     * Follows block-models.md section on model organization.
+     * 
+     * @param block The block
+     * @param variant The model variant (e.g., "bottom", "top", "open")
+     * @return The nested model identifier
+     */
+    protected static Identifier createNestedModelId(Block block, String variant) {
+        String blockName = getBlockName(block);
+        String modelPath = "block/" + blockName + "/" + variant;
+        return WesterosBlocks.id(modelPath);
+    }
+
+    /**
+     * Creates a default nested model identifier using the block name as variant.
+     * 
+     * @param block The block
+     * @return The nested model identifier
+     */
+    protected static Identifier createNestedModelId(Block block) {
+        return createNestedModelId(block, getBlockName(block));
     }
 
     /**
@@ -135,5 +160,42 @@ public abstract class BaseBlockExporter {
             default -> throw new IllegalArgumentException("Invalid rotation: " + rotation + ". Must be 0, 90, 180, or 270.");
         };
         return BlockStateVariant.create().put(VariantSettings.MODEL, modelId).put(VariantSettings.Y, rotationEnum);
+    }
+
+    /**
+     * Creates a simple blockstate supplier with a single model variant.
+     * Follows block-models.md singleton pattern.
+     * 
+     * @param block The block
+     * @param modelId The model identifier
+     * @return The blockstate supplier
+     */
+    protected static VariantsBlockStateSupplier createSimpleBlockState(Block block, Identifier modelId) {
+        return VariantsBlockStateSupplier.create(block, createVariant(modelId));
+    }
+
+    /**
+     * Registers a simple item model using generated template.
+     * Follows block-models.md item model pattern.
+     * 
+     * @param generator The generator
+     * @param block The block
+     * @param textureId The texture identifier
+     */
+    protected static void registerSimpleItemModel(BlockStateModelGenerator generator, Block block, Identifier textureId) {
+        TextureMap itemTextureMap = TextureMap.layer0(textureId);
+        Models.GENERATED.upload(ModelIds.getItemModelId(block.asItem()), itemTextureMap, generator.modelCollector);
+    }
+
+    /**
+     * Registers a parented item model using an existing block model.
+     * Follows block-models.md parented item pattern.
+     * 
+     * @param generator The generator
+     * @param block The block
+     * @param modelId The parent model identifier
+     */
+    protected static void registerParentedItemModel(BlockStateModelGenerator generator, Block block, Identifier modelId) {
+        generator.registerParentedItemModel(block, modelId);
     }
 }

@@ -1,54 +1,28 @@
 package com.westerosblocks.datagen.custom;
 
 import net.minecraft.block.Block;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.BlockStateVariant;
-import net.minecraft.data.client.BlockStateVariantMap;
-import net.minecraft.data.client.Models;
-import net.minecraft.data.client.TextureKey;
-import net.minecraft.data.client.TextureMap;
-import net.minecraft.data.client.VariantSettings;
-import net.minecraft.data.client.VariantsBlockStateSupplier;
+import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModTextureMap;
-import com.westerosblocks.utils.ModProperties;
 import com.westerosblocks.block.custom.WCSolidBlock;
-
-import java.io.IOException;
-import com.google.gson.stream.JsonWriter;
-import net.minecraft.data.client.BlockStateSupplier;
-import net.minecraft.block.BlockState;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * Simplified solid block exporter following block-models.md patterns.
+ * Uses singleton patterns and clean texture mapping for consistent, maintainable code.
+ */
 public class SolidBlockExporter extends BaseBlockExporter {
-
-    /**
-     * Generates model name with symmetrical/asymmetrical directory structure
-     */
-    public static String getModelName(Block block, String ext, int setIdx, Boolean symmetrical) {
-        String blockName = getBlockName(block);
-        String symmetricalPath = symmetrical ? "symmetrical" : "asymmetrical";
-        return blockName + "/" + symmetricalPath + "/" + ext + "_v" + (setIdx + 1);
-    }
-
-    /**
-     * Creates model file name with symmetrical/asymmetrical path
-     */
-    public static Identifier modelFileName(Block block, String ext, int setIdx, Boolean symmetrical) {
-        return Identifier.of(WesterosBlocks.MOD_ID, "block/" + getModelName(block, ext, setIdx, symmetrical));
-    }
 
     /**
      * Checks if a block is symmetrical
      */
-    public static boolean isSymmetrical(Block block) {
+    private static boolean isSymmetrical(Block block) {
         if (block instanceof WCSolidBlock) {
             return ((WCSolidBlock) block).symmetrical;
         }
@@ -56,251 +30,218 @@ public class SolidBlockExporter extends BaseBlockExporter {
     }
 
     /**
-     * Registers a custom solid block with a specific texture path
+     * Registers a solid block with a single texture (cube_all pattern).
+     * Follows block-models.md section 3.1: Simple Cube All.
      */
-    public static void registerSimpleCustomSolidBlock(BlockStateModelGenerator generator, Block block,
-            String texturePath) {
-        boolean isSymmetrical = isSymmetrical(block);
+    public static void registerSimpleCustomSolidBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
+        registerSimpleCustomSolidBlock(generator, block, texturePath, false);
+    }
 
-        if (isSymmetrical) {
-            // Generate both symmetrical and asymmetrical variants in a single block state
-            generateSymmetricalBlockState(generator, block, texturePath);
+    /**
+     * Registers a solid block with a single texture and tinted option.
+     */
+    public static void registerSimpleCustomSolidBlock(BlockStateModelGenerator generator, Block block, String texturePath, boolean isTinted) {
+        if (isSymmetrical(block)) {
+            registerSymmetricalSolidBlock(generator, block, texturePath, isTinted);
         } else {
-            // Standard registration for non-symmetrical blocks
-            TextureMap textureMap = new TextureMap().put(TextureKey.ALL,
-                    Identifier.of(WesterosBlocks.MOD_ID, "block/" + texturePath));
-
-            String blockName = getBlockName(block);
-            Identifier nestedModelId = Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "/" + blockName);
-
-            Identifier modelId = Models.CUBE_ALL.upload(nestedModelId, textureMap, generator.modelCollector);
-            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block,
-                    BlockStateVariant.create().put(VariantSettings.MODEL, modelId)));
-            generator.registerParentedItemModel(block, modelId);
+            registerStandardSolidBlock(generator, block, texturePath, isTinted);
         }
     }
 
     /**
-     * Registers a custom solid block with multiple textures
+     * Standard solid block registration using cube_all or tinted model.
+     */
+    private static void registerStandardSolidBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
+        registerStandardSolidBlock(generator, block, texturePath, false);
+    }
+
+    /**
+     * Standard solid block registration using cube_all or tinted model.
+     */
+    private static void registerStandardSolidBlock(BlockStateModelGenerator generator, Block block, String texturePath, boolean isTinted) {
+        TextureMap textureMap = new TextureMap().put(TextureKey.ALL, createBlockIdentifier(texturePath));
+        Identifier modelId;
+        
+        if (isTinted) {
+            // Use tinted cube model
+            Model tintedModel = new Model(
+                Optional.of(WesterosBlocks.id("block/tinted/cube")),
+                Optional.empty(),
+                TextureKey.ALL
+            );
+            modelId = tintedModel.upload(createNestedModelId(block), textureMap, generator.modelCollector);
+        } else {
+            modelId = Models.CUBE_ALL.upload(createNestedModelId(block), textureMap, generator.modelCollector);
+        }
+        
+        generator.blockStateCollector.accept(createSimpleBlockState(block, modelId));
+        registerParentedItemModel(generator, block, modelId);
+    }
+
+    /**
+     * Registers a solid block with multiple textures (cube pattern).
      * Texture order: down, up, north, south, east, west
+     * Follows block-models.md section 3.2: Singletons with TextureMap.
      */
-    public static void registerCustomSolidBlock(BlockStateModelGenerator generator, Block block,
-            String... texturePaths) {
-        if (texturePaths.length == 0) {
-            throw new IllegalArgumentException("At least one texture path is required");
-        }
+    public static void registerCustomSolidBlock(BlockStateModelGenerator generator, Block block, String... texturePaths) {
+        registerCustomSolidBlock(generator, block, false, texturePaths);
+    }
 
-        boolean isSymmetrical = isSymmetrical(block);
-
-        if (isSymmetrical) {
-            // Generate both symmetrical and asymmetrical variants in a single block state
-            generateSymmetricalBlockState(generator, block, texturePaths);
+    /**
+     * Registers a solid block with multiple textures and tinted option.
+     */
+    public static void registerCustomSolidBlock(BlockStateModelGenerator generator, Block block, boolean isTinted, String... texturePaths) {
+        validateTexturePaths(texturePaths, 1);
+        
+        if (isSymmetrical(block)) {
+            registerSymmetricalSolidBlock(generator, block, isTinted, texturePaths);
         } else {
-            // Standard registration for non-symmetrical blocks
-            String[] filledTextures = fillTextureArray(texturePaths);
-
-            TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
-
-            String blockName = getBlockName(block);
-            Identifier nestedModelId = Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "/" + blockName);
-
-            Identifier modelId = Models.CUBE.upload(nestedModelId, textureMap, generator.modelCollector);
-            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block,
-                    BlockStateVariant.create().put(VariantSettings.MODEL, modelId)));
-            generator.registerParentedItemModel(block, modelId);
+            registerStandardSolidBlock(generator, block, isTinted, texturePaths);
         }
     }
 
     /**
-     * Registers a custom solid block with random texture variants
-     * Each inner array should contain texture paths in order: down, up, north,
-     * south, east, west
-     * Generates multiple model variants for random selection
+     * Standard solid block registration using cube model with multiple textures.
      */
-    public static void registerCustomSolidBlockWithRandomTextures(BlockStateModelGenerator generator, Block block,
-            String[][] textureArrays) {
-        if (textureArrays.length == 0) {
-            throw new IllegalArgumentException("At least one texture array is required");
-        }
-
-        boolean isSymmetrical = isSymmetrical(block);
-
-        if (isSymmetrical) {
-            // Generate symmetrical variants in a single block state
-            generateSymmetricalBlockStateWithRandomTextures(generator, block, textureArrays);
-        } else {
-            // Standard registration for non-symmetrical blocks
-            String blockName = getBlockName(block);
-            List<Identifier> modelIds = new ArrayList<>();
-
-            for (int i = 0; i < textureArrays.length; i++) {
-                String[] texturePaths = textureArrays[i];
-                if (texturePaths.length == 0) {
-                    throw new IllegalArgumentException(
-                            "At least one texture path is required in array " + i);
-                }
-
-                String[] filledTextures = fillTextureArray(texturePaths);
-
-                TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
-
-                Identifier nestedModelId = Identifier.of(WesterosBlocks.MOD_ID,
-                        "block/" + blockName + "/base_v" + (i + 1));
-                Identifier modelId = Models.CUBE.upload(nestedModelId, textureMap, generator.modelCollector);
-                modelIds.add(modelId);
-            }
-
-            List<BlockStateVariant> variants = modelIds.stream()
-                    .map(modelId -> BlockStateVariant.create().put(VariantSettings.MODEL, modelId))
-                    .toList();
-
-            generator.blockStateCollector.accept(
-                    VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0])));
-
-            if (!modelIds.isEmpty()) {
-                generator.registerParentedItemModel(block, modelIds.get(0));
-            }
-        }
+    private static void registerStandardSolidBlock(BlockStateModelGenerator generator, Block block, String... texturePaths) {
+        registerStandardSolidBlock(generator, block, false, texturePaths);
     }
 
     /**
-     * Registers a custom solid block with multiple states
-     * Each inner array should contain texture paths in order: down, up, north,
-     * south, east, west
-     * Generates multiple model variants for different states
+     * Standard solid block registration using cube model with multiple textures and tinted option.
      */
-    public static void registerCustomSolidBlockWithStates(BlockStateModelGenerator generator, Block block,
-            String[][] textureArrays) {
-        if (textureArrays.length == 0) {
-            throw new IllegalArgumentException("At least one texture array is required");
-        }
-
-        boolean isSymmetrical = isSymmetrical(block);
-
-        if (isSymmetrical) {
-            // Generate symmetrical variants in a single block state
-            generateSymmetricalBlockStateWithStates(generator, block, textureArrays);
-        } else {
-            // Standard registration for non-symmetrical blocks
-            String blockName = getBlockName(block);
-            List<Identifier> modelIds = new ArrayList<>();
-
-            for (int i = 0; i < textureArrays.length; i++) {
-                String[] texturePaths = textureArrays[i];
-                if (texturePaths.length == 0) {
-                    throw new IllegalArgumentException(
-                            "At least one texture path is required in array " + i);
-                }
-
-                String[] filledTextures = fillTextureArray(texturePaths);
-
-                TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
-
-                Identifier nestedModelId = Identifier.of(WesterosBlocks.MOD_ID,
-                        "block/" + blockName + "/state" + i + "_v" + (i + 1));
-
-                Identifier modelId = Models.CUBE.upload(nestedModelId, textureMap, generator.modelCollector);
-                modelIds.add(modelId);
-            }
-
-            generator.blockStateCollector.accept(new BlockStateSupplier() {
-                @Override
-                public Block getBlock() {
-                    return block;
-                }
-
-                @Override
-                public JsonElement get() {
-                    JsonObject json = new JsonObject();
-                    JsonObject variants = new JsonObject();
-
-                    for (int i = 0; i < modelIds.size(); i++) {
-                        JsonObject variant = new JsonObject();
-                        variant.addProperty("model", modelIds.get(i).toString());
-                        variants.add("state=state" + i, variant);
-                    }
-
-                    json.add("variants", variants);
-                    return json;
-                }
-            });
-
-            if (!modelIds.isEmpty()) {
-                generator.registerParentedItemModel(block, modelIds.get(0));
-            }
-        }
-    }
-
-    /**
-     * Generates symmetrical block state for simple texture blocks
-     */
-    private static void generateSymmetricalBlockState(BlockStateModelGenerator generator, Block block,
-            String texturePath) {
-        // Generate both symmetrical and asymmetrical models
-        TextureMap textureMap = new TextureMap().put(TextureKey.ALL,
-                Identifier.of(WesterosBlocks.MOD_ID, "block/" + texturePath));
-
-        Identifier symmetricalModelId = Models.CUBE_ALL.upload(
-                modelFileName(block, "base", 0, true),
-                textureMap,
-                generator.modelCollector);
-
-        Identifier asymmetricalModelId = Models.CUBE_ALL.upload(
-                modelFileName(block, "base", 0, false),
-                textureMap,
-                generator.modelCollector);
-
-        // Create single block state with both symmetrical variants
-        generator.blockStateCollector.accept(new BlockStateSupplier() {
-            @Override
-            public Block getBlock() {
-                return block;
-            }
-
-            @Override
-            public JsonElement get() {
-                JsonObject json = new JsonObject();
-                JsonObject variants = new JsonObject();
-
-                JsonObject symmetricalVariant = new JsonObject();
-                symmetricalVariant.addProperty("model", symmetricalModelId.toString());
-                variants.add("symmetrical=true", symmetricalVariant);
-
-                JsonObject asymmetricalVariant = new JsonObject();
-                asymmetricalVariant.addProperty("model", asymmetricalModelId.toString());
-                variants.add("symmetrical=false", asymmetricalVariant);
-
-                json.add("variants", variants);
-                return json;
-            }
-        });
-
-        // Register item model using the symmetrical variant
-        generator.registerParentedItemModel(block, symmetricalModelId);
-    }
-
-    /**
-     * Generates symmetrical block state for multi-texture blocks
-     */
-    private static void generateSymmetricalBlockState(BlockStateModelGenerator generator, Block block,
-            String[] texturePaths) {
+    private static void registerStandardSolidBlock(BlockStateModelGenerator generator, Block block, boolean isTinted, String... texturePaths) {
         String[] filledTextures = fillTextureArray(texturePaths);
-
         TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
+        Identifier modelId;
+        
+        if (isTinted) {
+            // Use tinted cube model
+            Model tintedModel = new Model(
+                Optional.of(WesterosBlocks.id("block/tinted/cube")),
+                Optional.empty(),
+                TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST
+            );
+            modelId = tintedModel.upload(createNestedModelId(block), textureMap, generator.modelCollector);
+        } else {
+            modelId = Models.CUBE.upload(createNestedModelId(block), textureMap, generator.modelCollector);
+        }
+        
+        generator.blockStateCollector.accept(createSimpleBlockState(block, modelId));
+        registerParentedItemModel(generator, block, modelId);
+    }
 
-        // Generate both symmetrical and asymmetrical models
-        Identifier symmetricalModelId = Models.CUBE.upload(
-                modelFileName(block, "base", 0, true),
-                textureMap,
-                generator.modelCollector);
+    /**
+     * Registers a solid block with random texture variants.
+     * Each inner array contains texture paths: down, up, north, south, east, west
+     * Creates multiple model variants for random selection.
+     */
+    public static void registerCustomSolidBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, String[][] textureArrays) {
+        registerCustomSolidBlockWithRandomTextures(generator, block, textureArrays, false);
+    }
 
-        Identifier asymmetricalModelId = Models.CUBE.upload(
-                modelFileName(block, "base", 0, false),
-                textureMap,
-                generator.modelCollector);
+    /**
+     * Registers a solid block with random texture variants and tinted option.
+     */
+    public static void registerCustomSolidBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, String[][] textureArrays, boolean isTinted) {
+        if (textureArrays.length == 0) {
+            throw new IllegalArgumentException("At least one texture array is required");
+        }
 
-        // Create single block state with both symmetrical variants
-        generator.blockStateCollector.accept(new BlockStateSupplier() {
+        if (isSymmetrical(block)) {
+            registerSymmetricalSolidBlockWithRandomTextures(generator, block, textureArrays, isTinted);
+        } else {
+            registerStandardSolidBlockWithRandomTextures(generator, block, textureArrays, isTinted);
+        }
+    }
+
+    /**
+     * Standard registration for solid blocks with random texture variants.
+     */
+    private static void registerStandardSolidBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, String[][] textureArrays) {
+        registerStandardSolidBlockWithRandomTextures(generator, block, textureArrays, false);
+    }
+
+    /**
+     * Standard registration for solid blocks with random texture variants and tinted option.
+     */
+    private static void registerStandardSolidBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, String[][] textureArrays, boolean isTinted) {
+        List<Identifier> modelIds = new ArrayList<>();
+
+        for (int i = 0; i < textureArrays.length; i++) {
+            validateTexturePaths(textureArrays[i], 1);
+            String[] filledTextures = fillTextureArray(textureArrays[i]);
+            TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
+            Identifier modelId;
+            
+            if (isTinted) {
+                Model tintedModel = new Model(
+                    Optional.of(WesterosBlocks.id("block/tinted/cube")),
+                    Optional.empty(),
+                    TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST
+                );
+                modelId = tintedModel.upload(createNestedModelId(block, "base_v" + (i + 1)), textureMap, generator.modelCollector);
+            } else {
+                modelId = Models.CUBE.upload(createNestedModelId(block, "base_v" + (i + 1)), textureMap, generator.modelCollector);
+            }
+            modelIds.add(modelId);
+        }
+
+        List<BlockStateVariant> variants = modelIds.stream()
+            .map(BaseBlockExporter::createVariant)
+            .toList();
+
+        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0])));
+        
+        if (!modelIds.isEmpty()) {
+            registerParentedItemModel(generator, block, modelIds.get(0));
+        }
+    }
+
+    /**
+     * Registers a solid block with multiple states.
+     * Each inner array contains texture paths: down, up, north, south, east, west
+     * Creates state-based variants with custom properties.
+     */
+    public static void registerCustomSolidBlockWithStates(BlockStateModelGenerator generator, Block block, String[][] textureArrays) {
+        if (textureArrays.length == 0) {
+            throw new IllegalArgumentException("At least one texture array is required");
+        }
+
+        if (isSymmetrical(block)) {
+            registerSymmetricalSolidBlockWithStates(generator, block, textureArrays);
+        } else {
+            registerStandardSolidBlockWithStates(generator, block, textureArrays);
+        }
+    }
+
+    /**
+     * Standard registration for solid blocks with multiple states.
+     */
+    private static void registerStandardSolidBlockWithStates(BlockStateModelGenerator generator, Block block, String[][] textureArrays) {
+        List<Identifier> modelIds = new ArrayList<>();
+
+        for (int i = 0; i < textureArrays.length; i++) {
+            validateTexturePaths(textureArrays[i], 1);
+            String[] filledTextures = fillTextureArray(textureArrays[i]);
+            TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
+            Identifier modelId = Models.CUBE.upload(createNestedModelId(block, "state" + i + "_v" + (i + 1)), textureMap, generator.modelCollector);
+            modelIds.add(modelId);
+        }
+
+        // Create custom blockstate supplier for state-based variants
+        generator.blockStateCollector.accept(createStatesBlockState(block, modelIds));
+        
+        if (!modelIds.isEmpty()) {
+            registerParentedItemModel(generator, block, modelIds.get(0));
+        }
+    }
+
+    /**
+     * Creates a blockstate supplier for state-based variants.
+     */
+    private static BlockStateSupplier createStatesBlockState(Block block, List<Identifier> modelIds) {
+        return new BlockStateSupplier() {
             @Override
             public Block getBlock() {
                 return block;
@@ -311,58 +252,168 @@ public class SolidBlockExporter extends BaseBlockExporter {
                 JsonObject json = new JsonObject();
                 JsonObject variants = new JsonObject();
 
-                JsonObject symmetricalVariant = new JsonObject();
-                symmetricalVariant.addProperty("model", symmetricalModelId.toString());
-                variants.add("symmetrical=true", symmetricalVariant);
-
-                JsonObject asymmetricalVariant = new JsonObject();
-                asymmetricalVariant.addProperty("model", asymmetricalModelId.toString());
-                variants.add("symmetrical=false", asymmetricalVariant);
+                for (int i = 0; i < modelIds.size(); i++) {
+                    JsonObject variant = new JsonObject();
+                    variant.addProperty("model", modelIds.get(i).toString());
+                    variants.add("state=state" + i, variant);
+                }
 
                 json.add("variants", variants);
                 return json;
             }
-        });
+        };
+    }
 
-        // Register item model using the symmetrical variant
-        generator.registerParentedItemModel(block, symmetricalModelId);
+    // Symmetrical block registration methods - simplified
+
+    /**
+     * Registers a symmetrical solid block with single texture.
+     */
+    private static void registerSymmetricalSolidBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
+        registerSymmetricalSolidBlock(generator, block, texturePath, false);
     }
 
     /**
-     * Generates symmetrical block state with random textures
+     * Registers a symmetrical solid block with single texture and tinted option.
      */
-    private static void generateSymmetricalBlockStateWithRandomTextures(BlockStateModelGenerator generator, Block block,
-            String[][] textureArrays) {
+    private static void registerSymmetricalSolidBlock(BlockStateModelGenerator generator, Block block, String texturePath, boolean isTinted) {
+        TextureMap textureMap = new TextureMap().put(TextureKey.ALL, createBlockIdentifier(texturePath));
+        Identifier symmetricalModelId, asymmetricalModelId;
+        
+        if (isTinted) {
+            Model tintedModel = new Model(
+                Optional.of(WesterosBlocks.id("block/tinted/cube")),
+                Optional.empty(),
+                TextureKey.ALL
+            );
+            symmetricalModelId = tintedModel.upload(createNestedModelId(block, "symmetrical/base_v1"), textureMap, generator.modelCollector);
+            asymmetricalModelId = tintedModel.upload(createNestedModelId(block, "asymmetrical/base_v1"), textureMap, generator.modelCollector);
+        } else {
+            symmetricalModelId = Models.CUBE_ALL.upload(createNestedModelId(block, "symmetrical/base_v1"), textureMap, generator.modelCollector);
+            asymmetricalModelId = Models.CUBE_ALL.upload(createNestedModelId(block, "asymmetrical/base_v1"), textureMap, generator.modelCollector);
+        }
+
+        generator.blockStateCollector.accept(createSymmetricalBlockState(block, symmetricalModelId, asymmetricalModelId));
+        registerParentedItemModel(generator, block, symmetricalModelId);
+    }
+
+    /**
+     * Registers a symmetrical solid block with multiple textures.
+     */
+    private static void registerSymmetricalSolidBlock(BlockStateModelGenerator generator, Block block, String... texturePaths) {
+        registerSymmetricalSolidBlock(generator, block, false, texturePaths);
+    }
+
+    /**
+     * Registers a symmetrical solid block with multiple textures and tinted option.
+     */
+    private static void registerSymmetricalSolidBlock(BlockStateModelGenerator generator, Block block, boolean isTinted, String... texturePaths) {
+        String[] filledTextures = fillTextureArray(texturePaths);
+        TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
+        Identifier symmetricalModelId, asymmetricalModelId;
+        
+        if (isTinted) {
+            Model tintedModel = new Model(
+                Optional.of(WesterosBlocks.id("block/tinted/cube")),
+                Optional.empty(),
+                TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST
+            );
+            symmetricalModelId = tintedModel.upload(createNestedModelId(block, "symmetrical/base_v1"), textureMap, generator.modelCollector);
+            asymmetricalModelId = tintedModel.upload(createNestedModelId(block, "asymmetrical/base_v1"), textureMap, generator.modelCollector);
+        } else {
+            symmetricalModelId = Models.CUBE.upload(createNestedModelId(block, "symmetrical/base_v1"), textureMap, generator.modelCollector);
+            asymmetricalModelId = Models.CUBE.upload(createNestedModelId(block, "asymmetrical/base_v1"), textureMap, generator.modelCollector);
+        }
+
+        generator.blockStateCollector.accept(createSymmetricalBlockState(block, symmetricalModelId, asymmetricalModelId));
+        registerParentedItemModel(generator, block, symmetricalModelId);
+    }
+
+    /**
+     * Registers a symmetrical solid block with random textures.
+     */
+    private static void registerSymmetricalSolidBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, String[][] textureArrays) {
+        registerSymmetricalSolidBlockWithRandomTextures(generator, block, textureArrays, false);
+    }
+
+    /**
+     * Registers a symmetrical solid block with random textures and tinted option.
+     */
+    private static void registerSymmetricalSolidBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, String[][] textureArrays, boolean isTinted) {
         List<Identifier> symmetricalModelIds = new ArrayList<>();
         List<Identifier> asymmetricalModelIds = new ArrayList<>();
 
         for (int i = 0; i < textureArrays.length; i++) {
-            String[] texturePaths = textureArrays[i];
-            if (texturePaths.length == 0) {
-                throw new IllegalArgumentException(
-                        "At least one texture path is required in array " + i);
-            }
-
-            String[] filledTextures = fillTextureArray(texturePaths);
-
+            String[] filledTextures = fillTextureArray(textureArrays[i]);
             TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
-
-            // Generate both symmetrical and asymmetrical models for each texture array
-            Identifier symmetricalModelId = Models.CUBE.upload(
-                    modelFileName(block, "base", i, true),
-                    textureMap,
-                    generator.modelCollector);
-            symmetricalModelIds.add(symmetricalModelId);
-
-            Identifier asymmetricalModelId = Models.CUBE.upload(
-                    modelFileName(block, "base", i, false),
-                    textureMap,
-                    generator.modelCollector);
-            asymmetricalModelIds.add(asymmetricalModelId);
+            
+            symmetricalModelIds.add(Models.CUBE.upload(createNestedModelId(block, "symmetrical/base_v" + (i + 1)), textureMap, generator.modelCollector));
+            asymmetricalModelIds.add(Models.CUBE.upload(createNestedModelId(block, "asymmetrical/base_v" + (i + 1)), textureMap, generator.modelCollector));
         }
 
-        // Create single block state with both symmetrical variants
-        generator.blockStateCollector.accept(new BlockStateSupplier() {
+        generator.blockStateCollector.accept(createSymmetricalBlockStateWithVariants(block, symmetricalModelIds, asymmetricalModelIds));
+        if (!symmetricalModelIds.isEmpty()) {
+            registerParentedItemModel(generator, block, symmetricalModelIds.get(0));
+        }
+    }
+
+    /**
+     * Registers a symmetrical solid block with states.
+     */
+    private static void registerSymmetricalSolidBlockWithStates(BlockStateModelGenerator generator, Block block, String[][] textureArrays) {
+        List<Identifier> symmetricalModelIds = new ArrayList<>();
+        List<Identifier> asymmetricalModelIds = new ArrayList<>();
+
+        for (int i = 0; i < textureArrays.length; i++) {
+            String[] filledTextures = fillTextureArray(textureArrays[i]);
+            TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
+            
+            symmetricalModelIds.add(Models.CUBE.upload(createNestedModelId(block, "symmetrical/state" + i + "_v" + (i + 1)), textureMap, generator.modelCollector));
+            asymmetricalModelIds.add(Models.CUBE.upload(createNestedModelId(block, "asymmetrical/state" + i + "_v" + (i + 1)), textureMap, generator.modelCollector));
+        }
+
+        generator.blockStateCollector.accept(createSymmetricalBlockStateWithStates(block, symmetricalModelIds, asymmetricalModelIds));
+        if (!symmetricalModelIds.isEmpty()) {
+            registerParentedItemModel(generator, block, symmetricalModelIds.get(0));
+        }
+    }
+
+    // Utility methods for creating symmetrical blockstates
+
+    /**
+     * Creates a simple symmetrical blockstate with two variants.
+     */
+    private static BlockStateSupplier createSymmetricalBlockState(Block block, Identifier symmetricalModelId, Identifier asymmetricalModelId) {
+        return new BlockStateSupplier() {
+            @Override
+            public Block getBlock() {
+                return block;
+            }
+
+            @Override
+            public JsonElement get() {
+                JsonObject json = new JsonObject();
+                JsonObject variants = new JsonObject();
+
+                JsonObject symmetricalVariant = new JsonObject();
+                symmetricalVariant.addProperty("model", symmetricalModelId.toString());
+                variants.add("symmetrical=true", symmetricalVariant);
+
+                JsonObject asymmetricalVariant = new JsonObject();
+                asymmetricalVariant.addProperty("model", asymmetricalModelId.toString());
+                variants.add("symmetrical=false", asymmetricalVariant);
+
+                json.add("variants", variants);
+                return json;
+            }
+        };
+    }
+
+    /**
+     * Creates a symmetrical blockstate with multiple variants.
+     */
+    private static BlockStateSupplier createSymmetricalBlockStateWithVariants(Block block, List<Identifier> symmetricalModelIds, List<Identifier> asymmetricalModelIds) {
+        return new BlockStateSupplier() {
             @Override
             public Block getBlock() {
                 return block;
@@ -374,65 +425,30 @@ public class SolidBlockExporter extends BaseBlockExporter {
                 JsonObject variants = new JsonObject();
 
                 // Add symmetrical variants
-                for (int i = 0; i < symmetricalModelIds.size(); i++) {
+                for (Identifier modelId : symmetricalModelIds) {
                     JsonObject variant = new JsonObject();
-                    variant.addProperty("model", symmetricalModelIds.get(i).toString());
+                    variant.addProperty("model", modelId.toString());
                     variants.add("symmetrical=true", variant);
                 }
 
                 // Add asymmetrical variants
-                for (int i = 0; i < asymmetricalModelIds.size(); i++) {
+                for (Identifier modelId : asymmetricalModelIds) {
                     JsonObject variant = new JsonObject();
-                    variant.addProperty("model", asymmetricalModelIds.get(i).toString());
+                    variant.addProperty("model", modelId.toString());
                     variants.add("symmetrical=false", variant);
                 }
 
                 json.add("variants", variants);
                 return json;
             }
-        });
-
-        // Register item model using the first symmetrical variant
-        if (!symmetricalModelIds.isEmpty()) {
-            generator.registerParentedItemModel(block, symmetricalModelIds.get(0));
-        }
+        };
     }
 
     /**
-     * Generates symmetrical block state with states
+     * Creates a symmetrical blockstate with states.
      */
-    private static void generateSymmetricalBlockStateWithStates(BlockStateModelGenerator generator, Block block,
-            String[][] textureArrays) {
-        List<Identifier> symmetricalModelIds = new ArrayList<>();
-        List<Identifier> asymmetricalModelIds = new ArrayList<>();
-
-        for (int i = 0; i < textureArrays.length; i++) {
-            String[] texturePaths = textureArrays[i];
-            if (texturePaths.length == 0) {
-                throw new IllegalArgumentException(
-                        "At least one texture path is required in array " + i);
-            }
-
-            String[] filledTextures = fillTextureArray(texturePaths);
-
-            TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
-
-            // Generate both symmetrical and asymmetrical models for each state
-            Identifier symmetricalModelId = Models.CUBE.upload(
-                    modelFileName(block, "state" + i, i, true),
-                    textureMap,
-                    generator.modelCollector);
-            symmetricalModelIds.add(symmetricalModelId);
-
-            Identifier asymmetricalModelId = Models.CUBE.upload(
-                    modelFileName(block, "state" + i, i, false),
-                    textureMap,
-                    generator.modelCollector);
-            asymmetricalModelIds.add(asymmetricalModelId);
-        }
-
-        // Create single block state with both symmetrical variants and states
-        generator.blockStateCollector.accept(new BlockStateSupplier() {
+    private static BlockStateSupplier createSymmetricalBlockStateWithStates(Block block, List<Identifier> symmetricalModelIds, List<Identifier> asymmetricalModelIds) {
+        return new BlockStateSupplier() {
             @Override
             public Block getBlock() {
                 return block;
@@ -460,12 +476,6 @@ public class SolidBlockExporter extends BaseBlockExporter {
                 json.add("variants", variants);
                 return json;
             }
-        });
-
-        // Register item model using the first symmetrical variant
-        if (!symmetricalModelIds.isEmpty()) {
-            generator.registerParentedItemModel(block, symmetricalModelIds.get(0));
-        }
+        };
     }
-
 }

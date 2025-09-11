@@ -83,13 +83,13 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
                 private void buildSolid() {
                         if (!states.isEmpty()) {
-                                generateSolidWithStates(generator, block, states.toArray(new String[0][0]));
+                                SolidBlockExporter.registerCustomSolidBlockWithStates(generator, block, states.toArray(new String[0][0]));
                         } else if (!randomTextures.isEmpty()) {
-                                generateSolidWithRandomTextures(generator, block, randomTextures.toArray(new String[0][0]));
+                                SolidBlockExporter.registerCustomSolidBlockWithRandomTextures(generator, block, randomTextures.toArray(new String[0][0]), isTinted);
                         } else if (!texture.isEmpty()) {
-                                generateSimpleSolid(generator, block, texture);
+                                SolidBlockExporter.registerSimpleCustomSolidBlock(generator, block, texture, isTinted);
                         } else {
-                                generateSolid(generator, block, textures);
+                                SolidBlockExporter.registerCustomSolidBlock(generator, block, isTinted, textures);
                         }
                 }
 

@@ -1,97 +1,50 @@
 package com.westerosblocks.datagen.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureMap;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.SlabType;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.BlockStateVariant;
-import net.minecraft.data.client.BlockStateVariantMap;
-import net.minecraft.data.client.Models;
-import net.minecraft.data.client.TextureMap;
-import net.minecraft.data.client.VariantSettings;
-import net.minecraft.data.client.VariantsBlockStateSupplier;
+import net.minecraft.data.client.*;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
+/**
+ * Simplified slab block exporter following block-models.md patterns.
+ * Handles bottom, top, and double slab variants cleanly.
+ */
 public class SlabBlockExporter extends BaseBlockExporter {
 
         /**
-         * Uploads a custom model with the slab parent
+         * Registers a slab block with multiple textures.
+         * Texture order: down, up, north, south, east, west
+         * Follows block-models.md section on blockstate variants.
          */
-        private static Identifier uploadSlabModel(Identifier modelId, TextureMap textureMap,
-                        BlockStateModelGenerator generator) {
-                return ModModels.SLAB_BOTTOM.upload(modelId, textureMap, generator.modelCollector);
-        }
-
-        /**
-         * Uploads a custom model with the slab_top parent
-         */
-        private static Identifier uploadSlabTopModel(Identifier modelId, TextureMap textureMap,
-                        BlockStateModelGenerator generator) {
-                return ModModels.SLAB_TOP.upload(modelId, textureMap, generator.modelCollector);
-        }
-
-        /**
-         * Registers a custom slab block with separate textures for all 6 sides
-         */
-        public static void registerCustomSlabBlock(BlockStateModelGenerator generator, Block block,
-                        String... texturePaths) {
+        public static void registerCustomSlabBlock(BlockStateModelGenerator generator, Block block, String... texturePaths) {
                 validateTexturePaths(texturePaths, 1);
 
-                // Fill remaining slots with the last texture if less than 6 provided
                 String[] filledTextures = fillTextureArray(texturePaths);
+                TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
 
-                String blockName = getBlockName(block);
+                // Upload models for all three slab variants
+                Identifier bottomModelId = ModModels.SLAB_BOTTOM.upload(createNestedModelId(block, getBlockName(block) + "_bottom"), textureMap, generator.modelCollector);
+                Identifier topModelId = ModModels.SLAB_TOP.upload(createNestedModelId(block, getBlockName(block) + "_top"), textureMap, generator.modelCollector);
+                Identifier fullModelId = Models.CUBE.upload(createNestedModelId(block, getBlockName(block) + "_double"), textureMap, generator.modelCollector);
 
-                // Create texture maps using ModTextureMap utility for all 6 sides
-                TextureMap bottomTextureMap = ModTextureMap.customAllSides(filledTextures);
-                TextureMap topTextureMap = ModTextureMap.customAllSides(filledTextures);
-                TextureMap fullTextureMap = ModTextureMap.customAllSides(filledTextures);
+                // Create blockstate with slab type variants
+                BlockStateVariantMap variants = BlockStateVariantMap.create(Properties.SLAB_TYPE)
+                        .register(SlabType.BOTTOM, createVariant(bottomModelId))
+                        .register(SlabType.TOP, createVariant(topModelId))
+                        .register(SlabType.DOUBLE, createVariant(fullModelId));
 
-                // Create custom slab models using the same half_slab parent for both variants
-                Identifier bottomModelId = uploadSlabModel(
-                                Identifier.of(WesterosBlocks.MOD_ID,
-                                                "block/" + blockName + "/" + blockName + "_bottom"),
-                                bottomTextureMap, generator);
-
-                Identifier topModelId = uploadSlabTopModel(
-                                Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "/" + blockName + "_top"),
-                                topTextureMap, generator);
-
-                // Full block uses cube model
-                Identifier fullModelId = Models.CUBE.upload(
-                                Identifier.of(WesterosBlocks.MOD_ID,
-                                                "block/" + blockName + "/" + blockName + "_double"),
-                                fullTextureMap, generator.modelCollector);
-
-                // Create blockstate with slab variants
-                generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block)
-                                .coordinate(BlockStateVariantMap
-                                                .create(Properties.SLAB_TYPE)
-                                                .register(SlabType.BOTTOM,
-                                                                BlockStateVariant.create().put(VariantSettings.MODEL,
-                                                                                bottomModelId))
-                                                .register(SlabType.TOP,
-                                                                BlockStateVariant.create().put(VariantSettings.MODEL,
-                                                                                topModelId))
-                                                .register(SlabType.DOUBLE, BlockStateVariant.create()
-                                                                .put(VariantSettings.MODEL, fullModelId))));
-
-                // Register item model using the bottom variant
-                generator.registerParentedItemModel(block, bottomModelId);
+                generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
+                registerParentedItemModel(generator, block, bottomModelId);
         }
 
         /**
-         * Registers a custom slab block with separate textures for bottom, top, sides,
-         * and full block (legacy method for backward compatibility)
+         * Legacy method for backward compatibility.
          */
         public static void registerCustomSlabBlock(BlockStateModelGenerator generator, Block block,
                         String bottomTexture, String topTexture, String sideTexture, String fullTexture) {
-                // Use the new method with side texture for all sides
-                registerCustomSlabBlock(generator, block, bottomTexture, topTexture,
-                                sideTexture, sideTexture, sideTexture, sideTexture);
+                registerCustomSlabBlock(generator, block, bottomTexture, topTexture, sideTexture, sideTexture, sideTexture, sideTexture);
         }
 }

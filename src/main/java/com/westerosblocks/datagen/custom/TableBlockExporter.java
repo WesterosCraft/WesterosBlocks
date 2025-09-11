@@ -23,14 +23,11 @@ public class TableBlockExporter extends BaseBlockExporter {
                         String texturePath) {
                 String blockName = getBlockName(block);
 
-                // Key used by the custom Blockbench table models
                 TextureKey KEY1 = TextureKey.of("1");
 
-                // Texture map for the custom models (all parts use a single texture key "1")
                 TextureMap textureMap = new TextureMap()
                                 .put(KEY1, Identifier.of(WesterosBlocks.MOD_ID, "block/" + texturePath));
 
-                // Parent models (Blockbench) for each table type
                 Model singleParent = new Model(
                                 java.util.Optional.of(Identifier.of(WesterosBlocks.MOD_ID,
                                                 "block/table/table_single")),
@@ -48,7 +45,6 @@ public class TableBlockExporter extends BaseBlockExporter {
                                                 "block/table/table_corner")),
                                 java.util.Optional.empty(), KEY1);
 
-                // Upload child models that inherit from the custom parents
                 Identifier singleModelId = singleParent.upload(
                                 Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "/table_single"),
                                 textureMap, generator.modelCollector);
@@ -65,7 +61,6 @@ public class TableBlockExporter extends BaseBlockExporter {
                                 Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "/table_corner"),
                                 textureMap, generator.modelCollector);
 
-                // Use MultipartBlockStateSupplier for connection-based state generation
                 MultipartBlockStateSupplier stateSupplier = MultipartBlockStateSupplier.create(block);
 
                 // Single table (no connections)

@@ -12,18 +12,6 @@ import java.util.Optional;
 
 
 public class CrossBlockExporter extends BaseBlockExporter {
-
-
-
-    /**
-     * Generates block state models for cross blocks with rotation variants.
-     * 
-     * @param generator The BlockStateModelGenerator to use
-     * @param block The block to generate models for
-     * @param texturePath The texture path to use
-     * @param isTinted Whether the block should be tinted
-     * @param rotationCount Number of random rotations (1 or 4)
-     */
     public static void generateCross(BlockStateModelGenerator generator, Block block, String texturePath, boolean isTinted, int rotationCount) {
         // Create the cross model
         Identifier modelId = createCrossModel(generator, block, texturePath, isTinted);
