@@ -3437,7 +3437,9 @@ public class ModBlocks {
                 ModBlocks.WEIRWOOD_FACE_6,
                 ModBlocks.WEIRWOOD_FACE_7,
                 ModBlocks.WEIRWOOD_FACE_8,
-                ModBlocks.WEIRWOOD_SCARS
+                ModBlocks.WEIRWOOD_SCARS,
+                ModBlocks.OAK_BRANCH,
+                ModBlocks.BIRCH_BRANCH
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_half_ashlar_tab",
@@ -3541,7 +3543,9 @@ public class ModBlocks {
                 ModBlocks.CABINET_DRAWER,
                 ModBlocks.EMPTY_CABINET,
                 ModBlocks.FULL_CABINET,
-                ModBlocks.MIRROR_BLOCK
+                ModBlocks.MIRROR_BLOCK,
+                ModBlocks.OAK_TABLE,
+                ModBlocks.OAK_CHAIR
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_grass_dirt_tab",
@@ -3588,142 +3592,203 @@ public class ModBlocks {
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_wood_planks_tab",
-                ModBlocks.PARQUET_FLOOR
+                ModBlocks.PARQUET_FLOOR,
+                ModBlocks.BIRCH_DOOR,
+                ModBlocks.EYRIE_WEIRWOOD_DOOR,
+                ModBlocks.GREY_WOOD_DOOR,
+                ModBlocks.JUNGLE_DOOR,
+                ModBlocks.NORTHERN_WOOD_DOOR,
+                ModBlocks.OAK_DOOR,
+                ModBlocks.SPRUCE_DOOR,
+                ModBlocks.WHITE_WOOD_DOOR,
+                ModBlocks.LOCKED_BIRCH_DOOR,
+                ModBlocks.LOCKED_DARK_NORTHERN_WOOD_DOOR,
+                ModBlocks.LOCKED_GREY_WOOD_DOOR,
+                ModBlocks.LOCKED_JUNGLE_DOOR,
+                ModBlocks.LOCKED_OAK_DOOR,
+                ModBlocks.LOCKED_SPRUCE_DOOR,
+                ModBlocks.LOCKED_WHITE_WOOD_DOOR
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_food_blocks_tab",
+                ModBlocks.POMEGRANATE_BASKET,
+                ModBlocks.PURPLE_GRAPE_BASKET,
+                ModBlocks.PURPLE_GRAPE_CRATE,
+                ModBlocks.SALT_CRATE,
+                ModBlocks.SOURLEAF_BASKET,
+                ModBlocks.SOURLEAF_CRATE,
+                ModBlocks.SPIT_ROAST,
+                ModBlocks.SQUASH,
+                ModBlocks.TURNIP_BASKET,
+                ModBlocks.TURNIP_CRATE,
+                ModBlocks.WHITE_GRAPE_BASKET,
+                ModBlocks.WHITE_GRAPE_CRATE,
+                ModBlocks.FISH_BASKET_SLAB,
+                ModBlocks.GRAIN_BASKET_SLAB,
+                ModBlocks.GRAIN_FLOUR_SACK,
+                ModBlocks.HOP_BASKET_SLAB
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_panelling_carvings_tab",
+                ModBlocks.PINK_SANDSTONE_ENGRAVED,
+                ModBlocks.REACH_BRICK_ENGRAVED,
+                ModBlocks.REACH_OAK_WOOD_PANELLING,
+                ModBlocks.REACH_SPRUCE_WOOD_PANELLING,
+                ModBlocks.REDORANGE_CARVED_SANDSTONE,
+                ModBlocks.SMALL_ORANGE_BRICKS_ORNATE_TOP,
+                ModBlocks.SMALL_ORANGE_BRICKS_ORNATE,
+                ModBlocks.STORMLANDS_BRICK_ENGRAVED,
+                ModBlocks.TERRACOTTA_ENGRAVED,
+                ModBlocks.VIVID_DARK_SANDSTONE_ENGRAVED,
+                ModBlocks.VIVID_SANDSTONE_ENGRAVED,
+                ModBlocks.WHITE_BRICK_ENGRAVED,
+                ModBlocks.WINTERFELL_CARVING,
+                ModBlocks.SANDSTONE_PILLAR
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_windows_glass_tab",
+                ModBlocks.SEPT_CRYSTAL_LARGE,
+                ModBlocks.BIRCH_WINDOW_SHUTTERS,
+                ModBlocks.DORNE_RED_WINDOW_SHUTTERS,
+                ModBlocks.GREEN_LANNISPORT_WINDOW_SHUTTERS,
+                ModBlocks.GREY_WOOD_WINDOW_SHUTTERS,
+                ModBlocks.JUNGLE_WINDOW_SHUTTERS,
+                ModBlocks.NORTHERN_WOOD_WINDOW_SHUTTERS,
+                ModBlocks.OAK_WINDOW_SHUTTERS,
+                ModBlocks.REACH_BLUE_WINDOW_SHUTTERS,
+                ModBlocks.SPRUCE_WINDOW_SHUTTERS,
+                ModBlocks.WHITE_WOOD_WINDOW_SHUTTERS,
+                ModBlocks.DORNE_CARVED_STONE_WINDOW,
+                ModBlocks.DORNE_CARVED_WOODEN_WINDOW
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_logs_tab",
+                ModBlocks.JUNGLE_LOG_CHAIN,
+                ModBlocks.JUNGLE_LOG_ROPE,
+                ModBlocks.MOSSY_BIRCH_LOG,
+                ModBlocks.MOSSY_JUNGLE_LOG,
+                ModBlocks.MOSSY_OAK_LOG,
+                ModBlocks.MOSSY_SPRUCE_LOG,
+                ModBlocks.OAK_LOG_CHAIN,
+                ModBlocks.OAK_LOG_ROPE,
+                ModBlocks.PALM_TREE_LOG,
+                ModBlocks.SPRUCE_LOG_CHAIN,
+                ModBlocks.SPRUCE_LOG_ROPE
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_brick_tab",
+                ModBlocks.ORANGE_BRICK_ARCH_DOUBLE,
+                ModBlocks.ORANGE_BRICK_ARCH_SINGLE,
+                ModBlocks.ORANGE_BRICK_DENTIL,
+                ModBlocks.ORANGE_BRICK_ROWLOCK,
+                ModBlocks.SOUTHERN_BRICK_ARCH_FLAT,
+                ModBlocks.SOUTHERN_BRICK_ARCH,
+                ModBlocks.SOUTHERN_BRICK_LINTEL
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_timber_frame_tab",
+                ModBlocks.TIMBER_NORTHERN_BLUE_BRESSUMMER,
+                ModBlocks.TIMBER_NORTHERN_GREEN_LEFTHATCH
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_marble_plaster_tab",
+                ModBlocks.LANNISPORT_KEYSTONE_ORANGE_PLASTER,
+                ModBlocks.LANNISPORT_KEYSTONE_YELLOW_PLASTER,
+                ModBlocks.LIGHT_GREY_STONE_WHITE_PLASTER,
+                ModBlocks.SMALL_SMOOTH_STONE_BRICK_BLUE_PLASTER,
+                ModBlocks.SMALL_SMOOTH_STONE_BRICK_WHITE_PLASTER,
+                ModBlocks.SMALL_STONE_BRICK_WHITE_PLASTER,
+                ModBlocks.SMALL_WHITE_BRICK_BROWNISH_WHITE_PLASTER,
+                ModBlocks.SMALL_WHITE_BRICK_WHITE_PLASTER,
+                ModBlocks.UNUSED_BROWN_PLASTER,
+                ModBlocks.UNUSED_PURPLE_PLASTER,
+                ModBlocks.MARBLE_PILLAR_VERTICAL_CTM,
+                ModBlocks.MARBLE_PILLAR
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_cobblestone_tab",
+                ModBlocks.SANDY_STONE_SLABS
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_sand_gravel_tab",
+                ModBlocks.YELLOW_STAINED_CLAY
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_grass_dirt_tab",
+                ModBlocks.THICK_GRASS_BLOCK
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_utility_tab",
+                ModBlocks.SHOP_UTILITY_BLOCK,
+                ModBlocks.SPECIAL_UTILITY_BLOCK,
+                ModBlocks.WIP_UTILITY_BLOCK,
+                ModBlocks.WORKSHOP_UTILITY_BLOCK,
+                ModBlocks.YARD_UTILITY_BLOCK
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_tool_blocks_tab",
+                ModBlocks.PISTON_TOP
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_decor_tab",
+                ModBlocks.SILVER_TIN_CRATE,
+                ModBlocks.WATER_BARREL,
+                ModBlocks.CLOSED_BARREL,
+                ModBlocks.FIREWOOD,
+                ModBlocks.FIREWOOD_SLAB
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_misc_tab",
+                ModBlocks.PILED_BONES,
+                ModBlocks.STACKED_BONES_SOLID,
+                ModBlocks.HARRENHAL_SECRET_DOOR,
+                ModBlocks.RED_KEEP_SECRET_DOOR,
+                ModBlocks.ARCHERY_TARGET,
+                ModBlocks.STACKED_BONES
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_furniture_tab",
+                ModBlocks.TABLE_BOOKS,
+                ModBlocks.TABLE_DRAWERS,
+                ModBlocks.TABLE_WIDGETS
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_lighting_tab",
+                ModBlocks.GLOWING_EMBERS,
+                ModBlocks.RED_LANTERN2,
+                ModBlocks.TORCH,
+                ModBlocks.TORCH_UNLIT,
+                ModBlocks.CANDLE,
+                ModBlocks.CANDLE_UNLIT
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_metal_tab",
+                ModBlocks.IRON_BARS,
+                ModBlocks.IRON_CROSSBAR,
+                ModBlocks.OXIDIZED_IRON_BARS,
+                ModBlocks.OXIDIZED_IRON_CROSSBAR,
+                ModBlocks.HORIZONTAL_CHAIN
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_cloth_fibers_tab",
+                ModBlocks.VERTICAL_NET,
+                ModBlocks.FANCY_BLUE_CARPET,
+                ModBlocks.FANCY_RED_CARPET,
+                ModBlocks.HORIZONTAL_NET,
+                ModBlocks.HORIZONTAL_ROPE
+        );
+
+        WesterosCreativeModeTabs.addToTab("westeros_water_air_tab",
+                ModBlocks.CORAL_TUBE_FAN,
+                ModBlocks.CORAL_BRAIN_FAN,
+                ModBlocks.CORAL_BUBBLE_FAN,
+                ModBlocks.CORAL_FIRE_FAN,
+                ModBlocks.CORAL_HORN_FAN,
+                ModBlocks.PACKED_SNOW
         );
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.PILED_BONES);
-            entries.add(ModBlocks.PINK_SANDSTONE_ENGRAVED);
-            entries.add(ModBlocks.PISTON_TOP);
-            entries.add(ModBlocks.POMEGRANATE_BASKET);
-            entries.add(ModBlocks.PURPLE_GRAPE_BASKET);
-            entries.add(ModBlocks.PURPLE_GRAPE_CRATE);
-            entries.add(ModBlocks.REACH_BRICK_ENGRAVED);
-            entries.add(ModBlocks.REACH_OAK_WOOD_PANELLING);
-            entries.add(ModBlocks.REDORANGE_CARVED_SANDSTONE);
-            entries.add(ModBlocks.RED_LANTERN2);
-            entries.add(ModBlocks.REACH_SPRUCE_WOOD_PANELLING);
-            entries.add(ModBlocks.SALT_CRATE);
-            entries.add(ModBlocks.SANDY_STONE_SLABS);
-            entries.add(ModBlocks.SEPT_CRYSTAL_LARGE);
-            entries.add(ModBlocks.SHOP_UTILITY_BLOCK);
-            entries.add(ModBlocks.SILVER_TIN_CRATE);
-            entries.add(ModBlocks.SMALL_ORANGE_BRICKS_ORNATE_TOP);
-            entries.add(ModBlocks.SMALL_ORANGE_BRICKS_ORNATE);
-            entries.add(ModBlocks.SMALL_SMOOTH_STONE_BRICK_BLUE_PLASTER);
-            entries.add(ModBlocks.SMALL_SMOOTH_STONE_BRICK_WHITE_PLASTER);
-            entries.add(ModBlocks.SMALL_STONE_BRICK_WHITE_PLASTER);
-            entries.add(ModBlocks.SMALL_WHITE_BRICK_BROWNISH_WHITE_PLASTER);
-            entries.add(ModBlocks.SMALL_WHITE_BRICK_WHITE_PLASTER);
-            entries.add(ModBlocks.SOURLEAF_BASKET);
-            entries.add(ModBlocks.SOURLEAF_CRATE);
-            entries.add(ModBlocks.SOUTHERN_BRICK_ARCH_FLAT);
-            entries.add(ModBlocks.SOUTHERN_BRICK_ARCH);
-            entries.add(ModBlocks.SOUTHERN_BRICK_LINTEL);
-            entries.add(ModBlocks.SPECIAL_UTILITY_BLOCK);
-            entries.add(ModBlocks.SPIT_ROAST);
-            entries.add(ModBlocks.SQUASH);
-            entries.add(ModBlocks.STACKED_BONES_SOLID);
-            entries.add(ModBlocks.STORMLANDS_BRICK_ENGRAVED);
-            entries.add(ModBlocks.TABLE_BOOKS);
-            entries.add(ModBlocks.TABLE_DRAWERS);
-            entries.add(ModBlocks.THICK_GRASS_BLOCK);
-            entries.add(ModBlocks.TABLE_WIDGETS);
-            entries.add(ModBlocks.OAK_TABLE);
-            entries.add(ModBlocks.TERRACOTTA_ENGRAVED);
-            entries.add(ModBlocks.TIMBER_NORTHERN_BLUE_BRESSUMMER);
-            entries.add(ModBlocks.TIMBER_NORTHERN_GREEN_LEFTHATCH);
-            entries.add(ModBlocks.TURNIP_BASKET);
-            entries.add(ModBlocks.TURNIP_CRATE);
-            entries.add(ModBlocks.UNUSED_BROWN_PLASTER);
-            entries.add(ModBlocks.UNUSED_PURPLE_PLASTER);
-            entries.add(ModBlocks.VIVID_DARK_SANDSTONE_ENGRAVED);
-            entries.add(ModBlocks.VIVID_SANDSTONE_ENGRAVED);
-            entries.add(ModBlocks.WATER_BARREL);
-            entries.add(ModBlocks.WHITE_BRICK_ENGRAVED);
-            entries.add(ModBlocks.WHITE_GRAPE_BASKET);
-            entries.add(ModBlocks.WHITE_GRAPE_CRATE);
-            entries.add(ModBlocks.WINTERFELL_CARVING);
-            entries.add(ModBlocks.WIP_UTILITY_BLOCK);
-            entries.add(ModBlocks.WORKSHOP_UTILITY_BLOCK);
-            entries.add(ModBlocks.YARD_UTILITY_BLOCK);
-            entries.add(ModBlocks.YELLOW_STAINED_CLAY);
-            entries.add(ModBlocks.ARCHERY_TARGET);
-            entries.add(ModBlocks.CLOSED_BARREL);
-            entries.add(ModBlocks.FIREWOOD);
-            entries.add(ModBlocks.JUNGLE_LOG_CHAIN);
-            entries.add(ModBlocks.JUNGLE_LOG_ROPE);
-            entries.add(ModBlocks.MARBLE_PILLAR_VERTICAL_CTM);
-            entries.add(ModBlocks.MARBLE_PILLAR);
-            entries.add(ModBlocks.MOSSY_BIRCH_LOG);
-            entries.add(ModBlocks.MOSSY_JUNGLE_LOG);
-            entries.add(ModBlocks.MOSSY_OAK_LOG);
-            entries.add(ModBlocks.MOSSY_SPRUCE_LOG);
-            entries.add(ModBlocks.OAK_LOG_CHAIN);
-            entries.add(ModBlocks.OAK_LOG_ROPE);
-            entries.add(ModBlocks.PALM_TREE_LOG);
-            entries.add(ModBlocks.SANDSTONE_PILLAR);
-            entries.add(ModBlocks.SPRUCE_LOG_CHAIN);
-            entries.add(ModBlocks.SPRUCE_LOG_ROPE);
-            entries.add(ModBlocks.STACKED_BONES);
-            entries.add(ModBlocks.FIREWOOD_SLAB);
-            entries.add(ModBlocks.FISH_BASKET_SLAB);
-            entries.add(ModBlocks.GRAIN_BASKET_SLAB);
-            entries.add(ModBlocks.GRAIN_FLOUR_SACK);
-            entries.add(ModBlocks.HOP_BASKET_SLAB);
-            entries.add(ModBlocks.OAK_BRANCH);
-            entries.add(ModBlocks.BIRCH_BRANCH);
-            entries.add(ModBlocks.BIRCH_DOOR);
-            entries.add(ModBlocks.EYRIE_WEIRWOOD_DOOR);
-            entries.add(ModBlocks.GREY_WOOD_DOOR);
-            entries.add(ModBlocks.HARRENHAL_SECRET_DOOR);
-            entries.add(ModBlocks.JUNGLE_DOOR);
-            entries.add(ModBlocks.NORTHERN_WOOD_DOOR);
-            entries.add(ModBlocks.OAK_DOOR);
-            entries.add(ModBlocks.RED_KEEP_SECRET_DOOR);
-            entries.add(ModBlocks.SPRUCE_DOOR);
-            entries.add(ModBlocks.WHITE_WOOD_DOOR);
-            entries.add(ModBlocks.LOCKED_BIRCH_DOOR);
-            entries.add(ModBlocks.LOCKED_DARK_NORTHERN_WOOD_DOOR);
-            entries.add(ModBlocks.LOCKED_GREY_WOOD_DOOR);
-            entries.add(ModBlocks.LOCKED_JUNGLE_DOOR);
-            entries.add(ModBlocks.LOCKED_OAK_DOOR);
-            entries.add(ModBlocks.LOCKED_SPRUCE_DOOR);
-            entries.add(ModBlocks.LOCKED_WHITE_WOOD_DOOR);
-            entries.add(ModBlocks.BIRCH_WINDOW_SHUTTERS);
-            entries.add(ModBlocks.DORNE_RED_WINDOW_SHUTTERS);
-            entries.add(ModBlocks.GREEN_LANNISPORT_WINDOW_SHUTTERS);
-            entries.add(ModBlocks.GREY_WOOD_WINDOW_SHUTTERS);
-            entries.add(ModBlocks.JUNGLE_WINDOW_SHUTTERS);
-            entries.add(ModBlocks.NORTHERN_WOOD_WINDOW_SHUTTERS);
-            entries.add(ModBlocks.OAK_WINDOW_SHUTTERS);
-            entries.add(ModBlocks.REACH_BLUE_WINDOW_SHUTTERS);
-            entries.add(ModBlocks.SPRUCE_WINDOW_SHUTTERS);
-            entries.add(ModBlocks.WHITE_WOOD_WINDOW_SHUTTERS);
-            entries.add(ModBlocks.DORNE_CARVED_STONE_WINDOW);
-            entries.add(ModBlocks.DORNE_CARVED_WOODEN_WINDOW);
-            entries.add(ModBlocks.IRON_BARS);
-            entries.add(ModBlocks.IRON_CROSSBAR);
-            entries.add(ModBlocks.OXIDIZED_IRON_BARS);
-            entries.add(ModBlocks.OXIDIZED_IRON_CROSSBAR);
-            entries.add(ModBlocks.VERTICAL_NET);
-            entries.add(ModBlocks.OAK_CHAIR);
-            entries.add(ModBlocks.TORCH);
-            entries.add(ModBlocks.TORCH_UNLIT);
-            entries.add(ModBlocks.CANDLE);
-            entries.add(ModBlocks.CANDLE_UNLIT);
             entries.add(ModBlocks.ARBOR_BRICK_ARROW_SLIT);
-            entries.add(ModBlocks.CORAL_TUBE_FAN);
-            entries.add(ModBlocks.CORAL_BRAIN_FAN);
-            entries.add(ModBlocks.CORAL_BUBBLE_FAN);
-            entries.add(ModBlocks.CORAL_FIRE_FAN);
-            entries.add(ModBlocks.CORAL_HORN_FAN);
-            entries.add(ModBlocks.FANCY_BLUE_CARPET);
-            entries.add(ModBlocks.FANCY_RED_CARPET);
-            entries.add(ModBlocks.HORIZONTAL_CHAIN);
-            entries.add(ModBlocks.HORIZONTAL_NET);
-            entries.add(ModBlocks.HORIZONTAL_ROPE);
-            entries.add(ModBlocks.PACKED_SNOW);
         });
     }
 
