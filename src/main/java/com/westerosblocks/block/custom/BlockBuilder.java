@@ -101,6 +101,10 @@ public class BlockBuilder<T extends Block> {
         return new BlockBuilder<>(new WCWebBlock.Factory());
     }
     
+    public static BlockBuilder<WCFlowerbedBlock> flowerbed() {
+        return new BlockBuilder<>(new WCFlowerbedBlock.Factory());
+    }
+    
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
         return this;

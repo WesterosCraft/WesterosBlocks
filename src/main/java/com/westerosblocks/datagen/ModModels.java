@@ -74,6 +74,12 @@ public class ModModels {
     public static final Model FAN = ModModels.block("untinted/fan", ModTextureKey.FAN);
     public static final Model WALL_FAN = ModModels.block("untinted/wall_fan", ModTextureKey.FAN);
 
+    // Flowerbed models (using vanilla parents)
+    public static final Model FLOWERBED_1 = vanillaBlock("flowerbed_1", TextureKey.FLOWERBED, TextureKey.STEM);
+    public static final Model FLOWERBED_2 = vanillaBlock("flowerbed_2", TextureKey.FLOWERBED, TextureKey.STEM);
+    public static final Model FLOWERBED_3 = vanillaBlock("flowerbed_3", TextureKey.FLOWERBED, TextureKey.STEM);
+    public static final Model FLOWERBED_4 = vanillaBlock("flowerbed_4", TextureKey.FLOWERBED, TextureKey.STEM);
+
     // helper method for creating Models
     private static Model block(String parent, TextureKey... requiredTextureKeys) {
         return new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parent)), Optional.empty(),

@@ -3,6 +3,7 @@ package com.westerosblocks.block;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.BlockBuilder;
+import com.westerosblocks.block.custom.WCFlowerbedBlock;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
@@ -3691,6 +3692,16 @@ public class ModBlocks {
                     .layerSensitive()
                     .build());
 
+    // Flowerbed Blocks
+    public static final Block CLOVER = registerBlock(
+            "clover",
+            BlockBuilder.flowerbed()
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .noCollision()
+                    .build());
+
 
     /**
      * Initialize all blocks
@@ -3817,7 +3828,8 @@ public class ModBlocks {
                 ModBlocks.YELLOW_RUDBECKIA,
                 ModBlocks.YELLOW_SUNFLOWER,
                 ModBlocks.YELLOW_TANSY,
-                ModBlocks.YELLOW_WILDFLOWERS);
+                ModBlocks.YELLOW_WILDFLOWERS,
+                ModBlocks.CLOVER);
 
         WesterosCreativeModeTabs.addToTab("westeros_logs_tab",
                 ModBlocks.SIX_SIDED_BIRCH,

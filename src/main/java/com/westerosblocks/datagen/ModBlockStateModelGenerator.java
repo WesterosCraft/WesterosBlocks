@@ -77,6 +77,7 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 case "fan" -> buildFan();
                                 case "plant" -> buildPlant();
                                 case "cross" -> buildPlant(); // Alias for plant
+                                case "flowerbed" -> buildFlowerbed();
                                 default -> throw new IllegalArgumentException("Unknown block type: " + blockType);
                         }
                 }
@@ -186,6 +187,16 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 generatePlant(generator, block, texture, isTinted);
                         } else if (textures.length > 0) {
                                 generatePlant(generator, block, textures[0], isTinted);
+                        }
+                }
+
+                private void buildFlowerbed() {
+                        if (!texture.isEmpty()) {
+                                FlowerbedBlockExporter.generateCustomFlowerbed(generator, block, "block/flowerbed", TextureKey.STEM, "", texture);
+                        } else if (textures.length > 0) {
+                                String stemTexture = textures.length > 1 ? textures[0] : "";
+                                String flowerTexture = textures.length > 1 ? textures[1] : textures[0];
+                                FlowerbedBlockExporter.generateCustomFlowerbed(generator, block, "block/flowerbed", TextureKey.STEM, stemTexture, flowerTexture);
                         }
                 }
         }
@@ -411,5 +422,9 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
         public static CustomBlockBuilder registerCustomCrossBlock(BlockStateModelGenerator generator, Block block) {
                 return new CustomBlockBuilder(generator, block, "cross");
+        }
+
+        public static FlowerbedBlockExporter.CustomFlowerbedBuilder registerCustomFlowerbedBlock(BlockStateModelGenerator generator, Block block) {
+                return FlowerbedBlockExporter.registerCustomFlowerbedBlock(generator, block);
         }
 }
