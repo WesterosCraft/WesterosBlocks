@@ -458,6 +458,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.vertical_chain", "Vertical Chain");
                 translationBuilder.add("block.westerosblocks.vertical_rope", "Vertical Rope");
 
+                // Crop Blocks
+                translationBuilder.add("block.westerosblocks.crop_carrots", "Carrots");
+
                 // Flowerbed Blocks
                 translationBuilder.add("block.westerosblocks.clover", "Clover");
         }

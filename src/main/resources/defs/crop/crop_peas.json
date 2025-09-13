@@ -1,0 +1,37 @@
+{
+  "blockName": "crop_peas",
+  "blockType": "crop",
+  "hardness": 5,
+  "stepSound": "grass",
+  "material": "plants",
+  "resistance": 4,
+  "type": "toggleOnUse,layerSensitive",
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 3
+    }
+  ],
+  "creativeTab": "westeros_crops_herbs_tab",
+  "label": "Peas",
+  "states": [
+    {
+      "stateID": "age0",
+      "textures": [
+        "peas/peas_stage_0"
+      ]
+    },
+    {
+      "stateID": "age1",
+      "textures": [
+        "peas/peas_stage_1"
+      ]
+    },
+    {
+      "stateID": "age2",
+      "textures": [
+        "peas/peas_stage_2"
+      ]
+    }
+  ]
+}

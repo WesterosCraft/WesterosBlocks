@@ -1,75 +1,25 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.block.ModBlocks;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.state.property.Properties;
-import net.minecraft.text.Text;
 
-import java.util.List;
-import java.util.Map;
+public class WCCropBlock extends WCPlantBlock {
+    
+    public static class Factory extends BlockFactory {
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
+            AbstractBlock.Settings props = settings.noCollision().strength(0.0f);
+            boolean layerSensitive = params.length > 0 ? (Boolean) params[0] : false;
+            boolean toggleOnUse = params.length > 1 ? (Boolean) params[1] : false;
+            if (layerSensitive) {
+                tempLAYERS = Properties.LAYERS;
+            }
+            return new WCCropBlock(props, layerSensitive, toggleOnUse);
+        }
+    }
 
-public class WCCropBlock {
-
+    protected WCCropBlock(AbstractBlock.Settings settings, boolean layerSensitive, boolean toggleOnUse) {
+        super(settings, layerSensitive, toggleOnUse);
+    }
 }
-
-
-//package com.westerosblocks.block.custom;
-//
-//import com.westerosblocks.block.ModBlocks;
-//import com.westerosblocks.block.ModBlock;
-//import com.westerosblocks.block.ModBlockFactory;
-//import com.westerosblocks.block.ModBlockLifecycle;
-//import net.minecraft.block.AbstractBlock;
-//import net.minecraft.block.Block;
-//import net.minecraft.item.Item;
-//import net.minecraft.item.ItemStack;
-//import net.minecraft.item.tooltip.TooltipType;
-//import net.minecraft.state.property.Properties;
-//import net.minecraft.text.Text;
-//
-//import java.util.List;
-//import java.util.Map;
-//
-//public class WCCropBlockOld extends WCPlantBlockOld implements ModBlockLifecycle {
-//    public static class Factory extends ModBlockFactory {
-//        @Override
-//        public Block buildBlockClass(ModBlock def) {
-//            // See if we have a state property
-//            ModBlock.StateProperty state = def.buildStateProperty();
-//            if (state != null) {
-//                tempSTATE = state;
-//            }
-//            Map<String, String> params = ModBlocks.parseBlockParameters(def.getType());
-//
-//            if (params.containsKey(ModBlock.LAYER_SENSITIVE)) {
-//                tempLAYERS = Properties.LAYERS;
-//            }
-//
-//            AbstractBlock.Settings settings = def.applyCustomProperties().noCollision().breakInstantly();
-//            Block blk = new WCCropBlockOld(settings, def);
-//            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
-//        }
-//    }
-//
-//    protected WCCropBlockOld(AbstractBlock.Settings settings, ModBlock def) {
-//        super(settings, def);
-//    }
-//
-//    private static final String[] TAGS = {"crops"};
-//
-//    @Override
-//    public String[] getBlockTags() {
-//        return TAGS;
-//    }
-//
-//    @Override
-//    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-//        addCustomTooltip(tooltip);
-//        super.appendTooltip(stack, context, tooltip, options);
-//    }
-//
-//}

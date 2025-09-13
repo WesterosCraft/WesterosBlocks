@@ -3692,6 +3692,29 @@ public class ModBlocks {
                     .layerSensitive()
                     .build());
 
+    // Crop Blocks
+    public static final Block CROP_CARROTS = registerBlock(
+            "crop_carrots",
+            BlockBuilder.crop()
+                    .strength(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .layerSensitive()
+                    .toggleOnUse()
+                    .states(4)
+                    .build());
+
+    public static final Block CANDLE_ALTAR = registerBlock(
+            "candle_altar",
+            BlockBuilder.crop()
+                    .strength(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.METAL)
+                    .layerSensitive()
+                    .toggleOnUse()
+                    .states(4)
+                    .build());
+
     // Flowerbed Blocks
     public static final Block CLOVER = registerBlock(
             "clover",
@@ -3778,7 +3801,8 @@ public class ModBlocks {
                 ModBlocks.DOCK_LEAF,
                 ModBlocks.RED_SOURLEAF_BUSH,
                 ModBlocks.STRAWBERRY_BUSH,
-                ModBlocks.BUSHEL_OF_SOURLEAF
+                ModBlocks.BUSHEL_OF_SOURLEAF,
+                ModBlocks.CROP_CARROTS
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_flowers_tab",

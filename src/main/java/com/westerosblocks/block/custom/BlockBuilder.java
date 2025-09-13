@@ -97,6 +97,10 @@ public class BlockBuilder<T extends Block> {
         return new BlockBuilder<>(new WCPlantBlock.Factory());
     }
     
+    public static BlockBuilder<WCCropBlock> crop() {
+        return new BlockBuilder<>(new WCCropBlock.Factory());
+    }
+    
     public static BlockBuilder<WCWebBlock> web() {
         return new BlockBuilder<>(new WCWebBlock.Factory());
     }
