@@ -10,6 +10,7 @@ import net.minecraft.state.property.Property;
 import java.util.*;
 
 public class ModProperties {
+    public static final StateProperty STATE = new StateProperty(List.of("default"));
     public static final IntProperty CONNECTSTATE = IntProperty.of("connectstate", 0, 3);
     public static final BooleanProperty SYMMETRICAL = BooleanProperty.of("symmetrical");
 
@@ -63,6 +64,6 @@ public class ModProperties {
         }
     }
 
-    public static final StateProperty STATE = new StateProperty(Arrays.asList("default", "on", "off"));
+
 
 }
