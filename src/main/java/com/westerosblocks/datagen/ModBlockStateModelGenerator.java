@@ -77,6 +77,7 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 case "fan" -> buildFan();
                                 case "plant" -> buildPlant();
                                 case "cross" -> buildPlant(); // Alias for plant
+//                                case "crop" -> buildCrop();
                                 case "flowerbed" -> buildFlowerbed();
                                 default -> throw new IllegalArgumentException("Unknown block type: " + blockType);
                         }
@@ -189,6 +190,7 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 generatePlant(generator, block, textures[0], isTinted);
                         }
                 }
+
 
                 private void buildFlowerbed() {
                         if (!texture.isEmpty()) {
@@ -418,6 +420,10 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
         public static CustomBlockBuilder registerCustomPlantBlock(BlockStateModelGenerator generator, Block block) {
                 return new CustomBlockBuilder(generator, block, "plant");
+        }
+
+        public static CustomBlockBuilder registerCustomCropBlock(BlockStateModelGenerator generator, Block block) {
+                return new CustomBlockBuilder(generator, block, "crop");
         }
 
         public static CustomBlockBuilder registerCustomCrossBlock(BlockStateModelGenerator generator, Block block) {

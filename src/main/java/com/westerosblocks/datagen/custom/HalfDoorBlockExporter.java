@@ -10,6 +10,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.data.client.VariantSettings.Rotation;
 
+import java.util.Optional;
+
 public class HalfDoorBlockExporter extends BaseBlockExporter {
 
     /**
@@ -87,8 +89,8 @@ public class HalfDoorBlockExporter extends BaseBlockExporter {
         String parentModelPath = "block/untinted/" + getParentModelName(variant);
         
         Model doorModel = new Model(
-            java.util.Optional.of(WesterosBlocks.id(parentModelPath)),
-            java.util.Optional.empty(),
+            Optional.of(WesterosBlocks.id(parentModelPath)),
+            Optional.empty(),
             TextureKey.BOTTOM
         );
         doorModel.upload(modelId, textureMap, generator.modelCollector);

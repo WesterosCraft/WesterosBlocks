@@ -9,16 +9,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.state.property.Properties;
 
-/**
- * Simplified torch block exporter following block-models.md patterns.
- * Handles both standing and wall torch variants cleanly.
- */
 public class TorchBlockExporter extends BaseBlockExporter {
-
-    /**
-     * Registers torch blocks (both standing and wall variants).
-     * Follows block-models.md section on variant registration.
-     */
     public static void registerTorchBlock(BlockStateModelGenerator generator, Block standingTorch, String texturePath) {
         Block wallTorch = Registries.BLOCK.get(WesterosBlocks.id("wall_" + standingTorch.getTranslationKey().replace("block.westerosblocks.", "")));
 
@@ -38,7 +29,7 @@ public class TorchBlockExporter extends BaseBlockExporter {
     }
 
     /**
-     * Registers the wall torch variant with cardinal direction support.
+     * Registers the wall torch variant
      */
     private static void registerWallTorch(BlockStateModelGenerator generator, Block block, String texturePath) {
         TextureMap textureMap = new TextureMap().put(TextureKey.TORCH, createBlockIdentifier(texturePath));

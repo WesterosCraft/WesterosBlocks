@@ -1,11 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import net.minecraft.block.Block;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.MultipartBlockStateSupplier;
-import net.minecraft.data.client.TextureKey;
-import net.minecraft.data.client.TextureMap;
-import net.minecraft.data.client.When;
+import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 
 import com.westerosblocks.WesterosBlocks;
@@ -32,25 +28,16 @@ public class BranchBlockExporter extends BaseBlockExporter {
         Identifier baseModelId = createBranchModel(generator, block, branchType, texturePaths, "base");
         Identifier horizontalModelId = createBranchModel(generator, block, branchType, texturePaths, "horizontal");
         Identifier connectedModelId = createBranchModel(generator, block, branchType, texturePaths, "connected");
-        Identifier horizontalConnectedModelId = createBranchModel(generator, block, branchType, texturePaths,
-                "horizontal_connected");
-        Identifier horizontalConnectedTwoCornerModelId = createBranchModel(generator, block, branchType, texturePaths,
-                "horizontal_connected_two_corner");
-        Identifier horizontalConnectedThreeModelId = createBranchModel(generator, block, branchType, texturePaths,
-                "horizontal_connected_three");
-        Identifier horizontalConnectedFourModelId = createBranchModel(generator, block, branchType, texturePaths,
-                "horizontal_connected_four");
-        Identifier horizontalConnectedUpCornerModelId = createBranchModel(generator, block, branchType, texturePaths,
-                "horizontal_connected_up_corner");
+        Identifier horizontalConnectedModelId = createBranchModel(generator, block, branchType, texturePaths, "horizontal_connected");
+        Identifier horizontalConnectedTwoCornerModelId = createBranchModel(generator, block, branchType, texturePaths, "horizontal_connected_two_corner");
+        Identifier horizontalConnectedThreeModelId = createBranchModel(generator, block, branchType, texturePaths, "horizontal_connected_three");
+        Identifier horizontalConnectedFourModelId = createBranchModel(generator, block, branchType, texturePaths, "horizontal_connected_four");
+        Identifier horizontalConnectedUpCornerModelId = createBranchModel(generator, block, branchType, texturePaths, "horizontal_connected_up_corner");
         Identifier connectedTwoModelId = createBranchModel(generator, block, branchType, texturePaths, "connected_two");
-        Identifier connectedTwoCornerModelId = createBranchModel(generator, block, branchType, texturePaths,
-                "connected_two_corner");
-        Identifier connectedThreeModelId = createBranchModel(generator, block, branchType, texturePaths,
-                "connected_three");
-        Identifier connectedFourModelId = createBranchModel(generator, block, branchType, texturePaths,
-                "connected_four");
+        Identifier connectedTwoCornerModelId = createBranchModel(generator, block, branchType, texturePaths, "connected_two_corner");
+        Identifier connectedThreeModelId = createBranchModel(generator, block, branchType, texturePaths, "connected_three");
+        Identifier connectedFourModelId = createBranchModel(generator, block, branchType, texturePaths, "connected_four");
 
-        // Use MultipartBlockStateSupplier for more efficient state generation
         MultipartBlockStateSupplier stateSupplier = MultipartBlockStateSupplier.create(block);
 
         // UP = false: Use horizontal models (no branch below)
@@ -429,7 +416,7 @@ public class BranchBlockExporter extends BaseBlockExporter {
         Identifier modelId = Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "/" + connectionType);
 
         // Create and upload the model
-        net.minecraft.data.client.Model model = new net.minecraft.data.client.Model(parentModel, Optional.empty(),
+        Model model = new Model(parentModel, Optional.empty(),
                 TextureKey.ALL, TextureKey.PARTICLE);
         model.upload(modelId, textureMap, generator.modelCollector);
 

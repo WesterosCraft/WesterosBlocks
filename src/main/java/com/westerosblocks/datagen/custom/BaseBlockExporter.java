@@ -30,8 +30,7 @@ public abstract class BaseBlockExporter {
 
     /**
      * Creates a nested model identifier following the pattern: block/blockName/variant
-     * Follows block-models.md section on model organization.
-     * 
+     *
      * @param block The block
      * @param variant The model variant (e.g., "bottom", "top", "open")
      * @return The nested model identifier
