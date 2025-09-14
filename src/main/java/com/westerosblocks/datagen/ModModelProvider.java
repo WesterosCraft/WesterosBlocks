@@ -2,6 +2,7 @@ package com.westerosblocks.datagen;
 
 import com.westerosblocks.block.ModBlocks;
 
+import com.westerosblocks.datagen.custom.CropBlockDatagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -885,15 +886,7 @@ public class ModModelProvider extends FabricModelProvider {
         registerCustomRailBlock(bsmg, ModBlocks.HORIZONTAL_ROPE).textures("rail_block/rope", "rail_block/rope_turned").build();
         registerCustomRailBlock(bsmg, ModBlocks.PACKED_SNOW).textures("rail_block/packed_snow", "rail_block/packed_snow_turned").build();
 
-        // Plant Blocks
-        // Crop Blocks
-        registerCustomCropBlock(bsmg, ModBlocks.CROP_CARROTS)
-                .state("carrots/carrots_stage_0")
-                .state("carrots/carrots_stage_1") 
-                .state("carrots/carrots_stage_2")
-                .state("carrots/carrots_stage_3")
-                .build();
-        
+        // Plant Block
         registerCustomPlantBlock(bsmg, ModBlocks.BLUE_BELLS).texture("flowers/blue_bells").build();
         registerCustomPlantBlock(bsmg, ModBlocks.BLUE_CHICORY)
                 .randomTexture("flowers/blue_chicory/side1")
@@ -1531,6 +1524,9 @@ public class ModModelProvider extends FabricModelProvider {
         registerCustomCrossBlock(bsmg, ModBlocks.VERTICAL_ROPE)
                 .texture("web_block/rope_vertical")
                 .build();
+
+        // Crop Blocks
+        CropBlockDatagen.generateCropBlock(bsmg, ModBlocks.CROP_CARROTS, "crop_carrots").isTinted().build();
     }
 
     @Override
