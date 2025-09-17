@@ -189,7 +189,6 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.thick_grass_block", "Thick Grass Block");
                 translationBuilder.add("block.westerosblocks.table_widgets", "Table Widgets");
                 translationBuilder.add("block.westerosblocks.oak_table", "Oak Table");
-                translationBuilder.add("block.westerosblocks.itchy_straw_bed", "Itchy Straw Bed");
                 translationBuilder.add("block.westerosblocks.terracotta_engraved", "Ashlar Engraved Terracotta");
                 translationBuilder.add("block.westerosblocks.turnip_basket", "Turnip Basket");
                 translationBuilder.add("block.westerosblocks.turnip_crate", "Turnip Crate");
@@ -469,6 +468,17 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
                 // Flowerbed Blocks
                 translationBuilder.add("block.westerosblocks.clover", "Clover");
+
+                // Bed Blocks
+                translationBuilder.add("block.westerosblocks.itchy_straw_bed", "Itchy Straw Bed");
+                translationBuilder.add("block.westerosblocks.hammock", "Hammock");
+                translationBuilder.add("block.westerosblocks.nights_watch_bed", "Nights Watch Bed");
+                translationBuilder.add("block.westerosblocks.noble_blue_bed", "Noble Blue Bed");
+                translationBuilder.add("block.westerosblocks.noble_red_bed", "Noble Red Bed");
+                translationBuilder.add("block.westerosblocks.northern_bed", "Northern Bed");
+                translationBuilder.add("block.westerosblocks.pale_green_bed", "Pale Green Bed");
+                translationBuilder.add("block.westerosblocks.pale_red_bed", "Pale Red Bed");
+                translationBuilder.add("block.westerosblocks.straw_bed", "Straw Bed");
         }
 
 }

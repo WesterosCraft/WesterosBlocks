@@ -3779,6 +3779,79 @@ public class ModBlocks {
                     .nonOpaque()
                     .build());
 
+    public static final Block HAMMOCK = registerBlock(
+            "hammock",
+            BlockBuilder.bed()
+                    .strength(0.2f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .build());
+
+    public static final Block NIGHTS_WATCH_BED = registerBlock(
+            "nights_watch_bed",
+            BlockBuilder.bed()
+                    .strength(0.2f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .build());
+
+    public static final Block NOBLE_BLUE_BED = registerBlock(
+            "noble_blue_bed",
+            BlockBuilder.bed()
+                    .strength(0.2f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .build());
+
+    public static final Block NOBLE_RED_BED = registerBlock(
+            "noble_red_bed",
+            BlockBuilder.bed()
+                    .strength(0.2f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .build());
+
+    public static final Block NORTHERN_BED = registerBlock(
+            "northern_bed",
+            BlockBuilder.bed()
+                    .strength(0.2f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .build());
+
+    public static final Block PALE_GREEN_BED = registerBlock(
+            "pale_green_bed",
+            BlockBuilder.bed()
+                    .strength(0.2f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .build());
+
+    public static final Block PALE_RED_BED = registerBlock(
+            "pale_red_bed",
+            BlockBuilder.bed()
+                    .strength(0.2f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOL)
+                    .nonOpaque()
+                    .build());
+
+    public static final Block STRAW_BED = registerBlock(
+            "straw_bed",
+            BlockBuilder.bed()
+                    .strength(0.2f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .build());
+
+
     /**
      * Initialize all blocks
      */
@@ -4091,7 +4164,15 @@ public class ModBlocks {
                 ModBlocks.TABLE_BOOKS,
                 ModBlocks.TABLE_DRAWERS,
                 ModBlocks.TABLE_WIDGETS,
-                ModBlocks.ITCHY_STRAW_BED
+                ModBlocks.ITCHY_STRAW_BED,
+                ModBlocks.HAMMOCK,
+                ModBlocks.NIGHTS_WATCH_BED,
+                ModBlocks.NOBLE_BLUE_BED,
+                ModBlocks.NOBLE_RED_BED,
+                ModBlocks.NORTHERN_BED,
+                ModBlocks.PALE_GREEN_BED,
+                ModBlocks.PALE_RED_BED,
+                ModBlocks.STRAW_BED
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_grass_dirt_tab",

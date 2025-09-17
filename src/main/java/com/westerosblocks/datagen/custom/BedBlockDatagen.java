@@ -25,8 +25,10 @@ public class BedBlockDatagen {
     }
     
     private static Model createBedItemModel(boolean tinted) {
-        String path = tinted ? "block/tinted/bed_item" : "block/untinted/bed_item";
-        return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(), TextureKey.TEXTURE);
+        String path = tinted ? "item/tinted/bed_item" : "item/untinted/bed_item";
+        return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(), 
+            ModTextureKey.BED_TOP, ModTextureKey.BED_TOP2, ModTextureKey.BED_SIDE, 
+            ModTextureKey.BED_SIDE2, ModTextureKey.BED_END, ModTextureKey.BED_END2);
     }
 
     // Builder pattern for bed block generation
@@ -169,15 +171,20 @@ public class BedBlockDatagen {
         }
         
         private void generateBedItemModel() {
+            // Map all 6 textures for the item model
+            // Based on your example: texture[0]=bedtop, texture[1]=bedtop2, texture[2]=bedside, 
+            // texture[3]=bedside2, texture[4]=bedend, texture[5]=bedend2
             TextureMap itemTextureMap = new TextureMap()
-                    .put(TextureKey.TEXTURE, WesterosBlocks.id("block/" + textures.getFirst()));
-            
-            // Generate item model using the proper method
-            Identifier itemModelId = createBedItemModel(isTinted)
-                    .upload(bedBlock, "_item", itemTextureMap, generator.modelCollector);
-            
-            // Register the item model
-            generator.registerParentedItemModel(bedBlock, itemModelId);
+                    .put(ModTextureKey.BED_TOP, WesterosBlocks.id("block/" + textures.get(0)))
+                    .put(ModTextureKey.BED_TOP2, WesterosBlocks.id("block/" + textures.get(1)))
+                    .put(ModTextureKey.BED_SIDE, WesterosBlocks.id("block/" + textures.get(2)))
+                    .put(ModTextureKey.BED_SIDE2, WesterosBlocks.id("block/" + textures.get(3)))
+                    .put(ModTextureKey.BED_END, WesterosBlocks.id("block/" + textures.get(4)))
+                    .put(ModTextureKey.BED_END2, WesterosBlocks.id("block/" + textures.get(5)));
+
+            Identifier itemModelId = Identifier.of("westerosblocks", "item/" + bedName);
+            createBedItemModel(isTinted)
+                    .upload(itemModelId, itemTextureMap, generator.modelCollector);
         }
     }
     
