@@ -28,6 +28,7 @@ public class CropBlockDatagen {
         private final String cropName;
         private boolean isTinted = false;
         private boolean isLayerSensitive = false;
+        private boolean doRandomTextures = false;
         private final List<StateVariant> states = new ArrayList<>();
 
         private static final String[] LAYER_CONDITIONS = {
@@ -59,6 +60,11 @@ public class CropBlockDatagen {
         
         public CropBlockBuilder isLayerSensitive() {
             this.isLayerSensitive = true;
+            return this;
+        }
+        
+        public CropBlockBuilder doRandomTextures() {
+            this.doRandomTextures = true;
             return this;
         }
         
@@ -107,19 +113,41 @@ public class CropBlockDatagen {
             for (int i = 0; i < states.size(); i++) {
                 StateVariant state = states.get(i);
                 
-                // Create texture map for this state (use first texture if multiple)
-                TextureMap textureMap = new TextureMap()
-                        .put(TextureKey.CROP, WesterosBlocks.id("block/" + state.textures[0]));
-                
-                // Generate model identifier with block name in path
-                String modelSuffix = "/" + cropName + "_" + state.stateID;
-                Identifier modelId = createCropStageModel(isTinted)
-                        .upload(cropBlock, modelSuffix, textureMap, generator.modelCollector);
-                
-                modelIds.add(modelId);
-                
-                // Register variant
-                variantMap.register(state.stateID, BlockStateVariant.create().put(VariantSettings.MODEL, modelId));
+                if (doRandomTextures && state.textures.length > 1) {
+                    // Generate multiple models with random textures
+                    List<Identifier> stateModelIds = new ArrayList<>();
+                    for (int j = 0; j < state.textures.length; j++) {
+                        TextureMap textureMap = new TextureMap()
+                                .put(TextureKey.CROP, WesterosBlocks.id("block/" + state.textures[j]));
+                        
+                        String modelSuffix = "/" + cropName + "_" + state.stateID + "_v" + (j + 1);
+                        Identifier modelId = createCropStageModel(isTinted)
+                                .upload(cropBlock, modelSuffix, textureMap, generator.modelCollector);
+                        
+                        stateModelIds.add(modelId);
+                    }
+                    
+                    // Register variant with random models
+                    List<BlockStateVariant> variants = stateModelIds.stream()
+                            .map(modelId -> BlockStateVariant.create().put(VariantSettings.MODEL, modelId))
+                            .collect(Collectors.toList());
+                    variantMap.register(state.stateID, variants);
+                    
+                    modelIds.addAll(stateModelIds);
+                } else {
+                    // Single texture model
+                    TextureMap textureMap = new TextureMap()
+                            .put(TextureKey.CROP, WesterosBlocks.id("block/" + state.textures[0]));
+                    
+                    String modelSuffix = "/" + cropName + "_" + state.stateID;
+                    Identifier modelId = createCropStageModel(isTinted)
+                            .upload(cropBlock, modelSuffix, textureMap, generator.modelCollector);
+                    
+                    modelIds.add(modelId);
+                    
+                    // Register variant
+                    variantMap.register(state.stateID, BlockStateVariant.create().put(VariantSettings.MODEL, modelId));
+                }
             }
             
             // Create blockstate supplier

@@ -1535,6 +1535,13 @@ public class ModModelProvider extends FabricModelProvider {
                 .addState("age3", "carrots/carrots_stage_3")
                 .build();
 
+        CropBlockDatagen
+                .generateCropBlock(bsmg, ModBlocks.CANDLE_ALTAR, "candle_altar")
+                .addState("lit", "lighting/candle_altar/lit1", "lighting/candle_altar/lit2", "lighting/candle_altar/lit3")
+                .addState("unlit", "lighting/candle_altar/unlit1", "lighting/candle_altar/unlit2", "lighting/candle_altar/unlit3")
+                .doRandomTextures()
+                .build();
+
         // Bed Blocks
 //        registerCustomBedBlock(bsmg, ModBlocks.ITCHY_STRAW_BED)
 //                .textures("bed_block/bed_straw_itchy_0",

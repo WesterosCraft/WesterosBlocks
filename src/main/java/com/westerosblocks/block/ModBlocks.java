@@ -3715,7 +3715,8 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.METAL)
                     .layerSensitive()
                     .toggleOnUse()
-                    .states(4)
+                    .stateValues(List.of("lit", "unlit"))
+//                    .states(4)
                     .build());
 
     // Flowerbed Blocks
