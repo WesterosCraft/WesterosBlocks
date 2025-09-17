@@ -15,18 +15,12 @@ import java.util.stream.Collectors;
 
 public class CropBlockDatagen {
     
-    // Step 1: Parent Block Model - following block-models.md #parent-block-model pattern
-    private static Model createCropStageModel(int stage, boolean tinted) {
-        String path = tinted ? "block/tinted/crop_stage_" + stage : "block/untinted/crop_stage_" + stage;
-        return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(), TextureKey.TEXTURE);
+    // Parent Block Model - following block-models.md #parent-block-model pattern
+    private static Model createCropStageModel(boolean tinted) {
+        String path = tinted ? "block/tinted/crop" : "block/untinted/crop";
+        return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(), TextureKey.CROP);
     }
 
-    // Step 2: Using Texture Map - following block-models.md #using-texture-map pattern
-    public static TextureMap createCropTextureMap(String cropName, int stage) {
-        return new TextureMap()
-            .put(TextureKey.TEXTURE, WesterosBlocks.id("block/" + cropName + "/" + cropName + "_stage_" + stage));
-    }
-    
     // Builder pattern for crop block generation
     public static class CropBlockBuilder {
         private final BlockStateModelGenerator generator;
@@ -115,11 +109,12 @@ public class CropBlockDatagen {
                 
                 // Create texture map for this state (use first texture if multiple)
                 TextureMap textureMap = new TextureMap()
-                        .put(TextureKey.TEXTURE, WesterosBlocks.id(state.textures[0]));
+                        .put(TextureKey.CROP, WesterosBlocks.id("block/" + state.textures[0]));
                 
-                // Generate model identifier
-                Identifier modelId = createCropStageModel(i, isTinted)
-                        .upload(cropBlock, "_" + state.stateID, textureMap, generator.modelCollector);
+                // Generate model identifier with block name in path
+                String modelSuffix = "/" + cropName + "_" + state.stateID;
+                Identifier modelId = createCropStageModel(isTinted)
+                        .upload(cropBlock, modelSuffix, textureMap, generator.modelCollector);
                 
                 modelIds.add(modelId);
                 

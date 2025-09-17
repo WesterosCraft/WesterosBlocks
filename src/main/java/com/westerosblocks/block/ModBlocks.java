@@ -3702,7 +3702,7 @@ public class ModBlocks {
                     .strength(5.0f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.GRASS)
-                    .layerSensitive()
+//                    .layerSensitive()
                     .toggleOnUse()
                     .stateValues(List.of("age0", "age1", "age2", "age3"))
                     .build());

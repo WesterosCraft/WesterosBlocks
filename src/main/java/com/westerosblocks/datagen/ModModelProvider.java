@@ -1529,11 +1529,10 @@ public class ModModelProvider extends FabricModelProvider {
         // Crop Blocks
         CropBlockDatagen
                 .generateCropBlock(bsmg, ModBlocks.CROP_CARROTS, "crop_carrots")
-                .isTinted()
-                .addState("age0", "carrots/carrots_state_0")
-                .addState("age1", "carrots/carrots_state_1")
-                .addState("age2", "carrots/carrots_state_2")
-                .addState("age3", "carrots/carrots_state_3")
+                .addState("age0", "carrots/carrots_stage_0")
+                .addState("age1", "carrots/carrots_stage_1")
+                .addState("age2", "carrots/carrots_stage_2")
+                .addState("age3", "carrots/carrots_stage_3")
                 .build();
 
         // Bed Blocks

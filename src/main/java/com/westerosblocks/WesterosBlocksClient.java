@@ -184,5 +184,8 @@ public class WesterosBlocksClient implements ClientModInitializer {
 
         // flowerbed blocks
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CLOVER, RenderLayer.getCutout());
+
+        // crop blocks
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CROP_CARROTS, RenderLayer.getCutout());
     }
 }
