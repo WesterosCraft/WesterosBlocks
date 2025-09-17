@@ -85,17 +85,49 @@ public class CropBlockDatagen {
                 throw new IllegalStateException("No states or random textures defined for crop block " + cropBlock);
             }
             
-            // Handle random textures without states (simple crop block)
+            List<Identifier> modelIds = new ArrayList<>();
+            VariantsBlockStateSupplier blockStateSupplier;
+            
             if (!randomTextures.isEmpty() && states.isEmpty()) {
-                handleRandomTexturesOnly();
-                return;
+                blockStateSupplier = generateRandomTextureModels(modelIds);
+            } else {
+                blockStateSupplier = generateStateBasedModels(modelIds);
+            }
+
+            blockStateSupplier = applyLayerSensitivity(blockStateSupplier);
+
+            generator.blockStateCollector.accept(blockStateSupplier);
+
+            if (!modelIds.isEmpty()) {
+                generator.registerParentedItemModel(cropBlock, modelIds.get(0));
+            }
+        }
+        
+        private VariantsBlockStateSupplier generateRandomTextureModels(List<Identifier> modelIds) {
+            for (int i = 0; i < randomTextures.size(); i++) {
+                String texturePath = randomTextures.get(i);
+                
+                TextureMap textureMap = new TextureMap()
+                        .put(TextureKey.CROP, WesterosBlocks.id("block/" + texturePath));
+                
+                String modelSuffix = "_v" + (i + 1);
+                Identifier modelId = createCropStageModel(isTinted)
+                        .upload(cropBlock, modelSuffix, textureMap, generator.modelCollector);
+                
+                modelIds.add(modelId);
             }
             
+            List<BlockStateVariant> variants = modelIds.stream()
+                    .map(modelId -> BlockStateVariant.create().put(VariantSettings.MODEL, modelId))
+                    .collect(Collectors.toList());
+            
+            return VariantsBlockStateSupplier.create(cropBlock, variants.toArray(new BlockStateVariant[0]));
+        }
+        
+        private VariantsBlockStateSupplier generateStateBasedModels(List<Identifier> modelIds) {
             // Get the STATE property that should already be defined on the block
-            // The block must have been created with stateValues parameter for this to work
             ModProperties.StateProperty blockStateProperty = null;
             
-            // Find the STATE property from the block's state definition
             for (var property : cropBlock.getStateManager().getProperties()) {
                 if (property instanceof ModProperties.StateProperty stateProperty && "state".equals(property.getName())) {
                     blockStateProperty = stateProperty;
@@ -120,12 +152,9 @@ public class CropBlockDatagen {
             }
             
             // Generate models and variants
-            List<Identifier> modelIds = new ArrayList<>();
             BlockStateVariantMap.SingleProperty<String> variantMap = BlockStateVariantMap.create(blockStateProperty);
             
-            for (int i = 0; i < states.size(); i++) {
-                StateVariant state = states.get(i);
-                
+            for (StateVariant state : states) {
                 if (state.doRandomTextures && state.textures.length > 1) {
                     // Generate multiple models with random textures
                     List<Identifier> stateModelIds = new ArrayList<>();
@@ -140,7 +169,6 @@ public class CropBlockDatagen {
                         stateModelIds.add(modelId);
                     }
                     
-                    // Register variant with random models
                     List<BlockStateVariant> variants = stateModelIds.stream()
                             .map(modelId -> BlockStateVariant.create().put(VariantSettings.MODEL, modelId))
                             .collect(Collectors.toList());
@@ -157,80 +185,23 @@ public class CropBlockDatagen {
                             .upload(cropBlock, modelSuffix, textureMap, generator.modelCollector);
                     
                     modelIds.add(modelId);
-                    
-                    // Register variant
                     variantMap.register(state.stateID, BlockStateVariant.create().put(VariantSettings.MODEL, modelId));
                 }
             }
             
-            // Create blockstate supplier
-            VariantsBlockStateSupplier blockStateSupplier = VariantsBlockStateSupplier.create(cropBlock)
-                    .coordinate(variantMap);
-            
-            // Apply layer sensitive options if enabled
-            if (isLayerSensitive) {
-                // Add layer variants by coordinating with LAYERS property
-                BlockStateVariantMap.SingleProperty<Integer> layerMap = BlockStateVariantMap.create(Properties.LAYERS);
-                for (String layerCondition : LAYER_CONDITIONS) {
-                    // Extract layer value from condition (e.g. "layers=8" -> 8)
-                    int layerValue = Integer.parseInt(layerCondition.split("=")[1]);
-                    layerMap.register(layerValue, BlockStateVariant.create());
-                }
-                blockStateSupplier = blockStateSupplier.coordinate(layerMap);
-            }
-            
-            // BlockStateSupplier gets passed into the blockStateCollector
-            generator.blockStateCollector.accept(blockStateSupplier);
-            
-            // Create a model for the crop item (use first model)
-            if (!modelIds.isEmpty()) {
-                generator.registerParentedItemModel(cropBlock, modelIds.get(0));
-            }
+            return VariantsBlockStateSupplier.create(cropBlock).coordinate(variantMap);
         }
         
-        private void handleRandomTexturesOnly() {
-            // Generate models for each random texture
-            List<Identifier> modelIds = new ArrayList<>();
-            
-            for (int i = 0; i < randomTextures.size(); i++) {
-                String texturePath = randomTextures.get(i);
-                
-                // Create texture map for this random texture
-                TextureMap textureMap = new TextureMap()
-                        .put(TextureKey.CROP, WesterosBlocks.id("block/" + texturePath));
-                
-                // Generate model identifier
-                String modelSuffix = "_v" + (i + 1);
-                Identifier modelId = createCropStageModel(isTinted)
-                        .upload(cropBlock, modelSuffix, textureMap, generator.modelCollector);
-                
-                modelIds.add(modelId);
-            }
-            
-            // Create blockstate supplier with random variants
-            List<BlockStateVariant> variants = modelIds.stream()
-                    .map(modelId -> BlockStateVariant.create().put(VariantSettings.MODEL, modelId))
-                    .collect(Collectors.toList());
-            
-            VariantsBlockStateSupplier blockStateSupplier = VariantsBlockStateSupplier.create(cropBlock, variants.toArray(new BlockStateVariant[0]));
-            
-            // Apply layer sensitive options if enabled
+        private VariantsBlockStateSupplier applyLayerSensitivity(VariantsBlockStateSupplier blockStateSupplier) {
             if (isLayerSensitive) {
                 BlockStateVariantMap.SingleProperty<Integer> layerMap = BlockStateVariantMap.create(Properties.LAYERS);
                 for (String layerCondition : LAYER_CONDITIONS) {
                     int layerValue = Integer.parseInt(layerCondition.split("=")[1]);
                     layerMap.register(layerValue, BlockStateVariant.create());
                 }
-                blockStateSupplier = blockStateSupplier.coordinate(layerMap);
+                return blockStateSupplier.coordinate(layerMap);
             }
-            
-            // Register blockstate
-            generator.blockStateCollector.accept(blockStateSupplier);
-            
-            // Create item model (use first model)
-            if (!modelIds.isEmpty()) {
-                generator.registerParentedItemModel(cropBlock, modelIds.get(0));
-            }
+            return blockStateSupplier;
         }
     }
     
