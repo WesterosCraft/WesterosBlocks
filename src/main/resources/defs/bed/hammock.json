@@ -1,0 +1,18 @@
+{
+    "blockName": "hammock",
+    "stepSound": "plant",
+    "material": "cloth",
+    "blockType": "bed",
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Hammock",
+    "type": "shape:hammock",
+    "itemTexture": "bed_block/bed_hammock_1",
+    "textures": [
+        "bed_block/bed_hammock_0",
+        "bed_block/bed_hammock_1",
+        "bed_block/bed_hammock_2",
+        "bed_block/bed_hammock_3",
+        "bed_block/bed_hammock_4",
+        "bed_block/bed_hammock_5"
+    ]
+}

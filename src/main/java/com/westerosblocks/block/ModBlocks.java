@@ -1205,6 +1205,15 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.WOOD)
                     .build());
 
+    // Bed Blocks
+    public static final Block ITCHY_STRAW_BED = registerBlock(
+            "itchy_straw_bed",
+            BlockBuilder.bed()
+                    .strength(0.2f)
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .build());
+
     public static final Block TERRACOTTA_ENGRAVED = registerBlock(
             "terracotta_engraved",
             BlockBuilder.solid()
@@ -4030,6 +4039,7 @@ public class ModBlocks {
                 ModBlocks.FULL_CABINET,
                 ModBlocks.MIRROR_BLOCK,
                 ModBlocks.OAK_TABLE,
+                ModBlocks.ITCHY_STRAW_BED,
                 ModBlocks.OAK_CHAIR,
                 ModBlocks.TABLE_BOOKS,
                 ModBlocks.TABLE_DRAWERS,

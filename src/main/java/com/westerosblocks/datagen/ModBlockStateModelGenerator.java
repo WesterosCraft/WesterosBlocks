@@ -79,6 +79,7 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 case "cross" -> buildPlant(); // Alias for plant
 //                                case "crop" -> buildCrop();
                                 case "flowerbed" -> buildFlowerbed();
+                                case "bed" -> buildBed();
                                 default -> throw new IllegalArgumentException("Unknown block type: " + blockType);
                         }
                 }
@@ -199,6 +200,15 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 String stemTexture = textures.length > 1 ? textures[0] : "";
                                 String flowerTexture = textures.length > 1 ? textures[1] : textures[0];
                                 FlowerbedBlockExporter.generateCustomFlowerbed(generator, block, "block/flowerbed", TextureKey.STEM, stemTexture, flowerTexture);
+                        }
+                }
+
+                private void buildBed() {
+                        if (!texture.isEmpty()) {
+                                BedBlockExporter.registerSingleTextureBedBlock(generator, block, texture);
+                        } else if (textures.length >= 1) {
+                                // Pass all textures to handle the full 6-texture bed system
+                                BedBlockExporter.registerSimpleCustomBedBlock(generator, block, textures);
                         }
                 }
         }
@@ -432,5 +442,9 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
         public static FlowerbedBlockExporter.CustomFlowerbedBuilder registerCustomFlowerbedBlock(BlockStateModelGenerator generator, Block block) {
                 return FlowerbedBlockExporter.registerCustomFlowerbedBlock(generator, block);
+        }
+
+        public static CustomBlockBuilder registerCustomBedBlock(BlockStateModelGenerator generator, Block block) {
+                return new CustomBlockBuilder(generator, block, "bed");
         }
 }

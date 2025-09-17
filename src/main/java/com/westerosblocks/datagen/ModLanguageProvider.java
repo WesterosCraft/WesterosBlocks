@@ -189,6 +189,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.thick_grass_block", "Thick Grass Block");
                 translationBuilder.add("block.westerosblocks.table_widgets", "Table Widgets");
                 translationBuilder.add("block.westerosblocks.oak_table", "Oak Table");
+                translationBuilder.add("block.westerosblocks.itchy_straw_bed", "Itchy Straw Bed");
                 translationBuilder.add("block.westerosblocks.terracotta_engraved", "Ashlar Engraved Terracotta");
                 translationBuilder.add("block.westerosblocks.turnip_basket", "Turnip Basket");
                 translationBuilder.add("block.westerosblocks.turnip_crate", "Turnip Crate");

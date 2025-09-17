@@ -508,6 +508,7 @@ public class ModModelProvider extends FabricModelProvider {
         // Table Blocks
         registerCustomTableBlock(bsmg, ModBlocks.OAK_TABLE).texture("wood/oak/all").build();
 
+
         registerCustomSolidBlock(bsmg, ModBlocks.TERRACOTTA_ENGRAVED).texture("ashlar_engraved/terracotta/all")
                 .build();
         registerCustomSolidBlock(bsmg, ModBlocks.TURNIP_BASKET)
@@ -943,42 +944,42 @@ public class ModModelProvider extends FabricModelProvider {
         registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_11).texture("brown_mushroom_block/mushroom_brown_10").build();
         registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_12).texture("brown_mushroom_block/mushroom_brown_11").build();
         registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_13).texture("brown_mushroom_block/mushroom_brown_12").build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.CORAL_BRAIN_WEB)
                 .randomTexture("coral/brain/web1")
                 .randomTexture("coral/brain/web2")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.CORAL_BUBBLE_WEB)
                 .randomTexture("coral/bubble/web1")
                 .randomTexture("coral/bubble/web2")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.CORAL_FIRE_WEB)
                 .randomTexture("coral/fire/web1")
                 .randomTexture("coral/fire/web2")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.CORAL_HORN_WEB)
                 .randomTexture("coral/horn/web1")
                 .randomTexture("coral/horn/web2")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.CORAL_TUBE_WEB)
                 .randomTexture("coral/tube/web1")
                 .randomTexture("coral/tube/web2")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.COW_PARSELY)
                 .randomTexture("cow_parsely/side1")
                 .randomTexture("cow_parsely/side2")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.CRANBERRY_BUSH)
                 .randomTexture("cranberry/base1")
                 .randomTexture("cranberry/base2")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.DEAD_BRACKEN)
                 .randomTexture("dead_bracken/side1")
                 .randomTexture("dead_bracken/side2")
@@ -993,13 +994,13 @@ public class ModModelProvider extends FabricModelProvider {
                 .randomTexture("dead_bracken/side11")
                 .randomTexture("dead_bracken/side12")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.DEAD_BUSH)
                 .randomTexture("dorne_bush_thorny/side1")
                 .randomTexture("dorne_bush_thorny/side2")
                 .randomTexture("dorne_bush_thorny/side3")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.DEAD_SCRUB_GRASS)
                 .randomTexture("flowers/dead_scrub_grass1")
                 .randomTexture("flowers/dead_scrub_grass2")
@@ -1011,19 +1012,19 @@ public class ModModelProvider extends FabricModelProvider {
                 .randomTexture("flowers/dead_scrub_grass8")
                 .randomTexture("flowers/dead_scrub_grass9")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.DOCK_LEAF)
                 .randomTexture("dock_leaf/side1")
                 .randomTexture("dock_leaf/side2")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.FIREWEED)
                 .randomTexture("fireweed/side1")
                 .randomTexture("fireweed/side2")
                 .randomTexture("fireweed/side3")
                 .randomTexture("fireweed/side4")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.GRASS)
                 .randomTexture("minecraft:block/fern/fern1")
                 .randomTexture("minecraft:block/fern/fern2")
@@ -1035,11 +1036,11 @@ public class ModModelProvider extends FabricModelProvider {
                 .randomTexture("minecraft:block/fern/fern8")
                 .isTinted(true)
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.GREEN_LEAFY_HERB)
                 .texture("flowers/green_leafy_herb")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.GREEN_SCRUB_GRASS)
                 .randomTexture("flowers/green_scrub_grass1")
                 .randomTexture("flowers/green_scrub_grass2")
@@ -1048,7 +1049,7 @@ public class ModModelProvider extends FabricModelProvider {
                 .randomTexture("flowers/green_scrub_grass5")
                 .randomTexture("flowers/green_scrub_grass6")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.GREEN_SPINY_HERB)
                 .randomTexture("flowers/green_spiny_herb1")
                 .randomTexture("flowers/green_spiny_herb2")
@@ -1056,67 +1057,67 @@ public class ModModelProvider extends FabricModelProvider {
                 .randomTexture("flowers/green_spiny_herb4")
                 .randomTexture("flowers/green_spiny_herb5")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.HEATHER)
                 .randomTexture("heather/side1")
                 .randomTexture("heather/side2")
                 .randomTexture("heather/side3")
                 .randomTexture("heather/side4")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.KELP)
                 .randomTexture("kelp/side1")
                 .randomTexture("kelp/side2")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.LADY_FERN)
                 .randomTexture("lady_fern/side1")
                 .randomTexture("lady_fern/side2")
                 .randomTexture("lady_fern/side3")
                 .randomTexture("lady_fern/side4")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.MAGENTA_ROSES)
                 .randomTexture("flowers/magenta_roses1")
                 .randomTexture("flowers/magenta_roses2")
                 .randomTexture("flowers/magenta_roses3")
                 .randomTexture("flowers/magenta_roses4")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.MEADOW_FESCUE)
                 .randomTexture("flowers/meadow_fescue/side1")
                 .randomTexture("flowers/meadow_fescue/side2")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.NETTLE)
                 .randomTexture("nettle/side1")
                 .randomTexture("nettle/side2")
                 .randomTexture("nettle/side3")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.ORANGE_BELLS)
                 .texture("flowers/orange_bells1")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.ORANGE_BOG_ASPHODEL)
                 .randomTexture("flowers/orange_bog_asphodel1")
                 .randomTexture("flowers/orange_bog_asphodel2")
                 .randomTexture("flowers/orange_bog_asphodel3")
                 .randomTexture("flowers/orange_bog_asphodel4")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.ORANGE_MARIGOLDS)
                 .randomTexture("flowers/orange_marigolds1")
                 .randomTexture("flowers/orange_marigolds2")
                 .randomTexture("flowers/orange_marigolds3")
                 .randomTexture("flowers/orange_marigolds4")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.ORANGE_SUN_STAR)
                 .randomTexture("flowers/orange_sun_star1")
                 .randomTexture("flowers/orange_sun_star2")
                 .build();
-        
+
         registerCustomPlantBlock(bsmg, ModBlocks.ORANGE_TROLLIUS)
                 .randomTexture("flowers/orange_trollius1")
                 .randomTexture("flowers/orange_trollius2")
@@ -1369,7 +1370,7 @@ public class ModModelProvider extends FabricModelProvider {
                 .stemTexture("flowerbed/clover_stem")
                 .flowerTexture("flowerbed/clover")
                 .build();
-        
+
         // Web Blocks
         registerCustomCrossBlock(bsmg, ModBlocks.BEES)
                 .texture("web_block/bug_bees")
@@ -1533,6 +1534,16 @@ public class ModModelProvider extends FabricModelProvider {
                 .addState("age1", "carrots/carrots_state_1")
                 .addState("age2", "carrots/carrots_state_2")
                 .addState("age3", "carrots/carrots_state_3")
+                .build();
+
+        // Bed Blocks
+        registerCustomBedBlock(bsmg, ModBlocks.ITCHY_STRAW_BED)
+                .textures("bed_block/bed_straw_itchy_0",
+                        "bed_block/bed_straw_itchy_1",
+                        "bed_block/bed_straw_itchy_2",
+                        "bed_block/bed_straw_itchy_3",
+                        "bed_block/bed_straw_itchy_4",
+                        "bed_block/bed_straw_itchy_5")
                 .build();
     }
 

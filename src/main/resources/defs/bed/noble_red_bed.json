@@ -1,0 +1,18 @@
+{
+    "blockName": "noble_red_bed",
+    "stepSound": "wood",
+    "material": "cloth",
+    "blockType": "bed",
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Noble Red Bed",
+    "type": "shape:raised",
+    "itemTexture": "bed_block/bed_noble_red_1",
+    "textures": [
+        "bed_block/bed_noble_red_0",
+        "bed_block/bed_noble_red_1",
+        "bed_block/bed_noble_red_2",
+        "bed_block/bed_noble_red_3",
+        "bed_block/bed_noble_red_4",
+        "bed_block/bed_noble_red_5"
+    ]
+}
