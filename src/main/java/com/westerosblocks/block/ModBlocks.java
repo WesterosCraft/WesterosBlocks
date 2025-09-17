@@ -3699,10 +3699,9 @@ public class ModBlocks {
     public static final Block CROP_CARROTS = registerBlock(
             "crop_carrots",
             BlockBuilder.crop()
-                    .strength(5.0f)
+                    .strength(0.0f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.GRASS)
-//                    .layerSensitive()
                     .toggleOnUse()
                     .stateValues(List.of("age0", "age1", "age2", "age3"))
                     .build());
@@ -3710,13 +3709,54 @@ public class ModBlocks {
     public static final Block CANDLE_ALTAR = registerBlock(
             "candle_altar",
             BlockBuilder.crop()
-                    .strength(5.0f)
+                    .strength(0.0f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.METAL)
-                    .layerSensitive()
                     .toggleOnUse()
                     .stateValues(List.of("lit", "unlit"))
-//                    .states(4)
+                    .build());
+
+    public static final Block CROP_PEAS = registerBlock(
+            "crop_peas",
+            BlockBuilder.crop()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .toggleOnUse()
+                    .layerSensitive()
+                    .stateValues(List.of("age0", "age1", "age2"))
+                    .build());
+
+    public static final Block CROP_TURNIPS = registerBlock(
+            "crop_turnips",
+            BlockBuilder.crop()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .toggleOnUse()
+                    .layerSensitive()
+                    .stateValues(List.of("age0", "age1", "age2","age3"))
+                    .build());
+
+    public static final Block CROP_WHEAT = registerBlock(
+            "crop_wheat",
+            BlockBuilder.crop()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .toggleOnUse()
+                    .layerSensitive()
+                    .stateValues(List.of("age0", "age1", "age2","age3", "age4", "age5", "age6", "age7"))
+                    .build());
+
+    public static final Block SEAGRASS = registerBlock(
+            "seagrass",
+            BlockBuilder.crop()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .toggleOnUse()
+                    .layerSensitive()
                     .build());
 
     // Flowerbed Blocks
@@ -3805,7 +3845,8 @@ public class ModBlocks {
                 ModBlocks.ALYSSAS_TEARS_MIST_ONE,
                 ModBlocks.ALYSSAS_TEARS_MIST_TWO,
                 ModBlocks.ALYSSAS_TEARS_MIST_THREE,
-                ModBlocks.ALYSSAS_TEARS_MIST_FOUR
+                ModBlocks.ALYSSAS_TEARS_MIST_FOUR,
+                ModBlocks.SEAGRASS
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_crops_herbs_tab",
@@ -3814,7 +3855,10 @@ public class ModBlocks {
                 ModBlocks.RED_SOURLEAF_BUSH,
                 ModBlocks.STRAWBERRY_BUSH,
                 ModBlocks.BUSHEL_OF_SOURLEAF,
-                ModBlocks.CROP_CARROTS
+                ModBlocks.CROP_CARROTS,
+                ModBlocks.CROP_PEAS,
+                ModBlocks.CROP_TURNIPS,
+                ModBlocks.CROP_WHEAT
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_flowers_tab",
@@ -4183,7 +4227,8 @@ public class ModBlocks {
                 ModBlocks.TORCH,
                 ModBlocks.TORCH_UNLIT,
                 ModBlocks.CANDLE,
-                ModBlocks.CANDLE_UNLIT
+                ModBlocks.CANDLE_UNLIT,
+                ModBlocks.CANDLE_ALTAR
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_metal_tab",

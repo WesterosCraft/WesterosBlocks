@@ -1536,10 +1536,48 @@ public class ModModelProvider extends FabricModelProvider {
                 .build();
 
         CropBlockDatagen
+                .generateCropBlock(bsmg, ModBlocks.CROP_TURNIPS, "crop_turnips")
+                .addState("age0", "turnips/turnips_stage_0")
+                .addState("age1", "turnips/turnips_stage_1")
+                .addState("age2", "turnips/turnips_stage_2")
+                .addState("age3", "turnips/turnips_stage_3")
+                .isLayerSensitive()
+                .build();
+
+        CropBlockDatagen
+                .generateCropBlock(bsmg, ModBlocks.CROP_PEAS, "crop_peas")
+                .addState("age0", "peas/peas_stage_0")
+                .addState("age1", "peas/peas_stage_1")
+                .addState("age2", "peas/peas_stage_2")
+                .isLayerSensitive()
+                .build();
+
+        CropBlockDatagen
                 .generateCropBlock(bsmg, ModBlocks.CANDLE_ALTAR, "candle_altar")
-                .addState("lit", "lighting/candle_altar/lit1", "lighting/candle_altar/lit2", "lighting/candle_altar/lit3")
-                .addState("unlit", "lighting/candle_altar/unlit1", "lighting/candle_altar/unlit2", "lighting/candle_altar/unlit3")
-                .doRandomTextures()
+                .addStateRandomTextures("lit", "lighting/candle_altar/lit1", "lighting/candle_altar/lit2", "lighting/candle_altar/lit3")
+                .addStateRandomTextures("unlit", "lighting/candle_altar/unlit1", "lighting/candle_altar/unlit2", "lighting/candle_altar/unlit3")
+                .build();
+
+        CropBlockDatagen
+                .generateCropBlock(bsmg, ModBlocks.CROP_WHEAT, "crop_wheat")
+                .isLayerSensitive()
+                .addState("age0", "wheat/wheat_stage_0")
+                .addState("age1", "wheat/wheat_stage_1")
+                .addState("age2", "wheat/wheat_stage_2")
+                .addState("age3", "wheat/wheat_stage_3")
+                .addStateRandomTextures("age4", "wheat/stage4_1", "wheat/stage4_2")
+                .addStateRandomTextures("age5", "wheat/stage5_1", "wheat/stage5_2")
+                .addStateRandomTextures("age6", "wheat/stage6_1", "wheat/stage6_2")
+                .addStateRandomTextures("age7", "wheat/stage7_1", "wheat/stage7_2", "wheat/stage7_3", "wheat/stage7_4")
+                .build();
+
+        CropBlockDatagen
+                .generateCropBlock(bsmg, ModBlocks.SEAGRASS, "seagrass")
+                .addRandomTexture("seagrass/side1")
+                .addRandomTexture("seagrass/side2")
+                .addRandomTexture("seagrass/side3")
+                .addRandomTexture("seagrass/side4")
+                .isLayerSensitive()
                 .build();
 
         // Bed Blocks

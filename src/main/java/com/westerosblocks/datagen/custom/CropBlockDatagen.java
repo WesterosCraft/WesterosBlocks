@@ -28,8 +28,8 @@ public class CropBlockDatagen {
         private final String cropName;
         private boolean isTinted = false;
         private boolean isLayerSensitive = false;
-        private boolean doRandomTextures = false;
         private final List<StateVariant> states = new ArrayList<>();
+        private final List<String> randomTextures = new ArrayList<>();
 
         private static final String[] LAYER_CONDITIONS = {
                 "layers=8", "layers=1", "layers=2", "layers=3",
@@ -40,10 +40,12 @@ public class CropBlockDatagen {
         public static class StateVariant {
             public final String stateID;
             public final String[] textures;
+            public final boolean doRandomTextures;
             
-            public StateVariant(String stateID, String[] textures) {
+            public StateVariant(String stateID, String[] textures, boolean doRandomTextures) {
                 this.stateID = stateID;
                 this.textures = textures;
+                this.doRandomTextures = doRandomTextures;
             }
         }
         
@@ -63,19 +65,30 @@ public class CropBlockDatagen {
             return this;
         }
         
-        public CropBlockBuilder doRandomTextures() {
-            this.doRandomTextures = true;
+        public CropBlockBuilder addState(String stateID, String... textures) {
+            this.states.add(new StateVariant(stateID, textures, false));
             return this;
         }
         
-        public CropBlockBuilder addState(String stateID, String... textures) {
-            this.states.add(new StateVariant(stateID, textures));
+        public CropBlockBuilder addStateRandomTextures(String stateID, String... textures) {
+            this.states.add(new StateVariant(stateID, textures, true));
+            return this;
+        }
+        
+        public CropBlockBuilder addRandomTexture(String texturePath) {
+            this.randomTextures.add(texturePath);
             return this;
         }
         
         public void build() {
-            if (states.isEmpty()) {
-                throw new IllegalStateException("No states defined for crop block " + cropBlock);
+            if (states.isEmpty() && randomTextures.isEmpty()) {
+                throw new IllegalStateException("No states or random textures defined for crop block " + cropBlock);
+            }
+            
+            // Handle random textures without states (simple crop block)
+            if (!randomTextures.isEmpty() && states.isEmpty()) {
+                handleRandomTexturesOnly();
+                return;
             }
             
             // Get the STATE property that should already be defined on the block
@@ -113,7 +126,7 @@ public class CropBlockDatagen {
             for (int i = 0; i < states.size(); i++) {
                 StateVariant state = states.get(i);
                 
-                if (doRandomTextures && state.textures.length > 1) {
+                if (state.doRandomTextures && state.textures.length > 1) {
                     // Generate multiple models with random textures
                     List<Identifier> stateModelIds = new ArrayList<>();
                     for (int j = 0; j < state.textures.length; j++) {
@@ -170,6 +183,51 @@ public class CropBlockDatagen {
             generator.blockStateCollector.accept(blockStateSupplier);
             
             // Create a model for the crop item (use first model)
+            if (!modelIds.isEmpty()) {
+                generator.registerParentedItemModel(cropBlock, modelIds.get(0));
+            }
+        }
+        
+        private void handleRandomTexturesOnly() {
+            // Generate models for each random texture
+            List<Identifier> modelIds = new ArrayList<>();
+            
+            for (int i = 0; i < randomTextures.size(); i++) {
+                String texturePath = randomTextures.get(i);
+                
+                // Create texture map for this random texture
+                TextureMap textureMap = new TextureMap()
+                        .put(TextureKey.CROP, WesterosBlocks.id("block/" + texturePath));
+                
+                // Generate model identifier
+                String modelSuffix = "_v" + (i + 1);
+                Identifier modelId = createCropStageModel(isTinted)
+                        .upload(cropBlock, modelSuffix, textureMap, generator.modelCollector);
+                
+                modelIds.add(modelId);
+            }
+            
+            // Create blockstate supplier with random variants
+            List<BlockStateVariant> variants = modelIds.stream()
+                    .map(modelId -> BlockStateVariant.create().put(VariantSettings.MODEL, modelId))
+                    .collect(Collectors.toList());
+            
+            VariantsBlockStateSupplier blockStateSupplier = VariantsBlockStateSupplier.create(cropBlock, variants.toArray(new BlockStateVariant[0]));
+            
+            // Apply layer sensitive options if enabled
+            if (isLayerSensitive) {
+                BlockStateVariantMap.SingleProperty<Integer> layerMap = BlockStateVariantMap.create(Properties.LAYERS);
+                for (String layerCondition : LAYER_CONDITIONS) {
+                    int layerValue = Integer.parseInt(layerCondition.split("=")[1]);
+                    layerMap.register(layerValue, BlockStateVariant.create());
+                }
+                blockStateSupplier = blockStateSupplier.coordinate(layerMap);
+            }
+            
+            // Register blockstate
+            generator.blockStateCollector.accept(blockStateSupplier);
+            
+            // Create item model (use first model)
             if (!modelIds.isEmpty()) {
                 generator.registerParentedItemModel(cropBlock, modelIds.get(0));
             }

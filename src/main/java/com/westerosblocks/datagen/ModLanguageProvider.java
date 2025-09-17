@@ -461,6 +461,11 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
                 // Crop Blocks
                 translationBuilder.add("block.westerosblocks.crop_carrots", "Carrots");
+                translationBuilder.add("block.westerosblocks.candle_altar", "Candle Altar");
+                translationBuilder.add("block.westerosblocks.crop_peas", "Peas");
+                translationBuilder.add("block.westerosblocks.crop_turnips", "Turnips");
+                translationBuilder.add("block.westerosblocks.crop_wheat", "Wheat");
+                translationBuilder.add("block.westerosblocks.seagrass", "Seagrass");
 
                 // Flowerbed Blocks
                 translationBuilder.add("block.westerosblocks.clover", "Clover");
