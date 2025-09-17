@@ -114,6 +114,10 @@ public class BlockBuilder<T extends Block> {
         return new BlockBuilder<>(new WCFlowerbedBlock.Factory());
     }
     
+    public static BlockBuilder<WCLeavesBlock> leaves() {
+        return new BlockBuilder<>(new WCLeavesBlock.Factory());
+    }
+    
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
         return this;
@@ -247,6 +251,36 @@ public class BlockBuilder<T extends Block> {
     
     public BlockBuilder<T> stateValues(List<String> stateValues) {
         parameters.put("stateValues", stateValues);
+        return this;
+    }
+    
+    public BlockBuilder<T> betterFoliage(boolean betterFoliage) {
+        parameters.put("betterFoliage", betterFoliage);
+        return this;
+    }
+    
+    public BlockBuilder<T> betterFoliage() {
+        parameters.put("betterFoliage", true);
+        return this;
+    }
+    
+    public BlockBuilder<T> overlay(boolean overlay) {
+        parameters.put("overlay", overlay);
+        return this;
+    }
+    
+    public BlockBuilder<T> overlay() {
+        parameters.put("overlay", true);
+        return this;
+    }
+    
+    public BlockBuilder<T> noDecay(boolean noDecay) {
+        parameters.put("noDecay", noDecay);
+        return this;
+    }
+    
+    public BlockBuilder<T> noDecay() {
+        parameters.put("noDecay", true);
         return this;
     }
     

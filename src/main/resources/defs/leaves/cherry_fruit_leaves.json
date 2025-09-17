@@ -1,0 +1,45 @@
+{
+    "blockName": "cherry_fruit_leaves",
+    "blockType": "leaves",
+    "stepSound": "grass",
+    "material": "leaves",
+    "creativeTab": "westeros_foliage_tab",
+    "type": "no-decay,better-foliage,overlay",
+    "label": "Cherry Fruit Leaves",
+    "colorMult": "textures/colormap/foliageoak",
+    "rotateRandom": true,
+    "randomTextures": [
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/cherry0"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/cherry1"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/cherry2"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/cherry3"
+            ],
+            "weight": 2
+        }
+    ]
+}

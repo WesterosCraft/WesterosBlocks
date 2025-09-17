@@ -1,0 +1,45 @@
+{
+    "blockName": "orange_fruit_leaves",
+    "blockType": "leaves",
+    "stepSound": "grass",
+    "material": "leaves",
+    "creativeTab": "westeros_foliage_tab",
+    "type": "no-decay,better-foliage,overlay",
+    "label": "Orange Fruit Leaves",
+    "colorMult": "textures/colormap/foliagejungle",
+    "rotateRandom": true,
+    "randomTextures": [
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/orange0"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/orange1"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/orange2"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/orange3"
+            ],
+            "weight": 2
+        }
+    ]
+}

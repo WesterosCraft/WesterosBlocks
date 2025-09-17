@@ -1207,7 +1207,6 @@ public class ModBlocks {
                     .build());
 
 
-
     public static final Block TERRACOTTA_ENGRAVED = registerBlock(
             "terracotta_engraved",
             BlockBuilder.solid()
@@ -3735,7 +3734,7 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.GRASS)
                     .toggleOnUse()
                     .layerSensitive()
-                    .stateValues(List.of("age0", "age1", "age2","age3"))
+                    .stateValues(List.of("age0", "age1", "age2", "age3"))
                     .build());
 
     public static final Block CROP_WHEAT = registerBlock(
@@ -3746,7 +3745,7 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.GRASS)
                     .toggleOnUse()
                     .layerSensitive()
-                    .stateValues(List.of("age0", "age1", "age2","age3", "age4", "age5", "age6", "age7"))
+                    .stateValues(List.of("age0", "age1", "age2", "age3", "age4", "age5", "age6", "age7"))
                     .build());
 
     public static final Block SEAGRASS = registerBlock(
@@ -3848,6 +3847,19 @@ public class ModBlocks {
                     .strength(0.2f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .build());
+
+    // Leaves block
+    public static final Block APPLE_FRUIT_LEAVES = registerBlock(
+            "apple_fruit_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .betterFoliage()
+                    .overlay()
                     .nonOpaque()
                     .build());
 
@@ -4175,6 +4187,10 @@ public class ModBlocks {
                 ModBlocks.STRAW_BED
         );
 
+        WesterosCreativeModeTabs.addToTab("westeros_foliage_tab",
+                ModBlocks.APPLE_FRUIT_LEAVES
+        );
+
         WesterosCreativeModeTabs.addToTab("westeros_grass_dirt_tab",
                 ModBlocks.BONE_DIRT,
                 ModBlocks.THICK_GRASS_BLOCK
@@ -4225,7 +4241,6 @@ public class ModBlocks {
         );
 
 
-
         WesterosCreativeModeTabs.addToTab("westeros_windows_glass_tab",
                 ModBlocks.COLOURED_SEPT_WINDOW,
                 ModBlocks.SEPT_CRYSTAL_LARGE,
@@ -4273,7 +4288,6 @@ public class ModBlocks {
                 ModBlocks.MARBLE_PILLAR_VERTICAL_CTM,
                 ModBlocks.MARBLE_PILLAR
         );
-
 
 
         WesterosCreativeModeTabs.addToTab("westeros_sand_gravel_tab",

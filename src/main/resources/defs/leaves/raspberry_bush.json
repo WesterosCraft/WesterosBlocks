@@ -1,0 +1,45 @@
+{
+    "blockName": "raspberry_bush",
+    "blockType": "leaves",
+    "stepSound": "grass",
+    "material": "leaves",
+    "type": "no-decay,better-foliage,overlay",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Raspberry Bush",
+    "colorMult": "textures/colormap/foliagejungle",
+    "rotateRandom": true,
+    "randomTextures": [
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/raspberry0"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/raspberry1"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/raspberry2"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/raspberry3"
+            ],
+            "weight": 2
+        }
+    ]
+}

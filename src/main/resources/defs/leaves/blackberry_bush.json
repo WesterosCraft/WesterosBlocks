@@ -1,0 +1,45 @@
+{
+    "blockName": "blackberry_bush",
+    "blockType": "leaves",
+    "stepSound": "grass",
+    "material": "leaves",
+    "type": "no-decay,better-foliage,overlay",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Blackberry Bush",
+    "colorMult": "textures/colormap/birch",
+    "rotateRandom": true,
+    "randomTextures": [
+        {
+            "textures": [
+                "leaves/birch/all",
+                "transparent",
+                "leaves/overlay/blackberry0"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/birch/all",
+                "transparent",
+                "leaves/overlay/blackberry1"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/birch/all",
+                "transparent",
+                "leaves/overlay/blackberry2"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/birch/all",
+                "transparent",
+                "leaves/overlay/blackberry3"
+            ],
+            "weight": 2
+        }
+    ]
+}

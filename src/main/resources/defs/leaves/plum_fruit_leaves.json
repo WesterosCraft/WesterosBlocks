@@ -1,0 +1,45 @@
+{
+    "blockName": "plum_fruit_leaves",
+    "blockType": "leaves",
+    "stepSound": "grass",
+    "material": "leaves",
+    "type": "no-decay,better-foliage,overlay",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Plum Fruit Leaves",
+    "colorMult": "textures/colormap/foliageoak",
+    "rotateRandom": true,
+    "randomTextures": [
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/plum0"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/plum1"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/plum2"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/plum3"
+            ],
+            "weight": 2
+        }
+    ]
+}

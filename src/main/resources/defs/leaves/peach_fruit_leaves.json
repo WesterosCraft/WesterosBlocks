@@ -1,0 +1,45 @@
+{
+    "blockName": "peach_fruit_leaves",
+    "blockType": "leaves",
+    "stepSound": "grass",
+    "material": "leaves",
+    "creativeTab": "westeros_foliage_tab",
+    "type": "no-decay,better-foliage,overlay",
+    "label": "Peach Fruit Leaves",
+    "colorMult": "textures/colormap/birch",
+    "rotateRandom": true,
+    "randomTextures": [
+        {
+            "textures": [
+                "leaves/birch/all",
+                "transparent",
+                "leaves/overlay/peach0"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/birch/all",
+                "transparent",
+                "leaves/overlay/peach1"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/birch/all",
+                "transparent",
+                "leaves/overlay/peach2"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/birch/all",
+                "transparent",
+                "leaves/overlay/peach3"
+            ],
+            "weight": 2
+        }
+    ]
+}

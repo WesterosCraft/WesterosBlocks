@@ -1,0 +1,45 @@
+{
+    "blockName": "juniper_bush",
+    "blockType": "leaves",
+    "stepSound": "grass",
+    "material": "leaves",
+    "type": "no-decay,better-foliage,overlay",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Juniper Bush",
+    "colorMult": "textures/colormap/pine",
+    "rotateRandom": true,
+    "randomTextures": [
+        {
+            "textures": [
+                "leaves/spruce/all",
+                "transparent",
+                "leaves/overlay/juniper0"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/spruce/all",
+                "transparent",
+                "leaves/overlay/juniper1"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/spruce/all",
+                "transparent",
+                "leaves/overlay/juniper2"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/spruce/all",
+                "transparent",
+                "leaves/overlay/juniper3"
+            ],
+            "weight": 2
+        }
+    ]
+}

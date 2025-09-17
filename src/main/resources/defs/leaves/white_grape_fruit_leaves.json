@@ -1,0 +1,45 @@
+{
+    "blockName": "white_grape_fruit_leaves",
+    "blockType": "leaves",
+    "stepSound": "grass",
+    "material": "leaves",
+    "type": "no-decay,better-foliage,overlay",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "White Grape Fruit Leaves",
+    "colorMult": "textures/colormap/foliagejungle",
+    "rotateRandom": true,
+    "randomTextures": [
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/grapes_white0"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/grapes_white1"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/grapes_white2"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/grapes_white3"
+            ],
+            "weight": 2
+        }
+    ]
+}

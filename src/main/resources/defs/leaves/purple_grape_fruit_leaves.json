@@ -1,0 +1,45 @@
+{
+    "blockName": "purple_grape_fruit_leaves",
+    "blockType": "leaves",
+    "stepSound": "grass",
+    "material": "leaves",
+    "creativeTab": "westeros_foliage_tab",
+    "type": "no-decay,better-foliage,overlay",
+    "label": "Purple Grape Fruit Leaves",
+    "colorMult": "textures/colormap/foliagejungle",
+    "rotateRandom": true,
+    "randomTextures": [
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/grapes_purple0"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/grapes_purple1"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/grapes_purple2"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/jungle/all",
+                "transparent",
+                "leaves/overlay/grapes_purple3"
+            ],
+            "weight": 2
+        }
+    ]
+}

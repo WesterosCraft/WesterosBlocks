@@ -479,6 +479,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.pale_green_bed", "Pale Green Bed");
                 translationBuilder.add("block.westerosblocks.pale_red_bed", "Pale Red Bed");
                 translationBuilder.add("block.westerosblocks.straw_bed", "Straw Bed");
+
+                // Leaves Blocks
+                translationBuilder.add("block.westerosblocks.apple_fruit_leaves", "Apple Fruit Leaves");
         }
 
 }

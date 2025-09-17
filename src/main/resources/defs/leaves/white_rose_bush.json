@@ -1,0 +1,45 @@
+{
+    "blockName": "white_rose_bush",
+    "blockType": "leaves",
+    "stepSound": "grass",
+    "material": "leaves",
+    "type": "no-decay,better-foliage,overlay",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "White Rose Bush",
+    "colorMult": "textures/colormap/foliageoak",
+    "rotateRandom": true,
+    "randomTextures": [
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/white_rose0"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/white_rose1"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/white_rose2"
+            ],
+            "weight": 10
+        },
+        {
+            "textures": [
+                "leaves/oak/all",
+                "transparent",
+                "leaves/overlay/white_rose3"
+            ],
+            "weight": 2
+        }
+    ]
+}

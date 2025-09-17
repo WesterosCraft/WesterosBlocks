@@ -1,1 +1,2 @@
 - rail block does not place 45 deg angle
+- layer sensitive on crop and plants need double checking once the layer block is implemented
