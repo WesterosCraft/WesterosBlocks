@@ -4,6 +4,7 @@ import com.westerosblocks.block.ModBlocks;
 
 import com.westerosblocks.datagen.custom.BedBlockDatagen;
 import com.westerosblocks.datagen.custom.CropBlockDatagen;
+import com.westerosblocks.datagen.custom.LeavesBlockDatagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -1670,6 +1671,17 @@ public class ModModelProvider extends FabricModelProvider {
                 .texture("bed_block/bed_straw_3")
                 .texture("bed_block/bed_straw_4")
                 .texture("bed_block/bed_straw_5")
+                .build();
+
+        LeavesBlockDatagen.generateLeavesBlock(bsmg, ModBlocks.APPLE_FRUIT_LEAVES, "apple_fruit_leaves")
+                .betterFoliage()
+                .hasOverlay()
+                .rotateRandom()
+                .isTinted()
+                .addRandomTextureSet(10, "leaves/birch/all", "transparent", "leaves/overlay/apple0")
+                .addRandomTextureSet(10, "leaves/birch/all", "transparent", "leaves/overlay/apple1")
+                .addRandomTextureSet(10, "leaves/birch/all", "transparent", "leaves/overlay/apple2")
+                .addRandomTextureSet(2, "leaves/birch/all", "transparent", "leaves/overlay/apple3")
                 .build();
     }
 
