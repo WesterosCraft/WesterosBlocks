@@ -3,7 +3,6 @@ package com.westerosblocks.block;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.BlockBuilder;
-import com.westerosblocks.block.custom.WCFlowerbedBlock;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
@@ -14,6 +13,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+
+import java.util.List;
 
 public class ModBlocks {
 
@@ -1205,14 +1206,7 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.WOOD)
                     .build());
 
-    // Bed Blocks
-    public static final Block ITCHY_STRAW_BED = registerBlock(
-            "itchy_straw_bed",
-            BlockBuilder.bed()
-                    .strength(0.2f)
-                    .sounds(BlockSoundGroup.GRASS)
-                    .nonOpaque()
-                    .build());
+
 
     public static final Block TERRACOTTA_ENGRAVED = registerBlock(
             "terracotta_engraved",
@@ -3710,7 +3704,7 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.GRASS)
                     .layerSensitive()
                     .toggleOnUse()
-                    .states(4)
+                    .stateValues(List.of("age0", "age1", "age2", "age3"))
                     .build());
 
     public static final Block CANDLE_ALTAR = registerBlock(
@@ -3734,6 +3728,14 @@ public class ModBlocks {
                     .noCollision()
                     .build());
 
+    // Bed Blocks
+//    public static final Block ITCHY_STRAW_BED = registerBlock(
+//            "itchy_straw_bed",
+//            BlockBuilder.bed()
+//                    .strength(0.2f)
+//                    .sounds(BlockSoundGroup.GRASS)
+//                    .nonOpaque()
+//                    .build());
 
     /**
      * Initialize all blocks
@@ -4039,7 +4041,7 @@ public class ModBlocks {
                 ModBlocks.FULL_CABINET,
                 ModBlocks.MIRROR_BLOCK,
                 ModBlocks.OAK_TABLE,
-                ModBlocks.ITCHY_STRAW_BED,
+//                ModBlocks.ITCHY_STRAW_BED,
                 ModBlocks.OAK_CHAIR,
                 ModBlocks.TABLE_BOOKS,
                 ModBlocks.TABLE_DRAWERS,

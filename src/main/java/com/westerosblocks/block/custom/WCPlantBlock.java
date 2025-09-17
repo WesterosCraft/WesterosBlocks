@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.SlabType;
 import net.minecraft.entity.player.PlayerEntity;
@@ -28,9 +29,11 @@ public class WCPlantBlock extends Block {
     private final boolean layerSensitive;
     private final boolean toggleOnUse;
     private IntProperty LAYERS;
+    private ModProperties.StateProperty STATE;
     
     // Static fields to handle property transfer during construction
     protected static IntProperty tempLAYERS;
+    protected static ModProperties.StateProperty tempSTATE;
 
     public static final VoxelShape[] SHAPE_BY_LAYER = new VoxelShape[] {
             VoxelShapes.empty(),
@@ -53,6 +56,9 @@ public class WCPlantBlock extends Block {
         if (layerSensitive && LAYERS != null) {
             defbs = defbs.with(LAYERS, 8); // Default to full height
         }
+        if (STATE != null) {
+            defbs = defbs.with(STATE, STATE.defValue);
+        }
         this.setDefaultState(defbs);
     }
 
@@ -73,6 +79,10 @@ public class WCPlantBlock extends Block {
         FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
         bs = bs.with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
 
+        if (STATE != null) {
+            bs = bs.with(STATE, STATE.defValue);
+        }
+        
         if (layerSensitive && LAYERS != null) {
             BlockState below = ctx.getWorld().getBlockState(ctx.getBlockPos().offset(Direction.DOWN));
             if (below.contains(Properties.LAYERS)) {
@@ -113,6 +123,11 @@ public class WCPlantBlock extends Block {
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(WATERLOGGED);
+        if (tempSTATE != null) {
+            STATE = tempSTATE;
+            tempSTATE = null;
+            builder.add(STATE);
+        }
         if (tempLAYERS != null) {
             LAYERS = tempLAYERS;
             tempLAYERS = null;
@@ -123,7 +138,9 @@ public class WCPlantBlock extends Block {
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         Hand hand = player.getActiveHand();
-        if (this.toggleOnUse && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
+        if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
+            state = state.cycle(this.STATE);
+            world.setBlockState(pos, state, 10);
             world.syncWorldEvent(player, 1006, pos, 0);
             return ActionResult.success(world.isClient);
         }

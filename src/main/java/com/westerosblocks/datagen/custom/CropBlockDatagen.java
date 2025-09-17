@@ -8,42 +8,23 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class CropBlockDatagen {
+    
+    // Step 1: Parent Block Model - following block-models.md #parent-block-model pattern
     private static Model createCropStageModel(int stage, boolean tinted) {
         String path = tinted ? "block/tinted/crop_stage_" + stage : "block/untinted/crop_stage_" + stage;
         return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(), TextureKey.TEXTURE);
     }
 
+    // Step 2: Using Texture Map - following block-models.md #using-texture-map pattern
     public static TextureMap createCropTextureMap(String cropName, int stage) {
         return new TextureMap()
             .put(TextureKey.TEXTURE, WesterosBlocks.id("block/" + cropName + "/" + cropName + "_stage_" + stage));
-    }
-    
-    // Step 4: BlockStateSupplier for crop growth stages - following block-models.md #custom-supplier-method pattern
-    public static VariantsBlockStateSupplier createCropBlockStates(Block cropBlock, String cropName, 
-            Identifier stage0Model, Identifier stage1Model, Identifier stage2Model, Identifier stage3Model,
-            Identifier stage4Model, Identifier stage5Model, Identifier stage6Model, Identifier stage7Model) {
-        
-        // Create a custom StateProperty with age values for this specific crop
-        ModProperties.StateProperty cropStateProperty = new ModProperties.StateProperty(
-            List.of("age0", "age1", "age2", "age3", "age4", "age5", "age6", "age7")
-        );
-        
-        return VariantsBlockStateSupplier.create(cropBlock)
-            .coordinate(BlockStateVariantMap.create(cropStateProperty)
-                .register("age0", BlockStateVariant.create().put(VariantSettings.MODEL, stage0Model))
-                .register("age1", BlockStateVariant.create().put(VariantSettings.MODEL, stage1Model))
-                .register("age2", BlockStateVariant.create().put(VariantSettings.MODEL, stage2Model))
-                .register("age3", BlockStateVariant.create().put(VariantSettings.MODEL, stage3Model))
-                .register("age4", BlockStateVariant.create().put(VariantSettings.MODEL, stage4Model))
-                .register("age5", BlockStateVariant.create().put(VariantSettings.MODEL, stage5Model))
-                .register("age6", BlockStateVariant.create().put(VariantSettings.MODEL, stage6Model))
-                .register("age7", BlockStateVariant.create().put(VariantSettings.MODEL, stage7Model))
-            );
     }
     
     // Builder pattern for crop block generation
@@ -97,25 +78,44 @@ public class CropBlockDatagen {
                 throw new IllegalStateException("No states defined for crop block " + cropBlock);
             }
             
-            // Create StateProperty with all state IDs
-            List<String> stateIDs = states.stream().map(state -> state.stateID).collect(Collectors.toList());
+            // Get the STATE property that should already be defined on the block
+            // The block must have been created with stateValues parameter for this to work
+            ModProperties.StateProperty blockStateProperty = null;
             
-            if (stateIDs.isEmpty()) {
-                throw new IllegalStateException("StateIDs list is empty for crop block " + cropBlock);
+            // Find the STATE property from the block's state definition
+            for (var property : cropBlock.getStateManager().getProperties()) {
+                if (property instanceof ModProperties.StateProperty stateProperty && "state".equals(property.getName())) {
+                    blockStateProperty = stateProperty;
+                    break;
+                }
             }
             
-            ModProperties.StateProperty cropStateProperty = new ModProperties.StateProperty(stateIDs);
+            if (blockStateProperty == null) {
+                throw new IllegalStateException("Block " + cropBlock + " does not have a STATE property defined. " +
+                    "Make sure the block was created with stateValues parameter.");
+            }
+            
+            // Validate that all our state IDs exist in the block's property
+            List<String> stateIDs = states.stream().map(state -> state.stateID).collect(Collectors.toList());
+            Collection<String> blockStateValues = blockStateProperty.getValues();
+            
+            for (String stateID : stateIDs) {
+                if (!blockStateValues.contains(stateID)) {
+                    throw new IllegalStateException("State '" + stateID + "' is not defined in block's STATE property. " +
+                        "Available states: " + blockStateValues);
+                }
+            }
             
             // Generate models and variants
             List<Identifier> modelIds = new ArrayList<>();
-            BlockStateVariantMap.SingleProperty<String> variantMap = BlockStateVariantMap.create(cropStateProperty);
+            BlockStateVariantMap.SingleProperty<String> variantMap = BlockStateVariantMap.create(blockStateProperty);
             
             for (int i = 0; i < states.size(); i++) {
                 StateVariant state = states.get(i);
                 
                 // Create texture map for this state (use first texture if multiple)
                 TextureMap textureMap = new TextureMap()
-                        .put(TextureKey.TEXTURE, WesterosBlocks.id("block/" + state.textures[0]));
+                        .put(TextureKey.TEXTURE, WesterosBlocks.id(state.textures[0]));
                 
                 // Generate model identifier
                 Identifier modelId = createCropStageModel(i, isTinted)

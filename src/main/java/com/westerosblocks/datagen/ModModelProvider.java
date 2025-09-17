@@ -1537,14 +1537,14 @@ public class ModModelProvider extends FabricModelProvider {
                 .build();
 
         // Bed Blocks
-        registerCustomBedBlock(bsmg, ModBlocks.ITCHY_STRAW_BED)
-                .textures("bed_block/bed_straw_itchy_0",
-                        "bed_block/bed_straw_itchy_1",
-                        "bed_block/bed_straw_itchy_2",
-                        "bed_block/bed_straw_itchy_3",
-                        "bed_block/bed_straw_itchy_4",
-                        "bed_block/bed_straw_itchy_5")
-                .build();
+//        registerCustomBedBlock(bsmg, ModBlocks.ITCHY_STRAW_BED)
+//                .textures("bed_block/bed_straw_itchy_0",
+//                        "bed_block/bed_straw_itchy_1",
+//                        "bed_block/bed_straw_itchy_2",
+//                        "bed_block/bed_straw_itchy_3",
+//                        "bed_block/bed_straw_itchy_4",
+//                        "bed_block/bed_straw_itchy_5")
+//                .build();
     }
 
     @Override

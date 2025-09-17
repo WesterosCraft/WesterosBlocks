@@ -7,6 +7,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import java.util.function.ToIntFunction;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
 
 import net.minecraft.block.BlockState;
 
@@ -237,6 +238,11 @@ public class BlockBuilder<T extends Block> {
     
     public BlockBuilder<T> noInWeb() {
         parameters.put("noInWeb", true);
+        return this;
+    }
+    
+    public BlockBuilder<T> stateValues(List<String> stateValues) {
+        parameters.put("stateValues", stateValues);
         return this;
     }
     
