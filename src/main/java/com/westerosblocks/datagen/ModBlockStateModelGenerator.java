@@ -79,7 +79,7 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 case "cross" -> buildPlant(); // Alias for plant
 //                                case "crop" -> buildCrop();
                                 case "flowerbed" -> buildFlowerbed();
-                                case "bed" -> buildBed();
+//                                case "bed" -> buildBed();
                                 default -> throw new IllegalArgumentException("Unknown block type: " + blockType);
                         }
                 }
@@ -203,14 +203,14 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                         }
                 }
 
-                private void buildBed() {
-                        if (!texture.isEmpty()) {
-                                BedBlockExporter.registerSingleTextureBedBlock(generator, block, texture);
-                        } else if (textures.length >= 1) {
-                                // Pass all textures to handle the full 6-texture bed system
-                                BedBlockExporter.registerSimpleCustomBedBlock(generator, block, textures);
-                        }
-                }
+//                private void buildBed() {
+//                        if (!texture.isEmpty()) {
+//                                BedBlockExporter.registerSingleTextureBedBlock(generator, block, texture);
+//                        } else if (textures.length >= 1) {
+//                                // Pass all textures to handle the full 6-texture bed system
+//                                BedBlockExporter.registerSimpleCustomBedBlock(generator, block, textures);
+//                        }
+//                }
         }
 
         // Clean datagen methods following block-models.md pattern

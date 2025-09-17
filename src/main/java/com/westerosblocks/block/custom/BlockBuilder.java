@@ -105,6 +105,10 @@ public class BlockBuilder<T extends Block> {
     public static BlockBuilder<WCWebBlock> web() {
         return new BlockBuilder<>(new WCWebBlock.Factory());
     }
+
+    public static BlockBuilder<WCWebBlock> bed() {
+        return new BlockBuilder<>(new WCBedBlock.Factory());
+    }
     
     public static BlockBuilder<WCFlowerbedBlock> flowerbed() {
         return new BlockBuilder<>(new WCFlowerbedBlock.Factory());

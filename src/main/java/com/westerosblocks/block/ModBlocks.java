@@ -3770,13 +3770,14 @@ public class ModBlocks {
                     .build());
 
     // Bed Blocks
-//    public static final Block ITCHY_STRAW_BED = registerBlock(
-//            "itchy_straw_bed",
-//            BlockBuilder.bed()
-//                    .strength(0.2f)
-//                    .sounds(BlockSoundGroup.GRASS)
-//                    .nonOpaque()
-//                    .build());
+    public static final Block ITCHY_STRAW_BED = registerBlock(
+            "itchy_straw_bed",
+            BlockBuilder.bed()
+                    .strength(0.2f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .build());
 
     /**
      * Initialize all blocks
@@ -4086,11 +4087,11 @@ public class ModBlocks {
                 ModBlocks.FULL_CABINET,
                 ModBlocks.MIRROR_BLOCK,
                 ModBlocks.OAK_TABLE,
-//                ModBlocks.ITCHY_STRAW_BED,
                 ModBlocks.OAK_CHAIR,
                 ModBlocks.TABLE_BOOKS,
                 ModBlocks.TABLE_DRAWERS,
-                ModBlocks.TABLE_WIDGETS
+                ModBlocks.TABLE_WIDGETS,
+                ModBlocks.ITCHY_STRAW_BED
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_grass_dirt_tab",

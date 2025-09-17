@@ -2,6 +2,7 @@ package com.westerosblocks.datagen;
 
 import com.westerosblocks.block.ModBlocks;
 
+import com.westerosblocks.datagen.custom.BedBlockDatagen;
 import com.westerosblocks.datagen.custom.CropBlockDatagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -1581,14 +1582,15 @@ public class ModModelProvider extends FabricModelProvider {
                 .build();
 
         // Bed Blocks
-//        registerCustomBedBlock(bsmg, ModBlocks.ITCHY_STRAW_BED)
-//                .textures("bed_block/bed_straw_itchy_0",
-//                        "bed_block/bed_straw_itchy_1",
-//                        "bed_block/bed_straw_itchy_2",
-//                        "bed_block/bed_straw_itchy_3",
-//                        "bed_block/bed_straw_itchy_4",
-//                        "bed_block/bed_straw_itchy_5")
-//                .build();
+        BedBlockDatagen.generateBedBlock(bsmg, ModBlocks.ITCHY_STRAW_BED, "itchy_straw_bed")
+                .bedType("normal")
+                .texture("bed_block/bed_straw_itchy_0")
+                .texture("bed_block/bed_straw_itchy_1")
+                .texture("bed_block/bed_straw_itchy_2")
+                .texture("bed_block/bed_straw_itchy_3")
+                .texture("bed_block/bed_straw_itchy_4")
+                .texture("bed_block/bed_straw_itchy_5")
+                .build();
     }
 
     @Override
