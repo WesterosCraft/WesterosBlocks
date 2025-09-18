@@ -130,6 +130,10 @@ public class WCVinesBlock extends VineBlock {
             }
         }
 
+        if (canGrowDownward && state.get(DOWN)) {
+            ++i;
+        }
+
         return i;
     }
 
@@ -216,10 +220,12 @@ public class WCVinesBlock extends VineBlock {
 
         for (Direction direction : ctx.getPlacementDirections()) {
             if (canGrowDownward || (direction != Direction.DOWN)) {
-                BooleanProperty booleanproperty = FACING_PROPERTIES.get(direction);
-                boolean flag1 = flag && blockstate.get(booleanproperty);
-                if (!flag1 && this.canSupportAtFace(ctx.getWorld(), ctx.getBlockPos(), direction)) {
-                    return blockstate1.with(booleanproperty, Boolean.TRUE);
+                BooleanProperty booleanproperty = direction == Direction.DOWN ? DOWN : FACING_PROPERTIES.get(direction);
+                if (booleanproperty != null) {
+                    boolean flag1 = flag && blockstate.get(booleanproperty);
+                    if (!flag1 && this.canSupportAtFace(ctx.getWorld(), ctx.getBlockPos(), direction)) {
+                        return blockstate1.with(booleanproperty, Boolean.TRUE);
+                    }
                 }
             }
         }
