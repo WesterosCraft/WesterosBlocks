@@ -46,6 +46,11 @@ public class WesterosBlocksClient implements ClientModInitializer {
         // Chair Blocks
         EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
 
+        // Bed Blocks
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NOBLE_BLUE_BED, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NOBLE_RED_BED, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HAMMOCK, RenderLayer.getCutout());
+
         // Fan Blocks
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CORAL_TUBE_FAN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WALL_CORAL_TUBE_FAN, RenderLayer.getCutout());

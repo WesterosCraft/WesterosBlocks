@@ -19,7 +19,15 @@ public class BedBlockDatagen {
     private static Model createBedPartModel(String bedType, boolean isHead, boolean tinted) {
         String tintPath = tinted ? "block/tinted/" : "block/untinted/";
         String partSuffix = isHead ? "_head" : "_foot";
-        String path = tintPath + "bed" + partSuffix;
+        
+        // Apply different bed types based on bedType parameter
+        String bedTypeName = switch (bedType) {
+            case "raised" -> "bed_raised";
+            case "hammock" -> "bed_hammock";
+            default -> "bed";
+        };
+        
+        String path = tintPath + bedTypeName + partSuffix;
         return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(), 
             TextureKey.PARTICLE, ModTextureKey.BED_TOP, ModTextureKey.BED_SIDE, ModTextureKey.BED_END);
     }
@@ -104,10 +112,18 @@ public class BedBlockDatagen {
         private List<Identifier> generateBedModels() {
             List<Identifier> modelIds = new ArrayList<>();
             
-            // Create texture map for bed parts
-            // Based on your example: texture[0]=particle, texture[1]=bedtop, texture[3]=bedside, texture[5]=bedend
-            TextureMap bedTextureMap = new TextureMap()
+            // Create texture map for head model
+            // Head uses: texture[0]=bedtop+particle, texture[2]=bedside, texture[4]=bedend
+            TextureMap headTextureMap = new TextureMap()
                     .put(TextureKey.PARTICLE, WesterosBlocks.id("block/" + textures.get(0)))
+                    .put(ModTextureKey.BED_TOP, WesterosBlocks.id("block/" + textures.get(0)))
+                    .put(ModTextureKey.BED_SIDE, WesterosBlocks.id("block/" + textures.get(2)))
+                    .put(ModTextureKey.BED_END, WesterosBlocks.id("block/" + textures.get(4)));
+            
+            // Create texture map for foot model  
+            // Foot uses: texture[1]=bedtop+particle, texture[3]=bedside, texture[5]=bedend
+            TextureMap footTextureMap = new TextureMap()
+                    .put(TextureKey.PARTICLE, WesterosBlocks.id("block/" + textures.get(1)))
                     .put(ModTextureKey.BED_TOP, WesterosBlocks.id("block/" + textures.get(1)))
                     .put(ModTextureKey.BED_SIDE, WesterosBlocks.id("block/" + textures.get(3)))
                     .put(ModTextureKey.BED_END, WesterosBlocks.id("block/" + textures.get(5)));
@@ -115,13 +131,13 @@ public class BedBlockDatagen {
             // Generate head model
             String headModelSuffix = "/head_v1";
             Identifier headModelId = createBedPartModel(bedType, true, isTinted)
-                    .upload(bedBlock, headModelSuffix, bedTextureMap, generator.modelCollector);
+                    .upload(bedBlock, headModelSuffix, headTextureMap, generator.modelCollector);
             modelIds.add(headModelId);
             
             // Generate foot model
             String footModelSuffix = "/foot_v1";
             Identifier footModelId = createBedPartModel(bedType, false, isTinted)
-                    .upload(bedBlock, footModelSuffix, bedTextureMap, generator.modelCollector);
+                    .upload(bedBlock, footModelSuffix, footTextureMap, generator.modelCollector);
             modelIds.add(footModelId);
             
             return modelIds;

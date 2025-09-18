@@ -105,8 +105,10 @@ public class LeavesBlockDatagen {
             
             generator.blockStateCollector.accept(blockStateSupplier);
             
-            // Generate item model with minecraft:item/generated parent
-            generateItemModel();
+            // Register item model using first model
+            if (!modelIds.isEmpty()) {
+                generator.registerParentedItemModel(leavesBlock, modelIds.get(0));
+            }
         }
         
         private List<Identifier> generateLeavesModels() {
@@ -183,30 +185,6 @@ public class LeavesBlockDatagen {
             }
             
             return textureMap;
-        }
-        
-        private void generateItemModel() {
-            // Use the first texture set for the item model
-            RandomTextureSet firstTextureSet = randomTextureSets.get(0);
-            String itemTexture;
-            
-            if (betterFoliage) {
-                // For better foliage, use the 'all' texture
-                itemTexture = firstTextureSet.textures[0];
-            } else {
-                // For standard leaves, use the side texture
-                itemTexture = firstTextureSet.textures.length > 1 ? firstTextureSet.textures[1] : firstTextureSet.textures[0];
-            }
-            
-            // Create the item model with minecraft:item/generated parent
-            TextureMap itemTextureMap = new TextureMap()
-                    .put(TextureKey.LAYER0, WesterosBlocks.id("block/" + itemTexture));
-            
-            Models.GENERATED.upload(
-                    Identifier.of("westerosblocks", "item/" + leavesName),
-                    itemTextureMap,
-                    generator.modelCollector
-            );
         }
         
         private VariantsBlockStateSupplier generateBlockStateVariants(List<Identifier> modelIds) {
