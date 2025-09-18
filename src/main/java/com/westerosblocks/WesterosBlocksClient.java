@@ -198,7 +198,7 @@ public class WesterosBlocksClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CROP_TURNIPS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CROP_WHEAT, RenderLayer.getCutout());
 
-        // leaves blocks
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.APPLE_FRUIT_LEAVES, RenderLayer.getCutout());
+        // vines blocks
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DAPPLED_MOSS, RenderLayer.getCutout());
     }
 }

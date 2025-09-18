@@ -118,6 +118,10 @@ public class BlockBuilder<T extends Block> {
         return new BlockBuilder<>(new WCLeavesBlock.Factory());
     }
     
+    public static BlockBuilder<WCVinesBlock> vines() {
+        return new BlockBuilder<>(new WCVinesBlock.Factory());
+    }
+    
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
         return this;
@@ -281,6 +285,16 @@ public class BlockBuilder<T extends Block> {
     
     public BlockBuilder<T> noDecay() {
         parameters.put("noDecay", true);
+        return this;
+    }
+    
+    public BlockBuilder<T> noClimb() {
+        parameters.put("noClimb", true);
+        return this;
+    }
+    
+    public BlockBuilder<T> canGrowDownward() {
+        parameters.put("canGrowDownward", true);
         return this;
     }
     

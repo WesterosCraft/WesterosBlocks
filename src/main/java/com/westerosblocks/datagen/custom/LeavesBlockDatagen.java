@@ -52,6 +52,7 @@ public class LeavesBlockDatagen {
         private boolean betterFoliage = false;
         private boolean rotateRandom = false;
         private final List<RandomTextureSet> randomTextureSets = new ArrayList<>();
+        private final List<String> simpleTextures = new ArrayList<>();
         
         // Inner class to hold random texture set information
         public static class RandomTextureSet {
@@ -90,14 +91,31 @@ public class LeavesBlockDatagen {
             return this;
         }
         
+        public LeavesBlockBuilder textures(String... textures) {
+            this.simpleTextures.clear();
+            for (String texture : textures) {
+                this.simpleTextures.add(texture);
+            }
+            return this;
+        }
+        
         public LeavesBlockBuilder addRandomTextureSet(int weight, String... textures) {
             this.randomTextureSets.add(new RandomTextureSet(weight, textures));
             return this;
         }
         
         public void build() {
+            // If simple textures are provided, convert to a single random texture set
+            if (!simpleTextures.isEmpty()) {
+                if (randomTextureSets.isEmpty()) {
+                    randomTextureSets.add(new RandomTextureSet(1, simpleTextures.toArray(new String[0])));
+                } else {
+                    throw new IllegalStateException("Cannot use both .textures() and .addRandomTextureSet() methods");
+                }
+            }
+            
             if (randomTextureSets.isEmpty()) {
-                throw new IllegalStateException("No random texture sets defined for leaves block " + leavesBlock);
+                throw new IllegalStateException("No textures defined for leaves block " + leavesBlock + ". Use .textures() or .addRandomTextureSet()");
             }
             
             List<Identifier> modelIds = generateLeavesModels();

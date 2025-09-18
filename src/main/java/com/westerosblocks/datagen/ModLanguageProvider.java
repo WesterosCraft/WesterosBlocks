@@ -482,6 +482,33 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
                 // Leaves Blocks
                 translationBuilder.add("block.westerosblocks.apple_fruit_leaves", "Apple Fruit Leaves");
+                translationBuilder.add("block.westerosblocks.apricot_fruit_leaves", "Apricot Fruit Leaves");
+                translationBuilder.add("block.westerosblocks.blackberry_bush", "Blackberry Bush");
+                translationBuilder.add("block.westerosblocks.blueberry_bush", "Blueberry Bush");
+                translationBuilder.add("block.westerosblocks.cherry_fruit_leaves", "Cherry Fruit Leaves");
+                translationBuilder.add("block.westerosblocks.hop_fruit_leaves", "Hop Fruit Leaves");
+                translationBuilder.add("block.westerosblocks.juniper_bush", "Juniper Bush");
+                translationBuilder.add("block.westerosblocks.lemon_fruit_leaves", "Lemon Fruit Leaves");
+                translationBuilder.add("block.westerosblocks.lime_fruit_leaves", "Lime Fruit Leaves");
+                translationBuilder.add("block.westerosblocks.olive_fruit_leaves", "Olive Fruit Leaves");
+                translationBuilder.add("block.westerosblocks.orange_fruit_leaves", "Orange Fruit Leaves");
+                translationBuilder.add("block.westerosblocks.palm_leaves", "Palm Leaves");
+                translationBuilder.add("block.westerosblocks.peach_fruit_leaves", "Peach Fruit Leaves");
+                translationBuilder.add("block.westerosblocks.pink_rose_bush", "Pink Rose Bush");
+                translationBuilder.add("block.westerosblocks.plum_fruit_leaves", "Plum Fruit Leaves");
+                translationBuilder.add("block.westerosblocks.pomegranate_fruit_leaves", "Pomegranate Fruit Leaves");
+                translationBuilder.add("block.westerosblocks.purple_grape_fruit_leaves", "Purple Grape Fruit Leaves");
+                translationBuilder.add("block.westerosblocks.raspberry_bush", "Raspberry Bush");
+                translationBuilder.add("block.westerosblocks.red_rose_bush", "Red Rose Bush");
+                translationBuilder.add("block.westerosblocks.snowy_spruce_leaves", "Snowy Spruce Leaves");
+                translationBuilder.add("block.westerosblocks.snowy_weirwood_leaves", "Snowy Weirwood Leaves");
+                translationBuilder.add("block.westerosblocks.weirwood_leaves", "Weirwood Leaves");
+                translationBuilder.add("block.westerosblocks.white_grape_fruit_leaves", "White Grape Fruit Leaves");
+                translationBuilder.add("block.westerosblocks.white_rose_bush", "White Rose Bush");
+                translationBuilder.add("block.westerosblocks.yellow_rose_bush", "Yellow Rose Bush");
+
+                // Vines Blocks
+                translationBuilder.add("block.westerosblocks.dappled_moss", "Dappled Moss");
         }
 
 }

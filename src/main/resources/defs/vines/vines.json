@@ -1,0 +1,42 @@
+{
+    "blockName": "vines",
+    "blockType": "vines",
+    "stepSound": "grass",
+    "material": "plants",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Vines",
+    "colorMult": "textures/colormap/foliagevine",
+    "randomTextures": [
+        {
+            "textures": [
+                "vines/side1",
+                "vines/side1"
+            ]
+        },
+        {
+            "textures": [
+                "vines/side2",
+                "vines/side2"
+            ]
+        },
+        {
+            "textures": [
+                "vines/side3",
+                "vines/side3"
+            ]
+        },
+        {
+            "textures": [
+                "vines/side4",
+                "vines/side4"
+            ]
+        },
+        {
+            "textures": [
+                "vines/side5",
+                "vines/side5"
+            ]
+        }
+    ],
+    "type": "allow-unsupported,no-climb,has-down"
+}

@@ -3858,9 +3858,260 @@ public class ModBlocks {
                     .requiresTool()
                     .sounds(BlockSoundGroup.GRASS)
                     .noDecay()
-                    .betterFoliage()
-                    .overlay()
                     .nonOpaque()
+                    .build());
+
+    public static final Block APRICOT_FRUIT_LEAVES = registerBlock(
+            "apricot_fruit_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block BLACKBERRY_BUSH = registerBlock(
+            "blackberry_bush",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block BLUEBERRY_BUSH = registerBlock(
+            "blueberry_bush",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block CHERRY_FRUIT_LEAVES = registerBlock(
+            "cherry_fruit_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block HOP_FRUIT_LEAVES = registerBlock(
+            "hop_fruit_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block JUNIPER_BUSH = registerBlock(
+            "juniper_bush",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block LEMON_FRUIT_LEAVES = registerBlock(
+            "lemon_fruit_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block LIME_FRUIT_LEAVES = registerBlock(
+            "lime_fruit_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block OLIVE_FRUIT_LEAVES = registerBlock(
+            "olive_fruit_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block ORANGE_FRUIT_LEAVES = registerBlock(
+            "orange_fruit_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block PALM_LEAVES = registerBlock(
+            "palm_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block PEACH_FRUIT_LEAVES = registerBlock(
+            "peach_fruit_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block PINK_ROSE_BUSH = registerBlock(
+            "pink_rose_bush",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block PLUM_FRUIT_LEAVES = registerBlock(
+            "plum_fruit_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block POMEGRANATE_FRUIT_LEAVES = registerBlock(
+            "pomegranate_fruit_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block PURPLE_GRAPE_FRUIT_LEAVES = registerBlock(
+            "purple_grape_fruit_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block RASPBERRY_BUSH = registerBlock(
+            "raspberry_bush",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block RED_ROSE_BUSH = registerBlock(
+            "red_rose_bush",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block SNOWY_SPRUCE_LEAVES = registerBlock(
+            "snowy_spruce_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block SNOWY_WEIRWOOD_LEAVES = registerBlock(
+            "snowy_weirwood_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block WEIRWOOD_LEAVES = registerBlock(
+            "weirwood_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block WHITE_GRAPE_FRUIT_LEAVES = registerBlock(
+            "white_grape_fruit_leaves",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block WHITE_ROSE_BUSH = registerBlock(
+            "white_rose_bush",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    public static final Block YELLOW_ROSE_BUSH = registerBlock(
+            "yellow_rose_bush",
+            BlockBuilder.leaves()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .noDecay()
+                    .nonOpaque()
+                    .build());
+
+    // vines block
+    public static final Block DAPPLED_MOSS = registerBlock(
+            "dappled_moss",
+            BlockBuilder.vines()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowUnsupported()
+                    .noClimb()
+                    .canGrowDownward()
                     .build());
 
 
@@ -4188,7 +4439,32 @@ public class ModBlocks {
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_foliage_tab",
-                ModBlocks.APPLE_FRUIT_LEAVES
+                ModBlocks.APPLE_FRUIT_LEAVES,
+                ModBlocks.APRICOT_FRUIT_LEAVES,
+                ModBlocks.BLACKBERRY_BUSH,
+                ModBlocks.BLUEBERRY_BUSH,
+                ModBlocks.CHERRY_FRUIT_LEAVES,
+                ModBlocks.HOP_FRUIT_LEAVES,
+                ModBlocks.JUNIPER_BUSH,
+                ModBlocks.LEMON_FRUIT_LEAVES,
+                ModBlocks.LIME_FRUIT_LEAVES,
+                ModBlocks.OLIVE_FRUIT_LEAVES,
+                ModBlocks.ORANGE_FRUIT_LEAVES,
+                ModBlocks.PALM_LEAVES,
+                ModBlocks.PEACH_FRUIT_LEAVES,
+                ModBlocks.PINK_ROSE_BUSH,
+                ModBlocks.PLUM_FRUIT_LEAVES,
+                ModBlocks.POMEGRANATE_FRUIT_LEAVES,
+                ModBlocks.PURPLE_GRAPE_FRUIT_LEAVES,
+                ModBlocks.RASPBERRY_BUSH,
+                ModBlocks.RED_ROSE_BUSH,
+                ModBlocks.SNOWY_SPRUCE_LEAVES,
+                ModBlocks.SNOWY_WEIRWOOD_LEAVES,
+                ModBlocks.WEIRWOOD_LEAVES,
+                ModBlocks.WHITE_GRAPE_FRUIT_LEAVES,
+                ModBlocks.WHITE_ROSE_BUSH,
+                ModBlocks.YELLOW_ROSE_BUSH,
+                ModBlocks.DAPPLED_MOSS
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_grass_dirt_tab",
