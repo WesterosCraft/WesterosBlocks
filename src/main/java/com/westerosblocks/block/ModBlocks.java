@@ -2048,6 +2048,15 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.WOOD)
                     .build());
 
+    public static final Block STRIPPED_OAK_LOG = registerBlock(
+            "stripped_oak_log",
+            BlockBuilder.log()
+                    .strength(2.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .build());
+
+
     // Rail blocks
     public static final Block FANCY_BLUE_CARPET = registerBlock(
             "fancy_blue_carpet",
@@ -4275,7 +4284,8 @@ public class ModBlocks {
                 ModBlocks.OAK_LOG_ROPE,
                 ModBlocks.PALM_TREE_LOG,
                 ModBlocks.SPRUCE_LOG_CHAIN,
-                ModBlocks.SPRUCE_LOG_ROPE
+                ModBlocks.SPRUCE_LOG_ROPE,
+                ModBlocks.STRIPPED_OAK_LOG
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_half_ashlar_tab",

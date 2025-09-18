@@ -306,6 +306,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 // Arrow Slit Blocks
                 translationBuilder.add("block.westerosblocks.arbor_brick_arrow_slit", "Arbor Brick Arrow Slit");
 
+                // Log Blocks
+                translationBuilder.add("block.westerosblocks.stripped_oak_log", "Stripped Oak Log");
+
                 // Fan Blocks
                 translationBuilder.add("block.westerosblocks.coral_tube_fan", "Tube Coral Fan");
                 translationBuilder.add("block.westerosblocks.coral_brain_fan", "Brain Coral Fan");

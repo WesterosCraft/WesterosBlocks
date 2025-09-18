@@ -700,6 +700,10 @@ public class ModModelProvider extends FabricModelProvider {
                 .textures("bark/weirwood/side", "bark/weirwood/scars")
                 .build();
 
+        registerCustomLogBlock(bsmg, ModBlocks.STRIPPED_OAK_LOG)
+                .textures("wood/oak/stripped_oak_log", "wood/oak/stripped_oak_log_top")
+                .build();
+
         // Slab Blocks
         registerCustomSlabBlock(bsmg, ModBlocks.APPLE_BASKET_SLAB)
                 .textures("crate_block/basket_bottom", "crate_block/basket_apple",
