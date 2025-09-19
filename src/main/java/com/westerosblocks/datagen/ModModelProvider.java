@@ -1936,8 +1936,27 @@ public class ModModelProvider extends FabricModelProvider {
 
         VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.DAPPLED_MOSS, "dappled_moss")
                 .isTinted()
-                .rotateRandom()
                 .textures("dappled_moss/dappled", "dappled_moss/dappled")
+                .build();
+
+        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_ONE, "falling_water_block_one")
+                .textures("alyssas_tears_mist/mist1", "alyssas_tears_mist/mist1")
+                .isTinted()
+                .build();
+
+        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_TWO, "falling_water_block_two")
+                .textures("alyssas_tears_mist/mist2", "alyssas_tears_mist/mist2")
+                .isTinted()
+                .build();
+
+        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_THREE, "falling_water_block_three")
+                .textures("alyssas_tears_mist/mist3", "alyssas_tears_mist/mist3")
+                .isTinted()
+                .build();
+
+        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_FOUR, "falling_water_block_four")
+                .textures("alyssas_tears_mist/mist4", "alyssas_tears_mist/mist4")
+                .isTinted()
                 .build();
     }
 

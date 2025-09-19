@@ -4116,11 +4116,59 @@ public class ModBlocks {
             BlockBuilder.vines()
                     .strength(0.0f)
                     .requiresTool()
-                    .sounds(BlockSoundGroup.GRASS)
+                    .sounds(BlockSoundGroup.WET_GRASS)
                     .nonOpaque()
                     .allowUnsupported()
                     .noClimb()
                     .canGrowDownward()
+                    .build());
+
+    public static final Block FALLING_WATER_BLOCK_FOUR = registerBlock(
+            "falling_water_block_four",
+            BlockBuilder.vines()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WET_GRASS)
+                    .nonOpaque()
+                    .noCollision()
+                    .allowUnsupported()
+                    .noClimb()
+                    .build());
+
+    public static final Block FALLING_WATER_BLOCK_THREE = registerBlock(
+            "falling_water_block_three",
+            BlockBuilder.vines()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WET_GRASS)
+                    .nonOpaque()
+                    .noCollision()
+                    .allowUnsupported()
+                    .noClimb()
+                    .build());
+
+    public static final Block FALLING_WATER_BLOCK_TWO = registerBlock(
+            "falling_water_block_two",
+            BlockBuilder.vines()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WET_GRASS)
+                    .nonOpaque()
+                    .noCollision()
+                    .allowUnsupported()
+                    .noClimb()
+                    .build());
+
+    public static final Block FALLING_WATER_BLOCK_ONE = registerBlock(
+            "falling_water_block_one",
+            BlockBuilder.vines()
+                    .strength(0.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WET_GRASS)
+                    .nonOpaque()
+                    .allowUnsupported()
+                    .noCollision()
+                    .noClimb()
                     .build());
 
 
@@ -4192,7 +4240,11 @@ public class ModBlocks {
                 ModBlocks.ALYSSAS_TEARS_MIST_TWO,
                 ModBlocks.ALYSSAS_TEARS_MIST_THREE,
                 ModBlocks.ALYSSAS_TEARS_MIST_FOUR,
-                ModBlocks.SEAGRASS
+                ModBlocks.SEAGRASS,
+                ModBlocks.FALLING_WATER_BLOCK_ONE,
+                ModBlocks.FALLING_WATER_BLOCK_TWO,
+                ModBlocks.FALLING_WATER_BLOCK_THREE,
+                ModBlocks.FALLING_WATER_BLOCK_FOUR
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_crops_herbs_tab",

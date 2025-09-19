@@ -512,6 +512,10 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
                 // Vines Blocks
                 translationBuilder.add("block.westerosblocks.dappled_moss", "Dappled Moss");
+                translationBuilder.add("block.westerosblocks.falling_water_block_four", "Falling Water Block Four");
+                translationBuilder.add("block.westerosblocks.falling_water_block_one", "Falling Water Block One");
+                translationBuilder.add("block.westerosblocks.falling_water_block_three", "Falling Water Block Three");
+                translationBuilder.add("block.westerosblocks.falling_water_block_two", "Falling Water Block Two");
         }
 
 }
