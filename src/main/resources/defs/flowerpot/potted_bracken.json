@@ -1,0 +1,66 @@
+{
+    "blockName": "potted_bracken",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Potted Bracken",
+    "type": "plant-id:bracken",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "bracken/side1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "bracken/side2"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "bracken/side3"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "bracken/side4"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "bracken/side5"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "bracken/side6"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "bracken/side7"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "bracken/side8"
+            ]
+        }
+    ]
+}

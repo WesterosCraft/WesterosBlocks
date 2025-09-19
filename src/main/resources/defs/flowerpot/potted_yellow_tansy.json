@@ -1,0 +1,13 @@
+{
+    "blockName": "potted_yellow_tansy",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Yellow Tansy",
+    "type": "plant-id:yellow_tansy",
+    "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/yellow_tansy"
+    ]
+}

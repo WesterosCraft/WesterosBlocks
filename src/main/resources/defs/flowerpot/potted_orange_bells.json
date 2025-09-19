@@ -1,0 +1,13 @@
+{
+    "blockName": "potted_orange_bells",
+    "blockType": "flowerpot",
+    "material": "plants",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Orange Bells",
+    "type": "plant-id:orange_bells",
+    "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/orange_bells1"
+    ]
+}

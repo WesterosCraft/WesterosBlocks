@@ -1,0 +1,52 @@
+{
+    "blockName": "potted_green_scrub_grass",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Potted Green Scrub Grass",
+    "type": "plant-id:green_scrub_grass",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/green_scrub_grass1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/green_scrub_grass2"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/green_scrub_grass3"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/green_scrub_grass4"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/green_scrub_grass5"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/green_scrub_grass6"
+            ]
+        }
+    ]
+}

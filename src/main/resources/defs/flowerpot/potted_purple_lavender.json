@@ -1,0 +1,31 @@
+{
+    "blockName": "potted_purple_lavender",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Purple Lavender",
+    "type": "plant-id:purple_lavender",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/purple_lavender1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/purple_lavender2"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/purple_lavender3"
+            ]
+        }
+    ]
+}

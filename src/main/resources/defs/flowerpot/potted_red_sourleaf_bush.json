@@ -1,0 +1,24 @@
+{
+    "blockName": "potted_red_sourleaf_bush",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Red Sourleaf Bush",
+    "type": "plant-id:red_sourleaf_bush",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/red_sourleaf_bush1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/red_sourleaf_bush2"
+            ]
+        }
+    ]
+}

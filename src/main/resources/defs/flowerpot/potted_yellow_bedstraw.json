@@ -1,0 +1,31 @@
+{
+    "blockName": "potted_yellow_bedstraw",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Yellow Bedstraw",
+    "type": "plant-id:yellow_bedstraw",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/yellow_bedstraw/side1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/yellow_bedstraw/side2"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/yellow_bedstraw/side3"
+            ]
+        }
+    ]
+}

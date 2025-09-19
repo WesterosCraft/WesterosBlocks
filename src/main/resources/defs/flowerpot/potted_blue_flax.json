@@ -1,0 +1,38 @@
+{
+    "blockName": "potted_blue_flax",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Blue Flax",
+    "type": "plant-id:blue_flax",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/blue_flax1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/blue_flax2"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/blue_flax3"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/blue_flax4"
+            ]
+        }
+    ]
+}

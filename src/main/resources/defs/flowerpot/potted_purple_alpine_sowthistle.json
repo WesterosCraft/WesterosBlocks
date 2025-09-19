@@ -1,0 +1,38 @@
+{
+    "blockName": "potted_purple_alpine_sowthistle",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Purple Alpine Sow-thistle",
+    "type": "plant-id:purple_alpine_sowthistle",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/purple_alpine_sowthistle/side1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/purple_alpine_sowthistle/side2"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/purple_alpine_sowthistle/side3"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/purple_alpine_sowthistle/side4"
+            ]
+        }
+    ]
+}

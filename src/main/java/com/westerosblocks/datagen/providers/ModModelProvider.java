@@ -2,10 +2,7 @@ package com.westerosblocks.datagen.providers;
 
 import com.westerosblocks.block.ModBlocks;
 
-import com.westerosblocks.datagen.custom.BedBlockDatagen;
-import com.westerosblocks.datagen.custom.CropBlockDatagen;
-import com.westerosblocks.datagen.custom.LeavesBlockDatagen;
-import com.westerosblocks.datagen.custom.VinesBlockDatagen;
+import com.westerosblocks.datagen.custom.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -1975,6 +1972,22 @@ public class ModModelProvider extends FabricModelProvider {
                 .addRandomTextureSet(1, "vines/side4", "vines/side4")
                 .addRandomTextureSet(1, "vines/side5", "vines/side5")
                 .isTinted()
+                .build();
+
+        // ladder blocks
+        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.IRON_RUNGS, "iron_rungs")
+                .isCustom()
+                .texture("iron_rungs/ladder")
+                .build();
+
+        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.IRON_RUNGS_BROKEN, "iron_rungs_broken")
+                .isCustom()
+                .randomTexture("")
+                .randomTexture("")
+                .randomTexture("")
+                .randomTexture("")
+                .randomTexture("")
+                .randomTexture("")
                 .build();
     }
 

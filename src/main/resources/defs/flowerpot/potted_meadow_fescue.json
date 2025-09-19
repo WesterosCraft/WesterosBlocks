@@ -1,0 +1,24 @@
+{
+    "blockName": "potted_meadow_fescue",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Meadow Fescue",
+    "type": "plant-id:meadow_fescue",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/meadow_fescue/side1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/meadow_fescue/side2"
+            ]
+        }
+    ]
+}

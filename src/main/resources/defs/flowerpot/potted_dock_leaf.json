@@ -1,0 +1,24 @@
+{
+    "blockName": "potted_dock_leaf",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_crops_herbs_tab",
+    "label": "Potted Dock Leaf",
+    "type": "plant-id:dock_leaf",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "dock_leaf/side1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "dock_leaf/side2"
+            ]
+        }
+    ]
+}

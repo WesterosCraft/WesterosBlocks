@@ -1,0 +1,21 @@
+{
+    "blockName": "winterfell_stone_ladder",
+    "blockType": "ladder",
+    "stepSound": "stone",
+    "material": "rock",
+    "creativeTab": "westeros_misc_tab",
+    "label": "Winterfell Stone Ladder",
+    "randomTextures": [
+        {
+            "textures": [
+                "winterfell_stone_ladder/side1"
+            ]
+        },
+        {
+            "textures": [
+                "winterfell_stone_ladder/side2"
+            ]
+        }
+    ],
+    "type": "allow-unsupported"
+}

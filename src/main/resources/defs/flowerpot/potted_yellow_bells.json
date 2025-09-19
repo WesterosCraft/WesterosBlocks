@@ -1,0 +1,13 @@
+{
+    "blockName": "potted_yellow_bells",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Yellow Bells",
+    "type": "plant-id:yellow_bells",
+    "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/yellow_bells1"
+    ]
+}

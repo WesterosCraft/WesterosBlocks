@@ -1,0 +1,13 @@
+{
+    "blockName": "potted_yellow_rudbeckia",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Yellow Rudbeckia",
+    "type": "plant-id:yellow_rudbeckia",
+    "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/yellow_rudbeckia1"
+    ]
+}

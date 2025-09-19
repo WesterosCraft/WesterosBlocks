@@ -1,0 +1,31 @@
+{
+    "blockName": "potted_yellow_sunflower",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Yellow Sunflower",
+    "type": "plant-id:yellow_sunflower",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/yellow_sunflower/side1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/yellow_sunflower/side2"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/yellow_sunflower/side3"
+            ]
+        }
+    ]
+}

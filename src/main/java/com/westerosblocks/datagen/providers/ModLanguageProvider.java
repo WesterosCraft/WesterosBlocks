@@ -518,6 +518,10 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.falling_water_block_two", "Falling Water Block Two");
                 translationBuilder.add("block.westerosblocks.jasmine_vines", "Jasmine Vines");
                 translationBuilder.add("block.westerosblocks.vines", "Vines");
+
+                // Ladder Blocks
+                translationBuilder.add("block.westerosblocks.iron_rungs", "Iron Rungs");
+                translationBuilder.add("block.westerosblocks.iron_rungs_broken", "Iron Rungs Broken");
         }
 
 }

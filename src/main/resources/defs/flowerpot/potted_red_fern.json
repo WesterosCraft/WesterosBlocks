@@ -1,0 +1,31 @@
+{
+    "blockName": "potted_red_fern",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Potted Red Fern",
+    "type": "plant-id:red_fern",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "red_fern/side1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "red_fern/side2"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "red_fern/side3"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "westerosblocks:block/paper/paper",
+		"particle": "westerosblocks:block/paper/paper"
+	},
+	"elements": [
+		{
+			"name": "Quill",
+			"from": [12.87881, 2, 1.04189],
+			"to": [12.87881, 9, 10.54189],
+			"rotation": {"angle": 0, "axis": "y", "origin": [9.67346, 2.755, 6.71535]},
+			"faces": {
+				"east": {"uv": [4.75, 11.75, 0, 15.25], "texture": "#0"},
+				"west": {"uv": [4.75, 15.25, 0, 11.75], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "Paper",
+			"from": [2.70261, 0.01, 0.29759],
+			"to": [11.20261, 0.01, 7.79759],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [9.67346, 2.755, 6.71535]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 0], "texture": "#missing"},
+				"east": {"uv": [0, 0, 3.75, 0], "texture": "#missing"},
+				"south": {"uv": [0, 0, 3, 0], "texture": "#missing"},
+				"west": {"uv": [0, 0, 3.75, 0], "texture": "#missing"},
+				"up": {"uv": [12.75, 1.25, 16, 5.5], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 0, 3.75, 3], "rotation": 270, "texture": "#missing"}
+			}
+		},
+		{
+			"name": "Lip",
+			"from": [10.03336, 0, 0.1155],
+			"to": [12.53336, 3, 2.6155],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [9.67346, 2.755, 6.71535]},
+			"faces": {
+				"north": {"uv": [12.75, 5.75, 14, 7.25], "texture": "#0"},
+				"east": {"uv": [12.75, 5.75, 14, 7.25], "texture": "#0"},
+				"south": {"uv": [12.75, 5.75, 14, 7.25], "texture": "#0"},
+				"west": {"uv": [12.75, 5.75, 14, 7.25], "texture": "#0"},
+				"up": {"uv": [12.75, 5.75, 14, 7.25], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12.75, 5.75, 14, 7.25], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "Body",
+			"from": [10.53336, 3, 0.6155],
+			"to": [12.03336, 3.5, 2.1155],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [9.67346, 2.755, 6.71535]},
+			"faces": {
+				"north": {"uv": [13, 5.5, 13.75, 5.75], "texture": "#0"},
+				"east": {"uv": [13, 5.5, 13.75, 5.75], "texture": "#0"},
+				"south": {"uv": [13, 5.5, 13.75, 5.75], "texture": "#0"},
+				"west": {"uv": [13, 5.5, 13.75, 5.75], "texture": "#0"},
+				"up": {"uv": [14, 6, 14.75, 6.75], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [13, 5.5, 13.75, 5.75], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"from": [-0.11119, 0.02, 6.54189],
+			"to": [13.38881, 0.02, 15.54189],
+			"rotation": {"angle": 0, "axis": "y", "origin": [9.67346, 2.755, 6.71535]},
+			"faces": {
+				"north": {"uv": [0, 0, 5.25, 0], "texture": "#missing"},
+				"east": {"uv": [0, 0, 4.25, 0], "texture": "#missing"},
+				"south": {"uv": [0, 0, 5.25, 0], "texture": "#missing"},
+				"west": {"uv": [0, 0, 4.25, 0], "texture": "#0"},
+				"up": {"uv": [11.5, 9.25, 16, 16], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 0, 4.25, 5.25], "rotation": 270, "texture": "#missing"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [108.75, 90, 0],
+			"translation": [0, 0.75, 6],
+			"scale": [0.675, 0.675, 0.675]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [105, -90, 0],
+			"translation": [0, -1.25, 5.5],
+			"scale": [0.675, 0.675, 0.675]
+		},
+		"firstperson_righthand": {
+			"rotation": [29.5, 90, 0],
+			"translation": [-1, 6.5, 2.5],
+			"scale": [0.675, 0.675, 0.675]
+		},
+		"firstperson_lefthand": {
+			"rotation": [41.5, -90, 0],
+			"translation": [0, 6.25, 2.5],
+			"scale": [0.675, 0.675, 0.675]
+		},
+		"ground": {
+			"translation": [0, 4.5, 0]
+		},
+		"gui": {
+			"rotation": [90, 90, 0],
+			"translation": [-0.5, 0, 0],
+			"scale": [0.675, 0.675, 0.675]
+		},
+		"head": {
+			"translation": [0, 14.5, 0]
+		},
+		"fixed": {
+			"rotation": [-90, -90, 0],
+			"translation": [-0.5, 0, -7.25],
+			"scale": [0.675, 0.675, 0.675]
+		}
+	},
+	"groups": [
+		0,
+		1,
+		{
+			"name": "Inkwell",
+			"origin": [19.5, 11, 14],
+			"color": 0,
+			"children": [2, 3]
+		},
+		4
+	]
+}

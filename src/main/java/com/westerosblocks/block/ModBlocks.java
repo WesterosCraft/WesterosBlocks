@@ -4193,6 +4193,27 @@ public class ModBlocks {
                     .canGrowDownward()
                     .build());
 
+    // Ladder blocks
+
+    public static final Block IRON_RUNGS = registerBlock(
+            "iron_rungs",
+            BlockBuilder.ladder()
+                    .strength(0.8f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.METAL)
+                    .nonOpaque()
+                    .allowUnsupported()
+                    .build());
+
+    public static final Block IRON_RUNGS_BROKEN = registerBlock(
+            "iron_rungs_broken",
+            BlockBuilder.ladder()
+                    .strength(0.8f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.METAL)
+                    .nonOpaque()
+                    .allowUnsupported()
+                    .build());
 
     /**
      * Initialize all blocks
@@ -4695,7 +4716,9 @@ public class ModBlocks {
                 ModBlocks.OXIDIZED_IRON_BARS,
                 ModBlocks.OXIDIZED_IRON_CROSSBAR,
                 ModBlocks.HORIZONTAL_CHAIN,
-                ModBlocks.CHAIN_BLOCK_HARNESS
+                ModBlocks.CHAIN_BLOCK_HARNESS,
+                ModBlocks.IRON_RUNGS,
+                ModBlocks.IRON_RUNGS_BROKEN
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_cloth_fibers_tab",

@@ -1,0 +1,13 @@
+{
+    "blockName": "potted_pink_wildflowers",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Pink Wildflowers",
+    "type": "plant-id:pink_wildflowers",
+    "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/pink_wildflowers"
+    ]
+}

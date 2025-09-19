@@ -1,0 +1,53 @@
+{
+    "blockName": "potted_grass",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Potted Grass",
+    "type": "plant-id:fern",
+    "colorMult": "textures/colormap/grass",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "minecraft:block/fern/fern1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "minecraft:block/fern/fern2"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "minecraft:block/fern/fern3"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "minecraft:block/fern/fern4"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "minecraft:block/fern/fern5"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "minecraft:block/fern/fern6"
+            ]
+        }
+    ]
+}

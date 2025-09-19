@@ -1,0 +1,24 @@
+{
+    "blockName": "potted_red_poppies",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_flowers_tab",
+    "label": "Potted Red Poppies",
+    "type": "plant-id:red_poppies",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/red_poppies1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "flowers/red_poppies2"
+            ]
+        }
+    ]
+}

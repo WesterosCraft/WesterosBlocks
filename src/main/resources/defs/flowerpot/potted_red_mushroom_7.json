@@ -1,0 +1,13 @@
+{
+    "blockName": "potted_red_mushroom_7",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Potted Red Mushroom 7",
+    "type": "plant-id:red_mushroom_7",
+    "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "red_mushroom_block/mushroom_red_6"
+    ]
+}

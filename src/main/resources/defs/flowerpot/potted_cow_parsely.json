@@ -1,0 +1,24 @@
+{
+    "blockName": "potted_cow_parsely",
+    "blockType": "flowerpot",
+    "material": "wood",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Potted Cow Parsely",
+    "type": "plant-id:cow_parsely",
+    "randomTextures": [
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "cow_parsely/side1"
+            ]
+        },
+        {
+            "textures": [
+                "minecraft:block/dirt",
+                "minecraft:block/flower_pot",
+                "cow_parsely/side2"
+            ]
+        }
+    ]
+}

@@ -121,6 +121,10 @@ public class BlockBuilder<T extends Block> {
     public static BlockBuilder<WCVinesBlock> vines() {
         return new BlockBuilder<>(new WCVinesBlock.Factory());
     }
+
+    public static BlockBuilder<WCLadderBlock> ladder() {
+        return new BlockBuilder<>(new WCLadderBlock.Factory());
+    }
     
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
