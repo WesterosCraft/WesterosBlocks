@@ -1,4 +1,4 @@
-package com.westerosblocks.datagen;
+package com.westerosblocks.datagen.providers;
 
 import com.westerosblocks.block.ModBlocks;
 
@@ -1956,6 +1956,24 @@ public class ModModelProvider extends FabricModelProvider {
 
         VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_FOUR, "falling_water_block_four")
                 .textures("alyssas_tears_mist/mist4", "alyssas_tears_mist/mist4")
+                .isTinted()
+                .build();
+
+        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.JASMINE_VINES, "jasmine_vines")
+                .addRandomTextureSet(1, "jasmine_vines/side1", "jasmine_vines/side1")
+                .addRandomTextureSet(1, "jasmine_vines/side2", "jasmine_vines/side2")
+                .addRandomTextureSet(1, "jasmine_vines/side3", "jasmine_vines/side3")
+                .addRandomTextureSet(1, "jasmine_vines/side4", "jasmine_vines/side4")
+                .addRandomTextureSet(1, "jasmine_vines/side5", "jasmine_vines/side5")
+                .isTinted()
+                .build();
+
+        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.VINES, "vines")
+                .addRandomTextureSet(1, "vines/side1", "vines/side1")
+                .addRandomTextureSet(1, "vines/side2", "vines/side2")
+                .addRandomTextureSet(1, "vines/side3", "vines/side3")
+                .addRandomTextureSet(1, "vines/side4", "vines/side4")
+                .addRandomTextureSet(1, "vines/side5", "vines/side5")
                 .isTinted()
                 .build();
     }

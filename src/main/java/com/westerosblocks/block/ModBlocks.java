@@ -4171,6 +4171,28 @@ public class ModBlocks {
                     .noClimb()
                     .build());
 
+    public static final Block JASMINE_VINES = registerBlock(
+            "jasmine_vines",
+            BlockBuilder.vines()
+                    .strength(0.2f)
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowUnsupported()
+                    .noClimb()
+                    .canGrowDownward()
+                    .build());
+
+    public static final Block VINES = registerBlock(
+            "vines",
+            BlockBuilder.vines()
+                    .strength(0.2f)
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowUnsupported()
+                    .noClimb()
+                    .canGrowDownward()
+                    .build());
+
 
     /**
      * Initialize all blocks
@@ -4526,7 +4548,9 @@ public class ModBlocks {
                 ModBlocks.WHITE_GRAPE_FRUIT_LEAVES,
                 ModBlocks.WHITE_ROSE_BUSH,
                 ModBlocks.YELLOW_ROSE_BUSH,
-                ModBlocks.DAPPLED_MOSS
+                ModBlocks.DAPPLED_MOSS,
+                ModBlocks.JASMINE_VINES,
+                ModBlocks.VINES
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_grass_dirt_tab",

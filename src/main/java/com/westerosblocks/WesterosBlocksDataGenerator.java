@@ -1,9 +1,9 @@
 package com.westerosblocks;
 
-import com.westerosblocks.datagen.ModLanguageProvider;
-import com.westerosblocks.datagen.ModModelProvider;
-import com.westerosblocks.datagen.ModBlockTagProvider;
-import com.westerosblocks.datagen.ModItemTagProvider;
+import com.westerosblocks.datagen.providers.ModLanguageProvider;
+import com.westerosblocks.datagen.providers.ModModelProvider;
+import com.westerosblocks.datagen.providers.ModBlockTagProvider;
+import com.westerosblocks.datagen.providers.ModItemTagProvider;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;

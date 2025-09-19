@@ -1,4 +1,4 @@
-package com.westerosblocks.datagen;
+package com.westerosblocks.datagen.providers;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -516,6 +516,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.falling_water_block_one", "Falling Water Block One");
                 translationBuilder.add("block.westerosblocks.falling_water_block_three", "Falling Water Block Three");
                 translationBuilder.add("block.westerosblocks.falling_water_block_two", "Falling Water Block Two");
+                translationBuilder.add("block.westerosblocks.jasmine_vines", "Jasmine Vines");
+                translationBuilder.add("block.westerosblocks.vines", "Vines");
         }
 
 }
