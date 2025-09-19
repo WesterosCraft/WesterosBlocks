@@ -4215,6 +4215,43 @@ public class ModBlocks {
                     .allowUnsupported()
                     .build());
 
+    public static final Block ROPE_LADDER = registerBlock(
+            "rope_ladder",
+            BlockBuilder.ladder()
+                    .strength(0.4f)
+                    .sounds(BlockSoundGroup.LADDER)
+                    .nonOpaque()
+                    .allowUnsupported()
+                    .build());
+
+    public static final Block VINE_JASMINE = registerBlock(
+            "vine_jasmine",
+            BlockBuilder.ladder()
+                    .strength(0.4f)
+                    .sounds(BlockSoundGroup.LADDER)
+                    .nonOpaque()
+                    .allowUnsupported()
+                    .build());
+
+    public static final Block WINTERFELL_STONE_LADDER = registerBlock(
+            "winterfell_stone_ladder",
+            BlockBuilder.ladder()
+                    .strength(1.5f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.STONE)
+                    .nonOpaque()
+                    .allowUnsupported()
+                    .build());
+
+    public static final Block WOOD_LADDER = registerBlock(
+            "wood_ladder",
+            BlockBuilder.ladder()
+                    .strength(0.4f)
+                    .sounds(BlockSoundGroup.LADDER)
+                    .nonOpaque()
+                    .allowUnsupported()
+                    .build());
+
     /**
      * Initialize all blocks
      */
@@ -4544,6 +4581,7 @@ public class ModBlocks {
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_foliage_tab",
+                ModBlocks.VINE_JASMINE,
                 ModBlocks.APPLE_FRUIT_LEAVES,
                 ModBlocks.APRICOT_FRUIT_LEAVES,
                 ModBlocks.BLACKBERRY_BUSH,
@@ -4605,6 +4643,7 @@ public class ModBlocks {
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_wood_planks_tab",
+                ModBlocks.WOOD_LADDER,
                 ModBlocks.PARQUET_FLOOR,
                 ModBlocks.BIRCH_DOOR,
                 ModBlocks.EYRIE_WEIRWOOD_DOOR,
@@ -4684,6 +4723,7 @@ public class ModBlocks {
 
 
         WesterosCreativeModeTabs.addToTab("westeros_misc_tab",
+                ModBlocks.WINTERFELL_STONE_LADDER,
                 ModBlocks.PILED_BONES,
                 ModBlocks.STACKED_BONES_SOLID,
                 ModBlocks.HARRENHAL_SECRET_DOOR,
@@ -4723,6 +4763,7 @@ public class ModBlocks {
 
         WesterosCreativeModeTabs.addToTab("westeros_cloth_fibers_tab",
                 ModBlocks.VERTICAL_NET,
+                ModBlocks.ROPE_LADDER,
                 ModBlocks.FANCY_BLUE_CARPET,
                 ModBlocks.FANCY_RED_CARPET,
                 ModBlocks.HORIZONTAL_NET,

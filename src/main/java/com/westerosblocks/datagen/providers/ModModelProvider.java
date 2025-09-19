@@ -1982,12 +1982,35 @@ public class ModModelProvider extends FabricModelProvider {
 
         LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.IRON_RUNGS_BROKEN, "iron_rungs_broken")
                 .isCustom()
-                .randomTexture("")
-                .randomTexture("")
-                .randomTexture("")
-                .randomTexture("")
-                .randomTexture("")
-                .randomTexture("")
+                .addRandomTextureSet("")
+                .addRandomTextureSet("")
+                .addRandomTextureSet("")
+                .addRandomTextureSet("")
+                .addRandomTextureSet("")
+                .addRandomTextureSet("")
+                .build();
+
+        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.ROPE_LADDER, "rope_ladder")
+                .texture("rope_ladder/side")
+                .build();
+
+        // TODO: eventually remove this block
+        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.VINE_JASMINE, "vine_jasmine")
+                .addRandomTextureSet("jasmine_vines/side1")
+                .addRandomTextureSet("jasmine_vines/side2")
+                .addRandomTextureSet("jasmine_vines/side3")
+                .addRandomTextureSet("jasmine_vines/side4")
+                .addRandomTextureSet("jasmine_vines/side5")
+                .build();
+
+        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.WINTERFELL_STONE_LADDER, "winterfell_stone_ladder")
+                .addRandomTextureSet("winterfell_stone_ladder/side1")
+                .addRandomTextureSet("winterfell_stone_ladder/side2")
+                .build();
+
+        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.WOOD_LADDER, "wood_ladder")
+                .isCustom()
+                .texture("wood_ladder/side")
                 .build();
     }
 

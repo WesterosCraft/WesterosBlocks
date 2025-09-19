@@ -210,5 +210,9 @@ public class WesterosBlocksClient implements ClientModInitializer {
         // ladder blocks
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.IRON_RUNGS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.IRON_RUNGS_BROKEN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ROPE_LADDER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.VINE_JASMINE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WINTERFELL_STONE_LADDER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WOOD_LADDER, RenderLayer.getCutout());
     }
 }

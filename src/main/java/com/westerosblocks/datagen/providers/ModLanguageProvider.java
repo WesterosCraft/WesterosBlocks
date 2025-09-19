@@ -522,6 +522,10 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 // Ladder Blocks
                 translationBuilder.add("block.westerosblocks.iron_rungs", "Iron Rungs");
                 translationBuilder.add("block.westerosblocks.iron_rungs_broken", "Iron Rungs Broken");
+                translationBuilder.add("block.westerosblocks.rope_ladder", "Rope Ladder");
+                translationBuilder.add("block.westerosblocks.vine_jasmine", "Vine Jasmine (Do Not Use)");
+                translationBuilder.add("block.westerosblocks.winterfell_stone_ladder", "Winterfell Stone Ladder");
+                translationBuilder.add("block.westerosblocks.wood_ladder", "Wood Ladder");
         }
 
 }

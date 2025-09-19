@@ -48,7 +48,7 @@ public class LadderBlockDatagen {
     }
 
     // Parent Block Model - following block-models.md #parent-block-model pattern
-    private static Model createLadderModel(boolean tinted, boolean isCustom) {
+    private static Model createLadderModel(String blockName, boolean tinted, boolean isCustom) {
         String basePath = isCustom ? "block/custom/" : (tinted ? "block/tinted/" : "block/untinted/");
         String path = basePath + "ladder";
         return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
@@ -91,7 +91,7 @@ public class LadderBlockDatagen {
             return this;
         }
 
-        public LadderBlockBuilder randomTexture(String texture) {
+        public LadderBlockBuilder addRandomTextureSet(String texture) {
             this.randomTextureSets.add(new RandomTextureSet(texture));
             return this;
         }
@@ -175,7 +175,7 @@ public class LadderBlockDatagen {
 
             // Generate model using the block as the base for the path
             String modelSuffix = index == 0 ? "/base_v1" : "/base_v" + (index + 1);
-            return createLadderModel(isTinted, false) // Always use non-custom for generated models
+            return createLadderModel(ladderName, isTinted, false) // Always use non-custom for generated models
                     .upload(ladderBlock, modelSuffix, textureMap, generator.modelCollector);
         }
 
