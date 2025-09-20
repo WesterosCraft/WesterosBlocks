@@ -526,6 +526,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.vine_jasmine", "Vine Jasmine (Do Not Use)");
                 translationBuilder.add("block.westerosblocks.winterfell_stone_ladder", "Winterfell Stone Ladder");
                 translationBuilder.add("block.westerosblocks.wood_ladder", "Wood Ladder");
+
+                // Potted Blocks
+                translationBuilder.add("block.westerosblocks.potted_blue_bells", "Potted Blue Bells");
         }
 
 }

@@ -214,5 +214,8 @@ public class WesterosBlocksClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.VINE_JASMINE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WINTERFELL_STONE_LADDER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WOOD_LADDER, RenderLayer.getCutout());
+
+        // potted blocks
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_BLUE_BELLS, RenderLayer.getCutout());
     }
 }

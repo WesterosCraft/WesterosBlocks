@@ -2012,6 +2012,11 @@ public class ModModelProvider extends FabricModelProvider {
                 .isCustom()
                 .texture("wood_ladder/side")
                 .build();
+
+        // Flower pot blocks
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BLUE_BELLS, "potted_blue_bells")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_bells")
+                .build();
     }
 
     @Override

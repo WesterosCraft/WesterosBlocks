@@ -32,6 +32,9 @@ public class ModTextureKey {
     public static final TextureKey TEXTURE_17 = TextureKey.of("txt17");
     public static final TextureKey LADDER = TextureKey.of("ladder");
     public static final TextureKey FLOWER_POT = TextureKey.of("flowerpot");
+    public static final TextureKey FLOWERPOT = TextureKey.of("flowerpot");
+    public static final TextureKey DIRT = TextureKey.of("dirt");
+    public static final TextureKey PLANT = TextureKey.of("plant");
     public static final TextureKey LEAVES_OVERLAY_END = TextureKey.of("overlayend");
     public static final TextureKey LEAVES_OVERLAY_SIDE = TextureKey.of("overlayside");
     public static final TextureKey VINES = TextureKey.of("vines");

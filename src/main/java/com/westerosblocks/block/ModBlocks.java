@@ -2746,6 +2746,15 @@ public class ModBlocks {
                     .toggleOnUse()
                     .build());
 
+    public static final Block POTTED_BLUE_BELLS = registerBlock(
+            "potted_blue_bells",
+            BlockBuilder.flowerPot()
+                    .plant(BLUE_BELLS)
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .nonOpaque()
+                    .build());
+
     public static final Block BLUE_CHICORY = registerBlock(
             "blue_chicory",
             BlockBuilder.plant()
@@ -4341,6 +4350,7 @@ public class ModBlocks {
 
         WesterosCreativeModeTabs.addToTab("westeros_flowers_tab",
                 ModBlocks.BLUE_BELLS,
+                ModBlocks.POTTED_BLUE_BELLS,
                 ModBlocks.BLUE_CHICORY,
                 ModBlocks.BLUE_FORGETMENOTS,
                 ModBlocks.BLUE_FLAX,
