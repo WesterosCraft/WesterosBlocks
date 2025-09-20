@@ -2017,6 +2017,491 @@ public class ModModelProvider extends FabricModelProvider {
         FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BLUE_BELLS, "potted_blue_bells")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_bells")
                 .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BLUE_SWAMP_BELLS, "potted_blue_swamp_bells")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_swamp_bells1")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BROWN_MUSHROOM_13, "potted_brown_mushroom_13")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "brown_mushroom_block/mushroom_brown_12")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BROWN_MUSHROOM_1, "potted_brown_mushroom_1")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "brown_mushroom_block/mushroom_brown_0")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BROWN_MUSHROOM_3, "potted_brown_mushroom_3")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "brown_mushroom_block/mushroom_brown_2")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BROWN_MUSHROOM_6, "potted_brown_mushroom_6")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "brown_mushroom_block/mushroom_brown_5")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_DEAD_SCRUB_GRASS, "potted_dead_scrub_grass")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/dead_scrub_grass1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/dead_scrub_grass2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/dead_scrub_grass3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/dead_scrub_grass4")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/dead_scrub_grass5")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/dead_scrub_grass6")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/dead_scrub_grass7")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/dead_scrub_grass8")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/dead_scrub_grass9")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_FIREWEED, "potted_fireweed")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "fireweed/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "fireweed/side2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "fireweed/side3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "fireweed/side4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_GREEN_LEAFY_HERB, "potted_green_leafy_herb")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_leafy_herb")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_GREEN_SCRUB_GRASS, "potted_green_scrub_grass")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_scrub_grass1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_scrub_grass2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_scrub_grass3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_scrub_grass4")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_scrub_grass5")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_scrub_grass6")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_GREEN_SPINY_HERB, "potted_green_spiny_herb")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_spiny_herb1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_spiny_herb2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_spiny_herb3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_spiny_herb4")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_spiny_herb5")
+
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_HEATHER, "potted_heather")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "heather/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "heather/side2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "heather/side3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "heather/side4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_LADY_FERN, "potted_lady_fern")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "lady_fern/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "lady_fern/side2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "lady_fern/side3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "lady_fern/side4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_MAGENTA_ROSES, "potted_magenta_roses")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/magenta_roses1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/magenta_roses2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/magenta_roses3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/magenta_roses4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_MEADOW_FESCUE, "potted_meadow_fescue")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/meadow_fescue/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/meadow_fescue/side2")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_NETTLE, "potted_nettle")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "nettle/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "nettle/side2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "nettle/side3")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_ORANGE_BELLS, "potted_orange_bells")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_bells1")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_ORANGE_BOG_ASPHODEL, "potted_orange_bog_asphodel")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_bog_asphodel1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_bog_asphodel2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_bog_asphodel3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_bog_asphodel4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_ORANGE_MARIGOLDS, "potted_orange_marigolds")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_marigolds1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_marigolds2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_marigolds3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_marigolds4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_ORANGE_SUN_STAR, "potted_orange_sun_star")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_sun_star1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_sun_star2")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_ORANGE_TROLLIUS, "potted_orange_trollius")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_trollius1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_trollius2")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PINK_ALLIUM, "potted_pink_allium")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_allium1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_allium2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_allium3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_allium4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PINK_PRIMROSE, "potted_pink_primrose")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_primrose1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_primrose2")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PINK_ROSES, "potted_pink_roses")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_roses1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_roses2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_roses3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_roses4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PINK_SWEET_PEAS, "potted_pink_sweet_peas")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_sweet_peas1")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PINK_THISTLE, "potted_pink_thistle")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_thistle/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_thistle/side2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_thistle/side3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_thistle/side4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PINK_TULIPS, "potted_pink_tulips")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_tulips1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_tulips2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_tulips3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_tulips4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PINK_WILDFLOWERS, "potted_pink_wildflowers")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_wildflowers")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PURPLE_ALPINE_SOWTHISTLE, "potted_purple_alpine_sowthistle")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_alpine_sowthistle/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_alpine_sowthistle/side2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_alpine_sowthistle/side3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_alpine_sowthistle/side4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PURPLE_FOXGLOVE, "potted_purple_foxglove")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_foxglove1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_foxglove2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_foxglove3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_foxglove4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PURPLE_LAVENDER, "potted_purple_lavender")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_lavender1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_lavender2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_lavender3")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PURPLE_PANSIES, "potted_purple_pansies")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_pansies1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_pansies2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_pansies3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_pansies4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PURPLE_ROSES, "potted_purple_roses")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_roses1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_roses2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_roses3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_roses4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PURPLE_VIOLETS, "potted_purple_violets")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_violets1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_violets2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_violets3")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_ASTER, "potted_red_aster")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_aster1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_aster2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_aster3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_aster4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_CARNATIONS, "potted_red_carnations")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_carnations1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_carnations2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_carnations3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_carnations4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_CHRYSANTHEMUM, "potted_red_chrysanthemum")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_chrysanthemum1")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_DARK_ROSES, "potted_red_dark_roses")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_dark_roses1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_dark_roses2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_dark_roses3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_dark_roses4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_FERN, "potted_red_fern")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "red_fern/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "red_fern/side2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "red_fern/side3")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_FLOWERING_SPINY_HERB, "potted_red_flowering_spiny_herb")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_flowering_spiny_herb1")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_MUSHROOM_1, "potted_red_mushroom_1")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_0")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_MUSHROOM_2, "potted_red_mushroom_2")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_1")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_MUSHROOM_3, "potted_red_mushroom_3")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_2")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_MUSHROOM_7, "potted_red_mushroom_7")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_6")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_MUSHROOM_8, "potted_red_mushroom_8")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_7")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_MUSHROOM_9, "potted_red_mushroom_9")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_8")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_POPPIES, "potted_red_poppies")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_poppies1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_poppies2")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_ROSES, "potted_red_roses")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_roses1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_roses2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_roses3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_roses4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_SORREL, "potted_red_sorrel")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_sorrel1")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_SOURLEAF_BUSH, "potted_red_sourleaf_bush")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_sourleaf_bush1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_sourleaf_bush2")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_TULIPS, "potted_red_tulips")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_tulips1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_tulips2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_tulips3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_tulips4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_WHITE_CHAMOMILE, "potted_white_chamomile")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_chamomile1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_chamomile2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_chamomile3")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_WHITE_DAISIES, "potted_white_daisies")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_daisies1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_daisies2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_daisies3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_daisies4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_WHITE_LILYOFTHEVALLEY, "potted_white_lilyofthevalley")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_lily_valley1")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_WHITE_PEONY, "potted_white_peony")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_peony1")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_WHITE_ROSES, "potted_white_roses")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_roses1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_roses2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_roses3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_roses4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_BEDSTRAW, "potted_yellow_bedstraw")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_bedstraw/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_bedstraw/side2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_bedstraw/side3")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_BELLS, "potted_yellow_bells")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_bells1")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_BUTTERCUPS, "potted_yellow_buttercups")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_buttercups1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_buttercups2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_buttercups3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_buttercups4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_DAFFODILS, "potted_yellow_daffodils")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_daffodils1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_daffodils2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_daffodils3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_daffodils4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_DAISIES, "potted_yellow_daisies")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_daisies1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_daisies2")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_DANDELIONS, "potted_yellow_dandelions")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_dandelions1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_dandelions2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_dandelions3")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_HELLEBORE, "potted_yellow_hellebore")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_hellebore1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_hellebore2")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_LUPINE, "potted_yellow_lupine")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_lupine1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_lupine2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_lupine3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_lupine4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_ROSES, "potted_yellow_roses")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_roses1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_roses2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_roses3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_roses4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_RUDBECKIA, "potted_yellow_rudbeckia")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_rudbeckia1")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_SUNFLOWER, "potted_yellow_sunflower")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_sunflower/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_sunflower/side2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_sunflower/side3")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_TANSY, "potted_yellow_tansy")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_tansy")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_WILDFLOWERS, "potted_yellow_wildflowers")
+                .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_wildflowers")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BLUE_CHICORY, "potted_blue_chicory")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_chicory/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_chicory/side2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_chicory/side3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_chicory/side4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BLUE_FLAX, "potted_blue_flax")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_flax1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_flax2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_flax3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_flax4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BLUE_FORGETMENOTS, "potted_blue_forgetmenots")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_forgetmenots1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_forgetmenots2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_forgetmenots3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_forgetmenots4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BLUE_HYACINTH, "potted_blue_hyacinth")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_hyacinth1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_hyacinth2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_hyacinth3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_hyacinth4")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BLUE_ORCHID, "potted_blue_orchid")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_orchid1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_orchid2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_orchid3")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BRACKEN, "potted_bracken")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "bracken/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "bracken/side2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "bracken/side3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "bracken/side4")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "bracken/side5")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "bracken/side6")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "bracken/side7")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "bracken/side8")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_CATTAILS, "potted_cattails")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cattails/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cattails/side2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cattails/side3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cattails/side4")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cattails/side5")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cattails/side6")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cattails/side7")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cattails/side8")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_COW_PARSELY, "potted_cow_parsely")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cow_parsely/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cow_parsely/side2")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_DEAD_BRACKEN, "potted_dead_bracken")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side4")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side5")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side6")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side7")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side8")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side9")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side10")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side11")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side12")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_DEAD_BUSH, "potted_dead_bush")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dorne_bush_thorny/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dorne_bush_thorny/side2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dorne_bush_thorny/side3")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_DOCK_LEAF, "potted_dock_leaf")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dock_leaf/side1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dock_leaf/side2")
+                .build();
+
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_GRASS, "potted_grass")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "minecraft:block/fern/fern1")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "minecraft:block/fern/fern2")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "minecraft:block/fern/fern3")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "minecraft:block/fern/fern4")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "minecraft:block/fern/fern5")
+                .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "minecraft:block/fern/fern6")
+                .build();
     }
 
     @Override
