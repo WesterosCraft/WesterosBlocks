@@ -2750,7 +2750,7 @@ public class ModBlocks {
             "potted_blue_bells",
             BlockBuilder.flowerPot()
                     .plant(BLUE_BELLS)
-                    .strength(0.0f)
+                    .strength(0.2f)
                     .sounds(BlockSoundGroup.WOOD)
                     .nonOpaque()
                     .build());
@@ -2766,6 +2766,15 @@ public class ModBlocks {
                     .toggleOnUse()
                     .build());
 
+    public static final Block POTTED_BLUE_CHICORY = registerBlock(
+            "potted_blue_chicory",
+            BlockBuilder.flowerPot()
+                    .plant(BLUE_CHICORY)
+                    .strength(0.2f)
+                    .sounds(BlockSoundGroup.STONE)
+                    .nonOpaque()
+                    .build());
+
     public static final Block BLUE_FORGETMENOTS = registerBlock(
             "blue_forgetmenots",
             BlockBuilder.plant()
@@ -2775,6 +2784,15 @@ public class ModBlocks {
                     .noCollision()
                     .layerSensitive()
                     .toggleOnUse()
+                    .build());
+
+    public static final Block POTTED_BLUE_FORGETMENOTS = registerBlock(
+            "potted_blue_forgetmenots",
+            BlockBuilder.flowerPot()
+                    .plant(BLUE_FORGETMENOTS)
+                    .strength(0.2f)
+                    .sounds(BlockSoundGroup.STONE)
+                    .nonOpaque()
                     .build());
 
     public static final Block BLUE_FLAX = registerBlock(
@@ -2788,6 +2806,15 @@ public class ModBlocks {
                     .toggleOnUse()
                     .build());
 
+    public static final Block POTTED_BLUE_FLAX = registerBlock(
+            "potted_blue_flax",
+            BlockBuilder.flowerPot()
+                    .plant(BLUE_FLAX)
+                    .strength(0.2f)
+                    .sounds(BlockSoundGroup.STONE)
+                    .nonOpaque()
+                    .build());
+
     public static final Block BLUE_HYACINTH = registerBlock(
             "blue_hyacinth",
             BlockBuilder.plant()
@@ -2797,6 +2824,15 @@ public class ModBlocks {
                     .noCollision()
                     .layerSensitive()
                     .toggleOnUse()
+                    .build());
+
+    public static final Block POTTED_BLUE_HYACINTH = registerBlock(
+            "potted_blue_hyacinth",
+            BlockBuilder.flowerPot()
+                    .plant(BLUE_HYACINTH)
+                    .strength(0.2f)
+                    .sounds(BlockSoundGroup.STONE)
+                    .nonOpaque()
                     .build());
 
     public static final Block BLUE_ORCHID = registerBlock(
@@ -2810,6 +2846,15 @@ public class ModBlocks {
                     .toggleOnUse()
                     .build());
 
+    public static final Block POTTED_BLUE_ORCHID = registerBlock(
+            "potted_blue_orchid",
+            BlockBuilder.flowerPot()
+                    .plant(BLUE_ORCHID)
+                    .strength(0.2f)
+                    .sounds(BlockSoundGroup.STONE)
+                    .nonOpaque()
+                    .build());
+
     public static final Block BLUE_SWAMP_BELLS = registerBlock(
             "blue_swamp_bells",
             BlockBuilder.plant()
@@ -2821,6 +2866,15 @@ public class ModBlocks {
                     .toggleOnUse()
                     .build());
 
+    public static final Block POTTED_BLUE_SWAMP_BELLS = registerBlock(
+            "potted_blue_swamp_bells",
+            BlockBuilder.flowerPot()
+                    .plant(ModBlocks.BLUE_SWAMP_BELLS)
+                    .strength(0.2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .nonOpaque()
+                    .build());
+
     public static final Block BRACKEN = registerBlock(
             "bracken",
             BlockBuilder.plant()
@@ -2830,6 +2884,15 @@ public class ModBlocks {
                     .noCollision()
                     .layerSensitive()
                     .toggleOnUse()
+                    .build());
+
+    public static final Block POTTED_BRACKEN = registerBlock(
+            "potted_bracken",
+            BlockBuilder.flowerPot()
+                    .plant(BRACKEN)
+                    .strength(0.0f)
+                    .sounds(BlockSoundGroup.STONE)
+                    .nonOpaque()
                     .build());
 
     public static final Block BROWN_MUSHROOM_1 = registerBlock(
@@ -4269,6 +4332,7 @@ public class ModBlocks {
 
         WesterosCreativeModeTabs.addToTab("westeros_grasses_shrubs_tab",
                 ModBlocks.BRACKEN,
+                ModBlocks.POTTED_BRACKEN,
                 ModBlocks.BROWN_MUSHROOM_1,
                 ModBlocks.BROWN_MUSHROOM_2,
                 ModBlocks.BROWN_MUSHROOM_3,
@@ -4352,11 +4416,17 @@ public class ModBlocks {
                 ModBlocks.BLUE_BELLS,
                 ModBlocks.POTTED_BLUE_BELLS,
                 ModBlocks.BLUE_CHICORY,
+                ModBlocks.POTTED_BLUE_CHICORY,
                 ModBlocks.BLUE_FORGETMENOTS,
+                ModBlocks.POTTED_BLUE_FORGETMENOTS,
                 ModBlocks.BLUE_FLAX,
+                ModBlocks.POTTED_BLUE_FLAX,
                 ModBlocks.BLUE_HYACINTH,
+                ModBlocks.POTTED_BLUE_HYACINTH,
                 ModBlocks.BLUE_ORCHID,
+                ModBlocks.POTTED_BLUE_ORCHID,
                 ModBlocks.BLUE_SWAMP_BELLS,
+                ModBlocks.POTTED_BLUE_SWAMP_BELLS,
                 ModBlocks.MAGENTA_ROSES,
                 ModBlocks.ORANGE_BELLS,
                 ModBlocks.ORANGE_BOG_ASPHODEL,
