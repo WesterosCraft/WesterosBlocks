@@ -125,6 +125,10 @@ public class BlockBuilder<T extends Block> {
     public static BlockBuilder<WCLadderBlock> ladder() {
         return new BlockBuilder<>(new WCLadderBlock.Factory());
     }
+
+    public static BlockBuilder<WCFlowerPotBlock> flowerPot() {
+        return new BlockBuilder<>(new WCFlowerPotBlock.Factory());
+    }
     
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
@@ -301,7 +305,17 @@ public class BlockBuilder<T extends Block> {
         parameters.put("canGrowDownward", true);
         return this;
     }
-    
+
+    public BlockBuilder<T> plant(Block plant) {
+        parameters.put("plant", plant);
+        return this;
+    }
+
+    public BlockBuilder<T> plantId(String plantId) {
+        parameters.put("plantId", plantId);
+        return this;
+    }
+
     public BlockBuilder<T> parameter(String key, Object value) {
         parameters.put(key, value);
         return this;
