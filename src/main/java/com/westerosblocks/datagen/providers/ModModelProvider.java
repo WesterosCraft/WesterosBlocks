@@ -2,6 +2,8 @@ package com.westerosblocks.datagen.providers;
 
 import com.westerosblocks.block.ModBlocks;
 
+import com.westerosblocks.block.PlantBlocks;
+import com.westerosblocks.block.SolidBlocks;
 import com.westerosblocks.datagen.custom.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -22,567 +24,174 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator bsmg) {
         // Solid Blocks
-        registerCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_BIRCH).texture("bark/birch/side").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_JUNGLE).texture("bark/jungle/side").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_OAK).texture("bark/oak/side").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_SPRUCE).texture("bark/spruce/side").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SIX_SIDED_STONE_SLAB).texture("ashlar_half/white/tile")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.APPLE_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_apple",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.APPLE_CRATE)
-                .randomTexture("crate_block/side_bot1", "crate_block/crate_top_apples",
-                        "crate_block/side_bot1")
-                .randomTexture("crate_block/side_bot2", "crate_block/crate_top_apples",
-                        "crate_block/side_bot2")
-                .randomTexture("crate_block/side_bot3", "crate_block/crate_top_apples",
-                        "crate_block/side_bot3")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.APPROVAL_UTILITY_BLOCK).texture("utility_block/approved")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.ARBOR_BRICK_ORNATE).texture("ashlar_engraved/arbor/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BENCH_BUTCHER_KNIVES).textures("bench_block/spruce_top",
-                "bench_block/crafting_table_top", "bench_block/bench_butcher_knives").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BENCH_CARPENTRY_HAMMER_SAW).textures("bench_block/spruce_top",
-                "bench_block/crafting_table_top", "bench_block/bench_carpentry_hammer_saw").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BENCH_DRAWERS)
-                .textures("bench_block/spruce_top", "bench_block/crafting_table_top",
-                        "bench_block/bench_drawers")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BENCH_KITCHEN_KNIVES).textures("bench_block/spruce_top",
-                "bench_block/crafting_table_top", "bench_block/bench_kitchen_knives").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BENCH_KITCHEN_PANS)
-                .textures("bench_block/spruce_top", "bench_block/crafting_table_top",
-                        "bench_block/bench_kitchen_pans")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BENCH_MASON_HAMMER_MALLET).textures("bench_block/spruce_top",
-                "bench_block/crafting_table_top", "bench_block/bench_mason_hammer_mallet").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BERRY_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_berry",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BERRY_CRATE)
-                .randomTexture("crate_block/side_bot1", "crate_block/crate_top_berry",
-                        "crate_block/side_bot1")
-                .randomTexture("crate_block/side_bot2", "crate_block/crate_top_berry",
-                        "crate_block/side_bot2")
-                .randomTexture("crate_block/side_bot3", "crate_block/crate_top_berry",
-                        "crate_block/side_bot3")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.APRICOT_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_apricot",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BLACK_BRICK_ENGRAVED).texture("ashlar_engraved/black/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BLUEGREEN_CARVED_SANDSTONE)
-                .texture("bluegreen_carved_sandstone/side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BONE_DIRT).texture("dirt/bone").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BOOKSHELF_ABANDONED)
-                .randomTexture("bench_block/spruce_top", "bench_block/spruce_top",
-                        "bookshelf_abandoned/side1")
-                .randomTexture("bench_block/spruce_top", "bench_block/spruce_top",
-                        "bookshelf_abandoned/side2")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BOOKSHELF_LIBRARY)
-                .randomTexture("bench_block/spruce_top", "bench_block/spruce_top",
-                        "bookshelf_library/side1")
-                .randomTexture("bench_block/spruce_top", "bench_block/spruce_top",
-                        "bookshelf_library/side2")
-                .randomTexture("bench_block/spruce_top", "bench_block/spruce_top",
-                        "bookshelf_library/side3")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BOOKSHELF_MAESTER)
-                .randomTexture("bench_block/spruce_top", "bench_block/spruce_top",
-                        "bookshelf_maester/side1")
-                .randomTexture("bench_block/spruce_top", "bench_block/spruce_top",
-                        "bookshelf_maester/side2")
-                .randomTexture("bench_block/spruce_top", "bench_block/spruce_top",
-                        "bookshelf_maester/side3")
-                .randomTexture("bench_block/spruce_top", "bench_block/spruce_top",
-                        "bookshelf_maester/side4")
-                .randomTexture("bench_block/spruce_top", "bench_block/spruce_top",
-                        "bookshelf_maester/side5")
-                .randomTexture("bench_block/spruce_top", "bench_block/spruce_top",
-                        "bookshelf_maester/side6")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BROKEN_CABINET)
-                .textures("cabinet/top_bottom", "cabinet/top_bottom", "bench_block/cabinet_broken")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.BROWN_GREY_BRICK_ENGRAVED)
-                .texture("ashlar_engraved/brown_grey/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.CABINET_DRAWER)
-                .randomTexture("cabinet/top_bottom", "cabinet/top_bottom", "cabinet/drawer/side1")
-                .randomTexture("cabinet/top_bottom", "cabinet/top_bottom", "cabinet/drawer/side2")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.CAGE).textures("cage/bottom", "cage/top", "cage/side").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.CARROT_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_carrot",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.CARROT_CRATE)
-                .randomTexture("crate_block/side_bot1", "crate_block/crate_top_carrot",
-                        "crate_block/side_bot1")
-                .randomTexture("crate_block/side_bot2", "crate_block/crate_top_carrot",
-                        "crate_block/side_bot2")
-                .randomTexture("crate_block/side_bot3", "crate_block/crate_top_carrot",
-                        "crate_block/side_bot3")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.CLOSED_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_top_closed",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.CLOSED_CABINET)
-                .textures("cabinet/top_bottom", "cabinet/top_bottom", "cabinet/closed/side").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.COARSE_DARK_RED_CARVED_SANDSTONE)
-                .texture("ashlar_engraved/pale_dark_red/all").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.COARSE_RED_CARVED_SANDSTONE)
-                .texture("ashlar_engraved/pale_red/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.COBBLE_KEYSTONE).textures(
-                "cobblestone/grey/keystone/top_bottom",
-                "cobblestone/grey/keystone/top_bottom", "cobblestone/grey/keystone/side").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.COLOURED_SEPT_WINDOW).texture("glass/sept/all").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.CRATE)
-                .randomTexture("crate_block/side_bot1", "crate_block/crate_side_crossbar_right",
-                        "crate_block/side_bot1")
-                .randomTexture("crate_block/side_bot2", "crate_block/crate_side_crossbar_right",
-                        "crate_block/side_bot2")
-                .randomTexture("crate_block/side_bot3", "crate_block/crate_side_crossbar_right",
-                        "crate_block/side_bot3")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.CRATE2)
-                .randomTexture("crate_block/side_bot1", "crate_block/crate_side_crossbar_left",
-                        "crate_block/side_bot1")
-                .randomTexture("crate_block/side_bot2", "crate_block/crate_side_crossbar_left",
-                        "crate_block/side_bot2")
-                .randomTexture("crate_block/side_bot3", "crate_block/crate_side_crossbar_left",
-                        "crate_block/side_bot3")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.CRATE3)
-                .randomTexture("crate_block/side_bot1", "crate_block/crate_side_crossbar_crossed",
-                        "crate_block/side_bot1")
-                .randomTexture("crate_block/side_bot2", "crate_block/crate_side_crossbar_crossed",
-                        "crate_block/side_bot2")
-                .randomTexture("crate_block/side_bot3", "crate_block/crate_side_crossbar_crossed",
-                        "crate_block/side_bot3")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.DARK_GREY_BRICK_ENGRAVED)
-                .texture("ashlar_engraved/dark_grey/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.DATE_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_dates",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.DATES).textures("dates/bottom", "dates/top", "dates/side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.DESERT_SANDSTONE_ENGRAVED)
-                .texture("ashlar_engraved/sandstone/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.DOMESTIC_UTILITY_BLOCK).texture("utility_block/domestic")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.DONE_UTILITY_BLOCK).texture("utility_block/done").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.DRAGON_CARVING).randomTexture("dragon_carving/side1")
-                .randomTexture("dragon_carving/side2").randomTexture("dragon_carving/side3").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.EMPTY_BARREL)
-                .randomTexture("barrel_closed/barrel_top_closed", "crate_block/barrel_top_empty",
-                        "barrel_sides/side0")
-                .randomTexture("barrel_closed/barrel_top_closed", "crate_block/barrel_top_empty",
-                        "barrel_sides/side1")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.EMPTY_CABINET)
-                .textures("cabinet/top_bottom", "cabinet/top_bottom", "cabinet/empty/side").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_ARBOR_BRICK)
-                .texture("ashlar_third/arbor/faith_carved")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_BLACK_BRICK)
-                .texture("ashlar_quarter/black/faith_carved")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_BROWN_GREY_BRICK)
-                .texture("ashlar_quarter/brown_grey/faith_carved").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_COARSE_RED_BRICK)
-                .texture("ashlar_third/pale_red/faith_carved").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_DARK_GREY_BRICK)
-                .texture("ashlar_quarter/dark_grey/faith_carved").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_DUN_BRICK)
-                .texture("ashlar_third/dun/faith_carved")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_GREY_BRICK)
-                .texture("ashlar_third/grey/faith_carved")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_OLDTOWN_BRICK)
-                .texture("ashlar_quarter_rounded/light_oldtown/faith_carved").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_PINK_SANDSTONE)
-                .texture("ashlar_third/sandy_pink/faith_carved").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_REACH_BRICK)
-                .texture("ashlar_quarter_rounded/reach/faith_carved").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_SMALL_STONE_BRICK)
-                .texture("ashlar_quarter/green_grey/faith_carved").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_STONE_BRICK)
-                .texture("ashlar_half/white/faith_carved")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_STORMLANDS_BRICK)
-                .texture("ashlar_quarter/stormlands/faith_carved").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FAITH_CARVED_WESTERLANDS_BRICK)
-                .texture("ashlar_quarter/westerlands/faith_carved").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FISH_BARREL)
-                .randomTexture("barrel_closed/barrel_top_closed", "crate_block/barrel_top_fish",
-                        "barrel_sides/side0")
-                .randomTexture("barrel_closed/barrel_top_closed", "crate_block/barrel_top_fish",
-                        "barrel_sides/side1")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FISH_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_fish",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FISH_TRAP).randomTexture("fish_trap/side1")
-                .randomTexture("fish_trap/side2").randomTexture("fish_trap/side3")
-                .randomTexture("fish_trap/side4")
-                .randomTexture("fish_trap/side5").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FLAGSTONE).texture("stone_block/flagstone").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.FULL_CABINET)
-                .textures("cabinet/top_bottom", "cabinet/top_bottom", "cabinet/full/side").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.GLOWING_EMBERS).texture("lighting/coals_glowing").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.GRAIN_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_grain",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.GRAIN_CRATE)
-                .randomTexture("crate_block/side_bot1", "crate_block/crate_top_grain",
-                        "crate_block/side_bot1")
-                .randomTexture("crate_block/side_bot2", "crate_block/crate_top_grain",
-                        "crate_block/side_bot2")
-                .randomTexture("crate_block/side_bot3", "crate_block/crate_top_grain",
-                        "crate_block/side_bot3")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.GREEN_GREY_BRICK_ENGRAVED)
-                .texture("ashlar_engraved/green_grey/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.GREY_BRICK_ENGRAVED).texture("ashlar_engraved/grey/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.GREY_KEYSTONE).texture("stone_block/keystone_grey").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.HIGH_CLASS_UTILITY_BLOCK).texture("utility_block/highclass")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.HOP_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_hop",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.HOP_CRATE).textures("crate_block/crate_side_crossbar_right",
-                "crate_block/crate_hops", "crate_block/crate_side_crossbar_left").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.HOUSE_COUNT_UTILITY_BLOCK).texture("utility_block/housecount")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.INDUSTRY_UTILITY_BLOCK).texture("utility_block/industry")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.IRON_CRATE)
-                .randomTexture("crate_block/side_bot1", "crate_block/crate_top_iron",
-                        "crate_block/side_bot1")
-                .randomTexture("crate_block/side_bot2", "crate_block/crate_top_iron",
-                        "crate_block/side_bot2")
-                .randomTexture("crate_block/side_bot3", "crate_block/crate_top_iron",
-                        "crate_block/side_bot3")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.KL_DUN_CARVED_BRICK).texture("ashlar_engraved/dun/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.LANNISPORT_KEYSTONE_ORANGE_PLASTER)
-                .textures("fieldstone/westerlands/all", "fieldstone/westerlands/all",
-                        "plaster/smooth/lannisport_orange/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.LANNISPORT_KEYSTONE_YELLOW_PLASTER)
-                .textures("fieldstone/westerlands/all", "fieldstone/westerlands/all",
-                        "plaster/smooth/lannisport_yellow/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.LARGE_CLAY_POT_SOLID)
-                .textures("wood/oak/all", "clay_pot/solid", "clay_pot/solid").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.LAVENDER_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_lavender",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.LAVENDER_CRATE)
-                .textures("crate_block/crate_side_crossbar_right",
-                        "crate_block/crate_lavender", "crate_block/crate_side_crossbar_crossed")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.LEMON_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_lemons",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.LIGHT_GREY_BRICK_ENGRAVED)
-                .texture("ashlar_engraved/light_grey/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.LIGHT_GREY_STONE_WHITE_PLASTER)
-                .textures("fieldstone/grey/all", "fieldstone/grey/all", "plaster/smooth/white/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.LIGHT_OLDTOWN_BRICK_ENGRAVED)
-                .texture("ashlar_engraved/light_oldtown/all").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.LIME_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_limes",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.LOW_CLASS_UTILITY_BLOCK).texture("utility_block/lowclass")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.MIDDLE_CLASS_UTILITY_BLOCK)
-                .texture("utility_block/middleclass")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.MIRROR_BLOCK)
-                .textures("mirror/top_bottom", "mirror/top_bottom", "mirror/side").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.MONOCHROME_DARK_SANDSTONE_ENGRAVED)
-                .texture("ashlar_engraved/light_brown/all").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.MONOCHROME_SANDSTONE_ENGRAVED)
-                .texture("ashlar_engraved/westerlands/all").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.NETHER_BRICK_KEYSTONE).texture("ashlar_half/black/embellished")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.NORTHERN_CARVINGS).textures("wood/spruce/carving/top_bottom",
-                "wood/spruce/carving/top_bottom", "wood/spruce/carving/side").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.NOTE_UTILITY_BLOCK).texture("utility_block/note").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.OLIVE_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_olives",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.OPEN_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_top",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.OPEN_CRATE)
-                .randomTexture("crate_block/side_bot1", "crate_block/crate_top_empty",
-                        "crate_block/side_bot1")
-                .randomTexture("crate_block/side_bot2", "crate_block/crate_top_empty",
-                        "crate_block/side_bot2")
-                .randomTexture("crate_block/side_bot3", "crate_block/crate_top_empty",
-                        "crate_block/side_bot3")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.ORANGE_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_oranges",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.ORANGE_BRICK_ARCH_DOUBLE)
-                .textures("brick/orange/all1", "brick/orange/all1", "brick/orange/arch_double").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.ORANGE_BRICK_ARCH_SINGLE)
-                .textures("brick/orange/all1", "brick/orange/all1", "brick/orange/arch_single").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.ORANGE_BRICK_DENTIL)
-                .textures("brick/orange/all1", "brick/orange/all1", "brick/orange/dentil").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.ORANGE_BRICK_ROWLOCK)
-                .randomTexture("brick/orange/all1", "brick/orange/all1", "brick/orange/rowlock1")
-                .randomTexture("brick/orange/all1", "brick/orange/all1", "brick/orange/rowlock2")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.ORNATE_MARBLE).texture("marble/quartz/ornate/side").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.ORNATE_SANDSTONE).texture("ashlar_third/sandstone/ornate/side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.PARQUET_FLOOR).texture("wood/oak/ornate").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.PILED_BONES).texture("piled_bones/side").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.PINK_SANDSTONE_ENGRAVED)
-                .texture("ashlar_engraved/sandy_pink/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.PISTON_TOP).texture("wood/oak/studded").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.POMEGRANATE_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_pomegranates",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.PURPLE_GRAPE_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_grape_purple",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.PURPLE_GRAPE_CRATE)
-                .textures("crate_block/crate_side_crossbar_right",
-                        "crate_block/crate_top_grape_purple",
-                        "crate_block/crate_side_crossbar_crossed")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.REACH_BRICK_ENGRAVED).texture("ashlar_engraved/reach/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.REACH_OAK_WOOD_PANELLING)
-                .randomTexture("wood/oak/panelling/top_bottom", "wood/oak/panelling/top_bottom",
-                        "wood/oak/panelling/side1")
-                .randomTexture("wood/oak/panelling/top_bottom", "wood/oak/panelling/top_bottom",
-                        "wood/oak/panelling/side2")
-                .randomTexture("wood/oak/panelling/top_bottom", "wood/oak/panelling/top_bottom",
-                        "wood/oak/panelling/side3")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.REDORANGE_CARVED_SANDSTONE)
-                .texture("redorange_carved_sandstone/side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.RED_LANTERN2)
-                .textures("lighting/lantern_red_bottom", "lighting/lantern_red_top",
-                        "lighting/lantern_red_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.REACH_SPRUCE_WOOD_PANELLING)
-                .randomTexture("wood/spruce/panelling/top_bottom", "wood/spruce/panelling/top_bottom",
-                        "wood/spruce/panelling/side1")
-                .randomTexture("wood/spruce/panelling/top_bottom", "wood/spruce/panelling/top_bottom",
-                        "wood/spruce/panelling/side2")
-                .randomTexture("wood/spruce/panelling/top_bottom", "wood/spruce/panelling/top_bottom",
-                        "wood/spruce/panelling/side3")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SALT_CRATE)
-                .randomTexture("crate_block/side_bot1", "crate_block/crate_top_salt",
-                        "crate_block/side_bot1")
-                .randomTexture("crate_block/side_bot2", "crate_block/crate_top_salt",
-                        "crate_block/side_bot2")
-                .randomTexture("crate_block/side_bot3", "crate_block/crate_top_salt",
-                        "crate_block/side_bot3")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SANDY_STONE_SLABS).randomTexture("sandy_stone/sandy_stone_0")
-                .randomTexture("sandy_stone/sandy_stone_1").randomTexture("sandy_stone/sandy_stone_2")
-                .randomTexture("sandy_stone/sandy_stone_3").randomTexture("sandy_stone/sandy_stone_4")
-                .randomTexture("sandy_stone/sandy_stone_5").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SEPT_CRYSTAL_LARGE).texture("crystal/all").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SHOP_UTILITY_BLOCK).texture("utility_block/shop").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SILVER_TIN_CRATE)
-                .textures("crate_block/crate_side_crossbar_right",
-                        "crate_block/crate_top_tin", "crate_block/crate_side_crossbar_crossed")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SMALL_ORANGE_BRICKS_ORNATE_TOP)
-                .textures("brick/orange/ornate/top_bottom", "brick/orange/ornate/top_bottom",
-                        "brick/orange/all1")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SMALL_ORANGE_BRICKS_ORNATE)
-                .textures("brick/orange/ornate/top_bottom", "brick/orange/ornate/top_bottom",
-                        "brick/orange/all1")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SMALL_SMOOTH_STONE_BRICK_BLUE_PLASTER)
-                .textures("ashlar_quarter_rounded/grey/all", "ashlar_quarter_rounded/grey/all",
-                        "plaster/smooth/blue/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SMALL_SMOOTH_STONE_BRICK_WHITE_PLASTER)
-                .textures("ashlar_quarter_rounded/grey/all", "ashlar_quarter_rounded/grey/all",
-                        "plaster/smooth/brown_white/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SMALL_STONE_BRICK_WHITE_PLASTER)
-                .textures("ashlar_quarter/green_grey/all", "ashlar_quarter/green_grey/all",
-                        "plaster/smooth/white/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SMALL_WHITE_BRICK_BROWNISH_WHITE_PLASTER)
-                .textures("ashlar_quarter_rounded/white/all", "ashlar_quarter_rounded/white/all",
-                        "plaster/smooth/brown_white/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SMALL_WHITE_BRICK_WHITE_PLASTER)
-                .textures("ashlar_quarter_rounded/white/all", "ashlar_quarter_rounded/white/all",
-                        "plaster/smooth/white/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SOURLEAF_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_sourleaf",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SOURLEAF_CRATE)
-                .textures("crate_block/crate_side_crossbar_right",
-                        "crate_block/crate_sourleaf", "crate_block/crate_side_crossbar_crossed")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SOUTHERN_BRICK_ARCH_FLAT)
-                .textures("brick/southern/all1", "brick/southern/all1", "brick/southern/arch_flat")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SOUTHERN_BRICK_ARCH)
-                .textures("brick/southern/all1", "brick/southern/all1", "brick/southern/arch_flat")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SOUTHERN_BRICK_LINTEL)
-                .textures("brick/southern/all1", "brick/southern/all1", "brick/southern/lintel")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SPECIAL_UTILITY_BLOCK).texture("utility_block/special")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SPIT_ROAST).texture("meat_spitroast/all").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.SQUASH).textures("squash/top", "squash/top", "squash/side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.STACKED_BONES_SOLID).textures(
-                "stacked_bones/bone_stacked_front",
-                "stacked_bones/bone_stacked_front", "stacked_bones/bone_stacked_rotated").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.STORMLANDS_BRICK_ENGRAVED)
-                .texture("ashlar_engraved/stormlands/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.TABLE_BOOKS)
-                .textures("bench_block/spruce_top", "bench_block/table_top",
-                        "bench_block/table_drawer_books_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.TABLE_DRAWERS)
-                .textures("bench_block/spruce_top", "bench_block/table_top",
-                        "bench_block/table_drawers_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.THICK_GRASS_BLOCK).randomTexture("grass_block/forest_top1")
-                .randomTexture("grass_block/forest_top2").randomTexture("grass_block/forest_top3")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.TABLE_WIDGETS)
-                .textures("bench_block/spruce_top", "bench_block/table_top",
-                        "bench_block/table_drawer_widgets_side")
-                .build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SIX_SIDED_BIRCH).texture("bark/birch/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SIX_SIDED_JUNGLE).texture("bark/jungle/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SIX_SIDED_OAK).texture("bark/oak/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SIX_SIDED_SPRUCE).texture("bark/spruce/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SIX_SIDED_STONE_SLAB).texture("ashlar_half/white/tile").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.APPLE_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_apple", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.APPLE_CRATE).randomTexture("crate_block/side_bot1", "crate_block/crate_top_apples", "crate_block/side_bot1").randomTexture("crate_block/side_bot2", "crate_block/crate_top_apples", "crate_block/side_bot2").randomTexture("crate_block/side_bot3", "crate_block/crate_top_apples", "crate_block/side_bot3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.APPROVAL_UTILITY_BLOCK).texture("utility_block/approved").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.ARBOR_BRICK_ORNATE).texture("ashlar_engraved/arbor/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BENCH_BUTCHER_KNIVES).textures("bench_block/spruce_top", "bench_block/crafting_table_top", "bench_block/bench_butcher_knives").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BENCH_CARPENTRY_HAMMER_SAW).textures("bench_block/spruce_top", "bench_block/crafting_table_top", "bench_block/bench_carpentry_hammer_saw").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BENCH_DRAWERS).textures("bench_block/spruce_top", "bench_block/crafting_table_top", "bench_block/bench_drawers").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BENCH_KITCHEN_KNIVES).textures("bench_block/spruce_top", "bench_block/crafting_table_top", "bench_block/bench_kitchen_knives").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BENCH_KITCHEN_PANS).textures("bench_block/spruce_top", "bench_block/crafting_table_top", "bench_block/bench_kitchen_pans").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BENCH_MASON_HAMMER_MALLET).textures("bench_block/spruce_top", "bench_block/crafting_table_top", "bench_block/bench_mason_hammer_mallet").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BERRY_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_berry", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BERRY_CRATE).randomTexture("crate_block/side_bot1", "crate_block/crate_top_berry", "crate_block/side_bot1").randomTexture("crate_block/side_bot2", "crate_block/crate_top_berry", "crate_block/side_bot2").randomTexture("crate_block/side_bot3", "crate_block/crate_top_berry", "crate_block/side_bot3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.APRICOT_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_apricot", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BLACK_BRICK_ENGRAVED).texture("ashlar_engraved/black/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BLUEGREEN_CARVED_SANDSTONE).texture("bluegreen_carved_sandstone/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BONE_DIRT).texture("dirt/bone").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BOOKSHELF_ABANDONED).randomTexture("bench_block/spruce_top", "bench_block/spruce_top", "bookshelf_abandoned/side1").randomTexture("bench_block/spruce_top", "bench_block/spruce_top", "bookshelf_abandoned/side2").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BOOKSHELF_LIBRARY).randomTexture("bench_block/spruce_top", "bench_block/spruce_top", "bookshelf_library/side1").randomTexture("bench_block/spruce_top", "bench_block/spruce_top", "bookshelf_library/side2").randomTexture("bench_block/spruce_top", "bench_block/spruce_top", "bookshelf_library/side3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BOOKSHELF_MAESTER).randomTexture("bench_block/spruce_top", "bench_block/spruce_top", "bookshelf_maester/side1").randomTexture("bench_block/spruce_top", "bench_block/spruce_top", "bookshelf_maester/side2").randomTexture("bench_block/spruce_top", "bench_block/spruce_top", "bookshelf_maester/side3").randomTexture("bench_block/spruce_top", "bench_block/spruce_top", "bookshelf_maester/side4").randomTexture("bench_block/spruce_top", "bench_block/spruce_top", "bookshelf_maester/side5").randomTexture("bench_block/spruce_top", "bench_block/spruce_top", "bookshelf_maester/side6").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BROKEN_CABINET).textures("cabinet/top_bottom", "cabinet/top_bottom", "bench_block/cabinet_broken").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.BROWN_GREY_BRICK_ENGRAVED).texture("ashlar_engraved/brown_grey/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.CABINET_DRAWER).randomTexture("cabinet/top_bottom", "cabinet/top_bottom", "cabinet/drawer/side1").randomTexture("cabinet/top_bottom", "cabinet/top_bottom", "cabinet/drawer/side2").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.CAGE).textures("cage/bottom", "cage/top", "cage/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.CARROT_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_carrot", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.CARROT_CRATE).randomTexture("crate_block/side_bot1", "crate_block/crate_top_carrot", "crate_block/side_bot1").randomTexture("crate_block/side_bot2", "crate_block/crate_top_carrot", "crate_block/side_bot2").randomTexture("crate_block/side_bot3", "crate_block/crate_top_carrot", "crate_block/side_bot3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.CLOSED_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_top_closed", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.CLOSED_CABINET).textures("cabinet/top_bottom", "cabinet/top_bottom", "cabinet/closed/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.COARSE_DARK_RED_CARVED_SANDSTONE).texture("ashlar_engraved/pale_dark_red/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.COARSE_RED_CARVED_SANDSTONE).texture("ashlar_engraved/pale_red/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.COBBLE_KEYSTONE).textures("cobblestone/grey/keystone/top_bottom", "cobblestone/grey/keystone/top_bottom", "cobblestone/grey/keystone/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.COLOURED_SEPT_WINDOW).texture("glass/sept/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.CRATE).randomTexture("crate_block/side_bot1", "crate_block/crate_side_crossbar_right", "crate_block/side_bot1").randomTexture("crate_block/side_bot2", "crate_block/crate_side_crossbar_right", "crate_block/side_bot2").randomTexture("crate_block/side_bot3", "crate_block/crate_side_crossbar_right", "crate_block/side_bot3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.CRATE2).randomTexture("crate_block/side_bot1", "crate_block/crate_side_crossbar_left", "crate_block/side_bot1").randomTexture("crate_block/side_bot2", "crate_block/crate_side_crossbar_left", "crate_block/side_bot2").randomTexture("crate_block/side_bot3", "crate_block/crate_side_crossbar_left", "crate_block/side_bot3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.CRATE3).randomTexture("crate_block/side_bot1", "crate_block/crate_side_crossbar_crossed", "crate_block/side_bot1").randomTexture("crate_block/side_bot2", "crate_block/crate_side_crossbar_crossed", "crate_block/side_bot2").randomTexture("crate_block/side_bot3", "crate_block/crate_side_crossbar_crossed", "crate_block/side_bot3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.DARK_GREY_BRICK_ENGRAVED).texture("ashlar_engraved/dark_grey/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.DATE_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_dates", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.DATES).textures("dates/bottom", "dates/top", "dates/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.DESERT_SANDSTONE_ENGRAVED).texture("ashlar_engraved/sandstone/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.DOMESTIC_UTILITY_BLOCK).texture("utility_block/domestic").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.DONE_UTILITY_BLOCK).texture("utility_block/done").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.DRAGON_CARVING).randomTexture("dragon_carving/side1").randomTexture("dragon_carving/side2").randomTexture("dragon_carving/side3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.EMPTY_BARREL).randomTexture("barrel_closed/barrel_top_closed", "crate_block/barrel_top_empty", "barrel_sides/side0").randomTexture("barrel_closed/barrel_top_closed", "crate_block/barrel_top_empty", "barrel_sides/side1").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.EMPTY_CABINET).textures("cabinet/top_bottom", "cabinet/top_bottom", "cabinet/empty/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FAITH_CARVED_ARBOR_BRICK).texture("ashlar_third/arbor/faith_carved").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FAITH_CARVED_BLACK_BRICK).texture("ashlar_quarter/black/faith_carved").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FAITH_CARVED_BROWN_GREY_BRICK).texture("ashlar_quarter/brown_grey/faith_carved").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FAITH_CARVED_COARSE_RED_BRICK).texture("ashlar_third/pale_red/faith_carved").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FAITH_CARVED_DARK_GREY_BRICK).texture("ashlar_quarter/dark_grey/faith_carved").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FAITH_CARVED_DUN_BRICK).texture("ashlar_third/dun/faith_carved").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FAITH_CARVED_GREY_BRICK).texture("ashlar_third/grey/faith_carved").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FAITH_CARVED_OLDTOWN_BRICK).texture("ashlar_quarter_rounded/light_oldtown/faith_carved").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FAITH_CARVED_PINK_SANDSTONE).texture("ashlar_third/sandy_pink/faith_carved").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FAITH_CARVED_REACH_BRICK).texture("ashlar_quarter_rounded/reach/faith_carved").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FAITH_CARVED_SMALL_STONE_BRICK).texture("ashlar_quarter/green_grey/faith_carved").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FAITH_CARVED_STONE_BRICK).texture("ashlar_half/white/faith_carved").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FAITH_CARVED_STORMLANDS_BRICK).texture("ashlar_quarter/stormlands/faith_carved").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FAITH_CARVED_WESTERLANDS_BRICK).texture("ashlar_quarter/westerlands/faith_carved").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FISH_BARREL).randomTexture("barrel_closed/barrel_top_closed", "crate_block/barrel_top_fish", "barrel_sides/side0").randomTexture("barrel_closed/barrel_top_closed", "crate_block/barrel_top_fish", "barrel_sides/side1").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FISH_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_fish", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FISH_TRAP).randomTexture("fish_trap/side1").randomTexture("fish_trap/side2").randomTexture("fish_trap/side3").randomTexture("fish_trap/side4").randomTexture("fish_trap/side5").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FLAGSTONE).texture("stone_block/flagstone").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.FULL_CABINET).textures("cabinet/top_bottom", "cabinet/top_bottom", "cabinet/full/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.GLOWING_EMBERS).texture("lighting/coals_glowing").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.GRAIN_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_grain", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.GRAIN_CRATE).randomTexture("crate_block/side_bot1", "crate_block/crate_top_grain", "crate_block/side_bot1").randomTexture("crate_block/side_bot2", "crate_block/crate_top_grain", "crate_block/side_bot2").randomTexture("crate_block/side_bot3", "crate_block/crate_top_grain", "crate_block/side_bot3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.GREEN_GREY_BRICK_ENGRAVED).texture("ashlar_engraved/green_grey/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.GREY_BRICK_ENGRAVED).texture("ashlar_engraved/grey/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.GREY_KEYSTONE).texture("stone_block/keystone_grey").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.HIGH_CLASS_UTILITY_BLOCK).texture("utility_block/highclass").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.HOP_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_hop", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.HOP_CRATE).textures("crate_block/crate_side_crossbar_right", "crate_block/crate_hops", "crate_block/crate_side_crossbar_left").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.HOUSE_COUNT_UTILITY_BLOCK).texture("utility_block/housecount").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.INDUSTRY_UTILITY_BLOCK).texture("utility_block/industry").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.IRON_CRATE).randomTexture("crate_block/side_bot1", "crate_block/crate_top_iron", "crate_block/side_bot1").randomTexture("crate_block/side_bot2", "crate_block/crate_top_iron", "crate_block/side_bot2").randomTexture("crate_block/side_bot3", "crate_block/crate_top_iron", "crate_block/side_bot3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.KL_DUN_CARVED_BRICK).texture("ashlar_engraved/dun/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.LANNISPORT_KEYSTONE_ORANGE_PLASTER).textures("fieldstone/westerlands/all", "fieldstone/westerlands/all", "plaster/smooth/lannisport_orange/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.LANNISPORT_KEYSTONE_YELLOW_PLASTER).textures("fieldstone/westerlands/all", "fieldstone/westerlands/all", "plaster/smooth/lannisport_yellow/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.LARGE_CLAY_POT_SOLID).textures("wood/oak/all", "clay_pot/solid", "clay_pot/solid").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.LAVENDER_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_lavender", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.LAVENDER_CRATE).textures("crate_block/crate_side_crossbar_right", "crate_block/crate_lavender", "crate_block/crate_side_crossbar_crossed").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.LEMON_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_lemons", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.LIGHT_GREY_BRICK_ENGRAVED).texture("ashlar_engraved/light_grey/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.LIGHT_GREY_STONE_WHITE_PLASTER).textures("fieldstone/grey/all", "fieldstone/grey/all", "plaster/smooth/white/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.LIGHT_OLDTOWN_BRICK_ENGRAVED).texture("ashlar_engraved/light_oldtown/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.LIME_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_limes", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.LOW_CLASS_UTILITY_BLOCK).texture("utility_block/lowclass").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.MIDDLE_CLASS_UTILITY_BLOCK).texture("utility_block/middleclass").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.MIRROR_BLOCK).textures("mirror/top_bottom", "mirror/top_bottom", "mirror/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.MONOCHROME_DARK_SANDSTONE_ENGRAVED).texture("ashlar_engraved/light_brown/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.MONOCHROME_SANDSTONE_ENGRAVED).texture("ashlar_engraved/westerlands/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.NETHER_BRICK_KEYSTONE).texture("ashlar_half/black/embellished").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.NORTHERN_CARVINGS).textures("wood/spruce/carving/top_bottom", "wood/spruce/carving/top_bottom", "wood/spruce/carving/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.NOTE_UTILITY_BLOCK).texture("utility_block/note").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.OLIVE_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_olives", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.OPEN_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_top", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.OPEN_CRATE).randomTexture("crate_block/side_bot1", "crate_block/crate_top_empty", "crate_block/side_bot1").randomTexture("crate_block/side_bot2", "crate_block/crate_top_empty", "crate_block/side_bot2").randomTexture("crate_block/side_bot3", "crate_block/crate_top_empty", "crate_block/side_bot3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.ORANGE_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_oranges", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.ORANGE_BRICK_ARCH_DOUBLE).textures("brick/orange/all1", "brick/orange/all1", "brick/orange/arch_double").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.ORANGE_BRICK_ARCH_SINGLE).textures("brick/orange/all1", "brick/orange/all1", "brick/orange/arch_single").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.ORANGE_BRICK_DENTIL).textures("brick/orange/all1", "brick/orange/all1", "brick/orange/dentil").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.ORANGE_BRICK_ROWLOCK).randomTexture("brick/orange/all1", "brick/orange/all1", "brick/orange/rowlock1").randomTexture("brick/orange/all1", "brick/orange/all1", "brick/orange/rowlock2").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.ORNATE_MARBLE).texture("marble/quartz/ornate/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.ORNATE_SANDSTONE).texture("ashlar_third/sandstone/ornate/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.PARQUET_FLOOR).texture("wood/oak/ornate").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.PILED_BONES).texture("piled_bones/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.PINK_SANDSTONE_ENGRAVED).texture("ashlar_engraved/sandy_pink/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.PISTON_TOP).texture("wood/oak/studded").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.POMEGRANATE_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_pomegranates", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.PURPLE_GRAPE_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_grape_purple", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.PURPLE_GRAPE_CRATE).textures("crate_block/crate_side_crossbar_right", "crate_block/crate_top_grape_purple", "crate_block/crate_side_crossbar_crossed").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.REACH_BRICK_ENGRAVED).texture("ashlar_engraved/reach/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.REACH_OAK_WOOD_PANELLING).randomTexture("wood/oak/panelling/top_bottom", "wood/oak/panelling/top_bottom", "wood/oak/panelling/side1").randomTexture("wood/oak/panelling/top_bottom", "wood/oak/panelling/top_bottom", "wood/oak/panelling/side2").randomTexture("wood/oak/panelling/top_bottom", "wood/oak/panelling/top_bottom", "wood/oak/panelling/side3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.REDORANGE_CARVED_SANDSTONE).texture("redorange_carved_sandstone/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.RED_LANTERN2).textures("lighting/lantern_red_bottom", "lighting/lantern_red_top", "lighting/lantern_red_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.REACH_SPRUCE_WOOD_PANELLING).randomTexture("wood/spruce/panelling/top_bottom", "wood/spruce/panelling/top_bottom", "wood/spruce/panelling/side1").randomTexture("wood/spruce/panelling/top_bottom", "wood/spruce/panelling/top_bottom", "wood/spruce/panelling/side2").randomTexture("wood/spruce/panelling/top_bottom", "wood/spruce/panelling/top_bottom", "wood/spruce/panelling/side3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SALT_CRATE).randomTexture("crate_block/side_bot1", "crate_block/crate_top_salt", "crate_block/side_bot1").randomTexture("crate_block/side_bot2", "crate_block/crate_top_salt", "crate_block/side_bot2").randomTexture("crate_block/side_bot3", "crate_block/crate_top_salt", "crate_block/side_bot3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SANDY_STONE_SLABS).randomTexture("sandy_stone/sandy_stone_0").randomTexture("sandy_stone/sandy_stone_1").randomTexture("sandy_stone/sandy_stone_2").randomTexture("sandy_stone/sandy_stone_3").randomTexture("sandy_stone/sandy_stone_4").randomTexture("sandy_stone/sandy_stone_5").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SEPT_CRYSTAL_LARGE).texture("crystal/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SHOP_UTILITY_BLOCK).texture("utility_block/shop").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SILVER_TIN_CRATE).textures("crate_block/crate_side_crossbar_right", "crate_block/crate_top_tin", "crate_block/crate_side_crossbar_crossed").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SMALL_ORANGE_BRICKS_ORNATE_TOP).textures("brick/orange/ornate/top_bottom", "brick/orange/ornate/top_bottom", "brick/orange/all1").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SMALL_ORANGE_BRICKS_ORNATE).textures("brick/orange/ornate/top_bottom", "brick/orange/ornate/top_bottom", "brick/orange/all1").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SMALL_SMOOTH_STONE_BRICK_BLUE_PLASTER).textures("ashlar_quarter_rounded/grey/all", "ashlar_quarter_rounded/grey/all", "plaster/smooth/blue/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SMALL_SMOOTH_STONE_BRICK_WHITE_PLASTER).textures("ashlar_quarter_rounded/grey/all", "ashlar_quarter_rounded/grey/all", "plaster/smooth/brown_white/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SMALL_STONE_BRICK_WHITE_PLASTER).textures("ashlar_quarter/green_grey/all", "ashlar_quarter/green_grey/all", "plaster/smooth/white/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SMALL_WHITE_BRICK_BROWNISH_WHITE_PLASTER).textures("ashlar_quarter_rounded/white/all", "ashlar_quarter_rounded/white/all", "plaster/smooth/brown_white/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SMALL_WHITE_BRICK_WHITE_PLASTER).textures("ashlar_quarter_rounded/white/all", "ashlar_quarter_rounded/white/all", "plaster/smooth/white/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SOURLEAF_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_sourleaf", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SOURLEAF_CRATE).textures("crate_block/crate_side_crossbar_right", "crate_block/crate_sourleaf", "crate_block/crate_side_crossbar_crossed").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SOUTHERN_BRICK_ARCH_FLAT).textures("brick/southern/all1", "brick/southern/all1", "brick/southern/arch_flat").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SOUTHERN_BRICK_ARCH).textures("brick/southern/all1", "brick/southern/all1", "brick/southern/arch_flat").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SOUTHERN_BRICK_LINTEL).textures("brick/southern/all1", "brick/southern/all1", "brick/southern/lintel").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SPECIAL_UTILITY_BLOCK).texture("utility_block/special").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SPIT_ROAST).texture("meat_spitroast/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.SQUASH).textures("squash/top", "squash/top", "squash/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.STACKED_BONES_SOLID).textures("stacked_bones/bone_stacked_front", "stacked_bones/bone_stacked_front", "stacked_bones/bone_stacked_rotated").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.STORMLANDS_BRICK_ENGRAVED).texture("ashlar_engraved/stormlands/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.TABLE_BOOKS).textures("bench_block/spruce_top", "bench_block/table_top", "bench_block/table_drawer_books_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.TABLE_DRAWERS).textures("bench_block/spruce_top", "bench_block/table_top", "bench_block/table_drawers_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.THICK_GRASS_BLOCK).randomTexture("grass_block/forest_top1").randomTexture("grass_block/forest_top2").randomTexture("grass_block/forest_top3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.TABLE_WIDGETS).textures("bench_block/spruce_top", "bench_block/table_top", "bench_block/table_drawer_widgets_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.TERRACOTTA_ENGRAVED).texture("ashlar_engraved/terracotta/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.TURNIP_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_turnip", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.TURNIP_CRATE).randomTexture("crate_block/side_bot1", "crate_block/crate_top_turnip", "crate_block/side_bot1").randomTexture("crate_block/side_bot2", "crate_block/crate_top_turnip", "crate_block/side_bot2").randomTexture("crate_block/side_bot3", "crate_block/crate_top_turnip", "crate_block/side_bot3").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.UNUSED_BROWN_PLASTER).textures("ashlar_quarter_rounded/light_brown/all", "ashlar_quarter_rounded/light_brown/all", "plaster/smooth/brown_white/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.UNUSED_PURPLE_PLASTER).textures("ashlar_quarter_rounded/dark_red/all", "ashlar_quarter_rounded/dark_red/all", "plaster/smooth/brown_white/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.VIVID_DARK_SANDSTONE_ENGRAVED).texture("ashlar_engraved/dark_tan/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.VIVID_SANDSTONE_ENGRAVED).texture("ashlar_engraved/tan/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.WATER_BARREL).randomTexture("barrel_closed/barrel_top_closed", "crate_block/barrel_top_water", "barrel_sides/side0").randomTexture("barrel_closed/barrel_top_closed", "crate_block/barrel_top_water", "barrel_sides/side1").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.WHITE_BRICK_ENGRAVED).texture("ashlar_engraved/white/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.WHITE_GRAPE_BASKET).textures("crate_block/basket_bottom", "crate_block/basket_grape_white", "crate_block/basket_side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.WHITE_GRAPE_CRATE).textures("crate_block/crate_side_crossbar_right", "crate_block/crate_top_grape_white", "crate_block/crate_side_crossbar_crossed").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.WINTERFELL_CARVING).texture("ashlar_third/dark_grey/carving/side").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.WIP_UTILITY_BLOCK).texture("utility_block/wip").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.WORKSHOP_UTILITY_BLOCK).texture("utility_block/workshop").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.YARD_UTILITY_BLOCK).texture("utility_block/yard").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.YELLOW_STAINED_CLAY).texture("clay/yellow_stained_clay").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.TIMBER_NORTHERN_BLUE_BRESSUMMER).state("plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all").state("plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all").state("plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all").state("plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1").state("plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all").build();
+        registerCustomSolidBlock(bsmg, SolidBlocks.TIMBER_NORTHERN_GREEN_LEFTHATCH).state("plaster/smooth/gulltown_green/all", "wood/northern/all","plaster/smooth/gulltown_green/all").state("plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all").state("plaster/smooth/highgarden_green/all", "wood/northern/all", "plaster/smooth/highgarden_green/all").state("plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1").state("plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all").build();
 
         // Table Blocks
         registerCustomTableBlock(bsmg, ModBlocks.OAK_TABLE).texture("wood/oak/all").build();
 
-
-        registerCustomSolidBlock(bsmg, ModBlocks.TERRACOTTA_ENGRAVED).texture("ashlar_engraved/terracotta/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.TURNIP_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_turnip",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.TURNIP_CRATE)
-                .randomTexture("crate_block/side_bot1", "crate_block/crate_top_turnip",
-                        "crate_block/side_bot1")
-                .randomTexture("crate_block/side_bot2", "crate_block/crate_top_turnip",
-                        "crate_block/side_bot2")
-                .randomTexture("crate_block/side_bot3", "crate_block/crate_top_turnip",
-                        "crate_block/side_bot3")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.UNUSED_BROWN_PLASTER)
-                .textures("ashlar_quarter_rounded/light_brown/all",
-                        "ashlar_quarter_rounded/light_brown/all",
-                        "plaster/smooth/brown_white/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.UNUSED_PURPLE_PLASTER)
-                .textures("ashlar_quarter_rounded/dark_red/all",
-                        "ashlar_quarter_rounded/dark_red/all", "plaster/smooth/brown_white/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.VIVID_DARK_SANDSTONE_ENGRAVED)
-                .texture("ashlar_engraved/dark_tan/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.VIVID_SANDSTONE_ENGRAVED).texture("ashlar_engraved/tan/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.WATER_BARREL)
-                .randomTexture("barrel_closed/barrel_top_closed", "crate_block/barrel_top_water",
-                        "barrel_sides/side0")
-                .randomTexture("barrel_closed/barrel_top_closed", "crate_block/barrel_top_water",
-                        "barrel_sides/side1")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.WHITE_BRICK_ENGRAVED).texture("ashlar_engraved/white/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.WHITE_GRAPE_BASKET)
-                .textures("crate_block/basket_bottom", "crate_block/basket_grape_white",
-                        "crate_block/basket_side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.WHITE_GRAPE_CRATE).textures(
-                "crate_block/crate_side_crossbar_right",
-                "crate_block/crate_top_grape_white", "crate_block/crate_side_crossbar_crossed").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.WINTERFELL_CARVING)
-                .texture("ashlar_third/dark_grey/carving/side")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.WIP_UTILITY_BLOCK).texture("utility_block/wip").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.WORKSHOP_UTILITY_BLOCK).texture("utility_block/workshop")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.YARD_UTILITY_BLOCK).texture("utility_block/yard").build();
-        registerCustomSolidBlock(bsmg, ModBlocks.YELLOW_STAINED_CLAY).texture("clay/yellow_stained_clay")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.TIMBER_NORTHERN_BLUE_BRESSUMMER)
-                .state("plaster/smooth/gulltown_blue/all", "wood/northern/all",
-                        "plaster/smooth/gulltown_blue/all")
-                .state("plaster/smooth/light_blue/all", "wood/northern/all",
-                        "plaster/smooth/light_blue/all")
-                .state("plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all")
-                .state("plaster/rough/gulltown_blue/all1", "wood/northern/all",
-                        "plaster/rough/gulltown_blue/all1")
-                .state("plaster/wattle/gulltown_blue/all", "wood/northern/all",
-                        "plaster/wattle/gulltown_blue/all")
-                .build();
-        registerCustomSolidBlock(bsmg, ModBlocks.TIMBER_NORTHERN_GREEN_LEFTHATCH)
-                .state("plaster/smooth/gulltown_green/all", "wood/northern/all",
-                        "plaster/smooth/gulltown_green/all")
-                .state("plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all")
-                .state("plaster/smooth/highgarden_green/all", "wood/northern/all",
-                        "plaster/smooth/highgarden_green/all")
-                .state("plaster/rough/gulltown_green/all1", "wood/northern/all",
-                        "plaster/rough/gulltown_green/all1")
-                .state("plaster/wattle/gulltown_green/all", "wood/northern/all",
-                        "plaster/wattle/gulltown_green/all")
-                .build();
 
         // Log Blocks
         registerCustomLogBlock(bsmg, ModBlocks.ARCHERY_TARGET)
@@ -892,39 +501,39 @@ public class ModModelProvider extends FabricModelProvider {
         registerCustomRailBlock(bsmg, ModBlocks.PACKED_SNOW).textures("rail_block/packed_snow", "rail_block/packed_snow_turned").build();
 
         // Plant Block
-        registerCustomPlantBlock(bsmg, ModBlocks.BLUE_BELLS).texture("flowers/blue_bells").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BLUE_CHICORY)
+        registerCustomPlantBlock(bsmg, PlantBlocks.BLUE_BELLS).texture("flowers/blue_bells").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.BLUE_CHICORY)
                 .randomTexture("flowers/blue_chicory/side1")
                 .randomTexture("flowers/blue_chicory/side2")
                 .randomTexture("flowers/blue_chicory/side3")
                 .randomTexture("flowers/blue_chicory/side4")
                 .build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BLUE_FORGETMENOTS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.BLUE_FORGETMENOTS)
                 .randomTexture("flowers/blue_forgetmenots1")
                 .randomTexture("flowers/blue_forgetmenots2")
                 .randomTexture("flowers/blue_forgetmenots3")
                 .randomTexture("flowers/blue_forgetmenots4")
                 .build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BLUE_FLAX)
+        registerCustomPlantBlock(bsmg, PlantBlocks.BLUE_FLAX)
                 .randomTexture("flowers/blue_flax1")
                 .randomTexture("flowers/blue_flax2")
                 .randomTexture("flowers/blue_flax3")
                 .randomTexture("flowers/blue_flax4")
                 .build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BLUE_HYACINTH)
+        registerCustomPlantBlock(bsmg, PlantBlocks.BLUE_HYACINTH)
                 .randomTexture("flowers/blue_hyacinth1")
                 .randomTexture("flowers/blue_hyacinth2")
                 .randomTexture("flowers/blue_hyacinth3")
                 .randomTexture("flowers/blue_hyacinth4")
                 .build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BLUE_ORCHID)
+        registerCustomPlantBlock(bsmg, PlantBlocks.BLUE_ORCHID)
                 .randomTexture("flowers/blue_orchid1")
                 .randomTexture("flowers/blue_orchid2")
                 .randomTexture("flowers/blue_orchid3")
                 .build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BLUE_SWAMP_BELLS).texture("flowers/blue_swamp_bells1").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.BLUE_SWAMP_BELLS).texture("flowers/blue_swamp_bells1").build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.BRACKEN)
+        registerCustomPlantBlock(bsmg, PlantBlocks.BRACKEN)
                 .randomTexture("bracken/side1")
                 .randomTexture("bracken/side2")
                 .randomTexture("bracken/side3")
@@ -935,56 +544,56 @@ public class ModModelProvider extends FabricModelProvider {
                 .randomTexture("bracken/side8")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_1).texture("brown_mushroom_block/mushroom_brown_0").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_2).texture("brown_mushroom_block/mushroom_brown_1").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_3).texture("brown_mushroom_block/mushroom_brown_2").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_4).texture("brown_mushroom_block/mushroom_brown_3").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_5).texture("brown_mushroom_block/mushroom_brown_4").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_6).texture("brown_mushroom_block/mushroom_brown_5").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_7).texture("brown_mushroom_block/mushroom_brown_6").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_8).texture("brown_mushroom_block/mushroom_brown_7").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_9).texture("brown_mushroom_block/mushroom_brown_8").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_10).texture("brown_mushroom_block/mushroom_brown_9").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_11).texture("brown_mushroom_block/mushroom_brown_10").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_12).texture("brown_mushroom_block/mushroom_brown_11").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.BROWN_MUSHROOM_13).texture("brown_mushroom_block/mushroom_brown_12").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.BROWN_MUSHROOM_1).texture("brown_mushroom_block/mushroom_brown_0").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.BROWN_MUSHROOM_2).texture("brown_mushroom_block/mushroom_brown_1").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.BROWN_MUSHROOM_3).texture("brown_mushroom_block/mushroom_brown_2").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.BROWN_MUSHROOM_4).texture("brown_mushroom_block/mushroom_brown_3").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.BROWN_MUSHROOM_5).texture("brown_mushroom_block/mushroom_brown_4").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.BROWN_MUSHROOM_6).texture("brown_mushroom_block/mushroom_brown_5").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.BROWN_MUSHROOM_7).texture("brown_mushroom_block/mushroom_brown_6").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.BROWN_MUSHROOM_8).texture("brown_mushroom_block/mushroom_brown_7").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.BROWN_MUSHROOM_9).texture("brown_mushroom_block/mushroom_brown_8").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.BROWN_MUSHROOM_10).texture("brown_mushroom_block/mushroom_brown_9").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.BROWN_MUSHROOM_11).texture("brown_mushroom_block/mushroom_brown_10").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.BROWN_MUSHROOM_12).texture("brown_mushroom_block/mushroom_brown_11").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.BROWN_MUSHROOM_13).texture("brown_mushroom_block/mushroom_brown_12").build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.CORAL_BRAIN_WEB)
+        registerCustomPlantBlock(bsmg, PlantBlocks.CORAL_BRAIN_WEB)
                 .randomTexture("coral/brain/web1")
                 .randomTexture("coral/brain/web2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.CORAL_BUBBLE_WEB)
+        registerCustomPlantBlock(bsmg, PlantBlocks.CORAL_BUBBLE_WEB)
                 .randomTexture("coral/bubble/web1")
                 .randomTexture("coral/bubble/web2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.CORAL_FIRE_WEB)
+        registerCustomPlantBlock(bsmg, PlantBlocks.CORAL_FIRE_WEB)
                 .randomTexture("coral/fire/web1")
                 .randomTexture("coral/fire/web2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.CORAL_HORN_WEB)
+        registerCustomPlantBlock(bsmg, PlantBlocks.CORAL_HORN_WEB)
                 .randomTexture("coral/horn/web1")
                 .randomTexture("coral/horn/web2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.CORAL_TUBE_WEB)
+        registerCustomPlantBlock(bsmg, PlantBlocks.CORAL_TUBE_WEB)
                 .randomTexture("coral/tube/web1")
                 .randomTexture("coral/tube/web2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.COW_PARSELY)
+        registerCustomPlantBlock(bsmg, PlantBlocks.COW_PARSELY)
                 .randomTexture("cow_parsely/side1")
                 .randomTexture("cow_parsely/side2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.CRANBERRY_BUSH)
+        registerCustomPlantBlock(bsmg, PlantBlocks.CRANBERRY_BUSH)
                 .randomTexture("cranberry/base1")
                 .randomTexture("cranberry/base2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.DEAD_BRACKEN)
+        registerCustomPlantBlock(bsmg, PlantBlocks.DEAD_BRACKEN)
                 .randomTexture("dead_bracken/side1")
                 .randomTexture("dead_bracken/side2")
                 .randomTexture("dead_bracken/side3")
@@ -999,13 +608,13 @@ public class ModModelProvider extends FabricModelProvider {
                 .randomTexture("dead_bracken/side12")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.DEAD_BUSH)
+        registerCustomPlantBlock(bsmg, PlantBlocks.DEAD_BUSH)
                 .randomTexture("dorne_bush_thorny/side1")
                 .randomTexture("dorne_bush_thorny/side2")
                 .randomTexture("dorne_bush_thorny/side3")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.DEAD_SCRUB_GRASS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.DEAD_SCRUB_GRASS)
                 .randomTexture("flowers/dead_scrub_grass1")
                 .randomTexture("flowers/dead_scrub_grass2")
                 .randomTexture("flowers/dead_scrub_grass3")
@@ -1017,19 +626,19 @@ public class ModModelProvider extends FabricModelProvider {
                 .randomTexture("flowers/dead_scrub_grass9")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.DOCK_LEAF)
+        registerCustomPlantBlock(bsmg, PlantBlocks.DOCK_LEAF)
                 .randomTexture("dock_leaf/side1")
                 .randomTexture("dock_leaf/side2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.FIREWEED)
+        registerCustomPlantBlock(bsmg, PlantBlocks.FIREWEED)
                 .randomTexture("fireweed/side1")
                 .randomTexture("fireweed/side2")
                 .randomTexture("fireweed/side3")
                 .randomTexture("fireweed/side4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.GRASS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.GRASS)
                 .randomTexture("minecraft:block/fern/fern1")
                 .randomTexture("minecraft:block/fern/fern2")
                 .randomTexture("minecraft:block/fern/fern3")
@@ -1041,11 +650,11 @@ public class ModModelProvider extends FabricModelProvider {
                 .isTinted(true)
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.GREEN_LEAFY_HERB)
+        registerCustomPlantBlock(bsmg, PlantBlocks.GREEN_LEAFY_HERB)
                 .texture("flowers/green_leafy_herb")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.GREEN_SCRUB_GRASS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.GREEN_SCRUB_GRASS)
                 .randomTexture("flowers/green_scrub_grass1")
                 .randomTexture("flowers/green_scrub_grass2")
                 .randomTexture("flowers/green_scrub_grass3")
@@ -1054,7 +663,7 @@ public class ModModelProvider extends FabricModelProvider {
                 .randomTexture("flowers/green_scrub_grass6")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.GREEN_SPINY_HERB)
+        registerCustomPlantBlock(bsmg, PlantBlocks.GREEN_SPINY_HERB)
                 .randomTexture("flowers/green_spiny_herb1")
                 .randomTexture("flowers/green_spiny_herb2")
                 .randomTexture("flowers/green_spiny_herb3")
@@ -1062,190 +671,190 @@ public class ModModelProvider extends FabricModelProvider {
                 .randomTexture("flowers/green_spiny_herb5")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.HEATHER)
+        registerCustomPlantBlock(bsmg, PlantBlocks.HEATHER)
                 .randomTexture("heather/side1")
                 .randomTexture("heather/side2")
                 .randomTexture("heather/side3")
                 .randomTexture("heather/side4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.KELP)
+        registerCustomPlantBlock(bsmg, PlantBlocks.KELP)
                 .randomTexture("kelp/side1")
                 .randomTexture("kelp/side2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.LADY_FERN)
+        registerCustomPlantBlock(bsmg, PlantBlocks.LADY_FERN)
                 .randomTexture("lady_fern/side1")
                 .randomTexture("lady_fern/side2")
                 .randomTexture("lady_fern/side3")
                 .randomTexture("lady_fern/side4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.MAGENTA_ROSES)
+        registerCustomPlantBlock(bsmg, PlantBlocks.MAGENTA_ROSES)
                 .randomTexture("flowers/magenta_roses1")
                 .randomTexture("flowers/magenta_roses2")
                 .randomTexture("flowers/magenta_roses3")
                 .randomTexture("flowers/magenta_roses4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.MEADOW_FESCUE)
+        registerCustomPlantBlock(bsmg, PlantBlocks.MEADOW_FESCUE)
                 .randomTexture("flowers/meadow_fescue/side1")
                 .randomTexture("flowers/meadow_fescue/side2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.NETTLE)
+        registerCustomPlantBlock(bsmg, PlantBlocks.NETTLE)
                 .randomTexture("nettle/side1")
                 .randomTexture("nettle/side2")
                 .randomTexture("nettle/side3")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.ORANGE_BELLS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.ORANGE_BELLS)
                 .texture("flowers/orange_bells1")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.ORANGE_BOG_ASPHODEL)
+        registerCustomPlantBlock(bsmg, PlantBlocks.ORANGE_BOG_ASPHODEL)
                 .randomTexture("flowers/orange_bog_asphodel1")
                 .randomTexture("flowers/orange_bog_asphodel2")
                 .randomTexture("flowers/orange_bog_asphodel3")
                 .randomTexture("flowers/orange_bog_asphodel4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.ORANGE_MARIGOLDS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.ORANGE_MARIGOLDS)
                 .randomTexture("flowers/orange_marigolds1")
                 .randomTexture("flowers/orange_marigolds2")
                 .randomTexture("flowers/orange_marigolds3")
                 .randomTexture("flowers/orange_marigolds4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.ORANGE_SUN_STAR)
+        registerCustomPlantBlock(bsmg, PlantBlocks.ORANGE_SUN_STAR)
                 .randomTexture("flowers/orange_sun_star1")
                 .randomTexture("flowers/orange_sun_star2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.ORANGE_TROLLIUS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.ORANGE_TROLLIUS)
                 .randomTexture("flowers/orange_trollius1")
                 .randomTexture("flowers/orange_trollius2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.PINK_ALLIUM)
+        registerCustomPlantBlock(bsmg, PlantBlocks.PINK_ALLIUM)
                 .randomTexture("flowers/pink_allium1")
                 .randomTexture("flowers/pink_allium2")
                 .randomTexture("flowers/pink_allium3")
                 .randomTexture("flowers/pink_allium4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.PINK_PRIMROSE)
+        registerCustomPlantBlock(bsmg, PlantBlocks.PINK_PRIMROSE)
                 .randomTexture("flowers/pink_primrose1")
                 .randomTexture("flowers/pink_primrose2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.PINK_ROSES)
+        registerCustomPlantBlock(bsmg, PlantBlocks.PINK_ROSES)
                 .randomTexture("flowers/pink_roses1")
                 .randomTexture("flowers/pink_roses2")
                 .randomTexture("flowers/pink_roses3")
                 .randomTexture("flowers/pink_roses4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.PINK_SWEET_PEAS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.PINK_SWEET_PEAS)
                 .texture("flowers/pink_sweet_peas1")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.PINK_THISTLE)
+        registerCustomPlantBlock(bsmg, PlantBlocks.PINK_THISTLE)
                 .randomTexture("flowers/pink_thistle/side1")
                 .randomTexture("flowers/pink_thistle/side2")
                 .randomTexture("flowers/pink_thistle/side3")
                 .randomTexture("flowers/pink_thistle/side4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.PINK_TULIPS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.PINK_TULIPS)
                 .randomTexture("flowers/pink_tulips1")
                 .randomTexture("flowers/pink_tulips2")
                 .randomTexture("flowers/pink_tulips3")
                 .randomTexture("flowers/pink_tulips4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.PINK_WILDFLOWERS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.PINK_WILDFLOWERS)
                 .texture("flowers/pink_wildflowers")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_ASTER)
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_ASTER)
                 .randomTexture("flowers/red_aster1")
                 .randomTexture("flowers/red_aster2")
                 .randomTexture("flowers/red_aster3")
                 .randomTexture("flowers/red_aster4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_CARNATIONS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_CARNATIONS)
                 .randomTexture("flowers/red_carnations1")
                 .randomTexture("flowers/red_carnations2")
                 .randomTexture("flowers/red_carnations3")
                 .randomTexture("flowers/red_carnations4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_CHRYSANTHEMUM)
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_CHRYSANTHEMUM)
                 .texture("flowers/red_chrysanthemum1")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_DARK_ROSES)
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_DARK_ROSES)
                 .randomTexture("flowers/red_dark_roses1")
                 .randomTexture("flowers/red_dark_roses2")
                 .randomTexture("flowers/red_dark_roses3")
                 .randomTexture("flowers/red_dark_roses4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_FERN)
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_FERN)
                 .randomTexture("red_fern/side1")
                 .randomTexture("red_fern/side2")
                 .randomTexture("red_fern/side3")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_FLOWERING_SPINY_HERB)
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_FLOWERING_SPINY_HERB)
                 .texture("flowers/red_flowering_spiny_herb1")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_1).texture("red_mushroom_block/mushroom_red_0").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_2).texture("red_mushroom_block/mushroom_red_1").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_3).texture("red_mushroom_block/mushroom_red_2").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_4).texture("red_mushroom_block/mushroom_red_3").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_5).texture("red_mushroom_block/mushroom_red_4").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_6).texture("red_mushroom_block/mushroom_red_5").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_7).texture("red_mushroom_block/mushroom_red_6").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_8).texture("red_mushroom_block/mushroom_red_7").build();
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_MUSHROOM_9).texture("red_mushroom_block/mushroom_red_8").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_MUSHROOM_1).texture("red_mushroom_block/mushroom_red_0").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_MUSHROOM_2).texture("red_mushroom_block/mushroom_red_1").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_MUSHROOM_3).texture("red_mushroom_block/mushroom_red_2").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_MUSHROOM_4).texture("red_mushroom_block/mushroom_red_3").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_MUSHROOM_5).texture("red_mushroom_block/mushroom_red_4").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_MUSHROOM_6).texture("red_mushroom_block/mushroom_red_5").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_MUSHROOM_7).texture("red_mushroom_block/mushroom_red_6").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_MUSHROOM_8).texture("red_mushroom_block/mushroom_red_7").build();
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_MUSHROOM_9).texture("red_mushroom_block/mushroom_red_8").build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_POPPIES)
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_POPPIES)
                 .randomTexture("flowers/red_poppies1")
                 .randomTexture("flowers/red_poppies2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_ROSES)
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_ROSES)
                 .randomTexture("flowers/red_roses1")
                 .randomTexture("flowers/red_roses2")
                 .randomTexture("flowers/red_roses3")
                 .randomTexture("flowers/red_roses4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_SORREL)
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_SORREL)
                 .texture("flowers/red_sorrel1")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_SOURLEAF_BUSH)
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_SOURLEAF_BUSH)
                 .randomTexture("flowers/red_sourleaf_bush1")
                 .randomTexture("flowers/red_sourleaf_bush2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.RED_TULIPS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.RED_TULIPS)
                 .randomTexture("flowers/red_tulips1")
                 .randomTexture("flowers/red_tulips2")
                 .randomTexture("flowers/red_tulips3")
                 .randomTexture("flowers/red_tulips4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.STRAWBERRY_BUSH)
+        registerCustomPlantBlock(bsmg, PlantBlocks.STRAWBERRY_BUSH)
                 .texture("flowers/strawberry")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.THICK_GRASS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.THICK_GRASS)
                 .randomTexture("minecraft:block/grass/grass1")
                 .randomTexture("minecraft:block/grass/grass2")
                 .randomTexture("minecraft:block/grass/grass3")
@@ -1258,7 +867,7 @@ public class ModModelProvider extends FabricModelProvider {
                 .randomTexture("minecraft:block/grass/grass10")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.UNSHADED_GRASS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.UNSHADED_GRASS)
                 .randomTexture("deadbush/side1")
                 .randomTexture("deadbush/side2")
                 .randomTexture("deadbush/side3")
@@ -1269,103 +878,103 @@ public class ModModelProvider extends FabricModelProvider {
                 .randomTexture("deadbush/side8")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.WHITE_CHAMOMILE)
+        registerCustomPlantBlock(bsmg, PlantBlocks.WHITE_CHAMOMILE)
                 .randomTexture("flowers/white_chamomile1")
                 .randomTexture("flowers/white_chamomile2")
                 .randomTexture("flowers/white_chamomile3")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.WHITE_DAISIES)
+        registerCustomPlantBlock(bsmg, PlantBlocks.WHITE_DAISIES)
                 .randomTexture("flowers/white_daisies1")
                 .randomTexture("flowers/white_daisies2")
                 .randomTexture("flowers/white_daisies3")
                 .randomTexture("flowers/white_daisies4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.WHITE_LILYOFTHEVALLEY)
+        registerCustomPlantBlock(bsmg, PlantBlocks.WHITE_LILYOFTHEVALLEY)
                 .texture("flowers/white_lily_valley1")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.WHITE_PEONY)
+        registerCustomPlantBlock(bsmg, PlantBlocks.WHITE_PEONY)
                 .texture("flowers/white_peony1")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.WHITE_ROSES)
+        registerCustomPlantBlock(bsmg, PlantBlocks.WHITE_ROSES)
                 .randomTexture("flowers/white_roses1")
                 .randomTexture("flowers/white_roses2")
                 .randomTexture("flowers/white_roses3")
                 .randomTexture("flowers/white_roses4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_BEDSTRAW)
+        registerCustomPlantBlock(bsmg, PlantBlocks.YELLOW_BEDSTRAW)
                 .randomTexture("flowers/yellow_bedstraw/side1")
                 .randomTexture("flowers/yellow_bedstraw/side2")
                 .randomTexture("flowers/yellow_bedstraw/side3")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_BELLS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.YELLOW_BELLS)
                 .texture("flowers/yellow_bells1")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_BUTTERCUPS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.YELLOW_BUTTERCUPS)
                 .randomTexture("flowers/yellow_buttercups1")
                 .randomTexture("flowers/yellow_buttercups2")
                 .randomTexture("flowers/yellow_buttercups3")
                 .randomTexture("flowers/yellow_buttercups4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_DAFFODILS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.YELLOW_DAFFODILS)
                 .randomTexture("flowers/yellow_daffodils1")
                 .randomTexture("flowers/yellow_daffodils2")
                 .randomTexture("flowers/yellow_daffodils3")
                 .randomTexture("flowers/yellow_daffodils4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_DAISIES)
+        registerCustomPlantBlock(bsmg, PlantBlocks.YELLOW_DAISIES)
                 .randomTexture("flowers/yellow_daisies1")
                 .randomTexture("flowers/yellow_daisies2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_DANDELIONS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.YELLOW_DANDELIONS)
                 .randomTexture("flowers/yellow_dandelions1")
                 .randomTexture("flowers/yellow_dandelions2")
                 .randomTexture("flowers/yellow_dandelions3")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_HELLEBORE)
+        registerCustomPlantBlock(bsmg, PlantBlocks.YELLOW_HELLEBORE)
                 .randomTexture("flowers/yellow_hellebore1")
                 .randomTexture("flowers/yellow_hellebore2")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_LUPINE)
+        registerCustomPlantBlock(bsmg, PlantBlocks.YELLOW_LUPINE)
                 .randomTexture("flowers/yellow_lupine1")
                 .randomTexture("flowers/yellow_lupine2")
                 .randomTexture("flowers/yellow_lupine3")
                 .randomTexture("flowers/yellow_lupine4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_ROSES)
+        registerCustomPlantBlock(bsmg, PlantBlocks.YELLOW_ROSES)
                 .randomTexture("flowers/yellow_roses1")
                 .randomTexture("flowers/yellow_roses2")
                 .randomTexture("flowers/yellow_roses3")
                 .randomTexture("flowers/yellow_roses4")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_RUDBECKIA)
+        registerCustomPlantBlock(bsmg, PlantBlocks.YELLOW_RUDBECKIA)
                 .texture("flowers/yellow_rudbeckia1")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_SUNFLOWER)
+        registerCustomPlantBlock(bsmg, PlantBlocks.YELLOW_SUNFLOWER)
                 .randomTexture("flowers/yellow_sunflower/side1")
                 .randomTexture("flowers/yellow_sunflower/side2")
                 .randomTexture("flowers/yellow_sunflower/side3")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_TANSY)
+        registerCustomPlantBlock(bsmg, PlantBlocks.YELLOW_TANSY)
                 .texture("flowers/yellow_tansy")
                 .build();
 
-        registerCustomPlantBlock(bsmg, ModBlocks.YELLOW_WILDFLOWERS)
+        registerCustomPlantBlock(bsmg, PlantBlocks.YELLOW_WILDFLOWERS)
                 .texture("flowers/yellow_wildflowers")
                 .build();
 
@@ -2014,31 +1623,31 @@ public class ModModelProvider extends FabricModelProvider {
                 .build();
 
         // Flower pot blocks
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BLUE_BELLS, "potted_blue_bells")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_BLUE_BELLS, "potted_blue_bells")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_bells")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BLUE_SWAMP_BELLS, "potted_blue_swamp_bells")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_BLUE_SWAMP_BELLS, "potted_blue_swamp_bells")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_swamp_bells1")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BROWN_MUSHROOM_13, "potted_brown_mushroom_13")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_BROWN_MUSHROOM_13, "potted_brown_mushroom_13")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "brown_mushroom_block/mushroom_brown_12")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BROWN_MUSHROOM_1, "potted_brown_mushroom_1")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_BROWN_MUSHROOM_1, "potted_brown_mushroom_1")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "brown_mushroom_block/mushroom_brown_0")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BROWN_MUSHROOM_3, "potted_brown_mushroom_3")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_BROWN_MUSHROOM_3, "potted_brown_mushroom_3")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "brown_mushroom_block/mushroom_brown_2")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BROWN_MUSHROOM_6, "potted_brown_mushroom_6")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_BROWN_MUSHROOM_6, "potted_brown_mushroom_6")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "brown_mushroom_block/mushroom_brown_5")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_DEAD_SCRUB_GRASS, "potted_dead_scrub_grass")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_DEAD_SCRUB_GRASS, "potted_dead_scrub_grass")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/dead_scrub_grass1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/dead_scrub_grass2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/dead_scrub_grass3")
@@ -2050,18 +1659,18 @@ public class ModModelProvider extends FabricModelProvider {
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/dead_scrub_grass9")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_FIREWEED, "potted_fireweed")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_FIREWEED, "potted_fireweed")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "fireweed/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "fireweed/side2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "fireweed/side3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "fireweed/side4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_GREEN_LEAFY_HERB, "potted_green_leafy_herb")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_GREEN_LEAFY_HERB, "potted_green_leafy_herb")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_leafy_herb")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_GREEN_SCRUB_GRASS, "potted_green_scrub_grass")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_GREEN_SCRUB_GRASS, "potted_green_scrub_grass")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_scrub_grass1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_scrub_grass2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_scrub_grass3")
@@ -2070,7 +1679,7 @@ public class ModModelProvider extends FabricModelProvider {
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_scrub_grass6")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_GREEN_SPINY_HERB, "potted_green_spiny_herb")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_GREEN_SPINY_HERB, "potted_green_spiny_herb")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_spiny_herb1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_spiny_herb2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/green_spiny_herb3")
@@ -2079,369 +1688,369 @@ public class ModModelProvider extends FabricModelProvider {
 
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_HEATHER, "potted_heather")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_HEATHER, "potted_heather")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "heather/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "heather/side2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "heather/side3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "heather/side4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_LADY_FERN, "potted_lady_fern")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_LADY_FERN, "potted_lady_fern")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "lady_fern/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "lady_fern/side2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "lady_fern/side3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "lady_fern/side4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_MAGENTA_ROSES, "potted_magenta_roses")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_MAGENTA_ROSES, "potted_magenta_roses")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/magenta_roses1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/magenta_roses2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/magenta_roses3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/magenta_roses4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_MEADOW_FESCUE, "potted_meadow_fescue")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_MEADOW_FESCUE, "potted_meadow_fescue")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/meadow_fescue/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/meadow_fescue/side2")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_NETTLE, "potted_nettle")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_NETTLE, "potted_nettle")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "nettle/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "nettle/side2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "nettle/side3")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_ORANGE_BELLS, "potted_orange_bells")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_ORANGE_BELLS, "potted_orange_bells")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_bells1")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_ORANGE_BOG_ASPHODEL, "potted_orange_bog_asphodel")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_ORANGE_BOG_ASPHODEL, "potted_orange_bog_asphodel")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_bog_asphodel1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_bog_asphodel2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_bog_asphodel3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_bog_asphodel4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_ORANGE_MARIGOLDS, "potted_orange_marigolds")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_ORANGE_MARIGOLDS, "potted_orange_marigolds")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_marigolds1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_marigolds2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_marigolds3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_marigolds4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_ORANGE_SUN_STAR, "potted_orange_sun_star")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_ORANGE_SUN_STAR, "potted_orange_sun_star")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_sun_star1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_sun_star2")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_ORANGE_TROLLIUS, "potted_orange_trollius")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_ORANGE_TROLLIUS, "potted_orange_trollius")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_trollius1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/orange_trollius2")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PINK_ALLIUM, "potted_pink_allium")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_PINK_ALLIUM, "potted_pink_allium")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_allium1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_allium2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_allium3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_allium4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PINK_PRIMROSE, "potted_pink_primrose")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_PINK_PRIMROSE, "potted_pink_primrose")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_primrose1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_primrose2")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PINK_ROSES, "potted_pink_roses")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_PINK_ROSES, "potted_pink_roses")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_roses1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_roses2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_roses3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_roses4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PINK_SWEET_PEAS, "potted_pink_sweet_peas")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_PINK_SWEET_PEAS, "potted_pink_sweet_peas")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_sweet_peas1")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PINK_THISTLE, "potted_pink_thistle")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_PINK_THISTLE, "potted_pink_thistle")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_thistle/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_thistle/side2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_thistle/side3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_thistle/side4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PINK_TULIPS, "potted_pink_tulips")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_PINK_TULIPS, "potted_pink_tulips")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_tulips1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_tulips2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_tulips3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_tulips4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PINK_WILDFLOWERS, "potted_pink_wildflowers")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_PINK_WILDFLOWERS, "potted_pink_wildflowers")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/pink_wildflowers")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PURPLE_ALPINE_SOWTHISTLE, "potted_purple_alpine_sowthistle")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_PURPLE_ALPINE_SOWTHISTLE, "potted_purple_alpine_sowthistle")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_alpine_sowthistle/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_alpine_sowthistle/side2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_alpine_sowthistle/side3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_alpine_sowthistle/side4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PURPLE_FOXGLOVE, "potted_purple_foxglove")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_PURPLE_FOXGLOVE, "potted_purple_foxglove")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_foxglove1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_foxglove2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_foxglove3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_foxglove4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PURPLE_LAVENDER, "potted_purple_lavender")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_PURPLE_LAVENDER, "potted_purple_lavender")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_lavender1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_lavender2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_lavender3")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PURPLE_PANSIES, "potted_purple_pansies")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_PURPLE_PANSIES, "potted_purple_pansies")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_pansies1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_pansies2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_pansies3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_pansies4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PURPLE_ROSES, "potted_purple_roses")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_PURPLE_ROSES, "potted_purple_roses")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_roses1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_roses2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_roses3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_roses4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_PURPLE_VIOLETS, "potted_purple_violets")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_PURPLE_VIOLETS, "potted_purple_violets")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_violets1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_violets2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/purple_violets3")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_ASTER, "potted_red_aster")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_ASTER, "potted_red_aster")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_aster1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_aster2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_aster3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_aster4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_CARNATIONS, "potted_red_carnations")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_CARNATIONS, "potted_red_carnations")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_carnations1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_carnations2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_carnations3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_carnations4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_CHRYSANTHEMUM, "potted_red_chrysanthemum")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_CHRYSANTHEMUM, "potted_red_chrysanthemum")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_chrysanthemum1")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_DARK_ROSES, "potted_red_dark_roses")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_DARK_ROSES, "potted_red_dark_roses")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_dark_roses1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_dark_roses2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_dark_roses3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_dark_roses4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_FERN, "potted_red_fern")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_FERN, "potted_red_fern")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "red_fern/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "red_fern/side2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "red_fern/side3")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_FLOWERING_SPINY_HERB, "potted_red_flowering_spiny_herb")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_FLOWERING_SPINY_HERB, "potted_red_flowering_spiny_herb")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_flowering_spiny_herb1")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_MUSHROOM_1, "potted_red_mushroom_1")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_MUSHROOM_1, "potted_red_mushroom_1")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_0")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_MUSHROOM_2, "potted_red_mushroom_2")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_MUSHROOM_2, "potted_red_mushroom_2")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_1")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_MUSHROOM_3, "potted_red_mushroom_3")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_MUSHROOM_3, "potted_red_mushroom_3")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_2")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_MUSHROOM_7, "potted_red_mushroom_7")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_MUSHROOM_7, "potted_red_mushroom_7")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_6")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_MUSHROOM_8, "potted_red_mushroom_8")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_MUSHROOM_8, "potted_red_mushroom_8")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_7")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_MUSHROOM_9, "potted_red_mushroom_9")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_MUSHROOM_9, "potted_red_mushroom_9")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "red_mushroom_block/mushroom_red_8")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_POPPIES, "potted_red_poppies")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_POPPIES, "potted_red_poppies")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_poppies1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_poppies2")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_ROSES, "potted_red_roses")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_ROSES, "potted_red_roses")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_roses1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_roses2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_roses3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_roses4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_SORREL, "potted_red_sorrel")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_SORREL, "potted_red_sorrel")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_sorrel1")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_SOURLEAF_BUSH, "potted_red_sourleaf_bush")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_SOURLEAF_BUSH, "potted_red_sourleaf_bush")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_sourleaf_bush1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_sourleaf_bush2")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_RED_TULIPS, "potted_red_tulips")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_RED_TULIPS, "potted_red_tulips")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_tulips1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_tulips2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_tulips3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/red_tulips4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_WHITE_CHAMOMILE, "potted_white_chamomile")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_WHITE_CHAMOMILE, "potted_white_chamomile")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_chamomile1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_chamomile2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_chamomile3")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_WHITE_DAISIES, "potted_white_daisies")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_WHITE_DAISIES, "potted_white_daisies")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_daisies1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_daisies2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_daisies3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_daisies4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_WHITE_LILYOFTHEVALLEY, "potted_white_lilyofthevalley")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_WHITE_LILYOFTHEVALLEY, "potted_white_lilyofthevalley")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_lily_valley1")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_WHITE_PEONY, "potted_white_peony")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_WHITE_PEONY, "potted_white_peony")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_peony1")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_WHITE_ROSES, "potted_white_roses")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_WHITE_ROSES, "potted_white_roses")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_roses1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_roses2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_roses3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/white_roses4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_BEDSTRAW, "potted_yellow_bedstraw")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_YELLOW_BEDSTRAW, "potted_yellow_bedstraw")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_bedstraw/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_bedstraw/side2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_bedstraw/side3")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_BELLS, "potted_yellow_bells")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_YELLOW_BELLS, "potted_yellow_bells")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_bells1")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_BUTTERCUPS, "potted_yellow_buttercups")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_YELLOW_BUTTERCUPS, "potted_yellow_buttercups")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_buttercups1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_buttercups2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_buttercups3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_buttercups4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_DAFFODILS, "potted_yellow_daffodils")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_YELLOW_DAFFODILS, "potted_yellow_daffodils")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_daffodils1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_daffodils2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_daffodils3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_daffodils4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_DAISIES, "potted_yellow_daisies")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_YELLOW_DAISIES, "potted_yellow_daisies")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_daisies1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_daisies2")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_DANDELIONS, "potted_yellow_dandelions")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_YELLOW_DANDELIONS, "potted_yellow_dandelions")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_dandelions1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_dandelions2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_dandelions3")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_HELLEBORE, "potted_yellow_hellebore")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_YELLOW_HELLEBORE, "potted_yellow_hellebore")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_hellebore1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_hellebore2")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_LUPINE, "potted_yellow_lupine")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_YELLOW_LUPINE, "potted_yellow_lupine")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_lupine1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_lupine2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_lupine3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_lupine4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_ROSES, "potted_yellow_roses")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_YELLOW_ROSES, "potted_yellow_roses")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_roses1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_roses2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_roses3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_roses4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_RUDBECKIA, "potted_yellow_rudbeckia")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_YELLOW_RUDBECKIA, "potted_yellow_rudbeckia")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_rudbeckia1")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_SUNFLOWER, "potted_yellow_sunflower")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_YELLOW_SUNFLOWER, "potted_yellow_sunflower")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_sunflower/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_sunflower/side2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_sunflower/side3")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_TANSY, "potted_yellow_tansy")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_YELLOW_TANSY, "potted_yellow_tansy")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_tansy")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_YELLOW_WILDFLOWERS, "potted_yellow_wildflowers")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_YELLOW_WILDFLOWERS, "potted_yellow_wildflowers")
                 .textures("minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/yellow_wildflowers")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BLUE_CHICORY, "potted_blue_chicory")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_BLUE_CHICORY, "potted_blue_chicory")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_chicory/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_chicory/side2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_chicory/side3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_chicory/side4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BLUE_FLAX, "potted_blue_flax")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_BLUE_FLAX, "potted_blue_flax")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_flax1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_flax2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_flax3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_flax4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BLUE_FORGETMENOTS, "potted_blue_forgetmenots")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_BLUE_FORGETMENOTS, "potted_blue_forgetmenots")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_forgetmenots1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_forgetmenots2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_forgetmenots3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_forgetmenots4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BLUE_HYACINTH, "potted_blue_hyacinth")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_BLUE_HYACINTH, "potted_blue_hyacinth")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_hyacinth1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_hyacinth2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_hyacinth3")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_hyacinth4")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BLUE_ORCHID, "potted_blue_orchid")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_BLUE_ORCHID, "potted_blue_orchid")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_orchid1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_orchid2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "flowers/blue_orchid3")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_BRACKEN, "potted_bracken")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_BRACKEN, "potted_bracken")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "bracken/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "bracken/side2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "bracken/side3")
@@ -2452,7 +2061,7 @@ public class ModModelProvider extends FabricModelProvider {
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "bracken/side8")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_CATTAILS, "potted_cattails")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_CATTAILS, "potted_cattails")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cattails/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cattails/side2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cattails/side3")
@@ -2463,12 +2072,12 @@ public class ModModelProvider extends FabricModelProvider {
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cattails/side8")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_COW_PARSELY, "potted_cow_parsely")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_COW_PARSELY, "potted_cow_parsely")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cow_parsely/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "cow_parsely/side2")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_DEAD_BRACKEN, "potted_dead_bracken")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_DEAD_BRACKEN, "potted_dead_bracken")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side3")
@@ -2483,18 +2092,18 @@ public class ModModelProvider extends FabricModelProvider {
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dead_bracken/side12")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_DEAD_BUSH, "potted_dead_bush")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_DEAD_BUSH, "potted_dead_bush")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dorne_bush_thorny/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dorne_bush_thorny/side2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dorne_bush_thorny/side3")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_DOCK_LEAF, "potted_dock_leaf")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_DOCK_LEAF, "potted_dock_leaf")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dock_leaf/side1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "dock_leaf/side2")
                 .build();
 
-        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, ModBlocks.POTTED_GRASS, "potted_grass")
+        FlowerPotBlockDatagen.generateFlowerPotBlock(bsmg, PlantBlocks.POTTED_GRASS, "potted_grass")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "minecraft:block/fern/fern1")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "minecraft:block/fern/fern2")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "minecraft:block/fern/fern3")
