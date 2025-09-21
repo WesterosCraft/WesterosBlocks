@@ -1,0 +1,14 @@
+{
+    "blockName": "locked_birch_bark_fence_gate",
+    "blockType": "fencegate",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "type": "locked:true",
+    "creativeTab": "westeros_logs_tab",
+    "label": "Locked Birch Bark Fence Gate",
+    "textures": [
+        "bark/birch/side"
+    ]
+}

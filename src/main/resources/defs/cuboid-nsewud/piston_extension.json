@@ -1,0 +1,55 @@
+{
+    "blockName": "piston_extension",
+    "blockType": "cuboid-nsewud",
+    "hardness": 3,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_tool_blocks_tab",
+    "label": "Piston Extension",
+    "textures": [
+        "cuboid_nsewud_block/piston_side",
+        "cuboid_nsewud_block/piston_side_rotated",
+        "cuboid_nsewud_block/piston_top_normal"
+    ],
+    "cuboids": [
+        {
+            "xMin": 0.249,
+            "xMax": 1,
+            "yMin": 0.3755,
+            "yMax": 0.6245,
+            "zMin": 0.3755,
+            "zMax": 0.6245,
+            "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "xMin": 0,
+            "xMax": 0.249,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0,
+            "zMax": 1,
+            "sideTextures": [
+                1,
+                1,
+                1,
+                1,
+                2,
+                2
+            ]
+        }
+    ]
+}

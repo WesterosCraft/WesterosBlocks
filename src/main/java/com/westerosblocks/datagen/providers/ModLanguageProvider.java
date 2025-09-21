@@ -461,6 +461,10 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.vertical_chain", "Vertical Chain");
                 translationBuilder.add("block.westerosblocks.vertical_rope", "Vertical Rope");
 
+                // Fire Blocks
+                translationBuilder.add("block.westerosblocks.safe_fire", "Safe Fire");
+                translationBuilder.add("block.westerosblocks.wildfire", "Wildfire");
+
                 // Crop Blocks
                 translationBuilder.add("block.westerosblocks.crop_carrots", "Carrots");
                 translationBuilder.add("block.westerosblocks.candle_altar", "Candle Altar");

@@ -1,0 +1,24 @@
+{
+    "blockName": "sept_crystal_medium",
+    "blockType": "wall",
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "type": "unconnect:false",
+    "label": "Sept Crystal Medium",
+    "textures": [
+        "crystal/wall_top",
+        "crystal/wall_top",
+        "crystal/wall"
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "blockName": "firewood_directional_slab",
+    "blockType": "cuboid-ne",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Firewood Directional Slab",
+    "textures": [
+        "firewood/rotated",
+        "firewood/rotated",
+        "firewood/rotated",
+        "firewood/rotated",
+        "firewood/top",
+        "firewood/top"
+    ],
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 0.5,
+        "zMin": 0,
+        "zMax": 1
+    }
+}

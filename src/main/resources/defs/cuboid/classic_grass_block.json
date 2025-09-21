@@ -1,0 +1,109 @@
+{
+    "blockName": "classic_grass_block",
+    "blockType": "cuboid",
+    "hardness": 5,
+    "stepSound": "grass",
+    "material": "plants",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 3
+        }
+    ],
+    "colorMult": "textures/colormap/grass",
+    "creativeTab": "westeros_grass_dirt_tab",
+    "label": "Classic Grass Block",
+    "randomTextures": [
+        {
+            "textures": [
+                "classic_grass_block/top1",
+                "dirt/ground",
+                "transparent",
+                "classic_grass_block/grass_block_side_overlay"
+            ]
+        },
+        {
+            "textures": [
+                "classic_grass_block/top2",
+                "dirt/ground",
+                "transparent",
+                "classic_grass_block/grass_block_side_overlay"
+            ]
+        },
+        {
+            "textures": [
+                "classic_grass_block/top3",
+                "dirt/ground",
+                "transparent",
+                "classic_grass_block/grass_block_side_overlay"
+            ]
+        },
+        {
+            "textures": [
+                "classic_grass_block/top4",
+                "dirt/ground",
+                "transparent",
+                "classic_grass_block/grass_block_side_overlay"
+            ]
+        },
+        {
+            "textures": [
+                "classic_grass_block/top5",
+                "dirt/ground",
+                "transparent",
+                "classic_grass_block/grass_block_side_overlay"
+            ]
+        }
+    ],
+    "cuboids": [
+        {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0,
+            "zMax": 1,
+            "sideTextures": [
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "noTint": [
+                true,
+                false,
+                true,
+                true,
+                true,
+                true
+            ]
+        },
+        {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0,
+            "zMax": 1,
+            "sideTextures": [
+                2,
+                2,
+                3,
+                3,
+                3,
+                3
+            ],
+            "noTint": [
+                true,
+                true,
+                false,
+                false,
+                false,
+                false
+            ]
+        }
+    ]
+}

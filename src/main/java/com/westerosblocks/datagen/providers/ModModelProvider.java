@@ -1024,7 +1024,7 @@ public class ModModelProvider extends FabricModelProvider {
         registerCustomCrossBlock(bsmg, ModBlocks.BUTTERFLY_YELLOW)
                 .texture("web_block/bug_butterfly_yellow")
                 .build();
-        registerCustomCrossBlock(bsmg, ModBlocks.CATTAILS)
+        registerCustomCrossBlock(bsmg, PlantBlocks.CATTAILS)
                 .randomTexture("cattails/side1")
                 .randomTexture("cattails/side2")
                 .randomTexture("cattails/side3")
@@ -2110,6 +2110,14 @@ public class ModModelProvider extends FabricModelProvider {
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "minecraft:block/fern/fern4")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "minecraft:block/fern/fern5")
                 .addRandomTextureSet(1, "minecraft:block/dirt", "minecraft:block/flower_pot", "minecraft:block/fern/fern6")
+                .build();
+
+        FireBlockDatagen.generateFireBlock(bsmg, ModBlocks.SAFE_FIRE, "safe_fire")
+                .textures("safe_fire/fire_layer_0", "safe_fire/fire_layer_1")
+                .build();
+
+        FireBlockDatagen.generateFireBlock(bsmg, ModBlocks.WILDFIRE, "wildfire")
+                .textures("wildfire/wildfire_layer_0", "wildfire/wildfire_layer_1")
                 .build();
     }
 

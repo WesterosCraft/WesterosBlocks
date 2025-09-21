@@ -1,0 +1,136 @@
+{
+    "blockName": "wagon_wheel__axle",
+    "blockType": "cuboid-nsewud",
+    "hardness": 3,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "label": "Wagon Wheel & Axle",
+    "textures": [
+        "cuboid_nsewud_block/axle",
+        "cuboid_nsewud_block/rim",
+        "cuboid_nsewud_block/rim_top",
+        "cuboid_nsewud_block/spoke"
+    ],
+    "cuboids": [
+        {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0.3755,
+            "yMax": 0.6245,
+            "zMin": 0.3755,
+            "zMax": 0.6245,
+            "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                3,
+                3
+            ]
+        },
+        {
+            "zMin": 0,
+            "zMax": 0.09375,
+            "yMin": 0.0875,
+            "yMax": 0.9125,
+            "xMin": 0.03125,
+            "xMax": 0.1875,
+            "sideTextures": [
+                2,
+                2,
+                2,
+                1,
+                1,
+                1
+            ]
+        },
+        {
+            "zMin": 0.90625,
+            "zMax": 1,
+            "yMin": 0.0875,
+            "yMax": 0.9125,
+            "xMin": 0.03125,
+            "xMax": 0.1875,
+            "sideTextures": [
+                2,
+                2,
+                1,
+                2,
+                1,
+                1
+            ]
+        },
+        {
+            "zMin": 0.0875,
+            "zMax": 0.9125,
+            "yMin": 0,
+            "yMax": 0.09375,
+            "xMin": 0.03125,
+            "xMax": 0.1875,
+            "sideTextures": [
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        },
+        {
+            "zMin": 0.0875,
+            "zMax": 0.9125,
+            "yMin": 0.90625,
+            "yMax": 1,
+            "xMin": 0.03125,
+            "xMax": 0.1875,
+            "sideTextures": [
+                1,
+                2,
+                1,
+                1,
+                1,
+                1
+            ]
+        },
+        {
+            "zMin": 0.4375,
+            "zMax": 0.5625,
+            "yMin": 0.0875,
+            "yMax": 0.9125,
+            "xMin": 0.06375,
+            "xMax": 0.1575,
+            "sideTextures": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                3
+            ]
+        },
+        {
+            "yMin": 0.4375,
+            "yMax": 0.5625,
+            "zMin": 0.0875,
+            "zMax": 0.9125,
+            "xMin": 0.06375,
+            "xMax": 0.1575,
+            "sideTextures": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                3
+            ]
+        }
+    ]
+}

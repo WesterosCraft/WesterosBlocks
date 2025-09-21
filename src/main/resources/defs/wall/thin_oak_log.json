@@ -1,0 +1,22 @@
+{
+    "blockName": "thin_oak_log",
+    "blockType": "wall",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "type": "unconnect:false",
+    "label": "Thin Oak Log",
+    "textures": [
+        "bark/oak/wall_top",
+        "bark/oak/wall_top",
+        "bark/oak/side"
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "blockName": "pewter_flagon",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Pewter Flagon",
+    "textures": [
+        "cuboid_block/flagon_metal_bottom",
+        "cuboid_block/flagon_metal_top_lid",
+        "cuboid_block/flagon_metal_side",
+        "cuboid_block/flagon_metal_top_body"
+    ],
+    "cuboids": [
+        {
+            "xMin": 0.3125,
+            "xMax": 0.6875,
+            "yMin": 0,
+            "yMax": 0.0625,
+            "zMin": 0.3125,
+            "zMax": 0.6875,
+            "sideTextures": [
+                0,
+                3,
+                2,
+                2,
+                2,
+                2
+            ]
+        },
+        {
+            "xMin": 0.25,
+            "xMax": 0.75,
+            "yMin": 0.0625,
+            "yMax": 0.4375,
+            "zMin": 0.25,
+            "zMax": 0.75,
+            "sideTextures": [
+                0,
+                3,
+                2,
+                2,
+                2,
+                2
+            ]
+        },
+        {
+            "xMin": 0.40625,
+            "xMax": 0.59375,
+            "yMin": 0.4375,
+            "yMax": 0.5,
+            "zMin": 0.40625,
+            "zMax": 0.59375,
+            "sideTextures": [
+                0,
+                3,
+                2,
+                2,
+                2,
+                2
+            ]
+        },
+        {
+            "xMin": 0.375,
+            "xMax": 0.625,
+            "yMin": 0.5,
+            "yMax": 0.5625,
+            "zMin": 0.375,
+            "zMax": 0.625,
+            "sideTextures": [
+                0,
+                1,
+                2,
+                2,
+                2,
+                2
+            ]
+        }
+    ]
+}

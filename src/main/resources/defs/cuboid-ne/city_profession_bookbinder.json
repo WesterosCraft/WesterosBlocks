@@ -1,0 +1,174 @@
+{
+    "blockName": "city_profession_bookbinder",
+    "blockType": "cuboid-ne",
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "City Profession: Bookbinder",
+    "lightOpacity": 0,
+    "itemTexture": "profession_sign_base/noctm/bookbinder",
+    "type": "toggleOnUse",
+    "cuboids": [
+        {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0.45,
+            "zMax": 0.55,
+            "sideTextures": [
+                4,
+                4,
+                2,
+                2,
+                4,
+                4
+            ]
+        },
+        {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0.46,
+            "zMax": 0.54,
+            "sideTextures": [
+                0,
+                1,
+                3,
+                3,
+                0,
+                0
+            ]
+        }
+    ],
+    "states": [
+        {
+            "stateID": "random",
+            "randomTextures": [
+                {
+                    "textures": [
+                        "sign_block/sign_bottom",
+                        "sign_block/sign_top",
+                        "profession_sign_base/bookbinder",
+                        "profession_sign_base/sign_cut1",
+                        "transparent"
+                    ]
+                },
+                {
+                    "textures": [
+                        "sign_block/sign_bottom",
+                        "sign_block/sign_top",
+                        "profession_sign_base/bookbinder",
+                        "profession_sign_base/sign_cut2",
+                        "transparent"
+                    ]
+                },
+                {
+                    "textures": [
+                        "sign_block/sign_bottom",
+                        "sign_block/sign_top",
+                        "profession_sign_base/bookbinder",
+                        "profession_sign_base/sign_cut3",
+                        "transparent"
+                    ]
+                },
+                {
+                    "textures": [
+                        "sign_block/sign_bottom",
+                        "sign_block/sign_top",
+                        "profession_sign_base/bookbinder",
+                        "profession_sign_base/sign_cut4",
+                        "transparent"
+                    ]
+                },
+                {
+                    "textures": [
+                        "sign_block/sign_bottom",
+                        "sign_block/sign_top",
+                        "profession_sign_base/bookbinder",
+                        "profession_sign_base/sign_cut5",
+                        "transparent"
+                    ]
+                },
+                {
+                    "textures": [
+                        "sign_block/sign_bottom",
+                        "sign_block/sign_top",
+                        "profession_sign_base/bookbinder",
+                        "profession_sign_base/sign_cut6",
+                        "transparent"
+                    ]
+                }
+            ]
+        },
+        {
+            "stateID": "cut1",
+            "textures": [
+                "sign_block/sign_bottom",
+                "sign_block/sign_top",
+                "profession_sign_base/bookbinder",
+                "profession_sign_base/sign_cut1",
+                "transparent"
+            ]
+        },
+        {
+            "stateID": "cut2",
+            "textures": [
+                "sign_block/sign_bottom",
+                "sign_block/sign_top",
+                "profession_sign_base/bookbinder",
+                "profession_sign_base/sign_cut2",
+                "transparent"
+            ]
+        },
+        {
+            "stateID": "cut3",
+            "textures": [
+                "sign_block/sign_bottom",
+                "sign_block/sign_top",
+                "profession_sign_base/bookbinder",
+                "profession_sign_base/sign_cut3",
+                "transparent"
+            ]
+        },
+        {
+            "stateID": "cut4",
+            "textures": [
+                "sign_block/sign_bottom",
+                "sign_block/sign_top",
+                "profession_sign_base/bookbinder",
+                "profession_sign_base/sign_cut4",
+                "transparent"
+            ]
+        },
+        {
+            "stateID": "cut5",
+            "textures": [
+                "sign_block/sign_bottom",
+                "sign_block/sign_top",
+                "profession_sign_base/bookbinder",
+                "profession_sign_base/sign_cut5",
+                "transparent"
+            ]
+        },
+        {
+            "stateID": "cut6",
+            "textures": [
+                "sign_block/sign_bottom",
+                "sign_block/sign_top",
+                "profession_sign_base/bookbinder",
+                "profession_sign_base/sign_cut6",
+                "transparent"
+            ]
+        }
+    ]
+}

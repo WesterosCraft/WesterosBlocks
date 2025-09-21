@@ -1,0 +1,18 @@
+{
+    "blockName": "sept_crystal_small",
+    "blockType": "fence",
+    "hardness": 5,
+    "stepSound": "stone",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "material": "wood",
+    "resistance": 10,
+    "creativeTab": "westeros_decor_tab",
+    "type": "unconnect:false",
+    "label": "Sept Crystal Small",
+    "textures": [
+        "crystal/fence_top",
+        "crystal/fence_top",
+        "crystal/fence"
+    ]
+}

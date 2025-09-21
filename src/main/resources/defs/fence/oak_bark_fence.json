@@ -1,0 +1,14 @@
+{
+    "blockName": "oak_bark_fence",
+    "blockType": "fence",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_logs_tab",
+    "type": "unconnect:false",
+    "label": "Oak Bark Fence",
+    "textures": [
+        "bark/oak/side"
+    ]
+}

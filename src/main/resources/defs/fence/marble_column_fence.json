@@ -1,0 +1,14 @@
+{
+    "blockName": "marble_column_fence",
+    "blockType": "fence",
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "wood",
+    "resistance": 10,
+    "creativeTab": "westeros_marble_plaster_tab",
+    "type": "unconnect:false",
+    "label": "Marble Column Fence",
+    "textures": [
+        "marble/quartz/column_side"
+    ]
+}

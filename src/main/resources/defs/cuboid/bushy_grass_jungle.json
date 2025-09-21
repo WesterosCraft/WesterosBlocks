@@ -1,0 +1,26 @@
+{
+    "blockName": "bushy_grass_jungle",
+    "blockType": "cuboid",
+    "stepSound": "grass",
+    "material": "ground",
+    "creativeTab": "westeros_grass_dirt_tab",
+    "label": "Bushy Grass Jungle",
+    "isCustomModel": true,
+    "colorMults": [
+        "textures/colormap/grass",
+        "textures/colormap/foliagejungle"
+    ],
+    "randomTextures": [
+        {},
+        {},
+        {}
+    ],
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "blockName": "frying_pan",
+    "blockType": "cuboid-ne",
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Frying Pan",
+    "textures": [
+        "frying_pan/bottom",
+        "frying_pan/top",
+        "transparent"
+    ],
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0.03,
+        "yMax": 0.039,
+        "zMin": 0,
+        "zMax": 1
+    },
+    "itemTextureIndex": 1
+}

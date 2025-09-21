@@ -1,0 +1,59 @@
+{
+    "blockName": "greyjoy_banner",
+    "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 1,
+    "harvestLevel": [
+        {
+            "tool": "sword",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_banners_tab",
+    "type": "no-break-under,allowHalfBreak",
+    "label": "Greyjoy Banner",
+    "tooltips": [
+        "\u00c2\u00a7oWe Do Not Sow\u00c2\u00a7r"
+    ],
+    "itemTextureIndex": 2,
+    "stack": [
+        {
+            "textures": [
+                "transparent",
+                "transparent",
+                "transparent",
+                "transparent",
+                "banner/house/greyjoy/bottom",
+                "banner/house/greyjoy/bottom"
+            ],
+            "boundingBox": {
+                "xMin": 0.96875,
+                "xMax": 1,
+                "yMin": 0,
+                "yMax": 1,
+                "zMin": 0,
+                "zMax": 1
+            }
+        },
+        {
+            "textures": [
+                "transparent",
+                "transparent",
+                "transparent",
+                "transparent",
+                "banner/house/greyjoy/top",
+                "banner/house/greyjoy/top"
+            ],
+            "boundingBox": {
+                "xMin": 0.96875,
+                "xMax": 1,
+                "yMin": 0,
+                "yMax": 1,
+                "zMin": 0,
+                "zMax": 1
+            }
+        }
+    ]
+}

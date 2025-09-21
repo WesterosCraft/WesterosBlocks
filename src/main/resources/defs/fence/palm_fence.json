@@ -1,0 +1,14 @@
+{
+    "blockName": "palm_fence",
+    "blockType": "fence",
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "wood",
+    "resistance": 10,
+    "creativeTab": "westeros_logs_tab",
+    "type": "unconnect:false",
+    "label": "Palm Fence",
+    "textures": [
+        "bark/palm/side"
+    ]
+}

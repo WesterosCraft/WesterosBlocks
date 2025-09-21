@@ -1,0 +1,27 @@
+{
+    "blockName": "star_chart_2x2",
+    "blockType": "cuboid-nsew",
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Star Chart 2x2",
+    "textures": [
+        "star_chart/2x2/side"
+    ],
+    "boundingBox": {
+        "xMin": 0.961,
+        "xMax": 0.97,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+    }
+}

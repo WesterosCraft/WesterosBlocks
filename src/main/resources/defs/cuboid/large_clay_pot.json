@@ -1,0 +1,56 @@
+{
+    "blockName": "large_clay_pot",
+    "blockType": "cuboid",
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Large Clay Pot",
+    "textures": [
+        "clay_pot/side",
+        "clay_pot/top",
+        "clay_pot/cork",
+        "wood/oak/all"
+    ],
+    "cuboids": [
+        {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 0.8125,
+            "zMin": 0,
+            "zMax": 1,
+            "sideTextures": [
+                3,
+                1,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "xMin": 0.25,
+            "xMax": 0.75,
+            "yMin": 0.8125,
+            "yMax": 1,
+            "zMin": 0.25,
+            "zMax": 0.75,
+            "sideTextures": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ]
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "blockName": "fallen_weirwood_leaves",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Fallen Weirwood Leaves",
+    "randomTextures": [
+        {
+            "textures": [
+                "fallen_leaves_weirwood/side1"
+            ]
+        },
+        {
+            "textures": [
+                "fallen_leaves_weirwood/side2"
+            ]
+        },
+        {
+            "textures": [
+                "fallen_leaves_weirwood/side3"
+            ]
+        }
+    ],
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0.03,
+        "yMax": 0.039,
+        "zMin": 0,
+        "zMax": 1
+    }
+}

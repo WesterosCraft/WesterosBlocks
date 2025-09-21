@@ -1,0 +1,12 @@
+{
+  "blockName": "ctm_vertical_connectstate",
+  "blockType": "solid",
+  "stepSound": "wood",
+  "material": "cloth",
+  "creativeTab": "westeros_test_tab",
+  "type": "connectstate:true",
+  "label": "Vertical CTM (Connectstate)",
+  "textures": [
+    "ctm/vertical"
+  ]
+}

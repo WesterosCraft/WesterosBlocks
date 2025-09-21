@@ -1,0 +1,21 @@
+{
+  "blockName": "test_block_7",
+  "blockType": "pane",
+  "hardness": 5,
+  "stepSound": "metal",
+  "material": "iron",
+  "resistance": 10,
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 3
+    }
+  ],
+  "creativeTab": "westeros_test_tab",
+  "type": "unconnect:false,bars-model",
+  "label": "Test Pane (unconnect)",
+  "textures": [
+    "bars_iron_block/bars_iron_crossbars",
+    "bars_iron_block/bars_iron_crossbars_top"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+    "blockName": "jungle_bark_fence",
+    "blockType": "fence",
+    "hardness": 2,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 5,
+    "creativeTab": "westeros_logs_tab",
+    "type": "unconnect:false",
+    "label": "Jungle Bark Fence",
+    "textures": [
+        "bark/jungle/side"
+    ]
+}

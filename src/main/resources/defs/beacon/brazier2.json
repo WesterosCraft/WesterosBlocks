@@ -1,0 +1,31 @@
+{
+    "blockName": "brazier2",
+    "blockType": "beacon",
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 10,
+    "lightValue": 0,
+    "creativeTab": "westeros_lighting_tab",
+    "label": "Unlit Brazier",
+    "textures": [
+        "lighting/brazier/unlit_ash_bottom",
+        "lighting/brazier/transparent",
+        "lighting/brazier/side",
+        "lighting/brazier/side",
+        "lighting/brazier/side",
+        "lighting/brazier/side",
+        "lighting/brazier/unlit_ash_bottom",
+        "lighting/brazier/unlit_ash_bottom",
+        "lighting/brazier/unlit_ash_bottom",
+        "lighting/brazier/unlit_ash_bottom",
+        "lighting/brazier/unlit_ash_bottom",
+        "lighting/brazier/unlit_ash_bottom",
+        "lighting/brazier/transparent",
+        "lighting/brazier/transparent",
+        "lighting/brazier/transparent",
+        "lighting/brazier/transparent",
+        "lighting/brazier/transparent",
+        "lighting/brazier/transparent"
+    ]
+}

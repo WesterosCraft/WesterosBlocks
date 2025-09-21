@@ -1,0 +1,57 @@
+{
+    "blockName": "westerosi_coins",
+    "blockType": "cuboid-ne",
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 2,
+    "isCustomModel": true,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "itemTextureIndex": 1,
+    "creativeTab": "westeros_decor_tab",
+    "label": "Coins",
+    "type": "toggleOnUse",
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0.03,
+        "yMax": 0.039,
+        "zMin": 0,
+        "zMax": 1
+    },
+    "states": [
+        {
+            "stateID": "coins",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "coins2",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "coins3",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "coins4",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "coins5",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "coins6",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "coins7",
+            "isCustomModel": true
+        }
+    ]
+}

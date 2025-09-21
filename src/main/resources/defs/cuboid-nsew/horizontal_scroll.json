@@ -1,0 +1,72 @@
+{
+    "blockName": "horizontal_scroll",
+    "blockType": "cuboid-nsew",
+    "hardness": 1,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 1,
+    "isCustomModel": true,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Horizontal Scroll",
+    "type": "toggleOnUse",
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0.03,
+        "yMax": 0.039,
+        "zMin": 0,
+        "zMax": 1
+    },
+    "states": [
+        {
+            "stateID": "paper1",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "paper2",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "paper3",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "paper4",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "paper5",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "paper6",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "paper7",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "paper8",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "paper9",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "paper10",
+            "isCustomModel": true
+        },
+        {
+            "stateID": "paper11",
+            "isCustomModel": true
+        }
+    ]
+}

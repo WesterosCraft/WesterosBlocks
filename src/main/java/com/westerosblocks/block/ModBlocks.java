@@ -3,8 +3,10 @@ package com.westerosblocks.block;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.BlockBuilder;
+import com.westerosblocks.block.custom.WCFireBlock;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -1160,17 +1162,6 @@ public class ModBlocks {
                     .noInWeb()
                     .build());
 
-    public static final Block CATTAILS = registerBlock(
-            "cattails",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.GRASS)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .layerSensitive()
-                    .build());
-
     public static final Block CHAIN_BLOCK_HARNESS = registerBlock(
             "chain_block_harness",
             BlockBuilder.web()
@@ -1408,8 +1399,31 @@ public class ModBlocks {
                     .noInWeb()
                     .build());
 
-    // Plant Blocks - All plant blocks have been moved to PlantBlocks.java
-    // Access them via PlantBlocks.BLOCK_NAME (e.g., PlantBlocks.BLUE_BELLS)
+    // Fire Blocks
+    public static final Block SAFE_FIRE = registerBlock(
+            "safe_fire",
+            new WCFireBlock.Factory().buildBlockClass(
+                    AbstractBlock.Settings.create()
+                            .strength(0.0f)
+                            .luminance(state -> 1)
+                            .sounds(BlockSoundGroup.WOOL)
+                            .noCollision()
+                            .breakInstantly()
+                            .nonOpaque()
+            ));
+
+    public static final Block WILDFIRE = registerBlock(
+            "wildfire",
+            new WCFireBlock.Factory().buildBlockClass(
+                    AbstractBlock.Settings.create()
+                            .strength(0.0f)
+                            .luminance(state -> 9)
+                            .sounds(BlockSoundGroup.CANDLE)
+                            .noCollision()
+                            .breakInstantly()
+                            .nonOpaque()
+            ));
+
     // Crop Blocks
     public static final Block CROP_CARROTS = registerBlock(
             "crop_carrots",
@@ -2006,7 +2020,7 @@ public class ModBlocks {
                 PlantBlocks.RED_MUSHROOM_9,
                 PlantBlocks.THICK_GRASS,
                 PlantBlocks.UNSHADED_GRASS,
-                ModBlocks.CATTAILS,
+                PlantBlocks.CATTAILS,
                 ModBlocks.DEAD_JUNGLE_TALL_GRASS,
                 ModBlocks.DEAD_SAVANNA_TALL_GRASS
         );
@@ -2527,7 +2541,6 @@ public class ModBlocks {
                 ModBlocks.BUTTERFLY_YELLOW
         );
 
-
         WesterosCreativeModeTabs.addToTab("westeros_lighting_tab",
                 SolidBlocks.GLOWING_EMBERS,
                 SolidBlocks.RED_LANTERN2,
@@ -2535,7 +2548,9 @@ public class ModBlocks {
                 ModBlocks.TORCH_UNLIT,
                 ModBlocks.CANDLE,
                 ModBlocks.CANDLE_UNLIT,
-                ModBlocks.CANDLE_ALTAR
+                ModBlocks.CANDLE_ALTAR,
+                ModBlocks.SAFE_FIRE,
+                ModBlocks.WILDFIRE
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_metal_tab",

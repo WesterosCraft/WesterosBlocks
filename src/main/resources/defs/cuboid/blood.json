@@ -1,0 +1,109 @@
+{
+    "blockName": "blood",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Blood",
+    "states": [
+        {
+            "stateID": "random",
+            "randomTextures": [
+                {
+                    "textures": [
+                        "blood/blood1"
+                    ]
+                },
+                {
+                    "textures": [
+                        "blood/blood2"
+                    ]
+                },
+                {
+                    "textures": [
+                        "blood/blood3"
+                    ]
+                },
+                {
+                    "textures": [
+                        "blood/blood4"
+                    ]
+                },
+                {
+                    "textures": [
+                        "blood/blood5"
+                    ]
+                },
+                {
+                    "textures": [
+                        "blood/blood6"
+                    ]
+                },
+                {
+                    "textures": [
+                        "blood/blood7"
+                    ]
+                }
+            ]
+        },
+        {
+            "stateID": "blood1",
+            "textures": [
+                "blood/blood1"
+            ]
+        },
+        {
+            "stateID": "blood2",
+            "textures": [
+                "blood/blood2"
+            ]
+        },
+        {
+            "stateID": "blood3",
+            "textures": [
+                "blood/blood3"
+            ]
+        },
+        {
+            "stateID": "blood4",
+            "textures": [
+                "blood/blood4"
+            ]
+        },
+        {
+            "stateID": "blood5",
+            "textures": [
+                "blood/blood5"
+            ]
+        },
+        {
+            "stateID": "blood6",
+            "textures": [
+                "blood/blood6"
+            ]
+        },
+        {
+            "stateID": "blood7",
+            "textures": [
+                "blood/blood7"
+            ]
+        }
+    ],
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0.03,
+        "yMax": 0.039,
+        "zMin": 0,
+        "zMax": 1
+    }
+}

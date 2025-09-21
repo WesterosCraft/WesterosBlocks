@@ -1,0 +1,14 @@
+{
+  "blockName": "ctm_edges_full_overlay",
+  "blockType": "solid",
+  "stepSound": "wood",
+  "material": "cloth",
+  "creativeTab": "westeros_test_tab",
+  "label": "CTM Edges Full Overlay",
+  "textures": [
+    "piled_bones/side"
+  ],
+  "overlayTextures": [
+    "ctm/edges_full_overlay"
+  ]
+}

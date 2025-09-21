@@ -1,0 +1,20 @@
+{
+    "blockName": "stacked_bones_fence",
+    "blockType": "fence",
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "type": "unconnect:false",
+    "label": "Stacked Bones Fence",
+    "textures": [
+        "stacked_bones/bone_stacked_side"
+    ]
+}

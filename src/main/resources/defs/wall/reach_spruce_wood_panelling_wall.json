@@ -1,0 +1,40 @@
+{
+    "blockName": "reach_spruce_wood_panelling_wall",
+    "blockType": "wall",
+    "hardness": 1.5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "type": "unconnect:false",
+    "label": "Reach Spruce Wood Panelling Wall",
+    "randomTextures": [
+        {
+            "textures": [
+                "wood/spruce/panelling/top_bottom",
+                "wood/spruce/panelling/top_bottom",
+                "wood/spruce/panelling/side1"
+            ]
+        },
+        {
+            "textures": [
+                "wood/spruce/panelling/top_bottom",
+                "wood/spruce/panelling/top_bottom",
+                "wood/spruce/panelling/side2"
+            ]
+        },
+        {
+            "textures": [
+                "wood/spruce/panelling/top_bottom",
+                "wood/spruce/panelling/top_bottom",
+                "wood/spruce/panelling/side3"
+            ]
+        }
+    ]
+}

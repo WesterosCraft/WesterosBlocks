@@ -4,3 +4,5 @@
 - bushy leaves model looks bad
 - arrow slit block needs finishing and feedback, models and states need testing and optimization and more
 - branch blocks need testing and feedback
+
+- look into vanilla root blocks

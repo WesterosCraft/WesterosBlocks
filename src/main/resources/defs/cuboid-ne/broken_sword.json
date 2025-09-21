@@ -1,0 +1,30 @@
+{
+    "blockName": "broken_sword",
+    "blockType": "cuboid-ne",
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Broken Sword",
+    "textures": [
+        "broken_sword/bottom",
+        "broken_sword/top",
+        "transparent"
+    ],
+    "boundingBox": {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0.03,
+        "yMax": 0.039,
+        "zMin": 0,
+        "zMax": 1
+    },
+    "itemTextureIndex": 1
+}

@@ -1,0 +1,32 @@
+{
+    "blockName": "wight_head",
+    "blockType": "cuboid-16way",
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Wight Head",
+    "textures": [
+        "wight_head/down",
+        "wight_head/up",
+        "wight_head/west",
+        "wight_head/east",
+        "wight_head/south",
+        "wight_head/north"
+    ],
+    "boundingBox": {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0,
+        "yMax": 0.5,
+        "zMin": 0.25,
+        "zMax": 0.75
+    }
+}

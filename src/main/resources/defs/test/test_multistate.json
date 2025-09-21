@@ -1,0 +1,259 @@
+{
+  "blockName": "test_multistate",
+  "blockType": "cuboid",
+  "hardness": 5,
+  "stepSound": "wood",
+  "material": "wood",
+  "resistance": 4,
+  "type": "toggleOnUse",
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 3
+    }
+  ],
+  "creativeTab": "westeros_test_tab",
+  "label": "Test Multi-state",
+  "states": [
+    {
+      "stateID": "normal",
+      "textures": [
+        "piled_bones/side"
+      ],
+      "overlayTextures": [
+        "ctm/vertical_overlay"
+      ],
+      "cuboids": [
+        {
+          "xMin": 0.3755,
+          "xMax": 0.6245,
+          "yMin": 0,
+          "yMax": 0.275,
+          "zMin": 0.3755,
+          "zMax": 0.6245,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "xMin": 0.25,
+          "xMax": 0.75,
+          "yMin": 0.275,
+          "yMax": 0.625,
+          "zMin": 0.25,
+          "zMax": 0.75,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0.625,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "stateID": "flipped",
+      "textures": [
+        "piled_bones/side"
+      ],
+      "overlayTextures": [
+        "ctm/vertical_overlay"
+      ],
+      "cuboids": [
+        {
+          "xMin": 0.3755,
+          "xMax": 0.6245,
+          "yMin": 0.725,
+          "yMax": 1.0,
+          "zMin": 0.3755,
+          "zMax": 0.6245,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "xMin": 0.25,
+          "xMax": 0.75,
+          "yMin": 0.375,
+          "yMax": 0.725,
+          "zMin": 0.25,
+          "zMax": 0.75,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0.0,
+          "yMax": 0.375,
+          "zMin": 0,
+          "zMax": 1,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "stateID": "normal2",
+      "textures": [
+        "stacked_bones/bone_stacked_front",
+        "stacked_bones/bone_stacked_front",
+        "stacked_bones/bone_stacked_side"
+      ],
+      "overlayTextures": [
+        "ctm/vertical_overlay"
+      ],
+      "cuboids": [
+        {
+          "xMin": 0.3755,
+          "xMax": 0.6245,
+          "yMin": 0,
+          "yMax": 0.275,
+          "zMin": 0.3755,
+          "zMax": 0.6245,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "xMin": 0.25,
+          "xMax": 0.75,
+          "yMin": 0.275,
+          "yMax": 0.625,
+          "zMin": 0.25,
+          "zMax": 0.75,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0.625,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "stateID": "flipped2",
+      "textures": [
+        "stacked_bones/bone_stacked_front",
+        "stacked_bones/bone_stacked_front",
+        "stacked_bones/bone_stacked_side"
+      ],
+      "overlayTextures": [
+        "ctm/vertical_overlay"
+      ],
+      "cuboids": [
+        {
+          "xMin": 0.3755,
+          "xMax": 0.6245,
+          "yMin": 0.725,
+          "yMax": 1.0,
+          "zMin": 0.3755,
+          "zMax": 0.6245,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "xMin": 0.25,
+          "xMax": 0.75,
+          "yMin": 0.375,
+          "yMax": 0.725,
+          "zMin": 0.25,
+          "zMax": 0.75,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0.0,
+          "yMax": 0.375,
+          "zMin": 0,
+          "zMax": 1,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

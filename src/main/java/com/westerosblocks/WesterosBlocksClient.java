@@ -79,7 +79,6 @@ public class WesterosBlocksClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BUTTERFLY_RED, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BUTTERFLY_WHITE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BUTTERFLY_YELLOW, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CATTAILS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CHAIN_BLOCK_HARNESS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CHILI_RISTRA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COBWEB, RenderLayer.getCutout());
@@ -91,7 +90,12 @@ public class WesterosBlocksClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DEAD_RAT, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DEAD_SAVANNA_TALL_GRASS, RenderLayer.getCutout());
 
+        // Fire Blocks
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SAFE_FIRE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WILDFIRE, RenderLayer.getCutout());
+
         // Plant Blocks
+        BlockRenderLayerMap.INSTANCE.putBlock(PlantBlocks.CATTAILS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(PlantBlocks.BLUE_BELLS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(PlantBlocks.BLUE_CHICORY, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(PlantBlocks.BLUE_FORGETMENOTS, RenderLayer.getCutout());
