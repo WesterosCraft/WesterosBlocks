@@ -2119,6 +2119,92 @@ public class ModModelProvider extends FabricModelProvider {
         FireBlockDatagen.generateFireBlock(bsmg, ModBlocks.WILDFIRE, "wildfire")
                 .textures("wildfire/wildfire_layer_0", "wildfire/wildfire_layer_1")
                 .build();
+
+        // Fence Blocks
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.BIRCH_BARK_FENCE, "birch_bark_fence")
+                .texture("bark/birch/side")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.BIRCH_FENCE_WITH_GRAPES, "birch_fence_with_grapes")
+                .texture("wood/birch/grapevines")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.BIRCH_FENCE_WITH_VINES, "birch_fence_with_vines")
+                .texture("wood/birch/vines")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.JUNGLE_BARK_FENCE, "jungle_bark_fence")
+                .texture("bark/jungle/side")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.JUNGLE_FENCE_WITH_GRAPES, "jungle_fence_with_grapes")
+                .texture("wood/jungle/grapevines")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.JUNGLE_FENCE_WITH_VINES, "jungle_fence_with_vines")
+                .texture("wood/jungle/vines")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.MARBLE_COLUMN_FENCE, "marble_column_fence")
+                .texture("marble/quartz/column_side")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.OAK_BARK_FENCE, "oak_bark_fence")
+                .texture("bark/oak/side")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.OAK_FENCE_WITH_GRAPES, "oak_fence_with_grapes")
+                .texture("wood/oak/grapevines")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.OAK_FENCE_WITH_VINES, "oak_fence_with_vines")
+                .texture("wood/oak/vines")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.PALM_FENCE, "palm_fence")
+                .texture("bark/palm/side")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.REINFORCED_OAK_FENCE, "reinforced_oak_fence")
+                .texture("wood/oak/reinforced")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.SEPT_CRYSTAL_SMALL, "sept_crystal_small")
+                .textures("crystal/fence_top", "crystal/fence_top", "crystal/fence")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.SPRUCE_BARK_FENCE, "spruce_bark_fence")
+                .texture("bark/spruce/side")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.SPRUCE_FENCE_WITH_GRAPES, "spruce_fence_with_grapes")
+                .texture("wood/spruce/grapevines")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.SPRUCE_FENCE_WITH_VINES, "spruce_fence_with_vines")
+                .texture("wood/spruce/vines")
+                .build();
+
+        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.STACKED_BONES_FENCE, "stacked_bones_fence")
+                .texture("stacked_bones/bone_stacked_side")
+                .build();
+
+        // Fence Gate Blocks
+        FenceGateBlockDatagen.generateFenceGateBlock(bsmg, ModBlocks.LOCKED_BIRCH_BARK_FENCE_GATE, "locked_birch_bark_fence_gate")
+                .texture("bark/birch/side")
+                .build();
+
+        FenceGateBlockDatagen.generateFenceGateBlock(bsmg, ModBlocks.LOCKED_JUNGLE_BARK_FENCE_GATE, "locked_jungle_bark_fence_gate")
+                .texture("bark/jungle/side")
+                .build();
+
+        FenceGateBlockDatagen.generateFenceGateBlock(bsmg, ModBlocks.LOCKED_OAK_BARK_FENCE_GATE, "locked_oak_bark_fence_gate")
+                .texture("bark/oak/side")
+                .build();
+
+        FenceGateBlockDatagen.generateFenceGateBlock(bsmg, ModBlocks.LOCKED_SPRUCE_BARK_FENCE_GATE, "locked_spruce_bark_fence_gate")
+                .texture("bark/spruce/side")
+                .build();
     }
 
     @Override

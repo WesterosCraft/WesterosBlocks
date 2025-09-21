@@ -8,16 +8,8 @@ import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
 import com.westerosblocks.block.custom.WCPaneBlock;
 
-/**
- * Simplified pane block exporter following block-models.md patterns.
- * Handles both regular panes and bars models with clean, maintainable code.
- */
 public class PaneBlockExporter extends BaseBlockExporter {
 
-    /**
-     * Registers a pane block with a single texture.
-     * Follows block-models.md multipart blockstate pattern.
-     */
     public static void registerPaneBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
         WCPaneBlock paneBlock = (WCPaneBlock) block;
         

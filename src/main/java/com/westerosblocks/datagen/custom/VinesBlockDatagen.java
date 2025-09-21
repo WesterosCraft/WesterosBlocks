@@ -7,23 +7,18 @@ import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Direction;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class VinesBlockDatagen {
-    
-    // Parent Block Models - following block-models.md #parent-block-model pattern
     private static Model createVineModel(String vineType, boolean tinted) {
         String tintPath = tinted ? "block/tinted/" : "block/untinted/";
         String path = tintPath + "vine_" + vineType;
         return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(), ModTextureKey.VINES);
     }
 
-    // Builder pattern for vines block generation
     public static class VinesBlockBuilder {
         private final BlockStateModelGenerator generator;
         private final Block vinesBlock;

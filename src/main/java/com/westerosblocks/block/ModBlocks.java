@@ -4,10 +4,12 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.BlockBuilder;
 import com.westerosblocks.block.custom.WCFireBlock;
+import com.westerosblocks.block.custom.WCFenceGateBlock;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.WoodType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -1973,6 +1975,206 @@ public class ModBlocks {
                     .allowUnsupported()
                     .build());
 
+    // Fence Blocks
+    public static final Block BIRCH_BARK_FENCE = registerBlock(
+            "birch_bark_fence",
+            BlockBuilder.fence()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .build());
+
+    public static final Block BIRCH_FENCE_WITH_GRAPES = registerBlock(
+            "birch_fence_with_grapes",
+            BlockBuilder.fence()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .build());
+
+    public static final Block BIRCH_FENCE_WITH_VINES = registerBlock(
+            "birch_fence_with_vines",
+            BlockBuilder.fence()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .build());
+
+    public static final Block JUNGLE_BARK_FENCE = registerBlock(
+            "jungle_bark_fence",
+            BlockBuilder.fence()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .build());
+
+    public static final Block JUNGLE_FENCE_WITH_GRAPES = registerBlock(
+            "jungle_fence_with_grapes",
+            BlockBuilder.fence()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .build());
+
+    public static final Block JUNGLE_FENCE_WITH_VINES = registerBlock(
+            "jungle_fence_with_vines",
+            BlockBuilder.fence()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .build());
+
+    public static final Block MARBLE_COLUMN_FENCE = registerBlock(
+            "marble_column_fence",
+            BlockBuilder.fence()
+                    .strength(5.0f)
+                    .resistance(10.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.STONE)
+                    .build());
+
+    public static final Block OAK_BARK_FENCE = registerBlock(
+            "oak_bark_fence",
+            BlockBuilder.fence()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .build());
+
+    public static final Block OAK_FENCE_WITH_GRAPES = registerBlock(
+            "oak_fence_with_grapes",
+            BlockBuilder.fence()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .build());
+
+    public static final Block OAK_FENCE_WITH_VINES = registerBlock(
+            "oak_fence_with_vines",
+            BlockBuilder.fence()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .build());
+
+    public static final Block PALM_FENCE = registerBlock(
+            "palm_fence",
+            BlockBuilder.fence()
+                    .strength(5.0f)
+                    .resistance(10.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .build());
+
+    public static final Block REINFORCED_OAK_FENCE = registerBlock(
+            "reinforced_oak_fence",
+            BlockBuilder.fence()
+                    .strength(5.0f)
+                    .resistance(10.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .build());
+
+    public static final Block SEPT_CRYSTAL_SMALL = registerBlock(
+            "sept_crystal_small",
+            BlockBuilder.fence()
+                    .strength(5.0f)
+                    .resistance(10.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .build());
+
+    public static final Block SPRUCE_BARK_FENCE = registerBlock(
+            "spruce_bark_fence",
+            BlockBuilder.fence()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .build());
+
+    public static final Block SPRUCE_FENCE_WITH_GRAPES = registerBlock(
+            "spruce_fence_with_grapes",
+            BlockBuilder.fence()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .build());
+
+    public static final Block SPRUCE_FENCE_WITH_VINES = registerBlock(
+            "spruce_fence_with_vines",
+            BlockBuilder.fence()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .build());
+
+    public static final Block STACKED_BONES_FENCE = registerBlock(
+            "stacked_bones_fence",
+            BlockBuilder.fence()
+                    .strength(5.0f)
+                    .resistance(10.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.BONE)
+                    .build());
+
+    // Fence Gate Blocks
+    public static final Block LOCKED_BIRCH_BARK_FENCE_GATE = registerBlock(
+            "locked_birch_bark_fence_gate",
+            BlockBuilder.fenceGate()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .woodType("birch")
+                    .locked()
+                    .build());
+
+    public static final Block LOCKED_JUNGLE_BARK_FENCE_GATE = registerBlock(
+            "locked_jungle_bark_fence_gate",
+            BlockBuilder.fenceGate()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .woodType("jungle")
+                    .locked()
+                    .build());
+
+    public static final Block LOCKED_OAK_BARK_FENCE_GATE = registerBlock(
+            "locked_oak_bark_fence_gate",
+            BlockBuilder.fenceGate()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .woodType("oak")
+                    .locked()
+                    .build());
+
+    public static final Block LOCKED_SPRUCE_BARK_FENCE_GATE = registerBlock(
+            "locked_spruce_bark_fence_gate",
+            BlockBuilder.fenceGate()
+                    .strength(2.0f)
+                    .resistance(5.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .woodType("spruce")
+                    .locked()
+                    .build());
+
     /**
      * Initialize all blocks
      */
@@ -2219,7 +2421,13 @@ public class ModBlocks {
                 ModBlocks.PALM_TREE_LOG,
                 ModBlocks.SPRUCE_LOG_CHAIN,
                 ModBlocks.SPRUCE_LOG_ROPE,
-                ModBlocks.STRIPPED_OAK_LOG
+                ModBlocks.STRIPPED_OAK_LOG,
+                ModBlocks.BIRCH_BARK_FENCE,
+                ModBlocks.JUNGLE_BARK_FENCE,
+                ModBlocks.OAK_BARK_FENCE,
+                ModBlocks.PALM_FENCE,
+                ModBlocks.SPRUCE_BARK_FENCE,
+                ModBlocks.LOCKED_BIRCH_BARK_FENCE_GATE
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_half_ashlar_tab",
@@ -2436,7 +2644,8 @@ public class ModBlocks {
                 ModBlocks.CLOSED_BARREL,
                 ModBlocks.FIREWOOD,
                 ModBlocks.FIREWOOD_SLAB,
-                ModBlocks.COBWEB
+                ModBlocks.COBWEB,
+                ModBlocks.SEPT_CRYSTAL_SMALL
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_cobblestone_tab",
@@ -2461,7 +2670,16 @@ public class ModBlocks {
                 ModBlocks.LOCKED_JUNGLE_DOOR,
                 ModBlocks.LOCKED_OAK_DOOR,
                 ModBlocks.LOCKED_SPRUCE_DOOR,
-                ModBlocks.LOCKED_WHITE_WOOD_DOOR
+                ModBlocks.LOCKED_WHITE_WOOD_DOOR,
+                ModBlocks.BIRCH_FENCE_WITH_GRAPES,
+                ModBlocks.BIRCH_FENCE_WITH_VINES,
+                ModBlocks.JUNGLE_FENCE_WITH_GRAPES,
+                ModBlocks.JUNGLE_FENCE_WITH_VINES,
+                ModBlocks.OAK_FENCE_WITH_GRAPES,
+                ModBlocks.OAK_FENCE_WITH_VINES,
+                ModBlocks.REINFORCED_OAK_FENCE,
+                ModBlocks.SPRUCE_FENCE_WITH_GRAPES,
+                ModBlocks.SPRUCE_FENCE_WITH_VINES
         );
 
 
@@ -2510,7 +2728,8 @@ public class ModBlocks {
                 SolidBlocks.UNUSED_BROWN_PLASTER,
                 SolidBlocks.UNUSED_PURPLE_PLASTER,
                 ModBlocks.MARBLE_PILLAR_VERTICAL_CTM,
-                ModBlocks.MARBLE_PILLAR
+                ModBlocks.MARBLE_PILLAR,
+                ModBlocks.MARBLE_COLUMN_FENCE
         );
 
 
@@ -2538,7 +2757,8 @@ public class ModBlocks {
                 ModBlocks.BUTTERFLY_ORANGE,
                 ModBlocks.BUTTERFLY_RED,
                 ModBlocks.BUTTERFLY_WHITE,
-                ModBlocks.BUTTERFLY_YELLOW
+                ModBlocks.BUTTERFLY_YELLOW,
+                ModBlocks.STACKED_BONES_FENCE
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_lighting_tab",

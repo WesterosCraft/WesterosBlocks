@@ -8,7 +8,6 @@ import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.registry.Registries;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 

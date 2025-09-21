@@ -1,0 +1,54 @@
+package com.westerosblocks.block.custom;
+
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.FenceGateBlock;
+import net.minecraft.block.WoodType;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.westerosblocks.utils.ModWoodType;
+
+public class WCFenceGateBlock extends FenceGateBlock {
+    private final boolean locked;
+
+    public WCFenceGateBlock(WoodType type, Settings settings, boolean locked) {
+        super(type, settings);
+        this.locked = locked;
+    }
+
+    @Override
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+        if (this.locked) {
+            if (player.isCreative() && player.getMainHandStack().isEmpty()) {
+                return super.onUse(state, world, pos, player, hit);
+            } else {
+                return ActionResult.PASS;
+            }
+        } else {
+            return super.onUse(state, world, pos, player, hit);
+        }
+    }
+
+    public static class Factory extends BlockFactory {
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
+            Map<String, Object> parameters = new HashMap<>();
+            if (params.length > 0 && params[0] instanceof Map) {
+                parameters = (Map<String, Object>) params[0];
+            }
+
+            String woodTypeString = (String) parameters.getOrDefault("woodType", "oak");
+            WoodType woodType = ModWoodType.getWoodType(woodTypeString);
+            boolean locked = (Boolean) parameters.getOrDefault("locked", false);
+
+            return new WCFenceGateBlock(woodType, settings, locked);
+        }
+    }
+}

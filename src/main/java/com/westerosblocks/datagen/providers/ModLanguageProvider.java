@@ -34,6 +34,13 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.berry_basket", "Berry Basket");
                 translationBuilder.add("block.westerosblocks.berry_crate", "Berry Crate");
                 translationBuilder.add("block.westerosblocks.apricot_basket", "Apricot Basket");
+                translationBuilder.add("block.westerosblocks.birch_bark_fence", "Birch Bark Fence");
+                translationBuilder.add("block.westerosblocks.birch_fence_with_grapes", "Birch Fence with Grapes");
+                translationBuilder.add("block.westerosblocks.birch_fence_with_vines", "Birch Fence with Vines");
+                translationBuilder.add("block.westerosblocks.locked_birch_bark_fence_gate", "Locked Birch Bark Fence Gate");
+                translationBuilder.add("block.westerosblocks.locked_jungle_bark_fence_gate", "Locked Jungle Bark Fence Gate");
+                translationBuilder.add("block.westerosblocks.locked_oak_bark_fence_gate", "Locked Oak Bark Fence Gate");
+                translationBuilder.add("block.westerosblocks.locked_spruce_bark_fence_gate", "Locked Spruce Bark Fence Gate");
                 translationBuilder.add("block.westerosblocks.black_brick_engraved", "Ashlar Engraved Black");
                 translationBuilder.add("block.westerosblocks.bluegreen_carved_sandstone",
                                 "Blue/Green Carved Sandstone");
@@ -151,6 +158,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.purple_grape_crate", "Purple Grape Crate");
                 translationBuilder.add("block.westerosblocks.reach_brick_engraved", "Ashlar Engraved Reach");
                 translationBuilder.add("block.westerosblocks.reach_oak_wood_panelling", "Reach Oak Wood Panelling");
+                translationBuilder.add("block.westerosblocks.reinforced_oak_fence", "Reinforced Oak Fence");
                 translationBuilder.add("block.westerosblocks.redorange_carved_sandstone",
                                 "Red/Orange Carved Sandstone");
                 translationBuilder.add("block.westerosblocks.red_lantern2", "Large Red Lantern");
@@ -159,6 +167,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.salt_crate", "Salt Crate");
                 translationBuilder.add("block.westerosblocks.sandy_stone_slabs", "Sandy Stone Slabs");
                 translationBuilder.add("block.westerosblocks.sept_crystal_large", "Sept Crystal Large");
+                translationBuilder.add("block.westerosblocks.sept_crystal_small", "Sept Crystal Small");
                 translationBuilder.add("block.westerosblocks.shop_utility_block", "'Shop' Utility Block");
                 translationBuilder.add("block.westerosblocks.silver_tin_crate", "Silver Tin Crate");
                 translationBuilder.add("block.westerosblocks.small_orange_bricks_ornate_top",
@@ -213,6 +222,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.firewood", "Firewood");
                 translationBuilder.add("block.westerosblocks.jungle_log_chain", "Jungle Log Chain");
                 translationBuilder.add("block.westerosblocks.jungle_log_rope", "Jungle Log Rope");
+                translationBuilder.add("block.westerosblocks.marble_column_fence", "Marble Column Fence");
                 translationBuilder.add("block.westerosblocks.marble_pillar_vertical_ctm", "Marble Pillar Vertical");
                 translationBuilder.add("block.westerosblocks.marble_pillar", "Marble Pillar");
                 translationBuilder.add("block.westerosblocks.mossy_birch_log", "Mossy Birch Log");
@@ -221,11 +231,19 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.mossy_spruce_log", "Mossy Spruce Log");
                 translationBuilder.add("block.westerosblocks.oak_log_chain", "Oak Log Chain");
                 translationBuilder.add("block.westerosblocks.oak_log_rope", "Oak Log Rope");
+                translationBuilder.add("block.westerosblocks.oak_bark_fence", "Oak Bark Fence");
+                translationBuilder.add("block.westerosblocks.oak_fence_with_grapes", "Oak Fence with Grapes");
+                translationBuilder.add("block.westerosblocks.oak_fence_with_vines", "Oak Fence with Vines");
+                translationBuilder.add("block.westerosblocks.palm_fence", "Palm Fence");
                 translationBuilder.add("block.westerosblocks.palm_tree_log", "Palm Tree Log");
                 translationBuilder.add("block.westerosblocks.sandstone_pillar", "Sandstone Pillar");
                 translationBuilder.add("block.westerosblocks.spruce_log_chain", "Spruce Log Chain");
                 translationBuilder.add("block.westerosblocks.spruce_log_rope", "Spruce Log Rope");
+                translationBuilder.add("block.westerosblocks.spruce_bark_fence", "Spruce Bark Fence");
+                translationBuilder.add("block.westerosblocks.spruce_fence_with_grapes", "Spruce Fence with Grapes");
+                translationBuilder.add("block.westerosblocks.spruce_fence_with_vines", "Spruce Fence with Vines");
                 translationBuilder.add("block.westerosblocks.stacked_bones", "Stacked Bones");
+                translationBuilder.add("block.westerosblocks.stacked_bones_fence", "Stacked Bones Fence");
                 translationBuilder.add("block.westerosblocks.weirwood_face_0", "Weirwood Face 0");
                 translationBuilder.add("block.westerosblocks.weirwood_face_1", "Weirwood Face 1");
                 translationBuilder.add("block.westerosblocks.weirwood_face_2", "Weirwood Face 2");
@@ -259,6 +277,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.grey_wood_door", "Grey Wood Door");
                 translationBuilder.add("block.westerosblocks.harrenhal_secret_door", "Harrenhal Secret Door");
                 translationBuilder.add("block.westerosblocks.jungle_door", "Jungle Door");
+                translationBuilder.add("block.westerosblocks.jungle_bark_fence", "Jungle Bark Fence");
+                translationBuilder.add("block.westerosblocks.jungle_fence_with_grapes", "Jungle Fence with Grapes");
+                translationBuilder.add("block.westerosblocks.jungle_fence_with_vines", "Jungle Fence with Vines");
                 translationBuilder.add("block.westerosblocks.locked_birch_door", "Locked Birch Door");
                 translationBuilder.add("block.westerosblocks.locked_dark_northern_wood_door",
                                 "Locked Dark Northern Wood Door");

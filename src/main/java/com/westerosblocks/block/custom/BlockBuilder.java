@@ -89,6 +89,10 @@ public class BlockBuilder<T extends Block> {
     public static BlockBuilder<WCFenceBlock> fence() {
         return new BlockBuilder<>(new WCFenceBlock.Factory());
     }
+
+    public static BlockBuilder<WCFenceGateBlock> fenceGate() {
+        return new BlockBuilder<>(new WCFenceGateBlock.Factory());
+    }
     
     public static BlockBuilder<WCLayerBlock> layer() {
         return new BlockBuilder<>(new WCLayerBlock.Factory());
@@ -172,6 +176,11 @@ public class BlockBuilder<T extends Block> {
     
     public BlockBuilder<T> locked(boolean locked) {
         parameters.put("locked", locked);
+        return this;
+    }
+
+    public BlockBuilder<T> locked() {
+        parameters.put("locked", true);
         return this;
     }
     

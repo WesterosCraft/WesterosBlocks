@@ -1,6 +1,5 @@
 package com.westerosblocks.datagen.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModModels;
 import net.minecraft.block.Block;
 import net.minecraft.block.DoorBlock;

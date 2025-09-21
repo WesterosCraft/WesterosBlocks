@@ -9,11 +9,9 @@ import net.minecraft.util.Identifier;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class FlowerPotBlockDatagen {
 
-    // Parent Block Models - following block-models.md #parent-block-model pattern
     private static Model createFlowerPotModel(boolean isEmpty, boolean tinted) {
         String tintPath = tinted ? "block/tinted/" : "block/untinted/";
         String potType = isEmpty ? "flower_pot" : "flower_pot_cross";
