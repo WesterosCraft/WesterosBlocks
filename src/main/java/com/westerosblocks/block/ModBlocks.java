@@ -2258,7 +2258,8 @@ public class ModBlocks {
                 PlantBlocks.UNSHADED_GRASS,
                 PlantBlocks.CATTAILS,
                 ModBlocks.DEAD_JUNGLE_TALL_GRASS,
-                ModBlocks.DEAD_SAVANNA_TALL_GRASS
+                ModBlocks.DEAD_SAVANNA_TALL_GRASS,
+                ModBlocks.CLOVER
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_water_air_tab",
@@ -2424,8 +2425,8 @@ public class ModBlocks {
                 PlantBlocks.YELLOW_RUDBECKIA,
                 PlantBlocks.YELLOW_SUNFLOWER,
                 PlantBlocks.YELLOW_TANSY,
-                PlantBlocks.YELLOW_WILDFLOWERS,
-                ModBlocks.CLOVER);
+                PlantBlocks.YELLOW_WILDFLOWERS
+        );
 
         WesterosCreativeModeTabs.addToTab("westeros_logs_tab",
                 SolidBlocks.SIX_SIDED_BIRCH,

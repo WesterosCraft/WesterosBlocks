@@ -6,3 +6,23 @@
 - branch blocks need testing and feedback
 
 - look into vanilla root blocks
+
+- Wall Block
+- Soul Sand Block
+- Stair Block
+- should Sand Block extend FallingBlock or ColoredFallingBlock?
+- Furnace Block
+- Cuboid Block
+- Cuboid NE Block
+- Cuboid NSEW Block
+- Cuboid NESW Stack Block (banners)
+- Cuboid NSEWUD block
+
+
+NEW Block Types
+- Arrow slit Block
+- Chair Block
+- Branch Block
+- Flowerbed Block
+- Particle Emitter Block
+- Table Block
