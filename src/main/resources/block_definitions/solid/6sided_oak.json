@@ -1,10 +1,8 @@
 {
     "blockName": "6sided_oak",
     "blockType": "solid",
-    "hardness": 2,
+    "strength": 2,
     "stepSound": "wood",
-    "material": "wood",
-    "resistance": 5,
     "creativeTab": "westeros_logs_tab",
     "label": "6-Sided Oak",
     "textures": [
