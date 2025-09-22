@@ -303,5 +303,10 @@ public class WesterosBlocksClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(PlantBlocks.POTTED_YELLOW_SUNFLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(PlantBlocks.POTTED_YELLOW_TANSY, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(PlantBlocks.POTTED_YELLOW_WILDFLOWERS, RenderLayer.getCutout());
+
+        // Particle Emitter Blocks
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CASCADE_PARTICLE_EMITTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COSY_SMOKE_PARTICLE_EMITTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SIGNAL_SMOKE_PARTICLE_EMITTER, RenderLayer.getCutout());
     }
 }

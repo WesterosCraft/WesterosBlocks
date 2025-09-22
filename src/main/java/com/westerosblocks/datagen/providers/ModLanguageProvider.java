@@ -634,6 +634,10 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("block.westerosblocks.potted_yellow_sunflower", "Potted Yellow Sunflower");
                 translationBuilder.add("block.westerosblocks.potted_yellow_tansy", "Potted Yellow Tansy");
                 translationBuilder.add("block.westerosblocks.potted_yellow_wildflowers", "Potted Yellow Wildflowers");
+
+                translationBuilder.add("block.westerosblocks.cascade_particle_emitter", "Cascade Particle Emitter");
+                translationBuilder.add("block.westerosblocks.cosy_smoke_particle_emitter", "Cosy Smoke Particle Emitter");
+                translationBuilder.add("block.westerosblocks.signal_smoke_particle_emitter", "Signal Smoke Particle Emitter");
         }
 
 }

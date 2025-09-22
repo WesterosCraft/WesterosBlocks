@@ -2205,6 +2205,11 @@ public class ModModelProvider extends FabricModelProvider {
         FenceGateBlockDatagen.generateFenceGateBlock(bsmg, ModBlocks.LOCKED_SPRUCE_BARK_FENCE_GATE, "locked_spruce_bark_fence_gate")
                 .texture("bark/spruce/side")
                 .build();
+
+        // Particle Emitter Blocks
+        ParticleEmitterDatagen.registerCustomParticleEmitterBlock(bsmg, ModBlocks.CASCADE_PARTICLE_EMITTER, "cascade_particle_emitter");
+        ParticleEmitterDatagen.registerCustomParticleEmitterBlock(bsmg, ModBlocks.COSY_SMOKE_PARTICLE_EMITTER, "cosy_smoke_particle_emitter");
+        ParticleEmitterDatagen.registerCustomParticleEmitterBlock(bsmg, ModBlocks.SIGNAL_SMOKE_PARTICLE_EMITTER, "signal_smoke_particle_emitter");
     }
 
     @Override

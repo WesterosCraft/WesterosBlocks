@@ -1426,6 +1426,40 @@ public class ModBlocks {
                             .nonOpaque()
             ));
 
+    // Particle Emitter Blocks
+    public static final Block CASCADE_PARTICLE_EMITTER = registerBlock(
+            "cascade_particle_emitter",
+            BlockBuilder.particleEmitter()
+                    .strength(-1.0f)
+                    .resistance(3600000.0f)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .noCollision()
+                    .nonOpaque()
+                    .particle("cascade")
+                    .build());
+
+    public static final Block COSY_SMOKE_PARTICLE_EMITTER = registerBlock(
+            "cosy_smoke_particle_emitter",
+            BlockBuilder.particleEmitter()
+                    .strength(-1.0f)
+                    .resistance(3600000.0f)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .noCollision()
+                    .nonOpaque()
+                    .particle("cosy_smoke")
+                    .build());
+
+    public static final Block SIGNAL_SMOKE_PARTICLE_EMITTER = registerBlock(
+            "signal_smoke_particle_emitter",
+            BlockBuilder.particleEmitter()
+                    .strength(-1.0f)
+                    .resistance(3600000.0f)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .noCollision()
+                    .nonOpaque()
+                    .particle("signal_smoke")
+                    .build());
+
     // Crop Blocks
     public static final Block CROP_CARROTS = registerBlock(
             "crop_carrots",
@@ -2645,7 +2679,10 @@ public class ModBlocks {
                 ModBlocks.FIREWOOD,
                 ModBlocks.FIREWOOD_SLAB,
                 ModBlocks.COBWEB,
-                ModBlocks.SEPT_CRYSTAL_SMALL
+                ModBlocks.SEPT_CRYSTAL_SMALL,
+                ModBlocks.CASCADE_PARTICLE_EMITTER,
+                ModBlocks.COSY_SMOKE_PARTICLE_EMITTER,
+                ModBlocks.SIGNAL_SMOKE_PARTICLE_EMITTER
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_cobblestone_tab",

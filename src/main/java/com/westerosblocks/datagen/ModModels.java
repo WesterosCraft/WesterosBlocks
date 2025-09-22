@@ -80,6 +80,10 @@ public class ModModels {
     public static final Model FLOWERBED_3 = vanillaBlock("flowerbed_3", TextureKey.FLOWERBED, TextureKey.STEM);
     public static final Model FLOWERBED_4 = vanillaBlock("flowerbed_4", TextureKey.FLOWERBED, TextureKey.STEM);
 
+    // Particle emitter models
+    public static final Model PARTICLE_EMITTER_OFF = ModModels.block("custom/particle_emitter/particle_emitter_off", TextureKey.TEXTURE, TextureKey.PARTICLE);
+    public static final Model PARTICLE_EMITTER_ON = ModModels.block("custom/particle_emitter/particle_emitter_on", TextureKey.TEXTURE, TextureKey.PARTICLE);
+
     // helper method for creating Models
     private static Model block(String parent, TextureKey... requiredTextureKeys) {
         return new Model(Optional.of(Identifier.of(WesterosBlocks.MOD_ID, "block/" + parent)), Optional.empty(),

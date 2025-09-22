@@ -133,6 +133,10 @@ public class BlockBuilder<T extends Block> {
     public static BlockBuilder<WCFlowerPotBlock> flowerPot() {
         return new BlockBuilder<>(new WCFlowerPotBlock.Factory());
     }
+
+    public static BlockBuilder<WCParticleEmitterBlock> particleEmitter() {
+        return new BlockBuilder<>(new WCParticleEmitterBlock.Factory());
+    }
     
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
@@ -322,6 +326,11 @@ public class BlockBuilder<T extends Block> {
 
     public BlockBuilder<T> plantId(String plantId) {
         parameters.put("plantId", plantId);
+        return this;
+    }
+
+    public BlockBuilder<T> particle(String particle) {
+        parameters.put("particle", particle);
         return this;
     }
 

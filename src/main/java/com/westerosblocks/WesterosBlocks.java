@@ -1,6 +1,7 @@
 package com.westerosblocks;
 
 import com.westerosblocks.block.ModBlocks;
+import com.westerosblocks.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.util.Identifier;
@@ -19,6 +20,7 @@ public class WesterosBlocks implements ModInitializer {
     public void onInitialize() {
         WesterosCreativeModeTabs.registerCreativeModeTabs();
         ModBlocks.registerModBlocks();
+        ModSounds.registerSounds();
     }
 
     public static Identifier id(String path) {
