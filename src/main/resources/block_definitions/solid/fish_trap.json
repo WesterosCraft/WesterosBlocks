@@ -6,6 +6,7 @@
     "strength": 2,
     "stepSound": "wood",
     "lightOpacity": 0,
+    "renderLayer": "cutout",
     "label": "Fish Trap",
     "randomTextures": [
         {

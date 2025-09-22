@@ -172,9 +172,23 @@ public class BlockBuilder<T extends Block> {
         this.settings = this.settings.nonOpaque();
         return this;
     }
-    
+
+    public BlockBuilder<T> nonOpaque(Boolean condition) {
+        if (Boolean.TRUE.equals(condition)) {
+            this.settings = this.settings.nonOpaque();
+        }
+        return this;
+    }
+
     public BlockBuilder<T> noCollision() {
         this.settings = this.settings.noCollision();
+        return this;
+    }
+
+    public BlockBuilder<T> noCollision(Boolean condition) {
+        if (Boolean.TRUE.equals(condition)) {
+            this.settings = this.settings.noCollision();
+        }
         return this;
     }
     

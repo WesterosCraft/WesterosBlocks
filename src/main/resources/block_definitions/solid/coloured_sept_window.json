@@ -8,6 +8,7 @@
     "stepSound": "stone",
     "lightOpacity": 0,
     "label": "Coloured Sept Window",
+    "renderLayer": "translucent",
     "textures": [
         "glass/sept/all"
     ],

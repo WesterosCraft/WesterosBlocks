@@ -3,8 +3,12 @@ package com.westerosblocks;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.PlantBlocks;
 import com.westerosblocks.block.SolidBlocks;
+import com.westerosblocks.data.BlockDefinition;
+import com.westerosblocks.data.BlockDefinitionRegistry;
 import com.westerosblocks.entity.ModEntities;
 import com.westerosblocks.entity.client.ChairRenderer;
+import net.minecraft.block.Block;
+import net.minecraft.registry.Registries;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
@@ -13,11 +17,6 @@ import net.minecraft.client.render.RenderLayer;
 public class WesterosBlocksClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-//        BlockRenderLayerMap.INSTANCE.putBlock(SolidBlocks.CAGE, RenderLayer.getCutout());
-//        BlockRenderLayerMap.INSTANCE.putBlock(SolidBlocks.FISH_TRAP, RenderLayer.getCutout());
-//        BlockRenderLayerMap.INSTANCE.putBlock(SolidBlocks.SEPT_CRYSTAL_LARGE, RenderLayer.getTranslucent());
-//        BlockRenderLayerMap.INSTANCE.putBlock(SolidBlocks.COLOURED_SEPT_WINDOW, RenderLayer.getTranslucent());
-        
         // Pane Blocks
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DORNE_CARVED_STONE_WINDOW, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DORNE_CARVED_WOODEN_WINDOW, RenderLayer.getCutout());
@@ -308,5 +307,37 @@ public class WesterosBlocksClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CASCADE_PARTICLE_EMITTER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COSY_SMOKE_PARTICLE_EMITTER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SIGNAL_SMOKE_PARTICLE_EMITTER, RenderLayer.getCutout());
+
+        // Apply render layers from block definitions
+        applyRenderLayersFromDefinitions();
+    }
+
+    private void applyRenderLayersFromDefinitions() {
+        BlockDefinitionRegistry registry = BlockDefinitionRegistry.getInstance();
+
+        if (!registry.isInitialized()) {
+            return;
+        }
+
+        for (BlockDefinition definition : registry.getAllDefinitions()) {
+            if (definition.hasRenderLayer()) {
+                Block block = Registries.BLOCK.get(WesterosBlocks.id(definition.getBlockName()));
+                if (block != null) {
+                    RenderLayer renderLayer = getRenderLayerFromString(definition.getRenderLayer());
+                    if (renderLayer != null) {
+                        BlockRenderLayerMap.INSTANCE.putBlock(block, renderLayer);
+                    }
+                }
+            }
+        }
+    }
+
+    private RenderLayer getRenderLayerFromString(String renderLayerName) {
+        return switch (renderLayerName.toLowerCase()) {
+            case "cutout" -> RenderLayer.getCutout();
+            case "translucent" -> RenderLayer.getTranslucent();
+            case "cutout_mipped" -> RenderLayer.getCutoutMipped();
+            default -> null;
+        };
     }
 }

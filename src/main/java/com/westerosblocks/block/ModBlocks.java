@@ -102,6 +102,8 @@ public class ModBlocks {
                         .resistance(definition.getResistance())
                         .requiresTool()
                         .sounds(soundGroup)
+                        .nonOpaque(definition.isNonOpaque())
+                        .noCollision(definition.hasNoCollision())
                         .build();
 
 //                case "door":
