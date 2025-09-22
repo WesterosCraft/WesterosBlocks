@@ -1,0 +1,18 @@
+{
+    "blockName": "small_white_brick_brownish_white_plaster",
+    "blockType": "solid",
+    "strength": 5,
+    "stepSound": "stone",
+    "creativeTab": "westeros_marble_plaster_tab",
+    "label": "Small White Brick Keystone Brownish White Plaster",
+    "textures": [
+        "ashlar_quarter_rounded/white/all",
+        "ashlar_quarter_rounded/white/all",
+        "plaster/smooth/brown_white/all"
+    ],
+    "overlayTextures": [
+        "transparent",
+        "transparent",
+        "plaster_keystone/ashlar_quarter_rounded_white/side"
+    ]
+}

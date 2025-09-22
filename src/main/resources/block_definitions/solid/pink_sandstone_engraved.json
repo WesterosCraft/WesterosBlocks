@@ -1,0 +1,11 @@
+{
+    "blockName": "pink_sandstone_engraved",
+    "blockType": "solid",
+    "strength": 5,
+    "stepSound": "stone",
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ashlar Engraved Sandy Pink",
+    "textures": [
+        "ashlar_engraved/sandy_pink/all"
+    ]
+}

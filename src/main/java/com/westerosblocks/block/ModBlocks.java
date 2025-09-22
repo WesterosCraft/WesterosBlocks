@@ -5,6 +5,8 @@ import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.BlockBuilder;
 import com.westerosblocks.block.custom.WCFireBlock;
 import com.westerosblocks.block.custom.WCFenceGateBlock;
+import com.westerosblocks.data.BlockDefinition;
+import com.westerosblocks.data.BlockDefinitionRegistry;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
@@ -18,14 +20,285 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ModBlocks {
 
-    // Initialize solid blocks and plant blocks first
+    // Storage for automatically registered blocks from JSON definitions
+    private static final Map<String, Block> AUTO_REGISTERED_BLOCKS = new HashMap<>();
+
+    // Automatic Block Registration from JSON Definitions
     static {
-        SolidBlocks.initialize();
+        // Initialize solid blocks and plant blocks first
+//        SolidBlocks.initialize();
         PlantBlocks.initialize();
+
+        // Auto-register blocks from JSON definitions
+        registerBlocksFromDefinitions();
+    }
+
+    /**
+     * Automatically registers blocks from JSON block definitions
+     */
+    private static void registerBlocksFromDefinitions() {
+        try {
+            BlockDefinitionRegistry registry = BlockDefinitionRegistry.getInstance();
+
+            if (!registry.isInitialized()) {
+                WesterosBlocks.LOGGER.warn("BlockDefinitionRegistry not initialized - skipping automatic registration");
+                return;
+            }
+
+            WesterosBlocks.LOGGER.info("Starting automatic block registration from JSON definitions...");
+            int registeredCount = 0;
+            int skippedCount = 0;
+
+            // Loop through all block definitions
+            for (BlockDefinition definition : registry.getAllDefinitions()) {
+                try {
+                    Block block = createBlockFromDefinition(definition);
+                    if (block != null) {
+                        Block registeredBlock = registerBlock(definition.getBlockName(), block);
+                        AUTO_REGISTERED_BLOCKS.put(definition.getBlockName(), registeredBlock);
+                        registeredCount++;
+
+                        WesterosBlocks.LOGGER.debug("Auto-registered block: {} ({})",
+                            definition.getBlockName(), definition.getBlockType());
+                    } else {
+                        skippedCount++;
+                        WesterosBlocks.LOGGER.warn("Skipped unsupported block type '{}' for block '{}'",
+                            definition.getBlockType(), definition.getBlockName());
+                    }
+                } catch (Exception e) {
+                    skippedCount++;
+                    WesterosBlocks.LOGGER.error("Failed to register block '{}': {}",
+                        definition.getBlockName(), e.getMessage());
+                }
+            }
+
+            WesterosBlocks.LOGGER.info("Automatic block registration complete: {} registered, {} skipped",
+                registeredCount, skippedCount);
+
+        } catch (Exception e) {
+            WesterosBlocks.LOGGER.error("Error during automatic block registration", e);
+        }
+    }
+
+    /**
+     * Creates a Block instance from a BlockDefinition using the BlockBuilder pattern
+     */
+    private static Block createBlockFromDefinition(BlockDefinition definition) {
+        String blockType = definition.getBlockType();
+        BlockSoundGroup soundGroup = getSoundGroupFromString(definition.getStepSound());
+
+        try {
+            switch (blockType.toLowerCase()) {
+                case "solid":
+                    return BlockBuilder.solid()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .requiresTool()
+                        .sounds(soundGroup)
+                        .build();
+
+//                case "door":
+//                    return BlockBuilder.door()
+//                        .strength(definition.getStrength())
+//                        .resistance(definition.getResistance())
+//                        .requiresTool()
+//                        .sounds(soundGroup)
+//                        .woodType(getWoodTypeFromDefinition(definition))
+//                        .locked(false) // TODO: Extract from definition
+//                        .allowUnsupported(definition.isAllowUnsupported())
+//                        .build();
+//
+//                case "slab":
+//                    return BlockBuilder.slab()
+//                        .strength(definition.getStrength())
+//                        .resistance(definition.getResistance())
+//                        .requiresTool()
+//                        .sounds(soundGroup)
+//                        .build();
+//
+//                case "log":
+//                    return BlockBuilder.log()
+//                        .strength(definition.getStrength())
+//                        .resistance(definition.getResistance())
+//                        .requiresTool()
+//                        .sounds(soundGroup)
+//                        .build();
+//
+//                case "halfdoor":
+//                    return BlockBuilder.halfDoor()
+//                        .strength(definition.getStrength())
+//                        .resistance(definition.getResistance())
+//                        .requiresTool()
+//                        .sounds(soundGroup)
+//                        .locked(false) // TODO: Extract from definition
+//                        .allowUnsupported(definition.isAllowUnsupported())
+//                        .build();
+//
+//                case "pane":
+//                    return BlockBuilder.pane()
+//                        .strength(definition.getStrength())
+//                        .resistance(definition.getResistance())
+//                        .requiresTool()
+//                        .sounds(soundGroup)
+//                        .nonOpaque()
+//                        .legacyModel(true)
+//                        .unconnect(false)
+//                        .build();
+//
+//                case "torch":
+//                    return BlockBuilder.torch()
+//                        .strength(definition.getStrength())
+//                        .sounds(soundGroup)
+//                        .luminance(state -> 13) // TODO: Extract from definition
+//                        .nonOpaque()
+//                        .noCollision()
+//                        .allowUnsupported(true)
+//                        .noParticle(false)
+//                        .build();
+//
+//                case "chair":
+//                    return BlockBuilder.chair()
+//                        .strength(definition.getStrength())
+//                        .resistance(definition.getResistance())
+//                        .requiresTool()
+//                        .sounds(soundGroup)
+//                        .woodType(getWoodTypeFromDefinition(definition))
+//                        .build();
+//
+//                case "table":
+//                    return BlockBuilder.table()
+//                        .strength(definition.getStrength())
+//                        .resistance(definition.getResistance())
+//                        .requiresTool()
+//                        .sounds(soundGroup)
+//                        .build();
+//
+//                case "branch":
+//                    return BlockBuilder.branch()
+//                        .strength(definition.getStrength())
+//                        .resistance(definition.getResistance())
+//                        .requiresTool()
+//                        .sounds(soundGroup)
+//                        .build();
+
+                // Add more block types as needed
+                default:
+                    WesterosBlocks.LOGGER.warn("Unsupported block type '{}' for auto-registration", blockType);
+                    return null;
+            }
+        } catch (Exception e) {
+            WesterosBlocks.LOGGER.error("Error creating block from definition: {}", e.getMessage());
+            return null;
+        }
+    }
+
+    /**
+     * Maps string sound names to BlockSoundGroup instances
+     */
+    private static BlockSoundGroup getSoundGroupFromString(String soundName) {
+        if (soundName == null) return BlockSoundGroup.STONE;
+
+        switch (soundName.toLowerCase()) {
+            case "wood": return BlockSoundGroup.WOOD;
+            case "stone": return BlockSoundGroup.STONE;
+            case "metal": return BlockSoundGroup.METAL;
+            case "grass": return BlockSoundGroup.GRASS;
+            case "cloth": return BlockSoundGroup.WOOL;
+            case "gravel": return BlockSoundGroup.GRAVEL;
+            case "glass": return BlockSoundGroup.GLASS;
+            case "candle": return BlockSoundGroup.CANDLE;
+            case "bone": return BlockSoundGroup.BONE;
+            case "ladder": return BlockSoundGroup.LADDER;
+            case "snow": return BlockSoundGroup.SNOW;
+            default:
+                WesterosBlocks.LOGGER.warn("Unknown sound type '{}', defaulting to STONE", soundName);
+                return BlockSoundGroup.STONE;
+        }
+    }
+
+    /**
+     * Extracts wood type from block definition or defaults to "oak"
+     */
+    private static String getWoodTypeFromDefinition(BlockDefinition definition) {
+        // TODO: Add wood type extraction logic from block name or properties
+        // For now, default to "oak"
+        String blockName = definition.getBlockName().toLowerCase();
+        if (blockName.contains("birch")) return "birch";
+        if (blockName.contains("spruce")) return "spruce";
+        if (blockName.contains("jungle")) return "jungle";
+        if (blockName.contains("oak")) return "oak";
+        return "oak"; // Default
+    }
+
+    /**
+     * Gets an automatically registered block by name
+     */
+    public static Block getAutoRegisteredBlock(String blockName) {
+        return AUTO_REGISTERED_BLOCKS.get(blockName);
+    }
+
+    /**
+     * Gets all automatically registered blocks
+     */
+    public static Map<String, Block> getAllAutoRegisteredBlocks() {
+        return new HashMap<>(AUTO_REGISTERED_BLOCKS);
+    }
+
+    /**
+     * Registers auto-registered blocks to their creative tabs based on JSON definitions
+     */
+    private static void registerAutoBlocksToCreativeTabs() {
+        try {
+            BlockDefinitionRegistry registry = BlockDefinitionRegistry.getInstance();
+
+            if (!registry.isInitialized()) {
+                WesterosBlocks.LOGGER.warn("BlockDefinitionRegistry not initialized - skipping creative tab registration");
+                return;
+            }
+
+            // Group blocks by creative tab
+            Map<String, List<Block>> blocksByTab = new HashMap<>();
+
+            for (BlockDefinition definition : registry.getAllDefinitions()) {
+                String creativeTab = definition.getCreativeTab();
+                String blockName = definition.getBlockName();
+
+                // Get the auto-registered block
+                Block block = AUTO_REGISTERED_BLOCKS.get(blockName);
+
+                if (block != null && creativeTab != null && !creativeTab.isEmpty()) {
+                    blocksByTab.computeIfAbsent(creativeTab, k -> new ArrayList<>()).add(block);
+                }
+            }
+
+            // Register blocks to their creative tabs
+            int totalRegistered = 0;
+            for (Map.Entry<String, List<Block>> entry : blocksByTab.entrySet()) {
+                String tabName = entry.getKey();
+                List<Block> blocks = entry.getValue();
+
+                if (!blocks.isEmpty()) {
+                    Block[] blockArray = blocks.toArray(new Block[0]);
+                    WesterosCreativeModeTabs.addToTab(tabName, blockArray);
+
+                    totalRegistered += blocks.size();
+                    WesterosBlocks.LOGGER.info("Added {} blocks to creative tab '{}'", blocks.size(), tabName);
+                }
+            }
+
+            WesterosBlocks.LOGGER.info("Successfully registered {} auto-blocks to {} creative tabs",
+                totalRegistered, blocksByTab.size());
+
+        } catch (Exception e) {
+            WesterosBlocks.LOGGER.error("Error registering auto-blocks to creative tabs", e);
+        }
     }
 
     // Table Blocks (non-solid)
@@ -2215,6 +2488,9 @@ public class ModBlocks {
     public static void registerModBlocks() {
         WesterosBlocks.LOGGER.info("Registering Mod Blocks for " + WesterosBlocks.MOD_ID);
 
+        // Register auto-registered blocks to their creative tabs
+        registerAutoBlocksToCreativeTabs();
+
         WesterosCreativeModeTabs.addToTab("westeros_grasses_shrubs_tab",
                 PlantBlocks.BRACKEN,
                 PlantBlocks.POTTED_BRACKEN,
@@ -2429,10 +2705,10 @@ public class ModBlocks {
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_logs_tab",
-                SolidBlocks.SIX_SIDED_BIRCH,
-                SolidBlocks.SIX_SIDED_JUNGLE,
-                SolidBlocks.SIX_SIDED_OAK,
-                SolidBlocks.SIX_SIDED_SPRUCE,
+//                SolidBlocks.SIX_SIDED_BIRCH,
+//                SolidBlocks.SIX_SIDED_JUNGLE,
+//                SolidBlocks.SIX_SIDED_OAK,
+//                SolidBlocks.SIX_SIDED_SPRUCE,
                 ModBlocks.WEIRWOOD_FACE_0,
                 ModBlocks.WEIRWOOD_FACE_1,
                 ModBlocks.WEIRWOOD_FACE_2,
@@ -2465,31 +2741,31 @@ public class ModBlocks {
                 ModBlocks.LOCKED_BIRCH_BARK_FENCE_GATE
         );
 
-        WesterosCreativeModeTabs.addToTab("westeros_half_ashlar_tab",
-                SolidBlocks.SIX_SIDED_STONE_SLAB
-        );
+//        WesterosCreativeModeTabs.addToTab("westeros_half_ashlar_tab",
+//                SolidBlocks.SIX_SIDED_STONE_SLAB
+//        );
 
         WesterosCreativeModeTabs.addToTab("westeros_food_blocks_tab",
-                SolidBlocks.APPLE_BASKET,
-                SolidBlocks.APPLE_CRATE,
-                SolidBlocks.APRICOT_BASKET,
-                SolidBlocks.BERRY_BASKET,
-                SolidBlocks.BERRY_CRATE,
-                SolidBlocks.CARROT_BASKET,
-                SolidBlocks.CARROT_CRATE,
-                SolidBlocks.DATE_BASKET,
-                SolidBlocks.DATES,
-                SolidBlocks.FISH_BARREL,
-                SolidBlocks.FISH_BASKET,
-                SolidBlocks.FISH_TRAP,
-                SolidBlocks.GRAIN_BASKET,
-                SolidBlocks.GRAIN_CRATE,
-                SolidBlocks.HOP_BASKET,
-                SolidBlocks.HOP_CRATE,
-                SolidBlocks.LAVENDER_BASKET,
-                SolidBlocks.LAVENDER_CRATE,
-                SolidBlocks.LEMON_BASKET,
-                SolidBlocks.LIME_BASKET,
+//                SolidBlocks.APPLE_BASKET,
+//                SolidBlocks.APPLE_CRATE,
+//                SolidBlocks.APRICOT_BASKET,
+//                SolidBlocks.BERRY_BASKET,
+//                SolidBlocks.BERRY_CRATE,
+//                SolidBlocks.CARROT_BASKET,
+//                SolidBlocks.CARROT_CRATE,
+//                SolidBlocks.DATE_BASKET,
+//                SolidBlocks.DATES,
+//                SolidBlocks.FISH_BARREL,
+//                SolidBlocks.FISH_BASKET,
+//                SolidBlocks.FISH_TRAP,
+//                SolidBlocks.GRAIN_BASKET,
+//                SolidBlocks.GRAIN_CRATE,
+//                SolidBlocks.HOP_BASKET,
+//                SolidBlocks.HOP_CRATE,
+//                SolidBlocks.LAVENDER_BASKET,
+//                SolidBlocks.LAVENDER_CRATE,
+//                SolidBlocks.LEMON_BASKET,
+//                SolidBlocks.LIME_BASKET,
                 ModBlocks.APPLE_BASKET_SLAB,
                 ModBlocks.APRICOT_BASKET_SLAB,
                 ModBlocks.CLOSED_BASKET_SLAB,
@@ -2497,20 +2773,20 @@ public class ModBlocks {
                 ModBlocks.CARROT_BASKET_SLAB,
                 ModBlocks.CUT_GRAIN_FLOUR_SACK,
                 ModBlocks.DATE_BASKET_SLAB,
-                SolidBlocks.OLIVE_BASKET,
-                SolidBlocks.ORANGE_BASKET,
-                SolidBlocks.POMEGRANATE_BASKET,
-                SolidBlocks.PURPLE_GRAPE_BASKET,
-                SolidBlocks.PURPLE_GRAPE_CRATE,
-                SolidBlocks.SALT_CRATE,
-                SolidBlocks.SOURLEAF_BASKET,
-                SolidBlocks.SOURLEAF_CRATE,
-                SolidBlocks.SPIT_ROAST,
-                SolidBlocks.SQUASH,
-                SolidBlocks.TURNIP_BASKET,
-                SolidBlocks.TURNIP_CRATE,
-                SolidBlocks.WHITE_GRAPE_BASKET,
-                SolidBlocks.WHITE_GRAPE_CRATE,
+//                SolidBlocks.OLIVE_BASKET,
+//                SolidBlocks.ORANGE_BASKET,
+//                SolidBlocks.POMEGRANATE_BASKET,
+//                SolidBlocks.PURPLE_GRAPE_BASKET,
+//                SolidBlocks.PURPLE_GRAPE_CRATE,
+//                SolidBlocks.SALT_CRATE,
+//                SolidBlocks.SOURLEAF_BASKET,
+//                SolidBlocks.SOURLEAF_CRATE,
+//                SolidBlocks.SPIT_ROAST,
+//                SolidBlocks.SQUASH,
+//                SolidBlocks.TURNIP_BASKET,
+//                SolidBlocks.TURNIP_CRATE,
+//                SolidBlocks.WHITE_GRAPE_BASKET,
+//                SolidBlocks.WHITE_GRAPE_CRATE,
                 ModBlocks.FISH_BASKET_SLAB,
                 ModBlocks.GRAIN_BASKET_SLAB,
                 ModBlocks.GRAIN_FLOUR_SACK,
@@ -2524,96 +2800,96 @@ public class ModBlocks {
                 ModBlocks.DEAD_RAT
         );
 
-        WesterosCreativeModeTabs.addToTab("westeros_utility_tab",
-                SolidBlocks.APPROVAL_UTILITY_BLOCK,
-                SolidBlocks.DONE_UTILITY_BLOCK,
-                SolidBlocks.DOMESTIC_UTILITY_BLOCK,
-                SolidBlocks.HIGH_CLASS_UTILITY_BLOCK,
-                SolidBlocks.HOUSE_COUNT_UTILITY_BLOCK,
-                SolidBlocks.INDUSTRY_UTILITY_BLOCK,
-                SolidBlocks.LOW_CLASS_UTILITY_BLOCK,
-                SolidBlocks.MIDDLE_CLASS_UTILITY_BLOCK,
-                SolidBlocks.NOTE_UTILITY_BLOCK,
-                SolidBlocks.SHOP_UTILITY_BLOCK,
-                SolidBlocks.SPECIAL_UTILITY_BLOCK,
-                SolidBlocks.WIP_UTILITY_BLOCK,
-                SolidBlocks.WORKSHOP_UTILITY_BLOCK,
-                SolidBlocks.YARD_UTILITY_BLOCK
-        );
+//        WesterosCreativeModeTabs.addToTab("westeros_utility_tab",
+//                SolidBlocks.APPROVAL_UTILITY_BLOCK,
+//                SolidBlocks.DONE_UTILITY_BLOCK,
+//                SolidBlocks.DOMESTIC_UTILITY_BLOCK,
+//                SolidBlocks.HIGH_CLASS_UTILITY_BLOCK,
+//                SolidBlocks.HOUSE_COUNT_UTILITY_BLOCK,
+//                SolidBlocks.INDUSTRY_UTILITY_BLOCK,
+//                SolidBlocks.LOW_CLASS_UTILITY_BLOCK,
+//                SolidBlocks.MIDDLE_CLASS_UTILITY_BLOCK,
+//                SolidBlocks.NOTE_UTILITY_BLOCK,
+//                SolidBlocks.SHOP_UTILITY_BLOCK,
+//                SolidBlocks.SPECIAL_UTILITY_BLOCK,
+//                SolidBlocks.WIP_UTILITY_BLOCK,
+//                SolidBlocks.WORKSHOP_UTILITY_BLOCK,
+//                SolidBlocks.YARD_UTILITY_BLOCK
+//        );
 
         WesterosCreativeModeTabs.addToTab("westeros_panelling_carvings_tab",
-                SolidBlocks.ARBOR_BRICK_ORNATE,
-                SolidBlocks.BLACK_BRICK_ENGRAVED,
-                SolidBlocks.BLUEGREEN_CARVED_SANDSTONE,
-                SolidBlocks.BROWN_GREY_BRICK_ENGRAVED,
-                SolidBlocks.COARSE_DARK_RED_CARVED_SANDSTONE,
-                SolidBlocks.COARSE_RED_CARVED_SANDSTONE,
-                SolidBlocks.COBBLE_KEYSTONE,
-                SolidBlocks.DARK_GREY_BRICK_ENGRAVED,
-                SolidBlocks.DESERT_SANDSTONE_ENGRAVED,
-                SolidBlocks.DRAGON_CARVING,
-                SolidBlocks.FAITH_CARVED_ARBOR_BRICK,
-                SolidBlocks.FAITH_CARVED_BLACK_BRICK,
-                SolidBlocks.FAITH_CARVED_BROWN_GREY_BRICK,
-                SolidBlocks.FAITH_CARVED_COARSE_RED_BRICK,
-                SolidBlocks.FAITH_CARVED_DARK_GREY_BRICK,
-                SolidBlocks.FAITH_CARVED_DUN_BRICK,
-                SolidBlocks.FAITH_CARVED_GREY_BRICK,
-                SolidBlocks.FAITH_CARVED_OLDTOWN_BRICK,
-                SolidBlocks.FAITH_CARVED_PINK_SANDSTONE,
-                SolidBlocks.FAITH_CARVED_REACH_BRICK,
-                SolidBlocks.FAITH_CARVED_SMALL_STONE_BRICK,
-                SolidBlocks.FAITH_CARVED_STONE_BRICK,
-                SolidBlocks.FAITH_CARVED_STORMLANDS_BRICK,
-                SolidBlocks.FAITH_CARVED_WESTERLANDS_BRICK,
-                SolidBlocks.GREEN_GREY_BRICK_ENGRAVED,
-                SolidBlocks.GREY_BRICK_ENGRAVED,
-                SolidBlocks.GREY_KEYSTONE,
-                SolidBlocks.KL_DUN_CARVED_BRICK,
-                SolidBlocks.LIGHT_GREY_BRICK_ENGRAVED,
-                SolidBlocks.LIGHT_OLDTOWN_BRICK_ENGRAVED,
-                SolidBlocks.MONOCHROME_DARK_SANDSTONE_ENGRAVED,
-                SolidBlocks.MONOCHROME_SANDSTONE_ENGRAVED,
-                SolidBlocks.NETHER_BRICK_KEYSTONE,
-                SolidBlocks.NORTHERN_CARVINGS,
-                SolidBlocks.ORNATE_MARBLE,
-                SolidBlocks.ORNATE_SANDSTONE,
-                SolidBlocks.PINK_SANDSTONE_ENGRAVED,
-                SolidBlocks.REACH_BRICK_ENGRAVED,
-                SolidBlocks.REACH_OAK_WOOD_PANELLING,
-                SolidBlocks.REACH_SPRUCE_WOOD_PANELLING,
-                SolidBlocks.REDORANGE_CARVED_SANDSTONE,
-                SolidBlocks.SMALL_ORANGE_BRICKS_ORNATE_TOP,
-                SolidBlocks.SMALL_ORANGE_BRICKS_ORNATE,
-                SolidBlocks.STORMLANDS_BRICK_ENGRAVED,
-                SolidBlocks.TERRACOTTA_ENGRAVED,
-                SolidBlocks.VIVID_DARK_SANDSTONE_ENGRAVED,
-                SolidBlocks.VIVID_SANDSTONE_ENGRAVED,
-                SolidBlocks.WHITE_BRICK_ENGRAVED,
-                SolidBlocks.WINTERFELL_CARVING,
+//                SolidBlocks.ARBOR_BRICK_ORNATE,
+//                SolidBlocks.BLACK_BRICK_ENGRAVED,
+//                SolidBlocks.BLUEGREEN_CARVED_SANDSTONE,
+//                SolidBlocks.BROWN_GREY_BRICK_ENGRAVED,
+//                SolidBlocks.COARSE_DARK_RED_CARVED_SANDSTONE,
+//                SolidBlocks.COARSE_RED_CARVED_SANDSTONE,
+//                SolidBlocks.COBBLE_KEYSTONE,
+//                SolidBlocks.DARK_GREY_BRICK_ENGRAVED,
+//                SolidBlocks.DESERT_SANDSTONE_ENGRAVED,
+//                SolidBlocks.DRAGON_CARVING,
+//                SolidBlocks.FAITH_CARVED_ARBOR_BRICK,
+//                SolidBlocks.FAITH_CARVED_BLACK_BRICK,
+//                SolidBlocks.FAITH_CARVED_BROWN_GREY_BRICK,
+//                SolidBlocks.FAITH_CARVED_COARSE_RED_BRICK,
+//                SolidBlocks.FAITH_CARVED_DARK_GREY_BRICK,
+//                SolidBlocks.FAITH_CARVED_DUN_BRICK,
+//                SolidBlocks.FAITH_CARVED_GREY_BRICK,
+//                SolidBlocks.FAITH_CARVED_OLDTOWN_BRICK,
+//                SolidBlocks.FAITH_CARVED_PINK_SANDSTONE,
+//                SolidBlocks.FAITH_CARVED_REACH_BRICK,
+//                SolidBlocks.FAITH_CARVED_SMALL_STONE_BRICK,
+//                SolidBlocks.FAITH_CARVED_STONE_BRICK,
+//                SolidBlocks.FAITH_CARVED_STORMLANDS_BRICK,
+//                SolidBlocks.FAITH_CARVED_WESTERLANDS_BRICK,
+//                SolidBlocks.GREEN_GREY_BRICK_ENGRAVED,
+//                SolidBlocks.GREY_BRICK_ENGRAVED,
+//                SolidBlocks.GREY_KEYSTONE,
+//                SolidBlocks.KL_DUN_CARVED_BRICK,
+//                SolidBlocks.LIGHT_GREY_BRICK_ENGRAVED,
+//                SolidBlocks.LIGHT_OLDTOWN_BRICK_ENGRAVED,
+//                SolidBlocks.MONOCHROME_DARK_SANDSTONE_ENGRAVED,
+//                SolidBlocks.MONOCHROME_SANDSTONE_ENGRAVED,
+//                SolidBlocks.NETHER_BRICK_KEYSTONE,
+//                SolidBlocks.NORTHERN_CARVINGS,
+//                SolidBlocks.ORNATE_MARBLE,
+//                SolidBlocks.ORNATE_SANDSTONE,
+//                SolidBlocks.PINK_SANDSTONE_ENGRAVED,
+//                SolidBlocks.REACH_BRICK_ENGRAVED,
+//                SolidBlocks.REACH_OAK_WOOD_PANELLING,
+//                SolidBlocks.REACH_SPRUCE_WOOD_PANELLING,
+//                SolidBlocks.REDORANGE_CARVED_SANDSTONE,
+//                SolidBlocks.SMALL_ORANGE_BRICKS_ORNATE_TOP,
+//                SolidBlocks.SMALL_ORANGE_BRICKS_ORNATE,
+//                SolidBlocks.STORMLANDS_BRICK_ENGRAVED,
+//                SolidBlocks.TERRACOTTA_ENGRAVED,
+//                SolidBlocks.VIVID_DARK_SANDSTONE_ENGRAVED,
+//                SolidBlocks.VIVID_SANDSTONE_ENGRAVED,
+//                SolidBlocks.WHITE_BRICK_ENGRAVED,
+//                SolidBlocks.WINTERFELL_CARVING,
                 ModBlocks.SANDSTONE_PILLAR
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_furniture_tab",
-                SolidBlocks.BENCH_BUTCHER_KNIVES,
-                SolidBlocks.BENCH_CARPENTRY_HAMMER_SAW,
-                SolidBlocks.BENCH_DRAWERS,
-                SolidBlocks.BENCH_KITCHEN_KNIVES,
-                SolidBlocks.BENCH_KITCHEN_PANS,
-                SolidBlocks.BENCH_MASON_HAMMER_MALLET,
-                SolidBlocks.BOOKSHELF_ABANDONED,
-                SolidBlocks.BOOKSHELF_LIBRARY,
-                SolidBlocks.BOOKSHELF_MAESTER,
-                SolidBlocks.BROKEN_CABINET,
-                SolidBlocks.CABINET_DRAWER,
-                SolidBlocks.EMPTY_CABINET,
-                SolidBlocks.FULL_CABINET,
-                SolidBlocks.MIRROR_BLOCK,
+//                SolidBlocks.BENCH_BUTCHER_KNIVES,
+//                SolidBlocks.BENCH_CARPENTRY_HAMMER_SAW,
+//                SolidBlocks.BENCH_DRAWERS,
+//                SolidBlocks.BENCH_KITCHEN_KNIVES,
+//                SolidBlocks.BENCH_KITCHEN_PANS,
+//                SolidBlocks.BENCH_MASON_HAMMER_MALLET,
+//                SolidBlocks.BOOKSHELF_ABANDONED,
+//                SolidBlocks.BOOKSHELF_LIBRARY,
+//                SolidBlocks.BOOKSHELF_MAESTER,
+//                SolidBlocks.BROKEN_CABINET,
+//                SolidBlocks.CABINET_DRAWER,
+//                SolidBlocks.EMPTY_CABINET,
+//                SolidBlocks.FULL_CABINET,
+//                SolidBlocks.MIRROR_BLOCK,
                 ModBlocks.OAK_TABLE,
                 ModBlocks.OAK_CHAIR,
-                SolidBlocks.TABLE_BOOKS,
-                SolidBlocks.TABLE_DRAWERS,
-                SolidBlocks.TABLE_WIDGETS,
+//                SolidBlocks.TABLE_BOOKS,
+//                SolidBlocks.TABLE_DRAWERS,
+//                SolidBlocks.TABLE_WIDGETS,
                 ModBlocks.ITCHY_STRAW_BED,
                 ModBlocks.HAMMOCK,
                 ModBlocks.NIGHTS_WATCH_BED,
@@ -2657,25 +2933,25 @@ public class ModBlocks {
                 ModBlocks.VINES
         );
 
-        WesterosCreativeModeTabs.addToTab("westeros_grass_dirt_tab",
-                SolidBlocks.BONE_DIRT,
-                SolidBlocks.THICK_GRASS_BLOCK
-        );
+//        WesterosCreativeModeTabs.addToTab("westeros_grass_dirt_tab",
+//                SolidBlocks.BONE_DIRT,
+//                SolidBlocks.THICK_GRASS_BLOCK
+//        );
 
         WesterosCreativeModeTabs.addToTab("westeros_decor_tab",
-                SolidBlocks.CAGE,
-                SolidBlocks.CLOSED_BASKET,
-                SolidBlocks.CLOSED_CABINET,
-                SolidBlocks.CRATE,
-                SolidBlocks.CRATE2,
-                SolidBlocks.CRATE3,
-                SolidBlocks.EMPTY_BARREL,
-                SolidBlocks.IRON_CRATE,
-                SolidBlocks.LARGE_CLAY_POT_SOLID,
-                SolidBlocks.OPEN_BASKET,
-                SolidBlocks.OPEN_CRATE,
-                SolidBlocks.SILVER_TIN_CRATE,
-                SolidBlocks.WATER_BARREL,
+//                SolidBlocks.CAGE,
+//                SolidBlocks.CLOSED_BASKET,
+//                SolidBlocks.CLOSED_CABINET,
+//                SolidBlocks.CRATE,
+//                SolidBlocks.CRATE2,
+//                SolidBlocks.CRATE3,
+//                SolidBlocks.EMPTY_BARREL,
+//                SolidBlocks.IRON_CRATE,
+//                SolidBlocks.LARGE_CLAY_POT_SOLID,
+//                SolidBlocks.OPEN_BASKET,
+//                SolidBlocks.OPEN_CRATE,
+//                SolidBlocks.SILVER_TIN_CRATE,
+//                SolidBlocks.WATER_BARREL,
                 ModBlocks.CLOSED_BARREL,
                 ModBlocks.FIREWOOD,
                 ModBlocks.FIREWOOD_SLAB,
@@ -2686,14 +2962,14 @@ public class ModBlocks {
                 ModBlocks.SIGNAL_SMOKE_PARTICLE_EMITTER
         );
 
-        WesterosCreativeModeTabs.addToTab("westeros_cobblestone_tab",
-                SolidBlocks.FLAGSTONE,
-                SolidBlocks.SANDY_STONE_SLABS
-        );
+//        WesterosCreativeModeTabs.addToTab("westeros_cobblestone_tab",
+//                SolidBlocks.FLAGSTONE,
+//                SolidBlocks.SANDY_STONE_SLABS
+//        );
 
         WesterosCreativeModeTabs.addToTab("westeros_wood_planks_tab",
                 ModBlocks.WOOD_LADDER,
-                SolidBlocks.PARQUET_FLOOR,
+//                SolidBlocks.PARQUET_FLOOR,
                 ModBlocks.BIRCH_DOOR,
                 ModBlocks.EYRIE_WEIRWOOD_DOOR,
                 ModBlocks.GREY_WOOD_DOOR,
@@ -2722,8 +2998,8 @@ public class ModBlocks {
 
 
         WesterosCreativeModeTabs.addToTab("westeros_windows_glass_tab",
-                SolidBlocks.COLOURED_SEPT_WINDOW,
-                SolidBlocks.SEPT_CRYSTAL_LARGE,
+//                SolidBlocks.COLOURED_SEPT_WINDOW,
+//                SolidBlocks.SEPT_CRYSTAL_LARGE,
                 ModBlocks.BIRCH_WINDOW_SHUTTERS,
                 ModBlocks.DORNE_RED_WINDOW_SHUTTERS,
                 ModBlocks.GREEN_LANNISPORT_WINDOW_SHUTTERS,
@@ -2739,52 +3015,52 @@ public class ModBlocks {
         );
 
 
-        WesterosCreativeModeTabs.addToTab("westeros_brick_tab",
-                SolidBlocks.ORANGE_BRICK_ARCH_DOUBLE,
-                SolidBlocks.ORANGE_BRICK_ARCH_SINGLE,
-                SolidBlocks.ORANGE_BRICK_DENTIL,
-                SolidBlocks.ORANGE_BRICK_ROWLOCK,
-                SolidBlocks.SOUTHERN_BRICK_ARCH_FLAT,
-                SolidBlocks.SOUTHERN_BRICK_ARCH,
-                SolidBlocks.SOUTHERN_BRICK_LINTEL
-        );
+//        WesterosCreativeModeTabs.addToTab("westeros_brick_tab",
+//                SolidBlocks.ORANGE_BRICK_ARCH_DOUBLE,
+//                SolidBlocks.ORANGE_BRICK_ARCH_SINGLE,
+//                SolidBlocks.ORANGE_BRICK_DENTIL,
+//                SolidBlocks.ORANGE_BRICK_ROWLOCK,
+//                SolidBlocks.SOUTHERN_BRICK_ARCH_FLAT,
+//                SolidBlocks.SOUTHERN_BRICK_ARCH,
+//                SolidBlocks.SOUTHERN_BRICK_LINTEL
+//        );
 
-        WesterosCreativeModeTabs.addToTab("westeros_timber_frame_tab",
-                SolidBlocks.TIMBER_NORTHERN_BLUE_BRESSUMMER,
-                SolidBlocks.TIMBER_NORTHERN_GREEN_LEFTHATCH
-        );
+//        WesterosCreativeModeTabs.addToTab("westeros_timber_frame_tab",
+//                SolidBlocks.TIMBER_NORTHERN_BLUE_BRESSUMMER,
+//                SolidBlocks.TIMBER_NORTHERN_GREEN_LEFTHATCH
+//        );
 
         WesterosCreativeModeTabs.addToTab("westeros_marble_plaster_tab",
-                SolidBlocks.LANNISPORT_KEYSTONE_ORANGE_PLASTER,
-                SolidBlocks.LANNISPORT_KEYSTONE_YELLOW_PLASTER,
-                SolidBlocks.LIGHT_GREY_STONE_WHITE_PLASTER,
-                SolidBlocks.SMALL_SMOOTH_STONE_BRICK_BLUE_PLASTER,
-                SolidBlocks.SMALL_SMOOTH_STONE_BRICK_WHITE_PLASTER,
-                SolidBlocks.SMALL_STONE_BRICK_WHITE_PLASTER,
-                SolidBlocks.SMALL_WHITE_BRICK_BROWNISH_WHITE_PLASTER,
-                SolidBlocks.SMALL_WHITE_BRICK_WHITE_PLASTER,
-                SolidBlocks.UNUSED_BROWN_PLASTER,
-                SolidBlocks.UNUSED_PURPLE_PLASTER,
+//                SolidBlocks.LANNISPORT_KEYSTONE_ORANGE_PLASTER,
+//                SolidBlocks.LANNISPORT_KEYSTONE_YELLOW_PLASTER,
+//                SolidBlocks.LIGHT_GREY_STONE_WHITE_PLASTER,
+//                SolidBlocks.SMALL_SMOOTH_STONE_BRICK_BLUE_PLASTER,
+//                SolidBlocks.SMALL_SMOOTH_STONE_BRICK_WHITE_PLASTER,
+//                SolidBlocks.SMALL_STONE_BRICK_WHITE_PLASTER,
+//                SolidBlocks.SMALL_WHITE_BRICK_BROWNISH_WHITE_PLASTER,
+//                SolidBlocks.SMALL_WHITE_BRICK_WHITE_PLASTER,
+//                SolidBlocks.UNUSED_BROWN_PLASTER,
+//                SolidBlocks.UNUSED_PURPLE_PLASTER,
                 ModBlocks.MARBLE_PILLAR_VERTICAL_CTM,
                 ModBlocks.MARBLE_PILLAR,
                 ModBlocks.MARBLE_COLUMN_FENCE
         );
 
 
-        WesterosCreativeModeTabs.addToTab("westeros_sand_gravel_tab",
-                SolidBlocks.YELLOW_STAINED_CLAY
-        );
+//        WesterosCreativeModeTabs.addToTab("westeros_sand_gravel_tab",
+//                SolidBlocks.YELLOW_STAINED_CLAY
+//        );
 
 
-        WesterosCreativeModeTabs.addToTab("westeros_tool_blocks_tab",
-                SolidBlocks.PISTON_TOP
-        );
+//        WesterosCreativeModeTabs.addToTab("westeros_tool_blocks_tab",
+//                SolidBlocks.PISTON_TOP
+//        );
 
 
         WesterosCreativeModeTabs.addToTab("westeros_misc_tab",
                 ModBlocks.WINTERFELL_STONE_LADDER,
-                SolidBlocks.PILED_BONES,
-                SolidBlocks.STACKED_BONES_SOLID,
+//                SolidBlocks.PILED_BONES,
+//                SolidBlocks.STACKED_BONES_SOLID,
                 ModBlocks.HARRENHAL_SECRET_DOOR,
                 ModBlocks.RED_KEEP_SECRET_DOOR,
                 ModBlocks.ARCHERY_TARGET,
@@ -2800,8 +3076,8 @@ public class ModBlocks {
         );
 
         WesterosCreativeModeTabs.addToTab("westeros_lighting_tab",
-                SolidBlocks.GLOWING_EMBERS,
-                SolidBlocks.RED_LANTERN2,
+//                SolidBlocks.GLOWING_EMBERS,
+//                SolidBlocks.RED_LANTERN2,
                 ModBlocks.TORCH,
                 ModBlocks.TORCH_UNLIT,
                 ModBlocks.CANDLE,

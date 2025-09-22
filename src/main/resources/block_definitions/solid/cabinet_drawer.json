@@ -1,0 +1,24 @@
+{
+    "blockName": "cabinet_drawer",
+    "blockType": "solid",
+    "strength": 2,
+    "stepSound": "wood",
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Cabinet Drawer",
+    "randomTextures": [
+        {
+            "textures": [
+                "cabinet/top_bottom",
+                "cabinet/top_bottom",
+                "cabinet/drawer/side1"
+            ]
+        },
+        {
+            "textures": [
+                "cabinet/top_bottom",
+                "cabinet/top_bottom",
+                "cabinet/drawer/side2"
+            ]
+        }
+    ]
+}

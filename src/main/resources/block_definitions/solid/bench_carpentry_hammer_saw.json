@@ -1,0 +1,13 @@
+{
+    "blockName": "bench_carpentry_hammer_saw",
+    "blockType": "solid",
+    "strength": 2,
+    "stepSound": "wood",
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Bench Carpentry Hammer Saw",
+    "textures": [
+        "bench_block/spruce_top",
+        "bench_block/crafting_table_top",
+        "bench_block/bench_carpentry_hammer_saw"
+    ]
+}

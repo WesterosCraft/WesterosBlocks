@@ -1,0 +1,11 @@
+{
+    "blockName": "reach_brick_engraved",
+    "blockType": "solid",
+    "strength": 5,
+    "stepSound": "stone",
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ashlar Engraved Reach",
+    "textures": [
+        "ashlar_engraved/reach/all"
+    ]
+}

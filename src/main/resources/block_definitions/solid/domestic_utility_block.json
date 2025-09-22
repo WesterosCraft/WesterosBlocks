@@ -1,0 +1,18 @@
+{
+    "blockName": "domestic_utility_block",
+    "blockType": "solid",
+    "strength": 5,
+    "stepSound": "metal",
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_utility_tab",
+    "lightValue": 0,
+    "label": "'Domestic' Utility Block",
+    "textures": [
+        "utility_block/domestic"
+    ]
+}

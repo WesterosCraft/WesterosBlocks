@@ -1,0 +1,11 @@
+{
+    "blockName": "piled_bones",
+    "blockType": "solid",
+    "strength": 5,
+    "stepSound": "stone",
+    "creativeTab": "westeros_misc_tab",
+    "label": "Piled Bones",
+    "textures": [
+        "piled_bones/side"
+    ]
+}

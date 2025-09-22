@@ -1,0 +1,13 @@
+{
+    "blockName": "northern_carvings",
+    "blockType": "solid",
+    "strength": 2,
+    "stepSound": "wood",
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Northern Carvings",
+    "textures": [
+        "wood/spruce/carving/top_bottom",
+        "wood/spruce/carving/top_bottom",
+        "wood/spruce/carving/side"
+    ]
+}

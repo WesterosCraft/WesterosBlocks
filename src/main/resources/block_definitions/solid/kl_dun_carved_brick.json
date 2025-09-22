@@ -1,0 +1,11 @@
+{
+    "blockName": "kl_dun_carved_brick",
+    "blockType": "solid",
+    "strength": 5,
+    "stepSound": "stone",
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ashlar Engraved Dun",
+    "textures": [
+        "ashlar_engraved/dun/all"
+    ]
+}

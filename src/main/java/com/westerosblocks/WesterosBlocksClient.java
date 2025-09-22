@@ -13,10 +13,10 @@ import net.minecraft.client.render.RenderLayer;
 public class WesterosBlocksClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(SolidBlocks.CAGE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SolidBlocks.FISH_TRAP, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SolidBlocks.SEPT_CRYSTAL_LARGE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SolidBlocks.COLOURED_SEPT_WINDOW, RenderLayer.getTranslucent());
+//        BlockRenderLayerMap.INSTANCE.putBlock(SolidBlocks.CAGE, RenderLayer.getCutout());
+//        BlockRenderLayerMap.INSTANCE.putBlock(SolidBlocks.FISH_TRAP, RenderLayer.getCutout());
+//        BlockRenderLayerMap.INSTANCE.putBlock(SolidBlocks.SEPT_CRYSTAL_LARGE, RenderLayer.getTranslucent());
+//        BlockRenderLayerMap.INSTANCE.putBlock(SolidBlocks.COLOURED_SEPT_WINDOW, RenderLayer.getTranslucent());
         
         // Pane Blocks
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DORNE_CARVED_STONE_WINDOW, RenderLayer.getCutout());

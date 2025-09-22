@@ -1,0 +1,18 @@
+{
+    "blockName": "house_count_utility_block",
+    "blockType": "solid",
+    "strength": 5,
+    "stepSound": "metal",
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_utility_tab",
+    "lightValue": 0,
+    "label": "'House Count' Utility Block",
+    "textures": [
+        "utility_block/housecount"
+    ]
+}

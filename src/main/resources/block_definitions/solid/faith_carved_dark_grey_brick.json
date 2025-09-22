@@ -1,0 +1,11 @@
+{
+    "blockName": "faith_carved_dark_grey_brick",
+    "blockType": "solid",
+    "strength": 5,
+    "stepSound": "stone",
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ashlar Faith Carved Dark Grey",
+    "textures": [
+        "ashlar_quarter/dark_grey/faith_carved"
+    ]
+}

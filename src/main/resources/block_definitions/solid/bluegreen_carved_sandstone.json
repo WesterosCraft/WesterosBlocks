@@ -1,0 +1,11 @@
+{
+    "blockName": "bluegreen_carved_sandstone",
+    "blockType": "solid",
+    "strength": 5,
+    "stepSound": "stone",
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Blue/Green Carved Sandstone",
+    "textures": [
+        "bluegreen_carved_sandstone/side"
+    ]
+}

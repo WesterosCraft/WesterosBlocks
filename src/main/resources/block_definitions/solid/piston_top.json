@@ -1,0 +1,11 @@
+{
+    "blockName": "piston_top",
+    "blockType": "solid",
+    "strength": 2,
+    "stepSound": "wood",
+    "creativeTab": "westeros_tool_blocks_tab",
+    "label": "Piston Top",
+    "textures": [
+        "wood/oak/studded"
+    ]
+}

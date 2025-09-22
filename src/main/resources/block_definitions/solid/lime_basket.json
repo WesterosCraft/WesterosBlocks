@@ -1,0 +1,13 @@
+{
+    "blockName": "lime_basket",
+    "blockType": "solid",
+    "strength": 2,
+    "stepSound": "cloth",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Lime Basket",
+    "textures": [
+        "crate_block/basket_bottom",
+        "crate_block/basket_limes",
+        "crate_block/basket_side"
+    ]
+}

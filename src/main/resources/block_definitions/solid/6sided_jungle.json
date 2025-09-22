@@ -1,0 +1,11 @@
+{
+    "blockName": "6sided_jungle",
+    "blockType": "solid",
+    "strength": 2,
+    "stepSound": "wood",
+    "creativeTab": "westeros_logs_tab",
+    "label": "6-Sided Jungle",
+    "textures": [
+        "bark/jungle/side"
+    ]
+}

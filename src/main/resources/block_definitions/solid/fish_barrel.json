@@ -1,0 +1,24 @@
+{
+    "blockName": "fish_barrel",
+    "blockType": "solid",
+    "strength": 2,
+    "stepSound": "wood",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Fish Barrel",
+    "randomTextures": [
+        {
+            "textures": [
+                "barrel_closed/barrel_top_closed",
+                "crate_block/barrel_top_fish",
+                "barrel_sides/side0"
+            ]
+        },
+        {
+            "textures": [
+                "barrel_closed/barrel_top_closed",
+                "crate_block/barrel_top_fish",
+                "barrel_sides/side1"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "blockName": "vivid_dark_sandstone_engraved",
+    "blockType": "solid",
+    "strength": 5,
+    "stepSound": "stone",
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ashlar Engraved Dark Tan",
+    "textures": [
+        "ashlar_engraved/dark_tan/all"
+    ]
+}

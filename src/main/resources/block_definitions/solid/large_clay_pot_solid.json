@@ -1,0 +1,19 @@
+{
+    "blockName": "large_clay_pot_solid",
+    "blockType": "solid",
+    "strength": 5,
+    "stepSound": "wood",
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Large Clay Pot Solid",
+    "textures": [
+        "wood/oak/all",
+        "clay_pot/solid",
+        "clay_pot/solid"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "blockName": "squash",
+    "blockType": "solid",
+    "strength": 2,
+    "stepSound": "grass",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Squash",
+    "textures": [
+        "squash/top",
+        "squash/top",
+        "squash/side"
+    ]
+}

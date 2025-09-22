@@ -1,0 +1,11 @@
+{
+    "blockName": "faith_carved_stormlands_brick",
+    "blockType": "solid",
+    "strength": 5,
+    "stepSound": "stone",
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ashlar Faith Carved Stormlands",
+    "textures": [
+        "ashlar_quarter/stormlands/faith_carved"
+    ]
+}

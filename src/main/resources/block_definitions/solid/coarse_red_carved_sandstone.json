@@ -1,0 +1,11 @@
+{
+    "blockName": "coarse_red_carved_sandstone",
+    "blockType": "solid",
+    "strength": 5,
+    "stepSound": "stone",
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ashlar Engraved Pale Red",
+    "textures": [
+        "ashlar_engraved/pale_red/all"
+    ]
+}

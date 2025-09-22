@@ -1,0 +1,11 @@
+{
+    "blockName": "ornate_marble",
+    "blockType": "solid",
+    "strength": 5,
+    "stepSound": "stone",
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ornate Marble",
+    "textures": [
+        "marble/quartz/ornate/side"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "blockName": "faith_carved_pink_sandstone",
+    "blockType": "solid",
+    "strength": 5,
+    "stepSound": "stone",
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Ashlar Faith Carved Sandy Pink",
+    "textures": [
+        "ashlar_third/sandy_pink/faith_carved"
+    ]
+}

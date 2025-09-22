@@ -1,0 +1,13 @@
+{
+    "blockName": "southern_brick_lintel",
+    "blockType": "solid",
+    "strength": 3,
+    "stepSound": "stone",
+    "creativeTab": "westeros_brick_tab",
+    "label": "Southern Brick Lintel",
+    "textures": [
+        "brick/southern/all1",
+        "brick/southern/all1",
+        "brick/southern/lintel"
+    ]
+}
