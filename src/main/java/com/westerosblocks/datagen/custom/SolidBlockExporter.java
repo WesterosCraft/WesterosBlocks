@@ -6,6 +6,7 @@ import net.minecraft.util.Identifier;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.block.custom.WCSolidBlock;
+import com.westerosblocks.data.BlockDefinition;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
@@ -92,11 +93,43 @@ public class SolidBlockExporter extends BaseBlockExporter {
      */
     public static void registerCustomSolidBlock(BlockStateModelGenerator generator, Block block, boolean isTinted, String... texturePaths) {
         validateTexturePaths(texturePaths, 1);
-        
+
         if (isSymmetrical(block)) {
             registerSymmetricalSolidBlock(generator, block, isTinted, texturePaths);
         } else {
             registerStandardSolidBlock(generator, block, isTinted, texturePaths);
+        }
+    }
+
+    /**
+     * Registers a solid block from a BlockDefinition.
+     * Automatically handles textures vs randomTextures and chooses the appropriate method.
+     */
+    public static void registerCustomSolidBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        // Check for randomTextures first (priority over regular textures)
+        if (definition.hasRandomTextures()) {
+            // Convert randomTextures to String[][] format
+            List<BlockDefinition.RandomTextureVariant> randomTextures = definition.getRandomTextures();
+            String[][] textureArrays = new String[randomTextures.size()][];
+
+            for (int i = 0; i < randomTextures.size(); i++) {
+                List<String> variantTextures = randomTextures.get(i).getTextures();
+                textureArrays[i] = variantTextures.toArray(new String[0]);
+            }
+
+            registerCustomSolidBlockWithRandomTextures(generator, block, textureArrays);
+
+        } else if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
+            List<String> textures = definition.getTextures();
+
+            if (textures.size() == 1) {
+                // Single texture
+                registerSimpleCustomSolidBlock(generator, block, textures.get(0));
+            } else {
+                // Multiple textures
+                String[] textureArray = textures.toArray(new String[0]);
+                registerCustomSolidBlock(generator, block, textureArray);
+            }
         }
     }
 
