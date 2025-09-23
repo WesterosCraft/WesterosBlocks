@@ -103,11 +103,23 @@ public class SolidBlockExporter extends BaseBlockExporter {
 
     /**
      * Registers a solid block from a BlockDefinition.
-     * Automatically handles textures vs randomTextures and chooses the appropriate method.
+     * Automatically handles textures vs randomTextures vs states and chooses the appropriate method.
      */
     public static void registerCustomSolidBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        // Check for randomTextures first (priority over regular textures)
-        if (definition.hasRandomTextures()) {
+        // Check for states first (highest priority)
+        if (definition.hasStates()) {
+            // Convert states to String[][] format
+            List<BlockDefinition.StateVariant> states = definition.getStates();
+            String[][] textureArrays = new String[states.size()][];
+
+            for (int i = 0; i < states.size(); i++) {
+                List<String> stateTextures = states.get(i).getTextures();
+                textureArrays[i] = stateTextures.toArray(new String[0]);
+            }
+
+            registerCustomSolidBlockWithStates(generator, block, textureArrays);
+
+        } else if (definition.hasRandomTextures()) {
             // Convert randomTextures to String[][] format
             List<BlockDefinition.RandomTextureVariant> randomTextures = definition.getRandomTextures();
             String[][] textureArrays = new String[randomTextures.size()][];
