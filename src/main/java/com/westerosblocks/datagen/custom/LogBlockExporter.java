@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.data.BlockDefinition;
 
 import net.minecraft.block.Block;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -66,5 +67,32 @@ public class LogBlockExporter extends BaseBlockExporter {
 
                 // Register item model using the Y model (vertical orientation)
                 generator.registerParentedItemModel(block, modelY);
+        }
+
+        /**
+         * Registers a custom log block using BlockDefinition
+         */
+        public static void registerCustomLogBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+                if (definition.getTextures() == null || definition.getTextures().size() < 2) {
+                        throw new IllegalArgumentException("Log blocks require at least 2 textures: [side, end] or [end, end, side]");
+                }
+
+                // For log blocks, texture order is expected to be [side, end] or [end, end, side]
+                String sideTexture;
+                String endTexture;
+
+                if (definition.getTextures().size() == 2) {
+                        // [side, end] format
+                        sideTexture = definition.getTextures().get(0);
+                        endTexture = definition.getTextures().get(1);
+                } else if (definition.getTextures().size() == 3) {
+                        // [end, end, side] format (legacy compatibility)
+                        sideTexture = definition.getTextures().get(2);
+                        endTexture = definition.getTextures().get(0);
+                } else {
+                        throw new IllegalArgumentException("Log blocks require 2 or 3 textures, got: " + definition.getTextures().size());
+                }
+
+                registerCustomLogBlock(generator, block, sideTexture, endTexture, false);
         }
 }

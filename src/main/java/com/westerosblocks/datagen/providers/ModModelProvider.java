@@ -35,122 +35,6 @@ public class ModModelProvider extends FabricModelProvider {
         // Table Blocks
         registerCustomTableBlock(bsmg, ModBlocks.OAK_TABLE).texture("wood/oak/all").build();
 
-        // Log Blocks
-        registerCustomLogBlock(bsmg, ModBlocks.ARCHERY_TARGET)
-                .textures("archery_target/side", "archery_target/front")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.CLOSED_BARREL)
-                .textures("barrel_sides/side1", "barrel_closed/barrel_top_closed")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.FIREWOOD)
-                .textures("firewood/side", "firewood/top")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.JUNGLE_LOG_CHAIN)
-                .textures("bark/jungle/chain", "bark/jungle/top")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.JUNGLE_LOG_ROPE)
-                .textures("bark/jungle/rope", "bark/jungle/top")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.MARBLE_PILLAR_VERTICAL_CTM)
-                .textures("marble/quartz/column_side_ctm", "marble/quartz/column_topbottom")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.MARBLE_PILLAR)
-                .textures("marble/quartz/column_side", "marble/quartz/column_topbottom")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.MOSSY_BIRCH_LOG)
-                .textures("bark/birch/mossy/side", "bark/birch/mossy/top")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.MOSSY_JUNGLE_LOG)
-                .textures("bark/jungle/mossy/side", "bark/jungle/mossy/top")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.MOSSY_OAK_LOG)
-                .textures("bark/oak/mossy/side", "bark/oak/mossy/top")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.MOSSY_SPRUCE_LOG)
-                .textures("bark/spruce/mossy/side", "bark/spruce/mossy/top")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.OAK_LOG_CHAIN)
-                .textures("bark/oak/chain", "bark/oak/top")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.OAK_LOG_ROPE)
-                .textures("bark/oak/rope", "bark/oak/top")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.PALM_TREE_LOG)
-                .textures("bark/palm/side", "bark/palm/top")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.SANDSTONE_PILLAR)
-                .textures("ashlar_third/sandstone/column_side", "ashlar_third/sandstone/column_top")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.SPRUCE_LOG_CHAIN)
-                .textures("bark/spruce/chain", "bark/spruce/top")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.SPRUCE_LOG_ROPE)
-                .textures("bark/spruce/rope", "bark/spruce/top")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.STACKED_BONES)
-                .textures("stacked_bones/bone_stacked_side", "stacked_bones/bone_stacked_front")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.WEIRWOOD_FACE_0)
-                .textures("bark/weirwood/side", "bark/weirwood/face_0")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.WEIRWOOD_FACE_1)
-                .textures("bark/weirwood/side", "bark/weirwood/face_1")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.WEIRWOOD_FACE_2)
-                .textures("bark/weirwood/side", "bark/weirwood/face_2")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.WEIRWOOD_FACE_3)
-                .textures("bark/weirwood/side", "bark/weirwood/face_3")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.WEIRWOOD_FACE_4)
-                .textures("bark/weirwood/side", "bark/weirwood/face_4")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.WEIRWOOD_FACE_5)
-                .textures("bark/weirwood/side", "bark/weirwood/face_5")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.WEIRWOOD_FACE_6)
-                .textures("bark/weirwood/side", "bark/weirwood/face_6")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.WEIRWOOD_FACE_7)
-                .textures("bark/weirwood/side", "bark/weirwood/face_7")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.WEIRWOOD_FACE_8)
-                .textures("bark/weirwood/side", "bark/weirwood/face_8")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.WEIRWOOD_SCARS)
-                .textures("bark/weirwood/side", "bark/weirwood/scars")
-                .build();
-
-        registerCustomLogBlock(bsmg, ModBlocks.STRIPPED_OAK_LOG)
-                .textures("wood/oak/stripped_oak_log", "wood/oak/stripped_oak_log_top")
-                .build();
 
         // Slab Blocks
         registerCustomSlabBlock(bsmg, ModBlocks.APPLE_BASKET_SLAB)
@@ -2079,6 +1963,14 @@ public class ModModelProvider extends FabricModelProvider {
             Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
             if (block != null) {
                 DoorBlockExporter.registerCustomDoorBlock(bsmg, block, definition);
+            }
+        }
+
+        // Generate log block models
+        for (BlockDefinition definition : registry.getByType("log")) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block != null) {
+                LogBlockExporter.registerCustomLogBlock(bsmg, block, definition);
             }
         }
 
