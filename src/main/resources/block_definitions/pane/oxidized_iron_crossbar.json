@@ -3,6 +3,7 @@
     "blockType": "pane",
     "stepSound": "metal",
     "type": "bars-model,unconnect:false",
+    "renderLayer": "cutout",
     "harvestLevel": [
         {
             "tool": "pickaxe",

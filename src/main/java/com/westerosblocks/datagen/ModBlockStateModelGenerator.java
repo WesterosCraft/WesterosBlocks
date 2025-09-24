@@ -428,23 +428,9 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                 return new CustomBlockBuilder(generator, block, "fan");
         }
 
-        public static CustomBlockBuilder registerCustomPlantBlock(BlockStateModelGenerator generator, Block block) {
-                return new CustomBlockBuilder(generator, block, "plant");
-        }
-
-        public static CustomBlockBuilder registerCustomCropBlock(BlockStateModelGenerator generator, Block block) {
-                return new CustomBlockBuilder(generator, block, "crop");
-        }
-
-        public static CustomBlockBuilder registerCustomCrossBlock(BlockStateModelGenerator generator, Block block) {
-                return new CustomBlockBuilder(generator, block, "cross");
-        }
 
         public static FlowerbedBlockExporter.CustomFlowerbedBuilder registerCustomFlowerbedBlock(BlockStateModelGenerator generator, Block block) {
                 return FlowerbedBlockExporter.registerCustomFlowerbedBlock(generator, block);
         }
 
-        public static CustomBlockBuilder registerCustomBedBlock(BlockStateModelGenerator generator, Block block) {
-                return new CustomBlockBuilder(generator, block, "bed");
-        }
 }

@@ -2,11 +2,14 @@ package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureMap;
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.SlabType;
 import net.minecraft.data.client.*;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
+
+import java.util.List;
 
 /**
  * Simplified slab block exporter following block-models.md patterns.
@@ -41,10 +44,14 @@ public class SlabBlockExporter extends BaseBlockExporter {
         }
 
         /**
-         * Legacy method for backward compatibility.
+         * Registers a slab block from a BlockDefinition.
+         * Uses textures from the definition's texture array.
          */
-        public static void registerCustomSlabBlock(BlockStateModelGenerator generator, Block block,
-                        String bottomTexture, String topTexture, String sideTexture, String fullTexture) {
-                registerCustomSlabBlock(generator, block, bottomTexture, topTexture, sideTexture, sideTexture, sideTexture, sideTexture);
+        public static void registerCustomSlabBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+                List<String> textureList = definition.getTextures();
+                if (textureList != null && !textureList.isEmpty()) {
+                        String[] textures = textureList.toArray(new String[0]);
+                        registerCustomSlabBlock(generator, block, textures);
+                }
         }
 }

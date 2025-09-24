@@ -5,6 +5,7 @@
     "creativeTab": "westeros_windows_glass_tab",
     "type": "legacy-model,unconnect:false",
     "label": "Dorne Carved Stone Window",
+    "renderLayer": "cutout",
     "textures": [
         "pane_block/moorish_stone_window_pane"
     ],

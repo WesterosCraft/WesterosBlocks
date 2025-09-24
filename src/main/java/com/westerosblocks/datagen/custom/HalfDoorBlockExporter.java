@@ -3,6 +3,7 @@ package com.westerosblocks.datagen.custom;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.block.custom.WCHalfDoorBlock;
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.DoorHinge;
 import net.minecraft.data.client.*;
@@ -10,6 +11,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.data.client.VariantSettings.Rotation;
 
+import java.util.List;
 import java.util.Optional;
 
 public class HalfDoorBlockExporter extends BaseBlockExporter {
@@ -115,8 +117,23 @@ public class HalfDoorBlockExporter extends BaseBlockExporter {
     }
 
     /**
+     * Registers a half door block from a BlockDefinition.
+     * Uses textures from the definition's texture array.
+     */
+    public static void registerCustomHalfDoorBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        List<String> textureList = definition.getTextures();
+        if (textureList != null && !textureList.isEmpty()) {
+            String texturePath = textureList.get(0);
+            registerHalfDoorBlock(generator, block, texturePath);
+        } else {
+            // Fallback if no textures defined
+            registerHalfDoorBlock(generator, block, "missingno");
+        }
+    }
+
+    /**
      * Generates item models for a half door block.
-     * 
+     *
      * @param generator The ItemModelGenerator to register the model with
      * @param block The half door block to generate item models for
      * @param texturePath The texture path to use for the item model
@@ -125,7 +142,7 @@ public class HalfDoorBlockExporter extends BaseBlockExporter {
         // Create a simple item model that uses the block texture
         Identifier modelId = ModelIds.getItemModelId(block.asItem());
         TextureMap textureMap = TextureMap.layer0(createBlockIdentifier(texturePath));
-        
+
         Models.GENERATED.upload(modelId, textureMap, generator.writer);
     }
 }

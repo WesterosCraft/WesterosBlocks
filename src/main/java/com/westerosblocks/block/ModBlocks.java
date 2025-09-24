@@ -142,25 +142,24 @@ public class ModBlocks {
                         .noCollision()
                         .build();
 
-//
-//                case "slab":
-//                    return BlockBuilder.slab()
-//                        .strength(definition.getStrength())
-//                        .resistance(definition.getResistance())
-//                        .requiresTool()
-//                        .sounds(soundGroup)
-//                        .build();
-//
-//                case "halfdoor":
-//                    return BlockBuilder.halfDoor()
-//                        .strength(definition.getStrength())
-//                        .resistance(definition.getResistance())
-//                        .requiresTool()
-//                        .sounds(soundGroup)
-//                        .locked(false) // TODO: Extract from definition
-//                        .allowUnsupported(definition.isAllowUnsupported())
-//                        .build();
-//
+                case "slab":
+                    return BlockBuilder.slab()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .requiresTool()
+                        .sounds(soundGroup)
+                        .build();
+
+                case "halfdoor":
+                    return BlockBuilder.halfDoor()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .requiresTool()
+                        .sounds(soundGroup)
+                        .locked(definition.isLocked())
+                        .allowUnsupported(definition.isAllowUnsupported())
+                        .build();
+
 //                case "pane":
 //                    return BlockBuilder.pane()
 //                        .strength(definition.getStrength())
@@ -431,106 +430,6 @@ public class ModBlocks {
                     .noParticle(true)
                     .build());
 
-    // Half Door Blocks (Shutters)
-    public static final Block BIRCH_WINDOW_SHUTTERS = registerBlock(
-            "birch_window_shutters",
-            BlockBuilder.halfDoor()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .allowUnsupported()
-                    .build());
-
-    public static final Block DORNE_RED_WINDOW_SHUTTERS = registerBlock(
-            "dorne_red_window_shutters",
-            BlockBuilder.halfDoor()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .allowUnsupported()
-                    .build());
-
-    public static final Block GREEN_LANNISPORT_WINDOW_SHUTTERS = registerBlock(
-            "green_lannisport_window_shutters",
-            BlockBuilder.halfDoor()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .allowUnsupported()
-                    .build());
-
-    public static final Block GREY_WOOD_WINDOW_SHUTTERS = registerBlock(
-            "grey_wood_window_shutters",
-            BlockBuilder.halfDoor()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .allowUnsupported()
-                    .build());
-
-    public static final Block JUNGLE_WINDOW_SHUTTERS = registerBlock(
-            "jungle_window_shutters",
-            BlockBuilder.halfDoor()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .allowUnsupported()
-                    .build());
-
-    public static final Block NORTHERN_WOOD_WINDOW_SHUTTERS = registerBlock(
-            "northern_wood_window_shutters",
-            BlockBuilder.halfDoor()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .allowUnsupported()
-                    .build());
-
-    public static final Block OAK_WINDOW_SHUTTERS = registerBlock(
-            "oak_window_shutters",
-            BlockBuilder.halfDoor()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .allowUnsupported()
-                    .build());
-
-    public static final Block REACH_BLUE_WINDOW_SHUTTERS = registerBlock(
-            "reach_blue_window_shutters",
-            BlockBuilder.halfDoor()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .allowUnsupported()
-                    .build());
-
-    public static final Block SPRUCE_WINDOW_SHUTTERS = registerBlock(
-            "spruce_window_shutters",
-            BlockBuilder.halfDoor()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .allowUnsupported()
-                    .build());
-
-    public static final Block WHITE_WOOD_WINDOW_SHUTTERS = registerBlock(
-            "white_wood_window_shutters",
-            BlockBuilder.halfDoor()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .locked(false)
-                    .allowUnsupported(true)
-                    .build());
-
     // Pane Blocks
     public static final Block DORNE_CARVED_STONE_WINDOW = registerBlock(
             "dorne_carved_stone_window",
@@ -673,105 +572,8 @@ public class ModBlocks {
                     .allowUnsupported(true)
                     .nonOpaque()
                     .build());
-
-    // Slab blocks
-    public static final Block APPLE_BASKET_SLAB = registerBlock(
-            "apple_basket_slab",
-            BlockBuilder.slab()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block APRICOT_BASKET_SLAB = registerBlock(
-            "apricot_basket_slab",
-            BlockBuilder.slab()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block CLOSED_BASKET_SLAB = registerBlock(
-            "closed_basket_slab",
-            BlockBuilder.slab()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block BERRY_BASKET_SLAB = registerBlock(
-            "berry_basket_slab",
-            BlockBuilder.slab()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block CARROT_BASKET_SLAB = registerBlock(
-            "carrot_basket_slab",
-            BlockBuilder.slab()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block CUT_GRAIN_FLOUR_SACK = registerBlock(
-            "cut_grain_flour_sack",
-            BlockBuilder.slab()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.GRAVEL)
-                    .build());
-
-    public static final Block DATE_BASKET_SLAB = registerBlock(
-            "date_basket_slab",
-            BlockBuilder.slab()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block FIREWOOD_SLAB = registerBlock(
-            "firewood_slab",
-            BlockBuilder.slab()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block FISH_BASKET_SLAB = registerBlock(
-            "fish_basket_slab",
-            BlockBuilder.slab()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block GRAIN_BASKET_SLAB = registerBlock(
-            "grain_basket_slab",
-            BlockBuilder.slab()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block GRAIN_FLOUR_SACK = registerBlock(
-            "grain_flour_sack",
-            BlockBuilder.slab()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.GRAVEL)
-                    .build());
-
-    public static final Block HOP_BASKET_SLAB = registerBlock(
-            "hop_basket_slab",
-            BlockBuilder.slab()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    // Branch Blocks
+//
+//    // Branch Blocks
     public static final Block OAK_BRANCH = registerBlock(
             "oak_branch",
             BlockBuilder.branch()

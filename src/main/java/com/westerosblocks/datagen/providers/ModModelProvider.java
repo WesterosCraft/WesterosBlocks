@@ -27,136 +27,17 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator bsmg) {
         generateModelsFromDefinitions(bsmg);
 
-        // Solid Blocks
-//        registerCustomSolidBlock(bsmg, SolidBlocks.TIMBER_NORTHERN_BLUE_BRESSUMMER).state("plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all").state("plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all").state("plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all").state("plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1").state("plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all").build();
-//        registerCustomSolidBlock(bsmg, SolidBlocks.TIMBER_NORTHERN_GREEN_LEFTHATCH).state("plaster/smooth/gulltown_green/all", "wood/northern/all","plaster/smooth/gulltown_green/all").state("plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all").state("plaster/smooth/highgarden_green/all", "wood/northern/all", "plaster/smooth/highgarden_green/all").state("plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1").state("plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all").build();
-
         // Table Blocks
-        registerCustomTableBlock(bsmg, ModBlocks.OAK_TABLE).texture("wood/oak/all").build();
-
-
-        // Slab Blocks
-        registerCustomSlabBlock(bsmg, ModBlocks.APPLE_BASKET_SLAB)
-                .textures("crate_block/basket_bottom", "crate_block/basket_apple",
-                        "crate_block/basket_side_slab")
-                .build();
-
-        registerCustomSlabBlock(bsmg, ModBlocks.APRICOT_BASKET_SLAB)
-                .textures("crate_block/basket_bottom", "crate_block/basket_apricot",
-                        "crate_block/basket_side_slab")
-                .build();
-
-        registerCustomSlabBlock(bsmg, ModBlocks.CLOSED_BASKET_SLAB)
-                .textures("crate_block/basket_bottom", "crate_block/basket_top_closed",
-                        "crate_block/basket_side_slab")
-                .build();
-
-        registerCustomSlabBlock(bsmg, ModBlocks.BERRY_BASKET_SLAB)
-                .textures("crate_block/basket_bottom", "crate_block/basket_berry",
-                        "crate_block/basket_side_slab")
-                .build();
-
-        registerCustomSlabBlock(bsmg, ModBlocks.CARROT_BASKET_SLAB)
-                .textures("crate_block/basket_bottom", "crate_block/basket_carrot",
-                        "crate_block/basket_side_slab")
-                .build();
-
-        registerCustomSlabBlock(bsmg, ModBlocks.CUT_GRAIN_FLOUR_SACK)
-                .textures("grain_sack/all", "grain_sack/cut", "grain_sack/front", "grain_sack/front",
-                        "grain_sack/side")
-                .build();
-
-        registerCustomSlabBlock(bsmg, ModBlocks.DATE_BASKET_SLAB)
-                .textures("crate_block/basket_bottom", "crate_block/basket_dates",
-                        "crate_block/basket_side_slab")
-                .build();
-
-        registerCustomSlabBlock(bsmg, ModBlocks.FIREWOOD_SLAB)
-                .textures("firewood/side", "firewood/side", "firewood/top")
-                .build();
-
-        registerCustomSlabBlock(bsmg, ModBlocks.FISH_BASKET_SLAB)
-                .textures("crate_block/basket_bottom", "crate_block/basket_fish",
-                        "crate_block/basket_side_slab")
-                .build();
-
-        registerCustomSlabBlock(bsmg, ModBlocks.GRAIN_BASKET_SLAB)
-                .textures("crate_block/basket_bottom", "crate_block/basket_grain",
-                        "crate_block/basket_side_slab")
-                .build();
-
-        registerCustomSlabBlock(bsmg, ModBlocks.GRAIN_FLOUR_SACK)
-                .textures("grain_sack/all", "grain_sack/all", "grain_sack/front", "grain_sack/front",
-                        "grain_sack/side")
-                .build();
-
-        registerCustomSlabBlock(bsmg, ModBlocks.HOP_BASKET_SLAB)
-                .textures("crate_block/basket_bottom", "crate_block/basket_hop",
-                        "crate_block/basket_side_slab")
-                .build();
+        registerCustomTableBlock(bsmg, ModBlocks.OAK_TABLE)
+                .texture("wood/oak/all").build();
 
         // Branch Blocks
-        registerCustomBranchBlock(bsmg, ModBlocks.OAK_BRANCH).texture("bark/oak/side")
+        registerCustomBranchBlock(bsmg, ModBlocks.OAK_BRANCH)
+                .texture("bark/oak/side")
                 .build();
-        registerCustomBranchBlock(bsmg, ModBlocks.BIRCH_BRANCH).texture("bark/birch/side").build();
-
-        // Door Blocks
-//        registerCustomDoorBlock(bsmg, ModBlocks.BIRCH_DOOR)
-//                .textures("wood/birch/door_top", "wood/birch/door_bottom").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.EYRIE_WEIRWOOD_DOOR)
-//                .textures("door_block/door_weirwood_top", "door_block/door_weirwood_bottom").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.GREY_WOOD_DOOR)
-//                .textures("wood/grey/door_top", "wood/grey/door_bottom").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.HARRENHAL_SECRET_DOOR)
-//                .textures("ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.JUNGLE_DOOR)
-//                .textures("wood/jungle/door_top", "wood/jungle/door_bottom").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_BIRCH_DOOR)
-//                .textures("wood/birch/door_locked_top", "wood/birch/door_locked_bottom").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_DARK_NORTHERN_WOOD_DOOR)
-//                .textures("wood/northern/door_locked_top", "wood/northern/door_locked_bottom").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_GREY_WOOD_DOOR)
-//                .textures("wood/grey/door_locked_top", "wood/grey/door_locked_bottom").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_JUNGLE_DOOR)
-//                .textures("wood/jungle/door_locked_top", "wood/jungle/door_locked_bottom").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_OAK_DOOR)
-//                .textures("wood/oak/door_locked_top", "wood/oak/door_locked_bottom").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_SPRUCE_DOOR)
-//                .textures("wood/spruce/door_locked_top", "wood/spruce/door_locked_bottom").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_WHITE_WOOD_DOOR)
-//                .textures("wood/white/door_locked_top", "wood/white/door_locked_bottom").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.NORTHERN_WOOD_DOOR)
-//                .textures("wood/northern/door_top", "wood/northern/door_bottom").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.OAK_DOOR)
-//                .textures("wood/oak/door_top", "wood/oak/door_bottom").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.RED_KEEP_SECRET_DOOR)
-//                .textures("ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.SPRUCE_DOOR)
-//                .textures("wood/spruce/door_top", "wood/spruce/door_bottom").build();
-//        registerCustomDoorBlock(bsmg, ModBlocks.WHITE_WOOD_DOOR)
-//                .textures("wood/white/door_top", "wood/white/door_bottom").build();
-
-        // Half Door Blocks (Shutters)
-        registerCustomHalfDoorBlock(bsmg, ModBlocks.BIRCH_WINDOW_SHUTTERS)
-                .texture("wood/birch/shutters").build();
-        registerCustomHalfDoorBlock(bsmg, ModBlocks.DORNE_RED_WINDOW_SHUTTERS)
-                .texture("shutter_block/shutters_dorne").build();
-        registerCustomHalfDoorBlock(bsmg, ModBlocks.GREEN_LANNISPORT_WINDOW_SHUTTERS)
-                .texture("shutter_block/shutters_lannisport").build();
-        registerCustomHalfDoorBlock(bsmg, ModBlocks.GREY_WOOD_WINDOW_SHUTTERS)
-                .texture("wood/grey/shutters").build();
-        registerCustomHalfDoorBlock(bsmg, ModBlocks.JUNGLE_WINDOW_SHUTTERS)
-                .texture("wood/jungle/shutters").build();
-        registerCustomHalfDoorBlock(bsmg, ModBlocks.NORTHERN_WOOD_WINDOW_SHUTTERS)
-                .texture("wood/northern/shutters").build();
-        registerCustomHalfDoorBlock(bsmg, ModBlocks.OAK_WINDOW_SHUTTERS)
-                .texture("wood/oak/shutters").build();
-        registerCustomHalfDoorBlock(bsmg, ModBlocks.REACH_BLUE_WINDOW_SHUTTERS)
-                .texture("shutter_block/shutters_reach").build();
-        registerCustomHalfDoorBlock(bsmg, ModBlocks.SPRUCE_WINDOW_SHUTTERS)
-                .texture("wood/spruce/shutters").build();
-        registerCustomHalfDoorBlock(bsmg, ModBlocks.WHITE_WOOD_WINDOW_SHUTTERS)
-                .texture("wood/white/shutters").build();
+        registerCustomBranchBlock(bsmg, ModBlocks.BIRCH_BRANCH)
+                .texture("bark/birch/side")
+                .build();
 
         // Pane Blocks
         registerCustomPaneBlock(bsmg, ModBlocks.DORNE_CARVED_STONE_WINDOW)
@@ -816,11 +697,6 @@ public class ModModelProvider extends FabricModelProvider {
         ParticleEmitterDatagen.registerCustomParticleEmitterBlock(bsmg, ModBlocks.SIGNAL_SMOKE_PARTICLE_EMITTER, "signal_smoke_particle_emitter");
     }
 
-    @Override
-    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        // Item models are now handled automatically by the block exporters
-    }
-
     private void generateModelsFromDefinitions(BlockStateModelGenerator bsmg) {
         BlockDefinitionRegistry registry = BlockDefinitionRegistry.getInstance();
 
@@ -876,6 +752,28 @@ public class ModModelProvider extends FabricModelProvider {
             }
         }
 
-        // TODO: Add other block types (slab, etc.) as needed
+        // Generate slab block models
+        for (BlockDefinition definition : registry.getByType("slab")) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block != null) {
+                SlabBlockExporter.registerCustomSlabBlock(bsmg, block, definition);
+            }
+        }
+
+        // Generate halfdoor block models
+        for (BlockDefinition definition : registry.getByType("halfdoor")) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block != null) {
+                HalfDoorBlockExporter.registerCustomHalfDoorBlock(bsmg, block, definition);
+            }
+        }
+
+
+        // TODO: Add other block types as needed
+    }
+
+    @Override
+    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        // Item models are now handled automatically by the block exporters
     }
 }

@@ -5,6 +5,7 @@
     "creativeTab": "westeros_cloth_fibers_tab",
     "type": "legacy-model,unconnect:false",
     "label": "Vertical Net",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [
