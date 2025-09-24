@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Pink Thistle",
     "type": "plant-id:pink_thistle",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

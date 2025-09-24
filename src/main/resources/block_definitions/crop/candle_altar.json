@@ -1,5 +1,5 @@
 {
-    "blockName": "candle_altar_old",
+    "blockName": "candle_altar",
     "blockType": "crop",
     "stepSound": "powder",
     "creativeTab": "westeros_lighting_tab",

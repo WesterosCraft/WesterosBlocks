@@ -4,6 +4,7 @@
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Red Mushroom 8",
     "type": "plant-id:red_mushroom_8",
+    "renderLayer": "cutout",
     "textures": [
         "minecraft:block/dirt",
         "minecraft:block/flower_pot",

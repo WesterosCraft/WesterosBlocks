@@ -4,6 +4,7 @@
     "stepSound": "cloth",
     "creativeTab": "westeros_food_blocks_tab",
     "label": "Dead Frog",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

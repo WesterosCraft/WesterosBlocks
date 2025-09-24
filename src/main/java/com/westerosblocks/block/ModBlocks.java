@@ -26,8 +26,6 @@ public class ModBlocks {
     private static final Map<String, Block> AUTO_REGISTERED_BLOCKS = new HashMap<>();
 
     static {
-        PlantBlocks.initialize();
-
         registerBlocksFromDefinitions();
     }
 
@@ -116,6 +114,34 @@ public class ModBlocks {
                         .requiresTool()
                         .sounds(soundGroup)
                         .build();
+
+                case "plant":
+                    return BlockBuilder.plant()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .sounds(soundGroup)
+                        .nonOpaque()
+                        .noCollision()
+                        .layerSensitive(true)
+                        .build();
+
+                case "flowerpot":
+                    return BlockBuilder.flowerPot()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .sounds(soundGroup)
+                        .nonOpaque()
+                        .build();
+
+                case "web":
+                    return BlockBuilder.web()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .sounds(soundGroup)
+                        .nonOpaque()
+                        .noCollision()
+                        .build();
+
 //
 //                case "slab":
 //                    return BlockBuilder.slab()
@@ -887,376 +913,6 @@ public class ModBlocks {
                     .noCollision()
                     .build());
 
-    // Web Blocks
-    public static final Block BEES = registerBlock(
-            "bees",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block ALYSSAS_TEARS_MIST_ONE = registerBlock(
-            "alyssas_tears_mist_one",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block ALYSSAS_TEARS_MIST_TWO = registerBlock(
-            "alyssas_tears_mist_two",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .connectState(true)
-                    .build());
-
-    public static final Block ALYSSAS_TEARS_MIST_THREE = registerBlock(
-            "alyssas_tears_mist_three",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .connectState(true)
-                    .build());
-
-    public static final Block ALYSSAS_TEARS_MIST_FOUR = registerBlock(
-            "alyssas_tears_mist_four",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .connectState(true)
-                    .build());
-
-    public static final Block BLACK_BRICICLE = registerBlock(
-            "black_bricicle",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.STONE)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block BUSHEL_OF_HERBS = registerBlock(
-            "bushel_of_herbs",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block BUSHEL_OF_SOURLEAF = registerBlock(
-            "bushel_of_sourleaf",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block BUTTERFLY_BLUE = registerBlock(
-            "butterfly_blue",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block BUTTERFLY_ORANGE = registerBlock(
-            "butterfly_orange",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block BUTTERFLY_RED = registerBlock(
-            "butterfly_red",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block BUTTERFLY_WHITE = registerBlock(
-            "butterfly_white",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block BUTTERFLY_YELLOW = registerBlock(
-            "butterfly_yellow",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block CHAIN_BLOCK_HARNESS = registerBlock(
-            "chain_block_harness",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block CHILI_RISTRA = registerBlock(
-            "chili_ristra",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block COBWEB = registerBlock(
-            "cobweb",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .toggleOnUse()
-                    .build());
-
-    public static final Block DEAD_FISH = registerBlock(
-            "dead_fish",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block DEAD_FOWL = registerBlock(
-            "dead_fowl",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block DEAD_FROG = registerBlock(
-            "dead_frog",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block DEAD_HARE = registerBlock(
-            "dead_hare",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block DEAD_JUNGLE_TALL_GRASS = registerBlock(
-            "dead_jungle_tall_grass",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.GRASS)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .layerSensitive()
-                    .build());
-
-    public static final Block DEAD_RAT = registerBlock(
-            "dead_rat",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block DEAD_SAVANNA_TALL_GRASS = registerBlock(
-            "dead_savanna_tall_grass",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.GRASS)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .layerSensitive()
-                    .build());
-
-    public static final Block DRAGONFLY = registerBlock(
-            "dragonfly",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block FLIES = registerBlock(
-            "flies",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block GARLIC_STRAND = registerBlock(
-            "garlic_strand",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block ICICLE = registerBlock(
-            "icicle",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block IRON_THRONE_RANDOM_BLADES = registerBlock(
-            "iron_throne_random_blades",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block JUNGLE_TALL_FERN = registerBlock(
-            "jungle_tall_fern",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.GRASS)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .layerSensitive()
-                    .build());
-
-    public static final Block JUNGLE_TALL_GRASS = registerBlock(
-            "jungle_tall_grass",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.GRASS)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .layerSensitive()
-                    .build());
-
-    public static final Block ROPE_BLOCK_HARNESS = registerBlock(
-            "rope_block_harness",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block SAUSAGES_LEG_OF_HAM = registerBlock(
-            "sausages_leg_of_ham",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block SAVANNA_TALL_GRASS = registerBlock(
-            "savanna_tall_grass",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.GRASS)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .layerSensitive()
-                    .build());
-
-    public static final Block SMOKE = registerBlock(
-            "smoke",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .toggleOnUse()
-                    .build());
-
-    public static final Block VERTICAL_CHAIN = registerBlock(
-            "vertical_chain",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
-
-    public static final Block VERTICAL_ROPE = registerBlock(
-            "vertical_rope",
-            BlockBuilder.web()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .noCollision()
-                    .noInWeb()
-                    .build());
 
     // Fire Blocks
     public static final Block SAFE_FIRE = registerBlock(

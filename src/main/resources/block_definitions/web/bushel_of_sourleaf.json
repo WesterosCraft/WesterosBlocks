@@ -4,6 +4,7 @@
     "stepSound": "cloth",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Bushel of Sourleaf",
+    "renderLayer": "cutout",
     "textures": [
         "web_block/food_sourleaf"
     ],

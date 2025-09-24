@@ -4,6 +4,7 @@
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Cow Parsely",
     "type": "plant-id:cow_parsely",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

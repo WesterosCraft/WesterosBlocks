@@ -4,6 +4,7 @@
     "stepSound": "cloth",
     "creativeTab": "westeros_misc_tab",
     "label": "Southern Orange Butterfly",
+    "renderLayer": "cutout",
     "textures": [
         "web_block/bug_butterfly_orange"
     ],

@@ -4,6 +4,7 @@
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Potted Dock Leaf",
     "type": "plant-id:dock_leaf",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

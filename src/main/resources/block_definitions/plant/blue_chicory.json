@@ -1,9 +1,10 @@
 {
-    "blockName": "blue_chicory_old",
+    "blockName": "blue_chicory",
     "blockType": "plant",
     "type": "layerSensitive",
     "stepSound": "grass",
     "creativeTab": "westeros_flowers_tab",
+    "renderLayer": "cutout",
     "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,

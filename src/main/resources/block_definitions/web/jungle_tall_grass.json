@@ -4,6 +4,7 @@
     "stepSound": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Jungle Tall Grass",
+    "renderLayer": "cutout",
     "textures": [
         "jungle_tall_grass/down_side1"
     ],

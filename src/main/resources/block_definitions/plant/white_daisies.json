@@ -2,6 +2,7 @@
     "blockName": "white_daisies",
     "blockType": "plant",
     "type": "layerSensitive",
+    "renderLayer": "cutout",
     "creativeTab": "westeros_flowers_tab",
     "boundingBox": {
         "xMin": 0.3,

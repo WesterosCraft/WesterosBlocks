@@ -3,6 +3,7 @@
     "blockType": "web",
     "stepSound": "cloth",
     "creativeTab": "westeros_food_blocks_tab",
+    "renderLayer": "cutout",
     "label": "Dead Fish",
     "randomTextures": [
         {

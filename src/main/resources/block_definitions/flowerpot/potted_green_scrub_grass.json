@@ -4,6 +4,7 @@
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Green Scrub Grass",
     "type": "plant-id:green_scrub_grass",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

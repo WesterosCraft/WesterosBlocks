@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted White Roses",
     "type": "plant-id:white_roses",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

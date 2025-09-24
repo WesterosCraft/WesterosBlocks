@@ -3,6 +3,7 @@
     "blockType": "web",
     "stepSound": "cloth",
     "creativeTab": "westeros_decor_tab",
+    "renderLayer": "cutout",
     "label": "Cobweb",
     "type": "toggleOnUse,no-in-web",
     "states": [

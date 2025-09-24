@@ -1,9 +1,10 @@
 {
-    "blockName": "potted_blue_bells_old",
+    "blockName": "potted_blue_bells",
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Blue Bells",
     "type": "plant-id:blue_bells",
+    "renderLayer": "cutout",
     "textures": [
         "minecraft:block/dirt",
         "minecraft:block/flower_pot",

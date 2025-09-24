@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Orange Trollius",
     "type": "plant-id:orange_trollius",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

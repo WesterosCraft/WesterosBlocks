@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Purple Foxglove",
     "type": "plant-id:purple_foxglove",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

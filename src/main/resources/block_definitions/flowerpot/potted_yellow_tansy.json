@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Tansy",
     "type": "plant-id:yellow_tansy",
+    "renderLayer": "cutout",
     "textures": [
         "minecraft:block/dirt",
         "minecraft:block/flower_pot",

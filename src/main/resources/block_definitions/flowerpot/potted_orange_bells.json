@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Orange Bells",
     "type": "plant-id:orange_bells",
+    "renderLayer": "cutout",
     "textures": [
         "minecraft:block/dirt",
         "minecraft:block/flower_pot",

@@ -2,6 +2,7 @@
     "blockName": "bees",
     "blockType": "web",
     "stepSound": "cloth",
+    "renderLayer": "cutout",
     "creativeTab": "westeros_misc_tab",
     "label": "Bees",
     "textures": [

@@ -4,6 +4,7 @@
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Green Spiny Herb",
     "type": "plant-id:green_spiny_herb",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Flowering Spiny Herb",
     "type": "plant-id:red_flowering_spiny_herb",
+    "renderLayer": "cutout",
     "textures": [
         "minecraft:block/dirt",
         "minecraft:block/flower_pot",

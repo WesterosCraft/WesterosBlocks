@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Dark Roses",
     "type": "plant-id:red_dark_roses",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

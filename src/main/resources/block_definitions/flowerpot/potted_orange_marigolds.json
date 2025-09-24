@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Orange Marigolds",
     "type": "plant-id:orange_marigolds",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

@@ -4,6 +4,7 @@
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Brown Mushroom 3",
     "type": "plant-id:brown_mushroom_3",
+    "renderLayer": "cutout",
     "textures": [
         "minecraft:block/dirt",
         "minecraft:block/flower_pot",

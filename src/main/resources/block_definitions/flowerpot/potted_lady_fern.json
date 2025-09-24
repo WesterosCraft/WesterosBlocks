@@ -4,6 +4,7 @@
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Lady Fern",
     "type": "plant-id:lady_fern",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

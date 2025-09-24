@@ -3,6 +3,7 @@
     "blockType": "plant",
     "stepSound": "grass",
     "creativeTab": "westeros_water_air_tab",
+    "renderLayer": "cutout",
     "label": "Kelp",
     "randomTextures": [
         {

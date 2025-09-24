@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Daisies",
     "type": "plant-id:yellow_daisies",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

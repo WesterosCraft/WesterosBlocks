@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted White Chamomile",
     "type": "plant-id:white_chamomile",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

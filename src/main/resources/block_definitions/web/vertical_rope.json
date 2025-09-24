@@ -4,6 +4,7 @@
     "stepSound": "cloth",
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Vertical Rope",
+    "renderLayer": "cutout",
     "textures": [
         "web_block/rope_vertical"
     ],

@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Lupine",
     "type": "plant-id:yellow_lupine",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

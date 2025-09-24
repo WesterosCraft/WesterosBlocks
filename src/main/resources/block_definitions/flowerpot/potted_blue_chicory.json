@@ -1,9 +1,10 @@
 {
-    "blockName": "potted_blue_chicory_old",
+    "blockName": "potted_blue_chicory",
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Blue Chicory",
     "type": "plant-id:blue_chicory",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

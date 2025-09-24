@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Blue Forget-me-nots",
     "type": "plant-id:blue_forgetmenots",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

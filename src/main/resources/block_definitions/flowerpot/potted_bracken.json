@@ -4,6 +4,7 @@
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Bracken",
     "type": "plant-id:bracken",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

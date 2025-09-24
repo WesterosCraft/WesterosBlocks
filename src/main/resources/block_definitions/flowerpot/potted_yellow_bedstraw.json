@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Bedstraw",
     "type": "plant-id:yellow_bedstraw",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

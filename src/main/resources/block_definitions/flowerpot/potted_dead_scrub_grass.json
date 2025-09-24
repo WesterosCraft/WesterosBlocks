@@ -4,6 +4,7 @@
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Dead Scrub Grass",
     "type": "plant-id:dead_scrub_grass",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

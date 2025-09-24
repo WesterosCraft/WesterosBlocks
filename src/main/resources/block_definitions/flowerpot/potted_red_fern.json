@@ -4,6 +4,7 @@
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Red Fern",
     "type": "plant-id:red_fern",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

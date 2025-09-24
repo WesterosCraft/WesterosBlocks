@@ -4,6 +4,7 @@
     "stepSound": "cloth",
     "creativeTab": "westeros_metal_tab",
     "label": "Chain Block Harness",
+    "renderLayer": "cutout",
     "textures": [
         "web_block/chain_blockharness"
     ],

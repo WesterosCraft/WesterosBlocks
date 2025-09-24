@@ -2,6 +2,7 @@
     "blockName": "garlic_strand",
     "blockType": "web",
     "stepSound": "cloth",
+    "renderLayer": "cutout",
     "creativeTab": "westeros_food_blocks_tab",
     "label": "Garlic Strand",
     "textures": [

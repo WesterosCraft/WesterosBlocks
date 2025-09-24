@@ -4,6 +4,7 @@
     "stepSound": "cloth",
     "creativeTab": "westeros_metal_tab",
     "label": "Iron Throne Random Blades",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

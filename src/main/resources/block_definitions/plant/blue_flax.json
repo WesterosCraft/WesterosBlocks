@@ -12,6 +12,7 @@
         "zMax": 0.7
     },
     "label": "Blue Flax",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

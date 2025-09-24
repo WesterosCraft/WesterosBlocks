@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Dandelions",
     "type": "plant-id:yellow_dandelions",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

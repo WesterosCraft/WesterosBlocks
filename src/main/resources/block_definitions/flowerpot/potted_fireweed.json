@@ -4,6 +4,7 @@
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Fireweed",
     "type": "plant-id:fireweed",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

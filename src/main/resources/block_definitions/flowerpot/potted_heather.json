@@ -4,6 +4,7 @@
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Heather",
     "type": "plant-id:heather",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

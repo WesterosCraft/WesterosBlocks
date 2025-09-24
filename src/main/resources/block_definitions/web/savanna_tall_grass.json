@@ -4,6 +4,7 @@
     "stepSound": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Savanna Tall Grass",
+    "renderLayer": "cutout",
     "textures": [
         "savanna_tall_grass/savanna_tall_grass"
     ],

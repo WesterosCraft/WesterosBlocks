@@ -5,6 +5,7 @@
     "label": "Potted Grass",
     "type": "plant-id:fern",
     "colorMult": "textures/colormap/grass",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

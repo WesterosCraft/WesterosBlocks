@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted White Daisies",
     "type": "plant-id:white_daisies",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

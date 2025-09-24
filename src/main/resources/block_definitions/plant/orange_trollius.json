@@ -3,6 +3,7 @@
     "blockType": "plant",
     "type": "layerSensitive",
     "creativeTab": "westeros_flowers_tab",
+    "renderLayer": "cutout",
     "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,

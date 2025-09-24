@@ -3,6 +3,7 @@
     "blockType": "web",
     "stepSound": "stone",
     "creativeTab": "westeros_misc_tab",
+    "renderLayer": "cutout",
     "label": "Melted Ashlar Black Bricicle",
     "textures": [
         "ashlar_melted/black/bricicle/side"

@@ -4,6 +4,7 @@
     "stepSound": "cloth",
     "creativeTab": "westeros_food_blocks_tab",
     "label": "Bushel of Herbs",
+    "renderLayer": "cutout",
     "textures": [
         "web_block/food_herbs"
     ],

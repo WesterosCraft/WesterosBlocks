@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Orange Sun Star",
     "type": "plant-id:orange_sun_star",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

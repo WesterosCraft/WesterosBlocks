@@ -1,9 +1,9 @@
 {
-    "blockName": "jasmine_vines_old",
+    "blockName": "jasmine_vines",
     "blockType": "vines",
     "stepSound": "grass",
     "creativeTab": "westeros_foliage_tab",
-    "label": "Jasmine Vines Old",
+    "label": "Jasmine Vines",
     "randomTextures": [
         {
             "textures": [

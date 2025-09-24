@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Blue Orchid",
     "type": "plant-id:blue_orchid",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

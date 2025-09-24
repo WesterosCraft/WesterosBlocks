@@ -3,6 +3,7 @@
     "blockType": "web",
     "stepSound": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
+    "renderLayer": "cutout",
     "label": "Cattails",
     "randomTextures": [
         {

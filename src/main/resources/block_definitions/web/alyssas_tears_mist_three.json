@@ -5,6 +5,7 @@
     "nonOpaque": true,
     "alphaRender": true,
     "connectTo": "material",
+    "renderLayer": "cutout",
     "creativeTab": "westeros_water_air_tab",
     "label": "Alyssas Tears Mist Three",
     "textures": [

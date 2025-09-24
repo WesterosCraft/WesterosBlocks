@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Purple Violets",
     "type": "plant-id:purple_violets",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

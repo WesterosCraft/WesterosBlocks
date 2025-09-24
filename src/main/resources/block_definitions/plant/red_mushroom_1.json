@@ -3,6 +3,7 @@
     "blockType": "plant",
     "type": "layerSensitive",
     "stepSound": "grass",
+    "renderLayer": "cutout",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "boundingBox": {
         "xMin": 0.3,

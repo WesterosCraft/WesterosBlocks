@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Pink Tulips",
     "type": "plant-id:pink_tulips",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

@@ -5,6 +5,7 @@
     "creativeTab": "westeros_water_air_tab",
     "label": "Smoke",
     "type": "toggleOnUse,no-in-web",
+    "renderLayer": "cutout",
     "states": [
         {
             "stateID": "random",

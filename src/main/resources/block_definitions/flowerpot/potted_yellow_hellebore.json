@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Hellebore",
     "type": "plant-id:yellow_hellebore",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

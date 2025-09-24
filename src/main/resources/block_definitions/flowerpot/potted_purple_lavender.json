@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Purple Lavender",
     "type": "plant-id:purple_lavender",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

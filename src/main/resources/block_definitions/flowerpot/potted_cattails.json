@@ -5,6 +5,7 @@
     "label": "Potted Cattails",
     "type": "plant-id:cattails",
     "colorMult": "textures/colormap/reed",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

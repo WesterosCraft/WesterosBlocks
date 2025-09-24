@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Meadow Fescue",
     "type": "plant-id:meadow_fescue",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

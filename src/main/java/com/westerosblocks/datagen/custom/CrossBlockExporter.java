@@ -1,5 +1,6 @@
 package com.westerosblocks.datagen.custom;
 
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.state.property.Properties;
@@ -280,5 +281,92 @@ public class CrossBlockExporter extends BaseBlockExporter {
 
         // Register item model using layer 8 (full height)
         generator.registerParentedItemModel(block, layerModels[8]);
+    }
+
+    /**
+     * Registers a cross block using BlockDefinition (for web blocks and other cross blocks)
+     */
+    public static void registerCrossBlockFromDefinition(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        if (definition.getTextures() == null || definition.getTextures().isEmpty()) {
+            if ((definition.getStates() == null || definition.getStates().isEmpty()) &&
+                (definition.getRandomTextures() == null || definition.getRandomTextures().isEmpty())) {
+                throw new IllegalArgumentException("Cross blocks require textures, states, or randomTextures");
+            }
+        }
+
+        // Check for color multiplier to determine if tinted
+        boolean isTinted = definition.hasColorMult();
+
+        // Check if this is a layer-sensitive plant
+        boolean isLayerSensitive = "layerSensitive".equals(definition.getType()) ||
+                                   (definition.getType() != null && definition.getType().contains("layerSensitive"));
+
+        if (definition.hasStates()) {
+            // Handle complex state-based blocks (like smoke, cobweb)
+            handleStatesBasedCrossBlock(generator, block, definition, isTinted, isLayerSensitive);
+        } else if (definition.getRandomTextures() != null && !definition.getRandomTextures().isEmpty()) {
+            // Handle random texture blocks
+            String[] texturePaths = definition.getRandomTextures().stream()
+                .flatMap(randomTexture -> randomTexture.getTextures().stream())
+                .toArray(String[]::new);
+
+            if (isLayerSensitive) {
+                generateLayerSensitiveCrossWithRandomTextures(generator, block, texturePaths, isTinted, 4);
+            } else {
+                generateCrossWithRandomTextures(generator, block, texturePaths, isTinted, 4);
+            }
+        } else {
+            // Handle simple texture blocks
+            String texturePath = definition.getTextures().get(0);
+
+            if (isLayerSensitive) {
+                generateLayerSensitiveCross(generator, block, texturePath, isTinted, 1);
+            } else {
+                generateCross(generator, block, texturePath, isTinted, 1);
+            }
+        }
+    }
+
+    /**
+     * Handles blocks with complex states structure (like smoke, cobweb)
+     */
+    private static void handleStatesBasedCrossBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition, boolean isTinted, boolean isLayerSensitive) {
+        // For blocks with states, we need to look for the "random" state or use the first available state
+        for (BlockDefinition.StateVariant state : definition.getStates()) {
+            if ("random".equals(state.getStateID()) && state.hasRandomTextures()) {
+                // Handle random state with random textures
+                String[] texturePaths = state.getRandomTextures().stream()
+                    .flatMap(randomTexture -> randomTexture.getTextures().stream())
+                    .toArray(String[]::new);
+
+                if (isLayerSensitive) {
+                    generateLayerSensitiveCrossWithRandomTextures(generator, block, texturePaths, isTinted, 4);
+                } else {
+                    generateCrossWithRandomTextures(generator, block, texturePaths, isTinted, 4);
+                }
+                return;
+            } else if (state.getTextures() != null && !state.getTextures().isEmpty()) {
+                // Handle first found state with simple textures
+                String texturePath = state.getTextures().get(0);
+
+                if (isLayerSensitive) {
+                    generateLayerSensitiveCross(generator, block, texturePath, isTinted, 1);
+                } else {
+                    generateCross(generator, block, texturePath, isTinted, 1);
+                }
+                return;
+            }
+        }
+
+        // Fallback if no suitable state found
+        if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
+            String texturePath = definition.getTextures().get(0);
+
+            if (isLayerSensitive) {
+                generateLayerSensitiveCross(generator, block, texturePath, isTinted, 1);
+            } else {
+                generateCross(generator, block, texturePath, isTinted, 1);
+            }
+        }
     }
 }

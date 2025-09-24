@@ -4,6 +4,7 @@
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Dead bush",
     "type": "plant-id:dead_bush",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

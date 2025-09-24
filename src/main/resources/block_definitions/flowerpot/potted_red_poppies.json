@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Poppies",
     "type": "plant-id:red_poppies",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

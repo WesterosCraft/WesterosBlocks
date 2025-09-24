@@ -4,6 +4,7 @@
     "type": "layerSensitive",
     "stepSound": "grass",
     "creativeTab": "westeros_crops_herbs_tab",
+    "renderLayer": "cutout",
     "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,

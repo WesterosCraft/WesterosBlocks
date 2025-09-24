@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Daffodils",
     "type": "plant-id:yellow_daffodils",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

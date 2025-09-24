@@ -3,6 +3,7 @@
     "blockType": "web",
     "stepSound": "cloth",
     "creativeTab": "westeros_metal_tab",
+    "renderLayer": "cutout",
     "label": "Vertical Chain",
     "textures": [
         "web_block/chain_vertical"

@@ -4,6 +4,7 @@
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Blue Hyacinth",
     "type": "plant-id:blue_hyacinth",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [
