@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.datagen.ModModels;
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
 import net.minecraft.block.DoorBlock;
 import net.minecraft.block.enums.DoubleBlockHalf;
@@ -8,6 +9,8 @@ import net.minecraft.block.enums.DoorHinge;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
+
+import java.util.List;
 
 public class DoorBlockExporter extends BaseBlockExporter {
 
@@ -91,6 +94,33 @@ public class DoorBlockExporter extends BaseBlockExporter {
                 .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.LEFT, true, createVariant(topLeftOpenModelId, 0))
                 .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, false, createVariant(topRightModelId, 270))
                 .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true, createVariant(topRightOpenModelId, 180));
+    }
+
+    /**
+     * Registers a door block from a BlockDefinition.
+     * Automatically extracts textures from the definition and registers the door block.
+     *
+     * @param generator  The BlockStateModelGenerator to register models with
+     * @param block      The door block to generate models for
+     * @param definition The block definition containing texture information
+     */
+    public static void registerCustomDoorBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        if (definition.getTextures() == null || definition.getTextures().isEmpty()) {
+            throw new IllegalArgumentException("Door block definition must have textures");
+        }
+
+        List<String> textures = definition.getTextures();
+
+        if (textures.size() < 2) {
+            throw new IllegalArgumentException("Door block requires at least 2 textures (top and bottom)");
+        }
+
+        // Extract top and bottom textures from definition
+        String topTexture = textures.get(0);
+        String bottomTexture = textures.get(1);
+
+        // Use the existing registerDoorBlock method
+        registerDoorBlock(generator, block, topTexture, bottomTexture);
     }
 
     /**

@@ -99,16 +99,16 @@ public class ModBlocks {
                         .states(definition.hasStates() ? definition.getStates().size() : 0)
                         .build();
 
-//                case "door":
-//                    return BlockBuilder.door()
-//                        .strength(definition.getStrength())
-//                        .resistance(definition.getResistance())
-//                        .requiresTool()
-//                        .sounds(soundGroup)
-//                        .woodType(getWoodTypeFromDefinition(definition))
-//                        .locked(false) // TODO: Extract from definition
-//                        .allowUnsupported(definition.isAllowUnsupported())
-//                        .build();
+                case "door":
+                    return BlockBuilder.door()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .requiresTool()
+                        .sounds(soundGroup)
+                        .woodType(getWoodTypeFromDefinition(definition))
+                        .locked(definition.isLocked())
+                        .allowUnsupported(definition.isAllowUnsupported())
+                        .build();
 //
 //                case "slab":
 //                    return BlockBuilder.slab()
@@ -407,182 +407,182 @@ public class ModBlocks {
                     .build());
 
     // Door Blocks
-    public static final Block BIRCH_DOOR = registerBlock(
-            "birch_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("birch")
-                    .locked(false)
-                    .build());
-
-    public static final Block EYRIE_WEIRWOOD_DOOR = registerBlock(
-            "eyrie_weirwood_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("weirwood")
-                    .locked(false)
-                    .build());
-
-    public static final Block GREY_WOOD_DOOR = registerBlock(
-            "grey_wood_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("oak")
-                    .locked(false)
-                    .build());
-
-    public static final Block HARRENHAL_SECRET_DOOR = registerBlock(
-            "harrenhal_secret_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("oak")
-                    .locked(true)
-                    .build());
-
-    public static final Block JUNGLE_DOOR = registerBlock(
-            "jungle_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("jungle")
-                    .locked(false)
-                    .build());
-
-    public static final Block NORTHERN_WOOD_DOOR = registerBlock(
-            "northern_wood_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("northern")
-                    .locked(false)
-                    .build());
-
-    public static final Block OAK_DOOR = registerBlock(
-            "oak_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("oak")
-                    .locked(false)
-                    .build());
-
-    public static final Block RED_KEEP_SECRET_DOOR = registerBlock(
-            "red_keep_secret_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("oak")
-                    .locked(true)
-                    .build());
-
-    public static final Block SPRUCE_DOOR = registerBlock(
-            "spruce_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("spruce")
-                    .locked(false)
-                    .build());
-
-    public static final Block WHITE_WOOD_DOOR = registerBlock(
-            "white_wood_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("white")
-                    .locked(false)
-                    .build());
-
-    public static final Block LOCKED_BIRCH_DOOR = registerBlock(
-            "locked_birch_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("birch")
-                    .locked(true)
-                    .allowUnsupported(true)
-                    .build());
-
-    public static final Block LOCKED_DARK_NORTHERN_WOOD_DOOR = registerBlock(
-            "locked_dark_northern_wood_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("northern")
-                    .locked(true)
-                    .allowUnsupported(true)
-                    .build());
-
-    public static final Block LOCKED_GREY_WOOD_DOOR = registerBlock(
-            "locked_grey_wood_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("oak")
-                    .locked(true)
-                    .allowUnsupported(true)
-                    .build());
-
-    public static final Block LOCKED_JUNGLE_DOOR = registerBlock(
-            "locked_jungle_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("jungle")
-                    .locked(true)
-                    .allowUnsupported(true)
-                    .build());
-
-    public static final Block LOCKED_OAK_DOOR = registerBlock(
-            "locked_oak_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("oak")
-                    .locked(true)
-                    .allowUnsupported(true)
-                    .build());
-
-    public static final Block LOCKED_SPRUCE_DOOR = registerBlock(
-            "locked_spruce_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("spruce")
-                    .locked(true)
-                    .allowUnsupported()
-                    .build());
-
-    public static final Block LOCKED_WHITE_WOOD_DOOR = registerBlock(
-            "locked_white_wood_door",
-            BlockBuilder.door()
-                    .strength(2.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("white")
-                    .locked(true)
-                    .allowUnsupported()
-                    .build());
+//    public static final Block BIRCH_DOOR = registerBlock(
+//            "birch_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("birch")
+//                    .locked(false)
+//                    .build());
+//
+//    public static final Block EYRIE_WEIRWOOD_DOOR = registerBlock(
+//            "eyrie_weirwood_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("weirwood")
+//                    .locked(false)
+//                    .build());
+//
+//    public static final Block GREY_WOOD_DOOR = registerBlock(
+//            "grey_wood_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("oak")
+//                    .locked(false)
+//                    .build());
+//
+//    public static final Block HARRENHAL_SECRET_DOOR = registerBlock(
+//            "harrenhal_secret_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("oak")
+//                    .locked(true)
+//                    .build());
+//
+//    public static final Block JUNGLE_DOOR = registerBlock(
+//            "jungle_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("jungle")
+//                    .locked(false)
+//                    .build());
+//
+//    public static final Block NORTHERN_WOOD_DOOR = registerBlock(
+//            "northern_wood_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("northern")
+//                    .locked(false)
+//                    .build());
+//
+//    public static final Block OAK_DOOR = registerBlock(
+//            "oak_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("oak")
+//                    .locked(false)
+//                    .build());
+//
+//    public static final Block RED_KEEP_SECRET_DOOR = registerBlock(
+//            "red_keep_secret_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("oak")
+//                    .locked(true)
+//                    .build());
+//
+//    public static final Block SPRUCE_DOOR = registerBlock(
+//            "spruce_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("spruce")
+//                    .locked(false)
+//                    .build());
+//
+//    public static final Block WHITE_WOOD_DOOR = registerBlock(
+//            "white_wood_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("white")
+//                    .locked(false)
+//                    .build());
+//
+//    public static final Block LOCKED_BIRCH_DOOR = registerBlock(
+//            "locked_birch_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("birch")
+//                    .locked(true)
+//                    .allowUnsupported(true)
+//                    .build());
+//
+//    public static final Block LOCKED_DARK_NORTHERN_WOOD_DOOR = registerBlock(
+//            "locked_dark_northern_wood_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("northern")
+//                    .locked(true)
+//                    .allowUnsupported(true)
+//                    .build());
+//
+//    public static final Block LOCKED_GREY_WOOD_DOOR = registerBlock(
+//            "locked_grey_wood_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("oak")
+//                    .locked(true)
+//                    .allowUnsupported(true)
+//                    .build());
+//
+//    public static final Block LOCKED_JUNGLE_DOOR = registerBlock(
+//            "locked_jungle_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("jungle")
+//                    .locked(true)
+//                    .allowUnsupported(true)
+//                    .build());
+//
+//    public static final Block LOCKED_OAK_DOOR = registerBlock(
+//            "locked_oak_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("oak")
+//                    .locked(true)
+//                    .allowUnsupported(true)
+//                    .build());
+//
+//    public static final Block LOCKED_SPRUCE_DOOR = registerBlock(
+//            "locked_spruce_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("spruce")
+//                    .locked(true)
+//                    .allowUnsupported()
+//                    .build());
+//
+//    public static final Block LOCKED_WHITE_WOOD_DOOR = registerBlock(
+//            "locked_white_wood_door",
+//            BlockBuilder.door()
+//                    .strength(2.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("white")
+//                    .locked(true)
+//                    .allowUnsupported()
+//                    .build());
 
     // Half Door Blocks (Shutters)
     public static final Block BIRCH_WINDOW_SHUTTERS = registerBlock(

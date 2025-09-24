@@ -218,40 +218,40 @@ public class ModModelProvider extends FabricModelProvider {
         registerCustomBranchBlock(bsmg, ModBlocks.BIRCH_BRANCH).texture("bark/birch/side").build();
 
         // Door Blocks
-        registerCustomDoorBlock(bsmg, ModBlocks.BIRCH_DOOR)
-                .textures("wood/birch/door_top", "wood/birch/door_bottom").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.EYRIE_WEIRWOOD_DOOR)
-                .textures("door_block/door_weirwood_top", "door_block/door_weirwood_bottom").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.GREY_WOOD_DOOR)
-                .textures("wood/grey/door_top", "wood/grey/door_bottom").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.HARRENHAL_SECRET_DOOR)
-                .textures("ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.JUNGLE_DOOR)
-                .textures("wood/jungle/door_top", "wood/jungle/door_bottom").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_BIRCH_DOOR)
-                .textures("wood/birch/door_locked_top", "wood/birch/door_locked_bottom").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_DARK_NORTHERN_WOOD_DOOR)
-                .textures("wood/northern/door_locked_top", "wood/northern/door_locked_bottom").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_GREY_WOOD_DOOR)
-                .textures("wood/grey/door_locked_top", "wood/grey/door_locked_bottom").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_JUNGLE_DOOR)
-                .textures("wood/jungle/door_locked_top", "wood/jungle/door_locked_bottom").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_OAK_DOOR)
-                .textures("wood/oak/door_locked_top", "wood/oak/door_locked_bottom").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_SPRUCE_DOOR)
-                .textures("wood/spruce/door_locked_top", "wood/spruce/door_locked_bottom").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_WHITE_WOOD_DOOR)
-                .textures("wood/white/door_locked_top", "wood/white/door_locked_bottom").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.NORTHERN_WOOD_DOOR)
-                .textures("wood/northern/door_top", "wood/northern/door_bottom").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.OAK_DOOR)
-                .textures("wood/oak/door_top", "wood/oak/door_bottom").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.RED_KEEP_SECRET_DOOR)
-                .textures("ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.SPRUCE_DOOR)
-                .textures("wood/spruce/door_top", "wood/spruce/door_bottom").build();
-        registerCustomDoorBlock(bsmg, ModBlocks.WHITE_WOOD_DOOR)
-                .textures("wood/white/door_top", "wood/white/door_bottom").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.BIRCH_DOOR)
+//                .textures("wood/birch/door_top", "wood/birch/door_bottom").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.EYRIE_WEIRWOOD_DOOR)
+//                .textures("door_block/door_weirwood_top", "door_block/door_weirwood_bottom").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.GREY_WOOD_DOOR)
+//                .textures("wood/grey/door_top", "wood/grey/door_bottom").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.HARRENHAL_SECRET_DOOR)
+//                .textures("ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.JUNGLE_DOOR)
+//                .textures("wood/jungle/door_top", "wood/jungle/door_bottom").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_BIRCH_DOOR)
+//                .textures("wood/birch/door_locked_top", "wood/birch/door_locked_bottom").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_DARK_NORTHERN_WOOD_DOOR)
+//                .textures("wood/northern/door_locked_top", "wood/northern/door_locked_bottom").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_GREY_WOOD_DOOR)
+//                .textures("wood/grey/door_locked_top", "wood/grey/door_locked_bottom").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_JUNGLE_DOOR)
+//                .textures("wood/jungle/door_locked_top", "wood/jungle/door_locked_bottom").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_OAK_DOOR)
+//                .textures("wood/oak/door_locked_top", "wood/oak/door_locked_bottom").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_SPRUCE_DOOR)
+//                .textures("wood/spruce/door_locked_top", "wood/spruce/door_locked_bottom").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.LOCKED_WHITE_WOOD_DOOR)
+//                .textures("wood/white/door_locked_top", "wood/white/door_locked_bottom").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.NORTHERN_WOOD_DOOR)
+//                .textures("wood/northern/door_top", "wood/northern/door_bottom").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.OAK_DOOR)
+//                .textures("wood/oak/door_top", "wood/oak/door_bottom").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.RED_KEEP_SECRET_DOOR)
+//                .textures("ashlar_third/black/all_noctm", "ashlar_third/black/all_noctm").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.SPRUCE_DOOR)
+//                .textures("wood/spruce/door_top", "wood/spruce/door_bottom").build();
+//        registerCustomDoorBlock(bsmg, ModBlocks.WHITE_WOOD_DOOR)
+//                .textures("wood/white/door_top", "wood/white/door_bottom").build();
 
         // Half Door Blocks (Shutters)
         registerCustomHalfDoorBlock(bsmg, ModBlocks.BIRCH_WINDOW_SHUTTERS)
@@ -2074,6 +2074,14 @@ public class ModModelProvider extends FabricModelProvider {
             }
         }
 
-        // TODO: Add other block types (door, slab, etc.) as needed
+        // Generate door block models
+        for (BlockDefinition definition : registry.getByType("door")) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block != null) {
+                DoorBlockExporter.registerCustomDoorBlock(bsmg, block, definition);
+            }
+        }
+
+        // TODO: Add other block types (slab, etc.) as needed
     }
 }
