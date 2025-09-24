@@ -2,7 +2,6 @@
     "blockName": "seagrass",
     "blockType": "crop",
     "stepSound": "grass",
-    "material": "plants",
     "creativeTab": "westeros_water_air_tab",
     "label": "Seagrass",
     "randomTextures": [

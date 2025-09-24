@@ -2,7 +2,6 @@
     "blockName": "dead_fish",
     "blockType": "web",
     "stepSound": "cloth",
-    "material": "web",
     "creativeTab": "westeros_food_blocks_tab",
     "label": "Dead Fish",
     "randomTextures": [

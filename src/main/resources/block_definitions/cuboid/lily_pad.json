@@ -1,10 +1,7 @@
 {
     "blockName": "lily_pad",
     "blockType": "cuboid",
-    "hardness": 2,
     "stepSound": "grass",
-    "material": "ground",
-    "resistance": 2,
     "creativeTab": "westeros_foliage_tab",
     "label": "Lily Pad",
     "rotateRandom": true,
@@ -52,5 +49,6 @@
         "yMax": 0.031,
         "zMin": 0,
         "zMax": 1
-    }
+    },
+    "strength": 2
 }

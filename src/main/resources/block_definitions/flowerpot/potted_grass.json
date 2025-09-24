@@ -1,7 +1,6 @@
 {
     "blockName": "potted_grass",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Grass",
     "type": "plant-id:fern",

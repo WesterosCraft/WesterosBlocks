@@ -2,10 +2,7 @@
     "blockName": "bread_block",
     "blockType": "cuboid",
     "nonOpaque": true,
-    "hardness": 5,
     "stepSound": "metal",
-    "material": "iron",
-    "resistance": 2,
     "harvestLevel": [
         {
             "tool": "axe",
@@ -30,5 +27,6 @@
         "zMin": 0.125,
         "zMax": 0.875
     },
-    "itemTextureIndex": 2
+    "itemTextureIndex": 2,
+    "strength": 5
 }

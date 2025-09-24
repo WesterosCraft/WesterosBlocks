@@ -2,7 +2,6 @@
     "blockName": "coral_brain_fan",
     "blockType": "fan",
     "stepSound": "stone",
-    "material": "rock",
     "creativeTab": "westeros_water_air_tab",
     "label": "Brain Coral Fan",
     "type": "allow-unsupported",

@@ -4,7 +4,6 @@
     "stepSound": "cloth",
     "nonOpaque": true,
     "alphaRender": true,
-    "material": "cloth",
     "creativeTab": "westeros_water_air_tab",
     "label": "Falling Water Block Three",
     "textures": [

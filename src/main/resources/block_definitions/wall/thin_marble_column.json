@@ -1,10 +1,7 @@
 {
     "blockName": "thin_marble_column",
     "blockType": "wall",
-    "hardness": 1.5,
     "stepSound": "stone",
-    "material": "rock",
-    "resistance": 10,
     "harvestLevel": [
         {
             "tool": "pickaxe",
@@ -18,5 +15,6 @@
         "marble/quartz/wall/top",
         "marble/quartz/wall/top",
         "marble/quartz/wall/column_side"
-    ]
+    ],
+    "strength": 1.5
 }

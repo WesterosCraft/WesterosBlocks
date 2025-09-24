@@ -2,7 +2,6 @@
     "blockName": "oak_log_rope",
     "blockType": "log",
     "stepSound": "wood",
-    "material": "wood",
     "harvestLevel": [
         {
             "tool": "axe",

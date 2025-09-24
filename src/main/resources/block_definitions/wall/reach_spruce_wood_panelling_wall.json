@@ -1,10 +1,7 @@
 {
     "blockName": "reach_spruce_wood_panelling_wall",
     "blockType": "wall",
-    "hardness": 1.5,
     "stepSound": "wood",
-    "material": "wood",
-    "resistance": 10,
     "harvestLevel": [
         {
             "tool": "pickaxe",
@@ -36,5 +33,6 @@
                 "wood/spruce/panelling/side3"
             ]
         }
-    ]
+    ],
+    "strength": 1.5
 }

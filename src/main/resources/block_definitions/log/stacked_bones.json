@@ -2,7 +2,6 @@
     "blockName": "stacked_bones",
     "blockType": "log",
     "stepSound": "stone",
-    "material": "rock",
     "harvestLevel": [
         {
             "tool": "axe",

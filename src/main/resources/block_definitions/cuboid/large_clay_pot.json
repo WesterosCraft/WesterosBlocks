@@ -1,10 +1,7 @@
 {
     "blockName": "large_clay_pot",
     "blockType": "cuboid",
-    "hardness": 5,
     "stepSound": "wood",
-    "material": "wood",
-    "resistance": 4,
     "harvestLevel": [
         {
             "tool": "pickaxe",
@@ -52,5 +49,6 @@
                 2
             ]
         }
-    ]
+    ],
+    "strength": 5
 }

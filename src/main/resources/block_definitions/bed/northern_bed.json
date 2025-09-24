@@ -1,7 +1,6 @@
 {
     "blockName": "northern_bed",
     "stepSound": "wood",
-    "material": "cloth",
     "blockType": "bed",
     "creativeTab": "westeros_furniture_tab",
     "label": "Northern Bed",

@@ -1,10 +1,7 @@
 {
     "blockName": "westerosi_coins",
     "blockType": "cuboid-ne",
-    "hardness": 5,
     "stepSound": "metal",
-    "material": "iron",
-    "resistance": 2,
     "isCustomModel": true,
     "harvestLevel": [
         {
@@ -53,5 +50,6 @@
             "stateID": "coins7",
             "isCustomModel": true
         }
-    ]
+    ],
+    "strength": 5
 }

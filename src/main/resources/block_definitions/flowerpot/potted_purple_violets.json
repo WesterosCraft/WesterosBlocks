@@ -1,7 +1,6 @@
 {
     "blockName": "potted_purple_violets",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Purple Violets",
     "type": "plant-id:purple_violets",

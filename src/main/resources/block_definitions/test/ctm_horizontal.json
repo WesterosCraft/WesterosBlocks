@@ -1,11 +1,10 @@
 {
-  "blockName": "ctm_horizontal",
-  "blockType": "solid",
-  "stepSound": "wood",
-  "material": "cloth",
-  "creativeTab": "westeros_test_tab",
-  "label": "Horizontal CTM",
-  "textures": [
-    "ctm/horizontal"
-  ]
+    "blockName": "ctm_horizontal",
+    "blockType": "solid",
+    "stepSound": "wood",
+    "creativeTab": "westeros_test_tab",
+    "label": "Horizontal CTM",
+    "textures": [
+        "ctm/horizontal"
+    ]
 }

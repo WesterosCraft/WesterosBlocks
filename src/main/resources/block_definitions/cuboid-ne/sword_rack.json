@@ -1,10 +1,7 @@
 {
     "blockName": "sword_rack",
     "blockType": "cuboid-ne",
-    "hardness": 5,
     "stepSound": "metal",
-    "material": "iron",
-    "resistance": 2,
     "harvestLevel": [
         {
             "tool": "axe",
@@ -30,5 +27,6 @@
         "zMin": 0.45,
         "zMax": 0.55
     },
-    "itemTextureIndex": 2
+    "itemTextureIndex": 2,
+    "strength": 5
 }

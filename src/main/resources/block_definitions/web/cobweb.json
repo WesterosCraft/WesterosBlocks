@@ -2,7 +2,6 @@
     "blockName": "cobweb",
     "blockType": "web",
     "stepSound": "cloth",
-    "material": "web",
     "creativeTab": "westeros_decor_tab",
     "label": "Cobweb",
     "type": "toggleOnUse,no-in-web",

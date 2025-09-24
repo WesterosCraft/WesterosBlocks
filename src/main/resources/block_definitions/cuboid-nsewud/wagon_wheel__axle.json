@@ -1,10 +1,7 @@
 {
     "blockName": "wagon_wheel__axle",
     "blockType": "cuboid-nsewud",
-    "hardness": 3,
     "stepSound": "wood",
-    "material": "wood",
-    "resistance": 2,
     "harvestLevel": [
         {
             "tool": "axe",
@@ -132,5 +129,6 @@
                 3
             ]
         }
-    ]
+    ],
+    "strength": 3
 }

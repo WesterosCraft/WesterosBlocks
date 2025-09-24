@@ -1,7 +1,6 @@
 {
     "blockName": "potted_meadow_fescue",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Meadow Fescue",
     "type": "plant-id:meadow_fescue",

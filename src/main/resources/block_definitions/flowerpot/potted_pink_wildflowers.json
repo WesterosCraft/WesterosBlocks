@@ -1,7 +1,6 @@
 {
     "blockName": "potted_pink_wildflowers",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Pink Wildflowers",
     "type": "plant-id:pink_wildflowers",

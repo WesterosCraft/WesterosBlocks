@@ -1,7 +1,6 @@
 {
     "blockName": "potted_red_fern",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Red Fern",
     "type": "plant-id:red_fern",

@@ -2,7 +2,6 @@
     "blockName": "chili_ristra",
     "blockType": "web",
     "stepSound": "cloth",
-    "material": "web",
     "creativeTab": "westeros_food_blocks_tab",
     "label": "Chili Ristra",
     "textures": [

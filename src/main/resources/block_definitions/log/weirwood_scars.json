@@ -2,7 +2,6 @@
     "blockName": "weirwood_scars",
     "blockType": "log",
     "stepSound": "wood",
-    "material": "wood",
     "harvestLevel": [
         {
             "tool": "axe",

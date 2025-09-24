@@ -1,10 +1,7 @@
 {
     "blockName": "kl_dun_carved_brick_wall",
     "blockType": "wall",
-    "hardness": 1.5,
     "stepSound": "stone",
-    "material": "rock",
-    "resistance": 10,
     "harvestLevel": [
         {
             "tool": "pickaxe",
@@ -16,5 +13,6 @@
     "label": "Ashlar Engraved Dun Wall",
     "textures": [
         "ashlar_engraved/dun/all"
-    ]
+    ],
+    "strength": 1.5
 }

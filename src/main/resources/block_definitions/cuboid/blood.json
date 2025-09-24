@@ -2,10 +2,7 @@
     "blockName": "blood",
     "blockType": "cuboid",
     "nonOpaque": true,
-    "hardness": 5,
     "stepSound": "metal",
-    "material": "iron",
-    "resistance": 2,
     "harvestLevel": [
         {
             "tool": "axe",
@@ -105,5 +102,6 @@
         "yMax": 0.039,
         "zMin": 0,
         "zMax": 1
-    }
+    },
+    "strength": 5
 }

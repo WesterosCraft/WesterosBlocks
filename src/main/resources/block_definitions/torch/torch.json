@@ -2,7 +2,6 @@
     "blockName": "torch",
     "blockType": "torch",
     "stepSound": "metal",
-    "material": "iron",
     "creativeTab": "westeros_lighting_tab",
     "lightValue": 13,
     "label": "Torch",

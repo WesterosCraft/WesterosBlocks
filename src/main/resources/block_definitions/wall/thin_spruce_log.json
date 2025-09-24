@@ -1,10 +1,7 @@
 {
     "blockName": "thin_spruce_log",
     "blockType": "wall",
-    "hardness": 2,
     "stepSound": "wood",
-    "material": "wood",
-    "resistance": 5,
     "harvestLevel": [
         {
             "tool": "axe",
@@ -18,5 +15,6 @@
         "bark/spruce/wall_top",
         "bark/spruce/wall_top",
         "bark/spruce/side"
-    ]
+    ],
+    "strength": 2
 }

@@ -1,12 +1,9 @@
 {
     "blockName": "sept_crystal_medium",
     "blockType": "wall",
-    "hardness": 1.5,
     "stepSound": "stone",
     "nonOpaque": true,
     "alphaRender": true,
-    "material": "rock",
-    "resistance": 10,
     "harvestLevel": [
         {
             "tool": "pickaxe",
@@ -20,5 +17,6 @@
         "crystal/wall_top",
         "crystal/wall_top",
         "crystal/wall"
-    ]
+    ],
+    "strength": 1.5
 }

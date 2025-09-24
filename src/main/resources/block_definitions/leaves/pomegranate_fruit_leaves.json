@@ -2,7 +2,6 @@
     "blockName": "pomegranate_fruit_leaves",
     "blockType": "leaves",
     "stepSound": "grass",
-    "material": "leaves",
     "type": "no-decay,better-foliage,overlay",
     "creativeTab": "westeros_foliage_tab",
     "label": "Pomegranate Fruit Leaves",

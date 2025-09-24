@@ -1,7 +1,6 @@
 {
     "blockName": "potted_green_leafy_herb",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Green Leafy Herb",
     "type": "plant-id:green_leafy_herb",

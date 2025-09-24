@@ -2,7 +2,6 @@
     "blockName": "jungle_tall_grass",
     "blockType": "web",
     "stepSound": "grass",
-    "material": "plants",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Jungle Tall Grass",
     "textures": [

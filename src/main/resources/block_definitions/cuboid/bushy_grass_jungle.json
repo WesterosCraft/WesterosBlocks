@@ -2,7 +2,6 @@
     "blockName": "bushy_grass_jungle",
     "blockType": "cuboid",
     "stepSound": "grass",
-    "material": "ground",
     "creativeTab": "westeros_grass_dirt_tab",
     "label": "Bushy Grass Jungle",
     "isCustomModel": true,

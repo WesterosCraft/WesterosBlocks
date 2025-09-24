@@ -1,10 +1,7 @@
 {
     "blockName": "stool_cushion",
     "blockType": "slab",
-    "hardness": 2,
     "stepSound": "wood",
-    "material": "wood",
-    "resistance": 2,
     "harvestLevel": [
         {
             "tool": "shovel",
@@ -19,5 +16,6 @@
         "seat/bottom",
         "seat/top_cushion",
         "seat/side_cushion"
-    ]
+    ],
+    "strength": 2
 }

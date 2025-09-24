@@ -2,7 +2,6 @@
     "blockName": "jungle_log_chain",
     "blockType": "log",
     "stepSound": "wood",
-    "material": "wood",
     "harvestLevel": [
         {
             "tool": "axe",

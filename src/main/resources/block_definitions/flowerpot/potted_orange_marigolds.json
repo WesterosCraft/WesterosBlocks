@@ -1,7 +1,6 @@
 {
     "blockName": "potted_orange_marigolds",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Orange Marigolds",
     "type": "plant-id:orange_marigolds",

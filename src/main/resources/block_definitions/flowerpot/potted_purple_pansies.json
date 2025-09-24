@@ -1,7 +1,6 @@
 {
     "blockName": "potted_purple_pansies",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Purple Pansies",
     "type": "plant-id:purple_pansies",

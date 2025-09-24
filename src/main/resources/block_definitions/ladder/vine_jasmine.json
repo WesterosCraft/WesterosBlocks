@@ -2,7 +2,6 @@
     "blockName": "vine_jasmine",
     "blockType": "ladder",
     "stepSound": "ladder",
-    "material": "iron",
     "creativeTab": "westeros_foliage_tab",
     "label": "Vine Jasmine (Do Not Use)",
     "randomTextures": [

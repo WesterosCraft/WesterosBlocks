@@ -1,10 +1,7 @@
 {
     "blockName": "cabbage",
     "blockType": "cuboid-16way",
-    "hardness": 3,
     "stepSound": "plant",
-    "material": "plant",
-    "resistance": 2,
     "harvestLevel": [
         {
             "tool": "hoe",
@@ -28,5 +25,6 @@
         "yMax": 0.5,
         "zMin": 0.25,
         "zMax": 0.75
-    }
+    },
+    "strength": 3
 }

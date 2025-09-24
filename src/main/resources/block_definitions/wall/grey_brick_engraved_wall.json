@@ -1,10 +1,7 @@
 {
     "blockName": "grey_brick_engraved_wall",
     "blockType": "wall",
-    "hardness": 1.5,
     "stepSound": "stone",
-    "material": "rock",
-    "resistance": 10,
     "harvestLevel": [
         {
             "tool": "pickaxe",
@@ -16,5 +13,6 @@
     "label": "Ashlar Engraved Normal Grey Wall",
     "textures": [
         "ashlar_engraved/grey/all"
-    ]
+    ],
+    "strength": 1.5
 }

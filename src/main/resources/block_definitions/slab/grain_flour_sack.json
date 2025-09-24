@@ -1,10 +1,7 @@
 {
     "blockName": "grain_flour_sack",
     "blockType": "slab",
-    "hardness": 2,
     "stepSound": "gravel",
-    "material": "craftedSnow",
-    "resistance": 2,
     "harvestLevel": [
         {
             "tool": "shovel",
@@ -19,5 +16,6 @@
         "grain_sack/front",
         "grain_sack/front",
         "grain_sack/side"
-    ]
+    ],
+    "strength": 2
 }

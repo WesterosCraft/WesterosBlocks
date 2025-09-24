@@ -1,10 +1,7 @@
 {
     "blockName": "mooton_banner",
     "blockType": "cuboid-nsew-stack",
-    "hardness": 1,
     "stepSound": "wood",
-    "material": "wood",
-    "resistance": 1,
     "harvestLevel": [
         {
             "tool": "sword",
@@ -52,5 +49,6 @@
                 "zMax": 1
             }
         }
-    ]
+    ],
+    "strength": 1
 }

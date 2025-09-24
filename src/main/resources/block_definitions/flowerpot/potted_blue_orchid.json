@@ -1,7 +1,6 @@
 {
     "blockName": "potted_blue_orchid",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Blue Orchid",
     "type": "plant-id:blue_orchid",

@@ -1,10 +1,7 @@
 {
     "blockName": "cleaver_block",
     "blockType": "cuboid-nsew",
-    "hardness": 5,
     "stepSound": "metal",
-    "material": "iron",
-    "resistance": 10,
     "harvestLevel": [
         {
             "tool": "pickaxe",
@@ -29,5 +26,6 @@
         "yMax": 1,
         "zMin": 0.499,
         "zMax": 0.5
-    }
+    },
+    "strength": 5
 }

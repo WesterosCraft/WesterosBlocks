@@ -1,10 +1,7 @@
 {
     "blockName": "classic_grass_block",
     "blockType": "cuboid",
-    "hardness": 5,
     "stepSound": "grass",
-    "material": "plants",
-    "resistance": 5,
     "harvestLevel": [
         {
             "tool": "shovel",
@@ -105,5 +102,6 @@
                 false
             ]
         }
-    ]
+    ],
+    "strength": 5
 }

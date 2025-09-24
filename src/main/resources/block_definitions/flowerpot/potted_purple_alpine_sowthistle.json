@@ -1,7 +1,6 @@
 {
     "blockName": "potted_purple_alpine_sowthistle",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Purple Alpine Sow-thistle",
     "type": "plant-id:purple_alpine_sowthistle",

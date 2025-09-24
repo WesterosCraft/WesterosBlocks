@@ -2,7 +2,6 @@
     "blockName": "sandstone_pillar",
     "blockType": "log",
     "stepSound": "stone",
-    "material": "wood",
     "harvestLevel": [
         {
             "tool": "axe",

@@ -2,7 +2,6 @@
     "blockName": "red_rose_bush",
     "blockType": "leaves",
     "stepSound": "grass",
-    "material": "leaves",
     "type": "no-decay,better-foliage,overlay",
     "creativeTab": "westeros_foliage_tab",
     "label": "Red Rose Bush",

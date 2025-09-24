@@ -3,10 +3,7 @@
     "blockType": "cuboid-nsew",
     "nonOpaque": true,
     "alphaRender": true,
-    "hardness": 5,
     "stepSound": "wood",
-    "material": "wood",
-    "resistance": 5,
     "harvestLevel": [
         {
             "tool": "pickaxe",
@@ -30,5 +27,6 @@
         "yMax": 1,
         "zMin": 0,
         "zMax": 1
-    }
+    },
+    "strength": 5
 }

@@ -2,7 +2,6 @@
     "blockName": "yellow_wildflowers",
     "blockType": "plant",
     "type": "layerSensitive",
-    "material": "plants",
     "creativeTab": "westeros_flowers_tab",
     "boundingBox": {
         "xMin": 0.3,

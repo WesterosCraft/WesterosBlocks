@@ -1,10 +1,7 @@
 {
     "blockName": "axe_block",
     "blockType": "cuboid-nsew",
-    "hardness": 5,
     "stepSound": "metal",
-    "material": "iron",
-    "resistance": 10,
     "isCustomModel": true,
     "harvestLevel": [
         {
@@ -30,5 +27,6 @@
         "zMin": 0.499,
         "zMax": 0.5
     },
-    "itemTextureIndex": 2
+    "itemTextureIndex": 2,
+    "strength": 5
 }

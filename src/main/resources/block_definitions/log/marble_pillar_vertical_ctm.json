@@ -2,7 +2,6 @@
     "blockName": "marble_pillar_vertical_ctm",
     "blockType": "log",
     "stepSound": "stone",
-    "material": "wood",
     "harvestLevel": [
         {
             "tool": "axe",

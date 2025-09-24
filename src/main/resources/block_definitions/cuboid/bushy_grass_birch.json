@@ -2,7 +2,6 @@
     "blockName": "bushy_grass_birch",
     "blockType": "cuboid",
     "stepSound": "grass",
-    "material": "ground",
     "creativeTab": "westeros_grass_dirt_tab",
     "label": "Bushy Grass Birch",
     "isCustomModel": true,

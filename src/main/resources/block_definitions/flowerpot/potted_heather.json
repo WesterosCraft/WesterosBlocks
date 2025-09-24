@@ -1,7 +1,6 @@
 {
     "blockName": "potted_heather",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Heather",
     "type": "plant-id:heather",

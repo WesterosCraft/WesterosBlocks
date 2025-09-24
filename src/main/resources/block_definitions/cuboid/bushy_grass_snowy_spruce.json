@@ -2,7 +2,6 @@
     "blockName": "bushy_grass_snowy_spruce",
     "blockType": "cuboid",
     "stepSound": "grass",
-    "material": "ground",
     "creativeTab": "westeros_grass_dirt_tab",
     "label": "Bushy Grass Snowy Spruce",
     "isCustomModel": true,

@@ -1,10 +1,7 @@
 {
     "blockName": "vertical_net",
     "blockType": "pane",
-    "hardness": 1,
     "stepSound": "glass",
-    "material": "glass",
-    "resistance": 3,
     "creativeTab": "westeros_cloth_fibers_tab",
     "type": "legacy-model,unconnect:false",
     "label": "Vertical Net",
@@ -34,5 +31,6 @@
                 "vertical_net/vertical_net5"
             ]
         }
-    ]
+    ],
+    "strength": 1
 }

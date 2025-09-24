@@ -1,10 +1,7 @@
 {
     "blockName": "mances_camp_mances_tent_antlers",
     "blockType": "cuboid-nsew",
-    "hardness": 5,
     "stepSound": "cloth",
-    "material": "wood",
-    "resistance": 5,
     "harvestLevel": [
         {
             "tool": "pickaxe",
@@ -29,5 +26,6 @@
         "yMax": 1,
         "zMin": 0,
         "zMax": 1
-    }
+    },
+    "strength": 5
 }

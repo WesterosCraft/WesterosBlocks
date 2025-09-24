@@ -1,7 +1,6 @@
 {
     "blockName": "potted_white_daisies",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted White Daisies",
     "type": "plant-id:white_daisies",

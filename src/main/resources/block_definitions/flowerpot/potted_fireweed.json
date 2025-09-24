@@ -1,7 +1,6 @@
 {
     "blockName": "potted_fireweed",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Fireweed",
     "type": "plant-id:fireweed",

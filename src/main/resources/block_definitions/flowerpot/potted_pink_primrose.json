@@ -1,7 +1,6 @@
 {
     "blockName": "potted_pink_primrose",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Pink Primrose",
     "type": "plant-id:pink_primrose",

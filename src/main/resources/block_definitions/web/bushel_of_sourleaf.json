@@ -2,7 +2,6 @@
     "blockName": "bushel_of_sourleaf",
     "blockType": "web",
     "stepSound": "cloth",
-    "material": "web",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Bushel of Sourleaf",
     "textures": [

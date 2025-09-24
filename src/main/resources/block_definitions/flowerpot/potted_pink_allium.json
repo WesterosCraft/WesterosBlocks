@@ -1,7 +1,6 @@
 {
     "blockName": "potted_pink_allium",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Pink Allium",
     "type": "plant-id:pink_allium",

@@ -1,10 +1,7 @@
 {
     "blockName": "pickaxe_block",
     "blockType": "cuboid-nsew",
-    "hardness": 5,
     "stepSound": "metal",
-    "material": "iron",
-    "resistance": 10,
     "harvestLevel": [
         {
             "tool": "pickaxe",
@@ -30,5 +27,6 @@
         "zMin": 0.499,
         "zMax": 0.5
     },
-    "itemTextureIndex": 4
+    "itemTextureIndex": 4,
+    "strength": 5
 }

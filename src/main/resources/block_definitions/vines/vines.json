@@ -2,7 +2,6 @@
     "blockName": "vines",
     "blockType": "vines",
     "stepSound": "grass",
-    "material": "plants",
     "creativeTab": "westeros_foliage_tab",
     "label": "Vines",
     "colorMult": "textures/colormap/foliagevine",

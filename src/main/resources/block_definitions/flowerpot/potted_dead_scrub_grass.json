@@ -1,7 +1,6 @@
 {
     "blockName": "potted_dead_scrub_grass",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Dead Scrub Grass",
     "type": "plant-id:dead_scrub_grass",

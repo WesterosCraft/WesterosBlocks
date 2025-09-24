@@ -1,7 +1,6 @@
 {
     "blockName": "potted_lady_fern",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Lady Fern",
     "type": "plant-id:lady_fern",

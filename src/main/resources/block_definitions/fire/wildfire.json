@@ -5,7 +5,6 @@
     "lightValue": 9,
     "label": "Wildfire",
     "particle": "wildfire",
-    "material": "fire",
     "tooltips": [
         "Very hot fire",
         "no fr its hot!"
@@ -15,8 +14,20 @@
         "wildfire/wildfire_layer_1"
     ],
     "gui": {
-        "rotation": [0, 0, 0],
-        "scale": [0.625, 0.625, 0.625],
-        "translation": [0, 0, 0]
+        "rotation": [
+            0,
+            0,
+            0
+        ],
+        "scale": [
+            0.625,
+            0.625,
+            0.625
+        ],
+        "translation": [
+            0,
+            0,
+            0
+        ]
     }
 }

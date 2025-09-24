@@ -1,7 +1,6 @@
 {
     "blockName": "potted_cattails",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Cattails",
     "type": "plant-id:cattails",

@@ -1,7 +1,6 @@
 {
     "blockName": "potted_red_aster",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Aster",
     "type": "plant-id:red_aster",

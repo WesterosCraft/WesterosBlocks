@@ -1,7 +1,6 @@
 {
     "blockName": "potted_red_sourleaf_bush",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Sourleaf Bush",
     "type": "plant-id:red_sourleaf_bush",

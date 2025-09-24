@@ -1,10 +1,7 @@
 {
     "blockName": "thin_oak_log",
     "blockType": "wall",
-    "hardness": 2,
     "stepSound": "wood",
-    "material": "wood",
-    "resistance": 5,
     "harvestLevel": [
         {
             "tool": "axe",
@@ -18,5 +15,6 @@
         "bark/oak/wall_top",
         "bark/oak/wall_top",
         "bark/oak/side"
-    ]
+    ],
+    "strength": 2
 }

@@ -1,7 +1,6 @@
 {
     "blockName": "potted_green_spiny_herb",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Green Spiny Herb",
     "type": "plant-id:green_spiny_herb",

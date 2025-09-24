@@ -1,7 +1,6 @@
 {
     "blockName": "hammock",
     "stepSound": "plant",
-    "material": "cloth",
     "blockType": "bed",
     "creativeTab": "westeros_furniture_tab",
     "label": "Hammock",

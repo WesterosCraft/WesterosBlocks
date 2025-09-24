@@ -1,7 +1,6 @@
 {
     "blockName": "potted_orange_bog_asphodel",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Orange Bog Asphodel",
     "type": "plant-id:orange_bog_asphodel",

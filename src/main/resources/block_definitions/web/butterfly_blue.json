@@ -2,7 +2,6 @@
     "blockName": "butterfly_blue",
     "blockType": "web",
     "stepSound": "cloth",
-    "material": "web",
     "creativeTab": "westeros_misc_tab",
     "label": "Northern Blue Butterfly",
     "textures": [

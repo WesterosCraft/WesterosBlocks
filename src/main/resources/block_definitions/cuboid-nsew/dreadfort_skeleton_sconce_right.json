@@ -1,10 +1,7 @@
 {
     "blockName": "dreadfort_skeleton_sconce_right",
     "blockType": "cuboid-nsew",
-    "hardness": 5,
     "stepSound": "metal",
-    "material": "iron",
-    "resistance": 5,
     "harvestLevel": [
         {
             "tool": "pickaxe",
@@ -25,5 +22,6 @@
         "zMin": 0,
         "zMax": 1
     },
-    "isCustomModel": true
+    "isCustomModel": true,
+    "strength": 5
 }

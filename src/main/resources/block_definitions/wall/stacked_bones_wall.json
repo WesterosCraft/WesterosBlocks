@@ -1,10 +1,7 @@
 {
     "blockName": "stacked_bones_wall",
     "blockType": "wall",
-    "hardness": 1.5,
     "stepSound": "stone",
-    "material": "rock",
-    "resistance": 10,
     "harvestLevel": [
         {
             "tool": "pickaxe",
@@ -18,5 +15,6 @@
         "stacked_bones/bone_stacked_side",
         "stacked_bones/bone_stacked_side",
         "stacked_bones/bone_stacked_front"
-    ]
+    ],
+    "strength": 1.5
 }

@@ -1,10 +1,7 @@
 {
     "blockName": "chain_pulley",
     "blockType": "cuboid-nsewud",
-    "hardness": 3,
     "stepSound": "wood",
-    "material": "wood",
-    "resistance": 2,
     "harvestLevel": [
         {
             "tool": "axe",
@@ -28,5 +25,6 @@
         "yMax": 1,
         "zMin": 0,
         "zMax": 1
-    }
+    },
+    "strength": 3
 }

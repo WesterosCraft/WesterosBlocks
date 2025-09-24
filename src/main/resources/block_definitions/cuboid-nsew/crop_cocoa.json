@@ -1,10 +1,7 @@
 {
     "blockName": "crop_cocoa",
     "blockType": "cuboid-nsew",
-    "hardness": 5,
     "stepSound": "grass",
-    "material": "plants",
-    "resistance": 4,
     "type": "toggleOnUse",
     "harvestLevel": [
         {
@@ -55,5 +52,6 @@
                 "zMax": 0.75
             }
         }
-    ]
+    ],
+    "strength": 5
 }

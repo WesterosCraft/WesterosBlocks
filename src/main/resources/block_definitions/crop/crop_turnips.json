@@ -1,10 +1,7 @@
 {
     "blockName": "crop_turnips",
     "blockType": "crop",
-    "hardness": 5,
     "stepSound": "grass",
-    "material": "plants",
-    "resistance": 4,
     "type": "toggleOnUse,layerSensitive",
     "harvestLevel": [
         {
@@ -39,5 +36,6 @@
                 "turnips/turnips_stage_3"
             ]
         }
-    ]
+    ],
+    "strength": 5
 }

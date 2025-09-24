@@ -2,7 +2,6 @@
     "blockName": "closed_barrel",
     "blockType": "log",
     "stepSound": "wood",
-    "material": "wood",
     "harvestLevel": [
         {
             "tool": "axe",

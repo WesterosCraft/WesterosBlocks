@@ -1,10 +1,7 @@
 {
     "blockName": "cheval_de_frise",
     "blockType": "cuboid-ne",
-    "hardness": 2,
     "stepSound": "wood",
-    "material": "wood",
-    "resistance": 2,
     "harvestLevel": [
         {
             "tool": "axe",
@@ -24,5 +21,6 @@
         "zMin": 0,
         "zMax": 1
     },
-    "isCustomModel": true
+    "isCustomModel": true,
+    "strength": 2
 }

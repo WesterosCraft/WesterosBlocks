@@ -1,6 +1,5 @@
 {
     "blockName": "nights_watch_bed",
-    "material": "cloth",
     "blockType": "bed",
     "creativeTab": "westeros_furniture_tab",
     "label": "Nights Watch Bed",

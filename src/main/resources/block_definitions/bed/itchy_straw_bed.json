@@ -1,7 +1,6 @@
 {
     "blockName": "itchy_straw_bed",
     "stepSound": "plant",
-    "material": "cloth",
     "blockType": "bed",
     "creativeTab": "westeros_furniture_tab",
     "label": "Itchy Straw Bed",

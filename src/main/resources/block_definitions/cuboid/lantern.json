@@ -3,10 +3,7 @@
     "blockType": "cuboid",
     "nonOpaque": true,
     "alphaRender": true,
-    "hardness": 5,
     "stepSound": "metal",
-    "material": "iron",
-    "resistance": 2,
     "harvestLevel": [
         {
             "tool": "axe",
@@ -198,5 +195,6 @@
                 "lighting/lantern_red_bottom"
             ]
         }
-    ]
+    ],
+    "strength": 5
 }

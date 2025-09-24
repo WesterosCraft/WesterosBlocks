@@ -2,7 +2,6 @@
     "blockName": "archery_target",
     "blockType": "log",
     "stepSound": "wood",
-    "material": "wood",
     "harvestLevel": [
         {
             "tool": "axe",

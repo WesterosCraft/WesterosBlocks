@@ -1,10 +1,7 @@
 {
     "blockName": "dark_wattle_fence_short",
     "blockType": "cuboid-nsew",
-    "hardness": 5,
     "stepSound": "wood",
-    "material": "wood",
-    "resistance": 5,
     "harvestLevel": [
         {
             "tool": "pickaxe",
@@ -28,5 +25,6 @@
         "yMax": 0.6,
         "zMin": 0,
         "zMax": 1
-    }
+    },
+    "strength": 5
 }

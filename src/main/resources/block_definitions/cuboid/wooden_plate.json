@@ -2,10 +2,7 @@
     "blockName": "wooden_plate",
     "blockType": "cuboid",
     "nonOpaque": true,
-    "hardness": 5,
     "stepSound": "wood",
-    "material": "wood",
-    "resistance": 2,
     "harvestLevel": [
         {
             "tool": "axe",
@@ -41,5 +38,6 @@
                 "transparent"
             ]
         }
-    ]
+    ],
+    "strength": 5
 }

@@ -1,10 +1,7 @@
 {
     "blockName": "stacked_bones_fence",
     "blockType": "fence",
-    "hardness": 5,
     "stepSound": "stone",
-    "material": "rock",
-    "resistance": 10,
     "harvestLevel": [
         {
             "tool": "axe",
@@ -16,5 +13,6 @@
     "label": "Stacked Bones Fence",
     "textures": [
         "stacked_bones/bone_stacked_side"
-    ]
+    ],
+    "strength": 5
 }

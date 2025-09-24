@@ -4,7 +4,6 @@
     "stepSound": "cloth",
     "nonOpaque": true,
     "alphaRender": true,
-    "material": "web",
     "creativeTab": "westeros_water_air_tab",
     "label": "Alyssas Tears Mist One",
     "textures": [

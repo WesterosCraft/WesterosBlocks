@@ -1,10 +1,7 @@
 {
     "blockName": "horizontal_scroll",
     "blockType": "cuboid-nsew",
-    "hardness": 1,
     "stepSound": "cloth",
-    "material": "cloth",
-    "resistance": 1,
     "isCustomModel": true,
     "harvestLevel": [
         {
@@ -68,5 +65,6 @@
             "stateID": "paper11",
             "isCustomModel": true
         }
-    ]
+    ],
+    "strength": 1
 }

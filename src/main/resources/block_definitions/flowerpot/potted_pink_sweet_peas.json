@@ -1,7 +1,6 @@
 {
     "blockName": "potted_pink_sweet_peas",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Pink Sweet Peas",
     "type": "plant-id:pink_sweet_peas",

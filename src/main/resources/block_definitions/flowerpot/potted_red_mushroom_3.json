@@ -1,7 +1,6 @@
 {
     "blockName": "potted_red_mushroom_3",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Red Mushroom 3",
     "type": "plant-id:red_mushroom_3",

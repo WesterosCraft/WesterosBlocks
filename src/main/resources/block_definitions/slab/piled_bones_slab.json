@@ -1,10 +1,7 @@
 {
     "blockName": "piled_bones_slab",
     "blockType": "slab",
-    "hardness": 3,
     "stepSound": "stone",
-    "material": "rock",
-    "resistance": 5,
     "harvestLevel": [
         {
             "tool": "pickaxe",
@@ -15,5 +12,6 @@
     "label": "Piled Bones Slab",
     "textures": [
         "piled_bones/side"
-    ]
+    ],
+    "strength": 3
 }

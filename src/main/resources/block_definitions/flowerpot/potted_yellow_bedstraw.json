@@ -1,7 +1,6 @@
 {
     "blockName": "potted_yellow_bedstraw",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Bedstraw",
     "type": "plant-id:yellow_bedstraw",

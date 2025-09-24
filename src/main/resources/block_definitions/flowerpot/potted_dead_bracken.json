@@ -1,7 +1,6 @@
 {
     "blockName": "potted_dead_bracken",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Dead Bracken",
     "type": "plant-id:dead_bracken",

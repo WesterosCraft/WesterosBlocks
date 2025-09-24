@@ -1,7 +1,6 @@
 {
     "blockName": "potted_pink_thistle",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Pink Thistle",
     "type": "plant-id:pink_thistle",

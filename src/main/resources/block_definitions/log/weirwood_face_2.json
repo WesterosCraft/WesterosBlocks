@@ -2,7 +2,6 @@
     "blockName": "weirwood_face_2",
     "blockType": "log",
     "stepSound": "wood",
-    "material": "wood",
     "harvestLevel": [
         {
             "tool": "axe",
@@ -18,9 +17,21 @@
     ],
     "display": {
         "gui": {
-            "rotation": [ -70, 0, 150 ],
-            "translation": [ 0, 0, 0],
-            "scale":[ 0.625, 0.625, 0.625 ]
+            "rotation": [
+                -70,
+                0,
+                150
+            ],
+            "translation": [
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                0.625,
+                0.625,
+                0.625
+            ]
         }
     }
 }

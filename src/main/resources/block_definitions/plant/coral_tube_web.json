@@ -2,7 +2,6 @@
     "blockName": "coral_tube_web",
     "blockType": "plant",
     "type": "layerSensitive",
-    "material": "rock",
     "creativeTab": "westeros_water_air_tab",
     "boundingBox": {
         "xMin": 0.3,

@@ -2,7 +2,6 @@
     "blockName": "candle_unlit",
     "blockType": "torch",
     "stepSound": "powder",
-    "material": "wood",
     "creativeTab": "westeros_lighting_tab",
     "lightValue": 0,
     "label": "Unlit Candle",

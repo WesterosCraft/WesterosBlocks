@@ -1,7 +1,6 @@
 {
     "blockName": "potted_dock_leaf",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Potted Dock Leaf",
     "type": "plant-id:dock_leaf",

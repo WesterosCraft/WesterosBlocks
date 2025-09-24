@@ -1,7 +1,6 @@
 {
     "blockName": "noble_blue_bed",
     "stepSound": "wood",
-    "material": "cloth",
     "blockType": "bed",
     "creativeTab": "westeros_furniture_tab",
     "label": "Noble Blue Bed",

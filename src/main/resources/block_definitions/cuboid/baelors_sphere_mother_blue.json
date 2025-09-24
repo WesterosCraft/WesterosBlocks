@@ -3,10 +3,7 @@
     "blockType": "cuboid",
     "nonOpaque": true,
     "alphaRender": true,
-    "hardness": 5,
     "stepSound": "metal",
-    "material": "iron",
-    "resistance": 2,
     "lightValue": 2,
     "harvestLevel": [
         {
@@ -101,5 +98,6 @@
                 1
             ]
         }
-    ]
+    ],
+    "strength": 5
 }

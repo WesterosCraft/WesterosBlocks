@@ -1,7 +1,6 @@
 {
     "blockName": "potted_yellow_sunflower",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Sunflower",
     "type": "plant-id:yellow_sunflower",

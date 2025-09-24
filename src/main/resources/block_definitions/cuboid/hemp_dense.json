@@ -2,7 +2,6 @@
     "blockName": "hemp_dense",
     "blockType": "cuboid",
     "stepSound": "cloth",
-    "material": "web",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Hemp Dense",
     "isCustomModel": true,

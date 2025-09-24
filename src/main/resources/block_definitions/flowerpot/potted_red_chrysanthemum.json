@@ -1,7 +1,6 @@
 {
     "blockName": "potted_red_chrysanthemum",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Chrysanthemum",
     "type": "plant-id:red_chrysanthemum",

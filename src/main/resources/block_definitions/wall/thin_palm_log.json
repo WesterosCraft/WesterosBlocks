@@ -1,10 +1,7 @@
 {
     "blockName": "thin_palm_log",
     "blockType": "wall",
-    "hardness": 2,
     "stepSound": "wood",
-    "material": "wood",
-    "resistance": 5,
     "harvestLevel": [
         {
             "tool": "axe",
@@ -18,5 +15,6 @@
         "bark/palm/wall_top",
         "bark/palm/wall_top",
         "bark/palm/side"
-    ]
+    ],
+    "strength": 2
 }

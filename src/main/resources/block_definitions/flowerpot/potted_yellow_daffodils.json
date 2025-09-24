@@ -1,7 +1,6 @@
 {
     "blockName": "potted_yellow_daffodils",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Daffodils",
     "type": "plant-id:yellow_daffodils",

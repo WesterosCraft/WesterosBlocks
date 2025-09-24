@@ -2,7 +2,6 @@
     "blockName": "bushy_grass_spruce",
     "blockType": "cuboid",
     "stepSound": "grass",
-    "material": "ground",
     "creativeTab": "westeros_grass_dirt_tab",
     "label": "Bushy Grass Spruce",
     "isCustomModel": true,
@@ -25,9 +24,21 @@
     },
     "display": {
         "gui": {
-            "rotation": [ -70, 0, 150 ],
-            "translation": [ 0, 0, 0],
-            "scale":[ 0.625, 0.625, 0.625 ]
+            "rotation": [
+                -70,
+                0,
+                150
+            ],
+            "translation": [
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                0.625,
+                0.625,
+                0.625
+            ]
         }
     }
 }

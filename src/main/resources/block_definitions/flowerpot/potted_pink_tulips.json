@@ -1,7 +1,6 @@
 {
     "blockName": "potted_pink_tulips",
     "blockType": "flowerpot",
-    "material": "wood",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Pink Tulips",
     "type": "plant-id:pink_tulips",

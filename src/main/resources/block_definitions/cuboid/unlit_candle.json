@@ -2,10 +2,7 @@
     "blockName": "unlit_candle",
     "blockType": "cuboid",
     "nonOpaque": true,
-    "hardness": 5,
     "stepSound": "powder",
-    "material": "wood",
-    "resistance": 2,
     "harvestLevel": [
         {
             "tool": "axe",
@@ -53,5 +50,6 @@
                 2
             ]
         }
-    ]
+    ],
+    "strength": 5
 }

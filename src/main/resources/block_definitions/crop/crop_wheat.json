@@ -1,10 +1,7 @@
 {
     "blockName": "crop_wheat",
     "blockType": "crop",
-    "hardness": 5,
     "stepSound": "grass",
-    "material": "plants",
-    "resistance": 4,
     "type": "toggleOnUse,layerSensitive",
     "harvestLevel": [
         {
@@ -109,5 +106,6 @@
                 }
             ]
         }
-    ]
+    ],
+    "strength": 5
 }

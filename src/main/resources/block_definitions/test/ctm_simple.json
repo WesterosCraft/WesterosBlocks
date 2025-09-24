@@ -1,11 +1,10 @@
 {
-  "blockName": "ctm_simple",
-  "blockType": "solid",
-  "stepSound": "wood",
-  "material": "cloth",
-  "creativeTab": "westeros_test_tab",
-  "label": "Simple CTM",
-  "textures": [
-    "ctm/simple"
-  ]
+    "blockName": "ctm_simple",
+    "blockType": "solid",
+    "stepSound": "wood",
+    "creativeTab": "westeros_test_tab",
+    "label": "Simple CTM",
+    "textures": [
+        "ctm/simple"
+    ]
 }

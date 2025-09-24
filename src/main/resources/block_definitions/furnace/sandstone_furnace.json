@@ -2,12 +2,10 @@
     "blockName": "sandstone_furnace",
     "blockType": "furnace",
     "nonOpaque": true,
-    "hardness": 5,
     "stepSound": "metal",
-    "material": "iron",
-    "resistance": 10,
     "lightValue": 13,
     "creativeTab": "westeros_furniture_tab",
     "label": "Ashlar Furnace Light Brown",
-    "isCustomModel": true
+    "isCustomModel": true,
+    "strength": 5
 }

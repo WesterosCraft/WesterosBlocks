@@ -2,7 +2,6 @@
     "blockName": "dead_hare",
     "blockType": "web",
     "stepSound": "cloth",
-    "material": "web",
     "creativeTab": "westeros_food_blocks_tab",
     "label": "Dead Hare",
     "randomTextures": [

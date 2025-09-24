@@ -1,11 +1,10 @@
 {
-  "blockName": "ctm_westerosnestedcond",
-  "blockType": "solid",
-  "stepSound": "wood",
-  "material": "cloth",
-  "creativeTab": "westeros_test_tab",
-  "label": "Westeros Nested Cond",
-  "textures": [
-    "ctm/westerosnestedcond"
-  ]
+    "blockName": "ctm_westerosnestedcond",
+    "blockType": "solid",
+    "stepSound": "wood",
+    "creativeTab": "westeros_test_tab",
+    "label": "Westeros Nested Cond",
+    "textures": [
+        "ctm/westerosnestedcond"
+    ]
 }

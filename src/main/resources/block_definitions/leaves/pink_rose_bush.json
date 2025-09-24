@@ -2,7 +2,6 @@
     "blockName": "pink_rose_bush",
     "blockType": "leaves",
     "stepSound": "grass",
-    "material": "leaves",
     "type": "no-decay,better-foliage,overlay",
     "creativeTab": "westeros_foliage_tab",
     "label": "Pink Rose Bush",

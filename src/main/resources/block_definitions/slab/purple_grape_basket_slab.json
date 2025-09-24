@@ -1,10 +1,7 @@
 {
     "blockName": "purple_grape_basket_slab",
     "blockType": "slab",
-    "hardness": 2,
     "stepSound": "cloth",
-    "material": "wood",
-    "resistance": 2,
     "harvestLevel": [
         {
             "tool": "shovel",
@@ -17,5 +14,6 @@
         "crate_block/basket_bottom",
         "crate_block/basket_grape_purple",
         "crate_block/basket_side_slab"
-    ]
+    ],
+    "strength": 2
 }
