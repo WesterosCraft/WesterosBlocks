@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
 import net.minecraft.state.property.Properties;
@@ -218,5 +219,60 @@ public class LadderBlockDatagen {
     // Entry point for builder pattern
     public static LadderBlockBuilder generateLadderBlock(BlockStateModelGenerator generator, Block ladderBlock, String ladderName) {
         return new LadderBlockBuilder(generator, ladderBlock, ladderName);
+    }
+
+    // Method for JSON definition system integration
+    public static void registerCustomLadderBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        List<String> textureList = definition.getTextures();
+        LadderBlockBuilder builder = generateLadderBlock(generator, block, definition.getBlockName());
+
+        // Check if this should use custom models based on the definition
+        boolean isCustomModel = definition.hasCustomModel();
+
+        if (definition.hasRandomTextures()) {
+            // Count the random texture variants to determine how many models to generate
+            List<BlockDefinition.RandomTextureVariant> randomTextures = definition.getRandomTextures();
+
+            // Only set as custom if explicitly specified in JSON
+            if (isCustomModel) {
+                builder.isCustom();
+            }
+
+            for (int i = 0; i < randomTextures.size(); i++) {
+                BlockDefinition.RandomTextureVariant randomTexture = randomTextures.get(i);
+                List<String> textures = randomTexture.getTextures();
+
+                // For empty objects {} in JSON, textures will be null or empty
+                // Each empty object represents one model variant (base_v1, base_v2, etc.)
+                if (textures == null || textures.isEmpty()) {
+                    // Add empty texture set (for custom models) or fallback texture
+                    if (isCustomModel) {
+                        builder.addRandomTextureSet("");
+                    } else {
+                        builder.addRandomTextureSet("missingno");
+                    }
+                } else {
+                    // Use actual textures if provided
+                    for (String texture : textures) {
+                        builder.addRandomTextureSet(texture);
+                    }
+                }
+            }
+            builder.build();
+        } else if (textureList != null && !textureList.isEmpty() && !textureList.get(0).isEmpty()) {
+            // Use first texture as main texture if it's not empty
+            String texturePath = textureList.get(0);
+            if (isCustomModel) {
+                builder.isCustom();
+            }
+            builder.texture(texturePath).build();
+        } else {
+            // Fallback for missing or empty textures
+            if (isCustomModel) {
+                builder.isCustom().addRandomTextureSet("").build();
+            } else {
+                builder.texture("missingno").build();
+            }
+        }
     }
 }

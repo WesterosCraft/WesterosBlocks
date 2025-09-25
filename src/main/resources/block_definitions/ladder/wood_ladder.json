@@ -4,6 +4,7 @@
     "stepSound": "ladder",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Wood Ladder",
+    "renderLayer": "cutout",
     "textures": [
         "wood_ladder/side"
     ],

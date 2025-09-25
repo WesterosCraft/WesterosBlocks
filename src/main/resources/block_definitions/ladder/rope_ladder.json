@@ -4,6 +4,7 @@
     "stepSound": "ladder",
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Rope Ladder",
+    "renderLayer": "cutout",
     "textures": [
         "rope_ladder/side"
     ],

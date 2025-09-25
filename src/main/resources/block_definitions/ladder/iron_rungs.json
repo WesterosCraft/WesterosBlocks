@@ -4,6 +4,7 @@
     "stepSound": "ladder",
     "creativeTab": "westeros_metal_tab",
     "label": "Iron Rungs",
+    "renderLayer": "cutout",
     "textures": [
         "iron_rungs/ladder"
     ],

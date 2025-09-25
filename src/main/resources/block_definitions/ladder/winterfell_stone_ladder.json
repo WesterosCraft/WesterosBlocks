@@ -4,6 +4,7 @@
     "stepSound": "stone",
     "creativeTab": "westeros_misc_tab",
     "label": "Winterfell Stone Ladder",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

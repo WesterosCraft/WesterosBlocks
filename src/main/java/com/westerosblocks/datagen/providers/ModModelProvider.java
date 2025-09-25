@@ -558,51 +558,42 @@ public class ModModelProvider extends FabricModelProvider {
                 .build();
 
         // ladder blocks
-        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.IRON_RUNGS, "iron_rungs")
-                .isCustom()
-                .texture("iron_rungs/ladder")
-                .build();
-
-        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.IRON_RUNGS_BROKEN, "iron_rungs_broken")
-                .isCustom()
-                .addRandomTextureSet("")
-                .addRandomTextureSet("")
-                .addRandomTextureSet("")
-                .addRandomTextureSet("")
-                .addRandomTextureSet("")
-                .addRandomTextureSet("")
-                .build();
-
-        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.ROPE_LADDER, "rope_ladder")
-                .texture("rope_ladder/side")
-                .build();
-
-        // TODO: eventually remove this block
-        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.VINE_JASMINE, "vine_jasmine")
-                .addRandomTextureSet("jasmine_vines/side1")
-                .addRandomTextureSet("jasmine_vines/side2")
-                .addRandomTextureSet("jasmine_vines/side3")
-                .addRandomTextureSet("jasmine_vines/side4")
-                .addRandomTextureSet("jasmine_vines/side5")
-                .build();
-
-        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.WINTERFELL_STONE_LADDER, "winterfell_stone_ladder")
-                .addRandomTextureSet("winterfell_stone_ladder/side1")
-                .addRandomTextureSet("winterfell_stone_ladder/side2")
-                .build();
-
-        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.WOOD_LADDER, "wood_ladder")
-                .isCustom()
-                .texture("wood_ladder/side")
-                .build();
-
-
-//        FireBlockDatagen.generateFireBlock(bsmg, ModBlocks.SAFE_FIRE, "safe_fire")
-//                .textures("safe_fire/fire_layer_0", "safe_fire/fire_layer_1")
+//        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.IRON_RUNGS, "iron_rungs")
+//                .isCustom()
+//                .texture("iron_rungs/ladder")
 //                .build();
 //
-//        FireBlockDatagen.generateFireBlock(bsmg, ModBlocks.WILDFIRE, "wildfire")
-//                .textures("wildfire/wildfire_layer_0", "wildfire/wildfire_layer_1")
+//        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.IRON_RUNGS_BROKEN, "iron_rungs_broken")
+//                .isCustom()
+//                .addRandomTextureSet("")
+//                .addRandomTextureSet("")
+//                .addRandomTextureSet("")
+//                .addRandomTextureSet("")
+//                .addRandomTextureSet("")
+//                .addRandomTextureSet("")
+//                .build();
+//
+//        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.ROPE_LADDER, "rope_ladder")
+//                .texture("rope_ladder/side")
+//                .build();
+//
+//
+//        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.VINE_JASMINE, "vine_jasmine")
+//                .addRandomTextureSet("jasmine_vines/side1")
+//                .addRandomTextureSet("jasmine_vines/side2")
+//                .addRandomTextureSet("jasmine_vines/side3")
+//                .addRandomTextureSet("jasmine_vines/side4")
+//                .addRandomTextureSet("jasmine_vines/side5")
+//                .build();
+//
+//        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.WINTERFELL_STONE_LADDER, "winterfell_stone_ladder")
+//                .addRandomTextureSet("winterfell_stone_ladder/side1")
+//                .addRandomTextureSet("winterfell_stone_ladder/side2")
+//                .build();
+//
+//        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.WOOD_LADDER, "wood_ladder")
+//                .isCustom()
+//                .texture("wood_ladder/side")
 //                .build();
 
         // Fence Blocks
@@ -773,6 +764,14 @@ public class ModModelProvider extends FabricModelProvider {
             Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
             if (block != null) {
                 FireBlockDatagen.registerCustomFireBlock(bsmg, block, definition);
+            }
+        }
+
+        // Generate ladder block models
+        for (BlockDefinition definition : registry.getByType("ladder")) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block != null) {
+                LadderBlockDatagen.registerCustomLadderBlock(bsmg, block, definition);
             }
         }
 

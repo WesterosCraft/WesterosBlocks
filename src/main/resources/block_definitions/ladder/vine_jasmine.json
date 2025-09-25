@@ -4,6 +4,7 @@
     "stepSound": "ladder",
     "creativeTab": "westeros_foliage_tab",
     "label": "Vine Jasmine (Do Not Use)",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [
