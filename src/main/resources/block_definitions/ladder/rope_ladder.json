@@ -8,5 +8,6 @@
     "textures": [
         "rope_ladder/side"
     ],
-    "type": "allow-unsupported"
+    "type": "allow-unsupported",
+    "allowUnsupported": true
 }

@@ -5,6 +5,7 @@
     "creativeTab": "westeros_misc_tab",
     "label": "Winterfell Stone Ladder",
     "renderLayer": "cutout",
+    "allowUnsupported": true,
     "randomTextures": [
         {
             "textures": [

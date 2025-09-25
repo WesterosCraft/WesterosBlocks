@@ -14,5 +14,6 @@
         {}
     ],
     "type": "allow-unsupported",
+    "allowUnsupported": true,
     "isCustomModel": true
 }
