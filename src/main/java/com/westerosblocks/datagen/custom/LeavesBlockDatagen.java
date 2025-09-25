@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
@@ -9,11 +10,9 @@ import net.minecraft.util.Identifier;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class LeavesBlockDatagen {
     
-    // Parent Block Models - following block-models.md #parent-block-model pattern
     private static Model createLeavesModel(boolean tinted, boolean overlay) {
         String tintPath = tinted ? "block/tinted/" : "block/untinted/";
         String overlayPath = overlay ? "leaves_overlay" : "leaves";
@@ -42,19 +41,16 @@ public class LeavesBlockDatagen {
         }
     }
 
-    // Builder pattern for leaves block generation
     public static class LeavesBlockBuilder {
         private final BlockStateModelGenerator generator;
         private final Block leavesBlock;
-        private final String leavesName;
         private boolean isTinted = false;
         private boolean hasOverlay = false;
         private boolean betterFoliage = false;
         private boolean rotateRandom = false;
         private final List<RandomTextureSet> randomTextureSets = new ArrayList<>();
         private final List<String> simpleTextures = new ArrayList<>();
-        
-        // Inner class to hold random texture set information
+
         public static class RandomTextureSet {
             public final String[] textures;
             public final int weight;
@@ -68,7 +64,6 @@ public class LeavesBlockDatagen {
         public LeavesBlockBuilder(BlockStateModelGenerator generator, Block leavesBlock, String leavesName) {
             this.generator = generator;
             this.leavesBlock = leavesBlock;
-            this.leavesName = leavesName;
         }
         
         public LeavesBlockBuilder isTinted() {
@@ -267,5 +262,47 @@ public class LeavesBlockDatagen {
     // Entry point for builder pattern
     public static LeavesBlockBuilder generateLeavesBlock(BlockStateModelGenerator generator, Block leavesBlock, String leavesName) {
         return new LeavesBlockBuilder(generator, leavesBlock, leavesName);
+    }
+
+    public static void registerCustomLeavesBlock(BlockStateModelGenerator generator, Block leavesBlock, BlockDefinition definition) {
+        LeavesBlockBuilder builder = new LeavesBlockBuilder(generator, leavesBlock, definition.getBlockName());
+
+        String type = definition.getType();
+        boolean isTinted = definition.isTinted() || definition.hasColorMult(); // tinted if colorMult is present
+        boolean hasOverlay = definition.hasOverlay() || (type != null && type.contains("overlay"));
+        boolean betterFoliage = definition.hasBetterFoliage() || (type != null && type.contains("better-foliage"));
+        boolean rotateRandom = definition.hasRotateRandom();
+
+        if (isTinted) {
+            builder.isTinted();
+        }
+
+        if (hasOverlay) {
+            builder.hasOverlay();
+        }
+
+        if (betterFoliage) {
+            builder.betterFoliage();
+        }
+
+        if (rotateRandom) {
+            builder.rotateRandom();
+        }
+
+        if (definition.hasRandomTextures()) {
+            for (BlockDefinition.RandomTextureVariant randomTexture : definition.getRandomTextures()) {
+                List<String> textures = randomTexture.getTextures();
+                if (textures != null && !textures.isEmpty()) {
+                    builder.addRandomTextureSet(randomTexture.getWeight(), textures.toArray(new String[0]));
+                }
+            }
+        } else if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
+            builder.textures(definition.getTextures().toArray(new String[0]));
+        } else {
+            WesterosBlocks.LOGGER.warn("No textures or randomTextures defined for leaves block: {}", definition.getBlockName());
+            return;
+        }
+
+        builder.build();
     }
 }

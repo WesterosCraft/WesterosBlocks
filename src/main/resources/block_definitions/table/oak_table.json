@@ -1,0 +1,8 @@
+{
+  "blockType": "table",
+  "blockName": "oak_table",
+  "label": "Oak Table",
+  "stepSound": "wood",
+  "woodType": "oak",
+  "creativeTab": "westeros_furniture_tab"
+}
