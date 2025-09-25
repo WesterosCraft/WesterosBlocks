@@ -4,7 +4,8 @@
     "blockType": "bed",
     "creativeTab": "westeros_furniture_tab",
     "label": "Noble Red Bed",
-    "type": "shape:raised",
+    "bedType": "raised",
+    "renderLayer": "cutout",
     "itemTexture": "bed_block/bed_noble_red_1",
     "textures": [
         "bed_block/bed_noble_red_0",

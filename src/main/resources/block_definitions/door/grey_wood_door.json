@@ -8,6 +8,7 @@
         "wood/grey/door_top",
         "wood/grey/door_bottom"
     ],
+    "allowUnsupported": true,
     "type": "allow-unsupported",
     "strength": 2
 }

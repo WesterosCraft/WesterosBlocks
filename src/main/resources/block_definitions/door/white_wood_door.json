@@ -4,6 +4,7 @@
     "stepSound": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "White Wood Door",
+    "allowUnsupported": true,
     "textures": [
         "wood/white/door_top",
         "wood/white/door_bottom"

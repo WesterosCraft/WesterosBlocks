@@ -4,7 +4,7 @@
     "blockType": "bed",
     "creativeTab": "westeros_furniture_tab",
     "label": "Pale Green Bed",
-    "type": "shape:normal",
+    "bedType": "normal",
     "itemTexture": "bed_block/bed_patchy_green_1",
     "textures": [
         "bed_block/bed_patchy_green_0",

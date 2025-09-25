@@ -8,6 +8,7 @@
         "door_block/door_weirwood_top",
         "door_block/door_weirwood_bottom"
     ],
+    "allowUnsupported": true,
     "type": "allow-unsupported",
     "strength": 2
 }

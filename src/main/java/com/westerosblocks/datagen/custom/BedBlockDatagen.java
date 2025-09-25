@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.block.enums.BedPart;
 import net.minecraft.data.client.*;
@@ -207,5 +208,34 @@ public class BedBlockDatagen {
     // Entry point for builder pattern
     public static BedBlockBuilder generateBedBlock(BlockStateModelGenerator generator, Block bedBlock, String bedName) {
         return new BedBlockBuilder(generator, bedBlock, bedName);
+    }
+
+    // Entry point for JSON definition system
+    public static void registerCustomBedBlock(BlockStateModelGenerator generator, Block bedBlock, BlockDefinition definition) {
+        BedBlockBuilder builder = new BedBlockBuilder(generator, bedBlock, definition.getBlockName());
+
+        // Extract textures from definition - bed blocks need exactly 6 textures
+        List<String> textures = definition.getTextures();
+        if (textures == null || textures.size() != 6) {
+            WesterosBlocks.LOGGER.warn("Bed block '{}' requires exactly 6 textures, got {}",
+                definition.getBlockName(), textures != null ? textures.size() : 0);
+            return;
+        }
+
+        // Add all 6 textures to the builder
+        for (String texture : textures) {
+            builder.texture(texture);
+        }
+
+        // Determine bed type from definition or fall back to default
+        String bedType = definition.hasBedType() ? definition.getBedType() : "normal";
+        builder.bedType(bedType);
+
+        // Check if tinted (based on definition properties)
+        if (definition.isTinted() || definition.hasColorMult()) {
+            builder.isTinted();
+        }
+
+        builder.build();
     }
 }

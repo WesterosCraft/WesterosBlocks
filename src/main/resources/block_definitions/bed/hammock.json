@@ -4,8 +4,9 @@
     "blockType": "bed",
     "creativeTab": "westeros_furniture_tab",
     "label": "Hammock",
-    "type": "shape:hammock",
+    "bedType": "hammock",
     "itemTexture": "bed_block/bed_hammock_1",
+    "renderLayer": "cutout",
     "textures": [
         "bed_block/bed_hammock_0",
         "bed_block/bed_hammock_1",

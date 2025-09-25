@@ -5,6 +5,8 @@
     "creativeTab": "westeros_wood_planks_tab",
     "type": "locked:true,allow-unsupported",
     "label": "Locked Oak Door",
+    "allowUnsupported": true,
+    "locked": true,
     "textures": [
         "wood/oak/door_locked_top",
         "wood/oak/door_locked_bottom"

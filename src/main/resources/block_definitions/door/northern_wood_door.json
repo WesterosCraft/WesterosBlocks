@@ -4,6 +4,7 @@
     "stepSound": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Northern Wood Door",
+    "allowUnsupported": true,
     "textures": [
         "wood/northern/door_top",
         "wood/northern/door_bottom"

@@ -231,6 +231,15 @@ public class ModBlocks {
                         .noDecay()
                         .build();
 
+                case "bed":
+                    return BlockBuilder.bed()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .requiresTool()
+                        .sounds(soundGroup)
+                        .nonOpaque()
+                        .build();
+
 //
 //                case "torch":
 //                    return BlockBuilder.torch()
@@ -799,86 +808,86 @@ public class ModBlocks {
                     .build());
 
     // Bed Blocks
-    public static final Block ITCHY_STRAW_BED = registerBlock(
-            "itchy_straw_bed",
-            BlockBuilder.bed()
-                    .strength(0.2f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.GRASS)
-                    .nonOpaque()
-                    .build());
-
-    public static final Block HAMMOCK = registerBlock(
-            "hammock",
-            BlockBuilder.bed()
-                    .strength(0.2f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .build());
-
-    public static final Block NIGHTS_WATCH_BED = registerBlock(
-            "nights_watch_bed",
-            BlockBuilder.bed()
-                    .strength(0.2f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .build());
-
-    public static final Block NOBLE_BLUE_BED = registerBlock(
-            "noble_blue_bed",
-            BlockBuilder.bed()
-                    .strength(0.2f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .build());
-
-    public static final Block NOBLE_RED_BED = registerBlock(
-            "noble_red_bed",
-            BlockBuilder.bed()
-                    .strength(0.2f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .build());
-
-    public static final Block NORTHERN_BED = registerBlock(
-            "northern_bed",
-            BlockBuilder.bed()
-                    .strength(0.2f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .build());
-
-    public static final Block PALE_GREEN_BED = registerBlock(
-            "pale_green_bed",
-            BlockBuilder.bed()
-                    .strength(0.2f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .build());
-
-    public static final Block PALE_RED_BED = registerBlock(
-            "pale_red_bed",
-            BlockBuilder.bed()
-                    .strength(0.2f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOL)
-                    .nonOpaque()
-                    .build());
-
-    public static final Block STRAW_BED = registerBlock(
-            "straw_bed",
-            BlockBuilder.bed()
-                    .strength(0.2f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.GRASS)
-                    .nonOpaque()
-                    .build());
+//    public static final Block ITCHY_STRAW_BED = registerBlock(
+//            "itchy_straw_bed",
+//            BlockBuilder.bed()
+//                    .strength(0.2f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.GRASS)
+//                    .nonOpaque()
+//                    .build());
+//
+//    public static final Block HAMMOCK = registerBlock(
+//            "hammock",
+//            BlockBuilder.bed()
+//                    .strength(0.2f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOL)
+//                    .nonOpaque()
+//                    .build());
+//
+//    public static final Block NIGHTS_WATCH_BED = registerBlock(
+//            "nights_watch_bed",
+//            BlockBuilder.bed()
+//                    .strength(0.2f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOL)
+//                    .nonOpaque()
+//                    .build());
+//
+//    public static final Block NOBLE_BLUE_BED = registerBlock(
+//            "noble_blue_bed",
+//            BlockBuilder.bed()
+//                    .strength(0.2f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOL)
+//                    .nonOpaque()
+//                    .build());
+//
+//    public static final Block NOBLE_RED_BED = registerBlock(
+//            "noble_red_bed",
+//            BlockBuilder.bed()
+//                    .strength(0.2f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOL)
+//                    .nonOpaque()
+//                    .build());
+//
+//    public static final Block NORTHERN_BED = registerBlock(
+//            "northern_bed",
+//            BlockBuilder.bed()
+//                    .strength(0.2f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOL)
+//                    .nonOpaque()
+//                    .build());
+//
+//    public static final Block PALE_GREEN_BED = registerBlock(
+//            "pale_green_bed",
+//            BlockBuilder.bed()
+//                    .strength(0.2f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOL)
+//                    .nonOpaque()
+//                    .build());
+//
+//    public static final Block PALE_RED_BED = registerBlock(
+//            "pale_red_bed",
+//            BlockBuilder.bed()
+//                    .strength(0.2f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOL)
+//                    .nonOpaque()
+//                    .build());
+//
+//    public static final Block STRAW_BED = registerBlock(
+//            "straw_bed",
+//            BlockBuilder.bed()
+//                    .strength(0.2f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.GRASS)
+//                    .nonOpaque()
+//                    .build());
 
     /**
      * Initialize all blocks
