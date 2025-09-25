@@ -5,6 +5,7 @@
     "lightValue": 9,
     "label": "Wildfire",
     "particle": "wildfire",
+    "renderLayer": "cutout",
     "tooltips": [
         "Very hot fire",
         "no fr its hot!"

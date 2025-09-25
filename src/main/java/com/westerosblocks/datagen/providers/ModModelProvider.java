@@ -597,13 +597,13 @@ public class ModModelProvider extends FabricModelProvider {
                 .build();
 
 
-        FireBlockDatagen.generateFireBlock(bsmg, ModBlocks.SAFE_FIRE, "safe_fire")
-                .textures("safe_fire/fire_layer_0", "safe_fire/fire_layer_1")
-                .build();
-
-        FireBlockDatagen.generateFireBlock(bsmg, ModBlocks.WILDFIRE, "wildfire")
-                .textures("wildfire/wildfire_layer_0", "wildfire/wildfire_layer_1")
-                .build();
+//        FireBlockDatagen.generateFireBlock(bsmg, ModBlocks.SAFE_FIRE, "safe_fire")
+//                .textures("safe_fire/fire_layer_0", "safe_fire/fire_layer_1")
+//                .build();
+//
+//        FireBlockDatagen.generateFireBlock(bsmg, ModBlocks.WILDFIRE, "wildfire")
+//                .textures("wildfire/wildfire_layer_0", "wildfire/wildfire_layer_1")
+//                .build();
 
         // Fence Blocks
         FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.BIRCH_BARK_FENCE, "birch_bark_fence")
@@ -768,6 +768,13 @@ public class ModModelProvider extends FabricModelProvider {
             }
         }
 
+        // Generate fire block models
+        for (BlockDefinition definition : registry.getByType("fire")) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block != null) {
+                FireBlockDatagen.registerCustomFireBlock(bsmg, block, definition);
+            }
+        }
 
         // TODO: Add other block types as needed
     }

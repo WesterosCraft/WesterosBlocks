@@ -137,6 +137,10 @@ public class BlockBuilder<T extends Block> {
     public static BlockBuilder<WCParticleEmitterBlock> particleEmitter() {
         return new BlockBuilder<>(new WCParticleEmitterBlock.Factory());
     }
+
+    public static BlockBuilder<WCFireBlock> fire() {
+        return new BlockBuilder<>(new WCFireBlock.Factory());
+    }
     
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
@@ -189,6 +193,11 @@ public class BlockBuilder<T extends Block> {
         if (Boolean.TRUE.equals(condition)) {
             this.settings = this.settings.noCollision();
         }
+        return this;
+    }
+
+    public BlockBuilder<T> breakInstantly() {
+        this.settings = this.settings.breakInstantly();
         return this;
     }
     

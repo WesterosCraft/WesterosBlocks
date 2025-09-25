@@ -4,6 +4,7 @@
     "creativeTab": "westeros_lighting_tab",
     "lightValue": 1,
     "label": "Safe Fire",
+    "renderLayer": "cutout",
     "textures": [
         "safe_fire/fire_layer_0",
         "safe_fire/fire_layer_1"

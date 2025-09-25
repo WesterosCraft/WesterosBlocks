@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
 import net.minecraft.state.property.Properties;
@@ -208,5 +209,22 @@ public class FireBlockDatagen {
     // Entry point for builder pattern
     public static FireBlockBuilder generateFireBlock(BlockStateModelGenerator generator, Block fireBlock, String fireName) {
         return new FireBlockBuilder(generator, fireBlock, fireName);
+    }
+
+    // Method for JSON definition system integration
+    public static void registerCustomFireBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        List<String> textureList = definition.getTextures();
+        if (textureList != null && textureList.size() >= 2) {
+            String texture0 = textureList.get(0);
+            String texture1 = textureList.get(1);
+            generateFireBlock(generator, block, definition.getBlockName())
+                .textures(texture0, texture1)
+                .build();
+        } else {
+            // Fallback for fire blocks with insufficient textures
+            generateFireBlock(generator, block, definition.getBlockName())
+                .textures("missingno", "missingno")
+                .build();
+        }
     }
 }

@@ -160,6 +160,16 @@ public class ModBlocks {
                         .allowUnsupported(definition.isAllowUnsupported())
                         .build();
 
+                case "fire":
+                    return BlockBuilder.fire()
+                        .strength(0.0f)
+                        .sounds(soundGroup)
+                        .luminance(state -> definition.getLuminance())
+                        .noCollision()
+                        .breakInstantly()
+                        .nonOpaque()
+                        .build();
+
 //                case "pane":
 //                    return BlockBuilder.pane()
 //                        .strength(definition.getStrength())
@@ -717,29 +727,29 @@ public class ModBlocks {
 
 
     // Fire Blocks
-    public static final Block SAFE_FIRE = registerBlock(
-            "safe_fire",
-            new WCFireBlock.Factory().buildBlockClass(
-                    AbstractBlock.Settings.create()
-                            .strength(0.0f)
-                            .luminance(state -> 1)
-                            .sounds(BlockSoundGroup.WOOL)
-                            .noCollision()
-                            .breakInstantly()
-                            .nonOpaque()
-            ));
-
-    public static final Block WILDFIRE = registerBlock(
-            "wildfire",
-            new WCFireBlock.Factory().buildBlockClass(
-                    AbstractBlock.Settings.create()
-                            .strength(0.0f)
-                            .luminance(state -> 9)
-                            .sounds(BlockSoundGroup.CANDLE)
-                            .noCollision()
-                            .breakInstantly()
-                            .nonOpaque()
-            ));
+//    public static final Block SAFE_FIRE = registerBlock(
+//            "safe_fire",
+//            new WCFireBlock.Factory().buildBlockClass(
+//                    AbstractBlock.Settings.create()
+//                            .strength(0.0f)
+//                            .luminance(state -> 1)
+//                            .sounds(BlockSoundGroup.WOOL)
+//                            .noCollision()
+//                            .breakInstantly()
+//                            .nonOpaque()
+//            ));
+//
+//    public static final Block WILDFIRE = registerBlock(
+//            "wildfire",
+//            new WCFireBlock.Factory().buildBlockClass(
+//                    AbstractBlock.Settings.create()
+//                            .strength(0.0f)
+//                            .luminance(state -> 9)
+//                            .sounds(BlockSoundGroup.CANDLE)
+//                            .noCollision()
+//                            .breakInstantly()
+//                            .nonOpaque()
+//            ));
 
     // Particle Emitter Blocks
     public static final Block CASCADE_PARTICLE_EMITTER = registerBlock(
