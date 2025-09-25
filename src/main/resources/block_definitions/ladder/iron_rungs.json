@@ -8,6 +8,6 @@
     "textures": [
         "iron_rungs/ladder"
     ],
-    "type": "allow-unsupported",
+    "allowUnsupported": true,
     "isCustomModel": true
 }

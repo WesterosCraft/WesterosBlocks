@@ -2,6 +2,7 @@ package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.custom.WCVinesBlock;
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
@@ -220,5 +221,39 @@ public class VinesBlockDatagen {
     // Entry point for builder pattern
     public static VinesBlockBuilder generateVinesBlock(BlockStateModelGenerator generator, Block vinesBlock, String vinesName) {
         return new VinesBlockBuilder(generator, vinesBlock, vinesName);
+    }
+
+    // Method for JSON definition system integration
+    public static void registerCustomVinesBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        VinesBlockBuilder builder = generateVinesBlock(generator, block, definition.getBlockName());
+
+        if (definition.hasRandomTextures()) {
+            // Use random textures from definition
+            for (BlockDefinition.RandomTextureVariant randomTexture : definition.getRandomTextures()) {
+                List<String> textures = randomTexture.getTextures();
+                int weight = randomTexture.getWeight();
+                if (textures != null && textures.size() >= 2) {
+                    // Vines typically need 2 textures (side and overlay/top)
+                    builder.addRandomTextureSet(weight, textures.get(0), textures.get(1));
+                } else if (textures != null && textures.size() == 1) {
+                    // Single texture used for both side and overlay
+                    String texture = textures.get(0);
+                    builder.addRandomTextureSet(weight, texture, texture);
+                }
+            }
+            builder.isTinted().build();
+        } else {
+            // Use simple textures if available
+            List<String> textureList = definition.getTextures();
+            if (textureList != null && textureList.size() >= 2) {
+                builder.textures(textureList.get(0), textureList.get(1)).isTinted().build();
+            } else if (textureList != null && textureList.size() == 1) {
+                String texture = textureList.get(0);
+                builder.textures(texture, texture).isTinted().build();
+            } else {
+                // Fallback for missing textures
+                builder.textures("missingno", "missingno").isTinted().build();
+            }
+        }
     }
 }

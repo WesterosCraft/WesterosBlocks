@@ -514,48 +514,48 @@ public class ModModelProvider extends FabricModelProvider {
                 .addRandomTextureSet(2, "leaves/oak/all", "transparent", "leaves/overlay/yellow_rose3")
                 .build();
 
-        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.DAPPLED_MOSS, "dappled_moss")
-                .isTinted()
-                .textures("dappled_moss/dappled", "dappled_moss/dappled")
-                .build();
-
-        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_ONE, "falling_water_block_one")
-                .textures("alyssas_tears_mist/mist1", "alyssas_tears_mist/mist1")
-                .isTinted()
-                .build();
-
-        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_TWO, "falling_water_block_two")
-                .textures("alyssas_tears_mist/mist2", "alyssas_tears_mist/mist2")
-                .isTinted()
-                .build();
-
-        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_THREE, "falling_water_block_three")
-                .textures("alyssas_tears_mist/mist3", "alyssas_tears_mist/mist3")
-                .isTinted()
-                .build();
-
-        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_FOUR, "falling_water_block_four")
-                .textures("alyssas_tears_mist/mist4", "alyssas_tears_mist/mist4")
-                .isTinted()
-                .build();
-
-        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.JASMINE_VINES, "jasmine_vines")
-                .addRandomTextureSet(1, "jasmine_vines/side1", "jasmine_vines/side1")
-                .addRandomTextureSet(1, "jasmine_vines/side2", "jasmine_vines/side2")
-                .addRandomTextureSet(1, "jasmine_vines/side3", "jasmine_vines/side3")
-                .addRandomTextureSet(1, "jasmine_vines/side4", "jasmine_vines/side4")
-                .addRandomTextureSet(1, "jasmine_vines/side5", "jasmine_vines/side5")
-                .isTinted()
-                .build();
-
-        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.VINES, "vines")
-                .addRandomTextureSet(1, "vines/side1", "vines/side1")
-                .addRandomTextureSet(1, "vines/side2", "vines/side2")
-                .addRandomTextureSet(1, "vines/side3", "vines/side3")
-                .addRandomTextureSet(1, "vines/side4", "vines/side4")
-                .addRandomTextureSet(1, "vines/side5", "vines/side5")
-                .isTinted()
-                .build();
+//        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.DAPPLED_MOSS, "dappled_moss")
+//                .isTinted()
+//                .textures("dappled_moss/dappled", "dappled_moss/dappled")
+//                .build();
+//
+//        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_ONE, "falling_water_block_one")
+//                .textures("alyssas_tears_mist/mist1", "alyssas_tears_mist/mist1")
+//                .isTinted()
+//                .build();
+//
+//        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_TWO, "falling_water_block_two")
+//                .textures("alyssas_tears_mist/mist2", "alyssas_tears_mist/mist2")
+//                .isTinted()
+//                .build();
+//
+//        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_THREE, "falling_water_block_three")
+//                .textures("alyssas_tears_mist/mist3", "alyssas_tears_mist/mist3")
+//                .isTinted()
+//                .build();
+//
+//        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_FOUR, "falling_water_block_four")
+//                .textures("alyssas_tears_mist/mist4", "alyssas_tears_mist/mist4")
+//                .isTinted()
+//                .build();
+//
+//        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.JASMINE_VINES, "jasmine_vines")
+//                .addRandomTextureSet(1, "jasmine_vines/side1", "jasmine_vines/side1")
+//                .addRandomTextureSet(1, "jasmine_vines/side2", "jasmine_vines/side2")
+//                .addRandomTextureSet(1, "jasmine_vines/side3", "jasmine_vines/side3")
+//                .addRandomTextureSet(1, "jasmine_vines/side4", "jasmine_vines/side4")
+//                .addRandomTextureSet(1, "jasmine_vines/side5", "jasmine_vines/side5")
+//                .isTinted()
+//                .build();
+//
+//        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.VINES, "vines")
+//                .addRandomTextureSet(1, "vines/side1", "vines/side1")
+//                .addRandomTextureSet(1, "vines/side2", "vines/side2")
+//                .addRandomTextureSet(1, "vines/side3", "vines/side3")
+//                .addRandomTextureSet(1, "vines/side4", "vines/side4")
+//                .addRandomTextureSet(1, "vines/side5", "vines/side5")
+//                .isTinted()
+//                .build();
 
         // ladder blocks
 //        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.IRON_RUNGS, "iron_rungs")
@@ -772,6 +772,22 @@ public class ModModelProvider extends FabricModelProvider {
             Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
             if (block != null) {
                 LadderBlockDatagen.registerCustomLadderBlock(bsmg, block, definition);
+            }
+        }
+
+        // Generate vines block models
+        for (BlockDefinition definition : registry.getByType("vines")) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block != null) {
+                VinesBlockDatagen.registerCustomVinesBlock(bsmg, block, definition);
+            }
+        }
+
+        // Generate pane block models
+        for (BlockDefinition definition : registry.getByType("pane")) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block != null) {
+                PaneBlockExporter.registerCustomPaneBlock(bsmg, block, definition);
             }
         }
 

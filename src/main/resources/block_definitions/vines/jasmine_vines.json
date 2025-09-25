@@ -4,6 +4,7 @@
     "stepSound": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Jasmine Vines",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [

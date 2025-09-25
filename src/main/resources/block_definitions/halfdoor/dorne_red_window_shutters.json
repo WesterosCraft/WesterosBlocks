@@ -4,7 +4,7 @@
     "stepSound": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Dorne Red Window Shutters",
-    "type": "allow-unsupported",
+    "allowUnsupported": true,
     "textures": [
         "shutter_block/shutters_dorne"
     ],

@@ -177,19 +177,32 @@ public class ModBlocks {
                         .requiresTool()
                         .sounds(soundGroup)
                         .nonOpaque()
-                        .allowUnsupported()
+                        .allowUnsupported(definition.isAllowUnsupported())
                         .build();
 
-//                case "pane":
-//                    return BlockBuilder.pane()
-//                        .strength(definition.getStrength())
-//                        .resistance(definition.getResistance())
-//                        .requiresTool()
-//                        .sounds(soundGroup)
-//                        .nonOpaque()
-//                        .legacyModel(true)
-//                        .unconnect(false)
-//                        .build();
+                case "vines":
+                    return BlockBuilder.vines()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .sounds(soundGroup)
+                        .nonOpaque()
+                        .allowUnsupported()
+                        .noClimb()
+                        .canGrowDownward()
+                        .noCollision(definition.hasNoCollision())
+                        .build();
+
+                case "pane":
+                    return BlockBuilder.pane()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .requiresTool()
+                        .sounds(soundGroup)
+                        .nonOpaque()
+                        .legacyModel(true)
+                        .unconnect(false)
+                        .build();
+
 //
 //                case "torch":
 //                    return BlockBuilder.torch()
@@ -1202,147 +1215,6 @@ public class ModBlocks {
                     .nonOpaque()
                     .build());
 
-    // vines block
-    public static final Block DAPPLED_MOSS = registerBlock(
-            "dappled_moss",
-            BlockBuilder.vines()
-                    .strength(0.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WET_GRASS)
-                    .nonOpaque()
-                    .allowUnsupported()
-                    .noClimb()
-                    .canGrowDownward()
-                    .build());
-
-    public static final Block FALLING_WATER_BLOCK_FOUR = registerBlock(
-            "falling_water_block_four",
-            BlockBuilder.vines()
-                    .strength(0.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WET_GRASS)
-                    .nonOpaque()
-                    .noCollision()
-                    .allowUnsupported()
-                    .noClimb()
-                    .build());
-
-    public static final Block FALLING_WATER_BLOCK_THREE = registerBlock(
-            "falling_water_block_three",
-            BlockBuilder.vines()
-                    .strength(0.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WET_GRASS)
-                    .nonOpaque()
-                    .noCollision()
-                    .allowUnsupported()
-                    .noClimb()
-                    .build());
-
-    public static final Block FALLING_WATER_BLOCK_TWO = registerBlock(
-            "falling_water_block_two",
-            BlockBuilder.vines()
-                    .strength(0.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WET_GRASS)
-                    .nonOpaque()
-                    .noCollision()
-                    .allowUnsupported()
-                    .noClimb()
-                    .build());
-
-    public static final Block FALLING_WATER_BLOCK_ONE = registerBlock(
-            "falling_water_block_one",
-            BlockBuilder.vines()
-                    .strength(0.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WET_GRASS)
-                    .nonOpaque()
-                    .allowUnsupported()
-                    .noCollision()
-                    .noClimb()
-                    .build());
-
-    public static final Block JASMINE_VINES = registerBlock(
-            "jasmine_vines",
-            BlockBuilder.vines()
-                    .strength(0.2f)
-                    .sounds(BlockSoundGroup.GRASS)
-                    .nonOpaque()
-                    .allowUnsupported()
-                    .noClimb()
-                    .canGrowDownward()
-                    .build());
-
-    public static final Block VINES = registerBlock(
-            "vines",
-            BlockBuilder.vines()
-                    .strength(0.2f)
-                    .sounds(BlockSoundGroup.GRASS)
-                    .nonOpaque()
-                    .allowUnsupported()
-                    .noClimb()
-                    .canGrowDownward()
-                    .build());
-
-    // Ladder blocks
-//
-//    public static final Block IRON_RUNGS = registerBlock(
-//            "iron_rungs",
-//            BlockBuilder.ladder()
-//                    .strength(0.8f)
-//                    .requiresTool()
-//                    .sounds(BlockSoundGroup.METAL)
-//                    .nonOpaque()
-//                    .allowUnsupported()
-//                    .build());
-//
-//    public static final Block IRON_RUNGS_BROKEN = registerBlock(
-//            "iron_rungs_broken",
-//            BlockBuilder.ladder()
-//                    .strength(0.8f)
-//                    .requiresTool()
-//                    .sounds(BlockSoundGroup.METAL)
-//                    .nonOpaque()
-//                    .allowUnsupported()
-//                    .build());
-//
-//    public static final Block ROPE_LADDER = registerBlock(
-//            "rope_ladder",
-//            BlockBuilder.ladder()
-//                    .strength(0.4f)
-//                    .sounds(BlockSoundGroup.LADDER)
-//                    .nonOpaque()
-//                    .allowUnsupported()
-//                    .build());
-//
-//    public static final Block VINE_JASMINE = registerBlock(
-//            "vine_jasmine",
-//            BlockBuilder.ladder()
-//                    .strength(0.4f)
-//                    .sounds(BlockSoundGroup.LADDER)
-//                    .nonOpaque()
-//                    .allowUnsupported()
-//                    .build());
-//
-//    public static final Block WINTERFELL_STONE_LADDER = registerBlock(
-//            "winterfell_stone_ladder",
-//            BlockBuilder.ladder()
-//                    .strength(1.5f)
-//                    .requiresTool()
-//                    .sounds(BlockSoundGroup.STONE)
-//                    .nonOpaque()
-//                    .allowUnsupported()
-//                    .build());
-//
-//    public static final Block WOOD_LADDER = registerBlock(
-//            "wood_ladder",
-//            BlockBuilder.ladder()
-//                    .strength(0.4f)
-//                    .sounds(BlockSoundGroup.LADDER)
-//                    .nonOpaque()
-//                    .allowUnsupported()
-//                    .build());
 
     // Fence Blocks
     public static final Block BIRCH_BARK_FENCE = registerBlock(

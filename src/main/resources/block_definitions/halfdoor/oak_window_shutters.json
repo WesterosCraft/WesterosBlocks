@@ -4,7 +4,7 @@
     "stepSound": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Oak Window Shutters",
-    "type": "allow-unsupported",
+    "allowUnsupported": true,
     "textures": [
         "wood/oak/shutters"
     ],

@@ -5,6 +5,7 @@
     "creativeTab": "westeros_foliage_tab",
     "label": "Vines",
     "colorMult": "textures/colormap/foliagevine",
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [
