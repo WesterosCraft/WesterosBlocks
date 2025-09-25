@@ -2,6 +2,7 @@ package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModTextureKey;
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
 import net.minecraft.state.property.Properties;
@@ -315,5 +316,63 @@ public class FenceBlockDatagen {
     // Entry point for builder pattern
     public static FenceBlockBuilder generateFenceBlock(BlockStateModelGenerator generator, Block fenceBlock, String fenceName) {
         return new FenceBlockBuilder(generator, fenceBlock, fenceName);
+    }
+
+    /**
+     * Method for JSON definition system integration
+     */
+    public static void registerCustomFenceBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        List<String> textureList = definition.getTextures();
+        FenceBlockBuilder builder = generateFenceBlock(generator, block, definition.getBlockName());
+
+        // Check if fence has overlay textures
+        if (definition.hasOverlayTextures()) {
+            builder.hasOverlay();
+        }
+
+        if (definition.hasRandomTextures()) {
+            // Handle random textures with possible overlay support
+            List<BlockDefinition.RandomTextureVariant> randomTextures = definition.getRandomTextures();
+
+            for (BlockDefinition.RandomTextureVariant randomTexture : randomTextures) {
+                List<String> textures = randomTexture.getTextures();
+                int weight = randomTexture.getWeight();
+
+                if (textures != null && !textures.isEmpty()) {
+                    if (definition.hasOverlayTextures() && definition.getOverlayTextures().size() >= textures.size()) {
+                        // Use overlay textures if available
+                        List<String> overlayTextures = definition.getOverlayTextures();
+                        String[] textureArray = textures.toArray(new String[0]);
+                        String[] overlayArray = overlayTextures.subList(0, textures.size()).toArray(new String[0]);
+                        builder.addRandomTextureSetWithOverlay(weight, textureArray, overlayArray);
+                    } else {
+                        // No overlay textures, just regular textures
+                        builder.addRandomTextureSet(weight, textures.toArray(new String[0]));
+                    }
+                } else {
+                    // Fallback for empty texture variant
+                    builder.addRandomTextureSet(weight, "missingno");
+                }
+            }
+            builder.build();
+        } else if (textureList != null && !textureList.isEmpty()) {
+            // Use simple textures
+            if (definition.hasOverlayTextures()) {
+                List<String> overlayTextures = definition.getOverlayTextures();
+                String[] textureArray = textureList.toArray(new String[0]);
+                String[] overlayArray = overlayTextures.toArray(new String[0]);
+                builder.hasOverlay().addRandomTextureSetWithOverlay(1, textureArray, overlayArray).build();
+            } else {
+                // Single texture or multiple textures for bottom, top, side
+                if (textureList.size() == 1) {
+                    builder.texture(textureList.get(0)).build();
+                } else {
+                    builder.textures(textureList.toArray(new String[0])).build();
+                }
+            }
+        } else {
+            // Fallback for missing textures
+            builder.texture("missingno").build();
+        }
     }
 }

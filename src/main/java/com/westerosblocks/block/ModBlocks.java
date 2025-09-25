@@ -203,6 +203,24 @@ public class ModBlocks {
                         .unconnect(false)
                         .build();
 
+                case "fence":
+                    return BlockBuilder.fence()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .requiresTool()
+                        .sounds(soundGroup)
+                        .build();
+
+                case "fencegate":
+                    return BlockBuilder.fenceGate()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .requiresTool()
+                        .sounds(soundGroup)
+                        .woodType(getWoodTypeFromDefinition(definition))
+                        .locked(definition.isLocked())
+                        .build();
+
 //
 //                case "torch":
 //                    return BlockBuilder.torch()
@@ -463,93 +481,6 @@ public class ModBlocks {
                     .noParticle(true)
                     .build());
 
-    // Pane Blocks
-    public static final Block DORNE_CARVED_STONE_WINDOW = registerBlock(
-            "dorne_carved_stone_window",
-            BlockBuilder.pane()
-                    .strength(1.0f)
-                    .resistance(3.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.STONE)
-                    .nonOpaque()
-                    .legacyModel(true)
-                    .unconnect(false)
-                    .build());
-
-    public static final Block DORNE_CARVED_WOODEN_WINDOW = registerBlock(
-            "dorne_carved_wooden_window",
-            BlockBuilder.pane()
-                    .strength(1.0f)
-                    .resistance(3.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.STONE)
-                    .nonOpaque()
-                    .legacyModel(true)
-                    .unconnect(false)
-                    .build());
-
-    public static final Block IRON_BARS = registerBlock(
-            "iron_bars",
-            BlockBuilder.pane()
-                    .strength(5.0f)
-                    .resistance(10.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.METAL)
-                    .nonOpaque()
-                    .barsModel(true)
-                    .unconnect(false)
-                    .build());
-
-    public static final Block IRON_CROSSBAR = registerBlock(
-            "iron_crossbar",
-            BlockBuilder.pane()
-                    .strength(5.0f)
-                    .resistance(10.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.METAL)
-                    .nonOpaque()
-                    .barsModel(true)
-                    .unconnect(false)
-                    .build());
-
-    public static final Block OXIDIZED_IRON_BARS = registerBlock(
-            "oxidized_iron_bars",
-            BlockBuilder.pane()
-                    .strength(5.0f)
-                    .resistance(10.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.METAL)
-                    .nonOpaque()
-                    .barsModel(true)
-                    .unconnect(false)
-                    .build());
-
-    public static final Block OXIDIZED_IRON_CROSSBAR = registerBlock(
-            "oxidized_iron_crossbar",
-            BlockBuilder.pane()
-                    .strength(5.0f)
-                    .resistance(10.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.METAL)
-                    .nonOpaque()
-                    .barsModel(true)
-                    .unconnect(false)
-                    .build());
-
-    public static final Block VERTICAL_NET = registerBlock(
-            "vertical_net",
-            BlockBuilder.pane()
-                    .strength(1.0f)
-                    .resistance(3.0f)
-                    .sounds(BlockSoundGroup.GLASS)
-                    .nonOpaque()
-                    .legacyModel(true)
-                    .unconnect(false)
-                    .build());
-
-
-
-
     // Rail blocks
     public static final Block FANCY_BLUE_CARPET = registerBlock(
             "fancy_blue_carpet",
@@ -748,31 +679,6 @@ public class ModBlocks {
                     .noCollision()
                     .build());
 
-
-    // Fire Blocks
-//    public static final Block SAFE_FIRE = registerBlock(
-//            "safe_fire",
-//            new WCFireBlock.Factory().buildBlockClass(
-//                    AbstractBlock.Settings.create()
-//                            .strength(0.0f)
-//                            .luminance(state -> 1)
-//                            .sounds(BlockSoundGroup.WOOL)
-//                            .noCollision()
-//                            .breakInstantly()
-//                            .nonOpaque()
-//            ));
-//
-//    public static final Block WILDFIRE = registerBlock(
-//            "wildfire",
-//            new WCFireBlock.Factory().buildBlockClass(
-//                    AbstractBlock.Settings.create()
-//                            .strength(0.0f)
-//                            .luminance(state -> 9)
-//                            .sounds(BlockSoundGroup.CANDLE)
-//                            .noCollision()
-//                            .breakInstantly()
-//                            .nonOpaque()
-//            ));
 
     // Particle Emitter Blocks
     public static final Block CASCADE_PARTICLE_EMITTER = registerBlock(
@@ -1216,205 +1122,50 @@ public class ModBlocks {
                     .build());
 
 
-    // Fence Blocks
-    public static final Block BIRCH_BARK_FENCE = registerBlock(
-            "birch_bark_fence",
-            BlockBuilder.fence()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block BIRCH_FENCE_WITH_GRAPES = registerBlock(
-            "birch_fence_with_grapes",
-            BlockBuilder.fence()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block BIRCH_FENCE_WITH_VINES = registerBlock(
-            "birch_fence_with_vines",
-            BlockBuilder.fence()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block JUNGLE_BARK_FENCE = registerBlock(
-            "jungle_bark_fence",
-            BlockBuilder.fence()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block JUNGLE_FENCE_WITH_GRAPES = registerBlock(
-            "jungle_fence_with_grapes",
-            BlockBuilder.fence()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block JUNGLE_FENCE_WITH_VINES = registerBlock(
-            "jungle_fence_with_vines",
-            BlockBuilder.fence()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block MARBLE_COLUMN_FENCE = registerBlock(
-            "marble_column_fence",
-            BlockBuilder.fence()
-                    .strength(5.0f)
-                    .resistance(10.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.STONE)
-                    .build());
-
-    public static final Block OAK_BARK_FENCE = registerBlock(
-            "oak_bark_fence",
-            BlockBuilder.fence()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block OAK_FENCE_WITH_GRAPES = registerBlock(
-            "oak_fence_with_grapes",
-            BlockBuilder.fence()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block OAK_FENCE_WITH_VINES = registerBlock(
-            "oak_fence_with_vines",
-            BlockBuilder.fence()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block PALM_FENCE = registerBlock(
-            "palm_fence",
-            BlockBuilder.fence()
-                    .strength(5.0f)
-                    .resistance(10.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block REINFORCED_OAK_FENCE = registerBlock(
-            "reinforced_oak_fence",
-            BlockBuilder.fence()
-                    .strength(5.0f)
-                    .resistance(10.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block SEPT_CRYSTAL_SMALL = registerBlock(
-            "sept_crystal_small",
-            BlockBuilder.fence()
-                    .strength(5.0f)
-                    .resistance(10.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.GLASS)
-                    .nonOpaque()
-                    .build());
-
-    public static final Block SPRUCE_BARK_FENCE = registerBlock(
-            "spruce_bark_fence",
-            BlockBuilder.fence()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block SPRUCE_FENCE_WITH_GRAPES = registerBlock(
-            "spruce_fence_with_grapes",
-            BlockBuilder.fence()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block SPRUCE_FENCE_WITH_VINES = registerBlock(
-            "spruce_fence_with_vines",
-            BlockBuilder.fence()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .build());
-
-    public static final Block STACKED_BONES_FENCE = registerBlock(
-            "stacked_bones_fence",
-            BlockBuilder.fence()
-                    .strength(5.0f)
-                    .resistance(10.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.BONE)
-                    .build());
-
     // Fence Gate Blocks
-    public static final Block LOCKED_BIRCH_BARK_FENCE_GATE = registerBlock(
-            "locked_birch_bark_fence_gate",
-            BlockBuilder.fenceGate()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("birch")
-                    .locked()
-                    .build());
-
-    public static final Block LOCKED_JUNGLE_BARK_FENCE_GATE = registerBlock(
-            "locked_jungle_bark_fence_gate",
-            BlockBuilder.fenceGate()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("jungle")
-                    .locked()
-                    .build());
-
-    public static final Block LOCKED_OAK_BARK_FENCE_GATE = registerBlock(
-            "locked_oak_bark_fence_gate",
-            BlockBuilder.fenceGate()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("oak")
-                    .locked()
-                    .build());
-
-    public static final Block LOCKED_SPRUCE_BARK_FENCE_GATE = registerBlock(
-            "locked_spruce_bark_fence_gate",
-            BlockBuilder.fenceGate()
-                    .strength(2.0f)
-                    .resistance(5.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOD)
-                    .woodType("spruce")
-                    .locked()
-                    .build());
+//    public static final Block LOCKED_BIRCH_BARK_FENCE_GATE = registerBlock(
+//            "locked_birch_bark_fence_gate",
+//            BlockBuilder.fenceGate()
+//                    .strength(2.0f)
+//                    .resistance(5.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("birch")
+//                    .locked()
+//                    .build());
+//
+//    public static final Block LOCKED_JUNGLE_BARK_FENCE_GATE = registerBlock(
+//            "locked_jungle_bark_fence_gate",
+//            BlockBuilder.fenceGate()
+//                    .strength(2.0f)
+//                    .resistance(5.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("jungle")
+//                    .locked()
+//                    .build());
+//
+//    public static final Block LOCKED_OAK_BARK_FENCE_GATE = registerBlock(
+//            "locked_oak_bark_fence_gate",
+//            BlockBuilder.fenceGate()
+//                    .strength(2.0f)
+//                    .resistance(5.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("oak")
+//                    .locked()
+//                    .build());
+//
+//    public static final Block LOCKED_SPRUCE_BARK_FENCE_GATE = registerBlock(
+//            "locked_spruce_bark_fence_gate",
+//            BlockBuilder.fenceGate()
+//                    .strength(2.0f)
+//                    .resistance(5.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.WOOD)
+//                    .woodType("spruce")
+//                    .locked()
+//                    .build());
 
     /**
      * Initialize all blocks

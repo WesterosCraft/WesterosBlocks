@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
 import net.minecraft.state.property.Properties;
@@ -239,5 +240,38 @@ public class FenceGateBlockDatagen {
     // Entry point for builder pattern
     public static FenceGateBlockBuilder generateFenceGateBlock(BlockStateModelGenerator generator, Block fenceGateBlock, String gateName) {
         return new FenceGateBlockBuilder(generator, fenceGateBlock, gateName);
+    }
+
+    /**
+     * Method for JSON definition system integration
+     */
+    public static void registerCustomFenceGateBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        List<String> textureList = definition.getTextures();
+        FenceGateBlockBuilder builder = generateFenceGateBlock(generator, block, definition.getBlockName());
+
+        if (definition.hasRandomTextures()) {
+            // Handle random textures
+            List<BlockDefinition.RandomTextureVariant> randomTextures = definition.getRandomTextures();
+
+            for (BlockDefinition.RandomTextureVariant randomTexture : randomTextures) {
+                List<String> textures = randomTexture.getTextures();
+                int weight = randomTexture.getWeight();
+
+                if (textures != null && !textures.isEmpty()) {
+                    // Use first texture for fence gate (fence gates typically use single texture)
+                    builder.addRandomTextureSet(weight, textures.get(0));
+                } else {
+                    // Fallback for empty texture variant
+                    builder.addRandomTextureSet(weight, "missingno");
+                }
+            }
+            builder.build();
+        } else if (textureList != null && !textureList.isEmpty()) {
+            // Use simple texture (fence gates typically use single texture)
+            builder.texture(textureList.get(0)).build();
+        } else {
+            // Fallback for missing textures
+            builder.texture("missingno").build();
+        }
     }
 }

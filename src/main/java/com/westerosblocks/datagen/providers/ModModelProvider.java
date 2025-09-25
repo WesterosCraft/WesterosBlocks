@@ -39,27 +39,6 @@ public class ModModelProvider extends FabricModelProvider {
                 .texture("bark/birch/side")
                 .build();
 
-        // Pane Blocks
-        registerCustomPaneBlock(bsmg, ModBlocks.DORNE_CARVED_STONE_WINDOW)
-                .texture("pane_block/moorish_stone_window_pane").build();
-        registerCustomPaneBlock(bsmg, ModBlocks.DORNE_CARVED_WOODEN_WINDOW)
-                .texture("pane_block/moorish_wood_window_pane").build();
-        registerCustomPaneBlock(bsmg, ModBlocks.IRON_BARS)
-                .texture("bars_iron_block/iron_bars").build();
-        registerCustomPaneBlock(bsmg, ModBlocks.IRON_CROSSBAR)
-                .texture("bars_iron_block/bars_iron_crossbars").build();
-        registerCustomPaneBlock(bsmg, ModBlocks.OXIDIZED_IRON_BARS)
-                .texture("bars_iron_block/bars_iron_oxidized").build();
-        registerCustomPaneBlock(bsmg, ModBlocks.OXIDIZED_IRON_CROSSBAR)
-                .texture("bars_iron_block/bars_iron_oxidized_crossbars").build();
-        registerCustomPaneBlock(bsmg, ModBlocks.VERTICAL_NET)
-                .randomTexture("vertical_net/vertical_net1")
-                .randomTexture("vertical_net/vertical_net2")
-                .randomTexture("vertical_net/vertical_net3")
-                .randomTexture("vertical_net/vertical_net4")
-                .randomTexture("vertical_net/vertical_net5")
-                .build();
-
         // Torch Blocks
         registerCustomTorchBlock(bsmg, ModBlocks.TORCH).texture("lighting/torch").build();
         registerCustomTorchBlock(bsmg, ModBlocks.TORCH_UNLIT).texture("lighting/torch_unlit").build();
@@ -514,173 +493,6 @@ public class ModModelProvider extends FabricModelProvider {
                 .addRandomTextureSet(2, "leaves/oak/all", "transparent", "leaves/overlay/yellow_rose3")
                 .build();
 
-//        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.DAPPLED_MOSS, "dappled_moss")
-//                .isTinted()
-//                .textures("dappled_moss/dappled", "dappled_moss/dappled")
-//                .build();
-//
-//        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_ONE, "falling_water_block_one")
-//                .textures("alyssas_tears_mist/mist1", "alyssas_tears_mist/mist1")
-//                .isTinted()
-//                .build();
-//
-//        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_TWO, "falling_water_block_two")
-//                .textures("alyssas_tears_mist/mist2", "alyssas_tears_mist/mist2")
-//                .isTinted()
-//                .build();
-//
-//        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_THREE, "falling_water_block_three")
-//                .textures("alyssas_tears_mist/mist3", "alyssas_tears_mist/mist3")
-//                .isTinted()
-//                .build();
-//
-//        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.FALLING_WATER_BLOCK_FOUR, "falling_water_block_four")
-//                .textures("alyssas_tears_mist/mist4", "alyssas_tears_mist/mist4")
-//                .isTinted()
-//                .build();
-//
-//        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.JASMINE_VINES, "jasmine_vines")
-//                .addRandomTextureSet(1, "jasmine_vines/side1", "jasmine_vines/side1")
-//                .addRandomTextureSet(1, "jasmine_vines/side2", "jasmine_vines/side2")
-//                .addRandomTextureSet(1, "jasmine_vines/side3", "jasmine_vines/side3")
-//                .addRandomTextureSet(1, "jasmine_vines/side4", "jasmine_vines/side4")
-//                .addRandomTextureSet(1, "jasmine_vines/side5", "jasmine_vines/side5")
-//                .isTinted()
-//                .build();
-//
-//        VinesBlockDatagen.generateVinesBlock(bsmg, ModBlocks.VINES, "vines")
-//                .addRandomTextureSet(1, "vines/side1", "vines/side1")
-//                .addRandomTextureSet(1, "vines/side2", "vines/side2")
-//                .addRandomTextureSet(1, "vines/side3", "vines/side3")
-//                .addRandomTextureSet(1, "vines/side4", "vines/side4")
-//                .addRandomTextureSet(1, "vines/side5", "vines/side5")
-//                .isTinted()
-//                .build();
-
-        // ladder blocks
-//        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.IRON_RUNGS, "iron_rungs")
-//                .isCustom()
-//                .texture("iron_rungs/ladder")
-//                .build();
-//
-//        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.IRON_RUNGS_BROKEN, "iron_rungs_broken")
-//                .isCustom()
-//                .addRandomTextureSet("")
-//                .addRandomTextureSet("")
-//                .addRandomTextureSet("")
-//                .addRandomTextureSet("")
-//                .addRandomTextureSet("")
-//                .addRandomTextureSet("")
-//                .build();
-//
-//        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.ROPE_LADDER, "rope_ladder")
-//                .texture("rope_ladder/side")
-//                .build();
-//
-//
-//        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.VINE_JASMINE, "vine_jasmine")
-//                .addRandomTextureSet("jasmine_vines/side1")
-//                .addRandomTextureSet("jasmine_vines/side2")
-//                .addRandomTextureSet("jasmine_vines/side3")
-//                .addRandomTextureSet("jasmine_vines/side4")
-//                .addRandomTextureSet("jasmine_vines/side5")
-//                .build();
-//
-//        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.WINTERFELL_STONE_LADDER, "winterfell_stone_ladder")
-//                .addRandomTextureSet("winterfell_stone_ladder/side1")
-//                .addRandomTextureSet("winterfell_stone_ladder/side2")
-//                .build();
-//
-//        LadderBlockDatagen.generateLadderBlock(bsmg, ModBlocks.WOOD_LADDER, "wood_ladder")
-//                .isCustom()
-//                .texture("wood_ladder/side")
-//                .build();
-
-        // Fence Blocks
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.BIRCH_BARK_FENCE, "birch_bark_fence")
-                .texture("bark/birch/side")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.BIRCH_FENCE_WITH_GRAPES, "birch_fence_with_grapes")
-                .texture("wood/birch/grapevines")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.BIRCH_FENCE_WITH_VINES, "birch_fence_with_vines")
-                .texture("wood/birch/vines")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.JUNGLE_BARK_FENCE, "jungle_bark_fence")
-                .texture("bark/jungle/side")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.JUNGLE_FENCE_WITH_GRAPES, "jungle_fence_with_grapes")
-                .texture("wood/jungle/grapevines")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.JUNGLE_FENCE_WITH_VINES, "jungle_fence_with_vines")
-                .texture("wood/jungle/vines")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.MARBLE_COLUMN_FENCE, "marble_column_fence")
-                .texture("marble/quartz/column_side")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.OAK_BARK_FENCE, "oak_bark_fence")
-                .texture("bark/oak/side")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.OAK_FENCE_WITH_GRAPES, "oak_fence_with_grapes")
-                .texture("wood/oak/grapevines")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.OAK_FENCE_WITH_VINES, "oak_fence_with_vines")
-                .texture("wood/oak/vines")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.PALM_FENCE, "palm_fence")
-                .texture("bark/palm/side")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.REINFORCED_OAK_FENCE, "reinforced_oak_fence")
-                .texture("wood/oak/reinforced")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.SEPT_CRYSTAL_SMALL, "sept_crystal_small")
-                .textures("crystal/fence_top", "crystal/fence_top", "crystal/fence")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.SPRUCE_BARK_FENCE, "spruce_bark_fence")
-                .texture("bark/spruce/side")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.SPRUCE_FENCE_WITH_GRAPES, "spruce_fence_with_grapes")
-                .texture("wood/spruce/grapevines")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.SPRUCE_FENCE_WITH_VINES, "spruce_fence_with_vines")
-                .texture("wood/spruce/vines")
-                .build();
-
-        FenceBlockDatagen.generateFenceBlock(bsmg, ModBlocks.STACKED_BONES_FENCE, "stacked_bones_fence")
-                .texture("stacked_bones/bone_stacked_side")
-                .build();
-
-        // Fence Gate Blocks
-        FenceGateBlockDatagen.generateFenceGateBlock(bsmg, ModBlocks.LOCKED_BIRCH_BARK_FENCE_GATE, "locked_birch_bark_fence_gate")
-                .texture("bark/birch/side")
-                .build();
-
-        FenceGateBlockDatagen.generateFenceGateBlock(bsmg, ModBlocks.LOCKED_JUNGLE_BARK_FENCE_GATE, "locked_jungle_bark_fence_gate")
-                .texture("bark/jungle/side")
-                .build();
-
-        FenceGateBlockDatagen.generateFenceGateBlock(bsmg, ModBlocks.LOCKED_OAK_BARK_FENCE_GATE, "locked_oak_bark_fence_gate")
-                .texture("bark/oak/side")
-                .build();
-
-        FenceGateBlockDatagen.generateFenceGateBlock(bsmg, ModBlocks.LOCKED_SPRUCE_BARK_FENCE_GATE, "locked_spruce_bark_fence_gate")
-                .texture("bark/spruce/side")
-                .build();
 
         // Particle Emitter Blocks
         ParticleEmitterDatagen.registerCustomParticleEmitterBlock(bsmg, ModBlocks.CASCADE_PARTICLE_EMITTER, "cascade_particle_emitter");
@@ -788,6 +600,22 @@ public class ModModelProvider extends FabricModelProvider {
             Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
             if (block != null) {
                 PaneBlockExporter.registerCustomPaneBlock(bsmg, block, definition);
+            }
+        }
+
+        // Generate fence block models
+        for (BlockDefinition definition : registry.getByType("fence")) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block != null) {
+                FenceBlockDatagen.registerCustomFenceBlock(bsmg, block, definition);
+            }
+        }
+
+        // Generate fencegate block models
+        for (BlockDefinition definition : registry.getByType("fencegate")) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block != null) {
+                FenceGateBlockDatagen.registerCustomFenceGateBlock(bsmg, block, definition);
             }
         }
 

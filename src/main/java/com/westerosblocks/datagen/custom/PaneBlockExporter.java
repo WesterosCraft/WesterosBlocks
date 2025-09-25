@@ -7,6 +7,9 @@ import net.minecraft.util.Identifier;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
 import com.westerosblocks.block.custom.WCPaneBlock;
+import com.westerosblocks.data.BlockDefinition;
+
+import java.util.List;
 
 public class PaneBlockExporter extends BaseBlockExporter {
 
@@ -64,5 +67,35 @@ public class PaneBlockExporter extends BaseBlockExporter {
         }
 
         return supplier;
+    }
+
+    /**
+     * Method for JSON definition system integration
+     */
+    public static void registerCustomPaneBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        List<String> textureList = definition.getTextures();
+
+        if (definition.hasRandomTextures()) {
+            // Handle random textures - use first texture from first variant
+            List<BlockDefinition.RandomTextureVariant> randomTextures = definition.getRandomTextures();
+            if (!randomTextures.isEmpty()) {
+                BlockDefinition.RandomTextureVariant firstVariant = randomTextures.get(0);
+                List<String> textures = firstVariant.getTextures();
+                if (textures != null && !textures.isEmpty()) {
+                    registerPaneBlock(generator, block, textures.get(0));
+                } else {
+                    // Fallback for empty texture variant
+                    registerPaneBlock(generator, block, "missingno");
+                }
+            } else {
+                registerPaneBlock(generator, block, "missingno");
+            }
+        } else if (textureList != null && !textureList.isEmpty()) {
+            // Use first texture from regular texture list
+            registerPaneBlock(generator, block, textureList.get(0));
+        } else {
+            // Fallback for missing textures
+            registerPaneBlock(generator, block, "missingno");
+        }
     }
 }
