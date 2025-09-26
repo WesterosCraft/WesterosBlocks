@@ -3,6 +3,9 @@
     "blockType": "crop",
     "stepSound": "grass",
     "type": "toggleOnUse,layerSensitive",
+    "layerSensitive": true,
+    "toggleOnUse": true,
+    "renderLayer": "cutout",
     "harvestLevel": [
         {
             "tool": "pickaxe",

@@ -91,152 +91,6 @@ public class ModModelProvider extends FabricModelProvider {
                 .flowerTexture("flowerbed/clover")
                 .build();
 
-
-        // Crop Blocks
-        CropBlockDatagen
-                .generateCropBlock(bsmg, ModBlocks.CROP_CARROTS, "crop_carrots")
-                .addState("age0", "carrots/carrots_stage_0")
-                .addState("age1", "carrots/carrots_stage_1")
-                .addState("age2", "carrots/carrots_stage_2")
-                .addState("age3", "carrots/carrots_stage_3")
-                .build();
-
-        CropBlockDatagen
-                .generateCropBlock(bsmg, ModBlocks.CROP_TURNIPS, "crop_turnips")
-                .addState("age0", "turnips/turnips_stage_0")
-                .addState("age1", "turnips/turnips_stage_1")
-                .addState("age2", "turnips/turnips_stage_2")
-                .addState("age3", "turnips/turnips_stage_3")
-                .isLayerSensitive()
-                .build();
-
-        CropBlockDatagen
-                .generateCropBlock(bsmg, ModBlocks.CROP_PEAS, "crop_peas")
-                .addState("age0", "peas/peas_stage_0")
-                .addState("age1", "peas/peas_stage_1")
-                .addState("age2", "peas/peas_stage_2")
-                .isLayerSensitive()
-                .build();
-
-        CropBlockDatagen
-                .generateCropBlock(bsmg, ModBlocks.CANDLE_ALTAR, "candle_altar")
-                .addStateRandomTextures("lit", "lighting/candle_altar/lit1", "lighting/candle_altar/lit2", "lighting/candle_altar/lit3")
-                .addStateRandomTextures("unlit", "lighting/candle_altar/unlit1", "lighting/candle_altar/unlit2", "lighting/candle_altar/unlit3")
-                .build();
-
-        CropBlockDatagen
-                .generateCropBlock(bsmg, ModBlocks.CROP_WHEAT, "crop_wheat")
-                .isLayerSensitive()
-                .addState("age0", "wheat/wheat_stage_0")
-                .addState("age1", "wheat/wheat_stage_1")
-                .addState("age2", "wheat/wheat_stage_2")
-                .addState("age3", "wheat/wheat_stage_3")
-                .addStateRandomTextures("age4", "wheat/stage4_1", "wheat/stage4_2")
-                .addStateRandomTextures("age5", "wheat/stage5_1", "wheat/stage5_2")
-                .addStateRandomTextures("age6", "wheat/stage6_1", "wheat/stage6_2")
-                .addStateRandomTextures("age7", "wheat/stage7_1", "wheat/stage7_2", "wheat/stage7_3", "wheat/stage7_4")
-                .build();
-
-        CropBlockDatagen
-                .generateCropBlock(bsmg, ModBlocks.SEAGRASS, "seagrass")
-                .addRandomTexture("seagrass/side1")
-                .addRandomTexture("seagrass/side2")
-                .addRandomTexture("seagrass/side3")
-                .addRandomTexture("seagrass/side4")
-                .isLayerSensitive()
-                .build();
-
-        // Bed Blocks
-//        BedBlockDatagen.generateBedBlock(bsmg, ModBlocks.ITCHY_STRAW_BED, "itchy_straw_bed")
-//                .bedType("normal")
-//                .texture("bed_block/bed_straw_itchy_0")
-//                .texture("bed_block/bed_straw_itchy_1")
-//                .texture("bed_block/bed_straw_itchy_2")
-//                .texture("bed_block/bed_straw_itchy_3")
-//                .texture("bed_block/bed_straw_itchy_4")
-//                .texture("bed_block/bed_straw_itchy_5")
-//                .build();
-//
-//        BedBlockDatagen.generateBedBlock(bsmg, ModBlocks.HAMMOCK, "hammock")
-//                .bedType("hammock")
-//                .texture("bed_block/bed_hammock_0")
-//                .texture("bed_block/bed_hammock_1")
-//                .texture("bed_block/bed_hammock_2")
-//                .texture("bed_block/bed_hammock_3")
-//                .texture("bed_block/bed_hammock_4")
-//                .texture("bed_block/bed_hammock_5")
-//                .build();
-//
-//        BedBlockDatagen.generateBedBlock(bsmg, ModBlocks.NIGHTS_WATCH_BED, "nights_watch_bed")
-//                .bedType("normal")
-//                .texture("bed_block/bed_night_watch_0")
-//                .texture("bed_block/bed_night_watch_1")
-//                .texture("bed_block/bed_night_watch_2")
-//                .texture("bed_block/bed_night_watch_3")
-//                .texture("bed_block/bed_night_watch_4")
-//                .texture("bed_block/bed_night_watch_5")
-//                .build();
-//
-//        BedBlockDatagen.generateBedBlock(bsmg, ModBlocks.NOBLE_BLUE_BED, "noble_blue_bed")
-//                .bedType("raised")
-//                .texture("bed_block/bed_noble_blue_0")
-//                .texture("bed_block/bed_noble_blue_1")
-//                .texture("bed_block/bed_noble_blue_2")
-//                .texture("bed_block/bed_noble_blue_3")
-//                .texture("bed_block/bed_noble_blue_4")
-//                .texture("bed_block/bed_noble_blue_5")
-//                .build();
-//
-//        BedBlockDatagen.generateBedBlock(bsmg, ModBlocks.NOBLE_RED_BED, "noble_red_bed")
-//                .bedType("raised")
-//                .texture("bed_block/bed_noble_red_0")
-//                .texture("bed_block/bed_noble_red_1")
-//                .texture("bed_block/bed_noble_red_2")
-//                .texture("bed_block/bed_noble_red_3")
-//                .texture("bed_block/bed_noble_red_4")
-//                .texture("bed_block/bed_noble_red_5")
-//                .build();
-//
-//        BedBlockDatagen.generateBedBlock(bsmg, ModBlocks.NORTHERN_BED, "northern_bed")
-//                .bedType("normal")
-//                .texture("bed_block/bed_north_0")
-//                .texture("bed_block/bed_north_1")
-//                .texture("bed_block/bed_north_2")
-//                .texture("bed_block/bed_north_3")
-//                .texture("bed_block/bed_north_4")
-//                .texture("bed_block/bed_north_5")
-//                .build();
-//
-//        BedBlockDatagen.generateBedBlock(bsmg, ModBlocks.PALE_GREEN_BED, "pale_green_bed")
-//                .bedType("normal")
-//                .texture("bed_block/bed_patchy_green_0")
-//                .texture("bed_block/bed_patchy_green_1")
-//                .texture("bed_block/bed_patchy_green_2")
-//                .texture("bed_block/bed_patchy_green_3")
-//                .texture("bed_block/bed_patchy_green_4")
-//                .texture("bed_block/bed_patchy_green_5")
-//                .build();
-//
-//        BedBlockDatagen.generateBedBlock(bsmg, ModBlocks.PALE_RED_BED, "pale_red_bed")
-//                .bedType("normal")
-//                .texture("bed_block/bed_patchy_red_0")
-//                .texture("bed_block/bed_patchy_red_1")
-//                .texture("bed_block/bed_patchy_red_2")
-//                .texture("bed_block/bed_patchy_red_3")
-//                .texture("bed_block/bed_patchy_red_4")
-//                .texture("bed_block/bed_patchy_red_5")
-//                .build();
-//
-//        BedBlockDatagen.generateBedBlock(bsmg, ModBlocks.STRAW_BED, "straw_bed")
-//                .bedType("normal")
-//                .texture("bed_block/bed_straw_0")
-//                .texture("bed_block/bed_straw_1")
-//                .texture("bed_block/bed_straw_2")
-//                .texture("bed_block/bed_straw_3")
-//                .texture("bed_block/bed_straw_4")
-//                .texture("bed_block/bed_straw_5")
-//                .build();
-
         // Particle Emitter Blocks
         ParticleEmitterDatagen.registerCustomParticleEmitterBlock(bsmg, ModBlocks.CASCADE_PARTICLE_EMITTER, "cascade_particle_emitter");
         ParticleEmitterDatagen.registerCustomParticleEmitterBlock(bsmg, ModBlocks.COSY_SMOKE_PARTICLE_EMITTER, "cosy_smoke_particle_emitter");
@@ -375,6 +229,14 @@ public class ModModelProvider extends FabricModelProvider {
             Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
             if (block != null) {
                 BedBlockDatagen.registerCustomBedBlock(bsmg, block, definition);
+            }
+        }
+
+        // Generate crop block models
+        for (BlockDefinition definition : registry.getByType("crop")) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block != null) {
+                CropBlockDatagen.registerCustomCropBlock(bsmg, block, definition);
             }
         }
 

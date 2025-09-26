@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
@@ -209,5 +210,90 @@ public class CropBlockDatagen {
     public static CropBlockBuilder generateCropBlock(BlockStateModelGenerator generator, Block cropBlock, String cropName) {
         return new CropBlockBuilder(generator, cropBlock, cropName);
     }
-    
+
+    /**
+     * Register a crop block from a BlockDefinition using the JSON definition system
+     */
+    public static void registerCustomCropBlock(BlockStateModelGenerator generator, Block cropBlock, BlockDefinition definition) {
+        CropBlockBuilder builder = new CropBlockBuilder(generator, cropBlock, definition.getBlockName());
+
+        // Check if the crop is layer sensitive from definition
+        if (definition.isLayerSensitive()) {
+            builder.isLayerSensitive();
+        }
+
+        // Check if the crop should be tinted (from definition properties if available)
+        // For now, assume untinted unless specifically marked as tinted
+        // TODO: Add tinted support to BlockDefinition if needed
+
+        // Add states from definition
+        if (definition.hasStates()) {
+            for (var stateDefinition : definition.getStates()) {
+                String stateID = stateDefinition.getStateID();
+                List<String> textures = stateDefinition.getTextures();
+
+                // Check if this state has randomTextures instead of regular textures
+                if ((textures == null || textures.isEmpty()) && stateDefinition.hasRandomTextures()) {
+                    // Extract textures from randomTextures array
+                    List<String> randomTextureList = new ArrayList<>();
+                    for (var randomVariant : stateDefinition.getRandomTextures()) {
+                        if (randomVariant.getTextures() != null && !randomVariant.getTextures().isEmpty()) {
+                            randomTextureList.addAll(randomVariant.getTextures());
+                        }
+                    }
+
+                    if (!randomTextureList.isEmpty()) {
+                        builder.addStateRandomTextures(stateID, randomTextureList.toArray(new String[0]));
+                    } else {
+                        WesterosBlocks.LOGGER.warn("Crop block '{}' state '{}' has no valid random textures",
+                            definition.getBlockName(), stateID);
+                    }
+                } else if (textures != null && !textures.isEmpty()) {
+                    if (textures.size() == 1) {
+                        // Single texture for this state
+                        builder.addState(stateID, textures.get(0));
+                    } else {
+                        // Multiple textures (random variants) for this state
+                        builder.addStateRandomTextures(stateID, textures.toArray(new String[0]));
+                    }
+                } else {
+                    WesterosBlocks.LOGGER.warn("Crop block '{}' state '{}' has no textures or random textures",
+                        definition.getBlockName(), stateID);
+                }
+            }
+        } else {
+            // No states defined, check for root-level textures or randomTextures
+            boolean hasTextures = false;
+
+            // Check regular textures first
+            List<String> textures = definition.getTextures();
+            if (textures != null && !textures.isEmpty()) {
+                for (String texture : textures) {
+                    builder.addRandomTexture(texture);
+                }
+                hasTextures = true;
+            }
+
+            // Check randomTextures at root level (like seagrass)
+            if (!hasTextures && definition.hasRandomTextures()) {
+                for (var randomVariant : definition.getRandomTextures()) {
+                    if (randomVariant.getTextures() != null && !randomVariant.getTextures().isEmpty()) {
+                        for (String texture : randomVariant.getTextures()) {
+                            builder.addRandomTexture(texture);
+                        }
+                        hasTextures = true;
+                    }
+                }
+            }
+
+            if (!hasTextures) {
+                WesterosBlocks.LOGGER.warn("Crop block '{}' has no states, textures, or random textures defined",
+                    definition.getBlockName());
+                return;
+            }
+        }
+
+        builder.build();
+    }
+
 }

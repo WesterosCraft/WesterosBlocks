@@ -5,6 +5,8 @@
     "creativeTab": "westeros_lighting_tab",
     "label": "Candle Altar",
     "type": "toggleOnUse",
+    "toggleOnUse": true,
+    "renderLayer": "cutout",
     "boundingBox": {
         "xMin": 0.125,
         "xMax": 0.875,

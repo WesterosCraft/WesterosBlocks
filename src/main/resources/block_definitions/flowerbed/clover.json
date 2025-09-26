@@ -2,5 +2,9 @@
   "blockName": "clover",
   "blockType": "flowerbed",
   "creativeTab": "westeros_grasses_shrubs_tab",
-  "label": "Clover"
+  "label": "Clover",
+  "textures": [
+    "flowerbed/clover_stem",
+    "flowerbed/clover"
+  ]
 }

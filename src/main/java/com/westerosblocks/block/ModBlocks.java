@@ -3,11 +3,10 @@ package com.westerosblocks.block;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.BlockBuilder;
-import com.westerosblocks.block.custom.WCFireBlock;
+import com.westerosblocks.block.custom.WCCropBlock;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -239,6 +238,27 @@ public class ModBlocks {
                         .sounds(soundGroup)
                         .nonOpaque()
                         .build();
+
+                case "crop":
+                    BlockBuilder<WCCropBlock> cropBuilder = BlockBuilder.crop()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .requiresTool()
+                        .sounds(soundGroup)
+                        .toggleOnUse(definition.toggleOnUse())
+                        .layerSensitive(definition.isLayerSensitive())
+                        .nonOpaque()
+                        .noCollision();
+
+                    // Add states from definition if they exist
+                    if (definition.hasStates()) {
+                        List<String> stateValues = definition.getStates().stream()
+                            .map(state -> state.getStateID())
+                            .collect(java.util.stream.Collectors.toList());
+                        cropBuilder.stateValues(stateValues);
+                    }
+
+                    return cropBuilder.build();
 
 //
 //                case "torch":
@@ -731,70 +751,6 @@ public class ModBlocks {
                     .noCollision()
                     .nonOpaque()
                     .particle("signal_smoke")
-                    .build());
-
-    // Crop Blocks
-    public static final Block CROP_CARROTS = registerBlock(
-            "crop_carrots",
-            BlockBuilder.crop()
-                    .strength(0.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.GRASS)
-                    .toggleOnUse()
-                    .stateValues(List.of("age0", "age1", "age2", "age3"))
-                    .build());
-
-    public static final Block CANDLE_ALTAR = registerBlock(
-            "candle_altar",
-            BlockBuilder.crop()
-                    .strength(0.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.METAL)
-                    .toggleOnUse()
-                    .stateValues(List.of("lit", "unlit"))
-                    .build());
-
-    public static final Block CROP_PEAS = registerBlock(
-            "crop_peas",
-            BlockBuilder.crop()
-                    .strength(0.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.GRASS)
-                    .toggleOnUse()
-                    .layerSensitive()
-                    .stateValues(List.of("age0", "age1", "age2"))
-                    .build());
-
-    public static final Block CROP_TURNIPS = registerBlock(
-            "crop_turnips",
-            BlockBuilder.crop()
-                    .strength(0.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.GRASS)
-                    .toggleOnUse()
-                    .layerSensitive()
-                    .stateValues(List.of("age0", "age1", "age2", "age3"))
-                    .build());
-
-    public static final Block CROP_WHEAT = registerBlock(
-            "crop_wheat",
-            BlockBuilder.crop()
-                    .strength(0.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.GRASS)
-                    .toggleOnUse()
-                    .layerSensitive()
-                    .stateValues(List.of("age0", "age1", "age2", "age3", "age4", "age5", "age6", "age7"))
-                    .build());
-
-    public static final Block SEAGRASS = registerBlock(
-            "seagrass",
-            BlockBuilder.crop()
-                    .strength(0.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.GRASS)
-                    .toggleOnUse()
-                    .layerSensitive()
                     .build());
 
     // Flowerbed Blocks

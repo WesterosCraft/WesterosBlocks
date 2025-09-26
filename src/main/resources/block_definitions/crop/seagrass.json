@@ -4,6 +4,8 @@
     "stepSound": "grass",
     "creativeTab": "westeros_water_air_tab",
     "label": "Seagrass",
+    "layerSensitive": true,
+    "renderLayer": "cutout",
     "randomTextures": [
         {
             "textures": [
