@@ -1,5 +1,6 @@
 package com.westerosblocks.datagen.providers;
 
+import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
 
 import com.westerosblocks.data.BlockDefinition;
@@ -39,12 +40,6 @@ public class ModModelProvider extends FabricModelProvider {
                 .texture("bark/birch/side")
                 .build();
 
-        // Torch Blocks
-//        registerCustomTorchBlock(bsmg, ModBlocks.TORCH).texture("lighting/torch").build();
-//        registerCustomTorchBlock(bsmg, ModBlocks.TORCH_UNLIT).texture("lighting/torch_unlit").build();
-//        registerCustomTorchBlock(bsmg, ModBlocks.CANDLE).texture("lighting/candle").build();
-//        registerCustomTorchBlock(bsmg, ModBlocks.CANDLE_UNLIT).texture("lighting/candle_unlit").build();
-
         // Chair Blocks
         registerCustomChairBlock(bsmg, ModBlocks.OAK_CHAIR).texture("bark/oak/side").build();
 
@@ -78,159 +73,108 @@ public class ModModelProvider extends FabricModelProvider {
             return;
         }
 
-        // Generate solid block models
-        for (BlockDefinition definition : registry.getByType("solid")) {
+        // Generate models for all block definitions in a single loop
+        for (BlockDefinition definition : registry.getAllDefinitions()) {
             Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
             if (block != null) {
-                SolidBlockExporter.registerCustomSolidBlock(bsmg, block, definition);
+                generateModelFromDefinition(bsmg, block, definition);
             }
         }
+    }
 
-        // Generate door block models
-        for (BlockDefinition definition : registry.getByType("door")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                DoorBlockExporter.registerCustomDoorBlock(bsmg, block, definition);
+    /**
+     * Generates models for a block from its definition using the appropriate exporter
+     */
+    private void generateModelFromDefinition(BlockStateModelGenerator bsmg, Block block, BlockDefinition definition) {
+        String blockType = definition.getBlockType();
+
+        try {
+            switch (blockType.toLowerCase()) {
+                case "solid":
+                    SolidBlockExporter.registerCustomSolidBlock(bsmg, block, definition);
+                    break;
+
+                case "door":
+                    DoorBlockExporter.registerCustomDoorBlock(bsmg, block, definition);
+                    break;
+
+                case "log":
+                    LogBlockExporter.registerCustomLogBlock(bsmg, block, definition);
+                    break;
+
+                case "plant":
+                    PlantBlockExporter.registerCustomPlantBlock(bsmg, block, definition);
+                    break;
+
+                case "flowerpot":
+                    FlowerPotBlockExporter.registerCustomFlowerPotBlock(bsmg, block, definition);
+                    break;
+
+                case "web":
+                    CrossBlockExporter.registerCrossBlockFromDefinition(bsmg, block, definition);
+                    break;
+
+                case "slab":
+                    SlabBlockExporter.registerCustomSlabBlock(bsmg, block, definition);
+                    break;
+
+                case "halfdoor":
+                    HalfDoorBlockExporter.registerCustomHalfDoorBlock(bsmg, block, definition);
+                    break;
+
+                case "fire":
+                    FireBlockDatagen.registerCustomFireBlock(bsmg, block, definition);
+                    break;
+
+                case "ladder":
+                    LadderBlockDatagen.registerCustomLadderBlock(bsmg, block, definition);
+                    break;
+
+                case "vines":
+                    VinesBlockDatagen.registerCustomVinesBlock(bsmg, block, definition);
+                    break;
+
+                case "pane":
+                    PaneBlockExporter.registerCustomPaneBlock(bsmg, block, definition);
+                    break;
+
+                case "fence":
+                    FenceBlockDatagen.registerCustomFenceBlock(bsmg, block, definition);
+                    break;
+
+                case "fencegate":
+                    FenceGateBlockDatagen.registerCustomFenceGateBlock(bsmg, block, definition);
+                    break;
+
+                case "leaves":
+                    LeavesBlockDatagen.registerCustomLeavesBlock(bsmg, block, definition);
+                    break;
+
+                case "bed":
+                    BedBlockDatagen.registerCustomBedBlock(bsmg, block, definition);
+                    break;
+
+                case "crop":
+                    CropBlockDatagen.registerCustomCropBlock(bsmg, block, definition);
+                    break;
+
+                case "torch":
+                    TorchBlockExporter.registerTorchBlockFromDefinition(bsmg, block, definition);
+                    break;
+
+                case "fan":
+                    FanBlockExporter.registerFanBlockFromDefinition(bsmg, block, definition);
+                    break;
+
+                default:
+                    WesterosBlocks.LOGGER.warn("Unsupported block type '{}' for model generation: {}",
+                        blockType, definition.getBlockName());
+                    break;
             }
+        } catch (Exception e) {
+            WesterosBlocks.LOGGER.error("Error generating model for block '{}': {}",
+                definition.getBlockName(), e.getMessage());
         }
-
-        // Generate log block models
-        for (BlockDefinition definition : registry.getByType("log")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                LogBlockExporter.registerCustomLogBlock(bsmg, block, definition);
-            }
-        }
-
-        // Generate plant block models
-        for (BlockDefinition definition : registry.getByType("plant")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                PlantBlockExporter.registerCustomPlantBlock(bsmg, block, definition);
-            }
-        }
-
-        // Generate flowerpot block models
-        for (BlockDefinition definition : registry.getByType("flowerpot")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                FlowerPotBlockExporter.registerCustomFlowerPotBlock(bsmg, block, definition);
-            }
-        }
-
-        // Generate web block models
-        for (BlockDefinition definition : registry.getByType("web")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                CrossBlockExporter.registerCrossBlockFromDefinition(bsmg, block, definition);
-            }
-        }
-
-        // Generate slab block models
-        for (BlockDefinition definition : registry.getByType("slab")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                SlabBlockExporter.registerCustomSlabBlock(bsmg, block, definition);
-            }
-        }
-
-        // Generate halfdoor block models
-        for (BlockDefinition definition : registry.getByType("halfdoor")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                HalfDoorBlockExporter.registerCustomHalfDoorBlock(bsmg, block, definition);
-            }
-        }
-
-        // Generate fire block models
-        for (BlockDefinition definition : registry.getByType("fire")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                FireBlockDatagen.registerCustomFireBlock(bsmg, block, definition);
-            }
-        }
-
-        // Generate ladder block models
-        for (BlockDefinition definition : registry.getByType("ladder")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                LadderBlockDatagen.registerCustomLadderBlock(bsmg, block, definition);
-            }
-        }
-
-        // Generate vines block models
-        for (BlockDefinition definition : registry.getByType("vines")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                VinesBlockDatagen.registerCustomVinesBlock(bsmg, block, definition);
-            }
-        }
-
-        // Generate pane block models
-        for (BlockDefinition definition : registry.getByType("pane")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                PaneBlockExporter.registerCustomPaneBlock(bsmg, block, definition);
-            }
-        }
-
-        // Generate fence block models
-        for (BlockDefinition definition : registry.getByType("fence")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                FenceBlockDatagen.registerCustomFenceBlock(bsmg, block, definition);
-            }
-        }
-
-        // Generate fencegate block models
-        for (BlockDefinition definition : registry.getByType("fencegate")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                FenceGateBlockDatagen.registerCustomFenceGateBlock(bsmg, block, definition);
-            }
-        }
-
-        // Generate leaves block models
-        for (BlockDefinition definition : registry.getByType("leaves")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                LeavesBlockDatagen.registerCustomLeavesBlock(bsmg, block, definition);
-            }
-        }
-
-        // Generate bed block models
-        for (BlockDefinition definition : registry.getByType("bed")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                BedBlockDatagen.registerCustomBedBlock(bsmg, block, definition);
-            }
-        }
-
-        // Generate crop block models
-        for (BlockDefinition definition : registry.getByType("crop")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                CropBlockDatagen.registerCustomCropBlock(bsmg, block, definition);
-            }
-        }
-
-        // Generate torch block models
-        for (BlockDefinition definition : registry.getByType("torch")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                TorchBlockExporter.registerTorchBlockFromDefinition(bsmg, block, definition);
-            }
-        }
-
-        // Generate fan block models
-        for (BlockDefinition definition : registry.getByType("fan")) {
-            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (block != null) {
-                FanBlockExporter.registerFanBlockFromDefinition(bsmg, block, definition);
-            }
-        }
-
-        // TODO: Add other block types as needed
     }
 
     @Override
