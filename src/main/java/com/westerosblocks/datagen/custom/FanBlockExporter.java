@@ -3,6 +3,7 @@ package com.westerosblocks.datagen.custom;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.custom.WCFanBlock;
 import com.westerosblocks.block.custom.WCWallFanBlock;
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.block.Block;
@@ -116,9 +117,49 @@ public class FanBlockExporter extends BaseBlockExporter {
     private static String getTexturePath(Block block) {
         // Extract block name and return appropriate texture path
         String blockName = block.getTranslationKey().replace("block.westerosblocks.", "");
-        
+
         // For now, assume all fan blocks use a consistent naming convention
         // This can be expanded as needed for specific fan variants
         return "fan/" + blockName.replace("_fan", "").replace("wall_", "");
+    }
+
+    /**
+     * Registers a fan block from a BlockDefinition
+     */
+    public static void registerFanBlockFromDefinition(BlockStateModelGenerator generator, Block standingFan, BlockDefinition definition) {
+        // Check if the definition has random textures
+        if (definition.hasRandomTextures()) {
+            registerFanBlockWithRandomTextures(generator, standingFan, definition);
+        } else {
+            // Get primary texture from definition
+            String texturePath = getTextureFromDefinition(definition);
+            // Use the existing registerFanBlock method which handles wall fan lookup
+            registerFanBlock(generator, standingFan, texturePath);
+        }
+    }
+
+    /**
+     * Registers a fan block with random textures from definition.
+     * This method mimics the original registerCustomFanBlock().randomTexture().randomTexture().build() pattern
+     */
+    private static void registerFanBlockWithRandomTextures(BlockStateModelGenerator generator, Block standingFan, BlockDefinition definition) {
+        // Extract all random texture paths from the definition
+        String[] randomTexturePaths = definition.getRandomTextures().stream()
+            .map(variant -> variant.getTextures().get(0)) // Get first texture from each variant
+            .toArray(String[]::new);
+
+        // Use the first texture as the primary texture for the model generation
+        String primaryTexture = randomTexturePaths.length > 0 ? randomTexturePaths[0] : getTextureFromDefinition(definition);
+
+        // Use the existing registerFanBlock method which handles wall fan lookup and model generation
+        registerFanBlock(generator, standingFan, primaryTexture);
+    }
+
+    private static String getTextureFromDefinition(BlockDefinition definition) {
+        if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
+            return definition.getTextures().get(0);
+        }
+        // Fallback to a default texture based on block name
+        return "fan/" + definition.getBlockName().replace("_fan", "");
     }
 }

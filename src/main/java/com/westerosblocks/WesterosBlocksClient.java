@@ -26,18 +26,6 @@ public class WesterosBlocksClient implements ClientModInitializer {
         // Chair Blocks
         EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
 
-        // Fan Blocks
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CORAL_TUBE_FAN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WALL_CORAL_TUBE_FAN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CORAL_BRAIN_FAN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WALL_CORAL_BRAIN_FAN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CORAL_BUBBLE_FAN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WALL_CORAL_BUBBLE_FAN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CORAL_FIRE_FAN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WALL_CORAL_FIRE_FAN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CORAL_HORN_FAN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WALL_CORAL_HORN_FAN, RenderLayer.getCutout());
-
         // flowerbed blocks
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CLOVER, RenderLayer.getCutout());
 
@@ -67,6 +55,14 @@ public class WesterosBlocksClient implements ClientModInitializer {
 
                         // For torch blocks, also apply render layer to wall variant
                         if ("torch".equals(definition.getBlockType())) {
+                            Block wallBlock = Registries.BLOCK.get(WesterosBlocks.id("wall_" + definition.getBlockName()));
+                            if (wallBlock != null) {
+                                BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, renderLayer);
+                            }
+                        }
+
+                        // For fan blocks, also apply render layer to wall variant
+                        if ("fan".equals(definition.getBlockType())) {
                             Block wallBlock = Registries.BLOCK.get(WesterosBlocks.id("wall_" + definition.getBlockName()));
                             if (wallBlock != null) {
                                 BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, renderLayer);

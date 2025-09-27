@@ -287,6 +287,32 @@ public class ModBlocks {
                         .allowUnsupported(true)
                         .noParticle(definition.isNoParticle())
                         .build();
+
+                case "fan":
+                    // First register the wall fan block
+                    String wallFanName = "wall_" + definition.getBlockName();
+                    Block wallFanBlock = BlockBuilder.wallFan()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .sounds(soundGroup)
+                        .nonOpaque()
+                        .noCollision()
+                        .allowUnsupported(true)
+                        .build();
+
+                    // Register the wall fan without block item
+                    registerBlockWithoutBlockItem(wallFanName, wallFanBlock);
+
+                    // Now create the standing fan with reference to wall fan
+                    return BlockBuilder.fan()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .sounds(soundGroup)
+                        .wallBlock(wallFanBlock)
+                        .allowUnsupported(true)
+                        .nonOpaque()
+                        .noCollision()
+                        .build();
 //
 //                case "chair":
 //                    return BlockBuilder.chair()
@@ -591,7 +617,7 @@ public class ModBlocks {
                     .allowUnsupported(true)
                     .nonOpaque()
                     .build());
-//
+
 //    // Branch Blocks
     public static final Block OAK_BRANCH = registerBlock(
             "oak_branch",
@@ -626,112 +652,6 @@ public class ModBlocks {
                     .strength(2.0f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.STONE)
-                    .build());
-
-    // Fan Blocks
-    public static final Block WALL_CORAL_TUBE_FAN = registerBlockWithoutBlockItem(
-            "wall_coral_tube_fan",
-            BlockBuilder.wallFan()
-                    .strength(1.0f)
-                    .sounds(BlockSoundGroup.STONE)
-                    .nonOpaque()
-                    .noCollision()
-                    .allowUnsupported(true)
-                    .build());
-
-    public static final Block CORAL_TUBE_FAN = registerBlock(
-            "coral_tube_fan",
-            BlockBuilder.fan()
-                    .strength(1.0f)
-                    .sounds(BlockSoundGroup.STONE)
-                    .wallBlock(WALL_CORAL_TUBE_FAN)
-                    .allowUnsupported(true)
-                    .nonOpaque()
-                    .noCollision()
-                    .build());
-
-    public static final Block WALL_CORAL_BRAIN_FAN = registerBlockWithoutBlockItem(
-            "wall_coral_brain_fan",
-            BlockBuilder.wallFan()
-                    .strength(1.0f)
-                    .sounds(BlockSoundGroup.STONE)
-                    .nonOpaque()
-                    .noCollision()
-                    .allowUnsupported(true)
-                    .build());
-
-    public static final Block CORAL_BRAIN_FAN = registerBlock(
-            "coral_brain_fan",
-            BlockBuilder.fan()
-                    .strength(1.0f)
-                    .sounds(BlockSoundGroup.STONE)
-                    .wallBlock(WALL_CORAL_BRAIN_FAN)
-                    .allowUnsupported(true)
-                    .nonOpaque()
-                    .noCollision()
-                    .build());
-
-    public static final Block WALL_CORAL_BUBBLE_FAN = registerBlockWithoutBlockItem(
-            "wall_coral_bubble_fan",
-            BlockBuilder.wallFan()
-                    .strength(1.0f)
-                    .sounds(BlockSoundGroup.STONE)
-                    .nonOpaque()
-                    .noCollision()
-                    .allowUnsupported(true)
-                    .build());
-
-    public static final Block CORAL_BUBBLE_FAN = registerBlock(
-            "coral_bubble_fan",
-            BlockBuilder.fan()
-                    .strength(1.0f)
-                    .sounds(BlockSoundGroup.STONE)
-                    .wallBlock(WALL_CORAL_BUBBLE_FAN)
-                    .allowUnsupported(true)
-                    .nonOpaque()
-                    .noCollision()
-                    .build());
-
-    public static final Block WALL_CORAL_FIRE_FAN = registerBlockWithoutBlockItem(
-            "wall_coral_fire_fan",
-            BlockBuilder.wallFan()
-                    .strength(1.0f)
-                    .sounds(BlockSoundGroup.STONE)
-                    .nonOpaque()
-                    .noCollision()
-                    .allowUnsupported(true)
-                    .build());
-
-    public static final Block CORAL_FIRE_FAN = registerBlock(
-            "coral_fire_fan",
-            BlockBuilder.fan()
-                    .strength(1.0f)
-                    .sounds(BlockSoundGroup.STONE)
-                    .wallBlock(WALL_CORAL_FIRE_FAN)
-                    .allowUnsupported(true)
-                    .nonOpaque()
-                    .noCollision()
-                    .build());
-
-    public static final Block WALL_CORAL_HORN_FAN = registerBlockWithoutBlockItem(
-            "wall_coral_horn_fan",
-            BlockBuilder.wallFan()
-                    .strength(1.0f)
-                    .sounds(BlockSoundGroup.STONE)
-                    .nonOpaque()
-                    .noCollision()
-                    .allowUnsupported(true)
-                    .build());
-
-    public static final Block CORAL_HORN_FAN = registerBlock(
-            "coral_horn_fan",
-            BlockBuilder.fan()
-                    .strength(1.0f)
-                    .sounds(BlockSoundGroup.STONE)
-                    .wallBlock(WALL_CORAL_HORN_FAN)
-                    .allowUnsupported(true)
-                    .nonOpaque()
-                    .noCollision()
                     .build());
 
 

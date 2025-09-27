@@ -51,32 +51,6 @@ public class ModModelProvider extends FabricModelProvider {
         // Arrow Slit Blocks
         registerCustomArrowSlitBlock(bsmg, ModBlocks.ARBOR_BRICK_ARROW_SLIT).texture("ashlar_third/arbor/all").build();
 
-        // Fan Blocks
-        registerCustomFanBlock(bsmg, ModBlocks.CORAL_TUBE_FAN)
-                .randomTexture("coral/tube/fan1")
-                .randomTexture("coral/tube/fan2")
-                .build();
-
-        registerCustomFanBlock(bsmg, ModBlocks.CORAL_BRAIN_FAN)
-                .randomTexture("coral/brain/fan1")
-                .randomTexture("coral/brain/fan2")
-                .build();
-
-        registerCustomFanBlock(bsmg, ModBlocks.CORAL_BUBBLE_FAN)
-                .randomTexture("coral/bubble/fan1")
-                .randomTexture("coral/bubble/fan2")
-                .build();
-
-        registerCustomFanBlock(bsmg, ModBlocks.CORAL_FIRE_FAN)
-                .randomTexture("coral/fire/fan1")
-                .randomTexture("coral/fire/fan2")
-                .build();
-
-        registerCustomFanBlock(bsmg, ModBlocks.CORAL_HORN_FAN)
-                .randomTexture("coral/horn/fan1")
-                .randomTexture("coral/horn/fan2")
-                .build();
-
         // Rail Blocks
         registerCustomRailBlock(bsmg, ModBlocks.FANCY_BLUE_CARPET).texture("carpet/fancy_blue_carpet").build();
         registerCustomRailBlock(bsmg, ModBlocks.FANCY_RED_CARPET).texture("carpet/fancy_red_carpet").build();
@@ -245,6 +219,14 @@ public class ModModelProvider extends FabricModelProvider {
             Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
             if (block != null) {
                 TorchBlockExporter.registerTorchBlockFromDefinition(bsmg, block, definition);
+            }
+        }
+
+        // Generate fan block models
+        for (BlockDefinition definition : registry.getByType("fan")) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block != null) {
+                FanBlockExporter.registerFanBlockFromDefinition(bsmg, block, definition);
             }
         }
 
