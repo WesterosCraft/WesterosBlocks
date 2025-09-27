@@ -3,6 +3,8 @@
     "blockType": "rail",
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Horizontal Rope",
+    "renderLayer": "cutout_mipped",
+    "allowUnsupported": true,
     "textures": [
         "rail_block/rope",
         "rail_block/rope_turned"

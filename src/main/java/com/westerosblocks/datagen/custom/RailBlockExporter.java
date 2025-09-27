@@ -9,6 +9,7 @@ import net.minecraft.util.Identifier;
 import java.util.*;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 
 public class RailBlockExporter extends BaseBlockExporter {
@@ -186,6 +187,44 @@ public class RailBlockExporter extends BaseBlockExporter {
 
         Identifier modelId = WesterosBlocks.id("block/" + blockName + "/" + modelType + variantSuffix);
         model.upload(modelId, textureMap, generator.modelCollector);
+    }
+
+    /**
+     * Registers a rail block from a BlockDefinition
+     */
+    public static void registerRailBlockFromDefinition(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        // Check if the definition has random textures
+        if (definition.hasRandomTextures()) {
+            registerRailBlockWithRandomTexturesFromDefinition(generator, block, definition);
+        } else if (definition.getTextures() != null && definition.getTextures().size() > 1) {
+            // Multiple textures - use first as flat, second as curved
+            String[] textures = definition.getTextures().toArray(new String[0]);
+            registerRailBlock(generator, block, textures);
+        } else {
+            // Single texture
+            String texturePath = getTextureFromDefinition(definition);
+            registerRailBlock(generator, block, texturePath);
+        }
+    }
+
+    /**
+     * Registers a rail block with random textures from definition
+     */
+    private static void registerRailBlockWithRandomTexturesFromDefinition(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        // Convert random texture variants to texture arrays
+        String[][] textureArrays = definition.getRandomTextures().stream()
+            .map(variant -> variant.getTextures().toArray(new String[0]))
+            .toArray(String[][]::new);
+
+        registerRailBlockWithRandomTextures(generator, block, textureArrays);
+    }
+
+    private static String getTextureFromDefinition(BlockDefinition definition) {
+        if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
+            return definition.getTextures().get(0);
+        }
+        // Fallback to a default texture based on block name
+        return "rail_block/" + definition.getBlockName();
     }
 
 }

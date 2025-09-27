@@ -3,6 +3,8 @@
     "blockType": "rail",
     "creativeTab": "westeros_water_air_tab",
     "label": "Packed Snow",
+    "renderLayer": "cutout_mipped",
+    "allowUnsupported": true,
     "textures": [
         "rail_block/packed_snow",
         "rail_block/packed_snow_turned"

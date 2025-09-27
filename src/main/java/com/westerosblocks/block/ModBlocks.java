@@ -313,6 +313,16 @@ public class ModBlocks {
                         .nonOpaque()
                         .noCollision()
                         .build();
+
+                case "rail":
+                    return BlockBuilder.rail()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .sounds(soundGroup)
+                        .allowUnsupported(definition.isAllowUnsupported())
+                        .nonOpaque()
+                        .noCollision(definition.hasNoCollision())
+                        .build();
 //
 //                case "chair":
 //                    return BlockBuilder.chair()
@@ -563,60 +573,60 @@ public class ModBlocks {
 //                    .build());
 
     // Rail blocks
-    public static final Block FANCY_BLUE_CARPET = registerBlock(
-            "fancy_blue_carpet",
-            BlockBuilder.rail()
-                    .strength(0.1f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .allowUnsupported(true)
-                    .nonOpaque()
-                    .build());
-
-    public static final Block FANCY_RED_CARPET = registerBlock(
-            "fancy_red_carpet",
-            BlockBuilder.rail()
-                    .strength(0.1f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .allowUnsupported(true)
-                    .nonOpaque()
-                    .build());
-
-    public static final Block HORIZONTAL_CHAIN = registerBlock(
-            "horizontal_chain",
-            BlockBuilder.rail()
-                    .strength(1.0f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.METAL)
-                    .allowUnsupported(true)
-                    .nonOpaque()
-                    .build());
-
-    public static final Block HORIZONTAL_NET = registerBlock(
-            "horizontal_net",
-            BlockBuilder.rail()
-                    .strength(0.5f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .allowUnsupported(true)
-                    .nonOpaque()
-                    .build());
-
-    public static final Block HORIZONTAL_ROPE = registerBlock(
-            "horizontal_rope",
-            BlockBuilder.rail()
-                    .strength(0.5f)
-                    .sounds(BlockSoundGroup.WOOL)
-                    .allowUnsupported(true)
-                    .nonOpaque()
-                    .build());
-
-    public static final Block PACKED_SNOW = registerBlock(
-            "packed_snow",
-            BlockBuilder.rail()
-                    .strength(0.2f)
-                    .sounds(BlockSoundGroup.SNOW)
-                    .allowUnsupported(true)
-                    .nonOpaque()
-                    .build());
+//    public static final Block FANCY_BLUE_CARPET = registerBlock(
+//            "fancy_blue_carpet",
+//            BlockBuilder.rail()
+//                    .strength(0.1f)
+//                    .sounds(BlockSoundGroup.WOOL)
+//                    .allowUnsupported(true)
+//                    .nonOpaque()
+//                    .build());
+//
+//    public static final Block FANCY_RED_CARPET = registerBlock(
+//            "fancy_red_carpet",
+//            BlockBuilder.rail()
+//                    .strength(0.1f)
+//                    .sounds(BlockSoundGroup.WOOL)
+//                    .allowUnsupported(true)
+//                    .nonOpaque()
+//                    .build());
+//
+//    public static final Block HORIZONTAL_CHAIN = registerBlock(
+//            "horizontal_chain",
+//            BlockBuilder.rail()
+//                    .strength(1.0f)
+//                    .requiresTool()
+//                    .sounds(BlockSoundGroup.METAL)
+//                    .allowUnsupported(true)
+//                    .nonOpaque()
+//                    .build());
+//
+//    public static final Block HORIZONTAL_NET = registerBlock(
+//            "horizontal_net",
+//            BlockBuilder.rail()
+//                    .strength(0.5f)
+//                    .sounds(BlockSoundGroup.WOOL)
+//                    .allowUnsupported(true)
+//                    .nonOpaque()
+//                    .build());
+//
+//    public static final Block HORIZONTAL_ROPE = registerBlock(
+//            "horizontal_rope",
+//            BlockBuilder.rail()
+//                    .strength(0.5f)
+//                    .sounds(BlockSoundGroup.WOOL)
+//                    .allowUnsupported(true)
+//                    .nonOpaque()
+//                    .build());
+//
+//    public static final Block PACKED_SNOW = registerBlock(
+//            "packed_snow",
+//            BlockBuilder.rail()
+//                    .strength(0.2f)
+//                    .sounds(BlockSoundGroup.SNOW)
+//                    .allowUnsupported(true)
+//                    .nonOpaque()
+//                    .build());
 
 //    // Branch Blocks
     public static final Block OAK_BRANCH = registerBlock(

@@ -3,6 +3,8 @@
     "blockType": "rail",
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Horizontal Net",
+    "renderLayer": "cutout_mipped",
+    "allowUnsupported": true,
     "textures": [
         "rail_block/net_large",
         "rail_block/net_large_turned"

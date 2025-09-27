@@ -5,6 +5,8 @@
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Fancy Blue Carpet",
     "type": "allow-unsupported",
+    "renderLayer": "cutout_mipped",
+    "allowUnsupported": true,
     "textures": [
         "carpet/fancy_blue_carpet"
     ]
