@@ -5,6 +5,8 @@
     "creativeTab": "westeros_water_air_tab",
     "label": "Brain Coral Fan",
     "type": "allow-unsupported",
+    "renderLayer": "cutout",
+    "allowUnsupported": true,
     "randomTextures": [
         {
             "textures": [
