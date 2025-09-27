@@ -6,6 +6,7 @@
     "lightValue": 0,
     "label": "Unlit Candle",
     "type": "allow-unsupported,no-particle",
+    "renderLayer": "cutout",
     "textures": [
         "lighting/candle_unlit"
     ]

@@ -15,16 +15,6 @@ import net.minecraft.client.render.RenderLayer;
 public class WesterosBlocksClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        // Torch Blocks
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TORCH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WALL_TORCH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TORCH_UNLIT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WALL_TORCH_UNLIT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CANDLE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WALL_CANDLE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CANDLE_UNLIT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WALL_CANDLE_UNLIT, RenderLayer.getCutout());
-        
         // Rail Blocks
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_BLUE_CARPET, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FANCY_RED_CARPET, RenderLayer.getCutoutMipped());
@@ -74,6 +64,14 @@ public class WesterosBlocksClient implements ClientModInitializer {
                     RenderLayer renderLayer = getRenderLayerFromString(definition.getRenderLayer());
                     if (renderLayer != null) {
                         BlockRenderLayerMap.INSTANCE.putBlock(block, renderLayer);
+
+                        // For torch blocks, also apply render layer to wall variant
+                        if ("torch".equals(definition.getBlockType())) {
+                            Block wallBlock = Registries.BLOCK.get(WesterosBlocks.id("wall_" + definition.getBlockName()));
+                            if (wallBlock != null) {
+                                BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, renderLayer);
+                            }
+                        }
                     }
                 }
             }

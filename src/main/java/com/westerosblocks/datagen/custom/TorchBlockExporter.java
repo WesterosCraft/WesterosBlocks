@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -16,6 +17,33 @@ public class TorchBlockExporter extends BaseBlockExporter {
         registerStandingTorch(generator, standingTorch, texturePath);
         registerWallTorch(generator, wallTorch, texturePath);
         registerSimpleItemModel(generator, standingTorch, createBlockIdentifier(texturePath));
+    }
+
+    /**
+     * Registers a torch block from definition
+     */
+    public static void registerTorchBlockFromDefinition(BlockStateModelGenerator generator, Block standingTorch, BlockDefinition definition) {
+        // Get texture from definition
+        String texturePath = getTextureFromDefinition(definition);
+
+        // Find the wall torch block
+        Block wallTorch = Registries.BLOCK.get(WesterosBlocks.id("wall_" + definition.getBlockName()));
+
+        if (wallTorch != null) {
+            registerStandingTorch(generator, standingTorch, texturePath);
+            registerWallTorch(generator, wallTorch, texturePath);
+            registerSimpleItemModel(generator, standingTorch, createBlockIdentifier(texturePath));
+        } else {
+            WesterosBlocks.LOGGER.warn("Could not find wall torch for: {}", definition.getBlockName());
+        }
+    }
+
+    private static String getTextureFromDefinition(BlockDefinition definition) {
+        if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
+            return definition.getTextures().get(0);
+        }
+        // Fallback to a default texture based on block name
+        return "lighting/" + definition.getBlockName();
     }
 
     /**

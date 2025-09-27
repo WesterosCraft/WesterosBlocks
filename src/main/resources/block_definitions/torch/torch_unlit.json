@@ -6,6 +6,7 @@
     "lightValue": 0,
     "label": "Unlit Torch",
     "type": "allow-unsupported,no-particle",
+    "renderLayer": "cutout",
     "textures": [
         "lighting/torch_unlit"
     ]

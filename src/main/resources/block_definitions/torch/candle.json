@@ -6,6 +6,7 @@
     "lightValue": 10,
     "label": "Candle",
     "type": "allow-unsupported",
+    "renderLayer": "cutout",
     "textures": [
         "lighting/candle"
     ]

@@ -40,10 +40,10 @@ public class ModModelProvider extends FabricModelProvider {
                 .build();
 
         // Torch Blocks
-        registerCustomTorchBlock(bsmg, ModBlocks.TORCH).texture("lighting/torch").build();
-        registerCustomTorchBlock(bsmg, ModBlocks.TORCH_UNLIT).texture("lighting/torch_unlit").build();
-        registerCustomTorchBlock(bsmg, ModBlocks.CANDLE).texture("lighting/candle").build();
-        registerCustomTorchBlock(bsmg, ModBlocks.CANDLE_UNLIT).texture("lighting/candle_unlit").build();
+//        registerCustomTorchBlock(bsmg, ModBlocks.TORCH).texture("lighting/torch").build();
+//        registerCustomTorchBlock(bsmg, ModBlocks.TORCH_UNLIT).texture("lighting/torch_unlit").build();
+//        registerCustomTorchBlock(bsmg, ModBlocks.CANDLE).texture("lighting/candle").build();
+//        registerCustomTorchBlock(bsmg, ModBlocks.CANDLE_UNLIT).texture("lighting/candle_unlit").build();
 
         // Chair Blocks
         registerCustomChairBlock(bsmg, ModBlocks.OAK_CHAIR).texture("bark/oak/side").build();
@@ -237,6 +237,14 @@ public class ModModelProvider extends FabricModelProvider {
             Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
             if (block != null) {
                 CropBlockDatagen.registerCustomCropBlock(bsmg, block, definition);
+            }
+        }
+
+        // Generate torch block models
+        for (BlockDefinition definition : registry.getByType("torch")) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block != null) {
+                TorchBlockExporter.registerTorchBlockFromDefinition(bsmg, block, definition);
             }
         }
 

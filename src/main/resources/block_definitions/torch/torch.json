@@ -6,6 +6,7 @@
     "lightValue": 13,
     "label": "Torch",
     "type": "allow-unsupported",
+    "renderLayer": "cutout",
     "textures": [
         "lighting/torch"
     ]

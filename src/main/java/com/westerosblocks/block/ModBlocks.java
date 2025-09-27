@@ -260,17 +260,33 @@ public class ModBlocks {
 
                     return cropBuilder.build();
 
-//
-//                case "torch":
-//                    return BlockBuilder.torch()
-//                        .strength(definition.getStrength())
-//                        .sounds(soundGroup)
-//                        .luminance(state -> 13) // TODO: Extract from definition
-//                        .nonOpaque()
-//                        .noCollision()
-//                        .allowUnsupported(true)
-//                        .noParticle(false)
-//                        .build();
+                case "torch":
+                    // First register the wall torch block
+                    String wallTorchName = "wall_" + definition.getBlockName();
+                    Block wallTorchBlock = BlockBuilder.wallTorch()
+                        .strength(definition.getStrength())
+                        .sounds(soundGroup)
+                        .luminance(state -> definition.getLuminance())
+                        .nonOpaque()
+                        .noCollision()
+                        .allowUnsupported(true)
+                        .noParticle(definition.isNoParticle())
+                        .build();
+
+                    // Register the wall torch without block item
+                    registerBlockWithoutBlockItem(wallTorchName, wallTorchBlock);
+
+                    // Now create the standing torch with reference to wall torch
+                    return BlockBuilder.torch()
+                        .strength(definition.getStrength())
+                        .sounds(soundGroup)
+                        .luminance(state -> definition.getLuminance())
+                        .nonOpaque()
+                        .noCollision()
+                        .wallBlock(wallTorchBlock)
+                        .allowUnsupported(true)
+                        .noParticle(definition.isNoParticle())
+                        .build();
 //
 //                case "chair":
 //                    return BlockBuilder.chair()
@@ -420,105 +436,105 @@ public class ModBlocks {
                     .build());
 
     // Torch Blocks
-    public static final Block WALL_TORCH = registerBlockWithoutBlockItem(
-            "wall_torch",
-            BlockBuilder.wallTorch()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.METAL)
-                    .luminance(state -> 13)
-                    .nonOpaque()
-                    .noCollision()
-                    .allowUnsupported(true)
-                    .noParticle(false)
-                    .build());
-
-    public static final Block TORCH = registerBlock(
-            "torch",
-            BlockBuilder.torch()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.METAL)
-                    .luminance(state -> 13)
-                    .nonOpaque()
-                    .noCollision()
-                    .wallBlock(WALL_TORCH)
-                    .allowUnsupported(true)
-                    .noParticle(false)
-                    .build());
-
-    public static final Block WALL_TORCH_UNLIT = registerBlockWithoutBlockItem(
-            "wall_torch_unlit",
-            BlockBuilder.wallTorch()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.METAL)
-                    .luminance(state -> 0)
-                    .nonOpaque()
-                    .noCollision()
-                    .allowUnsupported(true)
-                    .noParticle(true)
-                    .build());
-
-    public static final Block TORCH_UNLIT = registerBlock(
-            "torch_unlit",
-            BlockBuilder.torch()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.METAL)
-                    .luminance(state -> 0)
-                    .nonOpaque()
-                    .noCollision()
-                    .wallBlock(WALL_TORCH_UNLIT)
-                    .allowUnsupported(true)
-                    .noParticle(true)
-                    .build());
-
-    public static final Block WALL_CANDLE = registerBlockWithoutBlockItem(
-            "wall_candle",
-            BlockBuilder.wallTorch()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.CANDLE)
-                    .luminance(state -> 10)
-                    .nonOpaque()
-                    .noCollision()
-                    .allowUnsupported(true)
-                    .noParticle(false)
-                    .build());
-
-    public static final Block CANDLE = registerBlock(
-            "candle",
-            BlockBuilder.torch()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.CANDLE)
-                    .luminance(state -> 10)
-                    .nonOpaque()
-                    .noCollision()
-                    .wallBlock(WALL_CANDLE)
-                    .allowUnsupported(true)
-                    .noParticle(false)
-                    .build());
-
-    public static final Block WALL_CANDLE_UNLIT = registerBlockWithoutBlockItem(
-            "wall_candle_unlit",
-            BlockBuilder.wallTorch()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.CANDLE)
-                    .luminance(state -> 0)
-                    .nonOpaque()
-                    .noCollision()
-                    .allowUnsupported(true)
-                    .noParticle(true)
-                    .build());
-
-    public static final Block CANDLE_UNLIT = registerBlock(
-            "candle_unlit",
-            BlockBuilder.torch()
-                    .strength(0.0f)
-                    .sounds(BlockSoundGroup.CANDLE)
-                    .luminance(state -> 0)
-                    .nonOpaque()
-                    .noCollision()
-                    .wallBlock(WALL_CANDLE_UNLIT)
-                    .allowUnsupported(true)
-                    .noParticle(true)
-                    .build());
+//    public static final Block WALL_TORCH = registerBlockWithoutBlockItem(
+//            "wall_torch",
+//            BlockBuilder.wallTorch()
+//                    .strength(0.0f)
+//                    .sounds(BlockSoundGroup.METAL)
+//                    .luminance(state -> 13)
+//                    .nonOpaque()
+//                    .noCollision()
+//                    .allowUnsupported(true)
+//                    .noParticle(false)
+//                    .build());
+//
+//    public static final Block TORCH = registerBlock(
+//            "torch",
+//            BlockBuilder.torch()
+//                    .strength(0.0f)
+//                    .sounds(BlockSoundGroup.METAL)
+//                    .luminance(state -> 13)
+//                    .nonOpaque()
+//                    .noCollision()
+//                    .wallBlock(WALL_TORCH)
+//                    .allowUnsupported(true)
+//                    .noParticle(false)
+//                    .build());
+//
+//    public static final Block WALL_TORCH_UNLIT = registerBlockWithoutBlockItem(
+//            "wall_torch_unlit",
+//            BlockBuilder.wallTorch()
+//                    .strength(0.0f)
+//                    .sounds(BlockSoundGroup.METAL)
+//                    .luminance(state -> 0)
+//                    .nonOpaque()
+//                    .noCollision()
+//                    .allowUnsupported(true)
+//                    .noParticle(true)
+//                    .build());
+//
+//    public static final Block TORCH_UNLIT = registerBlock(
+//            "torch_unlit",
+//            BlockBuilder.torch()
+//                    .strength(0.0f)
+//                    .sounds(BlockSoundGroup.METAL)
+//                    .luminance(state -> 0)
+//                    .nonOpaque()
+//                    .noCollision()
+//                    .wallBlock(WALL_TORCH_UNLIT)
+//                    .allowUnsupported(true)
+//                    .noParticle(true)
+//                    .build());
+//
+//    public static final Block WALL_CANDLE = registerBlockWithoutBlockItem(
+//            "wall_candle",
+//            BlockBuilder.wallTorch()
+//                    .strength(0.0f)
+//                    .sounds(BlockSoundGroup.CANDLE)
+//                    .luminance(state -> 10)
+//                    .nonOpaque()
+//                    .noCollision()
+//                    .allowUnsupported(true)
+//                    .noParticle(false)
+//                    .build());
+//
+//    public static final Block CANDLE = registerBlock(
+//            "candle",
+//            BlockBuilder.torch()
+//                    .strength(0.0f)
+//                    .sounds(BlockSoundGroup.CANDLE)
+//                    .luminance(state -> 10)
+//                    .nonOpaque()
+//                    .noCollision()
+//                    .wallBlock(WALL_CANDLE)
+//                    .allowUnsupported(true)
+//                    .noParticle(false)
+//                    .build());
+//
+//    public static final Block WALL_CANDLE_UNLIT = registerBlockWithoutBlockItem(
+//            "wall_candle_unlit",
+//            BlockBuilder.wallTorch()
+//                    .strength(0.0f)
+//                    .sounds(BlockSoundGroup.CANDLE)
+//                    .luminance(state -> 0)
+//                    .nonOpaque()
+//                    .noCollision()
+//                    .allowUnsupported(true)
+//                    .noParticle(true)
+//                    .build());
+//
+//    public static final Block CANDLE_UNLIT = registerBlock(
+//            "candle_unlit",
+//            BlockBuilder.torch()
+//                    .strength(0.0f)
+//                    .sounds(BlockSoundGroup.CANDLE)
+//                    .luminance(state -> 0)
+//                    .nonOpaque()
+//                    .noCollision()
+//                    .wallBlock(WALL_CANDLE_UNLIT)
+//                    .allowUnsupported(true)
+//                    .noParticle(true)
+//                    .build());
 
     // Rail blocks
     public static final Block FANCY_BLUE_CARPET = registerBlock(
