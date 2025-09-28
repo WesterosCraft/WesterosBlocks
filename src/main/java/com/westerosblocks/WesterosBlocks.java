@@ -1,6 +1,7 @@
 package com.westerosblocks;
 
 import com.westerosblocks.block.ModBlocks;
+import com.westerosblocks.block.blockentity.ModBlockEntities;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 import com.westerosblocks.data.BlockDefinitionExample;
 import com.westerosblocks.sound.ModSounds;
@@ -23,6 +24,7 @@ public class WesterosBlocks implements ModInitializer {
         WesterosCreativeModeTabs.registerCreativeModeTabs();
         ModBlocks.registerModBlocks();
         ModSounds.registerSounds();
+        ModBlockEntities.registerModEntities();
 
         LOGGER.info("WesterosBlocks mod initialization complete!");
     }

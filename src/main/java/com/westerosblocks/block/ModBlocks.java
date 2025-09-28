@@ -55,21 +55,21 @@ public class ModBlocks {
                         registeredCount++;
 
                         WesterosBlocks.LOGGER.debug("Auto-registered block: {} ({})",
-                            definition.getBlockName(), definition.getBlockType());
+                                definition.getBlockName(), definition.getBlockType());
                     } else {
                         skippedCount++;
                         WesterosBlocks.LOGGER.warn("Skipped unsupported block type '{}' for block '{}'",
-                            definition.getBlockType(), definition.getBlockName());
+                                definition.getBlockType(), definition.getBlockName());
                     }
                 } catch (Exception e) {
                     skippedCount++;
                     WesterosBlocks.LOGGER.error("Failed to register block '{}': {}",
-                        definition.getBlockName(), e.getMessage());
+                            definition.getBlockName(), e.getMessage());
                 }
             }
 
             WesterosBlocks.LOGGER.info("Automatic block registration complete: {} registered, {} skipped",
-                registeredCount, skippedCount);
+                    registeredCount, skippedCount);
 
         } catch (Exception e) {
             WesterosBlocks.LOGGER.error("Error during automatic block registration", e);
@@ -87,175 +87,175 @@ public class ModBlocks {
             switch (blockType.toLowerCase()) {
                 case "solid":
                     return BlockBuilder.solid()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .requiresTool()
-                        .sounds(soundGroup)
-                        .nonOpaque(definition.isNonOpaque())
-                        .noCollision(definition.hasNoCollision())
-                        .states(definition.hasStates() ? definition.getStates().size() : 0)
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .nonOpaque(definition.isNonOpaque())
+                            .noCollision(definition.hasNoCollision())
+                            .states(definition.hasStates() ? definition.getStates().size() : 0)
+                            .build();
 
                 case "door":
                     return BlockBuilder.door()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .requiresTool()
-                        .sounds(soundGroup)
-                        .woodType(getWoodTypeFromDefinition(definition))
-                        .locked(definition.isLocked())
-                        .allowUnsupported(definition.isAllowUnsupported())
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .woodType(getWoodTypeFromDefinition(definition))
+                            .locked(definition.isLocked())
+                            .allowUnsupported(definition.isAllowUnsupported())
+                            .build();
 
                 case "log":
                     return BlockBuilder.log()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .requiresTool()
-                        .sounds(soundGroup)
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .build();
 
                 case "plant":
                     return BlockBuilder.plant()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .sounds(soundGroup)
-                        .nonOpaque()
-                        .noCollision()
-                        .layerSensitive(true)
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .sounds(soundGroup)
+                            .nonOpaque()
+                            .noCollision()
+                            .layerSensitive(true)
+                            .build();
 
                 case "flowerpot":
                     return BlockBuilder.flowerPot()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .sounds(soundGroup)
-                        .nonOpaque()
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .sounds(soundGroup)
+                            .nonOpaque()
+                            .build();
 
                 case "web":
                     return BlockBuilder.web()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .sounds(soundGroup)
-                        .nonOpaque()
-                        .noCollision()
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .sounds(soundGroup)
+                            .nonOpaque()
+                            .noCollision()
+                            .build();
 
                 case "slab":
                     return BlockBuilder.slab()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .requiresTool()
-                        .sounds(soundGroup)
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .build();
 
                 case "halfdoor":
                     return BlockBuilder.halfDoor()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .requiresTool()
-                        .sounds(soundGroup)
-                        .locked(definition.isLocked())
-                        .allowUnsupported(definition.isAllowUnsupported())
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .locked(definition.isLocked())
+                            .allowUnsupported(definition.isAllowUnsupported())
+                            .build();
 
                 case "fire":
                     return BlockBuilder.fire()
-                        .strength(0.0f)
-                        .sounds(soundGroup)
-                        .luminance(state -> definition.getLuminance())
-                        .noCollision()
-                        .breakInstantly()
-                        .nonOpaque()
-                        .build();
+                            .strength(0.0f)
+                            .sounds(soundGroup)
+                            .luminance(state -> definition.getLuminance())
+                            .noCollision()
+                            .breakInstantly()
+                            .nonOpaque()
+                            .build();
 
                 case "ladder":
                     return BlockBuilder.ladder()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .requiresTool()
-                        .sounds(soundGroup)
-                        .nonOpaque()
-                        .allowUnsupported(definition.isAllowUnsupported())
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .nonOpaque()
+                            .allowUnsupported(definition.isAllowUnsupported())
+                            .build();
 
                 case "vines":
                     return BlockBuilder.vines()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .sounds(soundGroup)
-                        .nonOpaque()
-                        .allowUnsupported()
-                        .noClimb()
-                        .canGrowDownward()
-                        .noCollision(definition.hasNoCollision())
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .sounds(soundGroup)
+                            .nonOpaque()
+                            .allowUnsupported()
+                            .noClimb()
+                            .canGrowDownward()
+                            .noCollision(definition.hasNoCollision())
+                            .build();
 
                 case "pane":
                     return BlockBuilder.pane()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .requiresTool()
-                        .sounds(soundGroup)
-                        .nonOpaque()
-                        .legacyModel(true)
-                        .unconnect(false)
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .nonOpaque()
+                            .legacyModel(true)
+                            .unconnect(false)
+                            .build();
 
                 case "fence":
                     return BlockBuilder.fence()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .requiresTool()
-                        .sounds(soundGroup)
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .build();
 
                 case "fencegate":
                     return BlockBuilder.fenceGate()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .requiresTool()
-                        .sounds(soundGroup)
-                        .woodType(getWoodTypeFromDefinition(definition))
-                        .locked(definition.isLocked())
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .woodType(getWoodTypeFromDefinition(definition))
+                            .locked(definition.isLocked())
+                            .build();
 
                 case "leaves":
                     return BlockBuilder.leaves()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .requiresTool()
-                        .sounds(soundGroup)
-                        .nonOpaque()
-                        .noDecay()
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .nonOpaque()
+                            .noDecay()
+                            .build();
 
                 case "bed":
                     return BlockBuilder.bed()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .requiresTool()
-                        .sounds(soundGroup)
-                        .nonOpaque()
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .nonOpaque()
+                            .build();
 
                 case "crop":
                     BlockBuilder<WCCropBlock> cropBuilder = BlockBuilder.crop()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .requiresTool()
-                        .sounds(soundGroup)
-                        .toggleOnUse(definition.toggleOnUse())
-                        .layerSensitive(definition.isLayerSensitive())
-                        .nonOpaque()
-                        .noCollision();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .toggleOnUse(definition.toggleOnUse())
+                            .layerSensitive(definition.isLayerSensitive())
+                            .nonOpaque()
+                            .noCollision();
 
                     // Add states from definition if they exist
                     if (definition.hasStates()) {
                         List<String> stateValues = definition.getStates().stream()
-                            .map(state -> state.getStateID())
-                            .collect(java.util.stream.Collectors.toList());
+                                .map(state -> state.getStateID())
+                                .collect(java.util.stream.Collectors.toList());
                         cropBuilder.stateValues(stateValues);
                     }
 
@@ -265,80 +265,81 @@ public class ModBlocks {
                     // First register the wall torch block
                     String wallTorchName = "wall_" + definition.getBlockName();
                     Block wallTorchBlock = BlockBuilder.wallTorch()
-                        .strength(definition.getStrength())
-                        .sounds(soundGroup)
-                        .luminance(state -> definition.getLuminance())
-                        .nonOpaque()
-                        .noCollision()
-                        .allowUnsupported(true)
-                        .noParticle(definition.isNoParticle())
-                        .build();
+                            .strength(definition.getStrength())
+                            .sounds(soundGroup)
+                            .luminance(state -> definition.getLuminance())
+                            .nonOpaque()
+                            .noCollision()
+                            .allowUnsupported(true)
+                            .noParticle(definition.isNoParticle())
+                            .build();
 
                     // Register the wall torch without block item
                     registerBlockWithoutBlockItem(wallTorchName, wallTorchBlock);
 
                     // Now create the standing torch with reference to wall torch
                     return BlockBuilder.torch()
-                        .strength(definition.getStrength())
-                        .sounds(soundGroup)
-                        .luminance(state -> definition.getLuminance())
-                        .nonOpaque()
-                        .noCollision()
-                        .wallBlock(wallTorchBlock)
-                        .allowUnsupported(true)
-                        .noParticle(definition.isNoParticle())
-                        .build();
+                            .strength(definition.getStrength())
+                            .sounds(soundGroup)
+                            .luminance(state -> definition.getLuminance())
+                            .nonOpaque()
+                            .noCollision()
+                            .wallBlock(wallTorchBlock)
+                            .allowUnsupported(true)
+                            .noParticle(definition.isNoParticle())
+                            .build();
 
                 case "fan":
                     // First register the wall fan block
                     String wallFanName = "wall_" + definition.getBlockName();
                     Block wallFanBlock = BlockBuilder.wallFan()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .sounds(soundGroup)
-                        .nonOpaque()
-                        .noCollision()
-                        .allowUnsupported(true)
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .sounds(soundGroup)
+                            .nonOpaque()
+                            .noCollision()
+                            .allowUnsupported(true)
+                            .build();
 
                     // Register the wall fan without block item
                     registerBlockWithoutBlockItem(wallFanName, wallFanBlock);
 
                     // Now create the standing fan with reference to wall fan
                     return BlockBuilder.fan()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .sounds(soundGroup)
-                        .wallBlock(wallFanBlock)
-                        .allowUnsupported(true)
-                        .nonOpaque()
-                        .noCollision()
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .sounds(soundGroup)
+                            .wallBlock(wallFanBlock)
+                            .allowUnsupported(true)
+                            .nonOpaque()
+                            .noCollision()
+                            .build();
 
                 case "rail":
                     return BlockBuilder.rail()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .sounds(soundGroup)
-                        .allowUnsupported(definition.isAllowUnsupported())
-                        .nonOpaque()
-                        .noCollision(definition.hasNoCollision())
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .sounds(soundGroup)
+                            .allowUnsupported(definition.isAllowUnsupported())
+                            .nonOpaque()
+                            .noCollision(definition.hasNoCollision())
+                            .build();
 
                 case "furnace":
                     return BlockBuilder.furnace()
-                        .strength(definition.getStrength())
-                        .resistance(definition.getResistance())
-                        .requiresTool()
-                        .sounds(soundGroup)
-                        .luminance(state -> {
-                            boolean alwaysOn = definition.isAlwaysOn();
-                            boolean isLit = state.contains(Properties.LIT) &&
-                                          state.get(Properties.LIT);
-                            return (alwaysOn || isLit) ? definition.getLuminance() : 0;
-                        })
-                        .alwaysOn(definition.isAlwaysOn())
-                        .build();
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .nonOpaque(definition.isNonOpaque())
+                            .sounds(soundGroup)
+                            .luminance(state -> {
+                                boolean alwaysOn = definition.isAlwaysOn();
+                                boolean isLit = state.contains(Properties.LIT) &&
+                                        state.get(Properties.LIT);
+                                return (alwaysOn || isLit) ? definition.getLuminance() : 0;
+                            })
+                            .alwaysOn(definition.isAlwaysOn())
+                            .build();
 //
 //                case "chair":
 //                    return BlockBuilder.chair()
@@ -383,17 +384,28 @@ public class ModBlocks {
         if (soundName == null) return BlockSoundGroup.STONE;
 
         switch (soundName.toLowerCase()) {
-            case "wood": return BlockSoundGroup.WOOD;
-            case "stone": return BlockSoundGroup.STONE;
-            case "metal": return BlockSoundGroup.METAL;
-            case "grass": return BlockSoundGroup.GRASS;
-            case "cloth": return BlockSoundGroup.WOOL;
-            case "gravel": return BlockSoundGroup.GRAVEL;
-            case "glass": return BlockSoundGroup.GLASS;
-            case "candle": return BlockSoundGroup.CANDLE;
-            case "bone": return BlockSoundGroup.BONE;
-            case "ladder": return BlockSoundGroup.LADDER;
-            case "snow": return BlockSoundGroup.SNOW;
+            case "wood":
+                return BlockSoundGroup.WOOD;
+            case "stone":
+                return BlockSoundGroup.STONE;
+            case "metal":
+                return BlockSoundGroup.METAL;
+            case "grass":
+                return BlockSoundGroup.GRASS;
+            case "cloth":
+                return BlockSoundGroup.WOOL;
+            case "gravel":
+                return BlockSoundGroup.GRAVEL;
+            case "glass":
+                return BlockSoundGroup.GLASS;
+            case "candle":
+                return BlockSoundGroup.CANDLE;
+            case "bone":
+                return BlockSoundGroup.BONE;
+            case "ladder":
+                return BlockSoundGroup.LADDER;
+            case "snow":
+                return BlockSoundGroup.SNOW;
             default:
                 WesterosBlocks.LOGGER.warn("Unknown sound type '{}', defaulting to STONE", soundName);
                 return BlockSoundGroup.STONE;
@@ -471,7 +483,7 @@ public class ModBlocks {
             }
 
             WesterosBlocks.LOGGER.info("Successfully registered {} auto-blocks to {} creative tabs",
-                totalRegistered, blocksByTab.size());
+                    totalRegistered, blocksByTab.size());
 
         } catch (Exception e) {
             WesterosBlocks.LOGGER.error("Error registering auto-blocks to creative tabs", e);
@@ -488,7 +500,7 @@ public class ModBlocks {
                     .build());
 
 
-//    // Branch Blocks
+    //    // Branch Blocks
     public static final Block OAK_BRANCH = registerBlock(
             "oak_branch",
             BlockBuilder.branch()

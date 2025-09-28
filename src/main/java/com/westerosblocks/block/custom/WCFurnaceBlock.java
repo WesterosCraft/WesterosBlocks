@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.block.blockentity.custom.WCFurnaceBlockEntity;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -7,6 +8,7 @@ import net.minecraft.block.FurnaceBlock;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.Registries;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -21,6 +23,7 @@ import java.util.Map;
 
 public class WCFurnaceBlock extends FurnaceBlock {
     private final boolean alwaysOn;
+    private final String blockName;
 
     public static class Factory extends BlockFactory {
         @Override
@@ -40,6 +43,7 @@ public class WCFurnaceBlock extends FurnaceBlock {
     protected WCFurnaceBlock(AbstractBlock.Settings settings, boolean alwaysOn) {
         super(settings);
         this.alwaysOn = alwaysOn;
+        this.blockName = null; // Will be set when registered
         this.setDefaultState(this.stateManager.getDefaultState()
                 .with(FACING, Direction.NORTH)
                 .with(LIT, false));
@@ -70,6 +74,12 @@ public class WCFurnaceBlock extends FurnaceBlock {
             world.addParticle(ParticleTypes.SMOKE, d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
             world.addParticle(ParticleTypes.FLAME, d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
         }
+    }
+
+    @Override
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        String actualBlockName = Registries.BLOCK.getId(this).getPath();
+        return new WCFurnaceBlockEntity(pos, state, actualBlockName);
     }
 
     @Override
