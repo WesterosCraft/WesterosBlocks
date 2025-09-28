@@ -99,7 +99,7 @@ public class ModModelProvider extends FabricModelProvider {
                     break;
 
                 case "flowerpot":
-                    FlowerPotBlockExporter.registerCustomFlowerPotBlock(bsmg, block, definition);
+                    FlowerPotBlockDatagen.registerCustomFlowerPotBlock(bsmg, block, definition);
                     break;
 
                 case "web":

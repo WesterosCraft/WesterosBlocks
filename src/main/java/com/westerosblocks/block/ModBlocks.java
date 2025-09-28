@@ -13,6 +13,7 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
@@ -322,6 +323,21 @@ public class ModBlocks {
                         .allowUnsupported(definition.isAllowUnsupported())
                         .nonOpaque()
                         .noCollision(definition.hasNoCollision())
+                        .build();
+
+                case "furnace":
+                    return BlockBuilder.furnace()
+                        .strength(definition.getStrength())
+                        .resistance(definition.getResistance())
+                        .requiresTool()
+                        .sounds(soundGroup)
+                        .luminance(state -> {
+                            boolean alwaysOn = definition.isAlwaysOn();
+                            boolean isLit = state.contains(Properties.LIT) &&
+                                          state.get(Properties.LIT);
+                            return (alwaysOn || isLit) ? definition.getLuminance() : 0;
+                        })
+                        .alwaysOn(definition.isAlwaysOn())
                         .build();
 //
 //                case "chair":

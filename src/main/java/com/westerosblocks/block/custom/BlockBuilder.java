@@ -141,6 +141,10 @@ public class BlockBuilder<T extends Block> {
     public static BlockBuilder<WCFireBlock> fire() {
         return new BlockBuilder<>(new WCFireBlock.Factory());
     }
+
+    public static BlockBuilder<WCFurnaceBlock> furnace() {
+        return new BlockBuilder<>(new WCFurnaceBlock.Factory());
+    }
     
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
@@ -354,6 +358,16 @@ public class BlockBuilder<T extends Block> {
 
     public BlockBuilder<T> particle(String particle) {
         parameters.put("particle", particle);
+        return this;
+    }
+
+    public BlockBuilder<T> alwaysOn(boolean alwaysOn) {
+        parameters.put("alwaysOn", alwaysOn);
+        return this;
+    }
+
+    public BlockBuilder<T> alwaysOn() {
+        parameters.put("alwaysOn", true);
         return this;
     }
 

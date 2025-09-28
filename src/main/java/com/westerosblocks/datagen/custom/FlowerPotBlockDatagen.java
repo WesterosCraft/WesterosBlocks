@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
@@ -9,6 +10,8 @@ import net.minecraft.util.Identifier;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
+import static com.westerosblocks.datagen.custom.BaseBlockExporter.getBlockName;
 
 public class FlowerPotBlockDatagen {
 
@@ -192,5 +195,49 @@ public class FlowerPotBlockDatagen {
     // Entry point for builder pattern
     public static FlowerPotBlockBuilder generateFlowerPotBlock(BlockStateModelGenerator generator, Block flowerPotBlock, String potName) {
         return new FlowerPotBlockBuilder(generator, flowerPotBlock, potName);
+    }
+
+    /**
+     * Registers a custom flower pot block using BlockDefinition
+     */
+    public static void registerCustomFlowerPotBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        if (definition.getTextures() == null || definition.getTextures().isEmpty()) {
+            if (definition.getRandomTextures() == null || definition.getRandomTextures().isEmpty()) {
+                throw new IllegalArgumentException("Flower pot blocks require either textures or randomTextures");
+            }
+        }
+
+        String blockName = getBlockName(block);
+
+        // Check for color multiplier to determine if tinted
+        boolean isTinted = definition.getColorMult() != null && !definition.getColorMult().isEmpty();
+
+        // Create the builder
+        FlowerPotBlockDatagen.FlowerPotBlockBuilder builder = FlowerPotBlockDatagen.generateFlowerPotBlock(
+                generator, block, blockName
+        );
+
+        // Apply tinting if needed
+        if (isTinted) {
+            builder.isTinted();
+        }
+
+        // Always add random rotation for flower pots
+        builder.rotateRandom();
+
+        if (definition.getRandomTextures() != null && !definition.getRandomTextures().isEmpty()) {
+            // Handle random textures with weights
+            for (BlockDefinition.RandomTextureVariant randomTexture : definition.getRandomTextures()) {
+                String[] textures = randomTexture.getTextures().toArray(new String[0]);
+                int weight = randomTexture.getWeight();
+                builder.addRandomTextureSet(weight, textures);
+            }
+        } else {
+            // Handle simple texture array
+            String[] textures = definition.getTextures().toArray(new String[0]);
+            builder.textures(textures);
+        }
+
+        builder.build();
     }
 }
