@@ -3,6 +3,7 @@ package com.westerosblocks.datagen;
 import com.westerosblocks.datagen.custom.*;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
@@ -75,6 +76,7 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 case "arrow_slit" -> buildArrowSlit();
                                 case "rail" -> buildRail();
                                 case "fan" -> buildFan();
+                                case "furnace" -> buildFurnace();
                                 case "plant" -> buildPlant();
                                 case "cross" -> buildPlant(); // Alias for plant
 //                                case "crop" -> buildCrop();
@@ -176,6 +178,16 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 generateFan(generator, block, texture);
                         } else if (textures.length > 0) {
                                 generateFan(generator, block, textures[0]);
+                        }
+                }
+
+                private void buildFurnace() {
+                        if (textures.length >= 4) {
+                                generateFurnace(generator, block, textures[0], textures[1], textures[2], textures[3]);
+                        } else if (!texture.isEmpty()) {
+                                generateFurnace(generator, block, texture, texture, texture, texture);
+                        } else if (textures.length > 0) {
+                                generateFurnace(generator, block, textures[0], textures[0], textures[0], textures[0]);
                         }
                 }
 
@@ -350,9 +362,16 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
         private static void generateFanWithRandomTextures(BlockStateModelGenerator generator, Block block, String[][] randomTexturePaths) {
                 // For random textures, use the first texture of the first set as the primary texture
-                String primaryTexture = randomTexturePaths.length > 0 && randomTexturePaths[0].length > 0 
+                String primaryTexture = randomTexturePaths.length > 0 && randomTexturePaths[0].length > 0
                         ? randomTexturePaths[0][0] : "coral/tube/fan1";
                 FanBlockExporter.registerFanBlock(generator, block, primaryTexture);
+        }
+
+        private static void generateFurnace(BlockStateModelGenerator generator, Block block, String topTexture, String sideTexture, String frontLitTexture, String frontUnlitTexture) {
+                FurnaceBlockDatagen.generateFurnaceBlock(generator, block,
+                        Registries.BLOCK.getId(block).getPath())
+                        .textures(topTexture, sideTexture, frontLitTexture, frontUnlitTexture)
+                        .build();
         }
 
         private static void generatePlant(BlockStateModelGenerator generator, Block block, String texturePath, boolean isTinted) {
@@ -428,6 +447,9 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                 return new CustomBlockBuilder(generator, block, "fan");
         }
 
+        public static CustomBlockBuilder registerCustomFurnaceBlock(BlockStateModelGenerator generator, Block block) {
+                return new CustomBlockBuilder(generator, block, "furnace");
+        }
 
         public static FlowerbedBlockExporter.CustomFlowerbedBuilder registerCustomFlowerbedBlock(BlockStateModelGenerator generator, Block block) {
                 return FlowerbedBlockExporter.registerCustomFlowerbedBlock(generator, block);

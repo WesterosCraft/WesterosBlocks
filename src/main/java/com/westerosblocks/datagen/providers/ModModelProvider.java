@@ -162,6 +162,10 @@ public class ModModelProvider extends FabricModelProvider {
                     RailBlockExporter.registerRailBlockFromDefinition(bsmg, block, definition);
                     break;
 
+                case "furnace":
+                    FurnaceBlockDatagen.registerCustomFurnaceBlock(bsmg, block, definition);
+                    break;
+
                 default:
                     WesterosBlocks.LOGGER.warn("Unsupported block type '{}' for model generation: {}",
                             blockType, definition.getBlockName());
