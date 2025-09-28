@@ -8,5 +8,6 @@
     "label": "Always Active Ashlar Furnace Dun",
     "type": "always-on:true",
     "isCustomModel": true,
+    "alwaysOn": true,
     "strength": 5
 }

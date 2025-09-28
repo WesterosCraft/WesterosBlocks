@@ -8,5 +8,6 @@
     "label": "Ashlar Furnace Light Grey",
     "type": "always-on:false",
     "isCustomModel": true,
+    "alwaysOn": false,
     "strength": 5
 }

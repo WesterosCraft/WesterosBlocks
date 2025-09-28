@@ -9,5 +9,6 @@
     "type": "always-on:true",
     "colorMult": "textures/colormap/furnace",
     "isCustomModel": true,
+    "alwaysOn": true,
     "strength": 5
 }

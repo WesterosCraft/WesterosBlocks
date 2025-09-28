@@ -8,5 +8,6 @@
     "label": "Ashlar Furnace Reach",
     "type": "always-on:false",
     "isCustomModel": true,
-    "strength": 5
+    "strength": 5,
+    "alwaysOn": false
 }

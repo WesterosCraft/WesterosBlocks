@@ -7,5 +7,6 @@
     "creativeTab": "westeros_furniture_tab",
     "label": "Ashlar Furnace Arbor",
     "isCustomModel": true,
+    "alwaysOn": true,
     "strength": 5
 }

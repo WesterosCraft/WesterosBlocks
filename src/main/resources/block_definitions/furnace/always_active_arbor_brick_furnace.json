@@ -7,6 +7,7 @@
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Arbor",
     "type": "always-on:true",
+    "alwaysOn": true,
     "isCustomModel": true,
     "strength": 5
 }

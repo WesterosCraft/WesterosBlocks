@@ -8,5 +8,6 @@
     "label": "Always Active Southern Brick Furnace",
     "type": "always-on:true",
     "isCustomModel": true,
+    "alwaysOn": true,
     "strength": 5
 }

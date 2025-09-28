@@ -8,5 +8,6 @@
     "label": "Always Active Dornish Mud Furnace",
     "type": "always-on:true",
     "isCustomModel": true,
+    "alwaysOn": true,
     "strength": 5
 }
