@@ -1,0 +1,10 @@
+{
+  "blockName": "branch_birch",
+  "blockType": "branch",
+  "stepSound": "wood",
+  "creativeTab": "westeros_logs_tab",
+  "label": "Birch Branch",
+  "textures": [
+    "bark/birch/side"
+  ]
+}
