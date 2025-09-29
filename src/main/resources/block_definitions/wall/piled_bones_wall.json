@@ -1,18 +1,16 @@
 {
-    "blockName": "piled_bones_wall",
-    "blockType": "wall",
-    "stepSound": "stone",
-    "harvestLevel": [
-        {
-            "tool": "pickaxe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_misc_tab",
-    "type": "unconnect:false",
-    "label": "Piled Bones Wall",
-    "textures": [
-        "piled_bones/side"
-    ],
-    "strength": 1.5
+  "blockName": "piled_bones_wall",
+  "blockType": "wall",
+  "soundGroup": "stone",
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_misc_tab",
+  "type": "unconnect:false",
+  "label": "Piled Bones Wall",
+  "textures": ["piled_bones/side"],
+  "strength": 1.5
 }

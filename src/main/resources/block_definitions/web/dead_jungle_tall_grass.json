@@ -1,12 +1,10 @@
 {
-    "blockName": "dead_jungle_tall_grass",
-    "blockType": "web",
-    "stepSound": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Dead Jungle Tall Grass",
-    "renderLayer": "cutout",
-    "textures": [
-        "dead_jungle_tall_grass/down_side1"
-    ],
-    "type": "no-in-web,layerSensitive"
+  "blockName": "dead_jungle_tall_grass",
+  "blockType": "web",
+  "soundGroup": "grass",
+  "creativeTab": "westeros_grasses_shrubs_tab",
+  "label": "Dead Jungle Tall Grass",
+  "renderLayer": "cutout",
+  "textures": ["dead_jungle_tall_grass/down_side1"],
+  "type": "no-in-web,layerSensitive"
 }

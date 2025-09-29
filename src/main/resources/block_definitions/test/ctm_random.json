@@ -1,10 +1,8 @@
 {
-    "blockName": "ctm_random",
-    "blockType": "solid",
-    "stepSound": "wood",
-    "creativeTab": "westeros_test_tab",
-    "label": "Random CTM",
-    "textures": [
-        "ctm/random"
-    ]
+  "blockName": "ctm_random",
+  "blockType": "solid",
+  "soundGroup": "wood",
+  "creativeTab": "westeros_test_tab",
+  "label": "Random CTM",
+  "textures": ["ctm/random"]
 }

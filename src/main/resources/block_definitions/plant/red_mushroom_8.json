@@ -1,20 +1,18 @@
 {
-    "blockName": "red_mushroom_8",
-    "blockType": "plant",
-    "type": "layerSensitive",
-    "stepSound": "grass",
-    "renderLayer": "cutout",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "boundingBox": {
-        "xMin": 0.3,
-        "xMax": 0.7,
-        "yMin": 0,
-        "yMax": 0.6,
-        "zMin": 0.3,
-        "zMax": 0.7
-    },
-    "label": "Red Mushroom 8",
-    "textures": [
-        "red_mushroom_block/mushroom_red_7"
-    ]
+  "blockName": "red_mushroom_8",
+  "blockType": "plant",
+  "type": "layerSensitive",
+  "soundGroup": "grass",
+  "renderLayer": "cutout",
+  "creativeTab": "westeros_grasses_shrubs_tab",
+  "boundingBox": {
+    "xMin": 0.3,
+    "xMax": 0.7,
+    "yMin": 0,
+    "yMax": 0.6,
+    "zMin": 0.3,
+    "zMax": 0.7
+  },
+  "label": "Red Mushroom 8",
+  "textures": ["red_mushroom_block/mushroom_red_7"]
 }

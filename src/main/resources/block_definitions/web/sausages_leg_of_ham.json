@@ -1,12 +1,10 @@
 {
-    "blockName": "sausages_leg_of_ham",
-    "blockType": "web",
-    "stepSound": "cloth",
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Sausages Leg of Ham",
-    "renderLayer": "cutout",
-    "textures": [
-        "sausages_leg_of_ham/default"
-    ],
-    "type": "no-in-web"
+  "blockName": "sausages_leg_of_ham",
+  "blockType": "web",
+  "soundGroup": "cloth",
+  "creativeTab": "westeros_food_blocks_tab",
+  "label": "Sausages Leg of Ham",
+  "renderLayer": "cutout",
+  "textures": ["sausages_leg_of_ham/default"],
+  "type": "no-in-web"
 }

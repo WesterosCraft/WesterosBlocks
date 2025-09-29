@@ -1,18 +1,18 @@
 {
-    "blockName": "unused_purple_plaster",
-    "blockType": "solid",
-    "strength": 5,
-    "stepSound": "stone",
-    "creativeTab": "westeros_marble_plaster_tab",
-    "label": "Smooth Purple Brick Keystone Brownish White Plaster",
-    "textures": [
-        "ashlar_quarter_rounded/dark_red/all",
-        "ashlar_quarter_rounded/dark_red/all",
-        "plaster/smooth/brown_white/all"
-    ],
-    "overlayTextures": [
-        "transparent",
-        "transparent",
-        "plaster_keystone/ashlar_quarter_rounded_dark_red/side"
-    ]
+  "blockName": "unused_purple_plaster",
+  "blockType": "solid",
+  "strength": 5,
+  "soundGroup": "stone",
+  "creativeTab": "westeros_marble_plaster_tab",
+  "label": "Smooth Purple Brick Keystone Brownish White Plaster",
+  "textures": [
+    "ashlar_quarter_rounded/dark_red/all",
+    "ashlar_quarter_rounded/dark_red/all",
+    "plaster/smooth/brown_white/all"
+  ],
+  "overlayTextures": [
+    "transparent",
+    "transparent",
+    "plaster_keystone/ashlar_quarter_rounded_dark_red/side"
+  ]
 }

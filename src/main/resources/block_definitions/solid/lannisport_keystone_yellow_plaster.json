@@ -1,18 +1,18 @@
 {
-    "blockName": "lannisport_keystone_yellow_plaster",
-    "blockType": "solid",
-    "strength": 5,
-    "stepSound": "stone",
-    "creativeTab": "westeros_marble_plaster_tab",
-    "label": "Lannisport Keystone Yellow Plaster",
-    "textures": [
-        "fieldstone/westerlands/all",
-        "fieldstone/westerlands/all",
-        "plaster/smooth/lannisport_yellow/all"
-    ],
-    "overlayTextures": [
-        "transparent",
-        "transparent",
-        "plaster_keystone/fieldstone_westerlands/side"
-    ]
+  "blockName": "lannisport_keystone_yellow_plaster",
+  "blockType": "solid",
+  "strength": 5,
+  "soundGroup": "stone",
+  "creativeTab": "westeros_marble_plaster_tab",
+  "label": "Lannisport Keystone Yellow Plaster",
+  "textures": [
+    "fieldstone/westerlands/all",
+    "fieldstone/westerlands/all",
+    "plaster/smooth/lannisport_yellow/all"
+  ],
+  "overlayTextures": [
+    "transparent",
+    "transparent",
+    "plaster_keystone/fieldstone_westerlands/side"
+  ]
 }

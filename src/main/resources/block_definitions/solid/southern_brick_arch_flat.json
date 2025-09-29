@@ -1,14 +1,14 @@
 {
-    "blockName": "southern_brick_arch_flat",
-    "blockType": "solid",
-    "strength": 3,
-    "stepSound": "stone",
-    "creativeTab": "westeros_brick_tab",
-    "label": "Southern Brick Arch Flat",
-    "type": "connectstate:true",
-    "textures": [
-        "brick/southern/all1",
-        "brick/southern/all1",
-        "brick/southern/arch_flat"
-    ]
+  "blockName": "southern_brick_arch_flat",
+  "blockType": "solid",
+  "strength": 3,
+  "soundGroup": "stone",
+  "creativeTab": "westeros_brick_tab",
+  "label": "Southern Brick Arch Flat",
+  "type": "connectstate:true",
+  "textures": [
+    "brick/southern/all1",
+    "brick/southern/all1",
+    "brick/southern/arch_flat"
+  ]
 }

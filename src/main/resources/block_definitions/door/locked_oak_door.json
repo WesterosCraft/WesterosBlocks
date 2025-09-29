@@ -1,15 +1,12 @@
 {
-    "blockName": "locked_oak_door",
-    "blockType": "door",
-    "stepSound": "wood",
-    "creativeTab": "westeros_wood_planks_tab",
-    "type": "locked:true,allow-unsupported",
-    "label": "Locked Oak Door",
-    "allowUnsupported": true,
-    "locked": true,
-    "textures": [
-        "wood/oak/door_locked_top",
-        "wood/oak/door_locked_bottom"
-    ],
-    "strength": 2
+  "blockName": "locked_oak_door",
+  "blockType": "door",
+  "soundGroup": "wood",
+  "creativeTab": "westeros_wood_planks_tab",
+  "type": "locked:true,allow-unsupported",
+  "label": "Locked Oak Door",
+  "allowUnsupported": true,
+  "locked": true,
+  "textures": ["wood/oak/door_locked_top", "wood/oak/door_locked_bottom"],
+  "strength": 2
 }

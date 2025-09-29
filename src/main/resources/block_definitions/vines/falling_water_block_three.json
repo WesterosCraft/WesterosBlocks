@@ -1,15 +1,12 @@
 {
-    "blockName": "falling_water_block_three",
-    "blockType": "vines",
-    "stepSound": "cloth",
-    "nonOpaque": true,
-    "alphaRender": true,
-    "creativeTab": "westeros_water_air_tab",
-    "label": "Falling Water Block Three",
-    "renderLayer": "translucent",
-    "textures": [
-        "alyssas_tears_mist/mist3",
-        "alyssas_tears_mist/mist3"
-    ],
-    "type": "allow-unsupported,no-climb"
+  "blockName": "falling_water_block_three",
+  "blockType": "vines",
+  "soundGroup": "cloth",
+  "nonOpaque": true,
+  "alphaRender": true,
+  "creativeTab": "westeros_water_air_tab",
+  "label": "Falling Water Block Three",
+  "renderLayer": "translucent",
+  "textures": ["alyssas_tears_mist/mist3", "alyssas_tears_mist/mist3"],
+  "type": "allow-unsupported,no-climb"
 }

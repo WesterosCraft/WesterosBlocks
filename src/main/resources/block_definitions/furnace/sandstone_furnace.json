@@ -3,7 +3,7 @@
   "blockType": "furnace",
   "nonOpaque": true,
   "hardness": 5,
-  "stepSound": "metal",
+  "soundGroup": "metal",
   "material": "iron",
   "resistance": 10,
   "luminance": 13,

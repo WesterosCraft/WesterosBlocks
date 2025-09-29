@@ -1,12 +1,10 @@
 {
-    "blockName": "snowy_spruce_leaves",
-    "blockType": "leaves",
-    "stepSound": "grass",
-    "type": "no-decay,better-foliage",
-    "creativeTab": "westeros_foliage_tab",
-    "label": "Snowy Spruce Leaves",
-    "rotateRandom": true,
-    "textures": [
-        "leaves/spruce/snowy/all"
-    ]
+  "blockName": "snowy_spruce_leaves",
+  "blockType": "leaves",
+  "soundGroup": "grass",
+  "type": "no-decay,better-foliage",
+  "creativeTab": "westeros_foliage_tab",
+  "label": "Snowy Spruce Leaves",
+  "rotateRandom": true,
+  "textures": ["leaves/spruce/snowy/all"]
 }

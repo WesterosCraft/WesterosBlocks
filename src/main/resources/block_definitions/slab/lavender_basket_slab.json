@@ -1,19 +1,19 @@
 {
-    "blockName": "lavender_basket_slab",
-    "blockType": "slab",
-    "stepSound": "cloth",
-    "harvestLevel": [
-        {
-            "tool": "shovel",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Lavender Basket Slab",
-    "textures": [
-        "crate_block/basket_bottom",
-        "crate_block/basket_lavender",
-        "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+  "blockName": "lavender_basket_slab",
+  "blockType": "slab",
+  "soundGroup": "cloth",
+  "harvestLevel": [
+    {
+      "tool": "shovel",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_food_blocks_tab",
+  "label": "Lavender Basket Slab",
+  "textures": [
+    "crate_block/basket_bottom",
+    "crate_block/basket_lavender",
+    "crate_block/basket_side_slab"
+  ],
+  "strength": 2
 }

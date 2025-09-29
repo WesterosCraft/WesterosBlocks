@@ -1,18 +1,18 @@
 {
-    "blockName": "small_stone_brick_white_plaster",
-    "blockType": "solid",
-    "strength": 5,
-    "stepSound": "stone",
-    "creativeTab": "westeros_marble_plaster_tab",
-    "label": "Small Stone Brick Keystone White Plaster",
-    "textures": [
-        "ashlar_quarter/green_grey/all",
-        "ashlar_quarter/green_grey/all",
-        "plaster/smooth/white/all"
-    ],
-    "overlayTextures": [
-        "transparent",
-        "transparent",
-        "plaster_keystone/ashlar_quarter_green_grey/side"
-    ]
+  "blockName": "small_stone_brick_white_plaster",
+  "blockType": "solid",
+  "strength": 5,
+  "soundGroup": "stone",
+  "creativeTab": "westeros_marble_plaster_tab",
+  "label": "Small Stone Brick Keystone White Plaster",
+  "textures": [
+    "ashlar_quarter/green_grey/all",
+    "ashlar_quarter/green_grey/all",
+    "plaster/smooth/white/all"
+  ],
+  "overlayTextures": [
+    "transparent",
+    "transparent",
+    "plaster_keystone/ashlar_quarter_green_grey/side"
+  ]
 }

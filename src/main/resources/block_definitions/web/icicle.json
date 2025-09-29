@@ -1,12 +1,10 @@
 {
-    "blockName": "icicle",
-    "blockType": "web",
-    "stepSound": "cloth",
-    "creativeTab": "westeros_water_air_tab",
-    "label": "Icicle",
-    "renderLayer": "cutout",
-    "textures": [
-        "icicle/side"
-    ],
-    "type": "no-in-web"
+  "blockName": "icicle",
+  "blockType": "web",
+  "soundGroup": "cloth",
+  "creativeTab": "westeros_water_air_tab",
+  "label": "Icicle",
+  "renderLayer": "cutout",
+  "textures": ["icicle/side"],
+  "type": "no-in-web"
 }

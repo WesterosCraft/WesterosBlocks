@@ -1,17 +1,17 @@
 {
-    "blockName": "northern_bed",
-    "stepSound": "wood",
-    "blockType": "bed",
-    "creativeTab": "westeros_furniture_tab",
-    "label": "Northern Bed",
-    "bedType": "normal",
-    "itemTexture": "bed_block/bed_north_1",
-    "textures": [
-        "bed_block/bed_north_0",
-        "bed_block/bed_north_1",
-        "bed_block/bed_north_2",
-        "bed_block/bed_north_3",
-        "bed_block/bed_north_4",
-        "bed_block/bed_north_5"
-    ]
+  "blockName": "northern_bed",
+  "soundGroup": "wood",
+  "blockType": "bed",
+  "creativeTab": "westeros_furniture_tab",
+  "label": "Northern Bed",
+  "bedType": "normal",
+  "itemTexture": "bed_block/bed_north_1",
+  "textures": [
+    "bed_block/bed_north_0",
+    "bed_block/bed_north_1",
+    "bed_block/bed_north_2",
+    "bed_block/bed_north_3",
+    "bed_block/bed_north_4",
+    "bed_block/bed_north_5"
+  ]
 }

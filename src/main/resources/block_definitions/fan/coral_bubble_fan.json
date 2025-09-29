@@ -1,22 +1,18 @@
 {
-    "blockName": "coral_bubble_fan",
-    "blockType": "fan",
-    "stepSound": "stone",
-    "creativeTab": "westeros_water_air_tab",
-    "label": "Bubble Coral Fan",
-    "type": "allow-unsupported",
-    "renderLayer": "cutout",
-    "allowUnsupported": true,
-    "randomTextures": [
-        {
-            "textures": [
-                "coral/bubble/fan1"
-            ]
-        },
-        {
-            "textures": [
-                "coral/bubble/fan2"
-            ]
-        }
-    ]
+  "blockName": "coral_bubble_fan",
+  "blockType": "fan",
+  "soundGroup": "stone",
+  "creativeTab": "westeros_water_air_tab",
+  "label": "Bubble Coral Fan",
+  "type": "allow-unsupported",
+  "renderLayer": "cutout",
+  "allowUnsupported": true,
+  "randomTextures": [
+    {
+      "textures": ["coral/bubble/fan1"]
+    },
+    {
+      "textures": ["coral/bubble/fan2"]
+    }
+  ]
 }

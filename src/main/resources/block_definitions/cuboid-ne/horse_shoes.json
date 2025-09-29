@@ -1,27 +1,25 @@
 {
-    "blockName": "horse_shoes",
-    "blockType": "cuboid-ne",
-    "stepSound": "metal",
-    "harvestLevel": [
-        {
-            "tool": "axe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_decor_tab",
-    "label": "Horse Shoes",
-    "lightOpacity": 0,
-    "textures": [
-        "cuboid_block/horseshoes"
-    ],
-    "boundingBox": {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0.03,
-        "yMax": 0.039,
-        "zMin": 0,
-        "zMax": 1
-    },
-    "itemTextureIndex": 2,
-    "strength": 5
+  "blockName": "horse_shoes",
+  "blockType": "cuboid-ne",
+  "soundGroup": "metal",
+  "harvestLevel": [
+    {
+      "tool": "axe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_decor_tab",
+  "label": "Horse Shoes",
+  "lightOpacity": 0,
+  "textures": ["cuboid_block/horseshoes"],
+  "boundingBox": {
+    "xMin": 0,
+    "xMax": 1,
+    "yMin": 0.03,
+    "yMax": 0.039,
+    "zMin": 0,
+    "zMax": 1
+  },
+  "itemTextureIndex": 2,
+  "strength": 5
 }

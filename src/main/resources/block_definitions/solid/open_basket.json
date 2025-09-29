@@ -1,13 +1,13 @@
 {
-    "blockName": "open_basket",
-    "blockType": "solid",
-    "strength": 2,
-    "stepSound": "cloth",
-    "creativeTab": "westeros_decor_tab",
-    "label": "Open Basket",
-    "textures": [
-        "crate_block/basket_bottom",
-        "crate_block/basket_top",
-        "crate_block/basket_side"
-    ]
+  "blockName": "open_basket",
+  "blockType": "solid",
+  "strength": 2,
+  "soundGroup": "cloth",
+  "creativeTab": "westeros_decor_tab",
+  "label": "Open Basket",
+  "textures": [
+    "crate_block/basket_bottom",
+    "crate_block/basket_top",
+    "crate_block/basket_side"
+  ]
 }

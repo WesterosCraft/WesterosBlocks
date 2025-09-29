@@ -1,11 +1,9 @@
 {
-    "blockName": "faith_carved_reach_brick",
-    "blockType": "solid",
-    "strength": 5,
-    "stepSound": "stone",
-    "creativeTab": "westeros_panelling_carvings_tab",
-    "label": "Ashlar Faith Carved Reach",
-    "textures": [
-        "ashlar_quarter_rounded/reach/faith_carved"
-    ]
+  "blockName": "faith_carved_reach_brick",
+  "blockType": "solid",
+  "strength": 5,
+  "soundGroup": "stone",
+  "creativeTab": "westeros_panelling_carvings_tab",
+  "label": "Ashlar Faith Carved Reach",
+  "textures": ["ashlar_quarter_rounded/reach/faith_carved"]
 }

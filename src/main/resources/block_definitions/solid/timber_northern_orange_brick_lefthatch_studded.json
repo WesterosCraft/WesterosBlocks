@@ -1,41 +1,41 @@
 {
-    "blockName": "timber_northern_orange_brick_lefthatch_studded",
-    "blockType": "solid",
-    "strength": 2,
-    "stepSound": "wood",
-    "creativeTab": "westeros_timber_frame_tab",
-    "label": "Timber Northern Orange Brick Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
-    "states": [
-        {
-            "textures": [
-                "brick/orange/all1",
-                "wood/northern/all",
-                "brick/orange/all1"
-            ]
-        },
-        {
-            "textures": [
-                "brick/orange_rough/all1",
-                "wood/northern/all",
-                "brick/orange_rough/all1"
-            ]
-        },
-        {
-            "textures": [
-                "brick/orange_dark/all1",
-                "wood/northern/all",
-                "brick/orange_dark/all1"
-            ]
-        }
-    ],
-    "overlayTextures": [
-        "timber/northern/bottom",
-        "transparent",
-        "timber/northern/lefthatch_studded",
-        "timber/northern/lefthatch_studded",
-        "timber/northern/lefthatch_studded",
-        "timber/northern/lefthatch_studded",
-        "timber/northern/righthatch_studded"
-    ]
+  "blockName": "timber_northern_orange_brick_lefthatch_studded",
+  "blockType": "solid",
+  "strength": 2,
+  "soundGroup": "wood",
+  "creativeTab": "westeros_timber_frame_tab",
+  "label": "Timber Northern Orange Brick Lefthatch Studded",
+  "type": "connectstate:true,symmetrical:true,toggleOnUse",
+  "states": [
+    {
+      "textures": [
+        "brick/orange/all1",
+        "wood/northern/all",
+        "brick/orange/all1"
+      ]
+    },
+    {
+      "textures": [
+        "brick/orange_rough/all1",
+        "wood/northern/all",
+        "brick/orange_rough/all1"
+      ]
+    },
+    {
+      "textures": [
+        "brick/orange_dark/all1",
+        "wood/northern/all",
+        "brick/orange_dark/all1"
+      ]
+    }
+  ],
+  "overlayTextures": [
+    "timber/northern/bottom",
+    "transparent",
+    "timber/northern/lefthatch_studded",
+    "timber/northern/lefthatch_studded",
+    "timber/northern/lefthatch_studded",
+    "timber/northern/lefthatch_studded",
+    "timber/northern/righthatch_studded"
+  ]
 }

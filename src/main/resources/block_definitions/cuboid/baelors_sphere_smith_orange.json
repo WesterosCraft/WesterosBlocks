@@ -3,7 +3,7 @@
   "blockType": "cuboid",
   "nonOpaque": true,
   "alphaRender": true,
-  "stepSound": "metal",
+  "soundGroup": "metal",
   "luminance": 2,
   "harvestLevel": [
     {

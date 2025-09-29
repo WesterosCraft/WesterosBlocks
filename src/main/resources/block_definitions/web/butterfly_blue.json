@@ -1,12 +1,10 @@
 {
-    "blockName": "butterfly_blue",
-    "blockType": "web",
-    "stepSound": "cloth",
-    "creativeTab": "westeros_misc_tab",
-    "label": "Northern Blue Butterfly",
-    "renderLayer": "cutout",
-    "textures": [
-        "web_block/bug_butterfly_blue"
-    ],
-    "type": "no-in-web"
+  "blockName": "butterfly_blue",
+  "blockType": "web",
+  "soundGroup": "cloth",
+  "creativeTab": "westeros_misc_tab",
+  "label": "Northern Blue Butterfly",
+  "renderLayer": "cutout",
+  "textures": ["web_block/bug_butterfly_blue"],
+  "type": "no-in-web"
 }

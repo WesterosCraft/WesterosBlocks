@@ -1,12 +1,10 @@
 {
-    "blockName": "grey_wood_window_shutters",
-    "blockType": "halfdoor",
-    "stepSound": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Grey Wood Window Shutters",
-    "allowUnsupported": true,
-    "textures": [
-        "wood/grey/shutters"
-    ],
-    "strength": 2
+  "blockName": "grey_wood_window_shutters",
+  "blockType": "halfdoor",
+  "soundGroup": "wood",
+  "creativeTab": "westeros_windows_glass_tab",
+  "label": "Grey Wood Window Shutters",
+  "allowUnsupported": true,
+  "textures": ["wood/grey/shutters"],
+  "strength": 2
 }

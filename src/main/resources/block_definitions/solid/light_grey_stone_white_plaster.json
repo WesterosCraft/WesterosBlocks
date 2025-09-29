@@ -1,18 +1,18 @@
 {
-    "blockName": "light_grey_stone_white_plaster",
-    "blockType": "solid",
-    "strength": 5,
-    "stepSound": "stone",
-    "creativeTab": "westeros_marble_plaster_tab",
-    "label": "Light Grey Brick Keystone White Plaster",
-    "textures": [
-        "fieldstone/grey/all",
-        "fieldstone/grey/all",
-        "plaster/smooth/white/all"
-    ],
-    "overlayTextures": [
-        "transparent",
-        "transparent",
-        "plaster_keystone/fieldstone_grey/side"
-    ]
+  "blockName": "light_grey_stone_white_plaster",
+  "blockType": "solid",
+  "strength": 5,
+  "soundGroup": "stone",
+  "creativeTab": "westeros_marble_plaster_tab",
+  "label": "Light Grey Brick Keystone White Plaster",
+  "textures": [
+    "fieldstone/grey/all",
+    "fieldstone/grey/all",
+    "plaster/smooth/white/all"
+  ],
+  "overlayTextures": [
+    "transparent",
+    "transparent",
+    "plaster_keystone/fieldstone_grey/side"
+  ]
 }

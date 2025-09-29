@@ -2,7 +2,7 @@
   "blockName": "glowing_embers",
   "blockType": "solid",
   "strength": 2,
-  "stepSound": "wood",
+  "soundGroup": "wood",
   "creativeTab": "westeros_lighting_tab",
   "label": "Glowing Embers",
   "luminance": 2,

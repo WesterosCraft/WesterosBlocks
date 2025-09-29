@@ -1,11 +1,9 @@
 {
-    "blockName": "winterfell_carving",
-    "blockType": "solid",
-    "strength": 5,
-    "stepSound": "stone",
-    "creativeTab": "westeros_panelling_carvings_tab",
-    "label": "Winterfell Carving",
-    "textures": [
-        "ashlar_third/dark_grey/carving/side"
-    ]
+  "blockName": "winterfell_carving",
+  "blockType": "solid",
+  "strength": 5,
+  "soundGroup": "stone",
+  "creativeTab": "westeros_panelling_carvings_tab",
+  "label": "Winterfell Carving",
+  "textures": ["ashlar_third/dark_grey/carving/side"]
 }

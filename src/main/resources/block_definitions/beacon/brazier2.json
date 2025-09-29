@@ -1,7 +1,7 @@
 {
   "blockName": "brazier2",
   "blockType": "beacon",
-  "stepSound": "metal",
+  "soundGroup": "metal",
   "luminance": 0,
   "creativeTab": "westeros_lighting_tab",
   "label": "Unlit Brazier",

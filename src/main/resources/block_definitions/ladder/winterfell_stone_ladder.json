@@ -1,22 +1,18 @@
 {
-    "blockName": "winterfell_stone_ladder",
-    "blockType": "ladder",
-    "stepSound": "stone",
-    "creativeTab": "westeros_misc_tab",
-    "label": "Winterfell Stone Ladder",
-    "renderLayer": "cutout",
-    "allowUnsupported": true,
-    "randomTextures": [
-        {
-            "textures": [
-                "winterfell_stone_ladder/side1"
-            ]
-        },
-        {
-            "textures": [
-                "winterfell_stone_ladder/side2"
-            ]
-        }
-    ],
-    "type": "allow-unsupported"
+  "blockName": "winterfell_stone_ladder",
+  "blockType": "ladder",
+  "soundGroup": "stone",
+  "creativeTab": "westeros_misc_tab",
+  "label": "Winterfell Stone Ladder",
+  "renderLayer": "cutout",
+  "allowUnsupported": true,
+  "randomTextures": [
+    {
+      "textures": ["winterfell_stone_ladder/side1"]
+    },
+    {
+      "textures": ["winterfell_stone_ladder/side2"]
+    }
+  ],
+  "type": "allow-unsupported"
 }

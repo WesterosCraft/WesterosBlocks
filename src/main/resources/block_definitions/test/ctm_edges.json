@@ -1,10 +1,8 @@
 {
-    "blockName": "ctm_edges",
-    "blockType": "solid",
-    "stepSound": "wood",
-    "creativeTab": "westeros_test_tab",
-    "label": "Edges CTM (to water)",
-    "textures": [
-        "ctm/edges"
-    ]
+  "blockName": "ctm_edges",
+  "blockType": "solid",
+  "soundGroup": "wood",
+  "creativeTab": "westeros_test_tab",
+  "label": "Edges CTM (to water)",
+  "textures": ["ctm/edges"]
 }

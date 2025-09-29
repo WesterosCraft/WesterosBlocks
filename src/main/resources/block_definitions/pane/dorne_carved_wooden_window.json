@@ -1,13 +1,11 @@
 {
-    "blockName": "dorne_carved_wooden_window",
-    "blockType": "pane",
-    "stepSound": "stone",
-    "creativeTab": "westeros_windows_glass_tab",
-    "type": "legacy-model,unconnect:false",
-    "label": "Dorne Carved Wooden Window",
-    "renderLayer": "cutout",
-    "textures": [
-        "pane_block/moorish_wood_window_pane"
-    ],
-    "strength": 1
+  "blockName": "dorne_carved_wooden_window",
+  "blockType": "pane",
+  "soundGroup": "stone",
+  "creativeTab": "westeros_windows_glass_tab",
+  "type": "legacy-model,unconnect:false",
+  "label": "Dorne Carved Wooden Window",
+  "renderLayer": "cutout",
+  "textures": ["pane_block/moorish_wood_window_pane"],
+  "strength": 1
 }

@@ -1,26 +1,20 @@
 {
-    "blockName": "dead_hare",
-    "blockType": "web",
-    "stepSound": "cloth",
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Dead Hare",
-    "renderLayer": "cutout",
-    "randomTextures": [
-        {
-            "textures": [
-                "dead_hare/rabbit_dead1"
-            ]
-        },
-        {
-            "textures": [
-                "dead_hare/rabbit_dead2"
-            ]
-        },
-        {
-            "textures": [
-                "dead_hare/rabbit_dead3"
-            ]
-        }
-    ],
-    "type": "no-in-web"
+  "blockName": "dead_hare",
+  "blockType": "web",
+  "soundGroup": "cloth",
+  "creativeTab": "westeros_food_blocks_tab",
+  "label": "Dead Hare",
+  "renderLayer": "cutout",
+  "randomTextures": [
+    {
+      "textures": ["dead_hare/rabbit_dead1"]
+    },
+    {
+      "textures": ["dead_hare/rabbit_dead2"]
+    },
+    {
+      "textures": ["dead_hare/rabbit_dead3"]
+    }
+  ],
+  "type": "no-in-web"
 }

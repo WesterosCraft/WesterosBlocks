@@ -1,20 +1,16 @@
 {
-    "blockName": "thin_palm_log",
-    "blockType": "wall",
-    "stepSound": "wood",
-    "harvestLevel": [
-        {
-            "tool": "axe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_logs_tab",
-    "type": "unconnect:false",
-    "label": "Thin Palm Log",
-    "textures": [
-        "bark/palm/wall_top",
-        "bark/palm/wall_top",
-        "bark/palm/side"
-    ],
-    "strength": 2
+  "blockName": "thin_palm_log",
+  "blockType": "wall",
+  "soundGroup": "wood",
+  "harvestLevel": [
+    {
+      "tool": "axe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_logs_tab",
+  "type": "unconnect:false",
+  "label": "Thin Palm Log",
+  "textures": ["bark/palm/wall_top", "bark/palm/wall_top", "bark/palm/side"],
+  "strength": 2
 }

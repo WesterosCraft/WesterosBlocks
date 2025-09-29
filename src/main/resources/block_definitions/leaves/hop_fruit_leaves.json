@@ -1,44 +1,28 @@
 {
-    "blockName": "hop_fruit_leaves",
-    "blockType": "leaves",
-    "stepSound": "grass",
-    "type": "no-decay,better-foliage,overlay",
-    "creativeTab": "westeros_foliage_tab",
-    "label": "Hop Fruit Leaves",
-    "colorMult": "textures/colormap/foliagejungle",
-    "rotateRandom": true,
-    "randomTextures": [
-        {
-            "textures": [
-                "leaves/jungle/all",
-                "transparent",
-                "leaves/overlay/hop0"
-            ],
-            "weight": 10
-        },
-        {
-            "textures": [
-                "leaves/jungle/all",
-                "transparent",
-                "leaves/overlay/hop1"
-            ],
-            "weight": 10
-        },
-        {
-            "textures": [
-                "leaves/jungle/all",
-                "transparent",
-                "leaves/overlay/hop2"
-            ],
-            "weight": 10
-        },
-        {
-            "textures": [
-                "leaves/jungle/all",
-                "transparent",
-                "leaves/overlay/hop3"
-            ],
-            "weight": 2
-        }
-    ]
+  "blockName": "hop_fruit_leaves",
+  "blockType": "leaves",
+  "soundGroup": "grass",
+  "type": "no-decay,better-foliage,overlay",
+  "creativeTab": "westeros_foliage_tab",
+  "label": "Hop Fruit Leaves",
+  "colorMult": "textures/colormap/foliagejungle",
+  "rotateRandom": true,
+  "randomTextures": [
+    {
+      "textures": ["leaves/jungle/all", "transparent", "leaves/overlay/hop0"],
+      "weight": 10
+    },
+    {
+      "textures": ["leaves/jungle/all", "transparent", "leaves/overlay/hop1"],
+      "weight": 10
+    },
+    {
+      "textures": ["leaves/jungle/all", "transparent", "leaves/overlay/hop2"],
+      "weight": 10
+    },
+    {
+      "textures": ["leaves/jungle/all", "transparent", "leaves/overlay/hop3"],
+      "weight": 2
+    }
+  ]
 }

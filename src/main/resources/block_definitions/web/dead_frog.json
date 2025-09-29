@@ -1,21 +1,17 @@
 {
-    "blockName": "dead_frog",
-    "blockType": "web",
-    "stepSound": "cloth",
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Dead Frog",
-    "renderLayer": "cutout",
-    "randomTextures": [
-        {
-            "textures": [
-                "dead_frog/toad_dead1"
-            ]
-        },
-        {
-            "textures": [
-                "dead_frog/toad_dead2"
-            ]
-        }
-    ],
-    "type": "no-in-web"
+  "blockName": "dead_frog",
+  "blockType": "web",
+  "soundGroup": "cloth",
+  "creativeTab": "westeros_food_blocks_tab",
+  "label": "Dead Frog",
+  "renderLayer": "cutout",
+  "randomTextures": [
+    {
+      "textures": ["dead_frog/toad_dead1"]
+    },
+    {
+      "textures": ["dead_frog/toad_dead2"]
+    }
+  ],
+  "type": "no-in-web"
 }

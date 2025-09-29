@@ -1,22 +1,18 @@
 {
-    "blockName": "coral_brain_fan",
-    "blockType": "fan",
-    "stepSound": "stone",
-    "creativeTab": "westeros_water_air_tab",
-    "label": "Brain Coral Fan",
-    "type": "allow-unsupported",
-    "renderLayer": "cutout",
-    "allowUnsupported": true,
-    "randomTextures": [
-        {
-            "textures": [
-                "coral/brain/fan1"
-            ]
-        },
-        {
-            "textures": [
-                "coral/brain/fan2"
-            ]
-        }
-    ]
+  "blockName": "coral_brain_fan",
+  "blockType": "fan",
+  "soundGroup": "stone",
+  "creativeTab": "westeros_water_air_tab",
+  "label": "Brain Coral Fan",
+  "type": "allow-unsupported",
+  "renderLayer": "cutout",
+  "allowUnsupported": true,
+  "randomTextures": [
+    {
+      "textures": ["coral/brain/fan1"]
+    },
+    {
+      "textures": ["coral/brain/fan2"]
+    }
+  ]
 }

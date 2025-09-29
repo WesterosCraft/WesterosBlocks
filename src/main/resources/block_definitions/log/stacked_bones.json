@@ -1,18 +1,18 @@
 {
-    "blockName": "stacked_bones",
-    "blockType": "log",
-    "stepSound": "stone",
-    "harvestLevel": [
-        {
-            "tool": "axe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_misc_tab",
-    "label": "Stacked Bones",
-    "textures": [
-        "stacked_bones/bone_stacked_front",
-        "stacked_bones/bone_stacked_front",
-        "stacked_bones/bone_stacked_side"
-    ]
+  "blockName": "stacked_bones",
+  "blockType": "log",
+  "soundGroup": "stone",
+  "harvestLevel": [
+    {
+      "tool": "axe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_misc_tab",
+  "label": "Stacked Bones",
+  "textures": [
+    "stacked_bones/bone_stacked_front",
+    "stacked_bones/bone_stacked_front",
+    "stacked_bones/bone_stacked_side"
+  ]
 }

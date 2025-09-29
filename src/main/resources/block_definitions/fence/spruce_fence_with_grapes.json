@@ -1,12 +1,10 @@
 {
-    "blockName": "spruce_fence_with_grapes",
-    "blockType": "fence",
-    "stepSound": "wood",
-    "creativeTab": "westeros_wood_planks_tab",
-    "type": "unconnect:false",
-    "label": "Spruce Fence with Grapes",
-    "textures": [
-        "wood/spruce/grapevines"
-    ],
-    "strength": 2
+  "blockName": "spruce_fence_with_grapes",
+  "blockType": "fence",
+  "soundGroup": "wood",
+  "creativeTab": "westeros_wood_planks_tab",
+  "type": "unconnect:false",
+  "label": "Spruce Fence with Grapes",
+  "textures": ["wood/spruce/grapevines"],
+  "strength": 2
 }

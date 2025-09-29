@@ -1,31 +1,31 @@
 {
-    "blockName": "bookshelf_library",
-    "blockType": "solid",
-    "strength": 2,
-    "stepSound": "wood",
-    "creativeTab": "westeros_furniture_tab",
-    "label": "Bookshelf Library",
-    "randomTextures": [
-        {
-            "textures": [
-                "bench_block/spruce_top",
-                "bench_block/spruce_top",
-                "bookshelf_library/side1"
-            ]
-        },
-        {
-            "textures": [
-                "bench_block/spruce_top",
-                "bench_block/spruce_top",
-                "bookshelf_library/side2"
-            ]
-        },
-        {
-            "textures": [
-                "bench_block/spruce_top",
-                "bench_block/spruce_top",
-                "bookshelf_library/side3"
-            ]
-        }
-    ]
+  "blockName": "bookshelf_library",
+  "blockType": "solid",
+  "strength": 2,
+  "soundGroup": "wood",
+  "creativeTab": "westeros_furniture_tab",
+  "label": "Bookshelf Library",
+  "randomTextures": [
+    {
+      "textures": [
+        "bench_block/spruce_top",
+        "bench_block/spruce_top",
+        "bookshelf_library/side1"
+      ]
+    },
+    {
+      "textures": [
+        "bench_block/spruce_top",
+        "bench_block/spruce_top",
+        "bookshelf_library/side2"
+      ]
+    },
+    {
+      "textures": [
+        "bench_block/spruce_top",
+        "bench_block/spruce_top",
+        "bookshelf_library/side3"
+      ]
+    }
+  ]
 }

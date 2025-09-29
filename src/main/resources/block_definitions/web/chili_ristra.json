@@ -1,12 +1,10 @@
 {
-    "blockName": "chili_ristra",
-    "blockType": "web",
-    "stepSound": "cloth",
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Chili Ristra",
-    "renderLayer": "cutout",
-    "textures": [
-        "web_block/food_chili_ristra"
-    ],
-    "type": "no-in-web"
+  "blockName": "chili_ristra",
+  "blockType": "web",
+  "soundGroup": "cloth",
+  "creativeTab": "westeros_food_blocks_tab",
+  "label": "Chili Ristra",
+  "renderLayer": "cutout",
+  "textures": ["web_block/food_chili_ristra"],
+  "type": "no-in-web"
 }

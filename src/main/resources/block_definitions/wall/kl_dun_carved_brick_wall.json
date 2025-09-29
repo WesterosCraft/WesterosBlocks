@@ -1,18 +1,16 @@
 {
-    "blockName": "kl_dun_carved_brick_wall",
-    "blockType": "wall",
-    "stepSound": "stone",
-    "harvestLevel": [
-        {
-            "tool": "pickaxe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_panelling_carvings_tab",
-    "type": "unconnect:false",
-    "label": "Ashlar Engraved Dun Wall",
-    "textures": [
-        "ashlar_engraved/dun/all"
-    ],
-    "strength": 1.5
+  "blockName": "kl_dun_carved_brick_wall",
+  "blockType": "wall",
+  "soundGroup": "stone",
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_panelling_carvings_tab",
+  "type": "unconnect:false",
+  "label": "Ashlar Engraved Dun Wall",
+  "textures": ["ashlar_engraved/dun/all"],
+  "strength": 1.5
 }

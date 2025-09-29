@@ -2,7 +2,7 @@
   "blockName": "middle_class_utility_block",
   "blockType": "solid",
   "strength": 5,
-  "stepSound": "metal",
+  "soundGroup": "metal",
   "harvestLevel": [
     {
       "tool": "pickaxe",

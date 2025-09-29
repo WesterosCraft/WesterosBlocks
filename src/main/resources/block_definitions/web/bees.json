@@ -1,12 +1,10 @@
 {
-    "blockName": "bees",
-    "blockType": "web",
-    "stepSound": "cloth",
-    "renderLayer": "cutout",
-    "creativeTab": "westeros_misc_tab",
-    "label": "Bees",
-    "textures": [
-        "web_block/bug_bees"
-    ],
-    "type": "no-in-web"
+  "blockName": "bees",
+  "blockType": "web",
+  "soundGroup": "cloth",
+  "renderLayer": "cutout",
+  "creativeTab": "westeros_misc_tab",
+  "label": "Bees",
+  "textures": ["web_block/bug_bees"],
+  "type": "no-in-web"
 }

@@ -1,12 +1,10 @@
 {
-    "blockName": "locked_oak_bark_fence_gate",
-    "blockType": "fencegate",
-    "stepSound": "wood",
-    "type": "locked:true",
-    "creativeTab": "westeros_logs_tab",
-    "label": "Locked Oak Bark Fence Gate",
-    "textures": [
-        "bark/oak/side"
-    ],
-    "strength": 2
+  "blockName": "locked_oak_bark_fence_gate",
+  "blockType": "fencegate",
+  "soundGroup": "wood",
+  "type": "locked:true",
+  "creativeTab": "westeros_logs_tab",
+  "label": "Locked Oak Bark Fence Gate",
+  "textures": ["bark/oak/side"],
+  "strength": 2
 }

@@ -1,18 +1,14 @@
 {
-    "blockName": "spruce_log_chain",
-    "blockType": "log",
-    "stepSound": "wood",
-    "harvestLevel": [
-        {
-            "tool": "axe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_logs_tab",
-    "label": "Spruce Log Chain",
-    "textures": [
-        "bark/spruce/top",
-        "bark/spruce/top",
-        "bark/spruce/chain"
-    ]
+  "blockName": "spruce_log_chain",
+  "blockType": "log",
+  "soundGroup": "wood",
+  "harvestLevel": [
+    {
+      "tool": "axe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_logs_tab",
+  "label": "Spruce Log Chain",
+  "textures": ["bark/spruce/top", "bark/spruce/top", "bark/spruce/chain"]
 }

@@ -1,18 +1,18 @@
 {
-    "blockName": "marble_pillar_vertical_ctm",
-    "blockType": "log",
-    "stepSound": "stone",
-    "harvestLevel": [
-        {
-            "tool": "axe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_marble_plaster_tab",
-    "label": "Marble Pillar Vertical",
-    "textures": [
-        "marble/quartz/column_topbottom",
-        "marble/quartz/column_topbottom",
-        "marble/quartz/column_side_ctm"
-    ]
+  "blockName": "marble_pillar_vertical_ctm",
+  "blockType": "log",
+  "soundGroup": "stone",
+  "harvestLevel": [
+    {
+      "tool": "axe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_marble_plaster_tab",
+  "label": "Marble Pillar Vertical",
+  "textures": [
+    "marble/quartz/column_topbottom",
+    "marble/quartz/column_topbottom",
+    "marble/quartz/column_side_ctm"
+  ]
 }

@@ -1,7 +1,7 @@
 {
   "blockName": "candle_altar",
   "blockType": "crop",
-  "stepSound": "powder",
+  "soundGroup": "powder",
   "creativeTab": "westeros_lighting_tab",
   "label": "Candle Altar",
   "type": "toggleOnUse",

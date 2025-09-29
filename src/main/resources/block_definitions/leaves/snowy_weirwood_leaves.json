@@ -1,12 +1,10 @@
 {
-    "blockName": "snowy_weirwood_leaves",
-    "blockType": "leaves",
-    "stepSound": "grass",
-    "type": "no-decay,better-foliage",
-    "creativeTab": "westeros_foliage_tab",
-    "label": "Snowy Weirwood Leaves",
-    "rotateRandom": true,
-    "textures": [
-        "leaves/weirwood/snowy/all"
-    ]
+  "blockName": "snowy_weirwood_leaves",
+  "blockType": "leaves",
+  "soundGroup": "grass",
+  "type": "no-decay,better-foliage",
+  "creativeTab": "westeros_foliage_tab",
+  "label": "Snowy Weirwood Leaves",
+  "rotateRandom": true,
+  "textures": ["leaves/weirwood/snowy/all"]
 }

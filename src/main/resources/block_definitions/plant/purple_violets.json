@@ -1,34 +1,28 @@
 {
-    "blockName": "purple_violets",
-    "blockType": "plant",
-    "type": "layerSensitive",
-    "stepSound": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "renderLayer": "cutout",
-    "boundingBox": {
-        "xMin": 0.3,
-        "xMax": 0.7,
-        "yMin": 0,
-        "yMax": 0.6,
-        "zMin": 0.3,
-        "zMax": 0.7
+  "blockName": "purple_violets",
+  "blockType": "plant",
+  "type": "layerSensitive",
+  "soundGroup": "grass",
+  "creativeTab": "westeros_flowers_tab",
+  "renderLayer": "cutout",
+  "boundingBox": {
+    "xMin": 0.3,
+    "xMax": 0.7,
+    "yMin": 0,
+    "yMax": 0.6,
+    "zMin": 0.3,
+    "zMax": 0.7
+  },
+  "label": "Purple Violets",
+  "randomTextures": [
+    {
+      "textures": ["flowers/purple_violets1"]
     },
-    "label": "Purple Violets",
-    "randomTextures": [
-        {
-            "textures": [
-                "flowers/purple_violets1"
-            ]
-        },
-        {
-            "textures": [
-                "flowers/purple_violets2"
-            ]
-        },
-        {
-            "textures": [
-                "flowers/purple_violets3"
-            ]
-        }
-    ]
+    {
+      "textures": ["flowers/purple_violets2"]
+    },
+    {
+      "textures": ["flowers/purple_violets3"]
+    }
+  ]
 }

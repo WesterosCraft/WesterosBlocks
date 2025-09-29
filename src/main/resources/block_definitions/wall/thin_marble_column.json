@@ -1,20 +1,20 @@
 {
-    "blockName": "thin_marble_column",
-    "blockType": "wall",
-    "stepSound": "stone",
-    "harvestLevel": [
-        {
-            "tool": "pickaxe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_marble_plaster_tab",
-    "type": "unconnect:false,size:short",
-    "label": "Thin Marble Column",
-    "textures": [
-        "marble/quartz/wall/top",
-        "marble/quartz/wall/top",
-        "marble/quartz/wall/column_side"
-    ],
-    "strength": 1.5
+  "blockName": "thin_marble_column",
+  "blockType": "wall",
+  "soundGroup": "stone",
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_marble_plaster_tab",
+  "type": "unconnect:false,size:short",
+  "label": "Thin Marble Column",
+  "textures": [
+    "marble/quartz/wall/top",
+    "marble/quartz/wall/top",
+    "marble/quartz/wall/column_side"
+  ],
+  "strength": 1.5
 }

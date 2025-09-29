@@ -1,19 +1,15 @@
 {
-    "blockName": "firewood",
-    "blockType": "log",
-    "stepSound": "wood",
-    "harvestLevel": [
-        {
-            "tool": "axe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_decor_tab",
-    "label": "Firewood",
-    "textures": [
-        "firewood/top",
-        "firewood/top",
-        "firewood/side"
-    ],
-    "strength": 2
+  "blockName": "firewood",
+  "blockType": "log",
+  "soundGroup": "wood",
+  "harvestLevel": [
+    {
+      "tool": "axe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_decor_tab",
+  "label": "Firewood",
+  "textures": ["firewood/top", "firewood/top", "firewood/side"],
+  "strength": 2
 }

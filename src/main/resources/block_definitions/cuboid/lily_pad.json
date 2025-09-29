@@ -1,54 +1,40 @@
 {
-    "blockName": "lily_pad",
-    "blockType": "cuboid",
-    "stepSound": "grass",
-    "creativeTab": "westeros_foliage_tab",
-    "label": "Lily Pad",
-    "rotateRandom": true,
-    "randomTextures": [
-        {
-            "textures": [
-                "lily_pad/side1"
-            ]
-        },
-        {
-            "textures": [
-                "lily_pad/side2"
-            ]
-        },
-        {
-            "textures": [
-                "lily_pad/side3"
-            ]
-        },
-        {
-            "textures": [
-                "lily_pad/side4"
-            ]
-        },
-        {
-            "textures": [
-                "lily_pad/side5"
-            ]
-        },
-        {
-            "textures": [
-                "lily_pad/side6"
-            ]
-        },
-        {
-            "textures": [
-                "lily_pad/side7"
-            ]
-        }
-    ],
-    "boundingBox": {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0.03,
-        "yMax": 0.031,
-        "zMin": 0,
-        "zMax": 1
+  "blockName": "lily_pad",
+  "blockType": "cuboid",
+  "soundGroup": "grass",
+  "creativeTab": "westeros_foliage_tab",
+  "label": "Lily Pad",
+  "rotateRandom": true,
+  "randomTextures": [
+    {
+      "textures": ["lily_pad/side1"]
     },
-    "strength": 2
+    {
+      "textures": ["lily_pad/side2"]
+    },
+    {
+      "textures": ["lily_pad/side3"]
+    },
+    {
+      "textures": ["lily_pad/side4"]
+    },
+    {
+      "textures": ["lily_pad/side5"]
+    },
+    {
+      "textures": ["lily_pad/side6"]
+    },
+    {
+      "textures": ["lily_pad/side7"]
+    }
+  ],
+  "boundingBox": {
+    "xMin": 0,
+    "xMax": 1,
+    "yMin": 0.03,
+    "yMax": 0.031,
+    "zMin": 0,
+    "zMax": 1
+  },
+  "strength": 2
 }

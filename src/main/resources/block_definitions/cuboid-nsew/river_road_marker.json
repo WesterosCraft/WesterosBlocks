@@ -1,32 +1,32 @@
 {
-    "blockName": "river_road_marker",
-    "blockType": "cuboid-nsew",
-    "nonOpaque": true,
-    "alphaRender": true,
-    "stepSound": "wood",
-    "harvestLevel": [
-        {
-            "tool": "pickaxe",
-            "level": 3
-        }
-    ],
-    "creativeTab": "westeros_misc_tab",
-    "label": "River Road Marker",
-    "textures": [
-        "transparent",
-        "transparent",
-        "transparent",
-        "transparent",
-        "road_marker_block/river_road",
-        "road_marker_block/river_road"
-    ],
-    "boundingBox": {
-        "xMin": 0.961,
-        "xMax": 0.97,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
-    },
-    "strength": 5
+  "blockName": "river_road_marker",
+  "blockType": "cuboid-nsew",
+  "nonOpaque": true,
+  "alphaRender": true,
+  "soundGroup": "wood",
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 3
+    }
+  ],
+  "creativeTab": "westeros_misc_tab",
+  "label": "River Road Marker",
+  "textures": [
+    "transparent",
+    "transparent",
+    "transparent",
+    "transparent",
+    "road_marker_block/river_road",
+    "road_marker_block/river_road"
+  ],
+  "boundingBox": {
+    "xMin": 0.961,
+    "xMax": 0.97,
+    "yMin": 0,
+    "yMax": 1,
+    "zMin": 0,
+    "zMax": 1
+  },
+  "strength": 5
 }

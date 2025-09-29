@@ -1,12 +1,10 @@
 {
-    "blockName": "butterfly_white",
-    "blockType": "web",
-    "stepSound": "cloth",
-    "creativeTab": "westeros_misc_tab",
-    "label": "Central White Butterfly",
-    "renderLayer": "cutout",
-    "textures": [
-        "web_block/bug_butterfly_white"
-    ],
-    "type": "no-in-web"
+  "blockName": "butterfly_white",
+  "blockType": "web",
+  "soundGroup": "cloth",
+  "creativeTab": "westeros_misc_tab",
+  "label": "Central White Butterfly",
+  "renderLayer": "cutout",
+  "textures": ["web_block/bug_butterfly_white"],
+  "type": "no-in-web"
 }

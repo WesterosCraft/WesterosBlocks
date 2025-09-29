@@ -1,11 +1,9 @@
 {
-    "blockName": "light_oldtown_brick_engraved",
-    "blockType": "solid",
-    "strength": 5,
-    "stepSound": "stone",
-    "creativeTab": "westeros_panelling_carvings_tab",
-    "label": "Ashlar Engraved Light Oldtown",
-    "textures": [
-        "ashlar_engraved/light_oldtown/all"
-    ]
+  "blockName": "light_oldtown_brick_engraved",
+  "blockType": "solid",
+  "strength": 5,
+  "soundGroup": "stone",
+  "creativeTab": "westeros_panelling_carvings_tab",
+  "label": "Ashlar Engraved Light Oldtown",
+  "textures": ["ashlar_engraved/light_oldtown/all"]
 }

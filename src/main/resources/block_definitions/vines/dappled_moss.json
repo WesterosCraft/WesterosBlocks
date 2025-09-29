@@ -1,14 +1,11 @@
 {
-    "blockName": "dappled_moss",
-    "blockType": "vines",
-    "stepSound": "grass",
-    "creativeTab": "westeros_foliage_tab",
-    "label": "Dappled Moss",
-    "colorMult": "textures/colormap/moss_dappled",
-    "renderLayer": "cutout",
-    "textures": [
-        "dappled_moss/dappled",
-        "dappled_moss/dappled"
-    ],
-    "type": "allow-unsupported,no-climb,has-down"
+  "blockName": "dappled_moss",
+  "blockType": "vines",
+  "soundGroup": "grass",
+  "creativeTab": "westeros_foliage_tab",
+  "label": "Dappled Moss",
+  "colorMult": "textures/colormap/moss_dappled",
+  "renderLayer": "cutout",
+  "textures": ["dappled_moss/dappled", "dappled_moss/dappled"],
+  "type": "allow-unsupported,no-climb,has-down"
 }

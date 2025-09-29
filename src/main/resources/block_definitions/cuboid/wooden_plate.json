@@ -1,43 +1,35 @@
 {
-    "blockName": "wooden_plate",
-    "blockType": "cuboid",
-    "nonOpaque": true,
-    "stepSound": "wood",
-    "harvestLevel": [
-        {
-            "tool": "axe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_decor_tab",
-    "label": "Wooden Plate",
-    "type": "toggleOnUse",
-    "itemTextureIndex": 2,
-    "boundingBox": {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0.03,
-        "yMax": 0.039,
-        "zMin": 0,
-        "zMax": 1
+  "blockName": "wooden_plate",
+  "blockType": "cuboid",
+  "nonOpaque": true,
+  "soundGroup": "wood",
+  "harvestLevel": [
+    {
+      "tool": "axe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_decor_tab",
+  "label": "Wooden Plate",
+  "type": "toggleOnUse",
+  "itemTextureIndex": 2,
+  "boundingBox": {
+    "xMin": 0,
+    "xMax": 1,
+    "yMin": 0.03,
+    "yMax": 0.039,
+    "zMin": 0,
+    "zMax": 1
+  },
+  "states": [
+    {
+      "stateID": "empty",
+      "textures": ["plate/wood_bottom", "plate/wood_empty", "transparent"]
     },
-    "states": [
-        {
-            "stateID": "empty",
-            "textures": [
-                "plate/wood_bottom",
-                "plate/wood_empty",
-                "transparent"
-            ]
-        },
-        {
-            "stateID": "food",
-            "textures": [
-                "plate/wood_bottom",
-                "plate/wood_food",
-                "transparent"
-            ]
-        }
-    ],
-    "strength": 5
+    {
+      "stateID": "food",
+      "textures": ["plate/wood_bottom", "plate/wood_food", "transparent"]
+    }
+  ],
+  "strength": 5
 }

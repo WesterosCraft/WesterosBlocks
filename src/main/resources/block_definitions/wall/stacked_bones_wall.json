@@ -1,20 +1,20 @@
 {
-    "blockName": "stacked_bones_wall",
-    "blockType": "wall",
-    "stepSound": "stone",
-    "harvestLevel": [
-        {
-            "tool": "pickaxe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_misc_tab",
-    "type": "unconnect:false",
-    "label": "Stacked Bones Wall",
-    "textures": [
-        "stacked_bones/bone_stacked_side",
-        "stacked_bones/bone_stacked_side",
-        "stacked_bones/bone_stacked_front"
-    ],
-    "strength": 1.5
+  "blockName": "stacked_bones_wall",
+  "blockType": "wall",
+  "soundGroup": "stone",
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_misc_tab",
+  "type": "unconnect:false",
+  "label": "Stacked Bones Wall",
+  "textures": [
+    "stacked_bones/bone_stacked_side",
+    "stacked_bones/bone_stacked_side",
+    "stacked_bones/bone_stacked_front"
+  ],
+  "strength": 1.5
 }

@@ -1,12 +1,10 @@
 {
-    "blockName": "6sided_birch",
-    "blockType": "solid",
-    "strength": 2,
-    "requiresTool": true,
-    "stepSound": "wood",
-    "creativeTab": "westeros_logs_tab",
-    "label": "6-Sided Birch",
-    "textures": [
-        "bark/birch/side"
-    ]
+  "blockName": "6sided_birch",
+  "blockType": "solid",
+  "strength": 2,
+  "requiresTool": true,
+  "soundGroup": "wood",
+  "creativeTab": "westeros_logs_tab",
+  "label": "6-Sided Birch",
+  "textures": ["bark/birch/side"]
 }

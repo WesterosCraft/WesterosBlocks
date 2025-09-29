@@ -1,13 +1,13 @@
 {
-    "blockName": "arbor_brick_furnace",
-    "blockType": "furnace",
-    "nonOpaque": true,
-    "hardness": 5,
-    "stepSound": "metal",
-    "material": "iron",
-    "resistance": 10,
-    "luminance": 10,
-    "creativeTab": "westeros_furniture_tab",
-    "label": "Ashlar Furnace Arbor",
-    "isCustomModel": true
+  "blockName": "arbor_brick_furnace",
+  "blockType": "furnace",
+  "nonOpaque": true,
+  "hardness": 5,
+  "soundGroup": "metal",
+  "material": "iron",
+  "resistance": 10,
+  "luminance": 10,
+  "creativeTab": "westeros_furniture_tab",
+  "label": "Ashlar Furnace Arbor",
+  "isCustomModel": true
 }

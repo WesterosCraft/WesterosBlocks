@@ -1,44 +1,28 @@
 {
-    "blockName": "lemon_fruit_leaves",
-    "blockType": "leaves",
-    "stepSound": "grass",
-    "creativeTab": "westeros_foliage_tab",
-    "type": "no-decay,better-foliage,overlay",
-    "label": "Lemon Fruit Leaves",
-    "colorMult": "textures/colormap/foliageoak",
-    "rotateRandom": true,
-    "randomTextures": [
-        {
-            "textures": [
-                "leaves/oak/all",
-                "transparent",
-                "leaves/overlay/lemon0"
-            ],
-            "weight": 10
-        },
-        {
-            "textures": [
-                "leaves/oak/all",
-                "transparent",
-                "leaves/overlay/lemon1"
-            ],
-            "weight": 10
-        },
-        {
-            "textures": [
-                "leaves/oak/all",
-                "transparent",
-                "leaves/overlay/lemon2"
-            ],
-            "weight": 10
-        },
-        {
-            "textures": [
-                "leaves/oak/all",
-                "transparent",
-                "leaves/overlay/lemon3"
-            ],
-            "weight": 2
-        }
-    ]
+  "blockName": "lemon_fruit_leaves",
+  "blockType": "leaves",
+  "soundGroup": "grass",
+  "creativeTab": "westeros_foliage_tab",
+  "type": "no-decay,better-foliage,overlay",
+  "label": "Lemon Fruit Leaves",
+  "colorMult": "textures/colormap/foliageoak",
+  "rotateRandom": true,
+  "randomTextures": [
+    {
+      "textures": ["leaves/oak/all", "transparent", "leaves/overlay/lemon0"],
+      "weight": 10
+    },
+    {
+      "textures": ["leaves/oak/all", "transparent", "leaves/overlay/lemon1"],
+      "weight": 10
+    },
+    {
+      "textures": ["leaves/oak/all", "transparent", "leaves/overlay/lemon2"],
+      "weight": 10
+    },
+    {
+      "textures": ["leaves/oak/all", "transparent", "leaves/overlay/lemon3"],
+      "weight": 2
+    }
+  ]
 }

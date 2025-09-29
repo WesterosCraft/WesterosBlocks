@@ -1,21 +1,21 @@
 {
-    "blockName": "marble_wall",
-    "blockType": "wall",
-    "stepSound": "stone",
-    "harvestLevel": [
-        {
-            "tool": "pickaxe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_marble_plaster_tab",
-    "wallSize": "short",
-    "unconnect": false,
-    "label": "Marble Wall",
-    "textures": [
-        "marble/quartz/wall/top",
-        "marble/quartz/wall/top",
-        "marble/quartz/wall/side"
-    ],
-    "strength": 1.5
+  "blockName": "marble_wall",
+  "blockType": "wall",
+  "soundGroup": "stone",
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_marble_plaster_tab",
+  "wallSize": "short",
+  "unconnect": false,
+  "label": "Marble Wall",
+  "textures": [
+    "marble/quartz/wall/top",
+    "marble/quartz/wall/top",
+    "marble/quartz/wall/side"
+  ],
+  "strength": 1.5
 }

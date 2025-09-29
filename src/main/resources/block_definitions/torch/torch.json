@@ -1,7 +1,7 @@
 {
   "blockName": "torch",
   "blockType": "torch",
-  "stepSound": "metal",
+  "soundGroup": "metal",
   "creativeTab": "westeros_lighting_tab",
   "luminance": 13,
   "label": "Torch",

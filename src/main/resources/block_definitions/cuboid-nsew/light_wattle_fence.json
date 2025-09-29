@@ -1,30 +1,30 @@
 {
-    "blockName": "light_wattle_fence",
-    "blockType": "cuboid-nsew",
-    "stepSound": "wood",
-    "harvestLevel": [
-        {
-            "tool": "pickaxe",
-            "level": 3
-        }
-    ],
-    "creativeTab": "westeros_wood_planks_tab",
-    "label": "Light Wattle Fence",
-    "textures": [
-        "transparent",
-        "transparent",
-        "wattle_fence_light/side1",
-        "wattle_fence_light/side1",
-        "wattle_fence_light/side1",
-        "wattle_fence_light/side2"
-    ],
-    "boundingBox": {
-        "xMin": 0.01,
-        "xMax": 0.07,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
-    },
-    "strength": 5
+  "blockName": "light_wattle_fence",
+  "blockType": "cuboid-nsew",
+  "soundGroup": "wood",
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 3
+    }
+  ],
+  "creativeTab": "westeros_wood_planks_tab",
+  "label": "Light Wattle Fence",
+  "textures": [
+    "transparent",
+    "transparent",
+    "wattle_fence_light/side1",
+    "wattle_fence_light/side1",
+    "wattle_fence_light/side1",
+    "wattle_fence_light/side2"
+  ],
+  "boundingBox": {
+    "xMin": 0.01,
+    "xMax": 0.07,
+    "yMin": 0,
+    "yMax": 1,
+    "zMin": 0,
+    "zMax": 1
+  },
+  "strength": 5
 }

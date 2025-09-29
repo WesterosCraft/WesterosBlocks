@@ -1,18 +1,16 @@
 {
-    "blockName": "stacked_bones_fence",
-    "blockType": "fence",
-    "stepSound": "stone",
-    "harvestLevel": [
-        {
-            "tool": "axe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_misc_tab",
-    "type": "unconnect:false",
-    "label": "Stacked Bones Fence",
-    "textures": [
-        "stacked_bones/bone_stacked_side"
-    ],
-    "strength": 5
+  "blockName": "stacked_bones_fence",
+  "blockType": "fence",
+  "soundGroup": "stone",
+  "harvestLevel": [
+    {
+      "tool": "axe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_misc_tab",
+  "type": "unconnect:false",
+  "label": "Stacked Bones Fence",
+  "textures": ["stacked_bones/bone_stacked_side"],
+  "strength": 5
 }

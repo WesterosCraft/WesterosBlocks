@@ -1,12 +1,10 @@
 {
-    "blockName": "jungle_window_shutters",
-    "blockType": "halfdoor",
-    "stepSound": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Jungle Window Shutters",
-    "allowUnsupported": true,
-    "textures": [
-        "wood/jungle/shutters"
-    ],
-    "strength": 2
+  "blockName": "jungle_window_shutters",
+  "blockType": "halfdoor",
+  "soundGroup": "wood",
+  "creativeTab": "westeros_windows_glass_tab",
+  "label": "Jungle Window Shutters",
+  "allowUnsupported": true,
+  "textures": ["wood/jungle/shutters"],
+  "strength": 2
 }

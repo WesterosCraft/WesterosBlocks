@@ -1,13 +1,13 @@
 {
-    "blockName": "olive_basket",
-    "blockType": "solid",
-    "strength": 2,
-    "stepSound": "cloth",
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Olive Basket",
-    "textures": [
-        "crate_block/basket_bottom",
-        "crate_block/basket_olives",
-        "crate_block/basket_side"
-    ]
+  "blockName": "olive_basket",
+  "blockType": "solid",
+  "strength": 2,
+  "soundGroup": "cloth",
+  "creativeTab": "westeros_food_blocks_tab",
+  "label": "Olive Basket",
+  "textures": [
+    "crate_block/basket_bottom",
+    "crate_block/basket_olives",
+    "crate_block/basket_side"
+  ]
 }

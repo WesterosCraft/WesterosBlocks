@@ -1,18 +1,16 @@
 {
-    "blockName": "black_brick_engraved_wall",
-    "blockType": "wall",
-    "stepSound": "stone",
-    "harvestLevel": [
-        {
-            "tool": "pickaxe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_panelling_carvings_tab",
-    "type": "unconnect:false",
-    "label": "Ashlar Engraved Black Wall",
-    "textures": [
-        "ashlar_engraved/black/all"
-    ],
-    "strength": 1.5
+  "blockName": "black_brick_engraved_wall",
+  "blockType": "wall",
+  "soundGroup": "stone",
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_panelling_carvings_tab",
+  "type": "unconnect:false",
+  "label": "Ashlar Engraved Black Wall",
+  "textures": ["ashlar_engraved/black/all"],
+  "strength": 1.5
 }

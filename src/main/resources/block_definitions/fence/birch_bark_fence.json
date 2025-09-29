@@ -1,12 +1,10 @@
 {
-    "blockName": "birch_bark_fence",
-    "blockType": "fence",
-    "stepSound": "wood",
-    "creativeTab": "westeros_logs_tab",
-    "type": "unconnect:false",
-    "label": "Birch Bark Fence",
-    "textures": [
-        "bark/birch/side"
-    ],
-    "strength": 2
+  "blockName": "birch_bark_fence",
+  "blockType": "fence",
+  "soundGroup": "wood",
+  "creativeTab": "westeros_logs_tab",
+  "type": "unconnect:false",
+  "label": "Birch Bark Fence",
+  "textures": ["bark/birch/side"],
+  "strength": 2
 }

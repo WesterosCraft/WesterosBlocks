@@ -1,13 +1,9 @@
 {
-    "blockName": "dates",
-    "blockType": "solid",
-    "strength": 2,
-    "stepSound": "grass",
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Dates",
-    "textures": [
-        "dates/bottom",
-        "dates/top",
-        "dates/side"
-    ]
+  "blockName": "dates",
+  "blockType": "solid",
+  "strength": 2,
+  "soundGroup": "grass",
+  "creativeTab": "westeros_food_blocks_tab",
+  "label": "Dates",
+  "textures": ["dates/bottom", "dates/top", "dates/side"]
 }

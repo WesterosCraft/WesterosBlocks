@@ -1,11 +1,9 @@
 {
-    "blockName": "parquet_floor",
-    "blockType": "solid",
-    "strength": 2,
-    "stepSound": "wood",
-    "creativeTab": "westeros_wood_planks_tab",
-    "label": "Parquet Floor",
-    "textures": [
-        "wood/oak/ornate"
-    ]
+  "blockName": "parquet_floor",
+  "blockType": "solid",
+  "strength": 2,
+  "soundGroup": "wood",
+  "creativeTab": "westeros_wood_planks_tab",
+  "label": "Parquet Floor",
+  "textures": ["wood/oak/ornate"]
 }

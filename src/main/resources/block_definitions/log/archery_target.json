@@ -1,18 +1,18 @@
 {
-    "blockName": "archery_target",
-    "blockType": "log",
-    "stepSound": "wood",
-    "harvestLevel": [
-        {
-            "tool": "axe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_misc_tab",
-    "label": "Archery Target",
-    "textures": [
-        "archery_target/front",
-        "archery_target/front",
-        "archery_target/side"
-    ]
+  "blockName": "archery_target",
+  "blockType": "log",
+  "soundGroup": "wood",
+  "harvestLevel": [
+    {
+      "tool": "axe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_misc_tab",
+  "label": "Archery Target",
+  "textures": [
+    "archery_target/front",
+    "archery_target/front",
+    "archery_target/side"
+  ]
 }

@@ -1,28 +1,24 @@
 {
-    "blockName": "frying_pan",
-    "blockType": "cuboid-ne",
-    "stepSound": "metal",
-    "harvestLevel": [
-        {
-            "tool": "axe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_decor_tab",
-    "label": "Frying Pan",
-    "textures": [
-        "frying_pan/bottom",
-        "frying_pan/top",
-        "transparent"
-    ],
-    "boundingBox": {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0.03,
-        "yMax": 0.039,
-        "zMin": 0,
-        "zMax": 1
-    },
-    "itemTextureIndex": 1,
-    "strength": 5
+  "blockName": "frying_pan",
+  "blockType": "cuboid-ne",
+  "soundGroup": "metal",
+  "harvestLevel": [
+    {
+      "tool": "axe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_decor_tab",
+  "label": "Frying Pan",
+  "textures": ["frying_pan/bottom", "frying_pan/top", "transparent"],
+  "boundingBox": {
+    "xMin": 0,
+    "xMax": 1,
+    "yMin": 0.03,
+    "yMax": 0.039,
+    "zMin": 0,
+    "zMax": 1
+  },
+  "itemTextureIndex": 1,
+  "strength": 5
 }

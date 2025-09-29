@@ -1,14 +1,11 @@
 {
-    "blockName": "grey_wood_door",
-    "blockType": "door",
-    "stepSound": "wood",
-    "creativeTab": "westeros_wood_planks_tab",
-    "label": "Grey Wood Door",
-    "textures": [
-        "wood/grey/door_top",
-        "wood/grey/door_bottom"
-    ],
-    "allowUnsupported": true,
-    "type": "allow-unsupported",
-    "strength": 2
+  "blockName": "grey_wood_door",
+  "blockType": "door",
+  "soundGroup": "wood",
+  "creativeTab": "westeros_wood_planks_tab",
+  "label": "Grey Wood Door",
+  "textures": ["wood/grey/door_top", "wood/grey/door_bottom"],
+  "allowUnsupported": true,
+  "type": "allow-unsupported",
+  "strength": 2
 }

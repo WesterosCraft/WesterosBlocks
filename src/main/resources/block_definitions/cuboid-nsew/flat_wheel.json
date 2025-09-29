@@ -1,26 +1,24 @@
 {
-    "blockName": "flat_wheel",
-    "blockType": "cuboid-nsew",
-    "stepSound": "wood",
-    "harvestLevel": [
-        {
-            "tool": "pickaxe",
-            "level": 3
-        }
-    ],
-    "creativeTab": "westeros_misc_tab",
-    "label": "Flat Wheel",
-    "textures": [
-        "transparent"
-    ],
-    "boundingBox": {
-        "xMin": 0.92,
-        "xMax": 0.97,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
-    },
-    "isCustomModel": true,
-    "strength": 5
+  "blockName": "flat_wheel",
+  "blockType": "cuboid-nsew",
+  "soundGroup": "wood",
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 3
+    }
+  ],
+  "creativeTab": "westeros_misc_tab",
+  "label": "Flat Wheel",
+  "textures": ["transparent"],
+  "boundingBox": {
+    "xMin": 0.92,
+    "xMax": 0.97,
+    "yMin": 0,
+    "yMax": 1,
+    "zMin": 0,
+    "zMax": 1
+  },
+  "isCustomModel": true,
+  "strength": 5
 }

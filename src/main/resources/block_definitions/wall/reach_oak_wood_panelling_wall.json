@@ -1,38 +1,38 @@
 {
-    "blockName": "reach_oak_wood_panelling_wall",
-    "blockType": "wall",
-    "stepSound": "wood",
-    "harvestLevel": [
-        {
-            "tool": "pickaxe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_panelling_carvings_tab",
-    "type": "unconnect:false",
-    "label": "Reach Oak Wood Panelling Wall",
-    "randomTextures": [
-        {
-            "textures": [
-                "wood/oak/panelling/top_bottom",
-                "wood/oak/panelling/top_bottom",
-                "wood/oak/panelling/side1"
-            ]
-        },
-        {
-            "textures": [
-                "wood/oak/panelling/top_bottom",
-                "wood/oak/panelling/top_bottom",
-                "wood/oak/panelling/side2"
-            ]
-        },
-        {
-            "textures": [
-                "wood/oak/panelling/top_bottom",
-                "wood/oak/panelling/top_bottom",
-                "wood/oak/panelling/side3"
-            ]
-        }
-    ],
-    "strength": 1.5
+  "blockName": "reach_oak_wood_panelling_wall",
+  "blockType": "wall",
+  "soundGroup": "wood",
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_panelling_carvings_tab",
+  "type": "unconnect:false",
+  "label": "Reach Oak Wood Panelling Wall",
+  "randomTextures": [
+    {
+      "textures": [
+        "wood/oak/panelling/top_bottom",
+        "wood/oak/panelling/top_bottom",
+        "wood/oak/panelling/side1"
+      ]
+    },
+    {
+      "textures": [
+        "wood/oak/panelling/top_bottom",
+        "wood/oak/panelling/top_bottom",
+        "wood/oak/panelling/side2"
+      ]
+    },
+    {
+      "textures": [
+        "wood/oak/panelling/top_bottom",
+        "wood/oak/panelling/top_bottom",
+        "wood/oak/panelling/side3"
+      ]
+    }
+  ],
+  "strength": 1.5
 }

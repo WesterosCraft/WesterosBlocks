@@ -1,40 +1,28 @@
 {
-    "blockName": "sandy_stone_slabs",
-    "blockType": "solid",
-    "strength": 3,
-    "stepSound": "stone",
-    "creativeTab": "westeros_cobblestone_tab",
-    "label": "Sandy Stone Slabs",
-    "randomTextures": [
-        {
-            "textures": [
-                "sandy_stone/sandy_stone_0"
-            ]
-        },
-        {
-            "textures": [
-                "sandy_stone/sandy_stone_1"
-            ]
-        },
-        {
-            "textures": [
-                "sandy_stone/sandy_stone_2"
-            ]
-        },
-        {
-            "textures": [
-                "sandy_stone/sandy_stone_3"
-            ]
-        },
-        {
-            "textures": [
-                "sandy_stone/sandy_stone_4"
-            ]
-        },
-        {
-            "textures": [
-                "sandy_stone/sandy_stone_5"
-            ]
-        }
-    ]
+  "blockName": "sandy_stone_slabs",
+  "blockType": "solid",
+  "strength": 3,
+  "soundGroup": "stone",
+  "creativeTab": "westeros_cobblestone_tab",
+  "label": "Sandy Stone Slabs",
+  "randomTextures": [
+    {
+      "textures": ["sandy_stone/sandy_stone_0"]
+    },
+    {
+      "textures": ["sandy_stone/sandy_stone_1"]
+    },
+    {
+      "textures": ["sandy_stone/sandy_stone_2"]
+    },
+    {
+      "textures": ["sandy_stone/sandy_stone_3"]
+    },
+    {
+      "textures": ["sandy_stone/sandy_stone_4"]
+    },
+    {
+      "textures": ["sandy_stone/sandy_stone_5"]
+    }
+  ]
 }

@@ -1,19 +1,15 @@
 {
-    "blockName": "firewood_slab",
-    "blockType": "slab",
-    "stepSound": "wood",
-    "harvestLevel": [
-        {
-            "tool": "axe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_decor_tab",
-    "label": "Firewood Slab",
-    "textures": [
-        "firewood/side",
-        "firewood/side",
-        "firewood/top"
-    ],
-    "strength": 2
+  "blockName": "firewood_slab",
+  "blockType": "slab",
+  "soundGroup": "wood",
+  "harvestLevel": [
+    {
+      "tool": "axe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_decor_tab",
+  "label": "Firewood Slab",
+  "textures": ["firewood/side", "firewood/side", "firewood/top"],
+  "strength": 2
 }

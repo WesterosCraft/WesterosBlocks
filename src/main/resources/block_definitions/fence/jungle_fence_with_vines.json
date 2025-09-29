@@ -1,12 +1,10 @@
 {
-    "blockName": "jungle_fence_with_vines",
-    "blockType": "fence",
-    "stepSound": "wood",
-    "creativeTab": "westeros_wood_planks_tab",
-    "type": "unconnect:false",
-    "label": "Jungle Fence with Vines",
-    "textures": [
-        "wood/jungle/vines"
-    ],
-    "strength": 2
+  "blockName": "jungle_fence_with_vines",
+  "blockType": "fence",
+  "soundGroup": "wood",
+  "creativeTab": "westeros_wood_planks_tab",
+  "type": "unconnect:false",
+  "label": "Jungle Fence with Vines",
+  "textures": ["wood/jungle/vines"],
+  "strength": 2
 }

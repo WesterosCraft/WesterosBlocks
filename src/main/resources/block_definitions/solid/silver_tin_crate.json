@@ -1,13 +1,13 @@
 {
-    "blockName": "silver_tin_crate",
-    "blockType": "solid",
-    "strength": 2,
-    "stepSound": "wood",
-    "creativeTab": "westeros_decor_tab",
-    "label": "Silver Tin Crate",
-    "textures": [
-        "crate_block/crate_side_crossbar_right",
-        "crate_block/crate_top_tin",
-        "crate_block/crate_side_crossbar_crossed"
-    ]
+  "blockName": "silver_tin_crate",
+  "blockType": "solid",
+  "strength": 2,
+  "soundGroup": "wood",
+  "creativeTab": "westeros_decor_tab",
+  "label": "Silver Tin Crate",
+  "textures": [
+    "crate_block/crate_side_crossbar_right",
+    "crate_block/crate_top_tin",
+    "crate_block/crate_side_crossbar_crossed"
+  ]
 }

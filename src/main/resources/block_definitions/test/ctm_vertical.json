@@ -1,10 +1,8 @@
 {
-    "blockName": "ctm_vertical",
-    "blockType": "solid",
-    "stepSound": "wood",
-    "creativeTab": "westeros_test_tab",
-    "label": "Vertical CTM",
-    "textures": [
-        "ctm/vertical"
-    ]
+  "blockName": "ctm_vertical",
+  "blockType": "solid",
+  "soundGroup": "wood",
+  "creativeTab": "westeros_test_tab",
+  "label": "Vertical CTM",
+  "textures": ["ctm/vertical"]
 }

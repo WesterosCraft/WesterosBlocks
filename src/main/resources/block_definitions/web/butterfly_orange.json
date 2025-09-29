@@ -1,12 +1,10 @@
 {
-    "blockName": "butterfly_orange",
-    "blockType": "web",
-    "stepSound": "cloth",
-    "creativeTab": "westeros_misc_tab",
-    "label": "Southern Orange Butterfly",
-    "renderLayer": "cutout",
-    "textures": [
-        "web_block/bug_butterfly_orange"
-    ],
-    "type": "no-in-web"
+  "blockName": "butterfly_orange",
+  "blockType": "web",
+  "soundGroup": "cloth",
+  "creativeTab": "westeros_misc_tab",
+  "label": "Southern Orange Butterfly",
+  "renderLayer": "cutout",
+  "textures": ["web_block/bug_butterfly_orange"],
+  "type": "no-in-web"
 }

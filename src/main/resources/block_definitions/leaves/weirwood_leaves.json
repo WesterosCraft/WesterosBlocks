@@ -1,12 +1,10 @@
 {
-    "blockName": "weirwood_leaves",
-    "blockType": "leaves",
-    "stepSound": "grass",
-    "type": "no-decay,better-foliage",
-    "creativeTab": "westeros_foliage_tab",
-    "label": "Weirwood Leaves",
-    "rotateRandom": true,
-    "textures": [
-        "leaves/weirwood/all"
-    ]
+  "blockName": "weirwood_leaves",
+  "blockType": "leaves",
+  "soundGroup": "grass",
+  "type": "no-decay,better-foliage",
+  "creativeTab": "westeros_foliage_tab",
+  "label": "Weirwood Leaves",
+  "rotateRandom": true,
+  "textures": ["leaves/weirwood/all"]
 }

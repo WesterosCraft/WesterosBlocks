@@ -1,44 +1,36 @@
 {
-    "blockName": "crop_turnips",
-    "blockType": "crop",
-    "stepSound": "grass",
-    "type": "toggleOnUse,layerSensitive",
-    "layerSensitive": true,
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "harvestLevel": [
-        {
-            "tool": "pickaxe",
-            "level": 3
-        }
-    ],
-    "creativeTab": "westeros_crops_herbs_tab",
-    "label": "Turnips",
-    "states": [
-        {
-            "stateID": "age0",
-            "textures": [
-                "turnips/turnips_stage_0"
-            ]
-        },
-        {
-            "stateID": "age1",
-            "textures": [
-                "turnips/turnips_stage_1"
-            ]
-        },
-        {
-            "stateID": "age2",
-            "textures": [
-                "turnips/turnips_stage_2"
-            ]
-        },
-        {
-            "stateID": "age3",
-            "textures": [
-                "turnips/turnips_stage_3"
-            ]
-        }
-    ],
-    "strength": 5
+  "blockName": "crop_turnips",
+  "blockType": "crop",
+  "soundGroup": "grass",
+  "type": "toggleOnUse,layerSensitive",
+  "layerSensitive": true,
+  "toggleOnUse": true,
+  "renderLayer": "cutout",
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 3
+    }
+  ],
+  "creativeTab": "westeros_crops_herbs_tab",
+  "label": "Turnips",
+  "states": [
+    {
+      "stateID": "age0",
+      "textures": ["turnips/turnips_stage_0"]
+    },
+    {
+      "stateID": "age1",
+      "textures": ["turnips/turnips_stage_1"]
+    },
+    {
+      "stateID": "age2",
+      "textures": ["turnips/turnips_stage_2"]
+    },
+    {
+      "stateID": "age3",
+      "textures": ["turnips/turnips_stage_3"]
+    }
+  ],
+  "strength": 5
 }

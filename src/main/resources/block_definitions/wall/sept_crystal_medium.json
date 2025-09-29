@@ -1,22 +1,18 @@
 {
-    "blockName": "sept_crystal_medium",
-    "blockType": "wall",
-    "stepSound": "stone",
-    "nonOpaque": true,
-    "alphaRender": true,
-    "harvestLevel": [
-        {
-            "tool": "pickaxe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_decor_tab",
-    "type": "unconnect:false",
-    "label": "Sept Crystal Medium",
-    "textures": [
-        "crystal/wall_top",
-        "crystal/wall_top",
-        "crystal/wall"
-    ],
-    "strength": 1.5
+  "blockName": "sept_crystal_medium",
+  "blockType": "wall",
+  "soundGroup": "stone",
+  "nonOpaque": true,
+  "alphaRender": true,
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_decor_tab",
+  "type": "unconnect:false",
+  "label": "Sept Crystal Medium",
+  "textures": ["crystal/wall_top", "crystal/wall_top", "crystal/wall"],
+  "strength": 1.5
 }

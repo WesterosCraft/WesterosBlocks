@@ -1,44 +1,44 @@
 {
-    "blockName": "timber_oak_oldtown_brick_close_studding",
-    "blockType": "solid",
-    "strength": 2,
-    "stepSound": "wood",
-    "creativeTab": "westeros_timber_frame_tab",
-    "label": "Timber Oak Fieldstone Oldtown Close Studding",
-    "type": "connectstate:true,toggleOnUse",
-    "states": [
-        {
-            "textures": [
-                "fieldstone/oldtown/all",
-                "wood/oak/all",
-                "fieldstone/oldtown/all"
-            ]
-        },
-        {
-            "textures": [
-                "fieldstone/light_oldtown/all",
-                "wood/oak/all",
-                "fieldstone/light_oldtown/all"
-            ]
-        },
-        {
-            "textures": [
-                "ashlar_smooth/light_oldtown/all_cutout",
-                "wood/oak/all",
-                "ashlar_smooth/light_oldtown/all_cutout"
-            ]
-        },
-        {
-            "textures": [
-                "ashlar_quarter_rounded/light_oldtown/all",
-                "wood/oak/all",
-                "ashlar_quarter_rounded/light_oldtown/all"
-            ]
-        }
-    ],
-    "overlayTextures": [
-        "timber/oak/bottom",
-        "transparent",
-        "timber/oak/close_studding"
-    ]
+  "blockName": "timber_oak_oldtown_brick_close_studding",
+  "blockType": "solid",
+  "strength": 2,
+  "soundGroup": "wood",
+  "creativeTab": "westeros_timber_frame_tab",
+  "label": "Timber Oak Fieldstone Oldtown Close Studding",
+  "type": "connectstate:true,toggleOnUse",
+  "states": [
+    {
+      "textures": [
+        "fieldstone/oldtown/all",
+        "wood/oak/all",
+        "fieldstone/oldtown/all"
+      ]
+    },
+    {
+      "textures": [
+        "fieldstone/light_oldtown/all",
+        "wood/oak/all",
+        "fieldstone/light_oldtown/all"
+      ]
+    },
+    {
+      "textures": [
+        "ashlar_smooth/light_oldtown/all_cutout",
+        "wood/oak/all",
+        "ashlar_smooth/light_oldtown/all_cutout"
+      ]
+    },
+    {
+      "textures": [
+        "ashlar_quarter_rounded/light_oldtown/all",
+        "wood/oak/all",
+        "ashlar_quarter_rounded/light_oldtown/all"
+      ]
+    }
+  ],
+  "overlayTextures": [
+    "timber/oak/bottom",
+    "transparent",
+    "timber/oak/close_studding"
+  ]
 }

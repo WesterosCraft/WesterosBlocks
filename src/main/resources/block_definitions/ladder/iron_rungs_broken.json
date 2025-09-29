@@ -1,19 +1,12 @@
 {
-    "blockName": "iron_rungs_broken",
-    "blockType": "ladder",
-    "stepSound": "ladder",
-    "creativeTab": "westeros_metal_tab",
-    "label": "Iron Rungs Broken",
-    "renderLayer": "cutout",
-    "randomTextures": [
-        {},
-        {},
-        {},
-        {},
-        {},
-        {}
-    ],
-    "type": "allow-unsupported",
-    "allowUnsupported": true,
-    "isCustomModel": true
+  "blockName": "iron_rungs_broken",
+  "blockType": "ladder",
+  "soundGroup": "ladder",
+  "creativeTab": "westeros_metal_tab",
+  "label": "Iron Rungs Broken",
+  "renderLayer": "cutout",
+  "randomTextures": [{}, {}, {}, {}, {}, {}],
+  "type": "allow-unsupported",
+  "allowUnsupported": true,
+  "isCustomModel": true
 }

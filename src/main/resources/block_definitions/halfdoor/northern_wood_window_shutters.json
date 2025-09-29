@@ -1,12 +1,10 @@
 {
-    "blockName": "northern_wood_window_shutters",
-    "blockType": "halfdoor",
-    "stepSound": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Northern Wood Window Shutters",
-    "allowUnsupported": true,
-    "textures": [
-        "wood/northern/shutters"
-    ],
-    "strength": 2
+  "blockName": "northern_wood_window_shutters",
+  "blockType": "halfdoor",
+  "soundGroup": "wood",
+  "creativeTab": "westeros_windows_glass_tab",
+  "label": "Northern Wood Window Shutters",
+  "allowUnsupported": true,
+  "textures": ["wood/northern/shutters"],
+  "strength": 2
 }

@@ -1,18 +1,16 @@
 {
-    "blockName": "coarse_red_carved_sandstone_wall",
-    "blockType": "wall",
-    "stepSound": "stone",
-    "harvestLevel": [
-        {
-            "tool": "pickaxe",
-            "level": 1
-        }
-    ],
-    "creativeTab": "westeros_panelling_carvings_tab",
-    "type": "unconnect:false",
-    "label": "Ashlar Engraved Pale Red Wall",
-    "textures": [
-        "ashlar_engraved/pale_red/all"
-    ],
-    "strength": 1.5
+  "blockName": "coarse_red_carved_sandstone_wall",
+  "blockType": "wall",
+  "soundGroup": "stone",
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 1
+    }
+  ],
+  "creativeTab": "westeros_panelling_carvings_tab",
+  "type": "unconnect:false",
+  "label": "Ashlar Engraved Pale Red Wall",
+  "textures": ["ashlar_engraved/pale_red/all"],
+  "strength": 1.5
 }

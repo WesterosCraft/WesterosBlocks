@@ -1,11 +1,9 @@
 {
-    "blockName": "green_grey_brick_engraved",
-    "blockType": "solid",
-    "strength": 5,
-    "stepSound": "stone",
-    "creativeTab": "westeros_panelling_carvings_tab",
-    "label": "Ashlar Engraved Green Grey",
-    "textures": [
-        "ashlar_engraved/green_grey/all"
-    ]
+  "blockName": "green_grey_brick_engraved",
+  "blockType": "solid",
+  "strength": 5,
+  "soundGroup": "stone",
+  "creativeTab": "westeros_panelling_carvings_tab",
+  "label": "Ashlar Engraved Green Grey",
+  "textures": ["ashlar_engraved/green_grey/all"]
 }

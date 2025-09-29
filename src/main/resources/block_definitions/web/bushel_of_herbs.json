@@ -1,12 +1,10 @@
 {
-    "blockName": "bushel_of_herbs",
-    "blockType": "web",
-    "stepSound": "cloth",
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Bushel of Herbs",
-    "renderLayer": "cutout",
-    "textures": [
-        "web_block/food_herbs"
-    ],
-    "type": "no-in-web"
+  "blockName": "bushel_of_herbs",
+  "blockType": "web",
+  "soundGroup": "cloth",
+  "creativeTab": "westeros_food_blocks_tab",
+  "label": "Bushel of Herbs",
+  "renderLayer": "cutout",
+  "textures": ["web_block/food_herbs"],
+  "type": "no-in-web"
 }

@@ -1,13 +1,13 @@
 {
-    "blockName": "lemon_basket",
-    "blockType": "solid",
-    "strength": 2,
-    "stepSound": "cloth",
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Lemon Basket",
-    "textures": [
-        "crate_block/basket_bottom",
-        "crate_block/basket_lemons",
-        "crate_block/basket_side"
-    ]
+  "blockName": "lemon_basket",
+  "blockType": "solid",
+  "strength": 2,
+  "soundGroup": "cloth",
+  "creativeTab": "westeros_food_blocks_tab",
+  "label": "Lemon Basket",
+  "textures": [
+    "crate_block/basket_bottom",
+    "crate_block/basket_lemons",
+    "crate_block/basket_side"
+  ]
 }

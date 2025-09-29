@@ -1,14 +1,11 @@
 {
-    "blockName": "northern_wood_door",
-    "blockType": "door",
-    "stepSound": "wood",
-    "creativeTab": "westeros_wood_planks_tab",
-    "label": "Northern Wood Door",
-    "allowUnsupported": true,
-    "textures": [
-        "wood/northern/door_top",
-        "wood/northern/door_bottom"
-    ],
-    "type": "allow-unsupported",
-    "strength": 2
+  "blockName": "northern_wood_door",
+  "blockType": "door",
+  "soundGroup": "wood",
+  "creativeTab": "westeros_wood_planks_tab",
+  "label": "Northern Wood Door",
+  "allowUnsupported": true,
+  "textures": ["wood/northern/door_top", "wood/northern/door_bottom"],
+  "type": "allow-unsupported",
+  "strength": 2
 }

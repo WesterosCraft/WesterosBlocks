@@ -1,12 +1,10 @@
 {
-    "blockName": "palm_fence",
-    "blockType": "fence",
-    "stepSound": "stone",
-    "creativeTab": "westeros_logs_tab",
-    "type": "unconnect:false",
-    "label": "Palm Fence",
-    "textures": [
-        "bark/palm/side"
-    ],
-    "strength": 5
+  "blockName": "palm_fence",
+  "blockType": "fence",
+  "soundGroup": "stone",
+  "creativeTab": "westeros_logs_tab",
+  "type": "unconnect:false",
+  "label": "Palm Fence",
+  "textures": ["bark/palm/side"],
+  "strength": 5
 }

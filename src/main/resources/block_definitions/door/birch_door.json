@@ -1,14 +1,11 @@
 {
-    "blockName": "birch_door",
-    "blockType": "door",
-    "strength": 2,
-    "stepSound": "wood",
-    "creativeTab": "westeros_wood_planks_tab",
-    "label": "Birch Door",
-    "textures": [
-        "wood/birch/door_top",
-        "wood/birch/door_bottom"
-    ],
-    "allowUnsupported": true,
-    "type": "allow-unsupported"
+  "blockName": "birch_door",
+  "blockType": "door",
+  "strength": 2,
+  "soundGroup": "wood",
+  "creativeTab": "westeros_wood_planks_tab",
+  "label": "Birch Door",
+  "textures": ["wood/birch/door_top", "wood/birch/door_bottom"],
+  "allowUnsupported": true,
+  "type": "allow-unsupported"
 }

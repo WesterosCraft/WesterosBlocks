@@ -2,7 +2,7 @@
   "blockName": "red_lantern2",
   "blockType": "solid",
   "strength": 2,
-  "stepSound": "wood",
+  "soundGroup": "wood",
   "creativeTab": "westeros_lighting_tab",
   "label": "Large Red Lantern",
   "luminance": 7,

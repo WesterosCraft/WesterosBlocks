@@ -1,13 +1,13 @@
 {
-    "blockName": "broken_cabinet",
-    "blockType": "solid",
-    "strength": 2,
-    "stepSound": "wood",
-    "creativeTab": "westeros_furniture_tab",
-    "label": "Broken Cabinet",
-    "textures": [
-        "cabinet/top_bottom",
-        "cabinet/top_bottom",
-        "bench_block/cabinet_broken"
-    ]
+  "blockName": "broken_cabinet",
+  "blockType": "solid",
+  "strength": 2,
+  "soundGroup": "wood",
+  "creativeTab": "westeros_furniture_tab",
+  "label": "Broken Cabinet",
+  "textures": [
+    "cabinet/top_bottom",
+    "cabinet/top_bottom",
+    "bench_block/cabinet_broken"
+  ]
 }

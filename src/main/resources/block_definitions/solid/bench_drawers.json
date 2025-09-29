@@ -1,13 +1,13 @@
 {
-    "blockName": "bench_drawers",
-    "blockType": "solid",
-    "strength": 2,
-    "stepSound": "wood",
-    "creativeTab": "westeros_furniture_tab",
-    "label": "Bench Drawers",
-    "textures": [
-        "bench_block/spruce_top",
-        "bench_block/crafting_table_top",
-        "bench_block/bench_drawers"
-    ]
+  "blockName": "bench_drawers",
+  "blockType": "solid",
+  "strength": 2,
+  "soundGroup": "wood",
+  "creativeTab": "westeros_furniture_tab",
+  "label": "Bench Drawers",
+  "textures": [
+    "bench_block/spruce_top",
+    "bench_block/crafting_table_top",
+    "bench_block/bench_drawers"
+  ]
 }

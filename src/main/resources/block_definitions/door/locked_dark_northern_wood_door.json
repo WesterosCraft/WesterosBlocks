@@ -1,15 +1,15 @@
 {
-    "blockName": "locked_dark_northern_wood_door",
-    "blockType": "door",
-    "stepSound": "wood",
-    "creativeTab": "westeros_wood_planks_tab",
-    "type": "locked:true,allow-unsupported",
-    "allowUnsupported": true,
-    "locked": true,
-    "label": "Locked Dark Northern Wood Door",
-    "textures": [
-        "wood/northern/door_locked_top",
-        "wood/northern/door_locked_bottom"
-    ],
-    "strength": 2
+  "blockName": "locked_dark_northern_wood_door",
+  "blockType": "door",
+  "soundGroup": "wood",
+  "creativeTab": "westeros_wood_planks_tab",
+  "type": "locked:true,allow-unsupported",
+  "allowUnsupported": true,
+  "locked": true,
+  "label": "Locked Dark Northern Wood Door",
+  "textures": [
+    "wood/northern/door_locked_top",
+    "wood/northern/door_locked_bottom"
+  ],
+  "strength": 2
 }

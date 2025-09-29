@@ -1,13 +1,13 @@
 {
-    "blockName": "purple_grape_crate",
-    "blockType": "solid",
-    "strength": 2,
-    "stepSound": "wood",
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Purple Grape Crate",
-    "textures": [
-        "crate_block/crate_side_crossbar_right",
-        "crate_block/crate_top_grape_purple",
-        "crate_block/crate_side_crossbar_crossed"
-    ]
+  "blockName": "purple_grape_crate",
+  "blockType": "solid",
+  "strength": 2,
+  "soundGroup": "wood",
+  "creativeTab": "westeros_food_blocks_tab",
+  "label": "Purple Grape Crate",
+  "textures": [
+    "crate_block/crate_side_crossbar_right",
+    "crate_block/crate_top_grape_purple",
+    "crate_block/crate_side_crossbar_crossed"
+  ]
 }

@@ -1,16 +1,12 @@
 {
-    "blockName": "sept_crystal_small",
-    "blockType": "fence",
-    "stepSound": "stone",
-    "nonOpaque": true,
-    "alphaRender": true,
-    "creativeTab": "westeros_decor_tab",
-    "type": "unconnect:false",
-    "label": "Sept Crystal Small",
-    "textures": [
-        "crystal/fence_top",
-        "crystal/fence_top",
-        "crystal/fence"
-    ],
-    "strength": 5
+  "blockName": "sept_crystal_small",
+  "blockType": "fence",
+  "soundGroup": "stone",
+  "nonOpaque": true,
+  "alphaRender": true,
+  "creativeTab": "westeros_decor_tab",
+  "type": "unconnect:false",
+  "label": "Sept Crystal Small",
+  "textures": ["crystal/fence_top", "crystal/fence_top", "crystal/fence"],
+  "strength": 5
 }

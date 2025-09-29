@@ -1,25 +1,19 @@
 {
-    "blockName": "dragon_carving",
-    "blockType": "solid",
-    "strength": 2,
-    "stepSound": "stone",
-    "creativeTab": "westeros_panelling_carvings_tab",
-    "label": "Dragon Carving",
-    "randomTextures": [
-        {
-            "textures": [
-                "dragon_carving/side1"
-            ]
-        },
-        {
-            "textures": [
-                "dragon_carving/side2"
-            ]
-        },
-        {
-            "textures": [
-                "dragon_carving/side3"
-            ]
-        }
-    ]
+  "blockName": "dragon_carving",
+  "blockType": "solid",
+  "strength": 2,
+  "soundGroup": "stone",
+  "creativeTab": "westeros_panelling_carvings_tab",
+  "label": "Dragon Carving",
+  "randomTextures": [
+    {
+      "textures": ["dragon_carving/side1"]
+    },
+    {
+      "textures": ["dragon_carving/side2"]
+    },
+    {
+      "textures": ["dragon_carving/side3"]
+    }
+  ]
 }

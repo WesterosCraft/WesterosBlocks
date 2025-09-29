@@ -1,22 +1,18 @@
 {
-    "blockName": "coral_tube_fan",
-    "blockType": "fan",
-    "stepSound": "stone",
-    "creativeTab": "westeros_water_air_tab",
-    "label": "Tube Coral Fan",
-    "type": "allow-unsupported",
-    "renderLayer": "cutout",
-    "allowUnsupported": true,
-    "randomTextures": [
-        {
-            "textures": [
-                "coral/tube/fan1"
-            ]
-        },
-        {
-            "textures": [
-                "coral/tube/fan2"
-            ]
-        }
-    ]
+  "blockName": "coral_tube_fan",
+  "blockType": "fan",
+  "soundGroup": "stone",
+  "creativeTab": "westeros_water_air_tab",
+  "label": "Tube Coral Fan",
+  "type": "allow-unsupported",
+  "renderLayer": "cutout",
+  "allowUnsupported": true,
+  "randomTextures": [
+    {
+      "textures": ["coral/tube/fan1"]
+    },
+    {
+      "textures": ["coral/tube/fan2"]
+    }
+  ]
 }

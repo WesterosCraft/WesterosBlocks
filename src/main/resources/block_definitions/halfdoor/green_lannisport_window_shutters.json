@@ -1,12 +1,10 @@
 {
-    "blockName": "green_lannisport_window_shutters",
-    "blockType": "halfdoor",
-    "stepSound": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Green Lannisport Window Shutters",
-    "allowUnsupported": true,
-    "textures": [
-        "shutter_block/shutters_lannisport"
-    ],
-    "strength": 2
+  "blockName": "green_lannisport_window_shutters",
+  "blockType": "halfdoor",
+  "soundGroup": "wood",
+  "creativeTab": "westeros_windows_glass_tab",
+  "label": "Green Lannisport Window Shutters",
+  "allowUnsupported": true,
+  "textures": ["shutter_block/shutters_lannisport"],
+  "strength": 2
 }

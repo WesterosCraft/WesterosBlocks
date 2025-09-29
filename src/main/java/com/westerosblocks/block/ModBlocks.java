@@ -82,13 +82,13 @@ public class ModBlocks {
      */
     private static Block createBlockFromDefinition(BlockDefinition definition) {
         String blockType = definition.getBlockType();
-        BlockSoundGroup soundGroup = getSoundGroupFromString(definition.getStepSound());
+        BlockSoundGroup soundGroup = getSoundGroupFromString(definition.getSoundGroup());
 
         try {
             switch (blockType.toLowerCase()) {
                 case "solid":
                     return BlockBuilder.solid()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
@@ -99,7 +99,7 @@ public class ModBlocks {
 
                 case "door":
                     return BlockBuilder.door()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
@@ -110,7 +110,7 @@ public class ModBlocks {
 
                 case "log":
                     return BlockBuilder.log()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
@@ -118,7 +118,7 @@ public class ModBlocks {
 
                 case "plant":
                     return BlockBuilder.plant()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .sounds(soundGroup)
                             .nonOpaque()
@@ -128,7 +128,7 @@ public class ModBlocks {
 
                 case "flowerpot":
                     return BlockBuilder.flowerPot()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .sounds(soundGroup)
                             .nonOpaque()
@@ -136,7 +136,7 @@ public class ModBlocks {
 
                 case "web":
                     return BlockBuilder.web()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .sounds(soundGroup)
                             .nonOpaque()
@@ -145,7 +145,7 @@ public class ModBlocks {
 
                 case "slab":
                     return BlockBuilder.slab()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
@@ -153,7 +153,7 @@ public class ModBlocks {
 
                 case "halfdoor":
                     return BlockBuilder.halfDoor()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
@@ -163,7 +163,8 @@ public class ModBlocks {
 
                 case "fire":
                     return BlockBuilder.fire()
-                            .strength(0.0f)
+                            .hardness(definition.getHardness())
+                            .resistance(definition.getResistance())
                             .sounds(soundGroup)
                             .luminance(state -> definition.getLuminance())
                             .noCollision()
@@ -173,7 +174,7 @@ public class ModBlocks {
 
                 case "ladder":
                     return BlockBuilder.ladder()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
@@ -183,7 +184,7 @@ public class ModBlocks {
 
                 case "vines":
                     return BlockBuilder.vines()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .sounds(soundGroup)
                             .nonOpaque()
@@ -195,18 +196,18 @@ public class ModBlocks {
 
                 case "pane":
                     return BlockBuilder.pane()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
                             .nonOpaque()
-                            .legacyModel(true)
+                            .legacyModel(definition.isLegacyModel())
                             .unconnect(false)
                             .build();
 
                 case "fence":
                     return BlockBuilder.fence()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
@@ -214,7 +215,7 @@ public class ModBlocks {
 
                 case "fencegate":
                     return BlockBuilder.fenceGate()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
@@ -224,7 +225,7 @@ public class ModBlocks {
 
                 case "leaves":
                     return BlockBuilder.leaves()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
@@ -234,7 +235,7 @@ public class ModBlocks {
 
                 case "bed":
                     return BlockBuilder.bed()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
@@ -243,7 +244,7 @@ public class ModBlocks {
 
                 case "crop":
                     BlockBuilder<WCCropBlock> cropBuilder = BlockBuilder.crop()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
@@ -266,12 +267,13 @@ public class ModBlocks {
                     // First register the wall torch block
                     String wallTorchName = "wall_" + definition.getBlockName();
                     Block wallTorchBlock = BlockBuilder.wallTorch()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
+                            .resistance(definition.getResistance())
                             .sounds(soundGroup)
                             .luminance(state -> definition.getLuminance())
                             .nonOpaque()
                             .noCollision()
-                            .allowUnsupported(true)
+                            .allowUnsupported(definition.isAllowUnsupported())
                             .noParticle(definition.isNoParticle())
                             .build();
 
@@ -280,13 +282,14 @@ public class ModBlocks {
 
                     // Now create the standing torch with reference to wall torch
                     return BlockBuilder.torch()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
+                            .resistance(definition.getResistance())
                             .sounds(soundGroup)
                             .luminance(state -> definition.getLuminance())
-                            .nonOpaque()
-                            .noCollision()
+                            .nonOpaque(definition.isNonOpaque())
+                            .noCollision(definition.hasNoCollision())
                             .wallBlock(wallTorchBlock)
-                            .allowUnsupported(true)
+                            .allowUnsupported(definition.isAllowUnsupported())
                             .noParticle(definition.isNoParticle())
                             .build();
 
@@ -294,7 +297,7 @@ public class ModBlocks {
                     // First register the wall fan block
                     String wallFanName = "wall_" + definition.getBlockName();
                     Block wallFanBlock = BlockBuilder.wallFan()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .sounds(soundGroup)
                             .nonOpaque()
@@ -307,18 +310,18 @@ public class ModBlocks {
 
                     // Now create the standing fan with reference to wall fan
                     return BlockBuilder.fan()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .sounds(soundGroup)
                             .wallBlock(wallFanBlock)
-                            .allowUnsupported(true)
-                            .nonOpaque()
-                            .noCollision()
+                            .allowUnsupported(definition.isAllowUnsupported())
+                            .nonOpaque(definition.isNonOpaque())
+                            .noCollision(definition.hasNoCollision())
                             .build();
 
                 case "rail":
                     return BlockBuilder.rail()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .sounds(soundGroup)
                             .allowUnsupported(definition.isAllowUnsupported())
@@ -328,7 +331,7 @@ public class ModBlocks {
 
                 case "furnace":
                     return BlockBuilder.furnace()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .nonOpaque(definition.isNonOpaque())
@@ -344,7 +347,7 @@ public class ModBlocks {
 
                 case "wall":
                     return BlockBuilder.wall()
-                            .strength(definition.getStrength())
+                            .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .connectState(definition.isConnectState())
@@ -396,33 +399,35 @@ public class ModBlocks {
     private static BlockSoundGroup getSoundGroupFromString(String soundName) {
         if (soundName == null) return BlockSoundGroup.STONE;
 
-        switch (soundName.toLowerCase()) {
-            case "wood":
-                return BlockSoundGroup.WOOD;
-            case "stone":
-                return BlockSoundGroup.STONE;
-            case "metal":
-                return BlockSoundGroup.METAL;
-            case "grass":
-                return BlockSoundGroup.GRASS;
-            case "cloth":
-                return BlockSoundGroup.WOOL;
-            case "gravel":
-                return BlockSoundGroup.GRAVEL;
-            case "glass":
-                return BlockSoundGroup.GLASS;
-            case "candle":
-                return BlockSoundGroup.CANDLE;
-            case "bone":
-                return BlockSoundGroup.BONE;
-            case "ladder":
-                return BlockSoundGroup.LADDER;
-            case "snow":
-                return BlockSoundGroup.SNOW;
-            default:
+        return switch (soundName.toLowerCase()) {
+            case "wood" -> BlockSoundGroup.WOOD;
+            case "stone" -> BlockSoundGroup.STONE;
+            case "metal" -> BlockSoundGroup.METAL;
+            case "grass" -> BlockSoundGroup.GRASS;
+            case "wool", "cloth" -> BlockSoundGroup.WOOL;
+            case "gravel" -> BlockSoundGroup.GRAVEL;
+            case "glass" -> BlockSoundGroup.GLASS;
+            case "candle" -> BlockSoundGroup.CANDLE;
+            case "bone" -> BlockSoundGroup.BONE;
+            case "ladder" -> BlockSoundGroup.LADDER;
+            case "crop" -> BlockSoundGroup.CROP;
+            case "snow" -> BlockSoundGroup.SNOW;
+            case "chain" -> BlockSoundGroup.CHAIN;
+            case "powder_snow" -> BlockSoundGroup.POWDER_SNOW;
+            case "mud" -> BlockSoundGroup.MUD;
+            case "packed_mud" -> BlockSoundGroup.PACKED_MUD;
+            case "sand" -> BlockSoundGroup.SAND;
+            case "vine" -> BlockSoundGroup.VINE;
+            case "fungus" -> BlockSoundGroup.FUNGUS;
+            case "rooted_dirt" -> BlockSoundGroup.ROOTED_DIRT;
+            case "scaffolding" -> BlockSoundGroup.SCAFFOLDING;
+            case "lantern" -> BlockSoundGroup.LANTERN;
+            case "coral" -> BlockSoundGroup.CORAL;
+            default -> {
                 WesterosBlocks.LOGGER.warn("Unknown sound type '{}', defaulting to STONE", soundName);
-                return BlockSoundGroup.STONE;
-        }
+                yield BlockSoundGroup.STONE;
+            }
+        };
     }
 
     /**

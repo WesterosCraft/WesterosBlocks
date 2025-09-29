@@ -1,12 +1,10 @@
 {
-    "blockName": "marble_column_fence",
-    "blockType": "fence",
-    "stepSound": "stone",
-    "creativeTab": "westeros_marble_plaster_tab",
-    "type": "unconnect:false",
-    "label": "Marble Column Fence",
-    "textures": [
-        "marble/quartz/column_side"
-    ],
-    "strength": 5
+  "blockName": "marble_column_fence",
+  "blockType": "fence",
+  "soundGroup": "stone",
+  "creativeTab": "westeros_marble_plaster_tab",
+  "type": "unconnect:false",
+  "label": "Marble Column Fence",
+  "textures": ["marble/quartz/column_side"],
+  "strength": 5
 }

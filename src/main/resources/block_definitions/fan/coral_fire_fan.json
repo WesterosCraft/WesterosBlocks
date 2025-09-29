@@ -1,22 +1,18 @@
 {
-    "blockName": "coral_fire_fan",
-    "blockType": "fan",
-    "stepSound": "stone",
-    "creativeTab": "westeros_water_air_tab",
-    "label": "Fire Coral Fan",
-    "type": "allow-unsupported",
-    "renderLayer": "cutout",
-    "allowUnsupported": true,
-    "randomTextures": [
-        {
-            "textures": [
-                "coral/fire/fan1"
-            ]
-        },
-        {
-            "textures": [
-                "coral/fire/fan2"
-            ]
-        }
-    ]
+  "blockName": "coral_fire_fan",
+  "blockType": "fan",
+  "soundGroup": "stone",
+  "creativeTab": "westeros_water_air_tab",
+  "label": "Fire Coral Fan",
+  "type": "allow-unsupported",
+  "renderLayer": "cutout",
+  "allowUnsupported": true,
+  "randomTextures": [
+    {
+      "textures": ["coral/fire/fan1"]
+    },
+    {
+      "textures": ["coral/fire/fan2"]
+    }
+  ]
 }
