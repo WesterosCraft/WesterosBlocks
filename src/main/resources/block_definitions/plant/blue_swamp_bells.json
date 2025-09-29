@@ -1,7 +1,7 @@
 {
   "blockName": "blue_swamp_bells",
   "blockType": "plant",
-  "type": "layerSensitive",
+  "layerSensitive": true,
   "soundGroup": "grass",
   "creativeTab": "westeros_flowers_tab",
   "renderLayer": "cutout",

@@ -1,7 +1,7 @@
 {
     "blockName": "blue_flax",
     "blockType": "plant",
-    "type": "layerSensitive",
+    "layerSensitive": true,
     "creativeTab": "westeros_flowers_tab",
     "boundingBox": {
         "xMin": 0.3,

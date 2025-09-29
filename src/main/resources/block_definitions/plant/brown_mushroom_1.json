@@ -1,7 +1,7 @@
 {
   "blockName": "brown_mushroom_1",
   "blockType": "plant",
-  "type": "layerSensitive",
+  "layerSensitive": true,
   "soundGroup": "grass",
   "creativeTab": "westeros_grasses_shrubs_tab",
   "renderLayer": "cutout",

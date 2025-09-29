@@ -27,3 +27,6 @@ NEW Block Types
 - Flowerbed Block
 - Particle Emitter Block
 - Table Block
+
+Changelog
+- Changed "stepSound" to "soundGroup" in block definitions

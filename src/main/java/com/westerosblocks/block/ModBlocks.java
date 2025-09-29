@@ -4,7 +4,6 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.BlockBuilder;
 import com.westerosblocks.block.custom.WCCropBlock;
-import com.westerosblocks.block.custom.WCWallBlock;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 
@@ -21,6 +20,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class ModBlocks {
     // Storage for automatically registered blocks from JSON definitions
@@ -121,9 +121,11 @@ public class ModBlocks {
                             .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .sounds(soundGroup)
+                            // plants are always nonopaque
                             .nonOpaque()
+                            // plants are always nocollision.
                             .noCollision()
-                            .layerSensitive(true)
+                            .layerSensitive(definition.isLayerSensitive())
                             .build();
 
                 case "flowerpot":
@@ -131,7 +133,7 @@ public class ModBlocks {
                             .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .sounds(soundGroup)
-                            .nonOpaque()
+                            .nonOpaque(definition.isNonOpaque())
                             .build();
 
                 case "web":
@@ -139,8 +141,8 @@ public class ModBlocks {
                             .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .sounds(soundGroup)
-                            .nonOpaque()
-                            .noCollision()
+                            .nonOpaque(definition.isNonOpaque())
+                            .noCollision(definition.hasNoCollision())
                             .build();
 
                 case "slab":
@@ -167,9 +169,9 @@ public class ModBlocks {
                             .resistance(definition.getResistance())
                             .sounds(soundGroup)
                             .luminance(state -> definition.getLuminance())
-                            .noCollision()
+                            .noCollision(definition.hasNoCollision())
                             .breakInstantly()
-                            .nonOpaque()
+                            .nonOpaque(definition.isNonOpaque())
                             .build();
 
                 case "ladder":
@@ -178,7 +180,7 @@ public class ModBlocks {
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
-                            .nonOpaque()
+                            .nonOpaque(definition.isNonOpaque())
                             .allowUnsupported(definition.isAllowUnsupported())
                             .build();
 
@@ -187,8 +189,9 @@ public class ModBlocks {
                             .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .sounds(soundGroup)
-                            .nonOpaque()
-                            .allowUnsupported()
+                            // vines are always nonopaque
+                            .nonOpaque(true)
+                            .allowUnsupported(definition.isAllowUnsupported())
                             .noClimb()
                             .canGrowDownward()
                             .noCollision(definition.hasNoCollision())
@@ -200,9 +203,9 @@ public class ModBlocks {
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
-                            .nonOpaque()
+                            .nonOpaque(definition.isNonOpaque())
                             .legacyModel(definition.isLegacyModel())
-                            .unconnect(false)
+                            .unconnect(definition.isUnconnect())
                             .build();
 
                 case "fence":
@@ -253,11 +256,11 @@ public class ModBlocks {
                             .nonOpaque()
                             .noCollision();
 
-                    // Add states from definition if they exist
+
                     if (definition.hasStates()) {
                         List<String> stateValues = definition.getStates().stream()
-                                .map(state -> state.getStateID())
-                                .collect(java.util.stream.Collectors.toList());
+                                .map(BlockDefinition.StateVariant::getStateID)
+                                .collect(Collectors.toList());
                         cropBuilder.stateValues(stateValues);
                     }
 
@@ -271,8 +274,8 @@ public class ModBlocks {
                             .resistance(definition.getResistance())
                             .sounds(soundGroup)
                             .luminance(state -> definition.getLuminance())
-                            .nonOpaque()
-                            .noCollision()
+                            .nonOpaque(definition.isNonOpaque())
+                            .noCollision(definition.hasNoCollision())
                             .allowUnsupported(definition.isAllowUnsupported())
                             .noParticle(definition.isNoParticle())
                             .build();
@@ -300,9 +303,9 @@ public class ModBlocks {
                             .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .sounds(soundGroup)
-                            .nonOpaque()
-                            .noCollision()
-                            .allowUnsupported(true)
+                            .nonOpaque(definition.isNonOpaque())
+                            .noCollision(definition.hasNoCollision())
+                            .allowUnsupported(definition.isAllowUnsupported())
                             .build();
 
                     // Register the wall fan without block item
@@ -325,7 +328,8 @@ public class ModBlocks {
                             .resistance(definition.getResistance())
                             .sounds(soundGroup)
                             .allowUnsupported(definition.isAllowUnsupported())
-                            .nonOpaque()
+                            // rails are always nonopaque
+                            .nonOpaque(true)
                             .noCollision(definition.hasNoCollision())
                             .build();
 

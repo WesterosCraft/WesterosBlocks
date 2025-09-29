@@ -1,7 +1,7 @@
 {
   "blockName": "blue_chicory",
   "blockType": "plant",
-  "type": "layerSensitive",
+  "layerSensitive": true,
   "soundGroup": "grass",
   "creativeTab": "westeros_flowers_tab",
   "renderLayer": "cutout",

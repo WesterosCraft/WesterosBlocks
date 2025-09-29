@@ -1,48 +1,36 @@
 {
-    "blockName": "green_scrub_grass",
-    "blockType": "plant",
-    "type": "layerSensitive",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "renderLayer": "cutout",
-    "boundingBox": {
-        "xMin": 0.3,
-        "xMax": 0.7,
-        "yMin": 0,
-        "yMax": 0.6,
-        "zMin": 0.3,
-        "zMax": 0.7
+  "blockName": "green_scrub_grass",
+  "blockType": "plant",
+  "layerSensitive": true,
+  "creativeTab": "westeros_grasses_shrubs_tab",
+  "renderLayer": "cutout",
+  "boundingBox": {
+    "xMin": 0.3,
+    "xMax": 0.7,
+    "yMin": 0,
+    "yMax": 0.6,
+    "zMin": 0.3,
+    "zMax": 0.7
+  },
+  "label": "Green Scrub Grass",
+  "randomTextures": [
+    {
+      "textures": ["flowers/green_scrub_grass1"]
     },
-    "label": "Green Scrub Grass",
-    "randomTextures": [
-        {
-            "textures": [
-                "flowers/green_scrub_grass1"
-            ]
-        },
-        {
-            "textures": [
-                "flowers/green_scrub_grass2"
-            ]
-        },
-        {
-            "textures": [
-                "flowers/green_scrub_grass3"
-            ]
-        },
-        {
-            "textures": [
-                "flowers/green_scrub_grass4"
-            ]
-        },
-        {
-            "textures": [
-                "flowers/green_scrub_grass5"
-            ]
-        },
-        {
-            "textures": [
-                "flowers/green_scrub_grass6"
-            ]
-        }
-    ]
+    {
+      "textures": ["flowers/green_scrub_grass2"]
+    },
+    {
+      "textures": ["flowers/green_scrub_grass3"]
+    },
+    {
+      "textures": ["flowers/green_scrub_grass4"]
+    },
+    {
+      "textures": ["flowers/green_scrub_grass5"]
+    },
+    {
+      "textures": ["flowers/green_scrub_grass6"]
+    }
+  ]
 }

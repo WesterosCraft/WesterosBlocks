@@ -4,6 +4,7 @@
     "creativeTab": "westeros_metal_tab",
     "label": "Horizontal Chain",
     "renderLayer": "cutout_mipped",
+    "nonOpaque": true,
     "allowUnsupported": true,
     "textures": [
         "rail_block/chain",

@@ -1,29 +1,16 @@
 package com.westerosblocks.block.custom;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FenceGateBlock;
-import net.minecraft.block.PaneBlock;
-import net.minecraft.block.Waterloggable;
-import net.minecraft.block.WallBlock;
-import net.minecraft.entity.ai.pathing.NavigationType;
+import net.minecraft.block.*;
+import net.minecraft.block.enums.WallShape;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.IntProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
-import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -32,7 +19,6 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
-import net.minecraft.world.WorldView;
 
 import java.util.Map;
 
@@ -40,13 +26,21 @@ public class WCWallBlock extends WallBlock implements Waterloggable {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            boolean unconnect = (Boolean) parameters.getOrDefault("unconnect", false);
-            boolean connectState = (Boolean) parameters.getOrDefault("connectState", false);
-            String size = (String) parameters.getOrDefault("size", "normal");
-            boolean toggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
+        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
+            if (params.length > 0 && params[0] instanceof Map) {
+                @SuppressWarnings("unchecked")
+                Map<String, Object> paramMap = (Map<String, Object>) params[0];
 
-            return new WCWallBlock(settings, unconnect, connectState, size, toggleOnUse);
+                boolean unconnect = (Boolean) paramMap.getOrDefault("unconnect", false);
+                boolean connectState = (Boolean) paramMap.getOrDefault("connectState", false);
+                String size = (String) paramMap.getOrDefault("size", "normal");
+                boolean toggleOnUse = (Boolean) paramMap.getOrDefault("toggleOnUse", false);
+
+                return new WCWallBlock(settings, unconnect, connectState, size, toggleOnUse);
+            }
+
+            // Fallback with defaults
+            return new WCWallBlock(settings, false, false, "normal", false);
         }
     }
 
@@ -122,13 +116,13 @@ public class WCWallBlock extends WallBlock implements Waterloggable {
     }
 
     @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, net.minecraft.util.shape.VoxelShapeContext context) {
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         VoxelShape[] shapes = (wallSize == WallSize.SHORT) ? shortShapes : normalShapes;
         return shapes[getShapeIndex(state)];
     }
 
     @Override
-    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, net.minecraft.util.shape.VoxelShapeContext context) {
+    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return collisionShapes[getShapeIndex(state)];
     }
 
@@ -146,7 +140,7 @@ public class WCWallBlock extends WallBlock implements Waterloggable {
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (toggleOnUse && hasConnectState && player.isCreative() && player.getMainHandStack().isEmpty()) {
             int currentState = state.get(CONNECT_STATE);
             int nextState = (currentState + 1) % 4;
@@ -155,11 +149,6 @@ public class WCWallBlock extends WallBlock implements Waterloggable {
             return ActionResult.success(world.isClient);
         }
         return ActionResult.PASS;
-    }
-
-    @Override
-    public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
-        return false;
     }
 
     @Override

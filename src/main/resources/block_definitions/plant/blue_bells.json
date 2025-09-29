@@ -1,7 +1,7 @@
 {
     "blockName": "blue_bells",
     "blockType": "plant",
-    "type": "layerSensitive",
+    "layerSensitive": true,
     "creativeTab": "westeros_flowers_tab",
     "renderLayer": "cutout",
     "boundingBox": {
