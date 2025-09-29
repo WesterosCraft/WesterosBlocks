@@ -1,14 +1,15 @@
 {
-    "blockName": "always_active_stone_furnace",
-    "blockType": "furnace",
-    "nonOpaque": true,
-    "stepSound": "metal",
-    "lightValue": 10,
-    "creativeTab": "westeros_furniture_tab",
-    "label": "Always Active Ashlar Furnace Green Grey",
-    "type": "always-on:true",
-    "colorMult": "textures/colormap/furnace",
-    "isCustomModel": true,
-    "alwaysOn": true,
-    "strength": 5
+  "blockName": "always_active_stone_furnace",
+  "blockType": "furnace",
+  "nonOpaque": true,
+  "hardness": 5,
+  "stepSound": "metal",
+  "material": "iron",
+  "resistance": 10,
+  "luminance": 10,
+  "creativeTab": "westeros_furniture_tab",
+  "label": "Always Active Ashlar Furnace Green Grey",
+  "alwaysOn": true,
+  "colorMult": "textures/colormap/furnace",
+  "isCustomModel": true
 }

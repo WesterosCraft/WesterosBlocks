@@ -15,136 +15,89 @@ public class BlockBuilder<T extends Block> {
     private AbstractBlock.Settings settings;
     private Map<String, Object> parameters = new HashMap<>();
     private BlockFactory factory;
-
-    public BlockBuilder() {
-        this.settings = AbstractBlock.Settings.create();
-    }
     
     private BlockBuilder(BlockFactory factory) {
         this.settings = AbstractBlock.Settings.create();
         this.factory = factory;
     }
-    
-    // Static factory methods for each block type
+
     public static BlockBuilder<WCHalfDoorBlock> halfDoor() {
         return new BlockBuilder<>(new WCHalfDoorBlock.Factory());
     }
-    
     public static BlockBuilder<WCDoorBlock> door() {
         return new BlockBuilder<>(new WCDoorBlock.Factory());
     }
-    
     public static BlockBuilder<WCPaneBlock> pane() {
         return new BlockBuilder<>(new WCPaneBlock.Factory());
     }
-    
     public static BlockBuilder<WCSolidBlock> solid() {
         return new BlockBuilder<>(new WCSolidBlock.Factory());
     }
-    
     public static BlockBuilder<WCSlabBlock> slab() {
         return new BlockBuilder<>(new WCSlabBlock.Factory());
     }
-    
     public static BlockBuilder<WCLogBlock> log() {
         return new BlockBuilder<>(new WCLogBlock.Factory());
     }
-    
     public static BlockBuilder<WCTableBlock> table() {
         return new BlockBuilder<>(new WCTableBlock.Factory());
     }
-    
     public static BlockBuilder<WCBranchBlock> branch() {
         return new BlockBuilder<>(new WCBranchBlock.Factory());
     }
-
     public static BlockBuilder<WCChairBlock> chair() {
         return new BlockBuilder<>(new WCChairBlock.Factory());
     }
-    
     public static BlockBuilder<WCTorchBlock> torch() {
         return new BlockBuilder<>(new WCTorchBlock.Factory());
     }
-    
-    public static BlockBuilder<WCWallTorchBlock> wallTorch() {
-        return new BlockBuilder<>(new WCWallTorchBlock.Factory());
-    }
-    
-    public static BlockBuilder<WCArrowSlitBlock> arrowSlit() {
-        return new BlockBuilder<>(new WCArrowSlitBlock.Factory());
-    }
-    
+    public static BlockBuilder<WCWallTorchBlock> wallTorch() { return new BlockBuilder<>(new WCWallTorchBlock.Factory()); }
+    public static BlockBuilder<WCArrowSlitBlock> arrowSlit() { return new BlockBuilder<>(new WCArrowSlitBlock.Factory()); }
     public static BlockBuilder<WCRailBlock> rail() {
         return new BlockBuilder<>(new WCRailBlock.Factory());
     }
-    
     public static BlockBuilder<WCFanBlock> fan() {
         return new BlockBuilder<>(new WCFanBlock.Factory());
     }
-    
     public static BlockBuilder<WCWallFanBlock> wallFan() {
         return new BlockBuilder<>(new WCWallFanBlock.Factory());
     }
-    
     public static BlockBuilder<WCFenceBlock> fence() {
         return new BlockBuilder<>(new WCFenceBlock.Factory());
     }
-
-    public static BlockBuilder<WCFenceGateBlock> fenceGate() {
-        return new BlockBuilder<>(new WCFenceGateBlock.Factory());
-    }
-    
+    public static BlockBuilder<WCFenceGateBlock> fenceGate() { return new BlockBuilder<>(new WCFenceGateBlock.Factory()); }
     public static BlockBuilder<WCLayerBlock> layer() {
         return new BlockBuilder<>(new WCLayerBlock.Factory());
     }
-    
     public static BlockBuilder<WCPlantBlock> plant() {
         return new BlockBuilder<>(new WCPlantBlock.Factory());
     }
-    
     public static BlockBuilder<WCCropBlock> crop() {
         return new BlockBuilder<>(new WCCropBlock.Factory());
     }
-    
     public static BlockBuilder<WCWebBlock> web() {
         return new BlockBuilder<>(new WCWebBlock.Factory());
     }
-
     public static BlockBuilder<WCWebBlock> bed() {
         return new BlockBuilder<>(new WCBedBlock.Factory());
     }
-    
-    public static BlockBuilder<WCFlowerbedBlock> flowerbed() {
-        return new BlockBuilder<>(new WCFlowerbedBlock.Factory());
-    }
-    
+    public static BlockBuilder<WCFlowerbedBlock> flowerbed() { return new BlockBuilder<>(new WCFlowerbedBlock.Factory()); }
     public static BlockBuilder<WCLeavesBlock> leaves() {
         return new BlockBuilder<>(new WCLeavesBlock.Factory());
     }
-    
     public static BlockBuilder<WCVinesBlock> vines() {
         return new BlockBuilder<>(new WCVinesBlock.Factory());
     }
-
     public static BlockBuilder<WCLadderBlock> ladder() {
         return new BlockBuilder<>(new WCLadderBlock.Factory());
     }
-
-    public static BlockBuilder<WCFlowerPotBlock> flowerPot() {
-        return new BlockBuilder<>(new WCFlowerPotBlock.Factory());
-    }
-
-    public static BlockBuilder<WCParticleEmitterBlock> particleEmitter() {
-        return new BlockBuilder<>(new WCParticleEmitterBlock.Factory());
-    }
-
+    public static BlockBuilder<WCFlowerPotBlock> flowerPot() { return new BlockBuilder<>(new WCFlowerPotBlock.Factory()); }
+    public static BlockBuilder<WCParticleEmitterBlock> particleEmitter() { return new BlockBuilder<>(new WCParticleEmitterBlock.Factory()); }
     public static BlockBuilder<WCFireBlock> fire() {
         return new BlockBuilder<>(new WCFireBlock.Factory());
     }
-
-    public static BlockBuilder<WCFurnaceBlock> furnace() {
-        return new BlockBuilder<>(new WCFurnaceBlock.Factory());
-    }
+    public static BlockBuilder<WCFurnaceBlock> furnace() { return new BlockBuilder<>(new WCFurnaceBlock.Factory()); }
+    public static BlockBuilder<WCWallBlock> wall() { return new BlockBuilder<>(new WCWallBlock.Factory()); }
     
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
@@ -155,9 +108,14 @@ public class BlockBuilder<T extends Block> {
         this.settings = this.settings.strength(strength);
         return this;
     }
-    
+
+    public BlockBuilder<T> hardness(float hardness) {
+        this.settings = this.settings.hardness(hardness);
+        return this;
+    }
+
     public BlockBuilder<T> resistance(float resistance) {
-        this.settings = this.settings.resistance(resistance);
+        this.settings = this.settings.resistance(Math.max(0.0F, resistance));
         return this;
     }
     
@@ -170,7 +128,7 @@ public class BlockBuilder<T extends Block> {
         this.settings = this.settings.sounds(soundGroup);
         return this;
     }
-    
+
     public BlockBuilder<T> luminance(ToIntFunction<BlockState> luminanceFunction) {
         this.settings = this.settings.luminance(luminanceFunction);
         return this;
@@ -214,24 +172,22 @@ public class BlockBuilder<T extends Block> {
         parameters.put("locked", true);
         return this;
     }
-    
+
+    // Allows for blocks to be placed in unsupported locations, such as plants on blocks besides grass
     public BlockBuilder<T> allowUnsupported(boolean allowUnsupported) {
         parameters.put("allowUnsupported", allowUnsupported);
         return this;
     }
-    
+
+    // Allows for blocks to be placed in unsupported locations, such as plants on blocks besides grass
     public BlockBuilder<T> allowUnsupported() {
         parameters.put("allowUnsupported", true);
         return this;
     }
-    
+
+    // The wood type for wood type blocks. "oak", "spruce", "birch", "jungle"
     public BlockBuilder<T> woodType(String woodType) {
         parameters.put("woodType", woodType);
-        return this;
-    }
-    
-    public BlockBuilder<T> unconnect(boolean unconnect) {
-        parameters.put("unconnect", unconnect);
         return this;
     }
     
@@ -245,12 +201,7 @@ public class BlockBuilder<T extends Block> {
         parameters.put("barsModel", barsModel);
         return this;
     }
-    
-    public BlockBuilder<T> connectState(boolean connectState) {
-        parameters.put("connectState", connectState);
-        return this;
-    }
-    
+
     public BlockBuilder<T> toggleOnUse(boolean toggleOnUse) {
         parameters.put("toggleOnUse", toggleOnUse);
         return this;
@@ -369,6 +320,36 @@ public class BlockBuilder<T extends Block> {
     public BlockBuilder<T> alwaysOn() {
         parameters.put("alwaysOn", true);
         return this;
+    }
+
+    public BlockBuilder<T> unconnect(boolean unconnect) {
+        parameters.put("unconnect", unconnect);
+        return this;
+    }
+
+    public BlockBuilder<T> unconnect() {
+        parameters.put("unconnect", true);
+        return this;
+    }
+
+    public BlockBuilder<T> connectState(boolean connectState) {
+        parameters.put("connectState", connectState);
+        return this;
+    }
+
+    public BlockBuilder<T> connectState() {
+        parameters.put("connectState", true);
+        return this;
+    }
+
+    public BlockBuilder<T> wallSize(String wallSize) {
+        parameters.put("size", wallSize);
+        return this;
+    }
+
+    // Alias methods that match JSON property names exactly
+    public BlockBuilder<T> size(String size) {
+        return wallSize(size);
     }
 
     public BlockBuilder<T> parameter(String key, Object value) {

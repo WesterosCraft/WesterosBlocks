@@ -1,18 +1,16 @@
 {
-    "blockName": "industry_utility_block",
-    "blockType": "solid",
-    "strength": 5,
-    "stepSound": "metal",
-    "harvestLevel": [
-        {
-            "tool": "pickaxe",
-            "level": 3
-        }
-    ],
-    "creativeTab": "westeros_utility_tab",
-    "lightValue": 0,
-    "label": "'Industry' Utility Block",
-    "textures": [
-        "utility_block/industry"
-    ]
+  "blockName": "industry_utility_block",
+  "blockType": "solid",
+  "strength": 5,
+  "stepSound": "metal",
+  "harvestLevel": [
+    {
+      "tool": "pickaxe",
+      "level": 3
+    }
+  ],
+  "creativeTab": "westeros_utility_tab",
+  "luminance": 0,
+  "label": "'Industry' Utility Block",
+  "textures": ["utility_block/industry"]
 }

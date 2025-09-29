@@ -4,6 +4,7 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.BlockBuilder;
 import com.westerosblocks.block.custom.WCCropBlock;
+import com.westerosblocks.block.custom.WCWallBlock;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 
@@ -340,7 +341,19 @@ public class ModBlocks {
                             })
                             .alwaysOn(definition.isAlwaysOn())
                             .build();
-//
+
+                case "wall":
+                    return BlockBuilder.wall()
+                            .strength(definition.getStrength())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .connectState(definition.isConnectState())
+                            .wallSize(definition.getWallSize())
+                            .unconnect(definition.isUnconnect())
+                            .toggleOnUse(definition.toggleOnUse())
+                            .sounds(soundGroup)
+                            .build();
+
 //                case "chair":
 //                    return BlockBuilder.chair()
 //                        .strength(definition.getStrength())

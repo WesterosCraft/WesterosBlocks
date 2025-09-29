@@ -1,12 +1,10 @@
 {
-    "blockName": "glowing_embers",
-    "blockType": "solid",
-    "strength": 2,
-    "stepSound": "wood",
-    "creativeTab": "westeros_lighting_tab",
-    "label": "Glowing Embers",
-    "lightValue": 2,
-    "textures": [
-        "lighting/coals_glowing"
-    ]
+  "blockName": "glowing_embers",
+  "blockType": "solid",
+  "strength": 2,
+  "stepSound": "wood",
+  "creativeTab": "westeros_lighting_tab",
+  "label": "Glowing Embers",
+  "luminance": 2,
+  "textures": ["lighting/coals_glowing"]
 }

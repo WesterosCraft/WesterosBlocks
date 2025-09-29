@@ -1,13 +1,11 @@
 {
-    "blockName": "candle",
-    "blockType": "torch",
-    "stepSound": "powder",
-    "creativeTab": "westeros_lighting_tab",
-    "lightValue": 10,
-    "label": "Candle",
-    "type": "allow-unsupported",
-    "renderLayer": "cutout",
-    "textures": [
-        "lighting/candle"
-    ]
+  "blockName": "candle",
+  "blockType": "torch",
+  "stepSound": "powder",
+  "creativeTab": "westeros_lighting_tab",
+  "luminance": 10,
+  "label": "Candle",
+  "type": "allow-unsupported",
+  "renderLayer": "cutout",
+  "textures": ["lighting/candle"]
 }
