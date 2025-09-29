@@ -166,6 +166,10 @@ public class ModModelProvider extends FabricModelProvider {
                     FurnaceBlockDatagen.registerCustomFurnaceBlock(bsmg, block, definition);
                     break;
 
+                case "wall":
+                    WallBlockDatagen.registerCustomWallBlock(bsmg, block, definition);
+                    break;
+
                 default:
                     WesterosBlocks.LOGGER.warn("Unsupported block type '{}' for model generation: {}",
                             blockType, definition.getBlockName());

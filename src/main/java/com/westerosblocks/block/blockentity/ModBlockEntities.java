@@ -50,7 +50,6 @@ public class ModBlockEntities {
                     ).build(null)
             );
             customEntitiesByName.put(entry.getKey(), blockEntityType);
-            WesterosBlocks.LOGGER.info("Registered furnace block entity: {}", entry.getKey());
         }
     }
 
