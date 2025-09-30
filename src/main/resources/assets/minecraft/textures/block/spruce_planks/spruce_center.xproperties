@@ -1,0 +1,6 @@
+matchTiles=/ctm/wood/17.png
+method=random
+tiles=260-264
+faces=sides
+weights=10 10 10 10 50
+metadata=1

@@ -1,0 +1,19 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_single_cond",
+    "layer": "CUTOUT_MIPPED",
+    "textures": [],
+    "extra": {
+      "condWidth": 1,
+      "condHeight": 1,
+      "conds": [
+        {
+          "isFancy": false,
+          "type": "null"
+        }
+      ],
+      "ignore_states": true
+    }
+  }
+}
