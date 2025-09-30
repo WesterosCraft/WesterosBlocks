@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.sound.BlockSoundGroup;
@@ -98,6 +99,7 @@ public class BlockBuilder<T extends Block> {
     }
     public static BlockBuilder<WCFurnaceBlock> furnace() { return new BlockBuilder<>(new WCFurnaceBlock.Factory()); }
     public static BlockBuilder<WCWallBlock> wall() { return new BlockBuilder<>(new WCWallBlock.Factory()); }
+    public static BlockBuilder<WCCuboidBlock> cuboid() { return new BlockBuilder<>(new WCCuboidBlock.Factory()); }
     
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
@@ -354,6 +356,18 @@ public class BlockBuilder<T extends Block> {
 
     public BlockBuilder<T> parameter(String key, Object value) {
         parameters.put(key, value);
+        return this;
+    }
+
+    public BlockBuilder<T> boundingBox(double xMin, double yMin, double zMin, double xMax, double yMax, double zMax) {
+        Map<String, Object> boundingBoxMap = new java.util.HashMap<>();
+        boundingBoxMap.put("xMin", xMin);
+        boundingBoxMap.put("yMin", yMin);
+        boundingBoxMap.put("zMin", zMin);
+        boundingBoxMap.put("xMax", xMax);
+        boundingBoxMap.put("yMax", yMax);
+        boundingBoxMap.put("zMax", zMax);
+        parameters.put("boundingBox", boundingBoxMap);
         return this;
     }
     
