@@ -2,6 +2,7 @@ package com.westerosblocks.block.custom;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -52,12 +53,12 @@ public class WCBeaconBlock extends Block {
     }
 
     @Override
-    public VoxelShape getOutlineShape(net.minecraft.block.BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
 
     @Override
-    public VoxelShape getCollisionShape(net.minecraft.block.BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
 

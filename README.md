@@ -46,48 +46,7 @@ The system supports over 30 different block types, each with their own specific 
 
 ## Block Properties
 
-### Datagen Properties
-*Properties used for model and texture generation during datagen phase*
-
-- `textures` - Array of texture file paths (relative to `textures/block/`). Order varies by block type.
-- `randomTextures` - Array of texture variants with weights for random selection
-  ```json
-  "randomTextures": [
-    {"textures": ["variant1"], "weight": 10},
-    {"textures": ["variant2"], "weight": 5}
-  ]
-  ```
-- `states` - Different texture sets for different block states
-  ```json
-  "states": [
-    {"stateID": "age0", "textures": ["crop_stage_0"]},
-    {"stateID": "age1", "textures": ["crop_stage_1"]}
-  ]
-  ```
-- `overlayTextures` - Additional overlay textures for tinted blocks
-- `colorMult` - Hex color for texture tinting (e.g., `"#FF0000"` for red, or `"textures/colormap/birch"` for biome tinting)
-- `renderLayer` - Render layer: `"cutout"`, `"cutout_mipped"`, or `"translucent"`
-- `isCustomModel` - Boolean indicating use of custom model files instead of generated ones
-- `isTinted` - Boolean for grass-like color variation rendering
-- `hasOverlay` - Boolean indicating block has overlay textures for tinting
-- `hasBetterFoliage` - Boolean for OptiFine Better Foliage support
-- `hasRotateRandom` - Boolean to randomly rotate block models
-- `stack` - Array of stack elements for complex geometry (used by `cuboid-nsew-stack`)
-  ```json
-  "stack": [
-    {
-      "textures": ["texture1", "texture2", "texture3", "texture4", "texture5", "texture6"],
-      "boundingBox": {
-        "xMin": 0.0, "xMax": 1.0,
-        "yMin": 0.0, "yMax": 1.0,
-        "zMin": 0.0, "zMax": 1.0
-      }
-    }
-  ]
-  ```
-
-### All Other Properties
-*Properties used for block behavior, registration, and gameplay mechanics*
+### Properties Available for All Block Definitions
 
 **Core Identification:**
 - `blockName` - Unique identifier for the block (e.g., `"oak_table"`, `"stone_wall"`)
@@ -106,8 +65,10 @@ The system supports over 30 different block types, each with their own specific 
   - `"cloth"` - Fabric sounds
   - `"powder"` - Powder/sand sounds
 
-**Lighting and Visual:**
+**Visual Properties:**
+- `textures` - Array of texture file paths (relative to `textures/block/`). Order varies by block type.
 - `luminance` - Light level emitted by block (0-15, where 15 is brightest)
+- `renderLayer` - Render layer: `"cutout"`, `"cutout_mipped"`, or `"translucent"`
 
 **Tool Requirements:**
 - `harvestLevel` - Array of tool requirements for efficient breaking
@@ -121,135 +82,57 @@ The system supports over 30 different block types, each with their own specific 
 **Behavior Flags:**
 - `nonOpaque` - Block is transparent/non-opaque (lets light through)
 - `noCollision` - Block has no collision box (can walk through)
-- `layerSensitive` - Plants only: breaks when supporting layer changes
 - `allowUnsupported` - Block can be placed in unsupported locations
 - `toggleOnUse` - Creative players can cycle states by right-clicking
-- `locked` - Doors/gates are locked and cannot be opened
-- `noParticle` - Torches don't emit particles
-- `alwaysOn` - Furnaces are always lit (no off state)
-
-**Block-Specific Properties:**
-- `bedType` - Bed type for bed blocks (affects model and behavior)
-- `wallSize` - Wall height: `"normal"` (16 blocks) or `"short"` (13 blocks)
-- `connectState` - Boolean indicating walls have connect state cycling feature
-- `unconnect` - Boolean indicating walls/panes don't connect to adjacent blocks when true
 - `type` - Legacy string field with comma-separated flags (mostly replaced by specific boolean properties)
 
-## Example Block Definitions
+### Properties Available for Specific Block Types
 
-### Simple Solid Block
-```json
-{
-  "blockName": "6sided_birch",
-  "blockType": "solid",
-  "strength": 2,
-  "requiresTool": true,
-  "soundGroup": "wood",
-  "creativeTab": "westeros_logs_tab",
-  "label": "6-Sided Birch",
-  "textures": ["bark/birch/side"]
-}
-```
-
-### Door Block with Wood Type
-```json
-{
-  "blockName": "birch_door",
-  "blockType": "door",
-  "strength": 2,
-  "soundGroup": "wood",
-  "creativeTab": "westeros_wood_planks_tab",
-  "label": "Birch Door",
-  "textures": ["wood/birch/door_top", "wood/birch/door_bottom"],
-  "allowUnsupported": true,
-  "type": "allow-unsupported"
-}
-```
-
-### Slab with Harvest Requirements
-```json
-{
-  "blockName": "apple_basket_slab",
-  "blockType": "slab",
-  "soundGroup": "cloth",
-  "harvestLevel": [{"tool": "shovel", "level": 1}],
-  "creativeTab": "westeros_food_blocks_tab",
-  "label": "Apple Basket Slab",
-  "textures": [
-    "crate_block/basket_bottom",
-    "crate_block/basket_apple",
-    "crate_block/basket_side_slab"
-  ],
-  "strength": 2
-}
-```
-
-### Leaves with Random Textures and Tinting
-```json
-{
-  "blockName": "apple_fruit_leaves",
-  "blockType": "leaves",
-  "soundGroup": "grass",
-  "creativeTab": "westeros_foliage_tab",
-  "type": "no-decay,better-foliage,overlay",
-  "label": "Apple Fruit Leaves",
-  "colorMult": "textures/colormap/birch",
-  "rotateRandom": true,
+**Datagen Properties** *(used for model and texture generation)*:
+- `randomTextures` - Array of texture variants with weights for random selection *(solid, leaves, pane)*
+  ```json
   "randomTextures": [
-    {"textures": ["leaves/birch/all", "transparent", "leaves/overlay/apple0"], "weight": 10},
-    {"textures": ["leaves/birch/all", "transparent", "leaves/overlay/apple1"], "weight": 10},
-    {"textures": ["leaves/birch/all", "transparent", "leaves/overlay/apple2"], "weight": 10},
-    {"textures": ["leaves/birch/all", "transparent", "leaves/overlay/apple3"], "weight": 2}
+    {"textures": ["variant1"], "weight": 10},
+    {"textures": ["variant2"], "weight": 5}
   ]
-}
-```
-
-### Crop with Growth States
-```json
-{
-  "blockName": "crop_carrots",
-  "blockType": "crop",
-  "soundGroup": "grass",
-  "type": "toggleOnUse,layerSensitive",
-  "layerSensitive": true,
-  "toggleOnUse": true,
-  "renderLayer": "cutout",
-  "harvestLevel": [{"tool": "pickaxe", "level": 3}],
-  "creativeTab": "westeros_crops_herbs_tab",
-  "label": "Carrots",
+  ```
+- `states` - Different texture sets for different block states *(crop, solid)*
+  ```json
   "states": [
-    {"stateID": "age0", "textures": ["carrots/carrots_stage_0"]},
-    {"stateID": "age1", "textures": ["carrots/carrots_stage_1"]},
-    {"stateID": "age2", "textures": ["carrots/carrots_stage_2"]},
-    {"stateID": "age3", "textures": ["carrots/carrots_stage_3"]}
-  ],
-  "strength": 5
-}
-```
-
-### Complex Stackable Block (Banner)
-```json
-{
-  "blockName": "allyrion_banner",
-  "blockType": "cuboid-nsew-stack",
-  "soundGroup": "wood",
-  "harvestLevel": [{"tool": "sword", "level": 1}],
-  "creativeTab": "westeros_banners_tab",
-  "type": "no-break-under,allowHalfBreak",
-  "label": "Allyrion Banner",
-  "itemTextureIndex": 2,
+    {"stateID": "age0", "textures": ["crop_stage_0"]},
+    {"stateID": "age1", "textures": ["crop_stage_1"]}
+  ]
+  ```
+- `overlayTextures` - Additional overlay textures for tinted blocks *(leaves)*
+- `colorMult` - Enables texture tinting *(leaves)* (e.g., `"#FF0000"` for red, or `"textures/colormap/birch"` for biome tinting)
+- `isCustomModel` - Boolean indicating use of custom model files *(furnace)*
+- `isTinted` - Boolean for grass-like color variation rendering *(leaves)*
+- `hasOverlay` - Boolean indicating block has overlay textures for tinting *(leaves)*
+- `hasBetterFoliage` - Boolean for OptiFine Better Foliage support *(leaves)*
+- `hasRotateRandom` - Boolean to randomly rotate block models *(leaves)*
+- `stack` - Array of stack elements for complex geometry *(cuboid-nsew-stack)*
+  ```json
   "stack": [
     {
-      "textures": ["transparent", "transparent", "transparent", "transparent", "banner/house/allyrion/bottom", "banner/house/allyrion/bottom"],
-      "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-    },
-    {
-      "textures": ["transparent", "transparent", "transparent", "transparent", "banner/house/allyrion/top", "banner/house/allyrion/top"],
-      "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+      "textures": ["texture1", "texture2", "texture3", "texture4", "texture5", "texture6"],
+      "boundingBox": {
+        "xMin": 0.0, "xMax": 1.0,
+        "yMin": 0.0, "yMax": 1.0,
+        "zMin": 0.0, "zMax": 1.0
+      }
     }
-  ],
-  "strength": 1
-}
-```
+  ]
+  ```
+
+**Block-Specific Behavior Properties**:
+- `layerSensitive` - Breaks when supporting layer changes *(plant, crop)*
+- `locked` - Doors/gates are locked and cannot be opened *(door, halfdoor, fencegate)*
+- `noParticle` - Torches don't emit particles *(torch)*
+- `alwaysOn` - Furnaces are always lit (no off state) *(furnace)*
+- `bedType` - Bed type for bed blocks (affects model and behavior) *(bed)*
+- `wallSize` - Wall height: `"normal"` (16 blocks) or `"short"` (13 blocks) *(wall)*
+- `connectState` - Boolean indicating walls have connect state cycling feature *(wall)*
+- `unconnect` - Boolean indicating walls/panes don't connect to adjacent blocks when true *(wall, pane)*
+
 
 This documentation serves as a comprehensive reference for understanding and implementing the WesterosBlocks block definition system.
