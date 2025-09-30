@@ -9,7 +9,7 @@
     }
   ],
   "creativeTab": "westeros_logs_tab",
-  "type": "unconnect:false",
+  "unconnect": false,
   "label": "Thin Birch Log",
   "textures": ["bark/birch/wall_top", "bark/birch/wall_top", "bark/birch/side"],
   "strength": 2

@@ -9,7 +9,7 @@
     }
   ],
   "creativeTab": "westeros_misc_tab",
-  "type": "unconnect:false",
+  "unconnect": false,
   "label": "Piled Bones Wall",
   "textures": ["piled_bones/side"],
   "strength": 1.5

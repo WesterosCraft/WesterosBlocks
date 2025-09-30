@@ -202,14 +202,6 @@ public class FurnaceBlockDatagen {
             String fallbackTexture = isCustomModel ? "" : "missingno";
             builder.textures(fallbackTexture, fallbackTexture, fallbackTexture, fallbackTexture);
 
-            if (isCustomModel) {
-                WesterosBlocks.LOGGER.warn("Furnace block '{}' is using a custom model",
-                        definition.getBlockName());
-            } else {
-                WesterosBlocks.LOGGER.warn("Furnace block '{}' has no textures defined, using fallback",
-                        definition.getBlockName());
-            }
-
         }
 
         builder.build();

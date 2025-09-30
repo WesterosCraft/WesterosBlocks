@@ -9,7 +9,7 @@
     }
   ],
   "creativeTab": "westeros_logs_tab",
-  "type": "unconnect:false",
+  "unconnect": false,
   "label": "Thin Palm Log",
   "textures": ["bark/palm/wall_top", "bark/palm/wall_top", "bark/palm/side"],
   "strength": 2

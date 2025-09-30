@@ -11,7 +11,7 @@
     }
   ],
   "creativeTab": "westeros_decor_tab",
-  "type": "unconnect:false",
+  "unconnect": false,
   "label": "Sept Crystal Medium",
   "textures": ["crystal/wall_top", "crystal/wall_top", "crystal/wall"],
   "strength": 1.5

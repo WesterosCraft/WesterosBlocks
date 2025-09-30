@@ -83,7 +83,7 @@ Use the BlockBuilder pattern for cleaner, self-documenting block registration:
 public static final Block EXAMPLE_BLOCK = registerBlock(
     "block_name",
     BlockBuilder.solid()
-        .strength(2.0f)
+        .hardness(def.getHardness())
         .requiresTool()
         .sounds(BlockSoundGroup.WOOD)
         .build()
@@ -108,14 +108,13 @@ public static final Block EXAMPLE_BLOCK = registerBlock(
 - `.noCollision()` - For non-solid blocks
 
 **Block-Specific Parameters:**
-- `.locked(boolean)` - For doors/shutters that can't be opened
-- `.allowUnsupported(boolean)` - For blocks that can float
+- `.locked()` - For doors/shutters that can't be opened
+- `.allowUnsupported()` - For blocks that can float
 - `.woodType(String)` - For doors requiring wood type
-- `.hasRecipe(boolean)` - For recipe generation
-- `.unconnect(boolean)` - For pane blocks
-- `.legacyModel(boolean)` - For pane model variants
-- `.barsModel(boolean)` - For pane bar models
-- `.parameter(String, Object)` - Generic parameter setter
+- `.hasRecipe()` - For recipe generation
+- `.unconnect()` - For pane blocks
+- `.legacyModel()` - For pane model variants
+- `.barsModel()` - For pane bar models
 
 ### Data Generation Builder Pattern (Unified)
 All block types now use a consistent unified builder pattern following block-models.md conventions:

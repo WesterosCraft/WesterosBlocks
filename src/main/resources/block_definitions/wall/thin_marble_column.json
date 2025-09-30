@@ -9,7 +9,8 @@
     }
   ],
   "creativeTab": "westeros_marble_plaster_tab",
-  "type": "unconnect:false,size:short",
+  "wallSize": "short",
+  "unconnect": false,
   "label": "Thin Marble Column",
   "textures": [
     "marble/quartz/wall/top",
