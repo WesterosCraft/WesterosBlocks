@@ -4,6 +4,7 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.BlockBuilder;
 import com.westerosblocks.block.custom.WCCropBlock;
+import com.westerosblocks.block.custom.WCCuboidBlock;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 
@@ -360,6 +361,36 @@ public class ModBlocks {
                             .toggleOnUse(definition.toggleOnUse())
                             .sounds(soundGroup)
                             .build();
+
+                case "cuboid":
+                    BlockBuilder<WCCuboidBlock> cuboidBuilder = BlockBuilder.cuboid()
+                            .hardness(definition.getHardness())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .nonOpaque(definition.isNonOpaque())
+                            .noCollision(definition.hasNoCollision())
+                            .toggleOnUse(definition.toggleOnUse())
+                            .states(definition.hasStates() ? definition.getStates().size() : 0);
+
+                    // Handle bounding box if present
+                    if (definition.getBoundingBox() != null) {
+                        var bbox = definition.getBoundingBox();
+                        cuboidBuilder.boundingBox(
+                            bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
+                            bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
+                        );
+                    }
+
+                    // Handle state values if present
+                    if (definition.hasStates()) {
+                        List<String> stateValues = definition.getStates().stream()
+                                .map(BlockDefinition.StateVariant::getStateID)
+                                .collect(Collectors.toList());
+                        cuboidBuilder.stateValues(stateValues);
+                    }
+
+                    return cuboidBuilder.build();
 
 //                case "chair":
 //                    return BlockBuilder.chair()
