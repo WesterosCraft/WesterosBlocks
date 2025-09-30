@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 
@@ -11,11 +12,11 @@ import net.minecraft.block.Block;
 public abstract class BlockFactory {
 
     /**
-     * Builds a block instance with the given settings and parameters.
-     * 
+     * Builds a block instance with the given settings and block definition.
+     *
      * @param settings The block settings
-     * @param params   Additional parameters specific to the block type
+     * @param definition The block definition containing all block properties
      * @return The created block instance
      */
-    public abstract Block buildBlockClass(AbstractBlock.Settings settings, Object... params);
+    public abstract Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition);
 }

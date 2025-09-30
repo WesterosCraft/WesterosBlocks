@@ -17,7 +17,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-import java.util.Map;
+import com.westerosblocks.data.BlockDefinition;
 
 public class WCFanBlock extends Block implements Waterloggable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
@@ -28,20 +28,13 @@ public class WCFanBlock extends Block implements Waterloggable {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            if (params.length > 0 && params[0] instanceof Map) {
-                @SuppressWarnings("unchecked")
-                Map<String, Object> paramMap = (Map<String, Object>) params[0];
-                Block wallBlock = (Block) paramMap.get("wallBlock");
-                boolean allowUnsupported = (Boolean) paramMap.getOrDefault("allowUnsupported", false);
-                
-                return new WCFanBlock(settings, wallBlock, allowUnsupported);
-            }
-            
-            // Fallback for legacy parameter style
-            Block wallBlock = params.length > 0 ? (Block) params[0] : null;
-            boolean allowUnsupported = params.length > 1 && params[1] instanceof Boolean ? (Boolean) params[1] : false;
-            
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            // Note: wallBlock will need to be set later via a setter or registration process
+            // since BlockDefinition doesn't contain Block references
+            Block wallBlock = null;
+            boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
+
             return new WCFanBlock(settings, wallBlock, allowUnsupported);
         }
     }

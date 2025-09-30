@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -19,19 +20,10 @@ public class WCLadderBlock extends LadderBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            if (params.length > 0 && params[0] instanceof Map) {
-                @SuppressWarnings("unchecked")
-                Map<String, Object> paramMap = (Map<String, Object>) params[0];
-                boolean allowUnsupported = (Boolean) paramMap.getOrDefault("allowUnsupported", false);
-                boolean noClimb = (Boolean) paramMap.getOrDefault("noClimb", false);
-
-                return new WCLadderBlock(settings.nonOpaque(), allowUnsupported, noClimb);
-            }
-
-            // Fallback for legacy parameter style
-            boolean allowUnsupported = params.length > 0 && params[0] instanceof Boolean ? (Boolean) params[0] : false;
-            boolean noClimb = params.length > 1 && params[1] instanceof Boolean ? (Boolean) params[1] : false;
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
+            boolean noClimb = definition != null && definition.getNoClimb() != null && definition.getNoClimb();
 
             return new WCLadderBlock(settings.nonOpaque(), allowUnsupported, noClimb);
         }

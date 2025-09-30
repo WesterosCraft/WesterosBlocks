@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
 
 import net.minecraft.block.AbstractBlock;
@@ -33,21 +34,17 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
 import java.util.ArrayList;
-import java.util.Map;
+import java.util.List;
 
 public class WCWebBlock extends CobwebBlock {
-    // Waterlogging support
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
-    
-    // Layer support for stacking behavior
+
     protected static IntProperty tempLAYERS;
     public IntProperty LAYERS;
-    
-    // State management for toggle functionality
+
     protected static ModProperties.StateProperty tempSTATE;
     public ModProperties.StateProperty STATE;
-    
-    // Behavior flags
+
     protected boolean toggleOnUse = false;
     protected boolean noInWeb = false;
     protected boolean layerSensitive = false;
@@ -67,59 +64,34 @@ public class WCWebBlock extends CobwebBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            if (params.length > 0 && params[0] instanceof Map) {
-                @SuppressWarnings("unchecked")
-                Map<String, Object> paramMap = (Map<String, Object>) params[0];
-                
-                boolean doToggleOnUse = (Boolean) paramMap.getOrDefault("toggleOnUse", false);
-                boolean doNoInWeb = (Boolean) paramMap.getOrDefault("noInWeb", false);
-                boolean doLayerSensitive = (Boolean) paramMap.getOrDefault("layerSensitive", false);
-                Integer numStates = (Integer) paramMap.get("states");
-                boolean doAddStates = numStates != null && numStates > 0;
-                
-                if (doLayerSensitive) {
-                    tempLAYERS = Properties.LAYERS;
-                }
-                
-                if (doAddStates) {
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            boolean doToggleOnUse = definition != null && definition.toggleOnUse();
+            boolean doNoInWeb = definition != null && definition.isNoInWeb();
+            boolean doLayerSensitive = definition != null && definition.isLayerSensitive();
+            int numStates = definition != null ? definition.getStateCount() : 0;
+            boolean doAddStates = numStates > 0;
+
+            if (doLayerSensitive) {
+                tempLAYERS = Properties.LAYERS;
+            }
+
+            if (doAddStates) {
+                List<String> stateValues = definition.getStateValues();
+                if (stateValues != null) {
+                    tempSTATE = new ModProperties.StateProperty(stateValues);
+                } else {
+                    // Generate default state IDs if not provided
                     ArrayList<String> stateIds = new ArrayList<>();
                     for (int i = 0; i < numStates; i++) {
                         stateIds.add("state" + i);
                     }
-                    ModProperties.StateProperty STATE = new ModProperties.StateProperty(stateIds);
-                    tempSTATE = STATE;
+                    tempSTATE = new ModProperties.StateProperty(stateIds);
                 }
-                
-                // Apply noCollision for web blocks
-                settings = settings.noCollision();
-                
-                return new WCWebBlock(settings, doToggleOnUse, doNoInWeb, doLayerSensitive, doAddStates);
             }
-            
-            // Fallback for legacy parameter style
-            boolean doToggleOnUse = params.length > 0 && params[0] instanceof Boolean ? (Boolean) params[0] : false;
-            boolean doNoInWeb = params.length > 1 && params[1] instanceof Boolean ? (Boolean) params[1] : false;
-            boolean doLayerSensitive = params.length > 2 && params[2] instanceof Boolean ? (Boolean) params[2] : false;
-            boolean doAddStates = params.length > 3 && params[3] instanceof Integer && (Integer) params[3] > 0;
-            
-            if (doLayerSensitive) {
-                tempLAYERS = Properties.LAYERS;
-            }
-            
-            if (doAddStates) {
-                int numStates = (Integer) params[3];
-                ArrayList<String> stateIds = new ArrayList<>();
-                for (int i = 0; i < numStates; i++) {
-                    stateIds.add("state" + i);
-                }
-                ModProperties.StateProperty STATE = new ModProperties.StateProperty(stateIds);
-                tempSTATE = STATE;
-            }
-            
+
             // Apply noCollision for web blocks
             settings = settings.noCollision();
-            
+
             return new WCWebBlock(settings, doToggleOnUse, doNoInWeb, doLayerSensitive, doAddStates);
         }
     }
@@ -136,12 +108,12 @@ public class WCWebBlock extends CobwebBlock {
         BlockState defaultState = this.getDefaultState()
                 .with(WATERLOGGED, Boolean.FALSE);
         
-        if (layerSensitive && LAYERS != null) {
-            defaultState = defaultState.with(LAYERS, 8);
+        if (layerSensitive && tempLAYERS != null) {
+            defaultState = defaultState.with(tempLAYERS, 8);
         }
-        
-        if (doAddStates && STATE != null) {
-            defaultState = defaultState.with(STATE, STATE.defValue);
+
+        if (doAddStates && tempSTATE != null) {
+            defaultState = defaultState.with(tempSTATE, tempSTATE.defValue);
         }
         
         this.setDefaultState(defaultState);
@@ -219,16 +191,12 @@ public class WCWebBlock extends CobwebBlock {
     
     @Override
     protected boolean canPathfindThrough(BlockState state, NavigationType type) {
-        switch (type) {
-            case LAND:
-                return false;
-            case WATER:
-                return state.getFluidState().isIn(FluidTags.WATER);
-            case AIR:
-                return false;
-            default:
-                return false;
-        }
+        return switch (type) {
+            case LAND -> false;
+            case WATER -> state.getFluidState().isIn(FluidTags.WATER);
+            case AIR -> false;
+            default -> false;
+        };
     }
     
     @Override
@@ -262,7 +230,6 @@ public class WCWebBlock extends CobwebBlock {
     
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        // Web blocks typically have no collision
         return VoxelShapes.empty();
     }
 }

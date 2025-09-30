@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -41,61 +42,34 @@ public class WCCuboidBlock extends Block implements Waterloggable {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            if (params.length > 0 && params[0] instanceof Map) {
-                @SuppressWarnings("unchecked")
-                Map<String, Object> paramMap = (Map<String, Object>) params[0];
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            boolean doToggleOnUse = definition != null && definition.toggleOnUse();
+            int numStates = definition != null ? definition.getStateCount() : 0;
+            boolean doAddStates = numStates > 0;
 
-                boolean doToggleOnUse = (Boolean) paramMap.getOrDefault("toggleOnUse", false);
-                Integer numStates = (Integer) paramMap.get("states");
-                boolean doAddStates = numStates != null && numStates > 0;
-
-                // Handle bounding box if provided
-                @SuppressWarnings("unchecked")
-                Map<String, Object> boundingBoxMap = (Map<String, Object>) paramMap.get("boundingBox");
-                VoxelShape customBoundingBox = null;
-
-                if (boundingBoxMap != null) {
-                    double xMin = ((Number) boundingBoxMap.getOrDefault("xMin", 0.0)).doubleValue();
-                    double yMin = ((Number) boundingBoxMap.getOrDefault("yMin", 0.0)).doubleValue();
-                    double zMin = ((Number) boundingBoxMap.getOrDefault("zMin", 0.0)).doubleValue();
-                    double xMax = ((Number) boundingBoxMap.getOrDefault("xMax", 1.0)).doubleValue();
-                    double yMax = ((Number) boundingBoxMap.getOrDefault("yMax", 1.0)).doubleValue();
-                    double zMax = ((Number) boundingBoxMap.getOrDefault("zMax", 1.0)).doubleValue();
-
-                    customBoundingBox = VoxelShapes.cuboid(xMin, yMin, zMin, xMax, yMax, zMax);
-                }
-
-                if (doAddStates) {
-                    ArrayList<String> stateIds = new ArrayList<>();
-                    @SuppressWarnings("unchecked")
-                    List<String> stateValues = (List<String>) paramMap.get("stateValues");
-                    if (stateValues != null && !stateValues.isEmpty()) {
-                        stateIds.addAll(stateValues);
-                    } else {
-                        for (int i = 0; i < numStates; i++) {
-                            stateIds.add("state" + i);
-                        }
-                    }
-                    STATE = new ModProperties.StateProperty(stateIds);
-                    tempSTATE = STATE;
-                }
-
-                return new WCCuboidBlock(settings, doToggleOnUse, doAddStates, customBoundingBox);
+            // Handle bounding box if provided
+            VoxelShape customBoundingBox = null;
+            if (definition != null && definition.hasBoundingBox()) {
+                BlockDefinition.BoundingBox bbox = definition.getBoundingBox();
+                customBoundingBox = VoxelShapes.cuboid(
+                    bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
+                    bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
+                );
             }
 
-            // Fallback for legacy parameter style
-            boolean doToggleOnUse = params.length > 0 && params[0] instanceof Boolean ? (Boolean) params[0] : false;
-            boolean doAddStates = params.length > 1 && params[1] instanceof Integer && (Integer) params[1] > 0;
-            VoxelShape customBoundingBox = params.length > 2 && params[2] instanceof VoxelShape ? (VoxelShape) params[2] : null;
-
             if (doAddStates) {
-                int numStates = (Integer) params[1];
-                ArrayList<String> stateIds = new ArrayList<>();
-                for (int i = 0; i < numStates; i++) {
-                    stateIds.add("state" + i);
+                List<String> stateValues = definition != null ? definition.getStateValues() : null;
+                if (stateValues != null && !stateValues.isEmpty()) {
+                    STATE = new ModProperties.StateProperty(stateValues);
+                } else {
+                    // Generate default state IDs if not provided
+                    ArrayList<String> stateIds = new ArrayList<>();
+                    for (int i = 0; i < numStates; i++) {
+                        stateIds.add("state" + i);
+                    }
+                    STATE = new ModProperties.StateProperty(stateIds);
                 }
-                STATE = new ModProperties.StateProperty(stateIds);
                 tempSTATE = STATE;
             }
 
@@ -117,8 +91,8 @@ public class WCCuboidBlock extends Block implements Waterloggable {
         }
 
         BlockState defbs = this.getDefaultState().with(WATERLOGGED, false);
-        if (addStates && STATE != null) {
-            defbs = defbs.with(STATE, STATE.defValue);
+        if (addStates && tempSTATE != null) {
+            defbs = defbs.with(tempSTATE, tempSTATE.defValue);
         }
         this.setDefaultState(defbs);
     }
@@ -127,6 +101,7 @@ public class WCCuboidBlock extends Block implements Waterloggable {
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(WATERLOGGED);
         if (tempSTATE != null) {
+            STATE = tempSTATE;
             builder.add(tempSTATE);
             tempSTATE = null;
         }

@@ -1,16 +1,15 @@
 package com.westerosblocks.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.BedPart;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
@@ -39,7 +38,7 @@ public class WCBedBlock extends HorizontalFacingBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
             return new WCBedBlock(settings);
         }
     }

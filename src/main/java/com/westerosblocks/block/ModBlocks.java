@@ -96,7 +96,7 @@ public class ModBlocks {
                             .nonOpaque(definition.isNonOpaque())
                             .noCollision(definition.hasNoCollision())
                             .states(definition.hasStates() ? definition.getStates().size() : 0)
-                            .build();
+                            .build(definition);
 
                 case "door":
                     return BlockBuilder.door()
@@ -259,13 +259,13 @@ public class ModBlocks {
 
 
                     if (definition.hasStates()) {
-                        List<String> stateValues = definition.getStates().stream()
-                                .map(BlockDefinition.StateVariant::getStateID)
-                                .collect(Collectors.toList());
-                        cropBuilder.stateValues(stateValues);
+                        List<String> stateValues = definition.getStateValues();
+                        if (stateValues != null && !stateValues.isEmpty()) {
+                            cropBuilder.stateValues(stateValues);
+                        }
                     }
 
-                    return cropBuilder.build();
+                    return cropBuilder.build(definition);
 
                 case "torch":
                     // First register the wall torch block
@@ -384,13 +384,13 @@ public class ModBlocks {
 
                     // Handle state values if present
                     if (definition.hasStates()) {
-                        List<String> stateValues = definition.getStates().stream()
-                                .map(BlockDefinition.StateVariant::getStateID)
-                                .collect(Collectors.toList());
-                        cuboidBuilder.stateValues(stateValues);
+                        List<String> stateValues = definition.getStateValues();
+                        if (stateValues != null && !stateValues.isEmpty()) {
+                            cuboidBuilder.stateValues(stateValues);
+                        }
                     }
 
-                    return cuboidBuilder.build();
+                    return cuboidBuilder.build(definition);
 
 //                case "chair":
 //                    return BlockBuilder.chair()

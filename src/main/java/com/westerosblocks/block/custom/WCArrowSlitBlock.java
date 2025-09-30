@@ -20,9 +20,10 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
-import java.util.Map;
-
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.block.custom.BlockFactory;
+
+import java.util.Map;
 
 public class WCArrowSlitBlock extends Block {
     public static final EnumProperty<ArrowSlitType> TYPE = EnumProperty.of("type", ArrowSlitType.class);
@@ -263,11 +264,10 @@ public class WCArrowSlitBlock extends Block {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            @SuppressWarnings("unchecked")
-            Map<String, Object> paramMap = (Map<String, Object>) params[0];
-            String blockName = (String) paramMap.getOrDefault("blockName", "arrow_slit");
-            String creativeTab = (String) paramMap.getOrDefault("creativeTab", "building_blocks");
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            String blockName = definition != null ? definition.getBlockName() : "arrow_slit";
+            String creativeTab = definition != null ? definition.getCreativeTab() : "building_blocks";
             return new WCArrowSlitBlock(settings, blockName, creativeTab);
         }
     }

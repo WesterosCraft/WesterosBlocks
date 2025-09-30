@@ -20,27 +20,19 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
-import java.util.Map;
+import com.westerosblocks.data.BlockDefinition;
 
 public class WCWallBlock extends WallBlock implements Waterloggable {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            if (params.length > 0 && params[0] instanceof Map) {
-                @SuppressWarnings("unchecked")
-                Map<String, Object> paramMap = (Map<String, Object>) params[0];
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            boolean unconnect = definition != null && definition.isUnconnect();
+            boolean connectState = definition != null && definition.isConnectState();
+            String size = definition != null && definition.getWallSize() != null ? definition.getWallSize() : "normal";
+            boolean toggleOnUse = definition != null && definition.toggleOnUse();
 
-                boolean unconnect = (Boolean) paramMap.getOrDefault("unconnect", false);
-                boolean connectState = (Boolean) paramMap.getOrDefault("connectState", false);
-                String size = (String) paramMap.getOrDefault("size", "normal");
-                boolean toggleOnUse = (Boolean) paramMap.getOrDefault("toggleOnUse", false);
-
-                return new WCWallBlock(settings, unconnect, connectState, size, toggleOnUse);
-            }
-
-            // Fallback with defaults
-            return new WCWallBlock(settings, false, false, "normal", false);
+            return new WCWallBlock(settings, unconnect, connectState, size, toggleOnUse);
         }
     }
 

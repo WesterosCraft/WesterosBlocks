@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -38,15 +39,11 @@ public class WCFenceGateBlock extends FenceGateBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            Map<String, Object> parameters = new HashMap<>();
-            if (params.length > 0 && params[0] instanceof Map) {
-                parameters = (Map<String, Object>) params[0];
-            }
-
-            String woodTypeString = (String) parameters.getOrDefault("woodType", "oak");
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            String woodTypeString = definition != null ? definition.getWoodType() : "oak";
             WoodType woodType = ModWoodType.getWoodType(woodTypeString);
-            boolean locked = (Boolean) parameters.getOrDefault("locked", false);
+            boolean locked = definition != null && definition.isLocked();
 
             return new WCFenceGateBlock(woodType, settings, locked);
         }

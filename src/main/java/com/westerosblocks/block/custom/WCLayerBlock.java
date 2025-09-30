@@ -26,6 +26,8 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.List;
 
+import com.westerosblocks.data.BlockDefinition;
+
 public class WCLayerBlock extends Block {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     public static final IntProperty LAYERS = Properties.LAYERS;
@@ -44,15 +46,15 @@ public class WCLayerBlock extends Block {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // TODO: Add getLayerCount() and isSoftLayer() to BlockDefinition
             java.util.Map<String, Object> parameters = new java.util.HashMap<>();
-            if (params.length > 0 && params[0] instanceof java.util.Map) {
-                parameters = (java.util.Map<String, Object>) params[0];
-            }
-            
+            parameters.put("layerCount", 8); // default value
+            parameters.put("softLayer", false); // default value
+
             // Apply custom block vision settings for layers
             settings = settings.blockVision((state, level, pos) -> state.get(LAYERS) >= 8);
-            
+
             return new WCLayerBlock(settings, parameters);
         }
     }

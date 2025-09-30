@@ -21,15 +21,23 @@ public class ModProperties {
 
         public StateProperty(List<String> stateIDs) {
             super("state", String.class);
+            if (stateIDs == null || stateIDs.isEmpty()) {
+                throw new IllegalArgumentException("StateProperty requires at least one state ID");
+            }
             Map<String, String> map = Maps.newHashMap();
             List<String> vals = new ArrayList<>();
             for (String s : stateIDs) {
-                map.put(s, s);
-                vals.add(s);
+                if (s != null && !s.isEmpty()) {
+                    map.put(s, s);
+                    vals.add(s);
+                }
+            }
+            if (vals.isEmpty()) {
+                throw new IllegalArgumentException("StateProperty requires at least one valid state ID");
             }
             this.values = ImmutableList.copyOf(vals);
             this.valMap = ImmutableMap.copyOf(map);
-            this.defValue = stateIDs.getFirst();
+            this.defValue = vals.get(0); // Use get(0) instead of getFirst() for compatibility
         }
 
         @Override

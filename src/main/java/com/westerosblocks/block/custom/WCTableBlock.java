@@ -21,6 +21,8 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.Map;
 
+import com.westerosblocks.data.BlockDefinition;
+
 public class WCTableBlock extends Block {
     public static final BooleanProperty NORTH = Properties.NORTH;
     public static final BooleanProperty EAST = Properties.EAST;
@@ -50,7 +52,7 @@ public class WCTableBlock extends Block {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
             return new WCTableBlock(settings);
         }
     }

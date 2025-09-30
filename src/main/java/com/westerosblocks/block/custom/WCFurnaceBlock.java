@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.block.blockentity.custom.WCFurnaceBlockEntity;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -27,15 +28,9 @@ public class WCFurnaceBlock extends FurnaceBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            if (params.length > 0 && params[0] instanceof Map) {
-                @SuppressWarnings("unchecked")
-                Map<String, Object> paramMap = (Map<String, Object>) params[0];
-                boolean alwaysOn = (Boolean) paramMap.getOrDefault("alwaysOn", false);
-                return new WCFurnaceBlock(settings, alwaysOn);
-            }
-            // Fallback for legacy parameter style
-            boolean alwaysOn = params.length > 0 && params[0] instanceof Boolean ? (Boolean) params[0] : false;
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            boolean alwaysOn = definition != null && definition.isAlwaysOn();
             return new WCFurnaceBlock(settings, alwaysOn);
         }
     }

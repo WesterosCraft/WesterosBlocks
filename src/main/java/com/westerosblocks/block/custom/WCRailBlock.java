@@ -13,7 +13,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
 import java.util.List;
-import java.util.Map;
+
+import com.westerosblocks.data.BlockDefinition;
 
 public class WCRailBlock extends RailBlock {
 
@@ -21,16 +22,10 @@ public class WCRailBlock extends RailBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            if (params.length > 0 && params[0] instanceof Map) {
-                @SuppressWarnings("unchecked")
-                Map<String, Object> paramMap = (Map<String, Object>) params[0];
-                boolean allowUnsupported = (Boolean) paramMap.getOrDefault("allowUnsupported", false);
-                
-                return new WCRailBlock(settings, allowUnsupported);
-            }
-
-            return new WCRailBlock(settings, false);
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
+            return new WCRailBlock(settings, allowUnsupported);
         }
     }
 

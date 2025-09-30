@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FlowerPotBlock;
@@ -20,43 +21,29 @@ public class WCFlowerPotBlock extends FlowerPotBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            if (params.length > 0 && params[0] instanceof Map) {
-                @SuppressWarnings("unchecked")
-                Map<String, Object> paramMap = (Map<String, Object>) params[0];
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            Block content = Blocks.AIR; // Default to empty pot
 
-                Block plant = (Block) paramMap.get("plant");
-                String plantId = (String) paramMap.get("plantId");
+            if (definition != null) {
+                // For now, we can't resolve plant blocks from BlockDefinition since it doesn't contain Block references
+                // This would need to be handled by the JSON def system when it's implemented
+                // TODO: Add support for plant resolution when JSON def system is ready
+                String plantId = definition.getBlockName(); // Could use blockName as plant reference
 
-                // Resolve plant block by ID if not directly provided
-                if (plant == null && plantId != null) {
+                if (plantId != null && !plantId.isEmpty()) {
                     try {
-                        plant = Registries.BLOCK.get(Identifier.of(plantId));
-                        if (plant == Blocks.AIR) {
-                            LOGGER.error("Plant ID '{}' not found", plantId);
-                            return null;
+                        Block plant = Registries.BLOCK.get(Identifier.of(plantId));
+                        if (plant != Blocks.AIR) {
+                            content = plant;
+                            LOGGER.debug("Created flower pot with plant '{}'", plantId);
                         }
                     } catch (Exception e) {
-                        LOGGER.error("Failed to resolve plant ID '{}': {}", plantId, e.getMessage());
-                        return null;
+                        LOGGER.warn("Failed to resolve plant ID '{}': {}", plantId, e.getMessage());
                     }
                 }
-
-                // Use the resolved plant or default to AIR for empty pots
-                Block content = plant != null ? plant : Blocks.AIR;
-
-                // The FlowerPotBlock constructor automatically registers content to the CONTENT_TO_POTTED map
-                WCFlowerPotBlock flowerPot = new WCFlowerPotBlock(content, settings);
-
-                if (plant != null) {
-                    LOGGER.debug("Created flower pot with plant '{}'", Registries.BLOCK.getId(plant));
-                }
-
-                return flowerPot;
             }
 
-            // Fallback for legacy parameter style
-            Block content = params.length > 0 && params[0] instanceof Block ? (Block) params[0] : Blocks.AIR;
             return new WCFlowerPotBlock(content, settings);
         }
     }

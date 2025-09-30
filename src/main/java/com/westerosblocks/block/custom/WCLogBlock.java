@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -13,7 +14,7 @@ public class WCLogBlock extends PillarBlock {
     }
 
     public static class Factory extends BlockFactory {
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
             return new WCLogBlock(settings);
         }
     }

@@ -23,6 +23,8 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.Map;
 
+import com.westerosblocks.data.BlockDefinition;
+
 public class WCBranchBlock extends Block implements Waterloggable {
     public static final BooleanProperty NORTH = Properties.NORTH;
     public static final BooleanProperty EAST = Properties.EAST;
@@ -45,9 +47,11 @@ public class WCBranchBlock extends Block implements Waterloggable {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            String woodType = params.length > 0 && params[0] instanceof String ? (String) params[0] : "oak";
-            String branchType = params.length > 1 && params[1] instanceof String ? (String) params[1] : "large_branch";
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            String woodType = definition != null ? definition.getWoodType() : "oak";
+            // Using blockType as branchType since branchType getter doesn't exist yet
+            String branchType = definition != null && definition.getBlockType() != null ? definition.getBlockType() : "large_branch";
             return new WCBranchBlock(settings, woodType, branchType);
         }
     }

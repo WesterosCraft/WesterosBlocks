@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -21,7 +22,8 @@ public class WCFireBlock extends FireBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Fire block doesn't use any special parameters from BlockDefinition
             return new WCFireBlock(settings);
         }
     }

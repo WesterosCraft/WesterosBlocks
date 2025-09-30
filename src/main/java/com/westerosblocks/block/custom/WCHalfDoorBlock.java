@@ -25,7 +25,7 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
 
-import java.util.Map;
+import com.westerosblocks.data.BlockDefinition;
 
 public class WCHalfDoorBlock extends Block {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
@@ -55,13 +55,12 @@ public class WCHalfDoorBlock extends Block {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(Settings settings, Object... params) {
-                @SuppressWarnings("unchecked")
-                Map<String, Object> paramMap = (Map<String, Object>) params[0];
-                boolean locked = (Boolean) paramMap.getOrDefault("locked", false);
-                boolean allowUnsupported = (Boolean) paramMap.getOrDefault("allowUnsupported", false);
-                return new WCHalfDoorBlock(settings, locked, allowUnsupported);
-            }
+        public Block buildBlockClass(Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            boolean locked = definition != null && definition.isLocked();
+            boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
+            return new WCHalfDoorBlock(settings, locked, allowUnsupported);
+        }
     }
 
     @Override

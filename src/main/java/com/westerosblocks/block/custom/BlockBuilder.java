@@ -22,9 +22,7 @@ public class BlockBuilder<T extends Block> {
         this.factory = factory;
     }
 
-    public static BlockBuilder<WCHalfDoorBlock> halfDoor() {
-        return new BlockBuilder<>(new WCHalfDoorBlock.Factory());
-    }
+    public static BlockBuilder<WCHalfDoorBlock> halfDoor() {return new BlockBuilder<>(new WCHalfDoorBlock.Factory());}
     public static BlockBuilder<WCDoorBlock> door() {
         return new BlockBuilder<>(new WCDoorBlock.Factory());
     }
@@ -370,7 +368,7 @@ public class BlockBuilder<T extends Block> {
         parameters.put("boundingBox", boundingBoxMap);
         return this;
     }
-    
+
     @SuppressWarnings("unchecked")
     public T build() {
         if (settings == null) {
@@ -379,15 +377,20 @@ public class BlockBuilder<T extends Block> {
         if (factory == null) {
             throw new IllegalStateException("Factory must be provided - use static factory methods like BlockBuilder.halfDoor()");
         }
-        return (T) factory.buildBlockClass(settings, parameters);
+        // Pass null as BlockDefinition since BlockBuilder is for manual block creation
+        // The JSON-based block registration should use build(BlockDefinition) instead
+        return (T) factory.buildBlockClass(settings, null);
     }
-    
-    // Legacy method for backward compatibility
+
     @SuppressWarnings("unchecked")
-    public T build(BlockFactory factory) {
+    public T build(BlockDefinition definition) {
         if (settings == null) {
             throw new IllegalStateException("Settings must be provided");
         }
-        return (T) factory.buildBlockClass(settings, parameters);
+        if (factory == null) {
+            throw new IllegalStateException("Factory must be provided - use static factory methods like BlockBuilder.halfDoor()");
+        }
+        // Pass the BlockDefinition for JSON-based block registration
+        return (T) factory.buildBlockClass(settings, definition);
     }
 }

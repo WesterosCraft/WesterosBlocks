@@ -1,6 +1,7 @@
 package com.westerosblocks.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -13,11 +14,9 @@ public class WCSandBlock extends FallingBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // TODO: Add getDustColor() getter to BlockDefinition
             int dustColor = 14406560; // Default sand dust color
-            if (params.length > 0 && params[0] instanceof Integer) {
-                dustColor = (Integer) params[0];
-            }
             return new WCSandBlock(settings, dustColor);
         }
     }

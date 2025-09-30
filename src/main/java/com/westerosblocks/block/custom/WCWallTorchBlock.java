@@ -12,7 +12,7 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-import java.util.Map;
+import com.westerosblocks.data.BlockDefinition;
 
 public class WCWallTorchBlock extends WallTorchBlock {
 
@@ -52,12 +52,11 @@ public class WCWallTorchBlock extends WallTorchBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            @SuppressWarnings("unchecked")
-            Map<String, Object> paramMap = (Map<String, Object>) params[0];
-            boolean allowUnsupported = (Boolean) paramMap.getOrDefault("allowUnsupported", false);
-            boolean noParticle = (Boolean) paramMap.getOrDefault("noParticle", false);
-            
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
+            boolean noParticle = definition != null && definition.isNoParticle();
+
             return new WCWallTorchBlock(settings, allowUnsupported, noParticle);
         }
     }

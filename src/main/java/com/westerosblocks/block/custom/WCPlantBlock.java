@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.SlabType;
@@ -23,6 +24,8 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
+import java.util.List;
+
 public class WCPlantBlock extends Block {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
@@ -30,8 +33,7 @@ public class WCPlantBlock extends Block {
     private final boolean toggleOnUse;
     private IntProperty LAYERS;
     private ModProperties.StateProperty STATE;
-    
-    // Static fields to handle property transfer during construction
+
     protected static IntProperty tempLAYERS;
     protected static ModProperties.StateProperty tempSTATE;
 
@@ -47,17 +49,37 @@ public class WCPlantBlock extends Block {
             Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)
     };
 
+    public static class Factory extends BlockFactory {
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            boolean layerSensitive = definition != null && definition.isLayerSensitive();
+            boolean toggleOnUse = definition != null && definition.toggleOnUse();
+            List<String> stateValues = definition != null ? definition.getStateValues() : null;
+
+            if (layerSensitive) {
+                tempLAYERS = Properties.LAYERS;
+            }
+
+            // Set the STATE property if stateValues are provided
+            if (stateValues != null && !stateValues.isEmpty()) {
+                tempSTATE = new ModProperties.StateProperty(stateValues);
+            }
+
+            return new WCPlantBlock(settings, layerSensitive, toggleOnUse);
+        }
+    }
+
     protected WCPlantBlock(AbstractBlock.Settings settings, boolean layerSensitive, boolean toggleOnUse) {
         super(settings);
         this.layerSensitive = layerSensitive;
         this.toggleOnUse = toggleOnUse;
 
         BlockState defbs = this.getDefaultState().with(WATERLOGGED, false);
-        if (layerSensitive && LAYERS != null) {
-            defbs = defbs.with(LAYERS, 8); // Default to full height
+        if (layerSensitive && tempLAYERS != null) {
+            defbs = defbs.with(tempLAYERS, 8); // Default to full height
         }
-        if (STATE != null) {
-            defbs = defbs.with(STATE, STATE.defValue);
+        if (tempSTATE != null) {
+            defbs = defbs.with(tempSTATE, tempSTATE.defValue);
         }
         this.setDefaultState(defbs);
     }
@@ -82,7 +104,7 @@ public class WCPlantBlock extends Block {
         if (STATE != null) {
             bs = bs.with(STATE, STATE.defValue);
         }
-        
+
         if (layerSensitive && LAYERS != null) {
             BlockState below = ctx.getWorld().getBlockState(ctx.getBlockPos().offset(Direction.DOWN));
             if (below.contains(Properties.LAYERS)) {
@@ -153,48 +175,5 @@ public class WCPlantBlock extends Block {
             return SHAPE_BY_LAYER[state.get(LAYERS)];
         }
         return VoxelShapes.fullCube();
-    }
-
-    public static class Factory extends BlockFactory {
-        private boolean layerSensitive = false;
-        private boolean toggleOnUse = false;
-
-        public Factory layerSensitive(boolean layerSensitive) {
-            this.layerSensitive = layerSensitive;
-            return this;
-        }
-
-        public Factory toggleOnUse(boolean toggleOnUse) {
-            this.toggleOnUse = toggleOnUse;
-            return this;
-        }
-
-        public WCPlantBlock buildBlockClass(AbstractBlock.Settings settings) {
-            if (layerSensitive) {
-                tempLAYERS = Properties.LAYERS;
-            }
-            return new WCPlantBlock(settings, layerSensitive, toggleOnUse);
-        }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            if (params.length >= 1 && params[0] instanceof java.util.Map) {
-                @SuppressWarnings("unchecked")
-                java.util.Map<String, Object> parameters = (java.util.Map<String, Object>) params[0];
-                boolean layerSensitive = (Boolean) parameters.getOrDefault("layerSensitive", false);
-                boolean toggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
-                if (layerSensitive) {
-                    tempLAYERS = Properties.LAYERS;
-                }
-                return new WCPlantBlock(settings, layerSensitive, toggleOnUse);
-            }
-            // Fallback for direct parameters
-            boolean layerSensitive = params.length > 0 ? (Boolean) params[0] : false;
-            boolean toggleOnUse = params.length > 1 ? (Boolean) params[1] : false;
-            if (layerSensitive) {
-                tempLAYERS = Properties.LAYERS;
-            }
-            return new WCPlantBlock(settings, layerSensitive, toggleOnUse);
-        }
     }
 }

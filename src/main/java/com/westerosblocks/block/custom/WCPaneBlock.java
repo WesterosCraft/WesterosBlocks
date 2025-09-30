@@ -11,7 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 
-import java.util.Map;
+import com.westerosblocks.data.BlockDefinition;
 
 public class WCPaneBlock extends PaneBlock {
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
@@ -23,42 +23,16 @@ public class WCPaneBlock extends PaneBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            if (params.length > 0 && params[0] instanceof Map) {
-                @SuppressWarnings("unchecked")
-                Map<String, Object> paramMap = (Map<String, Object>) params[0];
-                boolean doUnconnect = (Boolean) paramMap.getOrDefault("unconnect", false);
-                boolean legacy_model = (Boolean) paramMap.getOrDefault("legacyModel", false);
-                boolean bars_model = (Boolean) paramMap.getOrDefault("barsModel", false);
-                
-                if (doUnconnect) {
-                    tempUNCONNECT = UNCONNECT;
-                }
-                
-                return new WCPaneBlock(settings, doUnconnect, legacy_model, bars_model);
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            boolean doUnconnect = definition != null && definition.isUnconnect();
+            boolean legacy_model = definition != null && definition.isLegacyModel();
+            boolean bars_model = definition != null && definition.isBarsModel();
+
+            if (doUnconnect) {
+                tempUNCONNECT = UNCONNECT;
             }
-            
-            // Fallback for legacy string parameter style
-            boolean doUnconnect = false;
-            boolean legacy_model = false;
-            boolean bars_model = false;
-            
-            if (params.length > 0 && params[0] instanceof String) {
-                String type = (String) params[0];
-                String[] toks = type.split(",");
-                for (String tok : toks) {
-                    String[] parts = tok.split(":");
-                    if (parts[0].equals("unconnect")) {
-                        doUnconnect = true;
-                        tempUNCONNECT = UNCONNECT;
-                    } else if (tok.equals("legacy-model")) {
-                        legacy_model = true;
-                    } else if (tok.equals("bars-model")) {
-                        bars_model = true;
-                    }
-                }
-            }
-            
+
             return new WCPaneBlock(settings, doUnconnect, legacy_model, bars_model);
         }
     }

@@ -1,7 +1,9 @@
 package com.westerosblocks.block.custom;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
 
 import net.minecraft.block.AbstractBlock;
@@ -28,21 +30,19 @@ public class WCSlabBlock extends SlabBlock {
     public static ModProperties.StateProperty STATE;
 
     public static class Factory extends BlockFactory {
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            boolean doConnectState = params.length > 0 && params[0] instanceof Boolean ? (Boolean) params[0] : false;
-            boolean doToggleOnUse = params.length > 1 && params[1] instanceof Boolean ? (Boolean) params[1] : false;
-            boolean doAddStates = params.length > 2 && params[2] instanceof Integer && (Integer) params[2] > 0;
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            boolean doConnectState = definition != null && definition.isConnectState();
+            boolean doToggleOnUse = definition != null && definition.toggleOnUse();
+            List<String> stateValues = definition != null ? definition.getStateValues() : null;
+            boolean doAddStates = stateValues != null && !stateValues.isEmpty();
 
             if (doConnectState) {
                 tempCONNECTSTATE = CONNECTSTATE;
             }
 
             if (doAddStates) {
-                int numStates = (Integer) params[2];
-                ArrayList<String> stateIds = new ArrayList<>();
-                for (int i = 0; i < numStates; i++) {
-                    stateIds.add("state" + i);
-                }
+                ArrayList<String> stateIds = new ArrayList<>(stateValues);
                 STATE = new ModProperties.StateProperty(stateIds);
                 tempSTATE = STATE;
             }

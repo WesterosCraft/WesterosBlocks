@@ -25,6 +25,8 @@ import net.minecraft.world.World;
 import java.util.List;
 import java.util.Map;
 
+import com.westerosblocks.data.BlockDefinition;
+
 public class WCChairBlock extends HorizontalFacingBlock {
     public static final MapCodec<WCChairBlock> CODEC = createCodec(WCChairBlock::new);
 
@@ -58,11 +60,12 @@ public class WCChairBlock extends HorizontalFacingBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            String blockName = params.length > 0 && params[0] instanceof String ? (String) params[0] : "chair";
-            String creativeTab = params.length > 1 && params[1] instanceof String ? (String) params[1] : "building_blocks";
-            String woodType = params.length > 2 && params[2] instanceof String ? (String) params[2] : "oak";
-            
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            String blockName = definition != null ? definition.getBlockName() : "chair";
+            String creativeTab = definition != null ? definition.getCreativeTab() : "building_blocks";
+            String woodType = definition != null ? definition.getWoodType() : "oak";
+
             return new WCChairBlock(settings, blockName, creativeTab, woodType);
         }
     }

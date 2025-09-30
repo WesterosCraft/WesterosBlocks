@@ -1,6 +1,7 @@
 package com.westerosblocks.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.*;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
@@ -33,6 +34,13 @@ public class WCFlowerbedBlock extends PlantBlock implements Fertilizable {
 
     public MapCodec<WCFlowerbedBlock> getCodec() {
         return CODEC;
+    }
+
+    public static class Factory extends BlockFactory {
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            return new WCFlowerbedBlock(settings);
+        }
     }
 
     public WCFlowerbedBlock(AbstractBlock.Settings settings) {
@@ -116,10 +124,5 @@ public class WCFlowerbedBlock extends PlantBlock implements Fertilizable {
         });
     }
 
-    public static class Factory extends BlockFactory {
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            return new WCFlowerbedBlock(settings);
-        }
-    }
+
 }

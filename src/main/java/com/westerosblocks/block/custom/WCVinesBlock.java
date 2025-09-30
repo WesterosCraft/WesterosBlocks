@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
@@ -253,17 +254,13 @@ public class WCVinesBlock extends VineBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public WCVinesBlock buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            if (params.length > 0 && params[0] instanceof Map) {
-                @SuppressWarnings("unchecked")
-                Map<String, Object> paramMap = (Map<String, Object>) params[0];
-                boolean allowUnsupported = (Boolean) paramMap.getOrDefault("allowUnsupported", false);
-                boolean noClimb = (Boolean) paramMap.getOrDefault("noClimb", false);
-                boolean canGrowDownward = (Boolean) paramMap.getOrDefault("canGrowDownward", false);
-                
-                return new WCVinesBlock(settings, allowUnsupported, noClimb, canGrowDownward);
-            }
-            return new WCVinesBlock(settings);
+        public WCVinesBlock buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
+            boolean noClimb = definition != null && definition.getNoClimb() != null && definition.getNoClimb();
+            boolean canGrowDownward = definition != null && definition.canGrowDownward();
+
+            return new WCVinesBlock(settings, allowUnsupported, noClimb, canGrowDownward);
         }
 
         public WCVinesBlock buildBlockClass(AbstractBlock.Settings settings) {

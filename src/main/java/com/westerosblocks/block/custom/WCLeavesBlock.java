@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.LeavesBlock;
@@ -13,19 +14,11 @@ public class WCLeavesBlock extends LeavesBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            boolean betterFoliage = false;
-            boolean overlay = false;
-            boolean noDecay = false;
-            
-            if (params.length > 0 && params[0] instanceof Map) {
-                @SuppressWarnings("unchecked")
-                Map<String, Object> paramMap = (Map<String, Object>) params[0];
-                betterFoliage = (Boolean) paramMap.getOrDefault("betterFoliage", false);
-                overlay = (Boolean) paramMap.getOrDefault("overlay", false);
-                noDecay = (Boolean) paramMap.getOrDefault("noDecay", false);
-            }
-            
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            boolean betterFoliage = definition != null && definition.hasBetterFoliage();
+            boolean overlay = definition != null && definition.hasOverlay();
+            boolean noDecay = definition != null && definition.isNoDecay();
+
             return new WCLeavesBlock(settings, betterFoliage, overlay, noDecay);
         }
     }

@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
 
 import net.minecraft.block.AbstractBlock;
@@ -21,6 +22,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class WCSolidBlock extends Block {
@@ -39,41 +41,13 @@ public class WCSolidBlock extends Block {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Object... params) {
-            if (params.length > 0 && params[0] instanceof Map) {
-                @SuppressWarnings("unchecked")
-                Map<String, Object> paramMap = (Map<String, Object>) params[0];
-                boolean doConnectState = (Boolean) paramMap.getOrDefault("connectState", false);
-                boolean doToggleOnUse = (Boolean) paramMap.getOrDefault("toggleOnUse", false);
-                Integer numStates = (Integer) paramMap.get("states");
-                boolean doAddStates = numStates != null && numStates > 0;
-                boolean doSymmetrical = (Boolean) paramMap.getOrDefault("symmetrical", false);
-                
-                if (doConnectState) {
-                    tempCONNECTSTATE = CONNECTSTATE;
-                }
-
-                if (doSymmetrical) {
-                    tempSYMMETRICAL = SYMMETRICAL;
-                }
-
-                if (doAddStates) {
-                    ArrayList<String> stateIds = new ArrayList<>();
-                    for (int i = 0; i < numStates; i++) {
-                        stateIds.add("state" + i);
-                    }
-                    STATE = new ModProperties.StateProperty(stateIds);
-                    tempSTATE = STATE;
-                }
-
-                return new WCSolidBlock(settings, doConnectState, doToggleOnUse, doAddStates, doSymmetrical);
-            }
-            
-            // Fallback for legacy parameter style
-            boolean doConnectState = params.length > 0 && params[0] instanceof Boolean ? (Boolean) params[0] : false;
-            boolean doToggleOnUse = params.length > 1 && params[1] instanceof Boolean ? (Boolean) params[1] : false;
-            boolean doAddStates = params.length > 2 && params[2] instanceof Integer && (Integer) params[2] > 0;
-            boolean doSymmetrical = params.length > 3 && params[3] instanceof Boolean ? (Boolean) params[3] : false;
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            boolean doConnectState = definition != null && definition.isConnectState();
+            boolean doToggleOnUse = definition != null && definition.toggleOnUse();
+            int numStates = definition != null ? definition.getStateCount() : 0;
+            boolean doAddStates = numStates > 0;
+            boolean doSymmetrical = definition != null && definition.isSymmetrical();
 
             if (doConnectState) {
                 tempCONNECTSTATE = CONNECTSTATE;
@@ -84,12 +58,17 @@ public class WCSolidBlock extends Block {
             }
 
             if (doAddStates) {
-                int numStates = (Integer) params[2];
-                ArrayList<String> stateIds = new ArrayList<>();
-                for (int i = 0; i < numStates; i++) {
-                    stateIds.add("state" + i);
+                List<String> stateValues = definition.getStateValues();
+                if (stateValues != null) {
+                    STATE = new ModProperties.StateProperty(stateValues);
+                } else {
+                    // Generate default state IDs if not provided
+                    ArrayList<String> stateIds = new ArrayList<>();
+                    for (int i = 0; i < numStates; i++) {
+                        stateIds.add("state" + i);
+                    }
+                    STATE = new ModProperties.StateProperty(stateIds);
                 }
-                STATE = new ModProperties.StateProperty(stateIds);
                 tempSTATE = STATE;
             }
 
