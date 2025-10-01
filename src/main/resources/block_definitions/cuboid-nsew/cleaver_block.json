@@ -11,6 +11,7 @@
   "creativeTab": "westeros_tool_blocks_tab",
   "label": "Cleaver Block",
   "isCustomModel": true,
+  "renderLayer": "cutout",
   "textures": [
     "transparent",
     "transparent",

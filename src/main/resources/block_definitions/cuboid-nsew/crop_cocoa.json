@@ -2,7 +2,8 @@
   "blockName": "crop_cocoa",
   "blockType": "cuboid-nsew",
   "soundGroup": "grass",
-  "type": "toggleOnUse",
+  "toggleOnUse": true,
+  "nonOpaque": true,
   "harvestLevel": [
     {
       "tool": "pickaxe",
@@ -12,6 +13,7 @@
   "creativeTab": "westeros_crops_herbs_tab",
   "label": "Cocoa",
   "isCustomModel": true,
+  "renderLayer": "cutout",
   "states": [
     {
       "stateID": "age0",

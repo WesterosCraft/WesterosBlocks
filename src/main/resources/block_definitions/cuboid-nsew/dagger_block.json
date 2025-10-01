@@ -10,6 +10,7 @@
   ],
   "creativeTab": "westeros_tool_blocks_tab",
   "label": "Dagger Block",
+  "renderLayer": "cutout",
   "textures": [
     "transparent",
     "transparent",

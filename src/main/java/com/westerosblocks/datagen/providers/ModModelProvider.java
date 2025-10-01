@@ -174,6 +174,10 @@ public class ModModelProvider extends FabricModelProvider {
                     CuboidBlockExporter.registerCustomCuboidBlock(bsmg, block, definition);
                     break;
 
+                case "cuboid-nsew":
+                    CuboidNSEWBlockExporter.registerCustomCuboidNSEWBlock(bsmg, block, definition);
+                    break;
+
                 default:
                     WesterosBlocks.LOGGER.warn("Unsupported block type '{}' for model generation: {}",
                             blockType, definition.getBlockName());

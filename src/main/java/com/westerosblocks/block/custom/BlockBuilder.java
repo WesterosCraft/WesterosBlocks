@@ -98,6 +98,7 @@ public class BlockBuilder<T extends Block> {
     public static BlockBuilder<WCFurnaceBlock> furnace() { return new BlockBuilder<>(new WCFurnaceBlock.Factory()); }
     public static BlockBuilder<WCWallBlock> wall() { return new BlockBuilder<>(new WCWallBlock.Factory()); }
     public static BlockBuilder<WCCuboidBlock> cuboid() { return new BlockBuilder<>(new WCCuboidBlock.Factory()); }
+    public static BlockBuilder<WCCuboidNSEWBlock> cuboidNSEW() { return new BlockBuilder<>(new WCCuboidNSEWBlock.Factory()); }
     
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;

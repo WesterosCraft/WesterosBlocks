@@ -5,6 +5,7 @@ import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.BlockBuilder;
 import com.westerosblocks.block.custom.WCCropBlock;
 import com.westerosblocks.block.custom.WCCuboidBlock;
+import com.westerosblocks.block.custom.WCCuboidNSEWBlock;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 
@@ -391,6 +392,36 @@ public class ModBlocks {
                     }
 
                     return cuboidBuilder.build(definition);
+
+                case "cuboid-nsew":
+                    BlockBuilder<WCCuboidNSEWBlock> cuboidNSEWBuilder = BlockBuilder.cuboidNSEW()
+                            .hardness(definition.getHardness())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .nonOpaque(definition.isNonOpaque())
+                            .noCollision(definition.hasNoCollision())
+                            .toggleOnUse(definition.toggleOnUse())
+                            .states(definition.hasStates() ? definition.getStates().size() : 0);
+
+                    // Handle bounding box if present
+                    if (definition.getBoundingBox() != null) {
+                        var bbox = definition.getBoundingBox();
+                        cuboidNSEWBuilder.boundingBox(
+                            bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
+                            bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
+                        );
+                    }
+
+                    // Handle state values if present
+                    if (definition.hasStates()) {
+                        List<String> stateValues = definition.getStateValues();
+                        if (stateValues != null && !stateValues.isEmpty()) {
+                            cuboidNSEWBuilder.stateValues(stateValues);
+                        }
+                    }
+
+                    return cuboidNSEWBuilder.build(definition);
 
 //                case "chair":
 //                    return BlockBuilder.chair()

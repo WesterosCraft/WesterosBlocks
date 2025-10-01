@@ -3,6 +3,8 @@
   "blockType": "cuboid-nsew",
   "soundGroup": "metal",
   "isCustomModel": true,
+  "nonOpaque": true,
+  "renderLayer": "cutout",
   "harvestLevel": [
     {
       "tool": "pickaxe",
