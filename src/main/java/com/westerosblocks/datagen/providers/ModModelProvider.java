@@ -170,6 +170,10 @@ public class ModModelProvider extends FabricModelProvider {
                     WallBlockDatagen.registerCustomWallBlock(bsmg, block, definition);
                     break;
 
+                case "cuboid":
+                    CuboidBlockDatagen.registerCustomCuboidBlock(bsmg, block, definition);
+                    break;
+
                 default:
                     WesterosBlocks.LOGGER.warn("Unsupported block type '{}' for model generation: {}",
                             blockType, definition.getBlockName());

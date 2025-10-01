@@ -27,13 +27,12 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class WCCuboidBlock extends Block implements Waterloggable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     protected static ModProperties.StateProperty tempSTATE;
-    public static ModProperties.StateProperty STATE;
+    private ModProperties.StateProperty STATE;
 
     protected boolean toggleOnUse = false;
 
@@ -58,19 +57,19 @@ public class WCCuboidBlock extends Block implements Waterloggable {
                 );
             }
 
+            // Set the STATE property if stateValues are provided
             if (doAddStates) {
                 List<String> stateValues = definition != null ? definition.getStateValues() : null;
                 if (stateValues != null && !stateValues.isEmpty()) {
-                    STATE = new ModProperties.StateProperty(stateValues);
+                    tempSTATE = new ModProperties.StateProperty(stateValues);
                 } else {
                     // Generate default state IDs if not provided
                     ArrayList<String> stateIds = new ArrayList<>();
                     for (int i = 0; i < numStates; i++) {
                         stateIds.add("state" + i);
                     }
-                    STATE = new ModProperties.StateProperty(stateIds);
+                    tempSTATE = new ModProperties.StateProperty(stateIds);
                 }
-                tempSTATE = STATE;
             }
 
             return new WCCuboidBlock(settings, doToggleOnUse, doAddStates, customBoundingBox);
@@ -102,10 +101,9 @@ public class WCCuboidBlock extends Block implements Waterloggable {
         builder.add(WATERLOGGED);
         if (tempSTATE != null) {
             STATE = tempSTATE;
-            builder.add(tempSTATE);
             tempSTATE = null;
+            builder.add(STATE);
         }
-        super.appendProperties(builder);
     }
 
     @Override
@@ -135,9 +133,9 @@ public class WCCuboidBlock extends Block implements Waterloggable {
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         Hand hand = player.getActiveHand();
-        if (this.toggleOnUse && (STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
-            if (state.contains(STATE)) {
-                state = state.cycle(STATE);
+        if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
+            if (state.contains(this.STATE)) {
+                state = state.cycle(this.STATE);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);
                 world.syncWorldEvent(player, 1006, pos, 0);
                 return ActionResult.success(world.isClient);
