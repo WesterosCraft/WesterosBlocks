@@ -171,7 +171,7 @@ public class ModModelProvider extends FabricModelProvider {
                     break;
 
                 case "cuboid":
-                    CuboidBlockDatagen.registerCustomCuboidBlock(bsmg, block, definition);
+                    CuboidBlockExporter.registerCustomCuboidBlock(bsmg, block, definition);
                     break;
 
                 default:

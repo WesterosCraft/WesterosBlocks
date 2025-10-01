@@ -81,6 +81,7 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 case "cross" -> buildPlant(); // Alias for plant
 //                                case "crop" -> buildCrop();
                                 case "flowerbed" -> buildFlowerbed();
+                                case "cuboid" -> buildCuboid();
 //                                case "bed" -> buildBed();
                                 default -> throw new IllegalArgumentException("Unknown block type: " + blockType);
                         }
@@ -213,6 +214,11 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 String flowerTexture = textures.length > 1 ? textures[1] : textures[0];
                                 FlowerbedBlockExporter.generateCustomFlowerbed(generator, block, "block/flowerbed", TextureKey.STEM, stemTexture, flowerTexture);
                         }
+                }
+
+                private void buildCuboid() {
+                        // Cuboid blocks require BlockDefinition integration - handled in ModModelProvider
+                        throw new UnsupportedOperationException("Cuboid blocks must be registered via BlockDefinition integration in ModModelProvider");
                 }
 
 //                private void buildBed() {
@@ -449,6 +455,10 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
         public static CustomBlockBuilder registerCustomFurnaceBlock(BlockStateModelGenerator generator, Block block) {
                 return new CustomBlockBuilder(generator, block, "furnace");
+        }
+
+        public static CustomBlockBuilder registerCustomCuboidBlock(BlockStateModelGenerator generator, Block block) {
+                return new CustomBlockBuilder(generator, block, "cuboid");
         }
 
         public static FlowerbedBlockExporter.CustomFlowerbedBuilder registerCustomFlowerbedBlock(BlockStateModelGenerator generator, Block block) {
