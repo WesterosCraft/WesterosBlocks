@@ -2,7 +2,7 @@
   "blockName": "duckweed",
   "blockType": "cuboid",
   "nonOpaque": true,
-  "soundGroup": "metal",
+  "soundGroup": "grass",
   "harvestLevel": [
     {
       "tool": "axe",

@@ -3,7 +3,7 @@
   "blockType": "cuboid",
   "nonOpaque": true,
   "alphaRender": true,
-  "soundGroup": "metal",
+  "soundGroup": "glass",
   "harvestLevel": [
     {
       "tool": "axe",

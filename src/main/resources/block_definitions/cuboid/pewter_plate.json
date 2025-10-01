@@ -2,7 +2,7 @@
   "blockName": "pewter_plate",
   "blockType": "cuboid",
   "nonOpaque": true,
-  "soundGroup": "metal",
+  "soundGroup": "pot",
   "harvestLevel": [
     {
       "tool": "axe",
@@ -11,7 +11,7 @@
   ],
   "creativeTab": "westeros_decor_tab",
   "label": "Pewter Plate",
-  "type": "toggleOnUse",
+  "toggleOnUse": true,
   "itemTextureIndex": 2,
   "boundingBox": {
     "xMin": 0,

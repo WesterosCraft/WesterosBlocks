@@ -2,7 +2,7 @@
   "blockName": "cheese_block",
   "blockType": "cuboid",
   "nonOpaque": true,
-  "soundGroup": "metal",
+  "soundGroup": "tuff",
   "harvestLevel": [
     {
       "tool": "axe",

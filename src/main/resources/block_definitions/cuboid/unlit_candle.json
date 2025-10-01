@@ -2,7 +2,7 @@
   "blockName": "unlit_candle",
   "blockType": "cuboid",
   "nonOpaque": true,
-  "soundGroup": "powder",
+  "soundGroup": "candle",
   "harvestLevel": [
     {
       "tool": "axe",

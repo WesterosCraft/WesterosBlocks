@@ -1,7 +1,7 @@
 {
   "blockName": "classic_grass_block",
   "blockType": "cuboid",
-  "soundGroup": "grass",
+  "soundGroup": "glass",
   "harvestLevel": [
     {
       "tool": "shovel",

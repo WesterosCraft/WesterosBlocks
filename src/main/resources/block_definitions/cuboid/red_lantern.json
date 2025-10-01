@@ -13,7 +13,6 @@
   "lightOpacity": 0,
   "creativeTab": "westeros_lighting_tab",
   "label": "Red Lantern",
-  "type": "toggleOnUse",
   "toggleOnUse": true,
   "cuboids": [
     {

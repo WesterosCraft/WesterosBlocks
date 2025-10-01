@@ -448,7 +448,7 @@ public class ModBlocks {
             case "crop" -> BlockSoundGroup.CROP;
             case "snow" -> BlockSoundGroup.SNOW;
             case "chain" -> BlockSoundGroup.CHAIN;
-            case "powder_snow" -> BlockSoundGroup.POWDER_SNOW;
+            case "powder_snow", "powder" -> BlockSoundGroup.POWDER_SNOW;
             case "mud" -> BlockSoundGroup.MUD;
             case "packed_mud" -> BlockSoundGroup.PACKED_MUD;
             case "sand" -> BlockSoundGroup.SAND;
@@ -460,6 +460,8 @@ public class ModBlocks {
             case "coral" -> BlockSoundGroup.CORAL;
             case "wet_grass" -> BlockSoundGroup.WET_GRASS;
             case "moss_carpet" -> BlockSoundGroup.MOSS_CARPET;
+            case "tuff" -> BlockSoundGroup.TUFF;
+            case "pot" -> BlockSoundGroup.DECORATED_POT;
             default -> {
                 WesterosBlocks.LOGGER.warn("Unknown sound type '{}', defaulting to STONE", soundName);
                 yield BlockSoundGroup.STONE;

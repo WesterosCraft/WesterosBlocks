@@ -3,7 +3,7 @@
   "blockType": "cuboid",
   "nonOpaque": true,
   "alphaRender": true,
-  "soundGroup": "metal",
+  "soundGroup": "glass",
   "luminance": 2,
   "harvestLevel": [
     {
@@ -64,5 +64,6 @@
       "sideTextures": [0, 0, 1, 1, 1, 1]
     }
   ],
-  "strength": 5
+  "hardness": 1,
+  "resistance": 1
 }

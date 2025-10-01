@@ -1,7 +1,7 @@
 {
   "blockName": "large_clay_pot_empty",
   "blockType": "cuboid",
-  "soundGroup": "wood",
+  "soundGroup": "pot",
   "harvestLevel": [
     {
       "tool": "pickaxe",
