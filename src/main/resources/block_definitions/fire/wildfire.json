@@ -6,6 +6,7 @@
   "label": "Wildfire",
   "particle": "wildfire",
   "renderLayer": "cutout",
+  "nonOpaque": true,
   "tooltips": ["Very hot fire", "no fr its hot!"],
   "textures": ["wildfire/wildfire_layer_0", "wildfire/wildfire_layer_1"],
   "gui": {

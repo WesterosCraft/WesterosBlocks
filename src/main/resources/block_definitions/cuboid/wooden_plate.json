@@ -3,6 +3,7 @@
   "blockType": "cuboid",
   "nonOpaque": true,
   "soundGroup": "wood",
+  "renderLayer": "cutout_mipped",
   "harvestLevel": [
     {
       "tool": "axe",

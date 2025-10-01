@@ -6,6 +6,7 @@
   "label": "Hemp Tall",
   "isCustomModel": true,
   "rotateRandom": true,
+  "renderLayer": "cutout_mipped",
   "randomTextures": [{}, {}, {}, {}, {}, {}, {}],
   "boundingBox": {
     "xMin": 0.3,

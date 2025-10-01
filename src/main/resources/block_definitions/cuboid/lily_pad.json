@@ -5,6 +5,7 @@
   "creativeTab": "westeros_foliage_tab",
   "label": "Lily Pad",
   "rotateRandom": true,
+  "renderLayer": "cutout_mipped",
   "randomTextures": [
     {
       "textures": ["lily_pad/side1"]

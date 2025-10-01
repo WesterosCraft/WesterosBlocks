@@ -401,36 +401,8 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
         // Factory methods for each block type
 
-        public static CustomBlockBuilder registerCustomSolidBlock(BlockStateModelGenerator generator, Block block) {
-                return new CustomBlockBuilder(generator, block, "solid");
-        }
-
-        public static CustomBlockBuilder registerCustomSlabBlock(BlockStateModelGenerator generator, Block block) {
-                return new CustomBlockBuilder(generator, block, "slab");
-        }
-
-        public static CustomBlockBuilder registerCustomLogBlock(BlockStateModelGenerator generator, Block block) {
-                return new CustomBlockBuilder(generator, block, "log");
-        }
-
         public static CustomBlockBuilder registerCustomBranchBlock(BlockStateModelGenerator generator, Block block) {
                 return new CustomBlockBuilder(generator, block, "branch");
-        }
-
-        public static CustomBlockBuilder registerCustomDoorBlock(BlockStateModelGenerator generator, Block block) {
-                return new CustomBlockBuilder(generator, block, "door");
-        }
-
-        public static CustomBlockBuilder registerCustomHalfDoorBlock(BlockStateModelGenerator generator, Block block) {
-                return new CustomBlockBuilder(generator, block, "half_door");
-        }
-
-        public static CustomBlockBuilder registerCustomPaneBlock(BlockStateModelGenerator generator, Block block) {
-                return new CustomBlockBuilder(generator, block, "pane");
-        }
-
-        public static CustomBlockBuilder registerCustomTorchBlock(BlockStateModelGenerator generator, Block block) {
-                return new CustomBlockBuilder(generator, block, "torch");
         }
 
         public static CustomBlockBuilder registerCustomChairBlock(BlockStateModelGenerator generator, Block block) {
@@ -443,22 +415,6 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
         public static CustomBlockBuilder registerCustomArrowSlitBlock(BlockStateModelGenerator generator, Block block) {
                 return new CustomBlockBuilder(generator, block, "arrow_slit");
-        }
-
-        public static CustomBlockBuilder registerCustomRailBlock(BlockStateModelGenerator generator, Block block) {
-                return new CustomBlockBuilder(generator, block, "rail");
-        }
-
-        public static CustomBlockBuilder registerCustomFanBlock(BlockStateModelGenerator generator, Block block) {
-                return new CustomBlockBuilder(generator, block, "fan");
-        }
-
-        public static CustomBlockBuilder registerCustomFurnaceBlock(BlockStateModelGenerator generator, Block block) {
-                return new CustomBlockBuilder(generator, block, "furnace");
-        }
-
-        public static CustomBlockBuilder registerCustomCuboidBlock(BlockStateModelGenerator generator, Block block) {
-                return new CustomBlockBuilder(generator, block, "cuboid");
         }
 
         public static FlowerbedBlockExporter.CustomFlowerbedBuilder registerCustomFlowerbedBlock(BlockStateModelGenerator generator, Block block) {

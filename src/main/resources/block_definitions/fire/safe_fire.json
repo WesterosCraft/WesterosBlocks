@@ -5,5 +5,6 @@
   "luminance": 1,
   "label": "Safe Fire",
   "renderLayer": "cutout",
+  "nonOpaque": true,
   "textures": ["safe_fire/fire_layer_0", "safe_fire/fire_layer_1"]
 }

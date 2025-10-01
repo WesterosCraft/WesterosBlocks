@@ -2,7 +2,8 @@
   "blockName": "fallen_weirwood_leaves",
   "blockType": "cuboid",
   "nonOpaque": true,
-  "soundGroup": "metal",
+  "soundGroup": "wet_grass",
+  "renderLayer": "cutout_mipped",
   "harvestLevel": [
     {
       "tool": "axe",

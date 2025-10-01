@@ -458,6 +458,8 @@ public class ModBlocks {
             case "scaffolding" -> BlockSoundGroup.SCAFFOLDING;
             case "lantern" -> BlockSoundGroup.LANTERN;
             case "coral" -> BlockSoundGroup.CORAL;
+            case "wet_grass" -> BlockSoundGroup.WET_GRASS;
+            case "moss_carpet" -> BlockSoundGroup.MOSS_CARPET;
             default -> {
                 WesterosBlocks.LOGGER.warn("Unknown sound type '{}', defaulting to STONE", soundName);
                 yield BlockSoundGroup.STONE;

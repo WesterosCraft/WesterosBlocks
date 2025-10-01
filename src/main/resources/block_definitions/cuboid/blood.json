@@ -2,7 +2,8 @@
   "blockName": "blood",
   "blockType": "cuboid",
   "nonOpaque": true,
-  "soundGroup": "metal",
+  "soundGroup": "wet_grass",
+  "renderLayer": "cutout_mipped",
   "harvestLevel": [
     {
       "tool": "axe",
@@ -75,5 +76,6 @@
     "zMin": 0,
     "zMax": 1
   },
-  "strength": 5
+  "hardness": 5,
+  "resistance": 2
 }
