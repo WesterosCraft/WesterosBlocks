@@ -11,7 +11,6 @@
   "creativeTab": "westeros_banners_tab",
   "noBreakUnder": true,
   "allowHalfBreak": true,
-  "renderLayer": "cutout",
   "label": "Arryn Banner",
   "itemTextureIndex": 2,
   "stack": [
@@ -53,5 +52,6 @@
     }
   ],
   "hardness": 1,
-  "resistance": 0
+  "resistance": 0,
+  "renderLayer": "cutout"
 }

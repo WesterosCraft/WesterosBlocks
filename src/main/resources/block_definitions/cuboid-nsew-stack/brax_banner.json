@@ -51,5 +51,7 @@
       }
     }
   ],
-  "strength": 1
+  "hardness": 1,
+  "resistance": 0,
+"renderLayer": "cutout"
 }
