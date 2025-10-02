@@ -12,7 +12,8 @@
   "label": "City Profession: Baker",
   "lightOpacity": 0,
   "itemTexture": "profession_sign_base/noctm/baker",
-  "type": "toggleOnUse",
+  "toggleOnUse": true,
+"renderLayer": "cutout",
   "cuboids": [
     {
       "xMin": 0,

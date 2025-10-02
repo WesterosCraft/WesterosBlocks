@@ -10,6 +10,7 @@
   ],
   "creativeTab": "westeros_decor_tab",
   "label": "Firewood Directional Slab",
+  "renderLayer": "cutout",
   "textures": [
     "firewood/rotated",
     "firewood/rotated",

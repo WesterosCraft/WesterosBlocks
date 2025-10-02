@@ -12,7 +12,8 @@
   "label": "City Profession: Tailor",
   "lightOpacity": 0,
   "itemTexture": "profession_sign_base/noctm/tailor",
-  "type": "toggleOnUse",
+  "toggleOnUse": true,
+"renderLayer": "cutout",
   "cuboids": [
     {
       "xMin": 0,

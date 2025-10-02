@@ -11,6 +11,7 @@
   "creativeTab": "westeros_decor_tab",
   "label": "Broken Sword",
   "textures": ["broken_sword/bottom", "broken_sword/top", "transparent"],
+  "renderLayer": "cutout",
   "boundingBox": {
     "xMin": 0,
     "xMax": 1,

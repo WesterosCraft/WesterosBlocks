@@ -12,7 +12,8 @@
   "label": "City Profession: Inn",
   "lightOpacity": 0,
   "itemTexture": "profession_sign_base/noctm/inn",
-  "type": "toggleOnUse",
+  "toggleOnUse": true,
+"renderLayer": "cutout",
   "cuboids": [
     {
       "xMin": 0,

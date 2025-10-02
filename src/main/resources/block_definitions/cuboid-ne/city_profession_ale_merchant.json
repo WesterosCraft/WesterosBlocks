@@ -12,7 +12,8 @@
   "label": "City Profession: Ale Merchant",
   "lightOpacity": 0,
   "itemTexture": "profession_sign_base/noctm/ale_merchant",
-  "type": "toggleOnUse",
+  "toggleOnUse": true,
+"renderLayer": "cutout",
   "cuboids": [
     {
       "xMin": 0,

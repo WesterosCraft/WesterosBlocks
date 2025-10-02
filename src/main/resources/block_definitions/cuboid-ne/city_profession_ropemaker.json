@@ -12,7 +12,8 @@
   "label": "City Profession: Ropemaker",
   "lightOpacity": 0,
   "itemTexture": "profession_sign_base/noctm/ropemaker",
-  "type": "toggleOnUse",
+  "toggleOnUse": true,
+"renderLayer": "cutout",
   "cuboids": [
     {
       "xMin": 0,

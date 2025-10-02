@@ -11,6 +11,7 @@
   "creativeTab": "westeros_decor_tab",
   "label": "Sword Rack",
   "lightOpacity": 0,
+  "renderLayer": "cutout",
   "textures": [
     "cuboid_block/rack_bottom",
     "cuboid_block/rack_top",

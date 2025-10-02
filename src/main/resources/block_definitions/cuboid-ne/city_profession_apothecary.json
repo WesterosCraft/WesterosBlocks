@@ -12,7 +12,8 @@
   "label": "City Profession: Apothecary",
   "lightOpacity": 0,
   "itemTexture": "profession_sign_base/noctm/apothecary",
-  "type": "toggleOnUse",
+  "toggleOnUse": true,
+"renderLayer": "cutout",
   "cuboids": [
     {
       "xMin": 0,

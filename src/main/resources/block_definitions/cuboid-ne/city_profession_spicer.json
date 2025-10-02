@@ -12,7 +12,8 @@
   "label": "City Profession: Spicer",
   "lightOpacity": 0,
   "itemTexture": "profession_sign_base/noctm/spicer",
-  "type": "toggleOnUse",
+  "toggleOnUse": true,
+"renderLayer": "cutout",
   "cuboids": [
     {
       "xMin": 0,

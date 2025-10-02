@@ -12,7 +12,8 @@
   "itemTextureIndex": 2,
   "creativeTab": "westeros_cloth_fibers_tab",
   "label": "Clothesline",
-  "type": "toggleOnUse",
+  "toggleOnUse": true,
+"renderLayer": "cutout",
   "boundingBox": {
     "xMin": 0,
     "xMax": 1,

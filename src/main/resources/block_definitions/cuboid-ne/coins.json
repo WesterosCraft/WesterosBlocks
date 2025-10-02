@@ -11,7 +11,8 @@
   "itemTextureIndex": 1,
   "creativeTab": "westeros_decor_tab",
   "label": "Coins",
-  "type": "toggleOnUse",
+  "toggleOnUse": true,
+"renderLayer": "cutout",
   "boundingBox": {
     "xMin": 0,
     "xMax": 1,

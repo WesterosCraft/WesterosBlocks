@@ -442,7 +442,8 @@ public class ModBlocks {
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
-                            .nonOpaque(definition.isNonOpaque())
+                            // always true
+                            .nonOpaque()
                             .noCollision(definition.hasNoCollision())
                             .toggleOnUse(definition.toggleOnUse())
                             .states(definition.hasStates() ? definition.getStates().size() : 0)

@@ -11,8 +11,9 @@
   ],
   "itemTextureIndex": 1,
   "creativeTab": "westeros_decor_tab",
-  "label": "Coins",
-  "type": "toggleOnUse",
+  "label": "Westerosi Coins",
+  "toggleOnUse": true,
+  "renderLayer": "cutout",
   "boundingBox": {
     "xMin": 0,
     "xMax": 1,

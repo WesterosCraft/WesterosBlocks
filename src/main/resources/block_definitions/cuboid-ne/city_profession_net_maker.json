@@ -12,7 +12,8 @@
   "label": "City Profession: Net Maker",
   "lightOpacity": 0,
   "itemTexture": "profession_sign_base/noctm/net_maker",
-  "type": "toggleOnUse",
+  "toggleOnUse": true,
+"renderLayer": "cutout",
   "cuboids": [
     {
       "xMin": 0,

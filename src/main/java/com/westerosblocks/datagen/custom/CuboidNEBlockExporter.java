@@ -58,16 +58,20 @@ public class CuboidNEBlockExporter extends BaseBlockExporter {
         if (definition.hasCustomModel()) {
             // For custom models, just reference the existing model file
             modelId = createCustomModelId(block, "base_v1");
-        } else if (hasCuboids(definition)) {
+        } else if (hasCuboids(definition) && textures != null && !textures.isEmpty()) {
             modelId = createCuboidModel(generator, block, definition, textures, 0, "base_v1");
-        } else {
+        } else if (textures != null && !textures.isEmpty()) {
             // Use standard cube model
             TextureMap textureMap = createCuboidTextureMap(textures);
-            if (textures != null && textures.size() == 1) {
+            if (textures.size() == 1) {
                 modelId = Models.CUBE_ALL.upload(createGeneratedModelId(block, "base_v1"), textureMap, generator.modelCollector);
             } else {
                 modelId = Models.CUBE.upload(createGeneratedModelId(block, "base_v1"), textureMap, generator.modelCollector);
             }
+        } else {
+            // Fallback: no textures defined, use missing texture
+            TextureMap textureMap = TextureMap.all(createBlockIdentifier("missing"));
+            modelId = Models.CUBE_ALL.upload(createGeneratedModelId(block, "base_v1"), textureMap, generator.modelCollector);
         }
 
         // Generate blockstate with facing=east and facing=north variants
@@ -162,9 +166,23 @@ public class CuboidNEBlockExporter extends BaseBlockExporter {
                 stateModelMap.put(stateId, modelIds);
                 allModelIds.addAll(modelIds);
             } else {
-                // Handle state with single texture set
-                List<String> textures = state.getTextures() != null ? state.getTextures() : definition.getTextures();
-                Identifier modelId = createCuboidModel(generator, block, definition, textures, 0, stateId + "_v1");
+                // Handle state with single texture set or custom model
+                Identifier modelId;
+
+                if (state.isCustomModel() || definition.hasCustomModel()) {
+                    // Use custom model path
+                    modelId = createCustomModelId(block, stateId + "_v1");
+                } else {
+                    // Generate model from textures
+                    List<String> textures = state.getTextures() != null ? state.getTextures() : definition.getTextures();
+                    if (textures != null && !textures.isEmpty()) {
+                        modelId = createCuboidModel(generator, block, definition, textures, 0, stateId + "_v1");
+                    } else {
+                        // Fallback to custom model path if no textures
+                        modelId = createCustomModelId(block, stateId + "_v1");
+                    }
+                }
+
                 if (firstModelId == null) firstModelId = modelId;
 
                 stateModelMap.put(stateId, List.of(modelId));

@@ -12,7 +12,8 @@
   "label": "City Profession: Stables",
   "lightOpacity": 0,
   "itemTexture": "profession_sign_base/noctm/stables",
-  "type": "toggleOnUse",
+  "toggleOnUse": true,
+"renderLayer": "cutout",
   "cuboids": [
     {
       "xMin": 0,

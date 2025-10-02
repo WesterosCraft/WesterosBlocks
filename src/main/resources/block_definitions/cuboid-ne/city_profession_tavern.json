@@ -12,7 +12,8 @@
   "label": "City Profession: Tavern",
   "lightOpacity": 0,
   "itemTexture": "profession_sign_base/noctm/tavern",
-  "type": "toggleOnUse",
+  "toggleOnUse": true,
+"renderLayer": "cutout",
   "cuboids": [
     {
       "xMin": 0,
