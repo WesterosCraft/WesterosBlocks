@@ -64,4 +64,11 @@ public class ModTextureKey {
         }
         return TXT_N_KEYS[index];
     }
+
+    /**
+     * Returns a TextureKey for the given index (alias for getTextureNKey)
+     */
+    public static TextureKey getTextureKey(int index) {
+        return getTextureNKey(index);
+    }
 }

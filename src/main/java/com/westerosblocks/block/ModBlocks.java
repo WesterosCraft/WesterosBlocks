@@ -24,6 +24,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static com.westerosblocks.sound.ModSounds.getSoundGroupFromString;
+
 public class ModBlocks {
     // Storage for automatically registered blocks from JSON definitions
     private static final Map<String, Block> AUTO_REGISTERED_BLOCKS = new HashMap<>();
@@ -423,6 +425,18 @@ public class ModBlocks {
 
                     return cuboidNSEWBuilder.build(definition);
 
+                case "cuboid-nsew-stack":
+                    return BlockBuilder.cuboidNSEWStack()
+                            .hardness(definition.getHardness())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .nonOpaque(definition.isNonOpaque())
+                            .noCollision(false)
+                            .toggleOnUse(definition.toggleOnUse())
+                            .states(definition.hasStates() ? definition.getStates().size() : 0)
+                            .build(definition);
+
 //                case "chair":
 //                    return BlockBuilder.chair()
 //                        .strength(definition.getStrength())
@@ -459,46 +473,7 @@ public class ModBlocks {
         }
     }
 
-    /**
-     * Maps string sound names to BlockSoundGroup instances
-     */
-    private static BlockSoundGroup getSoundGroupFromString(String soundName) {
-        if (soundName == null) return BlockSoundGroup.STONE;
 
-        return switch (soundName.toLowerCase()) {
-            case "wood" -> BlockSoundGroup.WOOD;
-            case "stone" -> BlockSoundGroup.STONE;
-            case "metal" -> BlockSoundGroup.METAL;
-            case "grass" -> BlockSoundGroup.GRASS;
-            case "wool", "cloth" -> BlockSoundGroup.WOOL;
-            case "gravel" -> BlockSoundGroup.GRAVEL;
-            case "glass" -> BlockSoundGroup.GLASS;
-            case "candle" -> BlockSoundGroup.CANDLE;
-            case "bone" -> BlockSoundGroup.BONE;
-            case "ladder" -> BlockSoundGroup.LADDER;
-            case "crop" -> BlockSoundGroup.CROP;
-            case "snow" -> BlockSoundGroup.SNOW;
-            case "chain" -> BlockSoundGroup.CHAIN;
-            case "powder_snow", "powder" -> BlockSoundGroup.POWDER_SNOW;
-            case "mud" -> BlockSoundGroup.MUD;
-            case "packed_mud" -> BlockSoundGroup.PACKED_MUD;
-            case "sand" -> BlockSoundGroup.SAND;
-            case "vine" -> BlockSoundGroup.VINE;
-            case "fungus" -> BlockSoundGroup.FUNGUS;
-            case "rooted_dirt" -> BlockSoundGroup.ROOTED_DIRT;
-            case "scaffolding" -> BlockSoundGroup.SCAFFOLDING;
-            case "lantern" -> BlockSoundGroup.LANTERN;
-            case "coral" -> BlockSoundGroup.CORAL;
-            case "wet_grass" -> BlockSoundGroup.WET_GRASS;
-            case "moss_carpet" -> BlockSoundGroup.MOSS_CARPET;
-            case "tuff" -> BlockSoundGroup.TUFF;
-            case "pot" -> BlockSoundGroup.DECORATED_POT;
-            default -> {
-                WesterosBlocks.LOGGER.warn("Unknown sound type '{}', defaulting to STONE", soundName);
-                yield BlockSoundGroup.STONE;
-            }
-        };
-    }
 
     /**
      * Extracts wood type from block definition or defaults to "oak"

@@ -1,7 +1,7 @@
 {
   "blockName": "allyrion_banner",
   "blockType": "cuboid-nsew-stack",
-  "soundGroup": "wood",
+  "soundGroup": "cloth",
   "harvestLevel": [
     {
       "tool": "sword",
@@ -9,7 +9,8 @@
     }
   ],
   "creativeTab": "westeros_banners_tab",
-  "type": "no-break-under,allowHalfBreak",
+  "noBreakUnder": true,
+  "allowHalfBreak": true,
   "label": "Allyrion Banner",
   "itemTextureIndex": 2,
   "stack": [
@@ -50,5 +51,6 @@
       }
     }
   ],
-  "strength": 1
+  "hardness": 1,
+  "resistance": 1
 }

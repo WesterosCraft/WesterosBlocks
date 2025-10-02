@@ -9,7 +9,8 @@
     }
   ],
   "creativeTab": "westeros_banners_tab",
-  "type": "no-break-under,allowHalfBreak",
+  "noBreakUnder": true,
+  "allowHalfBreak": true,
   "label": "Cuy Banner",
   "itemTextureIndex": 2,
   "stack": [

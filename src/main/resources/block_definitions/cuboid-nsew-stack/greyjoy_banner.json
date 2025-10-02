@@ -1,7 +1,7 @@
 {
   "blockName": "greyjoy_banner",
   "blockType": "cuboid-nsew-stack",
-  "soundGroup": "wood",
+  "soundGroup": "cloth",
   "harvestLevel": [
     {
       "tool": "sword",
@@ -9,7 +9,8 @@
     }
   ],
   "creativeTab": "westeros_banners_tab",
-  "type": "no-break-under,allowHalfBreak",
+  "noBreakUnder": true,
+  "allowHalfBreak": true,
   "label": "Greyjoy Banner",
   "tooltips": ["\u00c2\u00a7oWe Do Not Sow\u00c2\u00a7r"],
   "itemTextureIndex": 2,
