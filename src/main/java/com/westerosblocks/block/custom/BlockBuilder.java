@@ -101,6 +101,7 @@ public class BlockBuilder<T extends Block> {
     public static BlockBuilder<WCCuboidNSEWBlock> cuboidNSEW() { return new BlockBuilder<>(new WCCuboidNSEWBlock.Factory()); }
     public static BlockBuilder<WCCuboidNSEWStackBlock> cuboidNSEWStack() { return new BlockBuilder<>(new WCCuboidNSEWStackBlock.Factory()); }
     public static BlockBuilder<WCCuboidNEBlock> cuboidNE() { return new BlockBuilder<>(new WCCuboidNEBlock.Factory()); }
+    public static BlockBuilder<WCStairBlock> stair() { return new BlockBuilder<>(new WCStairBlock.Factory()); }
 
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;
