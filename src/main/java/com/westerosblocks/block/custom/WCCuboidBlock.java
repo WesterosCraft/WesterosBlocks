@@ -32,7 +32,7 @@ public class WCCuboidBlock extends Block implements Waterloggable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     protected static ModProperties.StateProperty tempSTATE;
-    protected ModProperties.StateProperty STATE;
+    public ModProperties.StateProperty STATE;
 
     protected boolean toggleOnUse = false;
 

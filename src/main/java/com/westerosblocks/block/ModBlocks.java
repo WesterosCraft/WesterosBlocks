@@ -22,7 +22,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import static com.westerosblocks.sound.ModSounds.getSoundGroupFromString;
 
@@ -437,6 +436,18 @@ public class ModBlocks {
                             .states(definition.hasStates() ? definition.getStates().size() : 0)
                             .build(definition);
 
+                case "cuboid-ne":
+                    return BlockBuilder.cuboidNE()
+                            .hardness(definition.getHardness())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .nonOpaque(definition.isNonOpaque())
+                            .noCollision(definition.hasNoCollision())
+                            .toggleOnUse(definition.toggleOnUse())
+                            .states(definition.hasStates() ? definition.getStates().size() : 0)
+                            .build(definition);
+
 //                case "chair":
 //                    return BlockBuilder.chair()
 //                        .strength(definition.getStrength())
@@ -472,8 +483,6 @@ public class ModBlocks {
             return null;
         }
     }
-
-
 
     /**
      * Extracts wood type from block definition or defaults to "oak"
@@ -522,7 +531,6 @@ public class ModBlocks {
                 String creativeTab = definition.getCreativeTab();
                 String blockName = definition.getBlockName();
 
-                // Get the auto-registered block
                 Block block = AUTO_REGISTERED_BLOCKS.get(blockName);
 
                 if (block != null && creativeTab != null && !creativeTab.isEmpty()) {

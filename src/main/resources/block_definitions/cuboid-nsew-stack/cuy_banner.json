@@ -53,5 +53,5 @@
   ],
   "hardness": 1,
   "resistance": 0,
-"renderLayer": "cutout"
+  "renderLayer": "cutout"
 }

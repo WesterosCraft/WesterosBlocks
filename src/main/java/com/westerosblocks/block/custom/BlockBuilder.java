@@ -100,6 +100,7 @@ public class BlockBuilder<T extends Block> {
     public static BlockBuilder<WCCuboidBlock> cuboid() { return new BlockBuilder<>(new WCCuboidBlock.Factory()); }
     public static BlockBuilder<WCCuboidNSEWBlock> cuboidNSEW() { return new BlockBuilder<>(new WCCuboidNSEWBlock.Factory()); }
     public static BlockBuilder<WCCuboidNSEWStackBlock> cuboidNSEWStack() { return new BlockBuilder<>(new WCCuboidNSEWStackBlock.Factory()); }
+    public static BlockBuilder<WCCuboidNEBlock> cuboidNE() { return new BlockBuilder<>(new WCCuboidNEBlock.Factory()); }
 
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
         this.settings = settings;

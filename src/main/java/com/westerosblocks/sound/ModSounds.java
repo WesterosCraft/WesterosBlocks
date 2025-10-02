@@ -27,7 +27,7 @@ public class ModSounds {
             case "candle" -> BlockSoundGroup.CANDLE;
             case "bone" -> BlockSoundGroup.BONE;
             case "ladder" -> BlockSoundGroup.LADDER;
-            case "crop" -> BlockSoundGroup.CROP;
+            case "crop", "plant" -> BlockSoundGroup.CROP;
             case "snow" -> BlockSoundGroup.SNOW;
             case "chain" -> BlockSoundGroup.CHAIN;
             case "powder_snow", "powder" -> BlockSoundGroup.POWDER_SNOW;

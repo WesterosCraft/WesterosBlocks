@@ -10,7 +10,6 @@
   ],
   "creativeTab": "westeros_decor_tab",
   "label": "Cheval de Frise",
-  "textures": ["transparent"],
   "boundingBox": {
     "xMin": 0,
     "xMax": 1,
