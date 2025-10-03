@@ -449,6 +449,18 @@ public class ModBlocks {
                             .states(definition.hasStates() ? definition.getStates().size() : 0)
                             .build(definition);
 
+                case "cuboid-nsewud":
+                    return BlockBuilder.cuboidNSEWUD()
+                            .hardness(definition.getHardness())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .nonOpaque(definition.isNonOpaque())
+                            .noCollision(definition.hasNoCollision())
+                            .toggleOnUse(definition.toggleOnUse())
+                            .states(definition.hasStates() ? definition.getStates().size() : 0)
+                            .build(definition);
+
 //                case "chair":
 //                    return BlockBuilder.chair()
 //                        .strength(definition.getStrength())

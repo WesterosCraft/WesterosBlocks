@@ -10,6 +10,8 @@
   ],
   "creativeTab": "westeros_misc_tab",
   "label": "Wagon Wheel & Axle",
+  "nonOpaque": true,
+  "renderLayer": "cutout",
   "textures": [
     "cuboid_nsewud_block/axle",
     "cuboid_nsewud_block/rim",

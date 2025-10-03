@@ -10,7 +10,35 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.state.property.Properties;
 
+/**
+ * Exporter for torch blocks following block-models.md patterns.
+ * Generates models for both standing and wall torch variants.
+ *
+ * <p>Structure follows block-models.md sections 5.2-5.6:
+ * <ul>
+ *   <li>Model instances (references ModModels.TORCH, ModModels.TORCH_WALL)</li>
+ *   <li>TextureMap builders (createTorchTextureMap)</li>
+ *   <li>BlockStateSupplier methods (createWallTorchVariants)</li>
+ *   <li>Clean datagen methods (registerTorchBlock, registerStandingTorch, registerWallTorch)</li>
+ *   <li>BlockDefinition integration (registerTorchBlockFromDefinition)</li>
+ * </ul>
+ *
+ * @see ModModels#TORCH
+ * @see ModModels#TORCH_WALL
+ */
 public class TorchBlockExporter extends BaseBlockExporter {
+
+    /**
+     * Registers a torch block with both standing and wall variants.
+     * Follows block-models.md pattern for multi-variant blocks.
+     *
+     * <p>Automatically finds and registers the corresponding wall torch variant
+     * using the naming convention: wall_[standing_torch_name]
+     *
+     * @param generator The BlockStateModelGenerator to register models with
+     * @param standingTorch The standing torch block
+     * @param texturePath Texture path for the torch flame
+     */
     public static void registerTorchBlock(BlockStateModelGenerator generator, Block standingTorch, String texturePath) {
         Block wallTorch = Registries.BLOCK.get(WesterosBlocks.id("wall_" + standingTorch.getTranslationKey().replace("block.westerosblocks.", "")));
 
@@ -20,7 +48,12 @@ public class TorchBlockExporter extends BaseBlockExporter {
     }
 
     /**
-     * Registers a torch block from definition
+     * Registers a torch block from a BlockDefinition.
+     * Automatically extracts texture from the definition and finds the wall torch variant.
+     *
+     * @param generator The BlockStateModelGenerator to register models with
+     * @param standingTorch The standing torch block
+     * @param definition The block definition containing texture information
      */
     public static void registerTorchBlockFromDefinition(BlockStateModelGenerator generator, Block standingTorch, BlockDefinition definition) {
         // Get texture from definition
@@ -38,6 +71,16 @@ public class TorchBlockExporter extends BaseBlockExporter {
         }
     }
 
+    // ========================================
+    // Helper Methods (block-models.md 5.2-5.4)
+    // ========================================
+
+    /**
+     * Extracts texture path from BlockDefinition with fallback.
+     *
+     * @param definition The block definition
+     * @return Texture path (first texture from definition, or lighting/[blockName] fallback)
+     */
     private static String getTextureFromDefinition(BlockDefinition definition) {
         if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
             return definition.getTextures().get(0);
@@ -47,28 +90,59 @@ public class TorchBlockExporter extends BaseBlockExporter {
     }
 
     /**
+     * Creates a TextureMap for torch blocks.
+     * Follows block-models.md section 5.3: Using Texture Map.
+     *
+     * @param texturePath Texture path for the torch
+     * @return Configured TextureMap with TORCH key
+     */
+    private static TextureMap createTorchTextureMap(String texturePath) {
+        return new TextureMap().put(TextureKey.TORCH, createBlockIdentifier(texturePath));
+    }
+
+    /**
      * Registers the standing torch variant.
+     * Follows block-models.md section 5.2: Parent Block Model.
+     *
+     * @param generator The generator
+     * @param block The standing torch block
+     * @param texturePath Texture path
      */
     private static void registerStandingTorch(BlockStateModelGenerator generator, Block block, String texturePath) {
-        TextureMap textureMap = new TextureMap().put(TextureKey.TORCH, createBlockIdentifier(texturePath));
+        TextureMap textureMap = createTorchTextureMap(texturePath);
         Identifier modelId = ModModels.TORCH.upload(createNestedModelId(block), textureMap, generator.modelCollector);
-        
+
         generator.blockStateCollector.accept(createSimpleBlockState(block, modelId));
     }
 
     /**
-     * Registers the wall torch variant
+     * Registers the wall torch variant with directional facing.
+     * Follows block-models.md section 5.4: Custom BlockStateSupplier Method.
+     *
+     * @param generator The generator
+     * @param block The wall torch block
+     * @param texturePath Texture path
      */
     private static void registerWallTorch(BlockStateModelGenerator generator, Block block, String texturePath) {
-        TextureMap textureMap = new TextureMap().put(TextureKey.TORCH, createBlockIdentifier(texturePath));
+        TextureMap textureMap = createTorchTextureMap(texturePath);
         Identifier modelId = ModModels.TORCH_WALL.upload(createNestedModelId(block), textureMap, generator.modelCollector);
 
-        BlockStateVariantMap variants = BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
+        BlockStateVariantMap variants = createWallTorchVariants(modelId);
+        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
+    }
+
+    /**
+     * Creates blockstate variants for wall torch with directional facing.
+     * Follows block-models.md section 5.4: Custom BlockStateSupplier Method.
+     *
+     * @param modelId Model identifier for the wall torch
+     * @return Configured BlockStateVariantMap for all horizontal directions
+     */
+    private static BlockStateVariantMap createWallTorchVariants(Identifier modelId) {
+        return BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
             .register(Direction.NORTH, createVariant(modelId))
             .register(Direction.SOUTH, createVariant(modelId, 180))
             .register(Direction.EAST, createVariant(modelId, 90))
             .register(Direction.WEST, createVariant(modelId, 270));
-
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
     }
 }

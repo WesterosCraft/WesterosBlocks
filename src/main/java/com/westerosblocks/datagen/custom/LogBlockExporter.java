@@ -2,6 +2,7 @@ package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
+import com.westerosblocks.datagen.ModModels;
 
 import net.minecraft.block.Block;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -15,62 +16,78 @@ import net.minecraft.data.client.VariantsBlockStateSupplier;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction.Axis;
 
+/**
+ * Exporter for log/pillar blocks following block-models.md patterns.
+ * Generates models with axis rotation and separate side/end textures.
+ *
+ * <p>Structure follows block-models.md sections 5.2-5.6:
+ * <ul>
+ *   <li>Model instances (references ModModels.LOG, ModModels.LOG_HORIZONTAL)</li>
+ *   <li>TextureMap builders (createLogTextureMap)</li>
+ *   <li>BlockStateSupplier methods (createLogVariants)</li>
+ *   <li>Clean datagen methods (registerLogBlock)</li>
+ *   <li>BlockDefinition integration (registerCustomLogBlock)</li>
+ * </ul>
+ *
+ * @see com.westerosblocks.datagen.ModModels#LOG
+ * @see com.westerosblocks.datagen.ModModels#LOG_HORIZONTAL
+ */
 public class LogBlockExporter extends BaseBlockExporter {
+
         /**
-         * Registers a custom log block with separate textures for side and end, and
-         * optional UV locking
+         * Registers a log block with side and end textures.
+         * Follows block-models.md pillar block pattern.
+         *
+         * <p>Texture order: [sideTexture, endTexture]
+         *
+         * <p>Generates three axis variants:
+         * <ul>
+         *   <li>Y-axis (vertical): no rotation</li>
+         *   <li>X-axis: 90° X rotation, 90° Y rotation</li>
+         *   <li>Z-axis: 90° X rotation</li>
+         * </ul>
+         *
+         * @param generator The BlockStateModelGenerator to register models with
+         * @param block The log block to generate models for
+         * @param sideTexture Texture path for the log's sides (bark)
+         * @param endTexture Texture path for the log's ends (rings)
+         * @param uvLocked Whether to lock UV coordinates (currently unused, for future implementation)
          */
-        public static void registerCustomLogBlock(BlockStateModelGenerator generator, Block block,
+        public static void registerLogBlock(BlockStateModelGenerator generator, Block block,
                         String sideTexture, String endTexture, boolean uvLocked) {
                 if (sideTexture.isEmpty() || endTexture.isEmpty()) {
                         throw new IllegalArgumentException("Side and end textures are required for log blocks");
                 }
 
-                String blockName = getBlockName(block);
+                // Create texture map - block-models.md section 5.3: Using Texture Map
+                TextureMap textureMap = createLogTextureMap(sideTexture, endTexture);
 
-                // Create texture maps for side and end
-                TextureMap sideTextureMap = new TextureMap()
-                                .put(TextureKey.SIDE, Identifier.of(WesterosBlocks.MOD_ID, "block/" + sideTexture))
-                                .put(TextureKey.END, Identifier.of(WesterosBlocks.MOD_ID, "block/" + endTexture))
-                                .put(TextureKey.PARTICLE, Identifier.of(WesterosBlocks.MOD_ID, "block/" + sideTexture));
+                // Upload models for each axis - block-models.md section 5.2: Parent Block Model
+                Identifier verticalModelId = ModModels.LOG.upload(createNestedModelId(block), textureMap, generator.modelCollector);
+                Identifier horizontalModelId = ModModels.LOG_HORIZONTAL.upload(createNestedModelId(block, "horizontal"), textureMap, generator.modelCollector);
 
-                // Create three separate models for each axis
-                Identifier modelY = Models.CUBE_COLUMN.upload(
-                                Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "/y"),
-                                sideTextureMap, generator.modelCollector);
+                // Create blockstate variants - block-models.md section 5.4: Custom BlockStateSupplier Method
+                BlockStateVariantMap variants = createLogVariants(verticalModelId, horizontalModelId);
+                generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
 
-                Identifier modelX = Models.CUBE_COLUMN.upload(
-                                Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "/x"),
-                                sideTextureMap, generator.modelCollector);
-
-                Identifier modelZ = Models.CUBE_COLUMN.upload(
-                                Identifier.of(WesterosBlocks.MOD_ID, "block/" + blockName + "/z"),
-                                sideTextureMap, generator.modelCollector);
-
-                // Create blockstate with axis rotation referencing the three models
-                generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block)
-                                .coordinate(BlockStateVariantMap
-                                                .create(net.minecraft.state.property.Properties.AXIS)
-                                                .register(Axis.Y,
-                                                                BlockStateVariant.create().put(VariantSettings.MODEL,
-                                                                                modelY))
-                                                .register(Axis.X,
-                                                                BlockStateVariant.create().put(VariantSettings.MODEL,
-                                                                                modelX).put(VariantSettings.X,
-                                                                                                VariantSettings.Rotation.R90)
-                                                                                .put(VariantSettings.Y,
-                                                                                                VariantSettings.Rotation.R90))
-                                                .register(Axis.Z,
-                                                                BlockStateVariant.create().put(VariantSettings.MODEL,
-                                                                                modelZ).put(VariantSettings.X,
-                                                                                                VariantSettings.Rotation.R90))));
-
-                // Register item model using the Y model (vertical orientation)
-                generator.registerParentedItemModel(block, modelY);
+                // Register item model - block-models.md section 5.5: Custom Datagen Method
+                registerParentedItemModel(generator, block, verticalModelId);
         }
 
         /**
-         * Registers a custom log block using BlockDefinition
+         * Registers a log block from a BlockDefinition.
+         * Automatically extracts textures from the definition and registers the log block.
+         *
+         * <p>Texture order in definition:
+         * <ul>
+         *   <li>2 textures: [side, end] - preferred format</li>
+         *   <li>3 textures: [end, end, side] - legacy compatibility</li>
+         * </ul>
+         *
+         * @param generator The BlockStateModelGenerator to register models with
+         * @param block The log block to generate models for
+         * @param definition The block definition containing texture information
+         * @throws IllegalArgumentException if definition doesn't have required textures
          */
         public static void registerCustomLogBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
                 if (definition.getTextures() == null || definition.getTextures().size() < 2) {
@@ -93,6 +110,45 @@ public class LogBlockExporter extends BaseBlockExporter {
                         throw new IllegalArgumentException("Log blocks require 2 or 3 textures, got: " + definition.getTextures().size());
                 }
 
-                registerCustomLogBlock(generator, block, sideTexture, endTexture, false);
+                registerLogBlock(generator, block, sideTexture, endTexture, false);
+        }
+
+        // ========================================
+        // Helper Methods (block-models.md 5.2-5.4)
+        // ========================================
+
+        /**
+         * Creates a TextureMap for log blocks.
+         * Follows block-models.md section 5.3: Using Texture Map.
+         *
+         * @param sideTexture Texture path for sides
+         * @param endTexture Texture path for ends
+         * @return Configured TextureMap with SIDE, END, and PARTICLE keys
+         */
+        private static TextureMap createLogTextureMap(String sideTexture, String endTexture) {
+                return new TextureMap()
+                        .put(TextureKey.SIDE, createBlockIdentifier(sideTexture))
+                        .put(TextureKey.END, createBlockIdentifier(endTexture))
+                        .put(TextureKey.PARTICLE, createBlockIdentifier(sideTexture));
+        }
+
+        /**
+         * Creates blockstate variants for log blocks with axis rotation.
+         * Follows block-models.md section 5.4: Custom BlockStateSupplier Method.
+         *
+         * @param verticalModelId Model ID for Y-axis (vertical) orientation
+         * @param horizontalModelId Model ID for X/Z-axis (horizontal) orientations
+         * @return Configured BlockStateVariantMap for all three axes
+         */
+        private static BlockStateVariantMap createLogVariants(Identifier verticalModelId, Identifier horizontalModelId) {
+                return BlockStateVariantMap.create(net.minecraft.state.property.Properties.AXIS)
+                        .register(Axis.Y, createVariant(verticalModelId))
+                        .register(Axis.Z, BlockStateVariant.create()
+                                .put(VariantSettings.MODEL, horizontalModelId)
+                                .put(VariantSettings.X, VariantSettings.Rotation.R90))
+                        .register(Axis.X, BlockStateVariant.create()
+                                .put(VariantSettings.MODEL, horizontalModelId)
+                                .put(VariantSettings.X, VariantSettings.Rotation.R90)
+                                .put(VariantSettings.Y, VariantSettings.Rotation.R90));
         }
 }
