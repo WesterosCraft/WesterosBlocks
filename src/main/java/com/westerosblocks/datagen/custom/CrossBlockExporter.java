@@ -11,7 +11,45 @@ import com.westerosblocks.block.custom.WCPlantBlock;
 import java.util.Arrays;
 import java.util.Optional;
 
-
+/**
+ * Exporter for cross-shaped blocks following block-models.md patterns.
+ * Generates models for plants, webs, and other decorative cross-pattern blocks with optional layer sensitivity.
+ *
+ * <p>Structure follows block-models.md sections 5.2-5.6:
+ * <ul>
+ *   <li>Model instances (cross template with tinted/untinted variants)</li>
+ *   <li>TextureMap builders (CROSS texture key)</li>
+ *   <li>BlockStateSupplier methods (VariantsBlockStateSupplier or layer-based variants)</li>
+ *   <li>Clean datagen methods (generateCross, generateLayerSensitiveCross)</li>
+ *   <li>BlockDefinition integration (registerCrossBlockFromDefinition)</li>
+ * </ul>
+ *
+ * <p><b>Cross Block Variants:</b>
+ * <ul>
+ *   <li><b>Simple Cross:</b> Single texture with optional rotations (1 or 4 variants)</li>
+ *   <li><b>Random Textures:</b> Multiple texture variants with rotations (N textures × 4 rotations)</li>
+ *   <li><b>Layer Sensitive:</b> Height-based variants (layers 1-8) with textures and rotations</li>
+ *   <li><b>State-Based:</b> Complex blocks with multiple states (smoke, cobweb variants)</li>
+ * </ul>
+ *
+ * <p><b>Layer Sensitivity:</b>
+ * <ul>
+ *   <li>Layer 1-7: Uses cross_layer1 through cross_layer7 templates (partial height)</li>
+ *   <li>Layer 8: Uses standard cross template (full height)</li>
+ *   <li>Each layer supports texture variants and rotations</li>
+ * </ul>
+ *
+ * <p><b>Tinting Support:</b>
+ * <ul>
+ *   <li>Tinted: Uses block/tinted/cross or block/tinted/cross_layerN templates</li>
+ *   <li>Untinted: Uses block/untinted/cross or block/untinted/cross_layerN templates</li>
+ *   <li>Determined by BlockDefinition.hasColorMult()</li>
+ * </ul>
+ *
+ * <p><b>Texture Order:</b> Single CROSS texture key
+ *
+ * @see WCPlantBlock
+ */
 public class CrossBlockExporter extends BaseBlockExporter {
     public static void generateCross(BlockStateModelGenerator generator, Block block, String texturePath, boolean isTinted, int rotationCount) {
         // Create the cross model

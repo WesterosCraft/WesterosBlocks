@@ -9,6 +9,44 @@ import com.westerosblocks.block.custom.WCBranchBlock;
 
 import java.util.Optional;
 
+/**
+ * Exporter for branch blocks following block-models.md patterns.
+ * Generates models for horizontally and vertically connectable branch blocks with multiple connection states.
+ *
+ * <p>Structure follows block-models.md sections 5.2-5.6:
+ * <ul>
+ *   <li>Model instances (dynamically created for each connection type)</li>
+ *   <li>TextureMap builders (ALL and PARTICLE texture keys)</li>
+ *   <li>BlockStateSupplier methods (MultipartBlockStateSupplier for complex connections)</li>
+ *   <li>Clean datagen methods (registerBranchBlock)</li>
+ * </ul>
+ *
+ * <p><b>Branch Connection Types:</b>
+ * <ul>
+ *   <li><b>Horizontal (UP=false):</b> 11 variants including single, straight connections, corners, T-junctions, and cross</li>
+ *   <li><b>Vertical (UP=true):</b> 11 variants with vertical support pillar</li>
+ *   <li><b>Total:</b> 22 multipart variants for all horizontal connection combinations</li>
+ * </ul>
+ *
+ * <p><b>Model Hierarchy:</b>
+ * <ul>
+ *   <li>base - Single branch with no connections</li>
+ *   <li>horizontal - Straight horizontal branch (North-South or East-West)</li>
+ *   <li>connected - Vertical single directional connection</li>
+ *   <li>horizontal_connected - Horizontal single directional connection</li>
+ *   <li>horizontal_connected_two_corner - Horizontal L-shaped corner</li>
+ *   <li>horizontal_connected_three - Horizontal T-junction</li>
+ *   <li>horizontal_connected_four - Horizontal cross junction</li>
+ *   <li>connected_two - Vertical opposite connections (center)</li>
+ *   <li>connected_two_corner - Vertical L-shaped corner</li>
+ *   <li>connected_three - Vertical T-junction</li>
+ *   <li>connected_four - Vertical cross junction with all connections</li>
+ * </ul>
+ *
+ * <p><b>Texture Order:</b> Single texture applied to all faces with {@code TextureKey.ALL}
+ *
+ * @see WCBranchBlock
+ */
 public class BranchBlockExporter extends BaseBlockExporter {
     public static void registerBranchBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
         registerBranchBlock(generator, block, new String[] { texturePath });

@@ -14,6 +14,53 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Exporter for bed blocks following block-models.md patterns.
+ * Generates models for two-part bed blocks with directional facing and multiple bed types.
+ *
+ * <p>Structure follows block-models.md sections 5.2-5.6:
+ * <ul>
+ *   <li>Model instances (bed head/foot variants with tinted/untinted support)</li>
+ *   <li>TextureMap builders (6-texture system for head/foot parts)</li>
+ *   <li>BlockStateSupplier methods (FACING and BED_PART properties)</li>
+ *   <li>Clean datagen methods (BedBlockBuilder fluent API)</li>
+ *   <li>BlockDefinition integration (registerCustomBedBlock)</li>
+ * </ul>
+ *
+ * <p><b>Bed Block Variants:</b>
+ * <ul>
+ *   <li><b>Parts:</b> HEAD and FOOT (2 parts forming complete bed)</li>
+ *   <li><b>Facing:</b> NORTH, EAST, SOUTH, WEST (4 directions)</li>
+ *   <li><b>Total:</b> 8 blockstate variants (2 parts × 4 directions)</li>
+ * </ul>
+ *
+ * <p><b>Bed Types:</b>
+ * <ul>
+ *   <li>bed - Standard Minecraft-style bed</li>
+ *   <li>raised - Elevated bed with posts/frame</li>
+ *   <li>hammock - Suspended hammock-style bed</li>
+ * </ul>
+ *
+ * <p><b>Texture System (6 textures required):</b>
+ * <ul>
+ *   <li>[0] - Head top texture (also used as particle)</li>
+ *   <li>[1] - Foot top texture</li>
+ *   <li>[2] - Head side texture</li>
+ *   <li>[3] - Foot side texture</li>
+ *   <li>[4] - Head end texture</li>
+ *   <li>[5] - Foot end texture</li>
+ * </ul>
+ *
+ * <p><b>Item Model:</b>
+ * Combines all 6 textures to render isometric bed preview using specialized bed_item template.
+ *
+ * <p><b>Tinting Support:</b>
+ * Beds can be tinted for biome-specific coloring, using separate tinted/untinted model templates.
+ *
+ * @see ModTextureKey#BED_TOP
+ * @see ModTextureKey#BED_SIDE
+ * @see ModTextureKey#BED_END
+ */
 public class BedBlockDatagen {
     
     // Parent Block Models - following block-models.md #parent-block-model pattern

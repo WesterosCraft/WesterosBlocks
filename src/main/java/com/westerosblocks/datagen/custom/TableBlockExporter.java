@@ -16,6 +16,39 @@ import net.minecraft.util.Identifier;
 
 import java.util.Optional;
 
+/**
+ * Exporter for table blocks following block-models.md patterns.
+ * Generates models for connectable table blocks with multiple connection states.
+ *
+ * <p>Structure follows block-models.md sections 5.2-5.6:
+ * <ul>
+ *   <li>Model instances (table_single, table_double, table_middle, table_corner)</li>
+ *   <li>TextureMap builders (custom TextureKey for table texture)</li>
+ *   <li>BlockStateSupplier methods (MultipartBlockStateSupplier for connections)</li>
+ *   <li>Clean datagen methods (registerCustomTableBlock)</li>
+ * </ul>
+ *
+ * <p><b>Table Connection Variants:</b>
+ * <ul>
+ *   <li><b>Single:</b> No connections - standalone table</li>
+ *   <li><b>Double:</b> One connection (4 variants: North, East, South, West)</li>
+ *   <li><b>Corner:</b> Two adjacent connections (4 corner variants: NE, SE, SW, NW)</li>
+ *   <li><b>Center:</b> Opposite connections or 3+ connections (North-South, East-West, T-junctions, cross)</li>
+ *   <li><b>Total:</b> 16 multipart variants for all connection combinations</li>
+ * </ul>
+ *
+ * <p><b>Model Types:</b>
+ * <ul>
+ *   <li>table_single - Standalone table with no connections</li>
+ *   <li>table_double - Table with one connection (straight edge)</li>
+ *   <li>table_middle - Center piece for straight lines and complex junctions</li>
+ *   <li>table_corner - L-shaped corner piece for adjacent connections</li>
+ * </ul>
+ *
+ * <p><b>Texture Order:</b> Single texture applied via custom TextureKey
+ *
+ * @see WCTableBlock
+ */
 public class TableBlockExporter extends BaseBlockExporter {
 
         /**
