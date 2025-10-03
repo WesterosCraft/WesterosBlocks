@@ -15,13 +15,45 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Simplified solid block exporter following block-models.md patterns.
- * Uses singleton patterns and clean texture mapping for consistent, maintainable code.
+ * Exporter for solid/cube blocks following block-models.md patterns.
+ * Handles standard cubes, symmetrical blocks, tinted blocks, and blocks with random textures/states.
+ *
+ * <p>Structure follows block-models.md sections 5.2-5.6:
+ * <ul>
+ *   <li>Model instances (Models.CUBE_ALL, Models.CUBE, tinted variants)</li>
+ *   <li>TextureMap builders (single texture, multiple textures, random variants)</li>
+ *   <li>BlockStateSupplier methods (simple, symmetrical, random, states)</li>
+ *   <li>Clean datagen methods (registerSimpleCustomSolidBlock, registerCustomSolidBlock)</li>
+ *   <li>BlockDefinition integration (registerCustomSolidBlock with definition)</li>
+ * </ul>
+ *
+ * <p><b>Block Variants Supported:</b>
+ * <ul>
+ *   <li><b>Standard Blocks:</b> Simple cube_all or multi-textured cubes</li>
+ *   <li><b>Symmetrical Blocks:</b> Blocks with symmetrical property (mirrored variants)</li>
+ *   <li><b>Tinted Blocks:</b> Blocks with biome-based tinting (grass, leaves, etc.)</li>
+ *   <li><b>Random Textures:</b> Blocks with multiple texture variants for variation</li>
+ *   <li><b>State-Based:</b> Blocks with custom state properties</li>
+ * </ul>
+ *
+ * <p><b>Texture Order for Multi-Texture Cubes:</b>
+ * {@code [down, up, north, south, east, west]}
+ *
+ * @see Models#CUBE_ALL
+ * @see Models#CUBE
  */
 public class SolidBlockExporter extends BaseBlockExporter {
 
+    // ========================================
+    // Utility Methods
+    // ========================================
+
     /**
-     * Checks if a block is symmetrical
+     * Checks if a block has the symmetrical property.
+     * Symmetrical blocks generate separate model variants for mirrored states.
+     *
+     * @param block The block to check
+     * @return {@code true} if the block is a WCSolidBlock with symmetrical=true
      */
     private static boolean isSymmetrical(Block block) {
         if (block instanceof WCSolidBlock) {
@@ -30,9 +62,19 @@ public class SolidBlockExporter extends BaseBlockExporter {
         return false;
     }
 
+    // ========================================
+    // Public Registration Methods
+    // ========================================
+
     /**
      * Registers a solid block with a single texture (cube_all pattern).
      * Follows block-models.md section 3.1: Simple Cube All.
+     *
+     * <p>Automatically handles symmetrical blocks if the block has the symmetrical property.
+     *
+     * @param generator The BlockStateModelGenerator
+     * @param block The solid block to register
+     * @param texturePath Single texture path used for all 6 faces
      */
     public static void registerSimpleCustomSolidBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
         registerSimpleCustomSolidBlock(generator, block, texturePath, false);

@@ -12,15 +12,46 @@ import net.minecraft.util.math.Direction;
 
 import java.util.List;
 
+/**
+ * Exporter for door blocks following block-models.md patterns.
+ * Generates models for two-block tall doors with hinge positions and open/closed states.
+ *
+ * <p>Structure follows block-models.md sections 5.2-5.6:
+ * <ul>
+ *   <li>Model instances (references ModModels.DOOR_* variants)</li>
+ *   <li>TextureMap builders (createDoorTextureMap)</li>
+ *   <li>BlockStateSupplier methods (createDoorVariants)</li>
+ *   <li>Clean datagen methods (registerDoorBlock)</li>
+ *   <li>BlockDefinition integration (registerCustomDoorBlock)</li>
+ * </ul>
+ *
+ * <p><b>Door Variants:</b>
+ * <ul>
+ *   <li>UPPER/LOWER half positions</li>
+ *   <li>LEFT/RIGHT hinge positions</li>
+ *   <li>OPEN/CLOSED states</li>
+ *   <li>4 directional facings (NORTH, EAST, SOUTH, WEST)</li>
+ *   <li>Total: 32 variants (2 halves × 2 hinges × 2 open states × 4 directions)</li>
+ * </ul>
+ *
+ * <p><b>Texture Order:</b> {@code [topTexture, bottomTexture]}
+ *
+ * @see ModModels#DOOR_BOTTOM_LEFT
+ * @see ModModels#DOOR_BOTTOM_RIGHT
+ * @see ModModels#DOOR_TOP_LEFT
+ * @see ModModels#DOOR_TOP_RIGHT
+ */
 public class DoorBlockExporter extends BaseBlockExporter {
 
     /**
      * Registers a door block with top and bottom textures.
      * Follows block-models.md section 3.5: Doors and Trapdoors.
      *
-     * @param generator    The BlockStateModelGenerator to register models with
-     * @param block        The door block to generate models for
-     * @param texturePaths Texture paths [top, bottom] for the door
+     * <p>Generates all 32 variants for a functional door block.
+     *
+     * @param generator The BlockStateModelGenerator to register models with
+     * @param block The door block to generate models for
+     * @param texturePaths Texture paths {@code [top, bottom]} for the door
      */
     public static void registerDoorBlock(BlockStateModelGenerator generator, Block block, String... texturePaths) {
         validateTexturePaths(texturePaths, 2);
