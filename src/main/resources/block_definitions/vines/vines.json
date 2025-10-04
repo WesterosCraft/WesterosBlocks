@@ -6,6 +6,9 @@
   "label": "Vines",
   "colorMult": "textures/colormap/foliagevine",
   "renderLayer": "cutout",
+  "allowUnsupported": true,
+  "hasClimb": true,
+  "hasDown": true,
   "randomTextures": [
     {
       "textures": ["vines/side1", "vines/side1"]

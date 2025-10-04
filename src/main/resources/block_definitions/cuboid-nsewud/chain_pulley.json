@@ -10,6 +10,7 @@
   ],
   "creativeTab": "westeros_misc_tab",
   "label": "Chain Pulley",
+  "nonOpaque": true,
   "textures": [
     "pulley/chain/top_bottom",
     "pulley/chain/top_bottom",
@@ -26,5 +27,7 @@
     "zMin": 0,
     "zMax": 1
   },
-  "strength": 3
+  "renderLayer": "cutout",
+  "hardness": 3,
+  "resistance": 5
 }

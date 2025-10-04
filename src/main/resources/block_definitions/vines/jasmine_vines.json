@@ -5,6 +5,9 @@
   "creativeTab": "westeros_foliage_tab",
   "label": "Jasmine Vines",
   "renderLayer": "cutout",
+  "allowUnsupported": true,
+  "hasClimb": true,
+  "hasDown": true,
   "randomTextures": [
     {
       "textures": ["jasmine_vines/side1", "jasmine_vines/side1"]

@@ -8,5 +8,6 @@
   "label": "Falling Water Block Four",
   "renderLayer": "translucent",
   "textures": ["alyssas_tears_mist/mist4", "alyssas_tears_mist/mist4"],
-  "type": "allow-unsupported,no-climb"
+  "allowUnsupported": true,
+  "hasClimb": true
 }

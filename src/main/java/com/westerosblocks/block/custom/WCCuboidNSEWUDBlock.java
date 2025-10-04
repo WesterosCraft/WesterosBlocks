@@ -81,8 +81,13 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements Waterloggable 
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
 
-        // Get the direction based on which side of a block the player clicked
-        Direction dir = ctx.getSide().getOpposite();
+        // Get the direction based on player's looking direction (matches old WesterosCraft behavior)
+        Direction dir = ctx.getPlayerLookDirection().getOpposite();
+
+        // If player is not available, fall back to side placement
+        if (ctx.getPlayer() == null) {
+            dir = ctx.getSide().getOpposite();
+        }
 
         BlockState bs = this.getDefaultState()
             .with(FACING, dir)

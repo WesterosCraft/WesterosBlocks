@@ -10,6 +10,7 @@
   ],
   "creativeTab": "westeros_tool_blocks_tab",
   "label": "Sticky Piston Extension",
+  "nonOpaque": true,
   "textures": [
     "cuboid_nsewud_block/piston_side",
     "cuboid_nsewud_block/piston_side_rotated",
@@ -35,5 +36,7 @@
       "sideTextures": [1, 1, 1, 1, 2, 2]
     }
   ],
-  "strength": 3
+  "renderLayer": "cutout",
+  "hardness": 3,
+  "resistance": 5
 }

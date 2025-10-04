@@ -7,5 +7,7 @@
   "colorMult": "textures/colormap/moss_dappled",
   "renderLayer": "cutout",
   "textures": ["dappled_moss/dappled", "dappled_moss/dappled"],
-  "type": "allow-unsupported,no-climb,has-down"
+  "allowUnsupported": true,
+  "hasClimb": true,
+  "hasDown": true
 }

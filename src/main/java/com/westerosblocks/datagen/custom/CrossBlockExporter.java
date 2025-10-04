@@ -200,30 +200,30 @@ public class CrossBlockExporter extends BaseBlockExporter {
         }
         
         // Create blockstate with layer variants as arrays
-        BlockStateVariantMap layerMap = BlockStateVariantMap.create(Properties.LAYERS);
-        
+        BlockStateVariantMap.SingleProperty<Integer> layerMap = BlockStateVariantMap.create(Properties.LAYERS);
+
         for (int layer = 1; layer <= 8; layer++) {
             // Create array of variants for this layer (all texture variants with rotations)
             BlockStateVariant[] allVariantsForLayer = new BlockStateVariant[texturePaths.length * rotationCount];
             int variantIndex = 0;
-            
+
             for (int textureIndex = 0; textureIndex < texturePaths.length; textureIndex++) {
                 Identifier modelId = layerTextureModels[layer][textureIndex];
-                
+
                 for (int rotation = 0; rotation < rotationCount; rotation++) {
                     BlockStateVariant variant = BlockStateVariant.create()
                         .put(VariantSettings.MODEL, modelId);
-                    
+
                     if (rotation > 0) {
                         variant = variant.put(VariantSettings.Y, VariantSettings.Rotation.valueOf("R" + (rotation * 90)));
                     }
-                    
+
                     allVariantsForLayer[variantIndex] = variant;
                     variantIndex++;
                 }
             }
-            
-            ((BlockStateVariantMap.SingleProperty<Integer>) layerMap).register(layer, Arrays.asList(allVariantsForLayer));
+
+            layerMap.register(layer, Arrays.asList(allVariantsForLayer));
         }
         
         generator.blockStateCollector.accept(
@@ -285,12 +285,12 @@ public class CrossBlockExporter extends BaseBlockExporter {
         }
         
         // Create blockstate with layer variants
-        BlockStateVariantMap layerMap = BlockStateVariantMap.create(Properties.LAYERS);
-        
+        BlockStateVariantMap.SingleProperty<Integer> layerMap = BlockStateVariantMap.create(Properties.LAYERS);
+
         for (int layer = 1; layer <= 8; layer++) {
             if (rotationCount == 1) {
                 // Single variant per layer
-                ((BlockStateVariantMap.SingleProperty<Integer>) layerMap).register(layer, 
+                layerMap.register(layer,
                     BlockStateVariant.create().put(VariantSettings.MODEL, layerModels[layer])
                 );
             } else {
@@ -299,14 +299,14 @@ public class CrossBlockExporter extends BaseBlockExporter {
                 for (int rotation = 0; rotation < rotationCount; rotation++) {
                     BlockStateVariant variant = BlockStateVariant.create()
                         .put(VariantSettings.MODEL, layerModels[layer]);
-                    
+
                     if (rotation > 0) {
                         variant = variant.put(VariantSettings.Y, VariantSettings.Rotation.valueOf("R" + (rotation * 90)));
                     }
-                    
+
                     rotationVariants[rotation] = variant;
                 }
-                ((BlockStateVariantMap.SingleProperty<Integer>) layerMap).register(layer, Arrays.asList(rotationVariants));
+                layerMap.register(layer, Arrays.asList(rotationVariants));
             }
         }
         
