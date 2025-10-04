@@ -3,9 +3,17 @@ package com.westerosblocks.datagen.custom;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
 import net.minecraft.data.client.VariantSettings.Rotation;
 import com.westerosblocks.WesterosBlocks;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.function.BiConsumer;
+import java.util.function.Supplier;
+import com.google.gson.JsonElement;
 
 /**
  * Base class providing shared utilities for all block exporters.
@@ -288,6 +296,167 @@ public abstract class BaseBlockExporter {
      */
     protected static VariantsBlockStateSupplier createSimpleBlockState(Block block, Identifier modelId) {
         return VariantsBlockStateSupplier.create(block, createVariant(modelId));
+    }
+
+    // ========================================
+    // Model Creation and Upload Utilities
+    // ========================================
+
+    /**
+     * Creates a Model with automatic tinted/untinted path resolution.
+     * Centralizes the common pattern of path selection based on tinting.
+     *
+     * <p><b>Examples:</b>
+     * <pre>{@code
+     * createTintedModel(true, "ladder", TextureKey.TEXTURE)
+     *   → Model with parent "westerosblocks:block/tinted/ladder"
+     *
+     * createTintedModel(false, "template_fence_gate", TextureKey.TEXTURE, TextureKey.PARTICLE)
+     *   → Model with parent "westerosblocks:block/untinted/template_fence_gate"
+     * }</pre>
+     *
+     * @param tinted Whether the model should use tinted textures
+     * @param modelPath The model path (without tinted/untinted prefix)
+     * @param textureKeys The texture keys this model requires
+     * @return The configured Model instance
+     */
+    protected static Model createTintedModel(boolean tinted, String modelPath, TextureKey... textureKeys) {
+        String tintPath = tinted ? "block/tinted/" : "block/untinted/";
+        String fullPath = tintPath + modelPath;
+        return new Model(Optional.of(WesterosBlocks.id(fullPath)), Optional.empty(), textureKeys);
+    }
+
+    /**
+     * Uploads a model with automatic nested model ID creation.
+     * Combines model.upload() with createNestedModelId() in one call.
+     *
+     * <p><b>Example:</b>
+     * <pre>{@code
+     * // Before:
+     * Identifier modelId = model.upload(createNestedModelId(block, "base"), textureMap, generator.modelCollector);
+     *
+     * // After:
+     * Identifier modelId = uploadModel(model, block, "base", textureMap, generator.modelCollector);
+     * }</pre>
+     *
+     * @param model The model to upload
+     * @param block The block this model belongs to
+     * @param variant The model variant name
+     * @param textureMap The texture map for this model
+     * @param modelCollector The model collector to upload to
+     * @return The identifier of the uploaded model
+     */
+    protected static Identifier uploadModel(Model model, Block block, String variant,
+                                           TextureMap textureMap, BiConsumer<Identifier, Supplier<JsonElement>> modelCollector) {
+        return model.upload(createNestedModelId(block, variant), textureMap, modelCollector);
+    }
+
+    // ========================================
+    // TextureMap Creation Utilities
+    // ========================================
+    // Note: Common texture map patterns are available in ModTextureMap.java:
+    // - ModTextureMap.customAllSides() for cube models
+    // - ModTextureMap.customSlab() for directional blocks (bottom/top/side)
+
+    // ========================================
+    // Weighted Variant Utilities
+    // ========================================
+
+    /**
+     * Creates a BlockStateVariant with optional weight.
+     * Only adds weight setting if weight > 1.
+     *
+     * @param modelId The model identifier
+     * @param rotation Y-axis rotation (0, 90, 180, 270)
+     * @param weight The variant weight (1 = normal, >1 = higher probability)
+     * @return BlockStateVariant with model, rotation, and optional weight
+     */
+    protected static BlockStateVariant createWeightedVariant(Identifier modelId, int rotation, int weight) {
+        BlockStateVariant variant = createVariant(modelId, rotation);
+        if (weight > 1) {
+            variant = variant.put(VariantSettings.WEIGHT, weight);
+        }
+        return variant;
+    }
+
+    /**
+     * Creates a list of weighted variants from model IDs and weights.
+     * Applies the same rotation to all variants.
+     *
+     * @param modelIds List of model identifiers
+     * @param weights List of weights (must match modelIds size)
+     * @param rotation Y-axis rotation to apply to all variants
+     * @return List of weighted BlockStateVariants
+     */
+    protected static List<BlockStateVariant> createWeightedVariants(List<Identifier> modelIds,
+                                                                     List<Integer> weights, int rotation) {
+        List<BlockStateVariant> variants = new ArrayList<>();
+        for (int i = 0; i < modelIds.size(); i++) {
+            variants.add(createWeightedVariant(modelIds.get(i), rotation, weights.get(i)));
+        }
+        return variants;
+    }
+
+    // ========================================
+    // Direction Utilities
+    // ========================================
+
+    /**
+     * Converts a Direction enum to rotation degrees for Y-axis rotation.
+     * Standard mapping for horizontal facings.
+     *
+     * @param direction The direction
+     * @return Rotation in degrees (0, 90, 180, or 270)
+     * @throws IllegalArgumentException if direction is not horizontal
+     */
+    protected static int getRotationForDirection(Direction direction) {
+        return switch (direction) {
+            case NORTH -> 0;
+            case EAST -> 90;
+            case SOUTH -> 180;
+            case WEST -> 270;
+            default -> throw new IllegalArgumentException("Direction must be horizontal: " + direction);
+        };
+    }
+
+    // ========================================
+    // Model Registry Helper Class
+    // ========================================
+
+    /**
+     * Helper class for collecting models with weights during random texture processing.
+     * Provides type-safe container for model IDs and their associated weights.
+     *
+     * <p><b>Usage:</b>
+     * <pre>{@code
+     * ModelRegistry registry = new ModelRegistry();
+     * for (TextureSet set : textureSets) {
+     *     Identifier modelId = uploadModel(...);
+     *     registry.add(modelId, set.weight);
+     * }
+     * createBlockstate(block, registry.getModelIds(), registry.getWeights());
+     * }</pre>
+     */
+    protected static class ModelRegistry {
+        private final List<Identifier> modelIds = new ArrayList<>();
+        private final List<Integer> weights = new ArrayList<>();
+
+        public void add(Identifier modelId, int weight) {
+            modelIds.add(modelId);
+            weights.add(weight);
+        }
+
+        public List<Identifier> getModelIds() {
+            return modelIds;
+        }
+
+        public List<Integer> getWeights() {
+            return weights;
+        }
+
+        public int size() {
+            return modelIds.size();
+        }
     }
 
     // ========================================
