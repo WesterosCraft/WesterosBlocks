@@ -6,6 +6,7 @@
   "soundGroup": "metal",
   "material": "iron",
   "resistance": 10,
+  "renderLayer": "cutout",
   "luminance": 10,
   "creativeTab": "westeros_furniture_tab",
   "label": "Ashlar Furnace Reach",

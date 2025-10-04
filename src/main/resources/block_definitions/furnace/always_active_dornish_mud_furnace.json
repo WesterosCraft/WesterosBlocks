@@ -2,6 +2,7 @@
   "blockName": "always_active_dornish_mud_furnace",
   "blockType": "furnace",
   "nonOpaque": true,
+  "renderLayer": "cutout",
   "hardness": 5,
   "soundGroup": "stone",
   "material": "rock",

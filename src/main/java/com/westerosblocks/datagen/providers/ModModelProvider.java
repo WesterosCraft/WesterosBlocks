@@ -53,9 +53,9 @@ public class ModModelProvider extends FabricModelProvider {
                 .build();
 
         // Particle Emitter Blocks
-        ParticleEmitterDatagen.registerCustomParticleEmitterBlock(bsmg, ModBlocks.CASCADE_PARTICLE_EMITTER, "cascade_particle_emitter");
-        ParticleEmitterDatagen.registerCustomParticleEmitterBlock(bsmg, ModBlocks.COSY_SMOKE_PARTICLE_EMITTER, "cosy_smoke_particle_emitter");
-        ParticleEmitterDatagen.registerCustomParticleEmitterBlock(bsmg, ModBlocks.SIGNAL_SMOKE_PARTICLE_EMITTER, "signal_smoke_particle_emitter");
+        ParticleEmitterExporter.registerCustomParticleEmitterBlock(bsmg, ModBlocks.CASCADE_PARTICLE_EMITTER, "cascade_particle_emitter");
+        ParticleEmitterExporter.registerCustomParticleEmitterBlock(bsmg, ModBlocks.COSY_SMOKE_PARTICLE_EMITTER, "cosy_smoke_particle_emitter");
+        ParticleEmitterExporter.registerCustomParticleEmitterBlock(bsmg, ModBlocks.SIGNAL_SMOKE_PARTICLE_EMITTER, "signal_smoke_particle_emitter");
     }
 
     private void generateModelsFromDefinitions(BlockStateModelGenerator bsmg) {
@@ -99,7 +99,7 @@ public class ModModelProvider extends FabricModelProvider {
                     break;
 
                 case "flowerpot":
-                    FlowerPotBlockDatagen.registerCustomFlowerPotBlock(bsmg, block, definition);
+                    FlowerPotBlockExporter.registerCustomFlowerPotBlock(bsmg, block, definition);
                     break;
 
                 case "web":
@@ -115,15 +115,15 @@ public class ModModelProvider extends FabricModelProvider {
                     break;
 
                 case "fire":
-                    FireBlockDatagen.registerCustomFireBlock(bsmg, block, definition);
+                    FireBlockExporter.registerCustomFireBlock(bsmg, block, definition);
                     break;
 
                 case "ladder":
-                    LadderBlockDatagen.registerCustomLadderBlock(bsmg, block, definition);
+                    LadderBlockExporter.registerCustomLadderBlock(bsmg, block, definition);
                     break;
 
                 case "vines":
-                    VinesBlockDatagen.registerCustomVinesBlock(bsmg, block, definition);
+                    VinesBlockExporter.registerCustomVinesBlock(bsmg, block, definition);
                     break;
 
                 case "pane":
@@ -131,23 +131,23 @@ public class ModModelProvider extends FabricModelProvider {
                     break;
 
                 case "fence":
-                    FenceBlockDatagen.registerCustomFenceBlock(bsmg, block, definition);
+                    FenceBlockExporter.registerCustomFenceBlock(bsmg, block, definition);
                     break;
 
                 case "fencegate":
-                    FenceGateBlockDatagen.registerCustomFenceGateBlock(bsmg, block, definition);
+                    FenceGateBlockExporter.registerCustomFenceGateBlock(bsmg, block, definition);
                     break;
 
                 case "leaves":
-                    LeavesBlockDatagen.registerCustomLeavesBlock(bsmg, block, definition);
+                    LeavesBlockExporter.registerCustomLeavesBlock(bsmg, block, definition);
                     break;
 
                 case "bed":
-                    BedBlockDatagen.registerCustomBedBlock(bsmg, block, definition);
+                    BedBlockExporter.registerCustomBedBlock(bsmg, block, definition);
                     break;
 
                 case "crop":
-                    CropBlockDatagen.registerCustomCropBlock(bsmg, block, definition);
+                    CropBlockExporter.registerCustomCropBlock(bsmg, block, definition);
                     break;
 
                 case "torch":
@@ -163,11 +163,11 @@ public class ModModelProvider extends FabricModelProvider {
                     break;
 
                 case "furnace":
-                    FurnaceBlockDatagen.registerCustomFurnaceBlock(bsmg, block, definition);
+                    FurnaceBlockExporter.registerCustomFurnaceBlock(bsmg, block, definition);
                     break;
 
                 case "wall":
-                    WallBlockDatagen.registerCustomWallBlock(bsmg, block, definition);
+                    WallBlockExporter.registerCustomWallBlock(bsmg, block, definition);
                     break;
 
                 case "cuboid":

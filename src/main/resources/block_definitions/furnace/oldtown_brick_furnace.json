@@ -4,6 +4,7 @@
   "nonOpaque": true,
   "hardness": 5,
   "soundGroup": "metal",
+  "renderLayer": "cutout",
   "material": "iron",
   "resistance": 10,
   "luminance": 10,

@@ -1,6 +1,7 @@
 {
   "blockName": "light_grey_brick_furnace",
   "blockType": "furnace",
+  "renderLayer": "cutout",
   "nonOpaque": true,
   "hardness": 5,
   "soundGroup": "metal",

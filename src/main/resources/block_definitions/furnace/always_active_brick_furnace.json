@@ -3,6 +3,7 @@
   "blockType": "furnace",
   "nonOpaque": true,
   "hardness": 5,
+  "renderLayer": "cutout",
   "soundGroup": "metal",
   "material": "iron",
   "resistance": 10,

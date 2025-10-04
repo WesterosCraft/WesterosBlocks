@@ -5,6 +5,7 @@
   "hardness": 5,
   "soundGroup": "metal",
   "material": "iron",
+  "renderLayer": "cutout",
   "resistance": 10,
   "luminance": 10,
   "creativeTab": "westeros_furniture_tab",

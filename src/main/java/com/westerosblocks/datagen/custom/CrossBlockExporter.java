@@ -116,9 +116,7 @@ public class CrossBlockExporter extends BaseBlockExporter {
         );
 
         // Register item model using the first texture variant
-        if (firstModelId != null) {
-            generator.registerParentedItemModel(block, firstModelId);
-        }
+        generator.registerParentedItemModel(block, firstModelId);
     }
 
 

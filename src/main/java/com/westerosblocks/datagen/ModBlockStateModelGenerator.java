@@ -374,10 +374,8 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
         }
 
         private static void generateFurnace(BlockStateModelGenerator generator, Block block, String topTexture, String sideTexture, String frontLitTexture, String frontUnlitTexture) {
-                FurnaceBlockDatagen.generateFurnaceBlock(generator, block,
-                        Registries.BLOCK.getId(block).getPath())
-                        .textures(topTexture, sideTexture, frontLitTexture, frontUnlitTexture)
-                        .build();
+                FurnaceBlockExporter.registerFurnaceBlock(generator, block, false,
+                        topTexture, sideTexture, frontLitTexture, frontUnlitTexture);
         }
 
         private static void generatePlant(BlockStateModelGenerator generator, Block block, String texturePath, boolean isTinted) {

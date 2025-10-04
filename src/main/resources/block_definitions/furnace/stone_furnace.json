@@ -7,6 +7,7 @@
   "material": "iron",
   "resistance": 10,
   "luminance": 13,
+  "renderLayer": "cutout",
   "creativeTab": "westeros_furniture_tab",
   "label": "Ashlar Furnace Green Grey",
   "type": "always-on:false",
