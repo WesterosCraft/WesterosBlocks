@@ -76,18 +76,12 @@ public class PaneBlockExporter extends BaseBlockExporter {
         List<String> textureList = definition.getTextures();
 
         if (definition.hasRandomTextures()) {
-            // Handle random textures - use first texture from first variant
-            List<BlockDefinition.RandomTextureVariant> randomTextures = definition.getRandomTextures();
-            if (!randomTextures.isEmpty()) {
-                BlockDefinition.RandomTextureVariant firstVariant = randomTextures.get(0);
-                List<String> textures = firstVariant.getTextures();
-                if (textures != null && !textures.isEmpty()) {
-                    registerPaneBlock(generator, block, textures.get(0));
-                } else {
-                    // Fallback for empty texture variant
-                    registerPaneBlock(generator, block, "missingno");
-                }
+            // Handle random textures - use first texture from first variant using helper
+            List<TextureVariantSet> variants = extractRandomTextureVariants(definition);
+            if (!variants.isEmpty() && !variants.get(0).textures.isEmpty()) {
+                registerPaneBlock(generator, block, variants.get(0).textures.get(0));
             } else {
+                // Fallback for empty texture variant
                 registerPaneBlock(generator, block, "missingno");
             }
         } else if (textureList != null && !textureList.isEmpty()) {

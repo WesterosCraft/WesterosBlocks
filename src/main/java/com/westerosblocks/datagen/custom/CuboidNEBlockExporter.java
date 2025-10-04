@@ -224,10 +224,6 @@ public class CuboidNEBlockExporter extends BaseBlockExporter {
     }
 
     // Helper methods (delegate to CuboidBlockExporter methods)
-    private static boolean hasActualRandomTextures(BlockDefinition definition) {
-        return CuboidBlockExporter.hasActualRandomTextures(definition);
-    }
-
     private static boolean hasCuboids(BlockDefinition definition) {
         return CuboidBlockExporter.hasCuboids(definition);
     }

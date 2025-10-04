@@ -162,14 +162,9 @@ public class SolidBlockExporter extends BaseBlockExporter {
             registerCustomSolidBlockWithStates(generator, block, textureArrays);
 
         } else if (definition.hasRandomTextures()) {
-            // Convert randomTextures to String[][] format
-            List<BlockDefinition.RandomTextureVariant> randomTextures = definition.getRandomTextures();
-            String[][] textureArrays = new String[randomTextures.size()][];
-
-            for (int i = 0; i < randomTextures.size(); i++) {
-                List<String> variantTextures = randomTextures.get(i).getTextures();
-                textureArrays[i] = variantTextures.toArray(new String[0]);
-            }
+            // Convert randomTextures to String[][] format using helper
+            List<TextureVariantSet> variants = extractRandomTextureVariants(definition);
+            String[][] textureArrays = convertToTextureArrays(variants);
 
             registerCustomSolidBlockWithRandomTextures(generator, block, textureArrays);
 

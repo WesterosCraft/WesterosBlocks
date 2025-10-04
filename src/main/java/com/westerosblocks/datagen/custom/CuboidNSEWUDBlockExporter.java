@@ -322,16 +322,6 @@ public class CuboidNSEWUDBlockExporter extends BaseBlockExporter {
         return WesterosBlocks.id("block/" + blockName + "/" + variant);
     }
 
-    private static boolean hasActualRandomTextures(BlockDefinition definition) {
-        if (!definition.hasRandomTextures()) return false;
-        for (BlockDefinition.RandomTextureVariant variant : definition.getRandomTextures()) {
-            if (variant.getTextures() != null && !variant.getTextures().isEmpty()) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     /**
      * Checks if the definition has cuboids array for model generation.
      */

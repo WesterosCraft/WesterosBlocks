@@ -121,12 +121,12 @@ public class StairBlockExporter extends BaseBlockExporter {
      * Registers a stair block with random texture variants.
      */
     private static void registerStairBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, BlockDefinition definition, WCStairBlock stairBlock) {
-        List<BlockDefinition.RandomTextureVariant> randomTextures = definition.getRandomTextures();
+        List<TextureVariantSet> variants = extractRandomTextureVariants(definition);
         List<StairModelSet> modelSets = new ArrayList<>();
 
-        for (int i = 0; i < randomTextures.size(); i++) {
-            BlockDefinition.RandomTextureVariant variant = randomTextures.get(i);
-            List<String> textures = variant.getTextures();
+        for (int i = 0; i < variants.size(); i++) {
+            TextureVariantSet variant = variants.get(i);
+            List<String> textures = variant.textures;
 
             StairModelSet modelSet;
             if (definition.hasCustomModel()) {
@@ -134,13 +134,13 @@ public class StairBlockExporter extends BaseBlockExporter {
                     createCustomModelId(block, "base_v" + (i + 1)),
                     createCustomModelId(block, "inner_v" + (i + 1)),
                     createCustomModelId(block, "outer_v" + (i + 1)),
-                    variant.getWeight()
+                    variant.weight
                 );
             } else {
                 Identifier baseModel = generateStairModel(generator, block, definition, textures, "base", i, null, stairBlock);
                 Identifier innerModel = generateStairModel(generator, block, definition, textures, "inner", i, null, stairBlock);
                 Identifier outerModel = generateStairModel(generator, block, definition, textures, "outer", i, null, stairBlock);
-                modelSet = new StairModelSet(baseModel, innerModel, outerModel, variant.getWeight());
+                modelSet = new StairModelSet(baseModel, innerModel, outerModel, variant.weight);
             }
             modelSets.add(modelSet);
         }
@@ -166,14 +166,15 @@ public class StairBlockExporter extends BaseBlockExporter {
             List<StairModelSet> modelSets = new ArrayList<>();
 
             if (state.hasRandomTextures()) {
-                // Handle state with random textures
-                List<BlockDefinition.RandomTextureVariant> randomTextures = state.getRandomTextures();
-                for (int i = 0; i < randomTextures.size(); i++) {
-                    List<String> textures = randomTextures.get(i).getTextures();
+                // Handle state with random textures using helper
+                List<TextureVariantSet> variants = extractRandomTextureVariantsFromState(state);
+                for (int i = 0; i < variants.size(); i++) {
+                    TextureVariantSet variant = variants.get(i);
+                    List<String> textures = variant.textures;
                     Identifier baseModel = generateStairModel(generator, block, definition, textures, "base", i, stateId, stairBlock);
                     Identifier innerModel = generateStairModel(generator, block, definition, textures, "inner", i, stateId, stairBlock);
                     Identifier outerModel = generateStairModel(generator, block, definition, textures, "outer", i, stateId, stairBlock);
-                    modelSets.add(new StairModelSet(baseModel, innerModel, outerModel, randomTextures.get(i).getWeight()));
+                    modelSets.add(new StairModelSet(baseModel, innerModel, outerModel, variant.weight));
                     if (firstModel == null) firstModel = baseModel;
                 }
             } else {
@@ -472,16 +473,6 @@ public class StairBlockExporter extends BaseBlockExporter {
     private static Identifier createGeneratedModelId(Block block, String variant) {
         String blockName = getBlockName(block);
         return WesterosBlocks.id("block/" + blockName + "/" + variant);
-    }
-
-    private static boolean hasActualRandomTextures(BlockDefinition definition) {
-        if (!definition.hasRandomTextures()) return false;
-        for (BlockDefinition.RandomTextureVariant variant : definition.getRandomTextures()) {
-            if (variant.getTextures() != null && !variant.getTextures().isEmpty()) {
-                return true;
-            }
-        }
-        return false;
     }
 
     /**
