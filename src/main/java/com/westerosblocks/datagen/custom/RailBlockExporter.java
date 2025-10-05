@@ -237,30 +237,31 @@ public class RailBlockExporter extends BaseBlockExporter {
      * Registers a rail block from a BlockDefinition
      */
     public static void registerRailBlockFromDefinition(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        // Check if the definition has random textures
-        if (definition.hasRandomTextures()) {
-            registerRailBlockWithRandomTexturesFromDefinition(generator, block, definition);
-        } else if (definition.getTextures() != null && definition.getTextures().size() > 1) {
-            // Multiple textures - use first as flat, second as curved
-            String[] textures = definition.getTextures().toArray(new String[0]);
-            registerRailBlock(generator, block, textures);
-        } else {
-            // Single texture
-            String texturePath = getTextureFromDefinition(definition);
-            registerRailBlock(generator, block, texturePath);
+        // Use centralized priority logic
+        BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
+
+        switch (source) {
+            case RANDOM_TEXTURES -> {
+                // Use centralized random texture extraction
+                String[][] textureArrays = definition.getRandomTextureArrays();
+                registerRailBlockWithRandomTextures(generator, block, textureArrays);
+            }
+            case TEXTURES -> {
+                // Use centralized texture extraction
+                String[] textures = definition.getTexturesAsArray();
+                if (textures.length > 1) {
+                    // Multiple textures - use first as flat, second as curved
+                    registerRailBlock(generator, block, textures);
+                } else if (textures.length == 1) {
+                    // Single texture
+                    registerRailBlock(generator, block, textures[0]);
+                }
+            }
+            case STATES, CUSTOM_MODEL, NONE -> {
+                // Use fallback for missing textures
+                registerRailBlock(generator, block, "missingno");
+            }
         }
-    }
-
-    /**
-     * Registers a rail block with random textures from definition
-     */
-    private static void registerRailBlockWithRandomTexturesFromDefinition(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        // Convert random texture variants to texture arrays
-        String[][] textureArrays = definition.getRandomTextures().stream()
-            .map(variant -> variant.getTextures().toArray(new String[0]))
-            .toArray(String[][]::new);
-
-        registerRailBlockWithRandomTextures(generator, block, textureArrays);
     }
 
     private static String getTextureFromDefinition(BlockDefinition definition) {

@@ -77,16 +77,15 @@ public class StairBlockExporter extends BaseBlockExporter {
             throw new IllegalArgumentException("Block must be a WCStairBlock instance");
         }
 
-        if (definition.hasStates()) {
-            registerStairBlockWithStates(generator, block, definition, stairBlock);
-        } else if (definition.hasRandomTextures() && hasActualRandomTextures(definition)) {
-            registerStairBlockWithRandomTextures(generator, block, definition, stairBlock);
-        } else if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
-            registerSimpleStairBlock(generator, block, definition, stairBlock);
-        } else if (definition.hasCustomModel()) {
-            registerCustomModelStairBlock(generator, block, definition, stairBlock);
-        } else {
-            registerFallbackStairBlock(generator, block, definition, stairBlock);
+        // Use centralized priority logic from BlockDefinition
+        BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
+
+        switch (source) {
+            case STATES -> registerStairBlockWithStates(generator, block, definition, stairBlock);
+            case RANDOM_TEXTURES -> registerStairBlockWithRandomTextures(generator, block, definition, stairBlock);
+            case TEXTURES -> registerSimpleStairBlock(generator, block, definition, stairBlock);
+            case CUSTOM_MODEL -> registerCustomModelStairBlock(generator, block, definition, stairBlock);
+            case NONE -> registerFallbackStairBlock(generator, block, definition, stairBlock);
         }
     }
 
@@ -121,11 +120,11 @@ public class StairBlockExporter extends BaseBlockExporter {
      * Registers a stair block with random texture variants.
      */
     private static void registerStairBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, BlockDefinition definition, WCStairBlock stairBlock) {
-        List<TextureVariantSet> variants = extractRandomTextureVariants(definition);
+        List<BlockDefinition.TextureVariantSet> variants = definition.getRandomTextureVariantSets();
         List<StairModelSet> modelSets = new ArrayList<>();
 
         for (int i = 0; i < variants.size(); i++) {
-            TextureVariantSet variant = variants.get(i);
+            BlockDefinition.TextureVariantSet variant = variants.get(i);
             List<String> textures = variant.textures;
 
             StairModelSet modelSet;
@@ -166,10 +165,10 @@ public class StairBlockExporter extends BaseBlockExporter {
             List<StairModelSet> modelSets = new ArrayList<>();
 
             if (state.hasRandomTextures()) {
-                // Handle state with random textures using helper
-                List<TextureVariantSet> variants = extractRandomTextureVariantsFromState(state);
+                // Handle state with random textures using centralized helper
+                List<BlockDefinition.TextureVariantSet> variants = BlockDefinition.getRandomTextureVariantSetsFromState(state);
                 for (int i = 0; i < variants.size(); i++) {
-                    TextureVariantSet variant = variants.get(i);
+                    BlockDefinition.TextureVariantSet variant = variants.get(i);
                     List<String> textures = variant.textures;
                     Identifier baseModel = generateStairModel(generator, block, definition, textures, "base", i, stateId, stairBlock);
                     Identifier innerModel = generateStairModel(generator, block, definition, textures, "inner", i, stateId, stairBlock);

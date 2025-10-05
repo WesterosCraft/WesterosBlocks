@@ -31,20 +31,15 @@ public class CuboidNEBlockExporter extends BaseBlockExporter {
             throw new IllegalArgumentException("Block must be a WCCuboidNEBlock instance");
         }
 
-        // Check for states first (highest priority)
-        if (definition.hasStates()) {
-            registerCuboidNEBlockWithStates(generator, block, definition, cuboidBlock);
-        } else if (definition.hasRandomTextures() && hasActualRandomTextures(definition)) {
-            // Only use random texture path if there are actual textures defined
-            registerCuboidNEBlockWithRandomTextures(generator, block, definition, cuboidBlock);
-        } else if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
-            registerSimpleCuboidNEBlock(generator, block, definition, cuboidBlock);
-        } else if (definition.hasCustomModel() || definition.hasRandomTextures()) {
-            // Handle blocks with custom models or empty random textures
-            registerCustomModelCuboidNEBlock(generator, block, definition, cuboidBlock);
-        } else {
-            // Fallback: create a simple model with default texture
-            registerFallbackCuboidNEBlock(generator, block, definition, cuboidBlock);
+        // Use centralized priority logic from BlockDefinition
+        BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
+
+        switch (source) {
+            case STATES -> registerCuboidNEBlockWithStates(generator, block, definition, cuboidBlock);
+            case RANDOM_TEXTURES -> registerCuboidNEBlockWithRandomTextures(generator, block, definition, cuboidBlock);
+            case TEXTURES -> registerSimpleCuboidNEBlock(generator, block, definition, cuboidBlock);
+            case CUSTOM_MODEL -> registerCustomModelCuboidNEBlock(generator, block, definition, cuboidBlock);
+            case NONE -> registerFallbackCuboidNEBlock(generator, block, definition, cuboidBlock);
         }
     }
 

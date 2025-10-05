@@ -466,16 +466,11 @@ public abstract class BaseBlockExporter {
 
     /**
      * Container for texture variant information with weight.
-     * Provides type-safe wrapper around BlockDefinition.RandomTextureVariant.
+     * DEPRECATED: Use BlockDefinition.TextureVariantSet instead.
      *
-     * <p><b>Usage:</b>
-     * <pre>{@code
-     * List<TextureVariantSet> variants = extractRandomTextureVariants(definition);
-     * for (TextureVariantSet variant : variants) {
-     *     processTextures(variant.textures, variant.weight);
-     * }
-     * }</pre>
+     * @deprecated Use {@link BlockDefinition.TextureVariantSet} directly
      */
+    @Deprecated
     protected static class TextureVariantSet {
         public final List<String> textures;
         public final int weight;
@@ -488,40 +483,32 @@ public abstract class BaseBlockExporter {
 
     /**
      * Extracts random texture variants from a BlockDefinition.
-     * Handles null checks and provides safe defaults.
-     *
-     * <p>This method centralizes the common pattern of looping through randomTextures
-     * across all block exporters, eliminating code duplication.
+     * DEPRECATED: Use BlockDefinition.getRandomTextureVariantSets() instead.
      *
      * @param definition The block definition to extract variants from
      * @return List of texture variant sets, empty if no random textures defined
+     * @deprecated Use {@link BlockDefinition#getRandomTextureVariantSets()} directly
      */
+    @Deprecated
     protected static List<TextureVariantSet> extractRandomTextureVariants(BlockDefinition definition) {
-        if (!definition.hasRandomTextures()) {
-            return List.of();
+        // Delegate to BlockDefinition method
+        List<BlockDefinition.TextureVariantSet> sets = definition.getRandomTextureVariantSets();
+        List<TextureVariantSet> result = new ArrayList<>();
+        for (BlockDefinition.TextureVariantSet set : sets) {
+            result.add(new TextureVariantSet(set.textures, set.weight));
         }
-
-        List<TextureVariantSet> variants = new ArrayList<>();
-        for (BlockDefinition.RandomTextureVariant rtv : definition.getRandomTextures()) {
-            variants.add(new TextureVariantSet(rtv.getTextures(), rtv.getWeight()));
-        }
-        return variants;
+        return result;
     }
 
     /**
      * Converts random texture variants to String[][] format.
-     * Used by solid blocks, cuboid blocks, and other blocks that need array format.
-     *
-     * <p><b>Example:</b>
-     * <pre>{@code
-     * List<TextureVariantSet> variants = extractRandomTextureVariants(definition);
-     * String[][] textureArrays = convertToTextureArrays(variants);
-     * registerBlockWithRandomTextures(generator, block, textureArrays);
-     * }</pre>
+     * DEPRECATED: Use BlockDefinition.getRandomTextureArrays() instead.
      *
      * @param variants List of texture variant sets
      * @return 2D array where each row is a texture variant
+     * @deprecated Use {@link BlockDefinition#getRandomTextureArrays()} directly
      */
+    @Deprecated
     protected static String[][] convertToTextureArrays(List<TextureVariantSet> variants) {
         String[][] arrays = new String[variants.size()][];
         for (int i = 0; i < variants.size(); i++) {
@@ -533,41 +520,34 @@ public abstract class BaseBlockExporter {
 
     /**
      * Checks if definition has actual random textures (not just empty structure).
-     * Some definitions may have randomTextures array but with no actual texture data.
+     * DEPRECATED: Use BlockDefinition.hasActualRandomTextures() instead.
      *
      * @param definition The block definition to check
      * @return true if at least one random texture variant has actual textures
+     * @deprecated Use {@link BlockDefinition#hasActualRandomTextures()} directly
      */
+    @Deprecated
     protected static boolean hasActualRandomTextures(BlockDefinition definition) {
-        if (!definition.hasRandomTextures()) {
-            return false;
-        }
-
-        for (BlockDefinition.RandomTextureVariant rtv : definition.getRandomTextures()) {
-            if (rtv.getTextures() != null && !rtv.getTextures().isEmpty()) {
-                return true;
-            }
-        }
-        return false;
+        return definition.hasActualRandomTextures();
     }
 
     /**
      * Extracts random texture variants from a StateVariant.
-     * Useful for processing states that have their own random texture variants.
+     * DEPRECATED: Use BlockDefinition.getRandomTextureVariantSetsFromState() instead.
      *
      * @param stateVariant The state variant to extract random textures from
      * @return List of texture variant sets, empty if no random textures defined
+     * @deprecated Use {@link BlockDefinition#getRandomTextureVariantSetsFromState(BlockDefinition.StateVariant)} directly
      */
+    @Deprecated
     protected static List<TextureVariantSet> extractRandomTextureVariantsFromState(BlockDefinition.StateVariant stateVariant) {
-        if (!stateVariant.hasRandomTextures()) {
-            return List.of();
+        // Delegate to BlockDefinition method
+        List<BlockDefinition.TextureVariantSet> sets = BlockDefinition.getRandomTextureVariantSetsFromState(stateVariant);
+        List<TextureVariantSet> result = new ArrayList<>();
+        for (BlockDefinition.TextureVariantSet set : sets) {
+            result.add(new TextureVariantSet(set.textures, set.weight));
         }
-
-        List<TextureVariantSet> variants = new ArrayList<>();
-        for (BlockDefinition.RandomTextureVariant rtv : stateVariant.getRandomTextures()) {
-            variants.add(new TextureVariantSet(rtv.getTextures(), rtv.getWeight()));
-        }
-        return variants;
+        return result;
     }
 
     // ========================================

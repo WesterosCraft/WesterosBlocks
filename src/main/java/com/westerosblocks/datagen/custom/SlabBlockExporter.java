@@ -48,9 +48,9 @@ public class SlabBlockExporter extends BaseBlockExporter {
          * Uses textures from the definition's texture array.
          */
         public static void registerCustomSlabBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-                List<String> textureList = definition.getTextures();
-                if (textureList != null && !textureList.isEmpty()) {
-                        String[] textures = textureList.toArray(new String[0]);
+                // Use centralized texture extraction
+                String[] textures = definition.getTexturesAsArray();
+                if (textures.length > 0) {
                         registerCustomSlabBlock(generator, block, textures);
                 }
         }

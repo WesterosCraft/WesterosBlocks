@@ -136,22 +136,15 @@ public class DoorBlockExporter extends BaseBlockExporter {
      * @param definition The block definition containing texture information
      */
     public static void registerCustomDoorBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        if (definition.getTextures() == null || definition.getTextures().isEmpty()) {
-            throw new IllegalArgumentException("Door block definition must have textures");
-        }
+        // Validate texture data using centralized method
+        definition.validateTextureData();
+        definition.validateTextureCount(2);
 
-        List<String> textures = definition.getTextures();
-
-        if (textures.size() < 2) {
-            throw new IllegalArgumentException("Door block requires at least 2 textures (top and bottom)");
-        }
-
-        // Extract top and bottom textures from definition
-        String topTexture = textures.get(0);
-        String bottomTexture = textures.get(1);
+        // Extract textures using centralized method
+        String[] textures = definition.getTexturesAsArray();
 
         // Use the existing registerDoorBlock method
-        registerDoorBlock(generator, block, topTexture, bottomTexture);
+        registerDoorBlock(generator, block, textures[0], textures[1]);
     }
 
     /**

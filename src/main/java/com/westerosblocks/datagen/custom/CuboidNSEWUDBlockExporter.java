@@ -30,16 +30,14 @@ public class CuboidNSEWUDBlockExporter extends BaseBlockExporter {
             throw new IllegalArgumentException("Block must be a WCCuboidNSEWUDBlock instance");
         }
 
-        if (definition.hasStates()) {
-            registerCuboidNSEWUDBlockWithStates(generator, block, definition);
-        } else if (definition.hasRandomTextures() && hasActualRandomTextures(definition)) {
-            registerCuboidNSEWUDBlockWithRandomTextures(generator, block, definition);
-        } else if (definition.hasCustomModel()) {
-            // Reference pre-existing custom model
-            registerCustomModelCuboidNSEWUDBlock(generator, block, definition);
-        } else {
-            // Generate model from cuboids or textures
-            registerSimpleCuboidNSEWUDBlock(generator, block, definition);
+        // Use centralized priority logic from BlockDefinition
+        BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
+
+        switch (source) {
+            case STATES -> registerCuboidNSEWUDBlockWithStates(generator, block, definition);
+            case RANDOM_TEXTURES -> registerCuboidNSEWUDBlockWithRandomTextures(generator, block, definition);
+            case CUSTOM_MODEL -> registerCustomModelCuboidNSEWUDBlock(generator, block, definition);
+            case TEXTURES, NONE -> registerSimpleCuboidNSEWUDBlock(generator, block, definition);
         }
     }
 

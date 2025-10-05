@@ -73,23 +73,22 @@ public class PaneBlockExporter extends BaseBlockExporter {
      * Method for JSON definition system integration
      */
     public static void registerCustomPaneBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        List<String> textureList = definition.getTextures();
+        // Use centralized texture extraction with priority logic
+        BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
 
-        if (definition.hasRandomTextures()) {
-            // Handle random textures - use first texture from first variant using helper
-            List<TextureVariantSet> variants = extractRandomTextureVariants(definition);
-            if (!variants.isEmpty() && !variants.get(0).textures.isEmpty()) {
-                registerPaneBlock(generator, block, variants.get(0).textures.get(0));
-            } else {
-                // Fallback for empty texture variant
-                registerPaneBlock(generator, block, "missingno");
+        String texture = switch (source) {
+            case RANDOM_TEXTURES -> {
+                // Use first texture from first random variant
+                List<BlockDefinition.TextureVariantSet> variants = definition.getRandomTextureVariantSets();
+                if (!variants.isEmpty() && !variants.get(0).textures.isEmpty()) {
+                    yield variants.get(0).textures.get(0);
+                }
+                yield "missingno";
             }
-        } else if (textureList != null && !textureList.isEmpty()) {
-            // Use first texture from regular texture list
-            registerPaneBlock(generator, block, textureList.get(0));
-        } else {
-            // Fallback for missing textures
-            registerPaneBlock(generator, block, "missingno");
-        }
+            case TEXTURES -> definition.getFirstTexture("missingno");
+            case STATES, CUSTOM_MODEL, NONE -> "missingno";
+        };
+
+        registerPaneBlock(generator, block, texture);
     }
 }

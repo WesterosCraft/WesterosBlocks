@@ -148,36 +148,34 @@ public class SolidBlockExporter extends BaseBlockExporter {
      * Automatically handles textures vs randomTextures vs states and chooses the appropriate method.
      */
     public static void registerCustomSolidBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        // Check for states first (highest priority)
-        if (definition.hasStates()) {
-            // Convert states to String[][] format
-            List<BlockDefinition.StateVariant> states = definition.getStates();
-            String[][] textureArrays = new String[states.size()][];
+        // Use centralized priority logic from BlockDefinition
+        BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
 
-            for (int i = 0; i < states.size(); i++) {
-                List<String> stateTextures = states.get(i).getTextures();
-                textureArrays[i] = stateTextures.toArray(new String[0]);
+        switch (source) {
+            case STATES -> {
+                // Use centralized state texture extraction
+                String[][] textureArrays = definition.getStateTextureArrays();
+                registerCustomSolidBlockWithStates(generator, block, textureArrays);
             }
+            case RANDOM_TEXTURES -> {
+                // Use centralized random texture extraction
+                String[][] textureArrays = definition.getRandomTextureArrays();
+                registerCustomSolidBlockWithRandomTextures(generator, block, textureArrays);
+            }
+            case TEXTURES -> {
+                // Use centralized texture array extraction
+                String[] textures = definition.getTexturesAsArray();
 
-            registerCustomSolidBlockWithStates(generator, block, textureArrays);
-
-        } else if (definition.hasRandomTextures()) {
-            // Convert randomTextures to String[][] format using helper
-            List<TextureVariantSet> variants = extractRandomTextureVariants(definition);
-            String[][] textureArrays = convertToTextureArrays(variants);
-
-            registerCustomSolidBlockWithRandomTextures(generator, block, textureArrays);
-
-        } else if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
-            List<String> textures = definition.getTextures();
-
-            if (textures.size() == 1) {
-                // Single texture
-                registerSimpleCustomSolidBlock(generator, block, textures.get(0));
-            } else {
-                // Multiple textures
-                String[] textureArray = textures.toArray(new String[0]);
-                registerCustomSolidBlock(generator, block, textureArray);
+                if (textures.length == 1) {
+                    // Single texture
+                    registerSimpleCustomSolidBlock(generator, block, textures[0]);
+                } else {
+                    // Multiple textures
+                    registerCustomSolidBlock(generator, block, textures);
+                }
+            }
+            case CUSTOM_MODEL, NONE -> {
+                // Skip registration for custom models or blocks with no textures
             }
         }
     }
