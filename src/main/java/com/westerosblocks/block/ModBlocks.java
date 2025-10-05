@@ -364,6 +364,17 @@ public class ModBlocks {
                             .sounds(soundGroup)
                             .build();
 
+                case "stair":
+                    return BlockBuilder.stair()
+                            .hardness(definition.getHardness())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .connectState(definition.isConnectState())
+                            .unconnect(definition.isUnconnect())
+                            .toggleOnUse(definition.toggleOnUse())
+                            .sounds(soundGroup)
+                            .build();
+
                 case "cuboid":
                     BlockBuilder<WCCuboidBlock> cuboidBuilder = BlockBuilder.cuboid()
                             .hardness(definition.getHardness())

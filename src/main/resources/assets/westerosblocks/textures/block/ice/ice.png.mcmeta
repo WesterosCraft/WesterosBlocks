@@ -1,0 +1,39 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_cond",
+    "layer": "TRANSLUCENT",
+    "textures": [
+      "westerosblocks:block/ice/ice-4x4"
+    ],
+    "extra": {
+      "width": 4,
+      "height": 4,
+      "condWidth": 4,
+      "condHeight": 4,
+      "conds": [
+        {
+          "biomeNames": [
+            "minecraft:extreme_hills",
+            "minecraft:stony_shore",
+            "minecraft:taiga",
+            "minecraft:taiga_hills",
+            "minecraft:taiga_mountains",
+            "minecraft:snowy_taiga",
+            "minecraft:ice_spikes",
+            "minecraft:frozen_river",
+            "minecraft:frozen_peaks",
+            "minecraft:frozen_ocean",
+            "minecraft:cold_ocean"
+          ],
+          "type": "pattern",
+          "patRow": 0,
+          "patCol": 0,
+          "patWidth": 4,
+          "patHeight": 4
+        }
+      ],
+      "ignore_states": true
+    }
+  }
+}
