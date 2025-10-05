@@ -1,0 +1,34 @@
+{
+    "baseBlockName": "glass",
+    "variants": [
+        "solid",
+        "pane"
+    ],
+    "hardness": 1,
+    "stepSound": "glass",
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "lightOpacity": 0,
+    "creativeTab": "westeros_windows_glass_tab",
+    "types": {
+        "pane": "legacy-model,unconnect:false"
+    },
+    "baseLabel": "Glass",
+    "textures": {
+        "all": "glass/normal/all"
+    },
+    "altTextures": {
+        "pane": [
+            "glass/normal/all",
+            "glass/pane_top"
+        ]
+    }
+}

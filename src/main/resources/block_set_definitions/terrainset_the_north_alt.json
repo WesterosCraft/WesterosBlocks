@@ -1,0 +1,32 @@
+{
+    "baseBlockName": "terrainset_the_north_alt",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "fence_gate"
+    ],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 2
+        }
+    ],
+    "creativeTab": "westeros_terrain_sets_tab",
+    "types": {
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet The North Alt",
+    "textures": {
+        "all": "terrainset/north_alt/random_4x4"
+    }
+}

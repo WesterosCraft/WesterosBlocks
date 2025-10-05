@@ -1,0 +1,42 @@
+{
+    "baseBlockName": "mances_camp_mances_tent",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "directional"
+    ],
+    "altNames": {
+        "directional": "mances_camp_mances_tent",
+        "solid": "mances_camp_mances_tent_block"
+    },
+    "hardness": 2,
+    "stepSound": "cloth",
+    "material": "wood",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "baseLabel": "Mance's Camp Mance's Tent",
+    "altLabels": {
+        "directional": "Mance's Camp Mance's Tent Directional"
+    },
+    "textures": {
+        "all": "mances_camp_mances_tent/outside"
+    },
+    "altTextures": {
+        "directional": [
+            "mances_camp_common_tent/inside",
+            "mances_camp_mances_tent/outside",
+            "mances_camp_mances_tent/outside",
+            "mances_camp_mances_tent/outside",
+            "mances_camp_mances_tent/outside",
+            "mances_camp_common_tent/inside"
+        ]
+    }
+}

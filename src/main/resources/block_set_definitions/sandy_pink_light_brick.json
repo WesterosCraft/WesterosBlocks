@@ -1,0 +1,33 @@
+{
+    "baseBlockName": "sandy_pink_light_brick",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "arrow_slit",
+        "arrow_slit_window",
+        "arrow_slit_ornate"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_fieldstone_tab",
+    "baseLabel": "Fieldstone Sandy Pink",
+    "textures": {
+        "all": "fieldstone/sandy_pink/all",
+        "arrow-slit": "fieldstone/sandy_pink/arrow_slit",
+        "arrow-slit-window": "fieldstone/sandy_pink/arrow_slit_window",
+        "arrow-slit-ornate": "fieldstone/sandy_pink/arrow_slit_ornate"
+    }
+}

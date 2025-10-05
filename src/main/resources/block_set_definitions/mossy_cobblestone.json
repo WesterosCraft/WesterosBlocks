@@ -1,0 +1,57 @@
+{
+    "baseBlockName": "mossy_cobblestone",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_cobblestone_tab",
+    "baseLabel": "Cobblestone Normal Grey Mossy",
+    "colorMult": "textures/colormap/cobblestone",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "cobblestone/grey_mossy/all1"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/grey_mossy/all2"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/grey_mossy/all3"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/grey_mossy/all4"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/grey_mossy/all5"
+            },
+            "weight": 20
+        }
+    ]
+}

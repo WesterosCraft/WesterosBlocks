@@ -1,0 +1,61 @@
+{
+    "baseBlockName": "white_wood",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "fence_gate",
+        "window_frame",
+        "window_frame_mullion"
+    ],
+    "altNames": {
+        "fence_gate": "locked_white_wood_fence_gate",
+        "window_frame": "whitewashed_timber_window_frame",
+        "window_frame_mullion": "whitewashed_timber_window_frame_mullion"
+    },
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "types": {
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "White Wood",
+    "altCustomTags": {
+        "solid": [
+            "wood-ctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "plank-ctm"
+        ]
+    },
+    "textures": {
+        "all": "wood/white/all",
+        "window-frame": "timber/white/window_frame",
+        "window-frame-mullion": "timber/white/window_frame_mullion"
+    },
+    "altTextures": {
+        "solid": [
+            "wood/white/all",
+            "wood/white/all",
+            "wood/white/woodctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "wood/white/all",
+            "wood/white/all",
+            "wood/white/plankctm"
+        ]
+    }
+}

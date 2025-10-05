@@ -1,0 +1,66 @@
+{
+    "baseBlockName": "oak",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "fence_gate",
+        "cover",
+        "hollow_hopper",
+        "window_frame",
+        "window_frame_mullion"
+    ],
+    "altNames": {
+        "solid": "oak_planks",
+        "fence_gate": "locked_oak_fence_gate",
+        "hollow_hopper": "hollow_oak_hopper",
+        "window_frame": "oak_timber_window_frame",
+        "window_frame_mullion": "oak_timber_window_frame_mullion"
+    },
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "types": {
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "Oak Wood",
+    "altCustomTags": {
+        "solid": [
+            "wood-ctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "plank-ctm"
+        ]
+    },
+    "textures": {
+        "all": "wood/oak/all",
+        "cover": "wood/oak/cover",
+        "window-frame": "timber/oak/window_frame",
+        "window-frame-mullion": "timber/oak/window_frame_mullion"
+    },
+    "altTextures": {
+        "solid": [
+            "wood/oak/all",
+            "wood/oak/all",
+            "wood/oak/woodctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "wood/oak/all",
+            "wood/oak/all",
+            "wood/oak/plankctm"
+        ]
+    }
+}

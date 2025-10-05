@@ -1,0 +1,27 @@
+{
+    "baseBlockName": "light_umber_plaster",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_marble_plaster_tab",
+    "baseLabel": "Light Umber Plaster Smooth",
+    "textures": {
+        "all": "plaster/smooth/light_umber/all"
+    }
+}

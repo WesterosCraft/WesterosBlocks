@@ -1,0 +1,37 @@
+{
+    "baseBlockName": "silver_ore",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall"
+    ],
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_terrain_sets_tab",
+    "baseLabel": "Silver Ore",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "ore/silver/all1"
+            }
+        },
+        {
+            "textures": {
+                "all": "ore/silver/all2"
+            }
+        },
+        {
+            "textures": {
+                "all": "ore/silver/all3"
+            }
+        },
+        {
+            "textures": {
+                "all": "ore/silver/all4"
+            }
+        }
+    ]
+}

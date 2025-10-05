@@ -1,0 +1,37 @@
+{
+    "baseBlockName": "test_block_set",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "fence_gate"
+    ],
+    "hardness": 3,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_test_tab",
+    "types": {
+        "stairs,wall": "unconnect:false",
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+    },
+    "colorMult": "textures/colormap/cobblestone",
+    "textures": {
+        "bottom": "test_block/d_texture",
+        "top": "test_block/u_texture",
+        "west": "test_block/w_texture",
+        "east": "test_block/e_texture",
+        "south": "test_block/s_texture",
+        "north": "test_block/n_texture"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "baseBlockName": "pebbles_wet_reach",
+    "variants": [
+        "solid",
+        "layer"
+    ],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_sand_gravel_tab",
+    "baseLabel": "Pebbles Wet Reach",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "pebble/reach/wet1"
+            }
+        },
+        {
+            "textures": {
+                "all": "pebble/reach/wet2"
+            }
+        },
+        {
+            "textures": {
+                "all": "pebble/reach/wet3"
+            }
+        }
+    ]
+}

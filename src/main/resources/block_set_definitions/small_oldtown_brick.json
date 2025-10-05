@@ -1,0 +1,33 @@
+{
+    "baseBlockName": "small_oldtown_brick",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "arrow_slit",
+        "arrow_slit_window",
+        "arrow_slit_ornate"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_quarter_ashlar_tab",
+    "baseLabel": "Quarter Ashlar Oldtown",
+    "textures": {
+        "all": "ashlar_quarter/oldtown/all",
+        "arrow-slit": "ashlar_quarter/oldtown/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter/oldtown/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter/oldtown/arrow_slit_ornate"
+    }
+}

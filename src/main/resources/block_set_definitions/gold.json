@@ -1,0 +1,44 @@
+{
+    "baseBlockName": "gold",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "altNames": {
+        "solid": "gold_block"
+    },
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_metal_tab",
+    "baseLabel": "Gold",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "metal/gold/all1"
+            }
+        },
+        {
+            "textures": {
+                "all": "metal/gold/all2"
+            }
+        },
+        {
+            "textures": {
+                "all": "metal/gold/all3"
+            }
+        }
+    ]
+}

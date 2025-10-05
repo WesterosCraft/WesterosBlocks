@@ -31,12 +31,13 @@ public class WesterosBlocks implements ModInitializer {
 
     private void initializeBlockDefinitions() {
         try {
-            // Load block definitions from resources directory
+            // Load block definitions and block set definitions from resources directory
             String blockDefinitionsPath = "block_definitions";
+            String blockSetDefinitionsPath = "block_set_definitions";
             LOGGER.info("Initializing block definitions from resources...");
 
-            BlockDefinitionRegistry.getInstance().initialize(blockDefinitionsPath);
-//            BlockDefinitionRegistry.getInstance().printStatistics();
+            BlockDefinitionRegistry.getInstance().initialize(blockDefinitionsPath, blockSetDefinitionsPath);
+            BlockDefinitionRegistry.getInstance().printStatistics();
 
         } catch (Exception e) {
             LOGGER.error("Failed to initialize block definitions", e);

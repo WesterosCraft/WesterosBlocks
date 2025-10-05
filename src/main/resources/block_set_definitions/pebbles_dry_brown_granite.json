@@ -1,0 +1,36 @@
+{
+    "baseBlockName": "pebbles_dry_brown_granite",
+    "variants": [
+        "solid",
+        "layer"
+    ],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_sand_gravel_tab",
+    "baseLabel": "Pebbles Dry Brown Granite",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "pebble/brown_granite/dry1"
+            }
+        },
+        {
+            "textures": {
+                "all": "pebble/brown_granite/dry2"
+            }
+        },
+        {
+            "textures": {
+                "all": "pebble/brown_granite/dry3"
+            }
+        }
+    ]
+}

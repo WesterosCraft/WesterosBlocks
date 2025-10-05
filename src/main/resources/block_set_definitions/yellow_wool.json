@@ -1,0 +1,43 @@
+{
+    "baseBlockName": "yellow_wool",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "customTags": [
+        "wool-ctm"
+    ],
+    "altCustomTags": {
+        "solid": [
+            "wool-block-ctm"
+        ]
+    },
+    "baseLabel": "Yellow Wool",
+    "textures": {
+        "all": "wool/yellow/all"
+    },
+    "altTextures": {
+        "solid": [
+            "wool/yellow/block"
+        ],
+        "carpet": [
+            "wool/yellow/noctm"
+        ]
+    }
+}

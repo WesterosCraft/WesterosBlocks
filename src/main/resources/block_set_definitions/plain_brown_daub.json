@@ -1,0 +1,27 @@
+{
+    "baseBlockName": "plain_brown_daub",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_marble_plaster_tab",
+    "baseLabel": "Plain Brown Daub Plaster Smooth",
+    "textures": {
+        "all": "plaster/smooth/brown_daub/all"
+    }
+}

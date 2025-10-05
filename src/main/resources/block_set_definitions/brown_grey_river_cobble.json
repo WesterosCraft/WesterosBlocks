@@ -1,0 +1,46 @@
+{
+    "baseBlockName": "brown_grey_river_cobble",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_cobblestone_tab",
+    "baseLabel": "Brown Grey River Rubble",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "rubble/brown_grey_river/all1"
+            }
+        },
+        {
+            "textures": {
+                "all": "rubble/brown_grey_river/all2"
+            }
+        },
+        {
+            "textures": {
+                "all": "rubble/brown_grey_river/all3"
+            }
+        },
+        {
+            "textures": {
+                "all": "rubble/brown_grey_river/all4"
+            }
+        }
+    ]
+}

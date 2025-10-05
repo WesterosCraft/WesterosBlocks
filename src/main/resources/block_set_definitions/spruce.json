@@ -1,0 +1,66 @@
+{
+    "baseBlockName": "spruce",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "fence_gate",
+        "cover",
+        "hollow_hopper",
+        "window_frame",
+        "window_frame_mullion"
+    ],
+    "altNames": {
+        "solid": "spruce_planks",
+        "fence_gate": "locked_spruce_fence_gate",
+        "hollow_hopper": "hollow_spruce_hopper",
+        "window_frame": "spruce_timber_window_frame",
+        "window_frame_mullion": "spruce_timber_window_frame_mullion"
+    },
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "types": {
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "Spruce Wood",
+    "altCustomTags": {
+        "solid": [
+            "wood-ctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "plank-ctm"
+        ]
+    },
+    "textures": {
+        "all": "wood/spruce/all",
+        "cover": "wood/spruce/cover",
+        "window-frame": "timber/spruce/window_frame",
+        "window-frame-mullion": "timber/spruce/window_frame_mullion"
+    },
+    "altTextures": {
+        "solid": [
+            "wood/spruce/all",
+            "wood/spruce/all",
+            "wood/spruce/woodctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "wood/spruce/all",
+            "wood/spruce/all",
+            "wood/spruce/plankctm"
+        ]
+    }
+}

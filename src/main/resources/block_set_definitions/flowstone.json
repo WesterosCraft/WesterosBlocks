@@ -1,0 +1,51 @@
+{
+    "baseBlockName": "flowstone",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "fence_gate"
+    ],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 2
+        }
+    ],
+    "creativeTab": "westeros_terrain_sets_tab",
+    "types": {
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "Flowstone",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "terrainset/flowstone/all1"
+            }
+        },
+        {
+            "textures": {
+                "all": "terrainset/flowstone/all2"
+            }
+        },
+        {
+            "textures": {
+                "all": "terrainset/flowstone/all3"
+            }
+        },
+        {
+            "textures": {
+                "all": "terrainset/flowstone/all4"
+            }
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "baseBlockName": "light_grey_plaster_rough",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_marble_plaster_tab",
+    "baseLabel": "Light Grey Plaster Rough",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "plaster/rough/light_grey/all1"
+            }
+        },
+        {
+            "textures": {
+                "all": "plaster/rough/light_grey/all2"
+            }
+        }
+    ]
+}

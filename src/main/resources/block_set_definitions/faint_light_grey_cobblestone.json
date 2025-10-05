@@ -1,0 +1,56 @@
+{
+    "baseBlockName": "faint_light_grey_cobblestone",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_cobblestone_tab",
+    "baseLabel": "Cobblestone Light Grey",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "cobblestone/light_grey/all1"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/light_grey/all2"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/light_grey/all3"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/light_grey/all4"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/light_grey/all5"
+            },
+            "weight": 20
+        }
+    ]
+}

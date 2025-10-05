@@ -1,0 +1,24 @@
+{
+    "baseBlockName": "peat",
+    "variants": [
+        "solid",
+        "slab"
+    ],
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_grass_dirt_tab",
+    "baseLabel": "Peat",
+    "textures": {
+        "bottom": "peat/top_bottom",
+        "top": "peat/top_bottom",
+        "sides": "peat/side"
+    }
+}

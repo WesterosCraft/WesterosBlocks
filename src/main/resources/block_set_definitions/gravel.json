@@ -1,0 +1,121 @@
+{
+    "baseBlockName": "gravel",
+    "variants": [
+        "solid",
+        "slab",
+        "path"
+    ],
+    "altNames": {
+        "path": "path_gravel"
+    },
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_grass_dirt_tab",
+    "baseLabel": "Gravel",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "gravel/gravel1"
+            },
+            "weight": 10
+        },
+        {
+            "textures": {
+                "all": "gravel/gravel2"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "gravel/gravel3"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "gravel/gravel4"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "gravel/gravel5"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "gravel/gravel6"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "gravel/gravel7"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "gravel/gravel8"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "gravel/gravel9"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "gravel/gravel10"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "gravel/gravel11"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "gravel/gravel12"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "gravel/gravel13"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "gravel/gravel14"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "gravel/gravel15"
+            },
+            "weight": 1
+        },
+        {
+            "textures": {
+                "all": "gravel/gravel16"
+            },
+            "weight": 1
+        }
+    ]
+}

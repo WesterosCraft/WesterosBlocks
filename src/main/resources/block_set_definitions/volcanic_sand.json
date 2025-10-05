@@ -1,0 +1,22 @@
+{
+    "baseBlockName": "volcanic_sand",
+    "variants": [
+        "solid",
+        "layer"
+    ],
+    "hardness": 0.5,
+    "stepSound": "sand",
+    "material": "sand",
+    "resistance": 1,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_sand_gravel_tab",
+    "baseLabel": "Volcanic Sand",
+    "textures": {
+        "all": "sand_block/sand_volcanic"
+    }
+}

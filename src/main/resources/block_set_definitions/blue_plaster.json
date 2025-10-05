@@ -1,0 +1,27 @@
+{
+    "baseBlockName": "blue_plaster",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 2,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_marble_plaster_tab",
+    "baseLabel": "Blue Plaster Smooth",
+    "textures": {
+        "all": "plaster/smooth/blue/all"
+    }
+}

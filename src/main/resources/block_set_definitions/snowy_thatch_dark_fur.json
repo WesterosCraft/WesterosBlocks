@@ -1,0 +1,75 @@
+{
+    "baseBlockName": "snowy_thatch_dark_fur",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet",
+        "directional"
+    ],
+    "altNames": {
+        "directional": "snowy_thatch_dark_fur2",
+        "wall": "snowy_thatch_dark_wall"
+    },
+    "hardness": 2,
+    "stepSound": "plant",
+    "material": "wood",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Snowy Thatch Dark Fur",
+    "altLabels": {
+        "directional": "Snowy Thatch Dark Fur Directional"
+    },
+    "textures": {
+        "all": "thatch/snowy_dark/top"
+    },
+    "altTextures": {
+        "slab": [
+            "thatch/snowy_dark/bottom",
+            "thatch/snowy_dark/top",
+            "thatch/snowy_dark/side_half"
+        ],
+        "directional": [
+            "thatch/snowy_dark/bottom",
+            "thatch/snowy_dark/top",
+            "thatch/snowy_dark/side1",
+            "thatch/snowy_dark/side1",
+            "thatch/snowy_dark/side1",
+            "thatch/snowy_dark/bottom"
+        ]
+    },
+    "altRandomTextures": {
+        "solid,stairs": [
+            {
+                "textures": [
+                    "thatch/snowy_dark/bottom",
+                    "thatch/snowy_dark/top",
+                    "thatch/snowy_dark/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "thatch/snowy_dark/bottom",
+                    "thatch/snowy_dark/top",
+                    "thatch/snowy_dark/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "thatch/snowy_dark/bottom",
+                    "thatch/snowy_dark/top",
+                    "thatch/snowy_dark/side3"
+                ]
+            }
+        ]
+    }
+}

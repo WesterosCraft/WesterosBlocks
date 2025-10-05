@@ -1,0 +1,61 @@
+{
+    "baseBlockName": "red_wood",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "fence_gate",
+        "window_frame",
+        "window_frame_mullion"
+    ],
+    "altNames": {
+        "fence_gate": "locked_red_wood_fence_gate",
+        "window_frame": "red_timber_window_frame",
+        "window_frame_mullion": "red_timber_window_frame_mullion"
+    },
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "types": {
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "Red Wood",
+    "altCustomTags": {
+        "solid": [
+            "wood-ctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "plank-ctm"
+        ]
+    },
+    "textures": {
+        "all": "wood/red/all",
+        "window-frame": "timber/red/window_frame",
+        "window-frame-mullion": "timber/red/window_frame_mullion"
+    },
+    "altTextures": {
+        "solid": [
+            "wood/red/all",
+            "wood/red/all",
+            "wood/red/woodctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "wood/red/all",
+            "wood/red/all",
+            "wood/red/plankctm"
+        ]
+    }
+}

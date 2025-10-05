@@ -1,0 +1,104 @@
+{
+    "baseBlockName": "red_slate",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "types": {
+        "stairs": "unconnect:false,no-uvlock"
+    },
+    "baseLabel": "Red Slate",
+    "textures": {
+        "all": "slate/red/all"
+    },
+    "altTextures": {
+        "stairs": [
+            "slate/red/rotated",
+            "slate/red/rotated",
+            "slate/red/all"
+        ]
+    },
+    "altRandomTextures": {
+        "slab": [
+            {
+                "textures": [
+                    "slate/red/all",
+                    "slate/red/directional1",
+                    "slate/red/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/red/all",
+                    "slate/red/directional2",
+                    "slate/red/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/red/all",
+                    "slate/red/directional3",
+                    "slate/red/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/red/all",
+                    "slate/red/directional4",
+                    "slate/red/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/red/all",
+                    "slate/red/directional5",
+                    "slate/red/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/red/all",
+                    "slate/red/directional6",
+                    "slate/red/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/red/all",
+                    "slate/red/directional7",
+                    "slate/red/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/red/all",
+                    "slate/red/directional8",
+                    "slate/red/all"
+                ]
+            },
+            {
+                "textures": [
+                    "slate/red/all",
+                    "slate/red/directional9",
+                    "slate/red/all"
+                ]
+            }
+        ]
+    }
+}

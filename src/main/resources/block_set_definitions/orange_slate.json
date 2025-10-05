@@ -1,0 +1,42 @@
+{
+    "baseBlockName": "orange_slate",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "types": {
+        "stairs": "unconnect:false,no-uvlock"
+    },
+    "baseLabel": "Orange Slate",
+    "textures": {
+        "all": "slate/orange/all"
+    },
+    "altTextures": {
+        "slab": [
+            "slate/orange/all",
+            "slate/orange/directional",
+            "slate/orange/all"
+        ],
+        "stairs": [
+            "slate/orange/rotated",
+            "slate/orange/rotated",
+            "slate/orange/all"
+        ]
+    }
+}

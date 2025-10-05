@@ -1,0 +1,26 @@
+{
+    "baseBlockName": "snow",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "layer"
+    ],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "craftedSnow",
+    "resistance": 10,
+    "creativeTab": "westeros_water_air_tab",
+    "baseLabel": "Snow",
+    "ambientOcclusion": false,
+    "textures": {
+        "bottom": "snow/top_bottom",
+        "top": "snow/top_bottom",
+        "west": "snow/north_south",
+        "east": "snow/north_south",
+        "south": "snow/east_west",
+        "north": "snow/east_west"
+    }
+}

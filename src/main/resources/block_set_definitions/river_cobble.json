@@ -1,0 +1,47 @@
+{
+    "baseBlockName": "river_cobble",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_cobblestone_tab",
+    "baseLabel": "River Rubble",
+    "colorMult": "textures/colormap/lightgreystone",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "rubble/river/all1"
+            }
+        },
+        {
+            "textures": {
+                "all": "rubble/river/all2"
+            }
+        },
+        {
+            "textures": {
+                "all": "rubble/river/all3"
+            }
+        },
+        {
+            "textures": {
+                "all": "rubble/river/all4"
+            }
+        }
+    ]
+}

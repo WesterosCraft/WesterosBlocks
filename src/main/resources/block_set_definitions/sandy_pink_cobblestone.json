@@ -1,0 +1,31 @@
+{
+    "baseBlockName": "sandy_pink_cobblestone",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "altNames": {
+        "wall": "sandy_pink_cobble_wall",
+        "stairs": "sandy_pink_cobble_stairs"
+    },
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_cobblestone_tab",
+    "baseLabel": "Dark Cobblestone Sandy Pink",
+    "textures": {
+        "all": "cobblestone_dark/sandy_pink/all"
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "baseBlockName": "stained_glass_purple",
+    "variants": [
+        "solid",
+        "pane"
+    ],
+    "altNames": {
+        "pane": "stained_glass_pane_purple"
+    },
+    "hardness": 1,
+    "stepSound": "glass",
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "lightOpacity": 0,
+    "creativeTab": "westeros_windows_glass_tab",
+    "types": {
+        "pane": "legacy-model,unconnect:false"
+    },
+    "baseLabel": "Stained Glass Purple",
+    "textures": {
+        "all": "glass/purple/all"
+    },
+    "altTextures": {
+        "pane": [
+            "glass/purple/all",
+            "glass/pane_top"
+        ]
+    }
+}

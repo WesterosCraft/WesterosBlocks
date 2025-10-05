@@ -1,0 +1,93 @@
+{
+    "baseBlockName": "southern_brick",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "arrow_slit",
+        "arrow_slit_window",
+        "arrow_slit_ornate"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_brick_tab",
+    "baseLabel": "Southern Brick",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "brick/southern/all1",
+                "arrow-slit": "brick/southern/arrow_slit",
+                "arrow-slit-window": "brick/southern/arrow_slit_window",
+                "arrow-slit-ornate": "brick/southern/arrow_slit_ornate"
+            }
+        },
+        {
+            "textures": {
+                "all": "brick/southern/all2",
+                "arrow-slit": "brick/southern/arrow_slit",
+                "arrow-slit-window": "brick/southern/arrow_slit_window",
+                "arrow-slit-ornate": "brick/southern/arrow_slit_ornate"
+            }
+        },
+        {
+            "textures": {
+                "all": "brick/southern/all3",
+                "arrow-slit": "brick/southern/arrow_slit",
+                "arrow-slit-window": "brick/southern/arrow_slit_window",
+                "arrow-slit-ornate": "brick/southern/arrow_slit_ornate"
+            }
+        },
+        {
+            "textures": {
+                "all": "brick/southern/all4",
+                "arrow-slit": "brick/southern/arrow_slit",
+                "arrow-slit-window": "brick/southern/arrow_slit_window",
+                "arrow-slit-ornate": "brick/southern/arrow_slit_ornate"
+            }
+        },
+        {
+            "textures": {
+                "all": "brick/southern/all5",
+                "arrow-slit": "brick/southern/arrow_slit",
+                "arrow-slit-window": "brick/southern/arrow_slit_window",
+                "arrow-slit-ornate": "brick/southern/arrow_slit_ornate"
+            }
+        },
+        {
+            "textures": {
+                "all": "brick/southern/all6",
+                "arrow-slit": "brick/southern/arrow_slit",
+                "arrow-slit-window": "brick/southern/arrow_slit_window",
+                "arrow-slit-ornate": "brick/southern/arrow_slit_ornate"
+            }
+        },
+        {
+            "textures": {
+                "all": "brick/southern/all7",
+                "arrow-slit": "brick/southern/arrow_slit",
+                "arrow-slit-window": "brick/southern/arrow_slit_window",
+                "arrow-slit-ornate": "brick/southern/arrow_slit_ornate"
+            }
+        },
+        {
+            "textures": {
+                "all": "brick/southern/all8",
+                "arrow-slit": "brick/southern/arrow_slit",
+                "arrow-slit-window": "brick/southern/arrow_slit_window",
+                "arrow-slit-ornate": "brick/southern/arrow_slit_ornate"
+            }
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "baseBlockName": "arbor_light_cobblestone",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_cobblestone_tab",
+    "baseLabel": "Cobblestone Arbor",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "cobblestone/arbor/all1"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/arbor/all2"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/arbor/all3"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/arbor/all4"
+            },
+            "weight": 5
+        },
+        {
+            "textures": {
+                "all": "cobblestone/arbor/all5"
+            },
+            "weight": 20
+        }
+    ]
+}

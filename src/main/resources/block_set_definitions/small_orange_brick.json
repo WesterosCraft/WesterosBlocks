@@ -1,0 +1,96 @@
+{
+    "baseBlockName": "small_orange_brick",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "arrow_slit",
+        "arrow_slit_window",
+        "arrow_slit_ornate"
+    ],
+    "altNames": {
+        "solid": "small_orange_bricks"
+    },
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_brick_tab",
+    "baseLabel": "Orange Brick",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "brick/orange/all1",
+                "arrow-slit": "brick/orange/arrow_slit",
+                "arrow-slit-window": "brick/orange/arrow_slit_window",
+                "arrow-slit-ornate": "brick/orange/arrow_slit_ornate"
+            }
+        },
+        {
+            "textures": {
+                "all": "brick/orange/all2",
+                "arrow-slit": "brick/orange/arrow_slit",
+                "arrow-slit-window": "brick/orange/arrow_slit_window",
+                "arrow-slit-ornate": "brick/orange/arrow_slit_ornate"
+            }
+        },
+        {
+            "textures": {
+                "all": "brick/orange/all3",
+                "arrow-slit": "brick/orange/arrow_slit",
+                "arrow-slit-window": "brick/orange/arrow_slit_window",
+                "arrow-slit-ornate": "brick/orange/arrow_slit_ornate"
+            }
+        },
+        {
+            "textures": {
+                "all": "brick/orange/all4",
+                "arrow-slit": "brick/orange/arrow_slit",
+                "arrow-slit-window": "brick/orange/arrow_slit_window",
+                "arrow-slit-ornate": "brick/orange/arrow_slit_ornate"
+            }
+        },
+        {
+            "textures": {
+                "all": "brick/orange/all5",
+                "arrow-slit": "brick/orange/arrow_slit",
+                "arrow-slit-window": "brick/orange/arrow_slit_window",
+                "arrow-slit-ornate": "brick/orange/arrow_slit_ornate"
+            }
+        },
+        {
+            "textures": {
+                "all": "brick/orange/all6",
+                "arrow-slit": "brick/orange/arrow_slit",
+                "arrow-slit-window": "brick/orange/arrow_slit_window",
+                "arrow-slit-ornate": "brick/orange/arrow_slit_ornate"
+            }
+        },
+        {
+            "textures": {
+                "all": "brick/orange/all7",
+                "arrow-slit": "brick/orange/arrow_slit",
+                "arrow-slit-window": "brick/orange/arrow_slit_window",
+                "arrow-slit-ornate": "brick/orange/arrow_slit_ornate"
+            }
+        },
+        {
+            "textures": {
+                "all": "brick/orange/all8",
+                "arrow-slit": "brick/orange/arrow_slit",
+                "arrow-slit-window": "brick/orange/arrow_slit_window",
+                "arrow-slit-ornate": "brick/orange/arrow_slit_ornate"
+            }
+        }
+    ]
+}

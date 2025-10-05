@@ -1,0 +1,27 @@
+{
+    "baseBlockName": "gold_brick",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_metal_tab",
+    "baseLabel": "Gold Brick",
+    "textures": {
+        "all": "metal/gold_brick/all"
+    }
+}

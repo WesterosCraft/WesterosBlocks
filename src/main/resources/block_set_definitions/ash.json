@@ -1,0 +1,23 @@
+{
+    "baseBlockName": "ash",
+    "variants": [
+        "solid",
+        "slab",
+        "layer"
+    ],
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "baseLabel": "Ash",
+    "textures": {
+        "all": "ash/all"
+    }
+}

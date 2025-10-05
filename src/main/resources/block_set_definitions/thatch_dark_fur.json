@@ -1,0 +1,30 @@
+{
+    "baseBlockName": "thatch_dark_fur",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "thatch_dark_wall"
+    },
+    "hardness": 2,
+    "stepSound": "plant",
+    "material": "wood",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Thatch Dark Fur",
+    "textures": {
+        "all": "thatch/dark/all"
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "baseBlockName": "pebbles_dry_river_rocks",
+    "variants": [
+        "solid",
+        "layer"
+    ],
+    "altNames": {
+        "layer": "pebbles_dry_river_layer"
+    },
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_sand_gravel_tab",
+    "baseLabel": "Pebbles Dry River Rocks",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "pebble/river/dry1"
+            }
+        },
+        {
+            "textures": {
+                "all": "pebble/river/dry2"
+            }
+        },
+        {
+            "textures": {
+                "all": "pebble/river/dry3"
+            }
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "baseBlockName": "gold_ore",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall"
+    ],
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_terrain_sets_tab",
+    "baseLabel": "Gold Ore",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "ore/gold/all1"
+            }
+        },
+        {
+            "textures": {
+                "all": "ore/gold/all2"
+            }
+        },
+        {
+            "textures": {
+                "all": "ore/gold/all3"
+            }
+        },
+        {
+            "textures": {
+                "all": "ore/gold/all4"
+            }
+        }
+    ]
+}

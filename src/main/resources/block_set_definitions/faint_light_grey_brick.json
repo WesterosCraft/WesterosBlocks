@@ -1,0 +1,34 @@
+{
+    "baseBlockName": "faint_light_grey_brick",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "arrow_slit",
+        "arrow_slit_window",
+        "arrow_slit_ornate"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_fieldstone_tab",
+    "baseLabel": "Fieldstone Light Grey",
+    "colorMult": "textures/colormap/faintlightgreystone",
+    "textures": {
+        "all": "fieldstone/light_grey/all",
+        "arrow-slit": "fieldstone/light_grey/arrow_slit",
+        "arrow-slit-window": "fieldstone/light_grey/arrow_slit_window",
+        "arrow-slit-ornate": "fieldstone/light_grey/arrow_slit_ornate"
+    }
+}

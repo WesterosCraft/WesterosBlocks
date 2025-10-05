@@ -1,0 +1,47 @@
+{
+    "baseBlockName": "icy_northern_cobble",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_cobblestone_tab",
+    "baseLabel": "Icy Northern Rubble",
+    "colorMult": "textures/colormap/darkcobble",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "rubble/icy_northern/all1"
+            }
+        },
+        {
+            "textures": {
+                "all": "rubble/icy_northern/all2"
+            }
+        },
+        {
+            "textures": {
+                "all": "rubble/icy_northern/all3"
+            }
+        },
+        {
+            "textures": {
+                "all": "rubble/icy_northern/all4"
+            }
+        }
+    ]
+}

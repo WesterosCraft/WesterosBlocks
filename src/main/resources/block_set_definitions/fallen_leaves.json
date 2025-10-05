@@ -1,0 +1,22 @@
+{
+    "baseBlockName": "fallen_leaves",
+    "variants": [
+        "solid",
+        "slab"
+    ],
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_grass_dirt_tab",
+    "baseLabel": "Fallen Leaves",
+    "textures": {
+        "all": "fallen_leaves/temperate"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "baseBlockName": "desert_sand",
+    "variants": [
+        "solid",
+        "layer"
+    ],
+    "hardness": 0.5,
+    "stepSound": "sand",
+    "material": "sand",
+    "resistance": 1,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_sand_gravel_tab",
+    "baseLabel": "Desert Sand",
+    "colorMult": "textures/colormap/sand",
+    "textures": {
+        "all": "sand_block/sand_desert"
+    }
+}

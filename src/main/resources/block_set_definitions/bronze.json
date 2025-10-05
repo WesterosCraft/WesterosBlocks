@@ -1,0 +1,49 @@
+{
+    "baseBlockName": "bronze",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "altNames": {
+        "solid": "bronze_block"
+    },
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_metal_tab",
+    "baseLabel": "Bronze",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "metal/bronze/all1"
+            }
+        },
+        {
+            "textures": {
+                "all": "metal/bronze/all2"
+            }
+        },
+        {
+            "textures": {
+                "all": "metal/bronze/all3"
+            }
+        },
+        {
+            "textures": {
+                "all": "metal/bronze/all4"
+            }
+        }
+    ]
+}

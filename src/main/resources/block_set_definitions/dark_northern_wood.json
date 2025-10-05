@@ -1,0 +1,66 @@
+{
+    "baseBlockName": "dark_northern_wood",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "fence_gate",
+        "cover",
+        "hollow_hopper",
+        "window_frame",
+        "window_frame_mullion"
+    ],
+    "altNames": {
+        "fence_gate": "locked_dark_northern_wood_fence_gate",
+        "cover": "northern_wood_cover",
+        "hollow_hopper": "hollow_dark_northern_wood_hopper",
+        "window_frame": "northern_timber_window_frame",
+        "window_frame_mullion": "northern_timber_window_frame_mullion"
+    },
+    "hardness": 5,
+    "stepSound": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "types": {
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "Dark Northern Wood",
+    "altCustomTags": {
+        "solid": [
+            "wood-ctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "plank-ctm"
+        ]
+    },
+    "textures": {
+        "all": "wood/northern/all",
+        "cover": "wood/northern/cover",
+        "window-frame": "timber/northern/window_frame",
+        "window-frame-mullion": "timber/northern/window_frame_mullion"
+    },
+    "altTextures": {
+        "solid": [
+            "wood/northern/all",
+            "wood/northern/all",
+            "wood/northern/woodctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "wood/northern/all",
+            "wood/northern/all",
+            "wood/northern/plankctm"
+        ]
+    }
+}

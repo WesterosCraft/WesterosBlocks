@@ -1,0 +1,33 @@
+{
+    "baseBlockName": "stormlands_large_brick",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "arrow_slit",
+        "arrow_slit_window",
+        "arrow_slit_ornate"
+    ],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_half_ashlar_tab",
+    "baseLabel": "Half Ashlar Stormlands",
+    "textures": {
+        "all": "ashlar_half/stormlands/all",
+        "arrow-slit": "ashlar_half/stormlands/arrow_slit",
+        "arrow-slit-window": "ashlar_half/stormlands/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_half/stormlands/arrow_slit_ornate"
+    }
+}

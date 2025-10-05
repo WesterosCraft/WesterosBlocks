@@ -1,0 +1,44 @@
+{
+    "baseBlockName": "steel",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "altNames": {
+        "solid": "steel_block"
+    },
+    "hardness": 5,
+    "stepSound": "metal",
+    "material": "iron",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_metal_tab",
+    "baseLabel": "Steel",
+    "randomTextures": [
+        {
+            "textures": {
+                "all": "metal/steel/all1"
+            }
+        },
+        {
+            "textures": {
+                "all": "metal/steel/all2"
+            }
+        },
+        {
+            "textures": {
+                "all": "metal/steel/all3"
+            }
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "baseBlockName": "quartz",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 2
+        }
+    ],
+    "creativeTab": "westeros_marble_plaster_tab",
+    "baseLabel": "Quartz",
+    "textures": {
+        "all": "marble/quartz/all"
+    }
+}
