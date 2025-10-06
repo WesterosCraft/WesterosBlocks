@@ -1,0 +1,11 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_vertical",
+    "layer": "CUTOUT",
+    "textures": [],
+    "extra": {
+      "ignore_states": true
+    }
+  }
+}
