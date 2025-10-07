@@ -1,0 +1,28 @@
+{
+    "baseBlockName": "ice_blue_medium_dark",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence"
+    ],
+    "hardness": 2,
+    "stepSound": "glass",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "renderLayer": "translucent",
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_water_air_tab",
+    "baseLabel": "Medium Dark Blue Ice",
+    "textures": {
+        "all": "ice_blue_medium_dark/ice_blue_medium_dark"
+    }
+}
