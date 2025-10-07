@@ -8,6 +8,7 @@
       "level": 1
     }
   ],
+  "renderLayer": "cutout",
   "creativeTab": "westeros_decor_tab",
   "label": "Helmet",
   "textures": [

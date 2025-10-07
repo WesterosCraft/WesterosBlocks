@@ -8,6 +8,7 @@
       "level": 1
     }
   ],
+  "toggleOnUse": true,
   "creativeTab": "westeros_crops_herbs_tab",
   "label": "Cabbage",
   "textures": [

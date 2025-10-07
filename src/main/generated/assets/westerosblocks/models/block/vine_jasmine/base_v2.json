@@ -1,7 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/ladder",
-  "textures": {
-    "particle": "westerosblocks:block/jasmine_vines/side2",
-    "texture": "westerosblocks:block/jasmine_vines/side2"
-  }
-}

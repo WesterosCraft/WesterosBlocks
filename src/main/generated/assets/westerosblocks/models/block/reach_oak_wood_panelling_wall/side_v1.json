@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side",
-  "textures": {
-    "bottom": "westerosblocks:block/wood/oak/panelling/top_bottom",
-    "particle": "westerosblocks:block/wood/oak/panelling/side1",
-    "side": "westerosblocks:block/wood/oak/panelling/side1",
-    "top": "westerosblocks:block/wood/oak/panelling/top_bottom"
-  }
-}

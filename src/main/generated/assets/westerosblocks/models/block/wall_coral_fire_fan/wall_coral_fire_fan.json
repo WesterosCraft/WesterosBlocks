@@ -1,6 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/wall_fan",
-  "textures": {
-    "fan": "westerosblocks:block/coral/fire/fan1"
-  }
-}

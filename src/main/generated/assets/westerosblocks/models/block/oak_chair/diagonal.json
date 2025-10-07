@@ -1,6 +1,0 @@
-{
-  "parent": "westerosblocks:block/chair/simple_chair_45",
-  "textures": {
-    "all": "westerosblocks:block/bark/oak/side"
-  }
-}

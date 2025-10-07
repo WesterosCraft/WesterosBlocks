@@ -190,6 +190,10 @@ public class ModModelProvider extends FabricModelProvider {
                     CuboidNSEWUDBlockExporter.registerCustomCuboidNSEWUDBlock(bsmg, block, definition);
                     break;
 
+                case "cuboid-16way":
+                    Cuboid16WayBlockExporter.registerCustomCuboid16WayBlock(bsmg, block, definition);
+                    break;
+
                 case "stair":
                     StairBlockExporter.registerCustomStairBlock(bsmg, block, definition);
                     break;

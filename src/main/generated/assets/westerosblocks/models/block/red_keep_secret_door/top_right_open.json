@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_right_open",
-  "textures": {
-    "bottom": "westerosblocks:block/ashlar_third/pale_red/all_noctm",
-    "top": "westerosblocks:block/ashlar_third/pale_red/all_noctm"
-  }
-}

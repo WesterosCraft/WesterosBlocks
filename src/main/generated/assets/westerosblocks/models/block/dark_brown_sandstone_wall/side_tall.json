@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side_tall",
-  "textures": {
-    "bottom": "westerosblocks:block/dark_brown_sandstone/all",
-    "particle": "westerosblocks:block/dark_brown_sandstone/all",
-    "side": "westerosblocks:block/dark_brown_sandstone/all",
-    "top": "westerosblocks:block/dark_brown_sandstone/all"
-  }
-}

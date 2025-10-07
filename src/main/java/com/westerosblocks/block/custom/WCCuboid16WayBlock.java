@@ -247,8 +247,10 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
 
-        // Calculate rotation based on player's facing direction (0-15)
-        int rotation = MathHelper.floor((double)(ctx.getPlayerYaw() * 16.0F / 360.0F) + 0.5D) & 15;
+        // Calculate rotation based on player's horizontal rotation (0-15)
+        // Use getHorizontalPlayerFacing().asRotation() which gives us the player's horizontal rotation (0-360)
+        float playerRotation = ctx.getPlayerLookDirection().getOpposite().asRotation();
+        int rotation = MathHelper.floor((playerRotation * 16.0F / 360.0F) + 0.5F) & 15;
 
         BlockState state = this.getDefaultState()
             .with(ROTATION, rotation)
