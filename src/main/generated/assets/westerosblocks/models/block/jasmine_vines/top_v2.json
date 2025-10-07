@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/untinted/vine_u",
+  "textures": {
+    "vines": "westerosblocks:block/jasmine_vines/side2"
+  }
+}

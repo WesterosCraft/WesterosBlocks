@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_smooth/westerlands/all_cutout",
+    "east": "westerosblocks:block/ashlar_smooth/westerlands/all_cutout",
+    "north": "westerosblocks:block/ashlar_smooth/westerlands/all_cutout",
+    "particle": "westerosblocks:block/ashlar_smooth/westerlands/all_cutout",
+    "south": "westerosblocks:block/ashlar_smooth/westerlands/all_cutout",
+    "up": "westerosblocks:block/wood/oak/all",
+    "west": "westerosblocks:block/ashlar_smooth/westerlands/all_cutout"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/monochrome_dark_sandstone_polished_slab/monochrome_dark_sandstone_polished_slab_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/monochrome_dark_sandstone_polished_slab/monochrome_dark_sandstone_polished_slab_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/monochrome_dark_sandstone_polished_slab/monochrome_dark_sandstone_polished_slab_top"
+    }
+  }
+}

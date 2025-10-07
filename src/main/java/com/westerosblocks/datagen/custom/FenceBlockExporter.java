@@ -1,0 +1,351 @@
+package com.westerosblocks.datagen.custom;
+
+import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.datagen.ModTextureKey;
+import com.westerosblocks.data.BlockDefinition;
+import net.minecraft.data.client.*;
+import net.minecraft.block.Block;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * Exporter for fence blocks following block-models.md patterns.
+ * Generates models for connectable fence blocks with post and side components.
+ *
+ * <p>Structure follows block-models.md sections 5.2-5.6:
+ * <ul>
+ *   <li>Model instances (fence_post, fence_side, fence_inventory models)</li>
+ *   <li>TextureMap builders (3-texture system: bottom, top, side)</li>
+ *   <li>BlockStateSupplier methods (MultipartBlockStateSupplier for connections)</li>
+ *   <li>Clean datagen methods (registerFenceBlock)</li>
+ *   <li>BlockDefinition integration (registerCustomFenceBlock)</li>
+ * </ul>
+ *
+ * <p><b>Fence Block Components:</b>
+ * <ul>
+ *   <li><b>Post:</b> Central vertical pillar (always present)</li>
+ *   <li><b>Sides:</b> Horizontal rails connecting to adjacent fences (4 directions)</li>
+ *   <li><b>Inventory:</b> Simplified model for item rendering</li>
+ * </ul>
+ *
+ * <p><b>Connection System:</b>
+ * <ul>
+ *   <li>Multipart blockstate with post + conditional sides</li>
+ *   <li>Sides appear when connecting NORTH, EAST, SOUTH, or WEST</li>
+ *   <li>Up to 16 visual variants (1 post + 0-4 sides)</li>
+ * </ul>
+ *
+ * <p><b>Texture System (3 textures):</b>
+ * <ul>
+ *   <li>[0] - Bottom texture (bottom face of post/rails)</li>
+ *   <li>[1] - Top texture (top face of post/rails)</li>
+ *   <li>[2] - Side texture (vertical faces, used as particle)</li>
+ * </ul>
+ *
+ * @see ModTextureKey#BOTTOM_OVERLAY
+ * @see ModTextureKey#TOP_OVERLAY
+ * @see ModTextureKey#SIDE_OVERLAY
+ */
+public class FenceBlockExporter extends BaseBlockExporter {
+
+    // ========================================
+    // Model Instances (block-models.md 5.2)
+    // ========================================
+
+    private static Model createFencePostModel(boolean tinted, boolean overlay) {
+        String tintPath = tinted ? "block/tinted/" : "block/untinted/";
+        String overlayPath = overlay ? "fence_post_overlay" : "fence_post";
+        String path = tintPath + overlayPath;
+
+        if (overlay) {
+            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
+                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
+                ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
+        } else {
+            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
+                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+        }
+    }
+
+    private static Model createFenceSideModel(boolean tinted, boolean overlay) {
+        String tintPath = tinted ? "block/tinted/" : "block/untinted/";
+        String overlayPath = overlay ? "fence_side_overlay" : "fence_side";
+        String path = tintPath + overlayPath;
+
+        if (overlay) {
+            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
+                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
+                ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
+        } else {
+            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
+                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+        }
+    }
+
+    private static Model createFenceInventoryModel(boolean tinted, boolean overlay) {
+        String tintPath = tinted ? "block/tinted/" : "block/untinted/";
+        String overlayPath = overlay ? "fence_inventory_overlay" : "fence_inventory";
+        String path = tintPath + overlayPath;
+
+        if (overlay) {
+            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
+                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
+                ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
+        } else {
+            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
+                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+        }
+    }
+
+    // ========================================
+    // Helper Methods (block-models.md 5.3-5.4)
+    // ========================================
+
+    /**
+     * Creates a TextureMap for fence blocks.
+     * Follows block-models.md section 5.3: Using Texture Map.
+     */
+    private static TextureMap createFenceTextureMap(String[] textures, String[] overlayTextures) {
+        TextureMap textureMap = new TextureMap()
+                .put(TextureKey.BOTTOM, createBlockIdentifier(textures[0]))
+                .put(TextureKey.TOP, createBlockIdentifier(textures[1]))
+                .put(TextureKey.SIDE, createBlockIdentifier(textures[2]))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(textures[2]));
+
+        if (overlayTextures != null) {
+            textureMap.put(ModTextureKey.BOTTOM_OVERLAY, createBlockIdentifier(overlayTextures[0]));
+            textureMap.put(ModTextureKey.TOP_OVERLAY, createBlockIdentifier(overlayTextures[1]));
+            textureMap.put(ModTextureKey.SIDE_OVERLAY, createBlockIdentifier(overlayTextures[2]));
+        }
+
+        return textureMap;
+    }
+
+    /**
+     * Creates multipart blockstate supplier for fence blocks.
+     * Follows block-models.md section 5.4: Custom BlockStateSupplier Method.
+     */
+    private static MultipartBlockStateSupplier createFenceVariants(Block block, List<Identifier> postModelIds,
+                                                                    List<Identifier> sideModelIds, List<Integer> weights) {
+        MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
+
+        // Add post models (always present - no conditions)
+        List<BlockStateVariant> postVariants = new ArrayList<>();
+        for (int i = 0; i < postModelIds.size(); i++) {
+            BlockStateVariant postVariant = BlockStateVariant.create()
+                    .put(VariantSettings.MODEL, postModelIds.get(i));
+
+            if (weights.get(i) > 1) {
+                postVariant = postVariant.put(VariantSettings.WEIGHT, weights.get(i));
+            }
+
+            postVariants.add(postVariant);
+        }
+        supplier.with(postVariants);
+
+        // Add side models for each direction
+        addDirectionalSideModels(supplier, sideModelIds, weights, Direction.NORTH);
+        addDirectionalSideModels(supplier, sideModelIds, weights, Direction.EAST);
+        addDirectionalSideModels(supplier, sideModelIds, weights, Direction.SOUTH);
+        addDirectionalSideModels(supplier, sideModelIds, weights, Direction.WEST);
+
+        return supplier;
+    }
+
+    private static void addDirectionalSideModels(MultipartBlockStateSupplier supplier, List<Identifier> sideModelIds,
+                                                  List<Integer> weights, Direction direction) {
+        List<BlockStateVariant> sideVariants = new ArrayList<>();
+
+        for (int i = 0; i < sideModelIds.size(); i++) {
+            BlockStateVariant sideVariant = BlockStateVariant.create()
+                    .put(VariantSettings.MODEL, sideModelIds.get(i));
+
+            // Add rotation based on direction
+            switch (direction) {
+                case EAST -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R90);
+                case SOUTH -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R180);
+                case WEST -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R270);
+                // NORTH gets no rotation (0 degrees)
+            }
+
+            if (weights.get(i) > 1) {
+                sideVariant = sideVariant.put(VariantSettings.WEIGHT, weights.get(i));
+            }
+
+            // Add UV lock for rotated models
+            if (direction != Direction.NORTH) {
+                sideVariant = sideVariant.put(VariantSettings.UVLOCK, true);
+            }
+
+            sideVariants.add(sideVariant);
+        }
+
+        // Add condition for when this side should be rendered
+        When condition = switch (direction) {
+            case NORTH -> When.create().set(Properties.NORTH, true);
+            case EAST -> When.create().set(Properties.EAST, true);
+            case SOUTH -> When.create().set(Properties.SOUTH, true);
+            case WEST -> When.create().set(Properties.WEST, true);
+            default -> null;
+        };
+
+        supplier.with(condition, sideVariants);
+    }
+
+    // ========================================
+    // Public Registration Methods (block-models.md 5.5)
+    // ========================================
+
+    /**
+     * Registers a fence block with simple textures.
+     * Follows block-models.md section 5.5: Custom Datagen Method.
+     *
+     * @param generator The BlockStateModelGenerator to register models with
+     * @param block The fence block to generate models for
+     * @param tinted Whether the fence uses tinted textures
+     * @param overlay Whether the fence has overlay textures
+     * @param textures Texture paths [bottom, top, side] (or single texture for all)
+     * @param overlayTextures Overlay texture paths (optional, only if overlay=true)
+     */
+    public static void registerFenceBlock(BlockStateModelGenerator generator, Block block, boolean tinted,
+                                         boolean overlay, String[] textures, String[] overlayTextures) {
+        // Expand single texture to three if needed
+        String[] expandedTextures = expandTextureArray(textures);
+        String[] expandedOverlays = overlay && overlayTextures != null ? expandTextureArray(overlayTextures) : null;
+
+        // Create texture map
+        TextureMap textureMap = createFenceTextureMap(expandedTextures, expandedOverlays);
+
+        // Upload post and side models
+        Identifier postModelId = createFencePostModel(tinted, overlay)
+                .upload(createNestedModelId(block, "post"), textureMap, generator.modelCollector);
+        Identifier sideModelId = createFenceSideModel(tinted, overlay)
+                .upload(createNestedModelId(block, "side"), textureMap, generator.modelCollector);
+
+        // Create blockstate
+        MultipartBlockStateSupplier blockstate = createFenceVariants(block,
+                List.of(postModelId), List.of(sideModelId), List.of(1));
+        generator.blockStateCollector.accept(blockstate);
+
+        // Register item model
+        Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
+        createFenceInventoryModel(tinted, overlay)
+                .upload(itemModelId, textureMap, generator.modelCollector);
+    }
+
+    /**
+     * Registers a fence block with random texture variants.
+     */
+    public static void registerFenceBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, boolean tinted,
+                                                           boolean overlay, List<BlockDefinition.TextureVariantSet> textureSets) {
+        List<Identifier> postModelIds = new ArrayList<>();
+        List<Identifier> sideModelIds = new ArrayList<>();
+        List<Integer> weights = new ArrayList<>();
+
+        for (int i = 0; i < textureSets.size(); i++) {
+            BlockDefinition.TextureVariantSet set = textureSets.get(i);
+            String[] expandedTextures = expandTextureArray(set.getTexturesAsArray());
+            String[] expandedOverlays = overlay && set.hasOverlay() ? expandTextureArray(set.getOverlayTexturesAsArray()) : null;
+
+            TextureMap textureMap = createFenceTextureMap(expandedTextures, expandedOverlays);
+
+            Identifier postModelId = createFencePostModel(tinted, overlay)
+                    .upload(createNestedModelId(block, "post_v" + (i + 1)), textureMap, generator.modelCollector);
+            Identifier sideModelId = createFenceSideModel(tinted, overlay)
+                    .upload(createNestedModelId(block, "side_v" + (i + 1)), textureMap, generator.modelCollector);
+
+            postModelIds.add(postModelId);
+            sideModelIds.add(sideModelId);
+            weights.add(set.weight);
+        }
+
+        // Create blockstate
+        MultipartBlockStateSupplier blockstate = createFenceVariants(block, postModelIds, sideModelIds, weights);
+        generator.blockStateCollector.accept(blockstate);
+
+        // Register item model (using first texture set)
+        BlockDefinition.TextureVariantSet firstSet = textureSets.get(0);
+        String[] expandedTextures = expandTextureArray(firstSet.getTexturesAsArray());
+        String[] expandedOverlays = overlay && firstSet.hasOverlay() ? expandTextureArray(firstSet.getOverlayTexturesAsArray()) : null;
+        TextureMap itemTextureMap = createFenceTextureMap(expandedTextures, expandedOverlays);
+
+        Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
+        createFenceInventoryModel(tinted, overlay)
+                .upload(itemModelId, itemTextureMap, generator.modelCollector);
+    }
+
+    // ========================================
+    // BlockDefinition Integration (block-models.md 5.6)
+    // ========================================
+
+    /**
+     * Registers a fence block from a BlockDefinition.
+     * Automatically extracts textures and properties from the definition.
+     */
+    public static void registerCustomFenceBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        boolean tinted = definition.isTinted() || definition.hasColorMult();
+        boolean overlay = definition.hasOverlayTextures();
+        List<String> textureList = definition.getTextures();
+
+        if (definition.hasRandomTextures()) {
+            List<BlockDefinition.TextureVariantSet> textureSets = new ArrayList<>();
+            List<BlockDefinition.TextureVariantSet> variants = definition.getRandomTextureVariantSets();
+
+            for (BlockDefinition.TextureVariantSet variant : variants) {
+                List<String> textures = variant.textures;
+                int weight = variant.weight;
+
+                if (!textures.isEmpty()) {
+                    String[] textureArray = textures.toArray(new String[0]);
+                    String[] overlayArray = null;
+
+                    if (overlay && definition.getOverlayTextures() != null && definition.getOverlayTextures().size() >= textures.size()) {
+                        overlayArray = definition.getOverlayTextures().subList(0, textures.size()).toArray(new String[0]);
+                    }
+
+                    textureSets.add(new BlockDefinition.TextureVariantSet(textureArray, weight, overlayArray));
+                } else {
+                    textureSets.add(new BlockDefinition.TextureVariantSet(new String[]{"missingno"}, weight, null));
+                }
+            }
+
+            registerFenceBlockWithRandomTextures(generator, block, tinted, overlay, textureSets);
+        } else if (textureList != null && !textureList.isEmpty()) {
+            String[] textures = textureList.toArray(new String[0]);
+            String[] overlays = overlay && definition.getOverlayTextures() != null
+                    ? definition.getOverlayTextures().toArray(new String[0])
+                    : null;
+
+            registerFenceBlock(generator, block, tinted, overlay, textures, overlays);
+        } else {
+            // Fallback
+            registerFenceBlock(generator, block, tinted, overlay, new String[]{"missingno"}, null);
+        }
+    }
+
+    // ========================================
+    // Helper Classes
+    // ========================================
+
+    /**
+     * Helper class to hold texture set with weight for random textures.
+     */
+
+    /**
+     * Expands a texture array to 3 elements if it has only 1.
+     */
+    private static String[] expandTextureArray(String[] textures) {
+        if (textures.length == 1) {
+            return new String[]{textures[0], textures[0], textures[0]};
+        } else if (textures.length == 3) {
+            return textures;
+        } else {
+            throw new IllegalArgumentException("Fence blocks require 1 or 3 textures, got " + textures.length);
+        }
+    }
+}

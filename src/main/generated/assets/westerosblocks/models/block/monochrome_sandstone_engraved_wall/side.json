@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side",
+  "textures": {
+    "bottom": "westerosblocks:block/ashlar_engraved/westerlands/all",
+    "particle": "westerosblocks:block/ashlar_engraved/westerlands/all",
+    "side": "westerosblocks:block/ashlar_engraved/westerlands/all",
+    "top": "westerosblocks:block/ashlar_engraved/westerlands/all"
+  }
+}

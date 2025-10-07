@@ -1,0 +1,13 @@
+{
+  "parent": "block/block",
+  "elements": [],
+  "textures": {
+    "particle": "westerosblocks:block/pulley/chain/top_bottom",
+    "txt0": "westerosblocks:block/pulley/chain/top_bottom",
+    "txt1": "westerosblocks:block/pulley/chain/top_bottom",
+    "txt2": "westerosblocks:block/pulley/chain/side",
+    "txt3": "westerosblocks:block/pulley/chain/side",
+    "txt4": "westerosblocks:block/pulley/chain/front",
+    "txt5": "westerosblocks:block/pulley/chain/front"
+  }
+}

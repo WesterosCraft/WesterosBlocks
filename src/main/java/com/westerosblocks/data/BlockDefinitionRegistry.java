@@ -1,0 +1,197 @@
+package com.westerosblocks.data;
+
+import com.westerosblocks.WesterosBlocks;
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class BlockDefinitionRegistry {
+    private static BlockDefinitionRegistry instance;
+    private final Map<String, BlockDefinition> definitions;
+    private final Map<String, List<BlockDefinition>> definitionsByType;
+    private boolean initialized = false;
+
+    private BlockDefinitionRegistry() {
+        this.definitions = new HashMap<>();
+        this.definitionsByType = new HashMap<>();
+    }
+
+    public static synchronized BlockDefinitionRegistry getInstance() {
+        if (instance == null) {
+            instance = new BlockDefinitionRegistry();
+        }
+        return instance;
+    }
+
+    public void initialize(String blockDefinitionsPath) {
+        initialize(blockDefinitionsPath, null);
+    }
+
+    public void initialize(String blockDefinitionsPath, String blockSetDefinitionsPath) {
+        if (initialized) {
+            WesterosBlocks.LOGGER.warn("BlockDefinitionRegistry is already initialized. Skipping re-initialization.");
+            return;
+        }
+
+        WesterosBlocks.LOGGER.info("Initializing BlockDefinitionRegistry...");
+
+        // Load individual block definitions
+        BlockDefinitionLoader loader = new BlockDefinitionLoader(blockDefinitionsPath);
+        Map<String, BlockDefinition> loadedDefinitions = loader.loadAllDefinitions();
+
+        if (loadedDefinitions.isEmpty()) {
+            WesterosBlocks.LOGGER.warn("No individual block definitions were loaded!");
+        }
+
+        definitions.putAll(loadedDefinitions);
+        loader.validateDefinitions(loadedDefinitions);
+
+        // Load block set definitions and expand them
+        if (blockSetDefinitionsPath != null) {
+            BlockSetDefinitionLoader setLoader = new BlockSetDefinitionLoader(blockSetDefinitionsPath);
+            Map<String, BlockSetDefinition> loadedBlockSets = setLoader.loadAllDefinitions();
+
+            if (!loadedBlockSets.isEmpty()) {
+                WesterosBlocks.LOGGER.info("Expanding {} block sets into individual definitions...", loadedBlockSets.size());
+                int expandedCount = 0;
+
+                for (BlockSetDefinition blockSet : loadedBlockSets.values()) {
+                    List<BlockDefinition> expandedDefinitions = BlockSetExpander.expand(blockSet);
+                    for (BlockDefinition def : expandedDefinitions) {
+                        if (definitions.containsKey(def.getBlockName())) {
+                            WesterosBlocks.LOGGER.warn("Block set '{}' generated duplicate block name '{}' - skipping",
+                                blockSet.getBaseBlockName(), def.getBlockName());
+                        } else {
+                            definitions.put(def.getBlockName(), def);
+                            expandedCount++;
+                        }
+                    }
+                }
+
+                WesterosBlocks.LOGGER.info("Expanded block sets into {} additional block definitions", expandedCount);
+                setLoader.validateDefinitions(loadedBlockSets);
+            } else {
+                WesterosBlocks.LOGGER.warn("No block set definitions were loaded!");
+            }
+        }
+
+        // Group all definitions by type
+        definitionsByType.putAll(loader.groupByType(definitions));
+
+        initialized = true;
+        WesterosBlocks.LOGGER.info("BlockDefinitionRegistry initialized with {} total definitions across {} types",
+            definitions.size(), definitionsByType.size());
+    }
+
+    public boolean isInitialized() {
+        return initialized;
+    }
+
+    public BlockDefinition getDefinition(String blockName) {
+        if (!initialized) {
+            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
+        }
+        return definitions.get(blockName);
+    }
+
+    public List<BlockDefinition> getByType(String blockType) {
+        if (!initialized) {
+            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
+        }
+        return definitionsByType.getOrDefault(blockType, Collections.emptyList());
+    }
+
+    public Collection<BlockDefinition> getAllDefinitions() {
+        if (!initialized) {
+            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
+        }
+        return Collections.unmodifiableCollection(definitions.values());
+    }
+
+    public Set<String> getAllBlockNames() {
+        if (!initialized) {
+            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
+        }
+        return Collections.unmodifiableSet(definitions.keySet());
+    }
+
+    public Set<String> getAllBlockTypes() {
+        if (!initialized) {
+            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
+        }
+        return Collections.unmodifiableSet(definitionsByType.keySet());
+    }
+
+    public List<BlockDefinition> getByCreativeTab(String creativeTab) {
+        if (!initialized) {
+            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
+        }
+        return definitions.values().stream()
+            .filter(def -> creativeTab.equals(def.getCreativeTab()))
+            .collect(Collectors.toList());
+    }
+
+    public List<BlockDefinition> getWithAllowUnsupported() {
+        if (!initialized) {
+            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
+        }
+        return definitions.values().stream()
+            .filter(BlockDefinition::isAllowUnsupported)
+            .collect(Collectors.toList());
+    }
+
+    public boolean exists(String blockName) {
+        if (!initialized) {
+            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
+        }
+        return definitions.containsKey(blockName);
+    }
+
+    public int getCount() {
+        if (!initialized) {
+            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
+        }
+        return definitions.size();
+    }
+
+    public int getCountByType(String blockType) {
+        if (!initialized) {
+            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
+        }
+        List<BlockDefinition> typeDefinitions = definitionsByType.get(blockType);
+        return typeDefinitions != null ? typeDefinitions.size() : 0;
+    }
+
+    public Map<String, Integer> getTypeStatistics() {
+        if (!initialized) {
+            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
+        }
+        return definitionsByType.entrySet().stream()
+            .collect(Collectors.toMap(
+                Map.Entry::getKey,
+                entry -> entry.getValue().size()
+            ));
+    }
+
+    public void printStatistics() {
+        if (!initialized) {
+            WesterosBlocks.LOGGER.warn("Cannot print statistics - BlockDefinitionRegistry not initialized!");
+            return;
+        }
+
+        WesterosBlocks.LOGGER.info("=== Block Definition Registry Statistics ===");
+        WesterosBlocks.LOGGER.info("Total definitions loaded: {}", getCount());
+        WesterosBlocks.LOGGER.info("Block types found: {}", definitionsByType.size());
+
+        for (Map.Entry<String, Integer> entry : getTypeStatistics().entrySet()) {
+            WesterosBlocks.LOGGER.info("  {}: {} blocks", entry.getKey(), entry.getValue());
+        }
+    }
+
+    public void clear() {
+        definitions.clear();
+        definitionsByType.clear();
+        initialized = false;
+        WesterosBlocks.LOGGER.info("BlockDefinitionRegistry cleared");
+    }
+}

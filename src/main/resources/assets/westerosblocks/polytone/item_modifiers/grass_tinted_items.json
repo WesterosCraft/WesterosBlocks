@@ -1,0 +1,8 @@
+{
+  "targets": [
+    "westerosblocks:grass",
+    "westerosblocks:thick_grass_block",
+    "westerosblocks:thick_grass"
+  ],
+  "colormap": "westerosblocks:grass"
+}

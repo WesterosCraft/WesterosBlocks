@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side",
+  "textures": {
+    "bottom": "westerosblocks:block/plaster/rough/white_daub/all2",
+    "particle": "westerosblocks:block/plaster/rough/white_daub/all2",
+    "side": "westerosblocks:block/plaster/rough/white_daub/all2",
+    "top": "westerosblocks:block/plaster/rough/white_daub/all2"
+  }
+}

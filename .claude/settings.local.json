@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(while read file)",
+      "Bash(for file in FlowerbedBlockExporter.java RailBlockExporter.java PlantBlockExporter.java CuboidNEBlockExporter.java CuboidNSEWBlockExporter.java)",
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(for:*)",
+      "Bash(head:*)",
+      "Bash(find:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

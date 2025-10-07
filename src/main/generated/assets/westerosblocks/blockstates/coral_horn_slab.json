@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/coral_horn_slab/coral_horn_slab_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/coral_horn_slab/coral_horn_slab_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/coral_horn_slab/coral_horn_slab_top"
+    }
+  }
+}

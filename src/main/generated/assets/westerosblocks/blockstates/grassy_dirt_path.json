@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/grassy_dirt_path/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/grassy_dirt_path/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/grassy_dirt_path/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/grassy_dirt_path/base_v4"
+      },
+      {
+        "model": "westerosblocks:block/grassy_dirt_path/base_v5"
+      },
+      {
+        "model": "westerosblocks:block/grassy_dirt_path/base_v6"
+      },
+      {
+        "model": "westerosblocks:block/grassy_dirt_path/base_v7"
+      },
+      {
+        "model": "westerosblocks:block/grassy_dirt_path/base_v8"
+      },
+      {
+        "model": "westerosblocks:block/grassy_dirt_path/base_v9"
+      },
+      {
+        "model": "westerosblocks:block/grassy_dirt_path/base_v10"
+      }
+    ]
+  }
+}

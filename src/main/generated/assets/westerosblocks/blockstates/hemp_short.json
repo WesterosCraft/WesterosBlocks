@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/custom/hemp_short/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/custom/hemp_short/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/custom/hemp_short/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/custom/hemp_short/base_v4"
+      }
+    ]
+  }
+}

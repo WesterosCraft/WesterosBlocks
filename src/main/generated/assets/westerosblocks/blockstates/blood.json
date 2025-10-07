@@ -1,0 +1,48 @@
+{
+  "variants": {
+    "state=blood1": {
+      "model": "westerosblocks:block/blood/blood1_v1"
+    },
+    "state=blood2": {
+      "model": "westerosblocks:block/blood/blood2_v1"
+    },
+    "state=blood3": {
+      "model": "westerosblocks:block/blood/blood3_v1"
+    },
+    "state=blood4": {
+      "model": "westerosblocks:block/blood/blood4_v1"
+    },
+    "state=blood5": {
+      "model": "westerosblocks:block/blood/blood5_v1"
+    },
+    "state=blood6": {
+      "model": "westerosblocks:block/blood/blood6_v1"
+    },
+    "state=blood7": {
+      "model": "westerosblocks:block/blood/blood7_v1"
+    },
+    "state=random": [
+      {
+        "model": "westerosblocks:block/blood/random_v1"
+      },
+      {
+        "model": "westerosblocks:block/blood/random_v2"
+      },
+      {
+        "model": "westerosblocks:block/blood/random_v3"
+      },
+      {
+        "model": "westerosblocks:block/blood/random_v4"
+      },
+      {
+        "model": "westerosblocks:block/blood/random_v5"
+      },
+      {
+        "model": "westerosblocks:block/blood/random_v6"
+      },
+      {
+        "model": "westerosblocks:block/blood/random_v7"
+      }
+    ]
+  }
+}

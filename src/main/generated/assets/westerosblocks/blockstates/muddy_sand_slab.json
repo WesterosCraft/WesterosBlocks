@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/muddy_sand_slab/muddy_sand_slab_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/muddy_sand_slab/muddy_sand_slab_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/muddy_sand_slab/muddy_sand_slab_top"
+    }
+  }
+}

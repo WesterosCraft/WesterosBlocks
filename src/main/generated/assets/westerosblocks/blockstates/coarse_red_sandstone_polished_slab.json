@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/coarse_red_sandstone_polished_slab/coarse_red_sandstone_polished_slab_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/coarse_red_sandstone_polished_slab/coarse_red_sandstone_polished_slab_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/coarse_red_sandstone_polished_slab/coarse_red_sandstone_polished_slab_top"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/casterly_rock_crimson_plaster_rough/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/casterly_rock_crimson_plaster_rough/base_v2"
+      }
+    ]
+  }
+}

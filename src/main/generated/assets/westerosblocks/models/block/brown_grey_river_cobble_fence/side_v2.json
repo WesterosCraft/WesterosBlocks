@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_side",
+  "textures": {
+    "bottom": "westerosblocks:block/rubble/brown_grey_river/all2",
+    "particle": "westerosblocks:block/rubble/brown_grey_river/all2",
+    "side": "westerosblocks:block/rubble/brown_grey_river/all2",
+    "top": "westerosblocks:block/rubble/brown_grey_river/all2"
+  }
+}

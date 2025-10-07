@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_post",
+  "textures": {
+    "bottom": "westerosblocks:block/bark/oak/wall_top",
+    "particle": "westerosblocks:block/bark/oak/side",
+    "side": "westerosblocks:block/bark/oak/side",
+    "top": "westerosblocks:block/bark/oak/wall_top"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/brick/orange/all1",
+    "east": "westerosblocks:block/brick/orange/dentil",
+    "north": "westerosblocks:block/brick/orange/dentil",
+    "particle": "westerosblocks:block/brick/orange/all1",
+    "south": "westerosblocks:block/brick/orange/dentil",
+    "up": "westerosblocks:block/brick/orange/all1",
+    "west": "westerosblocks:block/brick/orange/dentil"
+  }
+}

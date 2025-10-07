@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/test_block_symmetrical/test_block_symmetrical"
+    }
+  }
+}

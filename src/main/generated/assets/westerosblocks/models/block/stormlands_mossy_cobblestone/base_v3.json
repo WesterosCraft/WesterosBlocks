@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/cobblestone/stormlands_mossy/all3",
+    "east": "westerosblocks:block/cobblestone/stormlands_mossy/all3",
+    "north": "westerosblocks:block/cobblestone/stormlands_mossy/all3",
+    "particle": "westerosblocks:block/cobblestone/stormlands_mossy/all3",
+    "south": "westerosblocks:block/cobblestone/stormlands_mossy/all3",
+    "up": "westerosblocks:block/cobblestone/stormlands_mossy/all3",
+    "west": "westerosblocks:block/cobblestone/stormlands_mossy/all3"
+  }
+}
