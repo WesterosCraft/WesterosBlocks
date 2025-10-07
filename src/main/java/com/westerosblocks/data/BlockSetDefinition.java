@@ -105,6 +105,10 @@ public class BlockSetDefinition {
     @SerializedName("nonOpaque")
     private Boolean nonOpaque;
 
+    /** Render layer - "cutout", "cutout_mipped", or "translucent" */
+    @SerializedName("renderLayer")
+    private String renderLayer;
+
     /** Light emission level (0-15) */
     @SerializedName("lightValue")
     private Float lightValue;
@@ -213,6 +217,7 @@ public class BlockSetDefinition {
     public Boolean getAlphaRender() { return alphaRender; }
     public Boolean getAmbientOcclusion() { return ambientOcclusion; }
     public Boolean getNonOpaque() { return nonOpaque; }
+    public String getRenderLayer() { return renderLayer; }
     public Float getLightValue() { return lightValue; }
     public String getColorMult() { return colorMult; }
 

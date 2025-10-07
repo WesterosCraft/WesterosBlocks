@@ -141,6 +141,7 @@ public class BlockSetExpander {
         if (blockSet.getAlphaRender() != null) defMap.put("alphaRender", blockSet.getAlphaRender());
         if (blockSet.getAmbientOcclusion() != null) defMap.put("ambientOcclusion", blockSet.getAmbientOcclusion());
         if (blockSet.getNonOpaque() != null) defMap.put("nonOpaque", blockSet.getNonOpaque());
+        if (blockSet.getRenderLayer() != null) defMap.put("renderLayer", blockSet.getRenderLayer());
         if (blockSet.getLightValue() != null) defMap.put("luminance", blockSet.getLightValue().intValue());
         if (blockSet.getColorMult() != null) defMap.put("colorMult", blockSet.getColorMult());
 
