@@ -5,6 +5,7 @@ import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.BlockBuilder;
 import com.westerosblocks.block.custom.WCCropBlock;
 import com.westerosblocks.block.custom.WCCuboidBlock;
+import com.westerosblocks.block.custom.WCCuboid16WayBlock;
 import com.westerosblocks.block.custom.WCCuboidNSEWBlock;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
@@ -471,6 +472,36 @@ public class ModBlocks {
                             .toggleOnUse(definition.toggleOnUse())
                             .states(definition.hasStates() ? definition.getStates().size() : 0)
                             .build(definition);
+
+                case "cuboid-16way":
+                    BlockBuilder<WCCuboid16WayBlock> cuboid16WayBuilder = BlockBuilder.cuboid16Way()
+                            .hardness(definition.getHardness())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .nonOpaque(definition.isNonOpaque())
+                            .noCollision(definition.hasNoCollision())
+                            .toggleOnUse(definition.toggleOnUse())
+                            .states(definition.hasStates() ? definition.getStates().size() : 0);
+
+                    // Handle bounding box if present
+                    if (definition.getBoundingBox() != null) {
+                        var bbox = definition.getBoundingBox();
+                        cuboid16WayBuilder.boundingBox(
+                            bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
+                            bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
+                        );
+                    }
+
+                    // Handle state values if present
+                    if (definition.hasStates()) {
+                        List<String> stateValues = definition.getStateValues();
+                        if (stateValues != null && !stateValues.isEmpty()) {
+                            cuboid16WayBuilder.stateValues(stateValues);
+                        }
+                    }
+
+                    return cuboid16WayBuilder.build(definition);
 
                 case "layer":
                     return BlockBuilder.layer()

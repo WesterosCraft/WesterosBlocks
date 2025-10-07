@@ -102,6 +102,7 @@ public class BlockBuilder<T extends Block> {
     public static BlockBuilder<WCCuboidNSEWStackBlock> cuboidNSEWStack() { return new BlockBuilder<>(new WCCuboidNSEWStackBlock.Factory()); }
     public static BlockBuilder<WCCuboidNEBlock> cuboidNE() { return new BlockBuilder<>(new WCCuboidNEBlock.Factory()); }
     public static BlockBuilder<WCCuboidNSEWUDBlock> cuboidNSEWUD() { return new BlockBuilder<>(new WCCuboidNSEWUDBlock.Factory()); }
+    public static BlockBuilder<WCCuboid16WayBlock> cuboid16Way() { return new BlockBuilder<>(new WCCuboid16WayBlock.Factory()); }
     public static BlockBuilder<WCStairBlock> stair() { return new BlockBuilder<>(new WCStairBlock.Factory()); }
 
     public BlockBuilder<T> settings(AbstractBlock.Settings settings) {
