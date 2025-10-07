@@ -472,6 +472,15 @@ public class ModBlocks {
                             .states(definition.hasStates() ? definition.getStates().size() : 0)
                             .build(definition);
 
+                case "layer":
+                    return BlockBuilder.layer()
+                            .hardness(definition.getHardness())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .nonOpaque()
+                            .build();
+
 //                case "chair":
 //                    return BlockBuilder.chair()
 //                        .strength(definition.getStrength())

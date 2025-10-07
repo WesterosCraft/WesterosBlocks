@@ -452,16 +452,182 @@ public class StairBlockExporter extends BaseBlockExporter {
         variants.add(condition, variant);
     }
 
-    // Similar methods for weighted variants - abbreviated for space
+    /**
+     * Adds stair variants with weighted random texture models.
+     */
     private static void addStairVariantsWithWeights(JsonObject variants, List<StairModelSet> modelSets, boolean noUvlock) {
-        // Implementation similar to addStairVariants but with weighted arrays
-        // This would create JsonArray for each condition with multiple weighted models
-        // Omitted for brevity - pattern matches other random texture implementations
+        // Bottom half
+        addWeightedVariant(variants, "facing=east,half=bottom,shape=straight", modelSets, "base", 0, 0, noUvlock);
+        addWeightedVariant(variants, "facing=west,half=bottom,shape=straight", modelSets, "base", 0, 180, noUvlock);
+        addWeightedVariant(variants, "facing=south,half=bottom,shape=straight", modelSets, "base", 0, 90, noUvlock);
+        addWeightedVariant(variants, "facing=north,half=bottom,shape=straight", modelSets, "base", 0, 270, noUvlock);
+
+        addWeightedVariant(variants, "facing=east,half=bottom,shape=outer_right", modelSets, "outer", 0, 0, noUvlock);
+        addWeightedVariant(variants, "facing=west,half=bottom,shape=outer_right", modelSets, "outer", 0, 180, noUvlock);
+        addWeightedVariant(variants, "facing=south,half=bottom,shape=outer_right", modelSets, "outer", 0, 90, noUvlock);
+        addWeightedVariant(variants, "facing=north,half=bottom,shape=outer_right", modelSets, "outer", 0, 270, noUvlock);
+
+        addWeightedVariant(variants, "facing=east,half=bottom,shape=outer_left", modelSets, "outer", 0, 270, noUvlock);
+        addWeightedVariant(variants, "facing=west,half=bottom,shape=outer_left", modelSets, "outer", 0, 90, noUvlock);
+        addWeightedVariant(variants, "facing=south,half=bottom,shape=outer_left", modelSets, "outer", 0, 0, noUvlock);
+        addWeightedVariant(variants, "facing=north,half=bottom,shape=outer_left", modelSets, "outer", 0, 180, noUvlock);
+
+        addWeightedVariant(variants, "facing=east,half=bottom,shape=inner_right", modelSets, "inner", 0, 0, noUvlock);
+        addWeightedVariant(variants, "facing=west,half=bottom,shape=inner_right", modelSets, "inner", 0, 180, noUvlock);
+        addWeightedVariant(variants, "facing=south,half=bottom,shape=inner_right", modelSets, "inner", 0, 90, noUvlock);
+        addWeightedVariant(variants, "facing=north,half=bottom,shape=inner_right", modelSets, "inner", 0, 270, noUvlock);
+
+        addWeightedVariant(variants, "facing=east,half=bottom,shape=inner_left", modelSets, "inner", 0, 270, noUvlock);
+        addWeightedVariant(variants, "facing=west,half=bottom,shape=inner_left", modelSets, "inner", 0, 90, noUvlock);
+        addWeightedVariant(variants, "facing=south,half=bottom,shape=inner_left", modelSets, "inner", 0, 0, noUvlock);
+        addWeightedVariant(variants, "facing=north,half=bottom,shape=inner_left", modelSets, "inner", 0, 180, noUvlock);
+
+        // Top half
+        addWeightedVariant(variants, "facing=east,half=top,shape=straight", modelSets, "base", 180, 0, noUvlock);
+        addWeightedVariant(variants, "facing=west,half=top,shape=straight", modelSets, "base", 180, 180, noUvlock);
+        addWeightedVariant(variants, "facing=south,half=top,shape=straight", modelSets, "base", 180, 90, noUvlock);
+        addWeightedVariant(variants, "facing=north,half=top,shape=straight", modelSets, "base", 180, 270, noUvlock);
+
+        addWeightedVariant(variants, "facing=east,half=top,shape=outer_right", modelSets, "outer", 180, 90, noUvlock);
+        addWeightedVariant(variants, "facing=west,half=top,shape=outer_right", modelSets, "outer", 180, 270, noUvlock);
+        addWeightedVariant(variants, "facing=south,half=top,shape=outer_right", modelSets, "outer", 180, 180, noUvlock);
+        addWeightedVariant(variants, "facing=north,half=top,shape=outer_right", modelSets, "outer", 180, 0, noUvlock);
+
+        addWeightedVariant(variants, "facing=east,half=top,shape=outer_left", modelSets, "outer", 180, 0, noUvlock);
+        addWeightedVariant(variants, "facing=west,half=top,shape=outer_left", modelSets, "outer", 180, 180, noUvlock);
+        addWeightedVariant(variants, "facing=south,half=top,shape=outer_left", modelSets, "outer", 180, 90, noUvlock);
+        addWeightedVariant(variants, "facing=north,half=top,shape=outer_left", modelSets, "outer", 180, 270, noUvlock);
+
+        addWeightedVariant(variants, "facing=east,half=top,shape=inner_right", modelSets, "inner", 180, 90, noUvlock);
+        addWeightedVariant(variants, "facing=west,half=top,shape=inner_right", modelSets, "inner", 180, 270, noUvlock);
+        addWeightedVariant(variants, "facing=south,half=top,shape=inner_right", modelSets, "inner", 180, 180, noUvlock);
+        addWeightedVariant(variants, "facing=north,half=top,shape=inner_right", modelSets, "inner", 180, 0, noUvlock);
+
+        addWeightedVariant(variants, "facing=east,half=top,shape=inner_left", modelSets, "inner", 180, 0, noUvlock);
+        addWeightedVariant(variants, "facing=west,half=top,shape=inner_left", modelSets, "inner", 180, 180, noUvlock);
+        addWeightedVariant(variants, "facing=south,half=top,shape=inner_left", modelSets, "inner", 180, 90, noUvlock);
+        addWeightedVariant(variants, "facing=north,half=top,shape=inner_left", modelSets, "inner", 180, 270, noUvlock);
     }
 
+    /**
+     * Helper to add a weighted variant with multiple random texture models.
+     */
+    private static void addWeightedVariant(JsonObject variants, String condition, List<StairModelSet> modelSets,
+                                          String modelType, int x, int y, boolean noUvlock) {
+        com.google.gson.JsonArray variantArray = new com.google.gson.JsonArray();
+
+        for (StairModelSet modelSet : modelSets) {
+            JsonObject variant = new JsonObject();
+
+            // Select the appropriate model (base, inner, or outer)
+            Identifier model = switch (modelType) {
+                case "inner" -> modelSet.inner;
+                case "outer" -> modelSet.outer;
+                default -> modelSet.base;
+            };
+
+            variant.addProperty("model", model.toString());
+            if (x != 0) variant.addProperty("x", x);
+            if (y != 0) variant.addProperty("y", y);
+            if (!noUvlock && (x != 0 || y != 0)) {
+                variant.addProperty("uvlock", true);
+            }
+            if (modelSet.weight > 1) {
+                variant.addProperty("weight", modelSet.weight);
+            }
+
+            variantArray.add(variant);
+        }
+
+        variants.add(condition, variantArray);
+    }
+
+    /**
+     * Adds stair variants with state prefix.
+     */
     private static void addStairVariantsWithState(JsonObject variants, List<StairModelSet> modelSets, String stateId, boolean noUvlock) {
-        // Implementation adds state= prefix to all conditions
-        // Omitted for brevity
+        // Bottom half
+        addStateVariant(variants, stateId, "facing=east,half=bottom,shape=straight", modelSets, "base", 0, 0, noUvlock);
+        addStateVariant(variants, stateId, "facing=west,half=bottom,shape=straight", modelSets, "base", 0, 180, noUvlock);
+        addStateVariant(variants, stateId, "facing=south,half=bottom,shape=straight", modelSets, "base", 0, 90, noUvlock);
+        addStateVariant(variants, stateId, "facing=north,half=bottom,shape=straight", modelSets, "base", 0, 270, noUvlock);
+
+        addStateVariant(variants, stateId, "facing=east,half=bottom,shape=outer_right", modelSets, "outer", 0, 0, noUvlock);
+        addStateVariant(variants, stateId, "facing=west,half=bottom,shape=outer_right", modelSets, "outer", 0, 180, noUvlock);
+        addStateVariant(variants, stateId, "facing=south,half=bottom,shape=outer_right", modelSets, "outer", 0, 90, noUvlock);
+        addStateVariant(variants, stateId, "facing=north,half=bottom,shape=outer_right", modelSets, "outer", 0, 270, noUvlock);
+
+        addStateVariant(variants, stateId, "facing=east,half=bottom,shape=outer_left", modelSets, "outer", 0, 270, noUvlock);
+        addStateVariant(variants, stateId, "facing=west,half=bottom,shape=outer_left", modelSets, "outer", 0, 90, noUvlock);
+        addStateVariant(variants, stateId, "facing=south,half=bottom,shape=outer_left", modelSets, "outer", 0, 0, noUvlock);
+        addStateVariant(variants, stateId, "facing=north,half=bottom,shape=outer_left", modelSets, "outer", 0, 180, noUvlock);
+
+        addStateVariant(variants, stateId, "facing=east,half=bottom,shape=inner_right", modelSets, "inner", 0, 0, noUvlock);
+        addStateVariant(variants, stateId, "facing=west,half=bottom,shape=inner_right", modelSets, "inner", 0, 180, noUvlock);
+        addStateVariant(variants, stateId, "facing=south,half=bottom,shape=inner_right", modelSets, "inner", 0, 90, noUvlock);
+        addStateVariant(variants, stateId, "facing=north,half=bottom,shape=inner_right", modelSets, "inner", 0, 270, noUvlock);
+
+        addStateVariant(variants, stateId, "facing=east,half=bottom,shape=inner_left", modelSets, "inner", 0, 270, noUvlock);
+        addStateVariant(variants, stateId, "facing=west,half=bottom,shape=inner_left", modelSets, "inner", 0, 90, noUvlock);
+        addStateVariant(variants, stateId, "facing=south,half=bottom,shape=inner_left", modelSets, "inner", 0, 0, noUvlock);
+        addStateVariant(variants, stateId, "facing=north,half=bottom,shape=inner_left", modelSets, "inner", 0, 180, noUvlock);
+
+        // Top half
+        addStateVariant(variants, stateId, "facing=east,half=top,shape=straight", modelSets, "base", 180, 0, noUvlock);
+        addStateVariant(variants, stateId, "facing=west,half=top,shape=straight", modelSets, "base", 180, 180, noUvlock);
+        addStateVariant(variants, stateId, "facing=south,half=top,shape=straight", modelSets, "base", 180, 90, noUvlock);
+        addStateVariant(variants, stateId, "facing=north,half=top,shape=straight", modelSets, "base", 180, 270, noUvlock);
+
+        addStateVariant(variants, stateId, "facing=east,half=top,shape=outer_right", modelSets, "outer", 180, 90, noUvlock);
+        addStateVariant(variants, stateId, "facing=west,half=top,shape=outer_right", modelSets, "outer", 180, 270, noUvlock);
+        addStateVariant(variants, stateId, "facing=south,half=top,shape=outer_right", modelSets, "outer", 180, 180, noUvlock);
+        addStateVariant(variants, stateId, "facing=north,half=top,shape=outer_right", modelSets, "outer", 180, 0, noUvlock);
+
+        addStateVariant(variants, stateId, "facing=east,half=top,shape=outer_left", modelSets, "outer", 180, 0, noUvlock);
+        addStateVariant(variants, stateId, "facing=west,half=top,shape=outer_left", modelSets, "outer", 180, 180, noUvlock);
+        addStateVariant(variants, stateId, "facing=south,half=top,shape=outer_left", modelSets, "outer", 180, 90, noUvlock);
+        addStateVariant(variants, stateId, "facing=north,half=top,shape=outer_left", modelSets, "outer", 180, 270, noUvlock);
+
+        addStateVariant(variants, stateId, "facing=east,half=top,shape=inner_right", modelSets, "inner", 180, 90, noUvlock);
+        addStateVariant(variants, stateId, "facing=west,half=top,shape=inner_right", modelSets, "inner", 180, 270, noUvlock);
+        addStateVariant(variants, stateId, "facing=south,half=top,shape=inner_right", modelSets, "inner", 180, 180, noUvlock);
+        addStateVariant(variants, stateId, "facing=north,half=top,shape=inner_right", modelSets, "inner", 180, 0, noUvlock);
+
+        addStateVariant(variants, stateId, "facing=east,half=top,shape=inner_left", modelSets, "inner", 180, 0, noUvlock);
+        addStateVariant(variants, stateId, "facing=west,half=top,shape=inner_left", modelSets, "inner", 180, 180, noUvlock);
+        addStateVariant(variants, stateId, "facing=south,half=top,shape=inner_left", modelSets, "inner", 180, 90, noUvlock);
+        addStateVariant(variants, stateId, "facing=north,half=top,shape=inner_left", modelSets, "inner", 180, 270, noUvlock);
+    }
+
+    /**
+     * Helper to add a state variant with weighted random textures.
+     */
+    private static void addStateVariant(JsonObject variants, String stateId, String condition,
+                                       List<StairModelSet> modelSets, String modelType, int x, int y, boolean noUvlock) {
+        String fullCondition = "state=" + stateId + "," + condition;
+
+        if (modelSets.size() == 1) {
+            // Single model
+            StairModelSet modelSet = modelSets.get(0);
+            Identifier model = switch (modelType) {
+                case "inner" -> modelSet.inner;
+                case "outer" -> modelSet.outer;
+                default -> modelSet.base;
+            };
+
+            JsonObject variant = new JsonObject();
+            variant.addProperty("model", model.toString());
+            if (x != 0) variant.addProperty("x", x);
+            if (y != 0) variant.addProperty("y", y);
+            if (!noUvlock && (x != 0 || y != 0)) {
+                variant.addProperty("uvlock", true);
+            }
+
+            variants.add(fullCondition, variant);
+        } else {
+            // Multiple weighted models
+            addWeightedVariant(variants, fullCondition, modelSets, modelType, x, y, noUvlock);
+        }
     }
 
     private static Identifier createCustomModelId(Block block, String variant) {

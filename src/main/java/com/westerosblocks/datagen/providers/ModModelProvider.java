@@ -194,6 +194,10 @@ public class ModModelProvider extends FabricModelProvider {
                     StairBlockExporter.registerCustomStairBlock(bsmg, block, definition);
                     break;
 
+                case "layer":
+                    LayerBlockExporter.registerCustomLayerBlock(bsmg, block, definition);
+                    break;
+
                 default:
                     WesterosBlocks.LOGGER.warn("Unsupported block type '{}' for model generation: {}",
                             blockType, definition.getBlockName());
