@@ -237,7 +237,8 @@ public class BlockSetDefinition {
     }
 
     public boolean hasTextures() {
-        return textures != null && !textures.isEmpty();
+        return (textures != null && !textures.isEmpty()) ||
+               (randomTextures != null && !randomTextures.isEmpty());
     }
 
     @Override
