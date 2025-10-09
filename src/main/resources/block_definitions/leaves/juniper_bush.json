@@ -7,6 +7,8 @@
   "label": "Juniper Bush",
   "colorMult": "textures/colormap/pine",
   "rotateRandom": true,
+  "noDecay": true,
+  "hasBetterFoliage": true,
   "randomTextures": [
     {
       "textures": [

@@ -5,6 +5,7 @@
   "creativeTab": "westeros_grass_dirt_tab",
   "label": "Bushy Grass Spruce",
   "isCustomModel": true,
+  "renderLayer": "cutout",
   "colorMults": ["textures/colormap/grass", "textures/colormap/pine"],
   "randomTextures": [{}, {}, {}],
   "boundingBox": {

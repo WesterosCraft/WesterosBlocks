@@ -5,6 +5,8 @@
   "type": "no-decay,better-foliage,overlay",
   "creativeTab": "westeros_foliage_tab",
   "label": "Plum Fruit Leaves",
+  "noDecay": true,
+  "hasBetterFoliage": true,
   "colorMult": "textures/colormap/foliageoak",
   "rotateRandom": true,
   "randomTextures": [

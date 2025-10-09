@@ -4,7 +4,6 @@
   "soundGroup": "cloth",
   "nonOpaque": true,
   "alphaRender": true,
-  "renderLayer": "cutout",
   "creativeTab": "westeros_water_air_tab",
   "label": "Alyssas Tears Mist One",
   "textures": ["alyssas_tears_mist/mist1"],

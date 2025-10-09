@@ -7,6 +7,8 @@
   "label": "Hop Fruit Leaves",
   "colorMult": "textures/colormap/foliagejungle",
   "rotateRandom": true,
+  "noDecay": true,
+  "hasBetterFoliage": true,
   "randomTextures": [
     {
       "textures": ["leaves/jungle/all", "transparent", "leaves/overlay/hop0"],

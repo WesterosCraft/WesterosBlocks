@@ -38,27 +38,36 @@ public class WesterosBlocksClient implements ClientModInitializer {
         }
 
         for (BlockDefinition definition : registry.getAllDefinitions()) {
+            RenderLayer renderLayer = null;
+
+            // First check for explicit renderLayer property
             if (definition.hasRenderLayer()) {
+                renderLayer = getRenderLayerFromString(definition.getRenderLayer());
+            }
+            // If no renderLayer but alphaRender is true, use translucent
+            else if (definition.isAlphaRender()) {
+                renderLayer = RenderLayer.getTranslucent();
+            }
+
+            // Apply render layer if determined
+            if (renderLayer != null) {
                 Block block = Registries.BLOCK.get(WesterosBlocks.id(definition.getBlockName()));
                 if (block != null) {
-                    RenderLayer renderLayer = getRenderLayerFromString(definition.getRenderLayer());
-                    if (renderLayer != null) {
-                        BlockRenderLayerMap.INSTANCE.putBlock(block, renderLayer);
+                    BlockRenderLayerMap.INSTANCE.putBlock(block, renderLayer);
 
-                        // For torch blocks, also apply render layer to wall variant
-                        if ("torch".equals(definition.getBlockType())) {
-                            Block wallBlock = Registries.BLOCK.get(WesterosBlocks.id("wall_" + definition.getBlockName()));
-                            if (wallBlock != null) {
-                                BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, renderLayer);
-                            }
+                    // For torch blocks, also apply render layer to wall variant
+                    if ("torch".equals(definition.getBlockType())) {
+                        Block wallBlock = Registries.BLOCK.get(WesterosBlocks.id("wall_" + definition.getBlockName()));
+                        if (wallBlock != null) {
+                            BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, renderLayer);
                         }
+                    }
 
-                        // For fan blocks, also apply render layer to wall variant
-                        if ("fan".equals(definition.getBlockType())) {
-                            Block wallBlock = Registries.BLOCK.get(WesterosBlocks.id("wall_" + definition.getBlockName()));
-                            if (wallBlock != null) {
-                                BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, renderLayer);
-                            }
+                    // For fan blocks, also apply render layer to wall variant
+                    if ("fan".equals(definition.getBlockType())) {
+                        Block wallBlock = Registries.BLOCK.get(WesterosBlocks.id("wall_" + definition.getBlockName()));
+                        if (wallBlock != null) {
+                            BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, renderLayer);
                         }
                     }
                 }

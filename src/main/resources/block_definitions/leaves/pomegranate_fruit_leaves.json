@@ -7,6 +7,8 @@
   "label": "Pomegranate Fruit Leaves",
   "colorMult": "textures/colormap/birch",
   "rotateRandom": true,
+  "noDecay": true,
+  "hasBetterFoliage": true,
   "randomTextures": [
     {
       "textures": [

@@ -134,9 +134,21 @@ public class BlockDefinition {
     @SerializedName("hasBetterFoliage")
     private Boolean hasBetterFoliage;
 
+    /** OptiFine Better Foliage support (alternate field name) */
+    @SerializedName("betterFoliage")
+    private Boolean betterFoliage;
+
+    /** Leaves should not decay */
+    @SerializedName("noDecay")
+    private Boolean noDecay;
+
     /** Randomly rotate block models */
     @SerializedName("hasRotateRandom")
     private Boolean hasRotateRandom;
+
+    /** Block uses alpha/translucent rendering */
+    @SerializedName("alphaRender")
+    private Boolean alphaRender;
 
     // === BLOCK-SPECIFIC PROPERTIES ===
 
@@ -486,11 +498,19 @@ public class BlockDefinition {
     }
 
     public boolean hasBetterFoliage() {
-        return Boolean.TRUE.equals(hasBetterFoliage);
+        return Boolean.TRUE.equals(hasBetterFoliage) || Boolean.TRUE.equals(betterFoliage);
     }
 
     public boolean hasRotateRandom() {
         return Boolean.TRUE.equals(hasRotateRandom);
+    }
+
+    public boolean isNoDecay() {
+        return Boolean.TRUE.equals(noDecay);
+    }
+
+    public boolean isAlphaRender() {
+        return Boolean.TRUE.equals(alphaRender);
     }
 
     public boolean isNoParticle() {
@@ -658,12 +678,6 @@ public class BlockDefinition {
         return "flame";
     }
 
-    /** Whether leaves should not decay */
-    public boolean isNoDecay() {
-        // This property would need to be added to the JSON schema
-        // For now, return false as default (leaves should decay normally)
-        return false;
-    }
 
     // === CENTRALIZED DATAGEN HELPER METHODS ===
 

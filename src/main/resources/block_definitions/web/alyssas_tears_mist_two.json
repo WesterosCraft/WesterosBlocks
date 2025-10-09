@@ -3,7 +3,6 @@
   "blockType": "web",
   "soundGroup": "cloth",
   "nonOpaque": true,
-  "renderLayer": "cutout",
   "alphaRender": true,
   "creativeTab": "westeros_water_air_tab",
   "label": "Alyssas Tears Mist Two",

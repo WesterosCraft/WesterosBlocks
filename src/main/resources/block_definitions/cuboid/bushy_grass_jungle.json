@@ -5,6 +5,7 @@
   "creativeTab": "westeros_grass_dirt_tab",
   "label": "Bushy Grass Jungle",
   "isCustomModel": true,
+  "renderLayer": "cutout",
   "colorMults": ["textures/colormap/grass", "textures/colormap/foliagejungle"],
   "randomTextures": [{}, {}, {}],
   "boundingBox": {

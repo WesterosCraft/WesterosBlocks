@@ -7,6 +7,8 @@
   "label": "Raspberry Bush",
   "colorMult": "textures/colormap/foliagejungle",
   "rotateRandom": true,
+  "noDecay": true,
+  "hasBetterFoliage": true,
   "randomTextures": [
     {
       "textures": [

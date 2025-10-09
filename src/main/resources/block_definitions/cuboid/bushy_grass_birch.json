@@ -5,6 +5,7 @@
   "creativeTab": "westeros_grass_dirt_tab",
   "label": "Bushy Grass Birch",
   "isCustomModel": true,
+  "renderLayer": "cutout",
   "colorMults": ["textures/colormap/grass", "textures/colormap/birch"],
   "randomTextures": [{}, {}, {}],
   "boundingBox": {

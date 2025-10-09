@@ -6,5 +6,7 @@
   "creativeTab": "westeros_foliage_tab",
   "label": "Snowy Spruce Leaves",
   "rotateRandom": true,
+  "noDecay": true,
+  "hasBetterFoliage": true,
   "textures": ["leaves/spruce/snowy/all"]
 }

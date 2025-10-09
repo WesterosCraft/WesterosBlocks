@@ -3,6 +3,8 @@
   "blockType": "beacon",
   "soundGroup": "metal",
   "luminance": 10,
+  "renderLayer": "cutout",
+  "nonOpaque": true,
   "creativeTab": "westeros_lighting_tab",
   "label": "Lit Brazier",
   "textures": [

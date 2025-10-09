@@ -7,6 +7,8 @@
   "label": "Apricot Fruit Leaves",
   "colorMult": "textures/colormap/foliageoak",
   "rotateRandom": true,
+  "noDecay": true,
+  "hasBetterFoliage": true,
   "randomTextures": [
     {
       "textures": ["leaves/oak/all", "transparent", "leaves/overlay/apricot0"],
