@@ -170,7 +170,8 @@ public class ModModelProvider extends FabricModelProvider {
                     WallBlockExporter.registerCustomWallBlock(bsmg, block, definition);
                     break;
 
-                case "cuboid":
+                case "cuboid",
+                     "beacon":
                     CuboidBlockExporter.registerCustomCuboidBlock(bsmg, block, definition);
                     break;
 

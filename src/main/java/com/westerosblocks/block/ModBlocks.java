@@ -3,6 +3,7 @@ package com.westerosblocks.block;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.BlockBuilder;
+import com.westerosblocks.block.custom.WCBeaconBlock;
 import com.westerosblocks.block.custom.WCCropBlock;
 import com.westerosblocks.block.custom.WCCuboidBlock;
 import com.westerosblocks.block.custom.WCCuboid16WayBlock;
@@ -505,6 +506,15 @@ public class ModBlocks {
 
                 case "layer":
                     return BlockBuilder.layer()
+                            .hardness(definition.getHardness())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .nonOpaque()
+                            .build();
+
+                case "beacon":
+                    return BlockBuilder.beacon()
                             .hardness(definition.getHardness())
                             .resistance(definition.getResistance())
                             .requiresTool()
