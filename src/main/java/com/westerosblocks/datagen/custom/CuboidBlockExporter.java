@@ -282,10 +282,18 @@ public class CuboidBlockExporter extends BaseBlockExporter {
      * Creates a custom cuboid model from definition.
      */
     static Identifier createCuboidModel(BlockStateModelGenerator generator, Block block, BlockDefinition definition, List<String> textures, int stateIndex, String variant) {
+        return createCuboidModel(generator, block, definition, textures, stateIndex, variant, null);
+    }
+
+    /**
+     * Creates a custom cuboid model from definition with optional rotation.
+     * @param rotation Y-axis rotation angle in degrees (e.g., -22.5, -45, 22.5) or null for no rotation
+     */
+    static Identifier createCuboidModel(BlockStateModelGenerator generator, Block block, BlockDefinition definition, List<String> textures, int stateIndex, String variant, Float rotation) {
         TextureMap textureMap = createCustomCuboidTextureMap(textures);
         Identifier modelId = createGeneratedModelId(block, variant);
 
-        Model cuboidModel = createCuboidModelFromDefinition(definition, textures, stateIndex);
+        Model cuboidModel = createCuboidModelFromDefinition(definition, textures, stateIndex, rotation);
         cuboidModel.upload(modelId, textureMap, generator.modelCollector);
 
         return modelId;
@@ -312,7 +320,7 @@ public class CuboidBlockExporter extends BaseBlockExporter {
     /**
      * Creates a Model instance from BlockDefinition cuboids.
      */
-    private static Model createCuboidModelFromDefinition(BlockDefinition definition, List<String> textures, int stateIndex) {
+    private static Model createCuboidModelFromDefinition(BlockDefinition definition, List<String> textures, int stateIndex, Float rotation) {
         int requiredTextures = Math.max(6, textures.size());
 
         List<TextureKey> textureKeys = new ArrayList<>();
@@ -342,14 +350,23 @@ public class CuboidBlockExporter extends BaseBlockExporter {
 
                             // First diagonal
                             JsonObject element1 = createCrossedElement(cuboid, true, definition.isTinted());
+                            if (rotation != null) {
+                                addRotation(element1, rotation);
+                            }
                             elements.add(element1);
 
                             // Second diagonal
                             JsonObject element2 = createCrossedElement(cuboid, false, definition.isTinted());
+                            if (rotation != null) {
+                                addRotation(element2, rotation);
+                            }
                             elements.add(element2);
                         } else {
                             JsonObject element = new JsonObject();
                             addCuboidElement(element, cuboid, definition.isTinted());
+                            if (rotation != null) {
+                                addRotation(element, rotation);
+                            }
                             elements.add(element);
                         }
                     }
@@ -358,6 +375,9 @@ public class CuboidBlockExporter extends BaseBlockExporter {
                     BlockDefinition.BoundingBox bbox = definition.getBoundingBox();
                     JsonObject element = new JsonObject();
                     addBoundingBoxElement(element, bbox, definition.isTinted());
+                    if (rotation != null) {
+                        addRotation(element, rotation);
+                    }
                     elements.add(element);
                 }
 
@@ -365,6 +385,25 @@ public class CuboidBlockExporter extends BaseBlockExporter {
                 return json;
             }
         };
+    }
+
+    /**
+     * Adds rotation property to a model element.
+     */
+    private static void addRotation(JsonObject element, float angle) {
+        JsonObject rotation = new JsonObject();
+
+        JsonArray origin = new JsonArray();
+        origin.add(8.0);
+        origin.add(8.0);
+        origin.add(8.0);
+        rotation.add("origin", origin);
+
+        rotation.addProperty("axis", "y");
+        rotation.addProperty("angle", angle);
+        rotation.addProperty("rescale", false);
+
+        element.add("rotation", rotation);
     }
 
     /**

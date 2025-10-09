@@ -31,6 +31,7 @@ Changelog
   - Updated horizontal plank textures, adds lined variant. Both variants have 3x3 repeat ctm
   - Updated 'Birch Door' textures
   - Adds new 'Simple Birch Door' block
+  - Adds new 'Simple Birch Window Shutters' block
 - New working shields
   - Stark Kite Shield
   - Tully Heater Shield

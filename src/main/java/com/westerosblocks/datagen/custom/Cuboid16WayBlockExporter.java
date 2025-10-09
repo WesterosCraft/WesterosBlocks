@@ -65,7 +65,7 @@ public class Cuboid16WayBlockExporter extends BaseBlockExporter {
             if (definition.hasCustomModel()) {
                 modelId = createCustomModelId(block, modelName);
             } else {
-                modelId = CuboidBlockExporter.createCuboidModel(generator, block, definition, textures, 0, modelName);
+                modelId = CuboidBlockExporter.createCuboidModel(generator, block, definition, textures, 0, modelName, MODEL_ROTATIONS[i]);
             }
 
             rotationModels.put(MODEL_SUFFIXES[i], modelId);
@@ -97,7 +97,7 @@ public class Cuboid16WayBlockExporter extends BaseBlockExporter {
                 if (definition.hasCustomModel()) {
                     modelId = createCustomModelId(block, modelName);
                 } else {
-                    modelId = CuboidBlockExporter.createCuboidModel(generator, block, definition, textures, texIdx, modelName);
+                    modelId = CuboidBlockExporter.createCuboidModel(generator, block, definition, textures, texIdx, modelName, MODEL_ROTATIONS[rotIdx]);
                 }
 
                 modelSets.add(new ModelSet16Way(modelId, variant.getWeight()));
@@ -135,7 +135,7 @@ public class Cuboid16WayBlockExporter extends BaseBlockExporter {
                     if (definition.hasCustomModel()) {
                         modelId = createCustomModelId(block, modelName);
                     } else {
-                        modelId = CuboidBlockExporter.createCuboidModel(generator, block, definition, textures, stateIdx, modelName);
+                        modelId = CuboidBlockExporter.createCuboidModel(generator, block, definition, textures, stateIdx, modelName, MODEL_ROTATIONS[rotIdx]);
                     }
 
                     rotationModels.put(MODEL_SUFFIXES[rotIdx], modelId);
@@ -151,7 +151,7 @@ public class Cuboid16WayBlockExporter extends BaseBlockExporter {
                     if (definition.hasCustomModel()) {
                         modelId = createCustomModelId(block, modelName);
                     } else {
-                        modelId = CuboidBlockExporter.createCuboidModel(generator, block, definition, textures, stateIdx, modelName);
+                        modelId = CuboidBlockExporter.createCuboidModel(generator, block, definition, textures, stateIdx, modelName, MODEL_ROTATIONS[rotIdx]);
                     }
 
                     rotationModels.put(MODEL_SUFFIXES[rotIdx], modelId);
@@ -194,7 +194,7 @@ public class Cuboid16WayBlockExporter extends BaseBlockExporter {
 
         for (int i = 0; i < MODEL_SUFFIXES.length; i++) {
             String modelName = "base" + MODEL_SUFFIXES[i] + "_v1";
-            Identifier modelId = CuboidBlockExporter.createCuboidModel(generator, block, definition, fallbackTextures, 0, modelName);
+            Identifier modelId = CuboidBlockExporter.createCuboidModel(generator, block, definition, fallbackTextures, 0, modelName, MODEL_ROTATIONS[i]);
             rotationModels.put(MODEL_SUFFIXES[i], modelId);
         }
 
