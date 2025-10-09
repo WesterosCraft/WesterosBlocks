@@ -6,19 +6,24 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
+import net.minecraft.util.Hand;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -260,6 +265,33 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
         }
 
         return state;
+    }
+
+    @Override
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+        Hand hand = player.getActiveHand();
+
+        // If toggle on use is enabled and player is in creative mode with empty hand
+        if (this.toggleOnUse && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
+            // First priority: cycle through states if STATE property exists
+            if (this.STATE != null && state.contains(this.STATE)) {
+                state = state.cycle(this.STATE);
+                world.setBlockState(pos, state, Block.NOTIFY_ALL);
+                world.syncWorldEvent(player, 1006, pos, 0);
+                return ActionResult.success(world.isClient);
+            }
+            // Second priority: cycle through rotations
+            else if (state.contains(ROTATION)) {
+                int currentRotation = state.get(ROTATION);
+                int newRotation = (currentRotation + 1) & 15; // Increment and wrap at 15
+                state = state.with(ROTATION, newRotation);
+                world.setBlockState(pos, state, Block.NOTIFY_ALL);
+                world.syncWorldEvent(player, 1006, pos, 0);
+                return ActionResult.success(world.isClient);
+            }
+        }
+
+        return ActionResult.PASS;
     }
 
     @Override

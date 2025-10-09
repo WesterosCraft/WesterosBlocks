@@ -10,6 +10,7 @@
   ],
   "creativeTab": "westeros_decor_tab",
   "label": "Wight Head",
+  "toggleOnUse": true,
   "textures": [
     "wight_head/down",
     "wight_head/up",

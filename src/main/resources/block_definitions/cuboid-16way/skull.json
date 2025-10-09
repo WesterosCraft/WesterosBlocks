@@ -10,6 +10,7 @@
   ],
   "creativeTab": "westeros_decor_tab",
   "label": "Skull",
+  "toggleOnUse": true,
   "textures": [
     "skull/down",
     "skull/up",

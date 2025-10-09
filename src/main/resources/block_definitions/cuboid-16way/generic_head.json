@@ -10,6 +10,7 @@
   ],
   "creativeTab": "westeros_decor_tab",
   "label": "Generic Head",
+  "toggleOnUse": true,
   "textures": [
     "generic_head/down",
     "generic_head/up",

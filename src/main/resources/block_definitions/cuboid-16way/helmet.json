@@ -11,6 +11,7 @@
   "renderLayer": "cutout",
   "creativeTab": "westeros_decor_tab",
   "label": "Helmet",
+  "toggleOnUse": true,
   "textures": [
     "helmet/down",
     "helmet/up",
