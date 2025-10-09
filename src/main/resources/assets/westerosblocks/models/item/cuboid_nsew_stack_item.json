@@ -1,0 +1,31 @@
+{
+  "credit": "Made with Blockbench.",
+  "parent": "minecraft:block/block",
+  "gui_light": "front",
+  "elements": [
+    {
+      "from": [15.5, 16, 0],
+      "to": [16, 32, 16],
+      "rotation": {"angle": 0, "axis": "y", "origin": [0, 16, 0]},
+      "faces": {
+        "east": {"uv": [0, 0, 16, 16], "texture": "#txt5", "cullface": "east"},
+        "west": {"uv": [0, 0, 16, 16], "texture": "#txt1"}
+      }
+    },
+    {
+      "from": [15.5, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "east": {"uv": [0, 0, 16, 16], "texture": "#missing", "cullface": "east"},
+        "west": {"uv": [0, 0, 16, 16], "texture": "#txt2"}
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [0, 90, 0],
+      "translation": [0, -4.00, 0],
+      "scale": [0.45, 0.45, 0.45]
+    }
+  }
+}

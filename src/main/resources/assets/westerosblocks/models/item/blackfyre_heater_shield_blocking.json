@@ -1,0 +1,4 @@
+{
+  "parent": "westerosblocks:item/blackfyre_heater_shield",
+  "gui_light": "front"
+}

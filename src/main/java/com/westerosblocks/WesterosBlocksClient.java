@@ -5,6 +5,10 @@ import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 import com.westerosblocks.entity.ModEntities;
 import com.westerosblocks.entity.client.ChairRenderer;
+import com.westerosblocks.item.ModItems;
+import com.westerosblocks.item.client.HeaterShieldRenderer;
+import com.westerosblocks.item.custom.ModShieldItem;
+import mod.azure.azurelib.rewrite.render.item.AzItemRendererRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.registry.Registries;
 import net.fabricmc.api.ClientModInitializer;
@@ -25,6 +29,13 @@ public class WesterosBlocksClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CASCADE_PARTICLE_EMITTER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COSY_SMOKE_PARTICLE_EMITTER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SIGNAL_SMOKE_PARTICLE_EMITTER, RenderLayer.getCutout());
+
+        // Shields Azurelib
+        AzItemRendererRegistry.register(ModItems.TARGARYEN_HEATER_SHIELD,
+                () -> new HeaterShieldRenderer(
+                        ((ModShieldItem) ModItems.TARGARYEN_HEATER_SHIELD).getGeoPath(),
+                        ((ModShieldItem) ModItems.TARGARYEN_HEATER_SHIELD).getTexPath()
+                ));
 
         // Apply render layers from block definitions
         applyRenderLayersFromDefinitions();

@@ -1,0 +1,4 @@
+{
+  "parent": "westerosblocks:item/tully_heater_shield",
+  "gui_light": "front"
+}

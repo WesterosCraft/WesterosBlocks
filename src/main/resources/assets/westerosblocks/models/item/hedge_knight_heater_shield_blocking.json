@@ -1,0 +1,4 @@
+{
+  "parent": "westerosblocks:item/hedge_knight_heater_shield",
+  "gui_light": "front"
+}

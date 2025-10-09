@@ -3,9 +3,9 @@
 	"id": "westerosblocks",
 	"version": "${version}",
 	"name": "WesterosBlocks",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "ASOIAF themed blocks for a medieval world",
 	"authors": [
-		"Me!"
+		"mikeprimm", "geeberry", "Emoticone11"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",

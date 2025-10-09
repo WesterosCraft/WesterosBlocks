@@ -1,0 +1,4 @@
+{
+  "parent": "westerosblocks:item/stark_kite_shield",
+  "gui_light": "front"
+}

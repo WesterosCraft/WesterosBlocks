@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:item/greyjoy_round_shield",
+  "gui_light": "front",
+  "texture_size": [
+    64,
+    64
+  ]
+}

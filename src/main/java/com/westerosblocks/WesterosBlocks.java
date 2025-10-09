@@ -4,6 +4,7 @@ import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.blockentity.ModBlockEntities;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 import com.westerosblocks.data.BlockDefinitionExample;
+import com.westerosblocks.item.ModItems;
 import com.westerosblocks.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 
@@ -23,6 +24,7 @@ public class WesterosBlocks implements ModInitializer {
 
         WesterosCreativeModeTabs.registerCreativeModeTabs();
         ModBlocks.registerModBlocks();
+        ModItems.registerModItems();
         ModSounds.registerSounds();
         ModBlockEntities.registerModEntities();
 
