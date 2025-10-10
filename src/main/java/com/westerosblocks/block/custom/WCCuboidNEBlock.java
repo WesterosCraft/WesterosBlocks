@@ -14,34 +14,26 @@ import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.WorldAccess;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Cuboid block with North-East facing (2 directions only).
- * Supports rotation between EAST and NORTH orientations.
- */
 public class WCCuboidNEBlock extends WCCuboidBlock implements Waterloggable {
     public static final DirectionProperty FACING = DirectionProperty.of("facing", Direction.EAST, Direction.NORTH);
 
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle toggleOnUse and states
             boolean doToggleOnUse = definition != null && definition.toggleOnUse();
             int numStates = definition != null ? definition.getStateCount() : 0;
             boolean doAddStates = numStates > 0;
 
-            // Set the STATE property if stateValues are provided
             if (doAddStates) {
                 List<String> stateValues = definition != null ? definition.getStateValues() : null;
                 if (stateValues != null && !stateValues.isEmpty()) {
                     tempSTATE = new ModProperties.StateProperty(stateValues);
                 } else {
-                    // Generate default state IDs if not provided
                     ArrayList<String> stateIds = new ArrayList<>();
                     for (int i = 0; i < numStates; i++) {
                         stateIds.add("state" + i);
@@ -52,10 +44,6 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements Waterloggable {
 
             return new WCCuboidNEBlock(settings, doToggleOnUse, doAddStates, definition);
         }
-    }
-
-    public WCCuboidNEBlock(AbstractBlock.Settings settings) {
-        this(settings, false, false, null);
     }
 
     public WCCuboidNEBlock(AbstractBlock.Settings settings, boolean doToggleOnUse, boolean addStates, BlockDefinition definition) {
@@ -81,9 +69,8 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements Waterloggable {
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
         Direction[] directions = ctx.getPlacementDirections();
-        Direction dir = Direction.EAST; // Default
+        Direction dir = Direction.EAST;
 
-        // Check placement directions to determine if we should face NORTH or EAST
         for (Direction d : directions) {
             if (d == Direction.EAST || d == Direction.WEST) {
                 dir = Direction.EAST;
@@ -123,13 +110,13 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements Waterloggable {
     public BlockState rotate(BlockState state, BlockRotation rotation) {
         switch (rotation) {
             case CLOCKWISE_180:
-            default:
-                return state;
             case COUNTERCLOCKWISE_90:
             case CLOCKWISE_90:
                 return state.get(FACING) == Direction.EAST
                     ? state.with(FACING, Direction.NORTH)
                     : state.with(FACING, Direction.EAST);
+            default:
+                return state;
         }
     }
 }

@@ -377,7 +377,7 @@ public class BlockBuilder<T extends Block> {
         }
         // Pass null as BlockDefinition since BlockBuilder is for manual block creation
         // The JSON-based block registration should use build(BlockDefinition) instead
-        return (T) factory.buildBlockClass(settings, null);
+        return (T) factory.buildBlockClass(settings, null, parameters);
     }
 
     @SuppressWarnings("unchecked")
@@ -389,6 +389,6 @@ public class BlockBuilder<T extends Block> {
             throw new IllegalStateException("Factory must be provided - use static factory methods like BlockBuilder.halfDoor()");
         }
         // Pass the BlockDefinition for JSON-based block registration
-        return (T) factory.buildBlockClass(settings, definition);
+        return (T) factory.buildBlockClass(settings, definition, parameters);
     }
 }

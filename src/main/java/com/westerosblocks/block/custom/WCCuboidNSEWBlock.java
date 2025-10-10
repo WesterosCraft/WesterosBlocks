@@ -26,22 +26,16 @@ import java.util.List;
 
 public class WCCuboidNSEWBlock extends WCCuboidBlock {
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
-
-    // Store rotated bounding boxes for each facing direction
     protected VoxelShape[] boundingBoxesByFacing = new VoxelShape[4];
-
-    // Store state-specific bounding boxes (if block has states with different bounding boxes)
     protected VoxelShape[][] stateSpecificBoundingBoxes = null;
 
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
             boolean doToggleOnUse = definition != null && definition.toggleOnUse();
             int numStates = definition != null ? definition.getStateCount() : 0;
             boolean doAddStates = numStates > 0;
 
-            // Handle bounding box if provided
             VoxelShape customBoundingBox = null;
             if (definition != null && definition.hasBoundingBox()) {
                 BlockDefinition.BoundingBox bbox = definition.getBoundingBox();
@@ -51,9 +45,8 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock {
                 );
             }
 
-            // Set the STATE property if stateValues are provided
             if (doAddStates) {
-                List<String> stateValues = definition != null ? definition.getStateValues() : null;
+                List<String> stateValues = definition.getStateValues();
                 if (stateValues != null && !stateValues.isEmpty()) {
                     tempSTATE = new ModProperties.StateProperty(stateValues);
                 } else {
@@ -68,14 +61,6 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock {
 
             return new WCCuboidNSEWBlock(settings, doToggleOnUse, doAddStates, customBoundingBox, definition);
         }
-    }
-
-    public WCCuboidNSEWBlock(AbstractBlock.Settings settings) {
-        this(settings, false, false, null, null);
-    }
-
-    public WCCuboidNSEWBlock(AbstractBlock.Settings settings, boolean doToggleOnUse, boolean addStates, VoxelShape customBoundingBox) {
-        this(settings, doToggleOnUse, addStates, customBoundingBox, null);
     }
 
     public WCCuboidNSEWBlock(AbstractBlock.Settings settings, boolean doToggleOnUse, boolean addStates, VoxelShape customBoundingBox, BlockDefinition definition) {
@@ -116,39 +101,31 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock {
 
     private void calculateStateSpecificBoundingBoxes(BlockDefinition definition, List<BlockDefinition.StateVariant> states) {
         int stateCount = states.size();
-        stateSpecificBoundingBoxes = new VoxelShape[stateCount][4]; // [state][facing]
+        stateSpecificBoundingBoxes = new VoxelShape[stateCount][4];
 
         for (int i = 0; i < stateCount; i++) {
             BlockDefinition.StateVariant state = states.get(i);
             VoxelShape stateShape;
 
             if (state.getBoundingBox() != null) {
-                // Use state-specific bounding box
                 BlockDefinition.BoundingBox bbox = state.getBoundingBox();
                 VoxelShape baseBBox = VoxelShapes.cuboid(
                     bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
                     bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
                 );
 
-                // Check if there's a rotYOffset that needs to be corrected
                 Integer rotYOffset = state.getRotYOffset();
                 if (rotYOffset != null && rotYOffset != 0) {
-                    // The bounding box coordinates are pre-rotated by rotYOffset degrees
-                    // We need to apply the inverse rotation to get the "base" orientation
-                    // Then our standard rotations will be applied correctly
 
-                    // Try different inverse rotation: instead of (360 - rotYOffset), try just rotYOffset
                     int inverseRotation = rotYOffset % 360;
                     stateShape = applyYRotationToBoundingBox(baseBBox, inverseRotation);
                 } else {
                     stateShape = baseBBox;
                 }
             } else {
-                // Fallback to default bounding box
                 stateShape = boundingBox;
             }
 
-            // Calculate rotations for this state (match old working pattern)
             stateSpecificBoundingBoxes[i][0] = stateShape; // EAST (0°) - base, matches old
             stateSpecificBoundingBoxes[i][1] = rotateShapeY90(stateShape); // SOUTH (90°)
             stateSpecificBoundingBoxes[i][2] = rotateShapeY180(stateShape); // WEST (180°)
@@ -164,21 +141,18 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock {
     }
 
     private VoxelShape rotateShapeY90(VoxelShape shape) {
-        // Rotate 90 degrees around Y axis: (x,y,z) -> (1-z,y,x)
         return shape.isEmpty() ? VoxelShapes.empty() :
             VoxelShapes.cuboid(1.0 - shape.getBoundingBox().maxZ, shape.getBoundingBox().minY, shape.getBoundingBox().minX,
                               1.0 - shape.getBoundingBox().minZ, shape.getBoundingBox().maxY, shape.getBoundingBox().maxX);
     }
 
     private VoxelShape rotateShapeY180(VoxelShape shape) {
-        // Rotate 180 degrees around Y axis: (x,y,z) -> (1-x,y,1-z)
         return shape.isEmpty() ? VoxelShapes.empty() :
             VoxelShapes.cuboid(1.0 - shape.getBoundingBox().maxX, shape.getBoundingBox().minY, 1.0 - shape.getBoundingBox().maxZ,
                               1.0 - shape.getBoundingBox().minX, shape.getBoundingBox().maxY, 1.0 - shape.getBoundingBox().minZ);
     }
 
     private VoxelShape rotateShapeY270(VoxelShape shape) {
-        // Rotate 270 degrees around Y axis: (x,y,z) -> (z,y,1-x)
         return shape.isEmpty() ? VoxelShapes.empty() :
             VoxelShapes.cuboid(shape.getBoundingBox().minZ, shape.getBoundingBox().minY, 1.0 - shape.getBoundingBox().maxX,
                               shape.getBoundingBox().maxZ, shape.getBoundingBox().maxY, 1.0 - shape.getBoundingBox().minX);
@@ -191,7 +165,7 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock {
             case 90 -> rotateShapeY90(shape);
             case 180 -> rotateShapeY180(shape);
             case 270 -> rotateShapeY270(shape);
-            default -> shape; // Fallback for non-90-degree increments
+            default -> shape;
         };
     }
 
@@ -205,9 +179,8 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock {
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
         Direction[] placementDirections = ctx.getPlacementDirections();
-        Direction facing = Direction.EAST;  // Match old version
+        Direction facing = Direction.EAST;
 
-        // Find the first horizontal direction from placement directions (match old version logic)
         for (Direction direction : placementDirections) {
             if (direction == Direction.EAST || direction == Direction.WEST ||
                 direction == Direction.NORTH || direction == Direction.SOUTH) {
@@ -263,11 +236,9 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock {
     }
 
     private VoxelShape getBoundingBoxForState(BlockState state) {
-        // If we have state-specific bounding boxes and a STATE property
         if (stateSpecificBoundingBoxes != null && STATE != null && state.contains(STATE)) {
             String currentStateValue = state.get(STATE);
 
-            // Find the index of the current state value
             Collection<String> stateValues = STATE.getValues();
             List<String> stateValuesList = new ArrayList<>(stateValues);
             int stateIndex = stateValuesList.indexOf(currentStateValue);
@@ -286,7 +257,6 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock {
             }
         }
 
-        // Fallback to default facing-based bounding box
         return getBoundingBoxForFacing(state.get(FACING));
     }
 }

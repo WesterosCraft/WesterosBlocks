@@ -11,8 +11,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-import java.util.Map;
-
 public class WCDoorBlock extends DoorBlock {
     private final boolean locked;
     private final boolean allowUnsupported;

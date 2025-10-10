@@ -38,21 +38,17 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggab
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Get allowHalfBreak from definition
             boolean doAllowHalfBreak = definition != null && definition.isAllowHalfBreak();
 
-            // Handle toggleOnUse and states
             boolean doToggleOnUse = definition != null && definition.toggleOnUse();
             int numStates = definition != null ? definition.getStateCount() : 0;
             boolean doAddStates = numStates > 0;
 
-            // Set the STATE property if stateValues are provided
             if (doAddStates) {
                 List<String> stateValues = definition != null ? definition.getStateValues() : null;
                 if (stateValues != null && !stateValues.isEmpty()) {
                     tempSTATE = new ModProperties.StateProperty(stateValues);
                 } else {
-                    // Generate default state IDs if not provided
                     ArrayList<String> stateIds = new ArrayList<>();
                     for (int i = 0; i < numStates; i++) {
                         stateIds.add("state" + i);
@@ -67,25 +63,17 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggab
 
     public WCCuboidNSEWStackBlock(AbstractBlock.Settings settings, boolean doAllowHalfBreak, boolean doToggleOnUse, boolean addStates, BlockDefinition definition) {
         super(settings, doToggleOnUse, addStates, null);
-
         this.allowHalfBreak = doAllowHalfBreak;
-
-        // Initialize shape array for 8 combinations: 4 facings × 2 halves
         this.SHAPE_BY_INDEX = new VoxelShape[8];
 
-        // Initialize with bounding boxes from definition
         if (definition != null && definition.hasStackElements() && definition.getStackElements().size() >= 2) {
-            // Get bottom and top stack elements
             BlockDefinition.StackElement bottomElement = definition.getStackElements().get(0);
             BlockDefinition.StackElement topElement = definition.getStackElements().get(1);
 
-            // Create shapes for bottom half (indices 0-3)
             initializeShapesForHalf(bottomElement, 0);
 
-            // Create shapes for top half (indices 4-7)
             initializeShapesForHalf(topElement, 4);
         } else {
-            // Default to full cube if no stack elements
             for (int i = 0; i < 8; i++) {
                 SHAPE_BY_INDEX[i] = VoxelShapes.fullCube();
             }
@@ -103,17 +91,14 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggab
     }
 
     private void initializeShapesForHalf(BlockDefinition.StackElement element, int baseIndex) {
-        // Get the bounding box for this element
         if (element != null && element.hasBoundingBox()) {
             BlockDefinition.BoundingBox bbox = element.getBoundingBox();
 
-            // Apply to all 4 facings with proper rotation
             SHAPE_BY_INDEX[baseIndex] = createRotatedShape(bbox, 0); // EAST (0°)
             SHAPE_BY_INDEX[baseIndex + 1] = createRotatedShape(bbox, 90); // SOUTH (90°)
             SHAPE_BY_INDEX[baseIndex + 2] = createRotatedShape(bbox, 180); // WEST (180°)
             SHAPE_BY_INDEX[baseIndex + 3] = createRotatedShape(bbox, 270); // NORTH (270°)
         } else {
-            // Default to full cube
             for (int i = 0; i < 4; i++) {
                 SHAPE_BY_INDEX[baseIndex + i] = VoxelShapes.fullCube();
             }

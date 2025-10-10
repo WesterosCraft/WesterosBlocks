@@ -54,10 +54,6 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements Waterloggable 
         }
     }
 
-    public WCCuboidNSEWUDBlock(AbstractBlock.Settings settings) {
-        this(settings, false, false, null);
-    }
-
     public WCCuboidNSEWUDBlock(AbstractBlock.Settings settings, boolean doToggleOnUse, boolean addStates, BlockDefinition definition) {
         super(settings, doToggleOnUse, addStates, null);
 
@@ -80,11 +76,8 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements Waterloggable 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
-
-        // Get the direction based on player's looking direction (matches old WesterosCraft behavior)
         Direction dir = ctx.getPlayerLookDirection().getOpposite();
 
-        // If player is not available, fall back to side placement
         if (ctx.getPlayer() == null) {
             dir = ctx.getSide().getOpposite();
         }
@@ -116,13 +109,9 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements Waterloggable 
     @Override
     public BlockState rotate(BlockState state, BlockRotation rotation) {
         Direction facing = state.get(FACING);
-
-        // Don't rotate UP and DOWN directions
         if (facing == Direction.UP || facing == Direction.DOWN) {
             return state;
         }
-
-        // Rotate horizontal directions
         return state.with(FACING, rotation.rotate(facing));
     }
 }

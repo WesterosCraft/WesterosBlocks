@@ -37,6 +37,22 @@ public class WCFanBlock extends Block implements Waterloggable {
 
             return new WCFanBlock(settings, wallBlock, allowUnsupported);
         }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition, java.util.Map<String, Object> parameters) {
+            // Extract wallBlock from parameters if present
+            Block wallBlock = parameters != null ? (Block) parameters.get("wallBlock") : null;
+
+            // Extract allowUnsupported from parameters or definition
+            boolean allowUnsupported = false;
+            if (parameters != null && parameters.containsKey("allowUnsupported")) {
+                allowUnsupported = (Boolean) parameters.get("allowUnsupported");
+            } else if (definition != null) {
+                allowUnsupported = definition.isAllowUnsupported();
+            }
+
+            return new WCFanBlock(settings, wallBlock, allowUnsupported);
+        }
     }
 
     public WCFanBlock(AbstractBlock.Settings settings, Block wallBlock, boolean allowUnsupported) {
