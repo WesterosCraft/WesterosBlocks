@@ -181,11 +181,6 @@ public class BlockDefinitionLoader {
             groupedDefinitions.computeIfAbsent(blockType, k -> new ArrayList<>()).add(definition);
         }
 
-        WesterosBlocks.LOGGER.info("Grouped block definitions by type:");
-        for (Map.Entry<String, List<BlockDefinition>> entry : groupedDefinitions.entrySet()) {
-            WesterosBlocks.LOGGER.info("  {}: {} blocks", entry.getKey(), entry.getValue().size());
-        }
-
         return groupedDefinitions;
     }
 

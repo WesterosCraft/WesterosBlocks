@@ -1,5 +1,5 @@
 {
-  "blockName": "wall_heater_shield_bracken",
+  "blockName": "wall_heater_shield_tully",
   "blockType": "cuboid-nsew",
   "soundGroup": "wood",
   "isCustomModel": true,
@@ -11,7 +11,7 @@
     }
   ],
   "creativeTab": "westeros_decor_tab",
-  "label": "Mounted Bracken Heater Shield",
+  "label": "Mounted Tully Heater Shield",
   "boundingBox": {
     "xMin": 0.03,
     "xMax": 0.039,
@@ -20,5 +20,6 @@
     "zMin": 0,
     "zMax": 1
   },
-  "strength": 5
+  "hardness": 5,
+  "resistance": 5
 }

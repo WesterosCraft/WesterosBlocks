@@ -32,5 +32,4 @@ public class ChairEntity extends Entity {
         super.removePassenger(passenger);
         this.kill();
     }
-
 }

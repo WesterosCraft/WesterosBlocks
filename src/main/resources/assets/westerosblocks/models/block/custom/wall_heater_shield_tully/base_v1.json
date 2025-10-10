@@ -4,8 +4,8 @@
 	"texture_size": [64, 64],
 	"gui_light": "front",
 	"textures": {
-		"0": "westerosblocks:item/bracken_heater_shield",
-		"particle": "westerosblocks:item/bracken_heater_shield"
+		"0": "westerosblocks:item/tully_heater_shield",
+		"particle": "westerosblocks:item/tully_heater_shield"
 	},
 	"elements": [
 		{

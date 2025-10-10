@@ -6,7 +6,7 @@ import com.westerosblocks.data.BlockDefinitionRegistry;
 import com.westerosblocks.entity.ModEntities;
 import com.westerosblocks.entity.client.ChairRenderer;
 import com.westerosblocks.item.ModItems;
-import com.westerosblocks.item.client.HeaterShieldRenderer;
+import com.westerosblocks.item.client.ModShieldRenderer;
 import com.westerosblocks.item.custom.ModShieldItem;
 import mod.azure.azurelib.rewrite.render.item.AzItemRendererRegistry;
 import net.minecraft.block.Block;
@@ -32,9 +32,51 @@ public class WesterosBlocksClient implements ClientModInitializer {
 
         // Shields Azurelib
         AzItemRendererRegistry.register(ModItems.TARGARYEN_HEATER_SHIELD,
-                () -> new HeaterShieldRenderer(
+                () -> new ModShieldRenderer(
                         ((ModShieldItem) ModItems.TARGARYEN_HEATER_SHIELD).getGeoPath(),
                         ((ModShieldItem) ModItems.TARGARYEN_HEATER_SHIELD).getTexPath()
+                ));
+
+        AzItemRendererRegistry.register(ModItems.BLACKFYRE_HEATER_SHIELD,
+                () -> new ModShieldRenderer(
+                        ((ModShieldItem) ModItems.BLACKFYRE_HEATER_SHIELD).getGeoPath(),
+                        ((ModShieldItem) ModItems.BLACKFYRE_HEATER_SHIELD).getTexPath()
+                ));
+
+        AzItemRendererRegistry.register(ModItems.BLACKWOOD_HEATER_SHIELD,
+                () -> new ModShieldRenderer(
+                        ((ModShieldItem) ModItems.BLACKWOOD_HEATER_SHIELD).getGeoPath(),
+                        ((ModShieldItem) ModItems.BLACKWOOD_HEATER_SHIELD).getTexPath()
+                ));
+
+        AzItemRendererRegistry.register(ModItems.BRACKEN_HEATER_SHIELD,
+                () -> new ModShieldRenderer(
+                        ((ModShieldItem) ModItems.BRACKEN_HEATER_SHIELD).getGeoPath(),
+                        ((ModShieldItem) ModItems.BRACKEN_HEATER_SHIELD).getTexPath()
+                ));
+
+        AzItemRendererRegistry.register(ModItems.TULLY_HEATER_SHIELD,
+                () -> new ModShieldRenderer(
+                        ((ModShieldItem) ModItems.TULLY_HEATER_SHIELD).getGeoPath(),
+                        ((ModShieldItem) ModItems.TULLY_HEATER_SHIELD).getTexPath()
+                ));
+
+        AzItemRendererRegistry.register(ModItems.HEDGE_KNIGHT_HEATER_SHIELD,
+                () -> new ModShieldRenderer(
+                        ((ModShieldItem) ModItems.HEDGE_KNIGHT_HEATER_SHIELD).getGeoPath(),
+                        ((ModShieldItem) ModItems.HEDGE_KNIGHT_HEATER_SHIELD).getTexPath()
+                ));
+
+        AzItemRendererRegistry.register(ModItems.LAUGHING_TREE_HEATER_SHIELD,
+                () -> new ModShieldRenderer(
+                        ((ModShieldItem) ModItems.LAUGHING_TREE_HEATER_SHIELD).getGeoPath(),
+                        ((ModShieldItem) ModItems.LAUGHING_TREE_HEATER_SHIELD).getTexPath()
+                ));
+
+        AzItemRendererRegistry.register(ModItems.GREYJOY_ROUND_SHIELD,
+                () -> new ModShieldRenderer(
+                        ((ModShieldItem) ModItems.GREYJOY_ROUND_SHIELD).getGeoPath(),
+                        ((ModShieldItem) ModItems.GREYJOY_ROUND_SHIELD).getTexPath()
                 ));
 
         // Apply render layers from block definitions

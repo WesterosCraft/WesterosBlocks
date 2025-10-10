@@ -57,7 +57,6 @@ public class BlockSetDefinitionLoader {
         for (String resourcePath : resourcePaths) {
             java.net.URL resourceUrl = classLoader.getResource(resourcePath);
             if (resourceUrl != null) {
-                WesterosBlocks.LOGGER.info("Found block set definitions at resource path: {}", resourcePath);
                 loadDefinitionsFromResourcePath(resourceUrl, definitions);
                 return;
             }

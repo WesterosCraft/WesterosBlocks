@@ -19,6 +19,23 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         @Override
         public void generateTranslations(WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
                 generateTranslationsFromDefinitions(translationBuilder);
+
+                // Items
+                translationBuilder.add("tag.item.westerosblocks.c.shield", "shield");
+                translationBuilder.add("item.westerosblocks.longclaw", "Longclaw");
+                translationBuilder.add("item.westerosblocks.valyrian_steel_ingot", "Valyrian Steel Ingot");
+                // translationBuilder.add("item.westerosblocks.lannister_shield", "Lannister
+                // Shield");
+//                translationBuilder.add("item.westerosblocks.stark_kite_shield", "Stark Kite Shield");
+                translationBuilder.add("item.westerosblocks.tully_heater_shield", "Tully Heater Shield");
+                translationBuilder.add("item.westerosblocks.hedge_knight_heater_shield", "Hedge Knight Heater Shield");
+                translationBuilder.add("item.westerosblocks.laughing_tree_heater_shield", "Laughing Tree Heater Shield");
+                translationBuilder.add("item.westerosblocks.targaryen_heater_shield", "Targaryen Heater Shield");
+                translationBuilder.add("item.westerosblocks.bracken_heater_shield", "Bracken Heater Shield");
+                translationBuilder.add("item.westerosblocks.greyjoy_round_shield", "Greyjoy Round Shield");
+                translationBuilder.add("item.westerosblocks.blackfyre_heater_shield", "Blackfyre Heater Shield");
+                translationBuilder.add("item.westerosblocks.blackwood_heater_shield", "Blackwood Heater Shield");
+
         }
 
         private void generateTranslationsFromDefinitions(TranslationBuilder translationBuilder) {

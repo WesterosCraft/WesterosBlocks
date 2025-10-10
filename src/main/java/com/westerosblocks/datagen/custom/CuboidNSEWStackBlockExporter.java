@@ -3,6 +3,7 @@ package com.westerosblocks.datagen.custom;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.westerosblocks.datagen.ModModels;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
@@ -86,7 +87,15 @@ public class CuboidNSEWStackBlockExporter extends BaseBlockExporter {
         generator.blockStateCollector.accept(blockStateSupplier);
 
         // Register item model using bottom model
-        registerParentedItemModel(generator, block, bottomModelId);
+//        registerParentedItemModel(generator, block, bottomModelId);
+        TextureMap itemTextureMap = new TextureMap()
+                .put(ModTextureKey.TEXTURE_1, createBlockIdentifier(topElement.getTextures().get(4)))
+                .put(ModTextureKey.TEXTURE_2, createBlockIdentifier(bottomElement.getTextures().get(4)))
+                .put(ModTextureKey.TEXTURE_5, createBlockIdentifier(topElement.getTextures().get(5)))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(topElement.getTextures().get(4)));
+        Identifier itemModelId = WesterosBlocks.id("item/" + definition.getBlockName());
+        Model combinedItemModel = ModModels.CUBOID_NSEW_STACK_ITEM();
+        combinedItemModel.upload(itemModelId, itemTextureMap, generator.modelCollector);
     }
 
     /**
