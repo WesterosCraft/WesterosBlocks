@@ -24,7 +24,9 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.westerosblocks.data.BlockDefinition;
 
@@ -48,7 +50,7 @@ public class WCLayerBlock extends Block {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
             // TODO: Add getLayerCount() and isSoftLayer() to BlockDefinition
-            java.util.Map<String, Object> parameters = new java.util.HashMap<>();
+            Map<String, Object> parameters = new HashMap<>();
             parameters.put("layerCount", 8); // default value
             parameters.put("softLayer", false); // default value
 
@@ -59,7 +61,7 @@ public class WCLayerBlock extends Block {
         }
     }
 
-    protected WCLayerBlock(AbstractBlock.Settings settings, java.util.Map<String, Object> parameters) {
+    protected WCLayerBlock(AbstractBlock.Settings settings, Map<String, Object> parameters) {
         super(settings);
         
         // Get parameters from the builder
@@ -153,7 +155,6 @@ public class WCLayerBlock extends Block {
 
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        // Custom tooltip logic can be added here if needed
         super.appendTooltip(stack, context, tooltip, options);
     }
 }

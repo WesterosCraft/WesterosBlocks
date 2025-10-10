@@ -11,16 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * Exporter for flower pot blocks following block-models.md patterns.
- * Generates models for potted plants with optional random textures and rotation.
- */
 public class FlowerPotBlockExporter extends BaseBlockExporter {
-
-    // ========================================
-    // Model Instances (block-models.md 5.2)
-    // ========================================
-
     private static Model createFlowerPotModel(boolean isEmpty, boolean tinted) {
         String tintPath = tinted ? "block/tinted/" : "block/untinted/";
         String potType = isEmpty ? "flower_pot" : "flower_pot_cross";
@@ -36,10 +27,6 @@ public class FlowerPotBlockExporter extends BaseBlockExporter {
                 ModTextureKey.DIRT, ModTextureKey.FLOWERPOT, ModTextureKey.PLANT, TextureKey.PARTICLE);
         }
     }
-
-    // ========================================
-    // Helper Methods (block-models.md 5.3-5.4)
-    // ========================================
 
     private static TextureMap createFlowerPotTextureMap(String[] textures, boolean isEmpty) {
         TextureMap textureMap = new TextureMap();
@@ -89,10 +76,6 @@ public class FlowerPotBlockExporter extends BaseBlockExporter {
         }
     }
 
-    // ========================================
-    // Public Registration Methods (block-models.md 5.5)
-    // ========================================
-
     public static void registerFlowerPotBlock(BlockStateModelGenerator generator, Block block, boolean tinted,
                                              boolean rotateRandom, String[] textures) {
         boolean isEmpty = textures.length == 2;
@@ -129,10 +112,6 @@ public class FlowerPotBlockExporter extends BaseBlockExporter {
         generator.registerParentedItemModel(block, modelIds.get(0));
     }
 
-    // ========================================
-    // BlockDefinition Integration (block-models.md 5.6)
-    // ========================================
-
     public static void registerCustomFlowerPotBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         boolean tinted = definition.isTinted() || definition.hasColorMult();
         boolean rotateRandom = true; // Always rotate flower pots
@@ -152,9 +131,4 @@ public class FlowerPotBlockExporter extends BaseBlockExporter {
             throw new IllegalArgumentException("Flower pot blocks require either textures or randomTextures");
         }
     }
-
-    // ========================================
-    // Helper Classes
-    // ========================================
-
 }

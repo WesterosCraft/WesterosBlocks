@@ -5,17 +5,16 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LadderBlock;
-import net.minecraft.block.ShapeContext;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldView;
 
-import java.util.Map;
-
 public class WCLadderBlock extends LadderBlock {
     private boolean allowUnsupported;
+    // no climb decided whether the ladder recieves the "climbable" tag or not
+    // this now happens in ModBlockTagProvider
     private boolean noClimb;
 
     public static class Factory extends BlockFactory {

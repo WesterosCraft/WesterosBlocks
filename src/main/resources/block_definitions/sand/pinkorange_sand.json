@@ -1,0 +1,12 @@
+{
+  "blockName": "pinkorange_sand",
+  "blockType": "sand",
+  "hardness": 0.5,
+  "stepSound": "sand",
+  "material": "sand",
+  "creativeTab": "WesterosSandGravel",
+  "label": "Pink/Orange Sand",
+  "textures": [
+    "sand_block/sand_pinkorange"
+  ]
+}

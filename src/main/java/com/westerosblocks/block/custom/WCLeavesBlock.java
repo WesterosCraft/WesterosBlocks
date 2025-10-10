@@ -5,8 +5,6 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.LeavesBlock;
 
-import java.util.Map;
-
 public class WCLeavesBlock extends LeavesBlock {
     public final boolean betterFoliage;
     public final boolean overlay;

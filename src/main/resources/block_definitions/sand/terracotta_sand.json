@@ -1,0 +1,12 @@
+{
+  "blockName": "terracotta_sand",
+  "blockType": "sand",
+  "hardness": 0.5,
+  "stepSound": "sand",
+  "material": "sand",
+  "creativeTab": "WesterosSandGravel",
+  "label": "Terracotta Sand",
+  "textures": [
+    "sand_block/sand_terracotta"
+  ]
+}

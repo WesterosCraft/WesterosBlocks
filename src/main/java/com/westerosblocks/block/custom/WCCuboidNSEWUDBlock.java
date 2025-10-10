@@ -35,9 +35,8 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements Waterloggable 
             int numStates = definition != null ? definition.getStateCount() : 0;
             boolean doAddStates = numStates > 0;
 
-            // Set the STATE property if stateValues are provided
             if (doAddStates) {
-                List<String> stateValues = definition != null ? definition.getStateValues() : null;
+                List<String> stateValues = definition.getStateValues();
                 if (stateValues != null && !stateValues.isEmpty()) {
                     tempSTATE = new ModProperties.StateProperty(stateValues);
                 } else {

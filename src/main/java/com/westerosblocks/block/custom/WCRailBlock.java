@@ -23,7 +23,6 @@ public class WCRailBlock extends RailBlock {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
             boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
             return new WCRailBlock(settings, allowUnsupported);
         }
