@@ -3,12 +3,12 @@
 	"id": "westerosblocks",
 	"version": "${version}",
 	"name": "WesterosBlocks",
-	"description": "ASOIAF themed blocks for a medieval world",
+	"description": "A Song Of Ice and Fire themed blocks for a medieval world",
 	"authors": [
-		"mikeprimm", "geeberry", "Emoticone11"
+		"geeberry", "Emoticone11", "mikeprimm"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
+		"homepage": "https://www.westeroscraft.com",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
@@ -23,6 +23,9 @@
 		],
 		"client": [
 			"com.westerosblocks.WesterosBlocksClient"
+		],
+		"modmenu": [
+			"com.westerosblocks.config.ModMenuIntegration"
 		]
 	},
 	"mixins": [

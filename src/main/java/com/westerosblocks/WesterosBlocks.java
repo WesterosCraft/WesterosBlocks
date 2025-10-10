@@ -2,6 +2,7 @@ package com.westerosblocks;
 
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.blockentity.ModBlockEntities;
+import com.westerosblocks.config.ModConfig;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 import com.westerosblocks.item.ModItems;
 import com.westerosblocks.sound.ModSounds;
@@ -14,10 +15,16 @@ import org.slf4j.LoggerFactory;
 public class WesterosBlocks implements ModInitializer {
     public static final String MOD_ID = "westerosblocks";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static ModConfig CONFIG;
 
     @Override
     public void onInitialize() {
         LOGGER.info("Initializing WesterosBlocks mod...");
+
+        // Load config
+        CONFIG = ModConfig.load();
+        LOGGER.info("Config loaded successfully");
+
         // Initialize block definitions registry first
         initializeBlockDefinitions();
 

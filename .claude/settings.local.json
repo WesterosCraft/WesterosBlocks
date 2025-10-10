@@ -6,7 +6,8 @@
       "Bash(do echo \"=== $file ===\")",
       "Bash(for:*)",
       "Bash(head:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "WebFetch(domain:shedaniel.gitbook.io)"
     ],
     "deny": [],
     "ask": []

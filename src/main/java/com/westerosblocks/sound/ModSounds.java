@@ -8,8 +8,6 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 public class ModSounds {
-    public static final SoundEvent CASCADE = registerSoundEvent("cascade");
-
     /**
      * Maps string sound names to BlockSoundGroup instances
      */
@@ -57,6 +55,7 @@ public class ModSounds {
     }
 
     public static void registerSounds() {
+        registerSoundEvent("cascade");
         WesterosBlocks.LOGGER.info("Registering Mod Sounds for " + WesterosBlocks.MOD_ID);
     }
 }

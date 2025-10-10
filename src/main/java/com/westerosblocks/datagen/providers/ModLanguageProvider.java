@@ -36,6 +36,12 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("item.westerosblocks.blackfyre_heater_shield", "Blackfyre Heater Shield");
                 translationBuilder.add("item.westerosblocks.blackwood_heater_shield", "Blackwood Heater Shield");
 
+                // Config translations
+                translationBuilder.add("config.westerosblocks.title", "WesterosBlocks Config");
+                translationBuilder.add("config.westerosblocks.category.general", "General");
+                translationBuilder.add("config.westerosblocks.dumpWorldPainterCSV", "Dump WorldPainter CSV");
+                translationBuilder.add("config.westerosblocks.dumpWorldPainterCSV.tooltip", "Export block data to WorldPainter CSV format");
+
         }
 
         private void generateTranslationsFromDefinitions(TranslationBuilder translationBuilder) {
