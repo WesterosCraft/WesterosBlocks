@@ -3,7 +3,6 @@ package com.westerosblocks.block;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.block.custom.BlockBuilder;
-import com.westerosblocks.block.custom.WCBeaconBlock;
 import com.westerosblocks.block.custom.WCCropBlock;
 import com.westerosblocks.block.custom.WCCuboidBlock;
 import com.westerosblocks.block.custom.WCCuboid16WayBlock;
@@ -28,7 +27,6 @@ import java.util.Map;
 import static com.westerosblocks.sound.ModSounds.getSoundGroupFromString;
 
 public class ModBlocks {
-    // Storage for automatically registered blocks from JSON definitions
     private static final Map<String, Block> AUTO_REGISTERED_BLOCKS = new HashMap<>();
 
     static {
@@ -392,8 +390,8 @@ public class ModBlocks {
                     if (definition.getBoundingBox() != null) {
                         var bbox = definition.getBoundingBox();
                         cuboidBuilder.boundingBox(
-                            bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
-                            bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
+                                bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
+                                bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
                         );
                     }
 
@@ -422,8 +420,8 @@ public class ModBlocks {
                     if (definition.getBoundingBox() != null) {
                         var bbox = definition.getBoundingBox();
                         cuboidNSEWBuilder.boundingBox(
-                            bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
-                            bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
+                                bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
+                                bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
                         );
                     }
 
@@ -490,8 +488,8 @@ public class ModBlocks {
                     if (definition.getBoundingBox() != null) {
                         var bbox = definition.getBoundingBox();
                         cuboid16WayBuilder.boundingBox(
-                            bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
-                            bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
+                                bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
+                                bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
                         );
                     }
 
@@ -548,7 +546,6 @@ public class ModBlocks {
 //                        .sounds(soundGroup)
 //                        .build();
 
-                // Add more block types as needed
                 default:
                     WesterosBlocks.LOGGER.warn("Unsupported block type '{}' for auto-registration", blockType);
                     return null;
@@ -573,23 +570,15 @@ public class ModBlocks {
         return "oak"; // Default
     }
 
-    /**
-     * Gets an automatically registered block by name
-     */
+
     public static Block getAutoRegisteredBlock(String blockName) {
         return AUTO_REGISTERED_BLOCKS.get(blockName);
     }
 
-    /**
-     * Gets all automatically registered blocks
-     */
     public static Map<String, Block> getAllAutoRegisteredBlocks() {
         return new HashMap<>(AUTO_REGISTERED_BLOCKS);
     }
 
-    /**
-     * Registers auto-registered blocks to their creative tabs based on JSON definitions
-     */
     private static void registerAutoBlocksToCreativeTabs() {
         try {
             BlockDefinitionRegistry registry = BlockDefinitionRegistry.getInstance();
@@ -646,7 +635,7 @@ public class ModBlocks {
                     .build());
 
 
-    //    // Branch Blocks
+    // Branch Blocks
     public static final Block OAK_BRANCH = registerBlock(
             "oak_branch",
             BlockBuilder.branch()

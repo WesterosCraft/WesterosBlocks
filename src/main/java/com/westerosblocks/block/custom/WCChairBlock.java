@@ -113,12 +113,8 @@ public class WCChairBlock extends HorizontalFacingBlock {
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        // Use the same approach as cuboid blocks for 8-directional rotation
-        // Adjust the rotation so the chair faces the player (front of chair towards
-        // player)
         int rotation = MathHelper.floor((double) (ctx.getPlayerYaw() * 8.0F / 360.0F) + 0.5D) & 7;
 
-        // No adjustment needed - chair will face the player directly
         return this.getDefaultState().with(ROTATION, rotation).with(FACING,
                 ctx.getHorizontalPlayerFacing().getOpposite());
     }

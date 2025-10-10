@@ -12,16 +12,13 @@ public class ModMenuIntegration implements ModMenuApi {
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
         return parent -> {
-            // Load current config
             ModConfig config = ModConfig.load();
 
-            // Create config builder
             ConfigBuilder builder = ConfigBuilder.create()
                     .setParentScreen(parent)
                     .setTitle(Text.translatable("config.westerosblocks.title"))
                     .setSavingRunnable(config::save);
 
-            // Get entry builder for creating config options
             ConfigEntryBuilder entryBuilder = builder.entryBuilder();
 
             // General Settings Category

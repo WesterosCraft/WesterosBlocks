@@ -12,9 +12,6 @@ public class WCCropBlock extends WCPlantBlock {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            AbstractBlock.Settings props = settings.noCollision().strength(0.0f);
-
-            // Handle null definition (from BlockBuilder) with sensible defaults
             boolean layerSensitive = definition != null && definition.isLayerSensitive();
             boolean toggleOnUse = definition != null && definition.toggleOnUse();
             List<String> stateValues = definition != null ? definition.getStateValues() : null;
@@ -23,12 +20,11 @@ public class WCCropBlock extends WCPlantBlock {
                 tempLAYERS = Properties.LAYERS;
             }
 
-            // Set the STATE property if stateValues are provided
             if (stateValues != null) {
                 tempSTATE = new ModProperties.StateProperty(stateValues);
             }
 
-            return new WCCropBlock(props, layerSensitive, toggleOnUse);
+            return new WCCropBlock(settings, layerSensitive, toggleOnUse);
         }
     }
 

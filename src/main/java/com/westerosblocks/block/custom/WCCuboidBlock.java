@@ -30,13 +30,9 @@ import java.util.List;
 
 public class WCCuboidBlock extends Block implements Waterloggable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
-
     protected static ModProperties.StateProperty tempSTATE;
     public ModProperties.StateProperty STATE;
-
     protected boolean toggleOnUse = false;
-
-    // Default bounding box - can be overridden by constructor
     protected VoxelShape boundingBox = VoxelShapes.fullCube();
 
     public static class Factory extends BlockFactory {
@@ -76,13 +72,8 @@ public class WCCuboidBlock extends Block implements Waterloggable {
         }
     }
 
-    public WCCuboidBlock(AbstractBlock.Settings settings) {
-        this(settings, false, false, null);
-    }
-
     public WCCuboidBlock(AbstractBlock.Settings settings, boolean doToggleOnUse, boolean addStates, VoxelShape customBoundingBox) {
         super(settings);
-
         this.toggleOnUse = doToggleOnUse;
 
         if (customBoundingBox != null) {

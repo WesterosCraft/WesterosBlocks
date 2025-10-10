@@ -354,15 +354,6 @@ public class BlockBuilder<T extends Block> {
         return this;
     }
 
-    // Alias methods that match JSON property names exactly
-    public BlockBuilder<T> size(String size) {
-        return wallSize(size);
-    }
-
-    public BlockBuilder<T> parameter(String key, Object value) {
-        parameters.put(key, value);
-        return this;
-    }
 
     public BlockBuilder<T> boundingBox(double xMin, double yMin, double zMin, double xMax, double yMax, double zMax) {
         Map<String, Object> boundingBoxMap = new java.util.HashMap<>();

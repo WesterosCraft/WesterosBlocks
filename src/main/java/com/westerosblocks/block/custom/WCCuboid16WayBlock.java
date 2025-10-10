@@ -35,22 +35,16 @@ import java.util.List;
 public class WCCuboid16WayBlock extends WCCuboidBlock {
     public static final IntProperty ROTATION = Properties.ROTATION;
     private static final int ROTATIONS = 16;
-
-    // Store rotated bounding boxes for each rotation (0-15)
     protected VoxelShape[] boundingBoxesByRotation = new VoxelShape[ROTATIONS];
-
-    // Store state-specific bounding boxes (if block has states with different bounding boxes)
     protected VoxelShape[][] stateSpecificBoundingBoxes = null;
 
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
             boolean doToggleOnUse = definition != null && definition.toggleOnUse();
             int numStates = definition != null ? definition.getStateCount() : 0;
             boolean doAddStates = numStates > 0;
 
-            // Handle bounding box if provided
             VoxelShape customBoundingBox = null;
             if (definition != null && definition.hasBoundingBox()) {
                 BlockDefinition.BoundingBox bbox = definition.getBoundingBox();
@@ -77,14 +71,6 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
 
             return new WCCuboid16WayBlock(settings, doToggleOnUse, doAddStates, customBoundingBox, definition);
         }
-    }
-
-    public WCCuboid16WayBlock(AbstractBlock.Settings settings) {
-        this(settings, false, false, null, null);
-    }
-
-    public WCCuboid16WayBlock(AbstractBlock.Settings settings, boolean doToggleOnUse, boolean addStates, VoxelShape customBoundingBox) {
-        this(settings, doToggleOnUse, addStates, customBoundingBox, null);
     }
 
     public WCCuboid16WayBlock(AbstractBlock.Settings settings, boolean doToggleOnUse, boolean addStates,
@@ -126,7 +112,7 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
 
     private void calculateStateSpecificBoundingBoxes(BlockDefinition definition, List<BlockDefinition.StateVariant> states) {
         int stateCount = states.size();
-        stateSpecificBoundingBoxes = new VoxelShape[stateCount][ROTATIONS]; // [state][rotation]
+        stateSpecificBoundingBoxes = new VoxelShape[stateCount][ROTATIONS];
 
         for (int i = 0; i < stateCount; i++) {
             BlockDefinition.StateVariant state = states.get(i);
@@ -251,9 +237,6 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
-
-        // Calculate rotation based on player's facing direction (0-15)
-        // Same approach as WCChairBlock but for 16 directions instead of 8
         int rotation = MathHelper.floor((double)(ctx.getPlayerYaw() * 16.0F / 360.0F) + 0.5D) & 15;
 
         BlockState state = this.getDefaultState()
@@ -296,12 +279,11 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
 
     @Override
     public BlockState rotate(BlockState state, BlockRotation rotation) {
-        // BlockRotation provides NONE, CLOCKWISE_90, CLOCKWISE_180, COUNTERCLOCKWISE_90
         int currentRotation = state.get(ROTATION);
         int rotationSteps = switch (rotation) {
             case CLOCKWISE_90 -> 4;  // 90° = 4 steps of 22.5°
             case CLOCKWISE_180 -> 8; // 180° = 8 steps
-            case COUNTERCLOCKWISE_90 -> 12; // 270° = 12 steps (or -4)
+            case COUNTERCLOCKWISE_90 -> 12; // 270° = 12 steps
             default -> 0;
         };
 
@@ -313,10 +295,9 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
     public BlockState mirror(BlockState state, BlockMirror mirror) {
         int rotation = state.get(ROTATION);
 
-        // Mirror the rotation value
         int mirroredRotation = switch (mirror) {
-            case FRONT_BACK -> (16 - rotation) & 15;  // Flip across Z axis
-            case LEFT_RIGHT -> (32 - rotation) & 15;  // Flip across X axis
+            case FRONT_BACK -> (16 - rotation) & 15;
+            case LEFT_RIGHT -> (32 - rotation) & 15;
             default -> rotation;
         };
 
