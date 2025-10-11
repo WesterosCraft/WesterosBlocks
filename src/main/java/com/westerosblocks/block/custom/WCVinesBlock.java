@@ -255,7 +255,6 @@ public class WCVinesBlock extends VineBlock {
     public static class Factory extends BlockFactory {
         @Override
         public WCVinesBlock buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
             boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
             boolean noClimb = definition != null && definition.getNoClimb() != null && definition.getNoClimb();
             boolean canGrowDownward = definition != null && definition.canGrowDownward();

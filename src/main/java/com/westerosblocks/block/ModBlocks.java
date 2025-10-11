@@ -229,6 +229,16 @@ public class ModBlocks {
                             .locked(definition.isLocked())
                             .build();
 
+                case "trapdoor":
+                    return BlockBuilder.trapdoor()
+                            .hardness(definition.getHardness())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .woodType(getWoodTypeFromDefinition(definition))
+                            .locked(definition.isLocked())
+                            .build();
+
                 case "leaves":
                     return BlockBuilder.leaves()
                             .hardness(definition.getHardness())

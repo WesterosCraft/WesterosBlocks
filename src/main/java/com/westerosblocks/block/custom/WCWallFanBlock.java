@@ -42,7 +42,6 @@ public class WCWallFanBlock extends Block implements Waterloggable {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
             boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
             return new WCWallFanBlock(settings, allowUnsupported);
         }

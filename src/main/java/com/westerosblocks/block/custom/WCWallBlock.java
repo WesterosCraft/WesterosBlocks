@@ -55,7 +55,6 @@ public class WCWallBlock extends WallBlock implements Waterloggable {
         }
     }
 
-    // Cached shapes for performance
     private static VoxelShape[] normalShapes = null;
     private static VoxelShape[] shortShapes = null;
     private static VoxelShape[] collisionShapes = null;

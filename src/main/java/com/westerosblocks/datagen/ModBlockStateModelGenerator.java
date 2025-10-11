@@ -69,6 +69,7 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                                 case "branch" -> buildBranch();
                                 case "door" -> buildDoor();
                                 case "half_door" -> buildHalfDoor();
+                                case "trapdoor" -> buildTrapdoor();
                                 case "pane" -> buildPane();
                                 case "torch" -> buildTorch();
                                 case "chair" -> buildChair();
@@ -129,6 +130,10 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
 
                 private void buildHalfDoor() {
                         generateHalfDoor(generator, block, !texture.isEmpty() ? texture : textures[0]);
+                }
+
+                private void buildTrapdoor() {
+                        generateTrapdoor(generator, block, !texture.isEmpty() ? texture : textures[0]);
                 }
 
                 private void buildPane() {
@@ -327,6 +332,11 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
         private static void generateHalfDoor(BlockStateModelGenerator generator, Block block, String texturePath) {
                 // Delegate to HalfDoorBlockExporter for complex shutter logic
                 HalfDoorBlockExporter.registerHalfDoorBlock(generator, block, texturePath);
+        }
+
+        private static void generateTrapdoor(BlockStateModelGenerator generator, Block block, String texturePath) {
+                // Delegate to TrapDoorBlockExporter for trapdoor logic
+                TrapDoorBlockExporter.registerTrapDoorBlock(generator, block, texturePath);
         }
 
         private static void generatePane(BlockStateModelGenerator generator, Block block, String texturePath) {

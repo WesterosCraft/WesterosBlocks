@@ -90,6 +90,10 @@ public class ModModelProvider extends FabricModelProvider {
                     DoorBlockExporter.registerCustomDoorBlock(bsmg, block, definition);
                     break;
 
+                case "trapdoor":
+                    TrapDoorBlockExporter.registerCustomTrapDoorBlock(bsmg, block, definition);
+                    break;
+
                 case "log":
                     LogBlockExporter.registerCustomLogBlock(bsmg, block, definition);
                     break;

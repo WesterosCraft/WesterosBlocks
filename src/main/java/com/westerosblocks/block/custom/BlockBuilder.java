@@ -65,6 +65,7 @@ public class BlockBuilder<T extends Block> {
         return new BlockBuilder<>(new WCFenceBlock.Factory());
     }
     public static BlockBuilder<WCFenceGateBlock> fenceGate() { return new BlockBuilder<>(new WCFenceGateBlock.Factory()); }
+    public static BlockBuilder<WCTrapDoorBlock> trapdoor() { return new BlockBuilder<>(new WCTrapDoorBlock.Factory()); }
     public static BlockBuilder<WCLayerBlock> layer() {
         return new BlockBuilder<>(new WCLayerBlock.Factory());
     }

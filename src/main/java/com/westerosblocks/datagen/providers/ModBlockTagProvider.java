@@ -99,7 +99,7 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
 
             Block ladderBlock = ModBlocks.getAutoRegisteredBlock(blockName);
 
-            if (ladderBlock != null && !isNoClimb) {
+            if (ladderBlock != null && isNoClimb != null && !isNoClimb) {
                 ladderTagBuilder.add(ladderBlock);
             }
         }
@@ -178,6 +178,20 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
 
             if (cropBlock != null) {
                 cropTagBuilder.add(cropBlock);
+            }
+        }
+
+        // Automatically add all trapdoor blocks from registry
+        FabricTagProvider<Block>.FabricTagBuilder trapdoorTagBuilder = getOrCreateTagBuilder(BlockTags.TRAPDOORS);
+        List<BlockDefinition> trapdoorBlocks = registry.getByType("trapdoor");
+
+        for (BlockDefinition trapDef : trapdoorBlocks) {
+            String blockName = trapDef.getBlockName();
+
+            Block trapdoorBlock = ModBlocks.getAutoRegisteredBlock(blockName);
+
+            if (trapdoorBlock != null) {
+                trapdoorTagBuilder.add(trapdoorBlock);
             }
         }
 

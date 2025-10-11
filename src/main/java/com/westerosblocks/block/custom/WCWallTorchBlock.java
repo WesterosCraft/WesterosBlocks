@@ -53,7 +53,6 @@ public class WCWallTorchBlock extends WallTorchBlock {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
             boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
             boolean noParticle = definition != null && definition.isNoParticle();
 
