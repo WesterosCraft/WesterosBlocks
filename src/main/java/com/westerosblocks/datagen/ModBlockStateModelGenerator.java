@@ -1,5 +1,6 @@
 package com.westerosblocks.datagen;
 
+import com.westerosblocks.block.custom.WCPlantBlock;
 import com.westerosblocks.datagen.custom.*;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -320,22 +321,18 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
         }
 
         private static void generateBranch(BlockStateModelGenerator generator, Block block, String texturePath) {
-                // Branch blocks use complex multipart logic - delegate to BranchBlockExporter
                 BranchBlockExporter.registerBranchBlock(generator, block, texturePath);
         }
 
         private static void generateDoor(BlockStateModelGenerator generator, Block block, String topTexture, String bottomTexture) {
-                // Delegate to DoorBlockExporter for complex door logic
                 DoorBlockExporter.registerDoorBlock(generator, block, topTexture, bottomTexture);
         }
 
         private static void generateHalfDoor(BlockStateModelGenerator generator, Block block, String texturePath) {
-                // Delegate to HalfDoorBlockExporter for complex shutter logic
                 HalfDoorBlockExporter.registerHalfDoorBlock(generator, block, texturePath);
         }
 
         private static void generateTrapdoor(BlockStateModelGenerator generator, Block block, String texturePath) {
-                // Delegate to TrapDoorBlockExporter for trapdoor logic
                 TrapDoorBlockExporter.registerTrapDoorBlock(generator, block, texturePath);
         }
 
@@ -377,7 +374,6 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
         }
 
         private static void generateFanWithRandomTextures(BlockStateModelGenerator generator, Block block, String[][] randomTexturePaths) {
-                // For random textures, use the first texture of the first set as the primary texture
                 String primaryTexture = randomTexturePaths.length > 0 && randomTexturePaths[0].length > 0
                         ? randomTexturePaths[0][0] : "coral/tube/fan1";
                 FanBlockExporter.registerFanBlock(generator, block, primaryTexture);
@@ -389,9 +385,8 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
         }
 
         private static void generatePlant(BlockStateModelGenerator generator, Block block, String texturePath, boolean isTinted) {
-                // Check if this is a layer-sensitive plant
-                if (block instanceof com.westerosblocks.block.custom.WCPlantBlock && 
-                    ((com.westerosblocks.block.custom.WCPlantBlock) block).isLayerSensitive()) {
+                if (block instanceof WCPlantBlock &&
+                    ((WCPlantBlock) block).isLayerSensitive()) {
                         CrossBlockExporter.generateLayerSensitiveCross(generator, block, texturePath, isTinted, 1);
                 } else {
                         CrossBlockExporter.generateCross(generator, block, texturePath, isTinted, 1);
@@ -399,16 +394,15 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
         }
 
         private static void generatePlantWithRandomTextures(BlockStateModelGenerator generator, Block block, String[] texturePaths, boolean isTinted) {
-                if (block instanceof com.westerosblocks.block.custom.WCPlantBlock && 
-                    ((com.westerosblocks.block.custom.WCPlantBlock) block).isLayerSensitive()) {
+                if (block instanceof WCPlantBlock &&
+                    ((WCPlantBlock) block).isLayerSensitive()) {
                         CrossBlockExporter.generateLayerSensitiveCrossWithRandomTextures(generator, block, texturePaths, isTinted, 1);
                 } else {
                         CrossBlockExporter.generateCrossWithRandomTextures(generator, block, texturePaths, isTinted, 1);
                 }
         }
 
-        // Factory methods for each block type
-
+        // Factory methods for each block type as needed
         public static CustomBlockBuilder registerCustomBranchBlock(BlockStateModelGenerator generator, Block block) {
                 return new CustomBlockBuilder(generator, block, "branch");
         }

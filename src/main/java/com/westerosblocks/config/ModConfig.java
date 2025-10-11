@@ -14,7 +14,7 @@ public class ModConfig {
     private static final File CONFIG_FILE = new File(FabricLoader.getInstance().getConfigDir().toFile(), "westerosblocks.json");
 
     public boolean dumpWorldPainterCSV = false;
-    public boolean doorsCanSurviveOnAnySurface = false;
+    public boolean exportBlockDefinitions = false;
 
     /**
      * Load the config from file, or create a new one with defaults
