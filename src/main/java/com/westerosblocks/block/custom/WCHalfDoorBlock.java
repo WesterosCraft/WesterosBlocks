@@ -185,7 +185,7 @@ public class WCHalfDoorBlock extends Block {
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         // Check global config option first
-        if (WesterosBlocks.CONFIG.doorsCanSurviveOnAnySurface) return true;
+//        if (WesterosBlocks.CONFIG.doorsCanSurviveOnAnySurface) return true;
         // Then check block-specific allowUnsupported setting
         if (this.allowUnsupported) return true;
         BlockPos belowPos = pos.down();

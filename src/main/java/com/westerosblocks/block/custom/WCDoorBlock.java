@@ -45,9 +45,9 @@ public class WCDoorBlock extends DoorBlock {
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         // Check global config option first
-        if (WesterosBlocks.CONFIG.doorsCanSurviveOnAnySurface && (state.get(DoorBlock.HALF) == DoubleBlockHalf.LOWER)) {
-            return true;
-        }
+//        if (WesterosBlocks.CONFIG.doorsCanSurviveOnAnySurface && (state.get(DoorBlock.HALF) == DoubleBlockHalf.LOWER)) {
+//            return true;
+//        }
         // Then check block-specific allowUnsupported setting
         if (allowUnsupported && (state.get(DoorBlock.HALF) == DoubleBlockHalf.LOWER)) {
             return true;
