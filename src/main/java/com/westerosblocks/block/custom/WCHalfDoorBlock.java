@@ -25,6 +25,7 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
 
+import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
 
 public class WCHalfDoorBlock extends Block {
@@ -183,6 +184,9 @@ public class WCHalfDoorBlock extends Block {
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        // Check global config option first
+        if (WesterosBlocks.CONFIG.doorsCanSurviveOnAnySurface) return true;
+        // Then check block-specific allowUnsupported setting
         if (this.allowUnsupported) return true;
         BlockPos belowPos = pos.down();
         return world.getBlockState(belowPos).isSideSolid(world, belowPos, Direction.UP, SideShapeType.RIGID);

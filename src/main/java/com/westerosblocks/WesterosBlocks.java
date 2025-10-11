@@ -4,6 +4,7 @@ import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.blockentity.ModBlockEntities;
 import com.westerosblocks.config.ModConfig;
 import com.westerosblocks.data.BlockDefinitionRegistry;
+import com.westerosblocks.data.WorldPaintExporter;
 import com.westerosblocks.item.ModItems;
 import com.westerosblocks.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
@@ -33,6 +34,12 @@ public class WesterosBlocks implements ModInitializer {
         ModItems.registerModItems();
         ModSounds.registerSounds();
         ModBlockEntities.registerModEntities();
+
+        // Export WorldPainter CSV if config option is enabled
+        if (CONFIG.dumpWorldPainterCSV) {
+            LOGGER.info("WorldPainter CSV export enabled in config");
+            WorldPaintExporter.exportToCSV();
+        }
 
         LOGGER.info("WesterosBlocks mod initialization complete!");
     }
