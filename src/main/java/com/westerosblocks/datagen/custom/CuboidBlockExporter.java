@@ -13,25 +13,18 @@ import com.westerosblocks.data.BlockDefinition;
 
 import java.util.*;
 
-/**
- * Exporter for cuboid blocks following the unified builder pattern.
- * Handles complex geometry from JSON definitions including custom states, random textures, and multi-part models.
- */
+
 public class CuboidBlockExporter extends BaseBlockExporter {
 
     private static final int[] STANDARD_TEXTURE_INDICES = {0, 1, 2, 3, 4, 5};
     private static final boolean[] NO_TINT_ALL = {false, false, false, false, false, false};
 
-    /**
-     * Registers a cuboid block from a BlockDefinition.
-     * Automatically handles states, randomTextures, and custom models.
-     */
+
     public static void registerCustomCuboidBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         if (!(block instanceof WCCuboidBlock cuboidBlock)) {
             throw new IllegalArgumentException("Block must be a WCCuboidBlock instance");
         }
 
-        // Use centralized priority logic from BlockDefinition
         BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
 
         switch (source) {
@@ -838,34 +831,6 @@ public class CuboidBlockExporter extends BaseBlockExporter {
                definition.hasBoundingBox();
     }
 
-    /**
-     * Creates a blockstate supplier for state-based variants.
-     */
-    private static BlockStateSupplier createStatesBlockState(Block block, List<Identifier> modelIds, List<BlockDefinition.StateVariant> states) {
-        return new BlockStateSupplier() {
-            @Override
-            public Block getBlock() {
-                return block;
-            }
-
-            @Override
-            public JsonElement get() {
-                JsonObject json = new JsonObject();
-                JsonObject variants = new JsonObject();
-
-                for (int i = 0; i < modelIds.size(); i++) {
-                    JsonObject variant = new JsonObject();
-                    variant.addProperty("model", modelIds.get(i).toString());
-
-                    String stateId = states.get(i).getStateID() != null ? states.get(i).getStateID() : "state" + i;
-                    variants.add("state=" + stateId, variant);
-                }
-
-                json.add("variants", variants);
-                return json;
-            }
-        };
-    }
 
     /**
      * Creates an advanced blockstate supplier for states with multiple model variants.

@@ -109,11 +109,11 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
 
         for (BlockDefinition ladderDef : ladderBlocks) {
             String blockName = ladderDef.getBlockName();
-            Boolean isNoClimb = ladderDef.getNoClimb();
+            boolean isNoClimb = ladderDef.isNoClimb();
 
             Block ladderBlock = ModBlocks.getAutoRegisteredBlock(blockName);
 
-            if (ladderBlock != null && isNoClimb != null && !isNoClimb) {
+            if (ladderBlock != null && !isNoClimb) {
                 ladderTagBuilder.add(ladderBlock);
             }
         }

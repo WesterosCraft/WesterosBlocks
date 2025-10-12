@@ -16,10 +16,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Exporter for NE (North-East) cuboid blocks with two-directional facing support.
- * Generates blockstate files with facing=east and facing=north variants.
- */
 public class CuboidNEBlockExporter extends BaseBlockExporter {
 
     /**

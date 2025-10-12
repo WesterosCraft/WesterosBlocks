@@ -16,34 +16,6 @@ import net.minecraft.util.math.Direction;
  * Exporter for fan blocks following block-models.md patterns.
  * Generates models for decorative fan blocks with both standing and wall-mounted variants.
  *
- * <p>Structure follows block-models.md sections 5.2-5.6:
- * <ul>
- *   <li>Model instances (references ModModels.FAN, ModModels.WALL_FAN)</li>
- *   <li>TextureMap builders (ModTextureKey.FAN)</li>
- *   <li>BlockStateSupplier methods (BlockStateVariantMap for facing and waterlogged)</li>
- *   <li>Clean datagen methods (registerFanBlock)</li>
- *   <li>BlockDefinition integration (registerFanBlockFromDefinition)</li>
- * </ul>
- *
- * <p><b>Fan Block Variants:</b>
- * <ul>
- *   <li><b>Standing Fan:</b> 2 variants (waterlogged true/false)</li>
- *   <li><b>Wall Fan:</b> 8 variants (4 directions × 2 waterlogged states)</li>
- *   <li><b>Total:</b> 10 variants across two blocks</li>
- * </ul>
- *
- * <p><b>Block Pairing:</b>
- * <ul>
- *   <li>Standing fan: Primary block with item model</li>
- *   <li>Wall fan: Automatically found using "wall_" prefix, no item model</li>
- *   <li>Wall fan lookup follows same pattern as torch blocks</li>
- * </ul>
- *
- * <p><b>Waterlogged Support:</b>
- * Both standing and wall variants support waterlogged states without visual model changes.
- *
- * <p><b>Texture Order:</b> Single texture applied via {@code ModTextureKey.FAN}
- *
  * @see ModModels#FAN
  * @see ModModels#WALL_FAN
  * @see WCFanBlock

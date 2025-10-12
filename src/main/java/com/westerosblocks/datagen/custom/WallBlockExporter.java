@@ -15,11 +15,10 @@ import java.util.Optional;
 
 public class WallBlockExporter extends BaseBlockExporter {
 
-    private static Model createWallPostModel(boolean tinted, boolean overlay, boolean isShort) {
+    private static Model createWallPostModel(boolean tinted, boolean overlay) {
         String tintPath = tinted ? "block/tinted/" : "block/untinted/";
         String overlayPath = overlay ? "_overlay" : "";
-        String shortPath = isShort ? "_2" : "";
-        String path = tintPath + "template_wall_post" + shortPath + overlayPath;
+        String path = tintPath + "template_wall_post" + overlayPath;
 
         if (overlay) {
             return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
@@ -178,7 +177,7 @@ public class WallBlockExporter extends BaseBlockExporter {
         TextureMap textureMap = createWallTextureMap(expandedTextures, expandedOverlays);
 
         // Upload post, side, and tall models
-        Identifier postModelId = createWallPostModel(tinted, overlay, isShort)
+        Identifier postModelId = createWallPostModel(tinted, overlay)
                 .upload(createNestedModelId(block, "post"), textureMap, generator.modelCollector);
         Identifier sideModelId = createWallSideModel(tinted, overlay, isShort)
                 .upload(createNestedModelId(block, "side"), textureMap, generator.modelCollector);
@@ -211,7 +210,7 @@ public class WallBlockExporter extends BaseBlockExporter {
 
             TextureMap textureMap = createWallTextureMap(expandedTextures, expandedOverlays);
 
-            Identifier postModelId = createWallPostModel(tinted, overlay, isShort)
+            Identifier postModelId = createWallPostModel(tinted, overlay)
                     .upload(createNestedModelId(block, "post_v" + (i + 1)), textureMap, generator.modelCollector);
             Identifier sideModelId = createWallSideModel(tinted, overlay, isShort)
                     .upload(createNestedModelId(block, "side_v" + (i + 1)), textureMap, generator.modelCollector);

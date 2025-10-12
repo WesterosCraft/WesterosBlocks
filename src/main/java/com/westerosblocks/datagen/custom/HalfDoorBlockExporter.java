@@ -18,22 +18,6 @@ import java.util.Optional;
  * Exporter for half door (shutter) blocks following block-models.md patterns.
  * Generates models for half-height door blocks with hinge and open/closed states.
  *
- * <p>Structure follows block-models.md sections 5.2-5.6:
- * <ul>
- *   <li>Model instances (references ModModels.HALF_DOOR_LEFT, HALF_DOOR_RIGHT, etc.)</li>
- *   <li>TextureMap builders (createHalfDoorTextureMap)</li>
- *   <li>BlockStateSupplier methods (createHalfDoorVariants)</li>
- *   <li>Clean datagen methods (registerHalfDoorBlock)</li>
- *   <li>BlockDefinition integration (registerCustomHalfDoorBlock)</li>
- * </ul>
- *
- * <p>Half door variants:
- * <ul>
- *   <li>LEFT/RIGHT hinge positions</li>
- *   <li>OPEN/CLOSED states</li>
- *   <li>4 directional facings (NORTH, EAST, SOUTH, WEST)</li>
- * </ul>
- *
  * @see ModModels#HALF_DOOR_LEFT
  * @see ModModels#HALF_DOOR_RIGHT
  * @see ModModels#HALF_DOOR_LEFT_OPEN
@@ -85,32 +69,11 @@ public class HalfDoorBlockExporter extends BaseBlockExporter {
         }
     }
 
-    // ========================================
-    // Helper Methods (block-models.md 5.2-5.4)
-    // ========================================
-
-    /**
-     * Creates a TextureMap for half door blocks.
-     * Follows block-models.md section 5.3: Using Texture Map.
-     *
-     * @param texturePath Texture path for the half door
-     * @return Configured TextureMap with TEXTURE key (using BOTTOM for legacy compatibility)
-     */
     private static TextureMap createHalfDoorTextureMap(String texturePath) {
         // Note: Uses TextureKey.BOTTOM for compatibility with existing models
         return new TextureMap().put(TextureKey.BOTTOM, createBlockIdentifier(texturePath));
     }
 
-    /**
-     * Creates blockstate variants for half doors with all hinge, open, and direction combinations.
-     * Follows block-models.md section 5.4: Custom BlockStateSupplier Method.
-     *
-     * @param leftModelId Model ID for LEFT hinge, closed
-     * @param rightModelId Model ID for RIGHT hinge, closed
-     * @param leftOpenModelId Model ID for LEFT hinge, open
-     * @param rightOpenModelId Model ID for RIGHT hinge, open
-     * @return Configured BlockStateVariantMap for all 16 variants
-     */
     private static BlockStateVariantMap createHalfDoorVariants(Identifier leftModelId, Identifier rightModelId,
                                                                 Identifier leftOpenModelId, Identifier rightOpenModelId) {
         return BlockStateVariantMap.create(WCHalfDoorBlock.FACING, WCHalfDoorBlock.HINGE, WCHalfDoorBlock.OPEN)
@@ -136,19 +99,6 @@ public class HalfDoorBlockExporter extends BaseBlockExporter {
             .register(Direction.NORTH, DoorHinge.RIGHT, true, createVariant(rightOpenModelId, 180));
     }
 
-    /**
-     * Creates a half door model with the specified variant.
-     * Follows block-models.md section 5.2: Parent Block Model.
-     *
-     * <p>Note: Uses legacy model creation approach for compatibility with existing model files.
-     *
-     * @param generator The BlockStateModelGenerator to register the model with
-     * @param block The block this model is for
-     * @param texturePath The texture path to use
-     * @param variant The variant name (e.g., "left", "right_open")
-     * @param model The predefined model from ModModels (currently unused, kept for compatibility)
-     * @return The created model Identifier
-     */
     private static Identifier createHalfDoorModel(BlockStateModelGenerator generator, Block block, String texturePath,
                                                    String variant, Model model) {
         // Create model ID using nested path structure
@@ -170,12 +120,6 @@ public class HalfDoorBlockExporter extends BaseBlockExporter {
         return modelId;
     }
 
-    /**
-     * Maps half door variants to their parent model names.
-     *
-     * @param variant The half door variant
-     * @return The parent model name
-     */
     private static String getParentModelName(String variant) {
         return switch (variant) {
             case "left" -> "half_door_left";

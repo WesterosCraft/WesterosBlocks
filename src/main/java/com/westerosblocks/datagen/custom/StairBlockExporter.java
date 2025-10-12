@@ -18,56 +18,6 @@ import java.util.Map;
  * Exporter for stair blocks following block-models.md patterns.
  * Generates models for stair blocks with all facing, half, and shape combinations.
  *
- * <p>Structure follows block-models.md sections 5.2-5.6:
- * <ul>
- *   <li>Model instances (base, inner, outer stair variants)</li>
- *   <li>TextureMap builders (3-texture system: bottom, top, side)</li>
- *   <li>BlockStateSupplier methods (custom JSON for 40 stair variants)</li>
- *   <li>Clean datagen methods (registerCustomStairBlock)</li>
- *   <li>BlockDefinition integration (states, random textures, overlays)</li>
- * </ul>
- *
- * <p><b>Stair Block Variants:</b>
- * <ul>
- *   <li><b>Facing:</b> NORTH, EAST, SOUTH, WEST (4 directions)</li>
- *   <li><b>Half:</b> BOTTOM, TOP (2 positions)</li>
- *   <li><b>Shape:</b> STRAIGHT, INNER_LEFT, INNER_RIGHT, OUTER_LEFT, OUTER_RIGHT (5 shapes)</li>
- *   <li><b>Total:</b> 40 blockstate variants (4 facings × 2 halves × 5 shapes)</li>
- * </ul>
- *
- * <p><b>Stair Model Types:</b>
- * <ul>
- *   <li><b>base</b> - Straight stair model for STRAIGHT shape</li>
- *   <li><b>inner</b> - Inner corner model for INNER_LEFT and INNER_RIGHT shapes</li>
- *   <li><b>outer</b> - Outer corner model for OUTER_LEFT and OUTER_RIGHT shapes</li>
- * </ul>
- *
- * <p><b>Texture System (3 textures):</b>
- * <ul>
- *   <li>[0] - Bottom texture (bottom face of stairs)</li>
- *   <li>[1] - Top texture (top face and step surface)</li>
- *   <li>[2] - Side texture (vertical faces, also used as particle)</li>
- * </ul>
- *
- * <p><b>Advanced Features:</b>
- * <ul>
- *   <li><b>UV Lock:</b> Controls texture rotation with block (disabled via no_uvlock property)</li>
- *   <li><b>Ambient Occlusion:</b> Supports both occluded and non-occluded variants</li>
- *   <li><b>Tinting:</b> Biome-specific coloring for grass/foliage stairs</li>
- *   <li><b>Overlay:</b> Dual-layer textures for snow-covered or mossy stairs</li>
- *   <li><b>States:</b> Multiple material states (clean, weathered, mossy, etc.)</li>
- *   <li><b>Random Textures:</b> Weighted texture variants for visual variety</li>
- * </ul>
- *
- * <p><b>Parent Model Paths:</b>
- * Parent models are selected based on properties:
- * <ul>
- *   <li>untinted/stairs - Standard stairs</li>
- *   <li>tinted/stairs - Biome-colored stairs</li>
- *   <li>noocclusion/stairs - No ambient occlusion</li>
- *   <li>*_overlay variants - With overlay textures</li>
- * </ul>
- *
  * @see WCStairBlock
  */
 public class StairBlockExporter extends BaseBlockExporter {

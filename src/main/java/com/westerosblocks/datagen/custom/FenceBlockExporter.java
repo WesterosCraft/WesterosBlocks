@@ -17,45 +17,12 @@ import java.util.Optional;
  * Exporter for fence blocks following block-models.md patterns.
  * Generates models for connectable fence blocks with post and side components.
  *
- * <p>Structure follows block-models.md sections 5.2-5.6:
- * <ul>
- *   <li>Model instances (fence_post, fence_side, fence_inventory models)</li>
- *   <li>TextureMap builders (3-texture system: bottom, top, side)</li>
- *   <li>BlockStateSupplier methods (MultipartBlockStateSupplier for connections)</li>
- *   <li>Clean datagen methods (registerFenceBlock)</li>
- *   <li>BlockDefinition integration (registerCustomFenceBlock)</li>
- * </ul>
- *
- * <p><b>Fence Block Components:</b>
- * <ul>
- *   <li><b>Post:</b> Central vertical pillar (always present)</li>
- *   <li><b>Sides:</b> Horizontal rails connecting to adjacent fences (4 directions)</li>
- *   <li><b>Inventory:</b> Simplified model for item rendering</li>
- * </ul>
- *
- * <p><b>Connection System:</b>
- * <ul>
- *   <li>Multipart blockstate with post + conditional sides</li>
- *   <li>Sides appear when connecting NORTH, EAST, SOUTH, or WEST</li>
- *   <li>Up to 16 visual variants (1 post + 0-4 sides)</li>
- * </ul>
- *
- * <p><b>Texture System (3 textures):</b>
- * <ul>
- *   <li>[0] - Bottom texture (bottom face of post/rails)</li>
- *   <li>[1] - Top texture (top face of post/rails)</li>
- *   <li>[2] - Side texture (vertical faces, used as particle)</li>
- * </ul>
  *
  * @see ModTextureKey#BOTTOM_OVERLAY
  * @see ModTextureKey#TOP_OVERLAY
  * @see ModTextureKey#SIDE_OVERLAY
  */
 public class FenceBlockExporter extends BaseBlockExporter {
-
-    // ========================================
-    // Model Instances (block-models.md 5.2)
-    // ========================================
 
     private static Model createFencePostModel(boolean tinted, boolean overlay) {
         String tintPath = tinted ? "block/tinted/" : "block/untinted/";
@@ -101,10 +68,6 @@ public class FenceBlockExporter extends BaseBlockExporter {
                 TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
         }
     }
-
-    // ========================================
-    // Helper Methods (block-models.md 5.3-5.4)
-    // ========================================
 
     /**
      * Creates a TextureMap for fence blocks.
@@ -196,10 +159,6 @@ public class FenceBlockExporter extends BaseBlockExporter {
 
         supplier.with(condition, sideVariants);
     }
-
-    // ========================================
-    // Public Registration Methods (block-models.md 5.5)
-    // ========================================
 
     /**
      * Registers a fence block with simple textures.
@@ -327,10 +286,6 @@ public class FenceBlockExporter extends BaseBlockExporter {
             registerFenceBlock(generator, block, tinted, overlay, new String[]{"missingno"}, null);
         }
     }
-
-    // ========================================
-    // Helper Classes
-    // ========================================
 
     /**
      * Helper class to hold texture set with weight for random textures.

@@ -389,7 +389,7 @@ public class BranchBlockExporter extends BaseBlockExporter {
     private static Identifier createBranchModel(BlockStateModelGenerator generator, Block block, String branchType,
             String[] texturePaths, String connectionType) {
         // Use the first texture for all faces (branches typically use single texture)
-        String texturePath = texturePaths.length > 0 ? texturePaths[0] : "oak_branch";
+        String texturePath = texturePaths[0];
 
         // Create texture map
         TextureMap textureMap = new TextureMap()
@@ -399,52 +399,27 @@ public class BranchBlockExporter extends BaseBlockExporter {
         // Determine model template based on connection type
         Optional<Identifier> parentModel = Optional.empty();
         if ("large_branch".equals(branchType)) {
-            switch (connectionType) {
-                case "base":
-                    parentModel = Optional.of(WesterosBlocks.id("block/branches/large_branch"));
-                    break;
-                case "horizontal":
-                    parentModel = Optional.of(WesterosBlocks.id("block/branches/large_branch_horizontal"));
-                    break;
-                case "connected":
-                    parentModel = Optional.of(WesterosBlocks.id("block/branches/large_branch_connected"));
-                    break;
-                case "horizontal_connected":
-                    parentModel = Optional
-                            .of(WesterosBlocks.id("block/branches/large_branch_horizontal_connected"));
-                    break;
-                case "horizontal_connected_two_corner":
-                    parentModel = Optional.of(
-                            WesterosBlocks.id("block/branches/large_branch_horizontal_connected_two_corner"));
-                    break;
-                case "horizontal_connected_three":
-                    parentModel = Optional
-                            .of(WesterosBlocks.id("block/branches/large_branch_horizontal_connected_three"));
-                    break;
-                case "horizontal_connected_four":
-                    parentModel = Optional
-                            .of(WesterosBlocks.id("block/branches/large_branch_horizontal_connected_four"));
-                    break;
-                case "horizontal_connected_up_corner":
-                    parentModel = Optional
-                            .of(WesterosBlocks.id("block/branches/large_branch_horizontal_connected_up_corner"));
-                    break;
-                case "connected_two":
-                    parentModel = Optional.of(WesterosBlocks.id("block/branches/large_branch_connected_two"));
-                    break;
-                case "connected_two_corner":
-                    parentModel = Optional
-                            .of(WesterosBlocks.id("block/branches/large_branch_connected_two_corner"));
-                    break;
-                case "connected_three":
-                    parentModel = Optional.of(WesterosBlocks.id("block/branches/large_branch_connected_three"));
-                    break;
-                case "connected_four":
-                    parentModel = Optional.of(WesterosBlocks.id("block/branches/large_branch_connected_four"));
-                    break;
-                default:
-                    parentModel = Optional.of(WesterosBlocks.id("block/branches/large_branch"));
-            }
+            parentModel = switch (connectionType) {
+                case "base" -> Optional.of(WesterosBlocks.id("block/branches/large_branch"));
+                case "horizontal" -> Optional.of(WesterosBlocks.id("block/branches/large_branch_horizontal"));
+                case "connected" -> Optional.of(WesterosBlocks.id("block/branches/large_branch_connected"));
+                case "horizontal_connected" -> Optional
+                        .of(WesterosBlocks.id("block/branches/large_branch_horizontal_connected"));
+                case "horizontal_connected_two_corner" -> Optional.of(
+                        WesterosBlocks.id("block/branches/large_branch_horizontal_connected_two_corner"));
+                case "horizontal_connected_three" -> Optional
+                        .of(WesterosBlocks.id("block/branches/large_branch_horizontal_connected_three"));
+                case "horizontal_connected_four" -> Optional
+                        .of(WesterosBlocks.id("block/branches/large_branch_horizontal_connected_four"));
+                case "horizontal_connected_up_corner" -> Optional
+                        .of(WesterosBlocks.id("block/branches/large_branch_horizontal_connected_up_corner"));
+                case "connected_two" -> Optional.of(WesterosBlocks.id("block/branches/large_branch_connected_two"));
+                case "connected_two_corner" -> Optional
+                        .of(WesterosBlocks.id("block/branches/large_branch_connected_two_corner"));
+                case "connected_three" -> Optional.of(WesterosBlocks.id("block/branches/large_branch_connected_three"));
+                case "connected_four" -> Optional.of(WesterosBlocks.id("block/branches/large_branch_connected_four"));
+                default -> Optional.of(WesterosBlocks.id("block/branches/large_branch"));
+            };
         } else {
             // Default to base branch model for other branch types
             parentModel = Optional.of(WesterosBlocks.id("block/custom/branches/large_branch"));

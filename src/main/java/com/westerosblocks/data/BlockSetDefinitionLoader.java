@@ -155,7 +155,7 @@ public class BlockSetDefinitionLoader {
             }
 
             // Check if sound is defined
-            if (definition.getStepSound() == null || definition.getStepSound().isEmpty()) {
+            if (definition.getSoundGroup() == null || definition.getSoundGroup().isEmpty()) {
                 WesterosBlocks.LOGGER.warn("Block set '{}' has no stepSound defined", definition.getBaseBlockName());
                 warningCount++;
                 isValid = false;

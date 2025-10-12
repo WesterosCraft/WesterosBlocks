@@ -134,7 +134,7 @@ public class BlockSetExpander {
 
         // 4. Copy common properties
         if (blockSet.getHardness() != null) defMap.put("hardness", blockSet.getHardness());
-        if (blockSet.getStepSound() != null) defMap.put("soundGroup", blockSet.getStepSound());
+        if (blockSet.getSoundGroup() != null) defMap.put("soundGroup", blockSet.getSoundGroup());
         if (blockSet.getResistance() != null) defMap.put("resistance", blockSet.getResistance());
         if (blockSet.getLightOpacity() != null) defMap.put("lightOpacity", blockSet.getLightOpacity());
         if (blockSet.getHarvestLevel() != null) defMap.put("harvestLevel", blockSet.getHarvestLevel());

@@ -1,6 +1,5 @@
 package com.westerosblocks.datagen.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
@@ -10,15 +9,8 @@ import net.minecraft.util.Identifier;
 
 import java.util.Optional;
 
-/**
- * Exporter for fire blocks following block-models.md patterns.
- * Generates models for animated fire blocks with directional multipart states.
- */
-public class FireBlockExporter extends BaseBlockExporter {
 
-    // ========================================
-    // Public Registration Methods (block-models.md 5.5)
-    // ========================================
+public class FireBlockExporter extends BaseBlockExporter {
 
     /**
      * Registers a fire block with two animation textures.
@@ -92,10 +84,6 @@ public class FireBlockExporter extends BaseBlockExporter {
             default -> VariantSettings.Rotation.R0;
         };
     }
-
-    // ========================================
-    // BlockDefinition Integration (block-models.md 5.6)
-    // ========================================
 
     public static void registerCustomFireBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         if (definition.getTextures() != null && definition.getTextures().size() >= 2) {

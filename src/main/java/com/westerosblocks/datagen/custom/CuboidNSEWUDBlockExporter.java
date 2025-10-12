@@ -19,10 +19,7 @@ import com.westerosblocks.datagen.ModTextureKey;
 
 import java.util.Optional;
 
-/**
- * Exporter for NSEWD (6-direction) cuboid blocks with directional facing support.
- * Generates blockstate files with facing variants for all 6 directions including UP and DOWN.
- */
+
 public class CuboidNSEWUDBlockExporter extends BaseBlockExporter {
 
     public static void registerCustomCuboidNSEWUDBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
@@ -30,7 +27,6 @@ public class CuboidNSEWUDBlockExporter extends BaseBlockExporter {
             throw new IllegalArgumentException("Block must be a WCCuboidNSEWUDBlock instance");
         }
 
-        // Use centralized priority logic from BlockDefinition
         BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
 
         switch (source) {
@@ -308,45 +304,6 @@ public class CuboidNSEWUDBlockExporter extends BaseBlockExporter {
     private static Identifier createGeneratedModelId(Block block, String variant) {
         String blockName = getBlockName(block);
         return WesterosBlocks.id("block/" + blockName + "/" + variant);
-    }
-
-    /**
-     * Checks if the definition has cuboids array for model generation.
-     */
-    private static boolean hasCuboids(BlockDefinition definition) {
-        return definition.getCuboids() != null && !definition.getCuboids().isEmpty();
-    }
-
-    /**
-     * Creates a texture map for cuboid blocks from a list of textures.
-     * Follows standard Minecraft cube texture ordering: down, up, north, south, west, east
-     */
-    private static TextureMap createCuboidTextureMap(List<String> textures) {
-        if (textures == null || textures.isEmpty()) {
-            return TextureMap.all(createBlockIdentifier("missing"));
-        }
-
-        TextureMap textureMap = new TextureMap();
-        int textureCount = textures.size();
-
-        // Standard Minecraft cube face ordering
-        TextureKey[] faceKeys = {
-            TextureKey.DOWN,   // 0: bottom
-            TextureKey.UP,     // 1: top
-            TextureKey.NORTH,  // 2: north
-            TextureKey.SOUTH,  // 3: south
-            TextureKey.WEST,   // 4: west
-            TextureKey.EAST    // 5: east
-        };
-
-        for (int i = 0; i < 6; i++) {
-            String texture = i < textureCount ? textures.get(i) : textures.get(textureCount - 1);
-            textureMap.put(faceKeys[i], createBlockIdentifier(texture));
-        }
-
-        // Particle texture defaults to first texture
-        textureMap.put(TextureKey.PARTICLE, createBlockIdentifier(textures.get(0)));
-        return textureMap;
     }
 
     /**

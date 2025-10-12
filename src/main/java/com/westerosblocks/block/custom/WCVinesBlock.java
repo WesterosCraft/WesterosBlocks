@@ -256,7 +256,7 @@ public class WCVinesBlock extends VineBlock {
         @Override
         public WCVinesBlock buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
             boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
-            boolean noClimb = definition != null && definition.getNoClimb() != null && definition.getNoClimb();
+            boolean noClimb = definition != null && definition.isNoClimb();
             boolean canGrowDownward = definition != null && definition.canGrowDownward();
 
             return new WCVinesBlock(settings, allowUnsupported, noClimb, canGrowDownward);

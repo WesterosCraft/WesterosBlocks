@@ -1,6 +1,5 @@
 package com.westerosblocks.datagen.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 
@@ -8,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.BlockStateVariant;
 import net.minecraft.data.client.BlockStateVariantMap;
-import net.minecraft.data.client.Models;
 import net.minecraft.data.client.TextureKey;
 import net.minecraft.data.client.TextureMap;
 import net.minecraft.data.client.VariantSettings;
@@ -19,33 +17,12 @@ import net.minecraft.util.math.Direction.Axis;
 /**
  * Exporter for log/pillar blocks following block-models.md patterns.
  * Generates models with axis rotation and separate side/end textures.
- *
- * <p>Structure follows block-models.md sections 5.2-5.6:
- * <ul>
- *   <li>Model instances (references ModModels.LOG, ModModels.LOG_HORIZONTAL)</li>
- *   <li>TextureMap builders (createLogTextureMap)</li>
- *   <li>BlockStateSupplier methods (createLogVariants)</li>
- *   <li>Clean datagen methods (registerLogBlock)</li>
- *   <li>BlockDefinition integration (registerCustomLogBlock)</li>
- * </ul>
- *
- * @see com.westerosblocks.datagen.ModModels#LOG
- * @see com.westerosblocks.datagen.ModModels#LOG_HORIZONTAL
  */
 public class LogBlockExporter extends BaseBlockExporter {
 
         /**
          * Registers a log block with side and end textures.
          * Follows block-models.md pillar block pattern.
-         *
-         * <p>Texture order: [sideTexture, endTexture]
-         *
-         * <p>Generates three axis variants:
-         * <ul>
-         *   <li>Y-axis (vertical): no rotation</li>
-         *   <li>X-axis: 90° X rotation, 90° Y rotation</li>
-         *   <li>Z-axis: 90° X rotation</li>
-         * </ul>
          *
          * @param generator The BlockStateModelGenerator to register models with
          * @param block The log block to generate models for
@@ -74,21 +51,6 @@ public class LogBlockExporter extends BaseBlockExporter {
                 registerParentedItemModel(generator, block, verticalModelId);
         }
 
-        /**
-         * Registers a log block from a BlockDefinition.
-         * Automatically extracts textures from the definition and registers the log block.
-         *
-         * <p>Texture order in definition:
-         * <ul>
-         *   <li>2 textures: [side, end] - preferred format</li>
-         *   <li>3 textures: [end, end, side] - legacy compatibility</li>
-         * </ul>
-         *
-         * @param generator The BlockStateModelGenerator to register models with
-         * @param block The log block to generate models for
-         * @param definition The block definition containing texture information
-         * @throws IllegalArgumentException if definition doesn't have required textures
-         */
         public static void registerCustomLogBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
                 if (definition.getTextures() == null || definition.getTextures().size() < 2) {
                         throw new IllegalArgumentException("Log blocks require at least 2 textures: [side, end] or [end, end, side]");
@@ -113,18 +75,7 @@ public class LogBlockExporter extends BaseBlockExporter {
                 registerLogBlock(generator, block, sideTexture, endTexture, false);
         }
 
-        // ========================================
-        // Helper Methods (block-models.md 5.2-5.4)
-        // ========================================
 
-        /**
-         * Creates a TextureMap for log blocks.
-         * Follows block-models.md section 5.3: Using Texture Map.
-         *
-         * @param sideTexture Texture path for sides
-         * @param endTexture Texture path for ends
-         * @return Configured TextureMap with SIDE, END, and PARTICLE keys
-         */
         private static TextureMap createLogTextureMap(String sideTexture, String endTexture) {
                 return new TextureMap()
                         .put(TextureKey.SIDE, createBlockIdentifier(sideTexture))
@@ -132,14 +83,6 @@ public class LogBlockExporter extends BaseBlockExporter {
                         .put(TextureKey.PARTICLE, createBlockIdentifier(sideTexture));
         }
 
-        /**
-         * Creates blockstate variants for log blocks with axis rotation.
-         * Follows block-models.md section 5.4: Custom BlockStateSupplier Method.
-         *
-         * @param verticalModelId Model ID for Y-axis (vertical) orientation
-         * @param horizontalModelId Model ID for X/Z-axis (horizontal) orientations
-         * @return Configured BlockStateVariantMap for all three axes
-         */
         private static BlockStateVariantMap createLogVariants(Identifier verticalModelId, Identifier horizontalModelId) {
                 return BlockStateVariantMap.create(net.minecraft.state.property.Properties.AXIS)
                         .register(Axis.Y, createVariant(verticalModelId))

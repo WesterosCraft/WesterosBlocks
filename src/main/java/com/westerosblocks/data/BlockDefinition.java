@@ -37,6 +37,7 @@ public class BlockDefinition {
     private Float strength;
 
     /** Material type (e.g., "iron", "rock", "wood") - affects various block behaviors */
+    @Deprecated
     @SerializedName("material")
     private String material;
 

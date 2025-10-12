@@ -50,8 +50,8 @@ public class BlockSetDefinition {
     private Float hardness;
 
     /** Sound effect when walking/placing/breaking */
-    @SerializedName("stepSound")
-    private String stepSound;
+    @SerializedName("soundGroup")
+    private String soundGroup;
 
     /** Generic material type */
     @SerializedName("material")
@@ -198,7 +198,7 @@ public class BlockSetDefinition {
     public Map<String, List<String>> getAltTextures() { return altTextures; }
 
     public Float getHardness() { return hardness; }
-    public String getStepSound() { return stepSound; }
+    public String getSoundGroup() { return soundGroup; }
     public String getMaterial() { return material; }
     public Float getResistance() { return resistance; }
     public Integer getLightOpacity() { return lightOpacity; }

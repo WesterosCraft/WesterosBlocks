@@ -18,10 +18,6 @@ import java.util.Optional;
  */
 public class FenceGateBlockExporter extends BaseBlockExporter {
 
-    // ========================================
-    // Model Instances (block-models.md 5.2)
-    // ========================================
-
     private static Model createFenceGateModel(boolean tinted) {
         return createTintedModel(tinted, "template_fence_gate", TextureKey.TEXTURE, TextureKey.PARTICLE);
     }
@@ -37,10 +33,6 @@ public class FenceGateBlockExporter extends BaseBlockExporter {
     private static Model createFenceGateWallOpenModel(boolean tinted) {
         return createTintedModel(tinted, "template_fence_gate_wall_open", TextureKey.TEXTURE, TextureKey.PARTICLE);
     }
-
-    // ========================================
-    // Helper Methods (block-models.md 5.3-5.4)
-    // ========================================
 
     /**
      * Creates a TextureMap for fence gate blocks.
@@ -173,11 +165,6 @@ public class FenceGateBlockExporter extends BaseBlockExporter {
         );
     }
 
-    // Weighted variants now handled by BaseBlockExporter.createWeightedVariants()
-
-    // ========================================
-    // BlockDefinition Integration (block-models.md 5.6)
-    // ========================================
 
     /**
      * Registers a fence gate block from a BlockDefinition.
@@ -208,10 +195,6 @@ public class FenceGateBlockExporter extends BaseBlockExporter {
             registerFenceGateBlock(generator, block, tinted, "missingno");
         }
     }
-
-    // ========================================
-    // Helper Classes
-    // ========================================
 
     /**
      * Helper class for texture variants with weight.

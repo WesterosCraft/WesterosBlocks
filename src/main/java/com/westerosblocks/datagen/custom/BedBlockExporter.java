@@ -13,15 +13,9 @@ import net.minecraft.util.math.Direction;
 import java.util.Optional;
 
 /**
- * Exporter for bed blocks following block-models.md patterns.
  * Generates models for two-part bed blocks with directional facing.
  */
 public class BedBlockExporter extends BaseBlockExporter {
-
-    // ========================================
-    // Model Instances (block-models.md 5.2)
-    // ========================================
-
     private static Model createBedPartModel(String bedType, boolean isHead, boolean tinted) {
         String tintPath = tinted ? "block/tinted/" : "block/untinted/";
         String partSuffix = isHead ? "_head" : "_foot";
@@ -43,10 +37,6 @@ public class BedBlockExporter extends BaseBlockExporter {
             ModTextureKey.BED_TOP, ModTextureKey.BED_TOP2, ModTextureKey.BED_SIDE,
             ModTextureKey.BED_SIDE2, ModTextureKey.BED_END, ModTextureKey.BED_END2);
     }
-
-    // ========================================
-    // Helper Methods (block-models.md 5.3-5.4)
-    // ========================================
 
     private static TextureMap createBedPartTextureMap(String[] textures, boolean isHead) {
         if (isHead) {
@@ -91,10 +81,6 @@ public class BedBlockExporter extends BaseBlockExporter {
                 );
     }
 
-    // ========================================
-    // Public Registration Methods (block-models.md 5.5)
-    // ========================================
-
     public static void registerBedBlock(BlockStateModelGenerator generator, Block block, boolean tinted,
                                        String bedType, String[] textures) {
         if (textures.length != 6) {
@@ -121,9 +107,6 @@ public class BedBlockExporter extends BaseBlockExporter {
         createBedItemModel(tinted).upload(itemModelId, itemTextureMap, generator.modelCollector);
     }
 
-    // ========================================
-    // BlockDefinition Integration (block-models.md 5.6)
-    // ========================================
 
     public static void registerCustomBedBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         boolean tinted = definition.isTinted() || definition.hasColorMult();

@@ -22,7 +22,7 @@ public class WCLadderBlock extends LadderBlock {
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
             // Handle null definition (from BlockBuilder) with sensible defaults
             boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
-            boolean noClimb = definition != null && definition.getNoClimb() != null && definition.getNoClimb();
+            boolean noClimb = definition != null && definition.isNoClimb();
 
             return new WCLadderBlock(settings.nonOpaque(), allowUnsupported, noClimb);
         }

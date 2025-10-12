@@ -34,13 +34,6 @@ public class PaneBlockExporter extends BaseBlockExporter {
         registerSimpleItemModel(generator, block, createBlockIdentifier(texturePath));
     }
 
-    /**
-     * Registers a pane block with random texture support.
-     */
-    public static void registerPaneBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, String[] texturePaths) {
-        validateTexturePaths(texturePaths, 1);
-        registerPaneBlock(generator, block, texturePaths[0]);
-    }
 
     /**
      * Creates a multipart blockstate for pane blocks.

@@ -15,46 +15,6 @@ import com.westerosblocks.datagen.ModModels;
 /**
  * Exporter for rail blocks following block-models.md patterns.
  * Generates models for track/rail blocks with multiple shape variants (flat, ascending, curved).
- *
- * <p>Structure follows block-models.md sections 5.2-5.6:
- * <ul>
- *   <li>Model instances (references ModModels.RAIL_FLAT, RAIL_CURVED, TEMPLATE_RAIL_RAISED_NE/SW)</li>
- *   <li>TextureMap builders (RAIL texture key)</li>
- *   <li>BlockStateSupplier methods (BlockStateVariantMap for SHAPE property)</li>
- *   <li>Clean datagen methods (registerRailBlock)</li>
- *   <li>BlockDefinition integration (registerRailBlockFromDefinition)</li>
- * </ul>
- *
- * <p><b>Rail Shape Variants:</b>
- * <ul>
- *   <li><b>Flat:</b> North-South, East-West (2 variants)</li>
- *   <li><b>Ascending:</b> North, South, East, West slopes (4 variants)</li>
- *   <li><b>Curved:</b> NE, SE, SW, NW corners (4 variants)</li>
- *   <li><b>Total:</b> 10 shape variants with automatic rotation</li>
- * </ul>
- *
- * <p><b>Model Types:</b>
- * <ul>
- *   <li>flat - Straight horizontal rail (0° and 90° rotations)</li>
- *   <li>raised_ne - Ascending rail facing northeast/southwest</li>
- *   <li>raised_sw - Ascending rail facing southwest/northeast</li>
- *   <li>curved - 90-degree curved corner rail (4 rotations)</li>
- * </ul>
- *
- * <p><b>Texture Support:</b>
- * <ul>
- *   <li>Single texture - Applied to all rail shapes</li>
- *   <li>Dual texture - First for flat/ascending, second for curved corners</li>
- *   <li>Random textures - Multiple texture sets for variety</li>
- * </ul>
- *
- * <p><b>Rotation Mapping:</b>
- * Automatic Y-axis rotation applied based on rail shape (0°, 90°, 180°, 270°)
- *
- * @see ModModels#RAIL_FLAT
- * @see ModModels#RAIL_CURVED
- * @see ModModels#TEMPLATE_RAIL_RAISED_NE
- * @see ModModels#TEMPLATE_RAIL_RAISED_SW
  */
 public class RailBlockExporter extends BaseBlockExporter {
 

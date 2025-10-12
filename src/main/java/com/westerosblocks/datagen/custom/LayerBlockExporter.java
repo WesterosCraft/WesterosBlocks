@@ -18,29 +18,6 @@ import java.util.Map;
 /**
  * Exporter for layer blocks following block-models.md patterns.
  * Generates models for stackable layer blocks (snow layers, carpets, etc.) with variable heights.
- *
- * <p>Layer blocks have multiple height variants (typically 1-8 layers), each requiring a separate model
- * with adjusted bounding boxes and UV coordinates for vertical faces.
- *
- * <p><b>Layer Block Features:</b>
- * <ul>
- *   <li><b>Variable Heights:</b> Each layer height (1-8) has a unique model</li>
- *   <li><b>Stacking:</b> Blocks can be placed on top of each other to increase layers</li>
- *   <li><b>UV Adjustment:</b> Vertical face UVs scale based on layer height</li>
- *   <li><b>Cullface:</b> Top face only culls when at max height (layer 8)</li>
- *   <li><b>Random Textures:</b> Supports weighted random texture variants</li>
- *   <li><b>Tinting:</b> Biome-specific coloring support</li>
- * </ul>
- *
- * <p><b>Texture System (6 textures):</b>
- * <ul>
- *   <li>[0] - Down texture (bottom face)</li>
- *   <li>[1] - Up texture (top face)</li>
- *   <li>[2] - North texture (north face)</li>
- *   <li>[3] - South texture (south face)</li>
- *   <li>[4] - West texture (west face)</li>
- *   <li>[5] - East texture (east face)</li>
- * </ul>
  */
 public class LayerBlockExporter extends BaseBlockExporter {
 

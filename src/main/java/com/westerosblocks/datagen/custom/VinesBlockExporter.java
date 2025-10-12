@@ -19,9 +19,6 @@ import java.util.Optional;
  */
 public class VinesBlockExporter extends BaseBlockExporter {
 
-    // ========================================
-    // Model Instances (block-models.md 5.2)
-    // ========================================
 
     private static Model createVineModel(String vineType, boolean tinted) {
         String tintPath = tinted ? "block/tinted/" : "block/untinted/";
@@ -29,9 +26,6 @@ public class VinesBlockExporter extends BaseBlockExporter {
         return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(), ModTextureKey.VINES);
     }
 
-    // ========================================
-    // Helper Methods (block-models.md 5.3-5.4)
-    // ========================================
 
     private static TextureMap createVinesTextureMap(String texture) {
         return new TextureMap().put(ModTextureKey.VINES, createBlockIdentifier(texture));
@@ -77,10 +71,6 @@ public class VinesBlockExporter extends BaseBlockExporter {
         }
         return variant;
     }
-
-    // ========================================
-    // Public Registration Methods (block-models.md 5.5)
-    // ========================================
 
     public static void registerVinesBlock(BlockStateModelGenerator generator, Block block, boolean tinted,
                                          String sideTexture, String topTexture) {
@@ -135,9 +125,6 @@ public class VinesBlockExporter extends BaseBlockExporter {
                 itemTextureMap, generator.modelCollector);
     }
 
-    // ========================================
-    // BlockDefinition Integration (block-models.md 5.6)
-    // ========================================
 
     public static void registerCustomVinesBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         boolean tinted = definition.isTinted() || definition.hasColorMult();
@@ -171,9 +158,5 @@ public class VinesBlockExporter extends BaseBlockExporter {
             registerVinesBlock(generator, block, tinted, "missingno", "missingno");
         }
     }
-
-    // ========================================
-    // Helper Classes
-    // ========================================
 
 }

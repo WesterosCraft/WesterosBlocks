@@ -16,10 +16,6 @@ import net.minecraft.util.Identifier;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Slab block exporter following block-models.md patterns.
- * Handles bottom, top, and double slab variants with waterlogged states and random textures.
- */
 public class SlabBlockExporter extends BaseBlockExporter {
 
     /**

@@ -38,10 +38,6 @@ import java.util.Optional;
  */
 public class ArrowSlitBlockExporter extends BaseBlockExporter {
 
-    // ========================================
-    // Model Instances (block-models.md 5.2)
-    // ========================================
-
     /** Model for single (standalone) arrow slit */
     private static final Model ARROW_SLIT_SINGLE = arrowSlitBlock("arrow_slits/arrow_slit_single", TextureKey.TEXTURE);
 
@@ -54,64 +50,25 @@ public class ArrowSlitBlockExporter extends BaseBlockExporter {
     /** Model for bottom section of vertically stacked arrow slits */
     private static final Model ARROW_SLIT_BOTTOM = arrowSlitBlock("arrow_slits/arrow_slit_bottom", TextureKey.TEXTURE);
 
-    /**
-     * Registers an arrow slit block with all type and direction variants.
-     * Follows block-models.md pattern for multi-variant blocks.
-     *
-     * <p>Generates 16 blockstate variants (4 types × 4 directions):
-     * <ul>
-     *   <li>SINGLE: north, east, south, west</li>
-     *   <li>MIDDLE: north, east, south, west</li>
-     *   <li>TOP: north, east, south, west</li>
-     *   <li>BOTTOM: north, east, south, west</li>
-     * </ul>
-     *
-     * @param generator The BlockStateModelGenerator to register models with
-     * @param block The arrow slit block to generate models for
-     * @param texturePath Texture path for the arrow slit (used for all variants)
-     */
+
     public static void registerArrowSlitBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
-        // Upload models for each type - block-models.md section 5.2: Parent Block Model
         Identifier singleModelId = createArrowSlitModel(generator, block, texturePath, "single", ARROW_SLIT_SINGLE);
         Identifier middleModelId = createArrowSlitModel(generator, block, texturePath, "middle", ARROW_SLIT_MIDDLE);
         Identifier topModelId = createArrowSlitModel(generator, block, texturePath, "top", ARROW_SLIT_TOP);
         Identifier bottomModelId = createArrowSlitModel(generator, block, texturePath, "bottom", ARROW_SLIT_BOTTOM);
 
-        // Create blockstate variants - block-models.md section 5.4: Custom BlockStateSupplier Method
         BlockStateVariantMap variants = createArrowSlitVariants(singleModelId, middleModelId, topModelId, bottomModelId);
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
 
-        // Register item model - block-models.md section 5.5: Custom Datagen Method
         registerParentedItemModel(generator, block, singleModelId);
     }
 
-    // ========================================
-    // Helper Methods (block-models.md 5.2-5.4)
-    // ========================================
-
-    /**
-     * Creates a TextureMap for arrow slit blocks.
-     * Follows block-models.md section 5.3: Using Texture Map.
-     *
-     * @param texturePath Texture path for the arrow slit
-     * @return Configured TextureMap with TEXTURE and PARTICLE keys
-     */
     private static TextureMap createArrowSlitTextureMap(String texturePath) {
         return new TextureMap()
                 .put(TextureKey.TEXTURE, createBlockIdentifier(texturePath))
                 .put(TextureKey.PARTICLE, createBlockIdentifier(texturePath));
     }
 
-    /**
-     * Creates blockstate variants for arrow slits with all type and direction combinations.
-     * Follows block-models.md section 5.4: Custom BlockStateSupplier Method.
-     *
-     * @param singleModelId Model ID for SINGLE type
-     * @param middleModelId Model ID for MIDDLE type
-     * @param topModelId Model ID for TOP type
-     * @param bottomModelId Model ID for BOTTOM type
-     * @return Configured BlockStateVariantMap for all variants
-     */
     private static BlockStateVariantMap createArrowSlitVariants(Identifier singleModelId, Identifier middleModelId,
                                                                  Identifier topModelId, Identifier bottomModelId) {
         return BlockStateVariantMap.create(WCArrowSlitBlock.FACING, WCArrowSlitBlock.TYPE)
@@ -137,17 +94,6 @@ public class ArrowSlitBlockExporter extends BaseBlockExporter {
                 .register(Direction.WEST, ArrowSlitType.TOP, createVariant(topModelId, 270));
     }
 
-    /**
-     * Creates an arrow slit model with the specified variant.
-     * Follows block-models.md section 5.2: Parent Block Model.
-     *
-     * @param generator The BlockStateModelGenerator to register the model with
-     * @param block The block this model is for
-     * @param texturePath The texture path to use
-     * @param variant The variant name (e.g., "single", "middle", "top", "bottom")
-     * @param model The predefined model to use
-     * @return The created model Identifier
-     */
     private static Identifier createArrowSlitModel(BlockStateModelGenerator generator, Block block, String texturePath,
                                                    String variant, Model model) {
         Identifier modelId = createNestedModelId(block, variant);
@@ -156,14 +102,6 @@ public class ArrowSlitBlockExporter extends BaseBlockExporter {
         return modelId;
     }
 
-    /**
-     * Helper method for creating arrow slit block Model instances.
-     * Follows block-models.md section 5.2: Parent Block Model.
-     *
-     * @param parent The model parent path (relative to westerosblocks:block/)
-     * @param requiredTextureKeys The required texture keys for this model
-     * @return The created Model instance
-     */
     private static Model arrowSlitBlock(String parent, TextureKey... requiredTextureKeys) {
         return new Model(Optional.of(WesterosBlocks.id("block/" + parent)), Optional.empty(), requiredTextureKeys);
     }

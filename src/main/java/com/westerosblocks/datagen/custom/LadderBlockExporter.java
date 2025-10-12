@@ -18,17 +18,10 @@ import java.util.Optional;
  */
 public class LadderBlockExporter extends BaseBlockExporter {
 
-    // ========================================
-    // Model Instances (block-models.md 5.2)
-    // ========================================
-
     private static Model createLadderModel(boolean tinted) {
         return createTintedModel(tinted, "ladder", TextureKey.TEXTURE, TextureKey.PARTICLE);
     }
 
-    // ========================================
-    // Helper Methods (block-models.md 5.3-5.4)
-    // ========================================
 
     private static TextureMap createLadderTextureMap(String texture) {
         return new TextureMap()
@@ -164,9 +157,5 @@ public class LadderBlockExporter extends BaseBlockExporter {
             }
         }
     }
-
-    // ========================================
-    // Helper Classes
-    // ========================================
 
 }

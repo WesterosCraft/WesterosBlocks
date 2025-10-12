@@ -11,41 +11,6 @@ import com.westerosblocks.datagen.ModModels;
  * Exporter for flowerbed blocks following block-models.md patterns.
  * Generates models for placeable flower clusters with variable amounts (1-4) and directional facing.
  *
- * <p>Structure follows block-models.md sections 5.2-5.6:
- * <ul>
- *   <li>Model instances (references ModModels.FLOWERBED_1 through FLOWERBED_4)</li>
- *   <li>TextureMap builders (STEM and FLOWERBED texture keys)</li>
- *   <li>BlockStateSupplier methods (MultipartBlockStateSupplier for FLOWER_AMOUNT and FACING)</li>
- *   <li>Clean datagen methods (generateCustomFlowerbed)</li>
- *   <li>Builder pattern integration (CustomFlowerbedBuilder)</li>
- * </ul>
- *
- * <p><b>Flowerbed Variants:</b>
- * <ul>
- *   <li><b>Flower Amount 1:</b> Single flower (4 directions)</li>
- *   <li><b>Flower Amount 2:</b> Two flowers (4 directions)</li>
- *   <li><b>Flower Amount 3:</b> Three flowers (4 directions)</li>
- *   <li><b>Flower Amount 4:</b> Four flowers (4 directions)</li>
- *   <li><b>Total:</b> 16 multipart variants (4 amounts × 4 directions)</li>
- * </ul>
- *
- * <p><b>Model Hierarchy:</b>
- * <ul>
- *   <li>Model 1 - Used when amount >= 1 (first flower placement)</li>
- *   <li>Model 2 - Added when amount >= 2 (second flower overlay)</li>
- *   <li>Model 3 - Added when amount >= 3 (third flower overlay)</li>
- *   <li>Model 4 - Added when amount == 4 (fourth flower overlay)</li>
- *   <li>Multipart combines models additively based on flower count</li>
- * </ul>
- *
- * <p><b>Texture Requirements:</b>
- * <ul>
- *   <li>STEM texture - Common stem/base for all flower positions</li>
- *   <li>FLOWERBED texture - Individual flower sprites</li>
- *   <li>Follows vanilla pink_petals pattern for multipart layering</li>
- * </ul>
- *
- * <p><b>Builder Pattern:</b>
  * Supports fluent builder API for flexible texture configuration.
  *
  * @see ModModels#FLOWERBED_1

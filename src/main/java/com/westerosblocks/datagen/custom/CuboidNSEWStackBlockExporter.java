@@ -1,7 +1,6 @@
 package com.westerosblocks.datagen.custom;
 
 import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.westerosblocks.datagen.ModModels;
 import net.minecraft.block.Block;
@@ -14,15 +13,8 @@ import com.westerosblocks.data.BlockDefinition;
 
 import java.util.*;
 
-/**
- * Exporter for NSEW Stack cuboid blocks with directional facing and double-height support.
- * Generates blockstate files with facing, half variants and appropriate model rotations.
- */
-public class CuboidNSEWStackBlockExporter extends BaseBlockExporter {
 
-    /**
-     * Registers a cuboid NSEW stack block from a BlockDefinition.
-     */
+public class CuboidNSEWStackBlockExporter extends BaseBlockExporter {
     public static void registerCustomCuboidNSEWStackBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         if (!(block instanceof WCCuboidNSEWStackBlock stackBlock)) {
             throw new IllegalArgumentException("Block must be a WCCuboidNSEWStackBlock instance");

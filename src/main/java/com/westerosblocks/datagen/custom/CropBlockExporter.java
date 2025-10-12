@@ -27,7 +27,6 @@ public class CropBlockExporter extends BaseBlockExporter {
      */
     public static void registerCropBlock(BlockStateModelGenerator generator, Block block, boolean tinted,
                                         List<StateTexture> stateTextures) {
-        // Get the STATE property from the block
         ModProperties.StateProperty blockStateProperty = null;
         for (var property : block.getStateManager().getProperties()) {
             if (property instanceof ModProperties.StateProperty stateProperty && "state".equals(property.getName())) {
@@ -40,8 +39,7 @@ public class CropBlockExporter extends BaseBlockExporter {
             throw new IllegalStateException("Block " + block + " does not have a STATE property defined");
         }
 
-        // Validate that all state IDs exist in the block's property
-        List<String> stateIDs = stateTextures.stream().map(st -> st.stateID).collect(Collectors.toList());
+        List<String> stateIDs = stateTextures.stream().map(st -> st.stateID).toList();
         Collection<String> blockStateValues = blockStateProperty.getValues();
 
         for (String stateID : stateIDs) {
@@ -50,7 +48,6 @@ public class CropBlockExporter extends BaseBlockExporter {
             }
         }
 
-        // Generate models and create blockstate
         BlockStateVariantMap.SingleProperty<String> variantMap = BlockStateVariantMap.create(blockStateProperty);
         List<Identifier> modelIds = new ArrayList<>();
 

@@ -16,17 +16,9 @@ import java.util.Optional;
  */
 public class FurnaceBlockExporter extends BaseBlockExporter {
 
-    // ========================================
-    // Model Instances (block-models.md 5.2)
-    // ========================================
-
     private static Model createFurnaceModel(boolean tinted) {
         return createTintedModel(tinted, "orientable", TextureKey.TOP, TextureKey.FRONT, TextureKey.SIDE);
     }
-
-    // ========================================
-    // Helper Methods (block-models.md 5.3-5.4)
-    // ========================================
 
     private static TextureMap createFurnaceTextureMap(String top, String side, String front) {
         return new TextureMap()
@@ -52,9 +44,6 @@ public class FurnaceBlockExporter extends BaseBlockExporter {
                 );
     }
 
-    // ========================================
-    // Public Registration Methods (block-models.md 5.5)
-    // ========================================
 
     public static void registerFurnaceBlock(BlockStateModelGenerator generator, Block block, boolean tinted,
                                            String top, String side, String frontLit, String frontUnlit) {
@@ -91,9 +80,6 @@ public class FurnaceBlockExporter extends BaseBlockExporter {
         generator.registerParentedItemModel(block, unlitModelId);
     }
 
-    // ========================================
-    // BlockDefinition Integration (block-models.md 5.6)
-    // ========================================
 
     public static void registerCustomFurnaceBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         boolean tinted = definition.isTinted() || definition.hasColorMult();

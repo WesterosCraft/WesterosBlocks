@@ -18,16 +18,6 @@ import java.util.Map;
 /**
  * Exporter for 16-way rotation cuboid blocks.
  *
- * <p>Generates 4 base models (0°, -22.5°, -45°, +22.5°) and uses Y-axis rotation
- * in blockstate to achieve all 16 rotation values (0-15).
- *
- * <p><b>Rotation Strategy:</b>
- * <ul>
- *   <li>rotation=0,4,8,12 → base model with y=0,90,180,270</li>
- *   <li>rotation=1,5,9,13 → rotn22 model (-22.5°) with y=0,90,180,270</li>
- *   <li>rotation=2,6,10,14 → rotn45 model (-45°) with y=0,90,180,270</li>
- *   <li>rotation=3,7,11,15 → rot22 model (+22.5°) with y=0,90,180,270</li>
- * </ul>
  */
 public class Cuboid16WayBlockExporter extends BaseBlockExporter {
 

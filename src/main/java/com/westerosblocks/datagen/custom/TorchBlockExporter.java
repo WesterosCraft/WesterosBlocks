@@ -14,39 +14,12 @@ import net.minecraft.state.property.Properties;
  * Exporter for torch blocks following block-models.md patterns.
  * Generates models for both standing and wall torch variants.
  *
- * <p>Structure follows block-models.md sections 5.2-5.6:
- * <ul>
- *   <li>Model instances (references ModModels.TORCH, ModModels.TORCH_WALL)</li>
- *   <li>TextureMap builders (createTorchTextureMap)</li>
- *   <li>BlockStateSupplier methods (createWallTorchVariants)</li>
- *   <li>Clean datagen methods (registerTorchBlock, registerStandingTorch, registerWallTorch)</li>
- *   <li>BlockDefinition integration (registerTorchBlockFromDefinition)</li>
- * </ul>
  *
  * @see ModModels#TORCH
  * @see ModModels#TORCH_WALL
  */
 public class TorchBlockExporter extends BaseBlockExporter {
 
-    /**
-     * Registers a torch block with both standing and wall variants.
-     * Follows block-models.md pattern for multi-variant blocks.
-     *
-     * <p>Automatically finds and registers the corresponding wall torch variant
-     * using the naming convention: wall_[standing_torch_name]
-     *
-     * @param generator The BlockStateModelGenerator to register models with
-     * @param standingTorch The standing torch block
-     * @param texturePath Texture path for the torch flame
-     */
-    public static void registerTorchBlock(BlockStateModelGenerator generator, Block standingTorch, String texturePath) {
-        Block wallTorch = Registries.BLOCK.get(WesterosBlocks.id("wall_" + standingTorch.getTranslationKey().replace("block.westerosblocks.", "")));
-
-        registerStandingTorch(generator, standingTorch, texturePath);
-        // Pass standingTorch to registerWallTorch to keep models organized together
-        registerWallTorch(generator, wallTorch, standingTorch, texturePath);
-        registerSimpleItemModel(generator, standingTorch, createBlockIdentifier(texturePath));
-    }
 
     /**
      * Registers a torch block from a BlockDefinition.
@@ -72,10 +45,6 @@ public class TorchBlockExporter extends BaseBlockExporter {
             WesterosBlocks.LOGGER.warn("Could not find wall torch for: {}", definition.getBlockName());
         }
     }
-
-    // ========================================
-    // Helper Methods (block-models.md 5.2-5.4)
-    // ========================================
 
     /**
      * Extracts texture path from BlockDefinition with fallback.
