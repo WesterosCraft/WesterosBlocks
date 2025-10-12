@@ -43,7 +43,8 @@ public class TorchBlockExporter extends BaseBlockExporter {
         Block wallTorch = Registries.BLOCK.get(WesterosBlocks.id("wall_" + standingTorch.getTranslationKey().replace("block.westerosblocks.", "")));
 
         registerStandingTorch(generator, standingTorch, texturePath);
-        registerWallTorch(generator, wallTorch, texturePath);
+        // Pass standingTorch to registerWallTorch to keep models organized together
+        registerWallTorch(generator, wallTorch, standingTorch, texturePath);
         registerSimpleItemModel(generator, standingTorch, createBlockIdentifier(texturePath));
     }
 
@@ -64,7 +65,8 @@ public class TorchBlockExporter extends BaseBlockExporter {
 
         if (wallTorch != null) {
             registerStandingTorch(generator, standingTorch, texturePath);
-            registerWallTorch(generator, wallTorch, texturePath);
+            // Pass standingTorch to registerWallTorch to keep models organized together
+            registerWallTorch(generator, wallTorch, standingTorch, texturePath);
             registerSimpleItemModel(generator, standingTorch, createBlockIdentifier(texturePath));
         } else {
             WesterosBlocks.LOGGER.warn("Could not find wall torch for: {}", definition.getBlockName());
@@ -110,7 +112,8 @@ public class TorchBlockExporter extends BaseBlockExporter {
      */
     private static void registerStandingTorch(BlockStateModelGenerator generator, Block block, String texturePath) {
         TextureMap textureMap = createTorchTextureMap(texturePath);
-        Identifier modelId = ModModels.TORCH.upload(createNestedModelId(block), textureMap, generator.modelCollector);
+        // Use "base" variant to organize torch models together
+        Identifier modelId = ModModels.TORCH.upload(createNestedModelId(block, "base"), textureMap, generator.modelCollector);
 
         generator.blockStateCollector.accept(createSimpleBlockState(block, modelId));
     }
@@ -120,29 +123,33 @@ public class TorchBlockExporter extends BaseBlockExporter {
      * Follows block-models.md section 5.4: Custom BlockStateSupplier Method.
      *
      * @param generator The generator
-     * @param block The wall torch block
+     * @param wallTorch The wall torch block
+     * @param standingTorch The standing torch block (used for model directory organization)
      * @param texturePath Texture path
      */
-    private static void registerWallTorch(BlockStateModelGenerator generator, Block block, String texturePath) {
+    private static void registerWallTorch(BlockStateModelGenerator generator, Block wallTorch, Block standingTorch, String texturePath) {
         TextureMap textureMap = createTorchTextureMap(texturePath);
-        Identifier modelId = ModModels.TORCH_WALL.upload(createNestedModelId(block), textureMap, generator.modelCollector);
+        // Use standing torch's directory with "wall" variant to keep models organized together
+        Identifier modelId = ModModels.TORCH_WALL.upload(createNestedModelId(standingTorch, "wall"), textureMap, generator.modelCollector);
 
         BlockStateVariantMap variants = createWallTorchVariants(modelId);
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
+        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(wallTorch).coordinate(variants));
     }
 
     /**
      * Creates blockstate variants for wall torch with directional facing.
      * Follows block-models.md section 5.4: Custom BlockStateSupplier Method.
      *
+     * Note: Uses legacy rotation mapping from old WesterosBlocks (East=0°, not North=0°)
+     *
      * @param modelId Model identifier for the wall torch
      * @return Configured BlockStateVariantMap for all horizontal directions
      */
     private static BlockStateVariantMap createWallTorchVariants(Identifier modelId) {
         return BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
-            .register(Direction.NORTH, createVariant(modelId))
-            .register(Direction.SOUTH, createVariant(modelId, 180))
-            .register(Direction.EAST, createVariant(modelId, 90))
-            .register(Direction.WEST, createVariant(modelId, 270));
+            .register(Direction.EAST, createVariant(modelId))
+            .register(Direction.SOUTH, createVariant(modelId, 90))
+            .register(Direction.WEST, createVariant(modelId, 180))
+            .register(Direction.NORTH, createVariant(modelId, 270));
     }
 }

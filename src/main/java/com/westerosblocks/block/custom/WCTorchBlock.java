@@ -32,7 +32,7 @@ public class WCTorchBlock extends TorchBlock {
 
     private static SimpleParticleType getParticle(boolean noParticle) {
         if (noParticle) {
-            return FabricParticleTypes.simple(false);
+            return null;
         }
         return ParticleTypes.FLAME;
     }
@@ -75,9 +75,6 @@ public class WCTorchBlock extends TorchBlock {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
-            // Note: wallBlock will need to be set later via a setter or registration process
-            // since BlockDefinition doesn't contain Block references
             Block wallBlock = null;
             boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
             boolean noParticle = definition != null && definition.isNoParticle();

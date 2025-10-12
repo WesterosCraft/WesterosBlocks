@@ -6,6 +6,7 @@
   "luminance": 13,
   "label": "Torch",
   "type": "allow-unsupported",
+  "allowUnsupported": true,
   "renderLayer": "cutout",
   "textures": ["lighting/torch"]
 }

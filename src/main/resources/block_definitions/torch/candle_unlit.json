@@ -6,6 +6,8 @@
   "luminance": 0,
   "label": "Unlit Candle",
   "type": "allow-unsupported,no-particle",
+  "allowUnsupported": true,
+  "noParticle": true,
   "renderLayer": "cutout",
   "textures": ["lighting/candle_unlit"]
 }

@@ -58,5 +58,26 @@ public class WCWallTorchBlock extends WallTorchBlock {
 
             return new WCWallTorchBlock(settings, allowUnsupported, noParticle);
         }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition, java.util.Map<String, Object> parameters) {
+            // Extract allowUnsupported from parameters or definition
+            boolean allowUnsupported = false;
+            if (parameters != null && parameters.containsKey("allowUnsupported")) {
+                allowUnsupported = (Boolean) parameters.get("allowUnsupported");
+            } else if (definition != null) {
+                allowUnsupported = definition.isAllowUnsupported();
+            }
+
+            // Extract noParticle from parameters or definition
+            boolean noParticle = false;
+            if (parameters != null && parameters.containsKey("noParticle")) {
+                noParticle = (Boolean) parameters.get("noParticle");
+            } else if (definition != null) {
+                noParticle = definition.isNoParticle();
+            }
+
+            return new WCWallTorchBlock(settings, allowUnsupported, noParticle);
+        }
     }
 }
