@@ -1,9 +1,0 @@
-{
-  "blockName": "ornate_sandstone",
-  "blockType": "solid",
-  "strength": 5,
-  "soundGroup": "stone",
-  "creativeTab": "westeros_panelling_carvings_tab",
-  "label": "Ornate Sandstone",
-  "textures": ["ashlar_third/sandstone/ornate/side"]
-}

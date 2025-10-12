@@ -1,8 +1,0 @@
-{
-  "blockName": "branch_oak",
-  "blockType": "branch",
-  "soundGroup": "wood",
-  "creativeTab": "westeros_logs_tab",
-  "label": "Oak Branch",
-  "textures": ["bark/oak/side"]
-}

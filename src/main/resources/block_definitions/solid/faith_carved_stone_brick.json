@@ -1,9 +1,0 @@
-{
-  "blockName": "faith_carved_stone_brick",
-  "blockType": "solid",
-  "strength": 5,
-  "soundGroup": "stone",
-  "creativeTab": "westeros_panelling_carvings_tab",
-  "label": "Ashlar Faith Carved White",
-  "textures": ["ashlar_half/white/faith_carved"]
-}

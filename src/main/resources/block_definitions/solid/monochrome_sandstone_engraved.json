@@ -1,9 +1,0 @@
-{
-  "blockName": "monochrome_sandstone_engraved",
-  "blockType": "solid",
-  "strength": 5,
-  "soundGroup": "stone",
-  "creativeTab": "westeros_panelling_carvings_tab",
-  "label": "Ashlar Engraved Westerlands",
-  "textures": ["ashlar_engraved/westerlands/all"]
-}

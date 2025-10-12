@@ -1,9 +1,0 @@
-{
-  "blockName": "bone_dirt",
-  "blockType": "solid",
-  "strength": 2,
-  "soundGroup": "grass",
-  "creativeTab": "westeros_grass_dirt_tab",
-  "label": "Bone Dirt",
-  "textures": ["dirt/bone"]
-}

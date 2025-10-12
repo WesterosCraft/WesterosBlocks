@@ -43,12 +43,12 @@ public class BlockDefinitionLoader {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
         // Try to find the block_definitions as a resource
-        try (var inputStream = classLoader.getResourceAsStream("block_definitions")) {
+        try (var inputStream = classLoader.getResourceAsStream("definitions/block_definitions")) {
             if (inputStream == null) {
                 // Try alternative resource paths
                 String[] resourcePaths = {
-                    "assets/westerosblocks/block_definitions",
-                    "data/westerosblocks/block_definitions",
+                    "assets/westerosblocks/definitions/block_definitions",
+                    "data/westerosblocks/definitions/block_definitions",
                     "block_definitions"
                 };
 
@@ -69,7 +69,7 @@ public class BlockDefinitionLoader {
         }
 
         // Load from the default path
-        loadDefinitionsFromResourcePath("block_definitions", definitions);
+        loadDefinitionsFromResourcePath("definitions/block_definitions", definitions);
     }
 
     private void loadDefinitionsFromResourcePath(String resourcePath, Map<String, BlockDefinition> definitions) throws Exception {
@@ -138,31 +138,30 @@ public class BlockDefinitionLoader {
     private void loadDefinitionFile(Path filePath, Map<String, BlockDefinition> definitions) {
         try {
             String content = Files.readString(filePath);
+
+            // Try to parse as array first (new consolidated format)
+            try {
+                BlockDefinition[] definitionArray = GSON.fromJson(content, BlockDefinition[].class);
+
+                if (definitionArray != null && definitionArray.length > 0) {
+                    // Successfully parsed as array - load all definitions
+                    WesterosBlocks.LOGGER.debug("Loading {} block definitions from consolidated file: {}",
+                        definitionArray.length, filePath);
+
+                    for (BlockDefinition definition : definitionArray) {
+                        if (!addDefinition(definition, definitions, filePath)) {
+                            continue; // Skip invalid definitions
+                        }
+                    }
+                    return;
+                }
+            } catch (JsonSyntaxException e) {
+                // Not an array, try as single object (legacy format)
+            }
+
+            // Fall back to parsing as single object (legacy format)
             BlockDefinition definition = GSON.fromJson(content, BlockDefinition.class);
-
-            if (definition == null) {
-                WesterosBlocks.LOGGER.warn("Failed to parse block definition file: {}", filePath);
-                return;
-            }
-
-            if (definition.getBlockName() == null || definition.getBlockName().isEmpty()) {
-                WesterosBlocks.LOGGER.warn("Block definition missing blockName in file: {}", filePath);
-                return;
-            }
-
-            if (definition.getBlockType() == null || definition.getBlockType().isEmpty()) {
-                WesterosBlocks.LOGGER.warn("Block definition missing blockType in file: {}", filePath);
-                return;
-            }
-
-            if (definitions.containsKey(definition.getBlockName())) {
-                WesterosBlocks.LOGGER.warn("Duplicate block definition found for '{}' in file: {}",
-                    definition.getBlockName(), filePath);
-            }
-
-            definitions.put(definition.getBlockName(), definition);
-            WesterosBlocks.LOGGER.debug("Loaded block definition: {} ({})",
-                definition.getBlockName(), definition.getBlockType());
+            addDefinition(definition, definitions, filePath);
 
         } catch (IOException e) {
             WesterosBlocks.LOGGER.error("Failed to read block definition file: {}", filePath, e);
@@ -171,6 +170,42 @@ public class BlockDefinitionLoader {
         } catch (Exception e) {
             WesterosBlocks.LOGGER.error("Unexpected error loading block definition file: {}", filePath, e);
         }
+    }
+
+    /**
+     * Validates and adds a block definition to the definitions map.
+     *
+     * @param definition The block definition to add
+     * @param definitions The map to add the definition to
+     * @param filePath The source file path (for logging)
+     * @return true if the definition was successfully added, false if validation failed
+     */
+    private boolean addDefinition(BlockDefinition definition, Map<String, BlockDefinition> definitions, Path filePath) {
+        if (definition == null) {
+            WesterosBlocks.LOGGER.warn("Failed to parse block definition in file: {}", filePath);
+            return false;
+        }
+
+        if (definition.getBlockName() == null || definition.getBlockName().isEmpty()) {
+            WesterosBlocks.LOGGER.warn("Block definition missing blockName in file: {}", filePath);
+            return false;
+        }
+
+        if (definition.getBlockType() == null || definition.getBlockType().isEmpty()) {
+            WesterosBlocks.LOGGER.warn("Block definition missing blockType in file: {}", filePath);
+            return false;
+        }
+
+        if (definitions.containsKey(definition.getBlockName())) {
+            WesterosBlocks.LOGGER.warn("Duplicate block definition found for '{}' in file: {}",
+                definition.getBlockName(), filePath);
+        }
+
+        definitions.put(definition.getBlockName(), definition);
+        WesterosBlocks.LOGGER.debug("Loaded block definition: {} ({})",
+            definition.getBlockName(), definition.getBlockType());
+
+        return true;
     }
 
     public Map<String, List<BlockDefinition>> groupByType(Map<String, BlockDefinition> definitions) {

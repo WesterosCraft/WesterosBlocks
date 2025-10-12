@@ -1,9 +1,0 @@
-{
-  "blockName": "faith_carved_dun_brick",
-  "blockType": "solid",
-  "strength": 5,
-  "soundGroup": "stone",
-  "creativeTab": "westeros_panelling_carvings_tab",
-  "label": "Ashlar Faith Carved Dun",
-  "textures": ["ashlar_third/dun/faith_carved"]
-}

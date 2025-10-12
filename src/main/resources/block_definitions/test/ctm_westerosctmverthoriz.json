@@ -1,8 +1,0 @@
-{
-  "blockName": "ctm_westerosctmverthoriz",
-  "blockType": "solid",
-  "soundGroup": "wood",
-  "creativeTab": "westeros_test_tab",
-  "label": "Westeros V+H",
-  "textures": ["ctm/westerosverthoriz"]
-}

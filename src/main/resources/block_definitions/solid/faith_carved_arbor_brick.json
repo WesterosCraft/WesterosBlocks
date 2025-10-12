@@ -1,9 +1,0 @@
-{
-  "blockName": "faith_carved_arbor_brick",
-  "blockType": "solid",
-  "strength": 5,
-  "soundGroup": "stone",
-  "creativeTab": "westeros_panelling_carvings_tab",
-  "label": "Ashlar Faith Carved Arbor",
-  "textures": ["ashlar_third/arbor/faith_carved"]
-}

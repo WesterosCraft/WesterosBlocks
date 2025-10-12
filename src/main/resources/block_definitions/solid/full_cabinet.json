@@ -1,9 +1,0 @@
-{
-  "blockName": "full_cabinet",
-  "blockType": "solid",
-  "strength": 2,
-  "soundGroup": "wood",
-  "creativeTab": "westeros_furniture_tab",
-  "label": "Full Cabinet",
-  "textures": ["cabinet/top_bottom", "cabinet/top_bottom", "cabinet/full/side"]
-}

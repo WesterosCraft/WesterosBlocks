@@ -47,8 +47,8 @@ public class WesterosBlocks implements ModInitializer {
     private void initializeBlockDefinitions() {
         try {
             // Load block definitions and block set definitions from resources directory
-            String blockDefinitionsPath = "block_definitions";
-            String blockSetDefinitionsPath = "block_set_definitions";
+            String blockDefinitionsPath = "definitions/block_definitions";
+            String blockSetDefinitionsPath = "definitions/block_set_definitions";
             LOGGER.info("Initializing block definitions from resources...");
 
             BlockDefinitionRegistry.getInstance().initialize(blockDefinitionsPath, blockSetDefinitionsPath);

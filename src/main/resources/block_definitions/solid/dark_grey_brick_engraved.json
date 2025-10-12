@@ -1,9 +1,0 @@
-{
-  "blockName": "dark_grey_brick_engraved",
-  "blockType": "solid",
-  "strength": 5,
-  "soundGroup": "stone",
-  "creativeTab": "westeros_panelling_carvings_tab",
-  "label": "Ashlar Engraved Dark Grey",
-  "textures": ["ashlar_engraved/dark_grey/all"]
-}

@@ -1,9 +1,0 @@
-{
-  "blockName": "6sided_oak",
-  "blockType": "solid",
-  "strength": 2,
-  "soundGroup": "wood",
-  "creativeTab": "westeros_logs_tab",
-  "label": "6-Sided Oak",
-  "textures": ["bark/oak/side"]
-}

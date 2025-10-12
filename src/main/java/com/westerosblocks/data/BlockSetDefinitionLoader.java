@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Stream;
@@ -49,9 +50,9 @@ public class BlockSetDefinitionLoader {
 
         // Try to find the block_set_definitions directory
         String[] resourcePaths = {
-            "block_set_definitions",
-            "assets/westerosblocks/block_set_definitions",
-            "data/westerosblocks/block_set_definitions"
+            "definitions/block_set_definitions",
+            "assets/westerosblocks/definitions/block_set_definitions",
+            "data/westerosblocks/definitions/block_set_definitions"
         };
 
         for (String resourcePath : resourcePaths) {
@@ -63,7 +64,7 @@ public class BlockSetDefinitionLoader {
         }
 
         WesterosBlocks.LOGGER.warn("Could not find block_set_definitions in resources. Tried paths: {}",
-            java.util.Arrays.toString(resourcePaths));
+            Arrays.toString(resourcePaths));
     }
 
     private void loadDefinitionsFromResourcePath(java.net.URL resourceUrl, Map<String, BlockSetDefinition> definitions) throws Exception {

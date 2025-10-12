@@ -1,9 +1,0 @@
-{
-  "blockName": "orange_brick_dentil",
-  "blockType": "solid",
-  "strength": 3,
-  "soundGroup": "stone",
-  "creativeTab": "westeros_brick_tab",
-  "label": "Orange Brick Dentil",
-  "textures": ["brick/orange/all1", "brick/orange/all1", "brick/orange/dentil"]
-}

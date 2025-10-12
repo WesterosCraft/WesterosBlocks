@@ -1,9 +1,0 @@
-{
-  "blockName": "arbor_brick_ornate",
-  "blockType": "solid",
-  "strength": 5,
-  "soundGroup": "stone",
-  "creativeTab": "westeros_panelling_carvings_tab",
-  "label": "Ashlar Engraved Arbor",
-  "textures": ["ashlar_engraved/arbor/all"]
-}

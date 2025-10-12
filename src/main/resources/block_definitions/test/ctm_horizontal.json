@@ -1,8 +1,0 @@
-{
-  "blockName": "ctm_horizontal",
-  "blockType": "solid",
-  "soundGroup": "wood",
-  "creativeTab": "westeros_test_tab",
-  "label": "Horizontal CTM",
-  "textures": ["ctm/horizontal"]
-}

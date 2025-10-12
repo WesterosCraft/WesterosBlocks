@@ -1,0 +1,158 @@
+[
+  {
+    "blockName": "dappled_moss",
+    "blockType": "vines",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Dappled Moss",
+    "colorMult": "textures/colormap/moss_dappled",
+    "renderLayer": "cutout",
+    "textures": [
+      "dappled_moss/dappled",
+      "dappled_moss/dappled"
+    ],
+    "allowUnsupported": true,
+    "hasClimb": true,
+    "hasDown": true
+  },
+  {
+    "blockName": "falling_water_block_four",
+    "blockType": "vines",
+    "soundGroup": "cloth",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Falling Water Block Four",
+    "renderLayer": "translucent",
+    "textures": [
+      "alyssas_tears_mist/mist4",
+      "alyssas_tears_mist/mist4"
+    ],
+    "allowUnsupported": true,
+    "hasClimb": true
+  },
+  {
+    "blockName": "falling_water_block_one",
+    "blockType": "vines",
+    "soundGroup": "cloth",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Falling Water Block One",
+    "renderLayer": "translucent",
+    "textures": [
+      "alyssas_tears_mist/mist1",
+      "alyssas_tears_mist/mist1"
+    ],
+    "allowUnsupported": true,
+    "hasClimb": true
+  },
+  {
+    "blockName": "falling_water_block_three",
+    "blockType": "vines",
+    "soundGroup": "cloth",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Falling Water Block Three",
+    "renderLayer": "translucent",
+    "allowUnsupported": true,
+    "hasClimb": true,
+    "textures": [
+      "alyssas_tears_mist/mist3",
+      "alyssas_tears_mist/mist3"
+    ],
+    "type": "allow-unsupported,no-climb"
+  },
+  {
+    "blockName": "falling_water_block_two",
+    "blockType": "vines",
+    "soundGroup": "cloth",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Falling Water Block Two",
+    "renderLayer": "translucent",
+    "allowUnsupported": true,
+    "hasClimb": true,
+    "textures": [
+      "alyssas_tears_mist/mist2",
+      "alyssas_tears_mist/mist2"
+    ],
+    "type": "allow-unsupported,no-climb"
+  },
+  {
+    "blockName": "jasmine_vines",
+    "blockType": "vines",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Jasmine Vines",
+    "renderLayer": "cutout",
+    "allowUnsupported": true,
+    "hasClimb": true,
+    "hasDown": true,
+    "randomTextures": [
+      {
+        "textures": [
+          "jasmine_vines/side1",
+          "jasmine_vines/side1"
+        ]
+      },
+      {
+        "textures": [
+          "jasmine_vines/side2",
+          "jasmine_vines/side2"
+        ]
+      },
+      {
+        "textures": [
+          "jasmine_vines/side3",
+          "jasmine_vines/side3"
+        ]
+      },
+      {
+        "textures": [
+          "jasmine_vines/side4",
+          "jasmine_vines/side4"
+        ]
+      },
+      {
+        "textures": [
+          "jasmine_vines/side5",
+          "jasmine_vines/side5"
+        ]
+      }
+    ],
+    "type": "allow-unsupported,no-climb,has-down"
+  },
+  {
+    "blockName": "vines",
+    "blockType": "vines",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Vines",
+    "colorMult": "textures/colormap/foliagevine",
+    "renderLayer": "cutout",
+    "allowUnsupported": true,
+    "hasClimb": true,
+    "hasDown": true,
+    "randomTextures": [
+      {
+        "textures": ["vines/side1", "vines/side1"]
+      },
+      {
+        "textures": ["vines/side2", "vines/side2"]
+      },
+      {
+        "textures": ["vines/side3", "vines/side3"]
+      },
+      {
+        "textures": ["vines/side4", "vines/side4"]
+      },
+      {
+        "textures": ["vines/side5", "vines/side5"]
+      }
+    ],
+    "type": "allow-unsupported,no-climb,has-down"
+  }
+]

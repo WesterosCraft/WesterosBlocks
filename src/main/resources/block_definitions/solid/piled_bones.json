@@ -1,9 +1,0 @@
-{
-  "blockName": "piled_bones",
-  "blockType": "solid",
-  "strength": 5,
-  "soundGroup": "stone",
-  "creativeTab": "westeros_misc_tab",
-  "label": "Piled Bones",
-  "textures": ["piled_bones/side"]
-}

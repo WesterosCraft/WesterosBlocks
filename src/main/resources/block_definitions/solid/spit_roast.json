@@ -1,9 +1,0 @@
-{
-  "blockName": "spit_roast",
-  "blockType": "solid",
-  "strength": 2,
-  "soundGroup": "grass",
-  "creativeTab": "westeros_food_blocks_tab",
-  "label": "Spit Roast",
-  "textures": ["meat_spitroast/all"]
-}
