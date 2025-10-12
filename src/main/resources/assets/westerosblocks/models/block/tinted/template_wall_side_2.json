@@ -10,6 +10,7 @@
                 "up":    { "texture": "#top", "tintindex": 0},
                 "north": { "texture": "#side", "cullface": "north", "tintindex": 0 },
                 "west":  { "texture": "#side", "tintindex": 0 },
+                "south": { "texture": "#side", "tintindex": 0 },
                 "east":  { "texture": "#side", "tintindex": 0 }
             },
             "__comment": "wall"
