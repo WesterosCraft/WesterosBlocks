@@ -7,7 +7,7 @@
         "wall"
     ],
     "hardness": 2,
-    "stepSound": "cloth",
+    "soundGroup": "cloth",
     "material": "wood",
     "resistance": 4,
     "harvestLevel": [

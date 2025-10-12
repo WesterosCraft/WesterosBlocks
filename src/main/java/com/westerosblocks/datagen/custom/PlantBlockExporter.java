@@ -79,7 +79,7 @@ public class PlantBlockExporter extends BaseBlockExporter {
             }
         } else if (source == BlockDefinition.TextureSource.TEXTURES) {
             // Handle single texture using centralized method
-            String texturePath = definition.getFirstTexture();
+            String texturePath = definition.getFirstTexture("missingno");
 
             if (isLayerSensitive) {
                 CrossBlockExporter.generateLayerSensitiveCross(

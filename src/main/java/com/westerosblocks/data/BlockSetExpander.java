@@ -1,5 +1,7 @@
 package com.westerosblocks.data;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.westerosblocks.WesterosBlocks;
 
 import java.util.*;
@@ -8,7 +10,6 @@ import java.util.*;
  * Expands BlockSetDefinition instances into individual BlockDefinition instances.
  * Converts one block set JSON file into multiple block definitions (one per variant).
  *
- * <p>This class implements the core logic from the old ModBlockSet.generateBlockDefs() method.
  */
 public class BlockSetExpander {
 
@@ -522,7 +523,7 @@ public class BlockSetExpander {
      * Converts a map to a BlockDefinition using Gson.
      */
     private static BlockDefinition convertMapToBlockDefinition(Map<String, Object> defMap) {
-        com.google.gson.Gson gson = new com.google.gson.GsonBuilder().create();
+        Gson gson = new GsonBuilder().create();
         String json = gson.toJson(defMap);
         return gson.fromJson(json, BlockDefinition.class);
     }

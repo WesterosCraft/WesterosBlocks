@@ -15,7 +15,7 @@
         "half_door": "blue_wood_half_door"
     },
     "hardness": 5,
-    "stepSound": "wood",
+    "soundGroup": "wood",
     "material": "wood",
     "resistance": 4,
     "harvestLevel": [

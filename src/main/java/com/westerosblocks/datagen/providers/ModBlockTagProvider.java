@@ -89,6 +89,20 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
             }
         }
 
+        // Automatically add all stair blocks from registry
+        FabricTagProvider<Block>.FabricTagBuilder stairTagBuilder = getOrCreateTagBuilder(BlockTags.STAIRS);
+        List<BlockDefinition> stairBlocks = registry.getByType("stair");
+
+        for (BlockDefinition stairDef : stairBlocks) {
+            String blockName = stairDef.getBlockName();
+
+            Block stairBlock = ModBlocks.getAutoRegisteredBlock(blockName);
+
+            if (stairBlock != null) {
+                stairTagBuilder.add(stairBlock);
+            }
+        }
+
         // Automatically add all ladder blocks from registry
         FabricTagProvider<Block>.FabricTagBuilder ladderTagBuilder = getOrCreateTagBuilder(BlockTags.CLIMBABLE);
         List<BlockDefinition> ladderBlocks = registry.getByType("ladder");
@@ -192,6 +206,34 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
 
             if (trapdoorBlock != null) {
                 trapdoorTagBuilder.add(trapdoorBlock);
+            }
+        }
+
+        // Automatically add all fire blocks from registry
+        FabricTagProvider<Block>.FabricTagBuilder fireTagBuilder = getOrCreateTagBuilder(BlockTags.FIRE);
+        List<BlockDefinition> fireBlocks = registry.getByType("fire");
+
+        for (BlockDefinition fireDef : fireBlocks) {
+            String blockName = fireDef.getBlockName();
+
+            Block fireBlock = ModBlocks.getAutoRegisteredBlock(blockName);
+
+            if (fireBlock != null) {
+                fireTagBuilder.add(fireBlock);
+            }
+        }
+
+        // Automatically add all fire blocks from registry
+        FabricTagProvider<Block>.FabricTagBuilder railTagBuilder = getOrCreateTagBuilder(BlockTags.FIRE);
+        List<BlockDefinition> railBlocks = registry.getByType("rail");
+
+        for (BlockDefinition railDef : railBlocks) {
+            String blockName = railDef.getBlockName();
+
+            Block railBlock = ModBlocks.getAutoRegisteredBlock(blockName);
+
+            if (railBlock != null) {
+                railTagBuilder.add(railBlock);
             }
         }
 

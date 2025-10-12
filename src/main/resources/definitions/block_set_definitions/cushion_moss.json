@@ -7,7 +7,7 @@
         "wall"
     ],
     "hardness": 2,
-    "stepSound": "grass",
+    "soundGroup": "grass",
     "material": "plants",
     "resistance": 5,
     "creativeTab": "westeros_foliage_tab",

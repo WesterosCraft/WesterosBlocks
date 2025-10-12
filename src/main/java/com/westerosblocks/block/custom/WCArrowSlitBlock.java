@@ -57,6 +57,16 @@ public class WCArrowSlitBlock extends Block {
         this.shapeByIndex = this.makeShapes();
     }
 
+    public static class Factory extends BlockFactory {
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+            // Handle null definition (from BlockBuilder) with sensible defaults
+            String blockName = definition != null ? definition.getBlockName() : "arrow_slit";
+            String creativeTab = definition != null ? definition.getCreativeTab() : "building_blocks";
+            return new WCArrowSlitBlock(settings, blockName, creativeTab);
+        }
+    }
+
     private Map<BlockState, VoxelShape> makeShapes() {
         ImmutableMap.Builder<BlockState, VoxelShape> builder = ImmutableMap.builder();
 
@@ -262,13 +272,5 @@ public class WCArrowSlitBlock extends Block {
         }
     }
 
-    public static class Factory extends BlockFactory {
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
-            String blockName = definition != null ? definition.getBlockName() : "arrow_slit";
-            String creativeTab = definition != null ? definition.getCreativeTab() : "building_blocks";
-            return new WCArrowSlitBlock(settings, blockName, creativeTab);
-        }
-    }
+
 }

@@ -105,10 +105,6 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggab
         }
     }
 
-    /**
-     * Creates a rotated VoxelShape from a bounding box based on Y-axis rotation.
-     * Rotation is clockwise when viewed from above.
-     */
     private VoxelShape createRotatedShape(BlockDefinition.BoundingBox bbox, int rotationDegrees) {
         double xMin = bbox.getXMin();
         double yMin = bbox.getYMin();

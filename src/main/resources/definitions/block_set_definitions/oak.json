@@ -23,7 +23,7 @@
         "window_frame_mullion": "oak_timber_window_frame_mullion"
     },
     "hardness": 5,
-    "stepSound": "wood",
+    "soundGroup": "wood",
     "material": "wood",
     "resistance": 4,
     "harvestLevel": [

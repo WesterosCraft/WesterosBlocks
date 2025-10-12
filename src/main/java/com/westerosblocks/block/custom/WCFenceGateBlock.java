@@ -12,8 +12,6 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import java.util.HashMap;
-import java.util.Map;
 import com.westerosblocks.utils.ModWoodType;
 
 public class WCFenceGateBlock extends FenceGateBlock {
@@ -40,7 +38,6 @@ public class WCFenceGateBlock extends FenceGateBlock {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
             String woodTypeString = definition != null ? definition.getWoodType() : "oak";
             WoodType woodType = ModWoodType.getWoodType(woodTypeString);
             boolean locked = definition != null && definition.isLocked();

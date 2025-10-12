@@ -5,7 +5,7 @@
         "pane"
     ],
     "hardness": 1,
-    "stepSound": "glass",
+    "soundGroup": "glass",
     "material": "glass",
     "resistance": 2,
     "harvestLevel": [

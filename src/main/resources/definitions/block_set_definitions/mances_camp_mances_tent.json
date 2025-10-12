@@ -12,7 +12,7 @@
         "solid": "mances_camp_mances_tent_block"
     },
     "hardness": 2,
-    "stepSound": "cloth",
+    "soundGroup": "cloth",
     "material": "wood",
     "resistance": 5,
     "harvestLevel": [

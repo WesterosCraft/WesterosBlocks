@@ -9,7 +9,7 @@
         "layer"
     ],
     "hardness": 5,
-    "stepSound": "gravel",
+    "soundGroup": "gravel",
     "material": "craftedSnow",
     "resistance": 10,
     "creativeTab": "westeros_water_air_tab",

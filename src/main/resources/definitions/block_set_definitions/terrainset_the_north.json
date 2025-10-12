@@ -11,7 +11,7 @@
         "fence_gate"
     ],
     "hardness": 5,
-    "stepSound": "stone",
+    "soundGroup": "stone",
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [

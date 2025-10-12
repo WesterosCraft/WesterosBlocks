@@ -8,7 +8,7 @@
         "fence"
     ],
     "hardness": 2,
-    "stepSound": "glass",
+    "soundGroup": "glass",
     "nonOpaque": true,
     "alphaRender": true,
     "material": "glass",

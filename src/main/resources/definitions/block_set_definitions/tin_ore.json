@@ -7,7 +7,7 @@
         "wall"
     ],
     "hardness": 3,
-    "stepSound": "stone",
+    "soundGroup": "stone",
     "material": "rock",
     "resistance": 10,
     "creativeTab": "westeros_terrain_sets_tab",

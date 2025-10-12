@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 /**
- * Loads BlockSetDefinition instances from JSON files in the block_set_definitions/ directory.
+ * Loads BlockSetDefinition instances from JSON files in the definitions/block_set_definitions directory.
  */
 public class BlockSetDefinitionLoader {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();

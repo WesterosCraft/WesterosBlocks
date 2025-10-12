@@ -15,7 +15,7 @@
         "wall": "mances_camp_common_tent_wall"
     },
     "hardness": 2,
-    "stepSound": "cloth",
+    "soundGroup": "cloth",
     "material": "wood",
     "resistance": 5,
     "harvestLevel": [

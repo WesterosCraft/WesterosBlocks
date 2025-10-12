@@ -8,7 +8,7 @@
         "layer": "pebbles_wet_north_layer"
     },
     "hardness": 5,
-    "stepSound": "gravel",
+    "soundGroup": "gravel",
     "material": "ground",
     "resistance": 10,
     "harvestLevel": [

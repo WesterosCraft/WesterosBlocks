@@ -10,7 +10,7 @@
         "tip"
     ],
     "hardness": 2,
-    "stepSound": "grass",
+    "soundGroup": "grass",
     "material": "ground",
     "resistance": 2,
     "harvestLevel": [

@@ -5,7 +5,7 @@
         "layer"
     ],
     "hardness": 0.5,
-    "stepSound": "sand",
+    "soundGroup": "sand",
     "material": "sand",
     "resistance": 1,
     "harvestLevel": [

@@ -9,7 +9,7 @@
         "path": "path_dorne_dry_soil"
     },
     "hardness": 2,
-    "stepSound": "gravel",
+    "soundGroup": "gravel",
     "material": "ground",
     "resistance": 2,
     "harvestLevel": [

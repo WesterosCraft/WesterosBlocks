@@ -10,7 +10,7 @@
         "tip"
     ],
     "hardness": 2,
-    "stepSound": "stone",
+    "soundGroup": "stone",
     "material": "rock",
     "resistance": 2,
     "harvestLevel": [

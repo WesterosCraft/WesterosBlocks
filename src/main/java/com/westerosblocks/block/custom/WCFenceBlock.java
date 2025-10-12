@@ -50,12 +50,10 @@ public class WCFenceBlock extends FenceBlock {
         this.unconnectDefault = unconnect;
         this.toggleOnUse = toggleOnUse;
 
-        // Create a state property for toggleable fences (like original system)
         if (toggleOnUse) {
             tempSTATE = new ModProperties.StateProperty(Arrays.asList("default", "state1", "state2", "state3"));
         }
         
-        // Set temp variables for appendProperties (like original system)
         if (unconnect) {
             tempUNCONNECT = UNCONNECT;
         }

@@ -38,7 +38,6 @@ public class WCCuboidBlock extends Block implements Waterloggable {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
             boolean doToggleOnUse = definition != null && definition.toggleOnUse();
             int numStates = definition != null ? definition.getStateCount() : 0;
             boolean doAddStates = numStates > 0;
@@ -59,7 +58,6 @@ public class WCCuboidBlock extends Block implements Waterloggable {
                 if (stateValues != null && !stateValues.isEmpty()) {
                     tempSTATE = new ModProperties.StateProperty(stateValues);
                 } else {
-                    // Generate default state IDs if not provided
                     ArrayList<String> stateIds = new ArrayList<>();
                     for (int i = 0; i < numStates; i++) {
                         stateIds.add("state" + i);

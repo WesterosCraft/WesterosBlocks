@@ -10,7 +10,7 @@
         "carpet"
     ],
     "hardness": 1.5,
-    "stepSound": "cloth",
+    "soundGroup": "cloth",
     "material": "wood",
     "resistance": 4,
     "harvestLevel": [

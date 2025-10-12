@@ -48,7 +48,6 @@ public class WCFireBlock extends FireBlock {
 
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        // Keep the original fire ambient sound
         if (random.nextInt(24) == 0) {
             world.playSound(
                     pos.getX() + 0.5,

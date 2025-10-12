@@ -9,7 +9,7 @@
         "path": "path_reach_gravel"
     },
     "hardness": 2,
-    "stepSound": "gravel",
+    "soundGroup": "gravel",
     "material": "ground",
     "resistance": 2,
     "harvestLevel": [

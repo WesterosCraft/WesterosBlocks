@@ -28,9 +28,25 @@ public class WCFlowerbedBlock extends PlantBlock implements Fertilizable {
     public static final MapCodec<WCFlowerbedBlock> CODEC = createCodec(WCFlowerbedBlock::new);
     public static final int MIN_FLOWERS = 1;
     public static final int MAX_FLOWERS = 4;
-    public static final DirectionProperty FACING;
-    public static final IntProperty FLOWER_AMOUNT;
-    private static final BiFunction<Direction, Integer, VoxelShape> FACING_AND_AMOUNT_TO_SHAPE;
+    public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
+    public static final IntProperty FLOWER_AMOUNT = Properties.FLOWER_AMOUNT;
+    private static final BiFunction<Direction, Integer, VoxelShape> FACING_AND_AMOUNT_TO_SHAPE = Util.memoize((facing, flowerAmount) -> {
+        VoxelShape[] quarterShapes = new VoxelShape[]{
+                Block.createCuboidShape(8.0, 0.0, 8.0, 16.0, 3.0, 16.0),  // SE
+                Block.createCuboidShape(8.0, 0.0, 0.0, 16.0, 3.0, 8.0),   // NE
+                Block.createCuboidShape(0.0, 0.0, 0.0, 8.0, 3.0, 8.0),    // NW
+                Block.createCuboidShape(0.0, 0.0, 8.0, 8.0, 3.0, 16.0)    // SW
+        };
+
+        VoxelShape combinedShape = VoxelShapes.empty();
+
+        for (int i = 0; i < flowerAmount; i++) {
+            int shapeIndex = Math.floorMod(i - facing.getHorizontal(), 4);
+            combinedShape = VoxelShapes.union(combinedShape, quarterShapes[shapeIndex]);
+        }
+
+        return combinedShape.asCuboid();
+    });
 
     public MapCodec<WCFlowerbedBlock> getCodec() {
         return CODEC;
@@ -101,28 +117,5 @@ public class WCFlowerbedBlock extends PlantBlock implements Fertilizable {
             dropStack(world, pos, new ItemStack(this));
         }
     }
-
-    static {
-        FACING = Properties.HORIZONTAL_FACING;
-        FLOWER_AMOUNT = Properties.FLOWER_AMOUNT;
-        FACING_AND_AMOUNT_TO_SHAPE = Util.memoize((facing, flowerAmount) -> {
-            VoxelShape[] quarterShapes = new VoxelShape[]{
-                Block.createCuboidShape(8.0, 0.0, 8.0, 16.0, 3.0, 16.0),  // SE
-                Block.createCuboidShape(8.0, 0.0, 0.0, 16.0, 3.0, 8.0),   // NE
-                Block.createCuboidShape(0.0, 0.0, 0.0, 8.0, 3.0, 8.0),    // NW
-                Block.createCuboidShape(0.0, 0.0, 8.0, 8.0, 3.0, 16.0)    // SW
-            };
-            
-            VoxelShape combinedShape = VoxelShapes.empty();
-            
-            for (int i = 0; i < flowerAmount; i++) {
-                int shapeIndex = Math.floorMod(i - facing.getHorizontal(), 4);
-                combinedShape = VoxelShapes.union(combinedShape, quarterShapes[shapeIndex]);
-            }
-            
-            return combinedShape.asCuboid();
-        });
-    }
-
 
 }

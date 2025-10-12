@@ -11,7 +11,7 @@
         "solid": "iron_throne_blade_block"
     },
     "hardness": 5,
-    "stepSound": "metal",
+    "soundGroup": "metal",
     "material": "iron",
     "resistance": 10,
     "harvestLevel": [

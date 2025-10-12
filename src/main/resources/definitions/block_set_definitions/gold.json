@@ -13,7 +13,7 @@
         "solid": "gold_block"
     },
     "hardness": 5,
-    "stepSound": "metal",
+    "soundGroup": "metal",
     "material": "iron",
     "resistance": 10,
     "harvestLevel": [

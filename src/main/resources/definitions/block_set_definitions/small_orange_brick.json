@@ -16,7 +16,7 @@
         "solid": "small_orange_bricks"
     },
     "hardness": 1.5,
-    "stepSound": "stone",
+    "soundGroup": "stone",
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [

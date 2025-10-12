@@ -3,15 +3,15 @@ package com.westerosblocks.data;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
- * Represents a block definition loaded from JSON files in block_definitions/ directory.
+ * Represents a block definition loaded from JSON files in definitions/block_definitions directory.
  * These definitions are used to automatically register blocks with their properties.
  */
 public class BlockDefinition {
-    // === CORE PROPERTIES ===
-
     /** The unique identifier for this block (e.g., "oak_table", "stone_wall") */
     @SerializedName("blockName")
     private String blockName;
@@ -31,6 +31,14 @@ public class BlockDefinition {
     /** The hardness of the block. */
     @SerializedName("hardness")
     private float hardness;
+
+    /** Shorthand property that sets both hardness and resistance to the same value */
+    @SerializedName("strength")
+    private Float strength;
+
+    /** Material type (e.g., "iron", "rock", "wood") - affects various block behaviors */
+    @SerializedName("material")
+    private String material;
 
     /** Which creative mode tab to place this block in */
     @SerializedName("creativeTab")
@@ -70,6 +78,26 @@ public class BlockDefinition {
     @SerializedName("colorMult")
     private String colorMult;
 
+    /** Array of colormap paths for multi-colormap tinting (e.g., ["textures/colormap/grass", "textures/colormap/birch"]) */
+    @SerializedName("colorMults")
+    private List<String> colorMults;
+
+    /** Custom texture path for item form (overrides default block texture) */
+    @SerializedName("itemTexture")
+    private String itemTexture;
+
+    /** Which texture index to use for item rendering (when block has multiple textures) */
+    @SerializedName("itemTextureIndex")
+    private Integer itemTextureIndex;
+
+    /** GUI transformation settings for item display in inventory */
+    @SerializedName("display")
+    private DisplaySettings display;
+
+    /** Tooltip text lines shown when hovering over the block in inventory */
+    @SerializedName("tooltips")
+    private List<String> tooltips;
+
     /** Light level emitted by block (0-15) */
     @SerializedName("luminance")
     private Integer luminance;
@@ -79,6 +107,18 @@ public class BlockDefinition {
     /** Tools required to break this block efficiently */
     @SerializedName("harvestLevel")
     private List<HarvestLevel> harvestLevel;
+
+    /** Block requires correct tool to harvest (drops nothing without correct tool) */
+    @SerializedName("requiresTool")
+    private Boolean requiresTool;
+
+    /** How much light the block blocks (0 = transparent, 15 = fully opaque) */
+    @SerializedName("lightOpacity")
+    private Integer lightOpacity;
+
+    /** Array of collision boxes for complex collision shapes */
+    @SerializedName("collisionBoxes")
+    private List<BoundingBox> collisionBoxes;
 
     /** Block is transparent/non-opaque (lets light through) */
     @SerializedName("nonOpaque")
@@ -116,6 +156,22 @@ public class BlockDefinition {
     @SerializedName("alwaysOn")
     private Boolean alwaysOn;
 
+    /** Vines are climbable like ladders */
+    @SerializedName("hasClimb")
+    private Boolean hasClimb;
+
+    /** Vines can grow downward */
+    @SerializedName("hasDown")
+    private Boolean hasDown;
+
+    /** What block material to connect to (e.g., "material" for webs) */
+    @SerializedName("connectTo")
+    private String connectTo;
+
+    /** Block has symmetrical texture mapping (mirrors textures) */
+    @SerializedName("symmetrical")
+    private Boolean symmetrical;
+
     // === RENDERING/MODEL PROPERTIES ===
 
     /** Uses custom model files instead of generated ones */
@@ -145,6 +201,10 @@ public class BlockDefinition {
     /** Randomly rotate block models */
     @SerializedName("hasRotateRandom")
     private Boolean hasRotateRandom;
+
+    /** Randomly rotate block on placement (Y-axis rotation) */
+    @SerializedName("rotateRandom")
+    private Boolean rotateRandom;
 
     /** Block uses alpha/translucent rendering */
     @SerializedName("alphaRender")
@@ -184,6 +244,62 @@ public class BlockDefinition {
     @SerializedName("cuboids")
     private List<CuboidElement> cuboids;
 
+    /** Wood type for wooden blocks (e.g., "oak", "spruce", "birch") */
+    @SerializedName("woodType")
+    private String woodType;
+
+    /** Particle type for particle emitter blocks (e.g., "flame", "cascade", "wildfire") */
+    @SerializedName("particle")
+    private String particle;
+
+    // ========================================
+    // Nested Classes
+    // ========================================
+
+    /**
+     * Display settings for GUI transformation (item rendering in inventory/hand).
+     * Contains transformation data for how the item appears in different contexts.
+     */
+    public static class DisplaySettings {
+        @SerializedName("gui")
+        private GuiTransform gui;
+
+        public GuiTransform getGui() {
+            return gui;
+        }
+
+        public boolean hasGui() {
+            return gui != null;
+        }
+    }
+
+    /**
+     * GUI transformation settings (rotation, translation, scale).
+     * Used to customize how items appear in inventory GUI.
+     */
+    public static class GuiTransform {
+        @SerializedName("rotation")
+        private double[] rotation;
+
+        @SerializedName("translation")
+        private double[] translation;
+
+        @SerializedName("scale")
+        private double[] scale;
+
+        public double[] getRotation() {
+            return rotation;
+        }
+
+        public double[] getTranslation() {
+            return translation;
+        }
+
+        public double[] getScale() {
+            return scale;
+        }
+    }
+
     public static class RandomTextureVariant {
         @SerializedName("textures")
         private List<String> textures;
@@ -210,8 +326,14 @@ public class BlockDefinition {
         @SerializedName("randomTextures")
         private List<RandomTextureVariant> randomTextures;
 
+        @SerializedName("overlayTextures")
+        private List<String> overlayTextures;
+
         @SerializedName("boundingBox")
         private BoundingBox boundingBox;
+
+        @SerializedName("cuboids")
+        private List<CuboidElement> cuboids;
 
         @SerializedName("rotYOffset")
         private Integer rotYOffset;
@@ -235,8 +357,24 @@ public class BlockDefinition {
             return randomTextures != null && !randomTextures.isEmpty();
         }
 
+        public List<String> getOverlayTextures() {
+            return overlayTextures;
+        }
+
+        public boolean hasOverlayTextures() {
+            return overlayTextures != null && !overlayTextures.isEmpty();
+        }
+
         public BoundingBox getBoundingBox() {
             return boundingBox;
+        }
+
+        public List<CuboidElement> getCuboids() {
+            return cuboids;
+        }
+
+        public boolean hasCuboids() {
+            return cuboids != null && !cuboids.isEmpty();
         }
 
         public Integer getRotYOffset() {
@@ -376,6 +514,22 @@ public class BlockDefinition {
         return hardness;
     }
 
+    public Float getStrength() {
+        return strength;
+    }
+
+    public boolean hasStrength() {
+        return strength != null;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public boolean hasMaterial() {
+        return material != null && !material.isEmpty();
+    }
+
     public String getCreativeTab() {
         return creativeTab;
     }
@@ -400,12 +554,24 @@ public class BlockDefinition {
         return harvestLevel;
     }
 
-    public boolean hasType() {
-        return type != null && !type.isEmpty();
+    public boolean isRequiresTool() {
+        return Boolean.TRUE.equals(requiresTool);
     }
 
-    public boolean hasHarvestLevel() {
-        return harvestLevel != null && !harvestLevel.isEmpty();
+    public Integer getLightOpacity() {
+        return lightOpacity;
+    }
+
+    public boolean hasLightOpacity() {
+        return lightOpacity != null;
+    }
+
+    public List<BoundingBox> getCollisionBoxes() {
+        return collisionBoxes;
+    }
+
+    public boolean hasCollisionBoxes() {
+        return collisionBoxes != null && !collisionBoxes.isEmpty();
     }
 
     public String getRenderLayer() {
@@ -481,6 +647,46 @@ public class BlockDefinition {
         return colorMult != null && !colorMult.isEmpty();
     }
 
+    public List<String> getColorMults() {
+        return colorMults;
+    }
+
+    public boolean hasColorMults() {
+        return colorMults != null && !colorMults.isEmpty();
+    }
+
+    public String getItemTexture() {
+        return itemTexture;
+    }
+
+    public boolean hasItemTexture() {
+        return itemTexture != null && !itemTexture.isEmpty();
+    }
+
+    public Integer getItemTextureIndex() {
+        return itemTextureIndex;
+    }
+
+    public boolean hasItemTextureIndex() {
+        return itemTextureIndex != null;
+    }
+
+    public DisplaySettings getDisplay() {
+        return display;
+    }
+
+    public boolean hasDisplay() {
+        return display != null;
+    }
+
+    public List<String> getTooltips() {
+        return tooltips;
+    }
+
+    public boolean hasTooltips() {
+        return tooltips != null && !tooltips.isEmpty();
+    }
+
     public int getLuminance() {
         return luminance != null ? luminance : 0;
     }
@@ -503,6 +709,10 @@ public class BlockDefinition {
 
     public boolean hasRotateRandom() {
         return Boolean.TRUE.equals(hasRotateRandom);
+    }
+
+    public boolean isRotateRandom() {
+        return Boolean.TRUE.equals(rotateRandom);
     }
 
     public boolean isNoDecay() {
@@ -529,28 +739,36 @@ public class BlockDefinition {
         return Boolean.TRUE.equals(alwaysOn);
     }
 
-    public String getWallSize() {
-        return wallSize != null ? wallSize : "normal";
+    public boolean hasClimb() {
+        return Boolean.TRUE.equals(hasClimb);
     }
 
-    public boolean hasWallSize() {
-        return wallSize != null && !wallSize.isEmpty();
+    public boolean hasDown() {
+        return Boolean.TRUE.equals(hasDown);
+    }
+
+    public String getConnectTo() {
+        return connectTo;
+    }
+
+    public boolean hasConnectTo() {
+        return connectTo != null && !connectTo.isEmpty();
+    }
+
+    public boolean isSymmetrical() {
+        return Boolean.TRUE.equals(symmetrical);
+    }
+
+    public String getWallSize() {
+        return wallSize != null ? wallSize : "normal";
     }
 
     public boolean isConnectState() {
         return Boolean.TRUE.equals(connectState);
     }
 
-    public boolean hasConnectState() {
-        return connectState != null;
-    }
-
     public boolean isUnconnect() {
         return Boolean.TRUE.equals(unconnect);
-    }
-
-    public boolean hasUnconnect() {
-        return unconnect != null;
     }
 
     public List<StackElement> getStack() {
@@ -559,10 +777,6 @@ public class BlockDefinition {
 
     public List<StackElement> getStackElements() {
         return stack;
-    }
-
-    public boolean hasStack() {
-        return stack != null && !stack.isEmpty();
     }
 
     public boolean hasStackElements() {
@@ -581,21 +795,23 @@ public class BlockDefinition {
         return cuboids;
     }
 
-    public boolean hasCuboids() {
-        return cuboids != null && !cuboids.isEmpty();
-    }
-
-    // === ADDITIONAL GETTERS FOR FACTORY COMPATIBILITY ===
-
-    /** Wood type for door blocks (extracted from type property or defaults to oak) */
+    /** Wood type for wooden blocks (e.g., "oak", "spruce", "birch") */
     public String getWoodType() {
-        // Check if type field contains wood type, otherwise default to oak
+        // Use dedicated woodType field if present
+        if (woodType != null && !woodType.isEmpty()) {
+            return woodType;
+        }
+        // Fall back to type field for legacy support
         if (type != null && !type.isEmpty()) {
             return type;
         }
+        // Default to oak
         return "oak";
     }
 
+    public boolean hasWoodType() {
+        return woodType != null && !woodType.isEmpty();
+    }
 
     /** State values list for STATE property creation */
     public List<String> getStateValues() {
@@ -611,75 +827,34 @@ public class BlockDefinition {
         return null;
     }
 
-    /** Whether block can climb (inverse of noClimb) */
-    public boolean canClimb() {
-        // Vines can climb by default unless explicitly disabled
-        return !"vines".equals(blockType) || !Boolean.TRUE.equals(getNoClimb());
+    /** Whether block has no-climb property (derived from type field) */
+    public boolean isNoClimb() {
+        return type != null && type.contains("no-climb");
     }
 
-    /** Getter for noClimb property (not exposed by boolean getter) */
-    public Boolean getNoClimb() {
-        // This property would need to be added to the JSON schema
-        // For now, return null to indicate not set
-        return null;
-    }
-
-    /** Whether vines can grow downward */
+    /** Whether vines can grow downward (alias for hasDown for backward compatibility) */
     public boolean canGrowDownward() {
-        // This property would need to be added to the JSON schema
-        // For now, return false as default
-        return false;
+        return hasDown();
     }
 
-    /** Whether block should not be contained in web */
+    /** Whether block should not be contained in web (derived from type field) */
     public boolean isNoInWeb() {
-        // This property would need to be added to the JSON schema
-        // For now, return false as default
-        return false;
+        return type != null && type.contains("no-in-web");
     }
 
-    /** Whether pane uses bars model */
+    /** Whether pane uses bars model (derived from type field) */
     public boolean isBarsModel() {
-        // This could be derived from the type field or need a new property
-        return "bars".equals(type);
+        return type != null && (type.contains("bars-model") || "bars".equals(type));
     }
 
-    /** Symmetrical property for solid blocks */
-    public boolean isSymmetrical() {
-        // This property would need to be added to the JSON schema
-        // For now, return false as default
-        return false;
-    }
-
-    /** Layer count for layer blocks */
-    public int getLayerCount() {
-        // This property would need to be added to the JSON schema
-        // For now, return 8 as default (full block)
-        return 8;
-    }
-
-    /** Whether layer is soft (affects falling behavior) */
-    public boolean isSoftLayer() {
-        // This property would need to be added to the JSON schema
-        // For now, return false as default
-        return false;
-    }
-
-    /** Dust color for sand blocks */
-    public int getDustColor() {
-        // This property would need to be added to the JSON schema
-        // For now, return default dust color
-        return 0xD2B48C; // Sandy brown color
-    }
-
-    /** Particle name for particle emitter blocks */
+    /** Particle type for particle emitter blocks (e.g., "flame", "cascade", "wildfire") */
     public String getParticle() {
-        // Check if particle is stored in a different field or return default
-        return "flame";
+        return particle != null ? particle : "flame";
     }
 
-
-    // === CENTRALIZED DATAGEN HELPER METHODS ===
+    public boolean hasParticle() {
+        return particle != null && !particle.isEmpty();
+    }
 
     /**
      * Enum representing the primary texture data source priority.
@@ -702,8 +877,6 @@ public class BlockDefinition {
      * Universal container for texture variants with weight and optional overlays.
      * Supports both List-based (from JSON) and array-based (exporter) workflows.
      *
-     * <p>This class replaces all duplicate TextureSet classes across exporters,
-     * providing a single unified implementation for texture variant handling.
      */
     public static class TextureVariantSet {
         public final List<String> textures;
@@ -735,9 +908,9 @@ public class BlockDefinition {
          */
         public TextureVariantSet(String[] textures, int weight, String[] overlayTextures) {
             this(
-                textures != null ? java.util.Arrays.asList(textures) : new ArrayList<>(),
+                textures != null ? Arrays.asList(textures) : new ArrayList<>(),
                 weight,
-                overlayTextures != null ? java.util.Arrays.asList(overlayTextures) : null
+                overlayTextures != null ? Arrays.asList(overlayTextures) : null
             );
         }
 
@@ -753,7 +926,7 @@ public class BlockDefinition {
          */
         public TextureVariantSet(String texture, int weight) {
             this(
-                texture != null ? java.util.Collections.singletonList(texture) : new ArrayList<>(),
+                texture != null ? Collections.singletonList(texture) : new ArrayList<>(),
                 weight,
                 null
             );
@@ -873,41 +1046,6 @@ public class BlockDefinition {
     }
 
     /**
-     * Gets textures for a specific state variant by index.
-     *
-     * @param stateIndex The index of the state variant
-     * @return Array of texture paths for the state, or empty array if invalid index
-     */
-    public String[] getStateVariantTextures(int stateIndex) {
-        if (!hasStates() || stateIndex < 0 || stateIndex >= states.size()) {
-            return new String[0];
-        }
-
-        StateVariant state = states.get(stateIndex);
-        List<String> textures = state.getTextures();
-        return textures != null ? textures.toArray(new String[0]) : new String[0];
-    }
-
-    /**
-     * Finds a state variant by its state ID.
-     *
-     * @param stateId The state ID to search for
-     * @return The state variant, or null if not found
-     */
-    public StateVariant getStateVariantById(String stateId) {
-        if (!hasStates() || stateId == null) {
-            return null;
-        }
-
-        for (StateVariant state : states) {
-            if (stateId.equals(state.getStateID())) {
-                return state;
-            }
-        }
-        return null;
-    }
-
-    /**
      * Extracts random texture variants from a specific StateVariant.
      * Useful for processing states that have their own random texture variants.
      *
@@ -926,10 +1064,6 @@ public class BlockDefinition {
         return variants;
     }
 
-    // ========================================
-    // Texture Array Processing
-    // ========================================
-
     /**
      * Returns textures as a String array for easy processing.
      *
@@ -942,17 +1076,6 @@ public class BlockDefinition {
         return textures.toArray(new String[0]);
     }
 
-    /**
-     * Gets the first texture with safe fallback.
-     *
-     * @return First texture path, or "missingno" if no textures defined
-     */
-    public String getFirstTexture() {
-        if (textures != null && !textures.isEmpty()) {
-            return textures.get(0);
-        }
-        return "missingno";
-    }
 
     /**
      * Gets the first texture with custom fallback.
@@ -962,7 +1085,7 @@ public class BlockDefinition {
      */
     public String getFirstTexture(String fallback) {
         if (textures != null && !textures.isEmpty()) {
-            return textures.get(0);
+            return textures.getFirst();
         }
         return fallback;
     }
@@ -975,22 +1098,6 @@ public class BlockDefinition {
     public int getTextureCount() {
         return textures != null ? textures.size() : 0;
     }
-
-    /**
-     * Returns overlay textures as a String array.
-     *
-     * @return Array of overlay texture paths, or empty array if no overlays defined
-     */
-    public String[] getOverlayTexturesAsArray() {
-        if (overlayTextures == null || overlayTextures.isEmpty()) {
-            return new String[0];
-        }
-        return overlayTextures.toArray(new String[0]);
-    }
-
-    // ========================================
-    // Texture Extraction Priority Logic
-    // ========================================
 
     /**
      * Determines the primary texture data source based on priority.
@@ -1030,10 +1137,6 @@ public class BlockDefinition {
         };
     }
 
-    // ========================================
-    // Validation Methods
-    // ========================================
-
     /**
      * Validates that the block definition has at least one texture source.
      *
@@ -1065,18 +1168,6 @@ public class BlockDefinition {
         }
     }
 
-    /**
-     * Checks if block should use custom pre-made model files.
-     *
-     * @return true if custom models should be used instead of generating new ones
-     */
-    public boolean requiresCustomModel() {
-        return hasCustomModel();
-    }
-
-    // ========================================
-    // Overlay and Tinting Detection
-    // ========================================
 
     /**
      * Determines if the block should use a tinted model.

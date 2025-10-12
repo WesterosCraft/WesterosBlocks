@@ -10,7 +10,7 @@
         "fence_gate"
     ],
     "hardness": 3,
-    "stepSound": "wood",
+    "soundGroup": "wood",
     "material": "wood",
     "resistance": 2,
     "harvestLevel": [

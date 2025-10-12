@@ -23,10 +23,6 @@ public class BlockDefinitionRegistry {
         return instance;
     }
 
-    public void initialize(String blockDefinitionsPath) {
-        initialize(blockDefinitionsPath, null);
-    }
-
     public void initialize(String blockDefinitionsPath, String blockSetDefinitionsPath) {
         if (initialized) {
             WesterosBlocks.LOGGER.warn("BlockDefinitionRegistry is already initialized. Skipping re-initialization.");
@@ -108,58 +104,11 @@ public class BlockDefinitionRegistry {
         return Collections.unmodifiableCollection(definitions.values());
     }
 
-    public Set<String> getAllBlockNames() {
-        if (!initialized) {
-            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
-        }
-        return Collections.unmodifiableSet(definitions.keySet());
-    }
-
-    public Set<String> getAllBlockTypes() {
-        if (!initialized) {
-            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
-        }
-        return Collections.unmodifiableSet(definitionsByType.keySet());
-    }
-
-    public List<BlockDefinition> getByCreativeTab(String creativeTab) {
-        if (!initialized) {
-            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
-        }
-        return definitions.values().stream()
-            .filter(def -> creativeTab.equals(def.getCreativeTab()))
-            .collect(Collectors.toList());
-    }
-
-    public List<BlockDefinition> getWithAllowUnsupported() {
-        if (!initialized) {
-            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
-        }
-        return definitions.values().stream()
-            .filter(BlockDefinition::isAllowUnsupported)
-            .collect(Collectors.toList());
-    }
-
-    public boolean exists(String blockName) {
-        if (!initialized) {
-            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
-        }
-        return definitions.containsKey(blockName);
-    }
-
     public int getCount() {
         if (!initialized) {
             throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
         }
         return definitions.size();
-    }
-
-    public int getCountByType(String blockType) {
-        if (!initialized) {
-            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
-        }
-        List<BlockDefinition> typeDefinitions = definitionsByType.get(blockType);
-        return typeDefinitions != null ? typeDefinitions.size() : 0;
     }
 
     public Map<String, Integer> getTypeStatistics() {

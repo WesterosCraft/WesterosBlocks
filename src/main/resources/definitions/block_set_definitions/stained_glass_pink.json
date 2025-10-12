@@ -8,7 +8,7 @@
         "pane": "stained_glass_pane_pink"
     },
     "hardness": 1,
-    "stepSound": "glass",
+    "soundGroup": "glass",
     "material": "glass",
     "resistance": 2,
     "harvestLevel": [

@@ -15,7 +15,7 @@
         "wall": "snowy_thatch_light_wall"
     },
     "hardness": 2,
-    "stepSound": "plant",
+    "soundGroup": "plant",
     "material": "wood",
     "resistance": 5,
     "harvestLevel": [

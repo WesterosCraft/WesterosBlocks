@@ -6,15 +6,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Represents a block set definition loaded from JSON files in block_set_definitions/ directory.
+ * Represents a block set definition loaded from JSON files in definitions/block_set_definitions directory.
  * Block sets define a base block with multiple variants (solid, stairs, slab, wall, fence, etc.)
  * that share common properties but may have variant-specific overrides.
  *
- * <p>This class mirrors the old ModBlockSet structure and expands to multiple BlockDefinition instances.
+ * <p>This class expands to multiple BlockDefinition instances.
  */
 public class BlockSetDefinition {
-    // === CORE PROPERTIES ===
-
     /** The base name used to generate variant names (e.g., "arbor_brick" → "arbor_brick_stairs") */
     @SerializedName("baseBlockName")
     private String baseBlockName;
@@ -26,8 +24,6 @@ public class BlockSetDefinition {
     /** List of variants to create (e.g., ["solid", "stairs", "slab", "wall", "fence"]) */
     @SerializedName("variants")
     private List<String> variants;
-
-    // === OVERRIDE PROPERTIES ===
 
     /** Alternative names for specific variants (e.g., {"solid": "birch_planks"}) */
     @SerializedName("altNames")
@@ -48,8 +44,6 @@ public class BlockSetDefinition {
     /** Alternative textures for specific variants (e.g., {"solid": ["tex1", "tex2", "tex3"]}) */
     @SerializedName("altTextures")
     private Map<String, List<String>> altTextures;
-
-    // === SHARED BLOCK PROPERTIES ===
 
     /** Block hardness */
     @SerializedName("hardness")
@@ -90,8 +84,6 @@ public class BlockSetDefinition {
     /** Custom tags (applied to all variants unless overridden) */
     @SerializedName("customTags")
     private List<String> customTags;
-
-    // === RENDERING PROPERTIES ===
 
     /** Alpha rendering for transparency */
     @SerializedName("alphaRender")
