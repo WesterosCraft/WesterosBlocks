@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/slab",
+  "textures": {
+    "down": "westerosblocks:block/ice_blue_dark/ice_blue_dark",
+    "east": "westerosblocks:block/ice_blue_dark/ice_blue_dark",
+    "north": "westerosblocks:block/ice_blue_dark/ice_blue_dark",
+    "particle": "westerosblocks:block/ice_blue_dark/ice_blue_dark",
+    "south": "westerosblocks:block/ice_blue_dark/ice_blue_dark",
+    "up": "westerosblocks:block/ice_blue_dark/ice_blue_dark",
+    "west": "westerosblocks:block/ice_blue_dark/ice_blue_dark"
+  }
+}

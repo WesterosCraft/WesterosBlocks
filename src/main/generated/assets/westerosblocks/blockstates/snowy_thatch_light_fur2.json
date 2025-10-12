@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "westerosblocks:block/snowy_thatch_light_fur2/base_v1",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/snowy_thatch_light_fur2/base_v1",
+      "y": 0
+    },
+    "facing=south": {
+      "model": "westerosblocks:block/snowy_thatch_light_fur2/base_v1",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "westerosblocks:block/snowy_thatch_light_fur2/base_v1",
+      "y": 270
+    }
+  }
+}

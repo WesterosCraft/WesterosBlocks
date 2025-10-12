@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "westerosblocks:block/closed_barrel/horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "westerosblocks:block/closed_barrel/closed_barrel"
+    },
+    "axis=z": {
+      "model": "westerosblocks:block/closed_barrel/horizontal",
+      "x": 90
+    }
+  }
+}

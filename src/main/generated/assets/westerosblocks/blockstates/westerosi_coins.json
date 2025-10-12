@@ -1,0 +1,53 @@
+{
+  "variants": {
+    "facing=east,state=coins": {
+      "model": "westerosblocks:block/custom/westerosi_coins/coins_v1"
+    },
+    "facing=east,state=coins2": {
+      "model": "westerosblocks:block/custom/westerosi_coins/coins2_v1"
+    },
+    "facing=east,state=coins3": {
+      "model": "westerosblocks:block/custom/westerosi_coins/coins3_v1"
+    },
+    "facing=east,state=coins4": {
+      "model": "westerosblocks:block/custom/westerosi_coins/coins4_v1"
+    },
+    "facing=east,state=coins5": {
+      "model": "westerosblocks:block/custom/westerosi_coins/coins5_v1"
+    },
+    "facing=east,state=coins6": {
+      "model": "westerosblocks:block/custom/westerosi_coins/coins6_v1"
+    },
+    "facing=east,state=coins7": {
+      "model": "westerosblocks:block/custom/westerosi_coins/coins7_v1"
+    },
+    "facing=north,state=coins": {
+      "model": "westerosblocks:block/custom/westerosi_coins/coins_v1",
+      "y": 90
+    },
+    "facing=north,state=coins2": {
+      "model": "westerosblocks:block/custom/westerosi_coins/coins2_v1",
+      "y": 90
+    },
+    "facing=north,state=coins3": {
+      "model": "westerosblocks:block/custom/westerosi_coins/coins3_v1",
+      "y": 90
+    },
+    "facing=north,state=coins4": {
+      "model": "westerosblocks:block/custom/westerosi_coins/coins4_v1",
+      "y": 90
+    },
+    "facing=north,state=coins5": {
+      "model": "westerosblocks:block/custom/westerosi_coins/coins5_v1",
+      "y": 90
+    },
+    "facing=north,state=coins6": {
+      "model": "westerosblocks:block/custom/westerosi_coins/coins6_v1",
+      "y": 90
+    },
+    "facing=north,state=coins7": {
+      "model": "westerosblocks:block/custom/westerosi_coins/coins7_v1",
+      "y": 90
+    }
+  }
+}

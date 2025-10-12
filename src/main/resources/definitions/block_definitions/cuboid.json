@@ -1,0 +1,2352 @@
+[
+  {
+    "blockName": "baelors_sphere_crone_yellow",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "soundGroup": "glass",
+    "luminance": 2,
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Baelors Sphere Crone Yellow",
+    "textures": [
+      "baelors_sphere/baelors_sphere_yellow_topbottom",
+      "baelors_sphere/baelors_sphere_yellow_side"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0,
+        "yMax": 0.125,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.125,
+        "yMax": 0.25,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.125,
+        "xMax": 0.875,
+        "yMin": 0.25,
+        "yMax": 0.75,
+        "zMin": 0.125,
+        "zMax": 0.875,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.75,
+        "yMax": 0.875,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0.875,
+        "yMax": 1,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "hardness": 1,
+    "resistance": 1
+  },
+  {
+    "blockName": "baelors_sphere_father_green",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "soundGroup": "glass",
+    "luminance": 2,
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Baelors Sphere Father Green",
+    "textures": [
+      "baelors_sphere/baelors_sphere_green_topbottom",
+      "baelors_sphere/baelors_sphere_green_side"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0,
+        "yMax": 0.125,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.125,
+        "yMax": 0.25,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.125,
+        "xMax": 0.875,
+        "yMin": 0.25,
+        "yMax": 0.75,
+        "zMin": 0.125,
+        "zMax": 0.875,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.75,
+        "yMax": 0.875,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0.875,
+        "yMax": 1,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "hardness": 1,
+    "resistance": 1
+  },
+  {
+    "blockName": "baelors_sphere_maiden_pink",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "soundGroup": "glass",
+    "luminance": 2,
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Baelors Sphere Maiden Pink",
+    "textures": [
+      "baelors_sphere/baelors_sphere_pink_topbottom",
+      "baelors_sphere/baelors_sphere_pink_side"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0,
+        "yMax": 0.125,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.125,
+        "yMax": 0.25,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.125,
+        "xMax": 0.875,
+        "yMin": 0.25,
+        "yMax": 0.75,
+        "zMin": 0.125,
+        "zMax": 0.875,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.75,
+        "yMax": 0.875,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0.875,
+        "yMax": 1,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "hardness": 1,
+    "resistance": 1
+  },
+  {
+    "blockName": "baelors_sphere_mother_blue",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "soundGroup": "glass",
+    "luminance": 2,
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Baelors Sphere Mother Blue",
+    "textures": [
+      "baelors_sphere/baelors_sphere_blue_topbottom",
+      "baelors_sphere/baelors_sphere_blue_side"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0,
+        "yMax": 0.125,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.125,
+        "yMax": 0.25,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.125,
+        "xMax": 0.875,
+        "yMin": 0.25,
+        "yMax": 0.75,
+        "zMin": 0.125,
+        "zMax": 0.875,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.75,
+        "yMax": 0.875,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0.875,
+        "yMax": 1,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "hardness": 1,
+    "resistance": 1
+  },
+  {
+    "blockName": "baelors_sphere_smith_orange",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "soundGroup": "glass",
+    "luminance": 2,
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Baelors Sphere Smith Orange",
+    "textures": [
+      "baelors_sphere/baelors_sphere_orange_topbottom",
+      "baelors_sphere/baelors_sphere_orange_side"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0,
+        "yMax": 0.125,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.125,
+        "yMax": 0.25,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.125,
+        "xMax": 0.875,
+        "yMin": 0.25,
+        "yMax": 0.75,
+        "zMin": 0.125,
+        "zMax": 0.875,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.75,
+        "yMax": 0.875,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0.875,
+        "yMax": 1,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "hardness": 1,
+    "resistance": 1
+  },
+  {
+    "blockName": "baelors_sphere_stranger_grey",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "soundGroup": "glass",
+    "luminance": 2,
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Baelors Sphere Stranger Grey",
+    "textures": [
+      "baelors_sphere/baelors_sphere_grey_topbottom",
+      "baelors_sphere/baelors_sphere_grey_side"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0,
+        "yMax": 0.125,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.125,
+        "yMax": 0.25,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.125,
+        "xMax": 0.875,
+        "yMin": 0.25,
+        "yMax": 0.75,
+        "zMin": 0.125,
+        "zMax": 0.875,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.75,
+        "yMax": 0.875,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0.875,
+        "yMax": 1,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "hardness": 1,
+    "resistance": 1
+  },
+  {
+    "blockName": "baelors_sphere_warrior_red",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "soundGroup": "glass",
+    "luminance": 2,
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Baelors Sphere Warrior Red",
+    "textures": [
+      "baelors_sphere/baelors_sphere_red_topbottom",
+      "baelors_sphere/baelors_sphere_red_side"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0,
+        "yMax": 0.125,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.125,
+        "yMax": 0.25,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.125,
+        "xMax": 0.875,
+        "yMin": 0.25,
+        "yMax": 0.75,
+        "zMin": 0.125,
+        "zMax": 0.875,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.75,
+        "yMax": 0.875,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0.875,
+        "yMax": 1,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "hardness": 1,
+    "resistance": 1
+  },
+  {
+    "blockName": "blood",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "soundGroup": "wet_grass",
+    "renderLayer": "cutout_mipped",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Blood",
+    "states": [
+      {
+        "stateID": "random",
+        "randomTextures": [
+          {
+            "textures": [
+              "blood/blood1"
+            ]
+          },
+          {
+            "textures": [
+              "blood/blood2"
+            ]
+          },
+          {
+            "textures": [
+              "blood/blood3"
+            ]
+          },
+          {
+            "textures": [
+              "blood/blood4"
+            ]
+          },
+          {
+            "textures": [
+              "blood/blood5"
+            ]
+          },
+          {
+            "textures": [
+              "blood/blood6"
+            ]
+          },
+          {
+            "textures": [
+              "blood/blood7"
+            ]
+          }
+        ]
+      },
+      {
+        "stateID": "blood1",
+        "textures": [
+          "blood/blood1"
+        ]
+      },
+      {
+        "stateID": "blood2",
+        "textures": [
+          "blood/blood2"
+        ]
+      },
+      {
+        "stateID": "blood3",
+        "textures": [
+          "blood/blood3"
+        ]
+      },
+      {
+        "stateID": "blood4",
+        "textures": [
+          "blood/blood4"
+        ]
+      },
+      {
+        "stateID": "blood5",
+        "textures": [
+          "blood/blood5"
+        ]
+      },
+      {
+        "stateID": "blood6",
+        "textures": [
+          "blood/blood6"
+        ]
+      },
+      {
+        "stateID": "blood7",
+        "textures": [
+          "blood/blood7"
+        ]
+      }
+    ],
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0.03,
+      "yMax": 0.039,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "hardness": 5,
+    "resistance": 2
+  },
+  {
+    "blockName": "bread_block",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "soundGroup": "tuff",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Bread Block",
+    "textures": [
+      "bread/bottom",
+      "bread/top",
+      "bread/side",
+      "bread/side",
+      "bread/side",
+      "bread/side"
+    ],
+    "boundingBox": {
+      "xMin": 0.125,
+      "xMax": 0.875,
+      "yMin": 0,
+      "yMax": 0.5,
+      "zMin": 0.125,
+      "zMax": 0.875
+    },
+    "itemTextureIndex": 2,
+    "strength": 5
+  },
+  {
+    "blockName": "bushy_grass_birch",
+    "blockType": "cuboid",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_grass_dirt_tab",
+    "label": "Bushy Grass Birch",
+    "isCustomModel": true,
+    "renderLayer": "cutout",
+    "colorMults": [
+      "textures/colormap/grass",
+      "textures/colormap/birch"
+    ],
+    "randomTextures": [
+      {},
+      {},
+      {}
+    ],
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0,
+      "zMax": 1
+    }
+  },
+  {
+    "blockName": "bushy_grass_jungle",
+    "blockType": "cuboid",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_grass_dirt_tab",
+    "label": "Bushy Grass Jungle",
+    "isCustomModel": true,
+    "renderLayer": "cutout",
+    "colorMults": [
+      "textures/colormap/grass",
+      "textures/colormap/foliagejungle"
+    ],
+    "randomTextures": [
+      {},
+      {},
+      {}
+    ],
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0,
+      "zMax": 1
+    }
+  },
+  {
+    "blockName": "bushy_grass_oak",
+    "blockType": "cuboid",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_grass_dirt_tab",
+    "label": "Bushy Grass Oak",
+    "isCustomModel": true,
+    "renderLayer": "cutout",
+    "colorMults": [
+      "textures/colormap/grass",
+      "textures/colormap/foliageoak"
+    ],
+    "randomTextures": [
+      {},
+      {},
+      {}
+    ],
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0,
+      "zMax": 1
+    }
+  },
+  {
+    "blockName": "bushy_grass_palm",
+    "blockType": "cuboid",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_grass_dirt_tab",
+    "label": "Bushy Grass Palm",
+    "isCustomModel": true,
+    "renderLayer": "cutout",
+    "colorMults": [
+      "textures/colormap/grass",
+      "textures/colormap/foliagepalm"
+    ],
+    "randomTextures": [
+      {},
+      {},
+      {}
+    ],
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0,
+      "zMax": 1
+    }
+  },
+  {
+    "blockName": "bushy_grass_snowy_spruce",
+    "blockType": "cuboid",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_grass_dirt_tab",
+    "label": "Bushy Grass Snowy Spruce",
+    "isCustomModel": true,
+    "renderLayer": "cutout",
+    "randomTextures": [
+      {}
+    ],
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0,
+      "zMax": 1
+    }
+  },
+  {
+    "blockName": "bushy_grass_spruce",
+    "blockType": "cuboid",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_grass_dirt_tab",
+    "label": "Bushy Grass Spruce",
+    "isCustomModel": true,
+    "renderLayer": "cutout",
+    "colorMults": [
+      "textures/colormap/grass",
+      "textures/colormap/pine"
+    ],
+    "randomTextures": [
+      {},
+      {},
+      {}
+    ],
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "display": {
+      "gui": {
+        "rotation": [
+          -70,
+          0,
+          150
+        ],
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.625,
+          0.625,
+          0.625
+        ]
+      }
+    }
+  },
+  {
+    "blockName": "cheese_block",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "soundGroup": "tuff",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Cheese Block",
+    "textures": [
+      "cheese/top_bottom",
+      "cheese/top_bottom",
+      "cheese/side",
+      "cheese/side",
+      "cheese/side",
+      "cheese/side"
+    ],
+    "boundingBox": {
+      "xMin": 0.125,
+      "xMax": 0.875,
+      "yMin": 0,
+      "yMax": 0.5,
+      "zMin": 0.125,
+      "zMax": 0.875
+    },
+    "itemTextureIndex": 2,
+    "strength": 5
+  },
+  {
+    "blockName": "citadel_glass_candle_black",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "soundGroup": "glass",
+    "luminance": 2,
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_lighting_tab",
+    "label": "Citadel Glass Candle Black",
+    "textures": [
+      "candle_glass/black_bottom",
+      "candle_glass/black_top",
+      "candle_glass/black_side",
+      "transparent"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0,
+        "yMax": 0.875,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "xMin": 0.46875,
+        "xMax": 0.53125,
+        "yMin": 0.875,
+        "yMax": 0.96875,
+        "zMin": 0.46875,
+        "zMax": 0.53125,
+        "sideTextures": [
+          3,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "strength": 5
+  },
+  {
+    "blockName": "citadel_glass_candle_green",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "soundGroup": "glass",
+    "luminance": 2,
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_lighting_tab",
+    "label": "Citadel Glass Candle Green",
+    "textures": [
+      "candle_glass/green_bottom",
+      "candle_glass/green_top",
+      "candle_glass/green_side",
+      "transparent"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0,
+        "yMax": 0.875,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "xMin": 0.46875,
+        "xMax": 0.53125,
+        "yMin": 0.875,
+        "yMax": 0.96875,
+        "zMin": 0.46875,
+        "zMax": 0.53125,
+        "sideTextures": [
+          3,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "strength": 5
+  },
+  {
+    "blockName": "classic_grass_block",
+    "blockType": "cuboid",
+    "soundGroup": "glass",
+    "harvestLevel": [
+      {
+        "tool": "shovel",
+        "level": 3
+      }
+    ],
+    "colorMult": "textures/colormap/grass",
+    "creativeTab": "westeros_grass_dirt_tab",
+    "label": "Classic Grass Block",
+    "randomTextures": [
+      {
+        "textures": [
+          "classic_grass_block/top1",
+          "dirt/ground",
+          "transparent",
+          "classic_grass_block/grass_block_side_overlay"
+        ]
+      },
+      {
+        "textures": [
+          "classic_grass_block/top2",
+          "dirt/ground",
+          "transparent",
+          "classic_grass_block/grass_block_side_overlay"
+        ]
+      },
+      {
+        "textures": [
+          "classic_grass_block/top3",
+          "dirt/ground",
+          "transparent",
+          "classic_grass_block/grass_block_side_overlay"
+        ]
+      },
+      {
+        "textures": [
+          "classic_grass_block/top4",
+          "dirt/ground",
+          "transparent",
+          "classic_grass_block/grass_block_side_overlay"
+        ]
+      },
+      {
+        "textures": [
+          "classic_grass_block/top5",
+          "dirt/ground",
+          "transparent",
+          "classic_grass_block/grass_block_side_overlay"
+        ]
+      }
+    ],
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1,
+        "sideTextures": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "noTint": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1,
+        "sideTextures": [
+          2,
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        "noTint": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false
+        ]
+      }
+    ],
+    "strength": 5
+  },
+  {
+    "blockName": "duckweed",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "soundGroup": "grass",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Duckweed",
+    "randomTextures": [
+      {
+        "textures": [
+          "duckweed/top_bottom1",
+          "duckweed/top_bottom1",
+          "transparent"
+        ]
+      },
+      {
+        "textures": [
+          "duckweed/top_bottom2",
+          "duckweed/top_bottom2",
+          "transparent"
+        ]
+      },
+      {
+        "textures": [
+          "duckweed/top_bottom3",
+          "duckweed/top_bottom3",
+          "transparent"
+        ]
+      },
+      {
+        "textures": [
+          "duckweed/top_bottom4",
+          "duckweed/top_bottom4",
+          "transparent"
+        ]
+      }
+    ],
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0.02,
+      "yMax": 0.029,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "strength": 5
+  },
+  {
+    "blockName": "fallen_weirwood_leaves",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "soundGroup": "wet_grass",
+    "renderLayer": "cutout_mipped",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Fallen Weirwood Leaves",
+    "randomTextures": [
+      {
+        "textures": [
+          "fallen_leaves_weirwood/side1"
+        ]
+      },
+      {
+        "textures": [
+          "fallen_leaves_weirwood/side2"
+        ]
+      },
+      {
+        "textures": [
+          "fallen_leaves_weirwood/side3"
+        ]
+      }
+    ],
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0.03,
+      "yMax": 0.039,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "strength": 5
+  },
+  {
+    "blockName": "glass_flagon",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "soundGroup": "glass",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Glass Flagon",
+    "textures": [
+      "cuboid_block/flagon_glass_bottom",
+      "cuboid_block/flagon_glass_top_lid",
+      "cuboid_block/flagon_glass_side",
+      "cuboid_block/flagon_glass_top_body"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0.3125,
+        "xMax": 0.6875,
+        "yMin": 0,
+        "yMax": 0.0625,
+        "zMin": 0.3125,
+        "zMax": 0.6875,
+        "sideTextures": [
+          0,
+          3,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.0625,
+        "yMax": 0.4375,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          3,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0.4375,
+        "yMax": 0.5,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          3,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "xMin": 0.375,
+        "xMax": 0.625,
+        "yMin": 0.5,
+        "yMax": 0.5625,
+        "zMin": 0.375,
+        "zMax": 0.625,
+        "sideTextures": [
+          0,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "strength": 5
+  },
+  {
+    "blockName": "hemp_dense",
+    "blockType": "cuboid",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_crops_herbs_tab",
+    "label": "Hemp Dense",
+    "isCustomModel": true,
+    "rotateRandom": true,
+    "textures": [
+      "hemp/hemp_dense"
+    ],
+    "boundingBox": {
+      "xMin": 0.3,
+      "xMax": 0.7,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0,
+      "zMax": 1
+    }
+  },
+  {
+    "blockName": "hemp_short",
+    "blockType": "cuboid",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_crops_herbs_tab",
+    "label": "Hemp Short",
+    "isCustomModel": true,
+    "rotateRandom": true,
+    "randomTextures": [
+      {},
+      {},
+      {},
+      {}
+    ],
+    "boundingBox": {
+      "xMin": 0.3,
+      "xMax": 0.7,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0,
+      "zMax": 1
+    }
+  },
+  {
+    "blockName": "hemp_tall",
+    "blockType": "cuboid",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_crops_herbs_tab",
+    "label": "Hemp Tall",
+    "isCustomModel": true,
+    "rotateRandom": true,
+    "renderLayer": "cutout_mipped",
+    "randomTextures": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    "boundingBox": {
+      "xMin": 0.3,
+      "xMax": 0.7,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0,
+      "zMax": 1
+    }
+  },
+  {
+    "blockName": "lantern",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "soundGroup": "metal",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "lightOpacity": 0,
+    "creativeTab": "westeros_lighting_tab",
+    "label": "Lantern",
+    "type": "toggleOnUse",
+    "toggleOnUse": true,
+    "cuboids": [
+      {
+        "xMin": 0.3125,
+        "xMax": 0.6875,
+        "yMin": 0.0625,
+        "yMax": 0.125,
+        "zMin": 0.3125,
+        "zMax": 0.6875,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.3125,
+        "xMax": 0.6875,
+        "yMin": 0.5625,
+        "yMax": 0.625,
+        "zMin": 0.3125,
+        "zMax": 0.6875,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.3125,
+        "xMax": 0.375,
+        "yMin": 0,
+        "yMax": 0.5625,
+        "zMin": 0.3125,
+        "zMax": 0.375,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.625,
+        "xMax": 0.6875,
+        "yMin": 0,
+        "yMax": 0.5625,
+        "zMin": 0.3125,
+        "zMax": 0.375,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.3125,
+        "xMax": 0.375,
+        "yMin": 0,
+        "yMax": 0.5625,
+        "zMin": 0.625,
+        "zMax": 0.6875,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.625,
+        "xMax": 0.6875,
+        "yMin": 0,
+        "yMax": 0.5625,
+        "zMin": 0.625,
+        "zMax": 0.6875,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.375,
+        "xMax": 0.625,
+        "yMin": 0.125,
+        "yMax": 0.5625,
+        "zMin": 0.375,
+        "zMax": 0.625,
+        "sideTextures": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.3125,
+        "xMax": 0.375,
+        "yMin": 0.625,
+        "yMax": 0.9,
+        "zMin": 0.47,
+        "zMax": 0.53,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.625,
+        "xMax": 0.6875,
+        "yMin": 0.625,
+        "yMax": 0.9,
+        "zMin": 0.47,
+        "zMax": 0.53,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.36,
+        "xMax": 0.64,
+        "yMin": 0.85,
+        "yMax": 1,
+        "zMin": 0.47,
+        "zMax": 0.53,
+        "sideTextures": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "states": [
+      {
+        "stateID": "lit",
+        "luminance": 7,
+        "textures": [
+          "metal/iron/all1",
+          "lighting/lantern_handheld_center",
+          "lighting/lantern_red_bottom"
+        ]
+      },
+      {
+        "stateID": "unlit",
+        "luminance": 0.0,
+        "textures": [
+          "metal/iron/all1",
+          "lighting/lantern_handheld_center_unlit",
+          "lighting/lantern_red_bottom"
+        ]
+      }
+    ],
+    "strength": 5
+  },
+  {
+    "blockName": "large_clay_pot",
+    "blockType": "cuboid",
+    "soundGroup": "pot",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 3
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Large Clay Pot",
+    "textures": [
+      "clay_pot/side",
+      "clay_pot/top",
+      "clay_pot/cork",
+      "wood/oak/all"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 0.8125,
+        "zMin": 0,
+        "zMax": 1,
+        "sideTextures": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.8125,
+        "yMax": 1,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "strength": 5
+  },
+  {
+    "blockName": "large_clay_pot_empty",
+    "blockType": "cuboid",
+    "soundGroup": "pot",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 3
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Large Clay Pot (Empty)",
+    "textures": [
+      "clay_pot/side",
+      "clay_pot/top",
+      "wood/oak/all"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 0.8125,
+        "zMin": 0,
+        "zMax": 1,
+        "sideTextures": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "strength": 5
+  },
+  {
+    "blockName": "lily_pad",
+    "blockType": "cuboid",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Lily Pad",
+    "rotateRandom": true,
+    "renderLayer": "cutout_mipped",
+    "randomTextures": [
+      {
+        "textures": [
+          "lily_pad/side1"
+        ]
+      },
+      {
+        "textures": [
+          "lily_pad/side2"
+        ]
+      },
+      {
+        "textures": [
+          "lily_pad/side3"
+        ]
+      },
+      {
+        "textures": [
+          "lily_pad/side4"
+        ]
+      },
+      {
+        "textures": [
+          "lily_pad/side5"
+        ]
+      },
+      {
+        "textures": [
+          "lily_pad/side6"
+        ]
+      },
+      {
+        "textures": [
+          "lily_pad/side7"
+        ]
+      }
+    ],
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0.03,
+      "yMax": 0.031,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "strength": 2
+  },
+  {
+    "blockName": "pewter_flagon",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "soundGroup": "pot",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Pewter Flagon",
+    "textures": [
+      "cuboid_block/flagon_metal_bottom",
+      "cuboid_block/flagon_metal_top_lid",
+      "cuboid_block/flagon_metal_side",
+      "cuboid_block/flagon_metal_top_body"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0.3125,
+        "xMax": 0.6875,
+        "yMin": 0,
+        "yMax": 0.0625,
+        "zMin": 0.3125,
+        "zMax": 0.6875,
+        "sideTextures": [
+          0,
+          3,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0.0625,
+        "yMax": 0.4375,
+        "zMin": 0.25,
+        "zMax": 0.75,
+        "sideTextures": [
+          0,
+          3,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "xMin": 0.40625,
+        "xMax": 0.59375,
+        "yMin": 0.4375,
+        "yMax": 0.5,
+        "zMin": 0.40625,
+        "zMax": 0.59375,
+        "sideTextures": [
+          0,
+          3,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "xMin": 0.375,
+        "xMax": 0.625,
+        "yMin": 0.5,
+        "yMax": 0.5625,
+        "zMin": 0.375,
+        "zMax": 0.625,
+        "sideTextures": [
+          0,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "strength": 5
+  },
+  {
+    "blockName": "pewter_plate",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "soundGroup": "pot",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Pewter Plate",
+    "toggleOnUse": true,
+    "itemTextureIndex": 2,
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0.03,
+      "yMax": 0.039,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "states": [
+      {
+        "stateID": "empty",
+        "textures": [
+          "plate/pewter_bottom",
+          "plate/pewter_empty",
+          "transparent"
+        ]
+      },
+      {
+        "stateID": "food",
+        "textures": [
+          "plate/pewter_bottom",
+          "plate/pewter_food",
+          "transparent"
+        ]
+      }
+    ],
+    "strength": 5
+  },
+  {
+    "blockName": "red_lantern",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "soundGroup": "metal",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "lightOpacity": 0,
+    "creativeTab": "westeros_lighting_tab",
+    "label": "Red Lantern",
+    "toggleOnUse": true,
+    "cuboids": [
+      {
+        "xMin": 0.3125,
+        "xMax": 0.6875,
+        "yMin": 0.0625,
+        "yMax": 0.125,
+        "zMin": 0.3125,
+        "zMax": 0.6875,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.3125,
+        "xMax": 0.6875,
+        "yMin": 0.5625,
+        "yMax": 0.625,
+        "zMin": 0.3125,
+        "zMax": 0.6875,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.3125,
+        "xMax": 0.375,
+        "yMin": 0,
+        "yMax": 0.5625,
+        "zMin": 0.3125,
+        "zMax": 0.375,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.625,
+        "xMax": 0.6875,
+        "yMin": 0,
+        "yMax": 0.5625,
+        "zMin": 0.3125,
+        "zMax": 0.375,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.3125,
+        "xMax": 0.375,
+        "yMin": 0,
+        "yMax": 0.5625,
+        "zMin": 0.625,
+        "zMax": 0.6875,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.625,
+        "xMax": 0.6875,
+        "yMin": 0,
+        "yMax": 0.5625,
+        "zMin": 0.625,
+        "zMax": 0.6875,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.375,
+        "xMax": 0.625,
+        "yMin": 0.125,
+        "yMax": 0.5625,
+        "zMin": 0.375,
+        "zMax": 0.625,
+        "sideTextures": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "xMin": 0.3125,
+        "xMax": 0.375,
+        "yMin": 0.625,
+        "yMax": 0.9,
+        "zMin": 0.47,
+        "zMax": 0.53,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.625,
+        "xMax": 0.6875,
+        "yMin": 0.625,
+        "yMax": 0.9,
+        "zMin": 0.47,
+        "zMax": 0.53,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0.36,
+        "xMax": 0.64,
+        "yMin": 0.85,
+        "yMax": 1,
+        "zMin": 0.47,
+        "zMax": 0.53,
+        "sideTextures": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "states": [
+      {
+        "stateID": "lit",
+        "luminance": 7,
+        "textures": [
+          "wood/jungle/all",
+          "lighting/lantern_handheld_red_center",
+          "lighting/lantern_red_bottom"
+        ]
+      },
+      {
+        "stateID": "unlit",
+        "luminance": 0.0,
+        "textures": [
+          "wood/jungle/all",
+          "lighting/lantern_handheld_red_center_unlit",
+          "lighting/lantern_red_bottom"
+        ]
+      }
+    ],
+    "strength": 5
+  },
+  {
+    "blockName": "table",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "lightOpacity": 0,
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Table",
+    "textures": [
+      "table/bottom",
+      "table/top",
+      "table/side"
+    ],
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "itemTextureIndex": 2,
+    "strength": 5
+  },
+  {
+    "blockName": "unlit_candle",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "soundGroup": "candle",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_lighting_tab",
+    "label": "Unlit Candle Solid",
+    "textures": [
+      "lighting/candle_unlit_bottom",
+      "lighting/candle_unlit_top",
+      "lighting/candle_unlit_side",
+      "transparent"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0.375,
+        "xMax": 0.625,
+        "yMin": 0,
+        "yMax": 0.53125,
+        "zMin": 0.375,
+        "zMax": 0.625,
+        "sideTextures": [
+          0,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "xMin": 0.46875,
+        "xMax": 0.53125,
+        "yMin": 0.53125,
+        "yMax": 0.625,
+        "zMin": 0.46875,
+        "zMax": 0.53125,
+        "sideTextures": [
+          3,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "strength": 5
+  },
+  {
+    "blockName": "wooden_plate",
+    "blockType": "cuboid",
+    "nonOpaque": true,
+    "soundGroup": "wood",
+    "renderLayer": "cutout_mipped",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Wooden Plate",
+    "type": "toggleOnUse",
+    "itemTextureIndex": 2,
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0.03,
+      "yMax": 0.039,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "states": [
+      {
+        "stateID": "empty",
+        "textures": [
+          "plate/wood_bottom",
+          "plate/wood_empty",
+          "transparent"
+        ]
+      },
+      {
+        "stateID": "food",
+        "textures": [
+          "plate/wood_bottom",
+          "plate/wood_food",
+          "transparent"
+        ]
+      }
+    ],
+    "strength": 5
+  }
+]

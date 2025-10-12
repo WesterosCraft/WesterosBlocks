@@ -1,0 +1,47 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "westerosblocks:block/red_wood_vertical_planks_fence/post"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/red_wood_vertical_planks_fence/side"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/red_wood_vertical_planks_fence/side",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/red_wood_vertical_planks_fence/side",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/red_wood_vertical_planks_fence/side",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    }
+  ]
+}

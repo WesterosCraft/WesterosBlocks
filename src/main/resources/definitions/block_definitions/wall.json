@@ -1,0 +1,658 @@
+[
+  {
+    "blockName": "arbor_brick_ornate_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Arbor Wall",
+    "textures": [
+      "ashlar_engraved/arbor/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "black_brick_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Black Wall",
+    "textures": [
+      "ashlar_engraved/black/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "brown_grey_brick_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Brown Grey Wall",
+    "textures": [
+      "ashlar_engraved/brown_grey/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "coarse_dark_red_carved_sandstone_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Pale Dark Red Wall",
+    "textures": [
+      "ashlar_engraved/pale_dark_red/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "coarse_red_carved_sandstone_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Pale Red Wall",
+    "textures": [
+      "ashlar_engraved/pale_red/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "dark_grey_brick_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Dark Grey Wall",
+    "textures": [
+      "ashlar_engraved/dark_grey/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "desert_sandstone_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Sandstone Wall",
+    "textures": [
+      "ashlar_engraved/sandstone/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "green_grey_brick_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Green Grey Wall",
+    "textures": [
+      "ashlar_engraved/green_grey/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "grey_brick_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Normal Grey Wall",
+    "textures": [
+      "ashlar_engraved/grey/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "kl_dun_carved_brick_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Dun Wall",
+    "textures": [
+      "ashlar_engraved/dun/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "light_grey_brick_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Light Grey Wall",
+    "textures": [
+      "ashlar_engraved/light_grey/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "light_oldtown_brick_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Light Oldtown Wall",
+    "textures": [
+      "ashlar_engraved/light_oldtown/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "marble_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_marble_plaster_tab",
+    "wallSize": "short",
+    "unconnect": false,
+    "label": "Marble Wall",
+    "textures": [
+      "marble/quartz/wall/top",
+      "marble/quartz/wall/top",
+      "marble/quartz/wall/side"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "monochrome_dark_sandstone_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Light Brown Wall",
+    "textures": [
+      "ashlar_engraved/light_brown/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "monochrome_sandstone_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Westerlands Wall",
+    "textures": [
+      "ashlar_engraved/westerlands/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "piled_bones_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "unconnect": false,
+    "label": "Piled Bones Wall",
+    "textures": [
+      "piled_bones/side"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "pink_sandstone_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Sandy Pink Wall",
+    "textures": [
+      "ashlar_engraved/sandy_pink/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "reach_brick_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Reach Wall",
+    "textures": [
+      "ashlar_engraved/reach/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "reach_oak_wood_panelling_wall",
+    "blockType": "wall",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Reach Oak Wood Panelling Wall",
+    "randomTextures": [
+      {
+        "textures": [
+          "wood/oak/panelling/top_bottom",
+          "wood/oak/panelling/top_bottom",
+          "wood/oak/panelling/side1"
+        ]
+      },
+      {
+        "textures": [
+          "wood/oak/panelling/top_bottom",
+          "wood/oak/panelling/top_bottom",
+          "wood/oak/panelling/side2"
+        ]
+      },
+      {
+        "textures": [
+          "wood/oak/panelling/top_bottom",
+          "wood/oak/panelling/top_bottom",
+          "wood/oak/panelling/side3"
+        ]
+      }
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "reach_spruce_wood_panelling_wall",
+    "blockType": "wall",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Reach Spruce Wood Panelling Wall",
+    "randomTextures": [
+      {
+        "textures": [
+          "wood/spruce/panelling/top_bottom",
+          "wood/spruce/panelling/top_bottom",
+          "wood/spruce/panelling/side1"
+        ]
+      },
+      {
+        "textures": [
+          "wood/spruce/panelling/top_bottom",
+          "wood/spruce/panelling/top_bottom",
+          "wood/spruce/panelling/side2"
+        ]
+      },
+      {
+        "textures": [
+          "wood/spruce/panelling/top_bottom",
+          "wood/spruce/panelling/top_bottom",
+          "wood/spruce/panelling/side3"
+        ]
+      }
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "sept_crystal_medium",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "unconnect": false,
+    "label": "Sept Crystal Medium",
+    "textures": [
+      "crystal/wall_top",
+      "crystal/wall_top",
+      "crystal/wall"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "stacked_bones_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "unconnect": false,
+    "label": "Stacked Bones Wall",
+    "textures": [
+      "stacked_bones/bone_stacked_side",
+      "stacked_bones/bone_stacked_side",
+      "stacked_bones/bone_stacked_front"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "stormlands_brick_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Stormlands Wall",
+    "textures": [
+      "ashlar_engraved/stormlands/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "terracotta_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Terracotta Wall",
+    "textures": [
+      "ashlar_engraved/terracotta/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "thin_birch_log",
+    "blockType": "wall",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "unconnect": false,
+    "label": "Thin Birch Log",
+    "textures": [
+      "bark/birch/wall_top",
+      "bark/birch/wall_top",
+      "bark/birch/side"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "thin_jungle_log",
+    "blockType": "wall",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "unconnect": false,
+    "label": "Thin Jungle Log",
+    "textures": [
+      "bark/jungle/wall_top",
+      "bark/jungle/wall_top",
+      "bark/jungle/side"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "thin_marble_column",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_marble_plaster_tab",
+    "wallSize": "short",
+    "unconnect": false,
+    "label": "Thin Marble Column",
+    "textures": [
+      "marble/quartz/wall/top",
+      "marble/quartz/wall/top",
+      "marble/quartz/wall/column_side"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "thin_oak_log",
+    "blockType": "wall",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "unconnect": false,
+    "label": "Thin Oak Log",
+    "textures": [
+      "bark/oak/wall_top",
+      "bark/oak/wall_top",
+      "bark/oak/side"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "thin_palm_log",
+    "blockType": "wall",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "unconnect": false,
+    "label": "Thin Palm Log",
+    "textures": [
+      "bark/palm/wall_top",
+      "bark/palm/wall_top",
+      "bark/palm/side"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "thin_spruce_log",
+    "blockType": "wall",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "unconnect": false,
+    "label": "Thin Spruce Log",
+    "textures": [
+      "bark/spruce/wall_top",
+      "bark/spruce/wall_top",
+      "bark/spruce/side"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "vivid_dark_sandstone_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Dark Tan Wall",
+    "textures": [
+      "ashlar_engraved/dark_tan/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "vivid_sandstone_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved Tan Wall",
+    "textures": [
+      "ashlar_engraved/tan/all"
+    ],
+    "strength": 1.5
+  },
+  {
+    "blockName": "white_brick_engraved_wall",
+    "blockType": "wall",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "unconnect": false,
+    "label": "Ashlar Engraved White Wall",
+    "textures": [
+      "ashlar_engraved/white/all"
+    ],
+    "strength": 1.5
+  }
+]

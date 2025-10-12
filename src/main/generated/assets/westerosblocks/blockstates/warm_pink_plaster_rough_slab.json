@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "type=bottom": [
+      {
+        "model": "westerosblocks:block/warm_pink_plaster_rough_slab/warm_pink_plaster_rough_slab_bottom_v1"
+      },
+      {
+        "model": "westerosblocks:block/warm_pink_plaster_rough_slab/warm_pink_plaster_rough_slab_bottom_v2"
+      }
+    ],
+    "type=double": [
+      {
+        "model": "westerosblocks:block/warm_pink_plaster_rough_slab/warm_pink_plaster_rough_slab_double_v1"
+      },
+      {
+        "model": "westerosblocks:block/warm_pink_plaster_rough_slab/warm_pink_plaster_rough_slab_double_v2"
+      }
+    ],
+    "type=top": [
+      {
+        "model": "westerosblocks:block/warm_pink_plaster_rough_slab/warm_pink_plaster_rough_slab_top_v1"
+      },
+      {
+        "model": "westerosblocks:block/warm_pink_plaster_rough_slab/warm_pink_plaster_rough_slab_top_v2"
+      }
+    ]
+  }
+}

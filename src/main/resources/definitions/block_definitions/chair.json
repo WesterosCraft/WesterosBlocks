@@ -1,0 +1,12 @@
+[
+  {
+    "blockName": "chair_oak",
+    "blockType": "chair",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Oak Chair",
+    "textures": [
+      "bark/oak/side"
+    ]
+  }
+]

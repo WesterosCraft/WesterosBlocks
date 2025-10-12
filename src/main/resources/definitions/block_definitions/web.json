@@ -1,0 +1,803 @@
+[
+  {
+    "blockName": "alyssas_tears_mist_four",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "connectTo": "material",
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Alyssas Tears Mist Four",
+    "textures": [
+      "alyssas_tears_mist/mist4"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "alyssas_tears_mist_one",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Alyssas Tears Mist One",
+    "textures": [
+      "alyssas_tears_mist/mist1"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "alyssas_tears_mist_three",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "connectTo": "material",
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Alyssas Tears Mist Three",
+    "textures": [
+      "alyssas_tears_mist/mist3"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "alyssas_tears_mist_two",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Alyssas Tears Mist Two",
+    "textures": [
+      "alyssas_tears_mist/mist2"
+    ],
+    "connectTo": "material",
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "bees",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "renderLayer": "cutout",
+    "creativeTab": "westeros_misc_tab",
+    "label": "Bees",
+    "textures": [
+      "web_block/bug_bees"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "black_bricicle",
+    "blockType": "web",
+    "soundGroup": "stone",
+    "creativeTab": "westeros_misc_tab",
+    "renderLayer": "cutout",
+    "label": "Melted Ashlar Black Bricicle",
+    "textures": [
+      "ashlar_melted/black/bricicle/side"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "bushel_of_herbs",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Bushel of Herbs",
+    "renderLayer": "cutout",
+    "textures": [
+      "web_block/food_herbs"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "bushel_of_sourleaf",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_crops_herbs_tab",
+    "label": "Bushel of Sourleaf",
+    "renderLayer": "cutout",
+    "textures": [
+      "web_block/food_sourleaf"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "butterfly_blue",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_misc_tab",
+    "label": "Northern Blue Butterfly",
+    "renderLayer": "cutout",
+    "textures": [
+      "web_block/bug_butterfly_blue"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "butterfly_orange",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_misc_tab",
+    "label": "Southern Orange Butterfly",
+    "renderLayer": "cutout",
+    "textures": [
+      "web_block/bug_butterfly_orange"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "butterfly_red",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_misc_tab",
+    "label": "Eastern Red Butterfly",
+    "renderLayer": "cutout",
+    "textures": [
+      "web_block/bug_butterfly_red"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "butterfly_white",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_misc_tab",
+    "label": "Central White Butterfly",
+    "renderLayer": "cutout",
+    "textures": [
+      "web_block/bug_butterfly_white"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "butterfly_yellow",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_misc_tab",
+    "label": "Western Yellow Butterfly",
+    "renderLayer": "cutout",
+    "textures": [
+      "web_block/bug_butterfly_yellow"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "cattails",
+    "blockType": "web",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "renderLayer": "cutout",
+    "label": "Cattails",
+    "randomTextures": [
+      {
+        "textures": [
+          "cattails/side1"
+        ]
+      },
+      {
+        "textures": [
+          "cattails/side2"
+        ]
+      },
+      {
+        "textures": [
+          "cattails/side3"
+        ]
+      },
+      {
+        "textures": [
+          "cattails/side4"
+        ]
+      },
+      {
+        "textures": [
+          "cattails/side5"
+        ]
+      },
+      {
+        "textures": [
+          "cattails/side6"
+        ]
+      },
+      {
+        "textures": [
+          "cattails/side7"
+        ]
+      },
+      {
+        "textures": [
+          "cattails/side8"
+        ]
+      }
+    ],
+    "colorMult": "textures/colormap/reed",
+    "type": "no-in-web,layerSensitive"
+  },
+  {
+    "blockName": "chain_block_harness",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_metal_tab",
+    "label": "Chain Block Harness",
+    "renderLayer": "cutout",
+    "textures": [
+      "web_block/chain_blockharness"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "chili_ristra",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Chili Ristra",
+    "renderLayer": "cutout",
+    "textures": [
+      "web_block/food_chili_ristra"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "cobweb",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_decor_tab",
+    "renderLayer": "cutout",
+    "label": "Cobweb",
+    "type": "toggleOnUse,no-in-web",
+    "states": [
+      {
+        "stateID": "random",
+        "randomTextures": [
+          {
+            "textures": [
+              "cobweb/side1"
+            ]
+          },
+          {
+            "textures": [
+              "cobweb/side2"
+            ]
+          },
+          {
+            "textures": [
+              "cobweb/side3"
+            ]
+          },
+          {
+            "textures": [
+              "cobweb/side4"
+            ]
+          },
+          {
+            "textures": [
+              "cobweb/side5"
+            ]
+          },
+          {
+            "textures": [
+              "cobweb/side6"
+            ]
+          },
+          {
+            "textures": [
+              "cobweb/side7"
+            ]
+          },
+          {
+            "textures": [
+              "cobweb/side8"
+            ]
+          }
+        ]
+      },
+      {
+        "stateID": "cobweb1",
+        "textures": [
+          "cobweb/side1"
+        ]
+      },
+      {
+        "stateID": "cobweb2",
+        "textures": [
+          "cobweb/side2"
+        ]
+      },
+      {
+        "stateID": "cobweb3",
+        "textures": [
+          "cobweb/side3"
+        ]
+      },
+      {
+        "stateID": "cobweb4",
+        "textures": [
+          "cobweb/side4"
+        ]
+      },
+      {
+        "stateID": "cobweb5",
+        "textures": [
+          "cobweb/side5"
+        ]
+      },
+      {
+        "stateID": "cobweb6",
+        "textures": [
+          "cobweb/side6"
+        ]
+      },
+      {
+        "stateID": "cobweb7",
+        "textures": [
+          "cobweb/side7"
+        ]
+      },
+      {
+        "stateID": "cobweb8",
+        "textures": [
+          "cobweb/side8"
+        ]
+      }
+    ]
+  },
+  {
+    "blockName": "dead_fish",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_food_blocks_tab",
+    "renderLayer": "cutout",
+    "label": "Dead Fish",
+    "randomTextures": [
+      {
+        "textures": [
+          "dead_fish/fish_dead1"
+        ]
+      },
+      {
+        "textures": [
+          "dead_fish/fish_dead2"
+        ]
+      },
+      {
+        "textures": [
+          "dead_fish/fish_dead3"
+        ]
+      },
+      {
+        "textures": [
+          "dead_fish/fish_dead4"
+        ]
+      },
+      {
+        "textures": [
+          "dead_fish/fish_dead5"
+        ]
+      }
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "dead_fowl",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Dead Fowl",
+    "renderLayer": "cutout",
+    "randomTextures": [
+      {
+        "textures": [
+          "dead_fowl/fowl"
+        ]
+      },
+      {
+        "textures": [
+          "dead_fowl/fowl2"
+        ]
+      },
+      {
+        "textures": [
+          "dead_fowl/gooseplains"
+        ]
+      },
+      {
+        "textures": [
+          "dead_fowl/gooseplains2"
+        ]
+      }
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "dead_frog",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Dead Frog",
+    "renderLayer": "cutout",
+    "randomTextures": [
+      {
+        "textures": [
+          "dead_frog/toad_dead1"
+        ]
+      },
+      {
+        "textures": [
+          "dead_frog/toad_dead2"
+        ]
+      }
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "dead_hare",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Dead Hare",
+    "renderLayer": "cutout",
+    "randomTextures": [
+      {
+        "textures": [
+          "dead_hare/rabbit_dead1"
+        ]
+      },
+      {
+        "textures": [
+          "dead_hare/rabbit_dead2"
+        ]
+      },
+      {
+        "textures": [
+          "dead_hare/rabbit_dead3"
+        ]
+      }
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "dead_jungle_tall_grass",
+    "blockType": "web",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Dead Jungle Tall Grass",
+    "renderLayer": "cutout",
+    "textures": [
+      "dead_jungle_tall_grass/down_side1"
+    ],
+    "type": "no-in-web,layerSensitive"
+  },
+  {
+    "blockName": "dead_rat",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Dead Rat",
+    "renderLayer": "cutout",
+    "randomTextures": [
+      {
+        "textures": [
+          "dead_rat/rat1"
+        ]
+      },
+      {
+        "textures": [
+          "dead_rat/rat2"
+        ]
+      },
+      {
+        "textures": [
+          "dead_rat/rat3"
+        ]
+      },
+      {
+        "textures": [
+          "dead_rat/rat4"
+        ]
+      },
+      {
+        "textures": [
+          "dead_rat/rat5"
+        ]
+      },
+      {
+        "textures": [
+          "dead_rat/rat6"
+        ]
+      },
+      {
+        "textures": [
+          "dead_rat/rat7"
+        ]
+      }
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "dead_savanna_tall_grass",
+    "blockType": "web",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Dead Savanna Tall Grass",
+    "renderLayer": "cutout",
+    "textures": [
+      "dead_savanna_tall_grass/dead_savanna_tall_grass"
+    ],
+    "type": "no-in-web,layerSensitive"
+  },
+  {
+    "blockName": "dragonfly",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_misc_tab",
+    "label": "Dragonfly",
+    "renderLayer": "cutout",
+    "textures": [
+      "web_block/bug_dragonfly"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "flies",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_misc_tab",
+    "label": "Flies",
+    "renderLayer": "cutout",
+    "textures": [
+      "web_block/bug_flies"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "garlic_strand",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "renderLayer": "cutout",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Garlic Strand",
+    "textures": [
+      "web_block/food_garlic_strand"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "icicle",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Icicle",
+    "renderLayer": "cutout",
+    "textures": [
+      "icicle/side"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "iron_throne_random_blades",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_metal_tab",
+    "label": "Iron Throne Random Blades",
+    "renderLayer": "cutout",
+    "randomTextures": [
+      {
+        "textures": [
+          "blades_random/side1"
+        ]
+      },
+      {
+        "textures": [
+          "blades_random/side2"
+        ]
+      },
+      {
+        "textures": [
+          "blades_random/side3"
+        ]
+      },
+      {
+        "textures": [
+          "blades_random/side4"
+        ]
+      },
+      {
+        "textures": [
+          "blades_random/side5"
+        ]
+      },
+      {
+        "textures": [
+          "blades_random/side6"
+        ]
+      },
+      {
+        "textures": [
+          "blades_random/side7"
+        ]
+      }
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "jungle_tall_fern",
+    "blockType": "web",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Jungle Tall Fern",
+    "renderLayer": "cutout",
+    "textures": [
+      "jungle_tall_fern/side"
+    ],
+    "colorMult": "textures/colormap/grass",
+    "type": "no-in-web,layerSensitive"
+  },
+  {
+    "blockName": "jungle_tall_grass",
+    "blockType": "web",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Jungle Tall Grass",
+    "renderLayer": "cutout",
+    "textures": [
+      "jungle_tall_grass/down_side1"
+    ],
+    "colorMult": "textures/colormap/grass",
+    "type": "no-in-web,layerSensitive"
+  },
+  {
+    "blockName": "rope_block_harness",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "label": "Rope Block Harness",
+    "renderLayer": "cutout",
+    "textures": [
+      "web_block/rope_blockharness"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "sausages_leg_of_ham",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Sausages Leg of Ham",
+    "renderLayer": "cutout",
+    "textures": [
+      "sausages_leg_of_ham/default"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "savanna_tall_grass",
+    "blockType": "web",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_grasses_shrubs_tab",
+    "label": "Savanna Tall Grass",
+    "renderLayer": "cutout",
+    "textures": [
+      "savanna_tall_grass/savanna_tall_grass"
+    ],
+    "colorMult": "textures/colormap/grass",
+    "type": "no-in-web,layerSensitive"
+  },
+  {
+    "blockName": "smoke",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Smoke",
+    "type": "toggleOnUse,no-in-web",
+    "renderLayer": "cutout",
+    "states": [
+      {
+        "stateID": "random",
+        "randomTextures": [
+          {
+            "textures": [
+              "smoke/smoke1"
+            ]
+          },
+          {
+            "textures": [
+              "smoke/smoke2"
+            ]
+          },
+          {
+            "textures": [
+              "smoke/smoke3"
+            ]
+          },
+          {
+            "textures": [
+              "smoke/smoke4"
+            ]
+          },
+          {
+            "textures": [
+              "smoke/smoke5"
+            ]
+          },
+          {
+            "textures": [
+              "smoke/smoke6"
+            ]
+          },
+          {
+            "textures": [
+              "smoke/smoke7"
+            ]
+          }
+        ]
+      },
+      {
+        "stateID": "smoke1",
+        "textures": [
+          "smoke/smoke1"
+        ]
+      },
+      {
+        "stateID": "smoke2",
+        "textures": [
+          "smoke/smoke2"
+        ]
+      },
+      {
+        "stateID": "smoke3",
+        "textures": [
+          "smoke/smoke3"
+        ]
+      },
+      {
+        "stateID": "smoke4",
+        "textures": [
+          "smoke/smoke4"
+        ]
+      },
+      {
+        "stateID": "smoke5",
+        "textures": [
+          "smoke/smoke5"
+        ]
+      },
+      {
+        "stateID": "smoke6",
+        "textures": [
+          "smoke/smoke6"
+        ]
+      },
+      {
+        "stateID": "smoke7",
+        "textures": [
+          "smoke/smoke7"
+        ]
+      }
+    ]
+  },
+  {
+    "blockName": "vertical_chain",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_metal_tab",
+    "renderLayer": "cutout",
+    "label": "Vertical Chain",
+    "textures": [
+      "web_block/chain_vertical"
+    ],
+    "type": "no-in-web"
+  },
+  {
+    "blockName": "vertical_rope",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "label": "Vertical Rope",
+    "renderLayer": "cutout",
+    "textures": [
+      "web_block/rope_vertical"
+    ],
+    "type": "no-in-web"
+  }
+]

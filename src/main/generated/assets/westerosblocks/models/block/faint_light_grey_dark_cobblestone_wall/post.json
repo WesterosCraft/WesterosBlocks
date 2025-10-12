@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_post",
+  "textures": {
+    "bottom": "westerosblocks:block/cobblestone_dark/light_grey/all",
+    "particle": "westerosblocks:block/cobblestone_dark/light_grey/all",
+    "side": "westerosblocks:block/cobblestone_dark/light_grey/all",
+    "top": "westerosblocks:block/cobblestone_dark/light_grey/all"
+  }
+}

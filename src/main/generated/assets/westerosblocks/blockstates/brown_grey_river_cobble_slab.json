@@ -1,0 +1,46 @@
+{
+  "variants": {
+    "type=bottom": [
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_slab/brown_grey_river_cobble_slab_bottom_v1"
+      },
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_slab/brown_grey_river_cobble_slab_bottom_v2"
+      },
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_slab/brown_grey_river_cobble_slab_bottom_v3"
+      },
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_slab/brown_grey_river_cobble_slab_bottom_v4"
+      }
+    ],
+    "type=double": [
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_slab/brown_grey_river_cobble_slab_double_v1"
+      },
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_slab/brown_grey_river_cobble_slab_double_v2"
+      },
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_slab/brown_grey_river_cobble_slab_double_v3"
+      },
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_slab/brown_grey_river_cobble_slab_double_v4"
+      }
+    ],
+    "type=top": [
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_slab/brown_grey_river_cobble_slab_top_v1"
+      },
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_slab/brown_grey_river_cobble_slab_top_v2"
+      },
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_slab/brown_grey_river_cobble_slab_top_v3"
+      },
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_slab/brown_grey_river_cobble_slab_top_v4"
+      }
+    ]
+  }
+}

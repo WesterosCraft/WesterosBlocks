@@ -1,0 +1,134 @@
+[
+  {
+    "blockName": "birch_window_shutters",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Birch Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "wood/birch/shutters"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "dorne_red_window_shutters",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Dorne Red Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "shutter_block/shutters_dorne"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "green_lannisport_window_shutters",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Green Lannisport Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "shutter_block/shutters_lannisport"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "grey_wood_window_shutters",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Grey Wood Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "wood/grey/shutters"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "jungle_window_shutters",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Jungle Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "wood/jungle/shutters"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "northern_wood_window_shutters",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Northern Wood Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "wood/northern/shutters"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "oak_window_shutters",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Oak Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "wood/oak/shutters"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "reach_blue_window_shutters",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Reach Blue Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "shutter_block/shutters_reach"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "birch_simple_window_shutters",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Simple Birch Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "wood/birch/shutters_alt"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "spruce_window_shutters",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Spruce Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "wood/spruce/shutters"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "white_wood_window_shutters",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "White Wood Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "wood/white/shutters"
+    ],
+    "strength": 2
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/pebble/volcanic/wet3",
+    "east": "westerosblocks:block/pebble/volcanic/wet3",
+    "north": "westerosblocks:block/pebble/volcanic/wet3",
+    "particle": "westerosblocks:block/pebble/volcanic/wet3",
+    "south": "westerosblocks:block/pebble/volcanic/wet3",
+    "up": "westerosblocks:block/pebble/volcanic/wet3",
+    "west": "westerosblocks:block/pebble/volcanic/wet3"
+  }
+}

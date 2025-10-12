@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/grey_wood_vertical_planks_slab/grey_wood_vertical_planks_slab_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/grey_wood_vertical_planks_slab/grey_wood_vertical_planks_slab_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/grey_wood_vertical_planks_slab/grey_wood_vertical_planks_slab_top"
+    }
+  }
+}

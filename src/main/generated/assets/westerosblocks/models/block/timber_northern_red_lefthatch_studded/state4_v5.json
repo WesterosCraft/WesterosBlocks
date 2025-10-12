@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/plaster/wattle/red/all",
+    "east": "westerosblocks:block/plaster/wattle/red/all",
+    "north": "westerosblocks:block/plaster/wattle/red/all",
+    "particle": "westerosblocks:block/plaster/wattle/red/all",
+    "south": "westerosblocks:block/plaster/wattle/red/all",
+    "up": "westerosblocks:block/wood/northern/all",
+    "west": "westerosblocks:block/plaster/wattle/red/all"
+  }
+}

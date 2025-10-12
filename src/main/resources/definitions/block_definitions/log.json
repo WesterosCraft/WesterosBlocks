@@ -1,0 +1,696 @@
+[
+  {
+    "blockName": "archery_target",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "label": "Archery Target",
+    "textures": [
+      "archery_target/front",
+      "archery_target/front",
+      "archery_target/side"
+    ]
+  },
+  {
+    "blockName": "closed_barrel",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Closed Barrel",
+    "textures": [
+      "barrel_closed/barrel_top_closed",
+      "barrel_closed/barrel_top_closed",
+      "barrel_sides/side1"
+    ]
+  },
+  {
+    "blockName": "firewood",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Firewood",
+    "textures": [
+      "firewood/top",
+      "firewood/top",
+      "firewood/side"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "jungle_log_chain",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Jungle Log Chain",
+    "textures": [
+      "bark/jungle/top",
+      "bark/jungle/top",
+      "bark/jungle/chain"
+    ]
+  },
+  {
+    "blockName": "jungle_log_rope",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Jungle Log Rope",
+    "textures": [
+      "bark/jungle/top",
+      "bark/jungle/top",
+      "bark/jungle/rope"
+    ]
+  },
+  {
+    "blockName": "marble_pillar",
+    "blockType": "log",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_marble_plaster_tab",
+    "label": "Marble Pillar",
+    "textures": [
+      "marble/quartz/column_topbottom",
+      "marble/quartz/column_topbottom",
+      "marble/quartz/column_side"
+    ]
+  },
+  {
+    "blockName": "marble_pillar_vertical_ctm",
+    "blockType": "log",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_marble_plaster_tab",
+    "label": "Marble Pillar Vertical",
+    "textures": [
+      "marble/quartz/column_topbottom",
+      "marble/quartz/column_topbottom",
+      "marble/quartz/column_side_ctm"
+    ]
+  },
+  {
+    "blockName": "mossy_birch_log",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Mossy Birch Log",
+    "textures": [
+      "bark/birch/mossy/bottom",
+      "bark/birch/mossy/top",
+      "bark/birch/mossy/side"
+    ]
+  },
+  {
+    "blockName": "mossy_jungle_log",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Mossy Jungle Log",
+    "textures": [
+      "bark/jungle/mossy/bottom",
+      "bark/jungle/mossy/top",
+      "bark/jungle/mossy/side"
+    ]
+  },
+  {
+    "blockName": "mossy_oak_log",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Mossy Oak Log",
+    "textures": [
+      "bark/oak/mossy/bottom",
+      "bark/oak/mossy/top",
+      "bark/oak/mossy/side"
+    ]
+  },
+  {
+    "blockName": "mossy_spruce_log",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Mossy Spruce Log",
+    "textures": [
+      "bark/spruce/mossy/bottom",
+      "bark/spruce/mossy/top",
+      "bark/spruce/mossy/side"
+    ]
+  },
+  {
+    "blockName": "oak_log_chain",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Oak Log Chain",
+    "textures": [
+      "bark/oak/top",
+      "bark/oak/top",
+      "bark/oak/chain"
+    ]
+  },
+  {
+    "blockName": "oak_log_rope",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Oak Log Rope",
+    "textures": [
+      "bark/oak/top",
+      "bark/oak/top",
+      "bark/oak/rope"
+    ]
+  },
+  {
+    "blockName": "palm_tree_log",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Palm Tree Log",
+    "textures": [
+      "bark/palm/top",
+      "bark/palm/top",
+      "bark/palm/side"
+    ]
+  },
+  {
+    "blockName": "sandstone_pillar",
+    "blockType": "log",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_panelling_carvings_tab",
+    "label": "Sandstone Pillar",
+    "textures": [
+      "ashlar_third/sandstone/column_top",
+      "ashlar_third/sandstone/column_top",
+      "ashlar_third/sandstone/column_side"
+    ]
+  },
+  {
+    "blockName": "spruce_log_chain",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Spruce Log Chain",
+    "textures": [
+      "bark/spruce/top",
+      "bark/spruce/top",
+      "bark/spruce/chain"
+    ]
+  },
+  {
+    "blockName": "spruce_log_rope",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Spruce Log Rope",
+    "textures": [
+      "bark/spruce/top",
+      "bark/spruce/top",
+      "bark/spruce/rope"
+    ]
+  },
+  {
+    "blockName": "stacked_bones",
+    "blockType": "log",
+    "soundGroup": "stone",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "label": "Stacked Bones",
+    "textures": [
+      "stacked_bones/bone_stacked_front",
+      "stacked_bones/bone_stacked_front",
+      "stacked_bones/bone_stacked_side"
+    ]
+  },
+  {
+    "blockName": "stripped_oak_log",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Stripped Oak Log",
+    "textures": [
+      "wood/oak/stripped_oak_log",
+      "wood/oak/stripped_oak_log_top"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "weirwood_face_0",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Weirwood Face 0",
+    "textures": [
+      "bark/weirwood/face_0",
+      "bark/weirwood/face_0",
+      "bark/weirwood/side"
+    ],
+    "display": {
+      "gui": {
+        "rotation": [
+          -70,
+          0,
+          150
+        ],
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.625,
+          0.625,
+          0.625
+        ]
+      }
+    }
+  },
+  {
+    "blockName": "weirwood_face_1",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Weirwood Face 1",
+    "textures": [
+      "bark/weirwood/face_1",
+      "bark/weirwood/face_1",
+      "bark/weirwood/side"
+    ],
+    "display": {
+      "gui": {
+        "rotation": [
+          -70,
+          0,
+          150
+        ],
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.625,
+          0.625,
+          0.625
+        ]
+      }
+    }
+  },
+  {
+    "blockName": "weirwood_face_2",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Weirwood Face 2",
+    "textures": [
+      "bark/weirwood/face_2",
+      "bark/weirwood/face_2",
+      "bark/weirwood/side"
+    ],
+    "display": {
+      "gui": {
+        "rotation": [
+          -70,
+          0,
+          150
+        ],
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.625,
+          0.625,
+          0.625
+        ]
+      }
+    }
+  },
+  {
+    "blockName": "weirwood_face_3",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Weirwood Face 3",
+    "textures": [
+      "bark/weirwood/face_3",
+      "bark/weirwood/face_3",
+      "bark/weirwood/side"
+    ],
+    "display": {
+      "gui": {
+        "rotation": [
+          -70,
+          0,
+          150
+        ],
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.625,
+          0.625,
+          0.625
+        ]
+      }
+    }
+  },
+  {
+    "blockName": "weirwood_face_4",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Weirwood Face 4",
+    "textures": [
+      "bark/weirwood/face_4",
+      "bark/weirwood/face_4",
+      "bark/weirwood/side"
+    ],
+    "display": {
+      "gui": {
+        "rotation": [
+          -70,
+          0,
+          150
+        ],
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.625,
+          0.625,
+          0.625
+        ]
+      }
+    }
+  },
+  {
+    "blockName": "weirwood_face_5",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Weirwood Face 5",
+    "textures": [
+      "bark/weirwood/face_5",
+      "bark/weirwood/face_5",
+      "bark/weirwood/side"
+    ],
+    "display": {
+      "gui": {
+        "rotation": [
+          -70,
+          0,
+          150
+        ],
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.625,
+          0.625,
+          0.625
+        ]
+      }
+    }
+  },
+  {
+    "blockName": "weirwood_face_6",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Weirwood Face 6",
+    "textures": [
+      "bark/weirwood/face_6",
+      "bark/weirwood/face_6",
+      "bark/weirwood/side"
+    ],
+    "display": {
+      "gui": {
+        "rotation": [
+          -70,
+          0,
+          150
+        ],
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.625,
+          0.625,
+          0.625
+        ]
+      }
+    }
+  },
+  {
+    "blockName": "weirwood_face_7",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Weirwood Face 7",
+    "textures": [
+      "bark/weirwood/face_7",
+      "bark/weirwood/face_7",
+      "bark/weirwood/side"
+    ],
+    "display": {
+      "gui": {
+        "rotation": [
+          -70,
+          0,
+          150
+        ],
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.625,
+          0.625,
+          0.625
+        ]
+      }
+    }
+  },
+  {
+    "blockName": "weirwood_face_8",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Weirwood Face 8",
+    "textures": [
+      "bark/weirwood/face_8",
+      "bark/weirwood/face_8",
+      "bark/weirwood/side"
+    ],
+    "display": {
+      "gui": {
+        "rotation": [
+          -70,
+          0,
+          150
+        ],
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.625,
+          0.625,
+          0.625
+        ]
+      }
+    }
+  },
+  {
+    "blockName": "weirwood_scars",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Weirwood Scars",
+    "textures": [
+      "bark/weirwood/scars",
+      "bark/weirwood/scars",
+      "bark/weirwood/side"
+    ]
+  }
+]

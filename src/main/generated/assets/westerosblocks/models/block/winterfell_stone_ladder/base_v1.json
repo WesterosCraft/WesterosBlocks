@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/untinted/ladder",
+  "textures": {
+    "particle": "westerosblocks:block/winterfell_stone_ladder/side1",
+    "texture": "westerosblocks:block/winterfell_stone_ladder/side1"
+  }
+}

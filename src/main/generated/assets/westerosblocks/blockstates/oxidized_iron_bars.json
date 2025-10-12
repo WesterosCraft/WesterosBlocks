@@ -1,0 +1,43 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "westerosblocks:block/oxidized_iron_bars/oxidized_iron_bars_post"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oxidized_iron_bars/oxidized_iron_bars_side"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oxidized_iron_bars/oxidized_iron_bars_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oxidized_iron_bars/oxidized_iron_bars_noside"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oxidized_iron_bars/oxidized_iron_bars_noside",
+        "y": 90
+      },
+      "when": {
+        "east": "false"
+      }
+    }
+  ]
+}

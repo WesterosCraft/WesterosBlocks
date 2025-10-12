@@ -1,0 +1,43 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_wooden_window/dorne_carved_wooden_window_post"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_wooden_window/dorne_carved_wooden_window_side"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_wooden_window/dorne_carved_wooden_window_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_wooden_window/dorne_carved_wooden_window_noside"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_wooden_window/dorne_carved_wooden_window_noside",
+        "y": 90
+      },
+      "when": {
+        "east": "false"
+      }
+    }
+  ]
+}

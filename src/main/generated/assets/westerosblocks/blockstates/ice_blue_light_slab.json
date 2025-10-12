@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/ice_blue_light_slab/ice_blue_light_slab_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/ice_blue_light_slab/ice_blue_light_slab_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/ice_blue_light_slab/ice_blue_light_slab_top"
+    }
+  }
+}

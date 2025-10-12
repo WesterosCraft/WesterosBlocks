@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:item/cuboid_nsew_stack_item",
+  "textures": {
+    "particle": "westerosblocks:block/banner/other/red_keep/top",
+    "txt1": "westerosblocks:block/banner/other/red_keep/top",
+    "txt2": "westerosblocks:block/banner/other/red_keep/bottom",
+    "txt5": "westerosblocks:block/banner/other/red_keep/top"
+  }
+}

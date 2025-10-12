@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/custom/particle_emitter/particle_emitter_off",
+  "textures": {
+    "particle": "westerosblocks:block/cascade_particle_emitter",
+    "texture": "westerosblocks:block/cascade_particle_emitter"
+  }
+}

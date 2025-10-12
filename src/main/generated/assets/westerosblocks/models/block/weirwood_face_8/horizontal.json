@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "westerosblocks:block/bark/weirwood/face_8",
+    "side": "westerosblocks:block/bark/weirwood/side"
+  }
+}

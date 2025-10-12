@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/seagrass/v1"
+      },
+      {
+        "model": "westerosblocks:block/seagrass/v2"
+      },
+      {
+        "model": "westerosblocks:block/seagrass/v3"
+      },
+      {
+        "model": "westerosblocks:block/seagrass/v4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_yellow/stained_glass_pane_yellow_post"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_yellow/stained_glass_pane_yellow_side"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_yellow/stained_glass_pane_yellow_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_yellow/stained_glass_pane_yellow_noside"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_yellow/stained_glass_pane_yellow_noside",
+        "y": 90
+      },
+      "when": {
+        "east": "false"
+      }
+    }
+  ]
+}

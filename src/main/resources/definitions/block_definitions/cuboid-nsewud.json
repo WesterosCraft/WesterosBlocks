@@ -1,0 +1,317 @@
+[
+  {
+    "blockName": "chain_pulley",
+    "blockType": "cuboid-nsewud",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "label": "Chain Pulley",
+    "nonOpaque": true,
+    "textures": [
+      "pulley/chain/top_bottom",
+      "pulley/chain/top_bottom",
+      "pulley/chain/side",
+      "pulley/chain/side",
+      "pulley/chain/front",
+      "pulley/chain/front"
+    ],
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "renderLayer": "cutout",
+    "hardness": 3,
+    "resistance": 5
+  },
+  {
+    "blockName": "piston_extension",
+    "blockType": "cuboid-nsewud",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_tool_blocks_tab",
+    "label": "Piston Extension",
+    "nonOpaque": true,
+    "textures": [
+      "cuboid_nsewud_block/piston_side",
+      "cuboid_nsewud_block/piston_side_rotated",
+      "cuboid_nsewud_block/piston_top_normal"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0.249,
+        "xMax": 1,
+        "yMin": 0.3755,
+        "yMax": 0.6245,
+        "zMin": 0.3755,
+        "zMax": 0.6245,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 0.249,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1,
+        "sideTextures": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ]
+      }
+    ],
+    "renderLayer": "cutout",
+    "hardness": 3,
+    "resistance": 5
+  },
+  {
+    "blockName": "rope_pulley",
+    "blockType": "cuboid-nsewud",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "label": "Rope Pulley",
+    "nonOpaque": true,
+    "textures": [
+      "pulley/rope/top_bottom",
+      "pulley/rope/top_bottom",
+      "pulley/rope/side",
+      "pulley/rope/side",
+      "pulley/rope/front",
+      "pulley/rope/front"
+    ],
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "renderLayer": "cutout",
+    "hardness": 3,
+    "resistance": 5
+  },
+  {
+    "blockName": "sticky_piston_extension",
+    "blockType": "cuboid-nsewud",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_tool_blocks_tab",
+    "label": "Sticky Piston Extension",
+    "nonOpaque": true,
+    "textures": [
+      "cuboid_nsewud_block/piston_side",
+      "cuboid_nsewud_block/piston_side_rotated",
+      "cuboid_nsewud_block/piston_top_sticky"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0.249,
+        "xMax": 1,
+        "yMin": 0.3755,
+        "yMax": 0.6245,
+        "zMin": 0.3755,
+        "zMax": 0.6245,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 0.249,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1,
+        "sideTextures": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ]
+      }
+    ],
+    "renderLayer": "cutout",
+    "hardness": 3,
+    "resistance": 5
+  },
+  {
+    "blockName": "wagon_wheel__axle",
+    "blockType": "cuboid-nsewud",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "label": "Wagon Wheel & Axle",
+    "nonOpaque": true,
+    "textures": [
+      "cuboid_nsewud_block/axle",
+      "cuboid_nsewud_block/rim",
+      "cuboid_nsewud_block/rim_top",
+      "cuboid_nsewud_block/spoke"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0.3755,
+        "yMax": 0.6245,
+        "zMin": 0.3755,
+        "zMax": 0.6245,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          3,
+          3
+        ]
+      },
+      {
+        "zMin": 0,
+        "zMax": 0.09375,
+        "yMin": 0.0875,
+        "yMax": 0.9125,
+        "xMin": 0.03125,
+        "xMax": 0.1875,
+        "sideTextures": [
+          2,
+          2,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "zMin": 0.90625,
+        "zMax": 1,
+        "yMin": 0.0875,
+        "yMax": 0.9125,
+        "xMin": 0.03125,
+        "xMax": 0.1875,
+        "sideTextures": [
+          2,
+          2,
+          1,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "zMin": 0.0875,
+        "zMax": 0.9125,
+        "yMin": 0,
+        "yMax": 0.09375,
+        "xMin": 0.03125,
+        "xMax": 0.1875,
+        "sideTextures": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "zMin": 0.0875,
+        "zMax": 0.9125,
+        "yMin": 0.90625,
+        "yMax": 1,
+        "xMin": 0.03125,
+        "xMax": 0.1875,
+        "sideTextures": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "zMin": 0.4375,
+        "zMax": 0.5625,
+        "yMin": 0.0875,
+        "yMax": 0.9125,
+        "xMin": 0.06375,
+        "xMax": 0.1575,
+        "sideTextures": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      {
+        "yMin": 0.4375,
+        "yMax": 0.5625,
+        "zMin": 0.0875,
+        "zMax": 0.9125,
+        "xMin": 0.06375,
+        "xMax": 0.1575,
+        "sideTextures": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      }
+    ],
+    "renderLayer": "cutout",
+    "hardness": 3,
+    "resistance": 5
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/plowed_soil_slab/plowed_soil_slab_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/plowed_soil_slab/plowed_soil_slab_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/plowed_soil_slab/plowed_soil_slab_top"
+    }
+  }
+}

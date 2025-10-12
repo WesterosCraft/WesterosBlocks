@@ -1,0 +1,81 @@
+[
+  {
+    "blockName": "fancy_blue_carpet",
+    "blockType": "rail",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "label": "Fancy Blue Carpet",
+    "type": "allow-unsupported",
+    "renderLayer": "cutout_mipped",
+    "allowUnsupported": true,
+    "textures": [
+      "carpet/fancy_blue_carpet"
+    ]
+  },
+  {
+    "blockName": "fancy_red_carpet",
+    "blockType": "rail",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "label": "Fancy Red Carpet",
+    "type": "allow-unsupported",
+    "renderLayer": "cutout_mipped",
+    "allowUnsupported": true,
+    "textures": [
+      "carpet/fancy_red_carpet"
+    ]
+  },
+  {
+    "blockName": "horizontal_chain",
+    "blockType": "rail",
+    "creativeTab": "westeros_metal_tab",
+    "label": "Horizontal Chain",
+    "renderLayer": "cutout_mipped",
+    "nonOpaque": true,
+    "allowUnsupported": true,
+    "textures": [
+      "rail_block/chain",
+      "rail_block/chain_turned"
+    ],
+    "type": "allow-unsupported"
+  },
+  {
+    "blockName": "horizontal_net",
+    "blockType": "rail",
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "label": "Horizontal Net",
+    "renderLayer": "cutout_mipped",
+    "allowUnsupported": true,
+    "textures": [
+      "rail_block/net_large",
+      "rail_block/net_large_turned"
+    ],
+    "type": "allow-unsupported"
+  },
+  {
+    "blockName": "horizontal_rope",
+    "blockType": "rail",
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "label": "Horizontal Rope",
+    "renderLayer": "cutout_mipped",
+    "allowUnsupported": true,
+    "textures": [
+      "rail_block/rope",
+      "rail_block/rope_turned"
+    ],
+    "type": "allow-unsupported"
+  },
+  {
+    "blockName": "packed_snow",
+    "blockType": "rail",
+    "creativeTab": "westeros_water_air_tab",
+    "label": "Packed Snow",
+    "renderLayer": "cutout_mipped",
+    "allowUnsupported": true,
+    "textures": [
+      "rail_block/packed_snow",
+      "rail_block/packed_snow_turned"
+    ],
+    "type": "allow-unsupported"
+  }
+]

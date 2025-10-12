@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/fish_trap/side4",
+    "east": "westerosblocks:block/fish_trap/side4",
+    "north": "westerosblocks:block/fish_trap/side4",
+    "particle": "westerosblocks:block/fish_trap/side4",
+    "south": "westerosblocks:block/fish_trap/side4",
+    "up": "westerosblocks:block/fish_trap/side4",
+    "west": "westerosblocks:block/fish_trap/side4"
+  }
+}

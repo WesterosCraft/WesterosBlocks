@@ -1,0 +1,81 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v1"
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v1",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v1",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v1",
+        "y": 270
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v2"
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v2",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v2",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v2",
+        "y": 270
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v3"
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v3",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v3",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v3",
+        "y": 270
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v4"
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v4",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v4",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v4",
+        "y": 270
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v5"
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v5",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v5",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/dead_fish/dead_fish_v5",
+        "y": 270
+      }
+    ]
+  }
+}

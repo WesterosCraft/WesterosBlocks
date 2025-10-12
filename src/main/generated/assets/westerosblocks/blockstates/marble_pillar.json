@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "westerosblocks:block/marble_pillar/horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "westerosblocks:block/marble_pillar/marble_pillar"
+    },
+    "axis=z": {
+      "model": "westerosblocks:block/marble_pillar/horizontal",
+      "x": 90
+    }
+  }
+}

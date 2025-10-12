@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/nether_brick_slab/nether_brick_slab_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/nether_brick_slab/nether_brick_slab_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/nether_brick_slab/nether_brick_slab_top"
+    }
+  }
+}

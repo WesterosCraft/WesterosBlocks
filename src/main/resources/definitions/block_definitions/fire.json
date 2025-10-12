@@ -1,0 +1,50 @@
+[
+  {
+    "blockName": "safe_fire",
+    "blockType": "fire",
+    "creativeTab": "westeros_lighting_tab",
+    "luminance": 1,
+    "label": "Safe Fire",
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "textures": [
+      "safe_fire/fire_layer_0",
+      "safe_fire/fire_layer_1"
+    ]
+  },
+  {
+    "blockName": "wildfire",
+    "blockType": "fire",
+    "creativeTab": "westeros_lighting_tab",
+    "luminance": 9,
+    "label": "Wildfire",
+    "particle": "wildfire",
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "tooltips": [
+      "Very hot fire",
+      "no fr its hot!"
+    ],
+    "textures": [
+      "wildfire/wildfire_layer_0",
+      "wildfire/wildfire_layer_1"
+    ],
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

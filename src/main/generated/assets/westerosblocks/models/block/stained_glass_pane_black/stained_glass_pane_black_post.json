@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/untinted/ctm_pane_post",
+  "textures": {
+    "cap": "westerosblocks:block/glass/black/all",
+    "side": "westerosblocks:block/glass/black/all"
+  }
+}

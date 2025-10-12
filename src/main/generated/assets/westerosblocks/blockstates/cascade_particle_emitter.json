@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "westerosblocks:block/cascade_particle_emitter/off"
+    },
+    "powered=true": {
+      "model": "westerosblocks:block/cascade_particle_emitter/on"
+    }
+  }
+}

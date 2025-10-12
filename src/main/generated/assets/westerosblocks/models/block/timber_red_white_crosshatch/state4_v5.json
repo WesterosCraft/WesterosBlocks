@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/plaster/wattle/white_daub_light/all",
+    "east": "westerosblocks:block/plaster/wattle/white_daub_light/all",
+    "north": "westerosblocks:block/plaster/wattle/white_daub_light/all",
+    "particle": "westerosblocks:block/plaster/wattle/white_daub_light/all",
+    "south": "westerosblocks:block/plaster/wattle/white_daub_light/all",
+    "up": "westerosblocks:block/wood/red/all",
+    "west": "westerosblocks:block/plaster/wattle/white_daub_light/all"
+  }
+}
