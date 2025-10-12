@@ -674,7 +674,7 @@ public class ModBlocks {
 
     // Arrow Slit Blocks
     public static final Block ARBOR_BRICK_ARROW_SLIT = registerBlock(
-            "arbor_brick_arrow_slit",
+            "arbor_brick_arrow_slit_test",
             BlockBuilder.arrowSlit()
                     .strength(2.0f)
                     .requiresTool()

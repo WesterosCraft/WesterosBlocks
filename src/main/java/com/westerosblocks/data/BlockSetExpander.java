@@ -516,6 +516,7 @@ public class BlockSetExpander {
     private static void addWindowGeometry(Map<String, Object> defMap) {
         defMap.put("nonOpaque", true);
         defMap.put("lightOpacity", 0);
+        defMap.put("renderLayer", "cutout");
         // Collision boxes and support boxes would be added here
     }
 
