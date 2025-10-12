@@ -12,7 +12,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class ModBlockEntities {
     public static HashMap<String, BlockEntityType<?>> customEntitiesByName = new HashMap<>();
@@ -29,27 +28,18 @@ public class ModBlockEntities {
             return;
         }
 
-        Map<String, Block> furnaceBlocks = new HashMap<>();
-
-        // Find all furnace block definitions
-        for (BlockDefinition definition : registry.getAllDefinitions()) {
-            if (definition == null || !"furnace".equals(definition.getBlockType())) continue;
-
-            Block currentBlock = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
-            if (currentBlock != null) {
-                furnaceBlocks.put(definition.getBlockName(), currentBlock);
+        // Get all furnace block definitions directly by type
+        for (BlockDefinition definition : registry.getByType("furnace")) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block != null) {
+                BlockEntityType<?> blockEntityType = register(definition.getBlockName(),
+                        BlockEntityType.Builder.create(
+                                (pos, state) -> new WCFurnaceBlockEntity(pos, state, definition.getBlockName()),
+                                block
+                        ).build(null)
+                );
+                customEntitiesByName.put(definition.getBlockName(), blockEntityType);
             }
-        }
-
-        // Register the block entities for each furnace block
-        for (Map.Entry<String, Block> entry : furnaceBlocks.entrySet()) {
-            BlockEntityType<?> blockEntityType = register(entry.getKey(),
-                    BlockEntityType.Builder.create(
-                            (pos, state) -> new WCFurnaceBlockEntity(pos, state, entry.getKey()),
-                            entry.getValue()
-                    ).build(null)
-            );
-            customEntitiesByName.put(entry.getKey(), blockEntityType);
         }
     }
 
