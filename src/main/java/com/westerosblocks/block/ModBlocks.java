@@ -531,6 +531,14 @@ public class ModBlocks {
                             .nonOpaque()
                             .build();
 
+                case "sand":
+                    return BlockBuilder.sand()
+                            .hardness(definition.getHardness())
+                            .resistance(definition.getResistance())
+                            .requiresTool()
+                            .sounds(soundGroup)
+                            .build();
+
 //                case "chair":
 //                    return BlockBuilder.chair()
 //                        .strength(definition.getStrength())

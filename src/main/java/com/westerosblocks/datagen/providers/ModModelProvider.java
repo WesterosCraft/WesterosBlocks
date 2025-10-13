@@ -83,6 +83,7 @@ public class ModModelProvider extends FabricModelProvider {
         try {
             switch (blockType.toLowerCase()) {
                 case "solid":
+                case "sand":
                     SolidBlockExporter.registerCustomSolidBlock(bsmg, block, definition);
                     break;
 

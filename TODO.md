@@ -5,3 +5,4 @@ TODO
 - branch blocks need testing and feedback
 ~~- furnace needs particle~~
 - should Sand Block extend FallingBlock or ColoredFallingBlock?
+- convert all colorMult/colormaps
