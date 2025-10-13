@@ -1,0 +1,10 @@
+{
+  "colormap": "westerosblocks:sand",
+  "targets": [
+    "westerosblocks:desert_sand",
+    "westerosblocks:desert_sand_layer",
+    "westerosblocks:sand_skeleton",
+    "westerosblocks:sand_stones",
+    "westerosblocks:sand_stones_layer"
+  ]
+}

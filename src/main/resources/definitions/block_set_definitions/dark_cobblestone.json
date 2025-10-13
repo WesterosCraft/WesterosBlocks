@@ -21,7 +21,7 @@
     ],
     "creativeTab": "westeros_cobblestone_tab",
     "baseLabel": "Dark Cobblestone Green Grey",
-    "colorMult": "textures/colormap/darkcobble",
+    "colorMult": "textures/colormap/dark_cobble",
     "textures": {
         "all": "cobblestone_dark/green_grey/all"
     }

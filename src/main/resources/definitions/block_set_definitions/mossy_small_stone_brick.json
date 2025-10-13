@@ -21,7 +21,7 @@
     ],
     "creativeTab": "westeros_quarter_ashlar_tab",
     "baseLabel": "Quarter Ashlar Green Grey Mossy",
-    "colorMult": "textures/colormap/smallstonebrick",
+    "colorMult": "textures/colormap/small_stone_brick",
     "textures": {
         "all": "ashlar_quarter/green_grey_mossy/all"
     }

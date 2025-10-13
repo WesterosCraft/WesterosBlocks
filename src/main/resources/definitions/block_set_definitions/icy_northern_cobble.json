@@ -21,7 +21,7 @@
     ],
     "creativeTab": "westeros_cobblestone_tab",
     "baseLabel": "Icy Northern Rubble",
-    "colorMult": "textures/colormap/darkcobble",
+    "colorMult": "textures/colormap/dark_cobble",
     "randomTextures": [
         {
             "textures": {

@@ -24,7 +24,7 @@
     ],
     "creativeTab": "westeros_fieldstone_tab",
     "baseLabel": "Fieldstone Light Grey",
-    "colorMult": "textures/colormap/faintlightgreystone",
+    "colorMult": "textures/colormap/faint_light_grey_stone",
     "textures": {
         "all": "fieldstone/light_grey/all",
         "arrow-slit": "fieldstone/light_grey/arrow_slit",

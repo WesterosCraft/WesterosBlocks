@@ -1,5 +1,6 @@
 {
     "ambientocclusion": false,
+    "gui_light": "front",
     "textures": {
         "particle": "#cross"
     },

@@ -16,7 +16,7 @@
     ],
     "creativeTab": "westeros_sand_gravel_tab",
     "baseLabel": "Pebbles Wet Eastern Islands",
-    "colorMult": "textures/colormap/easternisland",
+    "colorMult": "textures/colormap/eastern_island",
     "randomTextures": [
         {
             "textures": {

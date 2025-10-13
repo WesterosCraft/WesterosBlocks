@@ -21,7 +21,7 @@
     ],
     "creativeTab": "westeros_cobblestone_tab",
     "baseLabel": "River Rubble",
-    "colorMult": "textures/colormap/lightgreystone",
+    "colorMult": "textures/colormap/light_grey_stone",
     "randomTextures": [
         {
             "textures": {

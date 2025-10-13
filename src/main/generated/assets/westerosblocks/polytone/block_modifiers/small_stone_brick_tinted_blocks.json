@@ -1,0 +1,23 @@
+{
+  "colormap": "westerosblocks:small_stone_brick",
+  "targets": [
+    "westerosblocks:grey_keystone",
+    "westerosblocks:mossy_small_stone_brick",
+    "westerosblocks:mossy_small_stone_brick_fence",
+    "westerosblocks:mossy_small_stone_brick_hopper",
+    "westerosblocks:mossy_small_stone_brick_slab",
+    "westerosblocks:mossy_small_stone_brick_stairs",
+    "westerosblocks:mossy_small_stone_brick_tip",
+    "westerosblocks:mossy_small_stone_brick_wall",
+    "westerosblocks:small_stone_brick",
+    "westerosblocks:small_stone_brick_arrow_slit",
+    "westerosblocks:small_stone_brick_arrow_slit_ornate",
+    "westerosblocks:small_stone_brick_arrow_slit_window",
+    "westerosblocks:small_stone_brick_fence",
+    "westerosblocks:small_stone_brick_hopper",
+    "westerosblocks:small_stone_brick_slab",
+    "westerosblocks:small_stone_brick_stairs",
+    "westerosblocks:small_stone_brick_tip",
+    "westerosblocks:small_stone_brick_wall"
+  ]
+}

@@ -24,7 +24,7 @@
     ],
     "creativeTab": "westeros_quarter_ashlar_tab",
     "baseLabel": "Quarter Rounded Ashlar Normal Grey",
-    "colorMult": "textures/colormap/smallsmoothstonebrick",
+    "colorMult": "textures/colormap/small_smooth_stone_brick",
     "textures": {
         "all": "ashlar_quarter_rounded/grey/all",
         "arrow-slit": "ashlar_quarter_rounded/grey/arrow_slit",

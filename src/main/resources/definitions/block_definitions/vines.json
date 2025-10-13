@@ -131,7 +131,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Vines",
-    "colorMult": "textures/colormap/foliagevine",
+    "colorMult": "textures/colormap/foliage_vine",
     "renderLayer": "cutout",
     "allowUnsupported": true,
     "hasClimb": true,

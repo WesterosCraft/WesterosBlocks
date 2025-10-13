@@ -838,7 +838,7 @@
       "zMax": 0.7
     },
     "label": "Dead Bush",
-    "colorMult": "textures/colormap/deadbush",
+    "colorMult": "textures/colormap/dead_bush",
     "randomTextures": [
       {
         "textures": [

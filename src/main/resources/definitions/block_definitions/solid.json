@@ -1195,7 +1195,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Grey Keystone",
-    "colorMult": "textures/colormap/smallstonebrick",
+    "colorMult": "textures/colormap/small_stone_brick",
     "textures": [
       "stone_block/keystone_grey"
     ]

@@ -1,0 +1,15 @@
+{
+  "colormap": "westerosblocks:small_smooth_stone_brick",
+  "targets": [
+    "westerosblocks:small_smooth_stone_brick",
+    "westerosblocks:small_smooth_stone_brick_arrow_slit",
+    "westerosblocks:small_smooth_stone_brick_arrow_slit_ornate",
+    "westerosblocks:small_smooth_stone_brick_arrow_slit_window",
+    "westerosblocks:small_smooth_stone_brick_fence",
+    "westerosblocks:small_smooth_stone_brick_hopper",
+    "westerosblocks:small_smooth_stone_brick_slab",
+    "westerosblocks:small_smooth_stone_brick_stairs",
+    "westerosblocks:small_smooth_stone_brick_tip",
+    "westerosblocks:small_smooth_stone_brick_wall"
+  ]
+}

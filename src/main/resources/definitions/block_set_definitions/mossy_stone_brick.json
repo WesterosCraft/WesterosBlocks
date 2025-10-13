@@ -24,7 +24,7 @@
     ],
     "creativeTab": "westeros_half_ashlar_tab",
     "baseLabel": "Half Ashlar Normal Grey Mossy",
-    "colorMult": "textures/colormap/stonebrick",
+    "colorMult": "textures/colormap/stone_brick",
     "textures": {
         "all": "ashlar_half/grey_mossy/all",
         "arrow-slit": "ashlar_half/grey_mossy/arrow_slit",
