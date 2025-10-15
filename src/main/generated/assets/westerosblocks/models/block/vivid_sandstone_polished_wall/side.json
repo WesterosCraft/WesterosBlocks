@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side",
-  "textures": {
-    "bottom": "westerosblocks:block/ashlar_full/tan/all",
-    "particle": "westerosblocks:block/ashlar_full/tan/all",
-    "side": "westerosblocks:block/ashlar_full/tan/all",
-    "top": "westerosblocks:block/ashlar_full/tan/all"
-  }
-}

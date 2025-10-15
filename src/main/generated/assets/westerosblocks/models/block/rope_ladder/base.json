@@ -1,7 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/ladder",
-  "textures": {
-    "particle": "westerosblocks:block/rope_ladder/side",
-    "texture": "westerosblocks:block/rope_ladder/side"
-  }
-}

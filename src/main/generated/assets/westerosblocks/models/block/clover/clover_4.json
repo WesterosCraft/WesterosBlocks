@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/flowerbed_4",
-  "textures": {
-    "flowerbed": "westerosblocks:block/flowerbed/clover",
-    "stem": "westerosblocks:block/flowerbed/clover_stem"
-  }
-}

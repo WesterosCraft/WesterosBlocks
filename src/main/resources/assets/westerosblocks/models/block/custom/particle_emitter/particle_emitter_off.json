@@ -1,6 +1,6 @@
 {
   "textures": {
-    "0": "westerosblocks:block/particle_emitter/off",
+    "all": "westerosblocks:block/particle_emitter/off",
     "particle": "westerosblocks:block/particle_emitter/off"
   },
   "elements": [
@@ -8,12 +8,12 @@
       "from": [4, 4, 4],
       "to": [12, 12, 12],
       "faces": {
-        "north": {"uv": [4, 4, 12, 12], "texture": "#0"},
-        "east": {"uv": [4, 4, 12, 12], "texture": "#0"},
-        "south": {"uv": [4, 4, 12, 12], "texture": "#0"},
-        "west": {"uv": [4, 4, 12, 12], "texture": "#0"},
-        "up": {"uv": [4, 4, 12, 12], "texture": "#0"},
-        "down": {"uv": [4, 4, 12, 12], "texture": "#0"}
+        "north": {"uv": [4, 4, 12, 12], "texture": "#all"},
+        "east": {"uv": [4, 4, 12, 12], "texture": "#all"},
+        "south": {"uv": [4, 4, 12, 12], "texture": "#all"},
+        "west": {"uv": [4, 4, 12, 12], "texture": "#all"},
+        "up": {"uv": [4, 4, 12, 12], "texture": "#all"},
+        "down": {"uv": [4, 4, 12, 12], "texture": "#all"}
       }
     }
   ]

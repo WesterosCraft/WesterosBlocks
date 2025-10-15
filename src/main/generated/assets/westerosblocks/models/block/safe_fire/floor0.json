@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_fire_floor",
-  "textures": {
-    "fire": "westerosblocks:block/safe_fire/fire_layer_0"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/outer_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/ice_medium_light/ice_medium_light",
-    "particle": "westerosblocks:block/ice_medium_light/ice_medium_light",
-    "side": "westerosblocks:block/ice_medium_light/ice_medium_light",
-    "top": "westerosblocks:block/ice_medium_light/ice_medium_light"
-  }
-}

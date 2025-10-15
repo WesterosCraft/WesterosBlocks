@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_side",
-  "textures": {
-    "bottom": "westerosblocks:block/ashlar_quarter_rounded/light_grey/all",
-    "particle": "westerosblocks:block/ashlar_quarter_rounded/light_grey/all",
-    "side": "westerosblocks:block/ashlar_quarter_rounded/light_grey/all",
-    "top": "westerosblocks:block/ashlar_quarter_rounded/light_grey/all"
-  }
-}

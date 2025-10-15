@@ -539,6 +539,17 @@ public class ModBlocks {
                             .sounds(soundGroup)
                             .build();
 
+                case "particle":
+                    return BlockBuilder.particleEmitter()
+                            .hardness(definition.getHardness())
+                            .resistance(definition.getResistance())
+                            .sounds(soundGroup)
+                            .nonOpaque(true)
+                            .noCollision(true)
+                            .particle(definition.getParticle())
+                            .luminance(state -> definition.getLuminance())
+                            .build();
+
 //                case "chair":
 //                    return BlockBuilder.chair()
 //                        .strength(definition.getStrength())
@@ -691,38 +702,38 @@ public class ModBlocks {
 
 
     // Particle Emitter Blocks
-    public static final Block CASCADE_PARTICLE_EMITTER = registerBlock(
-            "cascade_particle_emitter",
-            BlockBuilder.particleEmitter()
-                    .strength(-1.0f)
-                    .resistance(3600000.0f)
-                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
-                    .noCollision()
-                    .nonOpaque()
-                    .particle("cascade")
-                    .build());
-
-    public static final Block COSY_SMOKE_PARTICLE_EMITTER = registerBlock(
-            "cosy_smoke_particle_emitter",
-            BlockBuilder.particleEmitter()
-                    .strength(-1.0f)
-                    .resistance(3600000.0f)
-                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
-                    .noCollision()
-                    .nonOpaque()
-                    .particle("cosy_smoke")
-                    .build());
-
-    public static final Block SIGNAL_SMOKE_PARTICLE_EMITTER = registerBlock(
-            "signal_smoke_particle_emitter",
-            BlockBuilder.particleEmitter()
-                    .strength(-1.0f)
-                    .resistance(3600000.0f)
-                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
-                    .noCollision()
-                    .nonOpaque()
-                    .particle("signal_smoke")
-                    .build());
+//    public static final Block CASCADE_PARTICLE_EMITTER = registerBlock(
+//            "cascade_particle_emitter",
+//            BlockBuilder.particleEmitter()
+//                    .strength(-1.0f)
+//                    .resistance(3600000.0f)
+//                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+//                    .noCollision()
+//                    .nonOpaque()
+//                    .particle("cascade")
+//                    .build());
+//
+//    public static final Block COSY_SMOKE_PARTICLE_EMITTER = registerBlock(
+//            "cosy_smoke_particle_emitter",
+//            BlockBuilder.particleEmitter()
+//                    .strength(-1.0f)
+//                    .resistance(3600000.0f)
+//                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+//                    .noCollision()
+//                    .nonOpaque()
+//                    .particle("cosy_smoke")
+//                    .build());
+//
+//    public static final Block SIGNAL_SMOKE_PARTICLE_EMITTER = registerBlock(
+//            "signal_smoke_particle_emitter",
+//            BlockBuilder.particleEmitter()
+//                    .strength(-1.0f)
+//                    .resistance(3600000.0f)
+//                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+//                    .noCollision()
+//                    .nonOpaque()
+//                    .particle("signal_smoke")
+//                    .build());
 
     // Flowerbed Blocks
     public static final Block CLOVER = registerBlock(

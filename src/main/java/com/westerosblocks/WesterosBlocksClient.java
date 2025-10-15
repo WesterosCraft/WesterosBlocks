@@ -8,6 +8,7 @@ import com.westerosblocks.entity.client.ChairRenderer;
 import com.westerosblocks.item.ModItems;
 import com.westerosblocks.item.client.ModShieldRenderer;
 import com.westerosblocks.item.custom.ModShieldItem;
+import com.westerosblocks.particle.ModParticles;
 import mod.azure.azurelib.rewrite.render.item.AzItemRendererRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.registry.Registries;
@@ -25,10 +26,6 @@ public class WesterosBlocksClient implements ClientModInitializer {
         // flowerbed blocks
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CLOVER, RenderLayer.getCutout());
 
-        // Particle Emitter Blocks
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CASCADE_PARTICLE_EMITTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COSY_SMOKE_PARTICLE_EMITTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SIGNAL_SMOKE_PARTICLE_EMITTER, RenderLayer.getCutout());
 
         // Shields Azurelib
         AzItemRendererRegistry.register(ModItems.TARGARYEN_HEATER_SHIELD,
@@ -81,6 +78,7 @@ public class WesterosBlocksClient implements ClientModInitializer {
 
         // Apply render layers from block definitions
         applyRenderLayersFromDefinitions();
+        ModParticles.initializeClient();
     }
 
     private void applyRenderLayersFromDefinitions() {

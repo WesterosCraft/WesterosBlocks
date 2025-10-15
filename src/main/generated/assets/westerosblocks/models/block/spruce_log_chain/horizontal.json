@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column_horizontal",
-  "textures": {
-    "end": "westerosblocks:block/bark/spruce/top",
-    "side": "westerosblocks:block/bark/spruce/chain"
-  }
-}

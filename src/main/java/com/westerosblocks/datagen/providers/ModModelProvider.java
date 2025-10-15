@@ -51,11 +51,6 @@ public class ModModelProvider extends FabricModelProvider {
                 .stemTexture("flowerbed/clover_stem")
                 .flowerTexture("flowerbed/clover")
                 .build();
-
-        // Particle Emitter Blocks
-        ParticleEmitterExporter.registerCustomParticleEmitterBlock(bsmg, ModBlocks.CASCADE_PARTICLE_EMITTER, "cascade_particle_emitter");
-        ParticleEmitterExporter.registerCustomParticleEmitterBlock(bsmg, ModBlocks.COSY_SMOKE_PARTICLE_EMITTER, "cosy_smoke_particle_emitter");
-        ParticleEmitterExporter.registerCustomParticleEmitterBlock(bsmg, ModBlocks.SIGNAL_SMOKE_PARTICLE_EMITTER, "signal_smoke_particle_emitter");
     }
 
     private void generateModelsFromDefinitions(BlockStateModelGenerator bsmg) {
@@ -206,6 +201,10 @@ public class ModModelProvider extends FabricModelProvider {
 
                 case "layer":
                     LayerBlockExporter.registerCustomLayerBlock(bsmg, block, definition);
+                    break;
+
+                case "particle":
+                    ParticleEmitterExporter.registerCustomParticleEmitterBlock(bsmg, block, definition);
                     break;
 
                 default:
