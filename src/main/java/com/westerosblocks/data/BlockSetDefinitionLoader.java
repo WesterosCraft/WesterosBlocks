@@ -4,12 +4,12 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.westerosblocks.WesterosBlocks;
+import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.loader.api.ModContainer;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Stream;
@@ -19,10 +19,10 @@ import java.util.stream.Stream;
  */
 public class BlockSetDefinitionLoader {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
-    private final Path blockSetDefinitionsPath;
+    private final String blockSetDefinitionsPath;
 
     public BlockSetDefinitionLoader(String blockSetDefinitionsPath) {
-        this.blockSetDefinitionsPath = Paths.get(blockSetDefinitionsPath);
+        this.blockSetDefinitionsPath = blockSetDefinitionsPath;
     }
 
     /**
@@ -46,36 +46,30 @@ public class BlockSetDefinitionLoader {
     }
 
     private void loadDefinitionsFromResources(Map<String, BlockSetDefinition> definitions) throws Exception {
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        ModContainer container = FabricLoader.getInstance().getModContainer(WesterosBlocks.MOD_ID).orElse(null);
+        if (container == null) {
+            WesterosBlocks.LOGGER.error("Could not find mod container for {}", WesterosBlocks.MOD_ID);
+            return;
+        }
 
-        // Try to find the block_set_definitions directory
-        String[] resourcePaths = {
-            "definitions/block_set_definitions",
-            "assets/westerosblocks/definitions/block_set_definitions",
-            "data/westerosblocks/definitions/block_set_definitions"
-        };
+        // For each root path in the mod jar/directory
+        for (Path rootPath : container.getRootPaths()) {
+            // Remove leading slash if present and resolve path
+            String pathWithoutSlash = blockSetDefinitionsPath.startsWith("/")
+                ? blockSetDefinitionsPath.substring(1)
+                : blockSetDefinitionsPath;
+            Path dirPath = rootPath.resolve(pathWithoutSlash);
 
-        for (String resourcePath : resourcePaths) {
-            java.net.URL resourceUrl = classLoader.getResource(resourcePath);
-            if (resourceUrl != null) {
-                loadDefinitionsFromResourcePath(resourceUrl, definitions);
-                return;
+            if (Files.exists(dirPath) && Files.isDirectory(dirPath)) {
+                WesterosBlocks.LOGGER.debug("Loading block set definitions from: {}", dirPath);
+                loadDefinitionsRecursively(dirPath, definitions);
+            } else {
+                WesterosBlocks.LOGGER.debug("Block set definitions directory not found at: {}", dirPath);
             }
         }
 
-        WesterosBlocks.LOGGER.warn("Could not find block_set_definitions in resources. Tried paths: {}",
-            Arrays.toString(resourcePaths));
-    }
-
-    private void loadDefinitionsFromResourcePath(java.net.URL resourceUrl, Map<String, BlockSetDefinition> definitions) throws Exception {
-        if ("file".equals(resourceUrl.getProtocol())) {
-            // If it's a file URL, we can use the filesystem approach
-            Path resourceDir = Paths.get(resourceUrl.toURI());
-            loadDefinitionsRecursively(resourceDir, definitions);
-        } else {
-            WesterosBlocks.LOGGER.warn("Loading from JAR resources not yet fully implemented. Resource URL: {}", resourceUrl);
-            // For JAR files, we'd need a different approach (using JarFile API or resource manifest)
-            // For now, this is mainly for development where files are on the filesystem
+        if (definitions.isEmpty()) {
+            WesterosBlocks.LOGGER.warn("No block set definitions were loaded!");
         }
     }
 

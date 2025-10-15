@@ -4,11 +4,14 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.westerosblocks.WesterosBlocks;
+import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.loader.api.ModContainer;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -17,10 +20,10 @@ import java.util.stream.Stream;
 
 public class BlockDefinitionLoader {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
-    private final Path blockDefinitionsPath;
+    private final String blockDefinitionsPath;
 
     public BlockDefinitionLoader(String blockDefinitionsPath) {
-        this.blockDefinitionsPath = Paths.get(blockDefinitionsPath);
+        this.blockDefinitionsPath = blockDefinitionsPath;
     }
 
     public Map<String, BlockDefinition> loadAllDefinitions() {
@@ -39,92 +42,31 @@ public class BlockDefinitionLoader {
     }
 
     private void loadDefinitionsFromResources(Map<String, BlockDefinition> definitions) throws Exception {
-        // Get resource URL for the block_definitions directory
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-
-        // Try to find the block_definitions as a resource
-        try (var inputStream = classLoader.getResourceAsStream("definitions/block_definitions")) {
-            if (inputStream == null) {
-                // Try alternative resource paths
-                String[] resourcePaths = {
-                    "assets/westerosblocks/definitions/block_definitions",
-                    "data/westerosblocks/definitions/block_definitions",
-                    "block_definitions"
-                };
-
-                for (String resourcePath : resourcePaths) {
-                    try (var stream = classLoader.getResourceAsStream(resourcePath)) {
-                        if (stream != null) {
-                            WesterosBlocks.LOGGER.info("Found block definitions at resource path: {}", resourcePath);
-                            loadDefinitionsFromResourcePath(resourcePath, definitions);
-                            return;
-                        }
-                    }
-                }
-
-                WesterosBlocks.LOGGER.error("Could not find block_definitions in resources. Tried paths: {}",
-                    java.util.Arrays.toString(resourcePaths));
-                return;
-            }
-        }
-
-        // Load from the default path
-        loadDefinitionsFromResourcePath("definitions/block_definitions", definitions);
-    }
-
-    private void loadDefinitionsFromResourcePath(String resourcePath, Map<String, BlockDefinition> definitions) throws Exception {
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-
-        // Get all JSON files from the resource directory
-        // This is a bit tricky with resources, so we'll need to use a different approach
-        java.net.URL resourceUrl = classLoader.getResource(resourcePath);
-        if (resourceUrl == null) {
-            WesterosBlocks.LOGGER.error("Resource path not found: {}", resourcePath);
+        ModContainer container = FabricLoader.getInstance().getModContainer(WesterosBlocks.MOD_ID).orElse(null);
+        if (container == null) {
+            WesterosBlocks.LOGGER.error("Could not find mod container for {}", WesterosBlocks.MOD_ID);
             return;
         }
 
-        if ("file".equals(resourceUrl.getProtocol())) {
-            // If it's a file URL, we can use the filesystem approach
-            Path resourceDir = Paths.get(resourceUrl.toURI());
-            loadDefinitionsRecursively(resourceDir, definitions);
-        } else {
-            // If it's in a JAR, we need to handle it differently
-            WesterosBlocks.LOGGER.warn("Loading from JAR resources not yet implemented. Resource URL: {}", resourceUrl);
-            // For now, fall back to manual resource loading for known files
-            loadKnownResourceFiles(resourcePath, definitions);
-        }
-    }
+        // For each root path in the mod jar/directory
+        for (Path rootPath : container.getRootPaths()) {
+            // Remove leading slash if present and resolve path
+            String pathWithoutSlash = blockDefinitionsPath.startsWith("/")
+                ? blockDefinitionsPath.substring(1)
+                : blockDefinitionsPath;
+            Path dirPath = rootPath.resolve(pathWithoutSlash);
 
-    private void loadKnownResourceFiles(String basePath, Map<String, BlockDefinition> definitions) {
-        // List of known subdirectories in block_definitions
-        String[] blockTypes = {
-            "solid", "door", "log", "plant", "flowerpot", "web"
-//                ,"slab", "halfdoor", "pane", "torch",
-//            "chair", "table", "branch", "beacon", "bed", "crop", "fan",
-//            "fence", "fencegate", "fire", "furnace", "ladder",
-//            "leaves", "particle", "rail", "vines", "wall"
-        };
-
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-
-        for (String blockType : blockTypes) {
-            String typePath = basePath + "/" + blockType;
-
-            // Try to get the directory listing (this won't work in JARs)
-            try (var inputStream = classLoader.getResourceAsStream(typePath)) {
-                if (inputStream != null) {
-                    WesterosBlocks.LOGGER.debug("Found block type directory: {}", typePath);
-                    // Unfortunately, we can't easily list files in a JAR resource
-                    // This would need a more sophisticated approach using reflection or
-                    // creating a manifest of all JSON files
-                }
-            } catch (Exception e) {
-                WesterosBlocks.LOGGER.debug("Could not access resource directory: {}", typePath);
+            if (Files.exists(dirPath) && Files.isDirectory(dirPath)) {
+                WesterosBlocks.LOGGER.debug("Loading block definitions from: {}", dirPath);
+                loadDefinitionsRecursively(dirPath, definitions);
+            } else {
+                WesterosBlocks.LOGGER.debug("Block definitions directory not found at: {}", dirPath);
             }
         }
 
-        WesterosBlocks.LOGGER.warn("Resource-based loading needs enhancement for JAR files. " +
-            "Consider using filesystem approach during development.");
+        if (definitions.isEmpty()) {
+            WesterosBlocks.LOGGER.warn("No individual block definitions were loaded!");
+        }
     }
 
     private void loadDefinitionsRecursively(Path directory, Map<String, BlockDefinition> definitions) throws IOException {

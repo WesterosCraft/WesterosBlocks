@@ -356,7 +356,6 @@ public class BlockBuilder<T extends Block> {
         return this;
     }
 
-
     public BlockBuilder<T> boundingBox(double xMin, double yMin, double zMin, double xMax, double yMax, double zMax) {
         Map<String, Object> boundingBoxMap = new java.util.HashMap<>();
         boundingBoxMap.put("xMin", xMin);

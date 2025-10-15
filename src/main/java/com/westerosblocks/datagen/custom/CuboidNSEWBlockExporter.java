@@ -67,10 +67,10 @@ public class CuboidNSEWBlockExporter extends BaseBlockExporter {
 
         // Generate blockstate with facing variants
         BlockStateVariantMap variants = BlockStateVariantMap.create(WCCuboidNSEWBlock.FACING)
-            .register(Direction.NORTH, createVariant(modelId, 0))
-            .register(Direction.EAST, createVariant(modelId, 90))
-            .register(Direction.SOUTH, createVariant(modelId, 180))
-            .register(Direction.WEST, createVariant(modelId, 270));
+            .register(Direction.EAST, createVariant(modelId, 0))
+            .register(Direction.SOUTH, createVariant(modelId, 90))
+            .register(Direction.WEST, createVariant(modelId, 180))
+            .register(Direction.NORTH, createVariant(modelId, 270));
 
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
         registerParentedItemModel(generator, block, modelId);
@@ -103,16 +103,16 @@ public class CuboidNSEWBlockExporter extends BaseBlockExporter {
         }
 
         // Create facing variants with random model selection
-        List<BlockStateVariant> northVariants = modelIds.stream().map(id -> createVariant(id, 0)).toList();
-        List<BlockStateVariant> eastVariants = modelIds.stream().map(id -> createVariant(id, 90)).toList();
-        List<BlockStateVariant> southVariants = modelIds.stream().map(id -> createVariant(id, 180)).toList();
-        List<BlockStateVariant> westVariants = modelIds.stream().map(id -> createVariant(id, 270)).toList();
+        List<BlockStateVariant> eastVariants = modelIds.stream().map(id -> createVariant(id, 0)).toList();
+        List<BlockStateVariant> southVariants = modelIds.stream().map(id -> createVariant(id, 90)).toList();
+        List<BlockStateVariant> westVariants = modelIds.stream().map(id -> createVariant(id, 180)).toList();
+        List<BlockStateVariant> northVariants = modelIds.stream().map(id -> createVariant(id, 270)).toList();
 
         BlockStateVariantMap variants = BlockStateVariantMap.create(WCCuboidNSEWBlock.FACING)
-            .register(Direction.NORTH, northVariants)
             .register(Direction.EAST, eastVariants)
             .register(Direction.SOUTH, southVariants)
-            .register(Direction.WEST, westVariants);
+            .register(Direction.WEST, westVariants)
+            .register(Direction.NORTH, northVariants);
 
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
 
@@ -231,24 +231,24 @@ public class CuboidNSEWBlockExporter extends BaseBlockExporter {
 
                 // For rotateRandom + facing blocks, we apply rotations to each facing direction
                 BlockStateVariantMap variants = BlockStateVariantMap.create(WCCuboidNSEWBlock.FACING)
-                    .register(Direction.NORTH, allVariants)
                     .register(Direction.EAST, allVariants)
                     .register(Direction.SOUTH, allVariants)
-                    .register(Direction.WEST, allVariants);
+                    .register(Direction.WEST, allVariants)
+                    .register(Direction.NORTH, allVariants);
 
                 generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
             } else {
                 // Normal random texture variants with facing rotations
-                List<BlockStateVariant> northVariants = modelIds.stream().map(id -> createVariant(id, 0)).toList();
-                List<BlockStateVariant> eastVariants = modelIds.stream().map(id -> createVariant(id, 90)).toList();
-                List<BlockStateVariant> southVariants = modelIds.stream().map(id -> createVariant(id, 180)).toList();
-                List<BlockStateVariant> westVariants = modelIds.stream().map(id -> createVariant(id, 270)).toList();
+                List<BlockStateVariant> eastVariants = modelIds.stream().map(id -> createVariant(id, 0)).toList();
+                List<BlockStateVariant> southVariants = modelIds.stream().map(id -> createVariant(id, 90)).toList();
+                List<BlockStateVariant> westVariants = modelIds.stream().map(id -> createVariant(id, 180)).toList();
+                List<BlockStateVariant> northVariants = modelIds.stream().map(id -> createVariant(id, 270)).toList();
 
                 BlockStateVariantMap variants = BlockStateVariantMap.create(WCCuboidNSEWBlock.FACING)
-                    .register(Direction.NORTH, northVariants)
                     .register(Direction.EAST, eastVariants)
                     .register(Direction.SOUTH, southVariants)
-                    .register(Direction.WEST, westVariants);
+                    .register(Direction.WEST, westVariants)
+                    .register(Direction.NORTH, northVariants);
 
                 generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
             }
@@ -267,10 +267,10 @@ public class CuboidNSEWBlockExporter extends BaseBlockExporter {
             }
 
             BlockStateVariantMap variants = BlockStateVariantMap.create(WCCuboidNSEWBlock.FACING)
-                .register(Direction.NORTH, createVariant(modelId, 0))
-                .register(Direction.EAST, createVariant(modelId, 90))
-                .register(Direction.SOUTH, createVariant(modelId, 180))
-                .register(Direction.WEST, createVariant(modelId, 270));
+                .register(Direction.EAST, createVariant(modelId, 0))
+                .register(Direction.SOUTH, createVariant(modelId, 90))
+                .register(Direction.WEST, createVariant(modelId, 180))
+                .register(Direction.NORTH, createVariant(modelId, 270));
 
             generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
             registerParentedItemModel(generator, block, modelId);
@@ -288,10 +288,10 @@ public class CuboidNSEWBlockExporter extends BaseBlockExporter {
         Identifier modelId = Models.CUBE_ALL.upload(createGeneratedModelId(block, "base_v1"), textureMap, generator.modelCollector);
 
         BlockStateVariantMap variants = BlockStateVariantMap.create(WCCuboidNSEWBlock.FACING)
-            .register(Direction.NORTH, createVariant(modelId, 0))
-            .register(Direction.EAST, createVariant(modelId, 90))
-            .register(Direction.SOUTH, createVariant(modelId, 180))
-            .register(Direction.WEST, createVariant(modelId, 270));
+            .register(Direction.EAST, createVariant(modelId, 0))
+            .register(Direction.SOUTH, createVariant(modelId, 90))
+            .register(Direction.WEST, createVariant(modelId, 180))
+            .register(Direction.NORTH, createVariant(modelId, 270));
 
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
         registerParentedItemModel(generator, block, modelId);
@@ -358,10 +358,10 @@ public class CuboidNSEWBlockExporter extends BaseBlockExporter {
             // Fallback to simple facing-only variants if no STATE property
             Identifier modelId = modelIds.get(0);
             BlockStateVariantMap variants = BlockStateVariantMap.create(WCCuboidNSEWBlock.FACING)
-                .register(Direction.NORTH, createVariant(modelId, 0))
-                .register(Direction.EAST, createVariant(modelId, 90))
-                .register(Direction.SOUTH, createVariant(modelId, 180))
-                .register(Direction.WEST, createVariant(modelId, 270));
+                .register(Direction.EAST, createVariant(modelId, 0))
+                .register(Direction.SOUTH, createVariant(modelId, 90))
+                .register(Direction.WEST, createVariant(modelId, 180))
+                .register(Direction.NORTH, createVariant(modelId, 270));
 
             return VariantsBlockStateSupplier.create(block).coordinate(variants);
         }
@@ -397,24 +397,24 @@ public class CuboidNSEWBlockExporter extends BaseBlockExporter {
                     Identifier modelId = modelIds.get(i);
 
                     // Add variants for each facing direction for this state
-                    JsonObject northVariant = new JsonObject();
-                    northVariant.addProperty("model", modelId.toString());
-                    variants.add("facing=north,state=" + stateValue, northVariant);
-
                     JsonObject eastVariant = new JsonObject();
                     eastVariant.addProperty("model", modelId.toString());
-                    eastVariant.addProperty("y", 90);
                     variants.add("facing=east,state=" + stateValue, eastVariant);
 
                     JsonObject southVariant = new JsonObject();
                     southVariant.addProperty("model", modelId.toString());
-                    southVariant.addProperty("y", 180);
+                    southVariant.addProperty("y", 90);
                     variants.add("facing=south,state=" + stateValue, southVariant);
 
                     JsonObject westVariant = new JsonObject();
                     westVariant.addProperty("model", modelId.toString());
-                    westVariant.addProperty("y", 270);
+                    westVariant.addProperty("y", 180);
                     variants.add("facing=west,state=" + stateValue, westVariant);
+
+                    JsonObject northVariant = new JsonObject();
+                    northVariant.addProperty("model", modelId.toString());
+                    northVariant.addProperty("y", 270);
+                    variants.add("facing=north,state=" + stateValue, northVariant);
                 }
 
                 json.add("variants", variants);
