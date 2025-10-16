@@ -34,7 +34,7 @@ public class WesterosBlocks implements ModInitializer {
         ModBlocks.registerModBlocks();
         ModItems.registerModItems();
         ModSounds.registerSounds();
-        ModParticles.initialize();
+        ModParticles.registerParticles();
         ModBlockEntities.registerModEntities();
 
         // Export WorldPainter CSV if config option is enabled

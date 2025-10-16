@@ -8,7 +8,6 @@ import com.westerosblocks.entity.client.ChairRenderer;
 import com.westerosblocks.item.ModItems;
 import com.westerosblocks.item.client.ModShieldRenderer;
 import com.westerosblocks.item.custom.ModShieldItem;
-import com.westerosblocks.particle.ModParticles;
 import mod.azure.azurelib.rewrite.render.item.AzItemRendererRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.registry.Registries;
@@ -78,7 +77,6 @@ public class WesterosBlocksClient implements ClientModInitializer {
 
         // Apply render layers from block definitions
         applyRenderLayersFromDefinitions();
-        ModParticles.initializeClient();
     }
 
     private void applyRenderLayersFromDefinitions() {

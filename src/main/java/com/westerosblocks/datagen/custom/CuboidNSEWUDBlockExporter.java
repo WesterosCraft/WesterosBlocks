@@ -345,11 +345,18 @@ public class CuboidNSEWUDBlockExporter extends BaseBlockExporter {
                 List<BlockDefinition.CuboidElement> cuboids = definition.getCuboids();
 
                 if (cuboids != null && !cuboids.isEmpty()) {
+                    // Use defined cuboids
                     for (BlockDefinition.CuboidElement cuboid : cuboids) {
                         JsonObject element = new JsonObject();
                         addCuboidNSEWUDElement(element, cuboid, definition.isTinted());
                         elements.add(element);
                     }
+                } else if (definition.getBoundingBox() != null) {
+                    // Create single element from boundingBox
+                    BlockDefinition.BoundingBox bbox = definition.getBoundingBox();
+                    JsonObject element = new JsonObject();
+                    addCuboidNSEWUDElementFromBoundingBox(element, bbox, definition.isTinted());
+                    elements.add(element);
                 }
 
                 json.add("elements", elements);
@@ -383,22 +390,66 @@ public class CuboidNSEWUDBlockExporter extends BaseBlockExporter {
     }
 
     /**
+     * Adds a bounding box element to the model for NSEWUD blocks.
+     * This is used when no explicit cuboids array is defined but a boundingBox exists.
+     */
+    private static void addCuboidNSEWUDElementFromBoundingBox(JsonObject element, BlockDefinition.BoundingBox bbox, boolean isTinted) {
+        // Transform coordinates
+        JsonArray from = new JsonArray();
+        from.add(getClamped(bbox.getZMin()));        // new X = old Z
+        from.add(getClamped(bbox.getYMin()));        // new Y = old Y
+        from.add(16 - getClamped(bbox.getXMax()));   // new Z from = 16 - old X max
+        element.add("from", from);
+
+        JsonArray to = new JsonArray();
+        to.add(getClamped(bbox.getZMax()));          // new X = old Z
+        to.add(getClamped(bbox.getYMax()));          // new Y = old Y
+        to.add(16 - getClamped(bbox.getXMin()));     // new Z to = 16 - old X min
+        element.add("to", to);
+
+        // Add faces with default texture mapping
+        JsonObject faces = new JsonObject();
+        addBoundingBoxNSEWUDFaces(faces, bbox, isTinted);
+        element.add("faces", faces);
+    }
+
+    /**
      * Adds faces to a cuboid element for NSEWUD blocks.
+     * Default texture order: [down, up, west, east, south, north]
+     * Face processing order: [down, up, north, south, west, east]
+     * So default mapping: [0, 1, 5, 4, 2, 3]
      */
     private static void addCuboidNSEWUDFaces(JsonObject faces, BlockDefinition.CuboidElement cuboid, boolean isTinted) {
-        int[] sidetxt = cuboid.getSideTextures() != null ? cuboid.getSideTextures() : new int[]{0, 1, 2, 3, 4, 5};
+        int[] sidetxt = cuboid.getSideTextures() != null ? cuboid.getSideTextures() : new int[]{0, 1, 5, 4, 2, 3};
         boolean[] noTint = cuboid.getNoTint() != null ? cuboid.getNoTint() : new boolean[]{false, false, false, false, false, false};
         int[] siderot = cuboid.getSideRotations() != null ? cuboid.getSideRotations() : new int[]{0, 0, 0, 0, 0, 0};
 
-        // Add each face with transformed coordinates
-        // Original order: down(0), up(1), north(2), south(3), west(4), east(5)
-        // After transform: down(0), up(1), west(4), east(5), north(2), south(3)
+        // Add each face with texture mapping
+        // Face processing order: down(0), up(1), north(2), south(3), west(4), east(5)
+        // Default texture order: down(0), up(1), west(2), east(3), south(4), north(5)
         addFaceNSEWUD(faces, "down", 0, cuboid, sidetxt, noTint, siderot, isTinted);
         addFaceNSEWUD(faces, "up", 1, cuboid, sidetxt, noTint, siderot, isTinted);
         addFaceNSEWUD(faces, "north", 2, cuboid, sidetxt, noTint, siderot, isTinted);
         addFaceNSEWUD(faces, "south", 3, cuboid, sidetxt, noTint, siderot, isTinted);
         addFaceNSEWUD(faces, "west", 4, cuboid, sidetxt, noTint, siderot, isTinted);
         addFaceNSEWUD(faces, "east", 5, cuboid, sidetxt, noTint, siderot, isTinted);
+    }
+
+    /**
+     * Adds faces to a bounding box element for NSEWUD blocks using standard texture mapping.
+     */
+    private static void addBoundingBoxNSEWUDFaces(JsonObject faces, BlockDefinition.BoundingBox bbox, boolean isTinted) {
+        int[] sidetxt = new int[]{0, 1, 5, 4, 2, 3};  // Default: down, up, north, south, west, east maps to txt0-5
+        boolean[] noTint = new boolean[]{false, false, false, false, false, false};
+        int[] siderot = new int[]{0, 0, 0, 0, 0, 0};
+
+        // Add each face with texture mapping
+        addBoundingBoxFaceNSEWUD(faces, "down", 0, bbox, sidetxt, noTint, siderot, isTinted);
+        addBoundingBoxFaceNSEWUD(faces, "up", 1, bbox, sidetxt, noTint, siderot, isTinted);
+        addBoundingBoxFaceNSEWUD(faces, "north", 2, bbox, sidetxt, noTint, siderot, isTinted);
+        addBoundingBoxFaceNSEWUD(faces, "south", 3, bbox, sidetxt, noTint, siderot, isTinted);
+        addBoundingBoxFaceNSEWUD(faces, "west", 4, bbox, sidetxt, noTint, siderot, isTinted);
+        addBoundingBoxFaceNSEWUD(faces, "east", 5, bbox, sidetxt, noTint, siderot, isTinted);
     }
 
     /**
@@ -433,6 +484,45 @@ public class CuboidNSEWUDBlockExporter extends BaseBlockExporter {
 
         // Add cullface if needed
         String cullface = getCullfaceNSEWUD(face, cuboid);
+        if (cullface != null) {
+            faceObj.addProperty("cullface", cullface);
+        }
+
+        faces.add(face, faceObj);
+    }
+
+    /**
+     * Adds a single face to the faces object for bounding box elements in NSEWUD blocks.
+     */
+    private static void addBoundingBoxFaceNSEWUD(JsonObject faces, String face, int index,
+                                                  BlockDefinition.BoundingBox bbox, int[] sidetxt,
+                                                  boolean[] noTint, int[] siderot, boolean isTinted) {
+        JsonObject faceObj = new JsonObject();
+
+        // Set UV coordinates based on face
+        JsonArray uv = new JsonArray();
+        calculateBoundingBoxNSEWUDUVs(face, bbox, uv);
+        faceObj.add("uv", uv);
+
+        // Get correct texture key
+        faceObj.addProperty("texture", "#txt" + sidetxt[index]);
+
+        // Add rotation for down/up faces or from siderot array
+        if (face.equals("down") && siderot[index] == 0) {
+            faceObj.addProperty("rotation", 90);
+        } else if (face.equals("up") && siderot[index] == 0) {
+            faceObj.addProperty("rotation", 270);
+        } else if (siderot[index] != 0) {
+            faceObj.addProperty("rotation", siderot[index]);
+        }
+
+        // Add tint if needed
+        if (isTinted && !noTint[index]) {
+            faceObj.addProperty("tintindex", 0);
+        }
+
+        // Add cullface if needed
+        String cullface = getBoundingBoxCullfaceNSEWUD(face, bbox);
         if (cullface != null) {
             faceObj.addProperty("cullface", cullface);
         }
@@ -503,6 +593,67 @@ public class CuboidNSEWUDBlockExporter extends BaseBlockExporter {
             case "south" -> (16 - getClamped(cuboid.getXMin())) >= 16 ? "south" : null;  // newZ max = 16-oldX min
             case "west" -> cuboid.getZMin() <= 0 ? "west" : null;    // newX min = oldZ min
             case "east" -> cuboid.getZMax() >= 1 ? "east" : null;    // newX max = oldZ max
+            default -> null;
+        };
+    }
+
+    /**
+     * Calculates UV coordinates for a bounding box face for NSEWUD blocks.
+     * Accounts for coordinate transformation: newX=oldZ, newY=oldY, newZ=16-oldX.
+     */
+    private static void calculateBoundingBoxNSEWUDUVs(String face, BlockDefinition.BoundingBox bbox, JsonArray uv) {
+        switch (face) {
+            case "down" -> {
+                uv.add(getClamped(bbox.getZMin()));
+                uv.add(getClamped(bbox.getXMin()));
+                uv.add(getClamped(bbox.getZMax()));
+                uv.add(getClamped(bbox.getXMax()));
+            }
+            case "up" -> {
+                uv.add(getClamped(bbox.getZMin()));
+                uv.add(16 - getClamped(bbox.getXMax()));
+                uv.add(getClamped(bbox.getZMax()));
+                uv.add(16 - getClamped(bbox.getXMin()));
+            }
+            case "north" -> {
+                uv.add(getClamped(bbox.getZMin()));
+                uv.add(16 - getClamped(bbox.getYMax()));
+                uv.add(getClamped(bbox.getZMax()));
+                uv.add(16 - getClamped(bbox.getYMin()));
+            }
+            case "south" -> {
+                uv.add(getClamped(bbox.getZMin()));
+                uv.add(16 - getClamped(bbox.getYMax()));
+                uv.add(getClamped(bbox.getZMax()));
+                uv.add(16 - getClamped(bbox.getYMin()));
+            }
+            case "west" -> {
+                uv.add(16 - getClamped(bbox.getXMax()));
+                uv.add(16 - getClamped(bbox.getYMax()));
+                uv.add(16 - getClamped(bbox.getXMin()));
+                uv.add(16 - getClamped(bbox.getYMin()));
+            }
+            case "east" -> {
+                uv.add(getClamped(bbox.getXMin()));
+                uv.add(16 - getClamped(bbox.getYMax()));
+                uv.add(getClamped(bbox.getXMax()));
+                uv.add(16 - getClamped(bbox.getYMin()));
+            }
+        }
+    }
+
+    /**
+     * Gets the cullface for a bounding box face for NSEWUD blocks.
+     * Accounts for coordinate transformation: newX=oldZ, newY=oldY, newZ=16-oldX.
+     */
+    private static String getBoundingBoxCullfaceNSEWUD(String face, BlockDefinition.BoundingBox bbox) {
+        return switch (face) {
+            case "down" -> bbox.getYMin() <= 0 ? "down" : null;
+            case "up" -> bbox.getYMax() >= 1 ? "up" : null;
+            case "north" -> (16 - getClamped(bbox.getXMax())) <= 0 ? "north" : null;
+            case "south" -> (16 - getClamped(bbox.getXMin())) >= 16 ? "south" : null;
+            case "west" -> bbox.getZMin() <= 0 ? "west" : null;
+            case "east" -> bbox.getZMax() >= 1 ? "east" : null;
             default -> null;
         };
     }

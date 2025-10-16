@@ -1,0 +1,39 @@
+[
+  {
+    "blockName": "piled_bones_stairs",
+    "blockType": "stair",
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "westeros_misc_tab",
+    "type": "unconnect:false",
+    "unconnect": false,
+    "label": "Piled Bones Stairs",
+    "textures": [
+      "piled_bones/side"
+    ]
+  },
+  {
+    "blockName": "stacked_bones_stairs",
+    "blockType": "stair",
+    "stepSound": "stone",
+    "material": "rock",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_misc_tab",
+    "type": "unconnect:false,no-uvlock",
+    "unconnect": false,
+    "label": "Stacked Bones Stairs",
+    "isCustomModel": true,
+    "textures": [
+      "stacked_bones/bone_stacked_front",
+      "stacked_bones/bone_stacked_front",
+      "stacked_bones/bone_stacked_rotated"
+    ]
+  }
+]

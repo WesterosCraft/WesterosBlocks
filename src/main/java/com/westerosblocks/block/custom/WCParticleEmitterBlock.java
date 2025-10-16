@@ -6,7 +6,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
@@ -31,82 +30,26 @@ public class WCParticleEmitterBlock extends Block implements Waterloggable {
     public static final BooleanProperty POWERED = Properties.POWERED;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    private final ParticleEffect particleType;
-    private final String particleName;
-
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            String particleName = definition != null ? definition.getParticle() : "flame";
-
-            return new WCParticleEmitterBlock(settings, particleName);
+            return new WCParticleEmitterBlock(settings);
         }
     }
 
-    public WCParticleEmitterBlock(AbstractBlock.Settings settings, String particleName) {
+    public WCParticleEmitterBlock(AbstractBlock.Settings settings) {
         super(settings);
-        this.particleName = particleName;
-        this.particleType = particleName != null ? getParticleFromName(particleName) : null;
         this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false).with(POWERED, false));
-    }
-
-    private ParticleEffect getParticleFromName(String name) {
-        return switch (name.toLowerCase()) {
-            case "flame" -> ParticleTypes.FLAME;
-            case "smoke" -> ParticleTypes.SMOKE;
-            case "large_smoke" -> ParticleTypes.LARGE_SMOKE;
-            case "cloud" -> ParticleTypes.CLOUD;
-            case "white_ash" -> ParticleTypes.WHITE_ASH;
-            case "dripping_water" -> ParticleTypes.DRIPPING_WATER;
-            case "dripping_lava" -> ParticleTypes.DRIPPING_LAVA;
-            case "falling_water" -> ParticleTypes.FALLING_WATER;
-            case "falling_lava" -> ParticleTypes.FALLING_LAVA;
-            case "soul_fire_flame" -> ParticleTypes.SOUL_FIRE_FLAME;
-            case "crimson_spore" -> ParticleTypes.CRIMSON_SPORE;
-            case "warped_spore" -> ParticleTypes.WARPED_SPORE;
-            case "ash" -> ParticleTypes.ASH;
-            case "campfire_cosy_smoke" -> ParticleTypes.CAMPFIRE_COSY_SMOKE;
-            case "campfire_signal_smoke" -> ParticleTypes.CAMPFIRE_SIGNAL_SMOKE;
-            default -> ParticleTypes.FLAME;
-        };
     }
 
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (state.get(POWERED) && particleType != null && particleName != null) {
-            if (particleName.contains("smoke") || particleName.contains("cosy") || particleName.contains("signal")) {
-                if (random.nextInt(3) > 0) {
-                    double x = pos.getX() + 0.5 + random.nextDouble() / 3.0 * (random.nextBoolean() ? 1 : -1);
-                    double y = pos.getY() + random.nextDouble() + random.nextDouble();
-                    double z = pos.getZ() + 0.5 + random.nextDouble() / 3.0 * (random.nextBoolean() ? 1 : -1);
-                    world.addParticle(particleType, x, y, z, 0.0D, 0.07D, 0.0D);
-                }
-            } else if (particleName.contains("spore")) {
-                if (random.nextInt(4) == 0) {
-                    double x = pos.getX() + 0.5 + (random.nextFloat() - 0.5) * 0.8;
-                    double y = pos.getY() + 0.2;
-                    double z = pos.getZ() + 0.5 + (random.nextFloat() - 0.5) * 0.8;
-                    float vx = (random.nextFloat() - 0.5f) * 0.05f;
-                    float vy = random.nextFloat() * 0.02f;
-                    float vz = (random.nextFloat() - 0.5f) * 0.05f;
-                    world.addParticle(particleType, x, y, z, vx, vy, vz);
-                }
-            } else if (particleName.contains("dripping") || particleName.contains("falling")) {
-                if (random.nextInt(2) == 0) {
-                    double x = pos.getX() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
-                    double y = pos.getY() + 0.8;
-                    double z = pos.getZ() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
-                    float vx = (random.nextFloat() - 0.5f) * 0.1f;
-                    float vy = random.nextFloat() * 0.1f;
-                    float vz = (random.nextFloat() - 0.5f) * 0.1f;
-                    world.addParticle(particleType, x, y, z, vx, vy, vz);
-                }
-            } else {
-                double x = pos.getX() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
-                double y = pos.getY() + 0.5;
-                double z = pos.getZ() + 0.5 + (random.nextFloat() - 0.5) * 0.2;
-                world.addParticle(particleType, x, y, z, 0.0D, 0.0D, 0.0D);
-            }
+        // Test with vanilla smoke to verify powered state is working
+        if (state.get(POWERED)) {
+            double x = pos.getX() + 0.5;
+            double y = pos.getY() + 0.5;
+            double z = pos.getZ() + 0.5;
+            world.addParticle(ParticleTypes.SMOKE, x, y, z, 0.0, 0.05, 0.0);
         }
     }
 
