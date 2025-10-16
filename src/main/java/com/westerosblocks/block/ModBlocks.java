@@ -756,6 +756,12 @@ public class ModBlocks {
         WesterosBlocks.LOGGER.info("Registering Mod Blocks for " + WesterosBlocks.MOD_ID);
 
         registerAutoBlocksToCreativeTabs();
+
+        // Register manually-defined blocks to creative tabs
+        WesterosCreativeModeTabs.addToTab("westeros_test_tab", ARBOR_BRICK_ARROW_SLIT);
+        WesterosCreativeModeTabs.addToTab("westeros_furniture_tab", OAK_TABLE, OAK_CHAIR);
+        WesterosCreativeModeTabs.addToTab("westeros_decor_tab", OAK_BRANCH, BIRCH_BRANCH, CLOVER);
+
     }
 
     public static Block registerBlock(String name, Block block) {
