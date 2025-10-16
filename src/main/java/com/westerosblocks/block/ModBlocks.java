@@ -391,7 +391,8 @@ public class ModBlocks {
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
-                            .nonOpaque(definition.isNonOpaque())
+                            // always nonopaque
+                            .nonOpaque(true)
                             .noCollision(definition.hasNoCollision())
                             .toggleOnUse(definition.toggleOnUse())
                             .states(definition.hasStates() ? definition.getStates().size() : 0);
@@ -421,7 +422,8 @@ public class ModBlocks {
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
-                            .nonOpaque(definition.isNonOpaque())
+                            // always nonopaque
+                            .nonOpaque(true)
                             .noCollision(definition.hasNoCollision())
                             .toggleOnUse(definition.toggleOnUse())
                             .states(definition.hasStates() ? definition.getStates().size() : 0);
@@ -477,7 +479,8 @@ public class ModBlocks {
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
-                            .nonOpaque(definition.isNonOpaque())
+                            // always nonopaque
+                            .nonOpaque(true)
                             .noCollision(definition.hasNoCollision())
                             .toggleOnUse(definition.toggleOnUse())
                             .states(definition.hasStates() ? definition.getStates().size() : 0)
@@ -489,7 +492,8 @@ public class ModBlocks {
                             .resistance(definition.getResistance())
                             .requiresTool()
                             .sounds(soundGroup)
-                            .nonOpaque(definition.isNonOpaque())
+                            // always nonopaque
+                            .nonOpaque(true)
                             .noCollision(definition.hasNoCollision())
                             .toggleOnUse(definition.toggleOnUse())
                             .states(definition.hasStates() ? definition.getStates().size() : 0);
