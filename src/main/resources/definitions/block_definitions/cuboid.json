@@ -1982,6 +1982,7 @@
     "blockType": "cuboid",
     "nonOpaque": true,
     "soundGroup": "pot",
+    "renderLayer": "cutout",
     "harvestLevel": [
       {
         "tool": "axe",
@@ -2225,6 +2226,7 @@
     "blockType": "cuboid",
     "nonOpaque": true,
     "soundGroup": "wood",
+    "renderLayer": "cutout",
     "harvestLevel": [
       {
         "tool": "axe",

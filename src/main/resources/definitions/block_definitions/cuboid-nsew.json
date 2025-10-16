@@ -231,6 +231,7 @@
     "creativeTab": "westeros_decor_tab",
     "label": "Dreadfort Skeleton Sconce Left",
     "renderLayer": "cutout",
+    "nonOpaque": true,
     "textures": [
       "cuboid_block/skeleton_hand_base",
       "cuboid_block/skeleton_hand"
@@ -259,6 +260,7 @@
     "creativeTab": "westeros_decor_tab",
     "label": "Dreadfort Skeleton Sconce Right",
     "renderLayer": "cutout",
+    "nonOpaque": true,
     "textures": [
       "cuboid_block/skeleton_hand_base",
       "cuboid_block/skeleton_hand"
