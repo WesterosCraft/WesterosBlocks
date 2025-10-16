@@ -19,19 +19,30 @@ public class TrapDoorBlockExporter extends BaseBlockExporter {
         // Create texture identifier
         Identifier textureId = createBlockIdentifier(texturePath);
 
-        // Create trapdoor variants manually using BlockStateModelGenerator's internal models
         // Trapdoor has models: bottom, top, and open
         TextureMap textureMap = new TextureMap().put(TextureKey.TEXTURE, textureId);
 
-        Identifier bottomModel = Models.TEMPLATE_ORIENTABLE_TRAPDOOR_BOTTOM.upload(block, textureMap, generator.modelCollector);
-        Identifier topModel = Models.TEMPLATE_ORIENTABLE_TRAPDOOR_TOP.upload(block, textureMap, generator.modelCollector);
-        Identifier openModel = Models.TEMPLATE_ORIENTABLE_TRAPDOOR_OPEN.upload(block, textureMap, generator.modelCollector);
+        // Create models in nested folder structure
+        Identifier bottomModel = createTrapdoorModel(generator, block, textureMap, "bottom", Models.TEMPLATE_ORIENTABLE_TRAPDOOR_BOTTOM);
+        Identifier topModel = createTrapdoorModel(generator, block, textureMap, "top", Models.TEMPLATE_ORIENTABLE_TRAPDOOR_TOP);
+        Identifier openModel = createTrapdoorModel(generator, block, textureMap, "open", Models.TEMPLATE_ORIENTABLE_TRAPDOOR_OPEN);
 
         // Register blockstate with variants
         generator.blockStateCollector.accept(createTrapdoorBlockState(block, bottomModel, topModel, openModel));
 
         // Register item model
         registerParentedItemModel(generator, block, bottomModel);
+    }
+
+    /**
+     * Creates a trapdoor model in a nested folder structure.
+     * Follows the pattern: block/blockName/variant
+     */
+    private static Identifier createTrapdoorModel(BlockStateModelGenerator generator, Block block,
+                                                  TextureMap textureMap, String variant, Model model) {
+        Identifier modelId = createNestedModelId(block, variant);
+        model.upload(modelId, textureMap, generator.modelCollector);
+        return modelId;
     }
 
     /**
