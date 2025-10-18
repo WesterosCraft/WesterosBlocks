@@ -6,7 +6,6 @@ import net.minecraft.data.client.*;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.block.custom.WCPlantBlock;
 
 import java.util.Arrays;
 import java.util.Optional;
@@ -14,8 +13,6 @@ import java.util.Optional;
 /**
  * Exporter for cross-shaped blocks following block-models.md patterns.
  * Generates models for plants, webs, and other decorative cross-pattern blocks with optional layer sensitivity.
- *
- * @see WCPlantBlock
  */
 public class CrossBlockExporter extends BaseBlockExporter {
     public static void generateCross(BlockStateModelGenerator generator, Block block, String texturePath, boolean isTinted, int rotationCount) {
@@ -112,9 +109,9 @@ public class CrossBlockExporter extends BaseBlockExporter {
     /**
      * Generates block state models for layer-sensitive cross blocks with multiple random textures and rotations.
      * Creates array-based blockstate variants for each layer with all texture variants.
-     * 
+     *
      * @param generator The BlockStateModelGenerator to use
-     * @param block The layer-sensitive plant block to generate models for
+     * @param block The layer-sensitive cross block to generate models for
      * @param texturePaths Array of texture paths for random variants
      * @param isTinted Whether the block should be tinted
      * @param rotationCount Number of random rotations per texture (1 or 4)
@@ -122,13 +119,6 @@ public class CrossBlockExporter extends BaseBlockExporter {
     public static void generateLayerSensitiveCrossWithRandomTextures(BlockStateModelGenerator generator, Block block, String[] texturePaths, boolean isTinted, int rotationCount) {
         if (texturePaths.length == 0) {
             throw new IllegalArgumentException("At least one texture path is required");
-        }
-
-        // Verify this is actually a layer-sensitive plant
-        if (!(block instanceof WCPlantBlock) || !((WCPlantBlock) block).isLayerSensitive()) {
-            // Fall back to regular cross generation with random textures
-            generateCrossWithRandomTextures(generator, block, texturePaths, isTinted, rotationCount);
-            return;
         }
 
         String blockName = getBlockName(block);
@@ -204,20 +194,14 @@ public class CrossBlockExporter extends BaseBlockExporter {
 
     /**
      * Generates block state models for layer-sensitive cross blocks with rotation variants.
-     * 
+     *
      * @param generator The BlockStateModelGenerator to use
-     * @param block The layer-sensitive plant block to generate models for
+     * @param block The layer-sensitive cross block to generate models for
      * @param texturePath The texture path to use
      * @param isTinted Whether the block should be tinted
      * @param rotationCount Number of random rotations (1 or 4)
      */
     public static void generateLayerSensitiveCross(BlockStateModelGenerator generator, Block block, String texturePath, boolean isTinted, int rotationCount) {
-        // Verify this is actually a layer-sensitive plant
-        if (!(block instanceof WCPlantBlock) || !((WCPlantBlock) block).isLayerSensitive()) {
-            // Fall back to regular cross generation
-            generateCross(generator, block, texturePath, isTinted, rotationCount);
-            return;
-        }
 
         String blockName = getBlockName(block);
         
@@ -300,9 +284,8 @@ public class CrossBlockExporter extends BaseBlockExporter {
         // Check for color multiplier to determine if tinted
         boolean isTinted = definition.hasColorMult();
 
-        // Check if this is a layer-sensitive plant
-        boolean isLayerSensitive = "layerSensitive".equals(definition.getType()) ||
-                                   (definition.getType() != null && definition.getType().contains("layerSensitive"));
+        // Check if this is a layer-sensitive plant using the proper method
+        boolean isLayerSensitive = definition.isLayerSensitive();
 
         if (definition.hasStates()) {
             // Handle complex state-based blocks (like smoke, cobweb)

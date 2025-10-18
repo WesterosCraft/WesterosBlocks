@@ -212,7 +212,8 @@
       }
     ],
     "colorMult": "textures/colormap/reed",
-    "type": "no-in-web,layerSensitive"
+    "type": "no-in-web,layerSensitive",
+    "layerSensitive": true
   },
   {
     "blockName": "chain_block_harness",

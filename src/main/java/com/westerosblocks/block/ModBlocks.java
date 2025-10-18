@@ -129,7 +129,7 @@ public class ModBlocks {
                             // plants are always nocollision.
                             .noCollision()
                             .layerSensitive(definition.isLayerSensitive())
-                            .build();
+                            .build(definition);
 
                 case "flowerpot":
                     return BlockBuilder.flowerPot()
@@ -146,7 +146,8 @@ public class ModBlocks {
                             .sounds(soundGroup)
                             .nonOpaque(definition.isNonOpaque())
                             .noCollision(definition.hasNoCollision())
-                            .build();
+                            .layerSensitive(definition.isLayerSensitive())
+                            .build(definition);
 
                 case "slab":
                     return BlockBuilder.slab()

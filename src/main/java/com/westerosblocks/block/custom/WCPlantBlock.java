@@ -56,6 +56,10 @@ public class WCPlantBlock extends Block {
             boolean toggleOnUse = definition != null && definition.toggleOnUse();
             List<String> stateValues = definition != null ? definition.getStateValues() : null;
 
+            // Reset static fields before setting them (prevent leakage between blocks)
+            tempLAYERS = null;
+            tempSTATE = null;
+
             if (layerSensitive) {
                 tempLAYERS = Properties.LAYERS;
             }
