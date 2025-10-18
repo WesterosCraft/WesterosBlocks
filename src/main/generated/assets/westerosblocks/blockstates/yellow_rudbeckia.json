@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "westerosblocks:block/yellow_rudbeckia/yellow_rudbeckia_layer1"
+    },
+    "layers=2": {
+      "model": "westerosblocks:block/yellow_rudbeckia/yellow_rudbeckia_layer2"
+    },
+    "layers=3": {
+      "model": "westerosblocks:block/yellow_rudbeckia/yellow_rudbeckia_layer3"
+    },
+    "layers=4": {
+      "model": "westerosblocks:block/yellow_rudbeckia/yellow_rudbeckia_layer4"
+    },
+    "layers=5": {
+      "model": "westerosblocks:block/yellow_rudbeckia/yellow_rudbeckia_layer5"
+    },
+    "layers=6": {
+      "model": "westerosblocks:block/yellow_rudbeckia/yellow_rudbeckia_layer6"
+    },
+    "layers=7": {
+      "model": "westerosblocks:block/yellow_rudbeckia/yellow_rudbeckia_layer7"
+    },
+    "layers=8": {
+      "model": "westerosblocks:block/yellow_rudbeckia/yellow_rudbeckia_layer8"
+    }
+  }
+}

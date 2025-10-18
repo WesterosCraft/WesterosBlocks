@@ -1,0 +1,54 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v4"
+      },
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v5"
+      },
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v6"
+      },
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v7"
+      },
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v8"
+      },
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v9"
+      },
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v10"
+      },
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v11"
+      },
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v12"
+      },
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v13"
+      },
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v14"
+      },
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v15"
+      },
+      {
+        "model": "westerosblocks:block/path_reach_gravel/base_v16"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/potted_white_peony/base"
+      },
+      {
+        "model": "westerosblocks:block/potted_white_peony/base",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/potted_white_peony/base",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/potted_white_peony/base",
+        "y": 270
+      }
+    ]
+  }
+}

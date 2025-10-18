@@ -1,0 +1,69 @@
+{
+  "variants": {
+    "facing=east,half=bottom,open=false": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/bottom",
+      "y": 90
+    },
+    "facing=east,half=bottom,open=true": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/open",
+      "y": 90
+    },
+    "facing=east,half=top,open=false": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/top",
+      "y": 90
+    },
+    "facing=east,half=top,open=true": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/open",
+      "x": 180,
+      "y": 270
+    },
+    "facing=north,half=bottom,open=false": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/bottom"
+    },
+    "facing=north,half=bottom,open=true": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/open"
+    },
+    "facing=north,half=top,open=false": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/top"
+    },
+    "facing=north,half=top,open=true": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/open",
+      "x": 180,
+      "y": 180
+    },
+    "facing=south,half=bottom,open=false": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/bottom",
+      "y": 180
+    },
+    "facing=south,half=bottom,open=true": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/open",
+      "y": 180
+    },
+    "facing=south,half=top,open=false": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/top",
+      "y": 180
+    },
+    "facing=south,half=top,open=true": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/open",
+      "x": 180,
+      "y": 0
+    },
+    "facing=west,half=bottom,open=false": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/bottom",
+      "y": 270
+    },
+    "facing=west,half=bottom,open=true": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/open",
+      "y": 270
+    },
+    "facing=west,half=top,open=false": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/top",
+      "y": 270
+    },
+    "facing=west,half=top,open=true": {
+      "model": "westerosblocks:block/white_harbor_sewer_manhole/open",
+      "x": 180,
+      "y": 90
+    }
+  }
+}

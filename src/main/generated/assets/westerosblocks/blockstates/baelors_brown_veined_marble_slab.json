@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/baelors_brown_veined_marble_slab/baelors_brown_veined_marble_slab_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/baelors_brown_veined_marble_slab/baelors_brown_veined_marble_slab_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/baelors_brown_veined_marble_slab/baelors_brown_veined_marble_slab_top"
+    }
+  }
+}

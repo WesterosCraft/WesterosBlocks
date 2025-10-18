@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_post",
+  "textures": {
+    "bottom": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "particle": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "side": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "top": "westerosblocks:block/mances_camp_common_tent/outside2"
+  }
+}

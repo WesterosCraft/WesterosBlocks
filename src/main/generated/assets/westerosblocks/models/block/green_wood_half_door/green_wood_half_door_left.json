@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/untinted/half_door_left",
+  "textures": {
+    "bottom": "westerosblocks:block/wood/green/vertical"
+  }
+}

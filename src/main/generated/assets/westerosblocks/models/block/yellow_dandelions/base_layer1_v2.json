@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/untinted/cross_layer1",
+  "textures": {
+    "cross": "westerosblocks:block/flowers/yellow_dandelions2"
+  }
+}

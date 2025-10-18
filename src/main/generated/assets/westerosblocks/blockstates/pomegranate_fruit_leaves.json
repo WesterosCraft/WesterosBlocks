@@ -1,0 +1,54 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/pomegranate_fruit_leaves/bf1_v1",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/pomegranate_fruit_leaves/bf2_v1",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/pomegranate_fruit_leaves/bf3_v1",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/pomegranate_fruit_leaves/bf1_v2",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/pomegranate_fruit_leaves/bf2_v2",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/pomegranate_fruit_leaves/bf3_v2",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/pomegranate_fruit_leaves/bf1_v3",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/pomegranate_fruit_leaves/bf2_v3",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/pomegranate_fruit_leaves/bf3_v3",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/pomegranate_fruit_leaves/bf1_v4",
+        "weight": 2
+      },
+      {
+        "model": "westerosblocks:block/pomegranate_fruit_leaves/bf2_v4",
+        "weight": 2
+      },
+      {
+        "model": "westerosblocks:block/pomegranate_fruit_leaves/bf3_v4",
+        "weight": 2
+      }
+    ]
+  }
+}

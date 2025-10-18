@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/dorne_dusty_dirt/side9",
+    "east": "westerosblocks:block/dorne_dusty_dirt/side9",
+    "north": "westerosblocks:block/dorne_dusty_dirt/side9",
+    "particle": "westerosblocks:block/dorne_dusty_dirt/side9",
+    "south": "westerosblocks:block/dorne_dusty_dirt/side9",
+    "up": "westerosblocks:block/dorne_dusty_dirt/side9",
+    "west": "westerosblocks:block/dorne_dusty_dirt/side9"
+  }
+}

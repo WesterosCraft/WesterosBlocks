@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/yard_utility_block/yard_utility_block"
+    }
+  }
+}

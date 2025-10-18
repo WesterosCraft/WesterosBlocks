@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/dragon_carving/side1",
+    "east": "westerosblocks:block/dragon_carving/side1",
+    "north": "westerosblocks:block/dragon_carving/side1",
+    "particle": "westerosblocks:block/dragon_carving/side1",
+    "south": "westerosblocks:block/dragon_carving/side1",
+    "up": "westerosblocks:block/dragon_carving/side1",
+    "west": "westerosblocks:block/dragon_carving/side1"
+  }
+}

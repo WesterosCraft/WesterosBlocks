@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:item/cuboid_nsew_stack_item",
+  "textures": {
+    "particle": "westerosblocks:block/banner/house/hersy/top",
+    "txt1": "westerosblocks:block/banner/house/hersy/top",
+    "txt2": "westerosblocks:block/banner/house/hersy/bottom",
+    "txt5": "westerosblocks:block/banner/house/hersy/top"
+  }
+}

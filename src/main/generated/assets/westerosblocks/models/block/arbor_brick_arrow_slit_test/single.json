@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/arrow_slits/arrow_slit_single",
+  "textures": {
+    "texture": "westerosblocks:block/ashlar_third/arbor/all"
+  }
+}

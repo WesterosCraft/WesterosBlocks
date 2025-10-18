@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/terrainset_dornish_marches_slab/terrainset_dornish_marches_slab_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/terrainset_dornish_marches_slab/terrainset_dornish_marches_slab_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/terrainset_dornish_marches_slab/terrainset_dornish_marches_slab_top"
+    }
+  }
+}

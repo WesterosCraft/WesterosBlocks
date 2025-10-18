@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "westerosblocks:block/red_mushroom_2/red_mushroom_2_layer1"
+    },
+    "layers=2": {
+      "model": "westerosblocks:block/red_mushroom_2/red_mushroom_2_layer2"
+    },
+    "layers=3": {
+      "model": "westerosblocks:block/red_mushroom_2/red_mushroom_2_layer3"
+    },
+    "layers=4": {
+      "model": "westerosblocks:block/red_mushroom_2/red_mushroom_2_layer4"
+    },
+    "layers=5": {
+      "model": "westerosblocks:block/red_mushroom_2/red_mushroom_2_layer5"
+    },
+    "layers=6": {
+      "model": "westerosblocks:block/red_mushroom_2/red_mushroom_2_layer6"
+    },
+    "layers=7": {
+      "model": "westerosblocks:block/red_mushroom_2/red_mushroom_2_layer7"
+    },
+    "layers=8": {
+      "model": "westerosblocks:block/red_mushroom_2/red_mushroom_2_layer8"
+    }
+  }
+}

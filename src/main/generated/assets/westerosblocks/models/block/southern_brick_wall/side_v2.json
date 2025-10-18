@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side",
+  "textures": {
+    "bottom": "westerosblocks:block/brick/southern/all2",
+    "particle": "westerosblocks:block/brick/southern/all2",
+    "side": "westerosblocks:block/brick/southern/all2",
+    "top": "westerosblocks:block/brick/southern/all2"
+  }
+}

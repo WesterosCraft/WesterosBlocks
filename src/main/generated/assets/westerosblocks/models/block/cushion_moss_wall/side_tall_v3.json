@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side_tall",
+  "textures": {
+    "bottom": "westerosblocks:block/moss_cushion/all3",
+    "particle": "westerosblocks:block/moss_cushion/all3",
+    "side": "westerosblocks:block/moss_cushion/all3",
+    "top": "westerosblocks:block/moss_cushion/all3"
+  }
+}

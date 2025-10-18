@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/ice_medium_light/ice_medium_light",
+    "east": "westerosblocks:block/ice_medium_light/ice_medium_light",
+    "north": "westerosblocks:block/ice_medium_light/ice_medium_light",
+    "particle": "westerosblocks:block/ice_medium_light/ice_medium_light",
+    "south": "westerosblocks:block/ice_medium_light/ice_medium_light",
+    "up": "westerosblocks:block/ice_medium_light/ice_medium_light",
+    "west": "westerosblocks:block/ice_medium_light/ice_medium_light"
+  }
+}

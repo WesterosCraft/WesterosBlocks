@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/lighting/brazier/unlit_ash_bottom",
+    "east": "westerosblocks:block/lighting/brazier/side",
+    "north": "westerosblocks:block/lighting/brazier/side",
+    "particle": "westerosblocks:block/lighting/brazier/unlit_ash_bottom",
+    "south": "westerosblocks:block/lighting/brazier/side",
+    "up": "westerosblocks:block/lighting/brazier/transparent",
+    "west": "westerosblocks:block/lighting/brazier/side"
+  }
+}

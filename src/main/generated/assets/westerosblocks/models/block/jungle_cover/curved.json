@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/rail_curved",
+  "textures": {
+    "rail": "westerosblocks:block/wood/jungle/cover"
+  }
+}

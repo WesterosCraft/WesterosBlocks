@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_third/tan_mossy/all3",
+    "east": "westerosblocks:block/ashlar_third/tan_mossy/all3",
+    "north": "westerosblocks:block/ashlar_third/tan_mossy/all3",
+    "particle": "westerosblocks:block/ashlar_third/tan_mossy/all3",
+    "south": "westerosblocks:block/ashlar_third/tan_mossy/all3",
+    "up": "westerosblocks:block/ashlar_third/tan_mossy/all3",
+    "west": "westerosblocks:block/ashlar_third/tan_mossy/all3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/ore/coal/all2",
+    "east": "westerosblocks:block/ore/coal/all2",
+    "north": "westerosblocks:block/ore/coal/all2",
+    "particle": "westerosblocks:block/ore/coal/all2",
+    "south": "westerosblocks:block/ore/coal/all2",
+    "up": "westerosblocks:block/ore/coal/all2",
+    "west": "westerosblocks:block/ore/coal/all2"
+  }
+}

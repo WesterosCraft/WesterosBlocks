@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side_tall",
+  "textures": {
+    "bottom": "westerosblocks:block/test_block/d_texture",
+    "particle": "westerosblocks:block/test_block/w_texture",
+    "side": "westerosblocks:block/test_block/w_texture",
+    "top": "westerosblocks:block/test_block/u_texture"
+  }
+}
