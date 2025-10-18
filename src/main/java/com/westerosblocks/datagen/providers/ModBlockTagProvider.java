@@ -251,6 +251,20 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
             }
         }
 
+        // Automatically add all sand blocks from registry
+        FabricTagProvider<Block>.FabricTagBuilder sandTagBuilder = getOrCreateTagBuilder(BlockTags.SAND);
+        List<BlockDefinition> sandBlocks = registry.getByType("sand");
+
+        for (BlockDefinition sandDef : sandBlocks) {
+            String blockName = sandDef.getBlockName();
+
+            Block sandBlock = ModBlocks.getAutoRegisteredBlock(blockName);
+
+            if (sandBlock != null) {
+                sandTagBuilder.add(sandBlock);
+            }
+        }
+
         // Automatically add all fire blocks from registry
         FabricTagProvider<Block>.FabricTagBuilder torchBuilder = getOrCreateTagBuilder(BlockTags.WALL_POST_OVERRIDE);
         List<BlockDefinition> torchBlocks = registry.getByType("torch");

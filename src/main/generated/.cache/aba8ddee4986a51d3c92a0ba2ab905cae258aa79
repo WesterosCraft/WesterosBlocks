@@ -1,9 +1,10 @@
-// 1.21.1	2025-10-18T10:55:07.2913225	WesterosBlocks/Tags for minecraft:block
+// 1.21.1	2025-10-18T11:07:59.6464616	WesterosBlocks/Tags for minecraft:block
 2f68dd7b06d0191ef333a9b0a574a430c470c6a4 data\minecraft\tags\block\doors.json
 2db25d9e069f5dd236beb4a03b2fd57503b608cd data\minecraft\tags\block\slabs.json
 fe9891c770f1c35e42541e944f6ec45d3b6ade7a data\minecraft\tags\block\fence_gates.json
 f8f8d12455d99819aea6fd4049b249efcec8b658 data\minecraft\tags\block\fences.json
 04010702ecae7d52b0d8639874b209085fbab232 data\minecraft\tags\block\rails.json
+a13946c956541a830b4cb714f4fb1341398f10a4 data\minecraft\tags\block\sand.json
 bccc6e3e674f4cf2df0171e39f9d84bdf5077395 data\minecraft\tags\block\beds.json
 3a44c2199286989dc3d4c1eb62a75ccc5ff02ada data\minecraft\tags\block\crops.json
 34906b4677ac2cc93e47d432f90a70382265432b data\minecraft\tags\block\wooden_fences.json
