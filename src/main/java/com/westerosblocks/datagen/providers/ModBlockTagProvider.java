@@ -224,6 +224,20 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
         }
 
         // Automatically add all fire blocks from registry
+        FabricTagProvider<Block>.FabricTagBuilder flowersTagBuilder = getOrCreateTagBuilder(BlockTags.FLOWERS);
+        List<BlockDefinition> flowerBlocks = registry.getByType("plant");
+
+        for (BlockDefinition flowerDef : flowerBlocks) {
+            String blockName = flowerDef.getBlockName();
+
+            Block flowerBlock = ModBlocks.getAutoRegisteredBlock(blockName);
+
+            if (flowerBlock != null) {
+                flowersTagBuilder.add(flowerBlock);
+            }
+        }
+
+        // Automatically add all fire blocks from registry
         FabricTagProvider<Block>.FabricTagBuilder railTagBuilder = getOrCreateTagBuilder(BlockTags.FIRE);
         List<BlockDefinition> railBlocks = registry.getByType("rail");
 
