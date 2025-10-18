@@ -94,15 +94,12 @@ public class ModModelProvider extends FabricModelProvider {
                     LogBlockExporter.registerCustomLogBlock(bsmg, block, definition);
                     break;
 
-                case "plant":
-                    PlantBlockExporter.registerCustomPlantBlock(bsmg, block, definition);
-                    break;
-
                 case "flowerpot":
                     FlowerPotBlockExporter.registerCustomFlowerPotBlock(bsmg, block, definition);
                     break;
 
                 case "web":
+                case "plant":
                     CrossBlockExporter.registerCrossBlockFromDefinition(bsmg, block, definition);
                     break;
 

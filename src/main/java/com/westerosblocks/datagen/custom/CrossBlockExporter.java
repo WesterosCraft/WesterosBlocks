@@ -99,7 +99,7 @@ public class CrossBlockExporter extends BaseBlockExporter {
         TextureMap textureMap = new TextureMap()
             .put(TextureKey.CROSS, textureId);
         
-        net.minecraft.data.client.Model model = new net.minecraft.data.client.Model(
+        Model model = new Model(
             Optional.of(WesterosBlocks.id(parentPath)),
             Optional.empty(),
             TextureKey.CROSS
