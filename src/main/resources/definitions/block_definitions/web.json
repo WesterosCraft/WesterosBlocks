@@ -19,6 +19,7 @@
     "soundGroup": "cloth",
     "nonOpaque": true,
     "alphaRender": true,
+    "renderLayer": "translucent",
     "creativeTab": "westeros_water_air_tab",
     "label": "Alyssas Tears Mist One",
     "textures": [
@@ -32,6 +33,7 @@
     "soundGroup": "cloth",
     "nonOpaque": true,
     "alphaRender": true,
+    "renderLayer": "translucent",
     "connectTo": "material",
     "creativeTab": "westeros_water_air_tab",
     "label": "Alyssas Tears Mist Three",
@@ -46,6 +48,7 @@
     "soundGroup": "cloth",
     "nonOpaque": true,
     "alphaRender": true,
+    "renderLayer": "translucent",
     "creativeTab": "westeros_water_air_tab",
     "label": "Alyssas Tears Mist Two",
     "textures": [
@@ -247,6 +250,7 @@
     "renderLayer": "cutout",
     "label": "Cobweb",
     "type": "toggleOnUse,no-in-web",
+    "toggleOnUse": true,
     "states": [
       {
         "stateID": "random",
@@ -467,7 +471,8 @@
     "textures": [
       "dead_jungle_tall_grass/down_side1"
     ],
-    "type": "no-in-web,layerSensitive"
+    "type": "no-in-web,layerSensitive",
+    "layerSensitive": true
   },
   {
     "blockName": "dead_rat",
@@ -525,7 +530,8 @@
     "textures": [
       "dead_savanna_tall_grass/dead_savanna_tall_grass"
     ],
-    "type": "no-in-web,layerSensitive"
+    "type": "no-in-web,layerSensitive",
+    "layerSensitive": true
   },
   {
     "blockName": "dragonfly",
@@ -632,7 +638,8 @@
       "jungle_tall_fern/side"
     ],
     "colorMult": "textures/colormap/grass",
-    "type": "no-in-web,layerSensitive"
+    "type": "no-in-web,layerSensitive",
+    "layerSensitive": true
   },
   {
     "blockName": "jungle_tall_grass",
@@ -645,7 +652,8 @@
       "jungle_tall_grass/down_side1"
     ],
     "colorMult": "textures/colormap/grass",
-    "type": "no-in-web,layerSensitive"
+    "type": "no-in-web,layerSensitive",
+    "layerSensitive": true
   },
   {
     "blockName": "rope_block_harness",
@@ -682,7 +690,8 @@
       "savanna_tall_grass/savanna_tall_grass"
     ],
     "colorMult": "textures/colormap/grass",
-    "type": "no-in-web,layerSensitive"
+    "type": "no-in-web,layerSensitive",
+    "layerSensitive": true
   },
   {
     "blockName": "smoke",
