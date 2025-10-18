@@ -295,7 +295,8 @@ public class ModBlocks {
                             .build();
 
                     // Register the wall torch without block item
-                    registerBlockWithoutBlockItem(wallTorchName, wallTorchBlock);
+                    Block registeredWallTorch = registerBlockWithoutBlockItem(wallTorchName, wallTorchBlock);
+                    AUTO_REGISTERED_BLOCKS.put(wallTorchName, registeredWallTorch);
 
                     // Now create the standing torch with reference to wall torch
                     return BlockBuilder.torch()
@@ -323,7 +324,8 @@ public class ModBlocks {
                             .build();
 
                     // Register the wall fan without block item
-                    registerBlockWithoutBlockItem(wallFanName, wallFanBlock);
+                    Block registeredWallFan = registerBlockWithoutBlockItem(wallFanName, wallFanBlock);
+                    AUTO_REGISTERED_BLOCKS.put(wallFanName, registeredWallFan);
 
                     // Now create the standing fan with reference to wall fan
                     return BlockBuilder.fan()

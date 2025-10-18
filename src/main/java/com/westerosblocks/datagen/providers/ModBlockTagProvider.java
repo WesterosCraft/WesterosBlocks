@@ -237,8 +237,8 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
             }
         }
 
-        // Automatically add all fire blocks from registry
-        FabricTagProvider<Block>.FabricTagBuilder railTagBuilder = getOrCreateTagBuilder(BlockTags.FIRE);
+        // Automatically add all rail blocks from registry
+        FabricTagProvider<Block>.FabricTagBuilder railTagBuilder = getOrCreateTagBuilder(BlockTags.RAILS);
         List<BlockDefinition> railBlocks = registry.getByType("rail");
 
         for (BlockDefinition railDef : railBlocks) {
@@ -248,6 +248,25 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
 
             if (railBlock != null) {
                 railTagBuilder.add(railBlock);
+            }
+        }
+
+        // Automatically add all fire blocks from registry
+        FabricTagProvider<Block>.FabricTagBuilder torchBuilder = getOrCreateTagBuilder(BlockTags.WALL_POST_OVERRIDE);
+        List<BlockDefinition> torchBlocks = registry.getByType("torch");
+
+        for (BlockDefinition torchDef : torchBlocks) {
+            String blockName = torchDef.getBlockName();
+
+            Block torchBlock = ModBlocks.getAutoRegisteredBlock(blockName);
+            Block wallTorchBlock = ModBlocks.getAutoRegisteredBlock("wall_" + blockName);
+
+            if (torchBlock != null) {
+                torchBuilder.add(torchBlock);
+            }
+
+            if (wallTorchBlock !=null) {
+                torchBuilder.add(wallTorchBlock);
             }
         }
 

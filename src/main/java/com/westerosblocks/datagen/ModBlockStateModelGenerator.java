@@ -91,9 +91,6 @@ public class ModBlockStateModelGenerator extends BaseBlockExporter {
                         generateBranch(generator, block, !texture.isEmpty() ? texture : textures[0]);
                 }
 
-
-
-
                 private void buildChair() {
                         generateChair(generator, block, !texture.isEmpty() ? texture : textures[0]);
                 }
