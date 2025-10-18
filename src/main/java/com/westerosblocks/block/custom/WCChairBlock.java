@@ -17,6 +17,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
@@ -38,7 +39,6 @@ public class WCChairBlock extends HorizontalFacingBlock {
     public static final IntProperty ROTATION = IntProperty.of("rotation", 0, 7);
     private static final VoxelShape CHAIR_SHAPE = Block.createCuboidShape(2, 0, 2, 14, 18, 14);
 
-    // Pre-computed shape maps for efficient lookups
     private final Map<BlockState, VoxelShape> shapeByIndex;
 
     public WCChairBlock(AbstractBlock.Settings settings) {
@@ -54,7 +54,6 @@ public class WCChairBlock extends HorizontalFacingBlock {
 
         setDefaultState(getDefaultState().with(ROTATION, 0));
 
-        // Pre-compute all possible shape combinations
         this.shapeByIndex = this.makeShapes();
     }
 
@@ -73,10 +72,9 @@ public class WCChairBlock extends HorizontalFacingBlock {
     private Map<BlockState, VoxelShape> makeShapes() {
         ImmutableMap.Builder<BlockState, VoxelShape> builder = ImmutableMap.builder();
 
-        // Generate all possible state combinations
         for (int rotation = 0; rotation < 8; rotation++) {
-            for (net.minecraft.util.math.Direction facing : net.minecraft.util.math.Direction.Type.HORIZONTAL) {
-                VoxelShape shape = CHAIR_SHAPE; // All states use the same shape
+            for (Direction facing : Direction.Type.HORIZONTAL) {
+                VoxelShape shape = CHAIR_SHAPE;
 
                 BlockState state = this.getDefaultState()
                         .with(ROTATION, rotation)

@@ -54,9 +54,9 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
                 );
             }
 
-            // Set the STATE property if stateValues are provided
+
             if (doAddStates) {
-                List<String> stateValues = definition != null ? definition.getStateValues() : null;
+                List<String> stateValues = definition.getStateValues();
                 if (stateValues != null && !stateValues.isEmpty()) {
                     tempSTATE = new ModProperties.StateProperty(stateValues);
                 } else {
@@ -263,10 +263,10 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
                 world.syncWorldEvent(player, 1006, pos, 0);
                 return ActionResult.success(world.isClient);
             }
-            // Second priority: cycle through rotations
+
             else if (state.contains(ROTATION)) {
                 int currentRotation = state.get(ROTATION);
-                int newRotation = (currentRotation + 1) & 15; // Increment and wrap at 15
+                int newRotation = (currentRotation + 1) & 15;
                 state = state.with(ROTATION, newRotation);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);
                 world.syncWorldEvent(player, 1006, pos, 0);

@@ -18,11 +18,7 @@ import java.util.Map;
 import java.util.ArrayList;
 
 public class WesterosCreativeModeTabs {
-    
-    // Map to store registered tabs
     public static final Map<String, RegistryKey<ItemGroup>> TABS = new HashMap<>();
-    
-    // Map to store blocks assigned to each tab
     private static final Map<String, List<Block>> TAB_BLOCKS = new HashMap<>();
 
     public record TabDefinition(String id, String label, String iconItem, boolean devOnly) {
@@ -87,7 +83,7 @@ public class WesterosCreativeModeTabs {
         RegistryKey<ItemGroup> key = RegistryKey.of(RegistryKeys.ITEM_GROUP, tabId);
 
         ItemGroup group = FabricItemGroup.builder()
-                .icon(() -> new ItemStack(Registries.ITEM.get(Identifier.of(WesterosBlocks.MOD_ID, iconItem))))
+                .icon(() -> new ItemStack(Registries.ITEM.get(WesterosBlocks.id(iconItem))))
                 .displayName(Text.literal(title))
                 .entries((context, entries) -> {
                     List<Block> blocks = TAB_BLOCKS.get(tabName);

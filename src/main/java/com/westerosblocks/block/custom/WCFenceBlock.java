@@ -30,6 +30,14 @@ public class WCFenceBlock extends FenceBlock {
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
             boolean unconnect = definition != null && definition.isUnconnect();
             boolean toggleOnUse = definition != null && definition.toggleOnUse();
+            List<String> stateValues = definition != null ? definition.getStateValues() : null;
+            if (unconnect) {
+                tempUNCONNECT = UNCONNECT;
+            }
+
+            if (toggleOnUse) {
+                tempSTATE = new ModProperties.StateProperty(stateValues);
+            }
 
             return new WCFenceBlock(settings, unconnect, toggleOnUse);
         }
@@ -50,14 +58,6 @@ public class WCFenceBlock extends FenceBlock {
         this.unconnectDefault = unconnect;
         this.toggleOnUse = toggleOnUse;
 
-        if (toggleOnUse) {
-            tempSTATE = new ModProperties.StateProperty(Arrays.asList("default", "state1", "state2", "state3"));
-        }
-        
-        if (unconnect) {
-            tempUNCONNECT = UNCONNECT;
-        }
-
         BlockState defaultState = this.getStateManager().getDefaultState()
                 .with(NORTH, false)
                 .with(EAST, false)
@@ -69,8 +69,9 @@ public class WCFenceBlock extends FenceBlock {
             defaultState = defaultState.with(UNCONNECT, this.unconnectDefault);
         }
 
-        if (tempSTATE != null) {
-            defaultState = defaultState.with(tempSTATE, tempSTATE.defValue);
+        // Use STATE (not tempSTATE) because it was assigned in appendProperties during super()
+        if (STATE != null) {
+            defaultState = defaultState.with(STATE, STATE.defValue);
         }
 
         setDefaultState(defaultState);

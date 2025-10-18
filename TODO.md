@@ -6,6 +6,7 @@
 ~~- furnace needs particle~~
 - should Sand Block extend FallingBlock or ColoredFallingBlock?
 - convert all colorMult/colormaps
+- figure out wood type for all blocks that need them
 
 ## Future TODOS
 - doors need custom item texture, like vanilla.

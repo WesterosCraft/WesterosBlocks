@@ -42,7 +42,6 @@ public class WCCuboidBlock extends Block implements Waterloggable {
             int numStates = definition != null ? definition.getStateCount() : 0;
             boolean doAddStates = numStates > 0;
 
-            // Handle bounding box if provided
             VoxelShape customBoundingBox = null;
             if (definition != null && definition.hasBoundingBox()) {
                 BlockDefinition.BoundingBox bbox = definition.getBoundingBox();

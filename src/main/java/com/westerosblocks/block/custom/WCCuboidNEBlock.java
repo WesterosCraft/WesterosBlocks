@@ -30,7 +30,7 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements Waterloggable {
             boolean doAddStates = numStates > 0;
 
             if (doAddStates) {
-                List<String> stateValues = definition != null ? definition.getStateValues() : null;
+                List<String> stateValues = definition.getStateValues();
                 if (stateValues != null && !stateValues.isEmpty()) {
                     tempSTATE = new ModProperties.StateProperty(stateValues);
                 } else {

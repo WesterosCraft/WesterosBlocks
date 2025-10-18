@@ -86,9 +86,6 @@ public class ModPolytoneProvider implements DataProvider {
             Path itemOutputPath = itemModifiersPathResolver.resolveJson(itemFileId);
             CompletableFuture<?> itemFuture = DataProvider.writeToPath(writer, json, itemOutputPath);
             futures.add(itemFuture);
-
-            WesterosBlocks.LOGGER.info("Generated Polytone modifier: {} with {} blocks (block_modifiers + item_modifiers)",
-                    colormapId + "_tinted_blocks.json", blockIds.size());
         }
 
         WesterosBlocks.LOGGER.info("Successfully generated {} Polytone modifier files ({} in block_modifiers, {} in item_modifiers)",

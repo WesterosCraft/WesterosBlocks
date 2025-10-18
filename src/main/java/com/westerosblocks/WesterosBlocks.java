@@ -5,6 +5,7 @@ import com.westerosblocks.block.blockentity.ModBlockEntities;
 import com.westerosblocks.config.ModConfig;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 import com.westerosblocks.data.WorldPainterExporter;
+import com.westerosblocks.entity.ModEntities;
 import com.westerosblocks.item.ModItems;
 import com.westerosblocks.particle.ModParticles;
 import com.westerosblocks.sound.ModSounds;
@@ -22,12 +23,8 @@ public class WesterosBlocks implements ModInitializer {
     @Override
     public void onInitialize() {
         LOGGER.info("Initializing WesterosBlocks mod...");
-
-        // Load config
         CONFIG = ModConfig.load();
-        LOGGER.info("Config loaded successfully");
 
-        // Initialize block definitions registry first
         initializeBlockDefinitions();
 
         WesterosCreativeModeTabs.registerCreativeModeTabs();
@@ -35,7 +32,8 @@ public class WesterosBlocks implements ModInitializer {
         ModItems.registerModItems();
         ModSounds.registerSounds();
         ModParticles.registerParticles();
-        ModBlockEntities.registerModEntities();
+        ModBlockEntities.registerModBlockEntities();
+        ModEntities.registerModEntities();
 
         // Export WorldPainter CSV if config option is enabled
         if (CONFIG.dumpWorldPainterCSV) {

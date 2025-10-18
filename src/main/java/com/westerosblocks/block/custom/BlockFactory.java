@@ -31,6 +31,7 @@ public abstract class BlockFactory {
      * @param parameters Additional parameters from BlockBuilder
      * @return The created block instance
      */
+    @Deprecated // need to ditch parameters
     public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition, Map<String, Object> parameters) {
         // Default implementation calls the old method for backwards compatibility
         return buildBlockClass(settings, definition);

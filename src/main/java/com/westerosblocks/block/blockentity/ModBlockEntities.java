@@ -51,7 +51,7 @@ public class ModBlockEntities {
         return Registry.register(Registries.BLOCK_ENTITY_TYPE, WesterosBlocks.id(name), type);
     }
 
-    public static void registerModEntities() {
+    public static void registerModBlockEntities() {
         WesterosBlocks.LOGGER.info("Registering Mod Entities for " + WesterosBlocks.MOD_ID);
     }
 }

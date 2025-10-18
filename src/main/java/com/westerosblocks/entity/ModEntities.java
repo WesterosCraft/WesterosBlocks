@@ -10,8 +10,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModEntities {
-
-
     public static final EntityType<ChairEntity> CHAIR = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(WesterosBlocks.MOD_ID, "chair_entity"),
             EntityType.Builder.<ChairEntity>create(ChairEntity::new,SpawnGroup.MISC).dimensions(0.5f, 0.5f).build());
