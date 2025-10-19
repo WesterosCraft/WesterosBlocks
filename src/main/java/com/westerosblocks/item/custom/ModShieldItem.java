@@ -1,5 +1,6 @@
 package com.westerosblocks.item.custom;
 
+import com.westerosblocks.WesterosBlocks;
 import net.fabric_extras.shield_api.item.CustomShieldItem;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
@@ -47,7 +48,7 @@ public class ModShieldItem extends CustomShieldItem {
                 new Pair<>(
                         EntityAttributes.GENERIC_ARMOR,
                         new EntityAttributeModifier(
-                                Identifier.ofVanilla(shieldName + "_armor"),
+                                WesterosBlocks.id(shieldName + "_armor"),
                                 armorValue,
                                 EntityAttributeModifier.Operation.ADD_VALUE
                         )
