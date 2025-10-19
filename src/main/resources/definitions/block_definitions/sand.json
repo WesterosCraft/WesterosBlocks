@@ -3,7 +3,7 @@
     "blockName": "sand_skeleton",
     "blockType": "sand",
     "hardness": 0.5,
-    "stepSound": "sand",
+    "soundGroup": "sand",
     "material": "sand",
     "creativeTab": "westeros_sand_gravel_tab",
     "label": "Sand Skeleton",

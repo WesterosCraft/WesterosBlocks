@@ -70,7 +70,7 @@ JSON files that expand into multiple block variants (solid, stairs, slab, wall, 
   "baseLabel": "Medium Ashlar Arbor",
   "variants": ["solid", "stairs", "slab", "wall", "fence"],
   "hardness": 1.5,
-  "stepSound": "stone",
+  "soundGroup": "stone",
   "harvestLevel": [{"tool": "pickaxe", "level": 1}],
   "textures": {
     "all": "ashlar_third/arbor/all",
@@ -191,18 +191,6 @@ Exporters implement a common pattern:
 - `assets/westerosblocks/models/block/*.json`: Block models
 - `assets/westerosblocks/models/item/*.json`: Item models
 - `data/westerosblocks/lang/en_us.json`: English translations
-
-### Texture Extraction Priority
-
-BlockDefinition has a texture priority system (see `getPrimaryTextureSource()`):
-
-1. **STATES** - Multiple states with different textures per state
-2. **RANDOM_TEXTURES** - Random texture variants with weights
-3. **TEXTURES** - Standard texture list
-4. **CUSTOM_MODEL** - Pre-made model files (no texture generation)
-5. **NONE** - No textures defined (error condition)
-
-Exporters should use `BlockDefinition.extractTextures()` to get textures following this priority.
 
 ## Important Development Notes
 

@@ -28,7 +28,8 @@
       "lighting/brazier/fire",
       "lighting/brazier/fire"
     ],
-    "strength": 5
+    "hardness": 5,
+    "resistance": 0
   },
   {
     "blockName": "brazier2",
@@ -59,6 +60,7 @@
       "lighting/brazier/transparent",
       "lighting/brazier/transparent"
     ],
-    "strength": 5
+    "hardness": 5,
+    "resistance": 0
   }
 ]

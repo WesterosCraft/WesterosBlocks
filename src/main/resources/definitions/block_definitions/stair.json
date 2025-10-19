@@ -3,7 +3,7 @@
     "blockName": "piled_bones_stairs",
     "blockType": "stair",
     "hardness": 5,
-    "stepSound": "stone",
+    "soundGroup": "stone",
     "material": "rock",
     "resistance": 10,
     "creativeTab": "westeros_misc_tab",
@@ -17,7 +17,7 @@
   {
     "blockName": "stacked_bones_stairs",
     "blockType": "stair",
-    "stepSound": "stone",
+    "soundGroup": "stone",
     "harvestLevel": [
       {
         "tool": "axe",

@@ -5,7 +5,6 @@
     "soundGroup": "powder",
     "creativeTab": "westeros_lighting_tab",
     "label": "Candle Altar",
-    "type": "toggleOnUse",
     "toggleOnUse": true,
     "renderLayer": "cutout",
     "boundingBox": {
@@ -59,13 +58,14 @@
           }
         ]
       }
-    ]
+    ],
+    "hardness": 3,
+    "resistance": 0
   },
   {
     "blockName": "crop_carrots",
     "blockType": "crop",
     "soundGroup": "grass",
-    "type": "toggleOnUse,layerSensitive",
     "layerSensitive": true,
     "toggleOnUse": true,
     "renderLayer": "cutout",
@@ -103,13 +103,13 @@
         ]
       }
     ],
-    "strength": 5
+    "hardness": 5,
+    "resistance": 0
   },
   {
     "blockName": "crop_peas",
     "blockType": "crop",
     "soundGroup": "grass",
-    "type": "toggleOnUse,layerSensitive",
     "layerSensitive": true,
     "toggleOnUse": true,
     "renderLayer": "cutout",
@@ -141,7 +141,8 @@
         ]
       }
     ],
-    "strength": 5
+    "hardness": 3,
+    "resistance": 0
   },
   {
     "blockName": "crop_turnips",
@@ -185,13 +186,13 @@
         ]
       }
     ],
-    "strength": 5
+    "hardness": 3,
+    "resistance": 0
   },
   {
     "blockName": "crop_wheat",
     "blockType": "crop",
     "soundGroup": "grass",
-    "type": "toggleOnUse,layerSensitive",
     "layerSensitive": true,
     "toggleOnUse": true,
     "renderLayer": "cutout",
@@ -299,7 +300,8 @@
         ]
       }
     ],
-    "strength": 5
+    "hardness": 3,
+    "resistance": 0
   },
   {
     "blockName": "seagrass",
@@ -309,6 +311,8 @@
     "label": "Seagrass",
     "layerSensitive": true,
     "renderLayer": "cutout",
+    "hardness": 3,
+    "resistance": 0,
     "randomTextures": [
       {
         "textures": [
@@ -330,7 +334,6 @@
           "seagrass/side4"
         ]
       }
-    ],
-    "type": "layerSensitive"
+    ]
   }
 ]
