@@ -1,6 +1,5 @@
 package com.westerosblocks.item.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import net.fabric_extras.shield_api.item.CustomShieldItem;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
@@ -40,19 +39,23 @@ public class ModShieldItem extends CustomShieldItem {
         return texPath;
     }
 
-    /**
-     * Helper method to create default armor attribute modifier for shields
-     */
     public static List<Pair<RegistryEntry<EntityAttribute>, EntityAttributeModifier>> createDefaultAttributes(String shieldName, double armorValue) {
         return List.of(
                 new Pair<>(
                         EntityAttributes.GENERIC_ARMOR,
                         new EntityAttributeModifier(
-                                WesterosBlocks.id(shieldName + "_armor"),
+                                Identifier.of(shieldName + "_armor"),
                                 armorValue,
                                 EntityAttributeModifier.Operation.ADD_VALUE
                         )
                 )
         );
+    }
+
+    public void applyAttributes(double armorValue) {
+        this.setAttributeModifiers(createDefaultAttributes(
+                this.getGeoPath().getPath().replace("geo/item/", "").replace(".geo.json", ""),
+                armorValue
+        ));
     }
 }
