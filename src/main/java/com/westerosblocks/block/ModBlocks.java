@@ -10,6 +10,7 @@ import com.westerosblocks.block.custom.WCCuboidNSEWBlock;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -49,9 +50,19 @@ public class ModBlocks {
             int registeredCount = 0;
             int skippedCount = 0;
 
+            // Check if we're in development environment
+            boolean isDevelopment = FabricLoader.getInstance().isDevelopmentEnvironment();
+
             // Loop through all block definitions
             for (BlockDefinition definition : registry.getAllDefinitions()) {
                 try {
+                    // Skip test blocks in production (blocks in westeros_test_tab)
+                    if (!isDevelopment && "westeros_test_tab".equals(definition.getCreativeTab())) {
+                        skippedCount++;
+                        WesterosBlocks.LOGGER.debug("Skipped test block (production): {}", definition.getBlockName());
+                        continue;
+                    }
+
                     Block block = createBlockFromDefinition(definition);
                     if (block != null) {
                         Block registeredBlock = registerBlock(definition.getBlockName(), block);

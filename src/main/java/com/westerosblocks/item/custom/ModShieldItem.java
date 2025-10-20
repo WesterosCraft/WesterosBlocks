@@ -39,23 +39,23 @@ public class ModShieldItem extends CustomShieldItem {
         return texPath;
     }
 
-    public static List<Pair<RegistryEntry<EntityAttribute>, EntityAttributeModifier>> createDefaultAttributes(String shieldName, double armorValue) {
-        return List.of(
-                new Pair<>(
-                        EntityAttributes.GENERIC_ARMOR,
-                        new EntityAttributeModifier(
-                                Identifier.of(shieldName + "_armor"),
-                                armorValue,
-                                EntityAttributeModifier.Operation.ADD_VALUE
-                        )
-                )
-        );
-    }
-
-    public void applyAttributes(double armorValue) {
-        this.setAttributeModifiers(createDefaultAttributes(
-                this.getGeoPath().getPath().replace("geo/item/", "").replace(".geo.json", ""),
-                armorValue
-        ));
-    }
+//    public static List<Pair<RegistryEntry<EntityAttribute>, EntityAttributeModifier>> createDefaultAttributes(String shieldName, double armorValue) {
+//        return List.of(
+//                new Pair<>(
+//                        EntityAttributes.GENERIC_ARMOR,
+//                        new EntityAttributeModifier(
+//                                Identifier.of(shieldName + "_armor"),
+//                                armorValue,
+//                                EntityAttributeModifier.Operation.ADD_VALUE
+//                        )
+//                )
+//        );
+//    }
+//
+//    public void applyAttributes(double armorValue) {
+//        this.setAttributeModifiers(createDefaultAttributes(
+//                this.getGeoPath().getPath().replace("geo/item/", "").replace(".geo.json", ""),
+//                armorValue
+//        ));
+//    }
 }

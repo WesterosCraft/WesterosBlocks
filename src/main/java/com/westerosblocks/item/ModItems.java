@@ -125,14 +125,14 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(VALYRIAN_STEEL_INGOT);
         });
-
-        TARGARYEN_HEATER_SHIELD.applyAttributes(2.0);
-        BLACKFYRE_HEATER_SHIELD.applyAttributes(2.0);
-        BLACKWOOD_HEATER_SHIELD.applyAttributes(2.0);
-        BRACKEN_HEATER_SHIELD.applyAttributes(2.0);
-        TULLY_HEATER_SHIELD.applyAttributes(2.0);
-        HEDGE_KNIGHT_HEATER_SHIELD.applyAttributes(2.0);
-        LAUGHING_TREE_HEATER_SHIELD.applyAttributes(2.0);
-        GREYJOY_ROUND_SHIELD.applyAttributes(2.0);
+//
+//        TARGARYEN_HEATER_SHIELD.applyAttributes(2.0);
+//        BLACKFYRE_HEATER_SHIELD.applyAttributes(2.0);
+//        BLACKWOOD_HEATER_SHIELD.applyAttributes(2.0);
+//        BRACKEN_HEATER_SHIELD.applyAttributes(2.0);
+//        TULLY_HEATER_SHIELD.applyAttributes(2.0);
+//        HEDGE_KNIGHT_HEATER_SHIELD.applyAttributes(2.0);
+//        LAUGHING_TREE_HEATER_SHIELD.applyAttributes(2.0);
+//        GREYJOY_ROUND_SHIELD.applyAttributes(2.0);
     }
 }
