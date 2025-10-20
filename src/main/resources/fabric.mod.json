@@ -1,43 +1,53 @@
 {
-	"schemaVersion": 1,
-	"id": "westerosblocks",
-	"version": "${version}",
-	"name": "WesterosBlocks",
-	"description": "A Song Of Ice and Fire themed blocks for a medieval world",
-	"authors": [
-		"geeberry", "Emoticone11", "mikeprimm"
-	],
-	"contact": {
-		"homepage": "https://www.westeroscraft.com",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/westerosblocks/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"com.westerosblocks.WesterosBlocks"
-		],
-		"fabric-datagen": [
-			"com.westerosblocks.WesterosBlocksDataGenerator"
-		],
-		"client": [
-			"com.westerosblocks.WesterosBlocksClient"
-		],
-		"modmenu": [
-			"com.westerosblocks.config.ModMenuIntegration"
-		]
-	},
-	"mixins": [
-		"westerosblocks.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.16.14",
-		"minecraft": "~1.21.1",
-		"java": ">=21",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+  "schemaVersion": 1,
+  "id": "westerosblocks",
+  "version": "${version}",
+  "name": "WesterosBlocks",
+  "description": "A Song Of Ice and Fire themed blocks for a medieval world",
+  "authors": [
+    "geeberry",
+    "Emoticone11",
+    "mikeprimm"
+  ],
+  "contact": {
+    "homepage": "https://www.westeroscraft.com",
+    "sources": "https://github.com/WesterosCraft/WesterosBlocks"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/westerosblocks/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.westerosblocks.WesterosBlocks"
+    ],
+    "fabric-datagen": [
+      "com.westerosblocks.WesterosBlocksDataGenerator"
+    ],
+    "client": [
+      "com.westerosblocks.WesterosBlocksClient"
+    ],
+    "modmenu": [
+      "com.westerosblocks.config.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "westerosblocks.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.com/invite/pBS5TH4"
+      },
+      "update_checker": true
+    }
+  }
 }
