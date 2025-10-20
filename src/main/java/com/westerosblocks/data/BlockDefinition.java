@@ -1,11 +1,12 @@
 package com.westerosblocks.data;
 
 import com.google.gson.annotations.SerializedName;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.sound.BlockSoundGroup;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.function.UnaryOperator;
 
 /**
  * Represents a block definition loaded from JSON files in definitions/block_definitions directory.
@@ -1178,6 +1179,134 @@ public class BlockDefinition {
      */
     public boolean shouldUseTintedModel() {
         return isTinted() || hasColorMult() || hasOverlay();
+    }
+
+    // ========================================
+    // Block Settings/Properties Creation
+    // ========================================
+
+    // Static sound group mapping
+    private static final Map<String, BlockSoundGroup> SOUND_GROUP_MAP = createSoundGroupMap();
+
+    private static Map<String, BlockSoundGroup> createSoundGroupMap() {
+        Map<String, BlockSoundGroup> map = new HashMap<>();
+        map.put("powder", BlockSoundGroup.SAND);
+        map.put("wood", BlockSoundGroup.WOOD);
+        map.put("gravel", BlockSoundGroup.GRAVEL);
+        map.put("grass", BlockSoundGroup.GRASS);
+        map.put("stone", BlockSoundGroup.STONE);
+        map.put("metal", BlockSoundGroup.METAL);
+        map.put("glass", BlockSoundGroup.GLASS);
+        map.put("cloth", BlockSoundGroup.WOOL);
+        map.put("sand", BlockSoundGroup.SAND);
+        map.put("snow", BlockSoundGroup.SNOW);
+        map.put("ladder", BlockSoundGroup.LADDER);
+        map.put("anvil", BlockSoundGroup.ANVIL);
+        map.put("plant", BlockSoundGroup.CROP);
+        map.put("wool", BlockSoundGroup.WOOL);
+        map.put("slime", BlockSoundGroup.SLIME);
+        map.put("bamboo", BlockSoundGroup.BAMBOO);
+        map.put("lantern", BlockSoundGroup.LANTERN);
+        map.put("nether_bricks", BlockSoundGroup.NETHER_BRICKS);
+        map.put("netherite", BlockSoundGroup.NETHERITE);
+        return map;
+    }
+
+    /**
+     * Gets the BlockSoundGroup for this block definition.
+     * Uses the soundGroup field to look up the appropriate sound group.
+     *
+     * @return The BlockSoundGroup, defaults to STONE if not found
+     */
+    public BlockSoundGroup getBlockSoundGroup() {
+        if (soundGroup == null || soundGroup.isEmpty()) {
+            return BlockSoundGroup.STONE;
+        }
+        return SOUND_GROUP_MAP.getOrDefault(soundGroup.toLowerCase(), BlockSoundGroup.STONE);
+    }
+
+    /**
+     * Creates AbstractBlock.Settings from this block definition.
+     * This is the primary method for creating block settings with default behavior.
+     *
+     * @return Configured AbstractBlock.Settings
+     */
+    public AbstractBlock.Settings makeSettings() {
+        return makeSettings(null);
+    }
+
+    /**
+     * Creates AbstractBlock.Settings from this block definition, optionally copying from another block.
+     * Applies all relevant properties from the block definition including:
+     * - Strength (hardness/resistance)
+     * - Sound group
+     * - Luminance (light level)
+     * - Opacity
+     * - Collision
+     * - Tool requirements
+     *
+     * @param copyFrom Optional block to copy base settings from, or null to create fresh settings
+     * @return Configured AbstractBlock.Settings based on this block definition
+     */
+    public AbstractBlock.Settings makeSettings(Block copyFrom) {
+        AbstractBlock.Settings settings;
+
+        // Start with either copy or fresh settings
+        if (copyFrom != null) {
+            settings = AbstractBlock.Settings.copy(copyFrom);
+        } else {
+            settings = AbstractBlock.Settings.create();
+        }
+
+        // Apply strength (hardness and resistance)
+        if (hasStrength()) {
+            // Use strength shorthand if provided (sets both to same value)
+            settings = settings.strength(strength, strength);
+        } else if (hardness != 0.0f || resistance != 0.0f) {
+            // Apply individual hardness and resistance
+            settings = settings.strength(hardness, resistance);
+        }
+
+        // Apply sound group
+        settings = settings.sounds(getBlockSoundGroup());
+
+        // Apply luminance (light level 0-15)
+        int light = getLuminance();
+        if (light > 0) {
+            settings = settings.luminance(lum -> getLuminance());
+        }
+
+        // Apply opacity settings
+        if (isNonOpaque()) {
+            settings = settings.nonOpaque();
+        }
+
+        // Apply collision settings
+        if (hasNoCollision()) {
+            settings = settings.noCollision();
+        }
+
+        // Apply tool requirements
+        if (isRequiresTool()) {
+            settings = settings.requiresTool();
+        }
+
+        return settings;
+    }
+
+    /**
+     * Creates AbstractBlock.Settings with custom overrides applied after base settings.
+     * Useful when you need to apply the definition's settings but then customize further.
+     *
+     * @param copyFrom Optional block to copy from
+     * @param customizer Function to apply custom modifications to the settings
+     * @return Configured and customized AbstractBlock.Settings
+     */
+    public AbstractBlock.Settings makeSettings(
+            Block copyFrom,
+            UnaryOperator<AbstractBlock.Settings> customizer) {
+        AbstractBlock.Settings settings = makeSettings(copyFrom);
+        return customizer.apply(settings);
     }
 
     @Override
