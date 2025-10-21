@@ -44,6 +44,9 @@ public class ArrowSlitBlockExporter extends BaseBlockExporter {
     /** Model for middle section of vertically stacked arrow slits */
     private static final Model ARROW_SLIT_MIDDLE = arrowSlitBlock("arrow_slits/arrow_slit_middle", TextureKey.TEXTURE);
 
+    /** Model for middle edge section of vertically stacked arrow slits (4+ blocks) */
+    private static final Model ARROW_SLIT_MIDDLE_EDGE = arrowSlitBlock("arrow_slits/arrow_slit_middle_edge", TextureKey.TEXTURE);
+
     /** Model for top section of vertically stacked arrow slits */
     private static final Model ARROW_SLIT_TOP = arrowSlitBlock("arrow_slits/arrow_slit_top", TextureKey.TEXTURE);
 
@@ -54,10 +57,11 @@ public class ArrowSlitBlockExporter extends BaseBlockExporter {
     public static void registerArrowSlitBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
         Identifier singleModelId = createArrowSlitModel(generator, block, texturePath, "single", ARROW_SLIT_SINGLE);
         Identifier middleModelId = createArrowSlitModel(generator, block, texturePath, "middle", ARROW_SLIT_MIDDLE);
+        Identifier middleEdgeModelId = createArrowSlitModel(generator, block, texturePath, "middle_edge", ARROW_SLIT_MIDDLE_EDGE);
         Identifier topModelId = createArrowSlitModel(generator, block, texturePath, "top", ARROW_SLIT_TOP);
         Identifier bottomModelId = createArrowSlitModel(generator, block, texturePath, "bottom", ARROW_SLIT_BOTTOM);
 
-        BlockStateVariantMap variants = createArrowSlitVariants(singleModelId, middleModelId, topModelId, bottomModelId);
+        BlockStateVariantMap variants = createArrowSlitVariants(singleModelId, middleModelId, middleEdgeModelId, topModelId, bottomModelId);
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
 
         registerParentedItemModel(generator, block, singleModelId);
@@ -70,7 +74,8 @@ public class ArrowSlitBlockExporter extends BaseBlockExporter {
     }
 
     private static BlockStateVariantMap createArrowSlitVariants(Identifier singleModelId, Identifier middleModelId,
-                                                                 Identifier topModelId, Identifier bottomModelId) {
+                                                                 Identifier middleEdgeModelId, Identifier topModelId,
+                                                                 Identifier bottomModelId) {
         return BlockStateVariantMap.create(WCArrowSlitBlock.FACING, WCArrowSlitBlock.TYPE)
                 // Single state
                 .register(Direction.NORTH, ArrowSlitType.SINGLE, createVariant(singleModelId))
@@ -82,6 +87,11 @@ public class ArrowSlitBlockExporter extends BaseBlockExporter {
                 .register(Direction.EAST, ArrowSlitType.MIDDLE, createVariant(middleModelId, 90))
                 .register(Direction.SOUTH, ArrowSlitType.MIDDLE, createVariant(middleModelId, 180))
                 .register(Direction.WEST, ArrowSlitType.MIDDLE, createVariant(middleModelId, 270))
+                // Middle edge state
+                .register(Direction.NORTH, ArrowSlitType.MIDDLE_EDGE, createVariant(middleEdgeModelId))
+                .register(Direction.EAST, ArrowSlitType.MIDDLE_EDGE, createVariant(middleEdgeModelId, 90))
+                .register(Direction.SOUTH, ArrowSlitType.MIDDLE_EDGE, createVariant(middleEdgeModelId, 180))
+                .register(Direction.WEST, ArrowSlitType.MIDDLE_EDGE, createVariant(middleEdgeModelId, 270))
                 // Bottom state
                 .register(Direction.NORTH, ArrowSlitType.BOTTOM, createVariant(bottomModelId))
                 .register(Direction.EAST, ArrowSlitType.BOTTOM, createVariant(bottomModelId, 90))

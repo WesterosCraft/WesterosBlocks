@@ -116,7 +116,7 @@ public class WCArrowSlitBlock extends Block {
                     Block.createCuboidShape(0, 4, 3, 6, 15, 13),
                     Block.createCuboidShape(10, 4, 3, 16, 15, 13),
                     BOTTOM_BASE, BOTTOM_LEDGE_LEFT, BOTTOM_LEDGE_RIGHT);
-            case MIDDLE -> VoxelShapes.union(
+            case MIDDLE, MIDDLE_EDGE -> VoxelShapes.union(
                     LEFT_WALL, RIGHT_WALL, LEFT_SLIT_WALL, RIGHT_SLIT_WALL);
         };
     }
@@ -141,7 +141,7 @@ public class WCArrowSlitBlock extends Block {
                     Block.createCuboidShape(0, 4, 3, 6, 15, 13),
                     Block.createCuboidShape(10, 4, 3, 16, 15, 13),
                     BOTTOM_BASE, BOTTOM_LEDGE_LEFT, BOTTOM_LEDGE_RIGHT);
-            case MIDDLE -> VoxelShapes.union(
+            case MIDDLE, MIDDLE_EDGE -> VoxelShapes.union(
                     Block.createCuboidShape(0, 0, 3, 3, 16, 13),
                     Block.createCuboidShape(13, 0, 3, 16, 16, 13),
                     Block.createCuboidShape(3, 2, 3, 6, 14, 13),
@@ -169,7 +169,7 @@ public class WCArrowSlitBlock extends Block {
                     Block.createCuboidShape(3, 4, 3, 13, 15, 6),
                     Block.createCuboidShape(3, 4, 10, 13, 15, 13),
                     BOTTOM_BASE, BOTTOM_LEDGE_LEFT, BOTTOM_LEDGE_RIGHT);
-            case MIDDLE -> VoxelShapes.union(
+            case MIDDLE, MIDDLE_EDGE -> VoxelShapes.union(
                     Block.createCuboidShape(3, 0, 0, 13, 16, 3),
                     Block.createCuboidShape(3, 0, 13, 13, 16, 16),
                     Block.createCuboidShape(3, 2, 3, 13, 14, 6),
@@ -197,7 +197,7 @@ public class WCArrowSlitBlock extends Block {
                     Block.createCuboidShape(3, 4, 3, 13, 15, 6),
                     Block.createCuboidShape(3, 4, 10, 13, 15, 13),
                     BOTTOM_BASE, BOTTOM_LEDGE_LEFT, BOTTOM_LEDGE_RIGHT);
-            case MIDDLE -> VoxelShapes.union(
+            case MIDDLE, MIDDLE_EDGE -> VoxelShapes.union(
                     Block.createCuboidShape(3, 0, 0, 13, 16, 3),
                     Block.createCuboidShape(3, 0, 13, 13, 16, 16),
                     Block.createCuboidShape(3, 2, 3, 13, 14, 6),
@@ -214,18 +214,51 @@ public class WCArrowSlitBlock extends Block {
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
                                                 WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (direction == Direction.UP || direction == Direction.DOWN) {
-            boolean hasTop = world.getBlockState(pos.up()).isOf(this);
-            boolean hasBottom = world.getBlockState(pos.down()).isOf(this);
+            // Count blocks upward
+            int blocksAbove = 0;
+            BlockPos currentPos = pos.up();
+            while (world.getBlockState(currentPos).isOf(this)) {
+                blocksAbove++;
+                currentPos = currentPos.up();
+            }
 
+            // Count blocks downward
+            int blocksBelow = 0;
+            currentPos = pos.down();
+            while (world.getBlockState(currentPos).isOf(this)) {
+                blocksBelow++;
+                currentPos = currentPos.down();
+            }
+
+            // Calculate stack height and position
+            int stackHeight = blocksAbove + blocksBelow + 1; // +1 for current block
+            int position = blocksBelow; // 0 = bottom of stack
+
+            // Determine type based on height and position
             ArrowSlitType newType;
-            if (hasTop && hasBottom) {
-                newType = ArrowSlitType.MIDDLE;
-            } else if (hasTop) {
-                newType = ArrowSlitType.BOTTOM;
-            } else if (hasBottom) {
-                newType = ArrowSlitType.TOP;
-            } else {
+            if (stackHeight == 1) {
+                // Single isolated block
                 newType = ArrowSlitType.SINGLE;
+            } else if (position == 0) {
+                // Bottom of stack
+                newType = ArrowSlitType.BOTTOM;
+            } else if (position == stackHeight - 1) {
+                // Top of stack
+                newType = ArrowSlitType.TOP;
+            } else if (stackHeight == 3) {
+                // 3-block stack: middle is always MIDDLE
+                newType = ArrowSlitType.MIDDLE;
+            } else if (stackHeight == 4) {
+                // 4-block stack: no MIDDLE, only MIDDLE_EDGE
+                newType = ArrowSlitType.MIDDLE_EDGE;
+            } else {
+                // 5+ blocks: MIDDLE at height/2, MIDDLE_EDGE elsewhere
+                int middlePosition = stackHeight / 2;
+                if (position == middlePosition) {
+                    newType = ArrowSlitType.MIDDLE;
+                } else {
+                    newType = ArrowSlitType.MIDDLE_EDGE;
+                }
             }
 
             return state.with(TYPE, newType);
@@ -258,7 +291,8 @@ public class WCArrowSlitBlock extends Block {
         SINGLE("single"),
         TOP("top"),
         BOTTOM("bottom"),
-        MIDDLE("middle");
+        MIDDLE("middle"),
+        MIDDLE_EDGE("middle_edge");
 
         private final String name;
 

@@ -234,7 +234,7 @@ public class CuboidNEBlockExporter extends BaseBlockExporter {
 
     private static Identifier createGeneratedModelId(Block block, String variant) {
         String blockName = getBlockName(block);
-        return WesterosBlocks.id("block/generated/" + blockName + "/" + variant);
+        return WesterosBlocks.id("block/" + blockName + "/" + variant);
     }
 
     /**

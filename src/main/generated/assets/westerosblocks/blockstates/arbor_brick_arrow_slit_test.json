@@ -8,6 +8,10 @@
       "model": "westerosblocks:block/arbor_brick_arrow_slit_test/middle",
       "y": 90
     },
+    "facing=east,type=middle_edge": {
+      "model": "westerosblocks:block/arbor_brick_arrow_slit_test/middle_edge",
+      "y": 90
+    },
     "facing=east,type=single": {
       "model": "westerosblocks:block/arbor_brick_arrow_slit_test/single",
       "y": 90
@@ -22,6 +26,9 @@
     "facing=north,type=middle": {
       "model": "westerosblocks:block/arbor_brick_arrow_slit_test/middle"
     },
+    "facing=north,type=middle_edge": {
+      "model": "westerosblocks:block/arbor_brick_arrow_slit_test/middle_edge"
+    },
     "facing=north,type=single": {
       "model": "westerosblocks:block/arbor_brick_arrow_slit_test/single"
     },
@@ -34,6 +41,10 @@
     },
     "facing=south,type=middle": {
       "model": "westerosblocks:block/arbor_brick_arrow_slit_test/middle",
+      "y": 180
+    },
+    "facing=south,type=middle_edge": {
+      "model": "westerosblocks:block/arbor_brick_arrow_slit_test/middle_edge",
       "y": 180
     },
     "facing=south,type=single": {
@@ -50,6 +61,10 @@
     },
     "facing=west,type=middle": {
       "model": "westerosblocks:block/arbor_brick_arrow_slit_test/middle",
+      "y": 270
+    },
+    "facing=west,type=middle_edge": {
+      "model": "westerosblocks:block/arbor_brick_arrow_slit_test/middle_edge",
       "y": 270
     },
     "facing=west,type=single": {
