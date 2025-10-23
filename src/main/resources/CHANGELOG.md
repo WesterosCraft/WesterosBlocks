@@ -9,13 +9,14 @@
 - Added Shield API mod for shields
 
 ## Wood update
-- Updated 'Birch Door' textures
+- Updated all birch wood and bark textures
 - Adds new 'Simple Birch Door' block
 - Adds new 'Simple Birch Window Shutters' block
-- Updates ice block textures and adds repeat CTM
+- Adds new 'Birch Stripped Log' blockset
 
 ## Ice Update
 - Added new ice blocks - 'Light Ice', 'Medium Light Ice', 'Blue Ice', 'Light Blue Ice', 'Dark Blue Ice', 'Dark Blue Medium Ice'
+- Updates ice block textures and adds repeat CTM
 
 ## Furniture
 - Added new table block
@@ -32,7 +33,7 @@
 - Added Hedge Knight Heater Shield
 - Added Laughing Tree Heater Shield
 - Added "Westerosi Coins" with 7 variants
--Updates pickaxe, axe, cleaver and pitchfork with 3D models
+- Updates pickaxe, axe, cleaver and pitchfork with 3D models
 
 # 26 Aug 2025:
 - Fixed transparent face in wall models when "up" blockstate is set to false.
