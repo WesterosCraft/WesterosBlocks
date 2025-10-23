@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/wood/birch/all"
+    "down": "westerosblocks:block/wood/birch/all",
+    "east": "westerosblocks:block/wood/birch/all",
+    "north": "westerosblocks:block/wood/birch/all",
+    "particle": "westerosblocks:block/wood/birch/all",
+    "south": "westerosblocks:block/wood/birch/all",
+    "up": "westerosblocks:block/wood/birch/all",
+    "west": "westerosblocks:block/wood/birch/all"
   }
 }

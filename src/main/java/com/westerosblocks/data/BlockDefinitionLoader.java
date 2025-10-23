@@ -138,6 +138,16 @@ public class BlockDefinitionLoader {
             return false;
         }
 
+        // Initialize the definition after loading (normalizes textures, inherits properties, etc.)
+        try {
+            definition.doInit();
+            WesterosBlocks.LOGGER.debug("Initialized block definition: {}", definition.getBlockName());
+        } catch (Exception e) {
+            WesterosBlocks.LOGGER.error("Failed to initialize block definition '{}' from file: {}",
+                definition.getBlockName(), filePath, e);
+            return false;
+        }
+
         if (definitions.containsKey(definition.getBlockName())) {
             WesterosBlocks.LOGGER.warn("Duplicate block definition found for '{}' in file: {}",
                 definition.getBlockName(), filePath);

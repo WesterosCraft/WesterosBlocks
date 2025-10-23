@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/purple_wool_tip/base_v1"
     }
   }

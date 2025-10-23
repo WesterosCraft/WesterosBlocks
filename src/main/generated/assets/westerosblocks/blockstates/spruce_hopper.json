@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/spruce_hopper/base_v1"
     }
   }

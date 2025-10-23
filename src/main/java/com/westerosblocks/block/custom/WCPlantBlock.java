@@ -64,8 +64,8 @@ public class WCPlantBlock extends Block {
                 tempLAYERS = Properties.LAYERS;
             }
 
-            // Set the STATE property if stateValues are provided
-            if (stateValues != null && !stateValues.isEmpty()) {
+            // Set the STATE property if stateValues are provided (need at least 2 for a valid property)
+            if (stateValues != null && stateValues.size() > 1) {
                 tempSTATE = new ModProperties.StateProperty(stateValues);
             }
 

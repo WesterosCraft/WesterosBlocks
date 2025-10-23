@@ -43,7 +43,7 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
             boolean doToggleOnUse = definition != null && definition.toggleOnUse();
             int numStates = definition != null ? definition.getStateCount() : 0;
-            boolean doAddStates = numStates > 0;
+            boolean doAddStates = numStates > 1;
 
             VoxelShape customBoundingBox = null;
             if (definition != null && definition.hasBoundingBox()) {

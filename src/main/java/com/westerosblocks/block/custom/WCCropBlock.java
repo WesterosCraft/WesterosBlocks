@@ -20,7 +20,8 @@ public class WCCropBlock extends WCPlantBlock {
                 tempLAYERS = Properties.LAYERS;
             }
 
-            if (stateValues != null) {
+            // Set the STATE property if stateValues are provided (need at least 2 for a valid property)
+            if (stateValues != null && stateValues.size() > 1) {
                 tempSTATE = new ModProperties.StateProperty(stateValues);
             }
 

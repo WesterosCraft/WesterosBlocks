@@ -316,6 +316,31 @@ public class BlockDefinition {
         public int getWeight() {
             return weight != null ? weight : 1;
         }
+
+        /**
+         * Gets the number of textures in this variant set.
+         * Matches old 1.18.2 API: set.getTextureCount()
+         */
+        public int getTextureCount() {
+            return (textures != null) ? textures.size() : 0;
+        }
+
+        /**
+         * Gets a specific texture by index from this variant set.
+         * Matches old 1.18.2 API: set.getTextureByIndex(idx)
+         *
+         * @param index The index of the texture to retrieve
+         * @return The texture at the given index, or null if out of bounds
+         */
+        public String getTextureByIndex(int index) {
+            if (textures == null || textures.isEmpty()) {
+                return null;
+            }
+            if (index >= textures.size()) {
+                index = textures.size() - 1;
+            }
+            return textures.get(index);
+        }
     }
 
     public static class StateVariant {
@@ -386,6 +411,116 @@ public class BlockDefinition {
         public boolean isCustomModel() {
             return Boolean.TRUE.equals(isCustomModel);
         }
+
+        /**
+         * Gets the number of random texture sets for this state.
+         * Matches old 1.18.2 API: rec.getRandomTextureSetCount()
+         */
+        public int getRandomTextureSetCount() {
+            return (randomTextures != null) ? randomTextures.size() : 0;
+        }
+
+        /**
+         * Gets a specific random texture set by index.
+         * Matches old 1.18.2 API: rec.getRandomTextureSet(setidx)
+         *
+         * @param index The index of the texture set to retrieve
+         * @return The texture set at the given index, or null if out of bounds
+         */
+        public RandomTextureVariant getRandomTextureSet(int index) {
+            if (randomTextures == null || index < 0 || index >= randomTextures.size()) {
+                return null;
+            }
+            return randomTextures.get(index);
+        }
+
+        /**
+         * Gets a texture by index from the primary texture list.
+         * Matches old 1.18.2 API: rec.getTextureByIndex(idx)
+         *
+         * @param index The index of the texture to retrieve
+         * @return The texture at the given index, or null if not available
+         */
+        public String getTextureByIndex(int index) {
+            // Try to get from first random texture set
+            if (randomTextures != null && !randomTextures.isEmpty()) {
+                RandomTextureVariant firstSet = randomTextures.get(0);
+                return firstSet.getTextureByIndex(index);
+            }
+            // Fallback to direct textures list
+            if (textures != null && !textures.isEmpty()) {
+                if (index >= textures.size()) {
+                    index = textures.size() - 1;
+                }
+                return textures.get(index);
+            }
+            return null;
+        }
+
+        /**
+         * Initializes this state variant after JSON loading.
+         * Normalizes textures and computes derived properties.
+         */
+        public void doInit() {
+            // Normalize textures to randomTextures format
+            if ((randomTextures == null || randomTextures.isEmpty()) &&
+                textures != null && !textures.isEmpty()) {
+                randomTextures = new ArrayList<>();
+                RandomTextureVariant rtv = new RandomTextureVariant();
+                rtv.textures = new ArrayList<>(textures);
+                rtv.weight = 1;
+                randomTextures.add(rtv);
+            }
+
+            // Compute bounding box from cuboids if needed
+            if (cuboids != null && !cuboids.isEmpty() && boundingBox == null) {
+                computeBoundingBoxFromCuboids();
+            }
+
+            // Create trivial cuboid from bounding box if needed
+            if (boundingBox != null && (cuboids == null || cuboids.isEmpty())) {
+                createCuboidFromBoundingBox();
+            }
+        }
+
+        /**
+         * Computes bounding box from cuboid list.
+         */
+        private void computeBoundingBoxFromCuboids() {
+            double minX = 1.0, minY = 1.0, minZ = 1.0;
+            double maxX = 0.0, maxY = 0.0, maxZ = 0.0;
+
+            for (CuboidElement c : cuboids) {
+                minX = Math.min(minX, c.getXMin());
+                minY = Math.min(minY, c.getYMin());
+                minZ = Math.min(minZ, c.getZMin());
+                maxX = Math.max(maxX, c.getXMax());
+                maxY = Math.max(maxY, c.getYMax());
+                maxZ = Math.max(maxZ, c.getZMax());
+            }
+
+            boundingBox = new BoundingBox();
+            boundingBox.xMin = minX;
+            boundingBox.xMax = maxX;
+            boundingBox.yMin = minY;
+            boundingBox.yMax = maxY;
+            boundingBox.zMin = minZ;
+            boundingBox.zMax = maxZ;
+        }
+
+        /**
+         * Creates a single cuboid from bounding box.
+         */
+        private void createCuboidFromBoundingBox() {
+            CuboidElement c = new CuboidElement();
+            c.xMin = boundingBox.xMin;
+            c.xMax = boundingBox.xMax;
+            c.yMin = boundingBox.yMin;
+            c.yMax = boundingBox.yMax;
+            c.zMin = boundingBox.zMin;
+            c.zMax = boundingBox.zMax;
+            cuboids = List.of(c);
+        }
     }
 
     public static class HarvestLevel {
@@ -421,6 +556,19 @@ public class BlockDefinition {
 
         public boolean hasBoundingBox() {
             return boundingBox != null;
+        }
+
+        /**
+         * Initializes this stack element after JSON loading.
+         * Normalizes textures and prepares for future cuboid processing.
+         */
+        public void doInit() {
+            // Normalize textures to randomTextures format if needed
+            // Note: StackElement currently only has textures field, but we prepare
+            // for potential future randomTextures support similar to StateVariant
+
+            // Future: If cuboids added to StackElement, compute bounding box here
+            // For now, StackElement initialization is minimal but provides extension point
         }
     }
 
@@ -492,6 +640,228 @@ public class BlockDefinition {
         public int[] getSideRotations() { return sideRotations; }
         public boolean[] getNoTint() { return noTint; }
         public String getShape() { return shape; }
+    }
+
+    // ========================================
+    // Initialization and State Management
+    // ========================================
+
+    /** Tracks whether doInit() has been called */
+    private transient boolean didInit = false;
+
+    /** State property for blocks with multiple states */
+    private transient StateProperty stateProperty = null;
+
+    /**
+     * Initializes the block definition after JSON loading.
+     * This method:
+     * - Normalizes texture data (converts simple textures to randomTextures)
+     * - Inherits properties from base definition to states
+     * - Processes stack elements
+     * - Creates state property for multi-state blocks
+     * - Computes derived properties
+     *
+     * Called automatically by BlockDefinitionLoader after JSON parsing.
+     */
+    public void doInit() {
+        if (didInit) return;
+
+        // Step 1: If overlay textures present, ensure nonOpaque
+        if (hasOverlayTextures()) {
+            nonOpaque = true;
+        }
+
+        // Step 2: Normalize base-level textures to randomTextures
+        normalizeBaseTextures();
+
+        // Step 3: Process states (inherit properties, normalize textures)
+        processStates();
+
+        // Step 4: Process stack elements if they exist
+        processStackElements();
+
+        // Step 5: Create state property for multi-state blocks
+        createStateProperty();
+
+        didInit = true;
+    }
+
+    /**
+     * Converts simple texture list to randomTextures format.
+     * If randomTextures already exists, this is a no-op.
+     */
+    private void normalizeBaseTextures() {
+        if (randomTextures == null && textures != null && !textures.isEmpty()) {
+            randomTextures = new ArrayList<>();
+            RandomTextureVariant rtv = new RandomTextureVariant();
+            rtv.textures = new ArrayList<>(textures);
+            rtv.weight = 1;
+            randomTextures.add(rtv);
+        }
+    }
+
+    /**
+     * Processes state variants - inherits properties from base and initializes each state.
+     * If no states are defined, creates a synthetic "base" state from this definition's properties.
+     * This ensures states is never null/empty after initialization, simplifying exporter logic.
+     */
+    private void processStates() {
+        // If no states defined, create a synthetic base state from this definition
+        // This matches the old 1.18.2 pattern where def.states always had at least one element
+        if (states == null || states.isEmpty()) {
+            StateVariant baseState = new StateVariant();
+            baseState.stateID = "base";
+
+            // Copy all base-level properties to the synthetic state
+            baseState.textures = this.textures;
+            baseState.randomTextures = this.randomTextures;
+            baseState.overlayTextures = this.overlayTextures;
+            baseState.boundingBox = this.boundingBox;
+            baseState.cuboids = this.cuboids;
+            baseState.rotYOffset = 0;
+            baseState.isCustomModel = this.isCustomModel;
+
+            // Initialize the synthetic state
+            baseState.doInit();
+
+            // Set states to contain just this synthetic base state
+            states = new ArrayList<>();
+            states.add(baseState);
+        } else {
+            // Process existing states
+            for (int i = 0; i < states.size(); i++) {
+                StateVariant state = states.get(i);
+
+                // Generate stateID if missing
+                if (state.stateID == null || state.stateID.isEmpty()) {
+                    state.stateID = "state" + i;
+                }
+
+                // Inherit undefined properties from base definition
+                inheritPropertiesToState(state);
+
+                // Initialize the state (normalizes textures, computes bounding boxes)
+                state.doInit();
+
+                // If state has overlay textures, mark base as nonOpaque
+                if (state.hasOverlayTextures()) {
+                    this.nonOpaque = true;
+                }
+            }
+        }
+    }
+
+    /**
+     * Inherits properties from base definition to a state variant if not defined.
+     */
+    private void inheritPropertiesToState(StateVariant state) {
+        // Inherit textures
+        if ((state.textures == null || state.textures.isEmpty()) && this.textures != null) {
+            state.textures = new ArrayList<>(this.textures);
+        }
+
+        // Inherit randomTextures
+        if ((state.randomTextures == null || state.randomTextures.isEmpty()) && this.randomTextures != null) {
+            state.randomTextures = new ArrayList<>(this.randomTextures);
+        }
+
+        // Inherit overlayTextures
+        if ((state.overlayTextures == null || state.overlayTextures.isEmpty()) && this.overlayTextures != null) {
+            state.overlayTextures = new ArrayList<>(this.overlayTextures);
+        }
+
+        // Inherit bounding box
+        if (state.boundingBox == null && this.boundingBox != null) {
+            state.boundingBox = this.boundingBox;
+        }
+
+        // Inherit cuboids
+        if ((state.cuboids == null || state.cuboids.isEmpty()) && this.cuboids != null) {
+            state.cuboids = new ArrayList<>(this.cuboids);
+        }
+    }
+
+    /**
+     * Processes stack elements for cuboid-nsew-stack blocks.
+     */
+    private void processStackElements() {
+        if (stack != null && !stack.isEmpty()) {
+            for (StackElement se : stack) {
+                se.doInit();
+            }
+        }
+    }
+
+    /**
+     * Creates StateProperty for blocks with multiple states.
+     */
+    private void createStateProperty() {
+        if (states != null && states.size() > 1) {
+            List<String> stateIds = new ArrayList<>();
+            for (StateVariant state : states) {
+                stateIds.add(state.getStateID());
+            }
+            stateProperty = new StateProperty(stateIds);
+        }
+    }
+
+    /**
+     * Property for multi-state blocks.
+     * Similar to Minecraft's EnumProperty but for custom state IDs.
+     */
+    public static class StateProperty {
+        private final List<String> values;
+        private final Map<String, String> valueMap;
+        private final String defaultValue;
+
+        public StateProperty(List<String> stateIDs) {
+            this.values = List.copyOf(stateIDs); // Immutable copy
+            Map<String, String> map = new HashMap<>();
+            for (String id : stateIDs) {
+                map.put(id, id);
+            }
+            this.valueMap = Map.copyOf(map); // Immutable copy
+            this.defaultValue = stateIDs.get(0);
+        }
+
+        public List<String> getValues() {
+            return values;
+        }
+
+        public String getDefaultValue() {
+            return defaultValue;
+        }
+
+        public int getIndex(String value) {
+            int index = values.indexOf(value);
+            return index >= 0 ? index : 0;
+        }
+
+        public Optional<String> getValue(String key) {
+            return Optional.ofNullable(valueMap.get(key));
+        }
+    }
+
+    /**
+     * Returns the state property for multi-state blocks.
+     * @return StateProperty if block has multiple states, null otherwise
+     */
+    public StateProperty getStateProperty() {
+        return stateProperty;
+    }
+
+    /**
+     * Returns whether this block has multiple states.
+     */
+    public boolean hasMultipleStates() {
+        return stateProperty != null;
+    }
+
+    /**
+     * Returns the default state ID for multi-state blocks.
+     */
+    public String getDefaultStateID() {
+        return stateProperty != null ? stateProperty.getDefaultValue() : null;
     }
 
     public String getBlockName() {

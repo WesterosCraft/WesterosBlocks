@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/terrainset_stormlands_tip/base_v1"
     }
   }

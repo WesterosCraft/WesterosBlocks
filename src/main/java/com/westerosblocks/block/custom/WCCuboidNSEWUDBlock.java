@@ -33,7 +33,7 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements Waterloggable 
             // Handle toggleOnUse and states
             boolean doToggleOnUse = definition != null && definition.toggleOnUse();
             int numStates = definition != null ? definition.getStateCount() : 0;
-            boolean doAddStates = numStates > 0;
+            boolean doAddStates = numStates > 1;
 
             if (doAddStates) {
                 List<String> stateValues = definition.getStateValues();

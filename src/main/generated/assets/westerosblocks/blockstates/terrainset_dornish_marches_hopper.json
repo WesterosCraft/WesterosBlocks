@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/terrainset_dornish_marches_hopper/base_v1"
     }
   }

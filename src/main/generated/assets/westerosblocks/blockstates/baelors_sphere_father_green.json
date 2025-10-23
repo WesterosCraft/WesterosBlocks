@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/baelors_sphere_father_green/base_v1"
     }
   }

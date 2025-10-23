@@ -69,7 +69,7 @@ public class WCWebBlock extends CobwebBlock {
             boolean doNoInWeb = definition != null && definition.isNoInWeb();
             boolean doLayerSensitive = definition != null && definition.isLayerSensitive();
             int numStates = definition != null ? definition.getStateCount() : 0;
-            boolean doAddStates = numStates > 0;
+            boolean doAddStates = numStates > 1;
 
             // Reset static fields before setting them (prevent leakage between blocks)
             tempLAYERS = null;

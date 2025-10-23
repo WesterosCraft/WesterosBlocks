@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": [
+    "state=base": [
       {
         "model": "westerosblocks:block/small_orange_brick_tip/base_v1"
       },

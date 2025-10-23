@@ -22,141 +22,106 @@ import java.util.Map;
  */
 public class StairBlockExporter extends BaseBlockExporter {
 
+    /**
+     * Registers a stair block from a BlockDefinition.
+     * Uses uniform iteration pattern: After doInit(), states is ALWAYS non-empty,
+     * and each state has randomTextures normalized from simple textures.
+     */
     public static void registerCustomStairBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         if (!(block instanceof WCStairBlock stairBlock)) {
             throw new IllegalArgumentException("Block must be a WCStairBlock instance");
         }
 
-        // Use centralized priority logic from BlockDefinition
-        BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
+        // After doInit(), states is ALWAYS non-empty (at least synthetic base state exists)
+        var states = definition.getStates();
 
-        switch (source) {
-            case STATES -> registerStairBlockWithStates(generator, block, definition, stairBlock);
-            case RANDOM_TEXTURES -> registerStairBlockWithRandomTextures(generator, block, definition, stairBlock);
-            case TEXTURES -> registerSimpleStairBlock(generator, block, definition, stairBlock);
-            case CUSTOM_MODEL -> registerCustomModelStairBlock(generator, block, definition, stairBlock);
-            case NONE -> registerFallbackStairBlock(generator, block, definition, stairBlock);
+        if (states == null || states.isEmpty()) {
+            throw new IllegalStateException("Block definition states should never be null/empty after doInit() for block: " + getBlockName(block));
         }
-    }
 
-    /**
-     * Registers a simple stair block with basic textures.
-     */
-    private static void registerSimpleStairBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition, WCStairBlock stairBlock) {
-        List<String> textures = definition.getTextures();
+        // Determine if this block actually has multiple states (needs STATE property in variants)
+        boolean hasMultipleStates = definition.getStateCount() > 1;
 
-        // Generate the three stair models
-        Identifier baseModel, innerModel, outerModel;
-
+        // Check for custom model first
         if (definition.hasCustomModel()) {
-            baseModel = createCustomModelId(block, "base_v1");
-            innerModel = createCustomModelId(block, "inner_v1");
-            outerModel = createCustomModelId(block, "outer_v1");
-        } else {
-            // Generate models from textures
-            baseModel = generateStairModel(generator, block, definition, textures, "base", 0, null, stairBlock);
-            innerModel = generateStairModel(generator, block, definition, textures, "inner", 0, null, stairBlock);
-            outerModel = generateStairModel(generator, block, definition, textures, "outer", 0, null, stairBlock);
+            registerCustomModelStairBlock(generator, block, definition, stairBlock);
+            return;
         }
 
-        // Generate blockstate with all stair variants
-        generator.blockStateCollector.accept(createStairBlockState(block, baseModel, innerModel, outerModel, stairBlock.no_uvlock));
-
-        // Register item model
-        registerParentedItemModel(generator, block, baseModel);
-    }
-
-    /**
-     * Registers a stair block with random texture variants.
-     */
-    private static void registerStairBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, BlockDefinition definition, WCStairBlock stairBlock) {
-        List<BlockDefinition.TextureVariantSet> variants = definition.getRandomTextureVariantSets();
-        List<StairModelSet> modelSets = new ArrayList<>();
-
-        for (int i = 0; i < variants.size(); i++) {
-            BlockDefinition.TextureVariantSet variant = variants.get(i);
-            List<String> textures = variant.textures;
-
-            StairModelSet modelSet;
-            if (definition.hasCustomModel()) {
-                modelSet = new StairModelSet(
-                    createCustomModelId(block, "base_v" + (i + 1)),
-                    createCustomModelId(block, "inner_v" + (i + 1)),
-                    createCustomModelId(block, "outer_v" + (i + 1)),
-                    variant.weight
-                );
-            } else {
-                Identifier baseModel = generateStairModel(generator, block, definition, textures, "base", i, null, stairBlock);
-                Identifier innerModel = generateStairModel(generator, block, definition, textures, "inner", i, null, stairBlock);
-                Identifier outerModel = generateStairModel(generator, block, definition, textures, "outer", i, null, stairBlock);
-                modelSet = new StairModelSet(baseModel, innerModel, outerModel, variant.weight);
-            }
-            modelSets.add(modelSet);
-        }
-
-        // Generate blockstate with weighted random variants
-        generator.blockStateCollector.accept(createStairBlockStateWithRandomTextures(block, modelSets, stairBlock.no_uvlock));
-
-        // Register item model
-        registerParentedItemModel(generator, block, modelSets.get(0).base);
-    }
-
-    /**
-     * Registers a stair block with multiple states.
-     */
-    private static void registerStairBlockWithStates(BlockStateModelGenerator generator, Block block, BlockDefinition definition, WCStairBlock stairBlock) {
-        List<BlockDefinition.StateVariant> states = definition.getStates();
+        // Collect all model sets for all states
         Map<String, List<StairModelSet>> stateModelMap = new HashMap<>();
-
         Identifier firstModel = null;
 
         for (BlockDefinition.StateVariant state : states) {
-            String stateId = state.getStateID() != null ? state.getStateID() : "base";
+            String stateId = state.getStateID();
+            if (stateId == null) stateId = "base";
+
             List<StairModelSet> modelSets = new ArrayList<>();
 
-            if (state.hasRandomTextures()) {
-                // Handle state with random textures using centralized helper
-                List<BlockDefinition.TextureVariantSet> variants = BlockDefinition.getRandomTextureVariantSetsFromState(state);
-                for (int i = 0; i < variants.size(); i++) {
-                    BlockDefinition.TextureVariantSet variant = variants.get(i);
-                    List<String> textures = variant.textures;
-                    Identifier baseModel = generateStairModel(generator, block, definition, textures, "base", i, stateId, stairBlock);
-                    Identifier innerModel = generateStairModel(generator, block, definition, textures, "inner", i, stateId, stairBlock);
-                    Identifier outerModel = generateStairModel(generator, block, definition, textures, "outer", i, stateId, stairBlock);
-                    modelSets.add(new StairModelSet(baseModel, innerModel, outerModel, variant.weight));
-                    if (firstModel == null) firstModel = baseModel;
-                }
-            } else {
-                // Handle state with single texture set or custom model
-                if (state.isCustomModel() || definition.hasCustomModel()) {
-                    Identifier baseModel = createCustomModelId(block, stateId + "_base_v1");
-                    Identifier innerModel = createCustomModelId(block, stateId + "_inner_v1");
-                    Identifier outerModel = createCustomModelId(block, stateId + "_outer_v1");
-                    modelSets.add(new StairModelSet(baseModel, innerModel, outerModel, 1));
-                    if (firstModel == null) firstModel = baseModel;
-                } else {
-                    List<String> textures = state.getTextures() != null ? state.getTextures() : definition.getTextures();
-                    if (textures != null && !textures.isEmpty()) {
-                        Identifier baseModel = generateStairModel(generator, block, definition, textures, "base", 0, stateId, stairBlock);
-                        Identifier innerModel = generateStairModel(generator, block, definition, textures, "inner", 0, stateId, stairBlock);
-                        Identifier outerModel = generateStairModel(generator, block, definition, textures, "outer", 0, stateId, stairBlock);
-                        modelSets.add(new StairModelSet(baseModel, innerModel, outerModel, 1));
-                        if (firstModel == null) firstModel = baseModel;
-                    }
-                }
+            // Check if we have texture sets to work with
+            int textureSetCount = state.getRandomTextureSetCount();
+
+            if (textureSetCount == 0) {
+                // No texture sets - skip this state or use fallback
+                continue;
             }
 
-            stateModelMap.put(stateId, modelSets);
+            // Iterate through all texture sets for this state
+            for (int setIdx = 0; setIdx < textureSetCount; setIdx++) {
+                BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                if (set == null || set.getTextureCount() == 0) {
+                    continue;
+                }
+
+                // Extract textures from this set
+                String[] textures = new String[set.getTextureCount()];
+                for (int i = 0; i < set.getTextureCount(); i++) {
+                    textures[i] = set.getTextureByIndex(i);
+                }
+
+                // Generate the three stair models for this texture set
+                Identifier baseModel = generateStairModelFromArray(generator, block, definition, textures, "base", setIdx, hasMultipleStates ? stateId : null, stairBlock);
+                Identifier innerModel = generateStairModelFromArray(generator, block, definition, textures, "inner", setIdx, hasMultipleStates ? stateId : null, stairBlock);
+                Identifier outerModel = generateStairModelFromArray(generator, block, definition, textures, "outer", setIdx, hasMultipleStates ? stateId : null, stairBlock);
+
+                modelSets.add(new StairModelSet(baseModel, innerModel, outerModel, set.getWeight()));
+
+                if (firstModel == null) firstModel = baseModel;
+            }
+
+            if (!modelSets.isEmpty()) {
+                stateModelMap.put(stateId, modelSets);
+            }
         }
 
-        // Generate blockstate with states
-        generator.blockStateCollector.accept(createStairBlockStateWithStates(block, definition, stateModelMap, states, stairBlock));
+        if (stateModelMap.isEmpty()) {
+            // Fallback if no valid models generated
+            registerFallbackStairBlock(generator, block, definition, stairBlock);
+            return;
+        }
+
+        // Generate blockstate based on whether we have multiple states
+        if (hasMultipleStates) {
+            generator.blockStateCollector.accept(createStairBlockStateWithStates(block, stateModelMap, stairBlock));
+        } else {
+            // Single state - no state prefix in variants
+            List<StairModelSet> modelSets = stateModelMap.values().iterator().next();
+            if (modelSets.size() == 1) {
+                // Single texture set
+                StairModelSet modelSet = modelSets.get(0);
+                generator.blockStateCollector.accept(createStairBlockState(block, modelSet.base, modelSet.inner, modelSet.outer, stairBlock.no_uvlock));
+            } else {
+                // Multiple texture sets (random textures)
+                generator.blockStateCollector.accept(createStairBlockStateWithRandomTextures(block, modelSets, stairBlock.no_uvlock));
+            }
+        }
 
         // Register item model
         if (firstModel != null) {
             registerParentedItemModel(generator, block, firstModel);
         }
     }
+
 
     private static void registerCustomModelStairBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition, WCStairBlock stairBlock) {
         Identifier baseModel = createCustomModelId(block, "base_v1");
@@ -169,20 +134,20 @@ public class StairBlockExporter extends BaseBlockExporter {
 
     private static void registerFallbackStairBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition, WCStairBlock stairBlock) {
         // Use missing texture as fallback
-        List<String> fallbackTextures = List.of("missing", "missing", "missing");
-        Identifier baseModel = generateStairModel(generator, block, definition, fallbackTextures, "base", 0, null, stairBlock);
-        Identifier innerModel = generateStairModel(generator, block, definition, fallbackTextures, "inner", 0, null, stairBlock);
-        Identifier outerModel = generateStairModel(generator, block, definition, fallbackTextures, "outer", 0, null, stairBlock);
+        String[] fallbackTextures = new String[]{"missing", "missing", "missing"};
+        Identifier baseModel = generateStairModelFromArray(generator, block, definition, fallbackTextures, "base", 0, null, stairBlock);
+        Identifier innerModel = generateStairModelFromArray(generator, block, definition, fallbackTextures, "inner", 0, null, stairBlock);
+        Identifier outerModel = generateStairModelFromArray(generator, block, definition, fallbackTextures, "outer", 0, null, stairBlock);
 
         generator.blockStateCollector.accept(createStairBlockState(block, baseModel, innerModel, outerModel, stairBlock.no_uvlock));
         registerParentedItemModel(generator, block, baseModel);
     }
 
     /**
-     * Generates a stair model (base, inner, or outer).
+     * Generates a stair model from a texture array.
      */
-    private static Identifier generateStairModel(BlockStateModelGenerator generator, Block block, BlockDefinition definition,
-                                                List<String> textures, String type, int variantIndex, String stateId, WCStairBlock stairBlock) {
+    private static Identifier generateStairModelFromArray(BlockStateModelGenerator generator, Block block, BlockDefinition definition,
+                                                         String[] textures, String type, int variantIndex, String stateId, WCStairBlock stairBlock) {
         String variantName = (stateId != null ? stateId + "_" : "") + type + "_v" + (variantIndex + 1);
         Identifier modelId = createGeneratedModelId(block, variantName);
 
@@ -190,8 +155,7 @@ public class StairBlockExporter extends BaseBlockExporter {
         JsonObject modelJson = new JsonObject();
 
         // Determine parent model based on properties
-        // Stairs typically have ambient occlusion enabled by default
-        boolean isOccluded = true;
+        boolean isOccluded = true; // Stairs typically have ambient occlusion enabled
         boolean isTinted = definition.isTinted();
         boolean hasOverlay = definition.hasOverlay();
 
@@ -200,9 +164,9 @@ public class StairBlockExporter extends BaseBlockExporter {
 
         // Add textures
         JsonObject texturesJson = new JsonObject();
-        String bottomTex = textures.size() > 0 ? textures.get(0) : "missing";
-        String topTex = textures.size() > 1 ? textures.get(1) : bottomTex;
-        String sideTex = textures.size() > 2 ? textures.get(2) : topTex;
+        String bottomTex = textures.length > 0 ? textures[0] : "missing";
+        String topTex = textures.length > 1 ? textures[1] : bottomTex;
+        String sideTex = textures.length > 2 ? textures[2] : topTex;
 
         texturesJson.addProperty("bottom", "westerosblocks:block/" + bottomTex);
         texturesJson.addProperty("top", "westerosblocks:block/" + topTex);
@@ -230,6 +194,7 @@ public class StairBlockExporter extends BaseBlockExporter {
 
         return modelId;
     }
+
 
     /**
      * Builds the parent path for stair models based on properties.
@@ -305,10 +270,7 @@ public class StairBlockExporter extends BaseBlockExporter {
     /**
      * Creates a blockstate for stairs with states.
      */
-    private static BlockStateSupplier createStairBlockStateWithStates(Block block, BlockDefinition definition,
-                                                                      Map<String, List<StairModelSet>> stateModelMap,
-                                                                      List<BlockDefinition.StateVariant> states,
-                                                                      WCStairBlock stairBlock) {
+    private static BlockStateSupplier createStairBlockStateWithStates(Block block, Map<String, List<StairModelSet>> stateModelMap, WCStairBlock stairBlock) {
         return new BlockStateSupplier() {
             @Override
             public Block getBlock() {
@@ -320,9 +282,9 @@ public class StairBlockExporter extends BaseBlockExporter {
                 JsonObject json = new JsonObject();
                 JsonObject variants = new JsonObject();
 
-                for (BlockDefinition.StateVariant state : states) {
-                    String stateId = state.getStateID() != null ? state.getStateID() : "base";
-                    List<StairModelSet> modelSets = stateModelMap.get(stateId);
+                for (Map.Entry<String, List<StairModelSet>> entry : stateModelMap.entrySet()) {
+                    String stateId = entry.getKey();
+                    List<StairModelSet> modelSets = entry.getValue();
 
                     if (modelSets != null && !modelSets.isEmpty()) {
                         addStairVariantsWithState(variants, modelSets, stateId, stairBlock.no_uvlock);

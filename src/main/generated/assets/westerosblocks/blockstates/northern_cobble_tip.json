@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": [
+    "state=base": [
       {
         "model": "westerosblocks:block/northern_cobble_tip/base_v1"
       },

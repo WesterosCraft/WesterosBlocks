@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/terrainset_ocean_rocks_hopper/base_v1"
     }
   }

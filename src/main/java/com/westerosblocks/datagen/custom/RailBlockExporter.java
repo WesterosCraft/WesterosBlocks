@@ -194,42 +194,71 @@ public class RailBlockExporter extends BaseBlockExporter {
     }
 
     /**
-     * Registers a rail block from a BlockDefinition
+     * Registers a rail block from a BlockDefinition.
+     * Uses uniform iteration pattern: After doInit(), states is ALWAYS non-empty,
+     * and each state has randomTextures normalized from simple textures.
      */
     public static void registerRailBlockFromDefinition(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        // Use centralized priority logic
-        BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
+        // After doInit(), states is ALWAYS non-empty (at least synthetic base state exists)
+        var states = definition.getStates();
 
-        switch (source) {
-            case RANDOM_TEXTURES -> {
-                // Use centralized random texture extraction
-                String[][] textureArrays = definition.getRandomTextureArrays();
-                registerRailBlockWithRandomTextures(generator, block, textureArrays);
+        if (states == null || states.isEmpty()) {
+            throw new IllegalStateException("Block definition states should never be null/empty after doInit() for block: " + getBlockName(block));
+        }
+
+        // For now, use the first state (multi-state rail blocks can be handled later if needed)
+        BlockDefinition.StateVariant state = states.get(0);
+
+        // Check if we have texture sets to work with
+        int textureSetCount = state.getRandomTextureSetCount();
+
+        if (textureSetCount == 0) {
+            // No texture sets at all - use fallback
+            registerRailBlock(generator, block, "missing");
+            return;
+        }
+
+        if (textureSetCount == 1) {
+            // Single texture set
+            BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(0);
+            if (set == null || set.getTextureCount() == 0) {
+                registerRailBlock(generator, block, "missing");
+                return;
             }
-            case TEXTURES -> {
-                // Use centralized texture extraction
-                String[] textures = definition.getTexturesAsArray();
-                if (textures.length > 1) {
-                    // Multiple textures - use first as flat, second as curved
-                    registerRailBlock(generator, block, textures);
-                } else if (textures.length == 1) {
-                    // Single texture
-                    registerRailBlock(generator, block, textures[0]);
+
+            // Extract textures from the single set
+            // Texture 0 is used for flat/raised, texture 1 (if exists) is used for curved
+            String flatTexture = set.getTextureByIndex(0);
+            String curvedTexture = set.getTextureCount() > 1 ? set.getTextureByIndex(1) : flatTexture;
+
+            if (flatTexture == null) {
+                registerRailBlock(generator, block, "missing");
+                return;
+            }
+
+            registerRailBlock(generator, block, new String[]{flatTexture, curvedTexture});
+        } else {
+            // Multiple random texture sets
+            String[][] textureArrays = new String[textureSetCount][];
+
+            for (int setIdx = 0; setIdx < textureSetCount; setIdx++) {
+                BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                if (set != null && set.getTextureCount() > 0) {
+                    String[] textures = new String[Math.min(set.getTextureCount(), 2)];
+                    textures[0] = set.getTextureByIndex(0);
+                    if (set.getTextureCount() > 1) {
+                        textures[1] = set.getTextureByIndex(1);
+                    } else {
+                        textures[1] = textures[0];
+                    }
+                    textureArrays[setIdx] = textures;
+                } else {
+                    textureArrays[setIdx] = new String[]{"missing", "missing"};
                 }
             }
-            case STATES, CUSTOM_MODEL, NONE -> {
-                // Use fallback for missing textures
-                registerRailBlock(generator, block, "missingno");
-            }
-        }
-    }
 
-    private static String getTextureFromDefinition(BlockDefinition definition) {
-        if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
-            return definition.getTextures().get(0);
+            registerRailBlockWithRandomTextures(generator, block, textureArrays);
         }
-        // Fallback to a default texture based on block name
-        return "rail_block/" + definition.getBlockName();
     }
 
 }

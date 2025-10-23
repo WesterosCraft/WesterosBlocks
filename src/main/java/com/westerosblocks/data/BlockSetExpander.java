@@ -522,10 +522,18 @@ public class BlockSetExpander {
 
     /**
      * Converts a map to a BlockDefinition using Gson.
+     * Calls doInit() to normalize the definition after creation.
      */
     private static BlockDefinition convertMapToBlockDefinition(Map<String, Object> defMap) {
         Gson gson = new GsonBuilder().create();
         String json = gson.toJson(defMap);
-        return gson.fromJson(json, BlockDefinition.class);
+        BlockDefinition definition = gson.fromJson(json, BlockDefinition.class);
+
+        // Initialize the definition to normalize textures and create synthetic base state
+        if (definition != null) {
+            definition.doInit();
+        }
+
+        return definition;
     }
 }

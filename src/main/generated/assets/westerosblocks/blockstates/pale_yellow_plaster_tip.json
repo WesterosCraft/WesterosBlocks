@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/pale_yellow_plaster_tip/base_v1"
     }
   }

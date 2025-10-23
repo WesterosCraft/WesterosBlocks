@@ -2,12 +2,12 @@
   "multipart": [
     {
       "apply": {
-        "model": "westerosblocks:block/spruce_fence_with_vines/post"
+        "model": "westerosblocks:block/spruce_fence_with_vines/post_v1"
       }
     },
     {
       "apply": {
-        "model": "westerosblocks:block/spruce_fence_with_vines/side"
+        "model": "westerosblocks:block/spruce_fence_with_vines/side_v1"
       },
       "when": {
         "north": "true"
@@ -15,7 +15,7 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/spruce_fence_with_vines/side",
+        "model": "westerosblocks:block/spruce_fence_with_vines/side_v1",
         "uvlock": true,
         "y": 90
       },
@@ -25,7 +25,7 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/spruce_fence_with_vines/side",
+        "model": "westerosblocks:block/spruce_fence_with_vines/side_v1",
         "uvlock": true,
         "y": 180
       },
@@ -35,7 +35,7 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/spruce_fence_with_vines/side",
+        "model": "westerosblocks:block/spruce_fence_with_vines/side_v1",
         "uvlock": true,
         "y": 270
       },

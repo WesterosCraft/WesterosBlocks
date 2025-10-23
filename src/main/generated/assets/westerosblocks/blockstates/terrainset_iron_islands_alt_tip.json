@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/terrainset_iron_islands_alt_tip/base_v1"
     }
   }

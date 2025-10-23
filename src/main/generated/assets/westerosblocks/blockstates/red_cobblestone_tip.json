@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": [
+    "state=base": [
       {
         "model": "westerosblocks:block/red_cobblestone_tip/base_v1"
       },

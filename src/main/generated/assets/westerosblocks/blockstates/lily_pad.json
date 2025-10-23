@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": [
+    "state=base": [
       {
         "model": "westerosblocks:block/lily_pad/base_v1"
       },

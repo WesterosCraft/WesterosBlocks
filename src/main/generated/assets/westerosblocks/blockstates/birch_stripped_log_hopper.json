@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/birch_stripped_log_hopper/base_v1"
     }
   }

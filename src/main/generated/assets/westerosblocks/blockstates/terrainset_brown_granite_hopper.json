@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/terrainset_brown_granite_hopper/base_v1"
     }
   }

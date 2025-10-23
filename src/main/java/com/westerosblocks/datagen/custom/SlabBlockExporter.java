@@ -21,26 +21,62 @@ public class SlabBlockExporter extends BaseBlockExporter {
     /**
      * Registers a slab block from a BlockDefinition.
      * Automatically handles textures, randomTextures, and waterlogged states.
+     *
+     * Uses uniform iteration pattern: After doInit(), states is ALWAYS non-empty,
+     * and each state has randomTextures normalized from simple textures.
      */
     public static void registerCustomSlabBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        // Use centralized priority logic from BlockDefinition
-        BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
+        // After doInit(), states is ALWAYS non-empty (at least synthetic base state exists)
+        var states = definition.getStates();
 
-        switch (source) {
-            case RANDOM_TEXTURES -> registerSlabBlockWithRandomTextures(generator, block, definition);
-            case TEXTURES -> registerSimpleSlabBlock(generator, block, definition);
-            case CUSTOM_MODEL -> registerCustomModelSlabBlock(generator, block, definition);
-            case NONE, STATES -> registerFallbackSlabBlock(generator, block, definition);
+        if (states == null || states.isEmpty()) {
+            throw new IllegalStateException("Block definition states should never be null/empty after doInit() for block: " + getBlockName(block));
+        }
+
+        // For now, use the first state (multi-state slab blocks can be handled later if needed)
+        BlockDefinition.StateVariant state = states.get(0);
+
+        // Check for custom model first
+        if (definition.hasCustomModel() || state.isCustomModel()) {
+            registerCustomModelSlabBlock(generator, block, definition);
+            return;
+        }
+
+        // Check if we have texture sets to work with
+        int textureSetCount = state.getRandomTextureSetCount();
+
+        if (textureSetCount == 0) {
+            // No texture sets at all - fallback
+            registerFallbackSlabBlock(generator, block, definition);
+            return;
+        }
+
+        if (textureSetCount == 1) {
+            // Single texture set
+            BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(0);
+            if (set == null || set.getTextureCount() == 0) {
+                registerFallbackSlabBlock(generator, block, definition);
+                return;
+            }
+
+            // Extract textures from the single set
+            String[] textures = new String[set.getTextureCount()];
+            for (int i = 0; i < set.getTextureCount(); i++) {
+                textures[i] = set.getTextureByIndex(i);
+            }
+
+            registerSimpleSlabBlockWithTextures(generator, block, textures);
+        } else {
+            // Multiple random texture sets
+            registerSlabBlockWithMultipleTextureSets(generator, block, state);
         }
     }
 
     /**
      * Registers a simple slab block with basic textures.
      */
-    private static void registerSimpleSlabBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        List<String> textures = definition.getTextures();
-        String[] textureArray = textures.toArray(new String[0]);
-        String[] filledTextures = fillTextureArray(textureArray);
+    private static void registerSimpleSlabBlockWithTextures(BlockStateModelGenerator generator, Block block, String[] textures) {
+        String[] filledTextures = fillTextureArray(textures);
         TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
 
         // Upload models for all three slab variants
@@ -54,17 +90,24 @@ public class SlabBlockExporter extends BaseBlockExporter {
     }
 
     /**
-     * Registers a slab block with random texture variants.
+     * Registers a slab block with multiple random texture sets from a state.
      */
-    private static void registerSlabBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        List<BlockDefinition.RandomTextureVariant> randomTextures = definition.getRandomTextures();
+    private static void registerSlabBlockWithMultipleTextureSets(BlockStateModelGenerator generator, Block block, BlockDefinition.StateVariant state) {
         List<SlabModelSet> modelSets = new ArrayList<>();
 
-        for (int i = 0; i < randomTextures.size(); i++) {
-            BlockDefinition.RandomTextureVariant variant = randomTextures.get(i);
-            List<String> textures = variant.getTextures();
-            String[] textureArray = textures.toArray(new String[0]);
-            String[] filledTextures = fillTextureArray(textureArray);
+        for (int i = 0; i < state.getRandomTextureSetCount(); i++) {
+            BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(i);
+            if (set == null || set.getTextureCount() == 0) {
+                continue;
+            }
+
+            // Extract textures from this set
+            String[] textures = new String[set.getTextureCount()];
+            for (int j = 0; j < set.getTextureCount(); j++) {
+                textures[j] = set.getTextureByIndex(j);
+            }
+
+            String[] filledTextures = fillTextureArray(textures);
             TextureMap textureMap = ModTextureMap.customAllSides(filledTextures);
 
             // Upload models for this variant
@@ -73,7 +116,13 @@ public class SlabBlockExporter extends BaseBlockExporter {
             Identifier topModelId = ModModels.SLAB_TOP.upload(createNestedModelId(block, getBlockName(block) + "_top" + variantSuffix), textureMap, generator.modelCollector);
             Identifier fullModelId = Models.CUBE.upload(createNestedModelId(block, getBlockName(block) + "_double" + variantSuffix), textureMap, generator.modelCollector);
 
-            modelSets.add(new SlabModelSet(bottomModelId, topModelId, fullModelId, variant.getWeight()));
+            modelSets.add(new SlabModelSet(bottomModelId, topModelId, fullModelId, set.getWeight()));
+        }
+
+        if (modelSets.isEmpty()) {
+            // Fallback if no valid texture sets found
+            registerFallbackSlabBlock(generator, block, null);
+            return;
         }
 
         // Create blockstate with weighted random variants

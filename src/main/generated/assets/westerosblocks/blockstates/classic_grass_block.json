@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": [
+    "state=base": [
       {
         "model": "westerosblocks:block/classic_grass_block/base_v1"
       },

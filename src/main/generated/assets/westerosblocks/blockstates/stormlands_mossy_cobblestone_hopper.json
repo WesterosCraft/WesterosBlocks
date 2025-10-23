@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": [
+    "state=base": [
       {
         "model": "westerosblocks:block/stormlands_mossy_cobblestone_hopper/base_v1"
       },

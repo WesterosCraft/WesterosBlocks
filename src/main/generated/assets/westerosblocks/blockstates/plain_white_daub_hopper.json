@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/plain_white_daub_hopper/base_v1"
     }
   }

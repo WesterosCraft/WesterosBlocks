@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/oldtown_light_stone_tip/base_v1"
     }
   }

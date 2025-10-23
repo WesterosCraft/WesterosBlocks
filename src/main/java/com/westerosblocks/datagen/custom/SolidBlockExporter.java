@@ -115,38 +115,66 @@ public class SolidBlockExporter extends BaseBlockExporter {
 
     /**
      * Registers a solid block from a BlockDefinition.
-     * Automatically handles textures vs randomTextures vs states and chooses the appropriate method.
+     * Uses uniform iteration pattern - after doInit(), states is always non-empty.
+     * Matches the old 1.18.2 pattern where we iterate through states first.
      */
     public static void registerCustomSolidBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        // Use centralized priority logic from BlockDefinition
-        BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
+        // After doInit(), states is ALWAYS non-empty (at least synthetic base state exists)
+        var states = definition.getStates();
 
-        switch (source) {
-            case STATES -> {
-                // Use centralized state texture extraction
-                String[][] textureArrays = definition.getStateTextureArrays();
-                registerCustomSolidBlockWithStates(generator, block, textureArrays);
-            }
-            case RANDOM_TEXTURES -> {
-                // Use centralized random texture extraction
-                String[][] textureArrays = definition.getRandomTextureArrays();
-                registerCustomSolidBlockWithRandomTextures(generator, block, textureArrays);
-            }
-            case TEXTURES -> {
-                // Use centralized texture array extraction
-                String[] textures = definition.getTexturesAsArray();
+        if (states == null || states.isEmpty()) {
+            throw new IllegalStateException("Block definition states should never be null/empty after doInit() for block: " + getBlockName(block));
+        }
 
-                if (textures.length == 1) {
-                    // Single texture
-                    registerSimpleCustomSolidBlock(generator, block, textures[0]);
+        // For now, use the first state (multi-state solid blocks handled separately if needed)
+        BlockDefinition.StateVariant state = states.get(0);
+
+        // Check if we have multiple random texture sets
+        int textureSetCount = state.getRandomTextureSetCount();
+
+        if (textureSetCount == 0) {
+            // No texture sets at all - skip
+            return;
+        }
+
+        if (textureSetCount == 1) {
+            // Single texture set - check how many textures it has
+            BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(0);
+            if (set == null || set.getTextureCount() == 0) {
+                return;
+            }
+
+            // Extract textures from the single set
+            String[] textures = new String[set.getTextureCount()];
+            for (int i = 0; i < set.getTextureCount(); i++) {
+                textures[i] = set.getTextureByIndex(i);
+            }
+
+            if (textures.length == 1) {
+                // Single texture - use cube_all
+                registerSimpleCustomSolidBlock(generator, block, textures[0]);
+            } else {
+                // Multiple textures - use cube model
+                registerCustomSolidBlock(generator, block, textures);
+            }
+        } else {
+            // Multiple random texture sets - extract all of them
+            String[][] textureArrays = new String[textureSetCount][];
+
+            for (int setIdx = 0; setIdx < textureSetCount; setIdx++) {
+                BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                if (set != null && set.getTextureCount() > 0) {
+                    String[] textures = new String[set.getTextureCount()];
+                    for (int i = 0; i < set.getTextureCount(); i++) {
+                        textures[i] = set.getTextureByIndex(i);
+                    }
+                    textureArrays[setIdx] = textures;
                 } else {
-                    // Multiple textures
-                    registerCustomSolidBlock(generator, block, textures);
+                    textureArrays[setIdx] = new String[0];
                 }
             }
-            case CUSTOM_MODEL, NONE -> {
-                // Skip registration for custom models or blocks with no textures
-            }
+
+            registerCustomSolidBlockWithRandomTextures(generator, block, textureArrays);
         }
     }
 

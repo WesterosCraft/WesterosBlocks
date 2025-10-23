@@ -46,7 +46,7 @@ public class WCSolidBlock extends Block {
             boolean doConnectState = definition != null && definition.isConnectState();
             boolean doToggleOnUse = definition != null && definition.toggleOnUse();
             int numStates = definition != null ? definition.getStateCount() : 0;
-            boolean doAddStates = numStates > 0;
+            boolean doAddStates = numStates > 1;
             boolean doSymmetrical = definition != null && definition.isSymmetrical();
 
             if (doConnectState) {

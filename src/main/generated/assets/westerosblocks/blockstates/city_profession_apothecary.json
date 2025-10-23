@@ -1,23 +1,35 @@
 {
   "variants": {
-    "facing=east,state=cut1": {
-      "model": "westerosblocks:block/city_profession_apothecary/cut1_v1"
-    },
-    "facing=east,state=cut2": {
-      "model": "westerosblocks:block/city_profession_apothecary/cut2_v1"
-    },
-    "facing=east,state=cut3": {
-      "model": "westerosblocks:block/city_profession_apothecary/cut3_v1"
-    },
-    "facing=east,state=cut4": {
-      "model": "westerosblocks:block/city_profession_apothecary/cut4_v1"
-    },
-    "facing=east,state=cut5": {
-      "model": "westerosblocks:block/city_profession_apothecary/cut5_v1"
-    },
-    "facing=east,state=cut6": {
-      "model": "westerosblocks:block/city_profession_apothecary/cut6_v1"
-    },
+    "facing=east,state=cut1": [
+      {
+        "model": "westerosblocks:block/city_profession_apothecary/cut1_v1"
+      }
+    ],
+    "facing=east,state=cut2": [
+      {
+        "model": "westerosblocks:block/city_profession_apothecary/cut2_v1"
+      }
+    ],
+    "facing=east,state=cut3": [
+      {
+        "model": "westerosblocks:block/city_profession_apothecary/cut3_v1"
+      }
+    ],
+    "facing=east,state=cut4": [
+      {
+        "model": "westerosblocks:block/city_profession_apothecary/cut4_v1"
+      }
+    ],
+    "facing=east,state=cut5": [
+      {
+        "model": "westerosblocks:block/city_profession_apothecary/cut5_v1"
+      }
+    ],
+    "facing=east,state=cut6": [
+      {
+        "model": "westerosblocks:block/city_profession_apothecary/cut6_v1"
+      }
+    ],
     "facing=east,state=random": [
       {
         "model": "westerosblocks:block/city_profession_apothecary/random_v1"
@@ -38,30 +50,42 @@
         "model": "westerosblocks:block/city_profession_apothecary/random_v6"
       }
     ],
-    "facing=north,state=cut1": {
-      "model": "westerosblocks:block/city_profession_apothecary/cut1_v1",
-      "y": 90
-    },
-    "facing=north,state=cut2": {
-      "model": "westerosblocks:block/city_profession_apothecary/cut2_v1",
-      "y": 90
-    },
-    "facing=north,state=cut3": {
-      "model": "westerosblocks:block/city_profession_apothecary/cut3_v1",
-      "y": 90
-    },
-    "facing=north,state=cut4": {
-      "model": "westerosblocks:block/city_profession_apothecary/cut4_v1",
-      "y": 90
-    },
-    "facing=north,state=cut5": {
-      "model": "westerosblocks:block/city_profession_apothecary/cut5_v1",
-      "y": 90
-    },
-    "facing=north,state=cut6": {
-      "model": "westerosblocks:block/city_profession_apothecary/cut6_v1",
-      "y": 90
-    },
+    "facing=north,state=cut1": [
+      {
+        "model": "westerosblocks:block/city_profession_apothecary/cut1_v1",
+        "y": 90
+      }
+    ],
+    "facing=north,state=cut2": [
+      {
+        "model": "westerosblocks:block/city_profession_apothecary/cut2_v1",
+        "y": 90
+      }
+    ],
+    "facing=north,state=cut3": [
+      {
+        "model": "westerosblocks:block/city_profession_apothecary/cut3_v1",
+        "y": 90
+      }
+    ],
+    "facing=north,state=cut4": [
+      {
+        "model": "westerosblocks:block/city_profession_apothecary/cut4_v1",
+        "y": 90
+      }
+    ],
+    "facing=north,state=cut5": [
+      {
+        "model": "westerosblocks:block/city_profession_apothecary/cut5_v1",
+        "y": 90
+      }
+    ],
+    "facing=north,state=cut6": [
+      {
+        "model": "westerosblocks:block/city_profession_apothecary/cut6_v1",
+        "y": 90
+      }
+    ],
     "facing=north,state=random": [
       {
         "model": "westerosblocks:block/city_profession_apothecary/random_v1",

@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/dorne_dark_sandstone_tip/base_v1"
     }
   }

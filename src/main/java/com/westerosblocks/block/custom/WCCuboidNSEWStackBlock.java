@@ -42,7 +42,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggab
 
             boolean doToggleOnUse = definition != null && definition.toggleOnUse();
             int numStates = definition != null ? definition.getStateCount() : 0;
-            boolean doAddStates = numStates > 0;
+            boolean doAddStates = numStates > 1;
 
             if (doAddStates) {
                 List<String> stateValues = definition != null ? definition.getStateValues() : null;

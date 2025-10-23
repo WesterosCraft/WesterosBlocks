@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "westerosblocks:block/rope_ladder/base",
+      "model": "westerosblocks:block/rope_ladder/base_v1",
       "y": 90
     },
     "facing=north": {
-      "model": "westerosblocks:block/rope_ladder/base"
+      "model": "westerosblocks:block/rope_ladder/base_v1"
     },
     "facing=south": {
-      "model": "westerosblocks:block/rope_ladder/base",
+      "model": "westerosblocks:block/rope_ladder/base_v1",
       "y": 180
     },
     "facing=west": {
-      "model": "westerosblocks:block/rope_ladder/base",
+      "model": "westerosblocks:block/rope_ladder/base_v1",
       "y": 270
     }
   }

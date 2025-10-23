@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/eyrie_blue_veined_marble_hopper/base_v1"
     }
   }

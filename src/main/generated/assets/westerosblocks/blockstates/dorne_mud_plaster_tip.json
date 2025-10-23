@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/dorne_mud_plaster_tip/base_v1"
     }
   }

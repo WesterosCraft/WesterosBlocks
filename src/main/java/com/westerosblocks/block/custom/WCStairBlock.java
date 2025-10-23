@@ -78,7 +78,7 @@ public class WCStairBlock extends Block implements Waterloggable {
         public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
             boolean doToggleOnUse = definition != null && definition.toggleOnUse();
             int numStates = definition != null ? definition.getStateCount() : 0;
-            boolean doAddStates = numStates > 0;
+            boolean doAddStates = numStates > 1;
 
             // Set the STATE property if stateValues are provided
             if (doAddStates) {

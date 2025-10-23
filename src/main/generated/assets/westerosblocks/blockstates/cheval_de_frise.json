@@ -1,10 +1,9 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "westerosblocks:block/custom/cheval_de_frise/base_v1",
-      "y": 0
+    "facing=east,state=base": {
+      "model": "westerosblocks:block/custom/cheval_de_frise/base_v1"
     },
-    "facing=north": {
+    "facing=north,state=base": {
       "model": "westerosblocks:block/custom/cheval_de_frise/base_v1",
       "y": 90
     }

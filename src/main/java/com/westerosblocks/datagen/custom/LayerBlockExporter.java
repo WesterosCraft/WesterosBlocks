@@ -23,40 +23,70 @@ public class LayerBlockExporter extends BaseBlockExporter {
 
     /**
      * Registers a layer block from a BlockDefinition.
-     * Automatically handles states, randomTextures, and layer counts.
+     * Uses uniform iteration pattern: After doInit(), states is ALWAYS non-empty,
+     * and each state has randomTextures normalized from simple textures.
      */
     public static void registerCustomLayerBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         if (!(block instanceof WCLayerBlock layerBlock)) {
             throw new IllegalArgumentException("Block must be a WCLayerBlock instance");
         }
 
-        // Use centralized priority logic from BlockDefinition
-        BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
+        // After doInit(), states is ALWAYS non-empty (at least synthetic base state exists)
+        var states = definition.getStates();
 
-        switch (source) {
-            case RANDOM_TEXTURES -> registerLayerBlockWithRandomTextures(generator, block, definition, layerBlock);
-            case TEXTURES -> registerSimpleLayerBlock(generator, block, definition, layerBlock);
-            case CUSTOM_MODEL -> registerCustomModelLayerBlock(generator, block, definition, layerBlock);
-            case NONE, STATES -> registerFallbackLayerBlock(generator, block, definition, layerBlock);
+        if (states == null || states.isEmpty()) {
+            throw new IllegalStateException("Block definition states should never be null/empty after doInit() for block: " + getBlockName(block));
+        }
+
+        // Check for custom model first
+        if (definition.hasCustomModel()) {
+            registerCustomModelLayerBlock(generator, block, definition, layerBlock);
+            return;
+        }
+
+        // For now, use the first state (multi-state layer blocks can be handled later if needed)
+        BlockDefinition.StateVariant state = states.get(0);
+
+        // Check if we have texture sets to work with
+        int textureSetCount = state.getRandomTextureSetCount();
+
+        if (textureSetCount == 0) {
+            // No texture sets at all - use fallback
+            registerFallbackLayerBlock(generator, block, definition, layerBlock);
+            return;
+        }
+
+        if (textureSetCount == 1) {
+            // Single texture set - simple layer block
+            BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(0);
+            if (set == null || set.getTextureCount() == 0) {
+                registerFallbackLayerBlock(generator, block, definition, layerBlock);
+                return;
+            }
+
+            // Extract textures from the single set
+            String[] textures = new String[set.getTextureCount()];
+            for (int i = 0; i < set.getTextureCount(); i++) {
+                textures[i] = set.getTextureByIndex(i);
+            }
+
+            registerSimpleLayerBlockWithTextures(generator, block, definition, textures, layerBlock);
+        } else {
+            // Multiple random texture sets
+            registerLayerBlockWithMultipleTextureSets(generator, block, definition, state, layerBlock);
         }
     }
 
     /**
-     * Registers a simple layer block with basic textures.
+     * Registers a simple layer block with basic textures from a texture array.
      */
-    private static void registerSimpleLayerBlock(BlockStateModelGenerator generator, Block block,
-                                                  BlockDefinition definition, WCLayerBlock layerBlock) {
-        List<String> textures = definition.getTextures();
+    private static void registerSimpleLayerBlockWithTextures(BlockStateModelGenerator generator, Block block,
+                                                             BlockDefinition definition, String[] textures, WCLayerBlock layerBlock) {
         Map<Integer, Identifier> layerModels = new HashMap<>();
 
         // Generate models for each layer height (1 through layerCount)
         for (int layer = 1; layer <= layerBlock.layerCount; layer++) {
-            Identifier modelId;
-            if (definition.hasCustomModel()) {
-                modelId = createCustomModelId(block, "layer" + layer + "_v1");
-            } else {
-                modelId = generateLayerModel(generator, block, definition, textures, layer, 0, layerBlock);
-            }
+            Identifier modelId = generateLayerModelFromArray(generator, block, definition, textures, layer, 0, layerBlock);
             layerModels.put(layer, modelId);
         }
 
@@ -68,32 +98,43 @@ public class LayerBlockExporter extends BaseBlockExporter {
     }
 
     /**
-     * Registers a layer block with random texture variants.
+     * Registers a layer block with multiple random texture sets from a state.
      */
-    private static void registerLayerBlockWithRandomTextures(BlockStateModelGenerator generator, Block block,
-                                                             BlockDefinition definition, WCLayerBlock layerBlock) {
-        List<BlockDefinition.RandomTextureVariant> randomTextures = definition.getRandomTextures();
+    private static void registerLayerBlockWithMultipleTextureSets(BlockStateModelGenerator generator, Block block,
+                                                                  BlockDefinition definition, BlockDefinition.StateVariant state,
+                                                                  WCLayerBlock layerBlock) {
         Map<Integer, List<LayerModelSet>> layerModelSets = new HashMap<>();
 
         // For each layer height
         for (int layer = 1; layer <= layerBlock.layerCount; layer++) {
             List<LayerModelSet> modelSets = new ArrayList<>();
 
-            // For each random texture variant
-            for (int i = 0; i < randomTextures.size(); i++) {
-                BlockDefinition.RandomTextureVariant variant = randomTextures.get(i);
-                List<String> textures = variant.getTextures();
-
-                Identifier modelId;
-                if (definition.hasCustomModel()) {
-                    modelId = createCustomModelId(block, "layer" + layer + "_v" + (i + 1));
-                } else {
-                    modelId = generateLayerModel(generator, block, definition, textures, layer, i, layerBlock);
+            // For each random texture set in the state
+            for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
+                BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                if (set == null || set.getTextureCount() == 0) {
+                    continue;
                 }
-                modelSets.add(new LayerModelSet(modelId, variant.getWeight()));
+
+                // Extract textures from this set
+                String[] textures = new String[set.getTextureCount()];
+                for (int i = 0; i < set.getTextureCount(); i++) {
+                    textures[i] = set.getTextureByIndex(i);
+                }
+
+                Identifier modelId = generateLayerModelFromArray(generator, block, definition, textures, layer, setIdx, layerBlock);
+                modelSets.add(new LayerModelSet(modelId, set.getWeight()));
             }
 
-            layerModelSets.put(layer, modelSets);
+            if (!modelSets.isEmpty()) {
+                layerModelSets.put(layer, modelSets);
+            }
+        }
+
+        if (layerModelSets.isEmpty()) {
+            // Fallback if no valid models generated
+            registerFallbackLayerBlock(generator, block, definition, layerBlock);
+            return;
         }
 
         // Generate blockstate with weighted random variants
@@ -123,11 +164,11 @@ public class LayerBlockExporter extends BaseBlockExporter {
      */
     private static void registerFallbackLayerBlock(BlockStateModelGenerator generator, Block block,
                                                    BlockDefinition definition, WCLayerBlock layerBlock) {
-        List<String> fallbackTextures = List.of("missing", "missing", "missing", "missing", "missing", "missing");
+        String[] fallbackTextures = new String[]{"missing", "missing", "missing", "missing", "missing", "missing"};
         Map<Integer, Identifier> layerModels = new HashMap<>();
 
         for (int layer = 1; layer <= layerBlock.layerCount; layer++) {
-            Identifier modelId = generateLayerModel(generator, block, definition, fallbackTextures, layer, 0, layerBlock);
+            Identifier modelId = generateLayerModelFromArray(generator, block, definition, fallbackTextures, layer, 0, layerBlock);
             layerModels.put(layer, modelId);
         }
 
@@ -136,11 +177,11 @@ public class LayerBlockExporter extends BaseBlockExporter {
     }
 
     /**
-     * Generates a layer model for a specific height.
+     * Generates a layer model for a specific height from a texture array.
      */
-    private static Identifier generateLayerModel(BlockStateModelGenerator generator, Block block,
-                                                BlockDefinition definition, List<String> textures,
-                                                int layer, int variantIndex, WCLayerBlock layerBlock) {
+    private static Identifier generateLayerModelFromArray(BlockStateModelGenerator generator, Block block,
+                                                         BlockDefinition definition, String[] textures,
+                                                         int layer, int variantIndex, WCLayerBlock layerBlock) {
         String variantName = "layer" + layer + "_v" + (variantIndex + 1);
         Identifier modelId = createGeneratedModelId(block, variantName);
 
@@ -150,12 +191,12 @@ public class LayerBlockExporter extends BaseBlockExporter {
 
         // Add textures
         JsonObject texturesJson = new JsonObject();
-        int cnt = Math.max(6, textures.size());
+        int cnt = Math.max(6, textures.length);
         for (int j = 0; j < cnt; j++) {
-            String texture = j < textures.size() ? textures.get(j) : textures.get(textures.size() - 1);
+            String texture = j < textures.length ? textures[j] : textures[textures.length - 1];
             texturesJson.addProperty("txt" + j, "westerosblocks:block/" + texture);
         }
-        texturesJson.addProperty("particle", "westerosblocks:block/" + textures.get(0));
+        texturesJson.addProperty("particle", "westerosblocks:block/" + textures[0]);
         modelJson.add("textures", texturesJson);
 
         // Calculate height for this layer

@@ -2,18 +2,18 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/potted_green_leafy_herb/base"
+        "model": "westerosblocks:block/potted_green_leafy_herb/base_v1"
       },
       {
-        "model": "westerosblocks:block/potted_green_leafy_herb/base",
+        "model": "westerosblocks:block/potted_green_leafy_herb/base_v1",
         "y": 90
       },
       {
-        "model": "westerosblocks:block/potted_green_leafy_herb/base",
+        "model": "westerosblocks:block/potted_green_leafy_herb/base_v1",
         "y": 180
       },
       {
-        "model": "westerosblocks:block/potted_green_leafy_herb/base",
+        "model": "westerosblocks:block/potted_green_leafy_herb/base_v1",
         "y": 270
       }
     ]

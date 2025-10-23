@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/starry_sept_marble_hopper/base_v1"
     }
   }

@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/pale_pink_light_stone_tip/base_v1"
     }
   }

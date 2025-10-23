@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/orange_wood_vertical_planks_tip/base_v1"
     }
   }

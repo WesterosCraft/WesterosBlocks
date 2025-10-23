@@ -2,7 +2,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "westerosblocks:block/falling_water_block_three/base",
+        "model": "westerosblocks:block/falling_water_block_three/base_v1",
         "y": 0
       },
       "when": {
@@ -11,7 +11,7 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/falling_water_block_three/base",
+        "model": "westerosblocks:block/falling_water_block_three/base_v1",
         "y": 90
       },
       "when": {
@@ -20,7 +20,7 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/falling_water_block_three/base",
+        "model": "westerosblocks:block/falling_water_block_three/base_v1",
         "y": 180
       },
       "when": {
@@ -29,7 +29,7 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/falling_water_block_three/base",
+        "model": "westerosblocks:block/falling_water_block_three/base_v1",
         "y": 270
       },
       "when": {
@@ -38,7 +38,7 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/falling_water_block_three/top",
+        "model": "westerosblocks:block/falling_water_block_three/top_v1",
         "y": 0
       },
       "when": {
@@ -47,7 +47,7 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/falling_water_block_three/top",
+        "model": "westerosblocks:block/falling_water_block_three/top_v1",
         "x": 180
       },
       "when": {

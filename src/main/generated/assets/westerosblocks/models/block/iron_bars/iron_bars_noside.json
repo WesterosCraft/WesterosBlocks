@@ -1,7 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/ctm_pane_noside",
   "textures": {
-    "cap": "westerosblocks:block/bars_iron_block/iron_bars",
-    "side": "westerosblocks:block/bars_iron_block/iron_bars"
+    "cap": "westerosblocks:block/missingno",
+    "side": "westerosblocks:block/missingno"
   }
 }

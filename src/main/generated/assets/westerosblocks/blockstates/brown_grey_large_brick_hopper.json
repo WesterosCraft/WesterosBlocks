@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/brown_grey_large_brick_hopper/base_v1"
     }
   }

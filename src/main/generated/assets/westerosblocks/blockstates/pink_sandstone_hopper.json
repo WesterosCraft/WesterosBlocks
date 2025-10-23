@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/pink_sandstone_hopper/base_v1"
     }
   }

@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "state=base": {
       "model": "westerosblocks:block/baelors_sphere_crone_yellow/base_v1"
     }
   }

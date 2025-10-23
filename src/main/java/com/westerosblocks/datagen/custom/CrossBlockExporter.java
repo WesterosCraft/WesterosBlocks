@@ -8,6 +8,7 @@ import net.minecraft.util.Identifier;
 import com.westerosblocks.WesterosBlocks;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -271,83 +272,79 @@ public class CrossBlockExporter extends BaseBlockExporter {
     }
 
     /**
-     * Registers a cross block using BlockDefinition (for web blocks and other cross blocks)
+     * Registers a cross block using BlockDefinition.
+     * Uses uniform iteration pattern - after doInit(), states is always non-empty
+     * and each state always has randomTextures (normalized from simple textures).
      */
     public static void registerCrossBlockFromDefinition(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        if (definition.getTextures() == null || definition.getTextures().isEmpty()) {
-            if ((definition.getStates() == null || definition.getStates().isEmpty()) &&
-                (definition.getRandomTextures() == null || definition.getRandomTextures().isEmpty())) {
-                throw new IllegalArgumentException("Cross blocks require textures, states, or randomTextures");
-            }
-        }
-
-        // Check for color multiplier to determine if tinted
         boolean isTinted = definition.hasColorMult();
-
-        // Check if this is a layer-sensitive plant using the proper method
         boolean isLayerSensitive = definition.isLayerSensitive();
 
-        if (definition.hasStates()) {
-            // Handle complex state-based blocks (like smoke, cobweb)
-            handleStatesBasedCrossBlock(generator, block, definition, isTinted, isLayerSensitive);
-        } else if (definition.getRandomTextures() != null && !definition.getRandomTextures().isEmpty()) {
-            // Handle random texture blocks
-            String[] texturePaths = definition.getRandomTextures().stream()
-                .flatMap(randomTexture -> randomTexture.getTextures().stream())
-                .toArray(String[]::new);
+        // After doInit(), states is ALWAYS non-empty (at least synthetic base state exists)
+        // Each state ALWAYS has randomTextures (normalized from simple textures)
+        List<BlockDefinition.StateVariant> states = definition.getStates();
 
+        if (states == null || states.isEmpty()) {
+            throw new IllegalStateException("Block definition states should never be null/empty after doInit() for block: " + getBlockName(block));
+        }
+
+        // For now, use the first state (multi-state cross blocks can be handled later if needed)
+        BlockDefinition.StateVariant state = states.get(0);
+
+        // Determine if we have multiple texture variants that warrant random rotations
+        // Multiple variants = multiple texture sets OR single set with multiple textures
+        boolean hasMultipleVariants = false;
+        int totalTextureCount = 0;
+
+        if (state.getRandomTextureSetCount() > 1) {
+            // Multiple texture sets = multiple variants
+            hasMultipleVariants = true;
+            for (int i = 0; i < state.getRandomTextureSetCount(); i++) {
+                BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(i);
+                totalTextureCount += (set != null) ? set.getTextureCount() : 0;
+            }
+        } else if (state.getRandomTextureSetCount() == 1) {
+            BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(0);
+            int textureCount = (set != null) ? set.getTextureCount() : 0;
+            if (textureCount > 1) {
+                // Single set with multiple textures = multiple variants
+                hasMultipleVariants = true;
+            }
+            totalTextureCount = textureCount;
+        }
+
+        if (hasMultipleVariants) {
+            // Collect all texture paths for random texture generation with rotations
+            String[] texturePaths = new String[totalTextureCount];
+            int textureIndex = 0;
+
+            for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
+                BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                if (set != null) {
+                    for (int i = 0; i < set.getTextureCount(); i++) {
+                        String texture = set.getTextureByIndex(i);
+                        if (texture != null) {
+                            texturePaths[textureIndex++] = texture;
+                        }
+                    }
+                }
+            }
+
+            // Generate with multiple variants and rotations (4 rotations for variety)
             if (isLayerSensitive) {
                 generateLayerSensitiveCrossWithRandomTextures(generator, block, texturePaths, isTinted, 4);
             } else {
                 generateCrossWithRandomTextures(generator, block, texturePaths, isTinted, 4);
             }
         } else {
-            // Handle simple texture blocks
-            String texturePath = definition.getTextures().get(0);
+            // Single texture variant, no random rotations needed
+            String texturePath = state.getTextureByIndex(0);
 
-            if (isLayerSensitive) {
-                generateLayerSensitiveCross(generator, block, texturePath, isTinted, 1);
-            } else {
-                generateCross(generator, block, texturePath, isTinted, 1);
+            if (texturePath == null) {
+                throw new IllegalArgumentException("Cross block '" + getBlockName(block) + "' has no valid textures");
             }
-        }
-    }
 
-    /**
-     * Handles blocks with complex states structure (like smoke, cobweb)
-     */
-    private static void handleStatesBasedCrossBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition, boolean isTinted, boolean isLayerSensitive) {
-        // For blocks with states, we need to look for the "random" state or use the first available state
-        for (BlockDefinition.StateVariant state : definition.getStates()) {
-            if ("random".equals(state.getStateID()) && state.hasRandomTextures()) {
-                // Handle random state with random textures
-                String[] texturePaths = state.getRandomTextures().stream()
-                    .flatMap(randomTexture -> randomTexture.getTextures().stream())
-                    .toArray(String[]::new);
-
-                if (isLayerSensitive) {
-                    generateLayerSensitiveCrossWithRandomTextures(generator, block, texturePaths, isTinted, 4);
-                } else {
-                    generateCrossWithRandomTextures(generator, block, texturePaths, isTinted, 4);
-                }
-                return;
-            } else if (state.getTextures() != null && !state.getTextures().isEmpty()) {
-                // Handle first found state with simple textures
-                String texturePath = state.getTextures().get(0);
-
-                if (isLayerSensitive) {
-                    generateLayerSensitiveCross(generator, block, texturePath, isTinted, 1);
-                } else {
-                    generateCross(generator, block, texturePath, isTinted, 1);
-                }
-                return;
-            }
-        }
-
-        // Fallback if no suitable state found
-        if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
-            String texturePath = definition.getTextures().get(0);
-
+            // Generate with single variant, no rotations
             if (isLayerSensitive) {
                 generateLayerSensitiveCross(generator, block, texturePath, isTinted, 1);
             } else {

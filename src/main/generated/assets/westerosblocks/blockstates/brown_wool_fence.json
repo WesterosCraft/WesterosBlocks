@@ -2,12 +2,12 @@
   "multipart": [
     {
       "apply": {
-        "model": "westerosblocks:block/brown_wool_fence/post"
+        "model": "westerosblocks:block/brown_wool_fence/post_v1"
       }
     },
     {
       "apply": {
-        "model": "westerosblocks:block/brown_wool_fence/side"
+        "model": "westerosblocks:block/brown_wool_fence/side_v1"
       },
       "when": {
         "north": "true"
@@ -15,7 +15,7 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/brown_wool_fence/side",
+        "model": "westerosblocks:block/brown_wool_fence/side_v1",
         "uvlock": true,
         "y": 90
       },
@@ -25,7 +25,7 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/brown_wool_fence/side",
+        "model": "westerosblocks:block/brown_wool_fence/side_v1",
         "uvlock": true,
         "y": 180
       },
@@ -35,7 +35,7 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/brown_wool_fence/side",
+        "model": "westerosblocks:block/brown_wool_fence/side_v1",
         "uvlock": true,
         "y": 270
       },

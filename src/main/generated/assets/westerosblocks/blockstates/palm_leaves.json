@@ -2,13 +2,13 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/palm_leaves/bf1"
+        "model": "westerosblocks:block/palm_leaves/bf1_v1"
       },
       {
-        "model": "westerosblocks:block/palm_leaves/bf2"
+        "model": "westerosblocks:block/palm_leaves/bf2_v1"
       },
       {
-        "model": "westerosblocks:block/palm_leaves/bf3"
+        "model": "westerosblocks:block/palm_leaves/bf3_v1"
       }
     ]
   }

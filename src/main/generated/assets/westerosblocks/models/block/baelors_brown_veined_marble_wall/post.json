@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_post",
-  "textures": {
-    "bottom": "westerosblocks:block/marble/baelors_brown_veined/all",
-    "particle": "westerosblocks:block/marble/baelors_brown_veined/all",
-    "side": "westerosblocks:block/marble/baelors_brown_veined/all",
-    "top": "westerosblocks:block/marble/baelors_brown_veined/all"
-  }
-}
