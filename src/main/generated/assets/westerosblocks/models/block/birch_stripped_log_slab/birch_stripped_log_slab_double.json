@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/bark/birch/stripped_birch",
+    "east": "westerosblocks:block/bark/birch/stripped_birch",
+    "north": "westerosblocks:block/bark/birch/stripped_birch",
+    "particle": "westerosblocks:block/bark/birch/stripped_birch",
+    "south": "westerosblocks:block/bark/birch/stripped_birch",
+    "up": "westerosblocks:block/bark/birch/stripped_birch",
+    "west": "westerosblocks:block/bark/birch/stripped_birch"
+  }
+}
