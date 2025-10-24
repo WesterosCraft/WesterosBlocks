@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/birch_hopper/base_v1"
+    "": {
+      "model": "westerosblocks:block/birch_hopper/v1"
     }
   }
 }

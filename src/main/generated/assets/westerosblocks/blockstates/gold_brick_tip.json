@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/gold_brick_tip/base_v1"
+    "": {
+      "model": "westerosblocks:block/gold_brick_tip/v1"
     }
   }
 }

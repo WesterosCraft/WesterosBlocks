@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/large_clay_pot_empty/base_v1"
+    "": {
+      "model": "westerosblocks:block/large_clay_pot_empty/v1"
     }
   }
 }

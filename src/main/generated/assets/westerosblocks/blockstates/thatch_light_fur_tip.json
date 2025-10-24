@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/thatch_light_fur_tip/base_v1"
+    "": {
+      "model": "westerosblocks:block/thatch_light_fur_tip/v1"
     }
   }
 }

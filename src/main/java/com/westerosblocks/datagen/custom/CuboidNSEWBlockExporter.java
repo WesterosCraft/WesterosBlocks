@@ -11,7 +11,9 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Exporter for NSEW cuboid blocks with directional facing support.
@@ -24,168 +26,144 @@ public class CuboidNSEWBlockExporter extends BaseBlockExporter {
 
     /**
      * Registers an NSEW cuboid block from a BlockDefinition.
-     * Handles facing directions with proper model rotations.
+     * Uses uniform iteration pattern: After doInit(), states is ALWAYS non-empty,
+     * and each state has randomTextures normalized from simple textures.
+     * Handles NSEW facing directions with proper model rotations.
      */
     public static void registerCustomCuboidNSEWBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         if (!(block instanceof WCCuboidNSEWBlock cuboidBlock)) {
             throw new IllegalArgumentException("Block must be a WCCuboidNSEWBlock instance");
         }
 
-        // Use centralized priority logic from BlockDefinition
-        BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
+        // After doInit(), states is ALWAYS non-empty (at least synthetic base state exists)
+        var states = definition.getStates();
 
-        switch (source) {
-            case STATES -> registerCuboidNSEWBlockWithStates(generator, block, definition, cuboidBlock);
-            case RANDOM_TEXTURES -> registerCuboidNSEWBlockWithRandomTextures(generator, block, definition, cuboidBlock);
-            case TEXTURES -> registerSimpleCuboidNSEWBlock(generator, block, definition, cuboidBlock);
-            case CUSTOM_MODEL -> registerCustomModelCuboidNSEWBlock(generator, block, definition, cuboidBlock);
-            case NONE -> registerFallbackCuboidNSEWBlock(generator, block, definition, cuboidBlock);
-        }
-    }
-
-    /**
-     * Registers a simple NSEW cuboid block with basic textures.
-     */
-    private static void registerSimpleCuboidNSEWBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition, WCCuboidNSEWBlock cuboidBlock) {
-        List<String> textures = definition.getTextures();
-
-        Identifier modelId;
-        if (definition.hasCustomModel()) {
-            // For custom models, just reference the existing model file
-            modelId = createCustomModelId(block, "base_v1");
-        } else if (hasCuboids(definition)) {
-            modelId = createCuboidModel(generator, block, definition, textures, 0, "base_v1");
-        } else {
-            // Use standard cube model
-            TextureMap textureMap = createCuboidTextureMap(textures);
-            if (textures != null && textures.size() == 1) {
-                modelId = Models.CUBE_ALL.upload(createGeneratedModelId(block, "base_v1"), textureMap, generator.modelCollector);
-            } else {
-                modelId = Models.CUBE.upload(createGeneratedModelId(block, "base_v1"), textureMap, generator.modelCollector);
-            }
+        if (states == null || states.isEmpty()) {
+            throw new IllegalStateException("Block definition states should never be null/empty after doInit() for block: " + getBlockName(block));
         }
 
-        // Generate blockstate with facing variants
-        BlockStateVariantMap variants = BlockStateVariantMap.create(WCCuboidNSEWBlock.FACING)
-            .register(Direction.EAST, createVariant(modelId, 0))
-            .register(Direction.SOUTH, createVariant(modelId, 90))
-            .register(Direction.WEST, createVariant(modelId, 180))
-            .register(Direction.NORTH, createVariant(modelId, 270));
+        // Determine if this block actually has multiple states (needs STATE property in variants)
+        boolean hasMultipleStates = definition.getStateCount() > 1;
 
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
-        registerParentedItemModel(generator, block, modelId);
-    }
-
-    /**
-     * Registers an NSEW cuboid block with random texture variants.
-     */
-    private static void registerCuboidNSEWBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, BlockDefinition definition, WCCuboidNSEWBlock cuboidBlock) {
-        List<BlockDefinition.RandomTextureVariant> randomTextures = definition.getRandomTextures();
-        List<Identifier> modelIds = new ArrayList<>();
-
-        for (int i = 0; i < randomTextures.size(); i++) {
-            BlockDefinition.RandomTextureVariant variant = randomTextures.get(i);
-            List<String> textures = variant.getTextures();
-
-            Identifier modelId;
-            if (definition.hasCustomModel()) {
-                // For custom models, just reference the existing model files
-                modelId = createCustomModelId(block, "base_v" + (i + 1));
-            } else if (hasCuboids(definition)) {
-                // Generate custom cuboid models with geometry
-                modelId = createCuboidModel(generator, block, definition, textures, i, "base_v" + (i + 1));
-            } else {
-                // Generate standard cube models
-                TextureMap textureMap = createCuboidTextureMap(textures);
-                modelId = Models.CUBE.upload(createGeneratedModelId(block, "base_v" + (i + 1)), textureMap, generator.modelCollector);
-            }
-            modelIds.add(modelId);
+        // Check for custom model first - but only if it's a single state block
+        // Multi-state blocks with custom models need per-state iteration
+        if (definition.hasCustomModel() && !hasMultipleStates) {
+            registerCustomModelCuboidNSEWBlock(generator, block, definition, cuboidBlock);
+            return;
         }
 
-        // Create facing variants with random model selection
-        List<BlockStateVariant> eastVariants = modelIds.stream().map(id -> createVariant(id, 0)).toList();
-        List<BlockStateVariant> southVariants = modelIds.stream().map(id -> createVariant(id, 90)).toList();
-        List<BlockStateVariant> westVariants = modelIds.stream().map(id -> createVariant(id, 180)).toList();
-        List<BlockStateVariant> northVariants = modelIds.stream().map(id -> createVariant(id, 270)).toList();
+        // Collect all model identifiers for all states
+        Map<String, List<Identifier>> stateModelMap = new HashMap<>();
+        Map<String, List<Integer>> stateWeightMap = new HashMap<>();
+        Identifier firstModel = null;
 
-        BlockStateVariantMap variants = BlockStateVariantMap.create(WCCuboidNSEWBlock.FACING)
-            .register(Direction.EAST, eastVariants)
-            .register(Direction.SOUTH, southVariants)
-            .register(Direction.WEST, westVariants)
-            .register(Direction.NORTH, northVariants);
+        for (BlockDefinition.StateVariant state : states) {
+            String stateId = state.getStateID();
+            if (stateId == null) stateId = "base";
 
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
+            List<Identifier> modelIds = new ArrayList<>();
+            List<Integer> weights = new ArrayList<>();
 
-        if (!modelIds.isEmpty()) {
-            registerParentedItemModel(generator, block, modelIds.get(0));
-        }
-    }
+            // Check if we have texture sets to work with
+            int textureSetCount = state.getRandomTextureSetCount();
 
-    /**
-     * Registers an NSEW cuboid block with multiple states.
-     */
-    private static void registerCuboidNSEWBlockWithStates(BlockStateModelGenerator generator, Block block, BlockDefinition definition, WCCuboidNSEWBlock cuboidBlock) {
-        List<BlockDefinition.StateVariant> states = definition.getStates();
-        List<Identifier> allModelIds = new ArrayList<>();
-
-        // Generate models for each state
-        for (int i = 0; i < states.size(); i++) {
-            BlockDefinition.StateVariant state = states.get(i);
-            String stateId = state.getStateID() != null ? state.getStateID() : "state" + i;
-
-            if (state.getRandomTextures() != null && !state.getRandomTextures().isEmpty()) {
-                // Handle state with multiple random texture variants
-                List<BlockDefinition.RandomTextureVariant> randomTextures = state.getRandomTextures();
-
-                for (int j = 0; j < randomTextures.size(); j++) {
-                    BlockDefinition.RandomTextureVariant variant = randomTextures.get(j);
-                    List<String> textures = variant.getTextures();
-                    String variantName = stateId + "_v" + (j + 1);
-
-                    Identifier modelId;
-                    if (definition.hasCustomModel()) {
-                        modelId = createCustomModelId(block, variantName);
-                    } else if (hasCuboids(definition)) {
-                        if (textures != null && !textures.isEmpty()) {
-                            modelId = createCuboidModel(generator, block, definition, textures, j, variantName);
-                        } else {
-                            modelId = createGeneratedModelId(block, variantName);
-                        }
-                    } else {
-                        TextureMap textureMap = createCuboidTextureMap(textures);
-                        modelId = Models.CUBE.upload(createGeneratedModelId(block, variantName), textureMap, generator.modelCollector);
-                    }
-                    allModelIds.add(modelId);
+            // For custom model states with no textures, ensure at least one iteration
+            if (textureSetCount == 0) {
+                if (state.isCustomModel()) {
+                    textureSetCount = 1;  // Force one iteration for custom model reference
+                } else {
+                    continue;  // Skip non-custom-model states with no textures
                 }
-            } else {
-                // Handle state with single texture set
-                List<String> textures = state.getTextures();
-                String variantName = stateId + "_v1";
+            }
 
+            // Iterate through all texture sets for this state
+            for (int setIdx = 0; setIdx < textureSetCount; setIdx++) {
                 Identifier modelId;
-                if (definition.hasCustomModel()) {
+                String variantName = (hasMultipleStates ? stateId + "_" : "") + "v" + (setIdx + 1);
+                int weight = 1;
+
+                // Check if this state uses custom models
+                if (state.isCustomModel()) {
+                    // Use custom model reference instead of generating from textures
                     modelId = createCustomModelId(block, variantName);
-                } else if (hasCuboids(definition)) {
-                    if (textures != null && !textures.isEmpty()) {
-                        modelId = createCuboidModel(generator, block, definition, textures, i, variantName);
-                    } else {
-                        modelId = createGeneratedModelId(block, variantName);
+                    BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                    if (set != null) {
+                        weight = set.getWeight();
                     }
                 } else {
-                    TextureMap textureMap = createCuboidTextureMap(textures);
-                    modelId = Models.CUBE.upload(createGeneratedModelId(block, variantName), textureMap, generator.modelCollector);
+                    BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                    if (set == null || set.getTextureCount() == 0) {
+                        continue;
+                    }
+
+                    // Extract textures from this set
+                    String[] textures = new String[set.getTextureCount()];
+                    for (int i = 0; i < set.getTextureCount(); i++) {
+                        textures[i] = set.getTextureByIndex(i);
+                    }
+
+                    // Convert to List for compatibility with existing helper methods
+                    List<String> textureList = java.util.Arrays.asList(textures);
+
+                    if (hasCuboids(definition)) {
+                        // Generate custom cuboid models with geometry
+                        modelId = createCuboidModel(generator, block, definition, textureList, setIdx, variantName);
+                    } else {
+                        // Generate standard cube models
+                        TextureMap textureMap = createCuboidTextureMap(textureList);
+                        if (textureList.size() == 1) {
+                            modelId = Models.CUBE_ALL.upload(createGeneratedModelId(block, variantName), textureMap, generator.modelCollector);
+                        } else {
+                            modelId = Models.CUBE.upload(createGeneratedModelId(block, variantName), textureMap, generator.modelCollector);
+                        }
+                    }
+                    weight = set.getWeight();
                 }
-                allModelIds.add(modelId);
+
+                modelIds.add(modelId);
+                weights.add(weight);
+                if (firstModel == null) firstModel = modelId;
+            }
+
+            if (!modelIds.isEmpty()) {
+                stateModelMap.put(stateId, modelIds);
+                stateWeightMap.put(stateId, weights);
             }
         }
 
-        // Create complex blockstate with both state and facing properties
-        // This would require a custom blockstate supplier for state + facing combinations
-        generator.blockStateCollector.accept(createAdvancedNSEWStatesBlockState(block, definition, allModelIds));
+        if (stateModelMap.isEmpty()) {
+            // Fallback if no valid models generated
+            registerFallbackCuboidNSEWBlock(generator, block, definition, cuboidBlock);
+            return;
+        }
 
-        // Use the first model for item model
-        if (!allModelIds.isEmpty()) {
-            registerParentedItemModel(generator, block, allModelIds.get(0));
+        // Generate blockstate based on whether we have multiple states
+        if (hasMultipleStates) {
+            // Multiple states - need "state=" prefix
+            generator.blockStateCollector.accept(createAdvancedNSEWStatesBlockState(block, stateModelMap, stateWeightMap, states));
+        } else {
+            // Single state - no state prefix in variants, just facing
+            List<Identifier> modelIds = stateModelMap.values().iterator().next();
+            List<Integer> weights = stateWeightMap.values().iterator().next();
+
+            if (modelIds.size() == 1) {
+                // Single model - simple facing variants
+                Identifier modelId = modelIds.get(0);
+                BlockStateVariantMap variants = BlockStateVariantMap.create(WCCuboidNSEWBlock.FACING)
+                    .register(Direction.EAST, createVariant(modelId, 0))
+                    .register(Direction.SOUTH, createVariant(modelId, 90))
+                    .register(Direction.WEST, createVariant(modelId, 180))
+                    .register(Direction.NORTH, createVariant(modelId, 270));
+                generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
+            } else {
+                // Multiple models (random textures) - weighted variants for each facing
+                generator.blockStateCollector.accept(createNSEWBlockStateWithRandomTextures(block, modelIds, weights));
+            }
+        }
+
+        // Register item model
+        if (firstModel != null) {
+            registerParentedItemModel(generator, block, firstModel);
         }
     }
 
@@ -348,36 +326,10 @@ public class CuboidNSEWBlockExporter extends BaseBlockExporter {
         return CuboidBlockExporter.createCuboidModel(generator, block, definition, textures, stateIndex, variant);
     }
 
-    private static BlockStateSupplier createAdvancedNSEWStatesBlockState(Block block, BlockDefinition definition, List<Identifier> modelIds) {
-        if (modelIds.isEmpty()) {
-            return createSimpleBlockState(block, WesterosBlocks.id("block/missing"));
-        }
-
-        // Check if the block has states defined in the definition
-        if (!definition.hasStates()) {
-            // Fallback to simple facing-only variants if no STATE property
-            Identifier modelId = modelIds.get(0);
-            BlockStateVariantMap variants = BlockStateVariantMap.create(WCCuboidNSEWBlock.FACING)
-                .register(Direction.EAST, createVariant(modelId, 0))
-                .register(Direction.SOUTH, createVariant(modelId, 90))
-                .register(Direction.WEST, createVariant(modelId, 180))
-                .register(Direction.NORTH, createVariant(modelId, 270));
-
-            return VariantsBlockStateSupplier.create(block).coordinate(variants);
-        }
-
-        // Create complex blockstate with both STATE and FACING properties
-        List<BlockDefinition.StateVariant> states = definition.getStates();
-
-        // Create a custom blockstate supplier that handles both STATE and FACING properties
-        return createAdvancedNSEWStatesBlockStateCustom(block, definition, modelIds);
-    }
-
-    /**
-     * Creates a custom blockstate supplier for NSEW blocks with states.
-     * Generates JSON with both state and facing properties.
-     */
-    private static BlockStateSupplier createAdvancedNSEWStatesBlockStateCustom(Block block, BlockDefinition definition, List<Identifier> modelIds) {
+    private static BlockStateSupplier createAdvancedNSEWStatesBlockState(Block block,
+                                                                          Map<String, List<Identifier>> stateModelMap,
+                                                                          Map<String, List<Integer>> stateWeightMap,
+                                                                          List<BlockDefinition.StateVariant> states) {
         return new BlockStateSupplier() {
             @Override
             public Block getBlock() {
@@ -389,33 +341,166 @@ public class CuboidNSEWBlockExporter extends BaseBlockExporter {
                 JsonObject json = new JsonObject();
                 JsonObject variants = new JsonObject();
 
-                List<BlockDefinition.StateVariant> states = definition.getStates();
+                for (BlockDefinition.StateVariant state : states) {
+                    String stateId = state.getStateID();
+                    if (stateId == null) stateId = "base";
 
-                for (int i = 0; i < states.size() && i < modelIds.size(); i++) {
-                    BlockDefinition.StateVariant state = states.get(i);
-                    String stateValue = state.getStateID() != null ? state.getStateID() : "state" + i;
-                    Identifier modelId = modelIds.get(i);
+                    List<Identifier> modelIds = stateModelMap.get(stateId);
+                    List<Integer> weights = stateWeightMap.get(stateId);
 
-                    // Add variants for each facing direction for this state
-                    JsonObject eastVariant = new JsonObject();
-                    eastVariant.addProperty("model", modelId.toString());
-                    variants.add("facing=east,state=" + stateValue, eastVariant);
+                    if (modelIds == null || modelIds.isEmpty()) {
+                        continue;
+                    }
 
-                    JsonObject southVariant = new JsonObject();
-                    southVariant.addProperty("model", modelId.toString());
-                    southVariant.addProperty("y", 90);
-                    variants.add("facing=south,state=" + stateValue, southVariant);
+                    if (modelIds.size() == 1) {
+                        // Single model per state
+                        Identifier modelId = modelIds.get(0);
 
-                    JsonObject westVariant = new JsonObject();
-                    westVariant.addProperty("model", modelId.toString());
-                    westVariant.addProperty("y", 180);
-                    variants.add("facing=west,state=" + stateValue, westVariant);
+                        JsonObject eastVariant = new JsonObject();
+                        eastVariant.addProperty("model", modelId.toString());
+                        variants.add("facing=east,state=" + stateId, eastVariant);
 
-                    JsonObject northVariant = new JsonObject();
-                    northVariant.addProperty("model", modelId.toString());
-                    northVariant.addProperty("y", 270);
-                    variants.add("facing=north,state=" + stateValue, northVariant);
+                        JsonObject southVariant = new JsonObject();
+                        southVariant.addProperty("model", modelId.toString());
+                        southVariant.addProperty("y", 90);
+                        variants.add("facing=south,state=" + stateId, southVariant);
+
+                        JsonObject westVariant = new JsonObject();
+                        westVariant.addProperty("model", modelId.toString());
+                        westVariant.addProperty("y", 180);
+                        variants.add("facing=west,state=" + stateId, westVariant);
+
+                        JsonObject northVariant = new JsonObject();
+                        northVariant.addProperty("model", modelId.toString());
+                        northVariant.addProperty("y", 270);
+                        variants.add("facing=north,state=" + stateId, northVariant);
+                    } else {
+                        // Multiple weighted models per state
+                        // EAST facing (0° rotation)
+                        com.google.gson.JsonArray eastArray = new com.google.gson.JsonArray();
+                        for (int i = 0; i < modelIds.size(); i++) {
+                            int weight = weights != null && i < weights.size() ? weights.get(i) : 1;
+                            for (int w = 0; w < weight; w++) {
+                                JsonObject variant = new JsonObject();
+                                variant.addProperty("model", modelIds.get(i).toString());
+                                eastArray.add(variant);
+                            }
+                        }
+                        variants.add("facing=east,state=" + stateId, eastArray);
+
+                        // SOUTH facing (90° rotation)
+                        com.google.gson.JsonArray southArray = new com.google.gson.JsonArray();
+                        for (int i = 0; i < modelIds.size(); i++) {
+                            int weight = weights != null && i < weights.size() ? weights.get(i) : 1;
+                            for (int w = 0; w < weight; w++) {
+                                JsonObject variant = new JsonObject();
+                                variant.addProperty("model", modelIds.get(i).toString());
+                                variant.addProperty("y", 90);
+                                southArray.add(variant);
+                            }
+                        }
+                        variants.add("facing=south,state=" + stateId, southArray);
+
+                        // WEST facing (180° rotation)
+                        com.google.gson.JsonArray westArray = new com.google.gson.JsonArray();
+                        for (int i = 0; i < modelIds.size(); i++) {
+                            int weight = weights != null && i < weights.size() ? weights.get(i) : 1;
+                            for (int w = 0; w < weight; w++) {
+                                JsonObject variant = new JsonObject();
+                                variant.addProperty("model", modelIds.get(i).toString());
+                                variant.addProperty("y", 180);
+                                westArray.add(variant);
+                            }
+                        }
+                        variants.add("facing=west,state=" + stateId, westArray);
+
+                        // NORTH facing (270° rotation)
+                        com.google.gson.JsonArray northArray = new com.google.gson.JsonArray();
+                        for (int i = 0; i < modelIds.size(); i++) {
+                            int weight = weights != null && i < weights.size() ? weights.get(i) : 1;
+                            for (int w = 0; w < weight; w++) {
+                                JsonObject variant = new JsonObject();
+                                variant.addProperty("model", modelIds.get(i).toString());
+                                variant.addProperty("y", 270);
+                                northArray.add(variant);
+                            }
+                        }
+                        variants.add("facing=north,state=" + stateId, northArray);
+                    }
                 }
+
+                json.add("variants", variants);
+                return json;
+            }
+        };
+    }
+
+    /**
+     * Creates a blockstate supplier for single-state NSEW blocks with random textures.
+     * Generates JSON with weighted variants for each facing direction.
+     */
+    private static BlockStateSupplier createNSEWBlockStateWithRandomTextures(Block block, List<Identifier> modelIds, List<Integer> weights) {
+        return new BlockStateSupplier() {
+            @Override
+            public Block getBlock() {
+                return block;
+            }
+
+            @Override
+            public JsonElement get() {
+                JsonObject json = new JsonObject();
+                JsonObject variants = new JsonObject();
+
+                // EAST facing (0° rotation)
+                com.google.gson.JsonArray eastArray = new com.google.gson.JsonArray();
+                for (int i = 0; i < modelIds.size(); i++) {
+                    int weight = weights != null && i < weights.size() ? weights.get(i) : 1;
+                    for (int w = 0; w < weight; w++) {
+                        JsonObject variant = new JsonObject();
+                        variant.addProperty("model", modelIds.get(i).toString());
+                        eastArray.add(variant);
+                    }
+                }
+                variants.add("facing=east", eastArray);
+
+                // SOUTH facing (90° rotation)
+                com.google.gson.JsonArray southArray = new com.google.gson.JsonArray();
+                for (int i = 0; i < modelIds.size(); i++) {
+                    int weight = weights != null && i < weights.size() ? weights.get(i) : 1;
+                    for (int w = 0; w < weight; w++) {
+                        JsonObject variant = new JsonObject();
+                        variant.addProperty("model", modelIds.get(i).toString());
+                        variant.addProperty("y", 90);
+                        southArray.add(variant);
+                    }
+                }
+                variants.add("facing=south", southArray);
+
+                // WEST facing (180° rotation)
+                com.google.gson.JsonArray westArray = new com.google.gson.JsonArray();
+                for (int i = 0; i < modelIds.size(); i++) {
+                    int weight = weights != null && i < weights.size() ? weights.get(i) : 1;
+                    for (int w = 0; w < weight; w++) {
+                        JsonObject variant = new JsonObject();
+                        variant.addProperty("model", modelIds.get(i).toString());
+                        variant.addProperty("y", 180);
+                        westArray.add(variant);
+                    }
+                }
+                variants.add("facing=west", westArray);
+
+                // NORTH facing (270° rotation)
+                com.google.gson.JsonArray northArray = new com.google.gson.JsonArray();
+                for (int i = 0; i < modelIds.size(); i++) {
+                    int weight = weights != null && i < weights.size() ? weights.get(i) : 1;
+                    for (int w = 0; w < weight; w++) {
+                        JsonObject variant = new JsonObject();
+                        variant.addProperty("model", modelIds.get(i).toString());
+                        variant.addProperty("y", 270);
+                        northArray.add(variant);
+                    }
+                }
+                variants.add("facing=north", northArray);
 
                 json.add("variants", variants);
                 return json;

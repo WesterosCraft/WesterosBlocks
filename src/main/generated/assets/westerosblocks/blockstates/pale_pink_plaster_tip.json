@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/pale_pink_plaster_tip/base_v1"
+    "": {
+      "model": "westerosblocks:block/pale_pink_plaster_tip/v1"
     }
   }
 }

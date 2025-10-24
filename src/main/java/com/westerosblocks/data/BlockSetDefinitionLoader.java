@@ -33,8 +33,6 @@ public class BlockSetDefinitionLoader {
     public Map<String, BlockSetDefinition> loadAllDefinitions() {
         Map<String, BlockSetDefinition> definitions = new HashMap<>();
 
-        WesterosBlocks.LOGGER.info("Loading block set definitions from resources: {}", blockSetDefinitionsPath);
-
         try {
             loadDefinitionsFromResources(definitions);
             WesterosBlocks.LOGGER.info("Successfully loaded {} block set definitions", definitions.size());
@@ -160,6 +158,5 @@ public class BlockSetDefinitionLoader {
             }
         }
 
-        WesterosBlocks.LOGGER.info("Block set validation complete: {} valid, {} with warnings", validCount, warningCount);
     }
 }

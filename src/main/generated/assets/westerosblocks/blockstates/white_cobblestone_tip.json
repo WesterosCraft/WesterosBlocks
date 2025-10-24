@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/white_cobblestone_tip/base_v1"
+    "": {
+      "model": "westerosblocks:block/white_cobblestone_tip/v1"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/white_wool_carpet/base_v1"
+    "": {
+      "model": "westerosblocks:block/white_wool_carpet/v1"
     }
   }
 }

@@ -1,14 +1,14 @@
 {
   "variants": {
-    "state=base": [
+    "": [
       {
-        "model": "westerosblocks:block/oxidized_iron_hopper/base_v1"
+        "model": "westerosblocks:block/oxidized_iron_hopper/v1"
       },
       {
-        "model": "westerosblocks:block/oxidized_iron_hopper/base_v2"
+        "model": "westerosblocks:block/oxidized_iron_hopper/v2"
       },
       {
-        "model": "westerosblocks:block/oxidized_iron_hopper/base_v3"
+        "model": "westerosblocks:block/oxidized_iron_hopper/v3"
       }
     ]
   }

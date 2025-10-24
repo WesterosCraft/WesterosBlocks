@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/vivid_sandstone_hopper/base_v1"
+    "": {
+      "model": "westerosblocks:block/vivid_sandstone_hopper/v1"
     }
   }
 }

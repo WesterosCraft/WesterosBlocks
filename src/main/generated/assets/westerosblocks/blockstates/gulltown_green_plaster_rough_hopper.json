@@ -1,11 +1,11 @@
 {
   "variants": {
-    "state=base": [
+    "": [
       {
-        "model": "westerosblocks:block/gulltown_green_plaster_rough_hopper/base_v1"
+        "model": "westerosblocks:block/gulltown_green_plaster_rough_hopper/v1"
       },
       {
-        "model": "westerosblocks:block/gulltown_green_plaster_rough_hopper/base_v2"
+        "model": "westerosblocks:block/gulltown_green_plaster_rough_hopper/v2"
       }
     ]
   }

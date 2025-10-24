@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/harrenhal_marble_hopper/base_v1"
+    "": {
+      "model": "westerosblocks:block/harrenhal_marble_hopper/v1"
     }
   }
 }

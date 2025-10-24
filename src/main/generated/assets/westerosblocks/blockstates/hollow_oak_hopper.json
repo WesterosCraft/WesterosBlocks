@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/hollow_oak_hopper/base_v1"
+    "": {
+      "model": "westerosblocks:block/hollow_oak_hopper/v1"
     }
   }
 }

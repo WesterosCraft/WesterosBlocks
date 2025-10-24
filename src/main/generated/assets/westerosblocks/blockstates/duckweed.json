@@ -1,17 +1,17 @@
 {
   "variants": {
-    "state=base": [
+    "": [
       {
-        "model": "westerosblocks:block/duckweed/base_v1"
+        "model": "westerosblocks:block/duckweed/v1"
       },
       {
-        "model": "westerosblocks:block/duckweed/base_v2"
+        "model": "westerosblocks:block/duckweed/v2"
       },
       {
-        "model": "westerosblocks:block/duckweed/base_v3"
+        "model": "westerosblocks:block/duckweed/v3"
       },
       {
-        "model": "westerosblocks:block/duckweed/base_v4"
+        "model": "westerosblocks:block/duckweed/v4"
       }
     ]
   }

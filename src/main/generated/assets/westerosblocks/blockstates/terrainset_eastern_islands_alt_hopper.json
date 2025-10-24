@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/terrainset_eastern_islands_alt_hopper/base_v1"
+    "": {
+      "model": "westerosblocks:block/terrainset_eastern_islands_alt_hopper/v1"
     }
   }
 }

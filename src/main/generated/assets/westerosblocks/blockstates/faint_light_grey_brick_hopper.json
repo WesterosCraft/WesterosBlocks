@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/faint_light_grey_brick_hopper/base_v1"
+    "": {
+      "model": "westerosblocks:block/faint_light_grey_brick_hopper/v1"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/baelors_sphere_mother_blue/base_v1"
+    "": {
+      "model": "westerosblocks:block/baelors_sphere_mother_blue/v1"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/bread_block/base_v1"
+    "": {
+      "model": "westerosblocks:block/bread_block/v1"
     }
   }
 }

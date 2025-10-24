@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/dark_red_light_stone_hopper/base_v1"
+    "": {
+      "model": "westerosblocks:block/dark_red_light_stone_hopper/v1"
     }
   }
 }

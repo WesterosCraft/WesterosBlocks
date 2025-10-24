@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/terrainset_arbor_dorne_hopper/base_v1"
+    "": {
+      "model": "westerosblocks:block/terrainset_arbor_dorne_hopper/v1"
     }
   }
 }

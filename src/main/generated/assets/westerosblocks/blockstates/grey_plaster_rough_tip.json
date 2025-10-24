@@ -1,11 +1,11 @@
 {
   "variants": {
-    "state=base": [
+    "": [
       {
-        "model": "westerosblocks:block/grey_plaster_rough_tip/base_v1"
+        "model": "westerosblocks:block/grey_plaster_rough_tip/v1"
       },
       {
-        "model": "westerosblocks:block/grey_plaster_rough_tip/base_v2"
+        "model": "westerosblocks:block/grey_plaster_rough_tip/v2"
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/plain_white_daub_tip/base_v1"
+    "": {
+      "model": "westerosblocks:block/plain_white_daub_tip/v1"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/small_kl_dun_brick_hopper/base_v1"
+    "": {
+      "model": "westerosblocks:block/small_kl_dun_brick_hopper/v1"
     }
   }
 }

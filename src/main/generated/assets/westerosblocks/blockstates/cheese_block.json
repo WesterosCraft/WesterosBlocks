@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/cheese_block/base_v1"
+    "": {
+      "model": "westerosblocks:block/cheese_block/v1"
     }
   }
 }

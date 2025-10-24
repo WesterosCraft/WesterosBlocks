@@ -63,24 +63,30 @@ public class PaneBlockExporter extends BaseBlockExporter {
     }
 
     /**
-     * Method for JSON definition system integration
+     * Method for JSON definition system integration.
+     * Uses uniform iteration pattern: After doInit(), states is ALWAYS non-empty,
+     * and each state has randomTextures normalized from simple textures.
+     * Pane blocks only use a single texture for both side and cap.
      */
     public static void registerCustomPaneBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        // Use centralized texture extraction with priority logic
-        BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
+        // After doInit(), states is ALWAYS non-empty (at least synthetic base state exists)
+        var states = definition.getStates();
 
-        String texture = switch (source) {
-            case RANDOM_TEXTURES -> {
-                // Use first texture from first random variant
-                List<BlockDefinition.TextureVariantSet> variants = definition.getRandomTextureVariantSets();
-                if (!variants.isEmpty() && !variants.get(0).textures.isEmpty()) {
-                    yield variants.get(0).textures.get(0);
-                }
-                yield "missingno";
+        if (states == null || states.isEmpty()) {
+            throw new IllegalStateException("Block definition states should never be null/empty after doInit() for block: " + getBlockName(block));
+        }
+
+        // Pane blocks only need a single texture - extract from first state's first texture set
+        BlockDefinition.StateVariant state = states.get(0);
+        String texture = "missingno";
+
+        int textureSetCount = state.getRandomTextureSetCount();
+        if (textureSetCount > 0) {
+            BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(0);
+            if (set != null && set.getTextureCount() > 0) {
+                texture = set.getTextureByIndex(0);
             }
-            case TEXTURES -> definition.getFirstTexture("missingno");
-            case STATES, CUSTOM_MODEL, NONE -> "missingno";
-        };
+        }
 
         registerPaneBlock(generator, block, texture);
     }

@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/spruce_vertical_planks_carpet/base_v1"
+    "": {
+      "model": "westerosblocks:block/spruce_vertical_planks_carpet/v1"
     }
   }
 }

@@ -1,20 +1,20 @@
 {
   "variants": {
-    "state=base": [
+    "": [
       {
-        "model": "westerosblocks:block/dark_grey_cobblestone_hopper/base_v1"
+        "model": "westerosblocks:block/dark_grey_cobblestone_hopper/v1"
       },
       {
-        "model": "westerosblocks:block/dark_grey_cobblestone_hopper/base_v2"
+        "model": "westerosblocks:block/dark_grey_cobblestone_hopper/v2"
       },
       {
-        "model": "westerosblocks:block/dark_grey_cobblestone_hopper/base_v3"
+        "model": "westerosblocks:block/dark_grey_cobblestone_hopper/v3"
       },
       {
-        "model": "westerosblocks:block/dark_grey_cobblestone_hopper/base_v4"
+        "model": "westerosblocks:block/dark_grey_cobblestone_hopper/v4"
       },
       {
-        "model": "westerosblocks:block/dark_grey_cobblestone_hopper/base_v5"
+        "model": "westerosblocks:block/dark_grey_cobblestone_hopper/v5"
       }
     ]
   }

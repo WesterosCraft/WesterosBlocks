@@ -1,62 +1,62 @@
 {
   "variants": {
-    "rotation=0,state=base": {
+    "rotation=0": {
       "model": "westerosblocks:block/generic_head/base_v1"
     },
-    "rotation=1,state=base": {
+    "rotation=1": {
       "model": "westerosblocks:block/generic_head/base_rotn22_v1"
     },
-    "rotation=10,state=base": {
+    "rotation=10": {
       "model": "westerosblocks:block/generic_head/base_rotn45_v1",
       "y": 180
     },
-    "rotation=11,state=base": {
+    "rotation=11": {
       "model": "westerosblocks:block/generic_head/base_rot22_v1",
       "y": 180
     },
-    "rotation=12,state=base": {
+    "rotation=12": {
       "model": "westerosblocks:block/generic_head/base_v1",
       "y": 270
     },
-    "rotation=13,state=base": {
+    "rotation=13": {
       "model": "westerosblocks:block/generic_head/base_rotn22_v1",
       "y": 270
     },
-    "rotation=14,state=base": {
+    "rotation=14": {
       "model": "westerosblocks:block/generic_head/base_rotn45_v1",
       "y": 270
     },
-    "rotation=15,state=base": {
+    "rotation=15": {
       "model": "westerosblocks:block/generic_head/base_rot22_v1",
       "y": 270
     },
-    "rotation=2,state=base": {
+    "rotation=2": {
       "model": "westerosblocks:block/generic_head/base_rotn45_v1"
     },
-    "rotation=3,state=base": {
+    "rotation=3": {
       "model": "westerosblocks:block/generic_head/base_rot22_v1"
     },
-    "rotation=4,state=base": {
+    "rotation=4": {
       "model": "westerosblocks:block/generic_head/base_v1",
       "y": 90
     },
-    "rotation=5,state=base": {
+    "rotation=5": {
       "model": "westerosblocks:block/generic_head/base_rotn22_v1",
       "y": 90
     },
-    "rotation=6,state=base": {
+    "rotation=6": {
       "model": "westerosblocks:block/generic_head/base_rotn45_v1",
       "y": 90
     },
-    "rotation=7,state=base": {
+    "rotation=7": {
       "model": "westerosblocks:block/generic_head/base_rot22_v1",
       "y": 90
     },
-    "rotation=8,state=base": {
+    "rotation=8": {
       "model": "westerosblocks:block/generic_head/base_v1",
       "y": 180
     },
-    "rotation=9,state=base": {
+    "rotation=9": {
       "model": "westerosblocks:block/generic_head/base_rotn22_v1",
       "y": 180
     }

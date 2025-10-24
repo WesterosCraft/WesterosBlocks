@@ -29,8 +29,6 @@ public class BlockDefinitionRegistry {
             return;
         }
 
-        WesterosBlocks.LOGGER.info("Initializing BlockDefinitionRegistry...");
-
         // Load individual block definitions
         BlockDefinitionLoader loader = new BlockDefinitionLoader(blockDefinitionsPath);
         Map<String, BlockDefinition> loadedDefinitions = loader.loadAllDefinitions();
@@ -48,7 +46,6 @@ public class BlockDefinitionRegistry {
             Map<String, BlockSetDefinition> loadedBlockSets = setLoader.loadAllDefinitions();
 
             if (!loadedBlockSets.isEmpty()) {
-                WesterosBlocks.LOGGER.info("Expanding {} block sets into individual definitions...", loadedBlockSets.size());
                 int expandedCount = 0;
 
                 for (BlockSetDefinition blockSet : loadedBlockSets.values()) {
@@ -75,8 +72,8 @@ public class BlockDefinitionRegistry {
         definitionsByType.putAll(loader.groupByType(definitions));
 
         initialized = true;
-        WesterosBlocks.LOGGER.info("BlockDefinitionRegistry initialized with {} total definitions across {} types",
-            definitions.size(), definitionsByType.size());
+        WesterosBlocks.LOGGER.info("BlockDefinitionRegistry initialized with {} total definitions.",
+            definitions.size());
     }
 
     public boolean isInitialized() {

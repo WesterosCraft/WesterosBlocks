@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/winterfell_granite_tip/base_v1"
+    "": {
+      "model": "westerosblocks:block/winterfell_granite_tip/v1"
     }
   }
 }

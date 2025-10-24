@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/citadel_glass_candle_green/base_v1"
+    "": {
+      "model": "westerosblocks:block/citadel_glass_candle_green/v1"
     }
   }
 }

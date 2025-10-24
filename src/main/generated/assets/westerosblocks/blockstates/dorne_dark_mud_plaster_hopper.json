@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/dorne_dark_mud_plaster_hopper/base_v1"
+    "": {
+      "model": "westerosblocks:block/dorne_dark_mud_plaster_hopper/v1"
     }
   }
 }

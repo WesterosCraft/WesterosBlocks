@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/terrainset_river_rocks_tip/base_v1"
+    "": {
+      "model": "westerosblocks:block/terrainset_river_rocks_tip/v1"
     }
   }
 }

@@ -1,26 +1,26 @@
 {
   "variants": {
-    "state=base,facing=down": {
-      "model": "westerosblocks:block/chain_pulley/base_v1",
+    "facing=down": {
+      "model": "westerosblocks:block/chain_pulley/v1",
       "x": 90
     },
-    "state=base,facing=east": {
-      "model": "westerosblocks:block/chain_pulley/base_v1",
+    "facing=east": {
+      "model": "westerosblocks:block/chain_pulley/v1",
       "y": 90
     },
-    "state=base,facing=north": {
-      "model": "westerosblocks:block/chain_pulley/base_v1"
+    "facing=north": {
+      "model": "westerosblocks:block/chain_pulley/v1"
     },
-    "state=base,facing=south": {
-      "model": "westerosblocks:block/chain_pulley/base_v1",
+    "facing=south": {
+      "model": "westerosblocks:block/chain_pulley/v1",
       "y": 180
     },
-    "state=base,facing=up": {
-      "model": "westerosblocks:block/chain_pulley/base_v1",
+    "facing=up": {
+      "model": "westerosblocks:block/chain_pulley/v1",
       "x": 270
     },
-    "state=base,facing=west": {
-      "model": "westerosblocks:block/chain_pulley/base_v1",
+    "facing=west": {
+      "model": "westerosblocks:block/chain_pulley/v1",
       "y": 270
     }
   }

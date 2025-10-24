@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/dark_orange_plaster_hopper/base_v1"
+    "": {
+      "model": "westerosblocks:block/dark_orange_plaster_hopper/v1"
     }
   }
 }

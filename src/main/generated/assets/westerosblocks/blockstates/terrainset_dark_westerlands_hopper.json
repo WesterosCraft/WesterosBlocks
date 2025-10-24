@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/terrainset_dark_westerlands_hopper/base_v1"
+    "": {
+      "model": "westerosblocks:block/terrainset_dark_westerlands_hopper/v1"
     }
   }
 }

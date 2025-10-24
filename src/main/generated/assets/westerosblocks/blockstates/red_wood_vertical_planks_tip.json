@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/red_wood_vertical_planks_tip/base_v1"
+    "": {
+      "model": "westerosblocks:block/red_wood_vertical_planks_tip/v1"
     }
   }
 }

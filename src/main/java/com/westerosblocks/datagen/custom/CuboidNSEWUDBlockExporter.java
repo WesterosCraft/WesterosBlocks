@@ -22,132 +22,138 @@ import java.util.Optional;
 
 public class CuboidNSEWUDBlockExporter extends BaseBlockExporter {
 
+    /**
+     * Registers a NSEWUD cuboid block from a BlockDefinition.
+     * Uses uniform iteration pattern: After doInit(), states is ALWAYS non-empty,
+     * and each state has randomTextures normalized from simple textures.
+     * Handles all 6 facing directions (N/S/E/W/U/D) with proper model rotations.
+     */
     public static void registerCustomCuboidNSEWUDBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         if (!(block instanceof WCCuboidNSEWUDBlock)) {
             throw new IllegalArgumentException("Block must be a WCCuboidNSEWUDBlock instance");
         }
 
-        BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
+        // After doInit(), states is ALWAYS non-empty (at least synthetic base state exists)
+        var states = definition.getStates();
 
-        switch (source) {
-            case STATES -> registerCuboidNSEWUDBlockWithStates(generator, block, definition);
-            case RANDOM_TEXTURES -> registerCuboidNSEWUDBlockWithRandomTextures(generator, block, definition);
-            case CUSTOM_MODEL -> registerCustomModelCuboidNSEWUDBlock(generator, block, definition);
-            case TEXTURES, NONE -> registerSimpleCuboidNSEWUDBlock(generator, block, definition);
-        }
-    }
-
-    /**
-     * Registers a simple cuboid block with generated model from cuboids or textures.
-     */
-    private static void registerSimpleCuboidNSEWUDBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        List<String> textures = definition.getTextures();
-
-        Identifier modelId;
-        if (definition.hasCustomModel()) {
-            // Reference pre-existing custom model
-            modelId = createCustomModelId(block, "base_v1");
-        } else {
-            // Always generate custom cuboid model for NSEWUD blocks to get proper element format
-            modelId = createCuboidNSEWUDModel(generator, block, definition, textures, 0, "base_v1");
+        if (states == null || states.isEmpty()) {
+            throw new IllegalStateException("Block definition states should never be null/empty after doInit() for block: " + getBlockName(block));
         }
 
-        // Generate blockstate with rotations for all 6 directions
-        generator.blockStateCollector.accept(createCuboidNSEWUDBlockState(block, modelId));
+        // Determine if this block actually has multiple states (needs STATE property in variants)
+        boolean hasMultipleStates = definition.getStateCount() > 1;
 
-        // Register item model
-        registerParentedItemModel(generator, block, modelId);
-    }
-
-
-    /**
-     * Registers a cuboid block with random texture variants.
-     */
-    private static void registerCuboidNSEWUDBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        List<BlockDefinition.RandomTextureVariant> randomTextures = definition.getRandomTextures();
-        List<ModelVariant> modelVariants = new ArrayList<>();
-
-        for (int i = 0; i < randomTextures.size(); i++) {
-            BlockDefinition.RandomTextureVariant variant = randomTextures.get(i);
-            List<String> textures = variant.getTextures();
-
-            Identifier modelId;
-            if (definition.hasCustomModel()) {
-                // Reference pre-existing custom model
-                modelId = createCustomModelId(block, "base_v" + (i + 1));
-            } else {
-                // Always generate custom cuboid model for NSEWUD blocks to get proper element format
-                modelId = createCuboidNSEWUDModel(generator, block, definition, textures, i, "base_v" + (i + 1));
-            }
-
-            modelVariants.add(new ModelVariant(modelId, variant.getWeight()));
+        // Check for custom model first - but only if it's a single state block
+        // Multi-state blocks with custom models need per-state iteration
+        if (definition.hasCustomModel() && !hasMultipleStates) {
+            registerCustomModelCuboidNSEWUDBlock(generator, block, definition);
+            return;
         }
 
-        // Generate blockstate with weighted random variants
-        generator.blockStateCollector.accept(createCuboidNSEWUDBlockStateWithRandomTextures(block, modelVariants));
-
-        // Register item model
-        registerParentedItemModel(generator, block, modelVariants.get(0).model);
-    }
-
-    /**
-     * Registers a cuboid block with multiple states.
-     */
-    private static void registerCuboidNSEWUDBlockWithStates(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        List<BlockDefinition.StateVariant> states = definition.getStates();
+        // Collect all model identifiers for all states
         Map<String, List<ModelVariant>> stateModelMap = new HashMap<>();
-
         Identifier firstModel = null;
 
         for (BlockDefinition.StateVariant state : states) {
-            String stateId = state.getStateID() != null ? state.getStateID() : "base";
+            String stateId = state.getStateID();
+            if (stateId == null) stateId = "base";
+
             List<ModelVariant> modelVariants = new ArrayList<>();
 
-            if (state.hasRandomTextures()) {
-                // Handle state with random textures
-                List<BlockDefinition.RandomTextureVariant> randomTextures = state.getRandomTextures();
-                for (int i = 0; i < randomTextures.size(); i++) {
-                    List<String> textures = randomTextures.get(i).getTextures();
+            // Check if we have texture sets to work with
+            int textureSetCount = state.getRandomTextureSetCount();
 
-                    Identifier modelId;
-                    if (definition.hasCustomModel()) {
-                        // Reference pre-existing custom model
-                        modelId = createCustomModelId(block, stateId + "_v" + (i + 1));
-                    } else {
-                        // Always generate custom cuboid model for NSEWUD blocks to get proper element format
-                        modelId = createCuboidNSEWUDModel(generator, block, definition, textures, i, stateId + "_v" + (i + 1));
+            // For custom model states with no textures, ensure at least one iteration
+            if (textureSetCount == 0) {
+                if (state.isCustomModel()) {
+                    textureSetCount = 1;  // Force one iteration for custom model reference
+                } else {
+                    continue;  // Skip non-custom-model states with no textures
+                }
+            }
+
+            // Iterate through all texture sets for this state
+            for (int setIdx = 0; setIdx < textureSetCount; setIdx++) {
+                Identifier modelId;
+                String variantName = (hasMultipleStates ? stateId + "_" : "") + "v" + (setIdx + 1);
+                int weight = 1;
+
+                // Check if this state uses custom models
+                if (state.isCustomModel()) {
+                    // Use custom model reference instead of generating from textures
+                    modelId = createCustomModelId(block, variantName);
+                    BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                    if (set != null) {
+                        weight = set.getWeight();
+                    }
+                } else {
+                    BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                    if (set == null || set.getTextureCount() == 0) {
+                        continue;
                     }
 
-                    modelVariants.add(new ModelVariant(modelId, randomTextures.get(i).getWeight()));
-                    if (firstModel == null) firstModel = modelId;
-                }
-            } else {
-                // Handle state with single texture set
-                List<String> textures = state.getTextures() != null ? state.getTextures() : definition.getTextures();
+                    // Extract textures from this set
+                    String[] textures = new String[set.getTextureCount()];
+                    for (int i = 0; i < set.getTextureCount(); i++) {
+                        textures[i] = set.getTextureByIndex(i);
+                    }
 
-                Identifier modelId;
-                if (definition.hasCustomModel()) {
-                    // Reference pre-existing custom model
-                    modelId = createCustomModelId(block, stateId + "_v1");
-                } else {
+                    // Convert to List for compatibility with existing helper methods
+                    List<String> textureList = java.util.Arrays.asList(textures);
+
                     // Always generate custom cuboid model for NSEWUD blocks to get proper element format
-                    modelId = createCuboidNSEWUDModel(generator, block, definition, textures, 0, stateId + "_v1");
+                    modelId = createCuboidNSEWUDModel(generator, block, definition, textureList, setIdx, variantName);
+                    weight = set.getWeight();
                 }
 
-                modelVariants.add(new ModelVariant(modelId, 1));
+                modelVariants.add(new ModelVariant(modelId, weight));
                 if (firstModel == null) firstModel = modelId;
             }
 
-            stateModelMap.put(stateId, modelVariants);
+            if (!modelVariants.isEmpty()) {
+                stateModelMap.put(stateId, modelVariants);
+            }
         }
 
-        // Generate blockstate with states
-        generator.blockStateCollector.accept(createCuboidNSEWUDBlockStateWithStates(block, definition, stateModelMap, states));
+        if (stateModelMap.isEmpty()) {
+            // Fallback if no valid models generated
+            registerFallbackCuboidNSEWUDBlock(generator, block, definition);
+            return;
+        }
+
+        // Generate blockstate based on whether we have multiple states
+        if (hasMultipleStates) {
+            // Multiple states - need "state=" prefix
+            generator.blockStateCollector.accept(createCuboidNSEWUDBlockStateWithStates(block, stateModelMap, states));
+        } else {
+            // Single state - no state prefix in variants, just facing
+            List<ModelVariant> modelVariants = stateModelMap.values().iterator().next();
+
+            if (modelVariants.size() == 1 && modelVariants.get(0).weight == 1) {
+                // Single model - simple facing variants
+                Identifier modelId = modelVariants.get(0).model;
+                generator.blockStateCollector.accept(createCuboidNSEWUDBlockState(block, modelId));
+            } else {
+                // Multiple models (random textures) - weighted variants for each facing
+                generator.blockStateCollector.accept(createCuboidNSEWUDBlockStateWithRandomTextures(block, modelVariants));
+            }
+        }
 
         // Register item model
         if (firstModel != null) {
             registerParentedItemModel(generator, block, firstModel);
         }
+    }
+
+    /**
+     * Fallback registration for NSEWUD cuboid blocks with no textures or models defined.
+     */
+    private static void registerFallbackCuboidNSEWUDBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        List<String> fallbackTextures = List.of("missing");
+        Identifier modelId = createCuboidNSEWUDModel(generator, block, definition, fallbackTextures, 0, "base_v1");
+
+        generator.blockStateCollector.accept(createCuboidNSEWUDBlockState(block, modelId));
+        registerParentedItemModel(generator, block, modelId);
     }
 
     /**
@@ -226,7 +232,7 @@ public class CuboidNSEWUDBlockExporter extends BaseBlockExporter {
     /**
      * Creates a blockstate for cuboid blocks with states.
      */
-    private static BlockStateSupplier createCuboidNSEWUDBlockStateWithStates(Block block, BlockDefinition definition,
+    private static BlockStateSupplier createCuboidNSEWUDBlockStateWithStates(Block block,
                                                                             Map<String, List<ModelVariant>> stateModelMap,
                                                                             List<BlockDefinition.StateVariant> states) {
         return new BlockStateSupplier() {

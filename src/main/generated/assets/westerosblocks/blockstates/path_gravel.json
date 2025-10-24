@@ -1,53 +1,53 @@
 {
   "variants": {
-    "state=base": [
+    "": [
       {
-        "model": "westerosblocks:block/path_gravel/base_v1"
+        "model": "westerosblocks:block/path_gravel/v1"
       },
       {
-        "model": "westerosblocks:block/path_gravel/base_v2"
+        "model": "westerosblocks:block/path_gravel/v2"
       },
       {
-        "model": "westerosblocks:block/path_gravel/base_v3"
+        "model": "westerosblocks:block/path_gravel/v3"
       },
       {
-        "model": "westerosblocks:block/path_gravel/base_v4"
+        "model": "westerosblocks:block/path_gravel/v4"
       },
       {
-        "model": "westerosblocks:block/path_gravel/base_v5"
+        "model": "westerosblocks:block/path_gravel/v5"
       },
       {
-        "model": "westerosblocks:block/path_gravel/base_v6"
+        "model": "westerosblocks:block/path_gravel/v6"
       },
       {
-        "model": "westerosblocks:block/path_gravel/base_v7"
+        "model": "westerosblocks:block/path_gravel/v7"
       },
       {
-        "model": "westerosblocks:block/path_gravel/base_v8"
+        "model": "westerosblocks:block/path_gravel/v8"
       },
       {
-        "model": "westerosblocks:block/path_gravel/base_v9"
+        "model": "westerosblocks:block/path_gravel/v9"
       },
       {
-        "model": "westerosblocks:block/path_gravel/base_v10"
+        "model": "westerosblocks:block/path_gravel/v10"
       },
       {
-        "model": "westerosblocks:block/path_gravel/base_v11"
+        "model": "westerosblocks:block/path_gravel/v11"
       },
       {
-        "model": "westerosblocks:block/path_gravel/base_v12"
+        "model": "westerosblocks:block/path_gravel/v12"
       },
       {
-        "model": "westerosblocks:block/path_gravel/base_v13"
+        "model": "westerosblocks:block/path_gravel/v13"
       },
       {
-        "model": "westerosblocks:block/path_gravel/base_v14"
+        "model": "westerosblocks:block/path_gravel/v14"
       },
       {
-        "model": "westerosblocks:block/path_gravel/base_v15"
+        "model": "westerosblocks:block/path_gravel/v15"
       },
       {
-        "model": "westerosblocks:block/path_gravel/base_v16"
+        "model": "westerosblocks:block/path_gravel/v16"
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "variants": {
-    "state=base": {
-      "model": "westerosblocks:block/black_light_stone_tip/base_v1"
+    "": {
+      "model": "westerosblocks:block/black_light_stone_tip/v1"
     }
   }
 }

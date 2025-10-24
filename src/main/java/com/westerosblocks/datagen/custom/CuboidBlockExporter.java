@@ -20,19 +20,129 @@ public class CuboidBlockExporter extends BaseBlockExporter {
     private static final boolean[] NO_TINT_ALL = {false, false, false, false, false, false};
 
 
+    /**
+     * Registers a cuboid block from a BlockDefinition.
+     * Uses uniform iteration pattern: After doInit(), states is ALWAYS non-empty,
+     * and each state has randomTextures normalized from simple textures.
+     */
     public static void registerCustomCuboidBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         if (!(block instanceof WCCuboidBlock cuboidBlock)) {
             throw new IllegalArgumentException("Block must be a WCCuboidBlock instance");
         }
 
-        BlockDefinition.TextureSource source = definition.getPrimaryTextureSource();
+        // After doInit(), states is ALWAYS non-empty (at least synthetic base state exists)
+        var states = definition.getStates();
 
-        switch (source) {
-            case STATES -> registerCustomCuboidBlockWithStates(generator, block, definition, cuboidBlock);
-            case RANDOM_TEXTURES -> registerCustomCuboidBlockWithRandomTextures(generator, block, definition, cuboidBlock);
-            case TEXTURES -> registerSimpleCuboidBlock(generator, block, definition, cuboidBlock);
-            case CUSTOM_MODEL -> registerCustomModelCuboidBlock(generator, block, definition, cuboidBlock);
-            case NONE -> registerFallbackCuboidBlock(generator, block, definition, cuboidBlock);
+        if (states == null || states.isEmpty()) {
+            throw new IllegalStateException("Block definition states should never be null/empty after doInit() for block: " + getBlockName(block));
+        }
+
+        // Determine if this block actually has multiple states (needs STATE property in variants)
+        boolean hasMultipleStates = definition.getStateCount() > 1;
+
+        // Check for custom model first - but only if it's a single state block
+        // Multi-state blocks with custom models need per-state iteration
+        if (definition.hasCustomModel() && !hasMultipleStates) {
+            registerCustomModelCuboidBlock(generator, block, definition, cuboidBlock);
+            return;
+        }
+
+        // Collect all model identifiers for all states
+        Map<String, List<Identifier>> stateModelIds = new HashMap<>();
+        Identifier firstModel = null;
+
+        for (BlockDefinition.StateVariant state : states) {
+            String stateId = state.getStateID();
+            if (stateId == null) stateId = "base";
+
+            List<Identifier> modelIds = new ArrayList<>();
+
+            // Check if we have texture sets to work with
+            int textureSetCount = state.getRandomTextureSetCount();
+
+            // For custom model states with no textures, ensure at least one iteration
+            if (textureSetCount == 0) {
+                if (state.isCustomModel()) {
+                    textureSetCount = 1;  // Force one iteration for custom model reference
+                } else {
+                    continue;  // Skip non-custom-model states with no textures
+                }
+            }
+
+            // Iterate through all texture sets for this state
+            for (int setIdx = 0; setIdx < textureSetCount; setIdx++) {
+                Identifier modelId;
+                String variantName = (hasMultipleStates ? stateId + "_" : "") + "v" + (setIdx + 1);
+
+                // Check if this state uses custom models
+                if (state.isCustomModel()) {
+                    // Use custom model reference instead of generating from textures
+                    modelId = createCustomModelId(block, variantName);
+                } else {
+                    BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                    if (set == null || set.getTextureCount() == 0) {
+                        continue;
+                    }
+
+                    // Extract textures from this set
+                    String[] textures = new String[set.getTextureCount()];
+                    for (int i = 0; i < set.getTextureCount(); i++) {
+                        textures[i] = set.getTextureByIndex(i);
+                    }
+
+                    // Convert to List for compatibility with existing helper methods
+                    List<String> textureList = Arrays.asList(textures);
+
+                    if (hasCuboids(definition)) {
+                        // Generate custom cuboid models with geometry
+                        modelId = createCuboidModel(generator, block, definition, textureList, setIdx, variantName);
+                    } else {
+                        // Generate standard cube models
+                        TextureMap textureMap = createCuboidTextureMap(textureList);
+                        if (textureList.size() == 1) {
+                            modelId = Models.CUBE_ALL.upload(createGeneratedModelId(block, variantName), textureMap, generator.modelCollector);
+                        } else {
+                            modelId = Models.CUBE.upload(createGeneratedModelId(block, variantName), textureMap, generator.modelCollector);
+                        }
+                    }
+                }
+
+                modelIds.add(modelId);
+                if (firstModel == null) firstModel = modelId;
+            }
+
+            if (!modelIds.isEmpty()) {
+                stateModelIds.put(stateId, modelIds);
+            }
+        }
+
+        if (stateModelIds.isEmpty()) {
+            // Fallback if no valid models generated
+            registerFallbackCuboidBlock(generator, block, definition, cuboidBlock);
+            return;
+        }
+
+        // Generate blockstate based on whether we have multiple states
+        if (hasMultipleStates) {
+            generator.blockStateCollector.accept(createAdvancedStatesBlockState(block, stateModelIds));
+        } else {
+            // Single state - no state prefix in variants
+            List<Identifier> modelIds = stateModelIds.values().iterator().next();
+            if (modelIds.size() == 1) {
+                // Single model
+                generator.blockStateCollector.accept(createSimpleBlockState(block, modelIds.get(0)));
+            } else {
+                // Multiple models (random textures)
+                List<BlockStateVariant> variants = modelIds.stream()
+                    .map(BaseBlockExporter::createVariant)
+                    .toList();
+                generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0])));
+            }
+        }
+
+        // Register item model
+        if (firstModel != null) {
+            registerParentedItemModel(generator, block, firstModel);
         }
     }
 
