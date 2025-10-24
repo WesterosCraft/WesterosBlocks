@@ -112,8 +112,10 @@ public class CropBlockExporter extends BaseBlockExporter {
         boolean tinted = definition.isTinted() || definition.hasColorMult();
         boolean layerSensitive = definition.isLayerSensitive();
 
-        // Check if block has states
-        if (definition.hasStates()) {
+        // Check if block has multiple actual states (not just synthetic base state)
+        boolean hasMultipleStates = definition.getStateCount() > 1;
+
+        if (hasMultipleStates) {
             if (layerSensitive) {
                 // Layer-sensitive with states
                 registerCropBlockLayerSensitiveWithStates(generator, block, definition, tinted);
