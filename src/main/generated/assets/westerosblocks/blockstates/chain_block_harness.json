@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "": {
-      "model": "westerosblocks:block/chain_block_harness/chain_block_harness"
-    }
-  }
-}

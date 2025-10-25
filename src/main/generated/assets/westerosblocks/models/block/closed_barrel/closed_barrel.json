@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "westerosblocks:block/barrel_closed/barrel_top_closed",
-    "side": "westerosblocks:block/barrel_sides/side1"
-  }
-}

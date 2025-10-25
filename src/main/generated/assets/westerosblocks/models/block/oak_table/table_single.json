@@ -1,6 +1,0 @@
-{
-  "parent": "westerosblocks:block/table/table_single",
-  "textures": {
-    "1": "westerosblocks:block/wood/oak/all"
-  }
-}
