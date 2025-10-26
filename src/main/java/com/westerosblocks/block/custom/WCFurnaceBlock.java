@@ -22,20 +22,28 @@ import net.minecraft.world.World;
 import java.util.Map;
 
 public class WCFurnaceBlock extends FurnaceBlock {
+    protected BlockDefinition def;
     private final boolean alwaysOn;
     private final String blockName;
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
-            boolean alwaysOn = definition != null && definition.isAlwaysOn();
-            return new WCFurnaceBlock(settings, alwaysOn);
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            boolean alwaysOn = definition.isAlwaysOn();
+            return new WCFurnaceBlock(settings, definition, alwaysOn);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            boolean alwaysOn = (Boolean) parameters.getOrDefault("alwaysOn", false);
+            return new WCFurnaceBlock(settings, null, alwaysOn);
         }
     }
 
-    protected WCFurnaceBlock(AbstractBlock.Settings settings, boolean alwaysOn) {
+    protected WCFurnaceBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean alwaysOn) {
         super(settings);
+        this.def = def;
         this.alwaysOn = alwaysOn;
         this.blockName = null; // Will be set when registered
         this.setDefaultState(this.stateManager.getDefaultState()
@@ -83,5 +91,13 @@ public class WCFurnaceBlock extends FurnaceBlock {
             player.openHandledScreen((NamedScreenHandlerFactory) blockEntity);
             player.incrementStat(Stats.INTERACT_WITH_FURNACE);
         }
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

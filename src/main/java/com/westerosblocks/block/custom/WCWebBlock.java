@@ -37,6 +37,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WCWebBlock extends CobwebBlock {
+    protected BlockDefinition def;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     protected static IntProperty tempLAYERS;
@@ -64,12 +65,13 @@ public class WCWebBlock extends CobwebBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            boolean doToggleOnUse = definition != null && definition.toggleOnUse();
-            boolean doNoInWeb = definition != null && definition.isNoInWeb();
-            boolean doLayerSensitive = definition != null && definition.isLayerSensitive();
-            int numStates = definition != null ? definition.getStateCount() : 0;
-            boolean doAddStates = numStates > 1;
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            ModProperties.StateProperty stateProperty = definition.buildStateProperty();
+
+            boolean doToggleOnUse = definition.toggleOnUse();
+            boolean doNoInWeb = definition.isNoInWeb();
+            boolean doLayerSensitive = definition.isLayerSensitive();
 
             // Reset static fields before setting them (prevent leakage between blocks)
             tempLAYERS = null;
@@ -79,12 +81,38 @@ public class WCWebBlock extends CobwebBlock {
                 tempLAYERS = Properties.LAYERS;
             }
 
+            if (stateProperty != null) {
+                tempSTATE = stateProperty;
+            }
+
+            // Apply noCollision for web blocks
+            settings = settings.noCollision();
+
+            return new WCWebBlock(settings, definition, doToggleOnUse, doNoInWeb, doLayerSensitive);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, java.util.Map<String, Object> parameters) {
+            boolean doToggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
+            boolean doNoInWeb = (Boolean) parameters.getOrDefault("noInWeb", false);
+            boolean doLayerSensitive = (Boolean) parameters.getOrDefault("layerSensitive", false);
+            boolean doAddStates = (Boolean) parameters.getOrDefault("addStates", false);
+
+            // Reset static fields
+            tempLAYERS = null;
+            tempSTATE = null;
+
+            if (doLayerSensitive) {
+                tempLAYERS = Properties.LAYERS;
+            }
+
             if (doAddStates) {
-                List<String> stateValues = definition.getStateValues();
+                @SuppressWarnings("unchecked")
+                List<String> stateValues = (List<String>) parameters.get("stateValues");
                 if (stateValues != null) {
                     tempSTATE = new ModProperties.StateProperty(stateValues);
                 } else {
-                    // Generate default state IDs if not provided
+                    int numStates = (Integer) parameters.getOrDefault("numStates", 1);
                     ArrayList<String> stateIds = new ArrayList<>();
                     for (int i = 0; i < numStates; i++) {
                         stateIds.add("state" + i);
@@ -93,33 +121,31 @@ public class WCWebBlock extends CobwebBlock {
                 }
             }
 
-            // Apply noCollision for web blocks
             settings = settings.noCollision();
-
-            return new WCWebBlock(settings, doToggleOnUse, doNoInWeb, doLayerSensitive, doAddStates);
+            return new WCWebBlock(settings, null, doToggleOnUse, doNoInWeb, doLayerSensitive);
         }
     }
-    
-    protected WCWebBlock(AbstractBlock.Settings settings, boolean doToggleOnUse, boolean doNoInWeb, 
-                        boolean doLayerSensitive, boolean doAddStates) {
+
+    protected WCWebBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doToggleOnUse,
+                        boolean doNoInWeb, boolean doLayerSensitive) {
         super(settings);
-        
+        this.def = def;
         this.toggleOnUse = doToggleOnUse;
         this.noInWeb = doNoInWeb;
         this.layerSensitive = doLayerSensitive;
-        
+
         // Set default state
         BlockState defaultState = this.getDefaultState()
                 .with(WATERLOGGED, Boolean.FALSE);
-        
+
         if (layerSensitive && tempLAYERS != null) {
             defaultState = defaultState.with(tempLAYERS, 8);
         }
 
-        if (doAddStates && tempSTATE != null) {
+        if (tempSTATE != null) {
             defaultState = defaultState.with(tempSTATE, tempSTATE.defValue);
         }
-        
+
         this.setDefaultState(defaultState);
     }
     
@@ -235,5 +261,13 @@ public class WCWebBlock extends CobwebBlock {
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return VoxelShapes.empty();
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

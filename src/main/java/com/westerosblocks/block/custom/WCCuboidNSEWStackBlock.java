@@ -37,38 +37,32 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggab
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            boolean doAllowHalfBreak = definition != null && definition.isAllowHalfBreak();
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            boolean doAllowHalfBreak = definition.isAllowHalfBreak();
 
-            boolean doToggleOnUse = definition != null && definition.toggleOnUse();
-            int numStates = definition != null ? definition.getStateCount() : 0;
-            boolean doAddStates = numStates > 1;
+            // This block type does NOT support STATE properties or toggleOnUse
+            // It only supports WATERLOGGED, FACING, and HALF
 
-            if (doAddStates) {
-                List<String> stateValues = definition != null ? definition.getStateValues() : null;
-                if (stateValues != null && !stateValues.isEmpty()) {
-                    tempSTATE = new ModProperties.StateProperty(stateValues);
-                } else {
-                    ArrayList<String> stateIds = new ArrayList<>();
-                    for (int i = 0; i < numStates; i++) {
-                        stateIds.add("state" + i);
-                    }
-                    tempSTATE = new ModProperties.StateProperty(stateIds);
-                }
-            }
+            return new WCCuboidNSEWStackBlock(settings, definition, doAllowHalfBreak);
+        }
 
-            return new WCCuboidNSEWStackBlock(settings, doAllowHalfBreak, doToggleOnUse, doAddStates, definition);
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, java.util.Map<String, Object> parameters) {
+            boolean doAllowHalfBreak = (Boolean) parameters.getOrDefault("allowHalfBreak", false);
+
+            return new WCCuboidNSEWStackBlock(settings, null, doAllowHalfBreak);
         }
     }
 
-    public WCCuboidNSEWStackBlock(AbstractBlock.Settings settings, boolean doAllowHalfBreak, boolean doToggleOnUse, boolean addStates, BlockDefinition definition) {
-        super(settings, doToggleOnUse, addStates, null);
+    public WCCuboidNSEWStackBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doAllowHalfBreak) {
+        super(settings, def, false, null);
         this.allowHalfBreak = doAllowHalfBreak;
         this.SHAPE_BY_INDEX = new VoxelShape[8];
 
-        if (definition != null && definition.hasStackElements() && definition.getStackElements().size() >= 2) {
-            BlockDefinition.StackElement bottomElement = definition.getStackElements().get(0);
-            BlockDefinition.StackElement topElement = definition.getStackElements().get(1);
+        if (def != null && def.hasStackElements() && def.getStackElements().size() >= 2) {
+            BlockDefinition.StackElement bottomElement = def.getStackElements().get(0);
+            BlockDefinition.StackElement topElement = def.getStackElements().get(1);
 
             initializeShapesForHalf(bottomElement, 0);
 
@@ -79,15 +73,10 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggab
             }
         }
 
-        BlockState defbs = this.getDefaultState()
+        this.setDefaultState(this.getDefaultState()
             .with(WATERLOGGED, false)
             .with(HALF, DoubleBlockHalf.LOWER)
-            .with(FACING, Direction.EAST);
-
-        if (addStates && tempSTATE != null) {
-            defbs = defbs.with(tempSTATE, tempSTATE.defValue);
-        }
-        this.setDefaultState(defbs);
+            .with(FACING, Direction.EAST));
     }
 
     private void initializeShapesForHalf(BlockDefinition.StackElement element, int baseIndex) {
@@ -213,15 +202,10 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggab
                     break;
                 }
             }
-            BlockState bs = this.getDefaultState()
+            return this.getDefaultState()
                 .with(FACING, dir)
                 .with(HALF, DoubleBlockHalf.LOWER)
                 .with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
-
-            if (STATE != null) {
-                bs = bs.with(STATE, STATE.defValue);
-            }
-            return bs;
         } else {
             return null;
         }
@@ -250,15 +234,10 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggab
     public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
         BlockPos above = pos.up();
         FluidState fluidstate = world.getFluidState(above);
-        BlockState newstate = this.getDefaultState()
+        world.setBlockState(above, this.getDefaultState()
             .with(FACING, state.get(FACING))
             .with(HALF, DoubleBlockHalf.UPPER)
-            .with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
-
-        if (STATE != null && state.contains(STATE)) {
-            newstate = newstate.with(STATE, state.get(STATE));
-        }
-        world.setBlockState(above, newstate, 3);
+            .with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER)), 3);
     }
 
     @Override
@@ -272,5 +251,10 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggab
             }
             return blockstate.isOf(this) && blockstate.get(HALF) == DoubleBlockHalf.LOWER;
         }
+    }
+
+    @Override
+    public BlockDefinition getDefinition() {
+        return this.def;
     }
 }

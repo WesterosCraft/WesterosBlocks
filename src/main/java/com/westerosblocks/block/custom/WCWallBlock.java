@@ -21,18 +21,32 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
 import com.westerosblocks.data.BlockDefinition;
+import java.util.Map;
 
 public class WCWallBlock extends WallBlock implements Waterloggable {
+    protected BlockDefinition def;
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            boolean unconnect = definition != null && definition.isUnconnect();
-            boolean connectState = definition != null && definition.isConnectState();
-            String size = definition != null && definition.getWallSize() != null ? definition.getWallSize() : "normal";
-            boolean toggleOnUse = definition != null && definition.toggleOnUse();
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
 
-            return new WCWallBlock(settings, unconnect, connectState, size, toggleOnUse);
+            boolean unconnect = definition.isUnconnect();
+            boolean connectState = definition.isConnectState();
+            String size = definition.getWallSize();
+            boolean toggleOnUse = definition.toggleOnUse();
+
+            return new WCWallBlock(settings, definition, unconnect, connectState, size, toggleOnUse);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            boolean unconnect = (Boolean) parameters.getOrDefault("unconnect", false);
+            boolean connectState = (Boolean) parameters.getOrDefault("connectState", false);
+            String size = (String) parameters.getOrDefault("wallSize", "normal");
+            boolean toggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
+
+            return new WCWallBlock(settings, null, unconnect, connectState, size, toggleOnUse);
         }
     }
 
@@ -59,12 +73,13 @@ public class WCWallBlock extends WallBlock implements Waterloggable {
     private static VoxelShape[] shortShapes = null;
     private static VoxelShape[] collisionShapes = null;
 
-    protected WCWallBlock(AbstractBlock.Settings settings, boolean unconnect, boolean connectState, String size, boolean toggleOnUse) {
+    protected WCWallBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean unconnect, boolean connectState, String size, boolean toggleOnUse) {
         super(settings);
+        this.def = def;
         this.hasUnconnect = unconnect;
         this.hasConnectState = connectState;
         this.toggleOnUse = toggleOnUse;
-        this.wallSize = size.equals("short") ? WallSize.SHORT : WallSize.NORMAL;
+        this.wallSize = size != null && size.equals("short") ? WallSize.SHORT : WallSize.NORMAL;
 
         BlockState defaultState = this.stateManager.getDefaultState()
                 .with(UP, true)
@@ -252,5 +267,13 @@ public class WCWallBlock extends WallBlock implements Waterloggable {
         } else {
             return base;
         }
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

@@ -25,6 +25,7 @@ import net.minecraft.world.WorldView;
 import java.util.function.BiFunction;
 
 public class WCFlowerbedBlock extends PlantBlock implements Fertilizable {
+    protected BlockDefinition def;
     public static final MapCodec<WCFlowerbedBlock> CODEC = createCodec(WCFlowerbedBlock::new);
     public static final int MIN_FLOWERS = 1;
     public static final int MAX_FLOWERS = 4;
@@ -54,13 +55,27 @@ public class WCFlowerbedBlock extends PlantBlock implements Fertilizable {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            return new WCFlowerbedBlock(settings);
+        public Block buildBlockClass(BlockDefinition definition) {
+            // Handle null definition for manual block creation
+            AbstractBlock.Settings settings = definition != null
+                    ? definition.makeSettings()
+                    : AbstractBlock.Settings.create();
+            return new WCFlowerbedBlock(settings, definition);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, java.util.Map<String, Object> parameters) {
+            return new WCFlowerbedBlock(settings, null);
         }
     }
 
     public WCFlowerbedBlock(AbstractBlock.Settings settings) {
+        this(settings, null);
+    }
+
+    public WCFlowerbedBlock(AbstractBlock.Settings settings, BlockDefinition def) {
         super(settings);
+        this.def = def;
         this.setDefaultState(this.stateManager.getDefaultState()
             .with(FACING, Direction.NORTH)
             .with(FLOWER_AMOUNT, 1));
@@ -118,4 +133,11 @@ public class WCFlowerbedBlock extends PlantBlock implements Fertilizable {
         }
     }
 
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
+    }
 }

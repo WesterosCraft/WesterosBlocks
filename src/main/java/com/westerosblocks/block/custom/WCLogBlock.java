@@ -8,14 +8,31 @@ import net.minecraft.block.PillarBlock;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 
+import java.util.Map;
+
 public class WCLogBlock extends PillarBlock {
+    protected BlockDefinition def;
+
     public WCLogBlock(Settings settings) {
         super(settings);
+        this.def = null;
+    }
+
+    public WCLogBlock(Settings settings, BlockDefinition def) {
+        super(settings);
+        this.def = def;
     }
 
     public static class Factory extends BlockFactory {
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            return new WCLogBlock(settings);
+        @Override
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            return new WCLogBlock(settings, definition);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            return new WCLogBlock(settings, null);
         }
     }
 
@@ -29,4 +46,11 @@ public class WCLogBlock extends PillarBlock {
         builder.add(AXIS);
     }
 
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
+    }
 }

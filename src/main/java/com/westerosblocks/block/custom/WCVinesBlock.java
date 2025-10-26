@@ -24,6 +24,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class WCVinesBlock extends VineBlock {
+    protected BlockDefinition def;
     public static final BooleanProperty DOWN = Properties.DOWN;
     private static final VoxelShape UP_AABB = Block.createCuboidShape(0.0D, 15.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     private static final VoxelShape DOWN_AABB = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
@@ -40,11 +41,12 @@ public class WCVinesBlock extends VineBlock {
     private final boolean canGrowDownward;
 
     public WCVinesBlock(AbstractBlock.Settings settings) {
-        this(settings, false, false, false);
+        this(settings, null, false, false, false);
     }
 
-    public WCVinesBlock(AbstractBlock.Settings settings, boolean allowUnsupported, boolean noClimb, boolean canGrowDownward) {
+    public WCVinesBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean allowUnsupported, boolean noClimb, boolean canGrowDownward) {
         super(settings);
+        this.def = def;
         this.allowUnsupported = allowUnsupported;
         this.noClimb = noClimb;
         this.canGrowDownward = canGrowDownward;
@@ -254,20 +256,30 @@ public class WCVinesBlock extends VineBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public WCVinesBlock buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
-            boolean noClimb = definition != null && definition.isNoClimb();
-            boolean canGrowDownward = definition != null && definition.canGrowDownward();
+        public WCVinesBlock buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            boolean allowUnsupported = definition.isAllowUnsupported();
+            boolean noClimb = definition.isNoClimb();
+            boolean canGrowDownward = definition.canGrowDownward();
 
-            return new WCVinesBlock(settings, allowUnsupported, noClimb, canGrowDownward);
+            return new WCVinesBlock(settings, definition, allowUnsupported, noClimb, canGrowDownward);
         }
 
-        public WCVinesBlock buildBlockClass(AbstractBlock.Settings settings) {
-            return new WCVinesBlock(settings);
-        }
+        @Override
+        public WCVinesBlock buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            boolean allowUnsupported = (Boolean) parameters.getOrDefault("allowUnsupported", false);
+            boolean noClimb = (Boolean) parameters.getOrDefault("noClimb", false);
+            boolean canGrowDownward = (Boolean) parameters.getOrDefault("canGrowDownward", false);
 
-        public WCVinesBlock buildBlockClass(AbstractBlock.Settings settings, boolean allowUnsupported, boolean noClimb, boolean canGrowDownward) {
-            return new WCVinesBlock(settings, allowUnsupported, noClimb, canGrowDownward);
+            return new WCVinesBlock(settings, null, allowUnsupported, noClimb, canGrowDownward);
         }
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

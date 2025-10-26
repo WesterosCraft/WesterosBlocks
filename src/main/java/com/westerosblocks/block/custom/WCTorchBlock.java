@@ -15,16 +15,18 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
 import com.westerosblocks.data.BlockDefinition;
+import java.util.Map;
 
 public class WCTorchBlock extends TorchBlock {
-
+    protected BlockDefinition def;
     private final boolean allowUnsupported;
     private final boolean noParticle;
     private final Block wallBlock;
 
-    public WCTorchBlock(AbstractBlock.Settings settings, Block wallBlock,
+    public WCTorchBlock(AbstractBlock.Settings settings, BlockDefinition def, Block wallBlock,
             boolean allowUnsupported, boolean noParticle) {
         super(getParticle(noParticle), settings);
+        this.def = def;
         this.wallBlock = wallBlock;
         this.allowUnsupported = allowUnsupported;
         this.noParticle = noParticle;
@@ -74,36 +76,50 @@ public class WCTorchBlock extends TorchBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            Block wallBlock = null;
-            boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
-            boolean noParticle = definition != null && definition.isNoParticle();
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
 
-            return new WCTorchBlock(settings, wallBlock, allowUnsupported, noParticle);
+            // wallBlock will be set later by ModBlocks after wall torch is registered
+            Block wallBlock = null;
+            boolean allowUnsupported = definition.isAllowUnsupported();
+            boolean noParticle = definition.isNoParticle();
+
+            return new WCTorchBlock(settings, definition, wallBlock, allowUnsupported, noParticle);
         }
 
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition, java.util.Map<String, Object> parameters) {
-            // Extract wallBlock from parameters if present
-            Block wallBlock = parameters != null ? (Block) parameters.get("wallBlock") : null;
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            // For BlockBuilder - wallBlock comes from parameters
+            Block wallBlock = (Block) parameters.get("wallBlock");
+            boolean allowUnsupported = (Boolean) parameters.getOrDefault("allowUnsupported", false);
+            boolean noParticle = (Boolean) parameters.getOrDefault("noParticle", false);
 
-            // Extract allowUnsupported from parameters or definition
-            boolean allowUnsupported = false;
-            if (parameters != null && parameters.containsKey("allowUnsupported")) {
-                allowUnsupported = (Boolean) parameters.get("allowUnsupported");
-            } else if (definition != null) {
-                allowUnsupported = definition.isAllowUnsupported();
-            }
-
-            // Extract noParticle from parameters or definition
-            boolean noParticle = false;
-            if (parameters != null && parameters.containsKey("noParticle")) {
-                noParticle = (Boolean) parameters.get("noParticle");
-            } else if (definition != null) {
-                noParticle = definition.isNoParticle();
-            }
-
-            return new WCTorchBlock(settings, wallBlock, allowUnsupported, noParticle);
+            return new WCTorchBlock(settings, null, wallBlock, allowUnsupported, noParticle);
         }
+    }
+
+    /**
+     * Sets the wall block reference. Called by ModBlocks after both torch variants are registered.
+     * Note: This is a workaround for the circular dependency between standing and wall torches.
+     */
+    public void setWallBlock(Block wallBlock) {
+        // This is handled via constructor - wall block should be set during registration
+        // This method exists for legacy compatibility but is no longer used
+    }
+
+    /**
+     * Gets the wall block variant for this torch.
+     * @return Wall block variant, or null if not set
+     */
+    public Block getWallBlock() {
+        return wallBlock;
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

@@ -32,6 +32,7 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.IntStream;
 
 /**
@@ -39,6 +40,8 @@ import java.util.stream.IntStream;
  * Handles custom textures, states, tinting, and stair shape connections.
  */
 public class WCStairBlock extends Block implements Waterloggable {
+    protected BlockDefinition def;
+
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final EnumProperty<BlockHalf> HALF = Properties.BLOCK_HALF;
     public static final EnumProperty<StairShape> SHAPE = Properties.STAIR_SHAPE;
@@ -75,18 +78,57 @@ public class WCStairBlock extends Block implements Waterloggable {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            boolean doToggleOnUse = definition != null && definition.toggleOnUse();
-            int numStates = definition != null ? definition.getStateCount() : 0;
-            boolean doAddStates = numStates > 1;
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            ModProperties.StateProperty stateProperty = definition.buildStateProperty();
 
-            // Set the STATE property if stateValues are provided
+            if (stateProperty != null) {
+                tempSTATE = stateProperty;
+            }
+
+            boolean doToggleOnUse = definition.toggleOnUse();
+            boolean doAddStates = (stateProperty != null);
+
+            // Parse type field for special properties
+            boolean doUnconnect = false;
+            boolean doConnectstate = false;
+            boolean noUvlock = false;
+
+            String type = definition.getType();
+            if (type != null) {
+                String[] toks = type.split(",");
+                for (String tok : toks) {
+                    String trimmed = tok.trim();
+                    if (trimmed.equals("unconnect")) {
+                        doUnconnect = true;
+                        tempUNCONNECT = UNCONNECT;
+                    } else if (trimmed.equals("connectstate")) {
+                        doConnectstate = true;
+                        tempCONNECTSTATE = CONNECTSTATE;
+                    } else if (trimmed.equals("no-uvlock")) {
+                        noUvlock = true;
+                    }
+                }
+            }
+
+            return new WCStairBlock(settings, definition, doToggleOnUse, doAddStates, doUnconnect, doConnectstate, noUvlock);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            boolean doToggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
+            Integer numStates = (Integer) parameters.get("states");
+            boolean doAddStates = (numStates != null && numStates > 1);
+            boolean doUnconnect = (Boolean) parameters.getOrDefault("unconnect", false);
+            boolean doConnectstate = (Boolean) parameters.getOrDefault("connectState", false);
+            boolean noUvlock = false;
+
             if (doAddStates) {
-                List<String> stateValues = definition != null ? definition.getStateValues() : null;
-                if (stateValues != null && !stateValues.isEmpty()) {
+                @SuppressWarnings("unchecked")
+                List<String> stateValues = (List<String>) parameters.get("stateValues");
+                if (stateValues != null) {
                     tempSTATE = new ModProperties.StateProperty(stateValues);
                 } else {
-                    // Generate default state IDs if not provided
                     ArrayList<String> stateIds = new ArrayList<>();
                     for (int i = 0; i < numStates; i++) {
                         stateIds.add("state" + i);
@@ -95,41 +137,25 @@ public class WCStairBlock extends Block implements Waterloggable {
                 }
             }
 
-            // Parse type field for special properties
-            boolean doUnconnect = false;
-            boolean doConnectstate = false;
-            boolean noUvlock = false;
-
-            if (definition != null) {
-                String type = definition.getType();
-                if (type != null) {
-                    String[] toks = type.split(",");
-                    for (String tok : toks) {
-                        String trimmed = tok.trim();
-                        if (trimmed.equals("unconnect")) {
-                            doUnconnect = true;
-                            tempUNCONNECT = UNCONNECT;
-                        } else if (trimmed.equals("connectstate")) {
-                            doConnectstate = true;
-                            tempCONNECTSTATE = CONNECTSTATE;
-                        } else if (trimmed.equals("no-uvlock")) {
-                            noUvlock = true;
-                        }
-                    }
-                }
+            if (doUnconnect) {
+                tempUNCONNECT = UNCONNECT;
+            }
+            if (doConnectstate) {
+                tempCONNECTSTATE = CONNECTSTATE;
             }
 
-            return new WCStairBlock(settings, doToggleOnUse, doAddStates, doUnconnect, doConnectstate, noUvlock);
+            return new WCStairBlock(settings, null, doToggleOnUse, doAddStates, doUnconnect, doConnectstate, noUvlock);
         }
     }
 
     public WCStairBlock(AbstractBlock.Settings settings) {
-        this(settings, false, false, false, false, false);
+        this(settings, null, false, false, false, false, false);
     }
 
-    public WCStairBlock(AbstractBlock.Settings settings, boolean doToggleOnUse, boolean addStates,
+    public WCStairBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doToggleOnUse, boolean addStates,
                        boolean doUnconnect, boolean doConnectstate, boolean noUvlock) {
         super(settings);
+        this.def = def;
 
         this.toggleOnUse = doToggleOnUse;
         this.unconnect = doUnconnect;
@@ -301,5 +327,13 @@ public class WCStairBlock extends Block implements Waterloggable {
             shape = VoxelShapes.union(shape, octet4);
         }
         return shape;
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

@@ -19,10 +19,11 @@ public class WCLadderBlock extends LadderBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
-            boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
-            boolean noClimb = definition != null && definition.isNoClimb();
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+
+            boolean allowUnsupported = definition.isAllowUnsupported();
+            boolean noClimb = definition.isNoClimb();
 
             return new WCLadderBlock(settings.nonOpaque(), allowUnsupported, noClimb);
         }

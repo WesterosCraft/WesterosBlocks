@@ -9,25 +9,32 @@ import net.minecraft.block.FallingBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
+import java.util.Map;
+
 public class WCSandBlock extends FallingBlock {
+    protected BlockDefinition def;
     private final int dustColor;
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
             // TODO: Add getDustColor() getter to BlockDefinition
             int dustColor = 14406560; // Default sand dust color
-            return new WCSandBlock(settings, dustColor);
+            return new WCSandBlock(settings, definition, dustColor);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            int dustColor = (Integer) parameters.getOrDefault("dustColor", 14406560);
+            return new WCSandBlock(settings, null, dustColor);
         }
     }
 
-    public WCSandBlock(AbstractBlock.Settings settings, int dustColor) {
+    public WCSandBlock(AbstractBlock.Settings settings, BlockDefinition def, int dustColor) {
         super(settings);
+        this.def = def;
         this.dustColor = dustColor;
-    }
-
-    public WCSandBlock(AbstractBlock.Settings settings) {
-        this(settings, 14406560); // Default sand dust color
     }
 
     @Override
@@ -38,5 +45,13 @@ public class WCSandBlock extends FallingBlock {
     @Override
     public int getColor(BlockState state, BlockView world, BlockPos pos) {
         return this.dustColor;
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

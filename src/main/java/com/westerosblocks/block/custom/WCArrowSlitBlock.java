@@ -26,6 +26,7 @@ import com.westerosblocks.block.custom.BlockFactory;
 import java.util.Map;
 
 public class WCArrowSlitBlock extends Block {
+    protected BlockDefinition def;
     public static final EnumProperty<ArrowSlitType> TYPE = EnumProperty.of("type", ArrowSlitType.class);
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
@@ -46,8 +47,9 @@ public class WCArrowSlitBlock extends Block {
     private final String blockName;
     private final String creativeTab;
 
-    public WCArrowSlitBlock(AbstractBlock.Settings settings, String blockName, String creativeTab) {
+    public WCArrowSlitBlock(AbstractBlock.Settings settings, BlockDefinition def, String blockName, String creativeTab) {
         super(settings);
+        this.def = def;
         this.blockName = blockName;
         this.creativeTab = creativeTab;
         setDefaultState(getDefaultState()
@@ -59,11 +61,21 @@ public class WCArrowSlitBlock extends Block {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
+        public Block buildBlockClass(BlockDefinition definition) {
+            // Handle null definition for manual block creation
+            AbstractBlock.Settings settings = definition != null
+                    ? definition.makeSettings()
+                    : AbstractBlock.Settings.create();
             String blockName = definition != null ? definition.getBlockName() : "arrow_slit";
             String creativeTab = definition != null ? definition.getCreativeTab() : "building_blocks";
-            return new WCArrowSlitBlock(settings, blockName, creativeTab);
+            return new WCArrowSlitBlock(settings, definition, blockName, creativeTab);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            String blockName = (String) parameters.getOrDefault("blockName", "arrow_slit");
+            String creativeTab = (String) parameters.getOrDefault("creativeTab", "building_blocks");
+            return new WCArrowSlitBlock(settings, null, blockName, creativeTab);
         }
     }
 
@@ -306,5 +318,11 @@ public class WCArrowSlitBlock extends Block {
         }
     }
 
-
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
+    }
 }

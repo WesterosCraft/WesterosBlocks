@@ -24,6 +24,7 @@ import java.util.Map;
 import com.westerosblocks.data.BlockDefinition;
 
 public class WCTableBlock extends Block {
+    protected BlockDefinition def;
     public static final BooleanProperty NORTH = Properties.NORTH;
     public static final BooleanProperty EAST = Properties.EAST;
     public static final BooleanProperty SOUTH = Properties.SOUTH;
@@ -38,8 +39,9 @@ public class WCTableBlock extends Block {
     // Pre-computed shape maps for efficient lookups
     private final Map<BlockState, VoxelShape> shapeByIndex;
 
-    public WCTableBlock(Settings settings) {
+    public WCTableBlock(Settings settings, BlockDefinition def) {
         super(settings);
+        this.def = def;
         this.setDefaultState(this.getDefaultState()
                 .with(NORTH, false)
                 .with(EAST, false)
@@ -52,8 +54,14 @@ public class WCTableBlock extends Block {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            return new WCTableBlock(settings);
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            return new WCTableBlock(settings, definition);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            return new WCTableBlock(settings, null);
         }
     }
 
@@ -271,5 +279,13 @@ public class WCTableBlock extends Block {
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return this.shapeByIndex.get(state);
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

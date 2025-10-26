@@ -12,8 +12,10 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 
 import com.westerosblocks.data.BlockDefinition;
+import java.util.Map;
 
 public class WCPaneBlock extends PaneBlock {
+    protected BlockDefinition def;
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
     protected static BooleanProperty tempUNCONNECT;
 
@@ -23,22 +25,36 @@ public class WCPaneBlock extends PaneBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
-            boolean doUnconnect = definition != null && definition.isUnconnect();
-            boolean legacy_model = definition != null && definition.isLegacyModel();
-            boolean bars_model = definition != null && definition.isBarsModel();
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            boolean doUnconnect = definition.isUnconnect();
+            boolean legacy_model = definition.isLegacyModel();
+            boolean bars_model = definition.isBarsModel();
 
             if (doUnconnect) {
                 tempUNCONNECT = UNCONNECT;
             }
 
-            return new WCPaneBlock(settings, doUnconnect, legacy_model, bars_model);
+            return new WCPaneBlock(settings, definition, doUnconnect, legacy_model, bars_model);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            boolean doUnconnect = (Boolean) parameters.getOrDefault("unconnect", false);
+            boolean legacy_model = (Boolean) parameters.getOrDefault("legacyModel", false);
+            boolean bars_model = (Boolean) parameters.getOrDefault("barsModel", false);
+
+            if (doUnconnect) {
+                tempUNCONNECT = UNCONNECT;
+            }
+
+            return new WCPaneBlock(settings, null, doUnconnect, legacy_model, bars_model);
         }
     }
 
-    protected WCPaneBlock(AbstractBlock.Settings settings, boolean doUnconnect, boolean legacy_model, boolean bars_model) {
+    protected WCPaneBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doUnconnect, boolean legacy_model, boolean bars_model) {
         super(settings);
+        this.def = def;
         this.unconnect = doUnconnect;
         this.legacy_model = legacy_model;
         this.bars_model = bars_model;
@@ -87,5 +103,13 @@ public class WCPaneBlock extends PaneBlock {
 
     public boolean isBarsModel() {
         return bars_model;
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

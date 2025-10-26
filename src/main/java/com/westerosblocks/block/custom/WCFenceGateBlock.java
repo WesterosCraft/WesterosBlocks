@@ -13,12 +13,15 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import com.westerosblocks.utils.ModWoodType;
+import java.util.Map;
 
 public class WCFenceGateBlock extends FenceGateBlock {
+    protected BlockDefinition def;
     private final boolean locked;
 
-    public WCFenceGateBlock(WoodType type, Settings settings, boolean locked) {
+    public WCFenceGateBlock(WoodType type, Settings settings, BlockDefinition def, boolean locked) {
         super(type, settings);
+        this.def = def;
         this.locked = locked;
     }
 
@@ -37,12 +40,30 @@ public class WCFenceGateBlock extends FenceGateBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            String woodTypeString = definition != null ? definition.getWoodType() : "oak";
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            String woodTypeString = definition.getWoodType() != null ? definition.getWoodType() : "oak";
             WoodType woodType = ModWoodType.getWoodType(woodTypeString);
-            boolean locked = definition != null && definition.isLocked();
+            boolean locked = definition.isLocked();
 
-            return new WCFenceGateBlock(woodType, settings, locked);
+            return new WCFenceGateBlock(woodType, settings, definition, locked);
         }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            String woodTypeString = (String) parameters.getOrDefault("woodType", "oak");
+            WoodType woodType = ModWoodType.getWoodType(woodTypeString);
+            boolean locked = (Boolean) parameters.getOrDefault("locked", false);
+
+            return new WCFenceGateBlock(woodType, settings, null, locked);
+        }
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

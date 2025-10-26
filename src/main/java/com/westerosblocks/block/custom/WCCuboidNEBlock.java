@@ -24,16 +24,29 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements Waterloggable {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            boolean doToggleOnUse = definition != null && definition.toggleOnUse();
-            int numStates = definition != null ? definition.getStateCount() : 0;
-            boolean doAddStates = numStates > 1;
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            ModProperties.StateProperty stateProperty = definition.buildStateProperty();
+            boolean doToggleOnUse = definition.toggleOnUse();
 
-            if (doAddStates) {
-                List<String> stateValues = definition.getStateValues();
+            tempSTATE = stateProperty;
+
+            return new WCCuboidNEBlock(settings, definition, doToggleOnUse);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, java.util.Map<String, Object> parameters) {
+            boolean doToggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
+            boolean addStates = (Boolean) parameters.getOrDefault("addStates", false);
+
+            tempSTATE = null;
+            if (addStates) {
+                @SuppressWarnings("unchecked")
+                List<String> stateValues = (List<String>) parameters.get("stateValues");
                 if (stateValues != null && !stateValues.isEmpty()) {
                     tempSTATE = new ModProperties.StateProperty(stateValues);
                 } else {
+                    int numStates = (Integer) parameters.getOrDefault("numStates", 1);
                     ArrayList<String> stateIds = new ArrayList<>();
                     for (int i = 0; i < numStates; i++) {
                         stateIds.add("state" + i);
@@ -42,18 +55,18 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements Waterloggable {
                 }
             }
 
-            return new WCCuboidNEBlock(settings, doToggleOnUse, doAddStates, definition);
+            return new WCCuboidNEBlock(settings, null, doToggleOnUse);
         }
     }
 
-    public WCCuboidNEBlock(AbstractBlock.Settings settings, boolean doToggleOnUse, boolean addStates, BlockDefinition definition) {
-        super(settings, doToggleOnUse, addStates, null);
+    public WCCuboidNEBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doToggleOnUse) {
+        super(settings, def, doToggleOnUse, null);
 
         BlockState defbs = this.getDefaultState()
             .with(WATERLOGGED, false)
             .with(FACING, Direction.EAST);
 
-        if (addStates && tempSTATE != null) {
+        if (tempSTATE != null) {
             defbs = defbs.with(tempSTATE, tempSTATE.defValue);
         }
         this.setDefaultState(defbs);

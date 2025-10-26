@@ -28,6 +28,7 @@ import net.minecraft.world.WorldAccess;
 import java.util.List;
 
 public class WCBedBlock extends HorizontalFacingBlock {
+    protected BlockDefinition def;
     public static final MapCodec<WCBedBlock> CODEC = createCodec(WCBedBlock::new);
 
     @Override
@@ -37,9 +38,28 @@ public class WCBedBlock extends HorizontalFacingBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            return new WCBedBlock(settings);
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            return new WCBedBlock(settings, definition);
         }
+    }
+
+    /**
+     * Constructor for CODEC (world save/load) - BlockDefinition not needed for serialization
+     */
+    protected WCBedBlock(AbstractBlock.Settings settings) {
+        this(settings, null);
+    }
+
+    protected WCBedBlock(AbstractBlock.Settings settings, BlockDefinition def) {
+        super(settings);
+        this.def = def;
+        this.color = DyeColor.RED;
+        this.bedType = BedType.NORMAL;
+        this.setDefaultState(this.getStateManager().getDefaultState()
+                .with(PART, BedPart.FOOT)
+                .with(OCCUPIED, false)
+                .with(FACING, Direction.NORTH));
     }
 
     public static final EnumProperty<BedPart> PART = Properties.BED_PART;
@@ -53,7 +73,7 @@ public class WCBedBlock extends HorizontalFacingBlock {
     protected static final VoxelShape SOUTH_SHAPE = VoxelShapes.union(BASE, LEG_SOUTH_WEST, LEG_SOUTH_EAST);
     protected static final VoxelShape WEST_SHAPE = VoxelShapes.union(BASE, LEG_NORTH_WEST, LEG_SOUTH_WEST);
     protected static final VoxelShape EAST_SHAPE = VoxelShapes.union(BASE, LEG_NORTH_EAST, LEG_SOUTH_EAST);
-    
+
     private final DyeColor color;
 
     public enum BedType {
@@ -62,15 +82,7 @@ public class WCBedBlock extends HorizontalFacingBlock {
 
     public final BedType bedType;
 
-    protected WCBedBlock(AbstractBlock.Settings settings) {
-        super(settings);
-        this.color = DyeColor.RED;
-        this.bedType = BedType.NORMAL;
-        this.setDefaultState(this.getStateManager().getDefaultState()
-                .with(PART, BedPart.FOOT)
-                .with(OCCUPIED, false)
-                .with(FACING, Direction.NORTH));
-    }
+
 
     @Override
     public BlockRenderType getRenderType(BlockState state) {
@@ -237,5 +249,13 @@ public class WCBedBlock extends HorizontalFacingBlock {
     public long getRenderingSeed(BlockState state, BlockPos pos) {
         BlockPos blockpos = pos.offset(state.get(FACING), state.get(PART) == BedPart.HEAD ? 0 : 1);
         return blockpos.hashCode();
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

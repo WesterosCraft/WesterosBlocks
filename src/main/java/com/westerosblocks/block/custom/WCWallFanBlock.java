@@ -27,6 +27,7 @@ import com.westerosblocks.data.BlockDefinition;
 import java.util.Map;
 
 public class WCWallFanBlock extends Block implements Waterloggable {
+    protected BlockDefinition def;
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
@@ -41,14 +42,22 @@ public class WCWallFanBlock extends Block implements Waterloggable {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
-            return new WCWallFanBlock(settings, allowUnsupported);
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            boolean allowUnsupported = definition.isAllowUnsupported();
+            return new WCWallFanBlock(settings, definition, allowUnsupported);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            boolean allowUnsupported = (Boolean) parameters.getOrDefault("allowUnsupported", false);
+            return new WCWallFanBlock(settings, null, allowUnsupported);
         }
     }
 
-    public WCWallFanBlock(AbstractBlock.Settings settings, boolean allowUnsupported) {
+    public WCWallFanBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean allowUnsupported) {
         super(settings);
+        this.def = def;
         this.allowUnsupported = allowUnsupported;
 
         setDefaultState(getStateManager().getDefaultState()
@@ -134,5 +143,13 @@ public class WCWallFanBlock extends Block implements Waterloggable {
             case WATER -> state.getFluidState().isIn(FluidTags.WATER);
             case AIR -> false;
         };
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

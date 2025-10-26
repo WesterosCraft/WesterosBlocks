@@ -26,6 +26,7 @@ import java.util.List;
 import java.util.Map;
 
 public class WCSolidBlock extends Block {
+    protected BlockDefinition def;
     protected boolean toggleOnUse = false;
 
     protected boolean connectState;
@@ -41,13 +42,38 @@ public class WCSolidBlock extends Block {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
-            boolean doConnectState = definition != null && definition.isConnectState();
-            boolean doToggleOnUse = definition != null && definition.toggleOnUse();
-            int numStates = definition != null ? definition.getStateCount() : 0;
-            boolean doAddStates = numStates > 1;
-            boolean doSymmetrical = definition != null && definition.isSymmetrical();
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            ModProperties.StateProperty stateProperty = definition.buildStateProperty();
+
+            if (stateProperty != null) {
+                tempSTATE = stateProperty;
+            }
+
+            boolean doConnectState = definition.isConnectState();
+            boolean doToggleOnUse = definition.toggleOnUse();
+            boolean doSymmetrical = definition.isSymmetrical();
+            boolean doAddStates = (stateProperty != null);
+
+            if (doConnectState) {
+                tempCONNECTSTATE = CONNECTSTATE;
+            }
+
+            if (doSymmetrical) {
+                tempSYMMETRICAL = SYMMETRICAL;
+            }
+
+            return new WCSolidBlock(settings, definition, doConnectState, doToggleOnUse, doAddStates, doSymmetrical);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            // For BlockBuilder - manual block creation without definition
+            boolean doConnectState = (Boolean) parameters.getOrDefault("connectState", false);
+            boolean doToggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
+            boolean doSymmetrical = (Boolean) parameters.getOrDefault("symmetrical", false);
+            Integer numStates = (Integer) parameters.get("states");
+            boolean doAddStates = (numStates != null && numStates > 1);
 
             if (doConnectState) {
                 tempCONNECTSTATE = CONNECTSTATE;
@@ -58,7 +84,8 @@ public class WCSolidBlock extends Block {
             }
 
             if (doAddStates) {
-                List<String> stateValues = definition.getStateValues();
+                @SuppressWarnings("unchecked")
+                List<String> stateValues = (List<String>) parameters.get("stateValues");
                 if (stateValues != null) {
                     STATE = new ModProperties.StateProperty(stateValues);
                 } else {
@@ -72,18 +99,14 @@ public class WCSolidBlock extends Block {
                 tempSTATE = STATE;
             }
 
-            return new WCSolidBlock(settings, doConnectState, doToggleOnUse, doAddStates, doSymmetrical);
+            return new WCSolidBlock(settings, null, doConnectState, doToggleOnUse, doAddStates, doSymmetrical);
         }
     }
 
-    public WCSolidBlock(AbstractBlock.Settings settings) {
+    public WCSolidBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean connectedState,
+            boolean doToggleOnUse, boolean addStates, boolean doSymmetrical) {
         super(settings);
-
-    }
-
-    public WCSolidBlock(AbstractBlock.Settings settings, boolean connectedState, boolean doToggleOnUse,
-            boolean addStates, boolean doSymmetrical) {
-        super(settings);
+        this.def = def;
 
         if (doToggleOnUse) {
             toggleOnUse = true;
@@ -115,6 +138,7 @@ public class WCSolidBlock extends Block {
             tempSYMMETRICAL = null;
         }
         if (tempSTATE != null) {
+            STATE = tempSTATE;  // Assign to instance field BEFORE nulling
             builder.add(tempSTATE);
             tempSTATE = null;
         }
@@ -152,5 +176,13 @@ public class WCSolidBlock extends Block {
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return VoxelShapes.fullCube();
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

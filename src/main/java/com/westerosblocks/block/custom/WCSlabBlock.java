@@ -2,6 +2,7 @@ package com.westerosblocks.block.custom;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
@@ -20,6 +21,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class WCSlabBlock extends SlabBlock {
+    protected BlockDefinition def;
     protected boolean toggleOnUse = false;
 
     protected boolean connectState;
@@ -30,32 +32,70 @@ public class WCSlabBlock extends SlabBlock {
     public static ModProperties.StateProperty STATE;
 
     public static class Factory extends BlockFactory {
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
-            boolean doConnectState = definition != null && definition.isConnectState();
-            boolean doToggleOnUse = definition != null && definition.toggleOnUse();
-            List<String> stateValues = definition != null ? definition.getStateValues() : null;
-            boolean doAddStates = stateValues != null && !stateValues.isEmpty();
+        @Override
+        public Block buildBlockClass(BlockDefinition definition) {
+            // Build settings from definition (1.18.2 pattern: def.makeProperties())
+            AbstractBlock.Settings settings = definition.makeSettings();
+
+            // Build state property from definition (1.18.2 pattern: def.buildStateProperty())
+            ModProperties.StateProperty stateProperty = definition.buildStateProperty();
+            if (stateProperty != null) {
+                tempSTATE = stateProperty;
+            }
+
+            // Extract block-specific properties from definition
+            boolean doConnectState = definition.isConnectState();
+            boolean doToggleOnUse = definition.toggleOnUse();
+            boolean doAddStates = (stateProperty != null);
+
+            if (doConnectState) {
+                tempCONNECTSTATE = CONNECTSTATE;
+            }
+
+            return new WCSlabBlock(settings, definition, doConnectState, doToggleOnUse, doAddStates);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            // For BlockBuilder - manual block creation without definition
+            boolean doConnectState = (Boolean) parameters.getOrDefault("connectState", false);
+            boolean doToggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
+            Integer numStates = (Integer) parameters.get("states");
+            boolean doAddStates = (numStates != null && numStates > 1);
 
             if (doConnectState) {
                 tempCONNECTSTATE = CONNECTSTATE;
             }
 
             if (doAddStates) {
-                ArrayList<String> stateIds = new ArrayList<>(stateValues);
-                STATE = new ModProperties.StateProperty(stateIds);
+                @SuppressWarnings("unchecked")
+                List<String> stateValues = (List<String>) parameters.get("stateValues");
+                if (stateValues != null) {
+                    STATE = new ModProperties.StateProperty(stateValues);
+                } else {
+                    // Generate default state IDs if not provided
+                    ArrayList<String> stateIds = new ArrayList<>();
+                    for (int i = 0; i < numStates; i++) {
+                        stateIds.add("state" + i);
+                    }
+                    STATE = new ModProperties.StateProperty(stateIds);
+                }
                 tempSTATE = STATE;
             }
-            return new WCSlabBlock(settings, doConnectState, doToggleOnUse, doAddStates);
+
+            return new WCSlabBlock(settings, null, doConnectState, doToggleOnUse, doAddStates);
         }
     }
 
     public WCSlabBlock(Settings settings) {
         super(settings);
+        this.def = null;
     }
 
-    public WCSlabBlock(Settings settings, boolean doConnectState, boolean doToggleOnUse, boolean doAddStates) {
+    public WCSlabBlock(Settings settings, BlockDefinition def, boolean doConnectState, boolean doToggleOnUse, boolean doAddStates) {
         super(settings);
+        this.def = def;
+
         if (doToggleOnUse) {
             toggleOnUse = true;
         }
@@ -87,12 +127,21 @@ public class WCSlabBlock extends SlabBlock {
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         super.appendProperties(builder);
-        if (this.connectState) {
-            builder.add(CONNECTSTATE);
+        if (tempCONNECTSTATE != null) {
+            builder.add(tempCONNECTSTATE);
+            tempCONNECTSTATE = null;
         }
-        if (STATE != null) {
-            builder.add(STATE);
+        if (tempSTATE != null) {
+            builder.add(tempSTATE);
+            tempSTATE = null;
         }
     }
 
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
+    }
 }

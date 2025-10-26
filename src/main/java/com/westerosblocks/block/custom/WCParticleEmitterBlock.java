@@ -24,6 +24,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
 public class WCParticleEmitterBlock extends Block implements Waterloggable {
+    protected BlockDefinition def;
     protected static final VoxelShape OFF_SHAPE = Block.createCuboidShape(4.0D, 4.0D, 4.0D, 12.0D, 12.0D, 12.0D);
     protected static final VoxelShape ON_SHAPE = Block.createCuboidShape(6.0D, 6.0D, 6.0D, 10.0D, 10.0D, 10.0D);
 
@@ -32,13 +33,20 @@ public class WCParticleEmitterBlock extends Block implements Waterloggable {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            return new WCParticleEmitterBlock(settings);
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            return new WCParticleEmitterBlock(settings, definition);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, java.util.Map<String, Object> parameters) {
+            return new WCParticleEmitterBlock(settings, null);
         }
     }
 
-    public WCParticleEmitterBlock(AbstractBlock.Settings settings) {
+    public WCParticleEmitterBlock(AbstractBlock.Settings settings, BlockDefinition def) {
         super(settings);
+        this.def = def;
         this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false).with(POWERED, false));
     }
 
@@ -98,5 +106,13 @@ public class WCParticleEmitterBlock extends Block implements Waterloggable {
             return ActionResult.success(world.isClient);
         }
         return ActionResult.PASS;
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

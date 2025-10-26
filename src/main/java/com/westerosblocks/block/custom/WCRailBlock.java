@@ -13,23 +13,32 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
 import java.util.List;
+import java.util.Map;
 
 import com.westerosblocks.data.BlockDefinition;
 
 public class WCRailBlock extends RailBlock {
-
+    protected BlockDefinition def;
     private final boolean allowUnsupported;
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
-            return new WCRailBlock(settings, allowUnsupported);
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            boolean allowUnsupported = definition.isAllowUnsupported();
+            return new WCRailBlock(settings, definition, allowUnsupported);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            boolean allowUnsupported = (Boolean) parameters.getOrDefault("allowUnsupported", false);
+            return new WCRailBlock(settings, null, allowUnsupported);
         }
     }
 
-    public WCRailBlock(AbstractBlock.Settings settings, boolean allowUnsupported) {
+    public WCRailBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean allowUnsupported) {
         super(settings);
+        this.def = def;
         this.allowUnsupported = allowUnsupported;
     }
 
@@ -52,5 +61,13 @@ public class WCRailBlock extends RailBlock {
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
         super.appendTooltip(stack, context, tooltip, options);
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

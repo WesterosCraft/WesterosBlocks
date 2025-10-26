@@ -31,6 +31,7 @@ import java.util.Map;
 import com.westerosblocks.data.BlockDefinition;
 
 public class WCLayerBlock extends Block {
+    protected BlockDefinition def;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     public static final IntProperty LAYERS = Properties.LAYERS;
     public final int layerCount;
@@ -48,26 +49,33 @@ public class WCLayerBlock extends Block {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+        public Block buildBlockClass(BlockDefinition definition) {
             // TODO: Add getLayerCount() and isSoftLayer() to BlockDefinition
-            Map<String, Object> parameters = new HashMap<>();
-            parameters.put("layerCount", 8); // default value
-            parameters.put("softLayer", false); // default value
+            int layerCount = 8; // default value
+            boolean softLayer = false; // default value
 
             // Apply custom block vision settings for layers
-            settings = settings.blockVision((state, level, pos) -> state.get(LAYERS) >= 8);
+            AbstractBlock.Settings settings = definition.makeSettings()
+                    .blockVision((state, level, pos) -> state.get(LAYERS) >= 8);
 
-            return new WCLayerBlock(settings, parameters);
+            return new WCLayerBlock(settings, definition, layerCount, softLayer);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            int layerCount = (Integer) parameters.getOrDefault("layerCount", 8);
+            boolean softLayer = (Boolean) parameters.getOrDefault("softLayer", false);
+            settings = settings.blockVision((state, level, pos) -> state.get(LAYERS) >= 8);
+            return new WCLayerBlock(settings, null, layerCount, softLayer);
         }
     }
 
-    protected WCLayerBlock(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+    protected WCLayerBlock(AbstractBlock.Settings settings, BlockDefinition def, int layerCount, boolean softLayer) {
         super(settings);
-        
-        // Get parameters from the builder
-        this.layerCount = (Integer) parameters.getOrDefault("layerCount", 8);
-        this.softLayer = (Boolean) parameters.getOrDefault("softLayer", false);
-        
+        this.def = def;
+        this.layerCount = layerCount;
+        this.softLayer = softLayer;
+
         this.setDefaultState(this.getDefaultState()
                 .with(LAYERS, 1)
                 .with(WATERLOGGED, Boolean.FALSE));
@@ -156,5 +164,13 @@ public class WCLayerBlock extends Block {
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
         super.appendTooltip(stack, context, tooltip, options);
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

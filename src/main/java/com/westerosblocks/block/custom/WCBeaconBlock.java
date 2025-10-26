@@ -39,14 +39,20 @@ public class WCBeaconBlock extends WCCuboidBlock {
         return shape;
     }
 
-    public WCBeaconBlock(AbstractBlock.Settings settings) {
-        super(settings, false, false, SHAPE);
+    public WCBeaconBlock(AbstractBlock.Settings settings, BlockDefinition def) {
+        super(settings, def, false, SHAPE);
     }
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            return new WCBeaconBlock(settings);
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            return new WCBeaconBlock(settings, definition);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, java.util.Map<String, Object> parameters) {
+            return new WCBeaconBlock(settings, null);
         }
     }
 }

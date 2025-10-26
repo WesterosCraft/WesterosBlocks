@@ -13,17 +13,20 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
 import com.westerosblocks.data.BlockDefinition;
+import java.util.Map;
 
 public class WCWallTorchBlock extends WallTorchBlock {
+    protected BlockDefinition def;
 
     public static final net.minecraft.state.property.DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
     private final boolean allowUnsupported;
     private final boolean noParticle;
 
-    public WCWallTorchBlock(AbstractBlock.Settings settings, 
+    public WCWallTorchBlock(AbstractBlock.Settings settings, BlockDefinition def,
                            boolean allowUnsupported, boolean noParticle) {
         super(getParticle(noParticle), settings);
+        this.def = def;
         this.allowUnsupported = allowUnsupported;
         this.noParticle = noParticle;
     }
@@ -52,32 +55,29 @@ public class WCWallTorchBlock extends WallTorchBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
-            boolean noParticle = definition != null && definition.isNoParticle();
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
 
-            return new WCWallTorchBlock(settings, allowUnsupported, noParticle);
+            boolean allowUnsupported = definition.isAllowUnsupported();
+            boolean noParticle = definition.isNoParticle();
+
+            return new WCWallTorchBlock(settings, definition, allowUnsupported, noParticle);
         }
 
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition, java.util.Map<String, Object> parameters) {
-            // Extract allowUnsupported from parameters or definition
-            boolean allowUnsupported = false;
-            if (parameters != null && parameters.containsKey("allowUnsupported")) {
-                allowUnsupported = (Boolean) parameters.get("allowUnsupported");
-            } else if (definition != null) {
-                allowUnsupported = definition.isAllowUnsupported();
-            }
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            boolean allowUnsupported = (Boolean) parameters.getOrDefault("allowUnsupported", false);
+            boolean noParticle = (Boolean) parameters.getOrDefault("noParticle", false);
 
-            // Extract noParticle from parameters or definition
-            boolean noParticle = false;
-            if (parameters != null && parameters.containsKey("noParticle")) {
-                noParticle = (Boolean) parameters.get("noParticle");
-            } else if (definition != null) {
-                noParticle = definition.isNoParticle();
-            }
-
-            return new WCWallTorchBlock(settings, allowUnsupported, noParticle);
+            return new WCWallTorchBlock(settings, null, allowUnsupported, noParticle);
         }
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

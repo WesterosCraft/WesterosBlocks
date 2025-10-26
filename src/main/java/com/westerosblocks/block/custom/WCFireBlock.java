@@ -18,17 +18,27 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
+import java.util.Map;
+
 public class WCFireBlock extends FireBlock {
+    protected BlockDefinition def;
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            return new WCFireBlock(settings);
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            return new WCFireBlock(settings, definition);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            return new WCFireBlock(settings, null);
         }
     }
 
-    public WCFireBlock(AbstractBlock.Settings settings) {
+    public WCFireBlock(AbstractBlock.Settings settings, BlockDefinition def) {
         super(settings);
+        this.def = def;
     }
 
     @Override
@@ -77,5 +87,13 @@ public class WCFireBlock extends FireBlock {
         if (!oldState.isOf(this)) {
             super.onBlockAdded(state, world, pos, oldState, notify);
         }
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

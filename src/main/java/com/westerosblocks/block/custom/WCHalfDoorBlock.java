@@ -27,8 +27,10 @@ import net.minecraft.world.event.GameEvent;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
+import java.util.Map;
 
 public class WCHalfDoorBlock extends Block {
+    protected BlockDefinition def;
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = Properties.OPEN;
     public static final EnumProperty<DoorHinge> HINGE = Properties.DOOR_HINGE;
@@ -42,8 +44,9 @@ public class WCHalfDoorBlock extends Block {
     private final boolean locked;
     private final boolean allowUnsupported;
 
-    public WCHalfDoorBlock(Settings settings, boolean locked, boolean allowUnsupported) {
+    public WCHalfDoorBlock(Settings settings, BlockDefinition def, boolean locked, boolean allowUnsupported) {
         super(settings);
+        this.def = def;
         this.locked = locked;
         this.allowUnsupported = allowUnsupported;
 
@@ -56,11 +59,11 @@ public class WCHalfDoorBlock extends Block {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
-            boolean locked = definition != null && definition.isLocked();
-            boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
-            return new WCHalfDoorBlock(settings, locked, allowUnsupported);
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            boolean locked = definition.isLocked();
+            boolean allowUnsupported = definition.isAllowUnsupported();
+            return new WCHalfDoorBlock(settings, definition, locked, allowUnsupported);
         }
     }
 
@@ -201,5 +204,13 @@ public class WCHalfDoorBlock extends Block {
     public BlockState mirror(BlockState state, BlockMirror mirror) {
         return mirror == BlockMirror.NONE ? state :
                 state.rotate(mirror.getRotation(state.get(FACING))).cycle(HINGE);
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

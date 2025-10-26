@@ -1,6 +1,7 @@
 package com.westerosblocks.data;
 
 import com.google.gson.annotations.SerializedName;
+import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.sound.BlockSoundGroup;
@@ -851,6 +852,20 @@ public class BlockDefinition {
     }
 
     /**
+     * Builds and returns the ModProperties.StateProperty for this block definition.
+     * This method is used by block factories to obtain the state property during block creation.
+     *
+     * @return ModProperties.StateProperty if block has multiple states, null otherwise
+     */
+    public ModProperties.StateProperty buildStateProperty() {
+        if (stateProperty == null) {
+            return null;
+        }
+
+        return new ModProperties.StateProperty(stateProperty.getValues());
+    }
+
+    /**
      * Returns whether this block has multiple states.
      */
     public boolean hasMultipleStates() {
@@ -880,7 +895,7 @@ public class BlockDefinition {
         return resistance;
     }
 
-    public Boolean isLegacyModel() { return Boolean.TRUE.equals(isLegacyModel); }
+    public Boolean isLegacyModel() { return false; }
 
     public float getHardness() {
         return hardness;

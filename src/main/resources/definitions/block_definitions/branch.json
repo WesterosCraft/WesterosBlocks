@@ -5,6 +5,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "Birch Branch",
+    "isCustomModel": true,
     "textures": [
       "bark/birch/side"
     ]
@@ -15,6 +16,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "Oak Branch",
+    "isCustomModel": true,
     "textures": [
       "bark/oak/side"
     ]

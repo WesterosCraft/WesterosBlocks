@@ -12,42 +12,32 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import java.util.Map;
+
 public class WCTrapDoorBlock extends TrapdoorBlock {
+    protected BlockDefinition def;
     private final boolean locked;
 
-    public WCTrapDoorBlock(AbstractBlock.Settings settings, String woodType, boolean locked) {
+    public WCTrapDoorBlock(AbstractBlock.Settings settings, BlockDefinition def, String woodType, boolean locked) {
         super(ModBlockSetType.getBlockSetType(woodType), settings);
+        this.def = def;
         this.locked = locked;
     }
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition with sensible defaults
-            String woodType = definition != null ? definition.getWoodType() : "oak";
-            boolean locked = definition != null && definition.isLocked();
-            return new WCTrapDoorBlock(settings, woodType, locked);
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            String woodType = definition.getWoodType() != null ? definition.getWoodType() : "oak";
+            boolean locked = definition.isLocked();
+            return new WCTrapDoorBlock(settings, definition, woodType, locked);
         }
 
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition, java.util.Map<String, Object> parameters) {
-            // Extract woodType from parameters or definition
-            String woodType = "oak";
-            if (parameters != null && parameters.containsKey("woodType")) {
-                woodType = (String) parameters.get("woodType");
-            } else if (definition != null) {
-                woodType = definition.getWoodType();
-            }
-
-            // Extract locked from parameters or definition
-            boolean locked = false;
-            if (parameters != null && parameters.containsKey("locked")) {
-                locked = (Boolean) parameters.get("locked");
-            } else if (definition != null) {
-                locked = definition.isLocked();
-            }
-
-            return new WCTrapDoorBlock(settings, woodType, locked);
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            String woodType = (String) parameters.getOrDefault("woodType", "oak");
+            boolean locked = (Boolean) parameters.getOrDefault("locked", false);
+            return new WCTrapDoorBlock(settings, null, woodType, locked);
         }
     }
 
@@ -58,5 +48,13 @@ public class WCTrapDoorBlock extends TrapdoorBlock {
         } else {
             return super.onUse(state, world, pos, player, hit);
         }
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

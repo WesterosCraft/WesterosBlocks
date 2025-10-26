@@ -22,40 +22,38 @@ import com.westerosblocks.data.BlockDefinition;
 import java.util.Map;
 
 public class WCFanBlock extends Block implements Waterloggable {
+    protected BlockDefinition def;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
-    
+
     private final boolean allowUnsupported;
     private final Block wallBlock;
     private static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 4.0, 14.0);
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            Block wallBlock = null;
-            boolean allowUnsupported = definition != null && definition.isAllowUnsupported();
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
 
-            return new WCFanBlock(settings, wallBlock, allowUnsupported);
+            // wallBlock will be set later by ModBlocks after wall fan is registered
+            Block wallBlock = null;
+            boolean allowUnsupported = definition.isAllowUnsupported();
+
+            return new WCFanBlock(settings, definition, wallBlock, allowUnsupported);
         }
 
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition, Map<String, Object> parameters) {
-            // Extract wallBlock from parameters if present
-            Block wallBlock = parameters != null ? (Block) parameters.get("wallBlock") : null;
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            // For BlockBuilder - wallBlock comes from parameters
+            Block wallBlock = (Block) parameters.get("wallBlock");
+            boolean allowUnsupported = (Boolean) parameters.getOrDefault("allowUnsupported", false);
 
-            // Extract allowUnsupported from parameters or definition
-            boolean allowUnsupported = false;
-            if (parameters != null && parameters.containsKey("allowUnsupported")) {
-                allowUnsupported = (Boolean) parameters.get("allowUnsupported");
-            } else if (definition != null) {
-                allowUnsupported = definition.isAllowUnsupported();
-            }
-
-            return new WCFanBlock(settings, wallBlock, allowUnsupported);
+            return new WCFanBlock(settings, null, wallBlock, allowUnsupported);
         }
     }
 
-    public WCFanBlock(AbstractBlock.Settings settings, Block wallBlock, boolean allowUnsupported) {
+    public WCFanBlock(AbstractBlock.Settings settings, BlockDefinition def, Block wallBlock, boolean allowUnsupported) {
         super(settings);
+        this.def = def;
         this.wallBlock = wallBlock;
         this.allowUnsupported = allowUnsupported;
 
@@ -137,5 +135,21 @@ public class WCFanBlock extends Block implements Waterloggable {
             case WATER -> state.getFluidState().isIn(FluidTags.WATER);
             case AIR -> false;
         };
+    }
+
+    /**
+     * Gets the wall block variant for this fan.
+     * @return Wall block variant, or null if not set
+     */
+    public Block getWallBlock() {
+        return wallBlock;
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

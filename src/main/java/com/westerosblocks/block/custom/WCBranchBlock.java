@@ -26,6 +26,7 @@ import java.util.Map;
 import com.westerosblocks.data.BlockDefinition;
 
 public class WCBranchBlock extends Block implements Waterloggable {
+    protected BlockDefinition def;
     public static final BooleanProperty NORTH = Properties.NORTH;
     public static final BooleanProperty EAST = Properties.EAST;
     public static final BooleanProperty SOUTH = Properties.SOUTH;
@@ -47,17 +48,30 @@ public class WCBranchBlock extends Block implements Waterloggable {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
+        public Block buildBlockClass(BlockDefinition definition) {
+            // Handle null definition for manual block creation
+            AbstractBlock.Settings settings = definition != null
+                    ? definition.makeSettings()
+                    : AbstractBlock.Settings.create();
             String woodType = definition != null ? definition.getWoodType() : "oak";
             // Using blockType as branchType since branchType getter doesn't exist yet
-            String branchType = definition != null && definition.getBlockType() != null ? definition.getBlockType() : "large_branch";
-            return new WCBranchBlock(settings, woodType, branchType);
+            String branchType = (definition != null && definition.getBlockType() != null)
+                    ? definition.getBlockType()
+                    : "large_branch";
+            return new WCBranchBlock(settings, definition, woodType, branchType);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            String woodType = (String) parameters.getOrDefault("woodType", "oak");
+            String branchType = (String) parameters.getOrDefault("branchType", "large_branch");
+            return new WCBranchBlock(settings, null, woodType, branchType);
         }
     }
 
-    public WCBranchBlock(AbstractBlock.Settings settings, String woodType, String branchType) {
+    public WCBranchBlock(AbstractBlock.Settings settings, BlockDefinition def, String woodType, String branchType) {
         super(settings);
+        this.def = def;
         this.woodType = woodType;
         this.branchType = branchType;
         this.setDefaultState(this.getDefaultState()
@@ -227,5 +241,13 @@ public class WCBranchBlock extends Block implements Waterloggable {
 
     public String getBranchType() {
         return branchType;
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

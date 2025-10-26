@@ -14,26 +14,50 @@ import java.util.Map;
 public abstract class BlockFactory {
 
     /**
-     * Builds a block instance with the given settings and block definition.
+     * Builds a block instance from a BlockDefinition (primary method for JSON-based blocks).
+     * This method should:
+     * 1. Call definition.makeSettings() to build block settings
+     * 2. Call definition.buildStateProperty() to get state property
+     * 3. Extract block-specific properties from definition
+     * 4. Create and return the block instance
      *
-     * @param settings The block settings
      * @param definition The block definition containing all block properties
      * @return The created block instance
      */
-    public abstract Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition);
+    public abstract Block buildBlockClass(BlockDefinition definition);
 
     /**
-     * Builds a block instance with the given settings, block definition, and parameters.
-     * This method is called by BlockBuilder to pass additional parameters like wallBlock.
+     * Builds a block instance with manual settings and parameters (for BlockBuilder).
+     * This method is used when creating blocks programmatically without a JSON definition.
+     * Used by BlockBuilder for manual block creation.
      *
-     * @param settings The block settings
-     * @param definition The block definition containing all block properties
+     * @param settings The block settings (built externally)
      * @param parameters Additional parameters from BlockBuilder
      * @return The created block instance
      */
-    @Deprecated // need to ditch parameters
+    public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+        // Default implementation - should be overridden by factories that support manual creation
+        throw new UnsupportedOperationException(
+            "This factory does not support manual block creation. Override buildBlockClass(Settings, Map) to support BlockBuilder."
+        );
+    }
+
+    /**
+     * @deprecated Old method signature. Use buildBlockClass(BlockDefinition) instead.
+     */
+    @Deprecated
+    public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
+        // Backwards compatibility - delegate to new method
+        return buildBlockClass(definition);
+    }
+
+    /**
+     * @deprecated Old method signature. Use buildBlockClass(BlockDefinition) for JSON blocks
+     * or buildBlockClass(Settings, Map) for manual creation.
+     */
+    @Deprecated
     public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition, Map<String, Object> parameters) {
-        // Default implementation calls the old method for backwards compatibility
-        return buildBlockClass(settings, definition);
+        // Backwards compatibility - delegate to parameters-based method for BlockBuilder
+        return buildBlockClass(settings, parameters);
     }
 }

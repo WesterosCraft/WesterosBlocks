@@ -29,6 +29,7 @@ import java.util.Map;
 import com.westerosblocks.data.BlockDefinition;
 
 public class WCChairBlock extends HorizontalFacingBlock {
+    protected BlockDefinition def;
     public static final MapCodec<WCChairBlock> CODEC = createCodec(WCChairBlock::new);
 
     @Override
@@ -42,15 +43,16 @@ public class WCChairBlock extends HorizontalFacingBlock {
     private final Map<BlockState, VoxelShape> shapeByIndex;
 
     public WCChairBlock(AbstractBlock.Settings settings) {
-        this(settings, "chair", "building_blocks", "oak");
+        this(settings, null, "chair", "building_blocks", "oak");
     }
 
-    public WCChairBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, String woodType) {
-        this(settings, blockName, creativeTab, ModWoodType.getWoodType(woodType));
+    public WCChairBlock(AbstractBlock.Settings settings, BlockDefinition def, String blockName, String creativeTab, String woodType) {
+        this(settings, def, blockName, creativeTab, ModWoodType.getWoodType(woodType));
     }
 
-    public WCChairBlock(AbstractBlock.Settings settings, String blockName, String creativeTab, WoodType woodType) {
+    public WCChairBlock(AbstractBlock.Settings settings, BlockDefinition def, String blockName, String creativeTab, WoodType woodType) {
         super(settings);
+        this.def = def;
 
         setDefaultState(getDefaultState().with(ROTATION, 0));
 
@@ -59,13 +61,25 @@ public class WCChairBlock extends HorizontalFacingBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            // Handle null definition (from BlockBuilder) with sensible defaults
+        public Block buildBlockClass(BlockDefinition definition) {
+            // Handle null definition for manual block creation
+            AbstractBlock.Settings settings = definition != null
+                    ? definition.makeSettings()
+                    : AbstractBlock.Settings.create();
             String blockName = definition != null ? definition.getBlockName() : "chair";
             String creativeTab = definition != null ? definition.getCreativeTab() : "building_blocks";
             String woodType = definition != null ? definition.getWoodType() : "oak";
 
-            return new WCChairBlock(settings, blockName, creativeTab, woodType);
+            return new WCChairBlock(settings, definition, blockName, creativeTab, woodType);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
+            String blockName = (String) parameters.getOrDefault("blockName", "chair");
+            String creativeTab = (String) parameters.getOrDefault("creativeTab", "building_blocks");
+            String woodType = (String) parameters.getOrDefault("woodType", "oak");
+
+            return new WCChairBlock(settings, null, blockName, creativeTab, woodType);
         }
     }
 
@@ -125,5 +139,13 @@ public class WCChairBlock extends HorizontalFacingBlock {
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return this.shapeByIndex.get(state);
+    }
+
+    /**
+     * Gets the BlockDefinition for this block.
+     * @return BlockDefinition if block was created from JSON, null if created programmatically
+     */
+    public BlockDefinition getDefinition() {
+        return def;
     }
 }

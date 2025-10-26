@@ -1,6 +1,5 @@
 package com.westerosblocks;
 
-import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 import com.westerosblocks.entity.ModEntities;
@@ -25,7 +24,7 @@ public class WesterosBlocksClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
 
         // flowerbed blocks
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CLOVER, RenderLayer.getCutout());
+//        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CLOVER, RenderLayer.getCutout());
 
 
         // Shields Azurelib

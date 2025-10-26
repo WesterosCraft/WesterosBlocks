@@ -27,30 +27,6 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator bsmg) {
         generateModelsFromDefinitions(bsmg);
-
-        // Table Blocks
-        registerCustomTableBlock(bsmg, ModBlocks.OAK_TABLE)
-                .texture("wood/oak/all").build();
-
-        // Branch Blocks
-        registerCustomBranchBlock(bsmg, ModBlocks.OAK_BRANCH)
-                .texture("bark/oak/side")
-                .build();
-        registerCustomBranchBlock(bsmg, ModBlocks.BIRCH_BRANCH)
-                .texture("bark/birch/side")
-                .build();
-
-        // Chair Blocks
-        registerCustomChairBlock(bsmg, ModBlocks.OAK_CHAIR).texture("bark/oak/side").build();
-
-        // Arrow Slit Blocks
-        registerCustomArrowSlitBlock(bsmg, ModBlocks.ARBOR_BRICK_ARROW_SLIT).texture("ashlar_third/arbor/all").build();
-
-        // Flowerbed Blocks
-        registerCustomFlowerbedBlock(bsmg, ModBlocks.CLOVER)
-                .stemTexture("flowerbed/clover_stem")
-                .flowerTexture("flowerbed/clover")
-                .build();
     }
 
     private void generateModelsFromDefinitions(BlockStateModelGenerator bsmg) {

@@ -40,13 +40,13 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
 
     public static class Factory extends BlockFactory {
         @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, BlockDefinition definition) {
-            boolean doToggleOnUse = definition != null && definition.toggleOnUse();
-            int numStates = definition != null ? definition.getStateCount() : 0;
-            boolean doAddStates = numStates > 1;
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            ModProperties.StateProperty stateProperty = definition.buildStateProperty();
+            boolean doToggleOnUse = definition.toggleOnUse();
 
             VoxelShape customBoundingBox = null;
-            if (definition != null && definition.hasBoundingBox()) {
+            if (definition.hasBoundingBox()) {
                 BlockDefinition.BoundingBox bbox = definition.getBoundingBox();
                 customBoundingBox = VoxelShapes.cuboid(
                     bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
@@ -54,13 +54,25 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
                 );
             }
 
+            tempSTATE = stateProperty;
 
-            if (doAddStates) {
-                List<String> stateValues = definition.getStateValues();
+            return new WCCuboid16WayBlock(settings, definition, doToggleOnUse, customBoundingBox);
+        }
+
+        @Override
+        public Block buildBlockClass(AbstractBlock.Settings settings, java.util.Map<String, Object> parameters) {
+            boolean doToggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
+            boolean addStates = (Boolean) parameters.getOrDefault("addStates", false);
+            VoxelShape customBoundingBox = (VoxelShape) parameters.get("boundingBox");
+
+            tempSTATE = null;
+            if (addStates) {
+                @SuppressWarnings("unchecked")
+                List<String> stateValues = (List<String>) parameters.get("stateValues");
                 if (stateValues != null && !stateValues.isEmpty()) {
                     tempSTATE = new ModProperties.StateProperty(stateValues);
                 } else {
-                    // Generate default state IDs if not provided
+                    int numStates = (Integer) parameters.getOrDefault("numStates", 1);
                     ArrayList<String> stateIds = new ArrayList<>();
                     for (int i = 0; i < numStates; i++) {
                         stateIds.add("state" + i);
@@ -69,17 +81,17 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
                 }
             }
 
-            return new WCCuboid16WayBlock(settings, doToggleOnUse, doAddStates, customBoundingBox, definition);
+            return new WCCuboid16WayBlock(settings, null, doToggleOnUse, customBoundingBox);
         }
     }
 
-    public WCCuboid16WayBlock(AbstractBlock.Settings settings, boolean doToggleOnUse, boolean addStates,
-                              VoxelShape customBoundingBox, BlockDefinition definition) {
-        super(settings, doToggleOnUse, addStates, customBoundingBox);
+    public WCCuboid16WayBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doToggleOnUse,
+                              VoxelShape customBoundingBox) {
+        super(settings, def, doToggleOnUse, customBoundingBox);
 
         // Check if we have state-specific bounding boxes
-        if (definition != null && definition.hasStates()) {
-            List<BlockDefinition.StateVariant> states = definition.getStates();
+        if (def != null && def.hasStates()) {
+            List<BlockDefinition.StateVariant> states = def.getStates();
             boolean hasStateSpecificBoundingBoxes = false;
 
             // Check if any state has its own bounding box
@@ -91,7 +103,7 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
             }
 
             if (hasStateSpecificBoundingBoxes) {
-                calculateStateSpecificBoundingBoxes(definition, states);
+                calculateStateSpecificBoundingBoxes(def, states);
             }
         }
 
