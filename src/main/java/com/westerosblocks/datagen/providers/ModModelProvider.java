@@ -76,7 +76,7 @@ public class ModModelProvider extends FabricModelProvider {
 
                 case "web":
                 case "plant":
-                    CrossBlockExporter.registerCrossBlockFromDefinition(bsmg, block, definition);
+                    CrossBlockExporter.registerCustomCrossBlock(bsmg, block, definition);
                     break;
 
                 case "slab":
