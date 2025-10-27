@@ -24,7 +24,6 @@ import java.util.Map;
 public class WCFurnaceBlock extends FurnaceBlock {
     protected BlockDefinition def;
     private final boolean alwaysOn;
-    private final String blockName;
 
     public static class Factory extends BlockFactory {
         @Override
@@ -33,19 +32,12 @@ public class WCFurnaceBlock extends FurnaceBlock {
             boolean alwaysOn = definition.isAlwaysOn();
             return new WCFurnaceBlock(settings, definition, alwaysOn);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            boolean alwaysOn = (Boolean) parameters.getOrDefault("alwaysOn", false);
-            return new WCFurnaceBlock(settings, null, alwaysOn);
-        }
     }
 
     protected WCFurnaceBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean alwaysOn) {
         super(settings);
         this.def = def;
         this.alwaysOn = alwaysOn;
-        this.blockName = null; // Will be set when registered
         this.setDefaultState(this.stateManager.getDefaultState()
                 .with(FACING, Direction.NORTH)
                 .with(LIT, false));
@@ -93,10 +85,6 @@ public class WCFurnaceBlock extends FurnaceBlock {
         }
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

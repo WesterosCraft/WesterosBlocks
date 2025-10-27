@@ -9,8 +9,6 @@ import net.minecraft.block.FallingBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
-import java.util.Map;
-
 public class WCSandBlock extends FallingBlock {
     protected BlockDefinition def;
     private final int dustColor;
@@ -22,12 +20,6 @@ public class WCSandBlock extends FallingBlock {
             // TODO: Add getDustColor() getter to BlockDefinition
             int dustColor = 14406560; // Default sand dust color
             return new WCSandBlock(settings, definition, dustColor);
-        }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            int dustColor = (Integer) parameters.getOrDefault("dustColor", 14406560);
-            return new WCSandBlock(settings, null, dustColor);
         }
     }
 
@@ -47,10 +39,6 @@ public class WCSandBlock extends FallingBlock {
         return this.dustColor;
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

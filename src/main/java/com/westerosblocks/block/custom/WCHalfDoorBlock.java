@@ -25,9 +25,7 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
-import java.util.Map;
 
 public class WCHalfDoorBlock extends Block {
     protected BlockDefinition def;
@@ -44,6 +42,16 @@ public class WCHalfDoorBlock extends Block {
     private final boolean locked;
     private final boolean allowUnsupported;
 
+    public static class Factory extends BlockFactory {
+        @Override
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+            boolean locked = definition.isLocked();
+            boolean allowUnsupported = definition.isAllowUnsupported();
+            return new WCHalfDoorBlock(settings, definition, locked, allowUnsupported);
+        }
+    }
+
     public WCHalfDoorBlock(Settings settings, BlockDefinition def, boolean locked, boolean allowUnsupported) {
         super(settings);
         this.def = def;
@@ -55,16 +63,6 @@ public class WCHalfDoorBlock extends Block {
                 .with(OPEN, false)
                 .with(HINGE, DoorHinge.LEFT)
                 .with(POWERED, false));
-    }
-
-    public static class Factory extends BlockFactory {
-        @Override
-        public Block buildBlockClass(BlockDefinition definition) {
-            AbstractBlock.Settings settings = definition.makeSettings();
-            boolean locked = definition.isLocked();
-            boolean allowUnsupported = definition.isAllowUnsupported();
-            return new WCHalfDoorBlock(settings, definition, locked, allowUnsupported);
-        }
     }
 
     @Override
@@ -206,10 +204,6 @@ public class WCHalfDoorBlock extends Block {
                 state.rotate(mirror.getRotation(state.get(FACING))).cycle(HINGE);
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

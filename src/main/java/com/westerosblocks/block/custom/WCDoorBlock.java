@@ -11,20 +11,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-import java.util.Map;
-
 public class WCDoorBlock extends DoorBlock {
     protected BlockDefinition def;
     private final boolean locked;
     private final boolean allowUnsupported;
-
-    public WCDoorBlock(AbstractBlock.Settings settings, BlockDefinition def, String woodType,
-            boolean locked, boolean allowUnsupported) {
-        super(ModBlockSetType.getBlockSetType(woodType), settings);
-        this.def = def;
-        this.locked = locked;
-        this.allowUnsupported = allowUnsupported;
-    }
 
     public static class Factory extends BlockFactory {
         @Override
@@ -35,14 +25,14 @@ public class WCDoorBlock extends DoorBlock {
             boolean allowUnsupported = definition.isAllowUnsupported();
             return new WCDoorBlock(settings, definition, woodType, locked, allowUnsupported);
         }
+    }
 
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            String woodType = (String) parameters.getOrDefault("woodType", "oak");
-            boolean locked = (Boolean) parameters.getOrDefault("locked", false);
-            boolean allowUnsupported = (Boolean) parameters.getOrDefault("allowUnsupported", false);
-            return new WCDoorBlock(settings, null, woodType, locked, allowUnsupported);
-        }
+    public WCDoorBlock(AbstractBlock.Settings settings, BlockDefinition def, String woodType,
+            boolean locked, boolean allowUnsupported) {
+        super(ModBlockSetType.getBlockSetType(woodType), settings);
+        this.def = def;
+        this.locked = locked;
+        this.allowUnsupported = allowUnsupported;
     }
 
     @Override
@@ -62,10 +52,6 @@ public class WCDoorBlock extends DoorBlock {
         return super.canPlaceAt(state, world, pos);
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

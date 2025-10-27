@@ -21,12 +21,19 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import com.westerosblocks.utils.ModProperties;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 public class WCFenceBlock extends FenceBlock {
     protected BlockDefinition def;
+
+    public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
+    protected static BooleanProperty tempUNCONNECT;
+    protected static ModProperties.StateProperty tempSTATE;
+
+    private final boolean unconnect;
+    private final boolean unconnectDefault;
+    private final boolean toggleOnUse;
+    protected ModProperties.StateProperty STATE;
 
     public static class Factory extends BlockFactory {
         @Override
@@ -47,36 +54,7 @@ public class WCFenceBlock extends FenceBlock {
 
             return new WCFenceBlock(settings, definition, unconnect, toggleOnUse);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            boolean unconnect = (Boolean) parameters.getOrDefault("unconnect", false);
-            boolean toggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
-
-            if (unconnect) {
-                tempUNCONNECT = UNCONNECT;
-            }
-
-            if (toggleOnUse) {
-                @SuppressWarnings("unchecked")
-                List<String> stateValues = (List<String>) parameters.get("stateValues");
-                if (stateValues != null) {
-                    tempSTATE = new ModProperties.StateProperty(stateValues);
-                }
-            }
-
-            return new WCFenceBlock(settings, null, unconnect, toggleOnUse);
-        }
     }
-
-    public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
-    protected static BooleanProperty tempUNCONNECT;
-    protected static ModProperties.StateProperty tempSTATE;
-
-    private final boolean unconnect;
-    private final boolean unconnectDefault;
-    private final boolean toggleOnUse;
-    protected ModProperties.StateProperty STATE;
 
     protected WCFenceBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean unconnect, boolean toggleOnUse) {
         super(settings);
@@ -96,7 +74,6 @@ public class WCFenceBlock extends FenceBlock {
             defaultState = defaultState.with(UNCONNECT, this.unconnectDefault);
         }
 
-        // Use STATE (not tempSTATE) because it was assigned in appendProperties during super()
         if (STATE != null) {
             defaultState = defaultState.with(STATE, STATE.defValue);
         }
@@ -176,10 +153,6 @@ public class WCFenceBlock extends FenceBlock {
         super.appendTooltip(stack, context, tooltip, options);
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

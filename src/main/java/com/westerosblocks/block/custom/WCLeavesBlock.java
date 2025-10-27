@@ -5,8 +5,6 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.LeavesBlock;
 
-import java.util.Map;
-
 public class WCLeavesBlock extends LeavesBlock {
     protected BlockDefinition def;
     public final boolean betterFoliage;
@@ -24,15 +22,6 @@ public class WCLeavesBlock extends LeavesBlock {
 
             return new WCLeavesBlock(settings, definition, betterFoliage, overlay, noDecay);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            boolean betterFoliage = (Boolean) parameters.getOrDefault("betterFoliage", false);
-            boolean overlay = (Boolean) parameters.getOrDefault("overlay", false);
-            boolean noDecay = (Boolean) parameters.getOrDefault("noDecay", false);
-
-            return new WCLeavesBlock(settings, null, betterFoliage, overlay, noDecay);
-        }
     }
 
     protected WCLeavesBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean betterFoliage, boolean overlay, boolean noDecay) {
@@ -44,10 +33,6 @@ public class WCLeavesBlock extends LeavesBlock {
         setDefaultState(this.getDefaultState().with(DISTANCE, 7).with(PERSISTENT, !noDecay));
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

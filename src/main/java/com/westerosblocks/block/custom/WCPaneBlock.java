@@ -12,7 +12,6 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 
 import com.westerosblocks.data.BlockDefinition;
-import java.util.Map;
 
 public class WCPaneBlock extends PaneBlock {
     protected BlockDefinition def;
@@ -36,19 +35,6 @@ public class WCPaneBlock extends PaneBlock {
             }
 
             return new WCPaneBlock(settings, definition, doUnconnect, legacy_model, bars_model);
-        }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            boolean doUnconnect = (Boolean) parameters.getOrDefault("unconnect", false);
-            boolean legacy_model = (Boolean) parameters.getOrDefault("legacyModel", false);
-            boolean bars_model = (Boolean) parameters.getOrDefault("barsModel", false);
-
-            if (doUnconnect) {
-                tempUNCONNECT = UNCONNECT;
-            }
-
-            return new WCPaneBlock(settings, null, doUnconnect, legacy_model, bars_model);
         }
     }
 
@@ -105,10 +91,6 @@ public class WCPaneBlock extends PaneBlock {
         return bars_model;
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

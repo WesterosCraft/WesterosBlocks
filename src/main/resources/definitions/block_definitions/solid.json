@@ -2592,7 +2592,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Blue Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -2647,7 +2649,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Blue Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -2702,7 +2706,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Blue Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -2757,7 +2763,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Blue Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -2812,7 +2820,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Blue Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -2867,7 +2877,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Blue Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -3177,7 +3189,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Brown Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -3232,7 +3246,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Brown Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -3287,7 +3303,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Brown Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -3342,7 +3360,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Brown Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -3397,7 +3417,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Brown Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -3452,7 +3474,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Brown Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -3762,7 +3786,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Green Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -3817,7 +3843,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Green Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -3872,7 +3900,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Green Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -3927,7 +3957,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Green Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -3982,7 +4014,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Green Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -4037,7 +4071,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Green Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -4291,7 +4327,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Fieldstone Normal Grey Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -4332,7 +4370,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Fieldstone Normal Grey Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -4373,7 +4413,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Fieldstone Normal Grey Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -4414,7 +4456,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Fieldstone Normal Grey Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -4455,7 +4499,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Fieldstone Normal Grey Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -4496,7 +4542,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Fieldstone Normal Grey Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -4722,7 +4770,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Orange Brick Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -4763,7 +4813,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Orange Brick Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -4804,7 +4856,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Orange Brick Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -4845,7 +4899,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Orange Brick Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -4886,7 +4942,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Orange Brick Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -4927,7 +4985,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Orange Brick Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -5209,7 +5269,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Pale Yellow Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -5264,7 +5326,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Pale Yellow Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -5319,7 +5383,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Pale Yellow Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -5374,7 +5440,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Pale Yellow Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -5429,7 +5497,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Pale Yellow Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -5484,7 +5554,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Pale Yellow Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -5794,7 +5866,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Red Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -5849,7 +5923,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Red Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -5904,7 +5980,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Red Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -5959,7 +6037,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Red Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -6014,7 +6094,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Red Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -6069,7 +6151,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Red Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -6379,7 +6463,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Umber Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -6434,7 +6520,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Umber Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -6489,7 +6577,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Umber Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -6544,7 +6634,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Umber Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -6599,7 +6691,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Umber Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -6654,7 +6748,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern Umber Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -6964,7 +7060,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern White Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -7019,7 +7117,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern White Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -7074,7 +7174,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern White Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -7129,7 +7231,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern White Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -7184,7 +7288,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern White Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -7239,7 +7345,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Northern White Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -7549,7 +7657,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Brown Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -7604,7 +7714,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Brown Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -7659,7 +7771,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Brown Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -7714,7 +7828,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Brown Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -7769,7 +7885,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Brown Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -7824,7 +7942,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Brown Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -8078,7 +8198,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Westerlands Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -8119,7 +8241,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Westerlands Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -8160,7 +8284,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Westerlands Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -8201,7 +8327,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Westerlands Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -8242,7 +8370,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Westerlands Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -8283,7 +8413,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Westerlands Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -8565,7 +8697,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Light Umber Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -8620,7 +8754,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Light Umber Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -8675,7 +8811,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Light Umber Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -8730,7 +8868,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Light Umber Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -8785,7 +8925,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Light Umber Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -8840,7 +8982,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Light Umber Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -9122,7 +9266,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Oldtown Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -9170,7 +9316,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Oldtown Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -9218,7 +9366,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Oldtown Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -9266,7 +9416,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Oldtown Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -9314,7 +9466,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Oldtown Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -9362,7 +9516,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Oldtown Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -9653,7 +9809,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Orange Brick Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -9694,7 +9852,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Orange Brick Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -9735,7 +9895,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Orange Brick Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -9776,7 +9938,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Orange Brick Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -9817,7 +9981,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Orange Brick Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -9858,7 +10024,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Orange Brick Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -10089,7 +10257,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Orange Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -10144,7 +10314,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Orange Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -10199,7 +10371,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Orange Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -10254,7 +10428,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Orange Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -10309,7 +10485,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Orange Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -10364,7 +10542,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Orange Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -10618,7 +10798,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Reach Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -10659,7 +10841,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Reach Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -10700,7 +10884,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Reach Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -10741,7 +10927,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Reach Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -10782,7 +10970,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Reach Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -10823,7 +11013,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Fieldstone Reach Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -11105,7 +11297,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak White Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -11160,7 +11354,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak White Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -11215,7 +11411,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak White Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -11270,7 +11468,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak White Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -11325,7 +11525,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak White Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -11380,7 +11582,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak White Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -11690,7 +11894,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Yellow Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -11745,7 +11951,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Yellow Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -11800,7 +12008,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Yellow Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -11855,7 +12065,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Yellow Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -11910,7 +12122,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Yellow Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -11965,7 +12179,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Oak Yellow Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -12275,7 +12491,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Red White Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -12330,7 +12548,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Red White Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -12385,7 +12605,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Red White Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -12440,7 +12662,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Red White Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -12495,7 +12719,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Red White Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -12550,7 +12776,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Red White Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -12860,7 +13088,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Whitewashed Lefthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -12915,7 +13145,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Whitewashed Lefthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -12970,7 +13202,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Whitewashed Lefthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -13025,7 +13259,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Whitewashed Righthatch",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -13080,7 +13316,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Whitewashed Righthatch Large",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [
@@ -13135,7 +13373,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_timber_frame_tab",
     "label": "Timber Whitewashed Righthatch Studded",
-    "type": "connectstate:true,symmetrical:true,toggleOnUse",
+    "connectstate": true,
+    "symmetrical": true,
+    "toggleOnUse": true,
     "states": [
       {
         "textures": [

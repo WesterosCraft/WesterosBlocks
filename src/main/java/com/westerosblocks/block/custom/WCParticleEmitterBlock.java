@@ -37,11 +37,6 @@ public class WCParticleEmitterBlock extends Block implements Waterloggable {
             AbstractBlock.Settings settings = definition.makeSettings();
             return new WCParticleEmitterBlock(settings, definition);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, java.util.Map<String, Object> parameters) {
-            return new WCParticleEmitterBlock(settings, null);
-        }
     }
 
     public WCParticleEmitterBlock(AbstractBlock.Settings settings, BlockDefinition def) {
@@ -108,10 +103,6 @@ public class WCParticleEmitterBlock extends Block implements Waterloggable {
         return ActionResult.PASS;
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

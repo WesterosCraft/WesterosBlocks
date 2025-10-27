@@ -85,14 +85,6 @@ public class WCPlantBlock extends Block {
         this.setDefaultState(defbs);
     }
 
-    public boolean isLayerSensitive() {
-        return layerSensitive;
-    }
-
-    public boolean isToggleOnUse() {
-        return toggleOnUse;
-    }
-
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         BlockState bs = super.getPlacementState(ctx);
@@ -176,6 +168,10 @@ public class WCPlantBlock extends Block {
             return SHAPE_BY_LAYER[state.get(LAYERS)];
         }
         return VoxelShapes.fullCube();
+    }
+
+    public boolean isToggleOnUse() {
+        return toggleOnUse;
     }
 
     public BlockDefinition getDefinition() {

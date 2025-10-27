@@ -7,6 +7,7 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.block.custom.WCSolidBlock;
 import com.westerosblocks.data.BlockDefinition;
+import com.westerosblocks.utils.ModProperties;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,8 +74,97 @@ public class SolidBlockExporter extends BaseBlockExporter {
     private static void generateBlockState(BlockStateModelGenerator generator, Block block,
             List<BlockDefinition.StateVariant> states, boolean hasSymmetrical, boolean hasRotateRandom) {
 
-        if (hasSymmetrical) {
-            // Build symmetrical blockstate
+        // Get STATE property from block if it exists
+        ModProperties.StateProperty blockStateProperty = null;
+        for (var property : block.getStateManager().getProperties()) {
+            if (property instanceof ModProperties.StateProperty stateProperty && "state".equals(property.getName())) {
+                blockStateProperty = stateProperty;
+                break;
+            }
+        }
+
+        boolean hasMultipleStates = blockStateProperty != null && states.size() > 1;
+
+        // Case 1: Both symmetrical and multiple states
+        if (hasSymmetrical && hasMultipleStates) {
+            BlockStateVariantMap.DoubleProperty<Boolean, String> variantMap =
+                BlockStateVariantMap.create(WCSolidBlock.SYMMETRICAL, blockStateProperty);
+
+            for (BlockDefinition.StateVariant state : states) {
+                String stateID = state.getStateID();
+                String fname = (stateID == null) ? "base" : stateID;
+
+                // Collect variants for this state (symmetrical=true)
+                List<BlockStateVariant> symVariants = new ArrayList<>();
+                // Collect variants for this state (symmetrical=false)
+                List<BlockStateVariant> asymVariants = new ArrayList<>();
+
+                for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
+                    BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                    if (set == null) continue;
+
+                    int cnt = hasRotateRandom ? 4 : 1;
+                    for (int i = 0; i < cnt; i++) {
+                        int rotation = i * 90;
+                        Identifier symModel = createNestedModelId(block, getModelName(fname, setIdx, true));
+                        Identifier asymModel = createNestedModelId(block, getModelName(fname, setIdx, false));
+
+                        symVariants.add(createWeightedVariant(symModel, rotation, set.getWeight()));
+                        asymVariants.add(createWeightedVariant(asymModel, rotation, set.getWeight()));
+                    }
+                }
+
+                // Register variants for this state
+                if (symVariants.size() == 1) {
+                    variantMap.register(true, stateID, symVariants.get(0));
+                } else {
+                    variantMap.register(true, stateID, symVariants);
+                }
+
+                if (asymVariants.size() == 1) {
+                    variantMap.register(false, stateID, asymVariants.get(0));
+                } else {
+                    variantMap.register(false, stateID, asymVariants);
+                }
+            }
+
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variantMap));
+
+        // Case 2: Multiple states only (no symmetrical)
+        } else if (hasMultipleStates) {
+            BlockStateVariantMap.SingleProperty<String> variantMap =
+                BlockStateVariantMap.create(blockStateProperty);
+
+            for (BlockDefinition.StateVariant state : states) {
+                String stateID = state.getStateID();
+                String fname = (stateID == null) ? "base" : stateID;
+
+                List<BlockStateVariant> stateVariants = new ArrayList<>();
+
+                for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
+                    BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                    if (set == null) continue;
+
+                    int cnt = hasRotateRandom ? 4 : 1;
+                    for (int i = 0; i < cnt; i++) {
+                        int rotation = i * 90;
+                        Identifier modelId = createNestedModelId(block, getModelName(fname, setIdx));
+                        stateVariants.add(createWeightedVariant(modelId, rotation, set.getWeight()));
+                    }
+                }
+
+                // Register variants for this state
+                if (stateVariants.size() == 1) {
+                    variantMap.register(stateID, stateVariants.get(0));
+                } else {
+                    variantMap.register(stateID, stateVariants);
+                }
+            }
+
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variantMap));
+
+        // Case 3: Symmetrical only (no multiple states)
+        } else if (hasSymmetrical) {
             List<BlockStateVariant> symVariants = new ArrayList<>();
             List<BlockStateVariant> asymVariants = new ArrayList<>();
 
@@ -86,7 +176,7 @@ public class SolidBlockExporter extends BaseBlockExporter {
                     BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
                     if (set == null) continue;
 
-                    int cnt = hasRotateRandom ? 4 : 1; // Matches: int cnt = sr.rotateRandom ? 4 : 1;
+                    int cnt = hasRotateRandom ? 4 : 1;
                     for (int i = 0; i < cnt; i++) {
                         int rotation = i * 90;
                         Identifier symModel = createNestedModelId(block, getModelName(fname, setIdx, true));
@@ -103,8 +193,8 @@ public class SolidBlockExporter extends BaseBlockExporter {
                 .register(false, asymVariants);
             generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variantMap));
 
+        // Case 4: Neither symmetrical nor multiple states
         } else {
-            // Build standard blockstate
             List<BlockStateVariant> allVariants = new ArrayList<>();
 
             for (BlockDefinition.StateVariant state : states) {

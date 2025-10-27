@@ -19,8 +19,6 @@ import net.minecraft.world.WorldView;
 
 import com.westerosblocks.data.BlockDefinition;
 
-import java.util.Map;
-
 public class WCFanBlock extends Block implements Waterloggable {
     protected BlockDefinition def;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
@@ -39,15 +37,6 @@ public class WCFanBlock extends Block implements Waterloggable {
             boolean allowUnsupported = definition.isAllowUnsupported();
 
             return new WCFanBlock(settings, definition, wallBlock, allowUnsupported);
-        }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            // For BlockBuilder - wallBlock comes from parameters
-            Block wallBlock = (Block) parameters.get("wallBlock");
-            boolean allowUnsupported = (Boolean) parameters.getOrDefault("allowUnsupported", false);
-
-            return new WCFanBlock(settings, null, wallBlock, allowUnsupported);
         }
     }
 
@@ -137,18 +126,6 @@ public class WCFanBlock extends Block implements Waterloggable {
         };
     }
 
-    /**
-     * Gets the wall block variant for this fan.
-     * @return Wall block variant, or null if not set
-     */
-    public Block getWallBlock() {
-        return wallBlock;
-    }
-
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

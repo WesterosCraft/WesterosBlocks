@@ -24,9 +24,7 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import com.westerosblocks.data.BlockDefinition;
 
@@ -59,14 +57,6 @@ public class WCLayerBlock extends Block {
                     .blockVision((state, level, pos) -> state.get(LAYERS) >= 8);
 
             return new WCLayerBlock(settings, definition, layerCount, softLayer);
-        }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            int layerCount = (Integer) parameters.getOrDefault("layerCount", 8);
-            boolean softLayer = (Boolean) parameters.getOrDefault("softLayer", false);
-            settings = settings.blockVision((state, level, pos) -> state.get(LAYERS) >= 8);
-            return new WCLayerBlock(settings, null, layerCount, softLayer);
         }
     }
 
@@ -166,10 +156,6 @@ public class WCLayerBlock extends Block {
         super.appendTooltip(stack, context, tooltip, options);
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

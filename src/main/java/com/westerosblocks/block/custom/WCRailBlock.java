@@ -13,7 +13,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
 import java.util.List;
-import java.util.Map;
 
 import com.westerosblocks.data.BlockDefinition;
 
@@ -27,12 +26,6 @@ public class WCRailBlock extends RailBlock {
             AbstractBlock.Settings settings = definition.makeSettings();
             boolean allowUnsupported = definition.isAllowUnsupported();
             return new WCRailBlock(settings, definition, allowUnsupported);
-        }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            boolean allowUnsupported = (Boolean) parameters.getOrDefault("allowUnsupported", false);
-            return new WCRailBlock(settings, null, allowUnsupported);
         }
     }
 
@@ -63,10 +56,6 @@ public class WCRailBlock extends RailBlock {
         super.appendTooltip(stack, context, tooltip, options);
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }
