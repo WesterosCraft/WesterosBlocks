@@ -12,9 +12,6 @@ import net.minecraft.util.math.Direction;
 
 import java.util.Optional;
 
-/**
- * Generates models for two-part bed blocks with directional facing.
- */
 public class BedBlockExporter extends BaseBlockExporter {
     private static Model createBedPartModel(String bedType, boolean isHead, boolean tinted) {
         String tintPath = tinted ? "block/tinted/" : "block/untinted/";

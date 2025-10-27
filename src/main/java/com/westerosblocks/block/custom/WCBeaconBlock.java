@@ -49,10 +49,5 @@ public class WCBeaconBlock extends WCCuboidBlock {
             AbstractBlock.Settings settings = definition.makeSettings();
             return new WCBeaconBlock(settings, definition);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, java.util.Map<String, Object> parameters) {
-            return new WCBeaconBlock(settings, null);
-        }
     }
 }

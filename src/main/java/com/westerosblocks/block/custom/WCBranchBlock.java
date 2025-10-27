@@ -60,13 +60,6 @@ public class WCBranchBlock extends Block implements Waterloggable {
                     : "large_branch";
             return new WCBranchBlock(settings, definition, woodType, branchType);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            String woodType = (String) parameters.getOrDefault("woodType", "oak");
-            String branchType = (String) parameters.getOrDefault("branchType", "large_branch");
-            return new WCBranchBlock(settings, null, woodType, branchType);
-        }
     }
 
     public WCBranchBlock(AbstractBlock.Settings settings, BlockDefinition def, String woodType, String branchType) {

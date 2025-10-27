@@ -24,8 +24,6 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
-import java.util.List;
-
 public class WCPlantBlock extends Block {
     protected BlockDefinition def;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
@@ -53,48 +51,21 @@ public class WCPlantBlock extends Block {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(BlockDefinition definition) {
-            AbstractBlock.Settings settings = definition.makeSettings();
+            AbstractBlock.Settings settings = definition.makeSettings().noCollision().breakInstantly();
             ModProperties.StateProperty stateProperty = definition.buildStateProperty();
 
             boolean layerSensitive = definition.isLayerSensitive();
             boolean toggleOnUse = definition.toggleOnUse();
 
-            // Reset static fields before setting them (prevent leakage between blocks)
-            tempLAYERS = null;
-            tempSTATE = null;
-
             if (layerSensitive) {
                 tempLAYERS = Properties.LAYERS;
             }
 
-            // Set the STATE property if provided
             if (stateProperty != null) {
                 tempSTATE = stateProperty;
             }
 
             return new WCPlantBlock(settings, definition, layerSensitive, toggleOnUse);
-        }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, java.util.Map<String, Object> parameters) {
-            boolean layerSensitive = (Boolean) parameters.getOrDefault("layerSensitive", false);
-            boolean toggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
-            List<String> stateValues = (List<String>) parameters.get("stateValues");
-
-            // Reset static fields before setting them (prevent leakage between blocks)
-            tempLAYERS = null;
-            tempSTATE = null;
-
-            if (layerSensitive) {
-                tempLAYERS = Properties.LAYERS;
-            }
-
-            // Set the STATE property if stateValues are provided (need at least 2 for a valid property)
-            if (stateValues != null && stateValues.size() > 1) {
-                tempSTATE = new ModProperties.StateProperty(stateValues);
-            }
-
-            return new WCPlantBlock(settings, null, layerSensitive, toggleOnUse);
         }
     }
 
@@ -207,10 +178,6 @@ public class WCPlantBlock extends Block {
         return VoxelShapes.fullCube();
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

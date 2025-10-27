@@ -44,39 +44,25 @@ public class WCArrowSlitBlock extends Block {
 
     private final Map<BlockState, VoxelShape> shapeByIndex;
 
-    private final String blockName;
-    private final String creativeTab;
 
-    public WCArrowSlitBlock(AbstractBlock.Settings settings, BlockDefinition def, String blockName, String creativeTab) {
+    public static class Factory extends BlockFactory {
+        @Override
+        public Block buildBlockClass(BlockDefinition definition) {
+            AbstractBlock.Settings settings = definition.makeSettings();
+
+            return new WCArrowSlitBlock(settings, definition);
+        }
+    }
+
+    public WCArrowSlitBlock(AbstractBlock.Settings settings, BlockDefinition def) {
         super(settings);
         this.def = def;
-        this.blockName = blockName;
-        this.creativeTab = creativeTab;
+
         setDefaultState(getDefaultState()
                 .with(TYPE, ArrowSlitType.SINGLE)
                 .with(FACING, Direction.NORTH));
 
         this.shapeByIndex = this.makeShapes();
-    }
-
-    public static class Factory extends BlockFactory {
-        @Override
-        public Block buildBlockClass(BlockDefinition definition) {
-            // Handle null definition for manual block creation
-            AbstractBlock.Settings settings = definition != null
-                    ? definition.makeSettings()
-                    : AbstractBlock.Settings.create();
-            String blockName = definition != null ? definition.getBlockName() : "arrow_slit";
-            String creativeTab = definition != null ? definition.getCreativeTab() : "building_blocks";
-            return new WCArrowSlitBlock(settings, definition, blockName, creativeTab);
-        }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            String blockName = (String) parameters.getOrDefault("blockName", "arrow_slit");
-            String creativeTab = (String) parameters.getOrDefault("creativeTab", "building_blocks");
-            return new WCArrowSlitBlock(settings, null, blockName, creativeTab);
-        }
     }
 
     private Map<BlockState, VoxelShape> makeShapes() {
@@ -320,6 +306,7 @@ public class WCArrowSlitBlock extends Block {
 
     /**
      * Gets the BlockDefinition for this block.
+     *
      * @return BlockDefinition if block was created from JSON, null if created programmatically
      */
     public BlockDefinition getDefinition() {

@@ -44,9 +44,6 @@ public class WCBedBlock extends HorizontalFacingBlock {
         }
     }
 
-    /**
-     * Constructor for CODEC (world save/load) - BlockDefinition not needed for serialization
-     */
     protected WCBedBlock(AbstractBlock.Settings settings) {
         this(settings, null);
     }
@@ -251,10 +248,6 @@ public class WCBedBlock extends HorizontalFacingBlock {
         return blockpos.hashCode();
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }
