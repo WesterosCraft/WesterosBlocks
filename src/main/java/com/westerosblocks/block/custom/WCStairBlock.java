@@ -30,15 +30,8 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 import java.util.stream.IntStream;
 
-/**
- * Custom stair block implementation.
- * Handles custom textures, states, tinting, and stair shape connections.
- */
 public class WCStairBlock extends Block implements Waterloggable {
     protected BlockDefinition def;
 
@@ -60,7 +53,6 @@ public class WCStairBlock extends Block implements Waterloggable {
     public final boolean connectstate;
     public final boolean no_uvlock;
 
-    // VoxelShape definitions for stairs
     protected static final VoxelShape BOTTOM_AABB = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 8.0, 16.0);
     protected static final VoxelShape TOP_AABB = Block.createCuboidShape(0.0, 8.0, 0.0, 16.0, 16.0, 16.0);
     protected static final VoxelShape OCTET_NNN = Block.createCuboidShape(0.0, 0.0, 0.0, 8.0, 8.0, 8.0);
@@ -87,9 +79,8 @@ public class WCStairBlock extends Block implements Waterloggable {
             }
 
             boolean doToggleOnUse = definition.toggleOnUse();
-            boolean doAddStates = (stateProperty != null);
 
-            // Parse type field for special properties
+            // TODO refactor this. Parse type field for special properties
             boolean doUnconnect = false;
             boolean doConnectstate = false;
             boolean noUvlock = false;
@@ -111,48 +102,12 @@ public class WCStairBlock extends Block implements Waterloggable {
                 }
             }
 
-            return new WCStairBlock(settings, definition, doToggleOnUse, doAddStates, doUnconnect, doConnectstate, noUvlock);
+            return new WCStairBlock(settings, definition, doToggleOnUse, doUnconnect, doConnectstate, noUvlock);
         }
 
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            boolean doToggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
-            Integer numStates = (Integer) parameters.get("states");
-            boolean doAddStates = (numStates != null && numStates > 1);
-            boolean doUnconnect = (Boolean) parameters.getOrDefault("unconnect", false);
-            boolean doConnectstate = (Boolean) parameters.getOrDefault("connectState", false);
-            boolean noUvlock = false;
-
-            if (doAddStates) {
-                @SuppressWarnings("unchecked")
-                List<String> stateValues = (List<String>) parameters.get("stateValues");
-                if (stateValues != null) {
-                    tempSTATE = new ModProperties.StateProperty(stateValues);
-                } else {
-                    ArrayList<String> stateIds = new ArrayList<>();
-                    for (int i = 0; i < numStates; i++) {
-                        stateIds.add("state" + i);
-                    }
-                    tempSTATE = new ModProperties.StateProperty(stateIds);
-                }
-            }
-
-            if (doUnconnect) {
-                tempUNCONNECT = UNCONNECT;
-            }
-            if (doConnectstate) {
-                tempCONNECTSTATE = CONNECTSTATE;
-            }
-
-            return new WCStairBlock(settings, null, doToggleOnUse, doAddStates, doUnconnect, doConnectstate, noUvlock);
-        }
     }
 
-    public WCStairBlock(AbstractBlock.Settings settings) {
-        this(settings, null, false, false, false, false, false);
-    }
-
-    public WCStairBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doToggleOnUse, boolean addStates,
+    public WCStairBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doToggleOnUse,
                        boolean doUnconnect, boolean doConnectstate, boolean noUvlock) {
         super(settings);
         this.def = def;
@@ -174,7 +129,7 @@ public class WCStairBlock extends Block implements Waterloggable {
         if (doConnectstate) {
             defbs = defbs.with(CONNECTSTATE, 0);
         }
-        if (addStates && tempSTATE != null) {
+        if (tempSTATE != null) {
             defbs = defbs.with(tempSTATE, tempSTATE.defValue);
         }
 
@@ -329,10 +284,6 @@ public class WCStairBlock extends Block implements Waterloggable {
         return shape;
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

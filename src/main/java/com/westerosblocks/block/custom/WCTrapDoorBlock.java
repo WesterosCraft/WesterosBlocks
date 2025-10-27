@@ -32,13 +32,6 @@ public class WCTrapDoorBlock extends TrapdoorBlock {
             boolean locked = definition.isLocked();
             return new WCTrapDoorBlock(settings, definition, woodType, locked);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            String woodType = (String) parameters.getOrDefault("woodType", "oak");
-            boolean locked = (Boolean) parameters.getOrDefault("locked", false);
-            return new WCTrapDoorBlock(settings, null, woodType, locked);
-        }
     }
 
     @Override
@@ -50,10 +43,6 @@ public class WCTrapDoorBlock extends TrapdoorBlock {
         }
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

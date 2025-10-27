@@ -47,12 +47,6 @@ public class WCWallFanBlock extends Block implements Waterloggable {
             boolean allowUnsupported = definition.isAllowUnsupported();
             return new WCWallFanBlock(settings, definition, allowUnsupported);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            boolean allowUnsupported = (Boolean) parameters.getOrDefault("allowUnsupported", false);
-            return new WCWallFanBlock(settings, null, allowUnsupported);
-        }
     }
 
     public WCWallFanBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean allowUnsupported) {
@@ -145,10 +139,6 @@ public class WCWallFanBlock extends Block implements Waterloggable {
         };
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

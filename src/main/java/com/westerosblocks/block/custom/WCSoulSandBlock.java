@@ -28,10 +28,6 @@ public class WCSoulSandBlock extends SoulSandBlock {
         this.def = def;
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

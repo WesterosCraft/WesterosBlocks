@@ -1,6 +1,5 @@
 package com.westerosblocks.block.custom;
 
-import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -15,7 +14,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
 import com.westerosblocks.data.BlockDefinition;
-import java.util.Map;
 
 public class WCTorchBlock extends TorchBlock {
     protected BlockDefinition def;
@@ -86,39 +84,8 @@ public class WCTorchBlock extends TorchBlock {
 
             return new WCTorchBlock(settings, definition, wallBlock, allowUnsupported, noParticle);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            // For BlockBuilder - wallBlock comes from parameters
-            Block wallBlock = (Block) parameters.get("wallBlock");
-            boolean allowUnsupported = (Boolean) parameters.getOrDefault("allowUnsupported", false);
-            boolean noParticle = (Boolean) parameters.getOrDefault("noParticle", false);
-
-            return new WCTorchBlock(settings, null, wallBlock, allowUnsupported, noParticle);
-        }
     }
 
-    /**
-     * Sets the wall block reference. Called by ModBlocks after both torch variants are registered.
-     * Note: This is a workaround for the circular dependency between standing and wall torches.
-     */
-    public void setWallBlock(Block wallBlock) {
-        // This is handled via constructor - wall block should be set during registration
-        // This method exists for legacy compatibility but is no longer used
-    }
-
-    /**
-     * Gets the wall block variant for this torch.
-     * @return Wall block variant, or null if not set
-     */
-    public Block getWallBlock() {
-        return wallBlock;
-    }
-
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

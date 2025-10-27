@@ -38,16 +38,6 @@ public class WCWallBlock extends WallBlock implements Waterloggable {
 
             return new WCWallBlock(settings, definition, unconnect, connectState, size, toggleOnUse);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            boolean unconnect = (Boolean) parameters.getOrDefault("unconnect", false);
-            boolean connectState = (Boolean) parameters.getOrDefault("connectState", false);
-            String size = (String) parameters.getOrDefault("wallSize", "normal");
-            boolean toggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
-
-            return new WCWallBlock(settings, null, unconnect, connectState, size, toggleOnUse);
-        }
     }
 
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
@@ -269,10 +259,6 @@ public class WCWallBlock extends WallBlock implements Waterloggable {
         }
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

@@ -73,10 +73,6 @@ public class WCWallTorchBlock extends WallTorchBlock {
         }
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

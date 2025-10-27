@@ -21,10 +21,6 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 public class WCSolidBlock extends Block {
     protected BlockDefinition def;
     protected boolean toggleOnUse = false;
@@ -64,42 +60,6 @@ public class WCSolidBlock extends Block {
             }
 
             return new WCSolidBlock(settings, definition, doConnectState, doToggleOnUse, doAddStates, doSymmetrical);
-        }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            // For BlockBuilder - manual block creation without definition
-            boolean doConnectState = (Boolean) parameters.getOrDefault("connectState", false);
-            boolean doToggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
-            boolean doSymmetrical = (Boolean) parameters.getOrDefault("symmetrical", false);
-            Integer numStates = (Integer) parameters.get("states");
-            boolean doAddStates = (numStates != null && numStates > 1);
-
-            if (doConnectState) {
-                tempCONNECTSTATE = CONNECTSTATE;
-            }
-
-            if (doSymmetrical) {
-                tempSYMMETRICAL = SYMMETRICAL;
-            }
-
-            if (doAddStates) {
-                @SuppressWarnings("unchecked")
-                List<String> stateValues = (List<String>) parameters.get("stateValues");
-                if (stateValues != null) {
-                    STATE = new ModProperties.StateProperty(stateValues);
-                } else {
-                    // Generate default state IDs if not provided
-                    ArrayList<String> stateIds = new ArrayList<>();
-                    for (int i = 0; i < numStates; i++) {
-                        stateIds.add("state" + i);
-                    }
-                    STATE = new ModProperties.StateProperty(stateIds);
-                }
-                tempSTATE = STATE;
-            }
-
-            return new WCSolidBlock(settings, null, doConnectState, doToggleOnUse, doAddStates, doSymmetrical);
         }
     }
 
@@ -178,10 +138,6 @@ public class WCSolidBlock extends Block {
         return VoxelShapes.fullCube();
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

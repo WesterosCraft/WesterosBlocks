@@ -90,40 +90,6 @@ public class WCWebBlock extends CobwebBlock {
 
             return new WCWebBlock(settings, definition, doToggleOnUse, doNoInWeb, doLayerSensitive);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, java.util.Map<String, Object> parameters) {
-            boolean doToggleOnUse = (Boolean) parameters.getOrDefault("toggleOnUse", false);
-            boolean doNoInWeb = (Boolean) parameters.getOrDefault("noInWeb", false);
-            boolean doLayerSensitive = (Boolean) parameters.getOrDefault("layerSensitive", false);
-            boolean doAddStates = (Boolean) parameters.getOrDefault("addStates", false);
-
-            // Reset static fields
-            tempLAYERS = null;
-            tempSTATE = null;
-
-            if (doLayerSensitive) {
-                tempLAYERS = Properties.LAYERS;
-            }
-
-            if (doAddStates) {
-                @SuppressWarnings("unchecked")
-                List<String> stateValues = (List<String>) parameters.get("stateValues");
-                if (stateValues != null) {
-                    tempSTATE = new ModProperties.StateProperty(stateValues);
-                } else {
-                    int numStates = (Integer) parameters.getOrDefault("numStates", 1);
-                    ArrayList<String> stateIds = new ArrayList<>();
-                    for (int i = 0; i < numStates; i++) {
-                        stateIds.add("state" + i);
-                    }
-                    tempSTATE = new ModProperties.StateProperty(stateIds);
-                }
-            }
-
-            settings = settings.noCollision();
-            return new WCWebBlock(settings, null, doToggleOnUse, doNoInWeb, doLayerSensitive);
-        }
     }
 
     protected WCWebBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doToggleOnUse,
@@ -263,10 +229,6 @@ public class WCWebBlock extends CobwebBlock {
         return VoxelShapes.empty();
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }
