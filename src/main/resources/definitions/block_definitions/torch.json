@@ -6,7 +6,6 @@
     "creativeTab": "westeros_lighting_tab",
     "luminance": 13,
     "label": "Torch",
-    "type": "allow-unsupported",
     "allowUnsupported": true,
     "renderLayer": "cutout",
     "textures": ["lighting/torch"]
@@ -18,7 +17,6 @@
     "creativeTab": "westeros_lighting_tab",
     "luminance": 10,
     "label": "Candle",
-    "type": "allow-unsupported",
     "allowUnsupported": true,
     "renderLayer": "cutout",
     "textures": [

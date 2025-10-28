@@ -12,7 +12,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
@@ -40,10 +39,8 @@ public class ModBlocks {
             int registeredCount = 0;
             int skippedCount = 0;
 
-            // Check if we're in development environment
             boolean isDevelopment = FabricLoader.getInstance().isDevelopmentEnvironment();
 
-            // Loop through all block definitions
             for (BlockDefinition definition : registry.getAllDefinitions()) {
                 try {
                     // Skip test blocks in production (blocks in westeros_test_tab)
@@ -137,13 +134,6 @@ public class ModBlocks {
         String blockType = definition.getBlockType().toLowerCase();
 
         try {
-            // Special case: fan blocks create both wall and floor variants
-            if ("fan".equals(blockType)) {
-                return createFanBlocks(definition);
-            }
-
-            // Standard case: use factory directly
-            // Note: Torch blocks now handle wall variant registration in their Factory
             BlockFactory factory = getFactory(blockType);
             if (factory != null) {
                 return factory.buildBlockClass(definition);
@@ -155,23 +145,6 @@ public class ModBlocks {
             WesterosBlocks.LOGGER.error("Error creating block from definition: {}", e.getMessage());
             return null;
         }
-    }
-
-    /**
-     * Special handling for fan blocks which create both wall and floor variants
-     */
-    private static Block createFanBlocks(BlockDefinition definition) {
-        BlockFactory wallFanFactory = new WCWallFanBlock.Factory();
-        Block wallFanBlock = wallFanFactory.buildBlockClass(definition);
-
-        // Register the wall fan without block item
-        String wallFanName = "wall_" + definition.getBlockName();
-        Block registeredWallFan = registerBlockWithoutItem(wallFanName, wallFanBlock);
-        AUTO_REGISTERED_BLOCKS.put(wallFanName, registeredWallFan);
-
-        // Now create the standing fan with reference to wall fan
-        BlockFactory fanFactory = new WCFanBlock.Factory();
-        return fanFactory.buildBlockClass(definition);
     }
 
     /**

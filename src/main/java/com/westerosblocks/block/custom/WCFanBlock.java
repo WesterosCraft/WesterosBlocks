@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.block.ModBlocks;
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
@@ -30,13 +31,16 @@ public class WCFanBlock extends Block implements Waterloggable {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(BlockDefinition definition) {
-            AbstractBlock.Settings settings = definition.makeSettings();
-
-            // wallBlock will be set later by ModBlocks after wall fan is registered
-            Block wallBlock = null;
             boolean allowUnsupported = definition.isAllowUnsupported();
 
-            return new WCFanBlock(settings, definition, wallBlock, allowUnsupported);
+            AbstractBlock.Settings wallSettings = definition.makeSettings();
+            Block wallBlock = new WCWallFanBlock(wallSettings, definition, allowUnsupported);
+
+            String wallFanName = "wall_" + definition.getBlockName();
+            Block registeredWallBlock = ModBlocks.registerBlockWithoutItem(wallFanName, wallBlock);
+
+            AbstractBlock.Settings floorSettings = definition.makeSettings();
+            return new WCFanBlock(floorSettings, definition, registeredWallBlock, allowUnsupported);
         }
     }
 
@@ -73,7 +77,6 @@ public class WCFanBlock extends Block implements Waterloggable {
             }
         }
 
-        // If not on wall, place normal floor fan
         return state.with(WATERLOGGED, fluidState.isIn(FluidTags.WATER));
     }
 

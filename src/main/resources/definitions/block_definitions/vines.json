@@ -29,7 +29,7 @@
       "alyssas_tears_mist/mist4"
     ],
     "allowUnsupported": true,
-    "hasClimb": true
+    "hasClimb": false
   },
   {
     "blockName": "falling_water_block_one",
@@ -45,7 +45,7 @@
       "alyssas_tears_mist/mist1"
     ],
     "allowUnsupported": true,
-    "hasClimb": true
+    "hasClimb": false
   },
   {
     "blockName": "falling_water_block_three",
@@ -57,12 +57,11 @@
     "label": "Falling Water Block Three",
     "renderLayer": "translucent",
     "allowUnsupported": true,
-    "hasClimb": true,
+    "hasClimb": false,
     "textures": [
       "alyssas_tears_mist/mist3",
       "alyssas_tears_mist/mist3"
-    ],
-    "type": "allow-unsupported,no-climb"
+    ]
   },
   {
     "blockName": "falling_water_block_two",
@@ -74,12 +73,11 @@
     "label": "Falling Water Block Two",
     "renderLayer": "translucent",
     "allowUnsupported": true,
-    "hasClimb": true,
+    "hasClimb": false,
     "textures": [
       "alyssas_tears_mist/mist2",
       "alyssas_tears_mist/mist2"
-    ],
-    "type": "allow-unsupported,no-climb"
+    ]
   },
   {
     "blockName": "jasmine_vines",
@@ -122,8 +120,7 @@
           "jasmine_vines/side5"
         ]
       }
-    ],
-    "type": "allow-unsupported,no-climb,has-down"
+    ]
   },
   {
     "blockName": "vines",
@@ -152,7 +149,6 @@
       {
         "textures": ["vines/side5", "vines/side5"]
       }
-    ],
-    "type": "allow-unsupported,no-climb,has-down"
+    ]
   }
 ]

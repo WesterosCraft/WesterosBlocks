@@ -12,43 +12,31 @@ import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 
-/**
- * Exporter for fan blocks following block-models.md patterns.
- * Generates models for decorative fan blocks with both standing and wall-mounted variants.
- *
- * @see ModModels#FAN
- * @see ModModels#WALL_FAN
- * @see WCFanBlock
- * @see WCWallFanBlock
- */
 public class FanBlockExporter extends BaseBlockExporter {
 
     public static void registerFanBlock(BlockStateModelGenerator generator, Block standingFan, String texturePath) {
-        // Get the wall fan block using the same pattern as TorchBlockExporter
         Block wallFan = Registries.BLOCK.get(WesterosBlocks.id("wall_" + standingFan.getTranslationKey().replace("block.westerosblocks.", "")));
 
-        // Generate standing fan block state
         generateStandingFanBlockState(generator, standingFan, texturePath);
         
-        // Generate wall fan block state if it exists
+
         if (wallFan != null) {
             generateWallFanBlockState(generator, wallFan, texturePath);
         }
         
-        // Generate item model for standing fan only (wall fan has no item)
         generateStandingFanItemModel(generator, standingFan, texturePath);
     }
 
     private static void generateStandingFanBlockState(BlockStateModelGenerator generator, Block block, String texturePath) {
-        // Create the standing fan model
+
         Identifier standingModelId = createStandingFanModel(generator, block, texturePath);
 
-        // Create block state variants for waterlogged states
+
         BlockStateVariantMap variants = BlockStateVariantMap.create(WCFanBlock.WATERLOGGED)
             .register(false, createVariant(standingModelId))
             .register(true, createVariant(standingModelId));
 
-        // Register the block state using the generator's collector
+
         generator.blockStateCollector.accept(
             VariantsBlockStateSupplier.create(block).coordinate(variants)
         );
