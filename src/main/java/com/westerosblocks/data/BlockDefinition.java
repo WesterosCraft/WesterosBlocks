@@ -51,13 +51,12 @@ public class BlockDefinition {
     @SerializedName("label")
     private String label;
 
-    // === VISUAL PROPERTIES ===
-
     /** Texture file paths (relative to textures/block/) - order varies by block type */
     @SerializedName("textures")
     private List<String> textures;
 
     /** Legacy type field - mostly replaced by specific properties */
+    @Deprecated
     @SerializedName("type")
     private String type;
 
@@ -105,8 +104,6 @@ public class BlockDefinition {
     @SerializedName("luminance")
     private Integer luminance;
 
-    // === BEHAVIOR PROPERTIES ===
-
     /** Tools required to break this block efficiently */
     @SerializedName("harvestLevel")
     private List<HarvestLevel> harvestLevel;
@@ -131,7 +128,7 @@ public class BlockDefinition {
     @SerializedName("noCollision")
     private Boolean noCollision;
 
-    /** Plants only: breaks when supporting layer changes */
+    /** Allows for placement of this block on Layer blocks */
     @SerializedName("layerSensitive")
     private Boolean layerSensitive;
 
@@ -175,8 +172,6 @@ public class BlockDefinition {
     @SerializedName("symmetrical")
     private Boolean symmetrical;
 
-    // === RENDERING/MODEL PROPERTIES ===
-
     /** Uses custom model files instead of generated ones */
     @SerializedName("isCustomModel")
     private Boolean isCustomModel;
@@ -212,8 +207,6 @@ public class BlockDefinition {
     /** Block uses alpha/translucent rendering */
     @SerializedName("alphaRender")
     private Boolean alphaRender;
-
-    // === BLOCK-SPECIFIC PROPERTIES ===
 
     /** Legacy model for pane blocks */
     @SerializedName("isLegacyModel")
@@ -254,10 +247,6 @@ public class BlockDefinition {
     /** Particle type for particle emitter blocks (e.g., "flame", "cascade", "wildfire") */
     @SerializedName("particle")
     private String particle;
-
-    // ========================================
-    // Nested Classes
-    // ========================================
 
     /**
      * Display settings for GUI transformation (item rendering in inventory/hand).
@@ -318,21 +307,10 @@ public class BlockDefinition {
             return weight != null ? weight : 1;
         }
 
-        /**
-         * Gets the number of textures in this variant set.
-         * Matches old 1.18.2 API: set.getTextureCount()
-         */
         public int getTextureCount() {
             return (textures != null) ? textures.size() : 0;
         }
 
-        /**
-         * Gets a specific texture by index from this variant set.
-         * Matches old 1.18.2 API: set.getTextureByIndex(idx)
-         *
-         * @param index The index of the texture to retrieve
-         * @return The texture at the given index, or null if out of bounds
-         */
         public String getTextureByIndex(int index) {
             if (textures == null || textures.isEmpty()) {
                 return null;
