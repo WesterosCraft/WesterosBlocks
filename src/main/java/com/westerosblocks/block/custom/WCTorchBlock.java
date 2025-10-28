@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.block.ModBlocks;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -20,6 +21,24 @@ public class WCTorchBlock extends TorchBlock {
     private final boolean allowUnsupported;
     private final boolean noParticle;
     private final Block wallBlock;
+
+    public static class Factory extends BlockFactory {
+        @Override
+        public Block buildBlockClass(BlockDefinition definition) {
+            boolean allowUnsupported = definition.isAllowUnsupported();
+            boolean noParticle = definition.isNoParticle();
+
+            AbstractBlock.Settings wallSettings = definition.makeSettings();
+            Block wallBlock = new WCWallTorchBlock(wallSettings, definition, allowUnsupported, noParticle);
+
+            String wallTorchName = "wall_" + definition.getBlockName();
+            Block registeredWallBlock = ModBlocks.registerBlockWithoutItem(wallTorchName, wallBlock);
+
+
+            AbstractBlock.Settings floorSettings = definition.makeSettings();
+            return new WCTorchBlock(floorSettings, definition, registeredWallBlock, allowUnsupported, noParticle);
+        }
+    }
 
     public WCTorchBlock(AbstractBlock.Settings settings, BlockDefinition def, Block wallBlock,
             boolean allowUnsupported, boolean noParticle) {
@@ -72,19 +91,7 @@ public class WCTorchBlock extends TorchBlock {
         return super.canPlaceAt(state, world, pos);
     }
 
-    public static class Factory extends BlockFactory {
-        @Override
-        public Block buildBlockClass(BlockDefinition definition) {
-            AbstractBlock.Settings settings = definition.makeSettings();
 
-            // wallBlock will be set later by ModBlocks after wall torch is registered
-            Block wallBlock = null;
-            boolean allowUnsupported = definition.isAllowUnsupported();
-            boolean noParticle = definition.isNoParticle();
-
-            return new WCTorchBlock(settings, definition, wallBlock, allowUnsupported, noParticle);
-        }
-    }
 
     public BlockDefinition getDefinition() {
         return def;

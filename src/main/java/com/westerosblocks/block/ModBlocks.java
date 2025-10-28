@@ -137,17 +137,13 @@ public class ModBlocks {
         String blockType = definition.getBlockType().toLowerCase();
 
         try {
-            // Special case: torch blocks create both wall and standing variants
-            if ("torch".equals(blockType)) {
-                return createTorchBlocks(definition);
-            }
-
             // Special case: fan blocks create both wall and floor variants
             if ("fan".equals(blockType)) {
                 return createFanBlocks(definition);
             }
 
             // Standard case: use factory directly
+            // Note: Torch blocks now handle wall variant registration in their Factory
             BlockFactory factory = getFactory(blockType);
             if (factory != null) {
                 return factory.buildBlockClass(definition);
@@ -162,23 +158,6 @@ public class ModBlocks {
     }
 
     /**
-     * Special handling for torch blocks which create both wall and standing variants
-     */
-    private static Block createTorchBlocks(BlockDefinition definition) {
-        BlockFactory wallTorchFactory = new WCWallTorchBlock.Factory();
-        Block wallTorchBlock = wallTorchFactory.buildBlockClass(definition);
-
-        // Register the wall torch without block item
-        String wallTorchName = "wall_" + definition.getBlockName();
-        Block registeredWallTorch = registerBlockWithoutBlockItem(wallTorchName, wallTorchBlock);
-        AUTO_REGISTERED_BLOCKS.put(wallTorchName, registeredWallTorch);
-
-        // Now create the standing torch with reference to wall torch
-        BlockFactory torchFactory = new WCTorchBlock.Factory();
-        return torchFactory.buildBlockClass(definition);
-    }
-
-    /**
      * Special handling for fan blocks which create both wall and floor variants
      */
     private static Block createFanBlocks(BlockDefinition definition) {
@@ -187,7 +166,7 @@ public class ModBlocks {
 
         // Register the wall fan without block item
         String wallFanName = "wall_" + definition.getBlockName();
-        Block registeredWallFan = registerBlockWithoutBlockItem(wallFanName, wallFanBlock);
+        Block registeredWallFan = registerBlockWithoutItem(wallFanName, wallFanBlock);
         AUTO_REGISTERED_BLOCKS.put(wallFanName, registeredWallFan);
 
         // Now create the standing fan with reference to wall fan
@@ -280,7 +259,14 @@ public class ModBlocks {
                 new BlockItem(block, new Item.Settings()));
     }
 
-    private static Block registerBlockWithoutBlockItem(String name, Block block) {
-        return Registry.register(Registries.BLOCK, Identifier.of(WesterosBlocks.MOD_ID, name), block);
+    /**
+     * Registers a block without creating a BlockItem (used for wall torches, wall fans, etc.)
+     * Made public so factories can register wall variants internally.
+     * Also adds the block to AUTO_REGISTERED_BLOCKS for tracking.
+     */
+    public static Block registerBlockWithoutItem(String name, Block block) {
+        Block registered = Registry.register(Registries.BLOCK, Identifier.of(WesterosBlocks.MOD_ID, name), block);
+        AUTO_REGISTERED_BLOCKS.put(name, registered);
+        return registered;
     }
 }
