@@ -1,322 +1,223 @@
 package com.westerosblocks.datagen.custom;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
-import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
-import net.minecraft.state.property.Properties;
+import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class CropBlockExporter extends BaseBlockExporter {
-
-    private static Model createCropStageModel(boolean tinted) {
-        return createCropStageModel(tinted, "");
-    }
-
-    private static TextureMap createCropTextureMap(String texture) {
-        return new TextureMap().put(TextureKey.CROP, createBlockIdentifier(texture));
-    }
-
-    /**
-     * Registers a crop block with state-based variants using custom STATE property.
-     */
-    public static void registerCropBlock(BlockStateModelGenerator generator, Block block, boolean tinted,
-                                        List<StateTexture> stateTextures) {
-        ModProperties.StateProperty blockStateProperty = null;
-        for (var property : block.getStateManager().getProperties()) {
-            if (property instanceof ModProperties.StateProperty stateProperty && "state".equals(property.getName())) {
-                blockStateProperty = stateProperty;
-                break;
-            }
-        }
-
-        if (blockStateProperty == null) {
-            throw new IllegalStateException("Block " + block + " does not have a STATE property defined");
-        }
-
-        List<String> stateIDs = stateTextures.stream().map(st -> st.stateID).toList();
-        Collection<String> blockStateValues = blockStateProperty.getValues();
-
-        for (String stateID : stateIDs) {
-            if (!blockStateValues.contains(stateID)) {
-                throw new IllegalStateException("State '" + stateID + "' is not defined in block's STATE property");
-            }
-        }
-
-        BlockStateVariantMap.SingleProperty<String> variantMap = BlockStateVariantMap.create(blockStateProperty);
-        List<Identifier> modelIds = new ArrayList<>();
-
-        for (StateTexture stateTexture : stateTextures) {
-            if (stateTexture.randomTextures.size() > 1) {
-                // Multiple random texture variants
-                List<Identifier> stateModelIds = new ArrayList<>();
-                for (int j = 0; j < stateTexture.randomTextures.size(); j++) {
-                    String texture = stateTexture.randomTextures.get(j);
-                    TextureMap textureMap = createCropTextureMap(texture);
-                    Identifier modelId = uploadModel(createCropStageModel(tinted), block,
-                                                    stateTexture.stateID + "_v" + (j + 1),
-                                                    textureMap, generator.modelCollector);
-                    stateModelIds.add(modelId);
-                }
-
-                List<BlockStateVariant> variants = stateModelIds.stream()
-                        .map(modelId -> BlockStateVariant.create().put(VariantSettings.MODEL, modelId))
-                        .collect(Collectors.toList());
-                variantMap.register(stateTexture.stateID, variants);
-                modelIds.addAll(stateModelIds);
-            } else {
-                // Single texture
-                String texture = stateTexture.randomTextures.get(0);
-                TextureMap textureMap = createCropTextureMap(texture);
-                Identifier modelId = uploadModel(createCropStageModel(tinted), block, stateTexture.stateID,
-                                                textureMap, generator.modelCollector);
-                modelIds.add(modelId);
-                variantMap.register(stateTexture.stateID, createVariant(modelId));
-            }
-        }
-
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variantMap));
-        registerParentedItemModel(generator, block, modelIds.get(0));
-    }
-
-    /**
-     * Registers a simple crop block with random texture variants (no state property).
-     */
-    public static void registerCropBlockSimple(BlockStateModelGenerator generator, Block block, boolean tinted,
-                                              List<String> textures) {
-        List<Identifier> modelIds = new ArrayList<>();
-
-        for (int i = 0; i < textures.size(); i++) {
-            TextureMap textureMap = createCropTextureMap(textures.get(i));
-            Identifier modelId = uploadModel(createCropStageModel(tinted), block, "v" + (i + 1),
-                                            textureMap, generator.modelCollector);
-            modelIds.add(modelId);
-        }
-
-        List<BlockStateVariant> variants = modelIds.stream()
-                .map(BaseBlockExporter::createVariant)
-                .collect(Collectors.toList());
-
-        generator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0])));
-        registerParentedItemModel(generator, block, modelIds.get(0));
-    }
 
     public static void registerCustomCropBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         boolean tinted = definition.isTinted() || definition.hasColorMult();
         boolean layerSensitive = definition.isLayerSensitive();
+        boolean rotateRandom = definition.hasRotateRandom();
+        var states = definition.getStates();
 
-        // Check if block has multiple actual states (not just synthetic base state)
-        boolean hasMultipleStates = definition.getStateCount() > 1;
+        if (states == null || states.isEmpty()) {
+            throw new IllegalStateException("Crop block definition states should never be null/empty for block: " + getBlockName(block));
+        }
 
-        if (hasMultipleStates) {
-            if (layerSensitive) {
-                // Layer-sensitive with states
-                registerCropBlockLayerSensitiveWithStates(generator, block, definition, tinted);
-            } else {
-                // Regular crop with states
-                List<StateTexture> stateTextures = new ArrayList<>();
+        generateBlockState(generator, block, definition, states, layerSensitive, rotateRandom);
 
-                for (var stateDefinition : definition.getStates()) {
-                    String stateID = stateDefinition.getStateID();
-                    List<String> textures = new ArrayList<>();
+        for (BlockDefinition.StateVariant state : states) {
+            if (state.isCustomModel()) continue;
 
-                    // Check if this state has randomTextures instead of regular textures
-                    if ((stateDefinition.getTextures() == null || stateDefinition.getTextures().isEmpty())
-                            && stateDefinition.hasRandomTextures()) {
-                        // Extract textures from randomTextures array
-                        for (var randomVariant : stateDefinition.getRandomTextures()) {
-                            if (randomVariant.getTextures() != null && !randomVariant.getTextures().isEmpty()) {
-                                textures.addAll(randomVariant.getTextures());
+            String stateID = state.getStateID();
+            String baseName = (stateID == null) ? "base" : stateID;
+
+            int layerCount = layerSensitive ? 8 : 1;
+            for (int layer = (layerSensitive ? 8 : 0); layer >= 1; layer--) {
+
+                String layerSuffix = layer != 8 ? "_layer" + layer : "";
+                String modelName = baseName + layerSuffix;
+
+                // Loop over texture sets
+                for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
+                    generateCropModel(generator, block, modelName, state, setIdx, tinted, layer, layerSensitive);
+                }
+
+            }
+        }
+
+        // Phase 3: Item model
+        BlockDefinition.StateVariant firstState = states.get(0);
+        String firstName = (firstState.getStateID() == null) ? "base" : firstState.getStateID();
+        Identifier itemModelId = createItemModelId(block, getModelName(firstName, 0));
+        registerParentedItemModel(generator, block, itemModelId);
+    }
+
+    private static void generateBlockState(BlockStateModelGenerator generator, Block block,
+                                          BlockDefinition definition, List<BlockDefinition.StateVariant> states,
+                                          boolean layerSensitive, boolean rotateRandom) {
+        int rotationCount = rotateRandom ? 4 : 1; // 4 rotations if random, 1 if not
+
+        generator.blockStateCollector.accept(new BlockStateSupplier() {
+            @Override
+            public Block getBlock() {
+                return block;
+            }
+
+            @Override
+            public JsonElement get() {
+                JsonObject json = new JsonObject();
+                JsonObject variants = new JsonObject();
+
+                // Determine layer conditions (matches old layerConds logic)
+                String[] layerConds = layerSensitive
+                    ? new String[]{"layers=8", "layers=1", "layers=2", "layers=3", "layers=4", "layers=5", "layers=6", "layers=7"}
+                    : new String[]{""};
+
+                // Check if block has STATE property (for multi-state crops)
+                boolean hasStateProperty = hasStateProperty(block);
+
+                // Loop: layers → states → texture sets → rotations (matches old nested loop exactly)
+                for (String layerCond : layerConds) {
+                    for (int stateIdx = 0; stateIdx < states.size(); stateIdx++) {
+                        BlockDefinition.StateVariant state = states.get(stateIdx);
+                        String stateID = state.getStateID();
+                        String baseName = (stateID == null) ? "base" : stateID;
+
+                        // Add layer suffix to model name if layer > 0
+                        String modelName = baseName;
+                        if (layerSensitive && !layerCond.isEmpty() && !layerCond.equals("layers=8")) {
+                            // Extract layer number from condition like "layers=1"
+                            int layerNum = Integer.parseInt(layerCond.substring(layerCond.indexOf('=') + 1));
+                            modelName = baseName + "_layer" + layerNum;
+                        }
+
+                        // Loop over texture sets
+                        for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
+                            BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                            if (set == null || set.getTextureCount() == 0) continue;
+
+                            // Loop over rotations
+                            for (int rot = 0; rot < rotationCount; rot++) {
+                                // Build variant key
+                                String variantKey = buildVariantKey(layerCond, stateID, hasStateProperty);
+
+                                // Create model identifier
+                                Identifier modelId = state.isCustomModel()
+                                    ? createCustomModelId(block, getModelName(modelName, setIdx))
+                                    : createGeneratedModelId(block, getModelName(modelName, setIdx));
+
+                                // Create variant JSON
+                                JsonObject variant = new JsonObject();
+                                variant.addProperty("model", modelId.toString());
+
+                                if (set.getWeight() > 1) {
+                                    variant.addProperty("weight", set.getWeight());
+                                }
+
+                                if (rot > 0) {
+                                    variant.addProperty("y", 90 * rot);
+                                }
+
+                                addVariantToKey(variants, variantKey, variant);
                             }
                         }
-                    } else if (stateDefinition.getTextures() != null && !stateDefinition.getTextures().isEmpty()) {
-                        textures.addAll(stateDefinition.getTextures());
-                    }
-
-                    if (!textures.isEmpty()) {
-                        stateTextures.add(new StateTexture(stateID, textures));
-                    } else {
-                        WesterosBlocks.LOGGER.warn("Crop block '{}' state '{}' has no textures",
-                                definition.getBlockName(), stateID);
                     }
                 }
 
-                if (!stateTextures.isEmpty()) {
-                    registerCropBlock(generator, block, tinted, stateTextures);
-                }
+                json.add("variants", variants);
+                return json;
+            }
+        });
+    }
+
+    private static void generateCropModel(BlockStateModelGenerator generator, Block block, String modelName,
+                                         BlockDefinition.StateVariant state, int setIdx, boolean tinted,
+                                         int layer, boolean layerSensitive) {
+        BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+        if (set == null || set.getTextureCount() == 0) return;
+
+        String fullModelName = getModelName(modelName, setIdx);
+        Identifier modelId = createGeneratedModelId(block, fullModelName);
+
+        // Determine parent model (matches old parent logic)
+        String parentBase = tinted ? "westerosblocks:block/tinted/crop" : "westerosblocks:block/untinted/crop";
+        String layerSuffix = (layerSensitive && layer != 8) ? "_layer" + layer : "";
+        String parent = parentBase + layerSuffix;
+
+        // Create model JSON
+        JsonObject modelJson = new JsonObject();
+        modelJson.addProperty("parent", parent);
+
+        // Add texture
+        JsonObject texturesJson = new JsonObject();
+        texturesJson.addProperty("crop", "westerosblocks:block/" + set.getTextureByIndex(0));
+        modelJson.add("textures", texturesJson);
+
+        // Upload model
+        generator.modelCollector.accept(modelId, () -> modelJson);
+    }
+
+    private static String buildVariantKey(String layerCond, String stateID, boolean hasStateProperty) {
+        if (layerCond.isEmpty()) {
+            // No layer condition
+            if (stateID != null && hasStateProperty) {
+                return "state=" + stateID;
+            }
+            return "";
+        } else {
+            // Has layer condition
+            if (stateID != null && hasStateProperty) {
+                return layerCond + ",state=" + stateID;
+            }
+            return layerCond;
+        }
+    }
+
+    private static void addVariantToKey(JsonObject variants, String key, JsonObject variant) {
+        if (variants.has(key)) {
+
+            JsonElement existing = variants.get(key);
+            if (existing.isJsonArray()) {
+                existing.getAsJsonArray().add(variant);
+            } else {
+
+                JsonArray array = new JsonArray();
+                array.add(existing);
+                array.add(variant);
+                variants.add(key, array);
             }
         } else {
-            // No states defined, check for root-level textures or randomTextures
-            List<String> textures = new ArrayList<>();
 
-            // Check regular textures first
-            if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
-                textures.addAll(definition.getTextures());
-            }
-
-            // Check randomTextures at root level (like seagrass)
-            if (textures.isEmpty() && definition.hasRandomTextures()) {
-                for (var randomVariant : definition.getRandomTextures()) {
-                    if (randomVariant.getTextures() != null && !randomVariant.getTextures().isEmpty()) {
-                        textures.addAll(randomVariant.getTextures());
-                    }
-                }
-            }
-
-            if (!textures.isEmpty()) {
-                if (layerSensitive) {
-                    // Layer-sensitive without states (like seagrass)
-                    registerCropBlockLayerSensitiveSimple(generator, block, definition, tinted, textures);
-                } else {
-                    registerCropBlockSimple(generator, block, tinted, textures);
-                }
-            } else {
-                WesterosBlocks.LOGGER.warn("Crop block '{}' has no states, textures, or random textures defined",
-                        definition.getBlockName());
-            }
+            variants.add(key, variant);
         }
     }
 
-    /**
-     * Registers a layer-sensitive crop block without states (like seagrass).
-     * Generates models for layers 1-8, each with random texture variants.
-     */
-    private static void registerCropBlockLayerSensitiveSimple(BlockStateModelGenerator generator, Block block,
-                                                              BlockDefinition definition, boolean tinted, List<String> textures) {
-        // Layers: 8 (full), 1-7 (partial)
-        int[] layers = {8, 1, 2, 3, 4, 5, 6, 7};
-
-        List<Identifier> allModelIds = new ArrayList<>();
-        BlockStateVariantMap.SingleProperty<Integer> layerMap = BlockStateVariantMap.create(Properties.LAYERS);
-
-        for (int layer : layers) {
-            String layerSuffix = (layer == 8) ? "" : "_layer" + layer;
-            String parentSuffix = (layer == 8) ? "" : "_layer" + layer;
-            Model cropModel = createCropStageModel(tinted, parentSuffix);
-
-            List<Identifier> layerModelIds = new ArrayList<>();
-
-            for (int i = 0; i < textures.size(); i++) {
-                TextureMap textureMap = createCropTextureMap(textures.get(i));
-                Identifier modelId = uploadModel(cropModel, block, "base" + layerSuffix + "_v" + (i + 1),
-                                                textureMap, generator.modelCollector);
-                layerModelIds.add(modelId);
-                if (allModelIds.isEmpty()) allModelIds.add(modelId);  // Keep first for item model
-            }
-
-            // Create variants for this layer
-            List<BlockStateVariant> variants = layerModelIds.stream()
-                    .map(BaseBlockExporter::createVariant)
-                    .collect(Collectors.toList());
-
-            // Register this layer's variants
-            layerMap.register(layer, variants);
-        }
-
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(layerMap));
-        registerParentedItemModel(generator, block, allModelIds.get(0));
-    }
-
-    /**
-     * Registers a layer-sensitive crop block with states.
-     * Generates models for each state × layer combination.
-     * For example: "layers=1,state=age0", "layers=2,state=age0", etc.
-     */
-    private static void registerCropBlockLayerSensitiveWithStates(BlockStateModelGenerator generator, Block block,
-                                                                   BlockDefinition definition, boolean tinted) {
-        // Layers: 8 (full), 1-7 (partial)
-        int[] layers = {8, 1, 2, 3, 4, 5, 6, 7};
-
-        // Get the STATE property from the block
-        ModProperties.StateProperty blockStateProperty = null;
+    private static boolean hasStateProperty(Block block) {
         for (var property : block.getStateManager().getProperties()) {
-            if (property instanceof ModProperties.StateProperty stateProperty && "state".equals(property.getName())) {
-                blockStateProperty = stateProperty;
-                break;
+            if (property instanceof ModProperties.StateProperty && "state".equals(property.getName())) {
+                return true;
             }
         }
-
-        if (blockStateProperty == null) {
-            throw new IllegalStateException("Block " + block + " does not have a STATE property defined");
-        }
-
-        List<Identifier> allModelIds = new ArrayList<>();
-
-        // Build variant map with both LAYERS and STATE properties
-        BlockStateVariantMap.DoubleProperty<Integer, String> layerStateMap =
-            BlockStateVariantMap.create(Properties.LAYERS, blockStateProperty);
-
-        for (int layer : layers) {
-            String layerSuffix = (layer == 8) ? "" : "_layer" + layer;
-            String parentSuffix = (layer == 8) ? "" : "_layer" + layer;
-            Model cropModel = createCropStageModel(tinted, parentSuffix);
-
-            // Loop through each state
-            for (var stateDefinition : definition.getStates()) {
-                String stateID = stateDefinition.getStateID();
-                List<String> textures = new ArrayList<>();
-
-                // Extract textures from this state
-                if ((stateDefinition.getTextures() == null || stateDefinition.getTextures().isEmpty())
-                        && stateDefinition.hasRandomTextures()) {
-                    for (var randomVariant : stateDefinition.getRandomTextures()) {
-                        if (randomVariant.getTextures() != null && !randomVariant.getTextures().isEmpty()) {
-                            textures.addAll(randomVariant.getTextures());
-                        }
-                    }
-                } else if (stateDefinition.getTextures() != null && !stateDefinition.getTextures().isEmpty()) {
-                    textures.addAll(stateDefinition.getTextures());
-                }
-
-                if (textures.isEmpty()) {
-                    WesterosBlocks.LOGGER.warn("Layer-sensitive crop block '{}' state '{}' has no textures",
-                            definition.getBlockName(), stateID);
-                    continue;
-                }
-
-                List<Identifier> stateModelIds = new ArrayList<>();
-
-                for (int i = 0; i < textures.size(); i++) {
-                    TextureMap textureMap = createCropTextureMap(textures.get(i));
-                    String modelName = stateID + layerSuffix + "_v" + (i + 1);
-                    Identifier modelId = uploadModel(cropModel, block, modelName, textureMap, generator.modelCollector);
-                    stateModelIds.add(modelId);
-                    if (allModelIds.isEmpty()) allModelIds.add(modelId);
-                }
-
-                // Create variants for this layer + state combination
-                List<BlockStateVariant> variants = stateModelIds.stream()
-                        .map(BaseBlockExporter::createVariant)
-                        .collect(Collectors.toList());
-
-                // Register this layer + state combination
-                layerStateMap.register(layer, stateID, variants);
-            }
-        }
-
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(layerStateMap));
-        registerParentedItemModel(generator, block, allModelIds.get(0));
+        return false;
     }
 
-    public static class StateTexture {
-        public final String stateID;
-        public final List<String> randomTextures;
-
-        public StateTexture(String stateID, List<String> randomTextures) {
-            this.stateID = stateID;
-            this.randomTextures = randomTextures;
-        }
+    private static Identifier createCustomModelId(Block block, String variant) {
+        String blockName = getBlockName(block);
+        return WesterosBlocks.id("block/custom/" + blockName + "/" + variant);
     }
 
-    private static Model createCropStageModel(boolean tinted, String layerSuffix) {
-        String parent = (tinted ? "westerosblocks:block/tinted/crop" : "westerosblocks:block/untinted/crop") + layerSuffix;
-        return new Model(java.util.Optional.of(Identifier.of(parent)), java.util.Optional.empty(), TextureKey.CROP);
+    private static Identifier createGeneratedModelId(Block block, String variant) {
+        String blockName = getBlockName(block);
+        return WesterosBlocks.id("block/" + blockName + "/" + variant);
+    }
+
+    private static Identifier createItemModelId(Block block, String variant) {
+        String blockName = getBlockName(block);
+        return WesterosBlocks.id("block/" + blockName + "/" + variant);
+    }
+
+    private static String getModelName(String baseName, int setIdx) {
+        return baseName + "_v" + (setIdx + 1);
     }
 }
