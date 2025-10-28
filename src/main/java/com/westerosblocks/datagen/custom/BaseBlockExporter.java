@@ -298,7 +298,161 @@ public abstract class BaseBlockExporter {
         }
     }
 
+    /**
+     * Helper class mimicking old 1.18.2 StateObject.addVariant() pattern.
+     * Collects variants with simple string conditions, then builds appropriate BlockStateVariantMap.
+     *
+     * This is shared across all exporters that need to build blockstates with multiple properties.
+     */
+    protected static class BlockStateBuilder {
+        private final Block block;
+        private final com.westerosblocks.utils.ModProperties.StateProperty stateProperty;
 
+        // Maps condition string (e.g., "symmetrical=true,state=state0") to list of variants
+        private final java.util.Map<String, List<BlockStateVariant>> variants = new java.util.HashMap<>();
+
+        public BlockStateBuilder(Block block, com.westerosblocks.utils.ModProperties.StateProperty stateProperty) {
+            this.block = block;
+            this.stateProperty = stateProperty;
+        }
+
+        /**
+         * Adds a variant with condition string and optional stateID.
+         * Mimics: so.addVariant("symmetrical=true", variant, stateIDs)
+         *
+         * @param cond Base condition string (e.g., "symmetrical=true" or "")
+         * @param variant The BlockStateVariant to add
+         * @param stateID Optional state ID (null if no states)
+         */
+        public void addVariant(String cond, BlockStateVariant variant, String stateID) {
+            String key;
+            if (stateID == null) {
+                // No state property, just use condition
+                key = cond;
+            } else {
+                // Combine condition with state: "cond,state=stateID"
+                key = cond + (cond.isEmpty() ? "" : ",") + "state=" + stateID;
+            }
+
+            variants.computeIfAbsent(key, k -> new ArrayList<>()).add(variant);
+        }
+
+        /**
+         * Builds and registers the blockstate with the generator.
+         * Analyzes collected variants and creates appropriate BlockStateVariantMap.
+         */
+        public void register(BlockStateModelGenerator generator) {
+            if (variants.isEmpty()) {
+                return;
+            }
+
+            // Analyze what properties we have by looking at the keys
+            boolean hasSymmetrical = variants.keySet().stream().anyMatch(k -> k.contains("symmetrical="));
+            boolean hasStates = variants.keySet().stream().anyMatch(k -> k.contains("state="));
+
+            if (hasSymmetrical && hasStates) {
+                // Case 1: Both SYMMETRICAL and STATE properties
+                registerDoubleProperty(generator);
+            } else if (hasStates) {
+                // Case 2: STATE property only
+                registerStateProperty(generator);
+            } else if (hasSymmetrical) {
+                // Case 3: SYMMETRICAL property only
+                registerSymmetricalProperty(generator);
+            } else {
+                // Case 4: No properties (simple variants)
+                registerSimple(generator);
+            }
+        }
+
+        private void registerDoubleProperty(BlockStateModelGenerator generator) {
+            BlockStateVariantMap.DoubleProperty<Boolean, String> variantMap =
+                BlockStateVariantMap.create(com.westerosblocks.block.custom.WCSolidBlock.SYMMETRICAL, stateProperty);
+
+            for (java.util.Map.Entry<String, List<BlockStateVariant>> entry : variants.entrySet()) {
+                String key = entry.getKey();
+                List<BlockStateVariant> variantList = entry.getValue();
+
+                // Parse "symmetrical=true,state=state0"
+                boolean symmetrical = key.contains("symmetrical=true");
+                String stateID = extractStateID(key);
+
+                if (variantList.size() == 1) {
+                    variantMap.register(symmetrical, stateID, variantList.get(0));
+                } else {
+                    variantMap.register(symmetrical, stateID, variantList);
+                }
+            }
+
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variantMap));
+        }
+
+        private void registerStateProperty(BlockStateModelGenerator generator) {
+            BlockStateVariantMap.SingleProperty<String> variantMap =
+                BlockStateVariantMap.create(stateProperty);
+
+            for (java.util.Map.Entry<String, List<BlockStateVariant>> entry : variants.entrySet()) {
+                String key = entry.getKey();
+                List<BlockStateVariant> variantList = entry.getValue();
+                String stateID = extractStateID(key);
+
+                if (variantList.size() == 1) {
+                    variantMap.register(stateID, variantList.get(0));
+                } else {
+                    variantMap.register(stateID, variantList);
+                }
+            }
+
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variantMap));
+        }
+
+        private void registerSymmetricalProperty(BlockStateModelGenerator generator) {
+            // Collect by symmetrical value
+            List<BlockStateVariant> symTrue = new ArrayList<>();
+            List<BlockStateVariant> symFalse = new ArrayList<>();
+
+            for (java.util.Map.Entry<String, List<BlockStateVariant>> entry : variants.entrySet()) {
+                boolean isSymmetrical = entry.getKey().contains("symmetrical=true");
+                if (isSymmetrical) {
+                    symTrue.addAll(entry.getValue());
+                } else {
+                    symFalse.addAll(entry.getValue());
+                }
+            }
+
+            BlockStateVariantMap variantMap = BlockStateVariantMap.create(com.westerosblocks.block.custom.WCSolidBlock.SYMMETRICAL)
+                .register(true, symTrue)
+                .register(false, symFalse);
+
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variantMap));
+        }
+
+        private void registerSimple(BlockStateModelGenerator generator) {
+            List<BlockStateVariant> allVariants = new ArrayList<>();
+            for (List<BlockStateVariant> variantList : variants.values()) {
+                allVariants.addAll(variantList);
+            }
+
+            generator.blockStateCollector.accept(
+                VariantsBlockStateSupplier.create(block, allVariants.toArray(new BlockStateVariant[0])));
+        }
+
+        /**
+         * Extracts state ID from key like "symmetrical=true,state=state0" -> "state0"
+         */
+        private String extractStateID(String key) {
+            int stateIndex = key.indexOf("state=");
+            if (stateIndex >= 0) {
+                String stateValue = key.substring(stateIndex + 6); // Skip "state="
+                int commaIndex = stateValue.indexOf(',');
+                if (commaIndex >= 0) {
+                    stateValue = stateValue.substring(0, commaIndex);
+                }
+                return stateValue;
+            }
+            return null;
+        }
+    }
 
     protected static void registerSimpleItemModel(BlockStateModelGenerator generator, Block block, Identifier textureId) {
         TextureMap itemTextureMap = TextureMap.layer0(textureId);
