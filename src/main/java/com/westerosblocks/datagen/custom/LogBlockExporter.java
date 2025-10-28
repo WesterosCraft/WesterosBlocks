@@ -14,22 +14,9 @@ import net.minecraft.data.client.VariantsBlockStateSupplier;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction.Axis;
 
-/**
- * Exporter for log/pillar blocks following block-models.md patterns.
- * Generates models with axis rotation and separate side/end textures.
- */
 public class LogBlockExporter extends BaseBlockExporter {
 
-        /**
-         * Registers a log block with side and end textures.
-         * Follows block-models.md pillar block pattern.
-         *
-         * @param generator The BlockStateModelGenerator to register models with
-         * @param block The log block to generate models for
-         * @param sideTexture Texture path for the log's sides (bark)
-         * @param endTexture Texture path for the log's ends (rings)
-         * @param uvLocked Whether to lock UV coordinates (currently unused, for future implementation)
-         */
+
         public static void registerLogBlock(BlockStateModelGenerator generator, Block block,
                         String sideTexture, String endTexture, boolean uvLocked) {
                 if (sideTexture.isEmpty() || endTexture.isEmpty()) {

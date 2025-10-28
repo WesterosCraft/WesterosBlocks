@@ -11,7 +11,7 @@ public class WCCropBlock extends WCPlantBlock {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(BlockDefinition definition) {
-            AbstractBlock.Settings settings = definition.makeSettings();
+            AbstractBlock.Settings settings = definition.makeSettings().noCollision().breakInstantly().nonOpaque();
             ModProperties.StateProperty stateProperty = definition.buildStateProperty();
 
             boolean layerSensitive = definition.isLayerSensitive();

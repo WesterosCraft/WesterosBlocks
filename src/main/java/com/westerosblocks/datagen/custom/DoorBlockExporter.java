@@ -12,27 +12,8 @@ import net.minecraft.util.math.Direction;
 
 import java.util.List;
 
-/**
- * Exporter for door blocks following block-models.md patterns.
- * Generates models for two-block tall doors with hinge positions and open/closed states.
- *
- * @see ModModels#DOOR_BOTTOM_LEFT
- * @see ModModels#DOOR_BOTTOM_RIGHT
- * @see ModModels#DOOR_TOP_LEFT
- * @see ModModels#DOOR_TOP_RIGHT
- */
 public class DoorBlockExporter extends BaseBlockExporter {
 
-    /**
-     * Registers a door block with top and bottom textures.
-     * Follows block-models.md section 3.5: Doors and Trapdoors.
-     *
-     * <p>Generates all 32 variants for a functional door block.
-     *
-     * @param generator The BlockStateModelGenerator to register models with
-     * @param block The door block to generate models for
-     * @param texturePaths Texture paths {@code [top, bottom]} for the door
-     */
     public static void registerDoorBlock(BlockStateModelGenerator generator, Block block, String... texturePaths) {
         validateTexturePaths(texturePaths, 2);
 
@@ -51,23 +32,19 @@ public class DoorBlockExporter extends BaseBlockExporter {
 
         // Create and register blockstate with all variants
         BlockStateVariantMap variants = createDoorVariants(
-            bottomLeftModelId, bottomRightModelId, bottomLeftOpenModelId, bottomRightOpenModelId,
-            topLeftModelId, topRightModelId, topLeftOpenModelId, topRightOpenModelId);
-        
+                bottomLeftModelId, bottomRightModelId, bottomLeftOpenModelId, bottomRightOpenModelId,
+                topLeftModelId, topRightModelId, topLeftOpenModelId, topRightOpenModelId);
+
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
         registerSimpleItemModel(generator, block, createBlockIdentifier(bottomTexture));
     }
 
-    /**
-     * Creates all door variant mappings.
-     * Extracted method to reduce complexity and follow block-models.md patterns.
-     */
     private static BlockStateVariantMap createDoorVariants(
-            Identifier bottomLeftModelId, Identifier bottomRightModelId, 
+            Identifier bottomLeftModelId, Identifier bottomRightModelId,
             Identifier bottomLeftOpenModelId, Identifier bottomRightOpenModelId,
-            Identifier topLeftModelId, Identifier topRightModelId, 
+            Identifier topLeftModelId, Identifier topRightModelId,
             Identifier topLeftOpenModelId, Identifier topRightOpenModelId) {
-        
+
         return BlockStateVariantMap.create(DoorBlock.FACING, DoorBlock.HALF, DoorBlock.HINGE, DoorBlock.OPEN)
                 // EAST facing
                 .register(Direction.EAST, DoubleBlockHalf.LOWER, DoorHinge.LEFT, false, createVariant(bottomLeftModelId))
@@ -107,30 +84,16 @@ public class DoorBlockExporter extends BaseBlockExporter {
                 .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true, createVariant(topRightOpenModelId, 180));
     }
 
-    /**
-     * Registers a door block from a BlockDefinition.
-     * Automatically extracts textures from the definition and registers the door block.
-     *
-     * @param generator  The BlockStateModelGenerator to register models with
-     * @param block      The door block to generate models for
-     * @param definition The block definition containing texture information
-     */
     public static void registerCustomDoorBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        // Validate texture data using centralized method
         definition.validateTextureData();
         definition.validateTextureCount(2);
 
-        // Extract textures using centralized method
         String[] textures = definition.getTexturesAsArray();
 
-        // Use the existing registerDoorBlock method
         registerDoorBlock(generator, block, textures[0], textures[1]);
     }
 
-    /**
-     * Creates a door model with top and bottom textures.
-     * Follows block-models.md texture mapping patterns.
-     */
+
     private static Identifier createDoorModel(BlockStateModelGenerator generator, Block block, String topTexture,
                                               String bottomTexture, String variant, Model model) {
         TextureMap textureMap = new TextureMap()

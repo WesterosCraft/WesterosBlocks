@@ -27,9 +27,6 @@ public class ModBlocks {
         registerBlocksFromDefinitions();
     }
 
-    /**
-     * Automatically registers blocks from JSON block definitions
-     */
     private static void registerBlocksFromDefinitions() {
         try {
             BlockDefinitionRegistry registry = BlockDefinitionRegistry.getInstance();
@@ -267,110 +264,10 @@ public class ModBlocks {
         }
     }
 
-    // Table Blocks
-//    public static final Block OAK_TABLE = registerBlock(
-//            "oak_table",
-//            BlockBuilder.table()
-//                    .strength(2.0f)
-//                    .requiresTool()
-//                    .sounds(BlockSoundGroup.WOOD)
-//                    .build());
-//
-//
-//    // Branch Blocks
-//    public static final Block OAK_BRANCH = registerBlock(
-//            "oak_branch",
-//            BlockBuilder.branch()
-//                    .strength(2.0f)
-//                    .requiresTool()
-//                    .sounds(BlockSoundGroup.WOOD)
-//                    .build());
-//
-//    public static final Block BIRCH_BRANCH = registerBlock(
-//            "birch_branch",
-//            BlockBuilder.branch()
-//                    .strength(2.0f)
-//                    .requiresTool()
-//                    .sounds(BlockSoundGroup.WOOD)
-//                    .build());
-//
-//    // Chair Blocks
-//    public static final Block OAK_CHAIR = registerBlock(
-//            "oak_chair",
-//            BlockBuilder.chair()
-//                    .strength(2.0f)
-//                    .requiresTool()
-//                    .sounds(BlockSoundGroup.WOOD)
-//                    .woodType("oak")
-//                    .build());
-//
-//    // Arrow Slit Blocks
-//    public static final Block ARBOR_BRICK_ARROW_SLIT = registerBlock(
-//            "arbor_brick_arrow_slit_test",
-//            BlockBuilder.arrowSlit()
-//                    .strength(2.0f)
-//                    .requiresTool()
-//                    .sounds(BlockSoundGroup.STONE)
-//                    .build());
-
-
-    // Particle Emitter Blocks
-//    public static final Block CASCADE_PARTICLE_EMITTER = registerBlock(
-//            "cascade_particle_emitter",
-//            BlockBuilder.particleEmitter()
-//                    .strength(-1.0f)
-//                    .resistance(3600000.0f)
-//                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
-//                    .noCollision()
-//                    .nonOpaque()
-//                    .particle("cascade")
-//                    .build());
-//
-//    public static final Block COSY_SMOKE_PARTICLE_EMITTER = registerBlock(
-//            "cosy_smoke_particle_emitter",
-//            BlockBuilder.particleEmitter()
-//                    .strength(-1.0f)
-//                    .resistance(3600000.0f)
-//                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
-//                    .noCollision()
-//                    .nonOpaque()
-//                    .particle("cosy_smoke")
-//                    .build());
-//
-//    public static final Block SIGNAL_SMOKE_PARTICLE_EMITTER = registerBlock(
-//            "signal_smoke_particle_emitter",
-//            BlockBuilder.particleEmitter()
-//                    .strength(-1.0f)
-//                    .resistance(3600000.0f)
-//                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
-//                    .noCollision()
-//                    .nonOpaque()
-//                    .particle("signal_smoke")
-//                    .build());
-
-    // Flowerbed Blocks
-//    public static final Block CLOVER = registerBlock(
-//            "clover",
-//            BlockBuilder.flowerbed()
-//                    .strength(0.0f)
-//                    .sounds(BlockSoundGroup.GRASS)
-//                    .nonOpaque()
-//                    .noCollision()
-//                    .build());
-
-    /**
-     * Initialize all blocks
-     */
     public static void registerModBlocks() {
         WesterosBlocks.LOGGER.info("Registering Mod Blocks for " + WesterosBlocks.MOD_ID);
 
         registerAutoBlocksToCreativeTabs();
-
-        // Register manually-defined blocks to creative tabs
-//        WesterosCreativeModeTabs.addToTab("westeros_test_tab", ARBOR_BRICK_ARROW_SLIT);
-//        WesterosCreativeModeTabs.addToTab("westeros_furniture_tab", OAK_TABLE, OAK_CHAIR);
-//        WesterosCreativeModeTabs.addToTab("westeros_decor_tab", OAK_BRANCH, BIRCH_BRANCH, CLOVER);
-
     }
 
     public static Block registerBlock(String name, Block block) {
