@@ -135,10 +135,6 @@ public class FanBlockExporter extends BaseBlockExporter {
         }
     }
 
-    /**
-     * Registers a fan block with random textures from definition.
-     * This method mimics the original registerCustomFanBlock().randomTexture().randomTexture().build() pattern
-     */
     private static void registerFanBlockWithRandomTextures(BlockStateModelGenerator generator, Block standingFan, BlockDefinition definition) {
         // Extract all random texture paths from the definition
         String[] randomTexturePaths = definition.getRandomTextures().stream()
