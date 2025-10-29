@@ -30,7 +30,8 @@
     ],
     "creativeTab": "westeros_wood_planks_tab",
     "types": {
-        "fence_gate": "locked:true"
+        "fence_gate": "locked:true",
+        "solid": "toggleOnUse:true"
     },
     "baseLabel": "Blue Wood",
     "altCustomTags": {

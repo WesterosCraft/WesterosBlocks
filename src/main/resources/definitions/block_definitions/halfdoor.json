@@ -96,18 +96,6 @@
     "strength": 2
   },
   {
-    "blockName": "birch_simple_window_shutters",
-    "blockType": "halfdoor",
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Simple Birch Window Shutters",
-    "allowUnsupported": true,
-    "textures": [
-      "wood/birch/shutters_alt"
-    ],
-    "strength": 2
-  },
-  {
     "blockName": "spruce_window_shutters",
     "blockType": "halfdoor",
     "soundGroup": "wood",
@@ -120,14 +108,26 @@
     "strength": 2
   },
   {
-    "blockName": "white_wood_window_shutters",
+    "blockName": "birch_window_shutters_2",
     "blockType": "halfdoor",
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
-    "label": "White Wood Window Shutters",
+    "label": "Simple Birch Window Shutters",
     "allowUnsupported": true,
     "textures": [
-      "wood/white/shutters"
+      "wood/birch/shutters_alt"
+    ],
+    "strength": 2
+  },
+  {
+    "blockName": "white_wood_window_shutters_2",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Fancy White Wood Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "wood/white/shutters_alt"
     ],
     "strength": 2
   }

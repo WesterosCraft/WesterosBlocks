@@ -10,9 +10,15 @@
 
 ## Wood update
 - Updated all birch wood and bark textures
-- Adds new 'Simple Birch Door' block
+- Adds new Door blocks - 
 - Adds new 'Simple Birch Window Shutters' block
 - Adds new 'Birch Stripped Log' blockset
+
+## New Doors + Halfdoors
+- Simple Birch Door
+- Simple Birch Window Shutters
+- Fancy White Door
+- Fancy White Wood Window Shutters
 
 ## Ice Update
 - Added new ice blocks - 'Light Ice', 'Medium Light Ice', 'Blue Ice', 'Light Blue Ice', 'Dark Blue Ice', 'Dark Blue Medium Ice'

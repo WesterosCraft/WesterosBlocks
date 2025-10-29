@@ -13,20 +13,6 @@
     "allowUnsupported": true
   },
   {
-    "blockName": "simple_birch_door",
-    "blockType": "door",
-    "hardness": 2,
-    "resistance": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_wood_planks_tab",
-    "label": "Simple Birch Door",
-    "textures": [
-      "wood/birch/door_simple_top",
-      "wood/birch/door_simple_bottom"
-    ],
-    "allowUnsupported": true
-  },
-  {
     "blockName": "eyrie_weirwood_door",
     "blockType": "door",
     "soundGroup": "wood",
@@ -258,5 +244,33 @@
     ],
     "type": "allow-unsupported",
     "strength": 2
+  },
+  {
+    "blockName": "birch_door_2",
+    "blockType": "door",
+    "hardness": 2,
+    "resistance": 2,
+    "soundGroup": "wood",
+    "creativeTab": "westeros_wood_planks_tab",
+    "label": "Simple Birch Door",
+    "textures": [
+      "wood/birch/door_simple_top",
+      "wood/birch/door_simple_bottom"
+    ],
+    "allowUnsupported": true
+  },
+  {
+    "blockName": "white_door_2",
+    "blockType": "door",
+    "hardness": 2,
+    "resistance": 2,
+    "soundGroup": "wood",
+    "creativeTab": "westeros_wood_planks_tab",
+    "label": "Fancy White Door",
+    "textures": [
+      "wood/white/door_alt_top",
+      "wood/white/door_alt_bottom"
+    ],
+    "allowUnsupported": true
   }
 ]
