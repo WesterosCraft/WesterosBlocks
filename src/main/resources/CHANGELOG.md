@@ -9,10 +9,9 @@
 - Added Shield API mod for shields
 
 ## Wood update
-- Updated all birch wood and bark textures
-- Adds new Door blocks - 
-- Adds new 'Simple Birch Window Shutters' block
+- Updated all wood and bark textures
 - Adds new 'Birch Stripped Log' blockset
+- Adds ctm for planks and vertical planks for yellow, red, purple, blue, white, orange 
 
 ## New Doors + Halfdoors
 - Simple Birch Door
