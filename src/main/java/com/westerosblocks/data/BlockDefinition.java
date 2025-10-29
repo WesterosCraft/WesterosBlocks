@@ -221,7 +221,7 @@ public class BlockDefinition {
     private String wallSize;
 
     /** Walls have connect state cycling feature */
-    @SerializedName("connectState")
+    @SerializedName("connectstate")
     private Boolean connectState;
 
     /** Walls don't connect to adjacent blocks when true */
@@ -647,7 +647,7 @@ public class BlockDefinition {
 
         // Step 1: If overlay textures present, ensure nonOpaque
         if (hasOverlayTextures()) {
-            nonOpaque = true;
+            this.nonOpaque = true;
         }
 
         // Step 2: Normalize base-level textures to randomTextures
@@ -900,7 +900,15 @@ public class BlockDefinition {
     }
 
     public boolean toggleOnUse() {
-        return Boolean.TRUE.equals(toggleOnUse);
+        // Check dedicated field first
+        if (Boolean.TRUE.equals(toggleOnUse)) {
+            return true;
+        }
+        // Check legacy type field for backward compatibility
+        if (type != null && type.contains("toggleOnUse")) {
+            return true;
+        }
+        return false;
     }
 
     public String getLabel() {
@@ -1121,7 +1129,15 @@ public class BlockDefinition {
     }
 
     public boolean isSymmetrical() {
-        return Boolean.TRUE.equals(symmetrical);
+        // Check dedicated field first
+        if (Boolean.TRUE.equals(symmetrical)) {
+            return true;
+        }
+        // Check legacy type field for backward compatibility
+        if (type != null && type.contains("symmetrical:true")) {
+            return true;
+        }
+        return false;
     }
 
     public String getWallSize() {
@@ -1129,7 +1145,15 @@ public class BlockDefinition {
     }
 
     public boolean isConnectState() {
-        return Boolean.TRUE.equals(connectState);
+        // Check dedicated field first
+        if (Boolean.TRUE.equals(connectState)) {
+            return true;
+        }
+        // Check legacy type field for backward compatibility
+        if (type != null && type.contains("connectstate")) {
+            return true;
+        }
+        return false;
     }
 
     public boolean isUnconnect() {

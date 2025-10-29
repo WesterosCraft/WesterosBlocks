@@ -1,5 +1,6 @@
 package com.westerosblocks.datagen.custom;
 
+import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
@@ -189,15 +190,15 @@ public class SolidBlockExporter extends BaseBlockExporter {
         TextureMap textureMap = ModTextureMap.customAllSides(textures);
 
         if (overlayTextures != null && !overlayTextures.isEmpty()) {
-            textureMap.put(TextureKey.of("down_ov"), createBlockIdentifier(getOverlayTextureByIndex(overlayTextures, 0)));
-            textureMap.put(TextureKey.of("up_ov"), createBlockIdentifier(getOverlayTextureByIndex(overlayTextures, 1)));
-            textureMap.put(TextureKey.of("north_ov"), createBlockIdentifier(getOverlayTextureByIndex(overlayTextures, 2)));
-            textureMap.put(TextureKey.of("south_ov"), createBlockIdentifier(getOverlayTextureByIndex(overlayTextures, 3)));
+            textureMap.put(ModTextureKey.DOWN_OVERLAY, createBlockIdentifier(getOverlayTextureByIndex(overlayTextures, 0)));
+            textureMap.put(ModTextureKey.UP_OVERLAY, createBlockIdentifier(getOverlayTextureByIndex(overlayTextures, 1)));
+            textureMap.put(ModTextureKey.NORTH_OVERLAY, createBlockIdentifier(getOverlayTextureByIndex(overlayTextures, 2)));
+            textureMap.put(ModTextureKey.SOUTH_OVERLAY, createBlockIdentifier(getOverlayTextureByIndex(overlayTextures, 3)));
 
             int westIdx = isSymmetrical ? 4 : 6;
             int eastIdx = isSymmetrical ? 5 : 7;
-            textureMap.put(TextureKey.of("west_ov"), createBlockIdentifier(getOverlayTextureByIndex(overlayTextures, westIdx)));
-            textureMap.put(TextureKey.of("east_ov"), createBlockIdentifier(getOverlayTextureByIndex(overlayTextures, eastIdx)));
+            textureMap.put(ModTextureKey.WEST_OVERLAY, createBlockIdentifier(getOverlayTextureByIndex(overlayTextures, westIdx)));
+            textureMap.put(ModTextureKey.EAST_OVERLAY, createBlockIdentifier(getOverlayTextureByIndex(overlayTextures, eastIdx)));
         }
 
         String modelPath = isTinted ? "block/tinted/cube_overlay" : "block/untinted/cube_overlay";
@@ -205,8 +206,8 @@ public class SolidBlockExporter extends BaseBlockExporter {
             Optional.of(WesterosBlocks.id(modelPath)),
             Optional.empty(),
             TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST,
-            TextureKey.of("down_ov"), TextureKey.of("up_ov"), TextureKey.of("north_ov"),
-            TextureKey.of("south_ov"), TextureKey.of("east_ov"), TextureKey.of("west_ov")
+                ModTextureKey.DOWN_OVERLAY, ModTextureKey.UP_OVERLAY, ModTextureKey.NORTH_OVERLAY,
+                ModTextureKey.SOUTH_OVERLAY, ModTextureKey.EAST_OVERLAY, ModTextureKey.WEST_OVERLAY
         );
         overlayModel.upload(modelId, textureMap, generator.modelCollector);
     }

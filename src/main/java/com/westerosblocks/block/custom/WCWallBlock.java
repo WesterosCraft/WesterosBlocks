@@ -21,7 +21,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
 import com.westerosblocks.data.BlockDefinition;
-import java.util.Map;
+import com.westerosblocks.utils.ModProperties;
 
 public class WCWallBlock extends WallBlock implements Waterloggable {
     protected BlockDefinition def;
@@ -31,10 +31,22 @@ public class WCWallBlock extends WallBlock implements Waterloggable {
         public Block buildBlockClass(BlockDefinition definition) {
             AbstractBlock.Settings settings = definition.makeSettings();
 
+            ModProperties.StateProperty stateProperty = definition.buildStateProperty();
+            if (stateProperty != null) {
+                tempSTATE = stateProperty;
+            }
+
             boolean unconnect = definition.isUnconnect();
             boolean connectState = definition.isConnectState();
             String size = definition.getWallSize();
             boolean toggleOnUse = definition.toggleOnUse();
+
+            if (unconnect) {
+                tempUNCONNECT = UNCONNECT;
+            }
+            if (connectState) {
+                tempCONNECT_STATE = CONNECT_STATE;
+            }
 
             return new WCWallBlock(settings, definition, unconnect, connectState, size, toggleOnUse);
         }
@@ -42,11 +54,16 @@ public class WCWallBlock extends WallBlock implements Waterloggable {
 
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
     public static final IntProperty CONNECT_STATE = IntProperty.of("connectstate", 0, 3);
+    protected static BooleanProperty tempUNCONNECT;
+    protected static IntProperty tempCONNECT_STATE;
+    protected static ModProperties.StateProperty tempSTATE;
 
     private final boolean hasUnconnect;
     private final boolean hasConnectState;
     private final boolean toggleOnUse;
     private final WallSize wallSize;
+
+    protected ModProperties.StateProperty STATE;
 
     public enum WallSize {
         NORMAL(16.0f),
@@ -103,11 +120,19 @@ public class WCWallBlock extends WallBlock implements Waterloggable {
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         super.appendProperties(builder);
-        if (hasUnconnect) {
-            builder.add(UNCONNECT);
+        
+        if (tempUNCONNECT != null) {
+            builder.add(tempUNCONNECT);
+            tempUNCONNECT = null;
         }
-        if (hasConnectState) {
-            builder.add(CONNECT_STATE);
+        if (tempCONNECT_STATE != null) {
+            builder.add(tempCONNECT_STATE);
+            tempCONNECT_STATE = null;
+        }
+        if (tempSTATE != null) {
+            STATE = tempSTATE;
+            builder.add(tempSTATE);
+            tempSTATE = null;
         }
     }
 
@@ -137,6 +162,13 @@ public class WCWallBlock extends WallBlock implements Waterloggable {
 
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+        if (toggleOnUse && STATE != null && player.isCreative() && player.getMainHandStack().isEmpty()) {
+            state = state.cycle(STATE);
+            world.setBlockState(pos, state, Block.NOTIFY_ALL);
+            world.syncWorldEvent(player, 1006, pos, 0);
+            return ActionResult.success(world.isClient);
+        }
+
         if (toggleOnUse && hasConnectState && player.isCreative() && player.getMainHandStack().isEmpty()) {
             int currentState = state.get(CONNECT_STATE);
             int nextState = (currentState + 1) % 4;
@@ -144,6 +176,7 @@ public class WCWallBlock extends WallBlock implements Waterloggable {
             world.syncWorldEvent(player, 1006, pos, 0);
             return ActionResult.success(world.isClient);
         }
+
         return ActionResult.PASS;
     }
 
