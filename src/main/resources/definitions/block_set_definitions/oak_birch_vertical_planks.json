@@ -1,5 +1,5 @@
 {
-    "baseBlockName": "birch_stripped_log",
+    "baseBlockName": "oak_birch_vertical_planks",
     "variants": [
         "solid",
         "stairs",
@@ -12,7 +12,7 @@
         "half_door"
     ],
     "altNames": {
-        "half_door": "birch_stripped_log_half_door"
+        "half_door": "oak_birch_half_door"
     },
     "hardness": 5,
     "soundGroup": "wood",
@@ -25,8 +25,8 @@
         }
     ],
     "creativeTab": "westeros_wood_planks_tab",
-    "baseLabel": "Birch Stripped Log",
+    "baseLabel": "Oak Birch Vertical Planks",
     "textures": {
-        "all": "bark/birch/stripped"
+        "all": "wood/oak_birch/vertical"
     }
 }

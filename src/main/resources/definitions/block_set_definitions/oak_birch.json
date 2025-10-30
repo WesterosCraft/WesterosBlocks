@@ -1,0 +1,53 @@
+{
+    "baseBlockName": "oak_birch",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "fence_gate",
+        "cover",
+        "hollow_hopper"
+    ],
+    "altNames": {
+        "solid": "oak_birch_planks",
+        "fence_gate": "locked_oak_birch_fence_gate",
+        "hollow_hopper": "hollow_oak_birch_hopper"
+    },
+    "hardness": 5,
+    "soundGroup": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "types": {
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "Oak Birch Wood",
+    "textures": {
+        "all": "wood/oak_birch/all"
+    },
+    "states": [
+        {
+            "stateID": "base",
+            "textures": {
+                "all": "wood/oak_birch/all"
+            }
+        },
+        {
+            "stateID": "cut",
+            "textures": {
+                "all": "wood/oak_birch/all_lines"
+            }
+        }
+    ]
+}
