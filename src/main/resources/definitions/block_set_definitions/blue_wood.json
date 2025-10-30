@@ -50,7 +50,7 @@
             "stateID": "cut",
             "excludeVariants": "window_frame,window_frame_mullion",
             "textures": {
-                "all": "wood/blue/all_cut"
+                "all": "wood/blue/all_lines"
             }
         }
     ]

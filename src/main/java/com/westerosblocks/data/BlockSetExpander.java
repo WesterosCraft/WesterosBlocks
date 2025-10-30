@@ -194,7 +194,68 @@ public class BlockSetExpander {
             }
         }
 
-        // 8. Handle special geometry for certain variants
+        // 8. Handle states if present
+        if (blockSet.hasStates()) {
+            List<Map<String, Object>> statesList = new ArrayList<>();
+
+            for (BlockSetDefinition.StateRecord stateRec : blockSet.getStates()) {
+                // Check if this variant should be excluded from this state
+                if (isVariantExcluded(variant, stateRec.getExcludeVariants())) {
+                    continue;
+                }
+
+                // Create state definition map
+                Map<String, Object> stateMap = new HashMap<>();
+                stateMap.put("stateID", stateRec.getStateID());
+
+                // Process state textures (expand "all" and "sides", pick for variant)
+                List<String> stateTextures = pickVariantTextures(
+                    stateRec.getTextures(),
+                    stateRec.getAltTextures(),
+                    variant
+                );
+                if (stateTextures != null && !stateTextures.isEmpty()) {
+                    stateMap.put("textures", stateTextures);
+                }
+
+                // Process state overlay textures if present
+                if (stateRec.getOverlayTextures() != null && !stateRec.getOverlayTextures().isEmpty()) {
+                    Map<String, String> overlayMap = preprocessTextureMap(stateRec.getOverlayTextures());
+                    List<String> overlayTextures = getTexturesForVariant(overlayMap, variant);
+                    if (overlayTextures != null && !overlayTextures.isEmpty()) {
+                        stateMap.put("overlayTextures", overlayTextures);
+                    }
+                }
+
+                // Copy other state properties
+                if (stateRec.getLightValue() != null) {
+                    stateMap.put("luminance", stateRec.getLightValue().intValue());
+                }
+                if (stateRec.getColorMult() != null) {
+                    stateMap.put("colorMult", stateRec.getColorMult());
+                }
+
+                statesList.add(stateMap);
+            }
+
+            // Only add states if 2+ remain after exclusions
+            if (statesList.size() >= 2) {
+                defMap.put("states", statesList);
+
+                // Add toggleOnUse type automatically when states are present
+                String existingType = (String) defMap.get("type");
+                if (existingType != null && !existingType.isEmpty()) {
+                    // Check if toggleOnUse is not already present
+                    if (!existingType.contains("toggleOnUse")) {
+                        defMap.put("type", existingType + ";toggleOnUse:true");
+                    }
+                } else {
+                    defMap.put("type", "toggleOnUse:true");
+                }
+            }
+        }
+
+        // 9. Handle special geometry for certain variants
         addSpecialGeometry(defMap, variant);
 
         // Convert map to JSON and then to BlockDefinition
@@ -361,6 +422,25 @@ public class BlockSetExpander {
             case "cover" -> "allow-unsupported";
             default -> null;
         };
+    }
+
+    /**
+     * Checks if a variant should be excluded based on the excludeVariants string.
+     * @param variant The variant to check (e.g., "solid", "window_frame")
+     * @param excludeVariants Comma-separated list of variants to exclude (e.g., "window_frame,window_frame_mullion")
+     * @return true if the variant is in the exclusion list, false otherwise
+     */
+    private static boolean isVariantExcluded(String variant, String excludeVariants) {
+        if (excludeVariants == null || excludeVariants.isEmpty()) {
+            return false;
+        }
+        String[] excluded = excludeVariants.split(",");
+        for (String ex : excluded) {
+            if (ex.trim().equals(variant)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**

@@ -716,11 +716,12 @@ public class BlockDefinition {
                     state.stateID = "state" + i;
                 }
 
-                // Inherit undefined properties from base definition
-                inheritPropertiesToState(state);
-
-                // Initialize the state (normalizes textures, computes bounding boxes)
+                // Initialize the state FIRST (normalizes textures, computes bounding boxes)
+                // This must happen before inheritance so state-specific textures aren't overwritten
                 state.doInit();
+
+                // Then inherit undefined properties from base definition
+                inheritPropertiesToState(state);
 
                 // If state has overlay textures, mark base as nonOpaque
                 if (state.hasOverlayTextures()) {
