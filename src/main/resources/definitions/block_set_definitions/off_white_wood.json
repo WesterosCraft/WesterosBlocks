@@ -1,0 +1,55 @@
+{
+    "baseBlockName": "off_white_wood",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "fence_gate"
+    ],
+    "altNames": {
+        "fence_gate": "locked_off_white_wood_fence_gate"
+    },
+    "hardness": 5,
+    "soundGroup": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "types": {
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "Off White Wood",
+    "altCustomTags": {
+        "solid": [
+            "wood-ctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "plank-ctm"
+        ]
+    },
+    "textures": {
+        "all": "wood/off_white/all"
+    },
+    "altTextures": {
+        "solid": [
+            "wood/off_white/all",
+            "wood/off_white/all",
+            "wood/off_white/woodctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "wood/off_white/all",
+            "wood/off_white/all",
+            "wood/off_white/plankctm"
+        ]
+    }
+}

@@ -11,7 +11,9 @@
 ## Wood update
 - Updated all wood and bark textures
 - Adds new 'Birch Stripped Log' blockset
-- Adds ctm for planks and vertical planks for yellow, red, purple, blue, white, orange 
+- Adds new 'Off White Wood' blockset
+- Adds new 'Off White Wood Vertical Planks' blockset
+- Adds ctm for planks and vertical planks for yellow, red, purple, blue, white, orange
 
 ## New Doors + Halfdoors
 - Simple Birch Door
