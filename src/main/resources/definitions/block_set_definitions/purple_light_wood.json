@@ -1,5 +1,5 @@
 {
-    "baseBlockName": "light_grey_wood",
+    "baseBlockName": "light_purple_wood",
     "variants": [
         "solid",
         "stairs",
@@ -12,7 +12,7 @@
         "fence_gate"
     ],
     "altNames": {
-        "fence_gate": "locked_light_grey_wood_fence_gate"
+        "fence_gate": "locked_light_purple_wood_fence_gate"
     },
     "hardness": 5,
     "soundGroup": "wood",
@@ -28,21 +28,21 @@
     "types": {
         "fence_gate": "locked:true"
     },
-    "baseLabel": "Light Grey Wood",
+    "baseLabel": "Light Purple Wood",
     "textures": {
-        "all": "wood/grey_light/all"
+        "all": "wood/purple_light/all"
     },
     "states": [
         {
             "stateID": "base",
             "textures": {
-                "all": "wood/grey_light/all"
+                "all": "wood/purple_light/all"
             }
         },
         {
             "stateID": "cut",
             "textures": {
-                "all": "wood/grey_light/all_lines"
+                "all": "wood/purple_light/all_lines"
             }
         }
     ]

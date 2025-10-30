@@ -9,7 +9,7 @@
 - Added Shield API mod for shields
 
 ## Wood update
-- Updated all wood and bark textures
+- Updated all wood and bark textures, including CTM for yellow, red, purple, blue, white, orange, green, black, birch, grey wood
 - Adds new 'Birch Stripped Log' blockset
 - Adds new 'Off White Wood' blockset
 - Adds new 'Off White Wood Vertical Planks' blockset
@@ -21,9 +21,12 @@
 - Adds new 'Off White Wood Vertical Planks' blockset
 - Adds new 'Dark Grey Wood' blockset
 - Adds new 'Dark Grey Wood Vertical Planks' blockset
-- Adds ctm for planks and vertical planks for yellow, red, purple, blue, white, orange, green, black, birch, grey
+- Adds new 'Light Grey Wood' blockset
+- Adds new 'Light Grey Wood Vertical Planks' blockset
+- Adds new 'Light Purple Wood' blockset
+- Adds new 'Light Purple Wood Vertical Planks' blockset
 
-## New Doors + Halfdoors
+## New Doors alts + Halfdoors alts
 - Simple Birch Door
 - Simple Birch Window Shutters
 - Fancy White Door
