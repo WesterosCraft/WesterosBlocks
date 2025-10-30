@@ -19,6 +19,8 @@
 - Adds new 'Grey Blue Wood Vertical Planks' blockset
 - Adds new 'Off White Wood' blockset
 - Adds new 'Off White Wood Vertical Planks' blockset
+- Adds new 'Dark Grey Wood' blockset
+- Adds new 'Dark Grey Wood Vertical Planks' blockset
 - Adds ctm for planks and vertical planks for yellow, red, purple, blue, white, orange, green, black, birch, grey
 
 ## New Doors + Halfdoors
@@ -26,6 +28,8 @@
 - Simple Birch Window Shutters
 - Fancy White Door
 - Fancy White Wood Window Shutters
+- Fancy Grey Door
+- Fancy Grey Wood Window Shutters
 
 ## Ice Update
 - Added new ice blocks - 'Light Ice', 'Medium Light Ice', 'Blue Ice', 'Light Blue Ice', 'Dark Blue Ice', 'Dark Blue Medium Ice'

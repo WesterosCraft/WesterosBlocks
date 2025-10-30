@@ -1,5 +1,5 @@
 {
-    "baseBlockName": "blue_wood",
+    "baseBlockName": "dark_grey_wood",
     "variants": [
         "solid",
         "stairs",
@@ -12,7 +12,7 @@
         "fence_gate"
     ],
     "altNames": {
-        "fence_gate": "locked_blue_wood_fence_gate"
+        "fence_gate": "locked_dark_grey_wood_fence_gate"
     },
     "hardness": 5,
     "soundGroup": "wood",
@@ -28,21 +28,23 @@
     "types": {
         "fence_gate": "locked:true"
     },
-    "baseLabel": "Blue Wood",
+    "baseLabel": "Dark Grey Wood",
     "textures": {
-        "all": "wood/blue/all"
+        "all": "wood/grey_dark/all",
+        "window-frame": "timber/grey_dark/window_frame",
+        "window-frame-mullion": "timber/grey_dark/window_frame_mullion"
     },
     "states": [
         {
             "stateID": "base",
             "textures": {
-                "all": "wood/blue/all"
+                "all": "wood/grey_dark/all"
             }
         },
         {
             "stateID": "cut",
             "textures": {
-                "all": "wood/blue/all_lines"
+                "all": "wood/grey_dark/all_lines"
             }
         }
     ]
