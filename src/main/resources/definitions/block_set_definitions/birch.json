@@ -37,30 +37,26 @@
         "fence_gate": "locked:true"
     },
     "baseLabel": "Birch Wood",
-    "altCustomTags": {
-        "solid": [
-            "wood-ctm"
-        ],
-        "stairs,slab,wall,hopper,tip": [
-            "plank-ctm"
-        ]
-    },
     "textures": {
         "all": "wood/birch/all",
         "cover": "wood/birch/cover",
         "window-frame": "timber/birch/window_frame",
         "window-frame-mullion": "timber/birch/window_frame_mullion"
     },
-    "altTextures": {
-        "solid": [
-            "wood/birch/all",
-            "wood/birch/all",
-            "wood/birch/woodctm"
-        ],
-        "stairs,slab,wall,hopper,tip": [
-            "wood/birch/all",
-            "wood/birch/all",
-            "wood/birch/plankctm"
-        ]
-    }
+    "states": [
+        {
+            "stateID": "base",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/birch/all"
+            }
+        },
+        {
+            "stateID": "cut",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/birch/all_lines"
+            }
+        }
+    ]
 }

@@ -1,0 +1,51 @@
+{
+    "baseBlockName": "birch_yellow_wood",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "fence_gate"
+    ],
+    "altNames": {
+        "fence_gate": "locked_birch_yellow_wood_fence_gate"
+    },
+    "hardness": 5,
+    "soundGroup": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "types": {
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "Birch Yellow Wood",
+    "textures": {
+        "all": "wood/birch_yellow/all"
+    },
+    "states": [
+        {
+            "stateID": "base",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/birch_yellow/all"
+            }
+        },
+        {
+            "stateID": "cut",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/birch_yellow/all_lines"
+            }
+        }
+    ]
+}

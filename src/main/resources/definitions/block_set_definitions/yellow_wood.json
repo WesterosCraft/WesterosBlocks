@@ -33,29 +33,25 @@
         "fence_gate": "locked:true"
     },
     "baseLabel": "Yellow Wood",
-    "altCustomTags": {
-        "solid": [
-            "wood-ctm"
-        ],
-        "stairs,slab,wall,hopper,tip": [
-            "plank-ctm"
-        ]
-    },
     "textures": {
         "all": "wood/yellow/all",
         "window-frame": "timber/yellow/window_frame",
         "window-frame-mullion": "timber/yellow/window_frame_mullion"
     },
-    "altTextures": {
-        "solid": [
-            "wood/yellow/all",
-            "wood/yellow/all",
-            "wood/yellow/woodctm"
-        ],
-        "stairs,slab,wall,hopper,tip": [
-            "wood/yellow/all",
-            "wood/yellow/all",
-            "wood/yellow/plankctm"
-        ]
-    }
+    "states": [
+        {
+            "stateID": "base",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/yellow/all"
+            }
+        },
+        {
+            "stateID": "cut",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/yellow/all_lines"
+            }
+        }
+    ]
 }

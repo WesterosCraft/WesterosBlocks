@@ -9,7 +9,9 @@
         "hopper",
         "tip",
         "carpet",
-        "fence_gate"
+        "fence_gate",
+        "window_frame",
+        "window_frame_mullion"
     ],
     "altNames": {
         "fence_gate": "locked_off_white_wood_fence_gate"
@@ -29,27 +31,23 @@
         "fence_gate": "locked:true"
     },
     "baseLabel": "Off White Wood",
-    "altCustomTags": {
-        "solid": [
-            "wood-ctm"
-        ],
-        "stairs,slab,wall,hopper,tip": [
-            "plank-ctm"
-        ]
-    },
     "textures": {
         "all": "wood/off_white/all"
     },
-    "altTextures": {
-        "solid": [
-            "wood/off_white/all",
-            "wood/off_white/all",
-            "wood/off_white/woodctm"
-        ],
-        "stairs,slab,wall,hopper,tip": [
-            "wood/off_white/all",
-            "wood/off_white/all",
-            "wood/off_white/plankctm"
-        ]
-    }
+    "states": [
+        {
+            "stateID": "base",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/off_white/all"
+            }
+        },
+        {
+            "stateID": "cut",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/off_white/all_lines"
+            }
+        }
+    ]
 }

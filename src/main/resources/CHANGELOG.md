@@ -13,7 +13,13 @@
 - Adds new 'Birch Stripped Log' blockset
 - Adds new 'Off White Wood' blockset
 - Adds new 'Off White Wood Vertical Planks' blockset
-- Adds ctm for planks and vertical planks for yellow, red, purple, blue, white, orange
+- Adds new 'Birch Yellow Wood' blockset
+- Adds new 'Birch Yellow Wood Vertical Planks' blockset
+- Adds new 'Grey Blue Wood' blockset
+- Adds new 'Grey Blue Wood Vertical Planks' blockset
+- Adds new 'Off White Wood' blockset
+- Adds new 'Off White Wood Vertical Planks' blockset
+- Adds ctm for planks and vertical planks for yellow, red, purple, blue, white, orange, green, black, birch, grey
 
 ## New Doors + Halfdoors
 - Simple Birch Door

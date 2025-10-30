@@ -13,7 +13,6 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
@@ -30,7 +29,7 @@ public class WCSolidBlock extends Block {
     public static final IntProperty CONNECTSTATE = ModProperties.CONNECTSTATE;
 
     protected static ModProperties.StateProperty tempSTATE;
-    public static ModProperties.StateProperty STATE;
+    protected ModProperties.StateProperty STATE;
 
     public boolean symmetrical;
     protected static BooleanProperty tempSYMMETRICAL;
@@ -116,8 +115,7 @@ public class WCSolidBlock extends Block {
 
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        Hand hand = player.getActiveHand();
-        if (this.toggleOnUse && (STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
+        if (this.toggleOnUse && (STATE != null) && player.isCreative() && player.getMainHandStack().isEmpty()) {
             if (state.contains(STATE)) {
                 state = state.cycle(STATE);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);

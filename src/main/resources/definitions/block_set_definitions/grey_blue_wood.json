@@ -1,0 +1,57 @@
+{
+    "baseBlockName": "grey_blue_wood",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "fence_gate",
+        "window_frame",
+        "window_frame_mullion"
+    ],
+    "altNames": {
+        "fence_gate": "locked_grey_blue_wood_fence_gate",
+        "window_frame": "grey_blue_timber_window_frame",
+        "window_frame_mullion": "grey_blue_timber_window_frame_mullion"
+    },
+    "hardness": 5,
+    "soundGroup": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "types": {
+        "fence_gate": "locked:true"
+    },
+    "baseLabel": "Grey Blue Wood",
+    "textures": {
+        "all": "wood/grey_blue/all",
+        "window-frame": "timber/grey_blue/window_frame",
+        "window-frame-mullion": "timber/grey_blue/window_frame_mullion"
+    },
+    "states": [
+        {
+            "stateID": "base",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/grey_blue/all"
+            }
+        },
+        {
+            "stateID": "cut",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/grey_blue/all_lines"
+            }
+        }
+    ]
+}

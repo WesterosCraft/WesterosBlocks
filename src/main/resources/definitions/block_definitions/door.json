@@ -272,5 +272,19 @@
       "wood/white/door_alt_bottom"
     ],
     "allowUnsupported": true
+  },
+  {
+    "blockName": "grey_door_2",
+    "blockType": "door",
+    "hardness": 2,
+    "resistance": 2,
+    "soundGroup": "wood",
+    "creativeTab": "westeros_wood_planks_tab",
+    "label": "Fancy Grey Door",
+    "textures": [
+      "wood/grey/door_alt_top",
+      "wood/grey/door_alt_bottom"
+    ],
+    "allowUnsupported": true
   }
 ]

@@ -130,5 +130,17 @@
       "wood/white/shutters_alt"
     ],
     "strength": 2
+  },
+  {
+    "blockName": "grey_wood_window_shutters_2",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Fancy Grey Wood Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "wood/grey/shutters_alt"
+    ],
+    "strength": 2
   }
 ]

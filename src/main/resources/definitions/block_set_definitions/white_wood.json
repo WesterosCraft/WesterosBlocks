@@ -33,29 +33,25 @@
         "fence_gate": "locked:true"
     },
     "baseLabel": "White Wood",
-    "altCustomTags": {
-        "solid": [
-            "wood-ctm"
-        ],
-        "stairs,slab,wall,hopper,tip": [
-            "plank-ctm"
-        ]
-    },
     "textures": {
         "all": "wood/white/all",
         "window-frame": "timber/white/window_frame",
         "window-frame-mullion": "timber/white/window_frame_mullion"
     },
-    "altTextures": {
-        "solid": [
-            "wood/white/all",
-            "wood/white/all",
-            "wood/white/woodctm"
-        ],
-        "stairs,slab,wall,hopper,tip": [
-            "wood/white/all",
-            "wood/white/all",
-            "wood/white/plankctm"
-        ]
-    }
+    "states": [
+        {
+            "stateID": "base",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/white/all"
+            }
+        },
+        {
+            "stateID": "cut",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/white/all_lines"
+            }
+        }
+    ]
 }

@@ -242,16 +242,8 @@ public class BlockSetExpander {
             if (statesList.size() >= 2) {
                 defMap.put("states", statesList);
 
-                // Add toggleOnUse type automatically when states are present
-                String existingType = (String) defMap.get("type");
-                if (existingType != null && !existingType.isEmpty()) {
-                    // Check if toggleOnUse is not already present
-                    if (!existingType.contains("toggleOnUse")) {
-                        defMap.put("type", existingType + ";toggleOnUse:true");
-                    }
-                } else {
-                    defMap.put("type", "toggleOnUse:true");
-                }
+                // Add toggleOnUse property automatically when states are present
+                defMap.put("toggleOnUse", true);
             }
         }
 
