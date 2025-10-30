@@ -325,24 +325,6 @@
     ]
   },
   {
-    "blockName": "stripped_oak_log",
-    "blockType": "log",
-    "soundGroup": "wood",
-    "harvestLevel": [
-      {
-        "tool": "axe",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_logs_tab",
-    "label": "Stripped Oak Log",
-    "textures": [
-      "wood/oak/stripped_oak_log",
-      "wood/oak/stripped_oak_log_top"
-    ],
-    "strength": 2
-  },
-  {
     "blockName": "weirwood_face_0",
     "blockType": "log",
     "soundGroup": "wood",
@@ -692,5 +674,23 @@
       "bark/weirwood/scars",
       "bark/weirwood/side"
     ]
+  },
+  {
+    "blockName": "stripped_oak_log",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Stripped Oak Log",
+    "textures": [
+      "wood/oak/stripped_oak",
+      "wood/oak/stripped_oak"
+    ],
+    "strength": 2
   }
 ]

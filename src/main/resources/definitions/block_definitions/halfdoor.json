@@ -142,5 +142,17 @@
       "wood/grey/shutters_alt"
     ],
     "strength": 2
+  },
+  {
+    "blockName": "oak_window_shutters_2",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Fancy Oak Wood Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "wood/oak/shutters_alt"
+    ],
+    "strength": 2
   }
 ]

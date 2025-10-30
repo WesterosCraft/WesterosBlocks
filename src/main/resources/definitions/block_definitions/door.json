@@ -286,5 +286,19 @@
       "wood/grey/door_alt_bottom"
     ],
     "allowUnsupported": true
+  },
+  {
+    "blockName": "oak_door_2",
+    "blockType": "door",
+    "hardness": 2,
+    "resistance": 2,
+    "soundGroup": "wood",
+    "creativeTab": "westeros_wood_planks_tab",
+    "label": "Fancy Oak Door",
+    "textures": [
+      "wood/oak/door_alt_top",
+      "wood/oak/door_alt_bottom"
+    ],
+    "allowUnsupported": true
   }
 ]

@@ -1,0 +1,32 @@
+{
+    "baseBlockName": "oak_jungle_vertical_planks",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "half_door"
+    ],
+    "altNames": {
+        "half_door": "oak_jungle_half_door"
+    },
+    "hardness": 5,
+    "soundGroup": "wood",
+    "material": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "baseLabel": "Oak Jungle Vertical Planks",
+    "textures": {
+        "all": "wood/oak_jungle/vertical"
+    }
+}

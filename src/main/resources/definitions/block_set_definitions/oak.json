@@ -37,30 +37,24 @@
         "fence_gate": "locked:true"
     },
     "baseLabel": "Oak Wood",
-    "altCustomTags": {
-        "solid": [
-            "wood-ctm"
-        ],
-        "stairs,slab,wall,hopper,tip": [
-            "plank-ctm"
-        ]
-    },
     "textures": {
         "all": "wood/oak/all",
         "cover": "wood/oak/cover",
         "window-frame": "timber/oak/window_frame",
         "window-frame-mullion": "timber/oak/window_frame_mullion"
     },
-    "altTextures": {
-        "solid": [
-            "wood/oak/all",
-            "wood/oak/all",
-            "wood/oak/woodctm"
-        ],
-        "stairs,slab,wall,hopper,tip": [
-            "wood/oak/all",
-            "wood/oak/all",
-            "wood/oak/plankctm"
-        ]
-    }
+    "states": [
+        {
+            "stateID": "base",
+            "textures": {
+                "all": "wood/oak/all"
+            }
+        },
+        {
+            "stateID": "cut",
+            "textures": {
+                "all": "wood/oak/all_lines"
+            }
+        }
+    ]
 }
