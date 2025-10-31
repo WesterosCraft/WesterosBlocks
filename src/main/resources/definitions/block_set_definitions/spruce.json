@@ -37,30 +37,26 @@
         "fence_gate": "locked:true"
     },
     "baseLabel": "Spruce Wood",
-    "altCustomTags": {
-        "solid": [
-            "wood-ctm"
-        ],
-        "stairs,slab,wall,hopper,tip": [
-            "plank-ctm"
-        ]
-    },
     "textures": {
         "all": "wood/spruce/all",
         "cover": "wood/spruce/cover",
         "window-frame": "timber/spruce/window_frame",
         "window-frame-mullion": "timber/spruce/window_frame_mullion"
     },
-    "altTextures": {
-        "solid": [
-            "wood/spruce/all",
-            "wood/spruce/all",
-            "wood/spruce/woodctm"
-        ],
-        "stairs,slab,wall,hopper,tip": [
-            "wood/spruce/all",
-            "wood/spruce/all",
-            "wood/spruce/plankctm"
-        ]
-    }
+    "states": [
+        {
+            "stateID": "base",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/spruce/all"
+            }
+        },
+        {
+            "stateID": "cut",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/spruce/all_lines"
+            }
+        }
+    ]
 }

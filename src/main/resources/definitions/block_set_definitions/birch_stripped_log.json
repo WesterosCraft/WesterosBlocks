@@ -25,8 +25,22 @@
         }
     ],
     "creativeTab": "westeros_wood_planks_tab",
-    "baseLabel": "Birch Stripped Log",
+    "baseLabel": "Stripped Birch Log",
     "textures": {
         "all": "bark/birch/stripped"
-    }
+    },
+    "states": [
+        {
+            "stateID": "base",
+            "textures": {
+                "all": "bark/birch/stripped"
+            }
+        },
+        {
+            "stateID": "cut",
+            "textures": {
+                "all": "bark/birch/stripped_lines"
+            }
+        }
+    ]
 }

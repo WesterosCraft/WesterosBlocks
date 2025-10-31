@@ -300,5 +300,19 @@
       "wood/oak/door_alt_bottom"
     ],
     "allowUnsupported": true
+  },
+  {
+    "blockName": "spruce_door_2",
+    "blockType": "door",
+    "hardness": 2,
+    "resistance": 2,
+    "soundGroup": "wood",
+    "creativeTab": "westeros_wood_planks_tab",
+    "label": "Fancy Spruce Door",
+    "textures": [
+      "wood/spruce/door_alt_top",
+      "wood/spruce/door_alt_bottom"
+    ],
+    "allowUnsupported": true
   }
 ]
