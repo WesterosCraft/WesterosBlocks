@@ -178,5 +178,17 @@
       "wood/northern/shutters_alt"
     ],
     "strength": 2
+  },
+  {
+    "blockName": "jungle_window_shutters_2",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Jungle Fancy Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "wood/jungle/shutters_alt"
+    ],
+    "strength": 2
   }
 ]

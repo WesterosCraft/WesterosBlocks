@@ -328,5 +328,18 @@
       "wood/northern/door_alt_bottom"
     ],
     "allowUnsupported": true
+  },
+  {
+    "blockName": "jungle_door_2",
+    "blockType": "door",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_wood_planks_tab",
+    "label": "Jungle Fancy Door",
+    "allowUnsupported": true,
+    "textures": [
+      "wood/jungle/door_alt_top",
+      "wood/jungle/door_alt_bottom"
+    ],
+    "strength": 2
   }
 ]
