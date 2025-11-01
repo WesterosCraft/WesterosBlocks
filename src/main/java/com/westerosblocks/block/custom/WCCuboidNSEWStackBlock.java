@@ -38,11 +38,8 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggab
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(BlockDefinition definition) {
-            AbstractBlock.Settings settings = definition.makeSettings();
+            AbstractBlock.Settings settings = definition.makeSettings().nonOpaque();
             boolean doAllowHalfBreak = definition.isAllowHalfBreak();
-
-            // This block type does NOT support STATE properties or toggleOnUse
-            // It only supports WATERLOGGED, FACING, and HALF
 
             return new WCCuboidNSEWStackBlock(settings, definition, doAllowHalfBreak);
         }

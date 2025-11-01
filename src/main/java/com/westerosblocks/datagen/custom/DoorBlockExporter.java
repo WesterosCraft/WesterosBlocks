@@ -85,9 +85,6 @@ public class DoorBlockExporter extends BaseBlockExporter {
     }
 
     public static void registerCustomDoorBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        definition.validateTextureData();
-        definition.validateTextureCount(2);
-
         String[] textures = definition.getTexturesAsArray();
 
         registerDoorBlock(generator, block, textures[0], textures[1]);

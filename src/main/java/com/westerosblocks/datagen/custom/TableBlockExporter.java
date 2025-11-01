@@ -38,8 +38,6 @@ public class TableBlockExporter extends BaseBlockExporter {
          * Registers a custom table block with connection-based state generation
          */
         public static void registerCustomTableBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-                // Extract texture from definition
-                definition.validateTextureData();
                 List<String> textureList = definition.getTextures();
                 String texturePath = (textureList != null && !textureList.isEmpty()) ? textureList.get(0) : "missingno";
 

@@ -391,21 +391,10 @@ public class BlockDefinition {
             return Boolean.TRUE.equals(isCustomModel);
         }
 
-        /**
-         * Gets the number of random texture sets for this state.
-         * Matches old 1.18.2 API: rec.getRandomTextureSetCount()
-         */
         public int getRandomTextureSetCount() {
             return (randomTextures != null) ? randomTextures.size() : 0;
         }
 
-        /**
-         * Gets a specific random texture set by index.
-         * Matches old 1.18.2 API: rec.getRandomTextureSet(setidx)
-         *
-         * @param index The index of the texture set to retrieve
-         * @return The texture set at the given index, or null if out of bounds
-         */
         public RandomTextureVariant getRandomTextureSet(int index) {
             if (randomTextures == null || index < 0 || index >= randomTextures.size()) {
                 return null;
@@ -413,13 +402,6 @@ public class BlockDefinition {
             return randomTextures.get(index);
         }
 
-        /**
-         * Gets a texture by index from the primary texture list.
-         * Matches old 1.18.2 API: rec.getTextureByIndex(idx)
-         *
-         * @param index The index of the texture to retrieve
-         * @return The texture at the given index, or null if not available
-         */
         public String getTextureByIndex(int index) {
             // Try to get from first random texture set
             if (randomTextures != null && !randomTextures.isEmpty()) {
@@ -436,10 +418,7 @@ public class BlockDefinition {
             return null;
         }
 
-        /**
-         * Initializes this state variant after JSON loading.
-         * Normalizes textures and computes derived properties.
-         */
+
         public void doInit() {
             // Normalize textures to randomTextures format
             if ((randomTextures == null || randomTextures.isEmpty()) &&
@@ -537,18 +516,6 @@ public class BlockDefinition {
             return boundingBox != null;
         }
 
-        /**
-         * Initializes this stack element after JSON loading.
-         * Normalizes textures and prepares for future cuboid processing.
-         */
-        public void doInit() {
-            // Normalize textures to randomTextures format if needed
-            // Note: StackElement currently only has textures field, but we prepare
-            // for potential future randomTextures support similar to StateVariant
-
-            // Future: If cuboids added to StackElement, compute bounding box here
-            // For now, StackElement initialization is minimal but provides extension point
-        }
     }
 
     public static class BoundingBox {
@@ -620,11 +587,6 @@ public class BlockDefinition {
         public boolean[] getNoTint() { return noTint; }
         public String getShape() { return shape; }
     }
-
-    // ========================================
-    // Initialization and State Management
-    // ========================================
-
     /** Tracks whether doInit() has been called */
     private transient boolean didInit = false;
 
@@ -645,21 +607,12 @@ public class BlockDefinition {
     public void doInit() {
         if (didInit) return;
 
-        // Step 1: If overlay textures present, ensure nonOpaque
         if (hasOverlayTextures()) {
             this.nonOpaque = true;
         }
 
-        // Step 2: Normalize base-level textures to randomTextures
         normalizeBaseTextures();
-
-        // Step 3: Process states (inherit properties, normalize textures)
         processStates();
-
-        // Step 4: Process stack elements if they exist
-        processStackElements();
-
-        // Step 5: Create state property for multi-state blocks
         createStateProperty();
 
         didInit = true;
@@ -762,17 +715,6 @@ public class BlockDefinition {
     }
 
     /**
-     * Processes stack elements for cuboid-nsew-stack blocks.
-     */
-    private void processStackElements() {
-        if (stack != null && !stack.isEmpty()) {
-            for (StackElement se : stack) {
-                se.doInit();
-            }
-        }
-    }
-
-    /**
      * Creates StateProperty for blocks with multiple states.
      */
     private void createStateProperty() {
@@ -811,15 +753,6 @@ public class BlockDefinition {
         public String getDefaultValue() {
             return defaultValue;
         }
-
-        public int getIndex(String value) {
-            int index = values.indexOf(value);
-            return index >= 0 ? index : 0;
-        }
-
-        public Optional<String> getValue(String key) {
-            return Optional.ofNullable(valueMap.get(key));
-        }
     }
 
     /**
@@ -842,13 +775,6 @@ public class BlockDefinition {
         }
 
         return new ModProperties.StateProperty(stateProperty.getValues());
-    }
-
-    /**
-     * Returns whether this block has multiple states.
-     */
-    public boolean hasMultipleStates() {
-        return stateProperty != null;
     }
 
     /**
@@ -1085,10 +1011,6 @@ public class BlockDefinition {
         return Boolean.TRUE.equals(hasRotateRandom);
     }
 
-    public boolean isRotateRandom() {
-        return Boolean.TRUE.equals(rotateRandom);
-    }
-
     public boolean isNoDecay() {
         return Boolean.TRUE.equals(noDecay);
     }
@@ -1113,20 +1035,8 @@ public class BlockDefinition {
         return Boolean.TRUE.equals(alwaysOn);
     }
 
-    public boolean hasClimb() {
-        return Boolean.TRUE.equals(hasClimb);
-    }
-
     public boolean hasDown() {
         return Boolean.TRUE.equals(hasDown);
-    }
-
-    public String getConnectTo() {
-        return connectTo;
-    }
-
-    public boolean hasConnectTo() {
-        return connectTo != null && !connectTo.isEmpty();
     }
 
     public boolean isSymmetrical() {
@@ -1203,19 +1113,6 @@ public class BlockDefinition {
         return woodType != null && !woodType.isEmpty();
     }
 
-    /** State values list for STATE property creation */
-    public List<String> getStateValues() {
-        if (hasStates()) {
-            List<String> stateIds = new ArrayList<>();
-            for (StateVariant state : states) {
-                if (state != null && state.getStateID() != null && !state.getStateID().isEmpty()) {
-                    stateIds.add(state.getStateID());
-                }
-            }
-            return stateIds.isEmpty() ? null : stateIds;
-        }
-        return null;
-    }
 
     /** Whether block has no-climb property (derived from type field) */
     public boolean isNoClimb() {
@@ -1240,27 +1137,6 @@ public class BlockDefinition {
     /** Particle type for particle emitter blocks (e.g., "flame", "cascade", "wildfire") */
     public String getParticle() {
         return particle != null ? particle : "flame";
-    }
-
-    public boolean hasParticle() {
-        return particle != null && !particle.isEmpty();
-    }
-
-    /**
-     * Enum representing the primary texture data source priority.
-     * Used by exporters to determine which texture extraction method to use.
-     */
-    public enum TextureSource {
-        /** Block has state variants with different textures per state */
-        STATES,
-        /** Block has random texture variants for variety */
-        RANDOM_TEXTURES,
-        /** Block uses a standard texture list */
-        TEXTURES,
-        /** Block uses pre-made custom model files */
-        CUSTOM_MODEL,
-        /** No texture data defined */
-        NONE
     }
 
     /**
@@ -1374,87 +1250,6 @@ public class BlockDefinition {
     }
 
     /**
-     * Converts random texture variants to String[][] format.
-     * Used by solid blocks, cuboid blocks, and other blocks that need array format.
-     *
-     * @return 2D array where each row is a texture variant
-     */
-    public String[][] getRandomTextureArrays() {
-        List<TextureVariantSet> variants = getRandomTextureVariantSets();
-        String[][] arrays = new String[variants.size()][];
-        for (int i = 0; i < variants.size(); i++) {
-            List<String> textures = variants.get(i).textures;
-            arrays[i] = textures.toArray(new String[0]);
-        }
-        return arrays;
-    }
-
-    /**
-     * Checks if definition has actual random textures (not just empty structure).
-     * Some definitions may have randomTextures array but with no actual texture data.
-     *
-     * @return true if at least one random texture variant has actual textures
-     */
-    public boolean hasActualRandomTextures() {
-        if (!hasRandomTextures()) {
-            return false;
-        }
-
-        for (RandomTextureVariant rtv : randomTextures) {
-            if (rtv.getTextures() != null && !rtv.getTextures().isEmpty()) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    // ========================================
-    // State Variant Processing
-    // ========================================
-
-    /**
-     * Converts state variants to String[][] format.
-     * Each row contains textures for one state variant.
-     *
-     * @return 2D array where each row is a state's textures
-     */
-    public String[][] getStateTextureArrays() {
-        if (!hasStates()) {
-            return new String[0][];
-        }
-
-        List<StateVariant> stateList = getStates();
-        String[][] arrays = new String[stateList.size()][];
-
-        for (int i = 0; i < stateList.size(); i++) {
-            StateVariant state = stateList.get(i);
-            List<String> stateTextures = state.getTextures();
-            arrays[i] = stateTextures != null ? stateTextures.toArray(new String[0]) : new String[0];
-        }
-
-        return arrays;
-    }
-
-    /**
-     * Extracts random texture variants from a specific StateVariant.
-     * Useful for processing states that have their own random texture variants.
-     *
-     * @param stateVariant The state variant to extract random textures from
-     * @return List of texture variant sets, empty if no random textures defined
-     */
-    public static List<TextureVariantSet> getRandomTextureVariantSetsFromState(StateVariant stateVariant) {
-        if (!stateVariant.hasRandomTextures()) {
-            return new ArrayList<>();
-        }
-
-        List<TextureVariantSet> variants = new ArrayList<>();
-        for (RandomTextureVariant rtv : stateVariant.getRandomTextures()) {
-            variants.add(new TextureVariantSet(rtv.getTextures(), rtv.getWeight()));
-        }
-        return variants;
-    }
-
-    /**
      * Returns textures as a String array for easy processing.
      *
      * @return Array of texture paths, or empty array if no textures defined
@@ -1466,20 +1261,6 @@ public class BlockDefinition {
         return textures.toArray(new String[0]);
     }
 
-
-    /**
-     * Gets the first texture with custom fallback.
-     *
-     * @param fallback The fallback texture to use if no textures defined
-     * @return First texture path, or fallback if no textures defined
-     */
-    public String getFirstTexture(String fallback) {
-        if (textures != null && !textures.isEmpty()) {
-            return textures.getFirst();
-        }
-        return fallback;
-    }
-
     /**
      * Returns the number of textures defined.
      *
@@ -1489,91 +1270,6 @@ public class BlockDefinition {
         return textures != null ? textures.size() : 0;
     }
 
-    /**
-     * Determines the primary texture data source based on priority.
-     * Priority order: STATES > RANDOM_TEXTURES > TEXTURES > CUSTOM_MODEL > NONE
-     *
-     * @return The primary texture source enum
-     */
-    public TextureSource getPrimaryTextureSource() {
-        if (hasStates()) {
-            return TextureSource.STATES;
-        }
-        if (hasActualRandomTextures()) {
-            return TextureSource.RANDOM_TEXTURES;
-        }
-        if (textures != null && !textures.isEmpty()) {
-            return TextureSource.TEXTURES;
-        }
-        if (hasCustomModel()) {
-            return TextureSource.CUSTOM_MODEL;
-        }
-        return TextureSource.NONE;
-    }
-
-    /**
-     * Extracts primary texture data based on priority.
-     * Returns String[] for single textures, String[][] for variants/states.
-     *
-     * @return Texture data as Object (cast to String[] or String[][] based on source)
-     */
-    public Object extractTextures() {
-        TextureSource source = getPrimaryTextureSource();
-        return switch (source) {
-            case STATES -> getStateTextureArrays();
-            case RANDOM_TEXTURES -> getRandomTextureArrays();
-            case TEXTURES -> getTexturesAsArray();
-            case CUSTOM_MODEL, NONE -> new String[0];
-        };
-    }
-
-    /**
-     * Validates that the block definition has at least one texture source.
-     *
-     * @throws IllegalArgumentException if no texture data is defined
-     */
-    public void validateTextureData() {
-        TextureSource source = getPrimaryTextureSource();
-        if (source == TextureSource.NONE && !hasCustomModel()) {
-            throw new IllegalArgumentException(
-                "Block definition '" + blockName + "' must have at least one texture source " +
-                "(textures, randomTextures, states, or isCustomModel)"
-            );
-        }
-    }
-
-    /**
-     * Validates that the texture list has at least the expected count.
-     *
-     * @param expected The minimum number of textures required
-     * @throws IllegalArgumentException if texture count is insufficient
-     */
-    public void validateTextureCount(int expected) {
-        int actual = getTextureCount();
-        if (actual < expected) {
-            throw new IllegalArgumentException(
-                "Block definition '" + blockName + "' requires at least " + expected +
-                " texture(s), but only " + actual + " provided"
-            );
-        }
-    }
-
-
-    /**
-     * Determines if the block should use a tinted model.
-     * Combines multiple tinting indicators for comprehensive detection.
-     *
-     * @return true if block should use tinted rendering
-     */
-    public boolean shouldUseTintedModel() {
-        return isTinted() || hasColorMult() || hasOverlay();
-    }
-
-    // ========================================
-    // Block Settings/Properties Creation
-    // ========================================
-
-    // Static sound group mapping
     private static final Map<String, BlockSoundGroup> SOUND_GROUP_MAP = createSoundGroupMap();
 
     private static Map<String, BlockSoundGroup> createSoundGroupMap() {
@@ -1600,12 +1296,6 @@ public class BlockDefinition {
         return map;
     }
 
-    /**
-     * Gets the BlockSoundGroup for this block definition.
-     * Uses the soundGroup field to look up the appropriate sound group.
-     *
-     * @return The BlockSoundGroup, defaults to STONE if not found
-     */
     public BlockSoundGroup getBlockSoundGroup() {
         if (soundGroup == null || soundGroup.isEmpty()) {
             return BlockSoundGroup.STONE;
@@ -1646,12 +1336,10 @@ public class BlockDefinition {
             settings = AbstractBlock.Settings.create();
         }
 
-        // Apply strength (hardness and resistance)
         if (hasStrength()) {
             // Use strength shorthand if provided (sets both to same value)
             settings = settings.strength(strength, strength);
         } else if (hardness != 0.0f || resistance != 0.0f) {
-            // Apply individual hardness and resistance
             settings = settings.strength(hardness, resistance);
         }
 

@@ -96,10 +96,6 @@ public class TrapDoorBlockExporter extends BaseBlockExporter {
     }
 
     public static void registerCustomTrapDoorBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        // Validate texture data using centralized method
-        definition.validateTextureData();
-        definition.validateTextureCount(1);
-
         // Extract textures using centralized method
         String[] textures = definition.getTexturesAsArray();
 

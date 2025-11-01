@@ -38,13 +38,15 @@
 - oak_jungle
 - oak_orange
 - oak_birch
+- oak_birch_stripped_log
+- oak_stripped_log + beam variant
 - oak_jungle_stripped_log + beam variant
-- oak_birch_stripped_log + beam variant
 - spruce_stripped_log + beam variant
 - northern_stripped_log + beam variant
 - jungle_stripped_log + beam variant
 - birch_stripped_log + beam variant
 - grey_stripped_log + beam variant
+- white_stripped_log + beam variant
 
 ## New doors alts + halfdoors alts
 - Simple Birch Door
@@ -57,6 +59,10 @@
 - Fancy Oak Wood Window Shutters
 - Fancy Spruce Door
 - Fancy Spruce Wood Window Shutters
+- Fancy Jungle Door
+- Fancy Jungle Wood Window Shutters
+- Fancy Northern Door
+- Fancy Northern Wood Window Shutters
 
 ## Ice Update
 - Added new ice blocks - 'Light Ice', 'Medium Light Ice', 'Blue Ice', 'Light Blue Ice', 'Dark Blue Ice', 'Dark Blue Medium Ice'

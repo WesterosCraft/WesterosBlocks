@@ -109,8 +109,6 @@ public class BlockSetDefinition {
     @SerializedName("colorMult")
     private String colorMult;
 
-    // === TEXTURE PROPERTIES ===
-
     /**
      * Texture map for variants.
      * Supports special keys: "all", "sides", "bottom", "top", "west", "east", "south", "north"
@@ -144,8 +142,6 @@ public class BlockSetDefinition {
         public Map<String, String> getTextures() { return textures; }
         public Integer getWeight() { return weight != null ? weight : 1; }
     }
-
-    // === STATE PROPERTIES (for blocks with multiple states) ===
 
     /** State records for blocks with multiple states */
     @SerializedName("states")
