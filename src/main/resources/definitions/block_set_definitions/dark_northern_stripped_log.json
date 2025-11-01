@@ -1,5 +1,5 @@
 {
-    "baseBlockName": "northern_stripped_log",
+    "baseBlockName": "dark_northern_stripped_log",
     "variants": [
         "solid",
         "stairs",
@@ -12,7 +12,7 @@
         "half_door"
     ],
     "altNames": {
-        "half_door": "northern_stripped_log_half_door"
+        "half_door": "dark_northern_stripped_log_half_door"
     },
     "hardness": 5,
     "soundGroup": "wood",
@@ -25,7 +25,7 @@
         }
     ],
     "creativeTab": "westeros_wood_planks_tab",
-    "baseLabel": "Stripped Northern Log",
+    "baseLabel": "Stripped Dark Northern Log",
     "textures": {
         "all": "bark/northern/stripped"
     },

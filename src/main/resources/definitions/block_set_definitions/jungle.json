@@ -37,30 +37,26 @@
         "fence_gate": "locked:true"
     },
     "baseLabel": "Jungle Wood",
-    "altCustomTags": {
-        "solid": [
-            "wood-ctm"
-        ],
-        "stairs,slab,wall,hopper,tip": [
-            "plank-ctm"
-        ]
-    },
     "textures": {
         "all": "wood/jungle/all",
         "cover": "wood/jungle/cover",
         "window-frame": "timber/jungle/window_frame",
         "window-frame-mullion": "timber/jungle/window_frame_mullion"
     },
-    "altTextures": {
-        "solid": [
-            "wood/jungle/all",
-            "wood/jungle/all",
-            "wood/jungle/woodctm"
-        ],
-        "stairs,slab,wall,hopper,tip": [
-            "wood/jungle/all",
-            "wood/jungle/all",
-            "wood/jungle/plankctm"
-        ]
-    }
+    "states": [
+        {
+            "stateID": "base",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/jungle/all"
+            }
+        },
+        {
+            "stateID": "cut",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/jungle/all_lines"
+            }
+        }
+    ]
 }

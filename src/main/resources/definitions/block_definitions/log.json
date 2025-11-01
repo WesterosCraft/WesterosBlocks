@@ -674,23 +674,5 @@
       "bark/weirwood/scars",
       "bark/weirwood/side"
     ]
-  },
-  {
-    "blockName": "stripped_oak_log",
-    "blockType": "log",
-    "soundGroup": "wood",
-    "harvestLevel": [
-      {
-        "tool": "axe",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_logs_tab",
-    "label": "Stripped Oak Log",
-    "textures": [
-      "wood/oak/stripped_oak",
-      "wood/oak/stripped_oak"
-    ],
-    "strength": 2
   }
 ]

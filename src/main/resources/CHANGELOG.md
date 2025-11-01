@@ -14,6 +14,7 @@
 - Adds repeat CTM for yellow, red, purple, blue, white, orange, green, black, birch, grey wood, spruce, oak, northern wood planks
 - Adds repeat CTM for wooden vertical planks
 - Adds CTM to bark blocks - spruce, birch, oak, jungle
+- Adds CTM to mossy bark blocks - spruce, birch, oak, jungle
 
 ## New wood blocksets, includes CTM:
 
