@@ -314,5 +314,19 @@
       "wood/spruce/door_alt_bottom"
     ],
     "allowUnsupported": true
+  },
+  {
+    "blockName": "northern_door_2",
+    "blockType": "door",
+    "hardness": 2,
+    "resistance": 2,
+    "soundGroup": "wood",
+    "creativeTab": "westeros_wood_planks_tab",
+    "label": "Fancy Northern Door",
+    "textures": [
+      "wood/northern/door_alt_top",
+      "wood/northern/door_alt_bottom"
+    ],
+    "allowUnsupported": true
   }
 ]

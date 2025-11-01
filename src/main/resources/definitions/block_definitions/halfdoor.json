@@ -166,5 +166,17 @@
       "wood/spruce/shutters_alt"
     ],
     "strength": 2
+  },
+  {
+    "blockName": "northern_window_shutters_2",
+    "blockType": "halfdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Fancy Northern Window Shutters",
+    "allowUnsupported": true,
+    "textures": [
+      "wood/northern/shutters_alt"
+    ],
+    "strength": 2
   }
 ]

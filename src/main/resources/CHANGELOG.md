@@ -8,36 +8,43 @@
 - Added "Particle Emitter" block type with a Cascade, Cosy Smoke, and Signal Smoke particle emitter blocks
 - Added Shield API mod for shields
 
-## Wood update
-- Updated all wood and bark textures, including CTM for yellow, red, purple, blue, white, orange, green, black, birch, grey wood, spruce, oak
-- Adds new 'Birch Stripped Log' blockset
-- Adds new 'Off White Wood' blockset
-- Adds new 'Off White Wood Vertical Planks' blockset
-- Adds new 'Birch Yellow Wood' blockset
-- Adds new 'Birch Yellow Wood Vertical Planks' blockset
-- Adds new 'Grey Blue Wood' blockset
-- Adds new 'Grey Blue Wood Vertical Planks' blockset
-- Adds new 'Off White Wood' blockset
-- Adds new 'Off White Wood Vertical Planks' blockset
-- Adds new 'Dark Grey Wood' blockset
-- Adds new 'Dark Grey Wood Vertical Planks' blockset
-- Adds new 'Blue Grey Wood' blockset
-- Adds new 'Blue Grey Wood Vertical Planks' blockset
-- Adds new 'Light Grey Wood' blockset
-- Adds new 'Light Grey Wood Vertical Planks' blockset
-- Adds new 'Light Purple Wood' blockset
-- Adds new 'Light Purple Wood Vertical Planks' blockset
-- Adds new 'Oak Jungle' blockset
-- Adds new 'Oak Jungle Vertical Planks' blockset
-- Adds new 'Oak Jungle Stripped Log' blockset
-- Adds new 'Oak Orange' blockset
-- Adds new 'Oak Orange Vertical Planks' blockset
-- Adds new 'Oak Birch' blockset
-- Adds new 'Oak Birch Vertical Planks' blockset
-- Adds new 'Oak Birch Stripped Log' blockset
-- Adds new 'Spruce Stripped Log' blockset
+## Updated wood CTM
+- Refreshes wood and bark textures
+- You can now toggle the vertical lines on planks by right clicking with an empty hand
+- Adds repeat CTM for yellow, red, purple, blue, white, orange, green, black, birch, grey wood, spruce, oak, northern wood planks
+- Adds repeat CTM for wooden vertical planks
 
-## New Doors alts + Halfdoors alts
+## New wood blocksets, includes CTM:
+
+- off_white_wood
+- birch_yellow_wood
+- oak_jungle_vertical_planks
+- oak_orange_vertical_planks
+- oak_birch_vertical_planks
+- off_white_wood_vertical_planks
+- birch_yellow_wood_vertical_planks
+- grey_blue_wood_vertical_planks
+- dark_grey_wood_vertical_planks
+- blue_grey_wood_vertical_planks
+- light_grey_wood_vertical_planks
+- light_purple_wood_vertical_planks
+- grey_blue_wood
+- dark_grey_wood
+- blue_grey_wood
+- light_grey_wood
+- light_purple_wood
+- oak_jungle
+- oak_orange
+- oak_birch
+- oak_jungle_stripped_log + beam variant
+- oak_birch_stripped_log + beam variant
+- spruce_stripped_log + beam variant
+- northern_stripped_log + beam variant
+- jungle_stripped_log + beam variant
+- birch_stripped_log + beam variant
+- grey_stripped_log + beam variant
+
+## New doors alts + halfdoors alts
 - Simple Birch Door
 - Simple Birch Window Shutters
 - Fancy White Door

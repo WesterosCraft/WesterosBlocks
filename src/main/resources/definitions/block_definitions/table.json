@@ -5,6 +5,11 @@
     "label": "Oak Table",
     "soundGroup": "wood",
     "woodType": "oak",
-    "creativeTab": "westeros_furniture_tab"
+    "creativeTab": "westeros_furniture_tab",
+
+    "renderLayer": "cutout",
+    "textures": [
+       "tables/wood_table_oak"
+    ]
   }
 ]

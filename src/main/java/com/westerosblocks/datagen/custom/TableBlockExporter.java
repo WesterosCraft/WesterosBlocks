@@ -2,6 +2,8 @@ package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.custom.WCTableBlock;
+import com.westerosblocks.data.BlockDefinition;
+import com.westerosblocks.datagen.ModTextureKey;
 
 import net.minecraft.block.Block;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -14,6 +16,7 @@ import net.minecraft.data.client.VariantSettings;
 import net.minecraft.data.client.When;
 import net.minecraft.util.Identifier;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -25,23 +28,43 @@ import java.util.Optional;
 public class TableBlockExporter extends BaseBlockExporter {
 
         /**
-         * Registers a custom table block with connection-based state generation
+         * Registers a custom table block with connection-based state generation (legacy method for CustomBlockBuilder)
          */
         public static void registerCustomTableBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
+                registerCustomTableBlock(generator, block, texturePath, texturePath);
+        }
+
+        /**
+         * Registers a custom table block with connection-based state generation
+         */
+        public static void registerCustomTableBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+                // Extract texture from definition
+                definition.validateTextureData();
+                List<String> textureList = definition.getTextures();
+                String texturePath = (textureList != null && !textureList.isEmpty()) ? textureList.get(0) : "missingno";
+
+                registerCustomTableBlock(generator, block, texturePath, texturePath);
+        }
+
+        /**
+         * Internal implementation for registering table blocks
+         */
+        private static void registerCustomTableBlock(BlockStateModelGenerator generator, Block block, String texturePath, String particleTexture) {
                 String blockName = getBlockName(block);
 
-                TextureKey KEY1 = TextureKey.of("1");
-                TextureMap textureMap = new TextureMap().put(KEY1, WesterosBlocks.id("block/" + texturePath));
+                TextureMap textureMap = new TextureMap()
+                        .put(ModTextureKey.TABLE, createBlockIdentifier(texturePath))
+                        .put(TextureKey.PARTICLE, createBlockIdentifier(particleTexture));
 
-                Model singleParent = new Model(Optional.of(WesterosBlocks.id("block/table/table_single")), Optional.empty(), KEY1);
-                Model doubleParent = new Model(Optional.of(WesterosBlocks.id("block/table/table_double")), Optional.empty(), KEY1);
-                Model centerParent = new Model(Optional.of(WesterosBlocks.id("block/table/table_middle")), Optional.empty(), KEY1);
-                Model cornerParent = new Model(Optional.of(WesterosBlocks.id("block/table/table_corner")), Optional.empty(), KEY1);
+                Model singleParent = new Model(Optional.of(WesterosBlocks.id("block/table/table_single")), Optional.empty(), ModTextureKey.TABLE, TextureKey.PARTICLE);
+                Model doubleParent = new Model(Optional.of(WesterosBlocks.id("block/table/table_double")), Optional.empty(), ModTextureKey.TABLE, TextureKey.PARTICLE);
+                Model centerParent = new Model(Optional.of(WesterosBlocks.id("block/table/table_middle")), Optional.empty(), ModTextureKey.TABLE, TextureKey.PARTICLE);
+                Model cornerParent = new Model(Optional.of(WesterosBlocks.id("block/table/table_corner")), Optional.empty(), ModTextureKey.TABLE, TextureKey.PARTICLE);
 
-                Identifier singleModelId = singleParent.upload(WesterosBlocks.id("block/" + blockName + "/table_single"), textureMap, generator.modelCollector);
-                Identifier doubleModelId = doubleParent.upload(WesterosBlocks.id( "block/" + blockName + "/table_double"), textureMap, generator.modelCollector);
-                Identifier centerModelId = centerParent.upload(WesterosBlocks.id( "block/" + blockName + "/table_middle"), textureMap, generator.modelCollector);
-                Identifier cornerModelId = cornerParent.upload(WesterosBlocks.id( "block/" + blockName + "/table_corner"), textureMap, generator.modelCollector);
+                Identifier singleModelId = singleParent.upload(createNestedModelId(block, "table_single"), textureMap, generator.modelCollector);
+                Identifier doubleModelId = doubleParent.upload(createNestedModelId(block, "table_double"), textureMap, generator.modelCollector);
+                Identifier centerModelId = centerParent.upload(createNestedModelId(block, "table_middle"), textureMap, generator.modelCollector);
+                Identifier cornerModelId = cornerParent.upload(createNestedModelId(block, "table_corner"), textureMap, generator.modelCollector);
 
                 MultipartBlockStateSupplier stateSupplier = MultipartBlockStateSupplier.create(block);
 
@@ -157,7 +180,7 @@ public class TableBlockExporter extends BaseBlockExporter {
                                 .set(WCTableBlock.WEST, true);
                 stateSupplier.with(threeConnectionsCondition1,
                                 BlockStateVariant.create().put(VariantSettings.MODEL, centerModelId)
-                                                .put(VariantSettings.Y, VariantSettings.Rotation.R90));
+                                                .put(VariantSettings.Y, VariantSettings.Rotation.R0));
 
                 // North-East-South
                 When.PropertyCondition threeConnectionsCondition2 = When.create()
@@ -166,8 +189,10 @@ public class TableBlockExporter extends BaseBlockExporter {
                                 .set(WCTableBlock.SOUTH, true)
                                 .set(WCTableBlock.WEST, false);
                 stateSupplier.with(threeConnectionsCondition2,
-                                BlockStateVariant.create().put(VariantSettings.MODEL, centerModelId)
-                                                .put(VariantSettings.Y, VariantSettings.Rotation.R180));
+                                BlockStateVariant.create()
+                                        .put(VariantSettings.MODEL, centerModelId)
+                                        .put(VariantSettings.Y, VariantSettings.Rotation.R90)
+                                        .put(VariantSettings.UVLOCK, true));
 
                 // North-South-West
                 When.PropertyCondition threeConnectionsCondition3 = When.create()
@@ -176,8 +201,10 @@ public class TableBlockExporter extends BaseBlockExporter {
                                 .set(WCTableBlock.SOUTH, true)
                                 .set(WCTableBlock.WEST, true);
                 stateSupplier.with(threeConnectionsCondition3,
-                                BlockStateVariant.create().put(VariantSettings.MODEL, centerModelId)
-                                                .put(VariantSettings.Y, VariantSettings.Rotation.R180));
+                                BlockStateVariant.create()
+                                        .put(VariantSettings.MODEL, centerModelId)
+                                        .put(VariantSettings.Y, VariantSettings.Rotation.R270)
+                                        .put(VariantSettings.UVLOCK, true));
 
                 // East-South-West
                 When.PropertyCondition threeConnectionsCondition4 = When.create()
@@ -187,7 +214,7 @@ public class TableBlockExporter extends BaseBlockExporter {
                                 .set(WCTableBlock.WEST, true);
                 stateSupplier.with(threeConnectionsCondition4,
                                 BlockStateVariant.create().put(VariantSettings.MODEL, centerModelId)
-                                                .put(VariantSettings.Y, VariantSettings.Rotation.R90));
+                                                .put(VariantSettings.Y, VariantSettings.Rotation.R180));
 
                 // All connections
                 When.PropertyCondition allConnectionsCondition = When.create()
@@ -202,6 +229,6 @@ public class TableBlockExporter extends BaseBlockExporter {
                 generator.blockStateCollector.accept(stateSupplier);
 
                 // Register item model using the single variant
-                generator.registerParentedItemModel(block, singleModelId);
+                registerSimpleItemModel(generator, block, createBlockIdentifier(texturePath));
         }
 }

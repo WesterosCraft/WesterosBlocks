@@ -119,6 +119,10 @@ public class ModModelProvider extends FabricModelProvider {
                     BedBlockExporter.registerCustomBedBlock(bsmg, block, definition);
                     break;
 
+                case "table":
+                    TableBlockExporter.registerCustomTableBlock(bsmg, block, definition);
+                    break;
+
                 case "crop":
                     CropBlockExporter.registerCustomCropBlock(bsmg, block, definition);
                     break;
