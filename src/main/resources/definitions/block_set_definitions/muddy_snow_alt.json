@@ -2,6 +2,7 @@
     "baseBlockName": "muddy_snow_alt",
     "variants": [
         "solid",
+        "slab",
         "layer"
     ],
     "hardness": 2,

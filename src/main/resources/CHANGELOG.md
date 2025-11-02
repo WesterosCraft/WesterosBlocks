@@ -66,11 +66,18 @@
 
 ## Snow
 - updates Muddy snow block with repeat CTM
-- 
+- Adds new Muddy Snow Alt Block + Layer
+- Adds new Muddy Snow Light Block + Layer
+- Adds new Muddy Snow Dark Block + Layer
+
+## Dirt/Paths
+- Adds new dirt blocks - 'Light Dirt', 'Medium Dirt', 'Dark Dirt'
+- Adds repeat CTM to dirt block
 
 ## Ice Update
 - Added new ice blocks - 'Light Ice', 'Medium Light Ice', 'Blue Ice', 'Light Blue Ice', 'Dark Blue Ice', 'Dark Blue Medium Ice'
 - Updates ice block textures and adds repeat CTM
+- Adds new packed ice block
 
 ## Furniture
 - Added new table block

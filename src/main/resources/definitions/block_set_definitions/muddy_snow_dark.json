@@ -2,6 +2,7 @@
     "baseBlockName": "muddy_snow_dark",
     "variants": [
         "solid",
+        "slab",
         "layer"
     ],
     "hardness": 2,

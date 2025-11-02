@@ -185,6 +185,10 @@ public class ModModelProvider extends FabricModelProvider {
                     BranchBlockExporter.registerCustomBranchBlock(bsmg, block, definition);
                     break;
 
+                case "chair":
+                    ChairBlockExporter.registerChairBlock(bsmg, block, definition);
+                    break;
+
                 default:
                     WesterosBlocks.LOGGER.warn("Unsupported block type '{}' for model generation: {}",
                             blockType, definition.getBlockName());

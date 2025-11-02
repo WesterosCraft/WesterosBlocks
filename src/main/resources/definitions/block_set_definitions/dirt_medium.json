@@ -1,12 +1,12 @@
 {
-  "baseBlockName": "dirt",
+  "baseBlockName": "dirt_medium",
   "variants": [
     "solid",
     "slab",
     "path"
   ],
   "altNames": {
-    "path": "path_dirt"
+    "path": "path_dirt_medium"
   },
   "hardness": 2,
   "soundGroup": "gravel",
@@ -19,10 +19,10 @@
     }
   ],
   "creativeTab": "westeros_grass_dirt_tab",
-  "baseLabel": "Dirt",
+  "baseLabel": "Medium Dirt",
   "textures": {
-    "bottom": "dirt/all",
-    "top": "dirt/all",
-    "sides": "dirt/all"
+    "bottom": "dirt_medium/all",
+    "top": "dirt_medium/all",
+    "sides": "dirt_medium/all"
   }
 }

@@ -1,0 +1,25 @@
+{
+    "baseBlockName": "ice_packed",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence"
+    ],
+    "hardness": 2,
+    "soundGroup": "glass",
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_water_air_tab",
+    "baseLabel": "Packed Ice",
+    "textures": {
+        "all": "ice/packed"
+    }
+}

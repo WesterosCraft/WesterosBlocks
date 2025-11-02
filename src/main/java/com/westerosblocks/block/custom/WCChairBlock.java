@@ -1,7 +1,6 @@
 package com.westerosblocks.block.custom;
 
 import com.google.common.collect.ImmutableMap;
-import com.mojang.serialization.MapCodec;
 import com.westerosblocks.entity.ModEntities;
 import com.westerosblocks.entity.custom.ChairEntity;
 import com.westerosblocks.utils.ModWoodType;
@@ -17,7 +16,6 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
@@ -28,14 +26,8 @@ import java.util.Map;
 
 import com.westerosblocks.data.BlockDefinition;
 
-public class WCChairBlock extends HorizontalFacingBlock {
+public class WCChairBlock extends Block {
     protected BlockDefinition def;
-    public static final MapCodec<WCChairBlock> CODEC = createCodec(WCChairBlock::new);
-
-    @Override
-    protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
-        return CODEC;
-    }
 
     public static final IntProperty ROTATION = IntProperty.of("rotation", 0, 7);
     private static final VoxelShape CHAIR_SHAPE = Block.createCuboidShape(2, 0, 2, 14, 18, 14);
@@ -87,15 +79,12 @@ public class WCChairBlock extends HorizontalFacingBlock {
         ImmutableMap.Builder<BlockState, VoxelShape> builder = ImmutableMap.builder();
 
         for (int rotation = 0; rotation < 8; rotation++) {
-            for (Direction facing : Direction.Type.HORIZONTAL) {
-                VoxelShape shape = CHAIR_SHAPE;
+            VoxelShape shape = CHAIR_SHAPE;
 
-                BlockState state = this.getDefaultState()
-                        .with(ROTATION, rotation)
-                        .with(FACING, facing);
+            BlockState state = this.getDefaultState()
+                    .with(ROTATION, rotation);
 
-                builder.put(state, shape);
-            }
+            builder.put(state, shape);
         }
 
         return builder.build();
@@ -120,15 +109,14 @@ public class WCChairBlock extends HorizontalFacingBlock {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(ROTATION, FACING);
+        builder.add(ROTATION);
     }
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         int rotation = MathHelper.floor((double) (ctx.getPlayerYaw() * 8.0F / 360.0F) + 0.5D) & 7;
 
-        return this.getDefaultState().with(ROTATION, rotation).with(FACING,
-                ctx.getHorizontalPlayerFacing().getOpposite());
+        return this.getDefaultState().with(ROTATION, rotation);
     }
 
     @Override
