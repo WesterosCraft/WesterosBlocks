@@ -24,7 +24,8 @@ public class BlockSetExpander {
             "carpet", "fence_gate", "half_door", "cover", "hollow_hopper",
             "log", "directional", "layer", "pane", "sand", "path",
             "window_frame", "window_frame_mullion",
-            "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"
+            "arrow_slit", "arrow_slit_window", "arrow_slit_ornate",
+            "bench"
     );
 
     // Maps variant names to block types
@@ -74,6 +75,7 @@ public class BlockSetExpander {
         VARIANT_TEXTURES.put("arrow_slit", new String[]{"window-topbottom", "window-topbottom", "arrow-slit"});
         VARIANT_TEXTURES.put("arrow_slit_window", new String[]{"window-topbottom", "window-topbottom", "arrow-slit-window"});
         VARIANT_TEXTURES.put("arrow_slit_ornate", new String[]{"window-topbottom", "window-topbottom", "arrow-slit-ornate"});
+        VARIANT_TEXTURES.put("bench", new String[]{"sides"});
     }
 
     /**

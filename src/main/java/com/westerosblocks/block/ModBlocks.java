@@ -120,6 +120,7 @@ public class ModBlocks {
             case "particle" -> new WCParticleEmitterBlock.Factory();
             case "table" -> new WCTableBlock.Factory();
             case "chair" -> new WCChairBlock.Factory();
+            case "bench" -> new WCBenchBlock.Factory();
             case "branch" -> new WCBranchBlock.Factory();
             case "arrow-slit" -> new WCArrowSlitBlock.Factory();
             case "flowerbed" -> new WCFlowerbedBlock.Factory();

@@ -1,0 +1,57 @@
+[
+  {
+    "blockName": "oak_bench",
+    "blockType": "bench",
+    "textures": ["benches/wood_bench_oak"],
+    "soundGroup": "wood",
+    "hardness": 2.0,
+    "resistance": 3.0,
+    "renderLayer": "cutout",
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Oak Bench"
+  },
+  {
+    "blockName": "birch_bench",
+    "blockType": "bench",
+    "textures": ["benches/wood_bench_birch"],
+    "soundGroup": "wood",
+    "hardness": 2.0,
+    "resistance": 3.0,
+    "renderLayer": "cutout",
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Birch Bench"
+  },
+  {
+    "blockName": "spruce_bench",
+    "blockType": "bench",
+    "textures": ["benches/wood_bench_spruce"],
+    "soundGroup": "wood",
+    "hardness": 2.0,
+    "resistance": 3.0,
+    "renderLayer": "cutout",
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Spruce Bench"
+  },
+  {
+    "blockName": "jungle_bench",
+    "blockType": "bench",
+    "textures": ["benches/wood_bench_jungle"],
+    "soundGroup": "wood",
+    "hardness": 2.0,
+    "resistance": 3.0,
+    "renderLayer": "cutout",
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Jungle Bench"
+  },
+  {
+    "blockName": "northern_bench",
+    "blockType": "bench",
+    "textures": ["benches/wood_bench_northern"],
+    "soundGroup": "wood",
+    "hardness": 2.0,
+    "resistance": 3.0,
+    "renderLayer": "cutout",
+    "creativeTab": "westeros_furniture_tab",
+    "label": "Northern Bench"
+  }
+]

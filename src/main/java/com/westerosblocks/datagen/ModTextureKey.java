@@ -48,6 +48,7 @@ public class ModTextureKey {
     public static final TextureKey INSIDE = TextureKey.of("inside");
     public static final TextureKey FAN = TextureKey.of("fan");
     public static final TextureKey TABLE = TextureKey.of("table");
+    public static final TextureKey BENCH = TextureKey.of("bench");
 
     private static final TextureKey[] TXT_N_KEYS = new TextureKey[18];
     static {

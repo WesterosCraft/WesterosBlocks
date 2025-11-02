@@ -120,6 +120,10 @@ public class ModModelProvider extends FabricModelProvider {
                     TableBlockExporter.registerCustomTableBlock(bsmg, block, definition);
                     break;
 
+                case "bench":
+                    BenchBlockExporter.registerCustomBenchBlock(bsmg, block, definition);
+                    break;
+
                 case "crop":
                     CropBlockExporter.registerCustomCropBlock(bsmg, block, definition);
                     break;
