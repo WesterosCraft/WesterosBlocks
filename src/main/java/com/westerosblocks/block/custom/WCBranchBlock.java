@@ -5,15 +5,11 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
-import net.minecraft.block.Waterloggable;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
@@ -25,14 +21,13 @@ import java.util.Map;
 
 import com.westerosblocks.data.BlockDefinition;
 
-public class WCBranchBlock extends Block implements Waterloggable {
+public class WCBranchBlock extends Block {
     protected BlockDefinition def;
     public static final BooleanProperty NORTH = Properties.NORTH;
     public static final BooleanProperty EAST = Properties.EAST;
     public static final BooleanProperty SOUTH = Properties.SOUTH;
     public static final BooleanProperty WEST = Properties.WEST;
     public static final BooleanProperty UP = Properties.UP;
-    public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     private static final VoxelShape BRANCH_CENTER = Block.createCuboidShape(4, 0, 4, 12, 16, 12);
     private static final VoxelShape BRANCH_NORTH = Block.createCuboidShape(4, 8, 0, 12, 12, 8);
@@ -72,8 +67,7 @@ public class WCBranchBlock extends Block implements Waterloggable {
                 .with(EAST, false)
                 .with(SOUTH, false)
                 .with(WEST, false)
-                .with(UP, false)
-                .with(WATERLOGGED, false));
+                .with(UP, false));
         this.shapeByIndex = this.makeShapes();
     }
 
@@ -88,7 +82,6 @@ public class WCBranchBlock extends Block implements Waterloggable {
                         for (boolean up : new boolean[] { false, true }) {
                             VoxelShape shape = this.getShapeForConnections(north, east, south, west, up);
 
-                            // Add both waterlogged and non-waterlogged states
                             BlockState state = this.getDefaultState()
                                     .with(NORTH, north)
                                     .with(EAST, east)
@@ -96,8 +89,7 @@ public class WCBranchBlock extends Block implements Waterloggable {
                                     .with(WEST, west)
                                     .with(UP, up);
 
-                            builder.put(state.with(WATERLOGGED, false), shape);
-                            builder.put(state.with(WATERLOGGED, true), shape);
+                            builder.put(state, shape);
                         }
                     }
                 }
@@ -158,27 +150,21 @@ public class WCBranchBlock extends Block implements Waterloggable {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(NORTH, EAST, SOUTH, WEST, UP, WATERLOGGED);
+        builder.add(NORTH, EAST, SOUTH, WEST, UP);
     }
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
         BlockPos pos = ctx.getBlockPos();
         boolean hasSolidBlockBelow = !ctx.getWorld().getBlockState(pos.down()).isAir();
 
         return this.getDefaultState()
-                .with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER))
                 .with(UP, hasSolidBlockBelow);
     }
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
             WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        if (state.get(WATERLOGGED)) {
-            world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
-        }
-
         if (direction.getAxis().isHorizontal()) {
             boolean isConnected = this.canConnect(neighborState,
                     neighborState.isSideSolidFullSquare(world, neighborPos, direction.getOpposite()),
@@ -210,11 +196,6 @@ public class WCBranchBlock extends Block implements Waterloggable {
 
         // Connect to specific block types - add more as needed
         return state.isIn(BlockTags.LOGS);
-    }
-
-    @Override
-    public FluidState getFluidState(BlockState state) {
-        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
     private BooleanProperty getPropertyForDirection(Direction direction) {

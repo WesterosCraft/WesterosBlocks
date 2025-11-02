@@ -1,0 +1,27 @@
+{
+    "baseBlockName": "muddy_snow_dark",
+    "variants": [
+        "solid",
+        "layer"
+    ],
+    "hardness": 2,
+    "soundGroup": "snow",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_grass_dirt_tab",
+    "baseLabel": "Muddy Snow Dark",
+    "ambientOcclusion": false,
+    "textures": {
+        "bottom": "muddy_snow/all_dark",
+        "top": "muddy_snow/all_dark",
+        "west": "muddy_snow/all_dark",
+        "east": "muddy_snow/all_dark",
+        "south": "muddy_snow/all_dark",
+        "north": "muddy_snow/all_dark"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "baseBlockName": "muddy_snow_light",
+    "variants": [
+        "solid",
+        "layer"
+    ],
+    "hardness": 2,
+    "soundGroup": "snow",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_grass_dirt_tab",
+    "baseLabel": "Muddy Snow Light",
+    "ambientOcclusion": false,
+    "textures": {
+        "bottom": "muddy_snow/all_light",
+        "top": "muddy_snow/all_light",
+        "west": "muddy_snow/all_light",
+        "east": "muddy_snow/all_light",
+        "south": "muddy_snow/all_light",
+        "north": "muddy_snow/all_light"
+    }
+}

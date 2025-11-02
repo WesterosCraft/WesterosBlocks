@@ -1,0 +1,27 @@
+{
+    "baseBlockName": "muddy_snow_alt",
+    "variants": [
+        "solid",
+        "layer"
+    ],
+    "hardness": 2,
+    "soundGroup": "snow",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_grass_dirt_tab",
+    "baseLabel": "Muddy Snow Alt",
+    "ambientOcclusion": false,
+    "textures": {
+        "bottom": "muddy_snow/all_alt",
+        "top": "muddy_snow/all_alt",
+        "west": "muddy_snow/all_alt",
+        "east": "muddy_snow/all_alt",
+        "south": "muddy_snow/all_alt",
+        "north": "muddy_snow/all_alt"
+    }
+}

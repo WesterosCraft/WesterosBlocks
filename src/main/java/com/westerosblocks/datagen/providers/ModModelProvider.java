@@ -12,9 +12,6 @@ import net.minecraft.block.Block;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 
-
-import static com.westerosblocks.datagen.ModBlockStateModelGenerator.*;
-
 public class ModModelProvider extends FabricModelProvider {
 
     private final FabricDataOutput output;
@@ -182,6 +179,10 @@ public class ModModelProvider extends FabricModelProvider {
 
                 case "particle":
                     ParticleEmitterExporter.registerCustomParticleEmitterBlock(bsmg, block, definition);
+                    break;
+
+                case "branch":
+                    BranchBlockExporter.registerCustomBranchBlock(bsmg, block, definition);
                     break;
 
                 default:

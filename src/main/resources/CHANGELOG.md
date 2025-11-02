@@ -64,6 +64,10 @@
 - Fancy Northern Door
 - Fancy Northern Wood Window Shutters
 
+## Snow
+- updates Muddy snow block with repeat CTM
+- 
+
 ## Ice Update
 - Added new ice blocks - 'Light Ice', 'Medium Light Ice', 'Blue Ice', 'Light Blue Ice', 'Dark Blue Ice', 'Dark Blue Medium Ice'
 - Updates ice block textures and adds repeat CTM

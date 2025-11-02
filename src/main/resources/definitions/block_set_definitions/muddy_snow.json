@@ -5,8 +5,7 @@
         "slab"
     ],
     "hardness": 2,
-    "soundGroup": "gravel",
-    "material": "craftedSnow",
+    "soundGroup": "snow",
     "resistance": 2,
     "harvestLevel": [
         {
@@ -18,11 +17,11 @@
     "baseLabel": "Muddy Snow",
     "ambientOcclusion": false,
     "textures": {
-        "bottom": "muddy_snow/top_bottom",
-        "top": "muddy_snow/top_bottom",
-        "west": "muddy_snow/north_south",
-        "east": "muddy_snow/north_south",
-        "south": "muddy_snow/east_west",
-        "north": "muddy_snow/east_west"
+        "bottom": "muddy_snow/all",
+        "top": "muddy_snow/all",
+        "west": "muddy_snow/all",
+        "east": "muddy_snow/all",
+        "south": "muddy_snow/all",
+        "north": "muddy_snow/all"
     }
 }
