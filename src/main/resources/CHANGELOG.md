@@ -17,7 +17,6 @@
 - Adds CTM to mossy bark blocks - spruce, birch, oak, jungle
 
 ## New wood blocksets, includes CTM:
-
 - off_white_wood
 - birch_yellow_wood
 - oak_jungle_vertical_planks
@@ -70,18 +69,21 @@
 - Adds new Muddy Snow Light Block + Layer
 - Adds new Muddy Snow Dark Block + Layer
 
-## Dirt/Paths
+## Dirt/Paths/Pebbles
 - Adds new dirt blocks - 'Light Dirt', 'Medium Dirt', 'Dark Dirt'
 - Adds repeat CTM to dirt block
+- new Pebble blocks - 'Pebble Light Stormlands', 'Pebble Dark Stormlands', 'Pebble Dark Mountains Of The Moon', 'Pebble Light Westerlands', 'Pebble Dark Westerlands'
 
 ## Ice Update
 - Added new ice blocks - 'Light Ice', 'Medium Light Ice', 'Blue Ice', 'Light Blue Ice', 'Dark Blue Ice', 'Dark Blue Medium Ice'
 - Updates ice block textures and adds repeat CTM
 - Adds new packed ice block
+- Adds new "Icicles" block that behaves and looks more like ghostskin
 
 ## Furniture
 - Added new table block
 - Added new chair block
+- Adds 5 new bench blocks - Oak Bench, Birch Bench, Spruce Bench, Jungle Bench and Northern Bench
 
 ## Other
 - Added Stark Kite Shield
