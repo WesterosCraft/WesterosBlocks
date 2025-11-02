@@ -1273,5 +1273,29 @@
       "zMax": 1
     },
     "strength": 5
+  },
+  {
+    "blockName": "icicles",
+    "blockType": "cuboid-nsew",
+    "soundGroup": "glass",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 3
+      }
+    ],
+    "renderLayer": "cutout",
+    "creativeTab": "westeros_misc_tab",
+    "isCustomModel": true,
+    "label": "Icicles",
+    "boundingBox": {
+      "xMin": 0.3,
+      "xMax": 0.7,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "strength": 5
   }
 ]
