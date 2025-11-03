@@ -33,7 +33,7 @@ public class CropBlockExporter extends BaseBlockExporter {
             String baseName = (stateID == null) ? "base" : stateID;
 
             int layerCount = layerSensitive ? 8 : 1;
-            for (int layer = (layerSensitive ? 8 : 0); layer >= 1; layer--) {
+            for (int layer = 8; layer >= (layerSensitive ? 1 : 8); layer--) {
 
                 String layerSuffix = layer != 8 ? "_layer" + layer : "";
                 String modelName = baseName + layerSuffix;
