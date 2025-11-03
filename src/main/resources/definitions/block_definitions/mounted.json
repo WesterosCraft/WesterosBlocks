@@ -4,6 +4,7 @@
     "blockType": "mounted",
     "soundGroup": "wood",
     "isCustomModel": true,
+    "allowUnsupported": true,
     "renderLayer": "cutout",
     "harvestLevel": [
       {
@@ -28,6 +29,7 @@
     "blockType": "mounted",
     "soundGroup": "wood",
     "isCustomModel": true,
+    "allowUnsupported": true,
     "renderLayer": "cutout",
     "harvestLevel": [
       {
@@ -53,6 +55,7 @@
     "blockType": "mounted",
     "soundGroup": "wood",
     "isCustomModel": true,
+    "allowUnsupported": true,
     "renderLayer": "cutout",
     "harvestLevel": [
       {
@@ -78,6 +81,7 @@
     "blockType": "mounted",
     "soundGroup": "wood",
     "isCustomModel": true,
+    "allowUnsupported": true,
     "renderLayer": "cutout",
     "harvestLevel": [
       {
@@ -103,6 +107,7 @@
     "blockType": "mounted",
     "soundGroup": "wood",
     "isCustomModel": true,
+    "allowUnsupported": true,
     "renderLayer": "cutout",
     "harvestLevel": [
       {
@@ -128,6 +133,7 @@
     "blockType": "mounted",
     "soundGroup": "wood",
     "isCustomModel": true,
+    "allowUnsupported": true,
     "renderLayer": "cutout",
     "harvestLevel": [
       {
@@ -137,6 +143,58 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Hedge Knight Heater Shield",
+    "boundingBox": {
+      "xMin": 0.03,
+      "xMax": 0.039,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "hardness": 5,
+    "resistance": 5
+  },
+  {
+    "blockName": "wall_round_shield_greyjoy",
+    "blockType": "mounted",
+    "soundGroup": "wood",
+    "isCustomModel": true,
+    "allowUnsupported": true,
+    "renderLayer": "cutout",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 3
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Mounted Greyjoy Round Shield",
+    "boundingBox": {
+      "xMin": 0.03,
+      "xMax": 0.039,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "hardness": 5,
+    "resistance": 5
+  },
+  {
+    "blockName": "wall_kite_shield_stark",
+    "blockType": "mounted",
+    "soundGroup": "wood",
+    "isCustomModel": true,
+    "allowUnsupported": true,
+    "renderLayer": "cutout",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 3
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Mounted Stark Kite Shield",
     "boundingBox": {
       "xMin": 0.03,
       "xMax": 0.039,
