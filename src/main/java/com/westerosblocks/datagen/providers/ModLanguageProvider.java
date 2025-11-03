@@ -52,6 +52,11 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 }
 
                 for (BlockDefinition definition : registry.getAllDefinitions()) {
+                        // Skip test blocks
+                        if ("westeros_test_tab".equals(definition.getCreativeTab())) {
+                                continue;
+                        }
+
                         if (definition.getLabel() != null && !definition.getLabel().isEmpty()) {
                                 String translationKey = "block.westerosblocks." + definition.getBlockName();
                                 translationBuilder.add(translationKey, definition.getLabel());

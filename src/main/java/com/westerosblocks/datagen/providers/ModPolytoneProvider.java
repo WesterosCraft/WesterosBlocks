@@ -38,6 +38,11 @@ public class ModPolytoneProvider implements DataProvider {
 
         // Group blocks by their colorMult value
         for (BlockDefinition definition : registry.getAllDefinitions()) {
+            // Skip test blocks (blocks in westeros_test_tab)
+            if ("westeros_test_tab".equals(definition.getCreativeTab())) {
+                continue;
+            }
+
             String colorMult = definition.getColorMult();
 
             if (colorMult != null && !colorMult.isEmpty()) {
