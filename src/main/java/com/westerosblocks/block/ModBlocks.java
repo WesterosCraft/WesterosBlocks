@@ -124,6 +124,7 @@ public class ModBlocks {
             case "branch" -> new WCBranchBlock.Factory();
             case "arrow-slit" -> new WCArrowSlitBlock.Factory();
             case "flowerbed" -> new WCFlowerbedBlock.Factory();
+            case "mounted" -> new WCMountedBlock.Factory();
             default -> null;
         };
     }

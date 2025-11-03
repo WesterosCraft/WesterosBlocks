@@ -193,6 +193,10 @@ public class ModModelProvider extends FabricModelProvider {
                     ChairBlockExporter.registerChairBlock(bsmg, block, definition);
                     break;
 
+                case "mounted":
+                    MountedBlockExporter.registerMountedBlock(bsmg, block, definition);
+                    break;
+
                 default:
                     WesterosBlocks.LOGGER.warn("Unsupported block type '{}' for model generation: {}",
                             blockType, definition.getBlockName());
