@@ -1,53 +1,69 @@
 {
   "variants": {
-    "": [
+    "state=cobweb1": {
+      "model": "westerosblocks:block/cobweb/cobweb1_v1",
+      "y": 0
+    },
+    "state=cobweb2": {
+      "model": "westerosblocks:block/cobweb/cobweb2_v1",
+      "y": 0
+    },
+    "state=cobweb3": {
+      "model": "westerosblocks:block/cobweb/cobweb3_v1",
+      "y": 0
+    },
+    "state=cobweb4": {
+      "model": "westerosblocks:block/cobweb/cobweb4_v1",
+      "y": 0
+    },
+    "state=cobweb5": {
+      "model": "westerosblocks:block/cobweb/cobweb5_v1",
+      "y": 0
+    },
+    "state=cobweb6": {
+      "model": "westerosblocks:block/cobweb/cobweb6_v1",
+      "y": 0
+    },
+    "state=cobweb7": {
+      "model": "westerosblocks:block/cobweb/cobweb7_v1",
+      "y": 0
+    },
+    "state=cobweb8": {
+      "model": "westerosblocks:block/cobweb/cobweb8_v1",
+      "y": 0
+    },
+    "state=random": [
       {
-        "model": "westerosblocks:block/cobweb/random_v1"
+        "model": "westerosblocks:block/cobweb/random_v1",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/cobweb/random_v2"
+        "model": "westerosblocks:block/cobweb/random_v2",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/cobweb/random_v3"
+        "model": "westerosblocks:block/cobweb/random_v3",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/cobweb/random_v4"
+        "model": "westerosblocks:block/cobweb/random_v4",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/cobweb/random_v5"
+        "model": "westerosblocks:block/cobweb/random_v5",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/cobweb/random_v6"
+        "model": "westerosblocks:block/cobweb/random_v6",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/cobweb/random_v7"
+        "model": "westerosblocks:block/cobweb/random_v7",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/cobweb/random_v8"
-      },
-      {
-        "model": "westerosblocks:block/cobweb/cobweb1_v1"
-      },
-      {
-        "model": "westerosblocks:block/cobweb/cobweb2_v1"
-      },
-      {
-        "model": "westerosblocks:block/cobweb/cobweb3_v1"
-      },
-      {
-        "model": "westerosblocks:block/cobweb/cobweb4_v1"
-      },
-      {
-        "model": "westerosblocks:block/cobweb/cobweb5_v1"
-      },
-      {
-        "model": "westerosblocks:block/cobweb/cobweb6_v1"
-      },
-      {
-        "model": "westerosblocks:block/cobweb/cobweb7_v1"
-      },
-      {
-        "model": "westerosblocks:block/cobweb/cobweb8_v1"
+        "model": "westerosblocks:block/cobweb/random_v8",
+        "y": 0
       }
     ]
   }
