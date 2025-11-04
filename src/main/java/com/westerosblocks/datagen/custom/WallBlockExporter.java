@@ -94,61 +94,58 @@ public class WallBlockExporter extends BaseBlockExporter {
                                                                     List<Integer> weights) {
         MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
 
-        // Add post models (when up=true)
-        List<BlockStateVariant> postVariants = new ArrayList<>();
+        // Single loop: for each texture variant, add post + all directional sides (low + tall)
         for (int i = 0; i < postModelIds.size(); i++) {
-            BlockStateVariant postVariant = BlockStateVariant.create()
-                    .put(VariantSettings.MODEL, postModelIds.get(i));
+            // Add post model (when up=true)
+            addPostVariant(supplier, postModelIds.get(i), weights.get(i));
 
-            if (weights.get(i) > 1) {
-                postVariant = postVariant.put(VariantSettings.WEIGHT, weights.get(i));
-            }
-
-            postVariants.add(postVariant);
+            // Add side models for each direction (low and tall)
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), "north", WallShape.LOW);
+            addSideVariant(supplier, tallModelIds.get(i), weights.get(i), "north", WallShape.TALL);
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), "east", WallShape.LOW);
+            addSideVariant(supplier, tallModelIds.get(i), weights.get(i), "east", WallShape.TALL);
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), "south", WallShape.LOW);
+            addSideVariant(supplier, tallModelIds.get(i), weights.get(i), "south", WallShape.TALL);
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), "west", WallShape.LOW);
+            addSideVariant(supplier, tallModelIds.get(i), weights.get(i), "west", WallShape.TALL);
         }
-        supplier.with(When.create().set(Properties.UP, true), postVariants);
-
-        // Add side models for each direction (when that direction is "low")
-        addDirectionalSideModels(supplier, sideModelIds, weights, "north", WallShape.LOW);
-        addDirectionalSideModels(supplier, sideModelIds, weights, "east", WallShape.LOW);
-        addDirectionalSideModels(supplier, sideModelIds, weights, "south", WallShape.LOW);
-        addDirectionalSideModels(supplier, sideModelIds, weights, "west", WallShape.LOW);
-
-        // Add tall side models for each direction (when that direction is "tall")
-        addDirectionalSideModels(supplier, tallModelIds, weights, "north", WallShape.TALL);
-        addDirectionalSideModels(supplier, tallModelIds, weights, "east", WallShape.TALL);
-        addDirectionalSideModels(supplier, tallModelIds, weights, "south", WallShape.TALL);
-        addDirectionalSideModels(supplier, tallModelIds, weights, "west", WallShape.TALL);
 
         return supplier;
     }
 
-    private static void addDirectionalSideModels(MultipartBlockStateSupplier supplier, List<Identifier> modelIds,
-                                                  List<Integer> weights, String direction, WallShape shape) {
-        List<BlockStateVariant> sideVariants = new ArrayList<>();
+    /**
+     * Adds a single post variant.
+     */
+    private static void addPostVariant(MultipartBlockStateSupplier supplier, Identifier postModelId, int weight) {
+        BlockStateVariant postVariant = BlockStateVariant.create()
+                .put(VariantSettings.MODEL, postModelId);
 
-        for (int i = 0; i < modelIds.size(); i++) {
-            BlockStateVariant sideVariant = BlockStateVariant.create()
-                    .put(VariantSettings.MODEL, modelIds.get(i));
+        if (weight > 1) {
+            postVariant = postVariant.put(VariantSettings.WEIGHT, weight);
+        }
 
-            // Add rotation based on direction
-            switch (direction) {
-                case "east" -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R90);
-                case "south" -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R180);
-                case "west" -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R270);
-                // NORTH gets no rotation (0 degrees)
-            }
+        supplier.with(When.create().set(Properties.UP, true), postVariant);
+    }
 
-            if (weights.get(i) > 1) {
-                sideVariant = sideVariant.put(VariantSettings.WEIGHT, weights.get(i));
-            }
+    /**
+     * Adds a single side variant for a specific direction and shape (low or tall).
+     */
+    private static void addSideVariant(MultipartBlockStateSupplier supplier, Identifier sideModelId,
+                                       int weight, String direction, WallShape shape) {
+        BlockStateVariant sideVariant = BlockStateVariant.create()
+                .put(VariantSettings.MODEL, sideModelId)
+                .put(VariantSettings.UVLOCK, true);
 
-            // Add UV lock for rotated models
-            if (!direction.equals("north")) {
-                sideVariant = sideVariant.put(VariantSettings.UVLOCK, true);
-            }
+        // Add rotation based on direction
+        switch (direction) {
+            case "east" -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R90);
+            case "south" -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R180);
+            case "west" -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R270);
+            // NORTH gets no rotation (0 degrees)
+        }
 
-            sideVariants.add(sideVariant);
+        if (weight > 1) {
+            sideVariant = sideVariant.put(VariantSettings.WEIGHT, weight);
         }
 
         // Create condition based on direction and shape
@@ -160,7 +157,7 @@ public class WallBlockExporter extends BaseBlockExporter {
             default -> throw new IllegalArgumentException("Unknown direction: " + direction);
         };
 
-        supplier.with(condition, sideVariants);
+        supplier.with(condition, sideVariant);
     }
 
     // ========================================
