@@ -1,0 +1,21 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "westerosblocks:block/oxidized_iron_crossbar/oxidized_iron_crossbar_side"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oxidized_iron_crossbar/oxidized_iron_crossbar_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    }
+  ]
+}

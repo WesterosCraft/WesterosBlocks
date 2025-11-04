@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/light_oldtown_brick/base_v1",
+      "y": 0
+    }
+  }
+}

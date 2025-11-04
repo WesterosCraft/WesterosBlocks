@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "state=base": {
+      "model": "westerosblocks:block/oak_planks/base_v1",
+      "y": 0
+    },
+    "state=cut": {
+      "model": "westerosblocks:block/oak_planks/cut_v1",
+      "y": 0
+    }
+  }
+}

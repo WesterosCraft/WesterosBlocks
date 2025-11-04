@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/small_orange_brick_hopper/v1"
+      },
+      {
+        "model": "westerosblocks:block/small_orange_brick_hopper/v2"
+      },
+      {
+        "model": "westerosblocks:block/small_orange_brick_hopper/v3"
+      },
+      {
+        "model": "westerosblocks:block/small_orange_brick_hopper/v4"
+      },
+      {
+        "model": "westerosblocks:block/small_orange_brick_hopper/v5"
+      },
+      {
+        "model": "westerosblocks:block/small_orange_brick_hopper/v6"
+      },
+      {
+        "model": "westerosblocks:block/small_orange_brick_hopper/v7"
+      },
+      {
+        "model": "westerosblocks:block/small_orange_brick_hopper/v8"
+      }
+    ]
+  }
+}

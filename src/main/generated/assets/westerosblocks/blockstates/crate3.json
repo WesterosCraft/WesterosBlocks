@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/crate3/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/crate3/base_v2",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/crate3/base_v3",
+        "y": 0
+      }
+    ]
+  }
+}

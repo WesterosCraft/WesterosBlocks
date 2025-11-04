@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/classic_grass_block/v1"
+      },
+      {
+        "model": "westerosblocks:block/classic_grass_block/v2"
+      },
+      {
+        "model": "westerosblocks:block/classic_grass_block/v3"
+      },
+      {
+        "model": "westerosblocks:block/classic_grass_block/v4"
+      },
+      {
+        "model": "westerosblocks:block/classic_grass_block/v5"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/orange_brick_hopper/v1"
+      },
+      {
+        "model": "westerosblocks:block/orange_brick_hopper/v2"
+      },
+      {
+        "model": "westerosblocks:block/orange_brick_hopper/v3"
+      },
+      {
+        "model": "westerosblocks:block/orange_brick_hopper/v4"
+      }
+    ]
+  }
+}

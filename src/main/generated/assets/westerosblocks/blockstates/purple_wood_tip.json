@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "state=base": {
+      "model": "westerosblocks:block/purple_wood_tip/base_v1"
+    },
+    "state=cut": {
+      "model": "westerosblocks:block/purple_wood_tip/cut_v1"
+    }
+  }
+}

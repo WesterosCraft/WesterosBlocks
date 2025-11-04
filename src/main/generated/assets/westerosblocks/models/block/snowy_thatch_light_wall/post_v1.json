@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_post",
+  "textures": {
+    "bottom": "westerosblocks:block/thatch/snowy_light/top",
+    "particle": "westerosblocks:block/thatch/snowy_light/top",
+    "side": "westerosblocks:block/thatch/snowy_light/top",
+    "top": "westerosblocks:block/thatch/snowy_light/top"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/dates/base_v1",
+      "y": 0
+    }
+  }
+}

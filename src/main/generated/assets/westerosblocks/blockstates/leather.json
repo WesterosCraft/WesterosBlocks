@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/leather/base_v1",
+      "y": 0
+    }
+  }
+}

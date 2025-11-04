@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_post",
+  "textures": {
+    "bottom": "westerosblocks:block/brick/southern_rough/all1",
+    "particle": "westerosblocks:block/brick/southern_rough/all1",
+    "side": "westerosblocks:block/brick/southern_rough/all1",
+    "top": "westerosblocks:block/brick/southern_rough/all1"
+  }
+}

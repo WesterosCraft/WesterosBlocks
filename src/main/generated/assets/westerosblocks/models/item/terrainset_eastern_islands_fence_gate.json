@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/tinted/template_fence_gate",
+  "textures": {
+    "particle": "westerosblocks:block/terrainset/east/random_4x4",
+    "texture": "westerosblocks:block/terrainset/east/random_4x4"
+  }
+}

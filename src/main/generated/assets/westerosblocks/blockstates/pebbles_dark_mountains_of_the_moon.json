@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/pebbles_dark_mountains_of_the_moon/base_v1",
+      "y": 0
+    }
+  }
+}

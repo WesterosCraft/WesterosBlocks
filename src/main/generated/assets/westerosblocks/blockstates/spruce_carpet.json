@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "state=base": {
+      "model": "westerosblocks:block/spruce_carpet/base_v1"
+    },
+    "state=cut": {
+      "model": "westerosblocks:block/spruce_carpet/cut_v1"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/pebbles_light_westerlands/base_v1",
+      "y": 0
+    }
+  }
+}

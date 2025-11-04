@@ -1,0 +1,38 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/small_orange_bricks/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/small_orange_bricks/base_v2",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/small_orange_bricks/base_v3",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/small_orange_bricks/base_v4",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/small_orange_bricks/base_v5",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/small_orange_bricks/base_v6",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/small_orange_bricks/base_v7",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/small_orange_bricks/base_v8",
+        "y": 0
+      }
+    ]
+  }
+}

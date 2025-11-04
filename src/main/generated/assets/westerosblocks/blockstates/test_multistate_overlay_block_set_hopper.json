@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/test_multistate_overlay_block_set_hopper/v1"
+    }
+  }
+}

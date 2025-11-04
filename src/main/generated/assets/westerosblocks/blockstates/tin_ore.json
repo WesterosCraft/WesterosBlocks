@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/tin_ore/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/tin_ore/base_v2",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/tin_ore/base_v3",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/tin_ore/base_v4",
+        "y": 0
+      }
+    ]
+  }
+}

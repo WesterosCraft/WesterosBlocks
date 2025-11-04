@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/pine_needles/base_v1",
+      "y": 0
+    }
+  }
+}

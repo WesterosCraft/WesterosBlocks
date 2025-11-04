@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/mossy_small_stone_brick_slab/bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/mossy_small_stone_brick_slab/double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/mossy_small_stone_brick_slab/top"
+    }
+  }
+}

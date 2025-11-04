@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/ice_blue_light/ice_blue_light",
+    "particle": "westerosblocks:block/ice_blue_light/ice_blue_light",
+    "side": "westerosblocks:block/ice_blue_light/ice_blue_light",
+    "top": "westerosblocks:block/ice_blue_light/ice_blue_light"
+  }
+}

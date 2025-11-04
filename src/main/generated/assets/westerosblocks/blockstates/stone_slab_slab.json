@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/stone_slab_slab/bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/stone_slab_slab/double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/stone_slab_slab/top"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/dark_southern_brick_tip/v1"
+      },
+      {
+        "model": "westerosblocks:block/dark_southern_brick_tip/v2"
+      },
+      {
+        "model": "westerosblocks:block/dark_southern_brick_tip/v3"
+      },
+      {
+        "model": "westerosblocks:block/dark_southern_brick_tip/v4"
+      }
+    ]
+  }
+}

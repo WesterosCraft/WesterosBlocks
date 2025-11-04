@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/scorched_earth/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/scorched_earth/base_v2",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/scorched_earth/base_v3",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/scorched_earth/base_v4",
+        "y": 0
+      }
+    ]
+  }
+}

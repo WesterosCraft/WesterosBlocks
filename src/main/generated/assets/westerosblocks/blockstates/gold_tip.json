@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/gold_tip/v1"
+      },
+      {
+        "model": "westerosblocks:block/gold_tip/v2"
+      },
+      {
+        "model": "westerosblocks:block/gold_tip/v3"
+      }
+    ]
+  }
+}

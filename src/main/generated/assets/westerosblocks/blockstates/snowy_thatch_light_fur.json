@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/snowy_thatch_light_fur/base_v1",
+      "y": 0
+    }
+  }
+}

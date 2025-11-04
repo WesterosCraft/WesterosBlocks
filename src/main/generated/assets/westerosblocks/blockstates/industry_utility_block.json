@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/industry_utility_block/base_v1",
+      "y": 0
+    }
+  }
+}

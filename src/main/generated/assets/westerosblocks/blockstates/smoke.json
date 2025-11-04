@@ -1,0 +1,48 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/smoke/random_v1"
+      },
+      {
+        "model": "westerosblocks:block/smoke/random_v2"
+      },
+      {
+        "model": "westerosblocks:block/smoke/random_v3"
+      },
+      {
+        "model": "westerosblocks:block/smoke/random_v4"
+      },
+      {
+        "model": "westerosblocks:block/smoke/random_v5"
+      },
+      {
+        "model": "westerosblocks:block/smoke/random_v6"
+      },
+      {
+        "model": "westerosblocks:block/smoke/random_v7"
+      },
+      {
+        "model": "westerosblocks:block/smoke/smoke1_v1"
+      },
+      {
+        "model": "westerosblocks:block/smoke/smoke2_v1"
+      },
+      {
+        "model": "westerosblocks:block/smoke/smoke3_v1"
+      },
+      {
+        "model": "westerosblocks:block/smoke/smoke4_v1"
+      },
+      {
+        "model": "westerosblocks:block/smoke/smoke5_v1"
+      },
+      {
+        "model": "westerosblocks:block/smoke/smoke6_v1"
+      },
+      {
+        "model": "westerosblocks:block/smoke/smoke7_v1"
+      }
+    ]
+  }
+}

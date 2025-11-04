@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_side",
+  "textures": {
+    "bottom": "westerosblocks:block/bark/jungle/side",
+    "particle": "westerosblocks:block/bark/jungle/side",
+    "side": "westerosblocks:block/bark/jungle/side",
+    "top": "westerosblocks:block/bark/jungle/side"
+  }
+}

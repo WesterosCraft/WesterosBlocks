@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/untinted/cross_layer7",
+  "textures": {
+    "cross": "westerosblocks:block/flowers/red_dark_roses4"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "colormap": "westerosblocks:foliage_jungle",
+  "targets": [
+    "westerosblocks:hop_fruit_leaves",
+    "westerosblocks:lime_fruit_leaves",
+    "westerosblocks:orange_fruit_leaves",
+    "westerosblocks:purple_grape_fruit_leaves",
+    "westerosblocks:raspberry_bush",
+    "westerosblocks:white_grape_fruit_leaves"
+  ]
+}

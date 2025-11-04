@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "state=base": {
+      "model": "westerosblocks:block/hollow_oak_jungle_hopper/base_v1"
+    },
+    "state=cut": {
+      "model": "westerosblocks:block/hollow_oak_jungle_hopper/cut_v1"
+    }
+  }
+}

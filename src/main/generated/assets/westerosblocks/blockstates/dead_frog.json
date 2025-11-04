@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/dead_frog/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/dead_frog/base_v2"
+      }
+    ]
+  }
+}

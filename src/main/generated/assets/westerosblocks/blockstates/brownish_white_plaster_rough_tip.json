@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/brownish_white_plaster_rough_tip/v1"
+      },
+      {
+        "model": "westerosblocks:block/brownish_white_plaster_rough_tip/v2"
+      }
+    ]
+  }
+}

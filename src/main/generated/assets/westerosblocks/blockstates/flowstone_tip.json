@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/flowstone_tip/v1"
+      },
+      {
+        "model": "westerosblocks:block/flowstone_tip/v2"
+      },
+      {
+        "model": "westerosblocks:block/flowstone_tip/v3"
+      },
+      {
+        "model": "westerosblocks:block/flowstone_tip/v4"
+      }
+    ]
+  }
+}

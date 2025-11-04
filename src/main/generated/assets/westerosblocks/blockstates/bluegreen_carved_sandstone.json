@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/bluegreen_carved_sandstone/base_v1",
+      "y": 0
+    }
+  }
+}

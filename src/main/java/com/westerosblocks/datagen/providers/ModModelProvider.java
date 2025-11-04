@@ -33,7 +33,7 @@ public class ModModelProvider extends FabricModelProvider {
             return;
         }
 
-        // Generate models for all block definitions in a single loop
+        // Generate models for all block definitions
         for (BlockDefinition definition : registry.getAllDefinitions()) {
             Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
             if (block != null) {

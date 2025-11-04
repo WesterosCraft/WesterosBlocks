@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/small_white_brick_brownish_white_plaster/base_v1",
+      "y": 0
+    }
+  }
+}

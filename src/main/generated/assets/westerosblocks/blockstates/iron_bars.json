@@ -1,0 +1,21 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "westerosblocks:block/iron_bars/iron_bars_side"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/iron_bars/iron_bars_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    }
+  ]
+}

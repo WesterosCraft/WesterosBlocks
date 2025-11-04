@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_tip/v1"
+      },
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_tip/v2"
+      },
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_tip/v3"
+      },
+      {
+        "model": "westerosblocks:block/brown_grey_river_cobble_tip/v4"
+      }
+    ]
+  }
+}

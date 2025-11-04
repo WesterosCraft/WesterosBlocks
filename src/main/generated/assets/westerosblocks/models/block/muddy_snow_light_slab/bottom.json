@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/slab",
+  "textures": {
+    "down": "westerosblocks:block/muddy_snow/all_light",
+    "east": "westerosblocks:block/muddy_snow/all_light",
+    "north": "westerosblocks:block/muddy_snow/all_light",
+    "particle": "westerosblocks:block/muddy_snow/all_light",
+    "south": "westerosblocks:block/muddy_snow/all_light",
+    "up": "westerosblocks:block/muddy_snow/all_light",
+    "west": "westerosblocks:block/muddy_snow/all_light"
+  }
+}

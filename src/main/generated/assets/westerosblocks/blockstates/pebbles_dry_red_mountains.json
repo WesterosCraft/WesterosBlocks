@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/pebbles_dry_red_mountains/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/pebbles_dry_red_mountains/base_v2",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/pebbles_dry_red_mountains/base_v3",
+        "y": 0
+      }
+    ]
+  }
+}

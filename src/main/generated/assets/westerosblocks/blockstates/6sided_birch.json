@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/6sided_birch/base_v1",
+      "y": 0
+    }
+  }
+}

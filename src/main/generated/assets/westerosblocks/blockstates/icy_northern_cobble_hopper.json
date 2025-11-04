@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/icy_northern_cobble_hopper/v1"
+      },
+      {
+        "model": "westerosblocks:block/icy_northern_cobble_hopper/v2"
+      },
+      {
+        "model": "westerosblocks:block/icy_northern_cobble_hopper/v3"
+      },
+      {
+        "model": "westerosblocks:block/icy_northern_cobble_hopper/v4"
+      }
+    ]
+  }
+}

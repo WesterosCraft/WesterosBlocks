@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/coral_brain_slab/bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/coral_brain_slab/double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/coral_brain_slab/top"
+    }
+  }
+}

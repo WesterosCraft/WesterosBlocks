@@ -1,0 +1,157 @@
+{
+  "variants": {
+    "type=bottom": [
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/bottom",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v2_bottom"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v3_bottom"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v4_bottom"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v5_bottom"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v6_bottom"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v7_bottom"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v8_bottom"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v9_bottom"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v10_bottom"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v11_bottom"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v12_bottom"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v13_bottom"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v14_bottom"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v15_bottom"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v16_bottom"
+      }
+    ],
+    "type=double": [
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/double",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v2_double"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v3_double"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v4_double"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v5_double"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v6_double"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v7_double"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v8_double"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v9_double"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v10_double"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v11_double"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v12_double"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v13_double"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v14_double"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v15_double"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v16_double"
+      }
+    ],
+    "type=top": [
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/top",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v2_top"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v3_top"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v4_top"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v5_top"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v6_top"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v7_top"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v8_top"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v9_top"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v10_top"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v11_top"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v12_top"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v13_top"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v14_top"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v15_top"
+      },
+      {
+        "model": "westerosblocks:block/reach_gravel_slab/base_v16_top"
+      }
+    ]
+  }
+}

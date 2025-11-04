@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/untinted/cross",
+  "textures": {
+    "cross": "westerosblocks:block/flowers/green_scrub_grass1"
+  }
+}

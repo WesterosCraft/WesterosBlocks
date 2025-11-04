@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/lannisport_light_brick_arrow_slit_window/base_v1",
+      "y": 0
+    }
+  }
+}

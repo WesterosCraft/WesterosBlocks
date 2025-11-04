@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/gulltown_green_plaster_rough_tip/v1"
+      },
+      {
+        "model": "westerosblocks:block/gulltown_green_plaster_rough_tip/v2"
+      }
+    ]
+  }
+}

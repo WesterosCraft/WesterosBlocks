@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/rubble/icy_northern/all1",
+    "east": "westerosblocks:block/rubble/icy_northern/all1",
+    "north": "westerosblocks:block/rubble/icy_northern/all1",
+    "particle": "westerosblocks:block/rubble/icy_northern/all1",
+    "south": "westerosblocks:block/rubble/icy_northern/all1",
+    "up": "westerosblocks:block/rubble/icy_northern/all1",
+    "west": "westerosblocks:block/rubble/icy_northern/all1"
+  }
+}

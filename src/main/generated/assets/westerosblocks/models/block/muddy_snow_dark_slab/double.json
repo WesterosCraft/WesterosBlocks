@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/muddy_snow/all_dark",
+    "east": "westerosblocks:block/muddy_snow/all_dark",
+    "north": "westerosblocks:block/muddy_snow/all_dark",
+    "particle": "westerosblocks:block/muddy_snow/all_dark",
+    "south": "westerosblocks:block/muddy_snow/all_dark",
+    "up": "westerosblocks:block/muddy_snow/all_dark",
+    "west": "westerosblocks:block/muddy_snow/all_dark"
+  }
+}

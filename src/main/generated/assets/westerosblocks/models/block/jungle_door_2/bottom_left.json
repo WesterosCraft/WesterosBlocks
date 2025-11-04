@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/untinted/door_bottom_left",
+  "textures": {
+    "bottom": "westerosblocks:block/wood/jungle/door_alt_bottom",
+    "top": "westerosblocks:block/wood/jungle/door_alt_top"
+  }
+}

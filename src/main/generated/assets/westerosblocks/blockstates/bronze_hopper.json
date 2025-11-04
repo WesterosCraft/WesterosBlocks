@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/bronze_hopper/v1"
+      },
+      {
+        "model": "westerosblocks:block/bronze_hopper/v2"
+      },
+      {
+        "model": "westerosblocks:block/bronze_hopper/v3"
+      },
+      {
+        "model": "westerosblocks:block/bronze_hopper/v4"
+      }
+    ]
+  }
+}

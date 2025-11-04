@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/dragonfly/base_v1"
+    }
+  }
+}

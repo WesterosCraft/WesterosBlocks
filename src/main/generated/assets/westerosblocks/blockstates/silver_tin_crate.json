@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/silver_tin_crate/base_v1",
+      "y": 0
+    }
+  }
+}

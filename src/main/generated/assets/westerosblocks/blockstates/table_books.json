@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/table_books/base_v1",
+      "y": 0
+    }
+  }
+}

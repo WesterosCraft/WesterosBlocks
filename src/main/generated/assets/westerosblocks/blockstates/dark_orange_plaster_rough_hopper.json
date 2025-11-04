@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/dark_orange_plaster_rough_hopper/v1"
+      },
+      {
+        "model": "westerosblocks:block/dark_orange_plaster_rough_hopper/v2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "variants": {
+    "facing=east,state=bones1": [
+      {
+        "model": "westerosblocks:block/bones/bones1_v1"
+      }
+    ],
+    "facing=east,state=bones2": [
+      {
+        "model": "westerosblocks:block/bones/bones2_v1"
+      }
+    ],
+    "facing=east,state=bones3": [
+      {
+        "model": "westerosblocks:block/bones/bones3_v1"
+      }
+    ],
+    "facing=east,state=random": [
+      {
+        "model": "westerosblocks:block/bones/random_v1"
+      },
+      {
+        "model": "westerosblocks:block/bones/random_v2"
+      },
+      {
+        "model": "westerosblocks:block/bones/random_v3"
+      }
+    ],
+    "facing=north,state=bones1": [
+      {
+        "model": "westerosblocks:block/bones/bones1_v1",
+        "y": 90
+      }
+    ],
+    "facing=north,state=bones2": [
+      {
+        "model": "westerosblocks:block/bones/bones2_v1",
+        "y": 90
+      }
+    ],
+    "facing=north,state=bones3": [
+      {
+        "model": "westerosblocks:block/bones/bones3_v1",
+        "y": 90
+      }
+    ],
+    "facing=north,state=random": [
+      {
+        "model": "westerosblocks:block/bones/random_v1",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/bones/random_v2",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/bones/random_v3",
+        "y": 90
+      }
+    ]
+  }
+}

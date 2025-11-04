@@ -1,0 +1,21 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "westerosblocks:block/test_block_7/test_block_7_side"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/test_block_7/test_block_7_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    }
+  ]
+}

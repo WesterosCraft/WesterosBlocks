@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/dirt_medium/base_v1",
+      "y": 0
+    }
+  }
+}

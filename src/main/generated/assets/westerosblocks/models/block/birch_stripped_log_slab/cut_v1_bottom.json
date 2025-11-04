@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/slab",
+  "textures": {
+    "down": "westerosblocks:block/bark/birch/stripped_lines",
+    "east": "westerosblocks:block/bark/birch/stripped_lines",
+    "north": "westerosblocks:block/bark/birch/stripped_lines",
+    "particle": "westerosblocks:block/bark/birch/stripped_lines",
+    "south": "westerosblocks:block/bark/birch/stripped_lines",
+    "up": "westerosblocks:block/bark/birch/stripped_lines",
+    "west": "westerosblocks:block/bark/birch/stripped_lines"
+  }
+}

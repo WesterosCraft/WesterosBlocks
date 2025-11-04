@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/duckweed/v1"
+      },
+      {
+        "model": "westerosblocks:block/duckweed/v2"
+      },
+      {
+        "model": "westerosblocks:block/duckweed/v3"
+      },
+      {
+        "model": "westerosblocks:block/duckweed/v4"
+      }
+    ]
+  }
+}

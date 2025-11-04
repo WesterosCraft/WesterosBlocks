@@ -1,0 +1,9 @@
+{
+  "colormap": "westerosblocks:birch",
+  "targets": [
+    "westerosblocks:apple_fruit_leaves",
+    "westerosblocks:blackberry_bush",
+    "westerosblocks:peach_fruit_leaves",
+    "westerosblocks:pomegranate_fruit_leaves"
+  ]
+}
