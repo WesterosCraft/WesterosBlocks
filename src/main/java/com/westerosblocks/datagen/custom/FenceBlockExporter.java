@@ -13,15 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * Exporter for fence blocks following block-models.md patterns.
- * Generates models for connectable fence blocks with post and side components.
- *
- *
- * @see ModTextureKey#BOTTOM_OVERLAY
- * @see ModTextureKey#TOP_OVERLAY
- * @see ModTextureKey#SIDE_OVERLAY
- */
 public class FenceBlockExporter extends BaseBlockExporter {
 
     private static Model createFencePostModel(boolean tinted, boolean overlay) {
@@ -92,60 +83,51 @@ public class FenceBlockExporter extends BaseBlockExporter {
     /**
      * Creates multipart blockstate supplier for fence blocks.
      * Follows block-models.md section 5.4: Custom BlockStateSupplier Method.
+     * Each variant is added individually as a separate multipart entry.
      */
     private static MultipartBlockStateSupplier createFenceVariants(Block block, List<Identifier> postModelIds,
                                                                     List<Identifier> sideModelIds, List<Integer> weights) {
         MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
 
-        // Add post models (always present - no conditions)
-        List<BlockStateVariant> postVariants = new ArrayList<>();
+        // Single loop: for each texture variant, add post + all directional sides
         for (int i = 0; i < postModelIds.size(); i++) {
+            // Add post model (no condition - always present)
             BlockStateVariant postVariant = BlockStateVariant.create()
                     .put(VariantSettings.MODEL, postModelIds.get(i));
-
             if (weights.get(i) > 1) {
                 postVariant = postVariant.put(VariantSettings.WEIGHT, weights.get(i));
             }
+            supplier.with(postVariant);
 
-            postVariants.add(postVariant);
+            // Add side models for each direction
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), Direction.NORTH);
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), Direction.EAST);
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), Direction.SOUTH);
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), Direction.WEST);
         }
-        supplier.with(postVariants);
-
-        // Add side models for each direction
-        addDirectionalSideModels(supplier, sideModelIds, weights, Direction.NORTH);
-        addDirectionalSideModels(supplier, sideModelIds, weights, Direction.EAST);
-        addDirectionalSideModels(supplier, sideModelIds, weights, Direction.SOUTH);
-        addDirectionalSideModels(supplier, sideModelIds, weights, Direction.WEST);
 
         return supplier;
     }
 
-    private static void addDirectionalSideModels(MultipartBlockStateSupplier supplier, List<Identifier> sideModelIds,
-                                                  List<Integer> weights, Direction direction) {
-        List<BlockStateVariant> sideVariants = new ArrayList<>();
+    /**
+     * Adds a single side variant for a specific direction.
+     */
+    private static void addSideVariant(MultipartBlockStateSupplier supplier, Identifier sideModelId,
+                                       int weight, Direction direction) {
+        BlockStateVariant sideVariant = BlockStateVariant.create()
+                .put(VariantSettings.MODEL, sideModelId)
+                .put(VariantSettings.UVLOCK, true);
 
-        for (int i = 0; i < sideModelIds.size(); i++) {
-            BlockStateVariant sideVariant = BlockStateVariant.create()
-                    .put(VariantSettings.MODEL, sideModelIds.get(i));
+        // Add rotation based on direction
+        switch (direction) {
+            case EAST -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R90);
+            case SOUTH -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R180);
+            case WEST -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R270);
+            // NORTH gets no rotation (0 degrees)
+        }
 
-            // Add rotation based on direction
-            switch (direction) {
-                case EAST -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R90);
-                case SOUTH -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R180);
-                case WEST -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R270);
-                // NORTH gets no rotation (0 degrees)
-            }
-
-            if (weights.get(i) > 1) {
-                sideVariant = sideVariant.put(VariantSettings.WEIGHT, weights.get(i));
-            }
-
-            // Add UV lock for rotated models
-            if (direction != Direction.NORTH) {
-                sideVariant = sideVariant.put(VariantSettings.UVLOCK, true);
-            }
-
-            sideVariants.add(sideVariant);
+        if (weight > 1) {
+            sideVariant = sideVariant.put(VariantSettings.WEIGHT, weight);
         }
 
         // Add condition for when this side should be rendered
@@ -157,20 +139,9 @@ public class FenceBlockExporter extends BaseBlockExporter {
             default -> null;
         };
 
-        supplier.with(condition, sideVariants);
+        supplier.with(condition, sideVariant);
     }
 
-    /**
-     * Registers a fence block with simple textures.
-     * Follows block-models.md section 5.5: Custom Datagen Method.
-     *
-     * @param generator The BlockStateModelGenerator to register models with
-     * @param block The fence block to generate models for
-     * @param tinted Whether the fence uses tinted textures
-     * @param overlay Whether the fence has overlay textures
-     * @param textures Texture paths [bottom, top, side] (or single texture for all)
-     * @param overlayTextures Overlay texture paths (optional, only if overlay=true)
-     */
     public static void registerFenceBlock(BlockStateModelGenerator generator, Block block, boolean tinted,
                                          boolean overlay, String[] textures, String[] overlayTextures) {
         // Expand single texture to three if needed
@@ -238,14 +209,6 @@ public class FenceBlockExporter extends BaseBlockExporter {
                 .upload(itemModelId, itemTextureMap, generator.modelCollector);
     }
 
-    // ========================================
-    // BlockDefinition Integration (block-models.md 5.6)
-    // ========================================
-
-    /**
-     * Registers a fence block from a BlockDefinition.
-     * Automatically extracts textures and properties from the definition.
-     */
     public static void registerCustomFenceBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         boolean tinted = definition.isTinted() || definition.hasColorMult();
         boolean overlay = definition.hasOverlayTextures();
