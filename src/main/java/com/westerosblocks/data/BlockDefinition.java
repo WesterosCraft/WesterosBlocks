@@ -1008,7 +1008,7 @@ public class BlockDefinition {
     }
 
     public boolean hasRotateRandom() {
-        return Boolean.TRUE.equals(hasRotateRandom);
+        return Boolean.TRUE.equals(hasRotateRandom) || Boolean.TRUE.equals(rotateRandom);
     }
 
     public boolean isNoDecay() {
