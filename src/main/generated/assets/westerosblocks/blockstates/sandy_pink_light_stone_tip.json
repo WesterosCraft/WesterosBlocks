@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/sandy_pink_light_stone_tip/v1"
+      "model": "westerosblocks:block/sandy_pink_light_stone_tip/base_v1"
     }
   }
 }

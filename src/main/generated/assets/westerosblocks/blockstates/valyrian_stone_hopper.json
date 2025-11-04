@@ -2,28 +2,36 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/valyrian_stone_hopper/v1"
+        "model": "westerosblocks:block/valyrian_stone_hopper/base_v1",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/valyrian_stone_hopper/v2"
+        "model": "westerosblocks:block/valyrian_stone_hopper/base_v2",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/valyrian_stone_hopper/v3"
+        "model": "westerosblocks:block/valyrian_stone_hopper/base_v3",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/valyrian_stone_hopper/v4"
+        "model": "westerosblocks:block/valyrian_stone_hopper/base_v4",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/valyrian_stone_hopper/v5"
+        "model": "westerosblocks:block/valyrian_stone_hopper/base_v5",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/valyrian_stone_hopper/v6"
+        "model": "westerosblocks:block/valyrian_stone_hopper/base_v6",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/valyrian_stone_hopper/v7"
+        "model": "westerosblocks:block/valyrian_stone_hopper/base_v7",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/valyrian_stone_hopper/v8"
+        "model": "westerosblocks:block/valyrian_stone_hopper/base_v8",
+        "y": 0
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/large_clay_pot/v1"
+      "model": "westerosblocks:block/large_clay_pot/base_v1"
     }
   }
 }

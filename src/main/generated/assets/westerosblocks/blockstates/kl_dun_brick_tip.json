@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/kl_dun_brick_tip/v1"
+      "model": "westerosblocks:block/kl_dun_brick_tip/base_v1"
     }
   }
 }

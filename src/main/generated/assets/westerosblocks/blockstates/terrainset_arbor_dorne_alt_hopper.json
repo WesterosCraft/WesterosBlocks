@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/terrainset_arbor_dorne_alt_hopper/v1"
+      "model": "westerosblocks:block/terrainset_arbor_dorne_alt_hopper/base_v1"
     }
   }
 }

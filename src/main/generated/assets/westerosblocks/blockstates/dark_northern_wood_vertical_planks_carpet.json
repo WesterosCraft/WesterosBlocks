@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/dark_northern_wood_vertical_planks_carpet/v1"
+      "model": "westerosblocks:block/dark_northern_wood_vertical_planks_carpet/base_v1"
     }
   }
 }

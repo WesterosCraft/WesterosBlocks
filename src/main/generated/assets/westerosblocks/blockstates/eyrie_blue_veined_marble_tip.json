@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/eyrie_blue_veined_marble_tip/v1"
+      "model": "westerosblocks:block/eyrie_blue_veined_marble_tip/base_v1"
     }
   }
 }

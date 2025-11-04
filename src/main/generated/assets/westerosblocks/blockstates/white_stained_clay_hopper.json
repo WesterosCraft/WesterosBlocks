@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/white_stained_clay_hopper/v1"
+      "model": "westerosblocks:block/white_stained_clay_hopper/base_v1"
     }
   }
 }

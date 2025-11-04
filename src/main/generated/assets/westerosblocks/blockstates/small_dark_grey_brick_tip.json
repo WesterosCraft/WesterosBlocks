@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/small_dark_grey_brick_tip/v1"
+      "model": "westerosblocks:block/small_dark_grey_brick_tip/base_v1"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/terrainset_mountains_of_the_moon_hopper/v1"
+      "model": "westerosblocks:block/terrainset_mountains_of_the_moon_hopper/base_v1"
     }
   }
 }

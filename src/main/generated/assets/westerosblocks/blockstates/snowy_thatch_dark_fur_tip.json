@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/snowy_thatch_dark_fur_tip/v1"
+      "model": "westerosblocks:block/snowy_thatch_dark_fur_tip/base_v1"
     }
   }
 }

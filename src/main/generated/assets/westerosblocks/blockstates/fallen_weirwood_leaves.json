@@ -2,13 +2,16 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/fallen_weirwood_leaves/v1"
+        "model": "westerosblocks:block/fallen_weirwood_leaves/base_v1",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/fallen_weirwood_leaves/v2"
+        "model": "westerosblocks:block/fallen_weirwood_leaves/base_v2",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/fallen_weirwood_leaves/v3"
+        "model": "westerosblocks:block/fallen_weirwood_leaves/base_v3",
+        "y": 0
       }
     ]
   }

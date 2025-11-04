@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/green_wood_vertical_planks_carpet/v1"
+      "model": "westerosblocks:block/green_wood_vertical_planks_carpet/base_v1"
     }
   }
 }

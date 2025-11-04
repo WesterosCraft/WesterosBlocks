@@ -1,4 +1,5 @@
 {
+	"parent": "block/block",
   "textures": {
 		"0": "westerosblocks:block/cheval_de_frise/axis",
 		"1": "westerosblocks:block/cheval_de_frise/spike",

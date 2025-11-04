@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/oak_jungle_vertical_planks_tip/v1"
+      "model": "westerosblocks:block/oak_jungle_vertical_planks_tip/base_v1"
     }
   }
 }

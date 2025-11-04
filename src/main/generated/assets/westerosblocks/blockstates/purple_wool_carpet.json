@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/purple_wool_carpet/v1"
+      "model": "westerosblocks:block/purple_wool_carpet/base_v1"
     }
   }
 }

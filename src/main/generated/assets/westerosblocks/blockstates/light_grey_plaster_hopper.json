@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/light_grey_plaster_hopper/v1"
+      "model": "westerosblocks:block/light_grey_plaster_hopper/base_v1"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/red_wool_tip/v1"
+      "model": "westerosblocks:block/red_wool_tip/base_v1"
     }
   }
 }

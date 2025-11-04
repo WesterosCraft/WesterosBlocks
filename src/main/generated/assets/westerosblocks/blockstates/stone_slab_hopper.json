@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/stone_slab_hopper/v1"
+      "model": "westerosblocks:block/stone_slab_hopper/base_v1"
     }
   }
 }

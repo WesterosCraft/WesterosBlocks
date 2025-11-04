@@ -2,13 +2,16 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/steel_tip/v1"
+        "model": "westerosblocks:block/steel_tip/base_v1",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/steel_tip/v2"
+        "model": "westerosblocks:block/steel_tip/base_v2",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/steel_tip/v3"
+        "model": "westerosblocks:block/steel_tip/base_v3",
+        "y": 0
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/terracotta_large_brick_tip/v1"
+      "model": "westerosblocks:block/terracotta_large_brick_tip/base_v1"
     }
   }
 }

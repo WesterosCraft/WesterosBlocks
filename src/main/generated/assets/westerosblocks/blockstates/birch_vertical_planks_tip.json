@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/birch_vertical_planks_tip/v1"
+      "model": "westerosblocks:block/birch_vertical_planks_tip/base_v1"
     }
   }
 }

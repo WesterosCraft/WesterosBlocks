@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/terrainset_eastern_islands_hopper/v1"
+      "model": "westerosblocks:block/terrainset_eastern_islands_hopper/base_v1"
     }
   }
 }

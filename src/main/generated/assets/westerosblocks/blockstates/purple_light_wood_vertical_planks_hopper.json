@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/purple_light_wood_vertical_planks_hopper/v1"
+      "model": "westerosblocks:block/purple_light_wood_vertical_planks_hopper/base_v1"
     }
   }
 }

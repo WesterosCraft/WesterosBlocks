@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/dorne_mossy_dark_sandstone_hopper/v1"
+      "model": "westerosblocks:block/dorne_mossy_dark_sandstone_hopper/base_v1"
     }
   }
 }

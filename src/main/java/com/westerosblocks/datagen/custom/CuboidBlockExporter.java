@@ -72,7 +72,8 @@ public class CuboidBlockExporter extends BaseBlockExporter {
             // Iterate through all texture sets for this state
             for (int setIdx = 0; setIdx < textureSetCount; setIdx++) {
                 Identifier modelId;
-                String variantName = (hasMultipleStates ? stateId + "_" : "") + "v" + (setIdx + 1);
+                String statePrefix = hasMultipleStates ? stateId : "base";
+                String variantName = statePrefix + "_v" + (setIdx + 1);
 
                 // Check if this state uses custom models
                 if (state.isCustomModel()) {
@@ -132,10 +133,16 @@ public class CuboidBlockExporter extends BaseBlockExporter {
                 // Single model
                 generator.blockStateCollector.accept(createSimpleBlockState(block, modelIds.get(0)));
             } else {
-                // Multiple models (random textures)
-                List<BlockStateVariant> variants = modelIds.stream()
-                    .map(BaseBlockExporter::createVariant)
-                    .toList();
+                // Multiple models (random textures) - apply weights from RandomTextureVariants
+                List<BlockStateVariant> variants = new ArrayList<>();
+                BlockDefinition.StateVariant state = definition.getStates().get(0);
+                for (int i = 0; i < modelIds.size(); i++) {
+                    BlockDefinition.RandomTextureVariant randomTexture = state.getRandomTextureSet(i);
+                    int weight = randomTexture.getWeight();
+                    Identifier modelId = modelIds.get(i);
+                    BlockStateVariant variant = createWeightedVariant(modelId, 0, weight);
+                    variants.add(variant);
+                }
                 generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0])));
             }
         }

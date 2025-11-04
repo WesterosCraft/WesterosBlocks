@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/path_dirt_medium/v1"
+      "model": "westerosblocks:block/path_dirt_medium/base_v1"
     }
   }
 }

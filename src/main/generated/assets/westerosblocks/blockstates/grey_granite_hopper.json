@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/grey_granite_hopper/v1"
+      "model": "westerosblocks:block/grey_granite_hopper/base_v1"
     }
   }
 }

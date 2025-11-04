@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/coarse_red_sandstone_tip/v1"
+      "model": "westerosblocks:block/coarse_red_sandstone_tip/base_v1"
     }
   }
 }

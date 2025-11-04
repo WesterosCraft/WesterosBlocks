@@ -251,6 +251,7 @@
     "label": "Cobweb",
     "type": "toggleOnUse,no-in-web",
     "toggleOnUse": true,
+    "noInWeb": true,
     "states": [
       {
         "stateID": "random",

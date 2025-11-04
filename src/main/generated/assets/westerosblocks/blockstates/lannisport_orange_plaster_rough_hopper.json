@@ -2,10 +2,12 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/lannisport_orange_plaster_rough_hopper/v1"
+        "model": "westerosblocks:block/lannisport_orange_plaster_rough_hopper/base_v1",
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/lannisport_orange_plaster_rough_hopper/v2"
+        "model": "westerosblocks:block/lannisport_orange_plaster_rough_hopper/base_v2",
+        "y": 0
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/terrainset_westerlands_hopper/v1"
+      "model": "westerosblocks:block/terrainset_westerlands_hopper/base_v1"
     }
   }
 }

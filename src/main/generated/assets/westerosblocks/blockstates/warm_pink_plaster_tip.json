@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/warm_pink_plaster_tip/v1"
+      "model": "westerosblocks:block/warm_pink_plaster_tip/base_v1"
     }
   }
 }

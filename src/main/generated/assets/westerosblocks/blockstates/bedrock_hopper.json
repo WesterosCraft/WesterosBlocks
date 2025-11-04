@@ -2,19 +2,29 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/bedrock_hopper/v1"
+        "model": "westerosblocks:block/bedrock_hopper/base_v1",
+        "weight": 5,
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/bedrock_hopper/v2"
+        "model": "westerosblocks:block/bedrock_hopper/base_v2",
+        "weight": 5,
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/bedrock_hopper/v3"
+        "model": "westerosblocks:block/bedrock_hopper/base_v3",
+        "weight": 5,
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/bedrock_hopper/v4"
+        "model": "westerosblocks:block/bedrock_hopper/base_v4",
+        "weight": 5,
+        "y": 0
       },
       {
-        "model": "westerosblocks:block/bedrock_hopper/v5"
+        "model": "westerosblocks:block/bedrock_hopper/base_v5",
+        "weight": 20,
+        "y": 0
       }
     ]
   }
