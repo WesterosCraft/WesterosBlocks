@@ -36,7 +36,7 @@ public class SolidBlockExporter extends BaseBlockExporter {
             BlockDefinition.StateVariant state = states.get(stateIdx);
             String stateID = state.getStateID();
             String fname = (stateID == null) ? "base" : stateID;
-            boolean isTinted = definition.isTinted() || state.hasOverlayTextures();
+            boolean isTinted = definition.isTinted();
             boolean isOverlay = state.hasOverlayTextures();
 
             for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {

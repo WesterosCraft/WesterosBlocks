@@ -1,5 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.block.custom.WCHalfDoorBlock;
@@ -13,6 +15,8 @@ import net.minecraft.data.client.VariantSettings.Rotation;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.function.BiConsumer;
+import java.util.function.Supplier;
 
 public class HalfDoorBlockExporter extends BaseBlockExporter {
 
@@ -34,13 +38,12 @@ public class HalfDoorBlockExporter extends BaseBlockExporter {
             String texturePath = textureList.get(0);
             registerHalfDoorBlock(generator, block, texturePath);
         } else {
-            // Fallback if no textures defined
             registerHalfDoorBlock(generator, block, "missingno");
         }
     }
 
     private static TextureMap createHalfDoorTextureMap(String texturePath) {
-        // Note: Uses TextureKey.BOTTOM for compatibility with existing models
+
         return new TextureMap().put(TextureKey.BOTTOM, createBlockIdentifier(texturePath));
     }
 
@@ -71,14 +74,11 @@ public class HalfDoorBlockExporter extends BaseBlockExporter {
 
     private static Identifier createHalfDoorModel(BlockStateModelGenerator generator, Block block, String texturePath,
                                                    String variant, Model model) {
-        // Create model ID using nested path structure
         String blockName = getBlockName(block);
         Identifier modelId = WesterosBlocks.id("block/" + blockName + "/" + blockName + "_" + variant);
 
-        // Create texture map
         TextureMap textureMap = createHalfDoorTextureMap(texturePath);
 
-        // Create custom model with parent model path for legacy compatibility
         String parentModelPath = "block/untinted/" + getParentModelName(variant);
         Model doorModel = new Model(
             Optional.of(WesterosBlocks.id(parentModelPath)),

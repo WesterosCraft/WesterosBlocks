@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/tinted/cube_overlay",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
     "down": "westerosblocks:block/plaster/smooth/brown_white/all",
     "down_ov": "westerosblocks:block/timber/oak/bottom",
