@@ -36,7 +36,7 @@ public class BlockSetExpander {
         VARIANT_TYPES.put("tip", "cuboid");
         VARIANT_TYPES.put("carpet", "cuboid");
         VARIANT_TYPES.put("fence_gate", "fencegate");
-        VARIANT_TYPES.put("half_door", "halfdoor");
+        VARIANT_TYPES.put("half_door", "cuboid-nsew");
         VARIANT_TYPES.put("cover", "rail");
         VARIANT_TYPES.put("hollow_hopper", "cuboid");
         VARIANT_TYPES.put("directional", "cuboid-nsew");

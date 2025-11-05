@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "westerosblocks:block/wood/purple_light/vertical"
-  }
+  "parent": "westerosblocks:block/purple_light_wood_half_door/v1"
 }

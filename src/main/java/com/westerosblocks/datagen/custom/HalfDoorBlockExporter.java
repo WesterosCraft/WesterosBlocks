@@ -14,50 +14,20 @@ import net.minecraft.data.client.VariantSettings.Rotation;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * Exporter for half door (shutter) blocks following block-models.md patterns.
- * Generates models for half-height door blocks with hinge and open/closed states.
- *
- * @see ModModels#HALF_DOOR_LEFT
- * @see ModModels#HALF_DOOR_RIGHT
- * @see ModModels#HALF_DOOR_LEFT_OPEN
- * @see ModModels#HALF_DOOR_RIGHT_OPEN
- */
 public class HalfDoorBlockExporter extends BaseBlockExporter {
 
-    /**
-     * Registers a half door (shutter) block with all hinge, open, and direction variants.
-     * Follows block-models.md pattern for multi-variant blocks.
-     *
-     * <p>Generates 16 blockstate variants (2 hinges × 2 open states × 4 directions)
-     *
-     * @param generator The BlockStateModelGenerator to register models with
-     * @param block The half door block to generate models for
-     * @param texturePath Texture path for the half door (used for all variants)
-     */
     public static void registerHalfDoorBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
-        // Upload models for each variant - block-models.md section 5.2: Parent Block Model
         Identifier leftModelId = createHalfDoorModel(generator, block, texturePath, "left", ModModels.HALF_DOOR_LEFT);
         Identifier rightModelId = createHalfDoorModel(generator, block, texturePath, "right", ModModels.HALF_DOOR_RIGHT);
         Identifier leftOpenModelId = createHalfDoorModel(generator, block, texturePath, "left_open", ModModels.HALF_DOOR_LEFT_OPEN);
         Identifier rightOpenModelId = createHalfDoorModel(generator, block, texturePath, "right_open", ModModels.HALF_DOOR_RIGHT_OPEN);
 
-        // Create blockstate variants - block-models.md section 5.4: Custom BlockStateSupplier Method
         BlockStateVariantMap variants = createHalfDoorVariants(leftModelId, rightModelId, leftOpenModelId, rightOpenModelId);
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
 
-        // Register item model - block-models.md section 5.5: Custom Datagen Method
         registerSimpleItemModel(generator, block, createBlockIdentifier(texturePath));
     }
 
-    /**
-     * Registers a half door block from a BlockDefinition.
-     * Automatically extracts texture from the definition and registers the half door block.
-     *
-     * @param generator The BlockStateModelGenerator to register models with
-     * @param block The half door block to generate models for
-     * @param definition The block definition containing texture information
-     */
     public static void registerCustomHalfDoorBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         List<String> textureList = definition.getTextures();
         if (textureList != null && !textureList.isEmpty()) {

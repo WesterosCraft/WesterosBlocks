@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "westerosblocks:block/wood/birch/vertical"
-  }
+  "parent": "westerosblocks:block/birch_half_door/v1"
 }

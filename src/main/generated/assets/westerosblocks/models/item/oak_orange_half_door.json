@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "westerosblocks:block/wood/oak_orange/vertical"
-  }
+  "parent": "westerosblocks:block/oak_orange_half_door/v1"
 }

@@ -1,5 +1,6 @@
 package com.westerosblocks.datagen.custom;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
@@ -15,27 +16,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Exporter for NSEW cuboid blocks with directional facing support.
- * Generates blockstate files with facing variants and appropriate model rotations.
- */
 public class CuboidNSEWBlockExporter extends BaseBlockExporter {
 
     private static final String[] FACING_DIRECTIONS = {"north", "east", "south", "west"};
     private static final int[] ROTATIONS = {0, 90, 180, 270};
 
-    /**
-     * Registers an NSEW cuboid block from a BlockDefinition.
-     * Uses uniform iteration pattern: After doInit(), states is ALWAYS non-empty,
-     * and each state has randomTextures normalized from simple textures.
-     * Handles NSEW facing directions with proper model rotations.
-     */
+
     public static void registerCustomCuboidNSEWBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         if (!(block instanceof WCCuboidNSEWBlock cuboidBlock)) {
             throw new IllegalArgumentException("Block must be a WCCuboidNSEWBlock instance");
         }
 
-        // After doInit(), states is ALWAYS non-empty (at least synthetic base state exists)
         var states = definition.getStates();
 
         if (states == null || states.isEmpty()) {
@@ -275,7 +266,6 @@ public class CuboidNSEWBlockExporter extends BaseBlockExporter {
         registerParentedItemModel(generator, block, modelId);
     }
 
-    // Helper methods from CuboidBlockExporter
     private static Identifier createGeneratedModelId(Block block, String variant) {
         String blockName = getBlockName(block);
         String modelPath = "block/" + blockName + "/" + variant;
@@ -415,7 +405,7 @@ public class CuboidNSEWBlockExporter extends BaseBlockExporter {
                         variants.add("facing=west,state=" + stateId, westArray);
 
                         // NORTH facing (270° rotation)
-                        com.google.gson.JsonArray northArray = new com.google.gson.JsonArray();
+                        JsonArray northArray = new JsonArray();
                         for (int i = 0; i < modelIds.size(); i++) {
                             int weight = weights != null && i < weights.size() ? weights.get(i) : 1;
                             for (int w = 0; w < weight; w++) {
@@ -435,10 +425,6 @@ public class CuboidNSEWBlockExporter extends BaseBlockExporter {
         };
     }
 
-    /**
-     * Creates a blockstate supplier for single-state NSEW blocks with random textures.
-     * Generates JSON with weighted variants for each facing direction.
-     */
     private static BlockStateSupplier createNSEWBlockStateWithRandomTextures(Block block, List<Identifier> modelIds, List<Integer> weights) {
         return new BlockStateSupplier() {
             @Override
@@ -489,8 +475,7 @@ public class CuboidNSEWBlockExporter extends BaseBlockExporter {
                 }
                 variants.add("facing=west", westArray);
 
-                // NORTH facing (270° rotation)
-                com.google.gson.JsonArray northArray = new com.google.gson.JsonArray();
+                JsonArray northArray = new JsonArray();
                 for (int i = 0; i < modelIds.size(); i++) {
                     int weight = weights != null && i < weights.size() ? weights.get(i) : 1;
                     for (int w = 0; w < weight; w++) {

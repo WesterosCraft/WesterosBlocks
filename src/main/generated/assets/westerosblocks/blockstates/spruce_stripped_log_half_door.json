@@ -1,66 +1,34 @@
 {
   "variants": {
-    "facing=east,hinge=left,open=false": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_left"
+    "facing=east,state=base": {
+      "model": "westerosblocks:block/spruce_stripped_log_half_door/base_v1"
     },
-    "facing=east,hinge=left,open=true": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_left_open",
-      "y": 90
+    "facing=east,state=cut": {
+      "model": "westerosblocks:block/spruce_stripped_log_half_door/cut_v1"
     },
-    "facing=east,hinge=right,open=false": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_right"
-    },
-    "facing=east,hinge=right,open=true": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_right_open",
+    "facing=north,state=base": {
+      "model": "westerosblocks:block/spruce_stripped_log_half_door/base_v1",
       "y": 270
     },
-    "facing=north,hinge=left,open=false": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_left",
+    "facing=north,state=cut": {
+      "model": "westerosblocks:block/spruce_stripped_log_half_door/cut_v1",
       "y": 270
     },
-    "facing=north,hinge=left,open=true": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_left_open",
-      "y": 0
-    },
-    "facing=north,hinge=right,open=false": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_right",
-      "y": 270
-    },
-    "facing=north,hinge=right,open=true": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_right_open",
-      "y": 180
-    },
-    "facing=south,hinge=left,open=false": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_left",
+    "facing=south,state=base": {
+      "model": "westerosblocks:block/spruce_stripped_log_half_door/base_v1",
       "y": 90
     },
-    "facing=south,hinge=left,open=true": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_left_open",
-      "y": 180
-    },
-    "facing=south,hinge=right,open=false": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_right",
+    "facing=south,state=cut": {
+      "model": "westerosblocks:block/spruce_stripped_log_half_door/cut_v1",
       "y": 90
     },
-    "facing=south,hinge=right,open=true": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_right_open",
-      "y": 0
-    },
-    "facing=west,hinge=left,open=false": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_left",
+    "facing=west,state=base": {
+      "model": "westerosblocks:block/spruce_stripped_log_half_door/base_v1",
       "y": 180
     },
-    "facing=west,hinge=left,open=true": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_left_open",
-      "y": 270
-    },
-    "facing=west,hinge=right,open=false": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_right",
+    "facing=west,state=cut": {
+      "model": "westerosblocks:block/spruce_stripped_log_half_door/cut_v1",
       "y": 180
-    },
-    "facing=west,hinge=right,open=true": {
-      "model": "westerosblocks:block/spruce_stripped_log_half_door/spruce_stripped_log_half_door_right_open",
-      "y": 90
     }
   }
 }

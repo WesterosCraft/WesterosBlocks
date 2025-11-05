@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "westerosblocks:block/wood/jungle/vertical"
-  }
+  "parent": "westerosblocks:block/jungle_half_door/v1"
 }
