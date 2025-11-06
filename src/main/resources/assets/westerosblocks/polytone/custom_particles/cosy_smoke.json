@@ -1,20 +1,22 @@
 {
-  "textures": "minecraft:smoke",
   "initializer": {
-    "lifetime": "80 + rand() * 40",
-    "alpha": "0.9",
-    "size": "0.3 + rand() * 0.2",
-    "friction": "0.96"
+    "lifetime": "40",
+    "alpha": "1",
+    "size": "0.5",
+    "red": "1",
+    "green": "1",
+    "blue": "1"
   },
   "ticker": {
-    "dx": "DX * 0.96",
-    "dz": "DZ * 0.96",
-    "dy": "DY + 0.004",
-    "alpha": "ALPHA - 0.01",
-    "size": "SIZE + 0.002"
+    "dy": "0.015 * cos((0.25 * AGE)) + 0.05",
+    "dx": "(0.01 + RAIN*0.025) * sin((0.1 * AGE)) + RAIN*0.025 + RAIN*0.0075*(RAIN > 0.5)",
+    "dz": "(0.01 + RAIN*0.025) * cos((0.1 * AGE))",
+    "size": "max(0, SIZE-0.005)",
+    "red": "max(0, RED - 0.015)",
+    "green": "max(0, GREEN - 0.015)",
+    "blue": "max(0, BLUE - 0.015)"
   },
-  "render_type": "translucent",
+  "liquid_affinity": "non_liquids",
   "has_physics": true,
-  "kill_when_still": false,
-  "kill_on_contact": false
+  "render_type": "translucent"
 }
