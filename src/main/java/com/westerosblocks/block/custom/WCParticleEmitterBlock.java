@@ -6,7 +6,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
@@ -16,7 +15,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
@@ -45,16 +43,9 @@ public class WCParticleEmitterBlock extends Block implements Waterloggable {
         this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false).with(POWERED, false));
     }
 
-    @Override
-    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        // Test with vanilla smoke to verify powered state is working
-        if (state.get(POWERED)) {
-            double x = pos.getX() + 0.5;
-            double y = pos.getY() + 0.5;
-            double z = pos.getZ() + 0.5;
-            world.addParticle(ParticleTypes.SMOKE, x, y, z, 0.0, 0.05, 0.0);
-        }
-    }
+    // Particle spawning is handled automatically by Polytone via block_properties files
+    // When powered=true, Polytone reads assets/westerosblocks/polytone/block_properties/[block_name].json
+    // and spawns the particles defined in the "ambient_particles" section
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {

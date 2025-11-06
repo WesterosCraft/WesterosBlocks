@@ -1,8 +1,0 @@
-{
-  "state_predicate": "powered=true",
-  "ambient_particles": {
-    "particle": "westerosblocks:signal_smoke",
-    "probability": 0.0625,
-    "offset_y": 0.5
-  }
-}
