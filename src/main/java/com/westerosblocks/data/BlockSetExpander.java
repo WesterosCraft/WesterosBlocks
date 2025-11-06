@@ -78,12 +78,6 @@ public class BlockSetExpander {
         VARIANT_TEXTURES.put("bench", new String[]{"sides"});
     }
 
-    /**
-     * Expands a block set definition into individual block definitions.
-     *
-     * @param blockSet The block set definition to expand
-     * @return List of expanded block definitions (one per variant)
-     */
     public static List<BlockDefinition> expand(BlockSetDefinition blockSet) {
         List<BlockDefinition> definitions = new ArrayList<>();
 

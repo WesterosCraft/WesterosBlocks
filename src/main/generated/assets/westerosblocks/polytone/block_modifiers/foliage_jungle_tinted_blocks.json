@@ -1,6 +1,7 @@
 {
   "colormap": "westerosblocks:foliage_jungle",
   "targets": [
+    "westerosblocks:bushy_grass_jungle",
     "westerosblocks:hop_fruit_leaves",
     "westerosblocks:lime_fruit_leaves",
     "westerosblocks:orange_fruit_leaves",

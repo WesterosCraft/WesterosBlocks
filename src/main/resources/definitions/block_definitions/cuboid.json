@@ -912,7 +912,7 @@
     "renderLayer": "cutout",
     "colorMults": [
       "textures/colormap/grass",
-      "textures/colormap/foliagejungle"
+      "textures/colormap/foliage_jungle"
     ],
     "randomTextures": [
       {},
@@ -938,7 +938,7 @@
     "renderLayer": "cutout",
     "colorMults": [
       "textures/colormap/grass",
-      "textures/colormap/foliageoak"
+      "textures/colormap/foliage_oak"
     ],
     "randomTextures": [
       {},
@@ -964,7 +964,7 @@
     "renderLayer": "cutout",
     "colorMults": [
       "textures/colormap/grass",
-      "textures/colormap/foliagepalm"
+      "textures/colormap/foliage_palm"
     ],
     "randomTextures": [
       {},

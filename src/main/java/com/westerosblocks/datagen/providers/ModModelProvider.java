@@ -197,6 +197,16 @@ public class ModModelProvider extends FabricModelProvider {
                     MountedBlockExporter.registerMountedBlock(bsmg, block, definition);
                     break;
 
+                case "flowerbed":
+                    String[] flowerTextures = definition.getTexturesAsArray();
+                    String stemTex = flowerTextures.length > 0 ? flowerTextures[0] : "";
+                    String flowerTex = flowerTextures.length > 1 ? flowerTextures[1] : "";
+                    FlowerbedBlockExporter.registerCustomFlowerbedBlock(bsmg, block)
+                        .stemTexture(stemTex)
+                        .flowerTexture(flowerTex)
+                        .build();
+                    break;
+
                 default:
                     WesterosBlocks.LOGGER.warn("Unsupported block type '{}' for model generation: {}",
                             blockType, definition.getBlockName());

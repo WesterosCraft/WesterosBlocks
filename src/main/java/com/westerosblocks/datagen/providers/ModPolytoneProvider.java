@@ -36,23 +36,29 @@ public class ModPolytoneProvider implements DataProvider {
             return CompletableFuture.completedFuture(null);
         }
 
-        // Group blocks by their colorMult value
+        // Group blocks by their colorMult value(s)
         for (BlockDefinition definition : registry.getAllDefinitions()) {
             // Skip test blocks (blocks in westeros_test_tab)
             if ("westeros_test_tab".equals(definition.getCreativeTab())) {
                 continue;
             }
 
-            String colorMult = definition.getColorMult();
+            String blockId = WesterosBlocks.MOD_ID + ":" + definition.getBlockName();
 
-            if (colorMult != null && !colorMult.isEmpty()) {
-                // Extract the colormap identifier from the path
-                // E.g., "textures/colormap/sand" -> "sand" or just "birch" -> "birch"
+            // Handle single colorMult
+            if (definition.hasColorMult()) {
+                String colorMult = definition.getColorMult();
                 String colormapId = extractColormapId(colorMult);
-
-                String blockId = WesterosBlocks.MOD_ID + ":" + definition.getBlockName();
-
                 blocksByColormap.computeIfAbsent(colormapId, k -> new ArrayList<>()).add(blockId);
+            }
+
+            // Handle multiple colorMults (blocks can have multiple colormaps applied)
+            if (definition.hasColorMults()) {
+                List<String> colorMults = definition.getColorMults();
+                for (String colorMult : colorMults) {
+                    String colormapId = extractColormapId(colorMult);
+                    blocksByColormap.computeIfAbsent(colormapId, k -> new ArrayList<>()).add(blockId);
+                }
             }
         }
 
