@@ -70,9 +70,8 @@
 - Adds new Muddy Snow Dark Block + Layer
 
 ## Dirt/Paths/Pebbles
-- Adds new dirt blocks - 'Light Dirt', 'Medium Dirt', 'Dark Dirt'
+- Adds new blocks - 'Light Dirt', 'Medium Dirt', 'Dark Dirt', 'Pebble Light Stormlands', 'Pebble Dark Stormlands', 'Pebble Dark Mountains Of The Moon', 'Pebble Light Westerlands', 'Pebble Dark Westerlands'
 - Adds repeat CTM to dirt block
-- new Pebble blocks - 'Pebble Light Stormlands', 'Pebble Dark Stormlands', 'Pebble Dark Mountains Of The Moon', 'Pebble Light Westerlands', 'Pebble Dark Westerlands'
 
 ## Ice Update
 - Added new ice blocks - 'Light Ice', 'Medium Light Ice', 'Blue Ice', 'Light Blue Ice', 'Dark Blue Ice', 'Dark Blue Medium Ice'

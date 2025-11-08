@@ -6,7 +6,7 @@ import com.westerosblocks.entity.ModEntities;
 import com.westerosblocks.entity.client.ChairRenderer;
 import com.westerosblocks.item.ModItems;
 import com.westerosblocks.item.client.ModShieldRenderer;
-import mod.azure.azurelib.rewrite.render.item.AzItemRendererRegistry;
+import mod.azure.azurelib.common.render.item.AzItemRendererRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.registry.Registries;
 import net.fabricmc.api.ClientModInitializer;
