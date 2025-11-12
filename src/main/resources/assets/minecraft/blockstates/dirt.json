@@ -1,0 +1,102 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/dirt/base_v1", "weight": 100
+      },
+      {
+        "model": "minecraft:block/dirt/base_v2", "weight": 33
+      },
+      {
+        "model": "minecraft:block/dirt/base_v3", "weight": 45
+      },
+      {
+        "model": "minecraft:block/dirt/base_v4", "weight": 140
+      },
+      {
+        "model": "minecraft:block/dirt/base_v5", "weight": 193
+      },
+      {
+        "model": "minecraft:block/dirt/base_v6", "weight": 77
+      },
+      {
+        "model": "minecraft:block/dirt/base_v7", "weight": 77
+      },
+      {
+        "model": "minecraft:block/dirt/base_v8", "weight": 77
+      },
+      {
+        "model": "minecraft:block/dirt/base_v1", "weight": 100, "y": 90
+      },
+      {
+        "model": "minecraft:block/dirt/base_v2", "weight": 33, "y": 90
+      },
+      {
+        "model": "minecraft:block/dirt/base_v3", "weight": 45, "y": 90
+      },
+      {
+        "model": "minecraft:block/dirt/base_v4", "weight": 140, "y": 90
+      },
+      {
+        "model": "minecraft:block/dirt/base_v5", "weight": 193, "y": 90
+      },
+      {
+        "model": "minecraft:block/dirt/base_v6", "weight": 77, "y": 90
+      },
+      {
+        "model": "minecraft:block/dirt/base_v7", "weight": 77, "y": 90
+      },
+      {
+        "model": "minecraft:block/dirt/base_v8", "weight": 77, "y": 90
+      },
+      {
+        "model": "minecraft:block/dirt/base_v1", "weight": 100, "y": 180
+      },
+      {
+        "model": "minecraft:block/dirt/base_v2", "weight": 33, "y": 180
+      },
+      {
+        "model": "minecraft:block/dirt/base_v3", "weight": 45, "y": 180
+      },
+      {
+        "model": "minecraft:block/dirt/base_v4", "weight": 140, "y": 180
+      },
+      {
+        "model": "minecraft:block/dirt/base_v5", "weight": 193, "y": 180
+      },
+      {
+        "model": "minecraft:block/dirt/base_v6", "weight": 77, "y": 180
+      },
+      {
+        "model": "minecraft:block/dirt/base_v7", "weight": 77, "y": 180
+      },
+      {
+        "model": "minecraft:block/dirt/base_v8", "weight": 77, "y": 180
+      },
+      {
+        "model": "minecraft:block/dirt/base_v1", "weight": 100, "y": 270
+      },
+      {
+        "model": "minecraft:block/dirt/base_v2", "weight": 33, "y": 270
+      },
+      {
+        "model": "minecraft:block/dirt/base_v3", "weight": 45, "y": 270
+      },
+      {
+        "model": "minecraft:block/dirt/base_v4", "weight": 140, "y": 270
+      },
+      {
+        "model": "minecraft:block/dirt/base_v5", "weight": 193, "y": 270
+      },
+      {
+        "model": "minecraft:block/dirt/base_v6", "weight": 77, "y": 270
+      },
+      {
+        "model": "minecraft:block/dirt/base_v7", "weight": 77, "y": 270
+      },
+      {
+        "model": "minecraft:block/dirt/base_v8", "weight": 77, "y": 270
+      }
+    ]
+  }
+}

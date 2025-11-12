@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "": [
+     { "model": "minecraft:block/cobweb/cobweb0" },
+     { "model": "minecraft:block/cobweb/cobweb1" },
+     { "model": "minecraft:block/cobweb/cobweb2" },
+     { "model": "minecraft:block/cobweb/cobweb3" },
+     { "model": "minecraft:block/cobweb/cobweb4" },
+     { "model": "minecraft:block/cobweb/cobweb5" },
+     { "model": "minecraft:block/cobweb/cobweb6" },
+     { "model": "minecraft:block/cobweb/cobweb7" }
+    ]
+  }
+}

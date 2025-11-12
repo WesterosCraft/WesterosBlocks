@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "minecraft:block/birch_planks/ctm26",
+    "side": "minecraft:block/birch_planks",
+    "bottom": "minecraft:block/birch_planks/ctm26"
+  }
+}

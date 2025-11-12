@@ -1,23 +1,20 @@
 {
   "initializer": {
-    "lifetime": "10",
-    "alpha": "0.8",
-    "size": "0.2",
-    "dx": "0",
-    "dy": "0.05",
-    "dz": "0"
+    "lifetime": "40 + rand() * 15",
+    "alpha": "1",
+    "size": "0.075 + rand()*0.05",
+    "custom": "rand() * 6.28"
   },
-  "particle_emitters": [
-    {
-      "particle": "minecraft:large_smoke",
-      "chance": "0.2",
-      "x": "cos(AGE)+0.5",
-      "z": "cos(AGE)+0.5",
-      "y": "1",
-      "dy": "DX"
-    }
-  ],
-  "render_type": "translucent",
+  "ticker": {
+    "dx": "0.0005 * sin(AGE * 0.3 + CUSTOM * 4)",
+    "dy": "0.01 + 0.0025 * sin(AGE * 0.2 + CUSTOM * 2)",
+    "dz": "0.0005 * cos(AGE * 0.3 + CUSTOM * 4)"
+  },
+  "random_sprite": true,
+  "rotation_mode": "movement_aligned",
   "liquid_affinity": "non_liquids",
-  "has_physics": false
+  "render_type": "opaque",
+  "has_physics": false,
+  "lit": true,
+  "light_level": 15
 }

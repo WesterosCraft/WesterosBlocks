@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "": [
+      { "model": "westerosblocks:block/custom/bedrock/base_v1", "weight": 5 },
+      { "model": "westerosblocks:block/custom/bedrock/base_v2", "weight": 5 },
+      { "model": "westerosblocks:block/custom/bedrock/base_v3", "weight": 5 },
+      { "model": "westerosblocks:block/custom/bedrock/base_v4", "weight": 5 },
+      { "model": "westerosblocks:block/custom/bedrock/base_v5", "weight": 20 }
+    ]
+  }
+}

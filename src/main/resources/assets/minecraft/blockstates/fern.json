@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "": [
+      { "model": "minecraft:block/fern/fern1", "weight": 5 },
+      { "model": "minecraft:block/fern/fern2", "weight": 5 },
+      { "model": "minecraft:block/fern/fern3", "weight": 15 },
+      { "model": "minecraft:block/fern/fern4", "weight": 10 },
+      { "model": "minecraft:block/fern/fern5", "weight": 10 },
+      { "model": "minecraft:block/fern/fern6", "weight": 15 },
+      { "model": "minecraft:block/fern/fern7", "weight": 25 },
+      { "model": "minecraft:block/fern/fern8", "weight": 15 }
+    ]
+  }
+}

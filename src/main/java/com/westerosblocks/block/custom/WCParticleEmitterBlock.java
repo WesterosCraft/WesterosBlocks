@@ -2,7 +2,6 @@ package com.westerosblocks.block.custom;
 
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.*;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
@@ -10,23 +9,17 @@ import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
 public class WCParticleEmitterBlock extends Block implements Waterloggable {
     protected BlockDefinition def;
-    protected static final VoxelShape OFF_SHAPE = Block.createCuboidShape(4.0D, 4.0D, 4.0D, 12.0D, 12.0D, 12.0D);
-    protected static final VoxelShape ON_SHAPE = Block.createCuboidShape(6.0D, 6.0D, 6.0D, 10.0D, 10.0D, 10.0D);
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(6.0D, 0.0D, 6.0D, 10.0D, 4.0D, 10.0D);
 
-    public static final BooleanProperty POWERED = Properties.POWERED;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     public static class Factory extends BlockFactory {
@@ -40,32 +33,32 @@ public class WCParticleEmitterBlock extends Block implements Waterloggable {
     public WCParticleEmitterBlock(AbstractBlock.Settings settings, BlockDefinition def) {
         super(settings);
         this.def = def;
-        this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false).with(POWERED, false));
+        this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false));
     }
 
-    // Particle spawning is handled automatically by Polytone via block_properties files
-    // When powered=true, Polytone reads assets/westerosblocks/polytone/block_properties/[block_name].json
-    // and spawns the particles defined in the "ambient_particles" section
+    // Particle spawning is handled automatically by Polytone via block_modifiers files
+    // Polytone reads assets/westerosblocks/polytone/block_modifiers/[block_name].json
+    // and spawns the particles defined in the "particle_emitters" section
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return state.get(POWERED) ? ON_SHAPE : OFF_SHAPE;
+        return SHAPE;
     }
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return state.get(POWERED) ? VoxelShapes.empty() : OFF_SHAPE;
+        return VoxelShapes.empty();
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(WATERLOGGED, POWERED);
+        builder.add(WATERLOGGED);
     }
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
-        return this.getDefaultState().with(POWERED, false).with(WATERLOGGED, fluidState.isIn(FluidTags.WATER));
+        return this.getDefaultState().with(WATERLOGGED, fluidState.isIn(FluidTags.WATER));
     }
 
     @Override
@@ -80,18 +73,6 @@ public class WCParticleEmitterBlock extends Block implements Waterloggable {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
-    }
-
-    @Override
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        Hand hand = player.getActiveHand();
-        if (player.isCreative() && player.getStackInHand(hand).isEmpty()) {
-            state = state.cycle(POWERED);
-            world.setBlockState(pos, state, Block.NOTIFY_ALL);
-            world.syncWorldEvent(player, 1006, pos, 0);
-            return ActionResult.success(world.isClient);
-        }
-        return ActionResult.PASS;
     }
 
     public BlockDefinition getDefinition() {

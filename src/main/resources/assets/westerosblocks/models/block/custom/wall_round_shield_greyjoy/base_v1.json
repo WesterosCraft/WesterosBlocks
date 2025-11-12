@@ -6,6 +6,7 @@
 		"0": "westerosblocks:item/greyjoy_round_shield",
 		"particle": "westerosblocks:item/greyjoy_round_shield"
 	},
+	"gui_light": "front",
 	"elements": [
 		{
 			"name": "rim_part2",

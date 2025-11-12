@@ -13,54 +13,20 @@ import com.westerosblocks.WesterosBlocks;
 import java.util.function.BiConsumer;
 import java.util.function.Supplier;
 
-/**
- * Exporter for particle emitter blocks following block-models.md patterns.
- * Handles powered/unpowered states with off/on textures and custom element bounding boxes.
- */
 public class ParticleEmitterExporter extends BaseBlockExporter {
 
-    /**
-     * Registers a particle emitter block with off and on textures.
-     *
-     * @param generator The block state model generator
-     * @param block The particle emitter block
-     */
     public static void registerCustomParticleEmitterBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        // Create block-specific model paths
-        Identifier offModelId = createNestedModelId(block, "off");
-        Identifier onModelId = createNestedModelId(block, "on");
+        Identifier modelId = createNestedModelId(block, "on");
 
-        // Create off state model with custom element (8x8x8 cube)
-        Identifier offTextureId = WesterosBlocks.id("block/particle_emitter/off");
-        uploadParticleEmitterModel(offModelId, offTextureId, 4, 4, 4, 12, 12, 12, generator.modelCollector);
+        // Create model with custom element (4x4x4 cube centered at bottom)
+        Identifier textureId = WesterosBlocks.id("block/particle_emitter/on");
+        uploadParticleEmitterModel(modelId, textureId, 6, 0, 6, 10, 4, 10, generator.modelCollector);
 
-        // Create on state model with custom element (4x4x4 cube)
-        Identifier onTextureId = WesterosBlocks.id("block/particle_emitter/on");
-        uploadParticleEmitterModel(onModelId, onTextureId, 6, 6, 6, 10, 10, 10, generator.modelCollector);
+        generator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(block, modelId));
 
-        // Create blockstate with powered variants
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block)
-            .coordinate(BlockStateVariantMap.create(Properties.POWERED)
-                .register(false, BlockStateVariant.create().put(VariantSettings.MODEL, offModelId))
-                .register(true, BlockStateVariant.create().put(VariantSettings.MODEL, onModelId))));
-
-        // Generate item model using off model
-        generator.registerParentedItemModel(block, offModelId);
+        generator.registerParentedItemModel(block, modelId);
     }
 
-    /**
-     * Uploads a particle emitter model with custom element bounding box.
-     *
-     * @param modelId The model identifier
-     * @param textureId The texture identifier
-     * @param fromX X coordinate of element start (0-16)
-     * @param fromY Y coordinate of element start (0-16)
-     * @param fromZ Z coordinate of element start (0-16)
-     * @param toX X coordinate of element end (0-16)
-     * @param toY Y coordinate of element end (0-16)
-     * @param toZ Z coordinate of element end (0-16)
-     * @param modelCollector The model collector
-     */
     private static void uploadParticleEmitterModel(Identifier modelId, Identifier textureId,
                                                    double fromX, double fromY, double fromZ,
                                                    double toX, double toY, double toZ,

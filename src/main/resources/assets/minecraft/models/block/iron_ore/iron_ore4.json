@@ -1,0 +1,13 @@
+{
+  "parent": "westerosblocks:block/untinted/cube",
+  "textures": {
+    "down": "minecraft:block/iron_ore/iron_ore4",
+    "up": "minecraft:block/iron_ore/iron_ore4",
+    "north": "minecraft:block/iron_ore/iron_ore4",
+    "south": "minecraft:block/iron_ore/iron_ore4",
+    "west": "minecraft:block/iron_ore/iron_ore4",
+    "east": "minecraft:block/iron_ore/iron_ore4",
+    "particle": "minecraft:block/iron_ore/iron_ore4"
+  }
+}
+

@@ -1,13 +1,13 @@
 [
   {
-    "blockName": "cascade_particle_emitter",
+    "blockName": "foam_particle_emitter",
     "blockType": "particle",
-    "particle": "cascade",
-    "label": "Cascade Particle Emitter",
+    "particle": "foam",
+    "label": "Foam Particle Emitter",
     "creativeTab": "westeros_decor_tab",
     "renderLayer": "cutout",
     "tooltips": [
-      "A block that emits a cascade of waterfall clouds.",
+      "A block that emits a foam.",
       "Typically used to enhance water sources such as waterfalls and rapids."
     ],
     "boundingBox": {
@@ -42,6 +42,23 @@
     "blockType": "particle",
     "particle": "signal_smoke",
     "label": "Signal Smoke Particle Emitter",
+    "creativeTab": "westeros_decor_tab",
+    "renderLayer": "cutout",
+    "boundingBox": {
+      "xMin": 0.25,
+      "xMax": 0.75,
+      "yMin": 0,
+      "yMax": 0.5,
+      "zMin": 0.25,
+      "zMax": 0.75
+    },
+    "hardness": -1.0
+  },
+  {
+    "blockName": "bat_particle_emitter",
+    "blockType": "particle",
+    "particle": "bat",
+    "label": "Bat Particle Emitter",
     "creativeTab": "westeros_decor_tab",
     "renderLayer": "cutout",
     "boundingBox": {

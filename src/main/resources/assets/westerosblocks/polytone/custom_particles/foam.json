@@ -1,0 +1,18 @@
+{
+  "initializer": {
+    "lifetime": "10",
+    "alpha": "1.0",
+    "size": "0.80",
+    "friction": "0.95"
+  },
+  "ticker": {
+    "dx": "DX * 0.95",
+    "dy": "DY - 0.02",
+    "dz": "DZ * 0.95"
+  },
+  "render_type": "translucent",
+  "liquid_affinity": "non_liquids",
+  "has_physics": true,
+  "kill_when_still": false,
+  "kill_on_contact": false
+}

@@ -10,10 +10,10 @@ import net.minecraft.registry.Registry;
 
 
 public class ModParticles {
-    public static final SimpleParticleType WILDFIRE = FabricParticleTypes.simple(false);
-    public static final SimpleParticleType CASCADE = FabricParticleTypes.simple(true);
-    public static final SimpleParticleType COSY_SMOKE = FabricParticleTypes.simple(true);
-    public static final SimpleParticleType SIGNAL_SMOKE = FabricParticleTypes.simple(true);
+//    public static final SimpleParticleType WILDFIRE = FabricParticleTypes.simple(false);
+//    public static final SimpleParticleType CASCADE = FabricParticleTypes.simple(true);
+//    public static final SimpleParticleType COSY_SMOKE = FabricParticleTypes.simple(true);
+//    public static final SimpleParticleType SIGNAL_SMOKE = FabricParticleTypes.simple(true);
 
 
 

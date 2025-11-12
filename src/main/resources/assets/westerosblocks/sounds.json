@@ -1,0 +1,11 @@
+{
+  "foam": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "westerosblocks:foam",
+        "volume": 1.0
+      }
+    ]
+  }
+}

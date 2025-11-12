@@ -1,0 +1,4 @@
+{
+  "targets": ["westerosblocks:bracken", "westerosblocks:smoke"],
+  "offset_type": "xz"
+}

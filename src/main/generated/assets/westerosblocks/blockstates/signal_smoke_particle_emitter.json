@@ -1,9 +1,6 @@
 {
   "variants": {
-    "powered=false": {
-      "model": "westerosblocks:block/signal_smoke_particle_emitter/off"
-    },
-    "powered=true": {
+    "": {
       "model": "westerosblocks:block/signal_smoke_particle_emitter/on"
     }
   }

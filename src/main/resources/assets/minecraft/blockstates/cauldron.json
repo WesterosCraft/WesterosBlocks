@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": [
+    	{ "model": "minecraft:block/cauldron/v1" },
+    	{ "model": "minecraft:block/cauldron/v2" }
+    ]
+  }
+}

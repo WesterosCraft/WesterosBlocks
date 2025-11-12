@@ -1,0 +1,28 @@
+{
+  "render_type": "translucent",
+  "has_physics": true,
+  "kill_when_still": false,
+  "kill_on_contact": false,
+  "random_sprite": false,
+  "rotation_mode": "movement_aligned",
+  "liquid_affinity": "non_liquids",
+
+  "initializer": {
+    "lifetime": "150 + rand() * 100",
+    "size": "0.3 + rand() * 0.1",
+    "alpha": "0.9",
+    "friction": "0.96",
+    "dx": "(rand() - 0.5) * 0.04",
+    "dy": "(rand() - 0.5) * 0.02",
+    "dz": "(rand() - 0.5) * 0.04",
+    "roll": "0",
+    "custom": "rand() * 6.28"
+  },
+
+  "ticker": {
+    "dx": "DX + 0.003 * cos(AGE * 0.04 + CUSTOM)",
+    "dy": "DY + 0.002 * sin(AGE * 0.06)",
+    "dz": "DZ + 0.003 * sin(AGE * 0.04 + CUSTOM)",
+    "size": "(0.3 + rand() * 0.1) * (1 + 0.05 * sin(AGE * 0.3))"
+  }
+}
