@@ -4,25 +4,25 @@
   "kill_when_still": false,
   "kill_on_contact": false,
   "random_sprite": false,
-  "rotation_mode": "movement_aligned",
+  "rotation_mode": "look_at_xyz",
   "liquid_affinity": "non_liquids",
 
   "initializer": {
-    "lifetime": "150 + rand() * 100",
-    "size": "0.3 + rand() * 0.1",
+    "lifetime": "(50 + rand() * 30) * 1.1",
+    "size": "0.25 + rand() * 0.05",
     "alpha": "0.9",
-    "friction": "0.96",
-    "dx": "(rand() - 0.5) * 0.04",
-    "dy": "(rand() - 0.5) * 0.02",
-    "dz": "(rand() - 0.5) * 0.04",
+    "friction": "0.94",
+    "dx": "(rand() - 0.5) * 0.15",
+    "dy": "(rand() - 0.5) * 0.10",
+    "dz": "(rand() - 0.5) * 0.15",
     "roll": "0",
     "custom": "rand() * 6.28"
   },
 
   "ticker": {
-    "dx": "DX + 0.003 * cos(AGE * 0.04 + CUSTOM)",
-    "dy": "DY + 0.002 * sin(AGE * 0.06)",
-    "dz": "DZ + 0.003 * sin(AGE * 0.04 + CUSTOM)",
-    "size": "(0.3 + rand() * 0.1) * (1 + 0.05 * sin(AGE * 0.3))"
+    "dx": "DX + 0.006 * (cos(AGE * 0.18 + CUSTOM) + 0.4 * cos(AGE * 0.37 + CUSTOM * 2)) + gaussian() * 0.003",
+    "dy": "DY + 0.005 * (sin(AGE * 0.22 + CUSTOM * 0.5) + 0.6 * sin(AGE * 0.43)) + gaussian() * 0.002",
+    "dz": "DZ + 0.006 * (sin(AGE * 0.18 + CUSTOM * 1.5) + 0.4 * sin(AGE * 0.37 + CUSTOM)) + gaussian() * 0.003",
+    "size": "(0.9 + CUSTOM * 0.2) * 0.18 * min(max(AGE / 4, 0), 1) * (1 - min(max((AGE - LIFETIME + 4) / 4, 0), 1))"
   }
 }

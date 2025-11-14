@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "top": "minecraft:block/oak_planks/ctm26",
-    "side": "minecraft:block/oak_planks",
-    "bottom": "minecraft:block/oak_planks/ctm26"
+    "top": "westerosblocks:block/wood/oak/all",
+    "side": "westerosblocks:block/wood/oak/all",
+    "bottom": "westerosblocks:block/wood/oak/all"
   }
 }

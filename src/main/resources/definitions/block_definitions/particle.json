@@ -58,7 +58,7 @@
     "blockName": "bat_particle_emitter",
     "blockType": "particle",
     "particle": "bat",
-    "label": "Bat Particle Emitter",
+    "label": "(Experimental) Bat Particle Emitter",
     "creativeTab": "westeros_decor_tab",
     "renderLayer": "cutout",
     "boundingBox": {

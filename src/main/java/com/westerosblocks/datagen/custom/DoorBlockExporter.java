@@ -14,13 +14,12 @@ import java.util.List;
 
 public class DoorBlockExporter extends BaseBlockExporter {
 
-    public static void registerDoorBlock(BlockStateModelGenerator generator, Block block, String... texturePaths) {
+    public static void registerDoorBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition, String... texturePaths) {
         validateTexturePaths(texturePaths, 2);
 
         String topTexture = texturePaths[0];
         String bottomTexture = texturePaths[1];
 
-        // Create all door models using simplified helper
         Identifier bottomLeftModelId = createDoorModel(generator, block, topTexture, bottomTexture, "bottom_left", ModModels.DOOR_BOTTOM_LEFT);
         Identifier bottomRightModelId = createDoorModel(generator, block, topTexture, bottomTexture, "bottom_right", ModModels.DOOR_BOTTOM_RIGHT);
         Identifier bottomLeftOpenModelId = createDoorModel(generator, block, topTexture, bottomTexture, "bottom_left_open", ModModels.DOOR_BOTTOM_LEFT_OPEN);
@@ -30,13 +29,22 @@ public class DoorBlockExporter extends BaseBlockExporter {
         Identifier topLeftOpenModelId = createDoorModel(generator, block, topTexture, bottomTexture, "top_left_open", ModModels.DOOR_TOP_LEFT_OPEN);
         Identifier topRightOpenModelId = createDoorModel(generator, block, topTexture, bottomTexture, "top_right_open", ModModels.DOOR_TOP_RIGHT_OPEN);
 
-        // Create and register blockstate with all variants
         BlockStateVariantMap variants = createDoorVariants(
                 bottomLeftModelId, bottomRightModelId, bottomLeftOpenModelId, bottomRightOpenModelId,
                 topLeftModelId, topRightModelId, topLeftOpenModelId, topRightOpenModelId);
 
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
-        registerSimpleItemModel(generator, block, createBlockIdentifier(bottomTexture));
+
+        Identifier itemTextureId;
+        if (definition.hasCustomItemTexture()) {
+            String blockName = getBlockName(block);
+            itemTextureId = Identifier.of("westerosblocks", "item/" + blockName);
+        } else if (definition.hasItemTexture()) {
+            itemTextureId = createBlockIdentifier(definition.getItemTexture());
+        } else {
+            itemTextureId = createBlockIdentifier(bottomTexture);
+        }
+        registerSimpleItemModel(generator, block, itemTextureId);
     }
 
     private static BlockStateVariantMap createDoorVariants(
@@ -87,7 +95,7 @@ public class DoorBlockExporter extends BaseBlockExporter {
     public static void registerCustomDoorBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         String[] textures = definition.getTexturesAsArray();
 
-        registerDoorBlock(generator, block, textures[0], textures[1]);
+        registerDoorBlock(generator, block, definition, textures[0], textures[1]);
     }
 
 

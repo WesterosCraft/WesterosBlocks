@@ -10,7 +10,8 @@
       "wood/birch/door_top",
       "wood/birch/door_bottom"
     ],
-    "allowUnsupported": true
+    "allowUnsupported": true,
+    "customItemTexture": true
   },
   {
     "blockName": "eyrie_weirwood_door",
@@ -38,7 +39,8 @@
     ],
     "allowUnsupported": true,
     "type": "allow-unsupported",
-    "strength": 2
+    "strength": 2,
+    "customItemTexture": true
   },
   {
     "blockName": "harrenhal_secret_door",
@@ -53,7 +55,8 @@
     "textures": [
       "ashlar_third/black/all_noctm",
       "ashlar_third/black/all_noctm"
-    ]
+    ],
+    "customItemTexture": true
   },
   {
     "blockName": "jungle_door",
@@ -67,7 +70,8 @@
       "wood/jungle/door_bottom"
     ],
     "type": "allow-unsupported",
-    "strength": 2
+    "strength": 2,
+    "customItemTexture": true
   },
   {
     "blockName": "locked_birch_door",
@@ -97,7 +101,8 @@
       "wood/northern/door_locked_top",
       "wood/northern/door_locked_bottom"
     ],
-    "strength": 2
+    "strength": 2,
+    "customItemTexture": true
   },
   {
     "blockName": "locked_grey_wood_door",

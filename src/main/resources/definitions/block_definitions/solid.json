@@ -7656,6 +7656,7 @@
     "label": "Timber Oak Brown Frame",
     "toggleOnUse": true,
     "connectstate": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [

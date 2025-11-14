@@ -3,7 +3,7 @@
   "particle_emitters": [
     {
       "particle": "westerosblocks:bat",
-      "chance": "0.325",
+      "chance": "0.10",
       "y": "0.5"
     }
   ]

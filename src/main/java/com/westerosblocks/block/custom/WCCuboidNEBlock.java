@@ -25,7 +25,7 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements Waterloggable {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(BlockDefinition definition) {
-            AbstractBlock.Settings settings = definition.makeSettings();
+            AbstractBlock.Settings settings = definition.makeSettings().nonOpaque();
             ModProperties.StateProperty stateProperty = definition.buildStateProperty();
             boolean doToggleOnUse = definition.toggleOnUse();
 

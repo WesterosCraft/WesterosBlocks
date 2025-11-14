@@ -37,7 +37,7 @@ public class WesterosBlocks implements ModInitializer {
         ModEntities.registerModEntities();
 
         // Register commands
-        ParticleEmitterCommand.register();
+//        ParticleEmitterCommand.register();
 
         // Export WorldPainter CSV if config option is enabled
         if (CONFIG.dumpWorldPainterCSV) {

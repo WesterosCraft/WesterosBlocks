@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/wood/grey/door_bottom"
+    "layer0": "westerosblocks:item/grey_wood_door"
   }
 }

@@ -88,6 +88,10 @@ public class BlockDefinition {
     @SerializedName("itemTexture")
     private String itemTexture;
 
+    /** Use custom item texture from item/ directory instead of block texture */
+    @SerializedName("customItemTexture")
+    private Boolean customItemTexture;
+
     /** Which texture index to use for item rendering (when block has multiple textures) */
     @SerializedName("itemTextureIndex")
     private Integer itemTextureIndex;
@@ -961,6 +965,10 @@ public class BlockDefinition {
 
     public boolean hasItemTexture() {
         return itemTexture != null && !itemTexture.isEmpty();
+    }
+
+    public boolean hasCustomItemTexture() {
+        return Boolean.TRUE.equals(customItemTexture);
     }
 
     public Integer getItemTextureIndex() {
