@@ -14,6 +14,7 @@
     "label": "Bones",
     "toggleOnUse": true,
     "renderLayer": "cutout",
+    "nonOpaque": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,

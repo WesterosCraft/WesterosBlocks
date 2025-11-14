@@ -19,12 +19,6 @@ public class CuboidBlockExporter extends BaseBlockExporter {
     private static final int[] STANDARD_TEXTURE_INDICES = {0, 1, 2, 3, 4, 5};
     private static final boolean[] NO_TINT_ALL = {false, false, false, false, false, false};
 
-
-    /**
-     * Registers a cuboid block from a BlockDefinition.
-     * Uses uniform iteration pattern: After doInit(), states is ALWAYS non-empty,
-     * and each state has randomTextures normalized from simple textures.
-     */
     public static void registerCustomCuboidBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         if (!(block instanceof WCCuboidBlock cuboidBlock)) {
             throw new IllegalArgumentException("Block must be a WCCuboidBlock instance");
