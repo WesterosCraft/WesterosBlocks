@@ -9,6 +9,7 @@ public class BlockDefinitionRegistry {
     private static BlockDefinitionRegistry instance;
     private final Map<String, BlockDefinition> definitions;
     private final Map<String, List<BlockDefinition>> definitionsByType;
+    private ColorMapDefinition colorMaps;
     private boolean initialized = false;
 
     private BlockDefinitionRegistry() {
@@ -71,6 +72,13 @@ public class BlockDefinitionRegistry {
         // Group all definitions by type
         definitionsByType.putAll(loader.groupByType(definitions));
 
+        // Load color maps for Polytone integration
+        ColorMapLoader colorMapLoader = new ColorMapLoader("definitions/color_maps.json");
+        this.colorMaps = colorMapLoader.loadDefinition();
+        if (this.colorMaps != null) {
+            colorMapLoader.validateDefinition(this.colorMaps);
+        }
+
         initialized = true;
         WesterosBlocks.LOGGER.info("BlockDefinitionRegistry initialized with {} total definitions.",
             definitions.size());
@@ -99,6 +107,13 @@ public class BlockDefinitionRegistry {
             throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
         }
         return Collections.unmodifiableCollection(definitions.values());
+    }
+
+    public ColorMapDefinition getColorMaps() {
+        if (!initialized) {
+            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
+        }
+        return colorMaps;
     }
 
     public int getCount() {

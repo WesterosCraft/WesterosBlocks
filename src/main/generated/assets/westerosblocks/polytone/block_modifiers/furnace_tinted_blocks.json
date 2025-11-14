@@ -1,6 +1,7 @@
 {
   "colormap": "westerosblocks:furnace",
   "targets": [
+    "minecraft:furnace",
     "westerosblocks:always_active_stone_furnace",
     "westerosblocks:stone_furnace"
   ]

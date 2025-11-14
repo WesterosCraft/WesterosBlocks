@@ -5,6 +5,8 @@ import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
+import com.westerosblocks.data.ColorMapDefinition;
+import com.westerosblocks.data.ColorMapEntry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.data.DataOutput;
 import net.minecraft.data.DataProvider;
@@ -60,6 +62,27 @@ public class ModPolytoneProvider implements DataProvider {
                     blocksByColormap.computeIfAbsent(colormapId, k -> new ArrayList<>()).add(blockId);
                 }
             }
+        }
+
+        // Merge vanilla blocks from color_maps.json
+        ColorMapDefinition colorMaps = registry.getColorMaps();
+        int vanillaBlockCount = 0;
+        if (colorMaps != null && colorMaps.hasColorMaps()) {
+            for (ColorMapEntry entry : colorMaps.getColorMaps()) {
+                if (entry.hasColorMult() && entry.hasBlockNames()) {
+                    String colorMult = entry.getColorMult();
+                    // Skip hex colors (e.g., "#FFFFFF") as they don't reference colormap textures
+                    if (colorMult.startsWith("#")) {
+                        WesterosBlocks.LOGGER.debug("Skipping hex color {} for blocks: {}", colorMult, entry.getBlockNames());
+                        continue;
+                    }
+                    String colormapId = extractColormapId(colorMult);
+                    List<String> blockIds = entry.getBlockNames();
+                    blocksByColormap.computeIfAbsent(colormapId, k -> new ArrayList<>()).addAll(blockIds);
+                    vanillaBlockCount += blockIds.size();
+                }
+            }
+            WesterosBlocks.LOGGER.info("Added {} vanilla/external blocks from color_maps.json", vanillaBlockCount);
         }
 
         if (blocksByColormap.isEmpty()) {

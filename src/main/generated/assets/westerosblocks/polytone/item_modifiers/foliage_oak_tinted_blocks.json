@@ -1,6 +1,7 @@
 {
   "colormap": "westerosblocks:foliage_oak",
   "targets": [
+    "minecraft:oak_leaves",
     "westerosblocks:apricot_fruit_leaves",
     "westerosblocks:blueberry_bush",
     "westerosblocks:bushy_grass_oak",

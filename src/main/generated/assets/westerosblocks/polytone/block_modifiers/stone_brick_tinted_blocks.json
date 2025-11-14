@@ -1,6 +1,11 @@
 {
   "colormap": "westerosblocks:stone_brick",
   "targets": [
+    "minecraft:cracked_stone_bricks",
+    "minecraft:mossy_stone_bricks",
+    "minecraft:stone_brick_slab",
+    "minecraft:stone_brick_stairs",
+    "minecraft:stone_bricks",
     "westerosblocks:mossy_stone_brick",
     "westerosblocks:mossy_stone_brick_arrow_slit",
     "westerosblocks:mossy_stone_brick_arrow_slit_ornate",

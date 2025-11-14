@@ -1,6 +1,7 @@
 {
   "colormap": "westerosblocks:light_grey_stone",
   "targets": [
+    "minecraft:terracotta",
     "westerosblocks:light_grey_brick",
     "westerosblocks:light_grey_brick_arrow_slit",
     "westerosblocks:light_grey_brick_arrow_slit_ornate",
