@@ -53,7 +53,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggab
     }
 
     public WCCuboidNSEWStackBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doAllowHalfBreak) {
-        super(settings, def, false, null);
+        super(settings, def, false, null, null);
         this.allowHalfBreak = doAllowHalfBreak;
         this.SHAPE_BY_INDEX = new VoxelShape[8];
 

@@ -65,7 +65,7 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements Waterloggable 
     }
 
     public WCCuboidNSEWUDBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doToggleOnUse) {
-        super(settings, def, doToggleOnUse, null);
+        super(settings, def, doToggleOnUse, null, null);
 
         BlockState defbs = this.getDefaultState()
             .with(WATERLOGGED, false)

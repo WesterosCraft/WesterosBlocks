@@ -9,7 +9,7 @@ import net.minecraft.util.shape.VoxelShapes;
 public class WCBeaconBlock extends WCCuboidBlock {
 
     public WCBeaconBlock(AbstractBlock.Settings settings, BlockDefinition def, VoxelShape shape) {
-        super(settings, def, false, shape);
+        super(settings, def, false, shape, null);
     }
 
     public static class Factory extends BlockFactory {

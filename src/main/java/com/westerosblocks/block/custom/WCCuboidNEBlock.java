@@ -60,7 +60,7 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements Waterloggable {
     }
 
     public WCCuboidNEBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doToggleOnUse) {
-        super(settings, def, doToggleOnUse, null);
+        super(settings, def, doToggleOnUse, null, null);
 
         BlockState defbs = this.getDefaultState()
             .with(WATERLOGGED, false)

@@ -87,7 +87,7 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
 
     public WCCuboid16WayBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doToggleOnUse,
                               VoxelShape customBoundingBox) {
-        super(settings, def, doToggleOnUse, customBoundingBox);
+        super(settings, def, doToggleOnUse, customBoundingBox, null);
 
         // Check if we have state-specific bounding boxes
         if (def != null && def.hasStates()) {
