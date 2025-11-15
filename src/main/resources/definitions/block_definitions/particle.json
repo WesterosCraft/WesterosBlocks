@@ -6,6 +6,7 @@
     "label": "Foam Particle Emitter",
     "creativeTab": "westeros_decor_tab",
     "renderLayer": "cutout",
+    "customItemTexture": true,
     "tooltips": [
       "A block that emits a foam.",
       "Typically used to enhance water sources such as waterfalls and rapids."
@@ -27,6 +28,7 @@
     "label": "Cosy Smoke Particle Emitter",
     "creativeTab": "westeros_decor_tab",
     "renderLayer": "cutout",
+    "customItemTexture": true,
     "boundingBox": {
       "xMin": 0.25,
       "xMax": 0.75,
@@ -44,6 +46,7 @@
     "label": "Signal Smoke Particle Emitter",
     "creativeTab": "westeros_decor_tab",
     "renderLayer": "cutout",
+    "customItemTexture": true,
     "boundingBox": {
       "xMin": 0.25,
       "xMax": 0.75,
@@ -61,6 +64,7 @@
     "label": "(Experimental) Bat Particle Emitter",
     "creativeTab": "westeros_decor_tab",
     "renderLayer": "cutout",
+    "customItemTexture": true,
     "boundingBox": {
       "xMin": 0.25,
       "xMax": 0.75,

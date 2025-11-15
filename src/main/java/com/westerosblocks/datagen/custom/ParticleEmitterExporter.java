@@ -24,7 +24,16 @@ public class ParticleEmitterExporter extends BaseBlockExporter {
 
         generator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(block, modelId));
 
-        generator.registerParentedItemModel(block, modelId);
+        if (definition.hasCustomItemTexture()) {
+            String blockName = getBlockName(block);
+            Identifier itemTextureId = Identifier.of("westerosblocks", "item/" + blockName);
+            registerSimpleItemModel(generator, block, itemTextureId);
+        } else if (definition.hasItemTexture()) {
+            Identifier itemTextureId = createBlockIdentifier(definition.getItemTexture());
+            registerSimpleItemModel(generator, block, itemTextureId);
+        } else {
+            generator.registerParentedItemModel(block, modelId);
+        }
     }
 
     private static void uploadParticleEmitterModel(Identifier modelId, Identifier textureId,
