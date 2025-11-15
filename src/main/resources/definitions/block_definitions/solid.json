@@ -2656,6 +2656,7 @@
     "connectstate": true,
     "symmetrical": true,
     "toggleOnUse": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7054,6 +7055,7 @@
     "label": "Timber Northern White Frame",
     "toggleOnUse": true,
     "connectstate": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7107,6 +7109,7 @@
     "connectstate": true,
     "symmetrical": true,
     "toggleOnUse": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7164,6 +7167,7 @@
     "connectstate": true,
     "symmetrical": true,
     "toggleOnUse": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7221,6 +7225,7 @@
     "connectstate": true,
     "symmetrical": true,
     "toggleOnUse": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7278,6 +7283,7 @@
     "connectstate": true,
     "symmetrical": true,
     "toggleOnUse": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7335,6 +7341,7 @@
     "connectstate": true,
     "symmetrical": true,
     "toggleOnUse": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7392,6 +7399,7 @@
     "connectstate": true,
     "symmetrical": true,
     "toggleOnUse": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7448,6 +7456,7 @@
     "label": "Timber Northern White Vertical",
     "toggleOnUse": true,
     "connectstate": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7500,6 +7509,7 @@
     "label": "Timber Oak Brown Bressummer",
     "toggleOnUse": true,
     "connectstate": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7552,6 +7562,7 @@
     "label": "Timber Oak Brown Close Studding",
     "toggleOnUse": true,
     "connectstate": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7604,6 +7615,7 @@
     "label": "Timber Oak Brown Crosshatch",
     "toggleOnUse": true,
     "connectstate": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7710,6 +7722,7 @@
     "connectstate": true,
     "symmetrical": true,
     "toggleOnUse": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7767,6 +7780,7 @@
     "connectstate": true,
     "symmetrical": true,
     "toggleOnUse": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7824,6 +7838,7 @@
     "connectstate": true,
     "symmetrical": true,
     "toggleOnUse": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7881,6 +7896,7 @@
     "connectstate": true,
     "symmetrical": true,
     "toggleOnUse": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7938,6 +7954,7 @@
     "connectstate": true,
     "symmetrical": true,
     "toggleOnUse": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -7995,6 +8012,7 @@
     "connectstate": true,
     "symmetrical": true,
     "toggleOnUse": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -8051,6 +8069,7 @@
     "label": "Timber Oak Brown Vertical",
     "toggleOnUse": true,
     "connectstate": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -8103,6 +8122,7 @@
     "label": "Timber Oak Fieldstone Westerlands Bressummer",
     "toggleOnUse": true,
     "connectstate": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -8141,6 +8161,7 @@
     "label": "Timber Oak Fieldstone Westerlands Close Studding",
     "toggleOnUse": true,
     "connectstate": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -8179,6 +8200,7 @@
     "label": "Timber Oak Fieldstone Westerlands Crosshatch",
     "toggleOnUse": true,
     "connectstate": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
