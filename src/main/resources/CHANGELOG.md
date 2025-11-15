@@ -7,6 +7,7 @@
 - Added "Clover" that uses the vanilla Flowerbed block type
 - Added "Particle Emitter" block type with a Cascade, Cosy Smoke, and Signal Smoke particle emitter blocks
 - Added Shield API mod for shields
+- Adds "Purple Cabbage" block
 
 ## Updated wood CTM
 - Refreshes wood and bark textures

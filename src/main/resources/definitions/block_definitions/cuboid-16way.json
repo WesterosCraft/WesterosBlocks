@@ -12,14 +12,35 @@
     "toggleOnUse": true,
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Cabbage",
-    "textures": [
-      "cabbage/down",
-      "cabbage/up",
-      "cabbage/west",
-      "cabbage/east",
-      "cabbage/south",
-      "cabbage/north"
+    "isCustomModel": true,
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "boundingBox": {
+      "xMin": 0.25,
+      "xMax": 0.75,
+      "yMin": 0,
+      "yMax": 0.5,
+      "zMin": 0.25,
+      "zMax": 0.75
+    },
+    "strength": 3
+  },
+  {
+    "blockName": "purple_cabbage",
+    "blockType": "cuboid-16way",
+    "soundGroup": "plant",
+    "harvestLevel": [
+      {
+        "tool": "hoe",
+        "level": 1
+      }
     ],
+    "toggleOnUse": true,
+    "creativeTab": "westeros_crops_herbs_tab",
+    "label": "Purple Cabbage",
+    "isCustomModel": true,
+    "nonOpaque": true,
+    "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.25,
       "xMax": 0.75,
