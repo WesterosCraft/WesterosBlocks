@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "westerosblocks:block/tables/wood_table_northern"
-  }
+  "parent": "westerosblocks:block/northern_table/single"
 }

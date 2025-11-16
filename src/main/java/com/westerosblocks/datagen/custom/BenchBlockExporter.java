@@ -20,17 +20,8 @@ import net.minecraft.util.math.Direction;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * Exporter for bench blocks with FACING and CONNECTION properties.
- * Generates models for connectable bench blocks that form straight lines.
- *
- * @see WCBenchBlock
- */
 public class BenchBlockExporter extends BaseBlockExporter {
 
-    /**
-     * Registers a custom bench block with FACING and CONNECTION properties
-     */
     public static void registerCustomBenchBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         List<String> textureList = definition.getTextures();
         String texturePath = (textureList != null && !textureList.isEmpty()) ? textureList.get(0) : "missingno";
@@ -38,9 +29,6 @@ public class BenchBlockExporter extends BaseBlockExporter {
         registerCustomBenchBlock(generator, block, texturePath, texturePath);
     }
 
-    /**
-     * Internal implementation for registering bench blocks
-     */
     private static void registerCustomBenchBlock(BlockStateModelGenerator generator, Block block, String texturePath, String particleTexture) {
         String blockName = getBlockName(block);
 

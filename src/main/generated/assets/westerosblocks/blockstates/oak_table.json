@@ -1,193 +1,68 @@
 {
-  "multipart": [
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_single"
-      },
-      "when": {
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "west": "false"
-      }
+  "variants": {
+    "connection=left,facing=east": {
+      "model": "westerosblocks:block/oak_table/left",
+      "y": 0
     },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_double",
-        "y": 180
-      },
-      "when": {
-        "east": "false",
-        "north": "true",
-        "south": "false",
-        "west": "false"
-      }
+    "connection=left,facing=north": {
+      "model": "westerosblocks:block/oak_table/left",
+      "y": 270
     },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_double"
-      },
-      "when": {
-        "east": "false",
-        "north": "false",
-        "south": "true",
-        "west": "false"
-      }
+    "connection=left,facing=south": {
+      "model": "westerosblocks:block/oak_table/left",
+      "y": 90
     },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_double",
-        "y": 270
-      },
-      "when": {
-        "east": "true",
-        "north": "false",
-        "south": "false",
-        "west": "false"
-      }
+    "connection=left,facing=west": {
+      "model": "westerosblocks:block/oak_table/left",
+      "y": 180
     },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_double",
-        "y": 90
-      },
-      "when": {
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "west": "true"
-      }
+    "connection=middle,facing=east": {
+      "model": "westerosblocks:block/oak_table/middle",
+      "y": 270
     },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_corner",
-        "y": 180
-      },
-      "when": {
-        "east": "false",
-        "north": "true",
-        "south": "false",
-        "west": "true"
-      }
+    "connection=middle,facing=north": {
+      "model": "westerosblocks:block/oak_table/middle",
+      "y": 180
     },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_corner",
-        "y": 270
-      },
-      "when": {
-        "east": "true",
-        "north": "true",
-        "south": "false",
-        "west": "false"
-      }
+    "connection=middle,facing=south": {
+      "model": "westerosblocks:block/oak_table/middle",
+      "y": 0
     },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_corner",
-        "y": 90
-      },
-      "when": {
-        "east": "false",
-        "north": "false",
-        "south": "true",
-        "west": "true"
-      }
+    "connection=middle,facing=west": {
+      "model": "westerosblocks:block/oak_table/middle",
+      "y": 90
     },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_corner"
-      },
-      "when": {
-        "east": "true",
-        "north": "false",
-        "south": "true",
-        "west": "false"
-      }
+    "connection=right,facing=east": {
+      "model": "westerosblocks:block/oak_table/right",
+      "y": 90
     },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_middle"
-      },
-      "when": {
-        "east": "false",
-        "north": "true",
-        "south": "true",
-        "west": "false"
-      }
+    "connection=right,facing=north": {
+      "model": "westerosblocks:block/oak_table/right",
+      "y": 0
     },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_middle",
-        "y": 270
-      },
-      "when": {
-        "east": "true",
-        "north": "false",
-        "south": "false",
-        "west": "true"
-      }
+    "connection=right,facing=south": {
+      "model": "westerosblocks:block/oak_table/right",
+      "y": 180
     },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_middle",
-        "y": 0
-      },
-      "when": {
-        "east": "true",
-        "north": "true",
-        "south": "false",
-        "west": "true"
-      }
+    "connection=right,facing=west": {
+      "model": "westerosblocks:block/oak_table/right",
+      "y": 270
     },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_middle",
-        "uvlock": true,
-        "y": 90
-      },
-      "when": {
-        "east": "true",
-        "north": "true",
-        "south": "true",
-        "west": "false"
-      }
+    "connection=single,facing=east": {
+      "model": "westerosblocks:block/oak_table/single",
+      "y": 270
     },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_middle",
-        "uvlock": true,
-        "y": 270
-      },
-      "when": {
-        "east": "false",
-        "north": "true",
-        "south": "true",
-        "west": "true"
-      }
+    "connection=single,facing=north": {
+      "model": "westerosblocks:block/oak_table/single",
+      "y": 180
     },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_middle",
-        "y": 180
-      },
-      "when": {
-        "east": "true",
-        "north": "false",
-        "south": "true",
-        "west": "true"
-      }
+    "connection=single,facing=south": {
+      "model": "westerosblocks:block/oak_table/single",
+      "y": 0
     },
-    {
-      "apply": {
-        "model": "westerosblocks:block/oak_table/table_middle"
-      },
-      "when": {
-        "east": "true",
-        "north": "true",
-        "south": "true",
-        "west": "true"
-      }
+    "connection=single,facing=west": {
+      "model": "westerosblocks:block/oak_table/single",
+      "y": 90
     }
-  ]
+  }
 }
