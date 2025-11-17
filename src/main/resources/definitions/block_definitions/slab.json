@@ -452,6 +452,7 @@
     "label": "Stool",
     "lightOpacity": 0,
     "nonOpaque": true,
+    "renderLayer": "cutout",
     "textures": [
       "seat/bottom",
       "seat/top",
@@ -473,6 +474,7 @@
     "label": "Stool Cushion",
     "lightOpacity": 0,
     "nonOpaque": true,
+    "renderLayer": "cutout",
     "textures": [
       "seat/bottom",
       "seat/top_cushion",
