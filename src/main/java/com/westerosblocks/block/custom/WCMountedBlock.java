@@ -45,11 +45,6 @@ public class WCMountedBlock extends Block {
             return new WCMountedBlock(settings, definition, shapes, allowUnsupported);
         }
 
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            return new WCMountedBlock(settings, null, null, false);
-        }
-
         /**
          * Creates rotated VoxelShapes for all 4 horizontal facings from the BlockDefinition's bounding box
          * Assumes JSON bbox is defined for WEST facing (thin in X, positioned at west edge)

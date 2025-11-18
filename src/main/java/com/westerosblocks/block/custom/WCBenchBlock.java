@@ -56,16 +56,8 @@ public class WCBenchBlock extends Block {
             AbstractBlock.Settings settings = definition.makeSettings();
             return new WCBenchBlock(settings, definition);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            return new WCBenchBlock(settings, null);
-        }
     }
 
-    /**
-     * Enum representing the connection type of a bench block
-     */
     public enum ConnectionType implements StringIdentifiable {
         SINGLE("single"),   // No connections
         LEFT("left"),       // Left end (connects on right)

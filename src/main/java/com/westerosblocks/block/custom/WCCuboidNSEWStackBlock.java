@@ -43,13 +43,6 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggab
 
             return new WCCuboidNSEWStackBlock(settings, definition, doAllowHalfBreak);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, java.util.Map<String, Object> parameters) {
-            boolean doAllowHalfBreak = (Boolean) parameters.getOrDefault("allowHalfBreak", false);
-
-            return new WCCuboidNSEWStackBlock(settings, null, doAllowHalfBreak);
-        }
     }
 
     public WCCuboidNSEWStackBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doAllowHalfBreak) {

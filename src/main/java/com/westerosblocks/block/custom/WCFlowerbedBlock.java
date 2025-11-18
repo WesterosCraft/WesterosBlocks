@@ -62,11 +62,6 @@ public class WCFlowerbedBlock extends PlantBlock implements Fertilizable {
                     : AbstractBlock.Settings.create();
             return new WCFlowerbedBlock(settings, definition);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, java.util.Map<String, Object> parameters) {
-            return new WCFlowerbedBlock(settings, null);
-        }
     }
 
     public WCFlowerbedBlock(AbstractBlock.Settings settings) {

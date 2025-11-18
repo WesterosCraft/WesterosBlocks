@@ -64,13 +64,6 @@ public class WCWallTorchBlock extends WallTorchBlock {
             return new WCWallTorchBlock(settings, definition, allowUnsupported, noParticle);
         }
 
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            boolean allowUnsupported = (Boolean) parameters.getOrDefault("allowUnsupported", false);
-            boolean noParticle = (Boolean) parameters.getOrDefault("noParticle", false);
-
-            return new WCWallTorchBlock(settings, null, allowUnsupported, noParticle);
-        }
     }
 
     public BlockDefinition getDefinition() {

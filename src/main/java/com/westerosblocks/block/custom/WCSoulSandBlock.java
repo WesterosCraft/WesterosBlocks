@@ -16,11 +16,6 @@ public class WCSoulSandBlock extends SoulSandBlock {
             AbstractBlock.Settings settings = definition.makeSettings();
             return new WCSoulSandBlock(settings, definition);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            return new WCSoulSandBlock(settings, null);
-        }
     }
 
     public WCSoulSandBlock(Settings settings, BlockDefinition def) {

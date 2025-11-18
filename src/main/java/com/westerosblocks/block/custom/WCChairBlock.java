@@ -64,15 +64,6 @@ public class WCChairBlock extends Block {
 
             return new WCChairBlock(settings, definition, blockName, creativeTab, woodType);
         }
-
-        @Override
-        public Block buildBlockClass(AbstractBlock.Settings settings, Map<String, Object> parameters) {
-            String blockName = (String) parameters.getOrDefault("blockName", "chair");
-            String creativeTab = (String) parameters.getOrDefault("creativeTab", "building_blocks");
-            String woodType = (String) parameters.getOrDefault("woodType", "oak");
-
-            return new WCChairBlock(settings, null, blockName, creativeTab, woodType);
-        }
     }
 
     private Map<BlockState, VoxelShape> makeShapes() {
