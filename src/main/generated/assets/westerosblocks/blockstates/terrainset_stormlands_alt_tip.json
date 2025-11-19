@@ -1,7 +1,8 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/terrainset_stormlands_alt_tip/base_v1"
+      "model": "westerosblocks:block/terrainset_stormlands_alt_tip/base_v1",
+      "y": 0
     }
   }
 }

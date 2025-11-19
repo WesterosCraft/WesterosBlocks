@@ -1,10 +1,12 @@
 {
   "variants": {
     "state=lit": {
-      "model": "westerosblocks:block/lantern/lit_v1"
+      "model": "westerosblocks:block/lantern/lit_v1",
+      "y": 0
     },
     "state=unlit": {
-      "model": "westerosblocks:block/lantern/unlit_v1"
+      "model": "westerosblocks:block/lantern/unlit_v1",
+      "y": 0
     }
   }
 }

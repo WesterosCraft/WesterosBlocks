@@ -1,7 +1,8 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/oak_birch_stripped_log_carpet/base_v1"
+      "model": "westerosblocks:block/oak_birch_stripped_log_carpet/base_v1",
+      "y": 0
     }
   }
 }

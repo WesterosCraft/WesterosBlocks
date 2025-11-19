@@ -1,10 +1,12 @@
 {
   "variants": {
     "state=base": {
-      "model": "westerosblocks:block/dark_northern_stripped_log_hopper/base_v1"
+      "model": "westerosblocks:block/dark_northern_stripped_log_hopper/base_v1",
+      "y": 0
     },
     "state=cut": {
-      "model": "westerosblocks:block/dark_northern_stripped_log_hopper/cut_v1"
+      "model": "westerosblocks:block/dark_northern_stripped_log_hopper/cut_v1",
+      "y": 0
     }
   }
 }

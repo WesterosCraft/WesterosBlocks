@@ -1,7 +1,8 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/test_block_set_hopper/base_v1"
+      "model": "westerosblocks:block/test_block_set_hopper/base_v1",
+      "y": 0
     }
   }
 }

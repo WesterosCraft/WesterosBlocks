@@ -1,10 +1,12 @@
 {
   "variants": {
     "state=base": {
-      "model": "westerosblocks:block/white_wood_carpet/base_v1"
+      "model": "westerosblocks:block/white_wood_carpet/base_v1",
+      "y": 0
     },
     "state=cut": {
-      "model": "westerosblocks:block/white_wood_carpet/cut_v1"
+      "model": "westerosblocks:block/white_wood_carpet/cut_v1",
+      "y": 0
     }
   }
 }

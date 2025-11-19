@@ -1,12 +1,13 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "block/block",
+  "elements": [],
   "textures": {
-    "down": "westerosblocks:block/stacked_bones/bone_stacked_front",
-    "east": "westerosblocks:block/stacked_bones/bone_stacked_side",
-    "north": "westerosblocks:block/stacked_bones/bone_stacked_side",
     "particle": "westerosblocks:block/stacked_bones/bone_stacked_front",
-    "south": "westerosblocks:block/stacked_bones/bone_stacked_side",
-    "up": "westerosblocks:block/stacked_bones/bone_stacked_front",
-    "west": "westerosblocks:block/stacked_bones/bone_stacked_side"
+    "txt0": "westerosblocks:block/stacked_bones/bone_stacked_front",
+    "txt1": "westerosblocks:block/stacked_bones/bone_stacked_front",
+    "txt2": "westerosblocks:block/stacked_bones/bone_stacked_side",
+    "txt3": "westerosblocks:block/stacked_bones/bone_stacked_side",
+    "txt4": "westerosblocks:block/stacked_bones/bone_stacked_side",
+    "txt5": "westerosblocks:block/stacked_bones/bone_stacked_side"
   }
 }

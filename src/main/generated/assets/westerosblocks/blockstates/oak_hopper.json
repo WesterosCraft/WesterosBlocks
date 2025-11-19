@@ -1,10 +1,12 @@
 {
   "variants": {
     "state=base": {
-      "model": "westerosblocks:block/oak_hopper/base_v1"
+      "model": "westerosblocks:block/oak_hopper/base_v1",
+      "y": 0
     },
     "state=cut": {
-      "model": "westerosblocks:block/oak_hopper/cut_v1"
+      "model": "westerosblocks:block/oak_hopper/cut_v1",
+      "y": 0
     }
   }
 }

@@ -1,10 +1,12 @@
 {
   "variants": {
     "state=base": {
-      "model": "westerosblocks:block/black_wood_hopper/base_v1"
+      "model": "westerosblocks:block/black_wood_hopper/base_v1",
+      "y": 0
     },
     "state=cut": {
-      "model": "westerosblocks:block/black_wood_hopper/cut_v1"
+      "model": "westerosblocks:block/black_wood_hopper/cut_v1",
+      "y": 0
     }
   }
 }

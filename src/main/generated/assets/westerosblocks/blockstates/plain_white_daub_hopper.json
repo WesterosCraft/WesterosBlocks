@@ -1,7 +1,8 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/plain_white_daub_hopper/base_v1"
+      "model": "westerosblocks:block/plain_white_daub_hopper/base_v1",
+      "y": 0
     }
   }
 }

@@ -1,6 +1,13 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "block/block",
+  "elements": [],
   "textures": {
-    "all": "westerosblocks:block/piled_bones/side"
+    "particle": "westerosblocks:block/piled_bones/side",
+    "txt0": "westerosblocks:block/piled_bones/side",
+    "txt1": "westerosblocks:block/piled_bones/side",
+    "txt2": "westerosblocks:block/piled_bones/side",
+    "txt3": "westerosblocks:block/piled_bones/side",
+    "txt4": "westerosblocks:block/piled_bones/side",
+    "txt5": "westerosblocks:block/piled_bones/side"
   }
 }

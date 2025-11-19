@@ -1,10 +1,12 @@
 {
   "variants": {
     "state=base": {
-      "model": "westerosblocks:block/jungle_tip/base_v1"
+      "model": "westerosblocks:block/jungle_tip/base_v1",
+      "y": 0
     },
     "state=cut": {
-      "model": "westerosblocks:block/jungle_tip/cut_v1"
+      "model": "westerosblocks:block/jungle_tip/cut_v1",
+      "y": 0
     }
   }
 }

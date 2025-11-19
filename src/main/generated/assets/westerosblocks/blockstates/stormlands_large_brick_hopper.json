@@ -1,7 +1,8 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/stormlands_large_brick_hopper/base_v1"
+      "model": "westerosblocks:block/stormlands_large_brick_hopper/base_v1",
+      "y": 0
     }
   }
 }

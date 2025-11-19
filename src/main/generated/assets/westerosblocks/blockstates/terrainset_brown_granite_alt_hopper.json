@@ -1,7 +1,8 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/terrainset_brown_granite_alt_hopper/base_v1"
+      "model": "westerosblocks:block/terrainset_brown_granite_alt_hopper/base_v1",
+      "y": 0
     }
   }
 }
