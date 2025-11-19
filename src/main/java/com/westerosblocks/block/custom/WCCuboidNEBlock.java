@@ -36,7 +36,28 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements Waterloggable {
     }
 
     public WCCuboidNEBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doToggleOnUse) {
-        super(settings, def, doToggleOnUse, null, null);
+        super(settings, def, 2, doToggleOnUse);  // modelsPerState = 2 (EAST, NORTH)
+
+        // Rotate cuboids for NORTH facing
+        int stcnt = def.getStateCount();
+        for (int stidx = 0; stidx < stcnt; stidx++) {
+            int off = stidx * this.modelsPerState;
+
+            // Rotate base cuboids by 90° for NORTH
+            List<BlockDefinition.CuboidElement> baseCuboids = cuboid_by_facing[off];
+            if (baseCuboids != null && !baseCuboids.isEmpty()) {
+                for (BlockDefinition.CuboidElement cuboid : baseCuboids) {
+                    cuboid_by_facing[off + 1].add(rotateCuboidY(cuboid, 90));  // NORTH
+                }
+            }
+        }
+
+        // Compute shapes from rotated cuboids
+        for (int i = 0; i < cuboid_by_facing.length; i++) {
+            if (SHAPE_BY_INDEX[i] == null) {
+                SHAPE_BY_INDEX[i] = computeShapeFromCuboids(cuboid_by_facing[i]);
+            }
+        }
 
         BlockState defbs = this.getDefaultState()
             .with(WATERLOGGED, false)
@@ -46,6 +67,46 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements Waterloggable {
             defbs = defbs.with(tempSTATE, tempSTATE.defValue);
         }
         this.setDefaultState(defbs);
+    }
+
+    private BlockDefinition.CuboidElement rotateCuboidY(BlockDefinition.CuboidElement cuboid, int degrees) {
+        double xMin = cuboid.getXMin();
+        double xMax = cuboid.getXMax();
+        double yMin = cuboid.getYMin();
+        double yMax = cuboid.getYMax();
+        double zMin = cuboid.getZMin();
+        double zMax = cuboid.getZMax();
+
+        double newXMin, newXMax, newZMin, newZMax;
+
+        // Only 90° rotation for NE blocks
+        newXMin = 1.0 - zMax;
+        newXMax = 1.0 - zMin;
+        newZMin = xMin;
+        newZMax = xMax;
+
+        return new BlockDefinition.CuboidElement() {
+            @Override
+            public double getXMin() { return newXMin; }
+            @Override
+            public double getXMax() { return newXMax; }
+            @Override
+            public double getYMin() { return yMin; }
+            @Override
+            public double getYMax() { return yMax; }
+            @Override
+            public double getZMin() { return newZMin; }
+            @Override
+            public double getZMax() { return newZMax; }
+            @Override
+            public int[] getSideTextures() { return cuboid.getSideTextures(); }
+            @Override
+            public int[] getSideRotations() { return cuboid.getSideRotations(); }
+            @Override
+            public boolean[] getNoTint() { return cuboid.getNoTint(); }
+            @Override
+            public String getShape() { return cuboid.getShape(); }
+        };
     }
 
     @Override
@@ -107,5 +168,11 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements Waterloggable {
             default:
                 return state;
         }
+    }
+
+    @Override
+    protected int getIndexFromState(BlockState state) {
+        int off = super.getIndexFromState(state);  // stateIdx × modelsPerState
+        return state.get(FACING) == Direction.EAST ? off : off + 1;  // EAST=+0, NORTH=+1
     }
 }

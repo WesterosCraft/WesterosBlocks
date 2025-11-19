@@ -34,8 +34,10 @@ public class WCCuboidBlock extends Block implements Waterloggable {
     protected static ModProperties.StateProperty tempSTATE;
     public ModProperties.StateProperty STATE;
     protected boolean toggleOnUse = false;
-    protected VoxelShape boundingBox = VoxelShapes.fullCube();
-    protected VoxelShape[] stateSpecificShapes = null;
+    protected int modelsPerState;
+    protected VoxelShape[] SHAPE_BY_INDEX;
+    protected VoxelShape[] SUPPORT_BY_INDEX;
+    protected List<BlockDefinition.CuboidElement>[] cuboid_by_facing;
 
     public static class Factory extends BlockFactory {
         @Override
@@ -44,77 +46,83 @@ public class WCCuboidBlock extends Block implements Waterloggable {
             ModProperties.StateProperty stateProperty = definition.buildStateProperty();
             boolean doToggleOnUse = definition.toggleOnUse();
 
-            // Calculate default bounding box (priority: cuboids > boundingBox > fullCube)
-            VoxelShape customBoundingBox = null;
-
-            // Check for cuboids first (highest priority)
-            if (definition.getCuboids() != null && !definition.getCuboids().isEmpty()) {
-                customBoundingBox = convertCuboidsToVoxelShape(definition.getCuboids());
-            }
-            // Fall back to boundingBox if no cuboids
-            else if (definition.hasBoundingBox()) {
-                BlockDefinition.BoundingBox bbox = definition.getBoundingBox();
-                customBoundingBox = VoxelShapes.cuboid(
-                    bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
-                    bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
-                );
-            }
-
-            // Check for per-state bounding boxes/cuboids
-            VoxelShape[] stateShapes = null;
-            if (definition.hasStates()) {
-                List<BlockDefinition.StateVariant> states = definition.getStates();
-                boolean hasStateSpecificGeometry = false;
-
-                // Check if any state has its own geometry
-                for (BlockDefinition.StateVariant state : states) {
-                    if ((state.getCuboids() != null && !state.getCuboids().isEmpty()) ||
-                        state.getBoundingBox() != null) {
-                        hasStateSpecificGeometry = true;
-                        break;
-                    }
-                }
-
-                if (hasStateSpecificGeometry) {
-                    stateShapes = new VoxelShape[states.size()];
-                    for (int i = 0; i < states.size(); i++) {
-                        BlockDefinition.StateVariant state = states.get(i);
-
-                        // Priority: state cuboids > state boundingBox > default shape
-                        if (state.getCuboids() != null && !state.getCuboids().isEmpty()) {
-                            stateShapes[i] = convertCuboidsToVoxelShape(state.getCuboids());
-                        } else if (state.getBoundingBox() != null) {
-                            BlockDefinition.BoundingBox bbox = state.getBoundingBox();
-                            stateShapes[i] = VoxelShapes.cuboid(
-                                bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
-                                bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
-                            );
-                        } else {
-                            // Use default shape for this state
-                            stateShapes[i] = customBoundingBox != null ? customBoundingBox : VoxelShapes.fullCube();
-                        }
-                    }
-                }
-            }
-
-            // Set the STATE property if stateValues are provided
+            // Set the STATE property for constructor
             tempSTATE = stateProperty;
 
-            return new WCCuboidBlock(settings, definition, doToggleOnUse, customBoundingBox, stateShapes);
+            return new WCCuboidBlock(settings, definition, 1, doToggleOnUse);
         }
     }
 
-    public WCCuboidBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doToggleOnUse, VoxelShape customBoundingBox, VoxelShape[] stateShapes) {
+    public WCCuboidBlock(AbstractBlock.Settings settings, BlockDefinition def, int modelsPerState, boolean doToggleOnUse) {
         super(settings);
         this.def = def;
+        this.modelsPerState = modelsPerState;
         this.toggleOnUse = doToggleOnUse;
 
-        if (customBoundingBox != null) {
-            this.boundingBox = customBoundingBox;
+        int cnt = def.getStateCount();
+
+        // Initialize arrays
+        this.cuboid_by_facing = new List[cnt * modelsPerState];
+        this.SHAPE_BY_INDEX = new VoxelShape[cnt * modelsPerState];
+        this.SUPPORT_BY_INDEX = new VoxelShape[cnt];
+
+        // Compute shapes for each state
+        List<BlockDefinition.StateVariant> states = def.getStates();
+        for (int i = 0; i < cnt; i++) {
+            BlockDefinition.StateVariant state = states.get(i);
+
+            // Get cuboids for this state (priority: state cuboids > definition cuboids > boundingBox > fullCube)
+            List<BlockDefinition.CuboidElement> cuboids = state.getCuboids();
+
+            // Fall back to definition-level cuboids if state doesn't have its own
+            if (cuboids == null || cuboids.isEmpty()) {
+                cuboids = def.getCuboids();
+            }
+
+            // If still no cuboids, convert boundingBox to cuboid
+            if (cuboids == null || cuboids.isEmpty()) {
+                BlockDefinition.BoundingBox bbox = state.getBoundingBox();
+                if (bbox == null) {
+                    bbox = def.getBoundingBox();
+                }
+                if (bbox != null) {
+                    // Store as a list for consistency, but we'll compute shape directly
+                    cuboids = new ArrayList<>();
+                }
+            }
+
+            // Store cuboids for base rotation (index i * modelsPerState)
+            cuboid_by_facing[i * modelsPerState] = cuboids != null ? new ArrayList<>(cuboids) : new ArrayList<>();
+
+            // Initialize empty lists for rotations (filled by subclasses)
+            for (int j = 1; j < modelsPerState; j++) {
+                cuboid_by_facing[i * modelsPerState + j] = new ArrayList<>();
+            }
+
+            // Compute base shape (index i * modelsPerState)
+            if (cuboids != null && !cuboids.isEmpty()) {
+                SHAPE_BY_INDEX[i * modelsPerState] = computeShapeFromCuboids(cuboids);
+            } else {
+                // Use boundingBox if no cuboids
+                BlockDefinition.BoundingBox bbox = state.getBoundingBox();
+                if (bbox == null) {
+                    bbox = def.getBoundingBox();
+                }
+                if (bbox != null) {
+                    SHAPE_BY_INDEX[i * modelsPerState] = VoxelShapes.cuboid(
+                        bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
+                        bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
+                    );
+                } else {
+                    SHAPE_BY_INDEX[i * modelsPerState] = VoxelShapes.fullCube();
+                }
+            }
+
+            // Compute support shape (same as base shape for simple blocks)
+            SUPPORT_BY_INDEX[i] = SHAPE_BY_INDEX[i * modelsPerState];
         }
 
-        this.stateSpecificShapes = stateShapes;
-
+        // Set default state
         BlockState defbs = this.getDefaultState().with(WATERLOGGED, false);
         if (tempSTATE != null) {
             defbs = defbs.with(tempSTATE, tempSTATE.defValue);
@@ -171,32 +179,30 @@ public class WCCuboidBlock extends Block implements Waterloggable {
     }
 
     /**
-     * Gets the appropriate VoxelShape for the given block state.
-     * Uses state-specific shapes if available, otherwise falls back to default boundingBox.
+     * Gets the array index for the given block state.
+     * Base implementation returns state index × modelsPerState.
+     * Subclasses override to add rotation offset.
      */
-    protected VoxelShape getShapeForState(BlockState state) {
-        if (stateSpecificShapes != null && STATE != null) {
-            int stateIndex = STATE.getIndex(state.get(STATE));
-            if (stateIndex >= 0 && stateIndex < stateSpecificShapes.length) {
-                return stateSpecificShapes[stateIndex];
-            }
-        }
-        return boundingBox;
+    protected int getIndexFromState(BlockState state) {
+        if (STATE != null)
+            return modelsPerState * STATE.getIndex(state.get(STATE));
+        else
+            return 0;
     }
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return getShapeForState(state);
+        return SHAPE_BY_INDEX[getIndexFromState(state)];
     }
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return getShapeForState(state);
+        return SHAPE_BY_INDEX[getIndexFromState(state)];
     }
 
     @Override
     public VoxelShape getCullingShape(BlockState state, BlockView world, BlockPos pos) {
-        return getShapeForState(state);
+        return SHAPE_BY_INDEX[getIndexFromState(state)];
     }
 
     public BlockDefinition getDefinition() {
@@ -206,11 +212,11 @@ public class WCCuboidBlock extends Block implements Waterloggable {
     /**
      * Helper method to convert a list of cuboid elements into a combined VoxelShape.
      * @param cuboids List of cuboid elements to convert
-     * @return Combined VoxelShape representing all cuboids, or null if list is empty
+     * @return Combined VoxelShape representing all cuboids, or full cube if list is empty
      */
-    protected static VoxelShape convertCuboidsToVoxelShape(List<BlockDefinition.CuboidElement> cuboids) {
+    protected VoxelShape computeShapeFromCuboids(List<BlockDefinition.CuboidElement> cuboids) {
         if (cuboids == null || cuboids.isEmpty()) {
-            return null;
+            return VoxelShapes.fullCube();
         }
 
         VoxelShape shape = VoxelShapes.empty();
@@ -222,5 +228,15 @@ public class WCCuboidBlock extends Block implements Waterloggable {
             shape = VoxelShapes.union(shape, cuboidShape);
         }
         return shape;
+    }
+
+    /**
+     * Gets the cuboid list for the specified state index.
+     * Used by exporters to generate models.
+     * @param stateIdx State index (0-based)
+     * @return List of cuboid elements for this state
+     */
+    public List<BlockDefinition.CuboidElement> getModelCuboids(int stateIdx) {
+        return cuboid_by_facing[modelsPerState * stateIdx];
     }
 }

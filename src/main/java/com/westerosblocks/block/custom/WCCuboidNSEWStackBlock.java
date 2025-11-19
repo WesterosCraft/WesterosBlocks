@@ -33,6 +33,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggab
     public static final EnumProperty<DoubleBlockHalf> HALF = Properties.DOUBLE_BLOCK_HALF;
 
     protected final boolean allowHalfBreak;
+    // Shadow parent's SHAPE_BY_INDEX with stack-specific shapes (8 = 4 facings × 2 halves)
     protected final VoxelShape[] SHAPE_BY_INDEX;
 
     public static class Factory extends BlockFactory {
@@ -46,8 +47,10 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggab
     }
 
     public WCCuboidNSEWStackBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doAllowHalfBreak) {
-        super(settings, def, false, null, null);
+        super(settings, def, 8, false);  // modelsPerState = 8 (4 facings × 2 halves)
         this.allowHalfBreak = doAllowHalfBreak;
+
+        // Initialize stack-specific shapes (uses StackElements, not cuboids)
         this.SHAPE_BY_INDEX = new VoxelShape[8];
 
         if (def != null && def.hasStackElements() && def.getStackElements().size() >= 2) {

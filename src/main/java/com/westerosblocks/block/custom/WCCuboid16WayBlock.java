@@ -35,8 +35,6 @@ import java.util.List;
 public class WCCuboid16WayBlock extends WCCuboidBlock {
     public static final IntProperty ROTATION = Properties.ROTATION;
     private static final int ROTATIONS = 16;
-    protected VoxelShape[] boundingBoxesByRotation = new VoxelShape[ROTATIONS];
-    protected VoxelShape[][] stateSpecificBoundingBoxes = null;
 
     public static class Factory extends BlockFactory {
         @Override
@@ -45,46 +43,43 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
             ModProperties.StateProperty stateProperty = definition.buildStateProperty();
             boolean doToggleOnUse = definition.toggleOnUse();
 
-            VoxelShape customBoundingBox = null;
-            if (definition.hasBoundingBox()) {
-                BlockDefinition.BoundingBox bbox = definition.getBoundingBox();
-                customBoundingBox = VoxelShapes.cuboid(
-                    bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
-                    bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
-                );
-            }
-
             tempSTATE = stateProperty;
 
-            return new WCCuboid16WayBlock(settings, definition, doToggleOnUse, customBoundingBox);
+            return new WCCuboid16WayBlock(settings, definition, doToggleOnUse);
         }
     }
 
-    public WCCuboid16WayBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doToggleOnUse,
-                              VoxelShape customBoundingBox) {
-        super(settings, def, doToggleOnUse, customBoundingBox, null);
+    public WCCuboid16WayBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean doToggleOnUse) {
+        super(settings, def, 16, doToggleOnUse);  // modelsPerState = 16 (16 visual rotations)
 
-        // Check if we have state-specific bounding boxes
-        if (def != null && def.hasStates()) {
-            List<BlockDefinition.StateVariant> states = def.getStates();
-            boolean hasStateSpecificBoundingBoxes = false;
+        // Build rotations - create 16 entries but only 4 unique rotations (one per 90° quadrant)
+        // Visual 22.5° increments are handled by model rotation in the exporter
+        int stcnt = def.getStateCount();
+        for (int stidx = 0; stidx < stcnt; stidx++) {
+            int idx = stidx * this.modelsPerState;
 
-            // Check if any state has its own bounding box
-            for (BlockDefinition.StateVariant state : states) {
-                if (state.getBoundingBox() != null) {
-                    hasStateSpecificBoundingBoxes = true;
-                    break;
+            List<BlockDefinition.CuboidElement> baseCuboids = cuboid_by_facing[idx];
+            if (baseCuboids != null && !baseCuboids.isEmpty()) {
+                // Create 16 rotation entries, but only 4 unique geometries
+                for (int i = 1; i < ROTATIONS; i++) {
+                    // Determine which 90° rotation to use based on quadrant
+                    // Rotations 0-3: 0°, 4-7: 90°, 8-11: 180°, 12-15: 270°
+                    int quadrant = i / 4;  // 0, 1, 2, or 3
+                    int rotationDegrees = quadrant * 90;
+
+                    for (BlockDefinition.CuboidElement cuboid : baseCuboids) {
+                        cuboid_by_facing[idx + i].add(rotateCuboidY(cuboid, rotationDegrees));
+                    }
                 }
-            }
-
-            if (hasStateSpecificBoundingBoxes) {
-                calculateStateSpecificBoundingBoxes(def, states);
             }
         }
 
-        // Calculate default rotated bounding boxes for each rotation (0-15)
-        VoxelShape defaultBoundingBox = customBoundingBox != null ? customBoundingBox : VoxelShapes.fullCube();
-        calculateRotatedBoundingBoxes(defaultBoundingBox);
+        // Compute shapes from rotated cuboids
+        for (int i = 0; i < cuboid_by_facing.length; i++) {
+            if (SHAPE_BY_INDEX[i] == null) {
+                SHAPE_BY_INDEX[i] = computeShapeFromCuboids(cuboid_by_facing[i]);
+            }
+        }
 
         // Set default state with rotation 0
         BlockState defbs = this.getDefaultState()
@@ -97,108 +92,69 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
         this.setDefaultState(defbs);
     }
 
-    private void calculateStateSpecificBoundingBoxes(BlockDefinition definition, List<BlockDefinition.StateVariant> states) {
-        int stateCount = states.size();
-        stateSpecificBoundingBoxes = new VoxelShape[stateCount][ROTATIONS];
-
-        for (int i = 0; i < stateCount; i++) {
-            BlockDefinition.StateVariant state = states.get(i);
-            VoxelShape stateShape;
-
-            if (state.getBoundingBox() != null) {
-                // Use state-specific bounding box
-                BlockDefinition.BoundingBox bbox = state.getBoundingBox();
-                stateShape = VoxelShapes.cuboid(
-                    bbox.getXMin(), bbox.getYMin(), bbox.getZMin(),
-                    bbox.getXMax(), bbox.getYMax(), bbox.getZMax()
-                );
-            } else {
-                // Fallback to default bounding box
-                stateShape = boundingBox;
-            }
-
-            // Calculate rotations for this state's bounding box
-            for (int rot = 0; rot < ROTATIONS; rot++) {
-                stateSpecificBoundingBoxes[i][rot] = applyYRotationToBoundingBox(stateShape, rot * 22.5f);
-            }
-        }
-    }
-
-    private void calculateRotatedBoundingBoxes(VoxelShape baseBoundingBox) {
-        // Calculate bounding boxes for all 16 rotations (0° to 337.5° in 22.5° steps)
-        for (int i = 0; i < ROTATIONS; i++) {
-            float angleDegrees = i * 22.5f;
-            boundingBoxesByRotation[i] = applyYRotationToBoundingBox(baseBoundingBox, angleDegrees);
-        }
-    }
-
     /**
-     * Applies a Y-axis rotation to a bounding box.
-     * @param shape The original bounding box
-     * @param angleDegrees Rotation angle in degrees
-     * @return Rotated bounding box
+     * Rotates a cuboid element around the Y-axis (horizontal rotation).
+     * @param cuboid Original cuboid
+     * @param degrees Rotation angle (0, 90, 180, or 270)
+     * @return Rotated cuboid element
      */
-    private VoxelShape applyYRotationToBoundingBox(VoxelShape shape, float angleDegrees) {
-        if (Math.abs(angleDegrees) < 0.01f || shape == VoxelShapes.fullCube()) {
-            return shape;
+    private BlockDefinition.CuboidElement rotateCuboidY(BlockDefinition.CuboidElement cuboid, int degrees) {
+        double xMin = cuboid.getXMin();
+        double xMax = cuboid.getXMax();
+        double yMin = cuboid.getYMin();
+        double yMax = cuboid.getYMax();
+        double zMin = cuboid.getZMin();
+        double zMax = cuboid.getZMax();
+
+        double newXMin, newXMax, newZMin, newZMax;
+
+        switch (degrees % 360) {
+            case 0:    // No rotation
+                return cuboid;
+            case 90:   // Rotate 90° clockwise (viewed from above)
+                newXMin = 1.0 - zMax;
+                newXMax = 1.0 - zMin;
+                newZMin = xMin;
+                newZMax = xMax;
+                break;
+            case 180:  // Rotate 180°
+                newXMin = 1.0 - xMax;
+                newXMax = 1.0 - xMin;
+                newZMin = 1.0 - zMax;
+                newZMax = 1.0 - zMin;
+                break;
+            case 270:  // Rotate 270° clockwise (or 90° counter-clockwise)
+                newXMin = zMin;
+                newXMax = zMax;
+                newZMin = 1.0 - xMax;
+                newZMax = 1.0 - xMin;
+                break;
+            default:
+                return cuboid;  // No rotation for invalid angles
         }
 
-        // Convert angle to radians
-        double angleRadians = Math.toRadians(angleDegrees);
-        double cos = Math.cos(angleRadians);
-        double sin = Math.sin(angleRadians);
-
-        // Get bounding box
-        double minX = shape.getMin(net.minecraft.util.math.Direction.Axis.X);
-        double minY = shape.getMin(net.minecraft.util.math.Direction.Axis.Y);
-        double minZ = shape.getMin(net.minecraft.util.math.Direction.Axis.Z);
-        double maxX = shape.getMax(net.minecraft.util.math.Direction.Axis.X);
-        double maxY = shape.getMax(net.minecraft.util.math.Direction.Axis.Y);
-        double maxZ = shape.getMax(net.minecraft.util.math.Direction.Axis.Z);
-
-        // Translate to origin (center at 0.5, 0.5)
-        double cx = 0.5;
-        double cz = 0.5;
-
-        // Rotate all 4 corners of the bounding box
-        double[][] corners = {
-            {minX - cx, minZ - cz},
-            {maxX - cx, minZ - cz},
-            {minX - cx, maxZ - cz},
-            {maxX - cx, maxZ - cz}
+        return new BlockDefinition.CuboidElement() {
+            @Override
+            public double getXMin() { return newXMin; }
+            @Override
+            public double getXMax() { return newXMax; }
+            @Override
+            public double getYMin() { return yMin; }
+            @Override
+            public double getYMax() { return yMax; }
+            @Override
+            public double getZMin() { return newZMin; }
+            @Override
+            public double getZMax() { return newZMax; }
+            @Override
+            public int[] getSideTextures() { return cuboid.getSideTextures(); }
+            @Override
+            public int[] getSideRotations() { return cuboid.getSideRotations(); }
+            @Override
+            public boolean[] getNoTint() { return cuboid.getNoTint(); }
+            @Override
+            public String getShape() { return cuboid.getShape(); }
         };
-
-        double newMinX = Double.MAX_VALUE;
-        double newMaxX = Double.MIN_VALUE;
-        double newMinZ = Double.MAX_VALUE;
-        double newMaxZ = Double.MIN_VALUE;
-
-        for (double[] corner : corners) {
-            double x = corner[0];
-            double z = corner[1];
-
-            // Apply rotation
-            double rotatedX = x * cos - z * sin;
-            double rotatedZ = x * sin + z * cos;
-
-            // Translate back
-            rotatedX += cx;
-            rotatedZ += cz;
-
-            // Track min/max
-            newMinX = Math.min(newMinX, rotatedX);
-            newMaxX = Math.max(newMaxX, rotatedX);
-            newMinZ = Math.min(newMinZ, rotatedZ);
-            newMaxZ = Math.max(newMaxZ, rotatedZ);
-        }
-
-        // Clamp to valid range [0, 1]
-        newMinX = MathHelper.clamp(newMinX, 0, 1);
-        newMaxX = MathHelper.clamp(newMaxX, 0, 1);
-        newMinZ = MathHelper.clamp(newMinZ, 0, 1);
-        newMaxZ = MathHelper.clamp(newMaxZ, 0, 1);
-
-        return VoxelShapes.cuboid(newMinX, minY, newMinZ, newMaxX, maxY, newMaxZ);
     }
 
     @Override
@@ -207,18 +163,15 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
         builder.add(ROTATION);
     }
 
+    /**
+     * Override to add rotation offset to state index.
+     * Index = (stateIdx × modelsPerState) + rotation
+     */
     @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        if (stateSpecificBoundingBoxes != null && STATE != null) {
-            // Use state-specific bounding box with rotation
-            int stateIndex = STATE.getIndex(state.get(STATE));
-            int rotation = state.get(ROTATION);
-            return stateSpecificBoundingBoxes[stateIndex][rotation];
-        } else {
-            // Use default rotated bounding box
-            int rotation = state.get(ROTATION);
-            return boundingBoxesByRotation[rotation];
-        }
+    protected int getIndexFromState(BlockState state) {
+        int off = super.getIndexFromState(state);  // stateIdx × modelsPerState
+        int rotation = state.get(ROTATION);
+        return off + rotation;  // Add rotation (0-15)
     }
 
     @Override
