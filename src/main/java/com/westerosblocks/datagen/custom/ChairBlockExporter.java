@@ -6,39 +6,18 @@ import com.westerosblocks.block.custom.WCChairBlock;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
-import net.minecraft.data.client.VariantSettings.Rotation;
 
-import java.util.Optional;
-
-/**
- * Exporter for chair blocks following block-models.md patterns.
- * Generates models for interactive seating blocks with 8-directional rotation support.
- *
- * @see ModModels#CHAIR
- * @see ModModels#CHAIR_45
- * @see WCChairBlock
- */
 public class ChairBlockExporter extends BaseBlockExporter {
-
-    /**
-     * Registers a custom chair block with rotation-based state generation (legacy method)
-     */
     public static void registerChairBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
         registerCustomChairBlock(generator, block, texturePath);
     }
 
-    /**
-     * Registers a custom chair block with rotation-based state generation
-     */
     public static void registerChairBlock(BlockStateModelGenerator generator, Block block, com.westerosblocks.data.BlockDefinition definition) {
         java.util.List<String> textureList = definition.getTextures();
         String texturePath = (textureList != null && !textureList.isEmpty()) ? textureList.get(0) : "missingno";
         registerCustomChairBlock(generator, block, texturePath);
     }
 
-    /**
-     * Internal implementation for registering chair blocks
-     */
     private static void registerCustomChairBlock(BlockStateModelGenerator generator, Block block, String texturePath) {
         Identifier cardinalModelId = createChairModel(generator, block, texturePath, "cardinal", ModModels.CHAIR);
         Identifier diagonalModelId = createChairModel(generator, block, texturePath, "diagonal", ModModels.CHAIR_45);

@@ -46,7 +46,6 @@ public class CropBlockExporter extends BaseBlockExporter {
             }
         }
 
-        // Phase 3: Item model
         BlockDefinition.StateVariant firstState = states.get(0);
         String firstName = (firstState.getStateID() == null) ? "base" : firstState.getStateID();
         Identifier itemModelId = createItemModelId(block, getModelName(firstName, 0));

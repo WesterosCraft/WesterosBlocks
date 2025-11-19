@@ -13,14 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * CrossBlockExporter - Handles cross-shaped blocks (web blocks, plants with layers)
- *
- * Follows three-phase pattern from EXPORTER_PATTERN.md:
- * 1. Generate blockstate JSON (with state tracking)
- * 2. Generate model files
- * 3. Register item model
- */
 public class CrossBlockExporter extends BaseBlockExporter {
 
     public static void registerCustomCrossBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
@@ -54,26 +46,14 @@ public class CrossBlockExporter extends BaseBlockExporter {
     private static void generateBlockState(BlockStateModelGenerator generator, Block block,
                                           List<BlockDefinition.StateVariant> states,
                                           boolean isLayerSensitive, int rotationCount) {
-        String blockName = getBlockName(block);
         int[] layerConds = isLayerSensitive ? new int[] {8, 1, 2, 3, 4, 5, 6, 7} : new int[] {0};
 
-        // Check if we have multiple states with IDs (like cobweb, smoke)
-        // Only use state map if: multiple states AND all have non-null IDs AND block has STATE property
         boolean useStateMap = states.size() > 1
             && states.stream().allMatch(s -> s.getStateID() != null)
             && hasStateProperty(block);
 
         if (useStateMap && !isLayerSensitive) {
-            // Multi-state block: Create separate entries for each state
-            // Matches old: so.addVariant(cond, var, Collections.singleton(rec.stateID))
-
-            // Get the STATE property from the block instance (not the static default one)
             ModProperties.StateProperty stateProperty = getStateProperty(block);
-            if (stateProperty == null) {
-                // Fallback to simple variant list if property not found
-                generateSimpleVariants(generator, block, states, rotationCount);
-                return;
-            }
 
             BlockStateVariantMap.SingleProperty<String> stateMap =
                 BlockStateVariantMap.create(stateProperty);
@@ -103,7 +83,6 @@ public class CrossBlockExporter extends BaseBlockExporter {
             );
         }
         else if (isLayerSensitive) {
-            // Layer-sensitive block: Create entries per layer value
             BlockStateVariantMap.SingleProperty<Integer> layerMap =
                 BlockStateVariantMap.create(Properties.LAYERS);
 
@@ -233,11 +212,6 @@ public class CrossBlockExporter extends BaseBlockExporter {
         return false;
     }
 
-    /**
-     * Gets the STATE property from a block instance.
-     * This retrieves the actual property with the correct state values,
-     * not the static ModProperties.STATE default.
-     */
     private static ModProperties.StateProperty getStateProperty(Block block) {
         for (var property : block.getStateManager().getProperties()) {
             if (property instanceof ModProperties.StateProperty stateProperty) {
@@ -245,36 +219,5 @@ public class CrossBlockExporter extends BaseBlockExporter {
             }
         }
         return null;
-    }
-
-    /**
-     * Fallback method to generate simple variants (no state map).
-     * Used when state property is not properly configured.
-     */
-    private static void generateSimpleVariants(BlockStateModelGenerator generator, Block block,
-                                              List<BlockDefinition.StateVariant> states, int rotationCount) {
-        List<BlockStateVariant> variants = new ArrayList<>();
-
-        for (BlockDefinition.StateVariant state : states) {
-            String stateID = state.getStateID();
-            String id = (stateID == null) ? "base" : stateID;
-
-            for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
-                BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
-                if (set == null) continue;
-
-                int weight = set.getWeight();
-                Identifier modelId = createNestedModelId(block, getModelName(id, setIdx));
-
-                for (int rot = 0; rot < rotationCount; rot++) {
-                    BlockStateVariant variant = createWeightedVariant(modelId, rot * 90, weight);
-                    variants.add(variant);
-                }
-            }
-        }
-
-        generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0]))
-        );
     }
 }
