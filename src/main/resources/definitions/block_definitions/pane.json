@@ -108,7 +108,7 @@
   {
     "blockName": "vertical_net",
     "blockType": "pane",
-    "soundGroup": "glass",
+    "soundGroup": "cloth",
     "creativeTab": "westeros_cloth_fibers_tab",
     "type": "legacy-model,unconnect:false",
     "label": "Vertical Net",
