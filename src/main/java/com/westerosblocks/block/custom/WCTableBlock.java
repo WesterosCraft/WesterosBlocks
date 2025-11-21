@@ -127,9 +127,6 @@ public class WCTableBlock extends Block {
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 
-    /**
-     * Determines the connection type based on neighboring tables
-     */
     private ConnectionType getConnectionType(BlockView world, BlockPos pos, Direction facing) {
         Direction left = facing.rotateYCounterclockwise();
         Direction right = facing.rotateYClockwise();

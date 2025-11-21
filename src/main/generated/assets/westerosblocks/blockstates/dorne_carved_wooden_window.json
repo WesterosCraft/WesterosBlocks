@@ -2,12 +2,13 @@
   "multipart": [
     {
       "apply": {
-        "model": "westerosblocks:block/dorne_carved_wooden_window/dorne_carved_wooden_window_post"
+        "model": "westerosblocks:block/dorne_carved_wooden_window/post_v1"
       }
     },
     {
       "apply": {
-        "model": "westerosblocks:block/dorne_carved_wooden_window/dorne_carved_wooden_window_side"
+        "model": "westerosblocks:block/dorne_carved_wooden_window/side_v1",
+        "uvlock": true
       },
       "when": {
         "north": "true"
@@ -15,7 +16,8 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/dorne_carved_wooden_window/dorne_carved_wooden_window_side",
+        "model": "westerosblocks:block/dorne_carved_wooden_window/side_v1",
+        "uvlock": true,
         "y": 90
       },
       "when": {
@@ -24,7 +26,28 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/dorne_carved_wooden_window/dorne_carved_wooden_window_noside"
+        "model": "westerosblocks:block/dorne_carved_wooden_window/side_v1",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_wooden_window/side_v1",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_wooden_window/noside_v1",
+        "uvlock": true
       },
       "when": {
         "north": "false"
@@ -32,11 +55,32 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/dorne_carved_wooden_window/dorne_carved_wooden_window_noside",
+        "model": "westerosblocks:block/dorne_carved_wooden_window/noside_v1",
+        "uvlock": true,
         "y": 90
       },
       "when": {
         "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_wooden_window/noside_v1",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/dorne_carved_wooden_window/noside_v1",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "west": "false"
       }
     }
   ]

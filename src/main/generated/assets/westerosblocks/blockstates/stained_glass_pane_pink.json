@@ -2,12 +2,13 @@
   "multipart": [
     {
       "apply": {
-        "model": "westerosblocks:block/stained_glass_pane_pink/stained_glass_pane_pink_post"
+        "model": "westerosblocks:block/stained_glass_pane_pink/post_v1"
       }
     },
     {
       "apply": {
-        "model": "westerosblocks:block/stained_glass_pane_pink/stained_glass_pane_pink_side"
+        "model": "westerosblocks:block/stained_glass_pane_pink/side_v1",
+        "uvlock": true
       },
       "when": {
         "north": "true"
@@ -15,7 +16,8 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/stained_glass_pane_pink/stained_glass_pane_pink_side",
+        "model": "westerosblocks:block/stained_glass_pane_pink/side_v1",
+        "uvlock": true,
         "y": 90
       },
       "when": {
@@ -24,7 +26,28 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/stained_glass_pane_pink/stained_glass_pane_pink_noside"
+        "model": "westerosblocks:block/stained_glass_pane_pink/side_v1",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_pink/side_v1",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_pink/noside_v1",
+        "uvlock": true
       },
       "when": {
         "north": "false"
@@ -32,11 +55,32 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/stained_glass_pane_pink/stained_glass_pane_pink_noside",
+        "model": "westerosblocks:block/stained_glass_pane_pink/noside_v1",
+        "uvlock": true,
         "y": 90
       },
       "when": {
         "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_pink/noside_v1",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_pink/noside_v1",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "west": "false"
       }
     }
   ]
