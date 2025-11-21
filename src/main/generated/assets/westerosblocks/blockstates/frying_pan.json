@@ -1,11 +1,10 @@
 {
   "variants": {
     "facing=east": {
-      "model": "westerosblocks:block/frying_pan/v1",
-      "y": 0
+      "model": "westerosblocks:block/frying_pan/base_v1"
     },
     "facing=north": {
-      "model": "westerosblocks:block/frying_pan/v1",
+      "model": "westerosblocks:block/frying_pan/base_v1",
       "y": 90
     }
   }

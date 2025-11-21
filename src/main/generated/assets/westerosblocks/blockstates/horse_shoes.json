@@ -1,11 +1,10 @@
 {
   "variants": {
     "facing=east": {
-      "model": "westerosblocks:block/horse_shoes/v1",
-      "y": 0
+      "model": "westerosblocks:block/horse_shoes/base_v1"
     },
     "facing=north": {
-      "model": "westerosblocks:block/horse_shoes/v1",
+      "model": "westerosblocks:block/horse_shoes/base_v1",
       "y": 90
     }
   }

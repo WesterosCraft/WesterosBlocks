@@ -1,11 +1,10 @@
 {
   "variants": {
     "facing=east": {
-      "model": "westerosblocks:block/firewood_directional_slab/v1",
-      "y": 0
+      "model": "westerosblocks:block/firewood_directional_slab/base_v1"
     },
     "facing=north": {
-      "model": "westerosblocks:block/firewood_directional_slab/v1",
+      "model": "westerosblocks:block/firewood_directional_slab/base_v1",
       "y": 90
     }
   }

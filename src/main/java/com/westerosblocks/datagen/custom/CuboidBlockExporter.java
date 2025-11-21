@@ -233,6 +233,93 @@ public class CuboidBlockExporter extends BaseBlockExporter {
     }
 
     /**
+     * Phase 3 Alternative: Generate model files and return map for directional exporters.
+     * Used by child exporters (CuboidNEBlockExporter, etc.) that need the model map
+     * to create custom facing-based blockstate variants.
+     */
+    public static Map<String, List<Identifier>> generateModelsReturnMap(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        boolean isTinted = definition.isTinted();
+        List<BlockDefinition.StateVariant> states = definition.getStates();
+        boolean hasMultipleStates = definition.getStateCount() > 1;
+
+        Map<String, List<Identifier>> stateModelMap = new HashMap<>();
+
+        for (BlockDefinition.StateVariant state : states) {
+            String stateId = state.getStateID();
+            if (stateId == null) stateId = "base";
+            String statePrefix = hasMultipleStates ? stateId : "base";
+
+            List<Identifier> modelIds = new ArrayList<>();
+
+            // Check if we have texture sets to work with
+            int textureSetCount = state.getRandomTextureSetCount();
+
+            // For custom model states with no textures, ensure at least one iteration
+            if (textureSetCount == 0) {
+                if (state.isCustomModel()) {
+                    textureSetCount = 1;  // Force one iteration for custom model reference
+                } else {
+                    continue;  // Skip non-custom-model states with no textures
+                }
+            }
+
+            // Generate models for each texture set
+            for (int setIdx = 0; setIdx < textureSetCount; setIdx++) {
+                Identifier modelId;
+                String variantName = getModelName(statePrefix, setIdx);
+
+                // Check if this state uses custom models
+                if (state.isCustomModel()) {
+                    // Use custom model reference instead of generating from textures
+                    modelId = createCustomModelId(block, variantName);
+                } else {
+                    BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                    if (set == null || set.getTextureCount() == 0) {
+                        continue;
+                    }
+
+                    // Extract textures from this set
+                    String[] textures = new String[set.getTextureCount()];
+                    for (int i = 0; i < set.getTextureCount(); i++) {
+                        textures[i] = set.getTextureByIndex(i);
+                    }
+                    List<String> textureList = Arrays.asList(textures);
+
+                    // Generate model based on block configuration
+                    if (hasCuboids(definition) || state.hasCuboids()) {
+                        // Handle per-state rotation offset
+                        Float rotation = null;
+                        if (state.getRotYOffset() != null) {
+                            rotation = state.getRotYOffset().floatValue();
+                        }
+
+                        modelId = createCuboidModel(generator, block, definition,
+                                                   textureList, setIdx, variantName, rotation);
+                    } else {
+                        // Generate standard cube models
+                        TextureMap textureMap = createCuboidTextureMap(textureList);
+                        if (textureList.size() == 1) {
+                            modelId = Models.CUBE_ALL.upload(createGeneratedModelId(block, variantName),
+                                                             textureMap, generator.modelCollector);
+                        } else {
+                            modelId = Models.CUBE.upload(createGeneratedModelId(block, variantName),
+                                                        textureMap, generator.modelCollector);
+                        }
+                    }
+                }
+
+                modelIds.add(modelId);
+            }
+
+            if (!modelIds.isEmpty()) {
+                stateModelMap.put(stateId, modelIds);
+            }
+        }
+
+        return stateModelMap;
+    }
+
+    /**
      * Helper method to get model name from state ID and set index.
      */
     private static String getModelName(String stateId, int setIdx) {
