@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CuboidNEBlockExporter extends BaseBlockExporter {
+public class CuboidNEBlockExporter extends CuboidBlockExporter {
 
     /**
      * Registers a NE cuboid block from a BlockDefinition.
@@ -35,8 +35,9 @@ public class CuboidNEBlockExporter extends BaseBlockExporter {
         }
         boolean hasMultipleStates = definition.getStateCount() > 1;
 
-        // Phase 2: Generate models (reuse CuboidBlockExporter completely)
-        Map<String, List<Identifier>> stateModelMap = CuboidBlockExporter.generateModelsReturnMap(generator, block, definition);
+        // Phase 2: Generate models (reuse CuboidBlockExporter completely via instance)
+        CuboidNEBlockExporter exporter = new CuboidNEBlockExporter();
+        Map<String, List<Identifier>> stateModelMap = exporter.generateModelsReturnMap(generator, block, definition);
 
         if (stateModelMap.isEmpty()) {
             WesterosBlocks.LOGGER.warn("No models generated for NE cuboid block: {}", getBlockName(block));

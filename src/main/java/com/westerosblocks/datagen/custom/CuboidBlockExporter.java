@@ -237,7 +237,7 @@ public class CuboidBlockExporter extends BaseBlockExporter {
      * Used by child exporters (CuboidNEBlockExporter, etc.) that need the model map
      * to create custom facing-based blockstate variants.
      */
-    public static Map<String, List<Identifier>> generateModelsReturnMap(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+    protected Map<String, List<Identifier>> generateModelsReturnMap(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         boolean isTinted = definition.isTinted();
         List<BlockDefinition.StateVariant> states = definition.getStates();
         boolean hasMultipleStates = definition.getStateCount() > 1;
@@ -404,7 +404,7 @@ public class CuboidBlockExporter extends BaseBlockExporter {
     /**
      * Creates a model identifier for custom cuboid models with the custom path prefix.
      */
-    private static Identifier createCustomModelId(Block block, String variant) {
+    public static Identifier createCustomModelId(Block block, String variant) {
         String blockName = getBlockName(block);
         String modelPath = "block/custom/" + blockName + "/" + variant;
         return WesterosBlocks.id(modelPath);

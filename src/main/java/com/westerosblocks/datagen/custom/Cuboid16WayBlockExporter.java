@@ -19,7 +19,7 @@ import java.util.Map;
  * Exporter for 16-way rotation cuboid blocks.
  *
  */
-public class Cuboid16WayBlockExporter extends BaseBlockExporter {
+public class Cuboid16WayBlockExporter extends CuboidBlockExporter {
 
     private static final String[] MODEL_SUFFIXES = {"", "_rotn22", "_rotn45", "_rot22"};
     private static final Float[] MODEL_ROTATIONS = {null, -22.5f, -45f, 22.5f};
@@ -306,10 +306,7 @@ public class Cuboid16WayBlockExporter extends BaseBlockExporter {
         };
     }
 
-    private static Identifier createCustomModelId(Block block, String variant) {
-        String blockName = getBlockName(block);
-        return WesterosBlocks.id("block/custom/" + blockName + "/" + variant);
-    }
+    // Note: createCustomModelId is now inherited from CuboidBlockExporter parent class
 
     /**
      * Helper class to hold a model with weight.

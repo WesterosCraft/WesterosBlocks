@@ -1,19 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "westerosblocks:block/grey_light_wood_half_door/v1",
-      "y": 0
+      "model": "westerosblocks:block/grey_light_wood_half_door/base_v1"
     },
     "facing=north": {
-      "model": "westerosblocks:block/grey_light_wood_half_door/v1",
+      "model": "westerosblocks:block/grey_light_wood_half_door/base_v1",
       "y": 270
     },
     "facing=south": {
-      "model": "westerosblocks:block/grey_light_wood_half_door/v1",
+      "model": "westerosblocks:block/grey_light_wood_half_door/base_v1",
       "y": 90
     },
     "facing=west": {
-      "model": "westerosblocks:block/grey_light_wood_half_door/v1",
+      "model": "westerosblocks:block/grey_light_wood_half_door/base_v1",
       "y": 180
     }
   }

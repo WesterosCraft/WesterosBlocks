@@ -1,8 +1,7 @@
 {
   "variants": {
     "facing=east": {
-      "model": "westerosblocks:block/custom/dreadfort_skeleton_sconce_right/base_v1",
-      "y": 0
+      "model": "westerosblocks:block/custom/dreadfort_skeleton_sconce_right/base_v1"
     },
     "facing=north": {
       "model": "westerosblocks:block/custom/dreadfort_skeleton_sconce_right/base_v1",

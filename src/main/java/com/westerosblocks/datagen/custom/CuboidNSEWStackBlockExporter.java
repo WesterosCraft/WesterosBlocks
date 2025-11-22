@@ -14,7 +14,7 @@ import com.westerosblocks.data.BlockDefinition;
 import java.util.*;
 
 
-public class CuboidNSEWStackBlockExporter extends BaseBlockExporter {
+public class CuboidNSEWStackBlockExporter extends CuboidBlockExporter {
     public static void registerCustomCuboidNSEWStackBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         if (!(block instanceof WCCuboidNSEWStackBlock stackBlock)) {
             throw new IllegalArgumentException("Block must be a WCCuboidNSEWStackBlock instance");
@@ -233,19 +233,5 @@ public class CuboidNSEWStackBlockExporter extends BaseBlockExporter {
         return elementJson;
     }
 
-    /**
-     * Creates a custom model identifier.
-     */
-    private static Identifier createCustomModelId(Block block, String variant) {
-        String blockName = getBlockName(block);
-        return WesterosBlocks.id("block/custom/" + blockName + "/" + variant);
-    }
-
-    /**
-     * Creates a generated model identifier.
-     */
-    private static Identifier createGeneratedModelId(Block block, String variant) {
-        String blockName = getBlockName(block);
-        return WesterosBlocks.id("block/" + blockName + "/" + variant);
-    }
+    // Note: createCustomModelId and createGeneratedModelId are now inherited from CuboidBlockExporter parent class
 }

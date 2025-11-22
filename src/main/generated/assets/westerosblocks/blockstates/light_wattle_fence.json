@@ -1,19 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "westerosblocks:block/light_wattle_fence/v1",
-      "y": 0
+      "model": "westerosblocks:block/light_wattle_fence/base_v1"
     },
     "facing=north": {
-      "model": "westerosblocks:block/light_wattle_fence/v1",
+      "model": "westerosblocks:block/light_wattle_fence/base_v1",
       "y": 270
     },
     "facing=south": {
-      "model": "westerosblocks:block/light_wattle_fence/v1",
+      "model": "westerosblocks:block/light_wattle_fence/base_v1",
       "y": 90
     },
     "facing=west": {
-      "model": "westerosblocks:block/light_wattle_fence/v1",
+      "model": "westerosblocks:block/light_wattle_fence/base_v1",
       "y": 180
     }
   }

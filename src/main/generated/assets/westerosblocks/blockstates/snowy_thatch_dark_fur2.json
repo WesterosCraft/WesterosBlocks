@@ -1,19 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "westerosblocks:block/snowy_thatch_dark_fur2/v1",
-      "y": 0
+      "model": "westerosblocks:block/snowy_thatch_dark_fur2/base_v1"
     },
     "facing=north": {
-      "model": "westerosblocks:block/snowy_thatch_dark_fur2/v1",
+      "model": "westerosblocks:block/snowy_thatch_dark_fur2/base_v1",
       "y": 270
     },
     "facing=south": {
-      "model": "westerosblocks:block/snowy_thatch_dark_fur2/v1",
+      "model": "westerosblocks:block/snowy_thatch_dark_fur2/base_v1",
       "y": 90
     },
     "facing=west": {
-      "model": "westerosblocks:block/snowy_thatch_dark_fur2/v1",
+      "model": "westerosblocks:block/snowy_thatch_dark_fur2/base_v1",
       "y": 180
     }
   }

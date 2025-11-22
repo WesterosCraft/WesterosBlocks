@@ -1,19 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "westerosblocks:block/mountain_road_marker/v1",
-      "y": 0
+      "model": "westerosblocks:block/mountain_road_marker/base_v1"
     },
     "facing=north": {
-      "model": "westerosblocks:block/mountain_road_marker/v1",
+      "model": "westerosblocks:block/mountain_road_marker/base_v1",
       "y": 270
     },
     "facing=south": {
-      "model": "westerosblocks:block/mountain_road_marker/v1",
+      "model": "westerosblocks:block/mountain_road_marker/base_v1",
       "y": 90
     },
     "facing=west": {
-      "model": "westerosblocks:block/mountain_road_marker/v1",
+      "model": "westerosblocks:block/mountain_road_marker/base_v1",
       "y": 180
     }
   }

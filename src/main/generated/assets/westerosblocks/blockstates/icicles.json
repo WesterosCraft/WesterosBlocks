@@ -1,8 +1,7 @@
 {
   "variants": {
     "facing=east": {
-      "model": "westerosblocks:block/custom/icicles/base_v1",
-      "y": 0
+      "model": "westerosblocks:block/custom/icicles/base_v1"
     },
     "facing=north": {
       "model": "westerosblocks:block/custom/icicles/base_v1",

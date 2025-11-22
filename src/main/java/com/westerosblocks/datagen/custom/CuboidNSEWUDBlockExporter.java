@@ -20,7 +20,7 @@ import com.westerosblocks.datagen.ModTextureKey;
 import java.util.Optional;
 
 
-public class CuboidNSEWUDBlockExporter extends BaseBlockExporter {
+public class CuboidNSEWUDBlockExporter extends CuboidBlockExporter {
 
     /**
      * Registers a NSEWUD cuboid block from a BlockDefinition.
@@ -302,15 +302,7 @@ public class CuboidNSEWUDBlockExporter extends BaseBlockExporter {
         addVariantWithWeights(variants, fullCondition, modelVariants, x, y);
     }
 
-    private static Identifier createCustomModelId(Block block, String variant) {
-        String blockName = getBlockName(block);
-        return WesterosBlocks.id("block/custom/" + blockName + "/" + variant);
-    }
-
-    private static Identifier createGeneratedModelId(Block block, String variant) {
-        String blockName = getBlockName(block);
-        return WesterosBlocks.id("block/" + blockName + "/" + variant);
-    }
+    // Note: createCustomModelId and createGeneratedModelId are now inherited from CuboidBlockExporter parent class
 
     /**
      * Creates a custom cuboid model from definition for NSEWUD blocks.

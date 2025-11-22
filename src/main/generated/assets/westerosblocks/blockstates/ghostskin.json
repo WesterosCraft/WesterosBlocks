@@ -2,28 +2,22 @@
   "variants": {
     "facing=east": [
       {
-        "model": "westerosblocks:block/custom/ghostskin/base_v1",
-        "y": 0
+        "model": "westerosblocks:block/custom/ghostskin/base_v1"
       },
       {
-        "model": "westerosblocks:block/custom/ghostskin/base_v2",
-        "y": 0
+        "model": "westerosblocks:block/custom/ghostskin/base_v2"
       },
       {
-        "model": "westerosblocks:block/custom/ghostskin/base_v3",
-        "y": 0
+        "model": "westerosblocks:block/custom/ghostskin/base_v3"
       },
       {
-        "model": "westerosblocks:block/custom/ghostskin/base_v4",
-        "y": 0
+        "model": "westerosblocks:block/custom/ghostskin/base_v4"
       },
       {
-        "model": "westerosblocks:block/custom/ghostskin/base_v5",
-        "y": 0
+        "model": "westerosblocks:block/custom/ghostskin/base_v5"
       },
       {
-        "model": "westerosblocks:block/custom/ghostskin/base_v6",
-        "y": 0
+        "model": "westerosblocks:block/custom/ghostskin/base_v6"
       }
     ],
     "facing=north": [
