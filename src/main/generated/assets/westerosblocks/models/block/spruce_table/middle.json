@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/table/wood_table_middle",
+  "textures": {
+    "particle": "westerosblocks:block/tables/wood_table_spruce",
+    "table": "westerosblocks:block/tables/wood_table_spruce"
+  }
+}

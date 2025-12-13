@@ -810,5 +810,22 @@
       "web_block/rope_vertical"
     ],
     "type": "no-in-web"
+  },
+  {
+    "blockName": "corn",
+    "blockType": "web",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_crops_herbs_tab",
+    "renderLayer": "cutout",
+    "label": "Corn",
+    "randomTextures": [
+      {
+        "textures": [
+          "corn/side1"
+        ]
+      }
+    ],
+    "type": "no-in-web,layerSensitive",
+    "layerSensitive": true
   }
 ]

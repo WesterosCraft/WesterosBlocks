@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/untinted/ctm_pane_noside",
+  "textures": {
+    "cap": "westerosblocks:block/glass/pane_top",
+    "side": "westerosblocks:block/glass/purple/all"
+  }
+}
