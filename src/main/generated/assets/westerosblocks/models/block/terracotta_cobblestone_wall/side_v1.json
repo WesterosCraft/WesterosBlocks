@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side",
-  "textures": {
-    "bottom": "westerosblocks:block/cobblestone/terracotta/all1",
-    "particle": "westerosblocks:block/cobblestone/terracotta/all1",
-    "side": "westerosblocks:block/cobblestone/terracotta/all1",
-    "top": "westerosblocks:block/cobblestone/terracotta/all1"
-  }
-}

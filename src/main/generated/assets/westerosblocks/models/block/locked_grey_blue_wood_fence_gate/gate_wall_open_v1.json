@@ -1,7 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_fence_gate_wall_open",
-  "textures": {
-    "particle": "westerosblocks:block/wood/grey_blue/all",
-    "texture": "westerosblocks:block/wood/grey_blue/all"
-  }
-}

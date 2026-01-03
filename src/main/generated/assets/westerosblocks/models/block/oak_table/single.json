@@ -1,7 +1,0 @@
-{
-  "parent": "westerosblocks:block/table/wood_table_1x1",
-  "textures": {
-    "particle": "westerosblocks:block/tables/wood_table_oak",
-    "table": "westerosblocks:block/tables/wood_table_oak"
-  }
-}

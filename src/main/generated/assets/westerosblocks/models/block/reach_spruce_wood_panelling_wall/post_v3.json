@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_post",
-  "textures": {
-    "bottom": "westerosblocks:block/wood/spruce/panelling/top_bottom",
-    "particle": "westerosblocks:block/wood/spruce/panelling/side3",
-    "side": "westerosblocks:block/wood/spruce/panelling/side3",
-    "top": "westerosblocks:block/wood/spruce/panelling/top_bottom"
-  }
-}

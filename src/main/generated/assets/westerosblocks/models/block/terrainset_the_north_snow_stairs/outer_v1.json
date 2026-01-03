@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/outer_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/terrainset/north/snow/all",
-    "particle": "westerosblocks:block/terrainset/north/snow/all",
-    "side": "westerosblocks:block/terrainset/north/snow/all",
-    "top": "westerosblocks:block/terrainset/north/snow/all"
-  }
-}

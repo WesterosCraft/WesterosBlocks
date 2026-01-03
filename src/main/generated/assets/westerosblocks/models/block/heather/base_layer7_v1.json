@@ -1,6 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/cross_layer7",
-  "textures": {
-    "cross": "westerosblocks:block/heather/side1"
-  }
-}

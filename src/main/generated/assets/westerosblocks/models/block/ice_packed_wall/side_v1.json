@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side",
-  "textures": {
-    "bottom": "westerosblocks:block/ice/packed",
-    "particle": "westerosblocks:block/ice/packed",
-    "side": "westerosblocks:block/ice/packed",
-    "top": "westerosblocks:block/ice/packed"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "": {
-      "model": "westerosblocks:block/dirt_light/base_v1",
-      "y": 0
-    }
-  }
-}

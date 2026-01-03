@@ -2361,6 +2361,7 @@
       }
     ],
     "colorMult": "textures/colormap/grass",
+    "isTinted": true,
     "creativeTab": "westeros_grass_dirt_tab",
     "label": "Thick Grass Block",
     "randomTextures": [

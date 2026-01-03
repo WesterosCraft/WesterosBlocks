@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "westerosblocks:block/red_mushroom_block/mushroom_red_6"
-  }
-}

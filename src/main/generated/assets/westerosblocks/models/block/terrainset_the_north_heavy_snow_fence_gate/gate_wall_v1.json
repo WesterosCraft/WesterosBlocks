@@ -1,7 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_fence_gate_wall",
-  "textures": {
-    "particle": "westerosblocks:block/terrainset/north/heavy_snow/all",
-    "texture": "westerosblocks:block/terrainset/north/heavy_snow/all"
-  }
-}
