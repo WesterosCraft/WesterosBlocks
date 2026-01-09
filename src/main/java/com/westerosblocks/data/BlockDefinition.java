@@ -1004,7 +1004,7 @@ public class BlockDefinition {
     }
 
     public boolean isTinted() {
-        return Boolean.TRUE.equals(isTinted);
+        return Boolean.TRUE.equals(isTinted) || hasColorMult() || hasColorMults();
     }
 
     public boolean hasOverlay() {

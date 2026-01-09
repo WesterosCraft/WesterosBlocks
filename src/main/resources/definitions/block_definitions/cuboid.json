@@ -1198,6 +1198,8 @@
     "blockName": "classic_grass_block",
     "blockType": "cuboid",
     "soundGroup": "grass",
+    "isTinted": true,
+    "renderLayer": "cutout",
     "harvestLevel": [
       {
         "tool": "shovel",
@@ -1296,6 +1298,77 @@
           false,
           false,
           false
+        ]
+      }
+    ],
+    "strength": 5
+  },
+  {
+    "blockName": "grassy_snow",
+    "blockType": "cuboid",
+    "soundGroup": "grass",
+    "isTinted": true,
+    "renderLayer": "cutout",
+    "harvestLevel": [
+      {
+        "tool": "shovel",
+        "level": 3
+      }
+    ],
+    "colorMult": "textures/colormap/grass",
+    "creativeTab": "westeros_grass_dirt_tab",
+    "label": "Grassy Snow",
+    "textures": [
+      "classic_grass_block/top1",
+      "snowy_grass/all1"
+    ],
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1,
+        "sideTextures": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "noTint": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1,
+        "sideTextures": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "noTint": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
         ]
       }
     ],
