@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/gulltown_blue_plaster/base_v1",
+      "y": 0
+    }
+  }
+}

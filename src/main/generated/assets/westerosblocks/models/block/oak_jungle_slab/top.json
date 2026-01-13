@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/slab_top",
+  "textures": {
+    "down": "westerosblocks:block/wood/oak_jungle/all",
+    "east": "westerosblocks:block/wood/oak_jungle/all",
+    "north": "westerosblocks:block/wood/oak_jungle/all",
+    "particle": "westerosblocks:block/wood/oak_jungle/all",
+    "south": "westerosblocks:block/wood/oak_jungle/all",
+    "up": "westerosblocks:block/wood/oak_jungle/all",
+    "west": "westerosblocks:block/wood/oak_jungle/all"
+  }
+}

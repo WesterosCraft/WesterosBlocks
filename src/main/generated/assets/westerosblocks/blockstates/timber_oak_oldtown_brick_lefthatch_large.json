@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "state=state0,symmetrical=false": {
+      "model": "westerosblocks:block/timber_oak_oldtown_brick_lefthatch_large/asymmetrical/state0_v1",
+      "y": 0
+    },
+    "state=state0,symmetrical=true": {
+      "model": "westerosblocks:block/timber_oak_oldtown_brick_lefthatch_large/symmetrical/state0_v1",
+      "y": 0
+    },
+    "state=state1,symmetrical=false": {
+      "model": "westerosblocks:block/timber_oak_oldtown_brick_lefthatch_large/asymmetrical/state1_v1",
+      "y": 0
+    },
+    "state=state1,symmetrical=true": {
+      "model": "westerosblocks:block/timber_oak_oldtown_brick_lefthatch_large/symmetrical/state1_v1",
+      "y": 0
+    },
+    "state=state2,symmetrical=false": {
+      "model": "westerosblocks:block/timber_oak_oldtown_brick_lefthatch_large/asymmetrical/state2_v1",
+      "y": 0
+    },
+    "state=state2,symmetrical=true": {
+      "model": "westerosblocks:block/timber_oak_oldtown_brick_lefthatch_large/symmetrical/state2_v1",
+      "y": 0
+    },
+    "state=state3,symmetrical=false": {
+      "model": "westerosblocks:block/timber_oak_oldtown_brick_lefthatch_large/asymmetrical/state3_v1",
+      "y": 0
+    },
+    "state=state3,symmetrical=true": {
+      "model": "westerosblocks:block/timber_oak_oldtown_brick_lefthatch_large/symmetrical/state3_v1",
+      "y": 0
+    }
+  }
+}

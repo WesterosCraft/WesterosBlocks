@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/stacked_bones_solid/base_v1",
+      "y": 0
+    }
+  }
+}

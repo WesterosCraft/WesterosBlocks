@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/bark/grey/stripped",
+    "east": "westerosblocks:block/bark/grey/stripped",
+    "north": "westerosblocks:block/bark/grey/stripped",
+    "particle": "westerosblocks:block/bark/grey/stripped",
+    "south": "westerosblocks:block/bark/grey/stripped",
+    "up": "westerosblocks:block/bark/grey/stripped",
+    "west": "westerosblocks:block/bark/grey/stripped"
+  }
+}

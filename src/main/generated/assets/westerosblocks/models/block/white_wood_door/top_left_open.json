@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "textures": {
+    "bottom": "westerosblocks:block/wood/white/door_bottom",
+    "top": "westerosblocks:block/wood/white/door_top"
+  }
+}

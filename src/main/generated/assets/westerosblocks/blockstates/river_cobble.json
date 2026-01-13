@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/river_cobble/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/river_cobble/base_v2",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/river_cobble/base_v3",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/river_cobble/base_v4",
+        "y": 0
+      }
+    ]
+  }
+}

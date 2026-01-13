@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/small_brown_grey_brick_arrow_slit_ornate/base_v1",
+      "y": 0
+    }
+  }
+}

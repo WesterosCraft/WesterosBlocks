@@ -1,0 +1,26 @@
+{
+  "colormap": "westerosblocks:dark_cobble",
+  "targets": [
+    "westerosblocks:dark_cobblestone",
+    "westerosblocks:dark_cobblestone_fence",
+    "westerosblocks:dark_cobblestone_hopper",
+    "westerosblocks:dark_cobblestone_slab",
+    "westerosblocks:dark_cobblestone_stairs",
+    "westerosblocks:dark_cobblestone_tip",
+    "westerosblocks:dark_cobblestone_wall",
+    "westerosblocks:icy_northern_cobble",
+    "westerosblocks:icy_northern_cobble_fence",
+    "westerosblocks:icy_northern_cobble_hopper",
+    "westerosblocks:icy_northern_cobble_slab",
+    "westerosblocks:icy_northern_cobble_stairs",
+    "westerosblocks:icy_northern_cobble_tip",
+    "westerosblocks:icy_northern_cobble_wall",
+    "westerosblocks:northern_cobble",
+    "westerosblocks:northern_cobble_fence",
+    "westerosblocks:northern_cobble_hopper",
+    "westerosblocks:northern_cobble_slab",
+    "westerosblocks:northern_cobble_stairs",
+    "westerosblocks:northern_cobble_tip",
+    "westerosblocks:northern_cobble_wall"
+  ]
+}

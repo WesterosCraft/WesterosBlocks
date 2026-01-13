@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_side",
+  "textures": {
+    "bottom": "westerosblocks:block/terrainset/flowstone/all1",
+    "particle": "westerosblocks:block/terrainset/flowstone/all1",
+    "side": "westerosblocks:block/terrainset/flowstone/all1",
+    "top": "westerosblocks:block/terrainset/flowstone/all1"
+  }
+}

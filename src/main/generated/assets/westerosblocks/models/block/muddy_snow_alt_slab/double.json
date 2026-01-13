@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/muddy_snow/all_alt",
+    "east": "westerosblocks:block/muddy_snow/all_alt",
+    "north": "westerosblocks:block/muddy_snow/all_alt",
+    "particle": "westerosblocks:block/muddy_snow/all_alt",
+    "south": "westerosblocks:block/muddy_snow/all_alt",
+    "up": "westerosblocks:block/muddy_snow/all_alt",
+    "west": "westerosblocks:block/muddy_snow/all_alt"
+  }
+}

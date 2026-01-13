@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/red_plaster_rough_tip/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/red_plaster_rough_tip/base_v2",
+        "y": 0
+      }
+    ]
+  }
+}

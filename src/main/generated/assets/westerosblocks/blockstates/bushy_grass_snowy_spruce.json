@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/custom/bushy_grass_snowy_spruce/base_v1",
+      "y": 0
+    }
+  }
+}

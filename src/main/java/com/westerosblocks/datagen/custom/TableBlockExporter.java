@@ -12,33 +12,40 @@ import net.minecraft.util.math.Direction;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Exporter for WCTableBlock2 - generates blockstate and model JSON files
+ * for table blocks with connection-based model variants.
+ */
 public class TableBlockExporter extends BaseBlockExporter {
 
-    public static void registerCustomTableBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+    public static void registerTableBlock2(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         List<String> textureList = definition.getTextures();
-        String texturePath = (textureList != null && !textureList.isEmpty()) ? textureList.getFirst() : "missingno";
+        String texturePath = (textureList != null && !textureList.isEmpty()) ? textureList.get(0) : "missingno";
 
-        registerCustomTableBlock(generator, block, texturePath, texturePath);
+        registerTableBlock2(generator, block, texturePath, texturePath);
     }
 
-    private static void registerCustomTableBlock(BlockStateModelGenerator generator, Block block, String texturePath, String particleTexture) {
+    private static void registerTableBlock2(BlockStateModelGenerator generator, Block block, String texturePath, String particleTexture) {
         String blockName = getBlockName(block);
 
+        // Use ModTextureKey.TABLE and TextureKey.PARTICLE
         TextureMap textureMap = new TextureMap()
                 .put(ModTextureKey.TABLE, createBlockIdentifier(texturePath))
                 .put(TextureKey.PARTICLE, createBlockIdentifier(particleTexture));
 
-        // Create model parents referencing the custom table models
+        // Create model parents referencing the custom table model files
         Model singleParent = new Model(Optional.of(WesterosBlocks.id("block/table/wood_table_1x1")), Optional.empty(), ModTextureKey.TABLE, TextureKey.PARTICLE);
         Model leftParent = new Model(Optional.of(WesterosBlocks.id("block/table/wood_table_left")), Optional.empty(), ModTextureKey.TABLE, TextureKey.PARTICLE);
         Model rightParent = new Model(Optional.of(WesterosBlocks.id("block/table/wood_table_right")), Optional.empty(), ModTextureKey.TABLE, TextureKey.PARTICLE);
         Model middleParent = new Model(Optional.of(WesterosBlocks.id("block/table/wood_table_middle")), Optional.empty(), ModTextureKey.TABLE, TextureKey.PARTICLE);
 
+        // Upload model variants with texture mappings
         Identifier singleModelId = singleParent.upload(createNestedModelId(block, "single"), textureMap, generator.modelCollector);
         Identifier leftModelId = leftParent.upload(createNestedModelId(block, "left"), textureMap, generator.modelCollector);
         Identifier rightModelId = rightParent.upload(createNestedModelId(block, "right"), textureMap, generator.modelCollector);
         Identifier middleModelId = middleParent.upload(createNestedModelId(block, "middle"), textureMap, generator.modelCollector);
 
+        // Create blockstate variant map (FACING first, then CONNECTION)
         BlockStateVariantMap.DoubleProperty<Direction, WCTableBlock.ConnectionType> variantMap =
             BlockStateVariantMap.create(WCTableBlock.FACING, WCTableBlock.CONNECTION);
 
@@ -52,11 +59,11 @@ public class TableBlockExporter extends BaseBlockExporter {
                             .put(VariantSettings.MODEL, singleModelId)
                             .put(VariantSettings.Y, getRotationEnum(rotation)));
 
-            // LEFT connection (rotated 90 degrees clockwise)
+            // LEFT connection
             variantMap.register(facing, WCTableBlock.ConnectionType.LEFT,
                     BlockStateVariant.create()
                             .put(VariantSettings.MODEL, leftModelId)
-                            .put(VariantSettings.Y, getRotationEnum((rotation + 90) % 360)));
+                            .put(VariantSettings.Y, getRotationEnum((rotation))));
 
             // RIGHT connection
             variantMap.register(facing, WCTableBlock.ConnectionType.RIGHT,
@@ -75,9 +82,14 @@ public class TableBlockExporter extends BaseBlockExporter {
         generator.blockStateCollector.accept(
                 VariantsBlockStateSupplier.create(block).coordinate(variantMap));
 
+        // Register item model (uses single variant)
         registerParentedItemModel(generator, block, singleModelId);
     }
 
+    /**
+     * Custom rotation mapping for table models.
+     * The models have a specific orientation that requires these rotation angles.
+     */
     private static int getRotationForFacing(Direction facing) {
         return switch (facing) {
             case NORTH -> 180;
@@ -88,6 +100,9 @@ public class TableBlockExporter extends BaseBlockExporter {
         };
     }
 
+    /**
+     * Converts degrees to Minecraft's rotation enum
+     */
     private static VariantSettings.Rotation getRotationEnum(int degrees) {
         return switch (degrees) {
             case 0 -> VariantSettings.Rotation.R0;

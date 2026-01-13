@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/eyrie_blue_veined_marble/base_v1",
+      "y": 0
+    }
+  }
+}

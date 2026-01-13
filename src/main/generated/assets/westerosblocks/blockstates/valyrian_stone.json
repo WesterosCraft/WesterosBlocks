@@ -1,0 +1,38 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/valyrian_stone/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/valyrian_stone/base_v2",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/valyrian_stone/base_v3",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/valyrian_stone/base_v4",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/valyrian_stone/base_v5",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/valyrian_stone/base_v6",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/valyrian_stone/base_v7",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/valyrian_stone/base_v8",
+        "y": 0
+      }
+    ]
+  }
+}

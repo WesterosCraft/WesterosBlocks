@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/desert_sand/base_v1",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/terrainset_reach_tip/base_v1",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/bat_particle_emitter/on"
+    }
+  }
+}

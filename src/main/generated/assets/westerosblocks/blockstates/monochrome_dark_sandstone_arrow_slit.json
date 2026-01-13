@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/monochrome_dark_sandstone_arrow_slit/base_v1",
+      "y": 0
+    }
+  }
+}

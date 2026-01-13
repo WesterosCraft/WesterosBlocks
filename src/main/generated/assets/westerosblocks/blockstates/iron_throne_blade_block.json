@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/iron_throne_blade_block/base_v1",
+      "y": 0
+    }
+  }
+}

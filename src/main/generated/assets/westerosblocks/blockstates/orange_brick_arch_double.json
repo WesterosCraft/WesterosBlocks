@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/orange_brick_arch_double/base_v1",
+      "y": 0
+    }
+  }
+}

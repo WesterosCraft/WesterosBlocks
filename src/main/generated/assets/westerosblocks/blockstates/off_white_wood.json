@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "state=base": {
+      "model": "westerosblocks:block/off_white_wood/base_v1",
+      "y": 0
+    },
+    "state=cut": {
+      "model": "westerosblocks:block/off_white_wood/cut_v1",
+      "y": 0
+    }
+  }
+}

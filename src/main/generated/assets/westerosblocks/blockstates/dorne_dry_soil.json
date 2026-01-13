@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/dorne_dry_soil/base_v1",
+      "y": 0
+    }
+  }
+}

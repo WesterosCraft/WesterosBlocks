@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "state=base": {
+      "model": "westerosblocks:block/jungle_planks/base_v1",
+      "y": 0
+    },
+    "state=cut": {
+      "model": "westerosblocks:block/jungle_planks/cut_v1",
+      "y": 0
+    }
+  }
+}

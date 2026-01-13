@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/icy_northern_cobble_hopper/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/icy_northern_cobble_hopper/base_v2",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/icy_northern_cobble_hopper/base_v3",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/icy_northern_cobble_hopper/base_v4",
+        "y": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/untinted/cross_layer6",
+  "textures": {
+    "cross": "westerosblocks:block/flowers/blue_chicory/side4"
+  }
+}

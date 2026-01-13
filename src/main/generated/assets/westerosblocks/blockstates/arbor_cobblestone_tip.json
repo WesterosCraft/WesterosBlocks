@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/arbor_cobblestone_tip/base_v1",
+      "y": 0
+    }
+  }
+}

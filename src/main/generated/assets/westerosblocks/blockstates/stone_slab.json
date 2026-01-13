@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/stone_slab/base_v1",
+      "y": 0
+    }
+  }
+}

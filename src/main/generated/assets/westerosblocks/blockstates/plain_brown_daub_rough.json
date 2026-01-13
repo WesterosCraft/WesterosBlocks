@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/plain_brown_daub_rough/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/plain_brown_daub_rough/base_v2",
+        "y": 0
+      }
+    ]
+  }
+}

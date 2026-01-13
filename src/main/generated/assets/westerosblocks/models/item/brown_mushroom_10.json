@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/brown_mushroom_block/mushroom_brown_9"
+  }
+}

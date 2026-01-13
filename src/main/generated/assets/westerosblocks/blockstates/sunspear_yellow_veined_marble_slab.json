@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/sunspear_yellow_veined_marble_slab/bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/sunspear_yellow_veined_marble_slab/double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/sunspear_yellow_veined_marble_slab/top"
+    }
+  }
+}

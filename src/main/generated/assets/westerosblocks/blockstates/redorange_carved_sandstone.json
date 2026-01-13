@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/redorange_carved_sandstone/base_v1",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/grey_keystone/base_v1",
+      "y": 0
+    }
+  }
+}

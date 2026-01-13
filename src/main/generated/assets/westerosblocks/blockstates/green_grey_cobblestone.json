@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/green_grey_cobblestone/base_v1",
+        "weight": 5,
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/green_grey_cobblestone/base_v2",
+        "weight": 5,
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/green_grey_cobblestone/base_v3",
+        "weight": 5,
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/green_grey_cobblestone/base_v4",
+        "weight": 5,
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/green_grey_cobblestone/base_v5",
+        "weight": 20,
+        "y": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/flowers/orange_sun_star1"
+  }
+}

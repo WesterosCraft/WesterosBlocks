@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/terrainset_the_north_hopper/base_v1",
+      "y": 0
+    }
+  }
+}

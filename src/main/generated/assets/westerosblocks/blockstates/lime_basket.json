@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/lime_basket/base_v1",
+      "y": 0
+    }
+  }
+}

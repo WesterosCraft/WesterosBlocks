@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/torch_unlit/base"
+    }
+  }
+}

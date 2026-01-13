@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/closed_cabinet/base_v1",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/black_bricicle/base_v1",
+      "y": 0
+    }
+  }
+}

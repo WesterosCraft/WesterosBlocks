@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/terrainset_eastern_islands/base_v1",
+      "y": 0
+    }
+  }
+}

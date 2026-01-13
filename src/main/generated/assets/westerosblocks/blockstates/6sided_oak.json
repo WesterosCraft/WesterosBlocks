@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/6sided_oak/base_v1",
+      "y": 0
+    }
+  }
+}

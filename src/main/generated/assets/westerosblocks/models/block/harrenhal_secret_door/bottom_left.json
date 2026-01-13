@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/untinted/door_bottom_left",
+  "textures": {
+    "bottom": "westerosblocks:block/ashlar_third/black/all_noctm",
+    "top": "westerosblocks:block/ashlar_third/black/all_noctm"
+  }
+}

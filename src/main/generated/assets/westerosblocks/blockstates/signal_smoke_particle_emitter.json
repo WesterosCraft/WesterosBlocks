@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/signal_smoke_particle_emitter/on"
+    }
+  }
+}

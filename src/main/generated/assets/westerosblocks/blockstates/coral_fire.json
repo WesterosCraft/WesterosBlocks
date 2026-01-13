@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/coral_fire/base_v1",
+      "y": 0
+    }
+  }
+}

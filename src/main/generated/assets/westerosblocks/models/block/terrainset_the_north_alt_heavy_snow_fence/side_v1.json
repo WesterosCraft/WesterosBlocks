@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_side",
+  "textures": {
+    "bottom": "westerosblocks:block/terrainset/north_alt/heavy_snow/all",
+    "particle": "westerosblocks:block/terrainset/north_alt/heavy_snow/all",
+    "side": "westerosblocks:block/terrainset/north_alt/heavy_snow/all",
+    "top": "westerosblocks:block/terrainset/north_alt/heavy_snow/all"
+  }
+}

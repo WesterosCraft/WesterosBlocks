@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/bark/northern/stripped_lines",
+    "particle": "westerosblocks:block/bark/northern/stripped_lines",
+    "side": "westerosblocks:block/bark/northern/stripped_lines",
+    "top": "westerosblocks:block/bark/northern/stripped_lines"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_post",
+  "textures": {
+    "bottom": "westerosblocks:block/wool/yellow/all",
+    "particle": "westerosblocks:block/wool/yellow/all",
+    "side": "westerosblocks:block/wool/yellow/all",
+    "top": "westerosblocks:block/wool/yellow/all"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/bench_kitchen_pans/base_v1",
+      "y": 0
+    }
+  }
+}

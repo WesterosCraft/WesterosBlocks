@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/cheese_block/base_v1",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/highgarden_pink_veined_marble_hopper/base_v1",
+      "y": 0
+    }
+  }
+}

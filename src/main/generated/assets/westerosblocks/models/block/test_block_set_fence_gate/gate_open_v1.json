@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/tinted/template_fence_gate_open",
+  "textures": {
+    "particle": "westerosblocks:block/test_block/d_texture",
+    "texture": "westerosblocks:block/test_block/d_texture"
+  }
+}

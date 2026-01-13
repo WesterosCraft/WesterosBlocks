@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/vertical_chain/base_v1",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/coral/horn/web1"
+  }
+}

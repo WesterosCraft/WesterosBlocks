@@ -119,6 +119,7 @@ public class ModBlocks {
             case "soul-sand" -> new WCSoulSandBlock.Factory();
             case "particle" -> new WCParticleEmitterBlock.Factory();
             case "table" -> new WCTableBlock.Factory();
+            case "table2" -> new WCTableBlock.Factory();
             case "chair" -> new WCChairBlock.Factory();
             case "bench" -> new WCBenchBlock.Factory();
             case "branch" -> new WCBranchBlock.Factory();

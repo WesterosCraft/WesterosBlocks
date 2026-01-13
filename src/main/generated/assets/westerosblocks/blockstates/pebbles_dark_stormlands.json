@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/pebbles_dark_stormlands/base_v1",
+      "y": 0
+    }
+  }
+}

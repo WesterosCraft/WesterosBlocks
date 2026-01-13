@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/gulltown_blue_plaster_rough/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/gulltown_blue_plaster_rough/base_v2",
+        "y": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/mances_camp_mances_tent_block/base_v1",
+      "y": 0
+    }
+  }
+}

@@ -2,14 +2,13 @@ package com.westerosblocks.block.custom;
 
 import com.google.common.collect.ImmutableMap;
 import com.westerosblocks.data.BlockDefinition;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalFacingBlock;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.EnumProperty;
+import net.minecraft.util.BlockMirror;
+import net.minecraft.util.BlockRotation;
 import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -20,11 +19,21 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.Map;
 
+/**
+ * WCTableBlock2 - Improved table block with proper connection logic.
+ * Tables connect to adjacent tables with the same facing direction.
+ * Connection type determines which model variant is used:
+ * - SINGLE: Standalone table (no neighbors)
+ * - LEFT: Left end of chain (neighbor to the right)
+ * - RIGHT: Right end of chain (neighbor to the left)
+ * - MIDDLE: Middle piece (neighbors on both sides)
+ */
 public class WCTableBlock extends Block {
     protected BlockDefinition def;
 
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final EnumProperty<ConnectionType> CONNECTION = EnumProperty.of("connection", ConnectionType.class);
+
     private static final VoxelShape TABLE_SHAPE_NS = Block.createCuboidShape(1, 0, 3, 15, 14, 13);
     private static final VoxelShape TABLE_SHAPE_EW = Block.createCuboidShape(3, 0, 1, 13, 14, 15);
 
@@ -47,11 +56,15 @@ public class WCTableBlock extends Block {
         }
     }
 
+    /**
+     * Connection types for table blocks.
+     * Naming convention: LEFT = left end of chain, RIGHT = right end of chain
+     */
     public enum ConnectionType implements StringIdentifiable {
         SINGLE("single"),   // No connections
-        LEFT("left"),       // Left end (connects on right)
-        RIGHT("right"),     // Right end (connects on left)
-        MIDDLE("middle");   // Middle piece (connects on both sides)
+        LEFT("left"),       // Left end (has neighbor to right)
+        RIGHT("right"),     // Right end (has neighbor to left)
+        MIDDLE("middle");   // Middle piece (neighbors both sides)
 
         private final String name;
 
@@ -111,11 +124,11 @@ public class WCTableBlock extends Block {
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
             WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        // Only update if the change is on our left or right side
+        // Only update if the change is on a horizontal axis
         if (direction.getAxis().isHorizontal()) {
             Direction facing = state.get(FACING);
-            Direction left = facing.rotateYCounterclockwise();
-            Direction right = facing.rotateYClockwise();
+            Direction left = getLeftDirection(facing);
+            Direction right = getRightDirection(facing);
 
             // Only recalculate if the neighbor change is on our left or right
             if (direction == left || direction == right) {
@@ -127,20 +140,24 @@ public class WCTableBlock extends Block {
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 
+    /**
+     * Determines the connection type based on adjacent tables.
+     * Following user's requirements: neighbor to LEFT → this becomes RIGHT end
+     */
     private ConnectionType getConnectionType(BlockView world, BlockPos pos, Direction facing) {
-        Direction left = facing.rotateYCounterclockwise();
-        Direction right = facing.rotateYClockwise();
+        Direction left = getLeftDirection(facing);
+        Direction right = getRightDirection(facing);
 
-        boolean connectsLeft = canConnectTo(world, pos, left, facing);
-        boolean connectsRight = canConnectTo(world, pos, right, facing);
+        boolean hasLeft = canConnectTo(world, pos, left, facing);
+        boolean hasRight = canConnectTo(world, pos, right, facing);
 
-        if (connectsLeft && connectsRight) {
+        if (hasLeft && hasRight) {
             return ConnectionType.MIDDLE;
-        } else if (connectsLeft) {
-            // Connects on left, so this is the right end
+        } else if (hasLeft) {
+            // Neighbor to left → we're the RIGHT end
             return ConnectionType.RIGHT;
-        } else if (connectsRight) {
-            // Connects on right, so this is the left end
+        } else if (hasRight) {
+            // Neighbor to right → we're the LEFT end
             return ConnectionType.LEFT;
         } else {
             return ConnectionType.SINGLE;
@@ -162,6 +179,30 @@ public class WCTableBlock extends Block {
         // Neighbor must have the same facing direction
         Direction neighborFacing = neighborState.get(FACING);
         return neighborFacing == thisFacing;
+    }
+
+    /**
+     * Get the left direction relative to the facing direction
+     */
+    private Direction getLeftDirection(Direction facing) {
+        return facing.rotateYCounterclockwise();
+    }
+
+    /**
+     * Get the right direction relative to the facing direction
+     */
+    private Direction getRightDirection(Direction facing) {
+        return facing.rotateYClockwise();
+    }
+
+    @Override
+    public BlockState rotate(BlockState state, BlockRotation rotation) {
+        return state.with(FACING, rotation.rotate(state.get(FACING)));
+    }
+
+    @Override
+    public BlockState mirror(BlockState state, BlockMirror mirror) {
+        return state.rotate(mirror.getRotation(state.get(FACING)));
     }
 
     @Override

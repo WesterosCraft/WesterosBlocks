@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/slab",
+  "textures": {
+    "down": "westerosblocks:block/wood/red/all_lines",
+    "east": "westerosblocks:block/wood/red/all_lines",
+    "north": "westerosblocks:block/wood/red/all_lines",
+    "particle": "westerosblocks:block/wood/red/all_lines",
+    "south": "westerosblocks:block/wood/red/all_lines",
+    "up": "westerosblocks:block/wood/red/all_lines",
+    "west": "westerosblocks:block/wood/red/all_lines"
+  }
+}

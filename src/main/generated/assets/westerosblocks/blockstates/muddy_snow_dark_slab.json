@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/muddy_snow_dark_slab/bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/muddy_snow_dark_slab/double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/muddy_snow_dark_slab/top"
+    }
+  }
+}

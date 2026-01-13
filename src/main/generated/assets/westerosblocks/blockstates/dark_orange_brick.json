@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/dark_orange_brick/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/dark_orange_brick/base_v2",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/dark_orange_brick/base_v3",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/dark_orange_brick/base_v4",
+        "y": 0
+      }
+    ]
+  }
+}

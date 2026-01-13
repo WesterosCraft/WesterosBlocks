@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/open_basket/base_v1",
+      "y": 0
+    }
+  }
+}

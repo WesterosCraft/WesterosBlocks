@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/plain_brown_daub_tip/base_v1",
+      "y": 0
+    }
+  }
+}

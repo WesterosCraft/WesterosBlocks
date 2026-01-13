@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/southern_brick_lintel/base_v1",
+      "y": 0
+    }
+  }
+}

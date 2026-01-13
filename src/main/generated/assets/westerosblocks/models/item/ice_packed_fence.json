@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_inventory",
+  "textures": {
+    "bottom": "westerosblocks:block/ice/packed",
+    "particle": "westerosblocks:block/ice/packed",
+    "side": "westerosblocks:block/ice/packed",
+    "top": "westerosblocks:block/ice/packed"
+  }
+}

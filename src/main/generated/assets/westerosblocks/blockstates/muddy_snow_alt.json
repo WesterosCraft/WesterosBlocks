@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/muddy_snow_alt/base_v1",
+      "y": 0
+    }
+  }
+}

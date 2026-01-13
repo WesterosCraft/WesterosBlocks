@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:item/cuboid_nsew_stack_item",
+  "textures": {
+    "particle": "westerosblocks:block/banner/other/the_faith_of_the_seven/top",
+    "txt1": "westerosblocks:block/banner/other/the_faith_of_the_seven/top",
+    "txt2": "westerosblocks:block/banner/other/the_faith_of_the_seven/bottom",
+    "txt5": "westerosblocks:block/banner/other/the_faith_of_the_seven/top"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/fish_barrel/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/fish_barrel/base_v2",
+        "y": 0
+      }
+    ]
+  }
+}

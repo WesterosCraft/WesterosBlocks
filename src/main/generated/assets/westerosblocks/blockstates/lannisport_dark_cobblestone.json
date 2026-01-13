@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/lannisport_dark_cobblestone/base_v1",
+      "y": 0
+    }
+  }
+}
