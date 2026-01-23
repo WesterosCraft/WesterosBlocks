@@ -207,6 +207,10 @@ public class ModModelProvider extends FabricModelProvider {
                         .build();
                     break;
 
+                case "awning":
+                    AwningBlockExporter.registerCustomAwningBlock(bsmg, block, definition);
+                    break;
+
                 default:
                     WesterosBlocks.LOGGER.warn("Unsupported block type '{}' for model generation: {}",
                             blockType, definition.getBlockName());
