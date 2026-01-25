@@ -1,0 +1,68 @@
+{
+  "variants": {
+    "facing=east,half=bottom,raised=false": {
+      "model": "westerosblocks:block/awning_light_grey/bottom",
+      "y": 90
+    },
+    "facing=east,half=bottom,raised=true": {
+      "model": "westerosblocks:block/awning_light_grey/bottom_raised",
+      "y": 90
+    },
+    "facing=east,half=top,raised=false": {
+      "model": "westerosblocks:block/awning_light_grey/top",
+      "y": 90
+    },
+    "facing=east,half=top,raised=true": {
+      "model": "westerosblocks:block/awning_light_grey/top_raised",
+      "y": 90
+    },
+    "facing=north,half=bottom,raised=false": {
+      "model": "westerosblocks:block/awning_light_grey/bottom",
+      "y": 0
+    },
+    "facing=north,half=bottom,raised=true": {
+      "model": "westerosblocks:block/awning_light_grey/bottom_raised",
+      "y": 0
+    },
+    "facing=north,half=top,raised=false": {
+      "model": "westerosblocks:block/awning_light_grey/top",
+      "y": 0
+    },
+    "facing=north,half=top,raised=true": {
+      "model": "westerosblocks:block/awning_light_grey/top_raised",
+      "y": 0
+    },
+    "facing=south,half=bottom,raised=false": {
+      "model": "westerosblocks:block/awning_light_grey/bottom",
+      "y": 180
+    },
+    "facing=south,half=bottom,raised=true": {
+      "model": "westerosblocks:block/awning_light_grey/bottom_raised",
+      "y": 180
+    },
+    "facing=south,half=top,raised=false": {
+      "model": "westerosblocks:block/awning_light_grey/top",
+      "y": 180
+    },
+    "facing=south,half=top,raised=true": {
+      "model": "westerosblocks:block/awning_light_grey/top_raised",
+      "y": 180
+    },
+    "facing=west,half=bottom,raised=false": {
+      "model": "westerosblocks:block/awning_light_grey/bottom",
+      "y": 270
+    },
+    "facing=west,half=bottom,raised=true": {
+      "model": "westerosblocks:block/awning_light_grey/bottom_raised",
+      "y": 270
+    },
+    "facing=west,half=top,raised=false": {
+      "model": "westerosblocks:block/awning_light_grey/top",
+      "y": 270
+    },
+    "facing=west,half=top,raised=true": {
+      "model": "westerosblocks:block/awning_light_grey/top_raised",
+      "y": 270
+    }
+  }
+}
