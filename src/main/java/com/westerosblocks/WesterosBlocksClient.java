@@ -88,6 +88,8 @@ public class WesterosBlocksClient implements ClientModInitializer {
 
             if (definition.hasRenderLayer()) {
                 renderLayer = getRenderLayerFromString(definition.getRenderLayer());
+            } else if (definition.hasOverlayTextures()) {
+                renderLayer = RenderLayer.getCutout();
             } else if (definition.isAlphaRender()) {
                 renderLayer = RenderLayer.getTranslucent();
             }

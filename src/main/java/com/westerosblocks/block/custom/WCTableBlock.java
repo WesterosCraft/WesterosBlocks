@@ -19,15 +19,6 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.Map;
 
-/**
- * WCTableBlock2 - Improved table block with proper connection logic.
- * Tables connect to adjacent tables with the same facing direction.
- * Connection type determines which model variant is used:
- * - SINGLE: Standalone table (no neighbors)
- * - LEFT: Left end of chain (neighbor to the right)
- * - RIGHT: Right end of chain (neighbor to the left)
- * - MIDDLE: Middle piece (neighbors on both sides)
- */
 public class WCTableBlock extends Block {
     protected BlockDefinition def;
 
@@ -56,10 +47,6 @@ public class WCTableBlock extends Block {
         }
     }
 
-    /**
-     * Connection types for table blocks.
-     * Naming convention: LEFT = left end of chain, RIGHT = right end of chain
-     */
     public enum ConnectionType implements StringIdentifiable {
         SINGLE("single"),   // No connections
         LEFT("left"),       // Left end (has neighbor to right)

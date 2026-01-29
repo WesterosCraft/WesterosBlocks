@@ -6,6 +6,7 @@
     "creativeTab": "westeros_foliage_tab",
     "label": "Dappled Moss",
     "colorMult": "textures/colormap/moss_dappled",
+    "nonOpaque": true,
     "renderLayer": "cutout",
     "textures": [
       "dappled_moss/dappled",
@@ -85,6 +86,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Jasmine Vines",
+    "nonOpaque": true,
     "renderLayer": "cutout",
     "allowUnsupported": true,
     "hasClimb": true,
@@ -129,6 +131,7 @@
     "creativeTab": "westeros_foliage_tab",
     "label": "Vines",
     "colorMult": "textures/colormap/foliage_vine",
+    "nonOpaque": true,
     "renderLayer": "cutout",
     "allowUnsupported": true,
     "hasClimb": true,

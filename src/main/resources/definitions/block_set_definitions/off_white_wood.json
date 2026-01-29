@@ -9,9 +9,7 @@
         "hopper",
         "tip",
         "carpet",
-        "fence_gate",
-        "window_frame",
-        "window_frame_mullion"
+        "fence_gate"
     ],
     "altNames": {
         "fence_gate": "locked_off_white_wood_fence_gate"
@@ -37,14 +35,12 @@
     "states": [
         {
             "stateID": "base",
-            "excludeVariants": "window_frame,window_frame_mullion",
             "textures": {
                 "all": "wood/off_white/all"
             }
         },
         {
             "stateID": "cut",
-            "excludeVariants": "window_frame,window_frame_mullion",
             "textures": {
                 "all": "wood/off_white/all_lines"
             }

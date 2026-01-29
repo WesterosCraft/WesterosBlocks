@@ -34,16 +34,12 @@ public class WCSlabBlock extends SlabBlock {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(BlockDefinition definition) {
-            // Build settings from definition (1.18.2 pattern: def.makeProperties())
             AbstractBlock.Settings settings = definition.makeSettings();
 
-            // Build state property from definition (1.18.2 pattern: def.buildStateProperty())
             ModProperties.StateProperty stateProperty = definition.buildStateProperty();
             if (stateProperty != null) {
                 tempSTATE = stateProperty;
             }
-
-            // Extract block-specific properties from definition
             boolean doConnectState = definition.isConnectState();
             boolean doToggleOnUse = definition.toggleOnUse();
             boolean doAddStates = (stateProperty != null);

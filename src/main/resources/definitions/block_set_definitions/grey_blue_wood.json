@@ -9,9 +9,7 @@
         "hopper",
         "tip",
         "carpet",
-        "fence_gate",
-        "window_frame",
-        "window_frame_mullion"
+        "fence_gate"
     ],
     "altNames": {
         "fence_gate": "locked_grey_blue_wood_fence_gate"

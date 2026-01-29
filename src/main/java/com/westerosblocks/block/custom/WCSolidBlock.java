@@ -15,6 +15,7 @@ import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
@@ -138,5 +139,31 @@ public class WCSolidBlock extends Block {
 
     public BlockDefinition getDefinition() {
         return def;
+    }
+
+    @Override
+    public boolean isSideInvisible(BlockState state, BlockState stateFrom, Direction direction) {
+        if (def.isNonOpaque()) {
+            return stateFrom.isOf(this) || super.isSideInvisible(state, stateFrom, direction);
+        }
+        return false;
+    }
+
+    @Override
+    public VoxelShape getCullingShape(BlockState state, BlockView world, BlockPos pos) {
+        if (def.isNonOpaque()) {
+            return VoxelShapes.empty();
+        }
+        return VoxelShapes.fullCube();
+    }
+
+    @Override
+    public float getAmbientOcclusionLightLevel(BlockState state, BlockView world, BlockPos pos) {
+        return (def.getLightOpacity() != null && def.getLightOpacity() == 0) ? 1.0F : 0.2F;
+    }
+
+    @Override
+    public boolean isTransparent(BlockState state, BlockView world, BlockPos pos) {
+        return def.isNonOpaque();
     }
 }

@@ -4684,6 +4684,8 @@
     "label": "Timber Northern Orange Brick Close Studding",
     "toggleOnUse": true,
     "connectstate": true,
+    "nonOpaque": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
@@ -4722,6 +4724,8 @@
     "label": "Timber Northern Orange Brick Crosshatch",
     "toggleOnUse": true,
     "connectstate": true,
+    "nonOpaque": true,
+    "renderLayer": "cutout",
     "states": [
       {
         "textures": [
