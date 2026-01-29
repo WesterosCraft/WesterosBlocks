@@ -1,0 +1,292 @@
+{
+  "variants": {
+    "facing=east,open=false,part=bottom_center": {
+      "model": "westerosblocks:block/castle_gate/bottom_center_closed",
+      "y": 90
+    },
+    "facing=east,open=false,part=bottom_left": {
+      "model": "westerosblocks:block/castle_gate/bottom_left_closed",
+      "y": 90
+    },
+    "facing=east,open=false,part=bottom_right": {
+      "model": "westerosblocks:block/castle_gate/bottom_right_closed",
+      "y": 90
+    },
+    "facing=east,open=false,part=middle_center": {
+      "model": "westerosblocks:block/castle_gate/middle_center_closed",
+      "y": 90
+    },
+    "facing=east,open=false,part=middle_left": {
+      "model": "westerosblocks:block/castle_gate/middle_left_closed",
+      "y": 90
+    },
+    "facing=east,open=false,part=middle_right": {
+      "model": "westerosblocks:block/castle_gate/middle_right_closed",
+      "y": 90
+    },
+    "facing=east,open=false,part=top_center": {
+      "model": "westerosblocks:block/castle_gate/top_center_closed",
+      "y": 90
+    },
+    "facing=east,open=false,part=top_left": {
+      "model": "westerosblocks:block/castle_gate/top_left_closed",
+      "y": 90
+    },
+    "facing=east,open=false,part=top_right": {
+      "model": "westerosblocks:block/castle_gate/top_right_closed",
+      "y": 90
+    },
+    "facing=east,open=true,part=bottom_center": {
+      "model": "westerosblocks:block/castle_gate/bottom_center_open",
+      "y": 90
+    },
+    "facing=east,open=true,part=bottom_left": {
+      "model": "westerosblocks:block/castle_gate/bottom_left_open",
+      "y": 90
+    },
+    "facing=east,open=true,part=bottom_right": {
+      "model": "westerosblocks:block/castle_gate/bottom_right_open",
+      "y": 90
+    },
+    "facing=east,open=true,part=middle_center": {
+      "model": "westerosblocks:block/castle_gate/middle_center_open",
+      "y": 90
+    },
+    "facing=east,open=true,part=middle_left": {
+      "model": "westerosblocks:block/castle_gate/middle_left_open",
+      "y": 90
+    },
+    "facing=east,open=true,part=middle_right": {
+      "model": "westerosblocks:block/castle_gate/middle_right_open",
+      "y": 90
+    },
+    "facing=east,open=true,part=top_center": {
+      "model": "westerosblocks:block/castle_gate/top_center_open",
+      "y": 90
+    },
+    "facing=east,open=true,part=top_left": {
+      "model": "westerosblocks:block/castle_gate/top_left_open",
+      "y": 90
+    },
+    "facing=east,open=true,part=top_right": {
+      "model": "westerosblocks:block/castle_gate/top_right_open",
+      "y": 90
+    },
+    "facing=north,open=false,part=bottom_center": {
+      "model": "westerosblocks:block/castle_gate/bottom_center_closed",
+      "y": 0
+    },
+    "facing=north,open=false,part=bottom_left": {
+      "model": "westerosblocks:block/castle_gate/bottom_left_closed",
+      "y": 0
+    },
+    "facing=north,open=false,part=bottom_right": {
+      "model": "westerosblocks:block/castle_gate/bottom_right_closed",
+      "y": 0
+    },
+    "facing=north,open=false,part=middle_center": {
+      "model": "westerosblocks:block/castle_gate/middle_center_closed",
+      "y": 0
+    },
+    "facing=north,open=false,part=middle_left": {
+      "model": "westerosblocks:block/castle_gate/middle_left_closed",
+      "y": 0
+    },
+    "facing=north,open=false,part=middle_right": {
+      "model": "westerosblocks:block/castle_gate/middle_right_closed",
+      "y": 0
+    },
+    "facing=north,open=false,part=top_center": {
+      "model": "westerosblocks:block/castle_gate/top_center_closed",
+      "y": 0
+    },
+    "facing=north,open=false,part=top_left": {
+      "model": "westerosblocks:block/castle_gate/top_left_closed",
+      "y": 0
+    },
+    "facing=north,open=false,part=top_right": {
+      "model": "westerosblocks:block/castle_gate/top_right_closed",
+      "y": 0
+    },
+    "facing=north,open=true,part=bottom_center": {
+      "model": "westerosblocks:block/castle_gate/bottom_center_open",
+      "y": 0
+    },
+    "facing=north,open=true,part=bottom_left": {
+      "model": "westerosblocks:block/castle_gate/bottom_left_open",
+      "y": 0
+    },
+    "facing=north,open=true,part=bottom_right": {
+      "model": "westerosblocks:block/castle_gate/bottom_right_open",
+      "y": 0
+    },
+    "facing=north,open=true,part=middle_center": {
+      "model": "westerosblocks:block/castle_gate/middle_center_open",
+      "y": 0
+    },
+    "facing=north,open=true,part=middle_left": {
+      "model": "westerosblocks:block/castle_gate/middle_left_open",
+      "y": 0
+    },
+    "facing=north,open=true,part=middle_right": {
+      "model": "westerosblocks:block/castle_gate/middle_right_open",
+      "y": 0
+    },
+    "facing=north,open=true,part=top_center": {
+      "model": "westerosblocks:block/castle_gate/top_center_open",
+      "y": 0
+    },
+    "facing=north,open=true,part=top_left": {
+      "model": "westerosblocks:block/castle_gate/top_left_open",
+      "y": 0
+    },
+    "facing=north,open=true,part=top_right": {
+      "model": "westerosblocks:block/castle_gate/top_right_open",
+      "y": 0
+    },
+    "facing=south,open=false,part=bottom_center": {
+      "model": "westerosblocks:block/castle_gate/bottom_center_closed",
+      "y": 180
+    },
+    "facing=south,open=false,part=bottom_left": {
+      "model": "westerosblocks:block/castle_gate/bottom_left_closed",
+      "y": 180
+    },
+    "facing=south,open=false,part=bottom_right": {
+      "model": "westerosblocks:block/castle_gate/bottom_right_closed",
+      "y": 180
+    },
+    "facing=south,open=false,part=middle_center": {
+      "model": "westerosblocks:block/castle_gate/middle_center_closed",
+      "y": 180
+    },
+    "facing=south,open=false,part=middle_left": {
+      "model": "westerosblocks:block/castle_gate/middle_left_closed",
+      "y": 180
+    },
+    "facing=south,open=false,part=middle_right": {
+      "model": "westerosblocks:block/castle_gate/middle_right_closed",
+      "y": 180
+    },
+    "facing=south,open=false,part=top_center": {
+      "model": "westerosblocks:block/castle_gate/top_center_closed",
+      "y": 180
+    },
+    "facing=south,open=false,part=top_left": {
+      "model": "westerosblocks:block/castle_gate/top_left_closed",
+      "y": 180
+    },
+    "facing=south,open=false,part=top_right": {
+      "model": "westerosblocks:block/castle_gate/top_right_closed",
+      "y": 180
+    },
+    "facing=south,open=true,part=bottom_center": {
+      "model": "westerosblocks:block/castle_gate/bottom_center_open",
+      "y": 180
+    },
+    "facing=south,open=true,part=bottom_left": {
+      "model": "westerosblocks:block/castle_gate/bottom_left_open",
+      "y": 180
+    },
+    "facing=south,open=true,part=bottom_right": {
+      "model": "westerosblocks:block/castle_gate/bottom_right_open",
+      "y": 180
+    },
+    "facing=south,open=true,part=middle_center": {
+      "model": "westerosblocks:block/castle_gate/middle_center_open",
+      "y": 180
+    },
+    "facing=south,open=true,part=middle_left": {
+      "model": "westerosblocks:block/castle_gate/middle_left_open",
+      "y": 180
+    },
+    "facing=south,open=true,part=middle_right": {
+      "model": "westerosblocks:block/castle_gate/middle_right_open",
+      "y": 180
+    },
+    "facing=south,open=true,part=top_center": {
+      "model": "westerosblocks:block/castle_gate/top_center_open",
+      "y": 180
+    },
+    "facing=south,open=true,part=top_left": {
+      "model": "westerosblocks:block/castle_gate/top_left_open",
+      "y": 180
+    },
+    "facing=south,open=true,part=top_right": {
+      "model": "westerosblocks:block/castle_gate/top_right_open",
+      "y": 180
+    },
+    "facing=west,open=false,part=bottom_center": {
+      "model": "westerosblocks:block/castle_gate/bottom_center_closed",
+      "y": 270
+    },
+    "facing=west,open=false,part=bottom_left": {
+      "model": "westerosblocks:block/castle_gate/bottom_left_closed",
+      "y": 270
+    },
+    "facing=west,open=false,part=bottom_right": {
+      "model": "westerosblocks:block/castle_gate/bottom_right_closed",
+      "y": 270
+    },
+    "facing=west,open=false,part=middle_center": {
+      "model": "westerosblocks:block/castle_gate/middle_center_closed",
+      "y": 270
+    },
+    "facing=west,open=false,part=middle_left": {
+      "model": "westerosblocks:block/castle_gate/middle_left_closed",
+      "y": 270
+    },
+    "facing=west,open=false,part=middle_right": {
+      "model": "westerosblocks:block/castle_gate/middle_right_closed",
+      "y": 270
+    },
+    "facing=west,open=false,part=top_center": {
+      "model": "westerosblocks:block/castle_gate/top_center_closed",
+      "y": 270
+    },
+    "facing=west,open=false,part=top_left": {
+      "model": "westerosblocks:block/castle_gate/top_left_closed",
+      "y": 270
+    },
+    "facing=west,open=false,part=top_right": {
+      "model": "westerosblocks:block/castle_gate/top_right_closed",
+      "y": 270
+    },
+    "facing=west,open=true,part=bottom_center": {
+      "model": "westerosblocks:block/castle_gate/bottom_center_open",
+      "y": 270
+    },
+    "facing=west,open=true,part=bottom_left": {
+      "model": "westerosblocks:block/castle_gate/bottom_left_open",
+      "y": 270
+    },
+    "facing=west,open=true,part=bottom_right": {
+      "model": "westerosblocks:block/castle_gate/bottom_right_open",
+      "y": 270
+    },
+    "facing=west,open=true,part=middle_center": {
+      "model": "westerosblocks:block/castle_gate/middle_center_open",
+      "y": 270
+    },
+    "facing=west,open=true,part=middle_left": {
+      "model": "westerosblocks:block/castle_gate/middle_left_open",
+      "y": 270
+    },
+    "facing=west,open=true,part=middle_right": {
+      "model": "westerosblocks:block/castle_gate/middle_right_open",
+      "y": 270
+    },
+    "facing=west,open=true,part=top_center": {
+      "model": "westerosblocks:block/castle_gate/top_center_open",
+      "y": 270
+    },
+    "facing=west,open=true,part=top_left": {
+      "model": "westerosblocks:block/castle_gate/top_left_open",
+      "y": 270
+    },
+    "facing=west,open=true,part=top_right": {
+      "model": "westerosblocks:block/castle_gate/top_right_open",
+      "y": 270
+    }
+  }
+}

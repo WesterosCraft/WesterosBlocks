@@ -1,0 +1,14 @@
+[
+  {
+    "blockName": "castle_gate",
+    "blockType": "bigdoor",
+    "soundGroup": "wood",
+    "creativeTab": "westeros_test_tab",
+    "label": "Castle Gate",
+    "locked": false,
+    "textures": [
+      "wood/oak/all"
+    ],
+    "strength": 5
+  }
+]

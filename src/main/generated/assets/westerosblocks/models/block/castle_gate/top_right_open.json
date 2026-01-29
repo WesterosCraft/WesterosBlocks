@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/bigdoor/open_left",
+  "textures": {
+    "all": "westerosblocks:block/wood/oak/all",
+    "texture": "westerosblocks:block/wood/oak/all"
+  }
+}

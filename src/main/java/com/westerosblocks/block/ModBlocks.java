@@ -127,6 +127,7 @@ public class ModBlocks {
             case "flowerbed" -> new WCFlowerbedBlock.Factory();
             case "mounted" -> new WCMountedBlock.Factory();
             case "awning" -> new WCAwningBlock.Factory();
+            case "bigdoor" -> new WCBigDoorBlock.Factory();
             default -> null;
         };
     }
