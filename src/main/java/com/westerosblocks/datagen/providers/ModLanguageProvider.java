@@ -36,6 +36,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("item.westerosblocks.blackfyre_heater_shield", "Blackfyre Heater Shield");
                 translationBuilder.add("item.westerosblocks.blackwood_heater_shield", "Blackwood Heater Shield");
 
+                translationBuilder.add("item.westerosblocks.rope", "Rope");
+
                 // Config translations
                 translationBuilder.add("config.westerosblocks.title", "WesterosBlocks Config");
                 translationBuilder.add("config.westerosblocks.category.general", "General");

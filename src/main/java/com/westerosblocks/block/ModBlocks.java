@@ -7,8 +7,8 @@ import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 
 import net.fabricmc.loader.api.FabricLoader;
+import com.westerosblocks.item.custom.WCBlockItem;
 import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -234,7 +234,7 @@ public class ModBlocks {
 
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(WesterosBlocks.MOD_ID, name),
-                new BlockItem(block, new Item.Settings()));
+                new WCBlockItem(block, new Item.Settings()));
     }
 
     /**

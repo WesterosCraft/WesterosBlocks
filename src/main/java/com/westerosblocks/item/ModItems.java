@@ -4,6 +4,7 @@ import com.westerosblocks.WesterosBlocks;
 
 import com.westerosblocks.item.custom.ModShieldItem;
 
+import com.westerosblocks.item.custom.RopeItem;
 import com.westerosblocks.item.custom.ValyrianSteelSwordItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
@@ -100,6 +101,7 @@ public class ModItems {
                     List.of(), // Empty list - we'll set attributes after registration
                     new Item.Settings().maxDamage(2800)));
 
+    public static final Item ROPE = registerItem("rope", new RopeItem(new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, WesterosBlocks.id(name), item);
@@ -120,6 +122,10 @@ public class ModItems {
             entries.add(TULLY_HEATER_SHIELD);
             entries.add(HEDGE_KNIGHT_HEATER_SHIELD);
             entries.add(LAUGHING_TREE_HEATER_SHIELD);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
+            entries.add(ROPE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {

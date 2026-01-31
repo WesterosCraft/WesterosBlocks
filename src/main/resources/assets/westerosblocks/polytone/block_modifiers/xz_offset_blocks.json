@@ -1,4 +1,4 @@
 {
-  "targets": ["westerosblocks:bracken", "westerosblocks:smoke"],
+  "targets": ["westerosblocks:bracken", "westerosblocks:smoke", "westerosblocks:corn"],
   "offset_type": "xz"
 }

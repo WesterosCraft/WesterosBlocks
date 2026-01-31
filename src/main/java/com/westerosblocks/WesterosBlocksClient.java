@@ -4,6 +4,7 @@ import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 import com.westerosblocks.entity.ModEntities;
 import com.westerosblocks.entity.client.ChairRenderer;
+import com.westerosblocks.entity.client.RopeRenderer;
 import com.westerosblocks.item.ModItems;
 import com.westerosblocks.item.client.ModShieldRenderer;
 import mod.azure.azurelib.common.render.item.AzItemRendererRegistry;
@@ -21,6 +22,7 @@ public class WesterosBlocksClient implements ClientModInitializer {
 
         // Chair Blocks
         EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
+        EntityRendererRegistry.register(ModEntities.ROPE_ENTITY, RopeRenderer::new);
 
         // flowerbed blocks
 //        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CLOVER, RenderLayer.getCutout());
