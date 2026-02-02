@@ -71,7 +71,4 @@ public class ModProperties {
             return Math.max(v, 0);
         }
     }
-
-
-
 }

@@ -152,21 +152,6 @@ public class ModBlocks {
         }
     }
 
-    /**
-     * Extracts wood type from block definition or defaults to "oak"
-     */
-    private static String getWoodTypeFromDefinition(BlockDefinition definition) {
-        // TODO: Add wood type extraction logic from block name or properties
-        // For now, default to "oak"
-        String blockName = definition.getBlockName().toLowerCase();
-        if (blockName.contains("birch")) return "birch";
-        if (blockName.contains("spruce")) return "spruce";
-        if (blockName.contains("jungle")) return "jungle";
-        if (blockName.contains("oak")) return "oak";
-        return "oak"; // Default
-    }
-
-
     public static Block getAutoRegisteredBlock(String blockName) {
         return AUTO_REGISTERED_BLOCKS.get(blockName);
     }
