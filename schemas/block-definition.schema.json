@@ -1,0 +1,531 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://westerosblocks.com/schemas/block-definition.json",
+  "title": "WesterosBlocks Block Definitions",
+  "description": "Array of block definitions for the WesterosBlocks mod",
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/BlockDefinition"
+  },
+  "$defs": {
+    "BlockDefinition": {
+      "type": "object",
+      "description": "Defines a single block with all its properties",
+      "required": ["blockName", "blockType"],
+      "properties": {
+        "blockName": {
+          "type": "string",
+          "description": "Unique identifier for this block (e.g., 'oak_table', 'stone_wall')"
+        },
+        "blockType": {
+          "type": "string",
+          "description": "Block type determines which class to use and block behavior",
+          "enum": [
+            "solid", "stair", "slab", "wall", "fence", "fencegate",
+            "door", "halfdoor", "pane", "plant", "crop", "leaves",
+            "log", "torch", "ladder", "fire", "bed", "chair", "table",
+            "branch", "vines", "layer", "sand", "rail", "flowerpot",
+            "beacon", "furnace", "particle", "fan", "web", "soul-sand",
+            "arrow-slit", "cuboid", "cuboid-ne", "cuboid-nsew",
+            "cuboid-nsew-ud", "cuboid-16way", "cuboid-nsew-stack",
+            "awning", "flowerbed", "mounted", "bench"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "description": "Display name shown in-game (e.g., 'Oak Table', 'Stone Wall')"
+        },
+        "soundGroup": {
+          "type": "string",
+          "description": "Sound effect when walking/placing/breaking",
+          "enum": [
+            "stone", "wood", "gravel", "grass", "metal", "glass",
+            "wool", "cloth", "sand", "snow", "ladder", "anvil",
+            "plant", "slime", "bamboo", "lantern", "nether_bricks",
+            "netherite", "powder"
+          ]
+        },
+        "creativeTab": {
+          "type": "string",
+          "description": "Which creative mode tab to place this block in"
+        },
+        "hardness": {
+          "type": "number",
+          "description": "Block hardness (mining time)",
+          "default": 1.5
+        },
+        "resistance": {
+          "type": "number",
+          "description": "Blast resistance",
+          "default": 6.0
+        },
+        "strength": {
+          "type": "number",
+          "description": "Shorthand that sets both hardness and resistance to the same value"
+        },
+        "material": {
+          "type": "string",
+          "description": "[Deprecated] Material type",
+          "deprecated": true
+        },
+        "textures": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Texture paths relative to textures/block/"
+        },
+        "randomTextures": {
+          "type": "array",
+          "description": "Multiple texture variants with weights for random selection",
+          "items": {
+            "$ref": "#/$defs/RandomTextureVariant"
+          }
+        },
+        "states": {
+          "type": "array",
+          "description": "Different texture sets for different block states",
+          "items": {
+            "$ref": "#/$defs/StateVariant"
+          }
+        },
+        "overlayTextures": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Additional overlay textures for tinted blocks"
+        },
+        "colorMult": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "description": "Hex color for texture tinting (e.g., '#FF0000' for red)"
+        },
+        "colorMults": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Array of colormap paths for multi-colormap tinting"
+        },
+        "renderLayer": {
+          "type": "string",
+          "enum": ["cutout", "cutout_mipped", "translucent"],
+          "description": "Render layer for transparency handling"
+        },
+        "luminance": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 15,
+          "description": "Light level emitted by block (0-15)"
+        },
+        "lightOpacity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 15,
+          "description": "How much light the block blocks (0 = transparent, 15 = fully opaque)"
+        },
+        "itemTexture": {
+          "type": "string",
+          "description": "Custom texture path for item form"
+        },
+        "customItemTexture": {
+          "type": "boolean",
+          "description": "Use custom item texture from item/ directory",
+          "default": false
+        },
+        "itemTextureIndex": {
+          "type": "integer",
+          "description": "Which texture index to use for item rendering"
+        },
+        "display": {
+          "$ref": "#/$defs/DisplaySettings",
+          "description": "GUI transformation settings for item display"
+        },
+        "tooltips": {
+          "type": "array",
+          "description": "Tooltip text lines shown when hovering over the block",
+          "items": {
+            "$ref": "#/$defs/TooltipEntry"
+          }
+        },
+        "harvestLevel": {
+          "type": "array",
+          "description": "Tools required to break this block efficiently",
+          "items": {
+            "$ref": "#/$defs/HarvestLevel"
+          }
+        },
+        "requiresTool": {
+          "type": "boolean",
+          "description": "Block requires correct tool to harvest",
+          "default": false
+        },
+        "collisionBoxes": {
+          "type": "array",
+          "description": "Custom collision boxes",
+          "items": {
+            "$ref": "#/$defs/BoundingBox"
+          }
+        },
+        "boundingBox": {
+          "$ref": "#/$defs/BoundingBox",
+          "description": "Bounding box for cuboid blocks"
+        },
+        "cuboids": {
+          "type": "array",
+          "description": "Cuboid elements for complex cuboid blocks",
+          "items": {
+            "$ref": "#/$defs/CuboidElement"
+          }
+        },
+        "stack": {
+          "type": "array",
+          "description": "Stack elements for cuboid-nsew-stack blocks",
+          "items": {
+            "$ref": "#/$defs/StackElement"
+          }
+        },
+        "nonOpaque": {
+          "type": "boolean",
+          "description": "Block is transparent/non-opaque (lets light through)",
+          "default": false
+        },
+        "noCollision": {
+          "type": "boolean",
+          "description": "Block has no collision box (can walk through)",
+          "default": false
+        },
+        "layerSensitive": {
+          "type": "boolean",
+          "description": "Allows placement on Layer blocks",
+          "default": false
+        },
+        "allowUnsupported": {
+          "type": "boolean",
+          "description": "Block can be placed in unsupported locations",
+          "default": false
+        },
+        "allowHalfBreak": {
+          "type": "boolean",
+          "description": "Stack blocks: allows top half to be broken independently",
+          "default": false
+        },
+        "toggleOnUse": {
+          "type": "boolean",
+          "description": "Creative players can cycle states by right-clicking",
+          "default": false
+        },
+        "locked": {
+          "type": "boolean",
+          "description": "Doors/gates are locked and cannot be opened",
+          "default": false
+        },
+        "noParticle": {
+          "type": "boolean",
+          "description": "Torches don't emit particles",
+          "default": false
+        },
+        "alwaysOn": {
+          "type": "boolean",
+          "description": "Furnaces are always lit (no off state)",
+          "default": false
+        },
+        "hasClimb": {
+          "type": "boolean",
+          "description": "Vines are climbable like ladders",
+          "default": false
+        },
+        "hasDown": {
+          "type": "boolean",
+          "description": "Vines can grow downward",
+          "default": false
+        },
+        "connectTo": {
+          "type": "string",
+          "description": "What block material to connect to (e.g., for webs)"
+        },
+        "symmetrical": {
+          "type": "boolean",
+          "description": "Block has symmetrical texture mapping",
+          "default": false
+        },
+        "isCustomModel": {
+          "type": "boolean",
+          "description": "Uses custom model files instead of generated ones",
+          "default": false
+        },
+        "isTinted": {
+          "type": "boolean",
+          "description": "Block uses tinted rendering (grass-like biome color)",
+          "default": false
+        },
+        "hasOverlay": {
+          "type": "boolean",
+          "description": "Block has overlay textures for tinting",
+          "default": false
+        },
+        "hasBetterFoliage": {
+          "type": "boolean",
+          "description": "OptiFine Better Foliage support",
+          "default": false
+        },
+        "betterFoliage": {
+          "type": "boolean",
+          "description": "OptiFine Better Foliage support (alternate field)",
+          "default": false
+        },
+        "noDecay": {
+          "type": "boolean",
+          "description": "Leaves should not decay",
+          "default": false
+        },
+        "hasRotateRandom": {
+          "type": "boolean",
+          "description": "Randomly rotate block models",
+          "default": false
+        },
+        "rotateRandom": {
+          "type": "boolean",
+          "description": "Randomly rotate block on placement (Y-axis)",
+          "default": false
+        },
+        "alphaRender": {
+          "type": "boolean",
+          "description": "Block uses alpha/translucent rendering",
+          "default": false
+        },
+        "isLegacyModel": {
+          "type": "string",
+          "description": "Legacy model for pane blocks"
+        },
+        "bedType": {
+          "type": "string",
+          "description": "Bed type for bed blocks"
+        },
+        "wallSize": {
+          "type": "string",
+          "enum": ["normal", "short"],
+          "description": "Wall height: 'normal' (16 blocks) or 'short' (13 blocks)",
+          "default": "normal"
+        },
+        "connectstate": {
+          "type": "boolean",
+          "description": "Walls have connect state cycling feature",
+          "default": false
+        },
+        "unconnect": {
+          "type": "boolean",
+          "description": "Walls don't connect to adjacent blocks",
+          "default": false
+        },
+        "woodType": {
+          "type": "string",
+          "description": "Wood type for wooden blocks (e.g., 'oak', 'spruce', 'birch')"
+        },
+        "particle": {
+          "type": "string",
+          "description": "Particle type for particle emitter blocks",
+          "default": "flame"
+        },
+        "type": {
+          "type": "string",
+          "description": "[Deprecated] Legacy type field with encoded properties",
+          "deprecated": true
+        }
+      }
+    },
+    "RandomTextureVariant": {
+      "type": "object",
+      "description": "Texture variant with weight for random selection",
+      "properties": {
+        "textures": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Texture paths for this variant"
+        },
+        "weight": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1,
+          "description": "Selection weight (higher = more likely)"
+        }
+      },
+      "required": ["textures"]
+    },
+    "StateVariant": {
+      "type": "object",
+      "description": "Block state with its own textures and properties",
+      "properties": {
+        "stateID": {
+          "type": "string",
+          "description": "Unique identifier for this state"
+        },
+        "textures": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Textures for this state"
+        },
+        "randomTextures": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/RandomTextureVariant" },
+          "description": "Random texture variants for this state"
+        },
+        "overlayTextures": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Overlay textures for this state"
+        },
+        "boundingBox": {
+          "$ref": "#/$defs/BoundingBox",
+          "description": "Bounding box for this state"
+        },
+        "cuboids": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/CuboidElement" },
+          "description": "Cuboid elements for this state"
+        },
+        "rotYOffset": {
+          "type": "integer",
+          "description": "Y-axis rotation offset in degrees"
+        },
+        "isCustomModel": {
+          "type": "boolean",
+          "description": "Use custom model for this state"
+        }
+      }
+    },
+    "BoundingBox": {
+      "type": "object",
+      "description": "Axis-aligned bounding box (values 0.0-1.0)",
+      "properties": {
+        "xMin": { "type": "number" },
+        "xMax": { "type": "number" },
+        "yMin": { "type": "number" },
+        "yMax": { "type": "number" },
+        "zMin": { "type": "number" },
+        "zMax": { "type": "number" }
+      },
+      "required": ["xMin", "xMax", "yMin", "yMax", "zMin", "zMax"]
+    },
+    "CuboidElement": {
+      "type": "object",
+      "description": "Cuboid element with textures and optional shape",
+      "properties": {
+        "xMin": { "type": "number" },
+        "xMax": { "type": "number" },
+        "yMin": { "type": "number" },
+        "yMax": { "type": "number" },
+        "zMin": { "type": "number" },
+        "zMax": { "type": "number" },
+        "sideTextures": {
+          "type": "array",
+          "items": { "type": "integer" },
+          "description": "Texture indices for each face [down, up, north, south, west, east]"
+        },
+        "sideRotations": {
+          "type": "array",
+          "items": { "type": "integer", "enum": [0, 90, 180, 270] },
+          "description": "Rotation for each face texture"
+        },
+        "noTint": {
+          "type": "array",
+          "items": { "type": "boolean" },
+          "description": "Disable tinting per face"
+        },
+        "shape": {
+          "type": "string",
+          "description": "Shape type for special rendering"
+        }
+      },
+      "required": ["xMin", "xMax", "yMin", "yMax", "zMin", "zMax"]
+    },
+    "StackElement": {
+      "type": "object",
+      "description": "Stack element for cuboid-nsew-stack blocks",
+      "properties": {
+        "textures": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Textures for this stack layer"
+        },
+        "boundingBox": {
+          "$ref": "#/$defs/BoundingBox",
+          "description": "Bounding box for this stack layer"
+        }
+      },
+      "required": ["textures"]
+    },
+    "HarvestLevel": {
+      "type": "object",
+      "description": "Tool requirement for harvesting",
+      "properties": {
+        "tool": {
+          "type": "string",
+          "enum": ["pickaxe", "axe", "shovel", "hoe"],
+          "description": "Tool type required"
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4,
+          "description": "Tool tier (0=wood, 1=stone, 2=iron, 3=diamond, 4=netherite)"
+        }
+      },
+      "required": ["tool", "level"]
+    },
+    "TooltipEntry": {
+      "type": "object",
+      "description": "Tooltip line with optional formatting",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Tooltip text content"
+        },
+        "format": {
+          "type": "string",
+          "enum": [
+            "BLACK", "DARK_BLUE", "DARK_GREEN", "DARK_AQUA", "DARK_RED",
+            "DARK_PURPLE", "GOLD", "GRAY", "DARK_GRAY", "BLUE", "GREEN",
+            "AQUA", "RED", "LIGHT_PURPLE", "YELLOW", "WHITE",
+            "BOLD", "ITALIC", "UNDERLINE", "STRIKETHROUGH", "OBFUSCATED"
+          ],
+          "default": "GRAY",
+          "description": "Text formatting/color"
+        }
+      },
+      "required": ["text"]
+    },
+    "DisplaySettings": {
+      "type": "object",
+      "description": "GUI transformation settings",
+      "properties": {
+        "gui": {
+          "$ref": "#/$defs/GuiTransform",
+          "description": "Transform for inventory GUI display"
+        }
+      }
+    },
+    "GuiTransform": {
+      "type": "object",
+      "description": "Transformation for GUI rendering",
+      "properties": {
+        "rotation": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Rotation [x, y, z] in degrees"
+        },
+        "translation": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Translation [x, y, z]"
+        },
+        "scale": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Scale [x, y, z]"
+        }
+      }
+    }
+  }
+}

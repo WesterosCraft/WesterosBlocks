@@ -4106,6 +4106,7 @@
     "blockName": "greyjoy_banner",
     "blockType": "cuboid-nsew-stack",
     "soundGroup": "cloth",
+
     "harvestLevel": [
       {
         "tool": "sword",
@@ -4117,7 +4118,9 @@
     "allowHalfBreak": true,
     "label": "Greyjoy Banner",
     "tooltips": [
-      "Â§oWe Do Not SowÂ§r"
+      {
+        "text": "We Do Not Sow"
+      }
     ],
     "itemTextureIndex": 2,
     "stack": [
@@ -8121,6 +8124,11 @@
     "allowHalfBreak": true,
     "label": "Stark Damaged Banner",
     "itemTextureIndex": 2,
+    "tooltips": [
+      {
+        "text": "Winter Is Coming"
+      }
+    ],
     "stack": [
       {
         "textures": [

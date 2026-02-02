@@ -1,0 +1,309 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://westerosblocks.com/schemas/block-set-definition.json",
+  "title": "WesterosBlocks Block Set Definition",
+  "description": "Defines a block set that expands into multiple variant blocks (solid, stairs, slab, wall, etc.)",
+  "type": "object",
+  "required": ["baseBlockName", "baseLabel"],
+  "properties": {
+    "baseBlockName": {
+      "type": "string",
+      "description": "Base name used to generate variant names (e.g., 'arbor_brick' -> 'arbor_brick_stairs')"
+    },
+    "baseLabel": {
+      "type": "string",
+      "description": "Base label for all variants (e.g., 'Medium Ashlar Arbor' -> 'Medium Ashlar Arbor Stairs')"
+    },
+    "variants": {
+      "type": "array",
+      "description": "List of variants to create. Defaults to ['solid', 'stairs', 'slab', 'wall', 'fence', 'hopper']",
+      "items": {
+        "type": "string",
+        "enum": [
+          "solid", "stairs", "slab", "wall", "fence", "hopper", "tip",
+          "carpet", "fence_gate", "half_door", "cover", "hollow_hopper",
+          "log", "directional", "layer", "pane", "sand", "path",
+          "window_frame", "window_frame_mullion",
+          "arrow_slit", "arrow_slit_window", "arrow_slit_ornate",
+          "bench"
+        ]
+      },
+      "default": ["solid", "stairs", "slab", "wall", "fence", "hopper"]
+    },
+    "altNames": {
+      "type": "object",
+      "description": "Alternative names for specific variants (e.g., {'solid': 'birch_planks'})",
+      "additionalProperties": { "type": "string" }
+    },
+    "altLabels": {
+      "type": "object",
+      "description": "Alternative labels for specific variants",
+      "additionalProperties": { "type": "string" }
+    },
+    "types": {
+      "type": "object",
+      "description": "Type attributes for specific variants (e.g., {'fence_gate': 'locked:true'})",
+      "additionalProperties": { "type": "string" }
+    },
+    "altCustomTags": {
+      "type": "object",
+      "description": "Custom tags for specific variants (e.g., {'solid': ['wood-ctm']})",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+    "altTextures": {
+      "type": "object",
+      "description": "Alternative textures for specific variants",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+    "textures": {
+      "type": "object",
+      "description": "Texture map for variants. Keys: 'all', 'sides', 'bottom', 'top', 'north', 'south', 'east', 'west', 'arrow-slit', 'window-frame', 'cover', etc.",
+      "properties": {
+        "all": {
+          "type": "string",
+          "description": "Single texture for all faces (expanded to bottom/top/sides)"
+        },
+        "sides": {
+          "type": "string",
+          "description": "Texture for side faces"
+        },
+        "bottom": {
+          "type": "string",
+          "description": "Texture for bottom face"
+        },
+        "top": {
+          "type": "string",
+          "description": "Texture for top face"
+        },
+        "north": {
+          "type": "string",
+          "description": "Texture for north face"
+        },
+        "south": {
+          "type": "string",
+          "description": "Texture for south face"
+        },
+        "east": {
+          "type": "string",
+          "description": "Texture for east face"
+        },
+        "west": {
+          "type": "string",
+          "description": "Texture for west face"
+        },
+        "cover": {
+          "type": "string",
+          "description": "Texture for cover/rail variants"
+        },
+        "arrow-slit": {
+          "type": "string",
+          "description": "Texture for arrow slit variants"
+        },
+        "arrow-slit-window": {
+          "type": "string",
+          "description": "Texture for arrow slit window variants"
+        },
+        "arrow-slit-ornate": {
+          "type": "string",
+          "description": "Texture for ornate arrow slit variants"
+        },
+        "window-frame": {
+          "type": "string",
+          "description": "Texture for window frame variants"
+        },
+        "window-frame-mullion": {
+          "type": "string",
+          "description": "Texture for window frame mullion variants"
+        },
+        "window-topbottom": {
+          "type": "string",
+          "description": "Texture for window top/bottom"
+        }
+      },
+      "additionalProperties": { "type": "string" }
+    },
+    "overlayTextures": {
+      "type": "object",
+      "description": "Overlay texture map for tinted blocks",
+      "additionalProperties": { "type": "string" }
+    },
+    "randomTextures": {
+      "type": "array",
+      "description": "Random texture variants for all variants in this set",
+      "items": {
+        "$ref": "#/$defs/RandomTextureEntry"
+      }
+    },
+    "states": {
+      "type": "array",
+      "description": "State records for blocks with multiple states",
+      "items": {
+        "$ref": "#/$defs/StateRecord"
+      }
+    },
+    "hardness": {
+      "type": "number",
+      "description": "Block hardness (mining time)"
+    },
+    "soundGroup": {
+      "type": "string",
+      "description": "Sound effect when walking/placing/breaking",
+      "enum": [
+        "stone", "wood", "gravel", "grass", "metal", "glass",
+        "wool", "cloth", "sand", "snow", "ladder", "anvil",
+        "plant", "slime", "bamboo", "lantern", "nether_bricks",
+        "netherite", "powder"
+      ]
+    },
+    "material": {
+      "type": "string",
+      "description": "Generic material type"
+    },
+    "resistance": {
+      "type": "number",
+      "description": "Explosion resistance"
+    },
+    "lightOpacity": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 15,
+      "description": "Light opacity (0-15)"
+    },
+    "harvestLevel": {
+      "type": "array",
+      "description": "Harvest level requirements",
+      "items": {
+        "$ref": "#/$defs/HarvestLevel"
+      }
+    },
+    "fireSpreadSpeed": {
+      "type": "integer",
+      "description": "Fire spread speed"
+    },
+    "flamability": {
+      "type": "integer",
+      "description": "Flammability value"
+    },
+    "creativeTab": {
+      "type": "string",
+      "description": "Creative tab for all variants"
+    },
+    "customTags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Custom tags applied to all variants"
+    },
+    "alphaRender": {
+      "type": "boolean",
+      "description": "Alpha rendering for transparency"
+    },
+    "ambientOcclusion": {
+      "type": "boolean",
+      "description": "Enable ambient occlusion"
+    },
+    "nonOpaque": {
+      "type": "boolean",
+      "description": "Non-opaque block (transparent)"
+    },
+    "renderLayer": {
+      "type": "string",
+      "enum": ["cutout", "cutout_mipped", "translucent"],
+      "description": "Render layer for transparency"
+    },
+    "lightValue": {
+      "type": "number",
+      "description": "Light emission level (0-15)"
+    },
+    "colorMult": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$",
+      "description": "Color multiplier (hex)"
+    }
+  },
+  "$defs": {
+    "RandomTextureEntry": {
+      "type": "object",
+      "description": "Random texture entry for block sets",
+      "properties": {
+        "textures": {
+          "type": "object",
+          "description": "Texture map that will be expanded based on variant requirements",
+          "additionalProperties": { "type": "string" }
+        },
+        "weight": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1,
+          "description": "Selection weight"
+        }
+      },
+      "required": ["textures"]
+    },
+    "StateRecord": {
+      "type": "object",
+      "description": "State record for multi-state block sets",
+      "properties": {
+        "stateID": {
+          "type": "string",
+          "description": "Unique state identifier"
+        },
+        "excludeVariants": {
+          "type": "string",
+          "description": "Comma-separated variants to exclude from this state"
+        },
+        "lightValue": {
+          "type": "number",
+          "description": "Light value for this state"
+        },
+        "colorMult": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "description": "Color multiplier for this state"
+        },
+        "altTextures": {
+          "type": "object",
+          "description": "Alternative textures per variant for this state",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "textures": {
+          "type": "object",
+          "description": "Texture map for this state",
+          "additionalProperties": { "type": "string" }
+        },
+        "overlayTextures": {
+          "type": "object",
+          "description": "Overlay textures for this state",
+          "additionalProperties": { "type": "string" }
+        }
+      },
+      "required": ["stateID"]
+    },
+    "HarvestLevel": {
+      "type": "object",
+      "description": "Tool requirement for harvesting",
+      "properties": {
+        "tool": {
+          "type": "string",
+          "enum": ["pickaxe", "axe", "shovel", "hoe"],
+          "description": "Tool type required"
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4,
+          "description": "Tool tier (0=wood, 1=stone, 2=iron, 3=diamond, 4=netherite)"
+        }
+      },
+      "required": ["tool", "level"]
+    }
+  }
+}
