@@ -4563,5 +4563,11 @@
   "item.westerosblocks.targaryen_heater_shield": "Targaryen Heater Shield",
   "item.westerosblocks.tully_heater_shield": "Tully Heater Shield",
   "item.westerosblocks.valyrian_steel_ingot": "Valyrian Steel Ingot",
-  "tag.item.westerosblocks.c.shield": "shield"
+  "tag.item.westerosblocks.c.shield": "shield",
+  "tooltip.westerosblocks.foam_particle_emitter.0": "A block that emits a foam.",
+  "tooltip.westerosblocks.foam_particle_emitter.1": "Typically used to enhance water sources such as waterfalls and rapids.",
+  "tooltip.westerosblocks.greyjoy_banner.0": "Â§oWe Do Not SowÂ§r",
+  "tooltip.westerosblocks.lannister_banner.0": "Hear Me Roar!",
+  "tooltip.westerosblocks.stark_banner.0": "Winter Is Coming",
+  "tooltip.westerosblocks.wildfire.0": "A deadly green flame"
 }

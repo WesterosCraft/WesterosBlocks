@@ -1,15 +1,11 @@
 package com.westerosblocks.data;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonSyntaxException;
+import com.google.gson.*;
 import com.westerosblocks.WesterosBlocks;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -19,7 +15,33 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 public class BlockDefinitionLoader {
-    private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
+    /**
+     * Custom deserializer for TooltipEntry that handles both formats:
+     * - Simple string: "tooltip text" -> TooltipEntry{text: "tooltip text", format: "GRAY"}
+     * - Object: {"text": "tooltip text", "format": "RED"} -> TooltipEntry{text: "tooltip text", format: "RED"}
+     */
+    private static final JsonDeserializer<BlockDefinition.TooltipEntry> TOOLTIP_ENTRY_DESERIALIZER =
+        (json, typeOfT, context) -> {
+            if (json == null || json.isJsonNull()) {
+                return null;
+            }
+            if (json.isJsonPrimitive() && json.getAsJsonPrimitive().isString()) {
+                // Simple string format - convert to TooltipEntry with default format
+                return new BlockDefinition.TooltipEntry(json.getAsString(), "GRAY");
+            } else if (json.isJsonObject()) {
+                // Object format - deserialize manually
+                JsonObject obj = json.getAsJsonObject();
+                String text = obj.has("text") ? obj.get("text").getAsString() : "";
+                String format = obj.has("format") ? obj.get("format").getAsString() : "GRAY";
+                return new BlockDefinition.TooltipEntry(text, format);
+            }
+            return null;
+        };
+
+    private static final Gson GSON = new GsonBuilder()
+        .setPrettyPrinting()
+        .registerTypeAdapter(BlockDefinition.TooltipEntry.class, TOOLTIP_ENTRY_DESERIALIZER)
+        .create();
     private final String blockDefinitionsPath;
 
     public BlockDefinitionLoader(String blockDefinitionsPath) {

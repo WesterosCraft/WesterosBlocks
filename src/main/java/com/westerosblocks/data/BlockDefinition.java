@@ -102,7 +102,7 @@ public class BlockDefinition {
 
     /** Tooltip text lines shown when hovering over the block in inventory */
     @SerializedName("tooltips")
-    private List<String> tooltips;
+    private List<TooltipEntry> tooltips;
 
     /** Light level emitted by block (0-15) */
     @SerializedName("luminance")
@@ -482,6 +482,33 @@ public class BlockDefinition {
             c.zMin = boundingBox.zMin;
             c.zMax = boundingBox.zMax;
             cuboids = List.of(c);
+        }
+    }
+
+    /**
+     * Represents a single tooltip entry with text and optional formatting.
+     * Used in block definitions to provide per-line tooltip formatting.
+     */
+    public static class TooltipEntry {
+        @SerializedName("text")
+        private String text;
+
+        @SerializedName("format")
+        private String format;  // Optional, defaults to "GRAY"
+
+        public TooltipEntry() {}
+
+        public TooltipEntry(String text, String format) {
+            this.text = text;
+            this.format = format;
+        }
+
+        public String getText() {
+            return text;
+        }
+
+        public String getFormat() {
+            return format != null ? format : "GRAY";
         }
     }
 
@@ -987,7 +1014,7 @@ public class BlockDefinition {
         return display != null;
     }
 
-    public List<String> getTooltips() {
+    public List<TooltipEntry> getTooltips() {
         return tooltips;
     }
 

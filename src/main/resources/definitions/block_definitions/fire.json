@@ -22,8 +22,10 @@
     "renderLayer": "cutout",
     "nonOpaque": true,
     "tooltips": [
-      "Very hot fire",
-      "no fr its hot!"
+      {
+        "text": "A deadly green flame",
+        "format": "GREEN"
+      }
     ],
     "textures": [
       "wildfire/wildfire_layer_0",

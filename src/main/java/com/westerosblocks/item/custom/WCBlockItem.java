@@ -29,8 +29,15 @@ public class WCBlockItem extends BlockItem {
         // Look up definition and add tooltips if present
         BlockDefinition def = BlockDefinitionRegistry.getInstance().getDefinition(blockName);
         if (def != null && def.hasTooltips()) {
-            for (String line : def.getTooltips()) {
-                tooltip.add(Text.literal(line).formatted(Formatting.GRAY));
+            int index = 0;
+            for (BlockDefinition.TooltipEntry entry : def.getTooltips()) {
+                String key = "tooltip.westerosblocks." + blockName + "." + index;
+                Formatting format = Formatting.byName(entry.getFormat());
+                if (format == null) {
+                    format = Formatting.GRAY;
+                }
+                tooltip.add(Text.translatable(key).formatted(format));
+                index++;
             }
         }
     }

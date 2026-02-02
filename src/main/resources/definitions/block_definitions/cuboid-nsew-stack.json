@@ -4799,6 +4799,12 @@
         "level": 1
       }
     ],
+    "tooltips": [
+      {
+        "text": "Hear Me Roar!",
+        "format": "GREY"
+      }
+    ],
     "creativeTab": "westeros_banners_tab",
     "noBreakUnder": true,
     "allowHalfBreak": true,
@@ -8046,6 +8052,11 @@
       {
         "tool": "sword",
         "level": 1
+      }
+    ],
+    "tooltips": [
+      {
+        "text": "Winter Is Coming"
       }
     ],
     "creativeTab": "westeros_banners_tab",

@@ -63,6 +63,16 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                                 String translationKey = "block.westerosblocks." + definition.getBlockName();
                                 translationBuilder.add(translationKey, definition.getLabel());
                         }
+
+                        // Generate tooltip translations
+                        if (definition.hasTooltips()) {
+                                int index = 0;
+                                for (BlockDefinition.TooltipEntry entry : definition.getTooltips()) {
+                                        String tooltipKey = "tooltip.westerosblocks." + definition.getBlockName() + "." + index;
+                                        translationBuilder.add(tooltipKey, entry.getText());
+                                        index++;
+                                }
+                        }
                 }
         }
 
