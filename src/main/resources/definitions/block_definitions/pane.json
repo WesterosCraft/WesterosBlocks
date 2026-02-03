@@ -2,35 +2,40 @@
   {
     "blockName": "dorne_carved_stone_window",
     "blockType": "pane",
+    "strength": 1,
     "soundGroup": "stone",
     "creativeTab": "westeros_windows_glass_tab",
-    "type": "legacy-model,unconnect:false",
     "label": "Dorne Carved Stone Window",
-    "renderLayer": "cutout",
+    "type": {
+      "legacyModel": true,
+      "unconnect": false
+    },
     "textures": [
       "pane_block/moorish_stone_window_pane"
     ],
-    "strength": 1
+    "renderLayer": "cutout"
   },
   {
     "blockName": "dorne_carved_wooden_window",
     "blockType": "pane",
+    "strength": 1,
     "soundGroup": "stone",
     "creativeTab": "westeros_windows_glass_tab",
-    "type": "legacy-model,unconnect:false",
     "label": "Dorne Carved Wooden Window",
-    "renderLayer": "cutout",
+    "type": {
+      "legacyModel": true,
+      "unconnect": false
+    },
     "textures": [
       "pane_block/moorish_wood_window_pane"
     ],
-    "strength": 1
+    "renderLayer": "cutout"
   },
   {
     "blockName": "iron_bars",
     "blockType": "pane",
+    "strength": 5,
     "soundGroup": "metal",
-    "type": "bars-model,unconnect:false",
-    "renderLayer": "cutout",
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -39,18 +44,21 @@
     ],
     "creativeTab": "westeros_metal_tab",
     "label": "Iron Bars",
+    "type": {
+      "barsModel": true,
+      "unconnect": false
+    },
     "textures": [
       "bars_iron_block/iron_bars",
       "transparent"
     ],
-    "strength": 5
+    "renderLayer": "cutout"
   },
   {
     "blockName": "iron_crossbar",
     "blockType": "pane",
+    "strength": 5,
     "soundGroup": "metal",
-    "type": "bars-model,unconnect:false",
-    "renderLayer": "cutout",
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -59,18 +67,21 @@
     ],
     "creativeTab": "westeros_metal_tab",
     "label": "Iron Crossbar",
+    "type": {
+      "barsModel": true,
+      "unconnect": false
+    },
     "textures": [
       "bars_iron_block/bars_iron_crossbars",
       "bars_iron_block/bars_iron_crossbars_top"
     ],
-    "strength": 5
+    "renderLayer": "cutout"
   },
   {
     "blockName": "oxidized_iron_bars",
     "blockType": "pane",
+    "strength": 5,
     "soundGroup": "metal",
-    "type": "bars-model,unconnect:false",
-    "renderLayer": "cutout",
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -79,18 +90,21 @@
     ],
     "creativeTab": "westeros_metal_tab",
     "label": "Oxidized Iron Bars",
+    "type": {
+      "barsModel": true,
+      "unconnect": false
+    },
     "textures": [
       "bars_iron_block/bars_iron_oxidized",
       "transparent"
     ],
-    "strength": 5
+    "renderLayer": "cutout"
   },
   {
     "blockName": "oxidized_iron_crossbar",
     "blockType": "pane",
+    "strength": 5,
     "soundGroup": "metal",
-    "type": "bars-model,unconnect:false",
-    "renderLayer": "cutout",
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -99,20 +113,27 @@
     ],
     "creativeTab": "westeros_metal_tab",
     "label": "Oxidized Iron Crossbar",
+    "type": {
+      "barsModel": true,
+      "unconnect": false
+    },
     "textures": [
       "bars_iron_block/bars_iron_oxidized_crossbars",
       "bars_iron_block/bars_iron_oxidized_crossbars_top"
     ],
-    "strength": 5
+    "renderLayer": "cutout"
   },
   {
     "blockName": "vertical_net",
     "blockType": "pane",
+    "strength": 1,
     "soundGroup": "cloth",
     "creativeTab": "westeros_cloth_fibers_tab",
-    "type": "legacy-model,unconnect:false",
     "label": "Vertical Net",
-    "renderLayer": "cutout",
+    "type": {
+      "legacyModel": true,
+      "unconnect": false
+    },
     "randomTextures": [
       {
         "textures": [
@@ -140,6 +161,6 @@
         ]
       }
     ],
-    "strength": 1
+    "renderLayer": "cutout"
   }
 ]

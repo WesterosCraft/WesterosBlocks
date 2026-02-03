@@ -2,6 +2,8 @@
   {
     "blockName": "chain_pulley",
     "blockType": "cuboid-nsewud",
+    "hardness": 3,
+    "resistance": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -11,7 +13,6 @@
     ],
     "creativeTab": "westeros_misc_tab",
     "label": "Chain Pulley",
-    "nonOpaque": true,
     "textures": [
       "pulley/chain/top_bottom",
       "pulley/chain/top_bottom",
@@ -20,6 +21,8 @@
       "pulley/chain/front",
       "pulley/chain/front"
     ],
+    "renderLayer": "cutout",
+    "nonOpaque": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -27,14 +30,13 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "renderLayer": "cutout",
-    "hardness": 3,
-    "resistance": 5
+    }
   },
   {
     "blockName": "piston_extension",
     "blockType": "cuboid-nsewud",
+    "hardness": 3,
+    "resistance": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -44,12 +46,13 @@
     ],
     "creativeTab": "westeros_tool_blocks_tab",
     "label": "Piston Extension",
-    "nonOpaque": true,
     "textures": [
       "cuboid_nsewud_block/piston_side",
       "cuboid_nsewud_block/piston_side_rotated",
       "cuboid_nsewud_block/piston_top_normal"
     ],
+    "renderLayer": "cutout",
+    "nonOpaque": true,
     "cuboids": [
       {
         "xMin": 0.249,
@@ -83,14 +86,13 @@
           2
         ]
       }
-    ],
-    "renderLayer": "cutout",
-    "hardness": 3,
-    "resistance": 5
+    ]
   },
   {
     "blockName": "rope_pulley",
     "blockType": "cuboid-nsewud",
+    "hardness": 3,
+    "resistance": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -100,7 +102,6 @@
     ],
     "creativeTab": "westeros_misc_tab",
     "label": "Rope Pulley",
-    "nonOpaque": true,
     "textures": [
       "pulley/rope/top_bottom",
       "pulley/rope/top_bottom",
@@ -109,6 +110,8 @@
       "pulley/rope/front",
       "pulley/rope/front"
     ],
+    "renderLayer": "cutout",
+    "nonOpaque": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -116,14 +119,13 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "renderLayer": "cutout",
-    "hardness": 3,
-    "resistance": 5
+    }
   },
   {
     "blockName": "sticky_piston_extension",
     "blockType": "cuboid-nsewud",
+    "hardness": 3,
+    "resistance": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -133,12 +135,13 @@
     ],
     "creativeTab": "westeros_tool_blocks_tab",
     "label": "Sticky Piston Extension",
-    "nonOpaque": true,
     "textures": [
       "cuboid_nsewud_block/piston_side",
       "cuboid_nsewud_block/piston_side_rotated",
       "cuboid_nsewud_block/piston_top_sticky"
     ],
+    "renderLayer": "cutout",
+    "nonOpaque": true,
     "cuboids": [
       {
         "xMin": 0.249,
@@ -172,14 +175,13 @@
           2
         ]
       }
-    ],
-    "renderLayer": "cutout",
-    "hardness": 3,
-    "resistance": 5
+    ]
   },
   {
     "blockName": "wagon_wheel__axle",
     "blockType": "cuboid-nsewud",
+    "hardness": 3,
+    "resistance": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -189,13 +191,14 @@
     ],
     "creativeTab": "westeros_misc_tab",
     "label": "Wagon Wheel & Axle",
-    "nonOpaque": true,
     "textures": [
       "cuboid_nsewud_block/axle",
       "cuboid_nsewud_block/rim",
       "cuboid_nsewud_block/rim_top",
       "cuboid_nsewud_block/spoke"
     ],
+    "renderLayer": "cutout",
+    "nonOpaque": true,
     "cuboids": [
       {
         "xMin": 0,
@@ -309,9 +312,6 @@
           3
         ]
       }
-    ],
-    "renderLayer": "cutout",
-    "hardness": 3,
-    "resistance": 5
+    ]
   }
 ]

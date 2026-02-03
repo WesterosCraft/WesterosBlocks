@@ -5,12 +5,13 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Fancy Blue Carpet",
-    "type": "allow-unsupported",
-    "renderLayer": "cutout_mipped",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "carpet/fancy_blue_carpet"
-    ]
+    ],
+    "renderLayer": "cutout_mipped"
   },
   {
     "blockName": "fancy_red_carpet",
@@ -18,64 +19,69 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Fancy Red Carpet",
-    "type": "allow-unsupported",
-    "renderLayer": "cutout_mipped",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "carpet/fancy_red_carpet"
-    ]
+    ],
+    "renderLayer": "cutout_mipped"
   },
   {
     "blockName": "horizontal_chain",
     "blockType": "rail",
     "creativeTab": "westeros_metal_tab",
     "label": "Horizontal Chain",
-    "renderLayer": "cutout_mipped",
-    "nonOpaque": true,
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "rail_block/chain",
       "rail_block/chain_turned"
     ],
-    "type": "allow-unsupported"
+    "renderLayer": "cutout_mipped",
+    "nonOpaque": true
   },
   {
     "blockName": "horizontal_net",
     "blockType": "rail",
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Horizontal Net",
-    "renderLayer": "cutout_mipped",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "rail_block/net_large",
       "rail_block/net_large_turned"
     ],
-    "type": "allow-unsupported"
+    "renderLayer": "cutout_mipped"
   },
   {
     "blockName": "horizontal_rope",
     "blockType": "rail",
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Horizontal Rope",
-    "renderLayer": "cutout_mipped",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "rail_block/rope",
       "rail_block/rope_turned"
     ],
-    "type": "allow-unsupported"
+    "renderLayer": "cutout_mipped"
   },
   {
     "blockName": "packed_snow",
     "blockType": "rail",
     "creativeTab": "westeros_water_air_tab",
     "label": "Packed Snow",
-    "renderLayer": "cutout_mipped",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "rail_block/packed_snow",
       "rail_block/packed_snow_turned"
     ],
-    "type": "allow-unsupported"
+    "renderLayer": "cutout_mipped"
   }
 ]

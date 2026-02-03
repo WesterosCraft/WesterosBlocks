@@ -5,12 +5,12 @@
     "soundGroup": "ladder",
     "creativeTab": "westeros_metal_tab",
     "label": "Iron Rungs",
-    "renderLayer": "cutout",
     "textures": [
       "iron_rungs/ladder"
     ],
-    "allowUnsupported": true,
-    "isCustomModel": true
+    "renderLayer": "cutout",
+    "isCustomModel": true,
+    "allowUnsupported": true
   },
   {
     "blockName": "iron_rungs_broken",
@@ -18,7 +18,9 @@
     "soundGroup": "ladder",
     "creativeTab": "westeros_metal_tab",
     "label": "Iron Rungs Broken",
-    "renderLayer": "cutout",
+    "type": {
+      "allowUnsupported": true
+    },
     "randomTextures": [
       {},
       {},
@@ -27,8 +29,7 @@
       {},
       {}
     ],
-    "type": "allow-unsupported",
-    "allowUnsupported": true,
+    "renderLayer": "cutout",
     "isCustomModel": true
   },
   {
@@ -37,10 +38,10 @@
     "soundGroup": "ladder",
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Rope Ladder",
-    "renderLayer": "cutout",
     "textures": [
       "rope_ladder/side"
     ],
+    "renderLayer": "cutout",
     "allowUnsupported": true
   },
   {
@@ -49,8 +50,9 @@
     "soundGroup": "ladder",
     "creativeTab": "westeros_foliage_tab",
     "label": "Vine Jasmine (Do Not Use)",
-    "renderLayer": "cutout",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "randomTextures": [
       {
         "textures": [
@@ -78,7 +80,7 @@
         ]
       }
     ],
-    "type": "allow-unsupported"
+    "renderLayer": "cutout"
   },
   {
     "blockName": "winterfell_stone_ladder",
@@ -86,8 +88,9 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_misc_tab",
     "label": "Winterfell Stone Ladder",
-    "renderLayer": "cutout",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "randomTextures": [
       {
         "textures": [
@@ -100,7 +103,7 @@
         ]
       }
     ],
-    "type": "allow-unsupported"
+    "renderLayer": "cutout"
   },
   {
     "blockName": "wood_ladder",
@@ -108,12 +111,13 @@
     "soundGroup": "ladder",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Wood Ladder",
-    "allowUnsupported": true,
-    "renderLayer": "cutout",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood_ladder/side"
     ],
-    "type": "allow-unsupported",
+    "renderLayer": "cutout",
     "isCustomModel": true
   }
 ]

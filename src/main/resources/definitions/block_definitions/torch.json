@@ -4,53 +4,57 @@
     "blockType": "torch",
     "soundGroup": "metal",
     "creativeTab": "westeros_lighting_tab",
-    "luminance": 13,
     "label": "Torch",
-    "allowUnsupported": true,
+    "textures": [
+      "lighting/torch"
+    ],
     "renderLayer": "cutout",
-    "textures": ["lighting/torch"]
+    "luminance": 13,
+    "allowUnsupported": true
   },
   {
     "blockName": "candle",
     "blockType": "torch",
     "soundGroup": "powder",
     "creativeTab": "westeros_lighting_tab",
-    "luminance": 10,
     "label": "Candle",
-    "allowUnsupported": true,
-    "renderLayer": "cutout",
     "textures": [
       "lighting/candle"
-    ]
+    ],
+    "renderLayer": "cutout",
+    "luminance": 10,
+    "allowUnsupported": true
   },
   {
     "blockName": "candle_unlit",
     "blockType": "torch",
     "soundGroup": "powder",
     "creativeTab": "westeros_lighting_tab",
-    "luminance": 0,
     "label": "Unlit Candle",
-    "type": "allow-unsupported,no-particle",
-    "allowUnsupported": true,
-    "noParticle": true,
-    "renderLayer": "cutout",
+    "type": {
+      "allowUnsupported": true,
+      "noParticle": true
+    },
     "textures": [
       "lighting/candle_unlit"
-    ]
+    ],
+    "renderLayer": "cutout",
+    "luminance": 0
   },
   {
     "blockName": "torch_unlit",
     "blockType": "torch",
     "soundGroup": "metal",
     "creativeTab": "westeros_lighting_tab",
-    "luminance": 0,
     "label": "Unlit Torch",
-    "type": "allow-unsupported,no-particle",
-    "allowUnsupported": true,
-    "noParticle": true,
-    "renderLayer": "cutout",
+    "type": {
+      "allowUnsupported": true,
+      "noParticle": true
+    },
     "textures": [
       "lighting/torch_unlit"
-    ]
+    ],
+    "renderLayer": "cutout",
+    "luminance": 0
   }
 ]

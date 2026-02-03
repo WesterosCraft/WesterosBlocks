@@ -5,10 +5,10 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "(Experimental) Birch Branch",
-    "isCustomModel": true,
     "textures": [
       "bark/birch/side"
-    ]
+    ],
+    "isCustomModel": true
   },
   {
     "blockName": "branch_oak",
@@ -16,9 +16,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "(Experimental) Oak Branch",
-    "isCustomModel": true,
     "textures": [
       "bark/oak/side"
-    ]
+    ],
+    "isCustomModel": true
   }
 ]

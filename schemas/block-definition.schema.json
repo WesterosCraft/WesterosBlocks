@@ -62,7 +62,8 @@
             "awning",
             "flowerbed",
             "mounted",
-            "bench"
+            "bench",
+            "trapdoor"
           ]
         },
         "label": {

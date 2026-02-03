@@ -2,6 +2,8 @@
   {
     "blockName": "allyrion_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 1,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -10,10 +12,7 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Allyrion Banner",
-    "itemTextureIndex": 2,
     "stack": [
       {
         "textures": [
@@ -52,12 +51,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 1
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "arryn_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -66,10 +68,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Arryn Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -108,13 +108,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "baelish_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -123,10 +125,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Baelish Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -165,13 +165,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "banefort_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -180,10 +182,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Banefort Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -222,13 +222,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "bar_emmon_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -237,10 +239,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Bar Emmon Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -279,13 +279,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "baratheon_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -294,10 +296,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Baratheon Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -336,13 +336,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "beesbury_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -351,10 +353,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Beesbury Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -393,13 +393,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "belmore_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -408,10 +410,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Belmore Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -450,13 +450,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "black_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -465,10 +467,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Embroidered Black Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -507,13 +507,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "black_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -522,10 +524,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Black Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -564,13 +564,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "blackbar_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -579,10 +581,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Blackbar Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -621,13 +621,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "blackfyre_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -636,10 +638,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Blackfyre Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -678,13 +678,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "blackfyre_old_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -693,10 +695,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Blackfyre Old Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -735,13 +735,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "blackmont_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -750,10 +752,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Blackmont Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -792,13 +792,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "blacktyde_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -807,10 +809,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Blacktyde Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -849,13 +849,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "blackwood_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -864,10 +866,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Blackwood Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -906,13 +906,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "blue_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -921,10 +923,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Embroidered Blue Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -963,13 +963,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "blue_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -978,10 +980,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Blue Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1020,13 +1020,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "bolling_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1035,10 +1037,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Bolling Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1077,13 +1077,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "bolton_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1092,10 +1094,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Bolton Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1134,13 +1134,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "botley_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1149,10 +1151,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Botley Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1191,13 +1191,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "bracken_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1206,10 +1208,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Bracken Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1248,13 +1248,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "bracken_damaged_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1263,10 +1265,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Bracken Damaged Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1305,13 +1305,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "brax_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1320,10 +1322,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Brax Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1362,13 +1362,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "broom_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1377,10 +1379,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Broom Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1419,13 +1419,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "brown_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1434,10 +1436,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Embroidered Brown Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1476,13 +1476,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "brown_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1491,10 +1493,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Brown Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1533,13 +1533,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "buckwell_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1548,10 +1550,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Buckwell Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1590,13 +1590,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "bulwer_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1605,10 +1607,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Bulwer Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1647,13 +1647,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "butterwell_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1662,10 +1664,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Butterwell Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1704,13 +1704,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "caron_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1719,10 +1721,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Caron Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1761,13 +1761,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "caswell_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1776,10 +1778,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Caswell Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1818,13 +1818,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "celtigar_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1833,10 +1835,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Celtigar Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1875,13 +1875,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "cerwyn_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1890,10 +1892,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Cerwyn Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1932,13 +1932,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "charlton_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -1947,10 +1949,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Charlton Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -1989,13 +1989,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "citadel_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2004,10 +2006,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Citadel Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2046,13 +2046,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "clegane_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2061,10 +2063,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Clegane Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2103,13 +2103,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "coldwater_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2118,10 +2120,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Coldwater Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2160,13 +2160,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "connington_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2175,10 +2177,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Connington Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2217,13 +2217,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "corbray_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2232,10 +2234,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Corbray Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2274,13 +2274,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "costayne_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2289,10 +2291,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Costayne Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2331,13 +2331,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "crakehall_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2346,10 +2348,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Crakehall Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2388,13 +2388,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "crane_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2403,10 +2405,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Crane Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2445,13 +2445,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "cream_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2460,10 +2462,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Embroidered Cream Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2502,13 +2502,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "cuy_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2517,10 +2519,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Cuy Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2559,13 +2559,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "cyan_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2574,10 +2576,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Embroidered Cyan Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2616,13 +2616,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "cyan_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2631,10 +2633,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Cyan Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2673,13 +2673,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "darry_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2688,10 +2690,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Darry Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2730,13 +2730,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "dayne_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2745,10 +2747,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Dayne Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2787,13 +2787,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "dirty_white_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2802,10 +2804,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Dirty White Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2844,13 +2844,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "dondarrion_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2859,10 +2861,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Dondarrion Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2901,13 +2901,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "drumm_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2916,10 +2918,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Drumm Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -2958,13 +2958,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "dustin_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -2973,10 +2975,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Dustin Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3015,13 +3015,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "egen_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3030,10 +3032,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Egen Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3072,13 +3072,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "errol_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3087,10 +3089,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Errol Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3129,13 +3129,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "estermont_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3144,10 +3146,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Estermont Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3186,13 +3186,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "farman_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3201,10 +3203,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Farman Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3243,13 +3243,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "flint_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3258,10 +3260,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Flint Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3300,13 +3300,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "florent_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3315,10 +3317,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Florent Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3357,13 +3357,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "fossoway_green_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3372,10 +3374,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Fossoway Green Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3414,13 +3414,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "fossoway_red_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3429,10 +3431,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Fossoway Red Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3471,13 +3471,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "fowler_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3486,10 +3488,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Fowler Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3528,13 +3528,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "frey_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3543,10 +3545,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Frey Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3585,13 +3585,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "gardner_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3600,10 +3602,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Gardner Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3642,13 +3642,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "gardner_old_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3657,10 +3659,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Gardner Old Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3699,13 +3699,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "glover_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3714,10 +3716,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Glover Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3756,13 +3756,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "goodbrother_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3771,10 +3773,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Goodbrother Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3813,13 +3813,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "grafton_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3828,10 +3830,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Grafton Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3870,13 +3870,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "green_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3885,10 +3887,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Embroidered Green Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3927,13 +3927,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "green_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3942,10 +3944,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Green Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -3984,13 +3984,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "grey_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -3999,10 +4001,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Embroidered Grey Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4041,13 +4041,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "grey_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4056,10 +4058,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Grey Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4098,15 +4098,16 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "greyjoy_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
-
     "harvestLevel": [
       {
         "tool": "sword",
@@ -4114,15 +4115,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Greyjoy Banner",
-    "tooltips": [
-      {
-        "text": "We Do Not Sow"
-      }
-    ],
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4161,13 +4155,20 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "tooltips": [
+      {
+        "text": "We Do Not Sow"
+      }
+    ],
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "harlaw_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4176,10 +4177,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Harlaw Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4218,13 +4217,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "harte_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4233,10 +4234,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Harte Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4275,13 +4274,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "hersy_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4290,10 +4291,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Hersy Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4332,13 +4331,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "hewett_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4347,10 +4348,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Hewett Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4389,13 +4388,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "hightower_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4404,10 +4405,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Hightower Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4446,13 +4445,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "hoare_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4461,10 +4462,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Hoare Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4503,13 +4502,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "hoare_old_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4518,10 +4519,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Hoare Old Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4560,13 +4559,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "hornwood_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4575,10 +4576,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Hornwood Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4617,13 +4616,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "hunter_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4632,10 +4633,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Hunter Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4674,13 +4673,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "jordayne_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4689,10 +4690,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Jordayne Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4731,13 +4730,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "karstark_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4746,10 +4747,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Karstark Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4788,13 +4787,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "lannister_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4802,17 +4803,9 @@
         "level": 1
       }
     ],
-    "tooltips": [
-      {
-        "text": "Hear Me Roar!",
-        "format": "GREY"
-      }
-    ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Lannister Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4851,13 +4844,21 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "tooltips": [
+      {
+        "text": "Hear Me Roar!",
+        "format": "GREY"
+      }
+    ],
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "lannister_damaged_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4866,10 +4867,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Lannister Damaged Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4908,13 +4907,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "lefford_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4923,10 +4924,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Lefford Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -4965,13 +4964,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "light_blue_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -4980,10 +4981,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Light Blue Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5022,13 +5021,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "light_brown_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5037,10 +5038,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Light Brown Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5079,13 +5078,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "light_grey_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5094,10 +5095,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Light Grey Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5136,13 +5135,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "locke_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5151,10 +5152,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Locke Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5193,13 +5192,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "lord_of_light_rhllor_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5208,10 +5209,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Lord Of Light Rhllor Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5250,13 +5249,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "lothston_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5265,10 +5266,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Lothston Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5307,13 +5306,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "lydden_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5322,10 +5323,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Lydden Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5364,13 +5363,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "mallister_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5379,10 +5380,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Mallister Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5421,13 +5420,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "manderly_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5436,10 +5437,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Manderly Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5478,13 +5477,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "marbrand_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5493,10 +5494,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Marbrand Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5535,13 +5534,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "martell_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5550,10 +5551,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Martell Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5592,13 +5591,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "massey_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5607,10 +5608,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Massey Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5649,13 +5648,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "melcolm_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5664,10 +5665,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Melcolm Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5706,13 +5705,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "merlyn_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5721,10 +5722,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Merlyn Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5763,13 +5762,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "merryweather_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5778,10 +5779,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Merryweather Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5820,13 +5819,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "mertyns_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5835,10 +5836,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Mertyns Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5877,13 +5876,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "mooton_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5892,10 +5893,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Mooton Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5934,13 +5933,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "mormont_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -5949,10 +5950,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Mormont Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -5991,13 +5990,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "mullendore_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6006,10 +6007,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Mullendore Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6048,13 +6047,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "musgood_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6063,10 +6064,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Musgood Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6105,13 +6104,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "nights_watch_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6120,10 +6121,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Nights Watch Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6162,13 +6161,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "oakheart_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6177,10 +6178,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Oakheart Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6219,13 +6218,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "orange_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6234,10 +6235,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Embroidered Orange Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6276,13 +6275,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "orange_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6291,10 +6292,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Orange Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6333,13 +6332,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "payne_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6348,10 +6349,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Payne Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6390,13 +6389,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "peake_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6405,10 +6406,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Peake Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6447,13 +6446,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "penrose_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6462,10 +6463,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Penrose Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6504,13 +6503,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "pink_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6519,10 +6520,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Embroidered Pink Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6561,13 +6560,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "pink_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6576,10 +6577,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Pink Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6618,13 +6617,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "piper_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6633,10 +6634,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Piper Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6675,13 +6674,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "piper_damaged_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6690,10 +6691,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Piper Damaged Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6732,13 +6731,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "plumm_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6747,10 +6748,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Plumm Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6789,13 +6788,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "prester_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6804,10 +6805,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Prester Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6846,13 +6845,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "purple_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6861,10 +6862,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Embroidered Purple Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6903,13 +6902,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "purple_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6918,10 +6919,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Purple Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -6960,13 +6959,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "red_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -6975,10 +6976,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Embroidered Red Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7017,13 +7016,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "red_keep_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7032,10 +7033,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Red Keep Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7074,13 +7073,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "red_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7089,10 +7090,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Red Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7131,13 +7130,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "redfort_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7146,10 +7147,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Redfort Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7188,13 +7187,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "redwyne_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7203,10 +7204,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Redwyne Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7245,13 +7244,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "reed_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7260,10 +7261,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Reed Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7302,13 +7301,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "renly_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7317,10 +7318,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Renly Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7359,13 +7358,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "reyne_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7374,10 +7375,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Reyne Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7416,13 +7415,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "rollingford_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7431,10 +7432,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Rollingford Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7473,13 +7472,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "rosby_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7488,10 +7489,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Rosby Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7530,13 +7529,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "rowan_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7545,10 +7546,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Rowan Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7587,13 +7586,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "royce_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7602,10 +7603,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Royce Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7644,13 +7643,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "ryger_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7659,10 +7660,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Ryger Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7701,13 +7700,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "rykker_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7716,10 +7717,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Rykker Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7758,13 +7757,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "ryswell_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7773,10 +7774,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Ryswell Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7815,13 +7814,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "santagar_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7830,10 +7831,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Santagar Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7872,13 +7871,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "selmy_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7887,10 +7888,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Selmy Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7929,13 +7928,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "serrett_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -7944,10 +7945,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Serrett Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -7986,13 +7985,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "stannis_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8001,10 +8002,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Stannis Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8043,13 +8042,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "stark_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8057,16 +8058,9 @@
         "level": 1
       }
     ],
-    "tooltips": [
-      {
-        "text": "Winter Is Coming"
-      }
-    ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Stark Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8105,13 +8099,20 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "tooltips": [
+      {
+        "text": "Winter Is Coming"
+      }
+    ],
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "stark_damaged_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8120,15 +8121,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Stark Damaged Banner",
-    "itemTextureIndex": 2,
-    "tooltips": [
-      {
-        "text": "Winter Is Coming"
-      }
-    ],
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8167,13 +8161,20 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "tooltips": [
+      {
+        "text": "Winter Is Coming"
+      }
+    ],
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "staunton_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8182,10 +8183,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Staunton Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8224,13 +8223,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "stokeworth_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8239,10 +8240,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Stokeworth Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8281,13 +8280,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "stonehouse_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8296,10 +8297,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Stonehouse Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8338,13 +8337,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "sunderland_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8353,10 +8354,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Sunderland Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8395,13 +8394,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "sunderly_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8410,10 +8411,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Sunderly Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8452,13 +8451,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "sunglass_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8467,10 +8468,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Sunglass Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8509,13 +8508,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "swann_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8524,10 +8525,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Swann Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8566,13 +8565,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "swyft_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8581,10 +8582,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Swyft Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8623,13 +8622,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "tallhart_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8638,10 +8639,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Tallhart Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8680,13 +8679,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "tarbeck_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8695,10 +8696,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Tarbeck Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8737,13 +8736,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "targaryen_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8752,10 +8753,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Targaryen Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8794,13 +8793,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "targaryen_greens_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8809,10 +8810,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Targaryen Greens Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8851,13 +8850,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "targaryen_old_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8866,10 +8867,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Targaryen Old Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8908,13 +8907,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "tarly_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8923,10 +8924,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Tarly Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -8965,13 +8964,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "tarth_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -8980,10 +8981,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Tarth Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9022,13 +9021,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "tawney_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9037,10 +9038,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Tawney Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9079,13 +9078,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "terrick_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9094,10 +9095,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Terrick Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9136,13 +9135,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "the_faith_of_the_seven_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9151,10 +9152,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "The Faith Of The Seven Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9193,13 +9192,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "toland_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9208,10 +9209,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Toland Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9250,13 +9249,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "trant_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9265,10 +9266,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Trant Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9307,13 +9306,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "tully_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9322,10 +9323,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Tully Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9364,13 +9363,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "tully_damaged_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9379,10 +9380,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Tully Damaged Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9421,13 +9420,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "tyrell_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9436,10 +9437,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Tyrell Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9478,13 +9477,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "uller_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9493,10 +9494,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Uller Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9535,13 +9534,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "umber_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9550,10 +9551,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Umber Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9592,13 +9591,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "vance_atranta_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9607,10 +9608,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Vance Atranta Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9649,13 +9648,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "vance_wayfarers_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9664,10 +9665,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Vance Wayfarers Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9706,13 +9705,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "velaryon_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9721,10 +9722,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Velaryon Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9763,13 +9762,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "vyrwel_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9778,10 +9779,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Vyrwel Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9820,13 +9819,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "waterman_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9835,10 +9836,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Waterman Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9877,13 +9876,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "waxley_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9892,10 +9893,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Waxley Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9934,13 +9933,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "waynwood_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -9949,10 +9950,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Waynwood Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -9991,13 +9990,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "westerling_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -10006,10 +10007,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Westerling Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -10048,13 +10047,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "westeroscraft_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -10063,10 +10064,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Westeroscraft Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -10105,13 +10104,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "whent_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -10120,10 +10121,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Whent Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -10162,13 +10161,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "white_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -10177,10 +10178,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "White Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -10219,13 +10218,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "woodwright_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -10234,10 +10235,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Woodwright Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -10276,13 +10275,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "wull_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -10291,10 +10292,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Wull Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -10333,13 +10332,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "wyl_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -10348,10 +10349,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Wyl Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -10390,13 +10389,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "wylde_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -10405,10 +10406,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Wylde Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -10447,13 +10446,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "wynch_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -10462,10 +10463,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Wynch Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -10504,13 +10503,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "yellow_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -10519,10 +10520,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Embroidered Yellow Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -10561,13 +10560,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "yellow_wool_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -10576,10 +10577,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Yellow Wool Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -10618,13 +10617,15 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   },
   {
     "blockName": "yronwood_banner",
     "blockType": "cuboid-nsew-stack",
+    "hardness": 1,
+    "resistance": 0,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -10633,10 +10634,8 @@
       }
     ],
     "creativeTab": "westeros_banners_tab",
-    "noBreakUnder": true,
-    "allowHalfBreak": true,
     "label": "Yronwood Banner",
-    "itemTextureIndex": 2,
+    "renderLayer": "cutout",
     "stack": [
       {
         "textures": [
@@ -10675,8 +10674,8 @@
         }
       }
     ],
-    "hardness": 1,
-    "resistance": 0,
-    "renderLayer": "cutout"
+    "itemTextureIndex": 2,
+    "allowHalfBreak": true,
+    "noBreakUnder": true
   }
 ]

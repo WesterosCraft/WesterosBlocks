@@ -4,12 +4,12 @@
     "blockType": "sand",
     "hardness": 0.5,
     "soundGroup": "sand",
-    "material": "sand",
     "creativeTab": "westeros_sand_gravel_tab",
     "label": "Sand Skeleton",
-    "colorMult": "textures/colormap/sand",
     "textures": [
       "sand_block/sand_skeleton"
-    ]
+    ],
+    "colorMult": "textures/colormap/sand",
+    "material": "sand"
   }
 ]

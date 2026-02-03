@@ -131,33 +131,11 @@ public class BlockDefinition {
     @SerializedName("noCollision")
     private Boolean noCollision;
 
-    /** Allows for placement of this block on Layer blocks */
-    @SerializedName("layerSensitive")
-    private Boolean layerSensitive;
-
-    /** Block can be placed in unsupported locations */
-    @SerializedName("allowUnsupported")
-    private Boolean allowUnsupported;
 
     /** Stack blocks: allows top half to be broken independently */
     @SerializedName("allowHalfBreak")
     private Boolean allowHalfBreak;
 
-    /** Creative players can cycle states by right-clicking */
-    @SerializedName("toggleOnUse")
-    private Boolean toggleOnUse;
-
-    /** Doors/gates are locked and cannot be opened */
-    @SerializedName("locked")
-    private Boolean locked;
-
-    /** Torches don't emit particles */
-    @SerializedName("noParticle")
-    private Boolean noParticle;
-
-    /** Furnaces are always lit (no off state) */
-    @SerializedName("alwaysOn")
-    private Boolean alwaysOn;
 
     /** Vines are climbable like ladders */
     @SerializedName("hasClimb")
@@ -171,9 +149,6 @@ public class BlockDefinition {
     @SerializedName("connectTo")
     private String connectTo;
 
-    /** Block has symmetrical texture mapping (mirrors textures) */
-    @SerializedName("symmetrical")
-    private Boolean symmetrical;
 
     /** Uses custom model files instead of generated ones */
     @SerializedName("isCustomModel")
@@ -183,21 +158,6 @@ public class BlockDefinition {
     @SerializedName("isTinted")
     private Boolean isTinted;
 
-    /** Block has overlay textures for tinting */
-    @SerializedName("hasOverlay")
-    private Boolean hasOverlay;
-
-    /** OptiFine Better Foliage support */
-    @SerializedName("hasBetterFoliage")
-    private Boolean hasBetterFoliage;
-
-    /** OptiFine Better Foliage support (alternate field name) */
-    @SerializedName("betterFoliage")
-    private Boolean betterFoliage;
-
-    /** Leaves should not decay */
-    @SerializedName("noDecay")
-    private Boolean noDecay;
 
     /** Randomly rotate block models */
     @SerializedName("hasRotateRandom")
@@ -222,14 +182,6 @@ public class BlockDefinition {
     /** Wall height: "normal" (16 blocks) or "short" (13 blocks) */
     @SerializedName("wallSize")
     private String wallSize;
-
-    /** Walls have connect state cycling feature */
-    @SerializedName("connectstate")
-    private Boolean connectState;
-
-    /** Walls don't connect to adjacent blocks when true */
-    @SerializedName("unconnect")
-    private Boolean unconnect;
 
     /** Stack elements for cuboid-nsew-stack blocks */
     @SerializedName("stack")
@@ -857,15 +809,7 @@ public class BlockDefinition {
     }
 
     public boolean toggleOnUse() {
-        // Check dedicated field first
-        if (Boolean.TRUE.equals(toggleOnUse)) {
-            return true;
-        }
-        // Check type properties
-        if (type != null && Boolean.TRUE.equals(type.getToggleOnUse())) {
-            return true;
-        }
-        return false;
+        return type != null && Boolean.TRUE.equals(type.getToggleOnUse());
     }
 
     public String getLabel() {
@@ -917,7 +861,7 @@ public class BlockDefinition {
     }
 
     public boolean isLayerSensitive() {
-        return Boolean.TRUE.equals(layerSensitive);
+        return type != null && Boolean.TRUE.equals(type.getLayerSensitive());
     }
 
     public boolean hasNoCollision() {
@@ -953,16 +897,12 @@ public class BlockDefinition {
         return overlayTextures != null && !overlayTextures.isEmpty();
     }
 
-    public Boolean getLocked() {
-        return locked;
-    }
-
     public boolean isLocked() {
-        return Boolean.TRUE.equals(locked);
+        return type != null && Boolean.TRUE.equals(type.getLocked());
     }
 
     public boolean isAllowUnsupported() {
-        return Boolean.TRUE.equals(allowUnsupported);
+        return type != null && Boolean.TRUE.equals(type.getAllowUnsupported());
     }
 
     public boolean isAllowHalfBreak() {
@@ -1034,11 +974,11 @@ public class BlockDefinition {
     }
 
     public boolean hasOverlay() {
-        return Boolean.TRUE.equals(hasOverlay);
+        return type != null && Boolean.TRUE.equals(type.getOverlay());
     }
 
     public boolean hasBetterFoliage() {
-        return Boolean.TRUE.equals(hasBetterFoliage) || Boolean.TRUE.equals(betterFoliage);
+        return type != null && Boolean.TRUE.equals(type.getBetterFoliage());
     }
 
     public boolean hasRotateRandom() {
@@ -1046,7 +986,7 @@ public class BlockDefinition {
     }
 
     public boolean isNoDecay() {
-        return Boolean.TRUE.equals(noDecay);
+        return type != null && Boolean.TRUE.equals(type.getNoDecay());
     }
 
     public boolean isAlphaRender() {
@@ -1054,7 +994,7 @@ public class BlockDefinition {
     }
 
     public boolean isNoParticle() {
-        return Boolean.TRUE.equals(noParticle);
+        return type != null && Boolean.TRUE.equals(type.getNoParticle());
     }
 
     public String getBedType() {
@@ -1066,7 +1006,7 @@ public class BlockDefinition {
     }
 
     public boolean isAlwaysOn() {
-        return Boolean.TRUE.equals(alwaysOn);
+        return type != null && Boolean.TRUE.equals(type.getAlwaysOn());
     }
 
     public boolean hasDown() {
@@ -1074,15 +1014,7 @@ public class BlockDefinition {
     }
 
     public boolean isSymmetrical() {
-        // Check dedicated field first
-        if (Boolean.TRUE.equals(symmetrical)) {
-            return true;
-        }
-        // Check type properties
-        if (type != null && Boolean.TRUE.equals(type.getSymmetrical())) {
-            return true;
-        }
-        return false;
+        return type != null && Boolean.TRUE.equals(type.getSymmetrical());
     }
 
     public String getWallSize() {
@@ -1090,19 +1022,11 @@ public class BlockDefinition {
     }
 
     public boolean isConnectState() {
-        // Check dedicated field first
-        if (Boolean.TRUE.equals(connectState)) {
-            return true;
-        }
-        // Check type properties
-        if (type != null && Boolean.TRUE.equals(type.getConnectstate())) {
-            return true;
-        }
-        return false;
+        return type != null && Boolean.TRUE.equals(type.getConnectstate());
     }
 
     public boolean isUnconnect() {
-        return Boolean.TRUE.equals(unconnect);
+        return type != null && Boolean.TRUE.equals(type.getUnconnect());
     }
 
     public List<StackElement> getStack() {

@@ -5,9 +5,9 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_water_air_tab",
     "label": "Brain Coral Fan",
-    "type": "allow-unsupported",
-    "renderLayer": "cutout",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "randomTextures": [
       {
         "textures": [
@@ -19,7 +19,8 @@
           "coral/brain/fan2"
         ]
       }
-    ]
+    ],
+    "renderLayer": "cutout"
   },
   {
     "blockName": "coral_bubble_fan",
@@ -27,9 +28,9 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_water_air_tab",
     "label": "Bubble Coral Fan",
-    "type": "allow-unsupported",
-    "renderLayer": "cutout",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "randomTextures": [
       {
         "textures": [
@@ -41,7 +42,8 @@
           "coral/bubble/fan2"
         ]
       }
-    ]
+    ],
+    "renderLayer": "cutout"
   },
   {
     "blockName": "coral_fire_fan",
@@ -49,9 +51,9 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_water_air_tab",
     "label": "Fire Coral Fan",
-    "type": "allow-unsupported",
-    "renderLayer": "cutout",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "randomTextures": [
       {
         "textures": [
@@ -63,7 +65,8 @@
           "coral/fire/fan2"
         ]
       }
-    ]
+    ],
+    "renderLayer": "cutout"
   },
   {
     "blockName": "coral_horn_fan",
@@ -71,9 +74,9 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_water_air_tab",
     "label": "Horn Coral Fan",
-    "type": "allow-unsupported",
-    "renderLayer": "cutout",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "randomTextures": [
       {
         "textures": [
@@ -85,7 +88,8 @@
           "coral/horn/fan2"
         ]
       }
-    ]
+    ],
+    "renderLayer": "cutout"
   },
   {
     "blockName": "coral_tube_fan",
@@ -93,9 +97,9 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_water_air_tab",
     "label": "Tube Coral Fan",
-    "type": "allow-unsupported",
-    "renderLayer": "cutout",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "randomTextures": [
       {
         "textures": [
@@ -107,6 +111,7 @@
           "coral/tube/fan2"
         ]
       }
-    ]
+    ],
+    "renderLayer": "cutout"
   }
 ]

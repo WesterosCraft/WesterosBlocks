@@ -2,10 +2,8 @@
   {
     "blockName": "axe_block",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "metal",
-    "isCustomModel": true,
-    "nonOpaque": true,
-    "renderLayer": "cutout",
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -22,6 +20,9 @@
       "transparent",
       "transparent"
     ],
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -30,12 +31,12 @@
       "zMin": 0.499,
       "zMax": 0.5
     },
-    "itemTextureIndex": 2,
-    "strength": 5
+    "itemTextureIndex": 2
   },
   {
     "blockName": "cleaver_block",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "metal",
     "harvestLevel": [
       {
@@ -45,8 +46,6 @@
     ],
     "creativeTab": "westeros_tool_blocks_tab",
     "label": "Cleaver Block",
-    "isCustomModel": true,
-    "renderLayer": "cutout",
     "textures": [
       "transparent",
       "transparent",
@@ -55,6 +54,8 @@
       "transparent",
       "transparent"
     ],
+    "renderLayer": "cutout",
+    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -62,15 +63,13 @@
       "yMax": 1,
       "zMin": 0.499,
       "zMax": 0.5
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "crop_cocoa",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "grass",
-    "toggleOnUse": true,
-    "nonOpaque": true,
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -79,8 +78,9 @@
     ],
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Cocoa",
-    "isCustomModel": true,
-    "renderLayer": "cutout",
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "age0",
@@ -122,11 +122,14 @@
         }
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "isCustomModel": true
   },
   {
     "blockName": "dagger_block",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "metal",
     "harvestLevel": [
       {
@@ -136,7 +139,6 @@
     ],
     "creativeTab": "westeros_tool_blocks_tab",
     "label": "Dagger Block",
-    "renderLayer": "cutout",
     "textures": [
       "transparent",
       "transparent",
@@ -145,6 +147,7 @@
       "transparent",
       "transparent"
     ],
+    "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -153,12 +156,12 @@
       "zMin": 0.499,
       "zMax": 0.5
     },
-    "itemTextureIndex": 4,
-    "strength": 5
+    "itemTextureIndex": 4
   },
   {
     "blockName": "dark_wattle_fence",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -168,7 +171,6 @@
     ],
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Dark Wattle Fence",
-    "renderLayer": "cutout",
     "textures": [
       "transparent",
       "transparent",
@@ -177,6 +179,7 @@
       "wattle_fence_dark/side1",
       "wattle_fence_dark/side2"
     ],
+    "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.01,
       "xMax": 0.07,
@@ -184,12 +187,12 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "dark_wattle_fence_short",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -199,7 +202,6 @@
     ],
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Dark Wattle Fence Short",
-    "renderLayer": "cutout",
     "textures": [
       "transparent",
       "transparent",
@@ -208,6 +210,7 @@
       "wattle_fence_dark/fence_wattle_dark_short",
       "wattle_fence_dark/fence_wattle_dark_short"
     ],
+    "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.01,
       "xMax": 0.07,
@@ -215,12 +218,12 @@
       "yMax": 0.6,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "dreadfort_skeleton_sconce_left",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "metal",
     "harvestLevel": [
       {
@@ -230,12 +233,13 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Dreadfort Skeleton Sconce Left",
-    "renderLayer": "cutout",
-    "nonOpaque": true,
     "textures": [
       "cuboid_block/skeleton_hand_base",
       "cuboid_block/skeleton_hand"
     ],
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -243,13 +247,12 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "isCustomModel": true,
-    "strength": 5
+    }
   },
   {
     "blockName": "dreadfort_skeleton_sconce_right",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "metal",
     "harvestLevel": [
       {
@@ -259,12 +262,13 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Dreadfort Skeleton Sconce Right",
-    "renderLayer": "cutout",
-    "nonOpaque": true,
     "textures": [
       "cuboid_block/skeleton_hand_base",
       "cuboid_block/skeleton_hand"
     ],
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -272,16 +276,13 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "isCustomModel": true,
-    "strength": 5
+    }
   },
   {
     "blockName": "falling_water_block_four_old",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "cloth",
-    "nonOpaque": true,
-    "alphaRender": true,
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -289,7 +290,6 @@
       }
     ],
     "creativeTab": "westeros_water_air_tab",
-    "renderLayer": "translucent",
     "label": "Falling Water Block Four (Old)",
     "textures": [
       "transparent",
@@ -299,6 +299,9 @@
       "alyssas_tears_mist/mist4",
       "alyssas_tears_mist/mist4"
     ],
+    "renderLayer": "translucent",
+    "nonOpaque": true,
+    "alphaRender": true,
     "boundingBox": {
       "xMin": 0.92,
       "xMax": 0.97,
@@ -306,22 +309,19 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "falling_water_block_one_old",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "cloth",
-    "nonOpaque": true,
-    "alphaRender": true,
     "harvestLevel": [
       {
         "tool": "pickaxe",
         "level": 3
       }
     ],
-    "renderLayer": "translucent",
     "creativeTab": "westeros_water_air_tab",
     "label": "Falling Water Block One (Old)",
     "textures": [
@@ -332,6 +332,9 @@
       "alyssas_tears_mist/mist1",
       "alyssas_tears_mist/mist1"
     ],
+    "renderLayer": "translucent",
+    "nonOpaque": true,
+    "alphaRender": true,
     "boundingBox": {
       "xMin": 0.92,
       "xMax": 0.97,
@@ -339,22 +342,19 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "falling_water_block_three_old",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "cloth",
-    "nonOpaque": true,
-    "alphaRender": true,
     "harvestLevel": [
       {
         "tool": "pickaxe",
         "level": 3
       }
     ],
-    "renderLayer": "translucent",
     "creativeTab": "westeros_water_air_tab",
     "label": "Falling Water Block Three (Old)",
     "textures": [
@@ -365,6 +365,9 @@
       "alyssas_tears_mist/mist3_both",
       "alyssas_tears_mist/mist3_both"
     ],
+    "renderLayer": "translucent",
+    "nonOpaque": true,
+    "alphaRender": true,
     "boundingBox": {
       "xMin": 0.92,
       "xMax": 0.97,
@@ -372,22 +375,19 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "falling_water_block_two_old",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "cloth",
-    "nonOpaque": true,
-    "alphaRender": true,
     "harvestLevel": [
       {
         "tool": "pickaxe",
         "level": 3
       }
     ],
-    "renderLayer": "translucent",
     "creativeTab": "westeros_water_air_tab",
     "label": "Falling Water Block Two (Old)",
     "textures": [
@@ -398,6 +398,9 @@
       "alyssas_tears_mist/mist2_both",
       "alyssas_tears_mist/mist2_both"
     ],
+    "renderLayer": "translucent",
+    "nonOpaque": true,
+    "alphaRender": true,
     "boundingBox": {
       "xMin": 0.92,
       "xMax": 0.97,
@@ -405,12 +408,12 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "flat_wheel",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -418,12 +421,13 @@
         "level": 3
       }
     ],
-    "renderLayer": "cutout",
     "creativeTab": "westeros_misc_tab",
     "label": "Flat Wheel",
     "textures": [
       "transparent"
     ],
+    "renderLayer": "cutout",
+    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0.92,
       "xMax": 0.97,
@@ -431,13 +435,12 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "isCustomModel": true,
-    "strength": 5
+    }
   },
   {
     "blockName": "flat_wheel_large",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -445,12 +448,13 @@
         "level": 3
       }
     ],
-    "renderLayer": "cutout",
     "creativeTab": "westeros_misc_tab",
     "label": "Flat Wheel Large",
     "textures": [
       "transparent"
     ],
+    "renderLayer": "cutout",
+    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0.92,
       "xMax": 0.97,
@@ -458,13 +462,12 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "isCustomModel": true,
-    "strength": 5
+    }
   },
   {
     "blockName": "ghostskin",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -472,9 +475,7 @@
         "level": 3
       }
     ],
-    "renderLayer": "cutout",
     "creativeTab": "westeros_misc_tab",
-    "isCustomModel": true,
     "label": "Ghostskin",
     "randomTextures": [
       {},
@@ -484,6 +485,8 @@
       {},
       {}
     ],
+    "renderLayer": "cutout",
+    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0.3,
       "xMax": 0.7,
@@ -491,14 +494,12 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "gold_road_marker",
     "blockType": "cuboid-nsew",
-    "nonOpaque": true,
-    "alphaRender": true,
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -506,7 +507,6 @@
         "level": 3
       }
     ],
-    "renderLayer": "translucent",
     "creativeTab": "westeros_misc_tab",
     "label": "Gold Road Marker",
     "textures": [
@@ -517,6 +517,9 @@
       "road_marker_block/gold_road",
       "road_marker_block/gold_road"
     ],
+    "renderLayer": "translucent",
+    "nonOpaque": true,
+    "alphaRender": true,
     "boundingBox": {
       "xMin": 0.961,
       "xMax": 0.97,
@@ -524,12 +527,12 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "horizontal_paper",
     "blockType": "cuboid-nsew",
+    "strength": 1,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -537,17 +540,10 @@
         "level": 3
       }
     ],
-    "renderLayer": "cutout",
     "creativeTab": "westeros_decor_tab",
     "label": "Horizontal Paper",
-    "type": "toggleOnUse",
-    "boundingBox": {
-      "xMin": 0,
-      "xMax": 1,
-      "yMin": 0.03,
-      "yMax": 0.039,
-      "zMin": 0,
-      "zMax": 1
+    "type": {
+      "toggleOnUse": true
     },
     "states": [
       {
@@ -652,23 +648,7 @@
         ]
       }
     ],
-    "strength": 1
-  },
-  {
-    "blockName": "horizontal_scroll",
-    "blockType": "cuboid-nsew",
-    "soundGroup": "cloth",
-    "isCustomModel": true,
-    "harvestLevel": [
-      {
-        "tool": "pickaxe",
-        "level": 1
-      }
-    ],
     "renderLayer": "cutout",
-    "creativeTab": "westeros_decor_tab",
-    "label": "Horizontal Scroll",
-    "type": "toggleOnUse",
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -676,6 +656,23 @@
       "yMax": 0.039,
       "zMin": 0,
       "zMax": 1
+    }
+  },
+  {
+    "blockName": "horizontal_scroll",
+    "blockType": "cuboid-nsew",
+    "strength": 1,
+    "soundGroup": "cloth",
+    "harvestLevel": [
+      {
+        "tool": "pickaxe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_decor_tab",
+    "label": "Horizontal Scroll",
+    "type": {
+      "toggleOnUse": true
     },
     "states": [
       {
@@ -723,13 +720,21 @@
         "isCustomModel": true
       }
     ],
-    "strength": 1
+    "renderLayer": "cutout",
+    "isCustomModel": true,
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0.03,
+      "yMax": 0.039,
+      "zMin": 0,
+      "zMax": 1
+    }
   },
   {
     "blockName": "kings_road_marker",
     "blockType": "cuboid-nsew",
-    "nonOpaque": true,
-    "alphaRender": true,
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -737,7 +742,6 @@
         "level": 3
       }
     ],
-    "renderLayer": "translucent",
     "creativeTab": "westeros_misc_tab",
     "label": "King's Road Marker",
     "textures": [
@@ -748,6 +752,9 @@
       "road_marker_block/kings_road",
       "road_marker_block/kings_road"
     ],
+    "renderLayer": "translucent",
+    "nonOpaque": true,
+    "alphaRender": true,
     "boundingBox": {
       "xMin": 0.961,
       "xMax": 0.97,
@@ -755,12 +762,12 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "light_wattle_fence",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -768,7 +775,6 @@
         "level": 3
       }
     ],
-    "renderLayer": "cutout",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Light Wattle Fence",
     "textures": [
@@ -779,6 +785,7 @@
       "wattle_fence_light/side1",
       "wattle_fence_light/side2"
     ],
+    "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.01,
       "xMax": 0.07,
@@ -786,12 +793,12 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "light_wattle_fence_short",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -799,7 +806,6 @@
         "level": 3
       }
     ],
-    "renderLayer": "cutout",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Light Wattle Fence Short",
     "textures": [
@@ -810,6 +816,7 @@
       "wattle_fence_light/fence_wattle_light_short",
       "wattle_fence_light/fence_wattle_light_short"
     ],
+    "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.01,
       "xMax": 0.07,
@@ -817,12 +824,12 @@
       "yMax": 0.6,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "mances_camp_mances_tent_antlers",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -832,7 +839,6 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mance's Camp Mance's Tent Antlers",
-    "itemTexture": "mances_camp_mances_tent_antlers/noctm",
     "textures": [
       "mances_camp_mances_tent_antlers/edge",
       "mances_camp_mances_tent_antlers/edge",
@@ -841,6 +847,7 @@
       "mances_camp_mances_tent_antlers/side",
       "mances_camp_mances_tent_antlers/side"
     ],
+    "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.47,
       "xMax": 0.53,
@@ -849,16 +856,13 @@
       "zMin": 0,
       "zMax": 1
     },
-    "strength": 5,
-    "renderLayer": "cutout"
+    "itemTexture": "mances_camp_mances_tent_antlers/noctm"
   },
   {
     "blockName": "mountain_road_marker",
     "blockType": "cuboid-nsew",
-    "nonOpaque": true,
-    "alphaRender": true,
+    "strength": 5,
     "soundGroup": "wood",
-    "renderLayer": "translucent",
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -875,6 +879,9 @@
       "road_marker_block/mountain_road",
       "road_marker_block/mountain_road"
     ],
+    "renderLayer": "translucent",
+    "nonOpaque": true,
+    "alphaRender": true,
     "boundingBox": {
       "xMin": 0.961,
       "xMax": 0.97,
@@ -882,15 +889,12 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "ocean_road_marker",
     "blockType": "cuboid-nsew",
-    "renderLayer": "translucent",
-    "nonOpaque": true,
-    "alphaRender": true,
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -908,6 +912,9 @@
       "road_marker_block/ocean_road",
       "road_marker_block/ocean_road"
     ],
+    "renderLayer": "translucent",
+    "nonOpaque": true,
+    "alphaRender": true,
     "boundingBox": {
       "xMin": 0.961,
       "xMax": 0.97,
@@ -915,12 +922,12 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "pickaxe_block",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "metal",
     "harvestLevel": [
       {
@@ -928,8 +935,6 @@
         "level": 3
       }
     ],
-    "isCustomModel": true,
-    "renderLayer": "cutout",
     "creativeTab": "westeros_tool_blocks_tab",
     "label": "Pickaxe Block",
     "textures": [
@@ -940,6 +945,8 @@
       "transparent",
       "transparent"
     ],
+    "renderLayer": "cutout",
+    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -948,21 +955,19 @@
       "zMin": 0.499,
       "zMax": 0.5
     },
-    "itemTextureIndex": 4,
-    "strength": 5
+    "itemTextureIndex": 4
   },
   {
     "blockName": "pitchfork_block",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "metal",
-    "renderLayer": "cutout",
     "harvestLevel": [
       {
         "tool": "pickaxe",
         "level": 3
       }
     ],
-    "isCustomModel": true,
     "creativeTab": "westeros_tool_blocks_tab",
     "label": "Pitchfork Block",
     "textures": [
@@ -973,6 +978,8 @@
       "transparent",
       "transparent"
     ],
+    "renderLayer": "cutout",
+    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -981,16 +988,13 @@
       "zMin": 0.499,
       "zMax": 0.5
     },
-    "itemTextureIndex": 4,
-    "strength": 5
+    "itemTextureIndex": 4
   },
   {
     "blockName": "river_road_marker",
     "blockType": "cuboid-nsew",
-    "nonOpaque": true,
-    "alphaRender": true,
+    "strength": 5,
     "soundGroup": "wood",
-    "renderLayer": "translucent",
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -1007,6 +1011,9 @@
       "road_marker_block/river_road",
       "road_marker_block/river_road"
     ],
+    "renderLayer": "translucent",
+    "nonOpaque": true,
+    "alphaRender": true,
     "boundingBox": {
       "xMin": 0.961,
       "xMax": 0.97,
@@ -1014,15 +1021,12 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "rose_road_marker",
     "blockType": "cuboid-nsew",
-    "renderLayer": "translucent",
-    "nonOpaque": true,
-    "alphaRender": true,
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -1040,6 +1044,9 @@
       "road_marker_block/rose_road",
       "road_marker_block/rose_road"
     ],
+    "renderLayer": "translucent",
+    "nonOpaque": true,
+    "alphaRender": true,
     "boundingBox": {
       "xMin": 0.961,
       "xMax": 0.97,
@@ -1047,15 +1054,13 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "shovel_block",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "metal",
-    "isCustomModel": true,
-    "renderLayer": "cutout",
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -1072,6 +1077,8 @@
       "transparent",
       "transparent"
     ],
+    "renderLayer": "cutout",
+    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -1080,14 +1087,13 @@
       "zMin": 0.499,
       "zMax": 0.5
     },
-    "itemTextureIndex": 2,
-    "strength": 5
+    "itemTextureIndex": 2
   },
   {
     "blockName": "star_chart_2x2",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "wood",
-    "renderLayer": "cutout",
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -1099,6 +1105,7 @@
     "textures": [
       "star_chart/2x2/side"
     ],
+    "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.961,
       "xMax": 0.97,
@@ -1106,14 +1113,13 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "star_chart_3x3",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "wood",
-    "renderLayer": "cutout",
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -1125,6 +1131,7 @@
     "textures": [
       "star_chart/3x3/side"
     ],
+    "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.961,
       "xMax": 0.97,
@@ -1132,14 +1139,13 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "wattle_fence",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "wood",
-    "renderLayer": "cutout",
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -1170,6 +1176,7 @@
         ]
       }
     ],
+    "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.01,
       "xMax": 0.07,
@@ -1177,14 +1184,13 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "wattle_fence_short",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "wood",
-    "renderLayer": "cutout",
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -1215,6 +1221,7 @@
         ]
       }
     ],
+    "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.01,
       "xMax": 0.07,
@@ -1222,12 +1229,12 @@
       "yMax": 0.6,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   },
   {
     "blockName": "icicles",
     "blockType": "cuboid-nsew",
+    "strength": 5,
     "soundGroup": "glass",
     "harvestLevel": [
       {
@@ -1235,10 +1242,10 @@
         "level": 3
       }
     ],
-    "renderLayer": "cutout",
     "creativeTab": "westeros_misc_tab",
-    "isCustomModel": true,
     "label": "Icicles",
+    "renderLayer": "cutout",
+    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0.3,
       "xMax": 0.7,
@@ -1246,7 +1253,6 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 5
+    }
   }
 ]

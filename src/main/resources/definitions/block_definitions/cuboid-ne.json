@@ -2,6 +2,7 @@
   {
     "blockName": "bones",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "metal",
     "harvestLevel": [
       {
@@ -9,19 +10,10 @@
         "level": 1
       }
     ],
-    "itemTextureIndex": 1,
     "creativeTab": "westeros_decor_tab",
     "label": "Bones",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "nonOpaque": true,
-    "boundingBox": {
-      "xMin": 0,
-      "xMax": 1,
-      "yMin": 0.03,
-      "yMax": 0.039,
-      "zMin": 0,
-      "zMax": 1
+    "type": {
+      "toggleOnUse": true
     },
     "states": [
       {
@@ -75,11 +67,22 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0.03,
+      "yMax": 0.039,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "itemTextureIndex": 1
   },
   {
     "blockName": "broken_sword",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "metal",
     "harvestLevel": [
       {
@@ -103,12 +106,12 @@
       "zMin": 0,
       "zMax": 1
     },
-    "itemTextureIndex": 1,
-    "strength": 5
+    "itemTextureIndex": 1
   },
   {
     "blockName": "cheval_de_frise",
     "blockType": "cuboid-ne",
+    "strength": 2,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -120,6 +123,7 @@
     "label": "Cheval de Frise",
     "renderLayer": "cutout",
     "nonOpaque": true,
+    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -127,13 +131,12 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "isCustomModel": true,
-    "strength": 2
+    }
   },
   {
     "blockName": "city_profession_ale_merchant",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -143,44 +146,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Ale Merchant",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/ale_merchant",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -302,11 +270,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/ale_merchant"
   },
   {
     "blockName": "city_profession_apothecary",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -316,44 +321,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Apothecary",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/apothecary",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -475,11 +445,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/apothecary"
   },
   {
     "blockName": "city_profession_armorer",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -489,44 +496,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Armorer",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/armorer",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -648,11 +620,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/armorer"
   },
   {
     "blockName": "city_profession_baker",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -662,44 +671,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Baker",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/baker",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -821,11 +795,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/baker"
   },
   {
     "blockName": "city_profession_barber",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -835,44 +846,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Barber",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/barber",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -994,11 +970,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/barber"
   },
   {
     "blockName": "city_profession_blacksmith",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -1008,44 +1021,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Blacksmith",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/blacksmith",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -1167,11 +1145,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/blacksmith"
   },
   {
     "blockName": "city_profession_bookbinder",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -1181,44 +1196,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Bookbinder",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/bookbinder",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -1340,11 +1320,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/bookbinder"
   },
   {
     "blockName": "city_profession_butcher",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -1354,44 +1371,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Butcher",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/butcher",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -1513,11 +1495,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/butcher"
   },
   {
     "blockName": "city_profession_carpenter",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -1527,44 +1546,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Carpenter",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/carpenter",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -1686,11 +1670,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/carpenter"
   },
   {
     "blockName": "city_profession_cartwright",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -1700,44 +1721,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Cartwright",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/cartwright",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -1859,11 +1845,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/cartwright"
   },
   {
     "blockName": "city_profession_chandler",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -1873,44 +1896,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Chandler",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/chandler",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -2032,11 +2020,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/chandler"
   },
   {
     "blockName": "city_profession_cobbler",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -2046,44 +2071,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Cobbler",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/cobbler",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -2205,11 +2195,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/cobbler"
   },
   {
     "blockName": "city_profession_cooper",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -2219,44 +2246,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Cooper",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/cooper",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -2378,11 +2370,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/cooper"
   },
   {
     "blockName": "city_profession_fishmongerer",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -2392,44 +2421,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Fishmongerer",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/fishmongerer",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -2551,11 +2545,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/fishmongerer"
   },
   {
     "blockName": "city_profession_flea_bottom_potshop",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -2565,44 +2596,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Flea Bottom Potshop",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/potshop",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -2724,11 +2720,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/potshop"
   },
   {
     "blockName": "city_profession_fletcher",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -2738,44 +2771,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Fletcher",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/fletcher",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -2897,11 +2895,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/fletcher"
   },
   {
     "blockName": "city_profession_furrier",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -2911,44 +2946,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Furrier",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/furrier",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -3070,11 +3070,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/furrier"
   },
   {
     "blockName": "city_profession_inn",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -3084,44 +3121,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Inn",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/inn",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -3243,11 +3245,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/inn"
   },
   {
     "blockName": "city_profession_jeweller",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -3257,44 +3296,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Jeweller",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/jeweller",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -3416,11 +3420,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/jeweller"
   },
   {
     "blockName": "city_profession_mason",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -3430,44 +3471,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Mason",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/mason",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -3589,11 +3595,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/mason"
   },
   {
     "blockName": "city_profession_mercer",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -3603,44 +3646,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Mercer",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/mercer",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -3762,11 +3770,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/mercer"
   },
   {
     "blockName": "city_profession_net_maker",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -3776,44 +3821,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Net Maker",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/net_maker",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -3935,11 +3945,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/net_maker"
   },
   {
     "blockName": "city_profession_potter",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -3949,44 +3996,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Potter",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/potter",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -4108,11 +4120,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/potter"
   },
   {
     "blockName": "city_profession_ropemaker",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -4122,44 +4171,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Ropemaker",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/ropemaker",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -4281,11 +4295,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/ropemaker"
   },
   {
     "blockName": "city_profession_scribe",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -4295,44 +4346,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Scribe",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/scribe",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -4454,11 +4470,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/scribe"
   },
   {
     "blockName": "city_profession_spicer",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -4468,44 +4521,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Spicer",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/spicer",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -4627,11 +4645,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/spicer"
   },
   {
     "blockName": "city_profession_stables",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -4641,44 +4696,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Stables",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/stables",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -4800,11 +4820,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/stables"
   },
   {
     "blockName": "city_profession_tailor",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -4814,44 +4871,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Tailor",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/tailor",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -4973,11 +4995,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/tailor"
   },
   {
     "blockName": "city_profession_tanner",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -4987,44 +5046,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Tanner",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/tanner",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -5146,11 +5170,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/tanner"
   },
   {
     "blockName": "city_profession_tavern",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -5160,44 +5221,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Tavern",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/tavern",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -5319,11 +5345,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/tavern"
   },
   {
     "blockName": "city_profession_weaponsmith",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -5333,44 +5396,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Weaponsmith",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/weaponsmith",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -5492,11 +5520,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/weaponsmith"
   },
   {
     "blockName": "city_profession_wine_merchant",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -5506,44 +5571,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Wine Merchant",
-    "lightOpacity": 0,
-    "itemTexture": "profession_sign_base/noctm/wine_merchant",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "cuboids": [
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.45,
-        "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
-      },
-      {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0.46,
-        "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
-      }
-    ],
+    "type": {
+      "toggleOnUse": true
+    },
     "states": [
       {
         "stateID": "random",
@@ -5665,11 +5695,48 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "cuboids": [
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.45,
+        "zMax": 0.55,
+        "sideTextures": [
+          4,
+          4,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0.46,
+        "zMax": 0.54,
+        "sideTextures": [
+          0,
+          1,
+          3,
+          3,
+          0,
+          0
+        ]
+      }
+    ],
+    "itemTexture": "profession_sign_base/noctm/wine_merchant"
   },
   {
     "blockName": "clothesline",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "metal",
     "harvestLevel": [
       {
@@ -5677,19 +5744,10 @@
         "level": 1
       }
     ],
-    "lightOpacity": 0,
-    "itemTextureIndex": 2,
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Clothesline",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0,
-      "xMax": 1,
-      "yMin": 0,
-      "yMax": 1,
-      "zMin": 0.499,
-      "zMax": 0.5
+    "type": {
+      "toggleOnUse": true
     },
     "states": [
       {
@@ -5761,11 +5819,22 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0,
+      "yMax": 1,
+      "zMin": 0.499,
+      "zMax": 0.5
+    },
+    "itemTextureIndex": 2
   },
   {
     "blockName": "coins",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "metal",
     "harvestLevel": [
       {
@@ -5773,18 +5842,10 @@
         "level": 1
       }
     ],
-    "itemTextureIndex": 1,
     "creativeTab": "westeros_decor_tab",
     "label": "Coins",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0,
-      "xMax": 1,
-      "yMin": 0.03,
-      "yMax": 0.039,
-      "zMin": 0,
-      "zMax": 1
+    "type": {
+      "toggleOnUse": true
     },
     "states": [
       {
@@ -5871,11 +5932,21 @@
         ]
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0.03,
+      "yMax": 0.039,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "itemTextureIndex": 1
   },
   {
     "blockName": "firewood_directional_slab",
     "blockType": "cuboid-ne",
+    "strength": 2,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -5885,7 +5956,6 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Firewood Directional Slab",
-    "renderLayer": "cutout",
     "textures": [
       "firewood/rotated",
       "firewood/rotated",
@@ -5894,6 +5964,7 @@
       "firewood/top",
       "firewood/top"
     ],
+    "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -5901,12 +5972,12 @@
       "yMax": 0.5,
       "zMin": 0,
       "zMax": 1
-    },
-    "strength": 2
+    }
   },
   {
     "blockName": "frying_pan",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "metal",
     "harvestLevel": [
       {
@@ -5916,12 +5987,12 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Frying Pan",
-    "renderLayer": "cutout",
     "textures": [
       "frying_pan/bottom",
       "frying_pan/top",
       "transparent"
     ],
+    "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -5930,12 +6001,12 @@
       "zMin": 0,
       "zMax": 1
     },
-    "itemTextureIndex": 1,
-    "strength": 5
+    "itemTextureIndex": 1
   },
   {
     "blockName": "horse_shoes",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "metal",
     "harvestLevel": [
       {
@@ -5945,11 +6016,11 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Horse Shoes",
-    "lightOpacity": 0,
-    "renderLayer": "cutout",
     "textures": [
       "cuboid_block/horseshoes"
     ],
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -5958,12 +6029,12 @@
       "zMin": 0,
       "zMax": 1
     },
-    "itemTextureIndex": 2,
-    "strength": 5
+    "itemTextureIndex": 2
   },
   {
     "blockName": "sword_rack",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "metal",
     "harvestLevel": [
       {
@@ -5973,8 +6044,6 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Sword Rack",
-    "lightOpacity": 0,
-    "renderLayer": "cutout",
     "textures": [
       "cuboid_block/rack_bottom",
       "cuboid_block/rack_top",
@@ -5983,6 +6052,8 @@
       "cuboid_block/rack_bottom",
       "cuboid_block/rack_bottom"
     ],
+    "renderLayer": "cutout",
+    "lightOpacity": 0,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -5991,32 +6062,23 @@
       "zMin": 0.45,
       "zMax": 0.55
     },
-    "itemTextureIndex": 2,
-    "strength": 5
+    "itemTextureIndex": 2
   },
   {
     "blockName": "westerosi_coins",
     "blockType": "cuboid-ne",
+    "strength": 5,
     "soundGroup": "metal",
-    "isCustomModel": true,
     "harvestLevel": [
       {
         "tool": "pickaxe",
         "level": 1
       }
     ],
-    "itemTextureIndex": 1,
     "creativeTab": "westeros_decor_tab",
     "label": "Westerosi Coins",
-    "toggleOnUse": true,
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0,
-      "xMax": 1,
-      "yMin": 0.03,
-      "yMax": 0.039,
-      "zMin": 0,
-      "zMax": 1
+    "type": {
+      "toggleOnUse": true
     },
     "states": [
       {
@@ -6048,6 +6110,16 @@
         "isCustomModel": true
       }
     ],
-    "strength": 5
+    "renderLayer": "cutout",
+    "isCustomModel": true,
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0.03,
+      "yMax": 0.039,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "itemTextureIndex": 1
   }
 ]

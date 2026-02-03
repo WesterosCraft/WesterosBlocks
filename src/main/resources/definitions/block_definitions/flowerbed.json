@@ -4,12 +4,12 @@
     "blockType": "flowerbed",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Clover",
-    "isCustomModel": true,
-    "nonOpaque": true,
-    "renderLayer": "cutout",
     "textures": [
       "flowerbed/clover_stem",
       "flowerbed/clover"
-    ]
+    ],
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "isCustomModel": true
   }
 ]

@@ -3,12 +3,16 @@
     "blockName": "piled_bones_stairs",
     "blockType": "stair",
     "hardness": 5,
-    "soundGroup": "stone",
     "resistance": 10,
+    "soundGroup": "stone",
     "creativeTab": "westeros_misc_tab",
-    "type": {"unconnect": false},
     "label": "Piled Bones Stairs",
-    "textures": ["piled_bones/side"]
+    "type": {
+      "unconnect": false
+    },
+    "textures": [
+      "piled_bones/side"
+    ]
   },
   {
     "blockName": "stacked_bones_stairs",
@@ -21,13 +25,16 @@
       }
     ],
     "creativeTab": "westeros_misc_tab",
-    "type": {"unconnect": false, "noUvlock": true},
     "label": "Stacked Bones Stairs",
-    "isCustomModel": true,
+    "type": {
+      "unconnect": false,
+      "noUvlock": true
+    },
     "textures": [
       "stacked_bones/bone_stacked_front",
       "stacked_bones/bone_stacked_front",
       "stacked_bones/bone_stacked_rotated"
-    ]
+    ],
+    "isCustomModel": true
   }
 ]

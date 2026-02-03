@@ -2,6 +2,7 @@
   {
     "blockName": "apple_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -15,12 +16,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_apple",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "apricot_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -34,12 +35,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_apricot",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "berry_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -53,12 +54,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_berry",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "carrot_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -72,12 +73,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_carrot",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "closed_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -91,12 +92,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_top_closed",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "cut_grain_flour_sack",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "gravel",
     "harvestLevel": [
       {
@@ -112,12 +113,12 @@
       "grain_sack/front",
       "grain_sack/front",
       "grain_sack/side"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "date_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -131,12 +132,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_dates",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "firewood_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -150,12 +151,12 @@
       "firewood/side",
       "firewood/side",
       "firewood/top"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "fish_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -169,12 +170,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_fish",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "grain_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -188,12 +189,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_grain",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "grain_flour_sack",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "gravel",
     "harvestLevel": [
       {
@@ -209,12 +210,12 @@
       "grain_sack/front",
       "grain_sack/front",
       "grain_sack/side"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "hop_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -228,12 +229,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_hop",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "lavender_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -247,12 +248,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_lavender",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "lemon_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -266,12 +267,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_lemons",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "lime_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -285,12 +286,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_limes",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "olive_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -304,12 +305,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_olives",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "open_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -323,12 +324,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_top",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "orange_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -342,12 +343,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_oranges",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "piled_bones_slab",
     "blockType": "slab",
+    "strength": 3,
     "soundGroup": "stone",
     "harvestLevel": [
       {
@@ -359,12 +360,12 @@
     "label": "Piled Bones Slab",
     "textures": [
       "piled_bones/side"
-    ],
-    "strength": 3
+    ]
   },
   {
     "blockName": "pomegranate_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -378,12 +379,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_pomegranates",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "purple_grape_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -397,12 +398,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_grape_purple",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "sourleaf_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -416,12 +417,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_sourleaf",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "stacked_bones_slab",
     "blockType": "slab",
+    "strength": 3,
     "soundGroup": "stone",
     "harvestLevel": [
       {
@@ -435,12 +436,12 @@
       "stacked_bones/bone_stacked_side",
       "stacked_bones/bone_stacked_side",
       "stacked_bones/bone_stacked_front"
-    ],
-    "strength": 3
+    ]
   },
   {
     "blockName": "stool",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -450,19 +451,19 @@
     ],
     "creativeTab": "westeros_furniture_tab",
     "label": "Stool",
-    "lightOpacity": 0,
-    "nonOpaque": true,
-    "renderLayer": "cutout",
     "textures": [
       "seat/bottom",
       "seat/top",
       "seat/side"
     ],
-    "strength": 2
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "lightOpacity": 0
   },
   {
     "blockName": "stool_cushion",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -472,19 +473,19 @@
     ],
     "creativeTab": "westeros_furniture_tab",
     "label": "Stool Cushion",
-    "lightOpacity": 0,
-    "nonOpaque": true,
-    "renderLayer": "cutout",
     "textures": [
       "seat/bottom",
       "seat/top_cushion",
       "seat/side_cushion"
     ],
-    "strength": 2
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "lightOpacity": 0
   },
   {
     "blockName": "turnip_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -498,12 +499,12 @@
       "crate_block/basket_bottom",
       "crate_block/basket_turnip",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "white_grape_basket_slab",
     "blockType": "slab",
+    "strength": 2,
     "soundGroup": "cloth",
     "harvestLevel": [
       {
@@ -517,7 +518,6 @@
       "crate_block/basket_bottom",
       "crate_block/basket_grape_white",
       "crate_block/basket_side_slab"
-    ],
-    "strength": 2
+    ]
   }
 ]

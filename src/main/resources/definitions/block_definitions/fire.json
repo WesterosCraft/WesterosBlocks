@@ -3,34 +3,34 @@
     "blockName": "safe_fire",
     "blockType": "fire",
     "creativeTab": "westeros_lighting_tab",
-    "luminance": 1,
     "label": "Safe Fire",
-    "renderLayer": "cutout",
-    "nonOpaque": true,
     "textures": [
       "safe_fire/fire_layer_0",
       "safe_fire/fire_layer_1"
-    ]
+    ],
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "luminance": 1
   },
   {
     "blockName": "wildfire",
     "blockType": "fire",
     "creativeTab": "westeros_lighting_tab",
-    "luminance": 9,
     "label": "Wildfire",
-    "particle": "wildfire",
+    "textures": [
+      "wildfire/wildfire_layer_0",
+      "wildfire/wildfire_layer_1"
+    ],
     "renderLayer": "cutout",
     "nonOpaque": true,
+    "luminance": 9,
     "tooltips": [
       {
         "text": "A deadly green flame",
         "format": "GREEN"
       }
     ],
-    "textures": [
-      "wildfire/wildfire_layer_0",
-      "wildfire/wildfire_layer_1"
-    ],
+    "particle": "wildfire",
     "gui": {
       "rotation": [
         0,

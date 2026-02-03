@@ -10,36 +10,38 @@
       "wood/birch/door_top",
       "wood/birch/door_bottom"
     ],
-    "allowUnsupported": true,
-    "customItemTexture": true
+    "customItemTexture": true,
+    "allowUnsupported": true
   },
   {
     "blockName": "eyrie_weirwood_door",
     "blockType": "door",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Eyrie Weirwood Door",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "door_block/door_weirwood_top",
       "door_block/door_weirwood_bottom"
-    ],
-    "allowUnsupported": true,
-    "type": "allow-unsupported",
-    "strength": 2
+    ]
   },
   {
     "blockName": "grey_wood_door",
     "blockType": "door",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Grey Wood Door",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/grey/door_top",
       "wood/grey/door_bottom"
     ],
-    "allowUnsupported": true,
-    "type": "allow-unsupported",
-    "strength": 2,
     "customItemTexture": true
   },
   {
@@ -48,10 +50,11 @@
     "strength": 7,
     "soundGroup": "stone",
     "creativeTab": "westeros_misc_tab",
-    "type": "locked:true,allow-unsupported",
     "label": "Harrenhal Secret Door",
-    "allowUnsupported": true,
-    "locked": true,
+    "type": {
+      "locked": true,
+      "allowUnsupported": true
+    },
     "textures": [
       "ashlar_third/black/all_noctm",
       "ashlar_third/black/all_noctm"
@@ -61,194 +64,207 @@
   {
     "blockName": "jungle_door",
     "blockType": "door",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Jungle Door",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/jungle/door_top",
       "wood/jungle/door_bottom"
     ],
-    "type": "allow-unsupported",
-    "strength": 2,
     "customItemTexture": true
   },
   {
     "blockName": "locked_birch_door",
     "blockType": "door",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "locked:true,allow-unsupported",
-    "allowUnsupported": true,
-    "locked": true,
     "label": "Locked Birch Door",
+    "type": {
+      "locked": true,
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/birch/door_locked_top",
       "wood/birch/door_locked_bottom"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "locked_dark_northern_wood_door",
     "blockType": "door",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "locked:true,allow-unsupported",
-    "allowUnsupported": true,
-    "locked": true,
     "label": "Locked Dark Northern Wood Door",
+    "type": {
+      "locked": true,
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/northern/door_locked_top",
       "wood/northern/door_locked_bottom"
     ],
-    "strength": 2,
     "customItemTexture": true
   },
   {
     "blockName": "locked_grey_wood_door",
     "blockType": "door",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "locked:true,allow-unsupported",
     "label": "Locked Grey Wood Door",
-    "allowUnsupported": true,
-    "locked": true,
+    "type": {
+      "locked": true,
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/grey/door_locked_top",
       "wood/grey/door_locked_bottom"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "locked_jungle_door",
     "blockType": "door",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "locked:true,allow-unsupported",
     "label": "Locked Jungle Door",
-    "allowUnsupported": true,
-    "locked": true,
+    "type": {
+      "locked": true,
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/jungle/door_locked_top",
       "wood/jungle/door_locked_bottom"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "locked_oak_door",
     "blockType": "door",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "locked:true,allow-unsupported",
     "label": "Locked Oak Door",
-    "allowUnsupported": true,
-    "locked": true,
+    "type": {
+      "locked": true,
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/oak/door_locked_top",
       "wood/oak/door_locked_bottom"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "locked_spruce_door",
     "blockType": "door",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "locked:true,allow-unsupported",
     "label": "Locked Spruce Door",
-    "allowUnsupported": true,
-    "locked": true,
+    "type": {
+      "locked": true,
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/spruce/door_locked_top",
       "wood/spruce/door_locked_bottom"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "locked_white_wood_door",
     "blockType": "door",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "locked:true,allow-unsupported",
     "label": "Locked White Wood Door",
-    "allowUnsupported": true,
-    "locked": true,
+    "type": {
+      "locked": true,
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/white/door_locked_top",
       "wood/white/door_locked_bottom"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "northern_wood_door",
     "blockType": "door",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Northern Wood Door",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/northern/door_top",
       "wood/northern/door_bottom"
-    ],
-    "type": "allow-unsupported",
-    "strength": 2
+    ]
   },
   {
     "blockName": "oak_door",
     "blockType": "door",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Oak Door",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/oak/door_top",
       "wood/oak/door_bottom"
-    ],
-    "type": "allow-unsupported",
-    "strength": 2
+    ]
   },
   {
     "blockName": "red_keep_secret_door",
     "blockType": "door",
+    "strength": 7,
     "soundGroup": "stone",
     "creativeTab": "westeros_misc_tab",
-    "type": "locked:true,allow-unsupported",
     "label": "Red Keep Secret Door",
-    "allowUnsupported": true,
-    "locked": true,
+    "type": {
+      "locked": true,
+      "allowUnsupported": true
+    },
     "textures": [
       "ashlar_third/pale_red/all_noctm",
       "ashlar_third/pale_red/all_noctm"
-    ],
-    "strength": 7
+    ]
   },
   {
     "blockName": "spruce_door",
     "blockType": "door",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Spruce Door",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/spruce/door_top",
       "wood/spruce/door_bottom"
-    ],
-    "type": "allow-unsupported",
-    "strength": 2
+    ]
   },
   {
     "blockName": "white_wood_door",
     "blockType": "door",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "White Wood Door",
-    "allowUnsupported": true,
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/white/door_top",
       "wood/white/door_bottom"
-    ],
-    "type": "allow-unsupported",
-    "strength": 2
+    ]
   },
   {
     "blockName": "birch_door_2",
@@ -337,14 +353,14 @@
   {
     "blockName": "jungle_door_2",
     "blockType": "door",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Jungle Fancy Door",
-    "allowUnsupported": true,
     "textures": [
       "wood/jungle/door_alt_top",
       "wood/jungle/door_alt_bottom"
     ],
-    "strength": 2
+    "allowUnsupported": true
   }
 ]

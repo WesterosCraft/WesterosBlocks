@@ -2,7 +2,6 @@ package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
-import com.westerosblocks.data.TypeProperties;
 import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
@@ -154,10 +153,9 @@ public class LeavesBlockExporter extends BaseBlockExporter {
     }
 
     public static void registerCustomLeavesBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        TypeProperties type = definition.getType();
         boolean tinted = definition.isTinted() || definition.hasColorMult();
-        boolean overlay = definition.hasOverlay() || (type != null && Boolean.TRUE.equals(type.getOverlay()));
-        boolean betterFoliage = definition.hasBetterFoliage() || (type != null && Boolean.TRUE.equals(type.getBetterFoliage()));
+        boolean overlay = definition.hasOverlay();
+        boolean betterFoliage = definition.hasBetterFoliage();
         boolean rotateRandom = definition.hasRotateRandom();
 
         if (definition.hasRandomTextures()) {

@@ -2,10 +2,9 @@
   {
     "blockName": "brazier",
     "blockType": "beacon",
+    "hardness": 5,
+    "resistance": 0,
     "soundGroup": "metal",
-    "luminance": 10,
-    "renderLayer": "cutout",
-    "nonOpaque": true,
     "creativeTab": "westeros_lighting_tab",
     "label": "Lit Brazier",
     "textures": [
@@ -28,6 +27,9 @@
       "lighting/brazier/fire",
       "lighting/brazier/fire"
     ],
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "luminance": 10,
     "cuboids": [
       {
         "xMin": 0.0,
@@ -36,7 +38,14 @@
         "yMax": 1.0,
         "zMin": 0.0,
         "zMax": 1.0,
-        "sideTextures": [0, 1, 2, 3, 4, 5]
+        "sideTextures": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
       },
       {
         "xMin": 0.0,
@@ -45,7 +54,14 @@
         "yMax": 0.0,
         "zMin": 0.0,
         "zMax": 1.0,
-        "sideTextures": [0, 1, 2, 3, 4, 5]
+        "sideTextures": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
       },
       {
         "xMin": 0.0,
@@ -54,7 +70,14 @@
         "yMax": 1.0,
         "zMin": 0.0,
         "zMax": 0.0,
-        "sideTextures": [0, 1, 2, 3, 4, 5]
+        "sideTextures": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
       },
       {
         "xMin": 1.0,
@@ -63,7 +86,14 @@
         "yMax": 1.0,
         "zMin": 0.0,
         "zMax": 1.0,
-        "sideTextures": [0, 1, 2, 3, 4, 5]
+        "sideTextures": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
       },
       {
         "xMin": 0.0,
@@ -72,7 +102,14 @@
         "yMax": 1.0,
         "zMin": 1.0,
         "zMax": 1.0,
-        "sideTextures": [0, 1, 2, 3, 4, 5]
+        "sideTextures": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
       },
       {
         "xMin": 0.125,
@@ -81,7 +118,14 @@
         "yMax": 0.1875,
         "zMin": 0.125,
         "zMax": 0.875,
-        "sideTextures": [6, 7, 8, 9, 10, 11]
+        "sideTextures": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
       },
       {
         "xMin": 0.125,
@@ -90,7 +134,14 @@
         "yMax": 0.00625,
         "zMin": 0.125,
         "zMax": 0.875,
-        "sideTextures": [6, 7, 8, 9, 10, 11]
+        "sideTextures": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
       },
       {
         "xMin": 0.125,
@@ -99,7 +150,14 @@
         "yMax": 0.1875,
         "zMin": 0.125,
         "zMax": 0.125,
-        "sideTextures": [6, 7, 8, 9, 10, 11]
+        "sideTextures": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
       },
       {
         "xMin": 0.875,
@@ -108,7 +166,14 @@
         "yMax": 0.1875,
         "zMin": 0.125,
         "zMax": 0.875,
-        "sideTextures": [6, 7, 8, 9, 10, 11]
+        "sideTextures": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
       },
       {
         "xMin": 0.125,
@@ -117,7 +182,14 @@
         "yMax": 0.1875,
         "zMin": 0.1875,
         "zMax": 0.875,
-        "sideTextures": [6, 7, 8, 9, 10, 11]
+        "sideTextures": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
       },
       {
         "xMin": 0.125,
@@ -126,7 +198,14 @@
         "yMax": 0.1875,
         "zMin": 0.875,
         "zMax": 0.875,
-        "sideTextures": [6, 7, 8, 9, 10, 11]
+        "sideTextures": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
       },
       {
         "xMin": 0.1875,
@@ -135,7 +214,14 @@
         "yMax": 0.875,
         "zMin": 0.1875,
         "zMax": 0.8125,
-        "sideTextures": [12, 13, 14, 15, 16, 17]
+        "sideTextures": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
       },
       {
         "xMin": 0.1875,
@@ -144,7 +230,14 @@
         "yMax": 0.1875,
         "zMin": 0.1875,
         "zMax": 0.8125,
-        "sideTextures": [12, 13, 14, 15, 16, 17]
+        "sideTextures": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
       },
       {
         "xMin": 0.1875,
@@ -153,7 +246,14 @@
         "yMax": 0.875,
         "zMin": 0.1875,
         "zMax": 0.1875,
-        "sideTextures": [12, 13, 14, 15, 16, 17]
+        "sideTextures": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
       },
       {
         "xMin": 0.8125,
@@ -162,7 +262,14 @@
         "yMax": 0.875,
         "zMin": 0.1875,
         "zMax": 0.8125,
-        "sideTextures": [12, 13, 14, 15, 16, 17]
+        "sideTextures": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
       },
       {
         "xMin": 0.1875,
@@ -171,7 +278,14 @@
         "yMax": 0.875,
         "zMin": 0.1875,
         "zMax": 0.8125,
-        "sideTextures": [12, 13, 14, 15, 16, 17]
+        "sideTextures": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
       },
       {
         "xMin": 0.1875,
@@ -180,19 +294,23 @@
         "yMax": 0.875,
         "zMin": 0.8125,
         "zMax": 0.8125,
-        "sideTextures": [12, 13, 14, 15, 16, 17]
+        "sideTextures": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
       }
-    ],
-    "hardness": 5,
-    "resistance": 0
+    ]
   },
   {
     "blockName": "brazier2",
     "blockType": "beacon",
+    "hardness": 5,
+    "resistance": 0,
     "soundGroup": "metal",
-    "luminance": 0,
-    "renderLayer": "cutout",
-    "nonOpaque": true,
     "creativeTab": "westeros_lighting_tab",
     "label": "Unlit Brazier",
     "textures": [
@@ -215,6 +333,9 @@
       "lighting/brazier/transparent",
       "lighting/brazier/transparent"
     ],
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "luminance": 0,
     "cuboids": [
       {
         "xMin": 0.0,
@@ -223,7 +344,14 @@
         "yMax": 1.0,
         "zMin": 0.0,
         "zMax": 1.0,
-        "sideTextures": [0, 1, 2, 3, 4, 5]
+        "sideTextures": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
       },
       {
         "xMin": 0.0,
@@ -232,7 +360,14 @@
         "yMax": 0.0,
         "zMin": 0.0,
         "zMax": 1.0,
-        "sideTextures": [0, 1, 2, 3, 4, 5]
+        "sideTextures": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
       },
       {
         "xMin": 0.0,
@@ -241,7 +376,14 @@
         "yMax": 1.0,
         "zMin": 0.0,
         "zMax": 0.0,
-        "sideTextures": [0, 1, 2, 3, 4, 5]
+        "sideTextures": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
       },
       {
         "xMin": 1.0,
@@ -250,7 +392,14 @@
         "yMax": 1.0,
         "zMin": 0.0,
         "zMax": 1.0,
-        "sideTextures": [0, 1, 2, 3, 4, 5]
+        "sideTextures": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
       },
       {
         "xMin": 0.0,
@@ -259,7 +408,14 @@
         "yMax": 1.0,
         "zMin": 1.0,
         "zMax": 1.0,
-        "sideTextures": [0, 1, 2, 3, 4, 5]
+        "sideTextures": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
       },
       {
         "xMin": 0.125,
@@ -268,7 +424,14 @@
         "yMax": 0.1875,
         "zMin": 0.125,
         "zMax": 0.875,
-        "sideTextures": [6, 7, 8, 9, 10, 11]
+        "sideTextures": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
       },
       {
         "xMin": 0.125,
@@ -277,7 +440,14 @@
         "yMax": 0.00625,
         "zMin": 0.125,
         "zMax": 0.875,
-        "sideTextures": [6, 7, 8, 9, 10, 11]
+        "sideTextures": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
       },
       {
         "xMin": 0.125,
@@ -286,7 +456,14 @@
         "yMax": 0.1875,
         "zMin": 0.125,
         "zMax": 0.125,
-        "sideTextures": [6, 7, 8, 9, 10, 11]
+        "sideTextures": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
       },
       {
         "xMin": 0.875,
@@ -295,7 +472,14 @@
         "yMax": 0.1875,
         "zMin": 0.125,
         "zMax": 0.875,
-        "sideTextures": [6, 7, 8, 9, 10, 11]
+        "sideTextures": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
       },
       {
         "xMin": 0.125,
@@ -304,7 +488,14 @@
         "yMax": 0.1875,
         "zMin": 0.1875,
         "zMax": 0.875,
-        "sideTextures": [6, 7, 8, 9, 10, 11]
+        "sideTextures": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
       },
       {
         "xMin": 0.125,
@@ -313,7 +504,14 @@
         "yMax": 0.1875,
         "zMin": 0.875,
         "zMax": 0.875,
-        "sideTextures": [6, 7, 8, 9, 10, 11]
+        "sideTextures": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
       },
       {
         "xMin": 0.1875,
@@ -322,7 +520,14 @@
         "yMax": 0.875,
         "zMin": 0.1875,
         "zMax": 0.8125,
-        "sideTextures": [12, 13, 14, 15, 16, 17]
+        "sideTextures": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
       },
       {
         "xMin": 0.1875,
@@ -331,7 +536,14 @@
         "yMax": 0.1875,
         "zMin": 0.1875,
         "zMax": 0.8125,
-        "sideTextures": [12, 13, 14, 15, 16, 17]
+        "sideTextures": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
       },
       {
         "xMin": 0.1875,
@@ -340,7 +552,14 @@
         "yMax": 0.875,
         "zMin": 0.1875,
         "zMax": 0.1875,
-        "sideTextures": [12, 13, 14, 15, 16, 17]
+        "sideTextures": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
       },
       {
         "xMin": 0.8125,
@@ -349,7 +568,14 @@
         "yMax": 0.875,
         "zMin": 0.1875,
         "zMax": 0.8125,
-        "sideTextures": [12, 13, 14, 15, 16, 17]
+        "sideTextures": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
       },
       {
         "xMin": 0.1875,
@@ -358,7 +584,14 @@
         "yMax": 0.875,
         "zMin": 0.1875,
         "zMax": 0.8125,
-        "sideTextures": [12, 13, 14, 15, 16, 17]
+        "sideTextures": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
       },
       {
         "xMin": 0.1875,
@@ -367,10 +600,15 @@
         "yMax": 0.875,
         "zMin": 0.8125,
         "zMax": 0.8125,
-        "sideTextures": [12, 13, 14, 15, 16, 17]
+        "sideTextures": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
       }
-    ],
-    "hardness": 5,
-    "resistance": 0
+    ]
   }
 ]

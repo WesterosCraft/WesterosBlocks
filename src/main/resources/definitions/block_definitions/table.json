@@ -1,62 +1,62 @@
 [
   {
-    "blockType": "table",
     "blockName": "oak_table",
-    "label": "Oak Table",
+    "blockType": "table",
     "soundGroup": "wood",
-    "woodType": "oak",
     "creativeTab": "westeros_furniture_tab",
-    "renderLayer": "cutout",
+    "label": "Oak Table",
     "textures": [
-       "tables/wood_table_oak"
-    ]
+      "tables/wood_table_oak"
+    ],
+    "renderLayer": "cutout",
+    "woodType": "oak"
   },
   {
-    "blockType": "table",
     "blockName": "birch_table",
-    "label": "Birch Table",
+    "blockType": "table",
     "soundGroup": "wood",
-    "woodType": "birch",
     "creativeTab": "westeros_furniture_tab",
-    "renderLayer": "cutout",
+    "label": "Birch Table",
     "textures": [
       "tables/wood_table_birch"
-    ]
+    ],
+    "renderLayer": "cutout",
+    "woodType": "birch"
   },
   {
-    "blockType": "table",
     "blockName": "jungle_table",
-    "label": "Jungle Table",
+    "blockType": "table",
     "soundGroup": "wood",
-    "woodType": "birch",
     "creativeTab": "westeros_furniture_tab",
-    "renderLayer": "cutout",
+    "label": "Jungle Table",
     "textures": [
       "tables/wood_table_jungle"
-    ]
+    ],
+    "renderLayer": "cutout",
+    "woodType": "birch"
   },
   {
-    "blockType": "table",
     "blockName": "northern_table",
-    "label": "Northern Table",
+    "blockType": "table",
     "soundGroup": "wood",
-    "woodType": "birch",
     "creativeTab": "westeros_furniture_tab",
-    "renderLayer": "cutout",
+    "label": "Northern Table",
     "textures": [
       "tables/wood_table_northern"
-    ]
+    ],
+    "renderLayer": "cutout",
+    "woodType": "birch"
   },
   {
-    "blockType": "table",
     "blockName": "spruce_table",
-    "label": "Spruce Table",
+    "blockType": "table",
     "soundGroup": "wood",
-    "woodType": "birch",
     "creativeTab": "westeros_furniture_tab",
-    "renderLayer": "cutout",
+    "label": "Spruce Table",
     "textures": [
       "tables/wood_table_spruce"
-    ]
+    ],
+    "renderLayer": "cutout",
+    "woodType": "birch"
   }
 ]

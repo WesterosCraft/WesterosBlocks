@@ -2,202 +2,235 @@
   {
     "blockName": "birch_bark_fence",
     "blockType": "fence",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
-    "type": "unconnect:false",
     "label": "Birch Bark Fence",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "bark/birch/side"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "birch_fence_with_grapes",
     "blockType": "fence",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "unconnect:false",
     "label": "Birch Fence with Grapes",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "wood/birch/grapevines"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "birch_fence_with_vines",
     "blockType": "fence",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "unconnect:false",
     "label": "Birch Fence with Vines",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "wood/birch/vines"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "jungle_bark_fence",
     "blockType": "fence",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
-    "type": "unconnect:false",
     "label": "Jungle Bark Fence",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "bark/jungle/side"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "jungle_fence_with_grapes",
     "blockType": "fence",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "unconnect:false",
     "label": "Jungle Fence with Grapes",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "wood/jungle/grapevines"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "jungle_fence_with_vines",
     "blockType": "fence",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "unconnect:false",
     "label": "Jungle Fence with Vines",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "wood/jungle/vines"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "marble_column_fence",
     "blockType": "fence",
+    "strength": 5,
     "soundGroup": "stone",
     "creativeTab": "westeros_marble_plaster_tab",
-    "type": "unconnect:false",
     "label": "Marble Column Fence",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "marble/quartz/column_side"
-    ],
-    "strength": 5
+    ]
   },
   {
     "blockName": "oak_bark_fence",
     "blockType": "fence",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
-    "type": "unconnect:false",
     "label": "Oak Bark Fence",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "bark/oak/side"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "oak_fence_with_grapes",
     "blockType": "fence",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "unconnect:false",
     "label": "Oak Fence with Grapes",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "wood/oak/grapevines"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "oak_fence_with_vines",
     "blockType": "fence",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "unconnect:false",
     "label": "Oak Fence with Vines",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "wood/oak/vines"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "palm_fence",
     "blockType": "fence",
+    "strength": 5,
     "soundGroup": "stone",
     "creativeTab": "westeros_logs_tab",
-    "type": "unconnect:false",
     "label": "Palm Fence",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "bark/palm/side"
-    ],
-    "strength": 5
+    ]
   },
   {
     "blockName": "reinforced_oak_fence",
     "blockType": "fence",
+    "strength": 5,
     "soundGroup": "stone",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "unconnect:false",
     "label": "Reinforced Oak Fence",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "wood/oak/reinforced"
-    ],
-    "strength": 5
+    ]
   },
   {
     "blockName": "sept_crystal_small",
     "blockType": "fence",
+    "strength": 5,
     "soundGroup": "stone",
-    "nonOpaque": true,
-    "alphaRender": true,
     "creativeTab": "westeros_decor_tab",
-    "type": "unconnect:false",
     "label": "Sept Crystal Small",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "crystal/fence_top",
       "crystal/fence_top",
       "crystal/fence"
     ],
-    "strength": 5
+    "nonOpaque": true,
+    "alphaRender": true
   },
   {
     "blockName": "spruce_bark_fence",
     "blockType": "fence",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
-    "type": "unconnect:false",
     "label": "Spruce Bark Fence",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "bark/spruce/side"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "spruce_fence_with_grapes",
     "blockType": "fence",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "unconnect:false",
     "label": "Spruce Fence with Grapes",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "wood/spruce/grapevines"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "spruce_fence_with_vines",
     "blockType": "fence",
+    "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "type": "unconnect:false",
     "label": "Spruce Fence with Vines",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "wood/spruce/vines"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "stacked_bones_fence",
     "blockType": "fence",
+    "strength": 5,
     "soundGroup": "stone",
     "harvestLevel": [
       {
@@ -206,11 +239,12 @@
       }
     ],
     "creativeTab": "westeros_misc_tab",
-    "type": "unconnect:false",
     "label": "Stacked Bones Fence",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "stacked_bones/bone_stacked_side"
-    ],
-    "strength": 5
+    ]
   }
 ]

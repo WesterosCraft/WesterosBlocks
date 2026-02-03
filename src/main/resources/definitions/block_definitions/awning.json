@@ -2,162 +2,210 @@
   {
     "blockName": "awning_black",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
     "creativeTab": "westeros_decor_tab",
     "label": "Black Awning",
-    "textures": ["wool/black/all", "awning/black_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/black/all",
+      "awning/black_awning_side"
+    ],
+    "nonOpaque": true
   },
   {
     "blockName": "awning_blue",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
     "creativeTab": "westeros_decor_tab",
     "label": "Blue Awning",
-    "textures": ["wool/blue/all", "awning/blue_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/blue/all",
+      "awning/blue_awning_side"
+    ],
+    "nonOpaque": true
   },
   {
     "blockName": "awning_brown",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
     "creativeTab": "westeros_decor_tab",
     "label": "Brown Awning",
-    "textures": ["wool/brown/all", "awning/brown_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/brown/all",
+      "awning/brown_awning_side"
+    ],
+    "nonOpaque": true
   },
   {
     "blockName": "awning_cyan",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
     "creativeTab": "westeros_decor_tab",
     "label": "Cyan Awning",
-    "textures": ["wool/cyan/all", "awning/cyan_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/cyan/all",
+      "awning/cyan_awning_side"
+    ],
+    "nonOpaque": true
   },
   {
     "blockName": "awning_dirty_white",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
     "creativeTab": "westeros_decor_tab",
     "label": "Dirty White Awning",
-    "textures": ["wool/dirty_white/all", "awning/dirty_white_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/dirty_white/all",
+      "awning/dirty_white_awning_side"
+    ],
+    "nonOpaque": true
   },
   {
     "blockName": "awning_green",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
     "creativeTab": "westeros_decor_tab",
     "label": "Green Awning",
-    "textures": ["wool/green/all", "awning/green_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/green/all",
+      "awning/green_awning_side"
+    ],
+    "nonOpaque": true
   },
   {
     "blockName": "awning_grey",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
     "creativeTab": "westeros_decor_tab",
     "label": "Grey Awning",
-    "textures": ["wool/grey/all", "awning/grey_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/grey/all",
+      "awning/grey_awning_side"
+    ],
+    "nonOpaque": true
   },
   {
     "blockName": "awning_light_blue",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
     "creativeTab": "westeros_decor_tab",
     "label": "Light Blue Awning",
-    "textures": ["wool/light_blue/all", "awning/light_blue_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/light_blue/all",
+      "awning/light_blue_awning_side"
+    ],
+    "nonOpaque": true
   },
   {
     "blockName": "awning_light_brown",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
     "creativeTab": "westeros_decor_tab",
     "label": "Light Brown Awning",
-    "textures": ["wool/light_brown/all", "awning/light_brown_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/light_brown/all",
+      "awning/light_brown_awning_side"
+    ],
+    "nonOpaque": true
   },
   {
     "blockName": "awning_light_grey",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
     "creativeTab": "westeros_decor_tab",
     "label": "Light Grey Awning",
-    "textures": ["wool/light_grey/all", "awning/light_grey_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/light_grey/all",
+      "awning/light_grey_awning_side"
+    ],
+    "nonOpaque": true
   },
   {
     "blockName": "awning_orange",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
     "creativeTab": "westeros_decor_tab",
     "label": "Orange Awning",
-    "textures": ["wool/orange/all", "awning/orange_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/orange/all",
+      "awning/orange_awning_side"
+    ],
+    "nonOpaque": true
   },
   {
     "blockName": "awning_pink",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
     "creativeTab": "westeros_decor_tab",
     "label": "Pink Awning",
-    "textures": ["wool/pink/all", "awning/pink_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/pink/all",
+      "awning/pink_awning_side"
+    ],
+    "nonOpaque": true
   },
   {
     "blockName": "awning_purple",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
     "creativeTab": "westeros_decor_tab",
     "label": "Purple Awning",
-    "textures": ["wool/purple/all", "awning/purple_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/purple/all",
+      "awning/purple_awning_side"
+    ],
+    "nonOpaque": true
   },
   {
     "blockName": "awning_red",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
-    "renderLayer": "cutout",
     "creativeTab": "westeros_decor_tab",
     "label": "Red Awning",
-    "textures": ["wool/red/all", "awning/red_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/red/all",
+      "awning/red_awning_side"
+    ],
+    "renderLayer": "cutout",
+    "nonOpaque": true
   },
   {
     "blockName": "awning_white",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
     "creativeTab": "westeros_decor_tab",
     "label": "White Awning",
-    "textures": ["wool/white/all", "awning/white_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/white/all",
+      "awning/white_awning_side"
+    ],
+    "nonOpaque": true
   },
   {
     "blockName": "awning_yellow",
     "blockType": "awning",
+    "strength": 0.5,
     "soundGroup": "wool",
     "creativeTab": "westeros_decor_tab",
     "label": "Yellow Awning",
-    "textures": ["wool/yellow/all", "awning/yellow_awning_side"],
-    "nonOpaque": true,
-    "strength": 0.5
+    "textures": [
+      "wool/yellow/all",
+      "awning/yellow_awning_side"
+    ],
+    "nonOpaque": true
   }
 ]

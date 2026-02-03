@@ -38,6 +38,7 @@
   {
     "blockName": "firewood",
     "blockType": "log",
+    "strength": 2,
     "soundGroup": "wood",
     "harvestLevel": [
       {
@@ -51,8 +52,7 @@
       "firewood/top",
       "firewood/top",
       "firewood/side"
-    ],
-    "strength": 2
+    ]
   },
   {
     "blockName": "jungle_log_chain",

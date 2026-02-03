@@ -2,6 +2,7 @@
   {
     "blockName": "cabbage",
     "blockType": "cuboid-16way",
+    "strength": 3,
     "soundGroup": "plant",
     "harvestLevel": [
       {
@@ -9,12 +10,14 @@
         "level": 1
       }
     ],
-    "toggleOnUse": true,
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Cabbage",
-    "isCustomModel": true,
+    "type": {
+      "toggleOnUse": true
+    },
     "renderLayer": "cutout",
     "nonOpaque": true,
+    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0.25,
       "xMax": 0.75,
@@ -22,12 +25,12 @@
       "yMax": 0.5,
       "zMin": 0.25,
       "zMax": 0.75
-    },
-    "strength": 3
+    }
   },
   {
     "blockName": "purple_cabbage",
     "blockType": "cuboid-16way",
+    "strength": 3,
     "soundGroup": "plant",
     "harvestLevel": [
       {
@@ -35,12 +38,14 @@
         "level": 1
       }
     ],
-    "toggleOnUse": true,
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Purple Cabbage",
-    "isCustomModel": true,
-    "nonOpaque": true,
+    "type": {
+      "toggleOnUse": true
+    },
     "renderLayer": "cutout",
+    "nonOpaque": true,
+    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0.25,
       "xMax": 0.75,
@@ -48,12 +53,12 @@
       "yMax": 0.5,
       "zMin": 0.25,
       "zMax": 0.75
-    },
-    "strength": 3
+    }
   },
   {
     "blockName": "generic_head",
     "blockType": "cuboid-16way",
+    "strength": 3,
     "soundGroup": "stone",
     "harvestLevel": [
       {
@@ -63,7 +68,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Generic Head",
-    "toggleOnUse": true,
+    "type": {
+      "toggleOnUse": true
+    },
     "textures": [
       "generic_head/down",
       "generic_head/up",
@@ -79,12 +86,12 @@
       "yMax": 0.5,
       "zMin": 0.25,
       "zMax": 0.75
-    },
-    "strength": 3
+    }
   },
   {
     "blockName": "helmet",
     "blockType": "cuboid-16way",
+    "strength": 3,
     "soundGroup": "metal",
     "harvestLevel": [
       {
@@ -92,10 +99,11 @@
         "level": 1
       }
     ],
-    "renderLayer": "cutout",
     "creativeTab": "westeros_decor_tab",
     "label": "Helmet",
-    "toggleOnUse": true,
+    "type": {
+      "toggleOnUse": true
+    },
     "textures": [
       "helmet/down",
       "helmet/up",
@@ -104,6 +112,7 @@
       "helmet/south",
       "helmet/north"
     ],
+    "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.25,
       "xMax": 0.75,
@@ -111,12 +120,12 @@
       "yMax": 0.5,
       "zMin": 0.25,
       "zMax": 0.75
-    },
-    "strength": 3
+    }
   },
   {
     "blockName": "skull",
     "blockType": "cuboid-16way",
+    "strength": 3,
     "soundGroup": "stone",
     "harvestLevel": [
       {
@@ -126,7 +135,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Skull",
-    "toggleOnUse": true,
+    "type": {
+      "toggleOnUse": true
+    },
     "textures": [
       "skull/down",
       "skull/up",
@@ -142,12 +153,12 @@
       "yMax": 0.5,
       "zMin": 0.25,
       "zMax": 0.75
-    },
-    "strength": 3
+    }
   },
   {
     "blockName": "wight_head",
     "blockType": "cuboid-16way",
+    "strength": 3,
     "soundGroup": "stone",
     "harvestLevel": [
       {
@@ -157,7 +168,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Wight Head",
-    "toggleOnUse": true,
+    "type": {
+      "toggleOnUse": true
+    },
     "textures": [
       "wight_head/down",
       "wight_head/up",
@@ -173,7 +186,6 @@
       "yMax": 0.5,
       "zMin": 0.25,
       "zMax": 0.75
-    },
-    "strength": 3
+    }
   }
 ]

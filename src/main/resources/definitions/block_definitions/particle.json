@@ -2,33 +2,32 @@
   {
     "blockName": "foam_particle_emitter",
     "blockType": "particle",
-    "particle": "foam",
-    "label": "Foam Particle Emitter",
+    "hardness": -1.0,
     "creativeTab": "westeros_decor_tab",
+    "label": "Foam Particle Emitter",
     "renderLayer": "cutout",
+    "boundingBox": {
+      "xMin": 0.25,
+      "xMax": 0.75,
+      "yMin": 0,
+      "yMax": 0.5,
+      "zMin": 0.25,
+      "zMax": 0.75
+    },
     "customItemTexture": true,
     "tooltips": [
       "A block that emits a foam.",
       "Typically used to enhance water sources such as waterfalls and rapids."
     ],
-    "boundingBox": {
-      "xMin": 0.25,
-      "xMax": 0.75,
-      "yMin": 0,
-      "yMax": 0.5,
-      "zMin": 0.25,
-      "zMax": 0.75
-    },
-    "hardness": -1.0
+    "particle": "foam"
   },
   {
     "blockName": "cosy_smoke_particle_emitter",
     "blockType": "particle",
-    "particle": "cosy_smoke",
-    "label": "Cosy Smoke Particle Emitter",
+    "hardness": -1.0,
     "creativeTab": "westeros_decor_tab",
+    "label": "Cosy Smoke Particle Emitter",
     "renderLayer": "cutout",
-    "customItemTexture": true,
     "boundingBox": {
       "xMin": 0.25,
       "xMax": 0.75,
@@ -37,16 +36,16 @@
       "zMin": 0.25,
       "zMax": 0.75
     },
-    "hardness": -1.0
+    "customItemTexture": true,
+    "particle": "cosy_smoke"
   },
   {
     "blockName": "signal_smoke_particle_emitter",
     "blockType": "particle",
-    "particle": "signal_smoke",
-    "label": "Signal Smoke Particle Emitter",
+    "hardness": -1.0,
     "creativeTab": "westeros_decor_tab",
+    "label": "Signal Smoke Particle Emitter",
     "renderLayer": "cutout",
-    "customItemTexture": true,
     "boundingBox": {
       "xMin": 0.25,
       "xMax": 0.75,
@@ -55,16 +54,16 @@
       "zMin": 0.25,
       "zMax": 0.75
     },
-    "hardness": -1.0
+    "customItemTexture": true,
+    "particle": "signal_smoke"
   },
   {
     "blockName": "bat_particle_emitter",
     "blockType": "particle",
-    "particle": "bat",
-    "label": "(Experimental) Bat Particle Emitter",
+    "hardness": -1.0,
     "creativeTab": "westeros_decor_tab",
+    "label": "(Experimental) Bat Particle Emitter",
     "renderLayer": "cutout",
-    "customItemTexture": true,
     "boundingBox": {
       "xMin": 0.25,
       "xMax": 0.75,
@@ -73,6 +72,7 @@
       "zMin": 0.25,
       "zMax": 0.75
     },
-    "hardness": -1.0
+    "customItemTexture": true,
+    "particle": "bat"
   }
 ]
