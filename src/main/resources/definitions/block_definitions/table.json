@@ -5,9 +5,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Oak Table",
-    "textures": [
-      "tables/wood_table_oak"
-    ],
+    "textures": ["tables/wood_table_oak"],
     "renderLayer": "cutout",
     "woodType": "oak"
   },
@@ -17,9 +15,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Birch Table",
-    "textures": [
-      "tables/wood_table_birch"
-    ],
+    "textures": ["tables/wood_table_birch"],
     "renderLayer": "cutout",
     "woodType": "birch"
   },
@@ -29,9 +25,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Jungle Table",
-    "textures": [
-      "tables/wood_table_jungle"
-    ],
+    "textures": ["tables/wood_table_jungle"],
     "renderLayer": "cutout",
     "woodType": "birch"
   },
@@ -41,9 +35,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Northern Table",
-    "textures": [
-      "tables/wood_table_northern"
-    ],
+    "textures": ["tables/wood_table_northern"],
     "renderLayer": "cutout",
     "woodType": "birch"
   },
@@ -53,9 +45,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Spruce Table",
-    "textures": [
-      "tables/wood_table_spruce"
-    ],
+    "textures": ["tables/wood_table_spruce"],
     "renderLayer": "cutout",
     "woodType": "birch"
   }

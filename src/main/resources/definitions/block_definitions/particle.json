@@ -16,8 +16,12 @@
     },
     "customItemTexture": true,
     "tooltips": [
-      "A block that emits a foam.",
-      "Typically used to enhance water sources such as waterfalls and rapids."
+      {
+        "text": "A block that emits a foam."
+      },
+      {
+        "text": "Typically used to enhance water sources such as waterfalls and rapids."
+      }
     ],
     "particle": "foam"
   },

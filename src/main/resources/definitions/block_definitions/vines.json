@@ -10,10 +10,7 @@
       "hasClimb": true,
       "hasDown": true
     },
-    "textures": [
-      "dappled_moss/dappled",
-      "dappled_moss/dappled"
-    ],
+    "textures": ["dappled_moss/dappled", "dappled_moss/dappled"],
     "renderLayer": "cutout",
     "nonOpaque": true,
     "colorMult": "textures/colormap/moss_dappled"
@@ -28,10 +25,7 @@
       "allowUnsupported": true,
       "hasClimb": false
     },
-    "textures": [
-      "alyssas_tears_mist/mist4",
-      "alyssas_tears_mist/mist4"
-    ],
+    "textures": ["alyssas_tears_mist/mist4", "alyssas_tears_mist/mist4"],
     "renderLayer": "translucent",
     "nonOpaque": true,
     "alphaRender": true
@@ -46,10 +40,7 @@
       "allowUnsupported": true,
       "hasClimb": false
     },
-    "textures": [
-      "alyssas_tears_mist/mist1",
-      "alyssas_tears_mist/mist1"
-    ],
+    "textures": ["alyssas_tears_mist/mist1", "alyssas_tears_mist/mist1"],
     "renderLayer": "translucent",
     "nonOpaque": true,
     "alphaRender": true
@@ -64,10 +55,7 @@
       "allowUnsupported": true,
       "hasClimb": false
     },
-    "textures": [
-      "alyssas_tears_mist/mist3",
-      "alyssas_tears_mist/mist3"
-    ],
+    "textures": ["alyssas_tears_mist/mist3", "alyssas_tears_mist/mist3"],
     "renderLayer": "translucent",
     "nonOpaque": true,
     "alphaRender": true
@@ -82,10 +70,7 @@
       "allowUnsupported": true,
       "hasClimb": false
     },
-    "textures": [
-      "alyssas_tears_mist/mist2",
-      "alyssas_tears_mist/mist2"
-    ],
+    "textures": ["alyssas_tears_mist/mist2", "alyssas_tears_mist/mist2"],
     "renderLayer": "translucent",
     "nonOpaque": true,
     "alphaRender": true
@@ -103,34 +88,19 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "jasmine_vines/side1",
-          "jasmine_vines/side1"
-        ]
+        "textures": ["jasmine_vines/side1", "jasmine_vines/side1"]
       },
       {
-        "textures": [
-          "jasmine_vines/side2",
-          "jasmine_vines/side2"
-        ]
+        "textures": ["jasmine_vines/side2", "jasmine_vines/side2"]
       },
       {
-        "textures": [
-          "jasmine_vines/side3",
-          "jasmine_vines/side3"
-        ]
+        "textures": ["jasmine_vines/side3", "jasmine_vines/side3"]
       },
       {
-        "textures": [
-          "jasmine_vines/side4",
-          "jasmine_vines/side4"
-        ]
+        "textures": ["jasmine_vines/side4", "jasmine_vines/side4"]
       },
       {
-        "textures": [
-          "jasmine_vines/side5",
-          "jasmine_vines/side5"
-        ]
+        "textures": ["jasmine_vines/side5", "jasmine_vines/side5"]
       }
     ],
     "renderLayer": "cutout",
@@ -149,34 +119,19 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "vines/side1",
-          "vines/side1"
-        ]
+        "textures": ["vines/side1", "vines/side1"]
       },
       {
-        "textures": [
-          "vines/side2",
-          "vines/side2"
-        ]
+        "textures": ["vines/side2", "vines/side2"]
       },
       {
-        "textures": [
-          "vines/side3",
-          "vines/side3"
-        ]
+        "textures": ["vines/side3", "vines/side3"]
       },
       {
-        "textures": [
-          "vines/side4",
-          "vines/side4"
-        ]
+        "textures": ["vines/side4", "vines/side4"]
       },
       {
-        "textures": [
-          "vines/side5",
-          "vines/side5"
-        ]
+        "textures": ["vines/side5", "vines/side5"]
       }
     ],
     "renderLayer": "cutout",

@@ -7,9 +7,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "6-Sided Birch",
-    "textures": [
-      "bark/birch/side"
-    ]
+    "textures": ["bark/birch/side"]
   },
   {
     "blockName": "6sided_jungle",
@@ -18,9 +16,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "6-Sided Jungle",
-    "textures": [
-      "bark/jungle/side"
-    ]
+    "textures": ["bark/jungle/side"]
   },
   {
     "blockName": "6sided_oak",
@@ -29,9 +25,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "6-Sided Oak",
-    "textures": [
-      "bark/oak/side"
-    ]
+    "textures": ["bark/oak/side"]
   },
   {
     "blockName": "6sided_spruce",
@@ -40,9 +34,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "6-Sided Spruce",
-    "textures": [
-      "bark/spruce/side"
-    ]
+    "textures": ["bark/spruce/side"]
   },
   {
     "blockName": "6sided_stone_slab",
@@ -51,9 +43,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_half_ashlar_tab",
     "label": "6-Sided Stone Slab",
-    "textures": [
-      "ashlar_half/white/tile"
-    ]
+    "textures": ["ashlar_half/white/tile"]
   },
   {
     "blockName": "apple_basket",
@@ -112,9 +102,7 @@
     ],
     "creativeTab": "westeros_utility_tab",
     "label": "'Approval' Utility Block",
-    "textures": [
-      "utility_block/approved"
-    ],
+    "textures": ["utility_block/approved"],
     "luminance": 0
   },
   {
@@ -137,9 +125,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Arbor",
-    "textures": [
-      "ashlar_engraved/arbor/all"
-    ]
+    "textures": ["ashlar_engraved/arbor/all"]
   },
   {
     "blockName": "bench_butcher_knives",
@@ -270,9 +256,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Black",
-    "textures": [
-      "ashlar_engraved/black/all"
-    ]
+    "textures": ["ashlar_engraved/black/all"]
   },
   {
     "blockName": "bluegreen_carved_sandstone",
@@ -281,9 +265,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Blue/Green Carved Sandstone",
-    "textures": [
-      "bluegreen_carved_sandstone/side"
-    ]
+    "textures": ["bluegreen_carved_sandstone/side"]
   },
   {
     "blockName": "bone_dirt",
@@ -292,9 +274,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grass_dirt_tab",
     "label": "Bone Dirt",
-    "textures": [
-      "dirt/bone"
-    ]
+    "textures": ["dirt/bone"]
   },
   {
     "blockName": "bookshelf_abandoned",
@@ -423,9 +403,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Brown Grey",
-    "textures": [
-      "ashlar_engraved/brown_grey/all"
-    ]
+    "textures": ["ashlar_engraved/brown_grey/all"]
   },
   {
     "blockName": "cabinet_drawer",
@@ -458,11 +436,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_decor_tab",
     "label": "Cage",
-    "textures": [
-      "cage/bottom",
-      "cage/top",
-      "cage/side"
-    ],
+    "textures": ["cage/bottom", "cage/top", "cage/side"],
     "renderLayer": "cutout",
     "nonOpaque": true,
     "lightOpacity": 0,
@@ -554,9 +528,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Pale Dark Red",
-    "textures": [
-      "ashlar_engraved/pale_dark_red/all"
-    ]
+    "textures": ["ashlar_engraved/pale_dark_red/all"]
   },
   {
     "blockName": "coarse_red_carved_sandstone",
@@ -565,9 +537,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Pale Red",
-    "textures": [
-      "ashlar_engraved/pale_red/all"
-    ]
+    "textures": ["ashlar_engraved/pale_red/all"]
   },
   {
     "blockName": "cobble_keystone",
@@ -592,9 +562,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Coloured Sept Window",
-    "textures": [
-      "glass/sept/all"
-    ],
+    "textures": ["glass/sept/all"],
     "renderLayer": "translucent",
     "nonOpaque": true,
     "alphaRender": true,
@@ -710,9 +678,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Dark Grey",
-    "textures": [
-      "ashlar_engraved/dark_grey/all"
-    ]
+    "textures": ["ashlar_engraved/dark_grey/all"]
   },
   {
     "blockName": "date_basket",
@@ -734,11 +700,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_food_blocks_tab",
     "label": "Dates",
-    "textures": [
-      "dates/bottom",
-      "dates/top",
-      "dates/side"
-    ]
+    "textures": ["dates/bottom", "dates/top", "dates/side"]
   },
   {
     "blockName": "desert_sandstone_engraved",
@@ -747,9 +709,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Sandstone",
-    "textures": [
-      "ashlar_engraved/sandstone/all"
-    ]
+    "textures": ["ashlar_engraved/sandstone/all"]
   },
   {
     "blockName": "domestic_utility_block",
@@ -764,9 +724,7 @@
     ],
     "creativeTab": "westeros_utility_tab",
     "label": "'Domestic' Utility Block",
-    "textures": [
-      "utility_block/domestic"
-    ],
+    "textures": ["utility_block/domestic"],
     "luminance": 0
   },
   {
@@ -782,9 +740,7 @@
     ],
     "creativeTab": "westeros_utility_tab",
     "label": "'Done' Utility Block",
-    "textures": [
-      "utility_block/done"
-    ],
+    "textures": ["utility_block/done"],
     "luminance": 0
   },
   {
@@ -796,19 +752,13 @@
     "label": "Dragon Carving",
     "randomTextures": [
       {
-        "textures": [
-          "dragon_carving/side1"
-        ]
+        "textures": ["dragon_carving/side1"]
       },
       {
-        "textures": [
-          "dragon_carving/side2"
-        ]
+        "textures": ["dragon_carving/side2"]
       },
       {
-        "textures": [
-          "dragon_carving/side3"
-        ]
+        "textures": ["dragon_carving/side3"]
       }
     ]
   },
@@ -856,9 +806,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Faith Carved Arbor",
-    "textures": [
-      "ashlar_third/arbor/faith_carved"
-    ]
+    "textures": ["ashlar_third/arbor/faith_carved"]
   },
   {
     "blockName": "faith_carved_black_brick",
@@ -867,9 +815,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Faith Carved Black",
-    "textures": [
-      "ashlar_quarter/black/faith_carved"
-    ]
+    "textures": ["ashlar_quarter/black/faith_carved"]
   },
   {
     "blockName": "faith_carved_brown_grey_brick",
@@ -878,9 +824,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Faith Carved Brown Grey",
-    "textures": [
-      "ashlar_quarter/brown_grey/faith_carved"
-    ]
+    "textures": ["ashlar_quarter/brown_grey/faith_carved"]
   },
   {
     "blockName": "faith_carved_coarse_red_brick",
@@ -889,9 +833,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Faith Carved Pale Red",
-    "textures": [
-      "ashlar_third/pale_red/faith_carved"
-    ]
+    "textures": ["ashlar_third/pale_red/faith_carved"]
   },
   {
     "blockName": "faith_carved_dark_grey_brick",
@@ -900,9 +842,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Faith Carved Dark Grey",
-    "textures": [
-      "ashlar_quarter/dark_grey/faith_carved"
-    ]
+    "textures": ["ashlar_quarter/dark_grey/faith_carved"]
   },
   {
     "blockName": "faith_carved_dun_brick",
@@ -911,9 +851,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Faith Carved Dun",
-    "textures": [
-      "ashlar_third/dun/faith_carved"
-    ]
+    "textures": ["ashlar_third/dun/faith_carved"]
   },
   {
     "blockName": "faith_carved_grey_brick",
@@ -922,9 +860,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Faith Carved Normal Grey",
-    "textures": [
-      "ashlar_third/grey/faith_carved"
-    ]
+    "textures": ["ashlar_third/grey/faith_carved"]
   },
   {
     "blockName": "faith_carved_oldtown_brick",
@@ -933,9 +869,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Faith Carved Light Oldtown",
-    "textures": [
-      "ashlar_quarter_rounded/light_oldtown/faith_carved"
-    ]
+    "textures": ["ashlar_quarter_rounded/light_oldtown/faith_carved"]
   },
   {
     "blockName": "faith_carved_pink_sandstone",
@@ -944,9 +878,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Faith Carved Sandy Pink",
-    "textures": [
-      "ashlar_third/sandy_pink/faith_carved"
-    ]
+    "textures": ["ashlar_third/sandy_pink/faith_carved"]
   },
   {
     "blockName": "faith_carved_reach_brick",
@@ -955,9 +887,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Faith Carved Reach",
-    "textures": [
-      "ashlar_quarter_rounded/reach/faith_carved"
-    ]
+    "textures": ["ashlar_quarter_rounded/reach/faith_carved"]
   },
   {
     "blockName": "faith_carved_small_stone_brick",
@@ -966,9 +896,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Faith Carved Green Grey",
-    "textures": [
-      "ashlar_quarter/green_grey/faith_carved"
-    ]
+    "textures": ["ashlar_quarter/green_grey/faith_carved"]
   },
   {
     "blockName": "faith_carved_stone_brick",
@@ -977,9 +905,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Faith Carved White",
-    "textures": [
-      "ashlar_half/white/faith_carved"
-    ]
+    "textures": ["ashlar_half/white/faith_carved"]
   },
   {
     "blockName": "faith_carved_stormlands_brick",
@@ -988,9 +914,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Faith Carved Stormlands",
-    "textures": [
-      "ashlar_quarter/stormlands/faith_carved"
-    ]
+    "textures": ["ashlar_quarter/stormlands/faith_carved"]
   },
   {
     "blockName": "faith_carved_westerlands_brick",
@@ -999,9 +923,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Faith Carved Westerlands",
-    "textures": [
-      "ashlar_quarter/westerlands/faith_carved"
-    ]
+    "textures": ["ashlar_quarter/westerlands/faith_carved"]
   },
   {
     "blockName": "fish_barrel",
@@ -1049,29 +971,19 @@
     "label": "Fish Trap",
     "randomTextures": [
       {
-        "textures": [
-          "fish_trap/side1"
-        ]
+        "textures": ["fish_trap/side1"]
       },
       {
-        "textures": [
-          "fish_trap/side2"
-        ]
+        "textures": ["fish_trap/side2"]
       },
       {
-        "textures": [
-          "fish_trap/side3"
-        ]
+        "textures": ["fish_trap/side3"]
       },
       {
-        "textures": [
-          "fish_trap/side4"
-        ]
+        "textures": ["fish_trap/side4"]
       },
       {
-        "textures": [
-          "fish_trap/side5"
-        ]
+        "textures": ["fish_trap/side5"]
       }
     ],
     "renderLayer": "cutout",
@@ -1095,9 +1007,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_cobblestone_tab",
     "label": "Flagstone",
-    "textures": [
-      "stone_block/flagstone"
-    ]
+    "textures": ["stone_block/flagstone"]
   },
   {
     "blockName": "full_cabinet",
@@ -1119,9 +1029,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_lighting_tab",
     "label": "Glowing Embers",
-    "textures": [
-      "lighting/coals_glowing"
-    ],
+    "textures": ["lighting/coals_glowing"],
     "luminance": 2
   },
   {
@@ -1175,9 +1083,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Green Grey",
-    "textures": [
-      "ashlar_engraved/green_grey/all"
-    ]
+    "textures": ["ashlar_engraved/green_grey/all"]
   },
   {
     "blockName": "grey_brick_engraved",
@@ -1186,9 +1092,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Normal Grey",
-    "textures": [
-      "ashlar_engraved/grey/all"
-    ]
+    "textures": ["ashlar_engraved/grey/all"]
   },
   {
     "blockName": "grey_keystone",
@@ -1197,9 +1101,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Grey Keystone",
-    "textures": [
-      "stone_block/keystone_grey"
-    ],
+    "textures": ["stone_block/keystone_grey"],
     "colorMult": "textures/colormap/small_stone_brick"
   },
   {
@@ -1215,9 +1117,7 @@
     ],
     "creativeTab": "westeros_utility_tab",
     "label": "'High Class' Utility Block",
-    "textures": [
-      "utility_block/highclass"
-    ],
+    "textures": ["utility_block/highclass"],
     "luminance": 0
   },
   {
@@ -1259,9 +1159,7 @@
     ],
     "creativeTab": "westeros_utility_tab",
     "label": "'House Count' Utility Block",
-    "textures": [
-      "utility_block/housecount"
-    ],
+    "textures": ["utility_block/housecount"],
     "luminance": 0
   },
   {
@@ -1277,9 +1175,7 @@
     ],
     "creativeTab": "westeros_utility_tab",
     "label": "'Industry' Utility Block",
-    "textures": [
-      "utility_block/industry"
-    ],
+    "textures": ["utility_block/industry"],
     "luminance": 0
   },
   {
@@ -1320,9 +1216,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Dun",
-    "textures": [
-      "ashlar_engraved/dun/all"
-    ]
+    "textures": ["ashlar_engraved/dun/all"]
   },
   {
     "blockName": "lannisport_keystone_orange_plaster",
@@ -1373,11 +1267,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Large Clay Pot Solid",
-    "textures": [
-      "wood/oak/all",
-      "clay_pot/solid",
-      "clay_pot/solid"
-    ]
+    "textures": ["wood/oak/all", "clay_pot/solid", "clay_pot/solid"]
   },
   {
     "blockName": "lavender_basket",
@@ -1425,9 +1315,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Light Grey",
-    "textures": [
-      "ashlar_engraved/light_grey/all"
-    ]
+    "textures": ["ashlar_engraved/light_grey/all"]
   },
   {
     "blockName": "light_grey_stone_white_plaster",
@@ -1454,9 +1342,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Light Oldtown",
-    "textures": [
-      "ashlar_engraved/light_oldtown/all"
-    ]
+    "textures": ["ashlar_engraved/light_oldtown/all"]
   },
   {
     "blockName": "lime_basket",
@@ -1484,9 +1370,7 @@
     ],
     "creativeTab": "westeros_utility_tab",
     "label": "'Low Class' Utility Block",
-    "textures": [
-      "utility_block/lowclass"
-    ],
+    "textures": ["utility_block/lowclass"],
     "luminance": 0
   },
   {
@@ -1502,9 +1386,7 @@
     ],
     "creativeTab": "westeros_utility_tab",
     "label": "'Middle Class' Utility Block",
-    "textures": [
-      "utility_block/middleclass"
-    ],
+    "textures": ["utility_block/middleclass"],
     "luminance": 0
   },
   {
@@ -1514,11 +1396,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Mirror Block",
-    "textures": [
-      "mirror/top_bottom",
-      "mirror/top_bottom",
-      "mirror/side"
-    ]
+    "textures": ["mirror/top_bottom", "mirror/top_bottom", "mirror/side"]
   },
   {
     "blockName": "monochrome_dark_sandstone_engraved",
@@ -1527,9 +1405,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Light Brown",
-    "textures": [
-      "ashlar_engraved/light_brown/all"
-    ]
+    "textures": ["ashlar_engraved/light_brown/all"]
   },
   {
     "blockName": "monochrome_sandstone_engraved",
@@ -1538,9 +1414,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Westerlands",
-    "textures": [
-      "ashlar_engraved/westerlands/all"
-    ]
+    "textures": ["ashlar_engraved/westerlands/all"]
   },
   {
     "blockName": "nether_brick_keystone",
@@ -1549,9 +1423,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Embellished Black",
-    "textures": [
-      "ashlar_half/black/embellished"
-    ]
+    "textures": ["ashlar_half/black/embellished"]
   },
   {
     "blockName": "northern_carvings",
@@ -1579,9 +1451,7 @@
     ],
     "creativeTab": "westeros_utility_tab",
     "label": "'Note' Utility Block",
-    "textures": [
-      "utility_block/note"
-    ],
+    "textures": ["utility_block/note"],
     "luminance": 0
   },
   {
@@ -1730,9 +1600,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ornate Marble",
-    "textures": [
-      "marble/quartz/ornate/side"
-    ]
+    "textures": ["marble/quartz/ornate/side"]
   },
   {
     "blockName": "ornate_sandstone",
@@ -1741,9 +1609,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ornate Sandstone",
-    "textures": [
-      "ashlar_third/sandstone/ornate/side"
-    ]
+    "textures": ["ashlar_third/sandstone/ornate/side"]
   },
   {
     "blockName": "parquet_floor",
@@ -1752,9 +1618,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Parquet Floor",
-    "textures": [
-      "wood/oak/ornate"
-    ]
+    "textures": ["wood/oak/ornate"]
   },
   {
     "blockName": "piled_bones",
@@ -1763,9 +1627,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_misc_tab",
     "label": "Piled Bones",
-    "textures": [
-      "piled_bones/side"
-    ]
+    "textures": ["piled_bones/side"]
   },
   {
     "blockName": "pink_sandstone_engraved",
@@ -1774,9 +1636,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Sandy Pink",
-    "textures": [
-      "ashlar_engraved/sandy_pink/all"
-    ]
+    "textures": ["ashlar_engraved/sandy_pink/all"]
   },
   {
     "blockName": "piston_top",
@@ -1785,9 +1645,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_tool_blocks_tab",
     "label": "Piston Top",
-    "textures": [
-      "wood/oak/studded"
-    ]
+    "textures": ["wood/oak/studded"]
   },
   {
     "blockName": "pomegranate_basket",
@@ -1835,9 +1693,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Reach",
-    "textures": [
-      "ashlar_engraved/reach/all"
-    ]
+    "textures": ["ashlar_engraved/reach/all"]
   },
   {
     "blockName": "reach_oak_wood_panelling",
@@ -1922,9 +1778,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Red/Orange Carved Sandstone",
-    "textures": [
-      "redorange_carved_sandstone/side"
-    ]
+    "textures": ["redorange_carved_sandstone/side"]
   },
   {
     "blockName": "salt_crate",
@@ -1966,34 +1820,22 @@
     "label": "Sandy Stone Slabs",
     "randomTextures": [
       {
-        "textures": [
-          "sandy_stone/sandy_stone_0"
-        ]
+        "textures": ["sandy_stone/sandy_stone_0"]
       },
       {
-        "textures": [
-          "sandy_stone/sandy_stone_1"
-        ]
+        "textures": ["sandy_stone/sandy_stone_1"]
       },
       {
-        "textures": [
-          "sandy_stone/sandy_stone_2"
-        ]
+        "textures": ["sandy_stone/sandy_stone_2"]
       },
       {
-        "textures": [
-          "sandy_stone/sandy_stone_3"
-        ]
+        "textures": ["sandy_stone/sandy_stone_3"]
       },
       {
-        "textures": [
-          "sandy_stone/sandy_stone_4"
-        ]
+        "textures": ["sandy_stone/sandy_stone_4"]
       },
       {
-        "textures": [
-          "sandy_stone/sandy_stone_5"
-        ]
+        "textures": ["sandy_stone/sandy_stone_5"]
       }
     ]
   },
@@ -2004,9 +1846,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Sept Crystal Large",
-    "textures": [
-      "crystal/all"
-    ],
+    "textures": ["crystal/all"],
     "renderLayer": "translucent",
     "nonOpaque": true,
     "alphaRender": true,
@@ -2035,9 +1875,7 @@
     ],
     "creativeTab": "westeros_utility_tab",
     "label": "'Shop' Utility Block",
-    "textures": [
-      "utility_block/shop"
-    ],
+    "textures": ["utility_block/shop"],
     "luminance": 0
   },
   {
@@ -2060,9 +1898,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Orange Brick Ornate",
-    "textures": [
-      "brick/orange/ornate/top_bottom"
-    ]
+    "textures": ["brick/orange/ornate/top_bottom"]
   },
   {
     "blockName": "small_orange_bricks_ornate_top",
@@ -2251,9 +2087,7 @@
     ],
     "creativeTab": "westeros_utility_tab",
     "label": "'Special' Utility Block",
-    "textures": [
-      "utility_block/special"
-    ],
+    "textures": ["utility_block/special"],
     "luminance": 0
   },
   {
@@ -2263,9 +2097,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_food_blocks_tab",
     "label": "Spit Roast",
-    "textures": [
-      "meat_spitroast/all"
-    ]
+    "textures": ["meat_spitroast/all"]
   },
   {
     "blockName": "squash",
@@ -2274,11 +2106,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_food_blocks_tab",
     "label": "Squash",
-    "textures": [
-      "squash/top",
-      "squash/top",
-      "squash/side"
-    ]
+    "textures": ["squash/top", "squash/top", "squash/side"]
   },
   {
     "blockName": "stacked_bones_solid",
@@ -2305,9 +2133,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Stormlands",
-    "textures": [
-      "ashlar_engraved/stormlands/all"
-    ]
+    "textures": ["ashlar_engraved/stormlands/all"]
   },
   {
     "blockName": "table_books",
@@ -2355,9 +2181,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Terracotta",
-    "textures": [
-      "ashlar_engraved/terracotta/all"
-    ]
+    "textures": ["ashlar_engraved/terracotta/all"]
   },
   {
     "blockName": "thick_grass_block",
@@ -2374,19 +2198,13 @@
     "label": "Thick Grass Block",
     "randomTextures": [
       {
-        "textures": [
-          "grass_block/forest_top1"
-        ]
+        "textures": ["grass_block/forest_top1"]
       },
       {
-        "textures": [
-          "grass_block/forest_top2"
-        ]
+        "textures": ["grass_block/forest_top2"]
       },
       {
-        "textures": [
-          "grass_block/forest_top3"
-        ]
+        "textures": ["grass_block/forest_top3"]
       }
     ],
     "colorMult": "textures/colormap/grass",
@@ -7926,11 +7744,7 @@
         ]
       }
     ],
-    "overlayTextures": [
-      "timber/oak/bottom",
-      "transparent",
-      "timber/oak/frame"
-    ],
+    "overlayTextures": ["timber/oak/bottom", "transparent", "timber/oak/frame"],
     "renderLayer": "cutout"
   },
   {
@@ -8505,11 +8319,7 @@
         ]
       }
     ],
-    "overlayTextures": [
-      "timber/oak/bottom",
-      "transparent",
-      "timber/oak/frame"
-    ]
+    "overlayTextures": ["timber/oak/bottom", "transparent", "timber/oak/frame"]
   },
   {
     "blockName": "timber_oak_lannisport_brick_lefthatch",
@@ -9031,11 +8841,7 @@
         ]
       }
     ],
-    "overlayTextures": [
-      "timber/oak/bottom",
-      "transparent",
-      "timber/oak/frame"
-    ]
+    "overlayTextures": ["timber/oak/bottom", "transparent", "timber/oak/frame"]
   },
   {
     "blockName": "timber_oak_light_umber_lefthatch",
@@ -9627,11 +9433,7 @@
         ]
       }
     ],
-    "overlayTextures": [
-      "timber/oak/bottom",
-      "transparent",
-      "timber/oak/frame"
-    ]
+    "overlayTextures": ["timber/oak/bottom", "transparent", "timber/oak/frame"]
   },
   {
     "blockName": "timber_oak_oldtown_brick_lefthatch",
@@ -10059,11 +9861,7 @@
     },
     "states": [
       {
-        "textures": [
-          "brick/orange/all1",
-          "wood/oak/all",
-          "brick/orange/all1"
-        ]
+        "textures": ["brick/orange/all1", "wood/oak/all", "brick/orange/all1"]
       },
       {
         "textures": [
@@ -10099,11 +9897,7 @@
     },
     "states": [
       {
-        "textures": [
-          "brick/orange/all1",
-          "wood/oak/all",
-          "brick/orange/all1"
-        ]
+        "textures": ["brick/orange/all1", "wood/oak/all", "brick/orange/all1"]
       },
       {
         "textures": [
@@ -10139,11 +9933,7 @@
     },
     "states": [
       {
-        "textures": [
-          "brick/orange/all1",
-          "wood/oak/all",
-          "brick/orange/all1"
-        ]
+        "textures": ["brick/orange/all1", "wood/oak/all", "brick/orange/all1"]
       },
       {
         "textures": [
@@ -10180,11 +9970,7 @@
     },
     "states": [
       {
-        "textures": [
-          "brick/orange/all1",
-          "wood/oak/all",
-          "brick/orange/all1"
-        ]
+        "textures": ["brick/orange/all1", "wood/oak/all", "brick/orange/all1"]
       },
       {
         "textures": [
@@ -10201,11 +9987,7 @@
         ]
       }
     ],
-    "overlayTextures": [
-      "timber/oak/bottom",
-      "transparent",
-      "timber/oak/frame"
-    ],
+    "overlayTextures": ["timber/oak/bottom", "transparent", "timber/oak/frame"],
     "renderLayer": "cutout"
   },
   {
@@ -10222,11 +10004,7 @@
     },
     "states": [
       {
-        "textures": [
-          "brick/orange/all1",
-          "wood/oak/all",
-          "brick/orange/all1"
-        ]
+        "textures": ["brick/orange/all1", "wood/oak/all", "brick/orange/all1"]
       },
       {
         "textures": [
@@ -10268,11 +10046,7 @@
     },
     "states": [
       {
-        "textures": [
-          "brick/orange/all1",
-          "wood/oak/all",
-          "brick/orange/all1"
-        ]
+        "textures": ["brick/orange/all1", "wood/oak/all", "brick/orange/all1"]
       },
       {
         "textures": [
@@ -10314,11 +10088,7 @@
     },
     "states": [
       {
-        "textures": [
-          "brick/orange/all1",
-          "wood/oak/all",
-          "brick/orange/all1"
-        ]
+        "textures": ["brick/orange/all1", "wood/oak/all", "brick/orange/all1"]
       },
       {
         "textures": [
@@ -10360,11 +10130,7 @@
     },
     "states": [
       {
-        "textures": [
-          "brick/orange/all1",
-          "wood/oak/all",
-          "brick/orange/all1"
-        ]
+        "textures": ["brick/orange/all1", "wood/oak/all", "brick/orange/all1"]
       },
       {
         "textures": [
@@ -10406,11 +10172,7 @@
     },
     "states": [
       {
-        "textures": [
-          "brick/orange/all1",
-          "wood/oak/all",
-          "brick/orange/all1"
-        ]
+        "textures": ["brick/orange/all1", "wood/oak/all", "brick/orange/all1"]
       },
       {
         "textures": [
@@ -10452,11 +10214,7 @@
     },
     "states": [
       {
-        "textures": [
-          "brick/orange/all1",
-          "wood/oak/all",
-          "brick/orange/all1"
-        ]
+        "textures": ["brick/orange/all1", "wood/oak/all", "brick/orange/all1"]
       },
       {
         "textures": [
@@ -10497,11 +10255,7 @@
     },
     "states": [
       {
-        "textures": [
-          "brick/orange/all1",
-          "wood/oak/all",
-          "brick/orange/all1"
-        ]
+        "textures": ["brick/orange/all1", "wood/oak/all", "brick/orange/all1"]
       },
       {
         "textures": [
@@ -10683,11 +10437,7 @@
         ]
       }
     ],
-    "overlayTextures": [
-      "timber/oak/bottom",
-      "transparent",
-      "timber/oak/frame"
-    ],
+    "overlayTextures": ["timber/oak/bottom", "transparent", "timber/oak/frame"],
     "renderLayer": "cutout"
   },
   {
@@ -11262,11 +11012,7 @@
         ]
       }
     ],
-    "overlayTextures": [
-      "timber/oak/bottom",
-      "transparent",
-      "timber/oak/frame"
-    ],
+    "overlayTextures": ["timber/oak/bottom", "transparent", "timber/oak/frame"],
     "renderLayer": "cutout"
   },
   {
@@ -11799,11 +11545,7 @@
         ]
       }
     ],
-    "overlayTextures": [
-      "timber/oak/bottom",
-      "transparent",
-      "timber/oak/frame"
-    ],
+    "overlayTextures": ["timber/oak/bottom", "transparent", "timber/oak/frame"],
     "renderLayer": "cutout"
   },
   {
@@ -12434,11 +12176,7 @@
         ]
       }
     ],
-    "overlayTextures": [
-      "timber/oak/bottom",
-      "transparent",
-      "timber/oak/frame"
-    ],
+    "overlayTextures": ["timber/oak/bottom", "transparent", "timber/oak/frame"],
     "renderLayer": "cutout"
   },
   {
@@ -13069,11 +12807,7 @@
         ]
       }
     ],
-    "overlayTextures": [
-      "timber/red/bottom",
-      "transparent",
-      "timber/red/frame"
-    ],
+    "overlayTextures": ["timber/red/bottom", "transparent", "timber/red/frame"],
     "renderLayer": "cutout"
   },
   {
@@ -14213,9 +13947,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Dark Tan",
-    "textures": [
-      "ashlar_engraved/dark_tan/all"
-    ]
+    "textures": ["ashlar_engraved/dark_tan/all"]
   },
   {
     "blockName": "vivid_sandstone_engraved",
@@ -14224,9 +13956,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Tan",
-    "textures": [
-      "ashlar_engraved/tan/all"
-    ]
+    "textures": ["ashlar_engraved/tan/all"]
   },
   {
     "blockName": "water_barrel",
@@ -14259,9 +13989,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved White",
-    "textures": [
-      "ashlar_engraved/white/all"
-    ]
+    "textures": ["ashlar_engraved/white/all"]
   },
   {
     "blockName": "white_grape_basket",
@@ -14296,9 +14024,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Winterfell Carving",
-    "textures": [
-      "ashlar_third/dark_grey/carving/side"
-    ]
+    "textures": ["ashlar_third/dark_grey/carving/side"]
   },
   {
     "blockName": "wip_utility_block",
@@ -14313,9 +14039,7 @@
     ],
     "creativeTab": "westeros_utility_tab",
     "label": "'WIP' Utility Block",
-    "textures": [
-      "utility_block/wip"
-    ],
+    "textures": ["utility_block/wip"],
     "luminance": 0
   },
   {
@@ -14331,9 +14055,7 @@
     ],
     "creativeTab": "westeros_utility_tab",
     "label": "'Workshop' Utility Block",
-    "textures": [
-      "utility_block/workshop"
-    ],
+    "textures": ["utility_block/workshop"],
     "luminance": 0
   },
   {
@@ -14349,9 +14071,7 @@
     ],
     "creativeTab": "westeros_utility_tab",
     "label": "'Yard' Utility Block",
-    "textures": [
-      "utility_block/yard"
-    ],
+    "textures": ["utility_block/yard"],
     "luminance": 0
   },
   {
@@ -14361,8 +14081,6 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_sand_gravel_tab",
     "label": "Yellow Stained Clay",
-    "textures": [
-      "clay/yellow_stained_clay"
-    ]
+    "textures": ["clay/yellow_stained_clay"]
   }
 ]

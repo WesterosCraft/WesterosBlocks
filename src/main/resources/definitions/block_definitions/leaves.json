@@ -205,35 +205,19 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/cherry0"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/cherry0"],
         "weight": 10
       },
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/cherry1"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/cherry1"],
         "weight": 10
       },
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/cherry2"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/cherry2"],
         "weight": 10
       },
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/cherry3"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/cherry3"],
         "weight": 2
       }
     ],
@@ -253,35 +237,19 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "leaves/jungle/all",
-          "transparent",
-          "leaves/overlay/hop0"
-        ],
+        "textures": ["leaves/jungle/all", "transparent", "leaves/overlay/hop0"],
         "weight": 10
       },
       {
-        "textures": [
-          "leaves/jungle/all",
-          "transparent",
-          "leaves/overlay/hop1"
-        ],
+        "textures": ["leaves/jungle/all", "transparent", "leaves/overlay/hop1"],
         "weight": 10
       },
       {
-        "textures": [
-          "leaves/jungle/all",
-          "transparent",
-          "leaves/overlay/hop2"
-        ],
+        "textures": ["leaves/jungle/all", "transparent", "leaves/overlay/hop2"],
         "weight": 10
       },
       {
-        "textures": [
-          "leaves/jungle/all",
-          "transparent",
-          "leaves/overlay/hop3"
-        ],
+        "textures": ["leaves/jungle/all", "transparent", "leaves/overlay/hop3"],
         "weight": 2
       }
     ],
@@ -349,35 +317,19 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/lemon0"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/lemon0"],
         "weight": 10
       },
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/lemon1"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/lemon1"],
         "weight": 10
       },
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/lemon2"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/lemon2"],
         "weight": 10
       },
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/lemon3"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/lemon3"],
         "weight": 2
       }
     ],
@@ -445,35 +397,19 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/olive0"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/olive0"],
         "weight": 10
       },
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/olive1"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/olive1"],
         "weight": 10
       },
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/olive2"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/olive2"],
         "weight": 10
       },
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/olive3"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/olive3"],
         "weight": 2
       }
     ],
@@ -538,9 +474,7 @@
       "betterFoliage": true,
       "rotateRandom": true
     },
-    "textures": [
-      "leaves/palm/all"
-    ],
+    "textures": ["leaves/palm/all"],
     "colorMult": "textures/colormap/foliage_palm"
   },
   {
@@ -653,35 +587,19 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/plum0"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/plum0"],
         "weight": 10
       },
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/plum1"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/plum1"],
         "weight": 10
       },
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/plum2"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/plum2"],
         "weight": 10
       },
       {
-        "textures": [
-          "leaves/oak/all",
-          "transparent",
-          "leaves/overlay/plum3"
-        ],
+        "textures": ["leaves/oak/all", "transparent", "leaves/overlay/plum3"],
         "weight": 2
       }
     ],
@@ -890,9 +808,7 @@
       "betterFoliage": true,
       "rotateRandom": true
     },
-    "textures": [
-      "leaves/spruce/snowy/all"
-    ]
+    "textures": ["leaves/spruce/snowy/all"]
   },
   {
     "blockName": "snowy_weirwood_leaves",
@@ -905,9 +821,7 @@
       "betterFoliage": true,
       "rotateRandom": true
     },
-    "textures": [
-      "leaves/weirwood/snowy/all"
-    ]
+    "textures": ["leaves/weirwood/snowy/all"]
   },
   {
     "blockName": "weirwood_leaves",
@@ -920,9 +834,7 @@
       "betterFoliage": true,
       "rotateRandom": true
     },
-    "textures": [
-      "leaves/weirwood/all"
-    ]
+    "textures": ["leaves/weirwood/all"]
   },
   {
     "blockName": "white_grape_fruit_leaves",

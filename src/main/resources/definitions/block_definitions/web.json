@@ -8,9 +8,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "alyssas_tears_mist/mist4"
-    ],
+    "textures": ["alyssas_tears_mist/mist4"],
     "nonOpaque": true,
     "alphaRender": true,
     "connectTo": "material"
@@ -24,9 +22,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "alyssas_tears_mist/mist1"
-    ],
+    "textures": ["alyssas_tears_mist/mist1"],
     "renderLayer": "translucent",
     "nonOpaque": true,
     "alphaRender": true
@@ -40,9 +36,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "alyssas_tears_mist/mist3"
-    ],
+    "textures": ["alyssas_tears_mist/mist3"],
     "renderLayer": "translucent",
     "nonOpaque": true,
     "alphaRender": true,
@@ -57,9 +51,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "alyssas_tears_mist/mist2"
-    ],
+    "textures": ["alyssas_tears_mist/mist2"],
     "renderLayer": "translucent",
     "nonOpaque": true,
     "alphaRender": true,
@@ -74,9 +66,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/bug_bees"
-    ],
+    "textures": ["web_block/bug_bees"],
     "renderLayer": "cutout"
   },
   {
@@ -88,9 +78,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "ashlar_melted/black/bricicle/side"
-    ],
+    "textures": ["ashlar_melted/black/bricicle/side"],
     "renderLayer": "cutout"
   },
   {
@@ -102,9 +90,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/food_herbs"
-    ],
+    "textures": ["web_block/food_herbs"],
     "renderLayer": "cutout"
   },
   {
@@ -116,9 +102,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/food_sourleaf"
-    ],
+    "textures": ["web_block/food_sourleaf"],
     "renderLayer": "cutout"
   },
   {
@@ -130,9 +114,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/bug_butterfly_blue"
-    ],
+    "textures": ["web_block/bug_butterfly_blue"],
     "renderLayer": "cutout"
   },
   {
@@ -144,9 +126,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/bug_butterfly_orange"
-    ],
+    "textures": ["web_block/bug_butterfly_orange"],
     "renderLayer": "cutout"
   },
   {
@@ -158,9 +138,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/bug_butterfly_red"
-    ],
+    "textures": ["web_block/bug_butterfly_red"],
     "renderLayer": "cutout"
   },
   {
@@ -172,9 +150,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/bug_butterfly_white"
-    ],
+    "textures": ["web_block/bug_butterfly_white"],
     "renderLayer": "cutout"
   },
   {
@@ -186,9 +162,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/bug_butterfly_yellow"
-    ],
+    "textures": ["web_block/bug_butterfly_yellow"],
     "renderLayer": "cutout"
   },
   {
@@ -203,44 +177,28 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "cattails/side1"
-        ]
+        "textures": ["cattails/side1"]
       },
       {
-        "textures": [
-          "cattails/side2"
-        ]
+        "textures": ["cattails/side2"]
       },
       {
-        "textures": [
-          "cattails/side3"
-        ]
+        "textures": ["cattails/side3"]
       },
       {
-        "textures": [
-          "cattails/side4"
-        ]
+        "textures": ["cattails/side4"]
       },
       {
-        "textures": [
-          "cattails/side5"
-        ]
+        "textures": ["cattails/side5"]
       },
       {
-        "textures": [
-          "cattails/side6"
-        ]
+        "textures": ["cattails/side6"]
       },
       {
-        "textures": [
-          "cattails/side7"
-        ]
+        "textures": ["cattails/side7"]
       },
       {
-        "textures": [
-          "cattails/side8"
-        ]
+        "textures": ["cattails/side8"]
       }
     ],
     "renderLayer": "cutout",
@@ -255,9 +213,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/chain_blockharness"
-    ],
+    "textures": ["web_block/chain_blockharness"],
     "renderLayer": "cutout"
   },
   {
@@ -269,9 +225,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/food_chili_ristra"
-    ],
+    "textures": ["web_block/food_chili_ristra"],
     "renderLayer": "cutout"
   },
   {
@@ -289,94 +243,62 @@
         "stateID": "random",
         "randomTextures": [
           {
-            "textures": [
-              "cobweb/side1"
-            ]
+            "textures": ["cobweb/side1"]
           },
           {
-            "textures": [
-              "cobweb/side2"
-            ]
+            "textures": ["cobweb/side2"]
           },
           {
-            "textures": [
-              "cobweb/side3"
-            ]
+            "textures": ["cobweb/side3"]
           },
           {
-            "textures": [
-              "cobweb/side4"
-            ]
+            "textures": ["cobweb/side4"]
           },
           {
-            "textures": [
-              "cobweb/side5"
-            ]
+            "textures": ["cobweb/side5"]
           },
           {
-            "textures": [
-              "cobweb/side6"
-            ]
+            "textures": ["cobweb/side6"]
           },
           {
-            "textures": [
-              "cobweb/side7"
-            ]
+            "textures": ["cobweb/side7"]
           },
           {
-            "textures": [
-              "cobweb/side8"
-            ]
+            "textures": ["cobweb/side8"]
           }
         ]
       },
       {
         "stateID": "cobweb1",
-        "textures": [
-          "cobweb/side1"
-        ]
+        "textures": ["cobweb/side1"]
       },
       {
         "stateID": "cobweb2",
-        "textures": [
-          "cobweb/side2"
-        ]
+        "textures": ["cobweb/side2"]
       },
       {
         "stateID": "cobweb3",
-        "textures": [
-          "cobweb/side3"
-        ]
+        "textures": ["cobweb/side3"]
       },
       {
         "stateID": "cobweb4",
-        "textures": [
-          "cobweb/side4"
-        ]
+        "textures": ["cobweb/side4"]
       },
       {
         "stateID": "cobweb5",
-        "textures": [
-          "cobweb/side5"
-        ]
+        "textures": ["cobweb/side5"]
       },
       {
         "stateID": "cobweb6",
-        "textures": [
-          "cobweb/side6"
-        ]
+        "textures": ["cobweb/side6"]
       },
       {
         "stateID": "cobweb7",
-        "textures": [
-          "cobweb/side7"
-        ]
+        "textures": ["cobweb/side7"]
       },
       {
         "stateID": "cobweb8",
-        "textures": [
-          "cobweb/side8"
-        ]
+        "textures": ["cobweb/side8"]
       }
     ],
     "renderLayer": "cutout"
@@ -392,29 +314,19 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "dead_fish/fish_dead1"
-        ]
+        "textures": ["dead_fish/fish_dead1"]
       },
       {
-        "textures": [
-          "dead_fish/fish_dead2"
-        ]
+        "textures": ["dead_fish/fish_dead2"]
       },
       {
-        "textures": [
-          "dead_fish/fish_dead3"
-        ]
+        "textures": ["dead_fish/fish_dead3"]
       },
       {
-        "textures": [
-          "dead_fish/fish_dead4"
-        ]
+        "textures": ["dead_fish/fish_dead4"]
       },
       {
-        "textures": [
-          "dead_fish/fish_dead5"
-        ]
+        "textures": ["dead_fish/fish_dead5"]
       }
     ],
     "renderLayer": "cutout"
@@ -430,24 +342,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "dead_fowl/fowl"
-        ]
+        "textures": ["dead_fowl/fowl"]
       },
       {
-        "textures": [
-          "dead_fowl/fowl2"
-        ]
+        "textures": ["dead_fowl/fowl2"]
       },
       {
-        "textures": [
-          "dead_fowl/gooseplains"
-        ]
+        "textures": ["dead_fowl/gooseplains"]
       },
       {
-        "textures": [
-          "dead_fowl/gooseplains2"
-        ]
+        "textures": ["dead_fowl/gooseplains2"]
       }
     ],
     "renderLayer": "cutout"
@@ -463,14 +367,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "dead_frog/toad_dead1"
-        ]
+        "textures": ["dead_frog/toad_dead1"]
       },
       {
-        "textures": [
-          "dead_frog/toad_dead2"
-        ]
+        "textures": ["dead_frog/toad_dead2"]
       }
     ],
     "renderLayer": "cutout"
@@ -486,19 +386,13 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "dead_hare/rabbit_dead1"
-        ]
+        "textures": ["dead_hare/rabbit_dead1"]
       },
       {
-        "textures": [
-          "dead_hare/rabbit_dead2"
-        ]
+        "textures": ["dead_hare/rabbit_dead2"]
       },
       {
-        "textures": [
-          "dead_hare/rabbit_dead3"
-        ]
+        "textures": ["dead_hare/rabbit_dead3"]
       }
     ],
     "renderLayer": "cutout"
@@ -513,9 +407,7 @@
       "noInWeb": true,
       "layerSensitive": true
     },
-    "textures": [
-      "dead_jungle_tall_grass/down_side1"
-    ],
+    "textures": ["dead_jungle_tall_grass/down_side1"],
     "renderLayer": "cutout"
   },
   {
@@ -529,39 +421,25 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "dead_rat/rat1"
-        ]
+        "textures": ["dead_rat/rat1"]
       },
       {
-        "textures": [
-          "dead_rat/rat2"
-        ]
+        "textures": ["dead_rat/rat2"]
       },
       {
-        "textures": [
-          "dead_rat/rat3"
-        ]
+        "textures": ["dead_rat/rat3"]
       },
       {
-        "textures": [
-          "dead_rat/rat4"
-        ]
+        "textures": ["dead_rat/rat4"]
       },
       {
-        "textures": [
-          "dead_rat/rat5"
-        ]
+        "textures": ["dead_rat/rat5"]
       },
       {
-        "textures": [
-          "dead_rat/rat6"
-        ]
+        "textures": ["dead_rat/rat6"]
       },
       {
-        "textures": [
-          "dead_rat/rat7"
-        ]
+        "textures": ["dead_rat/rat7"]
       }
     ],
     "renderLayer": "cutout"
@@ -576,9 +454,7 @@
       "noInWeb": true,
       "layerSensitive": true
     },
-    "textures": [
-      "dead_savanna_tall_grass/dead_savanna_tall_grass"
-    ],
+    "textures": ["dead_savanna_tall_grass/dead_savanna_tall_grass"],
     "renderLayer": "cutout"
   },
   {
@@ -590,9 +466,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/bug_dragonfly"
-    ],
+    "textures": ["web_block/bug_dragonfly"],
     "renderLayer": "cutout"
   },
   {
@@ -604,9 +478,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/bug_flies"
-    ],
+    "textures": ["web_block/bug_flies"],
     "renderLayer": "cutout"
   },
   {
@@ -618,9 +490,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/food_garlic_strand"
-    ],
+    "textures": ["web_block/food_garlic_strand"],
     "renderLayer": "cutout"
   },
   {
@@ -632,9 +502,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "icicle/side"
-    ],
+    "textures": ["icicle/side"],
     "renderLayer": "cutout"
   },
   {
@@ -648,39 +516,25 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "blades_random/side1"
-        ]
+        "textures": ["blades_random/side1"]
       },
       {
-        "textures": [
-          "blades_random/side2"
-        ]
+        "textures": ["blades_random/side2"]
       },
       {
-        "textures": [
-          "blades_random/side3"
-        ]
+        "textures": ["blades_random/side3"]
       },
       {
-        "textures": [
-          "blades_random/side4"
-        ]
+        "textures": ["blades_random/side4"]
       },
       {
-        "textures": [
-          "blades_random/side5"
-        ]
+        "textures": ["blades_random/side5"]
       },
       {
-        "textures": [
-          "blades_random/side6"
-        ]
+        "textures": ["blades_random/side6"]
       },
       {
-        "textures": [
-          "blades_random/side7"
-        ]
+        "textures": ["blades_random/side7"]
       }
     ],
     "renderLayer": "cutout"
@@ -695,9 +549,7 @@
       "noInWeb": true,
       "layerSensitive": true
     },
-    "textures": [
-      "jungle_tall_fern/side"
-    ],
+    "textures": ["jungle_tall_fern/side"],
     "renderLayer": "cutout",
     "colorMult": "textures/colormap/grass"
   },
@@ -711,9 +563,7 @@
       "noInWeb": true,
       "layerSensitive": true
     },
-    "textures": [
-      "jungle_tall_grass/down_side1"
-    ],
+    "textures": ["jungle_tall_grass/down_side1"],
     "renderLayer": "cutout",
     "colorMult": "textures/colormap/grass"
   },
@@ -726,9 +576,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/rope_blockharness"
-    ],
+    "textures": ["web_block/rope_blockharness"],
     "renderLayer": "cutout"
   },
   {
@@ -740,9 +588,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "sausages_leg_of_ham/default"
-    ],
+    "textures": ["sausages_leg_of_ham/default"],
     "renderLayer": "cutout"
   },
   {
@@ -755,9 +601,7 @@
       "noInWeb": true,
       "layerSensitive": true
     },
-    "textures": [
-      "savanna_tall_grass/savanna_tall_grass"
-    ],
+    "textures": ["savanna_tall_grass/savanna_tall_grass"],
     "renderLayer": "cutout",
     "colorMult": "textures/colormap/grass"
   },
@@ -773,83 +617,55 @@
         "stateID": "random",
         "randomTextures": [
           {
-            "textures": [
-              "smoke/smoke1"
-            ]
+            "textures": ["smoke/smoke1"]
           },
           {
-            "textures": [
-              "smoke/smoke2"
-            ]
+            "textures": ["smoke/smoke2"]
           },
           {
-            "textures": [
-              "smoke/smoke3"
-            ]
+            "textures": ["smoke/smoke3"]
           },
           {
-            "textures": [
-              "smoke/smoke4"
-            ]
+            "textures": ["smoke/smoke4"]
           },
           {
-            "textures": [
-              "smoke/smoke5"
-            ]
+            "textures": ["smoke/smoke5"]
           },
           {
-            "textures": [
-              "smoke/smoke6"
-            ]
+            "textures": ["smoke/smoke6"]
           },
           {
-            "textures": [
-              "smoke/smoke7"
-            ]
+            "textures": ["smoke/smoke7"]
           }
         ]
       },
       {
         "stateID": "smoke1",
-        "textures": [
-          "smoke/smoke1"
-        ]
+        "textures": ["smoke/smoke1"]
       },
       {
         "stateID": "smoke2",
-        "textures": [
-          "smoke/smoke2"
-        ]
+        "textures": ["smoke/smoke2"]
       },
       {
         "stateID": "smoke3",
-        "textures": [
-          "smoke/smoke3"
-        ]
+        "textures": ["smoke/smoke3"]
       },
       {
         "stateID": "smoke4",
-        "textures": [
-          "smoke/smoke4"
-        ]
+        "textures": ["smoke/smoke4"]
       },
       {
         "stateID": "smoke5",
-        "textures": [
-          "smoke/smoke5"
-        ]
+        "textures": ["smoke/smoke5"]
       },
       {
         "stateID": "smoke6",
-        "textures": [
-          "smoke/smoke6"
-        ]
+        "textures": ["smoke/smoke6"]
       },
       {
         "stateID": "smoke7",
-        "textures": [
-          "smoke/smoke7"
-        ]
+        "textures": ["smoke/smoke7"]
       }
     ],
     "renderLayer": "cutout"
@@ -863,9 +679,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/chain_vertical"
-    ],
+    "textures": ["web_block/chain_vertical"],
     "renderLayer": "cutout"
   },
   {
@@ -877,9 +691,7 @@
     "type": {
       "noInWeb": true
     },
-    "textures": [
-      "web_block/rope_vertical"
-    ],
+    "textures": ["web_block/rope_vertical"],
     "renderLayer": "cutout"
   },
   {
@@ -894,9 +706,7 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "corn/side1"
-        ]
+        "textures": ["corn/side1"]
       }
     ],
     "renderLayer": "cutout"

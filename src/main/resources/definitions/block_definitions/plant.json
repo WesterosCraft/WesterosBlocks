@@ -7,9 +7,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/blue_bells"
-    ],
+    "textures": ["flowers/blue_bells"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -31,24 +29,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/blue_chicory/side1"
-        ]
+        "textures": ["flowers/blue_chicory/side1"]
       },
       {
-        "textures": [
-          "flowers/blue_chicory/side2"
-        ]
+        "textures": ["flowers/blue_chicory/side2"]
       },
       {
-        "textures": [
-          "flowers/blue_chicory/side3"
-        ]
+        "textures": ["flowers/blue_chicory/side3"]
       },
       {
-        "textures": [
-          "flowers/blue_chicory/side4"
-        ]
+        "textures": ["flowers/blue_chicory/side4"]
       }
     ],
     "renderLayer": "cutout",
@@ -71,24 +61,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/blue_flax1"
-        ]
+        "textures": ["flowers/blue_flax1"]
       },
       {
-        "textures": [
-          "flowers/blue_flax2"
-        ]
+        "textures": ["flowers/blue_flax2"]
       },
       {
-        "textures": [
-          "flowers/blue_flax3"
-        ]
+        "textures": ["flowers/blue_flax3"]
       },
       {
-        "textures": [
-          "flowers/blue_flax4"
-        ]
+        "textures": ["flowers/blue_flax4"]
       }
     ],
     "renderLayer": "cutout",
@@ -111,24 +93,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/blue_forgetmenots1"
-        ]
+        "textures": ["flowers/blue_forgetmenots1"]
       },
       {
-        "textures": [
-          "flowers/blue_forgetmenots2"
-        ]
+        "textures": ["flowers/blue_forgetmenots2"]
       },
       {
-        "textures": [
-          "flowers/blue_forgetmenots3"
-        ]
+        "textures": ["flowers/blue_forgetmenots3"]
       },
       {
-        "textures": [
-          "flowers/blue_forgetmenots4"
-        ]
+        "textures": ["flowers/blue_forgetmenots4"]
       }
     ],
     "renderLayer": "cutout",
@@ -152,24 +126,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/blue_hyacinth1"
-        ]
+        "textures": ["flowers/blue_hyacinth1"]
       },
       {
-        "textures": [
-          "flowers/blue_hyacinth2"
-        ]
+        "textures": ["flowers/blue_hyacinth2"]
       },
       {
-        "textures": [
-          "flowers/blue_hyacinth3"
-        ]
+        "textures": ["flowers/blue_hyacinth3"]
       },
       {
-        "textures": [
-          "flowers/blue_hyacinth4"
-        ]
+        "textures": ["flowers/blue_hyacinth4"]
       }
     ],
     "renderLayer": "cutout",
@@ -193,19 +159,13 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/blue_orchid1"
-        ]
+        "textures": ["flowers/blue_orchid1"]
       },
       {
-        "textures": [
-          "flowers/blue_orchid2"
-        ]
+        "textures": ["flowers/blue_orchid2"]
       },
       {
-        "textures": [
-          "flowers/blue_orchid3"
-        ]
+        "textures": ["flowers/blue_orchid3"]
       }
     ],
     "renderLayer": "cutout",
@@ -227,9 +187,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/blue_swamp_bells1"
-    ],
+    "textures": ["flowers/blue_swamp_bells1"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -251,44 +209,28 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "bracken/side1"
-        ]
+        "textures": ["bracken/side1"]
       },
       {
-        "textures": [
-          "bracken/side2"
-        ]
+        "textures": ["bracken/side2"]
       },
       {
-        "textures": [
-          "bracken/side3"
-        ]
+        "textures": ["bracken/side3"]
       },
       {
-        "textures": [
-          "bracken/side4"
-        ]
+        "textures": ["bracken/side4"]
       },
       {
-        "textures": [
-          "bracken/side5"
-        ]
+        "textures": ["bracken/side5"]
       },
       {
-        "textures": [
-          "bracken/side6"
-        ]
+        "textures": ["bracken/side6"]
       },
       {
-        "textures": [
-          "bracken/side7"
-        ]
+        "textures": ["bracken/side7"]
       },
       {
-        "textures": [
-          "bracken/side8"
-        ]
+        "textures": ["bracken/side8"]
       }
     ],
     "renderLayer": "cutout",
@@ -310,9 +252,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "brown_mushroom_block/mushroom_brown_0"
-    ],
+    "textures": ["brown_mushroom_block/mushroom_brown_0"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -332,9 +272,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "brown_mushroom_block/mushroom_brown_9"
-    ],
+    "textures": ["brown_mushroom_block/mushroom_brown_9"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -354,9 +292,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "brown_mushroom_block/mushroom_brown_10"
-    ],
+    "textures": ["brown_mushroom_block/mushroom_brown_10"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -376,9 +312,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "brown_mushroom_block/mushroom_brown_11"
-    ],
+    "textures": ["brown_mushroom_block/mushroom_brown_11"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -398,9 +332,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "brown_mushroom_block/mushroom_brown_12"
-    ],
+    "textures": ["brown_mushroom_block/mushroom_brown_12"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -420,9 +352,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "brown_mushroom_block/mushroom_brown_1"
-    ],
+    "textures": ["brown_mushroom_block/mushroom_brown_1"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -442,9 +372,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "brown_mushroom_block/mushroom_brown_2"
-    ],
+    "textures": ["brown_mushroom_block/mushroom_brown_2"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -464,9 +392,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "brown_mushroom_block/mushroom_brown_3"
-    ],
+    "textures": ["brown_mushroom_block/mushroom_brown_3"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -486,9 +412,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "brown_mushroom_block/mushroom_brown_4"
-    ],
+    "textures": ["brown_mushroom_block/mushroom_brown_4"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -508,9 +432,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "brown_mushroom_block/mushroom_brown_5"
-    ],
+    "textures": ["brown_mushroom_block/mushroom_brown_5"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -530,9 +452,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "brown_mushroom_block/mushroom_brown_6"
-    ],
+    "textures": ["brown_mushroom_block/mushroom_brown_6"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -552,9 +472,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "brown_mushroom_block/mushroom_brown_7"
-    ],
+    "textures": ["brown_mushroom_block/mushroom_brown_7"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -574,9 +492,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "brown_mushroom_block/mushroom_brown_8"
-    ],
+    "textures": ["brown_mushroom_block/mushroom_brown_8"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -597,14 +513,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "coral/brain/web1"
-        ]
+        "textures": ["coral/brain/web1"]
       },
       {
-        "textures": [
-          "coral/brain/web2"
-        ]
+        "textures": ["coral/brain/web2"]
       }
     ],
     "renderLayer": "cutout",
@@ -627,14 +539,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "coral/bubble/web1"
-        ]
+        "textures": ["coral/bubble/web1"]
       },
       {
-        "textures": [
-          "coral/bubble/web2"
-        ]
+        "textures": ["coral/bubble/web2"]
       }
     ],
     "renderLayer": "cutout",
@@ -657,14 +565,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "coral/fire/web1"
-        ]
+        "textures": ["coral/fire/web1"]
       },
       {
-        "textures": [
-          "coral/fire/web2"
-        ]
+        "textures": ["coral/fire/web2"]
       }
     ],
     "renderLayer": "cutout",
@@ -687,14 +591,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "coral/horn/web1"
-        ]
+        "textures": ["coral/horn/web1"]
       },
       {
-        "textures": [
-          "coral/horn/web2"
-        ]
+        "textures": ["coral/horn/web2"]
       }
     ],
     "renderLayer": "cutout",
@@ -717,14 +617,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "coral/tube/web1"
-        ]
+        "textures": ["coral/tube/web1"]
       },
       {
-        "textures": [
-          "coral/tube/web2"
-        ]
+        "textures": ["coral/tube/web2"]
       }
     ],
     "renderLayer": "cutout",
@@ -748,14 +644,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "cow_parsely/side1"
-        ]
+        "textures": ["cow_parsely/side1"]
       },
       {
-        "textures": [
-          "cow_parsely/side2"
-        ]
+        "textures": ["cow_parsely/side2"]
       }
     ],
     "renderLayer": "cutout",
@@ -779,14 +671,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "cranberry/base1"
-        ]
+        "textures": ["cranberry/base1"]
       },
       {
-        "textures": [
-          "cranberry/base2"
-        ]
+        "textures": ["cranberry/base2"]
       }
     ],
     "renderLayer": "cutout",
@@ -810,64 +698,40 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "dead_bracken/side1"
-        ]
+        "textures": ["dead_bracken/side1"]
       },
       {
-        "textures": [
-          "dead_bracken/side2"
-        ]
+        "textures": ["dead_bracken/side2"]
       },
       {
-        "textures": [
-          "dead_bracken/side3"
-        ]
+        "textures": ["dead_bracken/side3"]
       },
       {
-        "textures": [
-          "dead_bracken/side4"
-        ]
+        "textures": ["dead_bracken/side4"]
       },
       {
-        "textures": [
-          "dead_bracken/side5"
-        ]
+        "textures": ["dead_bracken/side5"]
       },
       {
-        "textures": [
-          "dead_bracken/side6"
-        ]
+        "textures": ["dead_bracken/side6"]
       },
       {
-        "textures": [
-          "dead_bracken/side7"
-        ]
+        "textures": ["dead_bracken/side7"]
       },
       {
-        "textures": [
-          "dead_bracken/side8"
-        ]
+        "textures": ["dead_bracken/side8"]
       },
       {
-        "textures": [
-          "dead_bracken/side9"
-        ]
+        "textures": ["dead_bracken/side9"]
       },
       {
-        "textures": [
-          "dead_bracken/side10"
-        ]
+        "textures": ["dead_bracken/side10"]
       },
       {
-        "textures": [
-          "dead_bracken/side11"
-        ]
+        "textures": ["dead_bracken/side11"]
       },
       {
-        "textures": [
-          "dead_bracken/side12"
-        ]
+        "textures": ["dead_bracken/side12"]
       }
     ],
     "renderLayer": "cutout",
@@ -891,19 +755,13 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "dorne_bush_thorny/side1"
-        ]
+        "textures": ["dorne_bush_thorny/side1"]
       },
       {
-        "textures": [
-          "dorne_bush_thorny/side2"
-        ]
+        "textures": ["dorne_bush_thorny/side2"]
       },
       {
-        "textures": [
-          "dorne_bush_thorny/side3"
-        ]
+        "textures": ["dorne_bush_thorny/side3"]
       }
     ],
     "renderLayer": "cutout",
@@ -927,57 +785,39 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/dead_scrub_grass1"
-        ],
+        "textures": ["flowers/dead_scrub_grass1"],
         "weight": 10
       },
       {
-        "textures": [
-          "flowers/dead_scrub_grass2"
-        ],
+        "textures": ["flowers/dead_scrub_grass2"],
         "weight": 10
       },
       {
-        "textures": [
-          "flowers/dead_scrub_grass3"
-        ],
+        "textures": ["flowers/dead_scrub_grass3"],
         "weight": 10
       },
       {
-        "textures": [
-          "flowers/dead_scrub_grass4"
-        ],
+        "textures": ["flowers/dead_scrub_grass4"],
         "weight": 10
       },
       {
-        "textures": [
-          "flowers/dead_scrub_grass5"
-        ],
+        "textures": ["flowers/dead_scrub_grass5"],
         "weight": 10
       },
       {
-        "textures": [
-          "flowers/dead_scrub_grass6"
-        ],
+        "textures": ["flowers/dead_scrub_grass6"],
         "weight": 10
       },
       {
-        "textures": [
-          "flowers/dead_scrub_grass7"
-        ],
+        "textures": ["flowers/dead_scrub_grass7"],
         "weight": 10
       },
       {
-        "textures": [
-          "flowers/dead_scrub_grass8"
-        ],
+        "textures": ["flowers/dead_scrub_grass8"],
         "weight": 15
       },
       {
-        "textures": [
-          "flowers/dead_scrub_grass9"
-        ],
+        "textures": ["flowers/dead_scrub_grass9"],
         "weight": 15
       }
     ],
@@ -1002,14 +842,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "dock_leaf/side1"
-        ]
+        "textures": ["dock_leaf/side1"]
       },
       {
-        "textures": [
-          "dock_leaf/side2"
-        ]
+        "textures": ["dock_leaf/side2"]
       }
     ],
     "renderLayer": "cutout",
@@ -1033,24 +869,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "fireweed/side1"
-        ]
+        "textures": ["fireweed/side1"]
       },
       {
-        "textures": [
-          "fireweed/side2"
-        ]
+        "textures": ["fireweed/side2"]
       },
       {
-        "textures": [
-          "fireweed/side3"
-        ]
+        "textures": ["fireweed/side3"]
       },
       {
-        "textures": [
-          "fireweed/side4"
-        ]
+        "textures": ["fireweed/side4"]
       }
     ],
     "renderLayer": "cutout",
@@ -1074,51 +902,35 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "minecraft:block/fern/fern1"
-        ],
+        "textures": ["minecraft:block/fern/fern1"],
         "weight": 5
       },
       {
-        "textures": [
-          "minecraft:block/fern/fern2"
-        ],
+        "textures": ["minecraft:block/fern/fern2"],
         "weight": 5
       },
       {
-        "textures": [
-          "minecraft:block/fern/fern3"
-        ],
+        "textures": ["minecraft:block/fern/fern3"],
         "weight": 15
       },
       {
-        "textures": [
-          "minecraft:block/fern/fern4"
-        ],
+        "textures": ["minecraft:block/fern/fern4"],
         "weight": 10
       },
       {
-        "textures": [
-          "minecraft:block/fern/fern5"
-        ],
+        "textures": ["minecraft:block/fern/fern5"],
         "weight": 10
       },
       {
-        "textures": [
-          "minecraft:block/fern/fern6"
-        ],
+        "textures": ["minecraft:block/fern/fern6"],
         "weight": 15
       },
       {
-        "textures": [
-          "minecraft:block/fern/fern7"
-        ],
+        "textures": ["minecraft:block/fern/fern7"],
         "weight": 25
       },
       {
-        "textures": [
-          "minecraft:block/fern/fern8"
-        ],
+        "textures": ["minecraft:block/fern/fern8"],
         "weight": 15
       }
     ],
@@ -1141,9 +953,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/green_leafy_herb"
-    ],
+    "textures": ["flowers/green_leafy_herb"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -1164,34 +974,22 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/green_scrub_grass1"
-        ]
+        "textures": ["flowers/green_scrub_grass1"]
       },
       {
-        "textures": [
-          "flowers/green_scrub_grass2"
-        ]
+        "textures": ["flowers/green_scrub_grass2"]
       },
       {
-        "textures": [
-          "flowers/green_scrub_grass3"
-        ]
+        "textures": ["flowers/green_scrub_grass3"]
       },
       {
-        "textures": [
-          "flowers/green_scrub_grass4"
-        ]
+        "textures": ["flowers/green_scrub_grass4"]
       },
       {
-        "textures": [
-          "flowers/green_scrub_grass5"
-        ]
+        "textures": ["flowers/green_scrub_grass5"]
       },
       {
-        "textures": [
-          "flowers/green_scrub_grass6"
-        ]
+        "textures": ["flowers/green_scrub_grass6"]
       }
     ],
     "renderLayer": "cutout",
@@ -1214,29 +1012,19 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/green_spiny_herb1"
-        ]
+        "textures": ["flowers/green_spiny_herb1"]
       },
       {
-        "textures": [
-          "flowers/green_spiny_herb2"
-        ]
+        "textures": ["flowers/green_spiny_herb2"]
       },
       {
-        "textures": [
-          "flowers/green_spiny_herb3"
-        ]
+        "textures": ["flowers/green_spiny_herb3"]
       },
       {
-        "textures": [
-          "flowers/green_spiny_herb4"
-        ]
+        "textures": ["flowers/green_spiny_herb4"]
       },
       {
-        "textures": [
-          "flowers/green_spiny_herb5"
-        ]
+        "textures": ["flowers/green_spiny_herb5"]
       }
     ],
     "renderLayer": "cutout",
@@ -1260,24 +1048,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "heather/side1"
-        ]
+        "textures": ["heather/side1"]
       },
       {
-        "textures": [
-          "heather/side2"
-        ]
+        "textures": ["heather/side2"]
       },
       {
-        "textures": [
-          "heather/side3"
-        ]
+        "textures": ["heather/side3"]
       },
       {
-        "textures": [
-          "heather/side4"
-        ]
+        "textures": ["heather/side4"]
       }
     ],
     "renderLayer": "cutout",
@@ -1301,14 +1081,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "kelp/side1"
-        ]
+        "textures": ["kelp/side1"]
       },
       {
-        "textures": [
-          "kelp/side2"
-        ]
+        "textures": ["kelp/side2"]
       }
     ],
     "renderLayer": "cutout"
@@ -1324,24 +1100,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "lady_fern/side1"
-        ]
+        "textures": ["lady_fern/side1"]
       },
       {
-        "textures": [
-          "lady_fern/side2"
-        ]
+        "textures": ["lady_fern/side2"]
       },
       {
-        "textures": [
-          "lady_fern/side3"
-        ]
+        "textures": ["lady_fern/side3"]
       },
       {
-        "textures": [
-          "lady_fern/side4"
-        ]
+        "textures": ["lady_fern/side4"]
       }
     ],
     "renderLayer": "cutout",
@@ -1365,24 +1133,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/magenta_roses1"
-        ]
+        "textures": ["flowers/magenta_roses1"]
       },
       {
-        "textures": [
-          "flowers/magenta_roses2"
-        ]
+        "textures": ["flowers/magenta_roses2"]
       },
       {
-        "textures": [
-          "flowers/magenta_roses3"
-        ]
+        "textures": ["flowers/magenta_roses3"]
       },
       {
-        "textures": [
-          "flowers/magenta_roses4"
-        ]
+        "textures": ["flowers/magenta_roses4"]
       }
     ],
     "renderLayer": "cutout",
@@ -1406,14 +1166,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/meadow_fescue/side1"
-        ]
+        "textures": ["flowers/meadow_fescue/side1"]
       },
       {
-        "textures": [
-          "flowers/meadow_fescue/side2"
-        ]
+        "textures": ["flowers/meadow_fescue/side2"]
       }
     ],
     "renderLayer": "cutout",
@@ -1437,19 +1193,13 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "nettle/side1"
-        ]
+        "textures": ["nettle/side1"]
       },
       {
-        "textures": [
-          "nettle/side2"
-        ]
+        "textures": ["nettle/side2"]
       },
       {
-        "textures": [
-          "nettle/side3"
-        ]
+        "textures": ["nettle/side3"]
       }
     ],
     "renderLayer": "cutout",
@@ -1470,9 +1220,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/orange_bells1"
-    ],
+    "textures": ["flowers/orange_bells1"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -1494,24 +1242,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/orange_bog_asphodel1"
-        ]
+        "textures": ["flowers/orange_bog_asphodel1"]
       },
       {
-        "textures": [
-          "flowers/orange_bog_asphodel2"
-        ]
+        "textures": ["flowers/orange_bog_asphodel2"]
       },
       {
-        "textures": [
-          "flowers/orange_bog_asphodel3"
-        ]
+        "textures": ["flowers/orange_bog_asphodel3"]
       },
       {
-        "textures": [
-          "flowers/orange_bog_asphodel4"
-        ]
+        "textures": ["flowers/orange_bog_asphodel4"]
       }
     ],
     "renderLayer": "cutout",
@@ -1534,24 +1274,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/orange_marigolds1"
-        ]
+        "textures": ["flowers/orange_marigolds1"]
       },
       {
-        "textures": [
-          "flowers/orange_marigolds2"
-        ]
+        "textures": ["flowers/orange_marigolds2"]
       },
       {
-        "textures": [
-          "flowers/orange_marigolds3"
-        ]
+        "textures": ["flowers/orange_marigolds3"]
       },
       {
-        "textures": [
-          "flowers/orange_marigolds4"
-        ]
+        "textures": ["flowers/orange_marigolds4"]
       }
     ],
     "renderLayer": "cutout",
@@ -1575,14 +1307,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/orange_sun_star1"
-        ]
+        "textures": ["flowers/orange_sun_star1"]
       },
       {
-        "textures": [
-          "flowers/orange_sun_star2"
-        ]
+        "textures": ["flowers/orange_sun_star2"]
       }
     ],
     "renderLayer": "cutout",
@@ -1605,14 +1333,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/orange_trollius1"
-        ]
+        "textures": ["flowers/orange_trollius1"]
       },
       {
-        "textures": [
-          "flowers/orange_trollius2"
-        ]
+        "textures": ["flowers/orange_trollius2"]
       }
     ],
     "renderLayer": "cutout",
@@ -1636,24 +1360,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/pink_allium1"
-        ]
+        "textures": ["flowers/pink_allium1"]
       },
       {
-        "textures": [
-          "flowers/pink_allium2"
-        ]
+        "textures": ["flowers/pink_allium2"]
       },
       {
-        "textures": [
-          "flowers/pink_allium3"
-        ]
+        "textures": ["flowers/pink_allium3"]
       },
       {
-        "textures": [
-          "flowers/pink_allium4"
-        ]
+        "textures": ["flowers/pink_allium4"]
       }
     ],
     "renderLayer": "cutout",
@@ -1677,14 +1393,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/pink_primrose1"
-        ]
+        "textures": ["flowers/pink_primrose1"]
       },
       {
-        "textures": [
-          "flowers/pink_primrose2"
-        ]
+        "textures": ["flowers/pink_primrose2"]
       }
     ],
     "renderLayer": "cutout",
@@ -1708,24 +1420,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/pink_roses1"
-        ]
+        "textures": ["flowers/pink_roses1"]
       },
       {
-        "textures": [
-          "flowers/pink_roses2"
-        ]
+        "textures": ["flowers/pink_roses2"]
       },
       {
-        "textures": [
-          "flowers/pink_roses3"
-        ]
+        "textures": ["flowers/pink_roses3"]
       },
       {
-        "textures": [
-          "flowers/pink_roses4"
-        ]
+        "textures": ["flowers/pink_roses4"]
       }
     ],
     "renderLayer": "cutout",
@@ -1747,9 +1451,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/pink_sweet_peas1"
-    ],
+    "textures": ["flowers/pink_sweet_peas1"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -1771,24 +1473,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/pink_thistle/side1"
-        ]
+        "textures": ["flowers/pink_thistle/side1"]
       },
       {
-        "textures": [
-          "flowers/pink_thistle/side2"
-        ]
+        "textures": ["flowers/pink_thistle/side2"]
       },
       {
-        "textures": [
-          "flowers/pink_thistle/side3"
-        ]
+        "textures": ["flowers/pink_thistle/side3"]
       },
       {
-        "textures": [
-          "flowers/pink_thistle/side4"
-        ]
+        "textures": ["flowers/pink_thistle/side4"]
       }
     ],
     "renderLayer": "cutout",
@@ -1812,24 +1506,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/pink_tulips1"
-        ]
+        "textures": ["flowers/pink_tulips1"]
       },
       {
-        "textures": [
-          "flowers/pink_tulips2"
-        ]
+        "textures": ["flowers/pink_tulips2"]
       },
       {
-        "textures": [
-          "flowers/pink_tulips3"
-        ]
+        "textures": ["flowers/pink_tulips3"]
       },
       {
-        "textures": [
-          "flowers/pink_tulips4"
-        ]
+        "textures": ["flowers/pink_tulips4"]
       }
     ],
     "renderLayer": "cutout",
@@ -1850,9 +1536,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/pink_wildflowers"
-    ],
+    "textures": ["flowers/pink_wildflowers"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -1874,24 +1558,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/purple_alpine_sowthistle/side1"
-        ]
+        "textures": ["flowers/purple_alpine_sowthistle/side1"]
       },
       {
-        "textures": [
-          "flowers/purple_alpine_sowthistle/side2"
-        ]
+        "textures": ["flowers/purple_alpine_sowthistle/side2"]
       },
       {
-        "textures": [
-          "flowers/purple_alpine_sowthistle/side3"
-        ]
+        "textures": ["flowers/purple_alpine_sowthistle/side3"]
       },
       {
-        "textures": [
-          "flowers/purple_alpine_sowthistle/side4"
-        ]
+        "textures": ["flowers/purple_alpine_sowthistle/side4"]
       }
     ],
     "renderLayer": "cutout",
@@ -1915,24 +1591,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/purple_foxglove1"
-        ]
+        "textures": ["flowers/purple_foxglove1"]
       },
       {
-        "textures": [
-          "flowers/purple_foxglove2"
-        ]
+        "textures": ["flowers/purple_foxglove2"]
       },
       {
-        "textures": [
-          "flowers/purple_foxglove3"
-        ]
+        "textures": ["flowers/purple_foxglove3"]
       },
       {
-        "textures": [
-          "flowers/purple_foxglove4"
-        ]
+        "textures": ["flowers/purple_foxglove4"]
       }
     ],
     "renderLayer": "cutout",
@@ -1956,19 +1624,13 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/purple_lavender1"
-        ]
+        "textures": ["flowers/purple_lavender1"]
       },
       {
-        "textures": [
-          "flowers/purple_lavender2"
-        ]
+        "textures": ["flowers/purple_lavender2"]
       },
       {
-        "textures": [
-          "flowers/purple_lavender3"
-        ]
+        "textures": ["flowers/purple_lavender3"]
       }
     ],
     "renderLayer": "cutout",
@@ -1992,24 +1654,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/purple_pansies1"
-        ]
+        "textures": ["flowers/purple_pansies1"]
       },
       {
-        "textures": [
-          "flowers/purple_pansies2"
-        ]
+        "textures": ["flowers/purple_pansies2"]
       },
       {
-        "textures": [
-          "flowers/purple_pansies3"
-        ]
+        "textures": ["flowers/purple_pansies3"]
       },
       {
-        "textures": [
-          "flowers/purple_pansies4"
-        ]
+        "textures": ["flowers/purple_pansies4"]
       }
     ],
     "renderLayer": "cutout",
@@ -2033,24 +1687,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/purple_roses1"
-        ]
+        "textures": ["flowers/purple_roses1"]
       },
       {
-        "textures": [
-          "flowers/purple_roses2"
-        ]
+        "textures": ["flowers/purple_roses2"]
       },
       {
-        "textures": [
-          "flowers/purple_roses3"
-        ]
+        "textures": ["flowers/purple_roses3"]
       },
       {
-        "textures": [
-          "flowers/purple_roses4"
-        ]
+        "textures": ["flowers/purple_roses4"]
       }
     ],
     "renderLayer": "cutout",
@@ -2074,19 +1720,13 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/purple_violets1"
-        ]
+        "textures": ["flowers/purple_violets1"]
       },
       {
-        "textures": [
-          "flowers/purple_violets2"
-        ]
+        "textures": ["flowers/purple_violets2"]
       },
       {
-        "textures": [
-          "flowers/purple_violets3"
-        ]
+        "textures": ["flowers/purple_violets3"]
       }
     ],
     "renderLayer": "cutout",
@@ -2110,24 +1750,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/red_aster1"
-        ]
+        "textures": ["flowers/red_aster1"]
       },
       {
-        "textures": [
-          "flowers/red_aster2"
-        ]
+        "textures": ["flowers/red_aster2"]
       },
       {
-        "textures": [
-          "flowers/red_aster3"
-        ]
+        "textures": ["flowers/red_aster3"]
       },
       {
-        "textures": [
-          "flowers/red_aster4"
-        ]
+        "textures": ["flowers/red_aster4"]
       }
     ],
     "renderLayer": "cutout",
@@ -2151,24 +1783,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/red_carnations1"
-        ]
+        "textures": ["flowers/red_carnations1"]
       },
       {
-        "textures": [
-          "flowers/red_carnations2"
-        ]
+        "textures": ["flowers/red_carnations2"]
       },
       {
-        "textures": [
-          "flowers/red_carnations3"
-        ]
+        "textures": ["flowers/red_carnations3"]
       },
       {
-        "textures": [
-          "flowers/red_carnations4"
-        ]
+        "textures": ["flowers/red_carnations4"]
       }
     ],
     "renderLayer": "cutout",
@@ -2190,9 +1814,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/red_chrysanthemum1"
-    ],
+    "textures": ["flowers/red_chrysanthemum1"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -2214,24 +1836,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/red_dark_roses1"
-        ]
+        "textures": ["flowers/red_dark_roses1"]
       },
       {
-        "textures": [
-          "flowers/red_dark_roses2"
-        ]
+        "textures": ["flowers/red_dark_roses2"]
       },
       {
-        "textures": [
-          "flowers/red_dark_roses3"
-        ]
+        "textures": ["flowers/red_dark_roses3"]
       },
       {
-        "textures": [
-          "flowers/red_dark_roses4"
-        ]
+        "textures": ["flowers/red_dark_roses4"]
       }
     ],
     "renderLayer": "cutout",
@@ -2255,19 +1869,13 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "red_fern/side1"
-        ]
+        "textures": ["red_fern/side1"]
       },
       {
-        "textures": [
-          "red_fern/side2"
-        ]
+        "textures": ["red_fern/side2"]
       },
       {
-        "textures": [
-          "red_fern/side3"
-        ]
+        "textures": ["red_fern/side3"]
       }
     ],
     "renderLayer": "cutout",
@@ -2289,9 +1897,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/red_flowering_spiny_herb1"
-    ],
+    "textures": ["flowers/red_flowering_spiny_herb1"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -2311,9 +1917,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "red_mushroom_block/mushroom_red_0"
-    ],
+    "textures": ["red_mushroom_block/mushroom_red_0"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -2333,9 +1937,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "red_mushroom_block/mushroom_red_1"
-    ],
+    "textures": ["red_mushroom_block/mushroom_red_1"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -2355,9 +1957,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "red_mushroom_block/mushroom_red_2"
-    ],
+    "textures": ["red_mushroom_block/mushroom_red_2"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -2377,9 +1977,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "red_mushroom_block/mushroom_red_3"
-    ],
+    "textures": ["red_mushroom_block/mushroom_red_3"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -2399,9 +1997,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "red_mushroom_block/mushroom_red_4"
-    ],
+    "textures": ["red_mushroom_block/mushroom_red_4"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -2421,9 +2017,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "red_mushroom_block/mushroom_red_5"
-    ],
+    "textures": ["red_mushroom_block/mushroom_red_5"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -2443,9 +2037,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "red_mushroom_block/mushroom_red_6"
-    ],
+    "textures": ["red_mushroom_block/mushroom_red_6"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -2465,9 +2057,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "red_mushroom_block/mushroom_red_7"
-    ],
+    "textures": ["red_mushroom_block/mushroom_red_7"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -2487,9 +2077,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "red_mushroom_block/mushroom_red_8"
-    ],
+    "textures": ["red_mushroom_block/mushroom_red_8"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -2511,14 +2099,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/red_poppies1"
-        ]
+        "textures": ["flowers/red_poppies1"]
       },
       {
-        "textures": [
-          "flowers/red_poppies2"
-        ]
+        "textures": ["flowers/red_poppies2"]
       }
     ],
     "renderLayer": "cutout",
@@ -2542,24 +2126,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/red_roses1"
-        ]
+        "textures": ["flowers/red_roses1"]
       },
       {
-        "textures": [
-          "flowers/red_roses2"
-        ]
+        "textures": ["flowers/red_roses2"]
       },
       {
-        "textures": [
-          "flowers/red_roses3"
-        ]
+        "textures": ["flowers/red_roses3"]
       },
       {
-        "textures": [
-          "flowers/red_roses4"
-        ]
+        "textures": ["flowers/red_roses4"]
       }
     ],
     "renderLayer": "cutout",
@@ -2581,9 +2157,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/red_sorrel1"
-    ],
+    "textures": ["flowers/red_sorrel1"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -2605,14 +2179,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/red_sourleaf_bush1"
-        ]
+        "textures": ["flowers/red_sourleaf_bush1"]
       },
       {
-        "textures": [
-          "flowers/red_sourleaf_bush2"
-        ]
+        "textures": ["flowers/red_sourleaf_bush2"]
       }
     ],
     "renderLayer": "cutout",
@@ -2636,24 +2206,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/red_tulips1"
-        ]
+        "textures": ["flowers/red_tulips1"]
       },
       {
-        "textures": [
-          "flowers/red_tulips2"
-        ]
+        "textures": ["flowers/red_tulips2"]
       },
       {
-        "textures": [
-          "flowers/red_tulips3"
-        ]
+        "textures": ["flowers/red_tulips3"]
       },
       {
-        "textures": [
-          "flowers/red_tulips4"
-        ]
+        "textures": ["flowers/red_tulips4"]
       }
     ],
     "renderLayer": "cutout",
@@ -2675,9 +2237,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/strawberry"
-    ],
+    "textures": ["flowers/strawberry"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -2699,63 +2259,43 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "minecraft:block/grass/grass1"
-        ],
+        "textures": ["minecraft:block/grass/grass1"],
         "weight": 10
       },
       {
-        "textures": [
-          "minecraft:block/grass/grass2"
-        ],
+        "textures": ["minecraft:block/grass/grass2"],
         "weight": 10
       },
       {
-        "textures": [
-          "minecraft:block/grass/grass3"
-        ],
+        "textures": ["minecraft:block/grass/grass3"],
         "weight": 10
       },
       {
-        "textures": [
-          "minecraft:block/grass/grass4"
-        ],
+        "textures": ["minecraft:block/grass/grass4"],
         "weight": 10
       },
       {
-        "textures": [
-          "minecraft:block/grass/grass5"
-        ],
+        "textures": ["minecraft:block/grass/grass5"],
         "weight": 10
       },
       {
-        "textures": [
-          "minecraft:block/grass/grass6"
-        ],
+        "textures": ["minecraft:block/grass/grass6"],
         "weight": 5
       },
       {
-        "textures": [
-          "minecraft:block/grass/grass7"
-        ],
+        "textures": ["minecraft:block/grass/grass7"],
         "weight": 5
       },
       {
-        "textures": [
-          "minecraft:block/grass/grass8"
-        ],
+        "textures": ["minecraft:block/grass/grass8"],
         "weight": 10
       },
       {
-        "textures": [
-          "minecraft:block/grass/grass9"
-        ],
+        "textures": ["minecraft:block/grass/grass9"],
         "weight": 10
       },
       {
-        "textures": [
-          "minecraft:block/grass/grass10"
-        ],
+        "textures": ["minecraft:block/grass/grass10"],
         "weight": 10
       }
     ],
@@ -2781,44 +2321,28 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "deadbush/side1"
-        ]
+        "textures": ["deadbush/side1"]
       },
       {
-        "textures": [
-          "deadbush/side2"
-        ]
+        "textures": ["deadbush/side2"]
       },
       {
-        "textures": [
-          "deadbush/side3"
-        ]
+        "textures": ["deadbush/side3"]
       },
       {
-        "textures": [
-          "deadbush/side4"
-        ]
+        "textures": ["deadbush/side4"]
       },
       {
-        "textures": [
-          "deadbush/side5"
-        ]
+        "textures": ["deadbush/side5"]
       },
       {
-        "textures": [
-          "deadbush/side6"
-        ]
+        "textures": ["deadbush/side6"]
       },
       {
-        "textures": [
-          "deadbush/side7"
-        ]
+        "textures": ["deadbush/side7"]
       },
       {
-        "textures": [
-          "deadbush/side8"
-        ]
+        "textures": ["deadbush/side8"]
       }
     ],
     "renderLayer": "cutout",
@@ -2842,19 +2366,13 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/white_chamomile1"
-        ]
+        "textures": ["flowers/white_chamomile1"]
       },
       {
-        "textures": [
-          "flowers/white_chamomile2"
-        ]
+        "textures": ["flowers/white_chamomile2"]
       },
       {
-        "textures": [
-          "flowers/white_chamomile3"
-        ]
+        "textures": ["flowers/white_chamomile3"]
       }
     ],
     "renderLayer": "cutout",
@@ -2877,24 +2395,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/white_daisies1"
-        ]
+        "textures": ["flowers/white_daisies1"]
       },
       {
-        "textures": [
-          "flowers/white_daisies2"
-        ]
+        "textures": ["flowers/white_daisies2"]
       },
       {
-        "textures": [
-          "flowers/white_daisies3"
-        ]
+        "textures": ["flowers/white_daisies3"]
       },
       {
-        "textures": [
-          "flowers/white_daisies4"
-        ]
+        "textures": ["flowers/white_daisies4"]
       }
     ],
     "renderLayer": "cutout",
@@ -2916,9 +2426,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/white_lily_valley1"
-    ],
+    "textures": ["flowers/white_lily_valley1"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -2938,9 +2446,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/white_peony1"
-    ],
+    "textures": ["flowers/white_peony1"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -2962,24 +2468,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/white_roses1"
-        ]
+        "textures": ["flowers/white_roses1"]
       },
       {
-        "textures": [
-          "flowers/white_roses2"
-        ]
+        "textures": ["flowers/white_roses2"]
       },
       {
-        "textures": [
-          "flowers/white_roses3"
-        ]
+        "textures": ["flowers/white_roses3"]
       },
       {
-        "textures": [
-          "flowers/white_roses4"
-        ]
+        "textures": ["flowers/white_roses4"]
       }
     ],
     "renderLayer": "cutout",
@@ -3002,19 +2500,13 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/yellow_bedstraw/side1"
-        ]
+        "textures": ["flowers/yellow_bedstraw/side1"]
       },
       {
-        "textures": [
-          "flowers/yellow_bedstraw/side2"
-        ]
+        "textures": ["flowers/yellow_bedstraw/side2"]
       },
       {
-        "textures": [
-          "flowers/yellow_bedstraw/side3"
-        ]
+        "textures": ["flowers/yellow_bedstraw/side3"]
       }
     ],
     "renderLayer": "cutout",
@@ -3036,9 +2528,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/yellow_bells1"
-    ],
+    "textures": ["flowers/yellow_bells1"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -3060,24 +2550,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/yellow_buttercups1"
-        ]
+        "textures": ["flowers/yellow_buttercups1"]
       },
       {
-        "textures": [
-          "flowers/yellow_buttercups2"
-        ]
+        "textures": ["flowers/yellow_buttercups2"]
       },
       {
-        "textures": [
-          "flowers/yellow_buttercups3"
-        ]
+        "textures": ["flowers/yellow_buttercups3"]
       },
       {
-        "textures": [
-          "flowers/yellow_buttercups4"
-        ]
+        "textures": ["flowers/yellow_buttercups4"]
       }
     ],
     "renderLayer": "cutout",
@@ -3101,24 +2583,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/yellow_daffodils1"
-        ]
+        "textures": ["flowers/yellow_daffodils1"]
       },
       {
-        "textures": [
-          "flowers/yellow_daffodils2"
-        ]
+        "textures": ["flowers/yellow_daffodils2"]
       },
       {
-        "textures": [
-          "flowers/yellow_daffodils3"
-        ]
+        "textures": ["flowers/yellow_daffodils3"]
       },
       {
-        "textures": [
-          "flowers/yellow_daffodils4"
-        ]
+        "textures": ["flowers/yellow_daffodils4"]
       }
     ],
     "renderLayer": "cutout",
@@ -3141,14 +2615,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/yellow_daisies1"
-        ]
+        "textures": ["flowers/yellow_daisies1"]
       },
       {
-        "textures": [
-          "flowers/yellow_daisies2"
-        ]
+        "textures": ["flowers/yellow_daisies2"]
       }
     ],
     "renderLayer": "cutout",
@@ -3172,19 +2642,13 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/yellow_dandelions1"
-        ]
+        "textures": ["flowers/yellow_dandelions1"]
       },
       {
-        "textures": [
-          "flowers/yellow_dandelions2"
-        ]
+        "textures": ["flowers/yellow_dandelions2"]
       },
       {
-        "textures": [
-          "flowers/yellow_dandelions3"
-        ]
+        "textures": ["flowers/yellow_dandelions3"]
       }
     ],
     "renderLayer": "cutout",
@@ -3208,14 +2672,10 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/yellow_hellebore1"
-        ]
+        "textures": ["flowers/yellow_hellebore1"]
       },
       {
-        "textures": [
-          "flowers/yellow_hellebore2"
-        ]
+        "textures": ["flowers/yellow_hellebore2"]
       }
     ],
     "renderLayer": "cutout",
@@ -3239,24 +2699,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/yellow_lupine1"
-        ]
+        "textures": ["flowers/yellow_lupine1"]
       },
       {
-        "textures": [
-          "flowers/yellow_lupine2"
-        ]
+        "textures": ["flowers/yellow_lupine2"]
       },
       {
-        "textures": [
-          "flowers/yellow_lupine3"
-        ]
+        "textures": ["flowers/yellow_lupine3"]
       },
       {
-        "textures": [
-          "flowers/yellow_lupine4"
-        ]
+        "textures": ["flowers/yellow_lupine4"]
       }
     ],
     "renderLayer": "cutout",
@@ -3280,24 +2732,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/yellow_roses1"
-        ]
+        "textures": ["flowers/yellow_roses1"]
       },
       {
-        "textures": [
-          "flowers/yellow_roses2"
-        ]
+        "textures": ["flowers/yellow_roses2"]
       },
       {
-        "textures": [
-          "flowers/yellow_roses3"
-        ]
+        "textures": ["flowers/yellow_roses3"]
       },
       {
-        "textures": [
-          "flowers/yellow_roses4"
-        ]
+        "textures": ["flowers/yellow_roses4"]
       }
     ],
     "renderLayer": "cutout",
@@ -3319,9 +2763,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/yellow_rudbeckia1"
-    ],
+    "textures": ["flowers/yellow_rudbeckia1"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -3343,19 +2785,13 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "flowers/yellow_sunflower/side1"
-        ]
+        "textures": ["flowers/yellow_sunflower/side1"]
       },
       {
-        "textures": [
-          "flowers/yellow_sunflower/side2"
-        ]
+        "textures": ["flowers/yellow_sunflower/side2"]
       },
       {
-        "textures": [
-          "flowers/yellow_sunflower/side3"
-        ]
+        "textures": ["flowers/yellow_sunflower/side3"]
       }
     ],
     "renderLayer": "cutout",
@@ -3376,9 +2812,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/yellow_tansy"
-    ],
+    "textures": ["flowers/yellow_tansy"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,
@@ -3397,9 +2831,7 @@
     "type": {
       "layerSensitive": true
     },
-    "textures": [
-      "flowers/yellow_wildflowers"
-    ],
+    "textures": ["flowers/yellow_wildflowers"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.3,

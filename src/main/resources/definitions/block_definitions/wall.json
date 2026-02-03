@@ -15,9 +15,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/arbor/all"
-    ]
+    "textures": ["ashlar_engraved/arbor/all"]
   },
   {
     "blockName": "black_brick_engraved_wall",
@@ -35,9 +33,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/black/all"
-    ]
+    "textures": ["ashlar_engraved/black/all"]
   },
   {
     "blockName": "brown_grey_brick_engraved_wall",
@@ -55,9 +51,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/brown_grey/all"
-    ]
+    "textures": ["ashlar_engraved/brown_grey/all"]
   },
   {
     "blockName": "coarse_dark_red_carved_sandstone_wall",
@@ -75,9 +69,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/pale_dark_red/all"
-    ]
+    "textures": ["ashlar_engraved/pale_dark_red/all"]
   },
   {
     "blockName": "coarse_red_carved_sandstone_wall",
@@ -95,9 +87,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/pale_red/all"
-    ]
+    "textures": ["ashlar_engraved/pale_red/all"]
   },
   {
     "blockName": "dark_grey_brick_engraved_wall",
@@ -115,9 +105,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/dark_grey/all"
-    ]
+    "textures": ["ashlar_engraved/dark_grey/all"]
   },
   {
     "blockName": "desert_sandstone_engraved_wall",
@@ -135,9 +123,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/sandstone/all"
-    ]
+    "textures": ["ashlar_engraved/sandstone/all"]
   },
   {
     "blockName": "green_grey_brick_engraved_wall",
@@ -155,9 +141,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/green_grey/all"
-    ]
+    "textures": ["ashlar_engraved/green_grey/all"]
   },
   {
     "blockName": "grey_brick_engraved_wall",
@@ -175,9 +159,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/grey/all"
-    ]
+    "textures": ["ashlar_engraved/grey/all"]
   },
   {
     "blockName": "kl_dun_carved_brick_wall",
@@ -195,9 +177,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/dun/all"
-    ]
+    "textures": ["ashlar_engraved/dun/all"]
   },
   {
     "blockName": "light_grey_brick_engraved_wall",
@@ -215,9 +195,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/light_grey/all"
-    ]
+    "textures": ["ashlar_engraved/light_grey/all"]
   },
   {
     "blockName": "light_oldtown_brick_engraved_wall",
@@ -235,9 +213,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/light_oldtown/all"
-    ]
+    "textures": ["ashlar_engraved/light_oldtown/all"]
   },
   {
     "blockName": "marble_wall",
@@ -278,9 +254,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/light_brown/all"
-    ]
+    "textures": ["ashlar_engraved/light_brown/all"]
   },
   {
     "blockName": "monochrome_sandstone_engraved_wall",
@@ -298,9 +272,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/westerlands/all"
-    ]
+    "textures": ["ashlar_engraved/westerlands/all"]
   },
   {
     "blockName": "piled_bones_wall",
@@ -318,9 +290,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "piled_bones/side"
-    ]
+    "textures": ["piled_bones/side"]
   },
   {
     "blockName": "pink_sandstone_engraved_wall",
@@ -338,9 +308,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/sandy_pink/all"
-    ]
+    "textures": ["ashlar_engraved/sandy_pink/all"]
   },
   {
     "blockName": "reach_brick_engraved_wall",
@@ -358,9 +326,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/reach/all"
-    ]
+    "textures": ["ashlar_engraved/reach/all"]
   },
   {
     "blockName": "reach_oak_wood_panelling_wall",
@@ -458,11 +424,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "crystal/wall_top",
-      "crystal/wall_top",
-      "crystal/wall"
-    ],
+    "textures": ["crystal/wall_top", "crystal/wall_top", "crystal/wall"],
     "nonOpaque": true,
     "alphaRender": true
   },
@@ -504,9 +466,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/stormlands/all"
-    ]
+    "textures": ["ashlar_engraved/stormlands/all"]
   },
   {
     "blockName": "terracotta_engraved_wall",
@@ -524,9 +484,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/terracotta/all"
-    ]
+    "textures": ["ashlar_engraved/terracotta/all"]
   },
   {
     "blockName": "thin_birch_log",
@@ -611,11 +569,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "bark/oak/wall_top",
-      "bark/oak/wall_top",
-      "bark/oak/side"
-    ]
+    "textures": ["bark/oak/wall_top", "bark/oak/wall_top", "bark/oak/side"]
   },
   {
     "blockName": "thin_palm_log",
@@ -633,11 +587,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "bark/palm/wall_top",
-      "bark/palm/wall_top",
-      "bark/palm/side"
-    ]
+    "textures": ["bark/palm/wall_top", "bark/palm/wall_top", "bark/palm/side"]
   },
   {
     "blockName": "thin_spruce_log",
@@ -677,9 +627,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/dark_tan/all"
-    ]
+    "textures": ["ashlar_engraved/dark_tan/all"]
   },
   {
     "blockName": "vivid_sandstone_engraved_wall",
@@ -697,9 +645,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/tan/all"
-    ]
+    "textures": ["ashlar_engraved/tan/all"]
   },
   {
     "blockName": "white_brick_engraved_wall",
@@ -717,8 +663,6 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "ashlar_engraved/white/all"
-    ]
+    "textures": ["ashlar_engraved/white/all"]
   }
 ]

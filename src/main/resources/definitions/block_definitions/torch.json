@@ -8,9 +8,7 @@
     "type": {
       "allowUnsupported": true
     },
-    "textures": [
-      "lighting/torch"
-    ],
+    "textures": ["lighting/torch"],
     "renderLayer": "cutout",
     "luminance": 13
   },
@@ -23,9 +21,7 @@
     "type": {
       "allowUnsupported": true
     },
-    "textures": [
-      "lighting/candle"
-    ],
+    "textures": ["lighting/candle"],
     "renderLayer": "cutout",
     "luminance": 10
   },
@@ -39,9 +35,7 @@
       "allowUnsupported": true,
       "noParticle": true
     },
-    "textures": [
-      "lighting/candle_unlit"
-    ],
+    "textures": ["lighting/candle_unlit"],
     "renderLayer": "cutout",
     "luminance": 0
   },
@@ -55,9 +49,7 @@
       "allowUnsupported": true,
       "noParticle": true
     },
-    "textures": [
-      "lighting/torch_unlit"
-    ],
+    "textures": ["lighting/torch_unlit"],
     "renderLayer": "cutout",
     "luminance": 0
   }

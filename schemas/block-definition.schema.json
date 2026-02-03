@@ -181,8 +181,17 @@
         },
         "colorMult": {
           "type": "string",
-          "pattern": "^#[0-9A-Fa-f]{6}$",
-          "description": "Hex color for texture tinting (e.g., '#FF0000' for red)"
+          "description": "Color tinting: hex color (e.g., '#FF0000') or colormap path (e.g., 'textures/colormap/reed')",
+          "oneOf": [
+            {
+              "pattern": "^#[0-9A-Fa-f]{6}$",
+              "description": "Hex color code"
+            },
+            {
+              "pattern": "^[^#].*$",
+              "description": "Colormap texture path"
+            }
+          ]
         },
         "colorMults": {
           "type": "array",

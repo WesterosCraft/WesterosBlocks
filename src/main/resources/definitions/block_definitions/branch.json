@@ -3,22 +3,18 @@
     "blockName": "branch_birch",
     "blockType": "branch",
     "soundGroup": "wood",
-    "creativeTab": "westeros_logs_tab",
+    "creativeTab": "westeros_test_tab",
     "label": "(Experimental) Birch Branch",
-    "textures": [
-      "bark/birch/side"
-    ],
+    "textures": ["bark/birch/side"],
     "isCustomModel": true
   },
   {
     "blockName": "branch_oak",
     "blockType": "branch",
     "soundGroup": "wood",
-    "creativeTab": "westeros_logs_tab",
+    "creativeTab": "westeros_test_tab",
     "label": "(Experimental) Oak Branch",
-    "textures": [
-      "bark/oak/side"
-    ],
+    "textures": ["bark/oak/side"],
     "isCustomModel": true
   }
 ]

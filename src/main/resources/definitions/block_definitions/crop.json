@@ -16,19 +16,13 @@
         "luminance": 10,
         "randomTextures": [
           {
-            "textures": [
-              "lighting/candle_altar/lit1"
-            ]
+            "textures": ["lighting/candle_altar/lit1"]
           },
           {
-            "textures": [
-              "lighting/candle_altar/lit2"
-            ]
+            "textures": ["lighting/candle_altar/lit2"]
           },
           {
-            "textures": [
-              "lighting/candle_altar/lit3"
-            ]
+            "textures": ["lighting/candle_altar/lit3"]
           }
         ]
       },
@@ -37,19 +31,13 @@
         "luminance": 0,
         "randomTextures": [
           {
-            "textures": [
-              "lighting/candle_altar/unlit1"
-            ]
+            "textures": ["lighting/candle_altar/unlit1"]
           },
           {
-            "textures": [
-              "lighting/candle_altar/unlit2"
-            ]
+            "textures": ["lighting/candle_altar/unlit2"]
           },
           {
-            "textures": [
-              "lighting/candle_altar/unlit3"
-            ]
+            "textures": ["lighting/candle_altar/unlit3"]
           }
         ]
       }
@@ -85,27 +73,19 @@
     "states": [
       {
         "stateID": "age0",
-        "textures": [
-          "carrots/carrots_stage_0"
-        ]
+        "textures": ["carrots/carrots_stage_0"]
       },
       {
         "stateID": "age1",
-        "textures": [
-          "carrots/carrots_stage_1"
-        ]
+        "textures": ["carrots/carrots_stage_1"]
       },
       {
         "stateID": "age2",
-        "textures": [
-          "carrots/carrots_stage_2"
-        ]
+        "textures": ["carrots/carrots_stage_2"]
       },
       {
         "stateID": "age3",
-        "textures": [
-          "carrots/carrots_stage_3"
-        ]
+        "textures": ["carrots/carrots_stage_3"]
       }
     ],
     "renderLayer": "cutout"
@@ -131,21 +111,15 @@
     "states": [
       {
         "stateID": "age0",
-        "textures": [
-          "peas/peas_stage_0"
-        ]
+        "textures": ["peas/peas_stage_0"]
       },
       {
         "stateID": "age1",
-        "textures": [
-          "peas/peas_stage_1"
-        ]
+        "textures": ["peas/peas_stage_1"]
       },
       {
         "stateID": "age2",
-        "textures": [
-          "peas/peas_stage_2"
-        ]
+        "textures": ["peas/peas_stage_2"]
       }
     ],
     "renderLayer": "cutout"
@@ -171,27 +145,19 @@
     "states": [
       {
         "stateID": "age0",
-        "textures": [
-          "turnips/turnips_stage_0"
-        ]
+        "textures": ["turnips/turnips_stage_0"]
       },
       {
         "stateID": "age1",
-        "textures": [
-          "turnips/turnips_stage_1"
-        ]
+        "textures": ["turnips/turnips_stage_1"]
       },
       {
         "stateID": "age2",
-        "textures": [
-          "turnips/turnips_stage_2"
-        ]
+        "textures": ["turnips/turnips_stage_2"]
       },
       {
         "stateID": "age3",
-        "textures": [
-          "turnips/turnips_stage_3"
-        ]
+        "textures": ["turnips/turnips_stage_3"]
       }
     ],
     "renderLayer": "cutout"
@@ -217,40 +183,28 @@
     "states": [
       {
         "stateID": "age0",
-        "textures": [
-          "wheat/wheat_stage_0"
-        ]
+        "textures": ["wheat/wheat_stage_0"]
       },
       {
         "stateID": "age1",
-        "textures": [
-          "wheat/wheat_stage_1"
-        ]
+        "textures": ["wheat/wheat_stage_1"]
       },
       {
         "stateID": "age2",
-        "textures": [
-          "wheat/wheat_stage_2"
-        ]
+        "textures": ["wheat/wheat_stage_2"]
       },
       {
         "stateID": "age3",
-        "textures": [
-          "wheat/wheat_stage_3"
-        ]
+        "textures": ["wheat/wheat_stage_3"]
       },
       {
         "stateID": "age4",
         "randomTextures": [
           {
-            "textures": [
-              "wheat/stage4_1"
-            ]
+            "textures": ["wheat/stage4_1"]
           },
           {
-            "textures": [
-              "wheat/stage4_2"
-            ]
+            "textures": ["wheat/stage4_2"]
           }
         ]
       },
@@ -258,14 +212,10 @@
         "stateID": "age5",
         "randomTextures": [
           {
-            "textures": [
-              "wheat/stage5_1"
-            ]
+            "textures": ["wheat/stage5_1"]
           },
           {
-            "textures": [
-              "wheat/stage5_2"
-            ]
+            "textures": ["wheat/stage5_2"]
           }
         ]
       },
@@ -273,14 +223,10 @@
         "stateID": "age6",
         "randomTextures": [
           {
-            "textures": [
-              "wheat/stage6_1"
-            ]
+            "textures": ["wheat/stage6_1"]
           },
           {
-            "textures": [
-              "wheat/stage6_2"
-            ]
+            "textures": ["wheat/stage6_2"]
           }
         ]
       },
@@ -288,24 +234,16 @@
         "stateID": "age7",
         "randomTextures": [
           {
-            "textures": [
-              "wheat/stage7_1"
-            ]
+            "textures": ["wheat/stage7_1"]
           },
           {
-            "textures": [
-              "wheat/stage7_2"
-            ]
+            "textures": ["wheat/stage7_2"]
           },
           {
-            "textures": [
-              "wheat/stage7_3"
-            ]
+            "textures": ["wheat/stage7_3"]
           },
           {
-            "textures": [
-              "wheat/stage7_4"
-            ]
+            "textures": ["wheat/stage7_4"]
           }
         ]
       }
@@ -325,24 +263,16 @@
     },
     "randomTextures": [
       {
-        "textures": [
-          "seagrass/side1"
-        ]
+        "textures": ["seagrass/side1"]
       },
       {
-        "textures": [
-          "seagrass/side2"
-        ]
+        "textures": ["seagrass/side2"]
       },
       {
-        "textures": [
-          "seagrass/side3"
-        ]
+        "textures": ["seagrass/side3"]
       },
       {
-        "textures": [
-          "seagrass/side4"
-        ]
+        "textures": ["seagrass/side4"]
       }
     ],
     "renderLayer": "cutout"

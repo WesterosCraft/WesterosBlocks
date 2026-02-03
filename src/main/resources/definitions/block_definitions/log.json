@@ -48,11 +48,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Firewood",
-    "textures": [
-      "firewood/top",
-      "firewood/top",
-      "firewood/side"
-    ]
+    "textures": ["firewood/top", "firewood/top", "firewood/side"]
   },
   {
     "blockName": "jungle_log_chain",
@@ -66,11 +62,7 @@
     ],
     "creativeTab": "westeros_logs_tab",
     "label": "Jungle Log Chain",
-    "textures": [
-      "bark/jungle/top",
-      "bark/jungle/top",
-      "bark/jungle/chain"
-    ]
+    "textures": ["bark/jungle/top", "bark/jungle/top", "bark/jungle/chain"]
   },
   {
     "blockName": "jungle_log_rope",
@@ -84,11 +76,7 @@
     ],
     "creativeTab": "westeros_logs_tab",
     "label": "Jungle Log Rope",
-    "textures": [
-      "bark/jungle/top",
-      "bark/jungle/top",
-      "bark/jungle/rope"
-    ]
+    "textures": ["bark/jungle/top", "bark/jungle/top", "bark/jungle/rope"]
   },
   {
     "blockName": "marble_pillar",
@@ -210,11 +198,7 @@
     ],
     "creativeTab": "westeros_logs_tab",
     "label": "Oak Log Chain",
-    "textures": [
-      "bark/oak/top",
-      "bark/oak/top",
-      "bark/oak/chain"
-    ]
+    "textures": ["bark/oak/top", "bark/oak/top", "bark/oak/chain"]
   },
   {
     "blockName": "oak_log_rope",
@@ -228,11 +212,7 @@
     ],
     "creativeTab": "westeros_logs_tab",
     "label": "Oak Log Rope",
-    "textures": [
-      "bark/oak/top",
-      "bark/oak/top",
-      "bark/oak/rope"
-    ]
+    "textures": ["bark/oak/top", "bark/oak/top", "bark/oak/rope"]
   },
   {
     "blockName": "palm_tree_log",
@@ -246,11 +226,7 @@
     ],
     "creativeTab": "westeros_logs_tab",
     "label": "Palm Tree Log",
-    "textures": [
-      "bark/palm/top",
-      "bark/palm/top",
-      "bark/palm/side"
-    ]
+    "textures": ["bark/palm/top", "bark/palm/top", "bark/palm/side"]
   },
   {
     "blockName": "sandstone_pillar",
@@ -282,11 +258,7 @@
     ],
     "creativeTab": "westeros_logs_tab",
     "label": "Spruce Log Chain",
-    "textures": [
-      "bark/spruce/top",
-      "bark/spruce/top",
-      "bark/spruce/chain"
-    ]
+    "textures": ["bark/spruce/top", "bark/spruce/top", "bark/spruce/chain"]
   },
   {
     "blockName": "spruce_log_rope",
@@ -300,11 +272,7 @@
     ],
     "creativeTab": "westeros_logs_tab",
     "label": "Spruce Log Rope",
-    "textures": [
-      "bark/spruce/top",
-      "bark/spruce/top",
-      "bark/spruce/rope"
-    ]
+    "textures": ["bark/spruce/top", "bark/spruce/top", "bark/spruce/rope"]
   },
   {
     "blockName": "stacked_bones",
@@ -343,21 +311,9 @@
     ],
     "display": {
       "gui": {
-        "rotation": [
-          -70,
-          0,
-          150
-        ],
-        "translation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          0.625,
-          0.625,
-          0.625
-        ]
+        "rotation": [-70, 0, 150],
+        "translation": [0, 0, 0],
+        "scale": [0.625, 0.625, 0.625]
       }
     }
   },
@@ -380,21 +336,9 @@
     ],
     "display": {
       "gui": {
-        "rotation": [
-          -70,
-          0,
-          150
-        ],
-        "translation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          0.625,
-          0.625,
-          0.625
-        ]
+        "rotation": [-70, 0, 150],
+        "translation": [0, 0, 0],
+        "scale": [0.625, 0.625, 0.625]
       }
     }
   },
@@ -417,21 +361,9 @@
     ],
     "display": {
       "gui": {
-        "rotation": [
-          -70,
-          0,
-          150
-        ],
-        "translation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          0.625,
-          0.625,
-          0.625
-        ]
+        "rotation": [-70, 0, 150],
+        "translation": [0, 0, 0],
+        "scale": [0.625, 0.625, 0.625]
       }
     }
   },
@@ -454,21 +386,9 @@
     ],
     "display": {
       "gui": {
-        "rotation": [
-          -70,
-          0,
-          150
-        ],
-        "translation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          0.625,
-          0.625,
-          0.625
-        ]
+        "rotation": [-70, 0, 150],
+        "translation": [0, 0, 0],
+        "scale": [0.625, 0.625, 0.625]
       }
     }
   },
@@ -491,21 +411,9 @@
     ],
     "display": {
       "gui": {
-        "rotation": [
-          -70,
-          0,
-          150
-        ],
-        "translation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          0.625,
-          0.625,
-          0.625
-        ]
+        "rotation": [-70, 0, 150],
+        "translation": [0, 0, 0],
+        "scale": [0.625, 0.625, 0.625]
       }
     }
   },
@@ -528,21 +436,9 @@
     ],
     "display": {
       "gui": {
-        "rotation": [
-          -70,
-          0,
-          150
-        ],
-        "translation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          0.625,
-          0.625,
-          0.625
-        ]
+        "rotation": [-70, 0, 150],
+        "translation": [0, 0, 0],
+        "scale": [0.625, 0.625, 0.625]
       }
     }
   },
@@ -565,21 +461,9 @@
     ],
     "display": {
       "gui": {
-        "rotation": [
-          -70,
-          0,
-          150
-        ],
-        "translation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          0.625,
-          0.625,
-          0.625
-        ]
+        "rotation": [-70, 0, 150],
+        "translation": [0, 0, 0],
+        "scale": [0.625, 0.625, 0.625]
       }
     }
   },
@@ -602,21 +486,9 @@
     ],
     "display": {
       "gui": {
-        "rotation": [
-          -70,
-          0,
-          150
-        ],
-        "translation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          0.625,
-          0.625,
-          0.625
-        ]
+        "rotation": [-70, 0, 150],
+        "translation": [0, 0, 0],
+        "scale": [0.625, 0.625, 0.625]
       }
     }
   },
@@ -639,21 +511,9 @@
     ],
     "display": {
       "gui": {
-        "rotation": [
-          -70,
-          0,
-          150
-        ],
-        "translation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          0.625,
-          0.625,
-          0.625
-        ]
+        "rotation": [-70, 0, 150],
+        "translation": [0, 0, 0],
+        "scale": [0.625, 0.625, 0.625]
       }
     }
   },

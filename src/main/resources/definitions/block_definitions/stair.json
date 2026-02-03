@@ -10,9 +10,7 @@
     "type": {
       "unconnect": false
     },
-    "textures": [
-      "piled_bones/side"
-    ]
+    "textures": ["piled_bones/side"]
   },
   {
     "blockName": "stacked_bones_stairs",

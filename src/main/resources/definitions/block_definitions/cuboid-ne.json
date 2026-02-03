@@ -20,51 +20,27 @@
         "stateID": "random",
         "randomTextures": [
           {
-            "textures": [
-              "bones/bottom1",
-              "bones/side1",
-              "transparent"
-            ]
+            "textures": ["bones/bottom1", "bones/side1", "transparent"]
           },
           {
-            "textures": [
-              "bones/bottom2",
-              "bones/side2",
-              "transparent"
-            ]
+            "textures": ["bones/bottom2", "bones/side2", "transparent"]
           },
           {
-            "textures": [
-              "bones/bottom3",
-              "bones/side3",
-              "transparent"
-            ]
+            "textures": ["bones/bottom3", "bones/side3", "transparent"]
           }
         ]
       },
       {
         "stateID": "bones1",
-        "textures": [
-          "bones/bottom1",
-          "bones/side1",
-          "transparent"
-        ]
+        "textures": ["bones/bottom1", "bones/side1", "transparent"]
       },
       {
         "stateID": "bones2",
-        "textures": [
-          "bones/bottom2",
-          "bones/side2",
-          "transparent"
-        ]
+        "textures": ["bones/bottom2", "bones/side2", "transparent"]
       },
       {
         "stateID": "bones3",
-        "textures": [
-          "bones/bottom3",
-          "bones/side3",
-          "transparent"
-        ]
+        "textures": ["bones/bottom3", "bones/side3", "transparent"]
       }
     ],
     "renderLayer": "cutout",
@@ -92,11 +68,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Broken Sword",
-    "textures": [
-      "broken_sword/bottom",
-      "broken_sword/top",
-      "transparent"
-    ],
+    "textures": ["broken_sword/bottom", "broken_sword/top", "transparent"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0,
@@ -280,14 +252,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -296,14 +261,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/ale_merchant"
@@ -455,14 +413,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -471,14 +422,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/apothecary"
@@ -630,14 +574,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -646,14 +583,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/armorer"
@@ -805,14 +735,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -821,14 +744,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/baker"
@@ -980,14 +896,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -996,14 +905,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/barber"
@@ -1155,14 +1057,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -1171,14 +1066,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/blacksmith"
@@ -1330,14 +1218,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -1346,14 +1227,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/bookbinder"
@@ -1505,14 +1379,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -1521,14 +1388,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/butcher"
@@ -1680,14 +1540,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -1696,14 +1549,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/carpenter"
@@ -1855,14 +1701,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -1871,14 +1710,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/cartwright"
@@ -2030,14 +1862,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -2046,14 +1871,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/chandler"
@@ -2205,14 +2023,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -2221,14 +2032,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/cobbler"
@@ -2380,14 +2184,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -2396,14 +2193,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/cooper"
@@ -2555,14 +2345,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -2571,14 +2354,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/fishmongerer"
@@ -2730,14 +2506,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -2746,14 +2515,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/potshop"
@@ -2905,14 +2667,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -2921,14 +2676,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/fletcher"
@@ -3080,14 +2828,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -3096,14 +2837,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/furrier"
@@ -3255,14 +2989,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -3271,14 +2998,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/inn"
@@ -3430,14 +3150,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -3446,14 +3159,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/jeweller"
@@ -3605,14 +3311,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -3621,14 +3320,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/mason"
@@ -3780,14 +3472,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -3796,14 +3481,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/mercer"
@@ -3955,14 +3633,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -3971,14 +3642,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/net_maker"
@@ -4130,14 +3794,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -4146,14 +3803,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/potter"
@@ -4305,14 +3955,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -4321,14 +3964,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/ropemaker"
@@ -4480,14 +4116,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -4496,14 +4125,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/scribe"
@@ -4655,14 +4277,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -4671,14 +4286,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/spicer"
@@ -4830,14 +4438,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -4846,14 +4447,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/stables"
@@ -5005,14 +4599,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -5021,14 +4608,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/tailor"
@@ -5180,14 +4760,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -5196,14 +4769,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/tanner"
@@ -5355,14 +4921,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -5371,14 +4930,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/tavern"
@@ -5530,14 +5082,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -5546,14 +5091,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/weaponsmith"
@@ -5705,14 +5243,7 @@
         "yMax": 1,
         "zMin": 0.45,
         "zMax": 0.55,
-        "sideTextures": [
-          4,
-          4,
-          2,
-          2,
-          4,
-          4
-        ]
+        "sideTextures": [4, 4, 2, 2, 4, 4]
       },
       {
         "xMin": 0,
@@ -5721,14 +5252,7 @@
         "yMax": 1,
         "zMin": 0.46,
         "zMax": 0.54,
-        "sideTextures": [
-          0,
-          1,
-          3,
-          3,
-          0,
-          0
-        ]
+        "sideTextures": [0, 1, 3, 3, 0, 0]
       }
     ],
     "itemTexture": "profession_sign_base/noctm/wine_merchant"
@@ -5852,84 +5376,48 @@
         "stateID": "random",
         "randomTextures": [
           {
-            "textures": [
-              "transparent",
-              "coins/top1"
-            ]
+            "textures": ["transparent", "coins/top1"]
           },
           {
-            "textures": [
-              "transparent",
-              "coins/top2"
-            ]
+            "textures": ["transparent", "coins/top2"]
           },
           {
-            "textures": [
-              "transparent",
-              "coins/top3"
-            ]
+            "textures": ["transparent", "coins/top3"]
           },
           {
-            "textures": [
-              "transparent",
-              "coins/top4"
-            ]
+            "textures": ["transparent", "coins/top4"]
           },
           {
-            "textures": [
-              "transparent",
-              "coins/top5"
-            ]
+            "textures": ["transparent", "coins/top5"]
           },
           {
-            "textures": [
-              "transparent",
-              "coins/top6"
-            ]
+            "textures": ["transparent", "coins/top6"]
           }
         ]
       },
       {
         "stateID": "coins1",
-        "textures": [
-          "transparent",
-          "coins/top1"
-        ]
+        "textures": ["transparent", "coins/top1"]
       },
       {
         "stateID": "coins2",
-        "textures": [
-          "transparent",
-          "coins/top2"
-        ]
+        "textures": ["transparent", "coins/top2"]
       },
       {
         "stateID": "coins3",
-        "textures": [
-          "transparent",
-          "coins/top3"
-        ]
+        "textures": ["transparent", "coins/top3"]
       },
       {
         "stateID": "coins4",
-        "textures": [
-          "transparent",
-          "coins/top4"
-        ]
+        "textures": ["transparent", "coins/top4"]
       },
       {
         "stateID": "coins5",
-        "textures": [
-          "transparent",
-          "coins/top5"
-        ]
+        "textures": ["transparent", "coins/top5"]
       },
       {
         "stateID": "coins6",
-        "textures": [
-          "transparent",
-          "coins/top6"
-        ]
+        "textures": ["transparent", "coins/top6"]
       }
     ],
     "renderLayer": "cutout",
@@ -5987,11 +5475,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Frying Pan",
-    "textures": [
-      "frying_pan/bottom",
-      "frying_pan/top",
-      "transparent"
-    ],
+    "textures": ["frying_pan/bottom", "frying_pan/top", "transparent"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0,
@@ -6016,9 +5500,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Horse Shoes",
-    "textures": [
-      "cuboid_block/horseshoes"
-    ],
+    "textures": ["cuboid_block/horseshoes"],
     "renderLayer": "cutout",
     "lightOpacity": 0,
     "boundingBox": {

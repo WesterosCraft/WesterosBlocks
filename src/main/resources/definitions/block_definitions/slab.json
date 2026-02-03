@@ -147,11 +147,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Firewood Slab",
-    "textures": [
-      "firewood/side",
-      "firewood/side",
-      "firewood/top"
-    ]
+    "textures": ["firewood/side", "firewood/side", "firewood/top"]
   },
   {
     "blockName": "fish_basket_slab",
@@ -358,9 +354,7 @@
     ],
     "creativeTab": "westeros_misc_tab",
     "label": "Piled Bones Slab",
-    "textures": [
-      "piled_bones/side"
-    ]
+    "textures": ["piled_bones/side"]
   },
   {
     "blockName": "pomegranate_basket_slab",
@@ -451,11 +445,7 @@
     ],
     "creativeTab": "westeros_furniture_tab",
     "label": "Stool",
-    "textures": [
-      "seat/bottom",
-      "seat/top",
-      "seat/side"
-    ],
+    "textures": ["seat/bottom", "seat/top", "seat/side"],
     "renderLayer": "cutout",
     "nonOpaque": true,
     "lightOpacity": 0
@@ -473,11 +463,7 @@
     ],
     "creativeTab": "westeros_furniture_tab",
     "label": "Stool Cushion",
-    "textures": [
-      "seat/bottom",
-      "seat/top_cushion",
-      "seat/side_cushion"
-    ],
+    "textures": ["seat/bottom", "seat/top_cushion", "seat/side_cushion"],
     "renderLayer": "cutout",
     "nonOpaque": true,
     "lightOpacity": 0

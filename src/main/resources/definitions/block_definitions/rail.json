@@ -8,9 +8,7 @@
     "type": {
       "allowUnsupported": true
     },
-    "textures": [
-      "carpet/fancy_blue_carpet"
-    ],
+    "textures": ["carpet/fancy_blue_carpet"],
     "renderLayer": "cutout_mipped"
   },
   {
@@ -22,9 +20,7 @@
     "type": {
       "allowUnsupported": true
     },
-    "textures": [
-      "carpet/fancy_red_carpet"
-    ],
+    "textures": ["carpet/fancy_red_carpet"],
     "renderLayer": "cutout_mipped"
   },
   {
@@ -35,10 +31,7 @@
     "type": {
       "allowUnsupported": true
     },
-    "textures": [
-      "rail_block/chain",
-      "rail_block/chain_turned"
-    ],
+    "textures": ["rail_block/chain", "rail_block/chain_turned"],
     "renderLayer": "cutout_mipped",
     "nonOpaque": true
   },
@@ -50,10 +43,7 @@
     "type": {
       "allowUnsupported": true
     },
-    "textures": [
-      "rail_block/net_large",
-      "rail_block/net_large_turned"
-    ],
+    "textures": ["rail_block/net_large", "rail_block/net_large_turned"],
     "renderLayer": "cutout_mipped"
   },
   {
@@ -64,10 +54,7 @@
     "type": {
       "allowUnsupported": true
     },
-    "textures": [
-      "rail_block/rope",
-      "rail_block/rope_turned"
-    ],
+    "textures": ["rail_block/rope", "rail_block/rope_turned"],
     "renderLayer": "cutout_mipped"
   },
   {
@@ -78,10 +65,7 @@
     "type": {
       "allowUnsupported": true
     },
-    "textures": [
-      "rail_block/packed_snow",
-      "rail_block/packed_snow_turned"
-    ],
+    "textures": ["rail_block/packed_snow", "rail_block/packed_snow_turned"],
     "renderLayer": "cutout_mipped"
   }
 ]
