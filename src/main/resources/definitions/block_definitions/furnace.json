@@ -7,12 +7,14 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Arbor",
+    "type": {
+      "alwaysOn": true
+    },
     "renderLayer": "cutout",
     "nonOpaque": true,
     "isCustomModel": true,
     "luminance": 10,
-    "material": "iron",
-    "alwaysOn": true
+    "material": "iron"
   },
   {
     "blockName": "always_active_brick_furnace",
@@ -22,12 +24,14 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Orange Brick Furnace",
+    "type": {
+      "alwaysOn": true
+    },
     "renderLayer": "cutout",
     "nonOpaque": true,
     "isCustomModel": true,
     "luminance": 10,
-    "material": "iron",
-    "alwaysOn": true
+    "material": "iron"
   },
   {
     "blockName": "always_active_dark_grey_brick_furnace",
@@ -37,12 +41,14 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Dark Grey",
+    "type": {
+      "alwaysOn": true
+    },
     "renderLayer": "cutout",
     "nonOpaque": true,
     "isCustomModel": true,
     "luminance": 10,
-    "material": "iron",
-    "alwaysOn": true
+    "material": "iron"
   },
   {
     "blockName": "always_active_dornish_mud_furnace",
@@ -52,12 +58,14 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Dornish Mud Furnace",
+    "type": {
+      "alwaysOn": true
+    },
     "renderLayer": "cutout",
     "nonOpaque": true,
     "isCustomModel": true,
     "luminance": 10,
-    "material": "rock",
-    "alwaysOn": true
+    "material": "rock"
   },
   {
     "blockName": "always_active_dun_brick_furnace",
@@ -67,12 +75,14 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Dun",
+    "type": {
+      "alwaysOn": true
+    },
     "renderLayer": "cutout",
     "nonOpaque": true,
     "isCustomModel": true,
     "luminance": 10,
-    "material": "iron",
-    "alwaysOn": true
+    "material": "iron"
   },
   {
     "blockName": "always_active_light_grey_brick_furnace",
@@ -82,12 +92,14 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Light Grey",
+    "type": {
+      "alwaysOn": true
+    },
     "renderLayer": "cutout",
     "nonOpaque": true,
     "isCustomModel": true,
     "luminance": 10,
-    "material": "iron",
-    "alwaysOn": true
+    "material": "iron"
   },
   {
     "blockName": "always_active_oldtown_brick_furnace",
@@ -97,12 +109,14 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Oldtown",
+    "type": {
+      "alwaysOn": true
+    },
     "renderLayer": "cutout",
     "nonOpaque": true,
     "isCustomModel": true,
     "luminance": 10,
-    "material": "iron",
-    "alwaysOn": true
+    "material": "iron"
   },
   {
     "blockName": "always_active_reach_brick_furnace",
@@ -112,12 +126,14 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Reach",
+    "type": {
+      "alwaysOn": true
+    },
     "renderLayer": "cutout",
     "nonOpaque": true,
     "isCustomModel": true,
     "luminance": 10,
-    "material": "iron",
-    "alwaysOn": true
+    "material": "iron"
   },
   {
     "blockName": "always_active_sandstone_furnace",
@@ -127,12 +143,14 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Light Brown",
+    "type": {
+      "alwaysOn": true
+    },
     "renderLayer": "cutout",
     "nonOpaque": true,
     "isCustomModel": true,
     "luminance": 10,
-    "material": "iron",
-    "alwaysOn": true
+    "material": "iron"
   },
   {
     "blockName": "always_active_southern_brick_furnace",
@@ -142,12 +160,14 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Southern Brick Furnace",
+    "type": {
+      "alwaysOn": true
+    },
     "renderLayer": "cutout",
     "nonOpaque": true,
     "isCustomModel": true,
     "luminance": 10,
-    "material": "iron",
-    "alwaysOn": true
+    "material": "iron"
   },
   {
     "blockName": "always_active_stone_furnace",
@@ -157,13 +177,15 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Green Grey",
+    "type": {
+      "alwaysOn": true
+    },
     "renderLayer": "cutout",
     "nonOpaque": true,
     "colorMult": "textures/colormap/furnace",
     "isCustomModel": true,
     "luminance": 10,
-    "material": "iron",
-    "alwaysOn": true
+    "material": "iron"
   },
   {
     "blockName": "arbor_brick_furnace",

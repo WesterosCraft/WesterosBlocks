@@ -8,7 +8,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -44,8 +45,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/birch",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/birch"
   },
   {
     "blockName": "apricot_fruit_leaves",
@@ -56,7 +56,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -92,8 +93,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_oak",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_oak"
   },
   {
     "blockName": "blackberry_bush",
@@ -104,7 +104,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -140,8 +141,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/birch",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/birch"
   },
   {
     "blockName": "blueberry_bush",
@@ -152,7 +152,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -188,8 +189,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_oak",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_oak"
   },
   {
     "blockName": "cherry_fruit_leaves",
@@ -200,7 +200,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -236,8 +237,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_oak",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_oak"
   },
   {
     "blockName": "hop_fruit_leaves",
@@ -248,7 +248,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -284,8 +285,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_jungle",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_jungle"
   },
   {
     "blockName": "juniper_bush",
@@ -296,7 +296,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -332,8 +333,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/pine",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/pine"
   },
   {
     "blockName": "lemon_fruit_leaves",
@@ -344,7 +344,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -380,8 +381,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_oak",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_oak"
   },
   {
     "blockName": "lime_fruit_leaves",
@@ -392,7 +392,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -428,8 +429,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_jungle",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_jungle"
   },
   {
     "blockName": "olive_fruit_leaves",
@@ -440,7 +440,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -476,8 +477,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_oak",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_oak"
   },
   {
     "blockName": "orange_fruit_leaves",
@@ -488,7 +488,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -524,8 +525,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_jungle",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_jungle"
   },
   {
     "blockName": "palm_leaves",
@@ -535,13 +535,13 @@
     "label": "Palm Leaves",
     "type": {
       "noDecay": true,
-      "betterFoliage": true
+      "betterFoliage": true,
+      "rotateRandom": true
     },
     "textures": [
       "leaves/palm/all"
     ],
-    "colorMult": "textures/colormap/foliage_palm",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_palm"
   },
   {
     "blockName": "peach_fruit_leaves",
@@ -552,7 +552,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -588,8 +589,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/birch",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/birch"
   },
   {
     "blockName": "pink_rose_bush",
@@ -600,7 +600,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -636,8 +637,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_oak",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_oak"
   },
   {
     "blockName": "plum_fruit_leaves",
@@ -648,7 +648,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -684,8 +685,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_oak",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_oak"
   },
   {
     "blockName": "pomegranate_fruit_leaves",
@@ -696,7 +696,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -732,8 +733,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/birch",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/birch"
   },
   {
     "blockName": "purple_grape_fruit_leaves",
@@ -744,7 +744,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -780,8 +781,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_jungle",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_jungle"
   },
   {
     "blockName": "raspberry_bush",
@@ -792,7 +792,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -828,8 +829,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_jungle",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_jungle"
   },
   {
     "blockName": "red_rose_bush",
@@ -840,7 +840,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -876,8 +877,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_oak",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_oak"
   },
   {
     "blockName": "snowy_spruce_leaves",
@@ -887,12 +887,12 @@
     "label": "Snowy Spruce Leaves",
     "type": {
       "noDecay": true,
-      "betterFoliage": true
+      "betterFoliage": true,
+      "rotateRandom": true
     },
     "textures": [
       "leaves/spruce/snowy/all"
-    ],
-    "rotateRandom": true
+    ]
   },
   {
     "blockName": "snowy_weirwood_leaves",
@@ -902,12 +902,12 @@
     "label": "Snowy Weirwood Leaves",
     "type": {
       "noDecay": true,
-      "betterFoliage": true
+      "betterFoliage": true,
+      "rotateRandom": true
     },
     "textures": [
       "leaves/weirwood/snowy/all"
-    ],
-    "rotateRandom": true
+    ]
   },
   {
     "blockName": "weirwood_leaves",
@@ -917,12 +917,12 @@
     "label": "Weirwood Leaves",
     "type": {
       "noDecay": true,
-      "betterFoliage": true
+      "betterFoliage": true,
+      "rotateRandom": true
     },
     "textures": [
       "leaves/weirwood/all"
-    ],
-    "rotateRandom": true
+    ]
   },
   {
     "blockName": "white_grape_fruit_leaves",
@@ -933,7 +933,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -969,8 +970,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_jungle",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_jungle"
   },
   {
     "blockName": "white_rose_bush",
@@ -981,7 +981,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -1017,8 +1018,7 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_oak",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_oak"
   },
   {
     "blockName": "yellow_rose_bush",
@@ -1029,7 +1029,8 @@
     "type": {
       "noDecay": true,
       "betterFoliage": true,
-      "overlay": true
+      "overlay": true,
+      "rotateRandom": true
     },
     "randomTextures": [
       {
@@ -1065,7 +1066,6 @@
         "weight": 2
       }
     ],
-    "colorMult": "textures/colormap/foliage_oak",
-    "rotateRandom": true
+    "colorMult": "textures/colormap/foliage_oak"
   }
 ]

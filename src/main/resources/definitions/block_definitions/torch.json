@@ -5,12 +5,14 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_lighting_tab",
     "label": "Torch",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "lighting/torch"
     ],
     "renderLayer": "cutout",
-    "luminance": 13,
-    "allowUnsupported": true
+    "luminance": 13
   },
   {
     "blockName": "candle",
@@ -18,12 +20,14 @@
     "soundGroup": "powder",
     "creativeTab": "westeros_lighting_tab",
     "label": "Candle",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "lighting/candle"
     ],
     "renderLayer": "cutout",
-    "luminance": 10,
-    "allowUnsupported": true
+    "luminance": 10
   },
   {
     "blockName": "candle_unlit",

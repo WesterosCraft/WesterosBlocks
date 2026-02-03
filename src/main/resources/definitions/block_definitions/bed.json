@@ -5,6 +5,9 @@
     "soundGroup": "plant",
     "creativeTab": "westeros_furniture_tab",
     "label": "Hammock",
+    "type": {
+      "bedType": "hammock"
+    },
     "textures": [
       "bed_block/bed_hammock_0",
       "bed_block/bed_hammock_1",
@@ -14,8 +17,7 @@
       "bed_block/bed_hammock_5"
     ],
     "renderLayer": "cutout",
-    "itemTexture": "bed_block/bed_hammock_1",
-    "bedType": "hammock"
+    "itemTexture": "bed_block/bed_hammock_1"
   },
   {
     "blockName": "itchy_straw_bed",
@@ -23,6 +25,9 @@
     "soundGroup": "plant",
     "creativeTab": "westeros_furniture_tab",
     "label": "Itchy Straw Bed",
+    "type": {
+      "bedType": "normal"
+    },
     "textures": [
       "bed_block/bed_straw_itchy_0",
       "bed_block/bed_straw_itchy_1",
@@ -31,14 +36,16 @@
       "bed_block/bed_straw_itchy_4",
       "bed_block/bed_straw_itchy_5"
     ],
-    "itemTexture": "bed_block/bed_straw_itchy_1",
-    "bedType": "normal"
+    "itemTexture": "bed_block/bed_straw_itchy_1"
   },
   {
     "blockName": "nights_watch_bed",
     "blockType": "bed",
     "creativeTab": "westeros_furniture_tab",
     "label": "Nights Watch Bed",
+    "type": {
+      "bedType": "normal"
+    },
     "textures": [
       "bed_block/bed_night_watch_0",
       "bed_block/bed_night_watch_1",
@@ -47,8 +54,7 @@
       "bed_block/bed_night_watch_4",
       "bed_block/bed_night_watch_5"
     ],
-    "itemTexture": "bed_block/bed_night_watch_1",
-    "bedType": "normal"
+    "itemTexture": "bed_block/bed_night_watch_1"
   },
   {
     "blockName": "noble_blue_bed",
@@ -56,6 +62,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Noble Blue Bed",
+    "type": {
+      "bedType": "raised"
+    },
     "textures": [
       "bed_block/bed_noble_blue_0",
       "bed_block/bed_noble_blue_1",
@@ -65,8 +74,7 @@
       "bed_block/bed_noble_blue_5"
     ],
     "renderLayer": "cutout",
-    "itemTexture": "bed_block/bed_noble_blue_1",
-    "bedType": "raised"
+    "itemTexture": "bed_block/bed_noble_blue_1"
   },
   {
     "blockName": "noble_red_bed",
@@ -74,6 +82,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Noble Red Bed",
+    "type": {
+      "bedType": "raised"
+    },
     "textures": [
       "bed_block/bed_noble_red_0",
       "bed_block/bed_noble_red_1",
@@ -83,8 +94,7 @@
       "bed_block/bed_noble_red_5"
     ],
     "renderLayer": "cutout",
-    "itemTexture": "bed_block/bed_noble_red_1",
-    "bedType": "raised"
+    "itemTexture": "bed_block/bed_noble_red_1"
   },
   {
     "blockName": "northern_bed",
@@ -92,6 +102,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Northern Bed",
+    "type": {
+      "bedType": "normal"
+    },
     "textures": [
       "bed_block/bed_north_0",
       "bed_block/bed_north_1",
@@ -100,8 +113,7 @@
       "bed_block/bed_north_4",
       "bed_block/bed_north_5"
     ],
-    "itemTexture": "bed_block/bed_north_1",
-    "bedType": "normal"
+    "itemTexture": "bed_block/bed_north_1"
   },
   {
     "blockName": "pale_green_bed",
@@ -109,6 +121,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Pale Green Bed",
+    "type": {
+      "bedType": "normal"
+    },
     "textures": [
       "bed_block/bed_patchy_green_0",
       "bed_block/bed_patchy_green_1",
@@ -117,8 +132,7 @@
       "bed_block/bed_patchy_green_4",
       "bed_block/bed_patchy_green_5"
     ],
-    "itemTexture": "bed_block/bed_patchy_green_1",
-    "bedType": "normal"
+    "itemTexture": "bed_block/bed_patchy_green_1"
   },
   {
     "blockName": "pale_red_bed",
@@ -126,6 +140,9 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Pale Red Bed",
+    "type": {
+      "bedType": "normal"
+    },
     "textures": [
       "bed_block/bed_patchy_red_0",
       "bed_block/bed_patchy_red_1",
@@ -134,8 +151,7 @@
       "bed_block/bed_patchy_red_4",
       "bed_block/bed_patchy_red_5"
     ],
-    "itemTexture": "bed_block/bed_patchy_red_1",
-    "bedType": "normal"
+    "itemTexture": "bed_block/bed_patchy_red_1"
   },
   {
     "blockName": "straw_bed",
@@ -143,6 +159,9 @@
     "soundGroup": "plant",
     "creativeTab": "westeros_furniture_tab",
     "label": "Straw Bed",
+    "type": {
+      "bedType": "normal"
+    },
     "textures": [
       "bed_block/bed_straw_0",
       "bed_block/bed_straw_1",
@@ -151,7 +170,6 @@
       "bed_block/bed_straw_4",
       "bed_block/bed_straw_5"
     ],
-    "itemTexture": "bed_block/bed_straw_1",
-    "bedType": "normal"
+    "itemTexture": "bed_block/bed_straw_1"
   }
 ]

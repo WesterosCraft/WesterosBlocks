@@ -42,8 +42,13 @@
     },
     "types": {
       "type": "object",
-      "description": "Type attributes for specific variants (e.g., {'fence_gate': 'locked:true'})",
-      "additionalProperties": { "type": "string" }
+      "description": "Type attributes for specific variants. Supports legacy string format (e.g., 'locked:true') or structured object format (e.g., {'locked': true})",
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "string" },
+          { "$ref": "#/$defs/TypeProperties" }
+        ]
+      }
     },
     "altCustomTags": {
       "type": "object",
@@ -304,6 +309,114 @@
         }
       },
       "required": ["tool", "level"]
+    },
+    "TypeProperties": {
+      "type": "object",
+      "description": "Structured type properties for block-specific behavior",
+      "properties": {
+        "unconnect": {
+          "type": "boolean",
+          "description": "Stair/Wall/Fence/Pane: disable automatic connection to adjacent blocks"
+        },
+        "connectstate": {
+          "type": "boolean",
+          "description": "Enable connect state cycling feature"
+        },
+        "noUvlock": {
+          "type": "boolean",
+          "description": "Disable UV lock on block models"
+        },
+        "barsModel": {
+          "type": "boolean",
+          "description": "Pane: use bars model instead of pane model"
+        },
+        "legacyModel": {
+          "type": "boolean",
+          "description": "Pane: use legacy model format"
+        },
+        "noDecay": {
+          "type": "boolean",
+          "description": "Leaves: prevent natural decay"
+        },
+        "betterFoliage": {
+          "type": "boolean",
+          "description": "Leaves: enable Better Foliage rendering"
+        },
+        "overlay": {
+          "type": "boolean",
+          "description": "Leaves: use overlay textures"
+        },
+        "allowUnsupported": {
+          "type": "boolean",
+          "description": "Torch/Ladder/Door: allow placement without support block"
+        },
+        "noParticle": {
+          "type": "boolean",
+          "description": "Torch: disable flame particles"
+        },
+        "locked": {
+          "type": "boolean",
+          "description": "Door/Gate: lock in closed position"
+        },
+        "alwaysOn": {
+          "type": "boolean",
+          "description": "Furnace: always show lit state"
+        },
+        "plantId": {
+          "type": "string",
+          "description": "Flowerpot: ID of the plant to display"
+        },
+        "noInWeb": {
+          "type": "boolean",
+          "description": "Web: don't slow entities"
+        },
+        "noClimb": {
+          "type": "boolean",
+          "description": "Vines: disable climbing"
+        },
+        "toggleOnUse": {
+          "type": "boolean",
+          "description": "Enable state cycling on right-click (creative mode)"
+        },
+        "layerSensitive": {
+          "type": "boolean",
+          "description": "Allow placement on layer blocks"
+        },
+        "symmetrical": {
+          "type": "boolean",
+          "description": "Use symmetrical texture mapping"
+        },
+        "noBreakUnder": {
+          "type": "boolean",
+          "description": "Stack blocks: prevent breaking blocks underneath"
+        },
+        "allowHalfBreak": {
+          "type": "boolean",
+          "description": "Stack blocks: allow breaking top half independently"
+        },
+        "hasClimb": {
+          "type": "boolean",
+          "description": "Vines: enable climbing like ladders"
+        },
+        "hasDown": {
+          "type": "boolean",
+          "description": "Vines: can grow/extend downward"
+        },
+        "wallSize": {
+          "type": "string",
+          "enum": ["normal", "short"],
+          "description": "Wall height: 'normal' (16 blocks) or 'short' (13 blocks)"
+        },
+        "bedType": {
+          "type": "string",
+          "description": "Bed variant type identifier"
+        },
+        "rotateRandom": {
+          "type": "boolean",
+          "description": "Randomly rotate block model on placement (Y-axis)"
+        }
+      },
+      "additionalProperties": false
     }
   }
 }

@@ -1564,12 +1564,14 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Hemp Dense",
+    "type": {
+      "rotateRandom": true
+    },
     "textures": [
       "hemp/hemp_dense"
     ],
     "renderLayer": "cutout",
     "isCustomModel": true,
-    "rotateRandom": true,
     "boundingBox": {
       "xMin": 0.3,
       "xMax": 0.7,
@@ -1585,6 +1587,9 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Hemp Short",
+    "type": {
+      "rotateRandom": true
+    },
     "randomTextures": [
       {},
       {},
@@ -1593,7 +1598,6 @@
     ],
     "renderLayer": "cutout",
     "isCustomModel": true,
-    "rotateRandom": true,
     "boundingBox": {
       "xMin": 0.3,
       "xMax": 0.7,
@@ -1609,6 +1613,9 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Hemp Tall",
+    "type": {
+      "rotateRandom": true
+    },
     "randomTextures": [
       {},
       {},
@@ -1620,7 +1627,6 @@
     ],
     "renderLayer": "cutout",
     "isCustomModel": true,
-    "rotateRandom": true,
     "boundingBox": {
       "xMin": 0.3,
       "xMax": 0.7,
@@ -1933,6 +1939,9 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Lily Pad",
+    "type": {
+      "rotateRandom": true
+    },
     "randomTextures": [
       {
         "textures": [
@@ -1971,7 +1980,6 @@
       }
     ],
     "renderLayer": "cutout",
-    "rotateRandom": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,

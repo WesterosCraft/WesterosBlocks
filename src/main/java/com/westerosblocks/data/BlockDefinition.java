@@ -132,18 +132,6 @@ public class BlockDefinition {
     private Boolean noCollision;
 
 
-    /** Stack blocks: allows top half to be broken independently */
-    @SerializedName("allowHalfBreak")
-    private Boolean allowHalfBreak;
-
-
-    /** Vines are climbable like ladders */
-    @SerializedName("hasClimb")
-    private Boolean hasClimb;
-
-    /** Vines can grow downward */
-    @SerializedName("hasDown")
-    private Boolean hasDown;
 
     /** What block material to connect to (e.g., "material" for webs) */
     @SerializedName("connectTo")
@@ -158,15 +146,6 @@ public class BlockDefinition {
     @SerializedName("isTinted")
     private Boolean isTinted;
 
-
-    /** Randomly rotate block models */
-    @SerializedName("hasRotateRandom")
-    private Boolean hasRotateRandom;
-
-    /** Randomly rotate block on placement (Y-axis rotation) */
-    @SerializedName("rotateRandom")
-    private Boolean rotateRandom;
-
     /** Block uses alpha/translucent rendering */
     @SerializedName("alphaRender")
     private Boolean alphaRender;
@@ -174,14 +153,6 @@ public class BlockDefinition {
     /** Legacy model for pane blocks */
     @SerializedName("isLegacyModel")
     private String isLegacyModel;
-
-    /** Bed type for bed blocks */
-    @SerializedName("bedType")
-    private String bedType;
-
-    /** Wall height: "normal" (16 blocks) or "short" (13 blocks) */
-    @SerializedName("wallSize")
-    private String wallSize;
 
     /** Stack elements for cuboid-nsew-stack blocks */
     @SerializedName("stack")
@@ -906,7 +877,11 @@ public class BlockDefinition {
     }
 
     public boolean isAllowHalfBreak() {
-        return Boolean.TRUE.equals(allowHalfBreak);
+        return type != null && Boolean.TRUE.equals(type.getAllowHalfBreak());
+    }
+
+    public boolean isNoBreakUnder() {
+        return type != null && Boolean.TRUE.equals(type.getNoBreakUnder());
     }
 
     public String getColorMult() {
@@ -982,7 +957,7 @@ public class BlockDefinition {
     }
 
     public boolean hasRotateRandom() {
-        return Boolean.TRUE.equals(hasRotateRandom) || Boolean.TRUE.equals(rotateRandom);
+        return type != null && Boolean.TRUE.equals(type.getRotateRandom());
     }
 
     public boolean isNoDecay() {
@@ -998,11 +973,11 @@ public class BlockDefinition {
     }
 
     public String getBedType() {
-        return bedType;
+        return type != null ? type.getBedType() : null;
     }
 
     public boolean hasBedType() {
-        return bedType != null && !bedType.isEmpty();
+        return type != null && type.getBedType() != null && !type.getBedType().isEmpty();
     }
 
     public boolean isAlwaysOn() {
@@ -1010,7 +985,11 @@ public class BlockDefinition {
     }
 
     public boolean hasDown() {
-        return Boolean.TRUE.equals(hasDown);
+        return type != null && Boolean.TRUE.equals(type.getHasDown());
+    }
+
+    public boolean hasClimb() {
+        return type != null && Boolean.TRUE.equals(type.getHasClimb());
     }
 
     public boolean isSymmetrical() {
@@ -1018,7 +997,10 @@ public class BlockDefinition {
     }
 
     public String getWallSize() {
-        return wallSize != null ? wallSize : "normal";
+        if (type != null && type.getWallSize() != null) {
+            return type.getWallSize();
+        }
+        return "normal";
     }
 
     public boolean isConnectState() {

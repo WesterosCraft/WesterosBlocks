@@ -279,48 +279,57 @@
         },
         "layerSensitive": {
           "type": "boolean",
-          "description": "Allows placement on Layer blocks",
-          "default": false
+          "description": "[DEPRECATED: Use type.layerSensitive] Allows placement on Layer blocks",
+          "default": false,
+          "deprecated": true
         },
         "allowUnsupported": {
           "type": "boolean",
-          "description": "Block can be placed in unsupported locations",
-          "default": false
+          "description": "[DEPRECATED: Use type.allowUnsupported] Block can be placed in unsupported locations",
+          "default": false,
+          "deprecated": true
         },
         "allowHalfBreak": {
           "type": "boolean",
-          "description": "Stack blocks: allows top half to be broken independently",
-          "default": false
+          "description": "[DEPRECATED: Use type.allowHalfBreak] Stack blocks: allows top half to be broken independently",
+          "default": false,
+          "deprecated": true
         },
         "toggleOnUse": {
           "type": "boolean",
-          "description": "Creative players can cycle states by right-clicking",
-          "default": false
+          "description": "[DEPRECATED: Use type.toggleOnUse] Creative players can cycle states by right-clicking",
+          "default": false,
+          "deprecated": true
         },
         "locked": {
           "type": "boolean",
-          "description": "Doors/gates are locked and cannot be opened",
-          "default": false
+          "description": "[DEPRECATED: Use type.locked] Doors/gates are locked and cannot be opened",
+          "default": false,
+          "deprecated": true
         },
         "noParticle": {
           "type": "boolean",
-          "description": "Torches don't emit particles",
-          "default": false
+          "description": "[DEPRECATED: Use type.noParticle] Torches don't emit particles",
+          "default": false,
+          "deprecated": true
         },
         "alwaysOn": {
           "type": "boolean",
-          "description": "Furnaces are always lit (no off state)",
-          "default": false
+          "description": "[DEPRECATED: Use type.alwaysOn] Furnaces are always lit (no off state)",
+          "default": false,
+          "deprecated": true
         },
         "hasClimb": {
           "type": "boolean",
-          "description": "Vines are climbable like ladders",
-          "default": false
+          "description": "[DEPRECATED: Use type.hasClimb] Vines are climbable like ladders",
+          "default": false,
+          "deprecated": true
         },
         "hasDown": {
           "type": "boolean",
-          "description": "Vines can grow downward",
-          "default": false
+          "description": "[DEPRECATED: Use type.hasDown] Vines can grow downward",
+          "default": false,
+          "deprecated": true
         },
         "connectTo": {
           "type": "string",
@@ -328,8 +337,9 @@
         },
         "symmetrical": {
           "type": "boolean",
-          "description": "Block has symmetrical texture mapping",
-          "default": false
+          "description": "[DEPRECATED: Use type.symmetrical] Block has symmetrical texture mapping",
+          "default": false,
+          "deprecated": true
         },
         "isCustomModel": {
           "type": "boolean",
@@ -348,28 +358,33 @@
         },
         "hasBetterFoliage": {
           "type": "boolean",
-          "description": "OptiFine Better Foliage support",
-          "default": false
+          "description": "[DEPRECATED: Use type.betterFoliage] OptiFine Better Foliage support",
+          "default": false,
+          "deprecated": true
         },
         "betterFoliage": {
           "type": "boolean",
-          "description": "OptiFine Better Foliage support (alternate field)",
-          "default": false
+          "description": "[DEPRECATED: Use type.betterFoliage] OptiFine Better Foliage support",
+          "default": false,
+          "deprecated": true
         },
         "noDecay": {
           "type": "boolean",
-          "description": "Leaves should not decay",
-          "default": false
+          "description": "[DEPRECATED: Use type.noDecay] Leaves should not decay",
+          "default": false,
+          "deprecated": true
         },
         "hasRotateRandom": {
           "type": "boolean",
-          "description": "Randomly rotate block models",
-          "default": false
+          "description": "[DEPRECATED: Use type.rotateRandom] Randomly rotate block models",
+          "default": false,
+          "deprecated": true
         },
         "rotateRandom": {
           "type": "boolean",
-          "description": "Randomly rotate block on placement (Y-axis)",
-          "default": false
+          "description": "[DEPRECATED: Use type.rotateRandom] Randomly rotate block on placement (Y-axis)",
+          "default": false,
+          "deprecated": true
         },
         "alphaRender": {
           "type": "boolean",
@@ -382,23 +397,27 @@
         },
         "bedType": {
           "type": "string",
-          "description": "Bed type for bed blocks"
+          "description": "[DEPRECATED: Use type.bedType] Bed type for bed blocks",
+          "deprecated": true
         },
         "wallSize": {
           "type": "string",
           "enum": ["normal", "short"],
-          "description": "Wall height: 'normal' (16 blocks) or 'short' (13 blocks)",
-          "default": "normal"
+          "description": "[DEPRECATED: Use type.wallSize] Wall height: 'normal' (16 blocks) or 'short' (13 blocks)",
+          "default": "normal",
+          "deprecated": true
         },
         "connectstate": {
           "type": "boolean",
-          "description": "Walls have connect state cycling feature",
-          "default": false
+          "description": "[DEPRECATED: Use type.connectstate] Walls have connect state cycling feature",
+          "default": false,
+          "deprecated": true
         },
         "unconnect": {
           "type": "boolean",
-          "description": "Walls don't connect to adjacent blocks",
-          "default": false
+          "description": "[DEPRECATED: Use type.unconnect] Walls don't connect to adjacent blocks",
+          "default": false,
+          "deprecated": true
         },
         "woodType": {
           "type": "string",
@@ -498,6 +517,35 @@
         "symmetrical": {
           "type": "boolean",
           "description": "Use symmetrical texture mapping"
+        },
+        "noBreakUnder": {
+          "type": "boolean",
+          "description": "Stack blocks: prevent breaking blocks underneath"
+        },
+        "allowHalfBreak": {
+          "type": "boolean",
+          "description": "Stack blocks: allow breaking top half independently"
+        },
+        "hasClimb": {
+          "type": "boolean",
+          "description": "Vines: enable climbing like ladders"
+        },
+        "hasDown": {
+          "type": "boolean",
+          "description": "Vines: can grow/extend downward"
+        },
+        "wallSize": {
+          "type": "string",
+          "enum": ["normal", "short"],
+          "description": "Wall height: 'normal' (16 blocks) or 'short' (13 blocks)"
+        },
+        "bedType": {
+          "type": "string",
+          "description": "Bed variant type identifier"
+        },
+        "rotateRandom": {
+          "type": "boolean",
+          "description": "Randomly rotate block model on placement (Y-axis)"
         }
       },
       "additionalProperties": false

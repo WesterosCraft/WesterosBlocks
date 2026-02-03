@@ -6,10 +6,12 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Birch Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/birch/shutters"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "dorne_red_window_shutters",
@@ -18,10 +20,12 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Dorne Red Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "shutter_block/shutters_dorne"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "green_lannisport_window_shutters",
@@ -30,10 +34,12 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Green Lannisport Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "shutter_block/shutters_lannisport"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "grey_wood_window_shutters",
@@ -42,10 +48,12 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Grey Wood Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/grey/shutters"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "jungle_window_shutters",
@@ -54,10 +62,12 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Jungle Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/jungle/shutters"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "northern_wood_window_shutters",
@@ -66,10 +76,12 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Northern Wood Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/northern/shutters"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "oak_window_shutters",
@@ -78,10 +90,12 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Oak Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/oak/shutters"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "reach_blue_window_shutters",
@@ -90,10 +104,12 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Reach Blue Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "shutter_block/shutters_reach"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "spruce_window_shutters",
@@ -102,10 +118,12 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Spruce Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/spruce/shutters"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "birch_window_shutters_2",
@@ -114,10 +132,12 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Simple Birch Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/birch/shutters_alt"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "white_wood_window_shutters_2",
@@ -126,10 +146,12 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Fancy White Wood Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/white/shutters_alt"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "grey_wood_window_shutters_2",
@@ -138,10 +160,12 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Fancy Grey Wood Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/grey/shutters_alt"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "oak_window_shutters_2",
@@ -150,10 +174,12 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Fancy Oak Wood Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/oak/shutters_alt"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "spruce_window_shutters_2",
@@ -162,10 +188,12 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Fancy Spruce Wood Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/spruce/shutters_alt"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "northern_window_shutters_2",
@@ -174,12 +202,14 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Fancy Northern Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/northern/shutters_alt"
     ],
     "renderLayer": "cutout",
-    "nonOpaque": true,
-    "allowUnsupported": true
+    "nonOpaque": true
   },
   {
     "blockName": "jungle_window_shutters_2",
@@ -188,9 +218,11 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Jungle Fancy Window Shutters",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/jungle/shutters_alt"
-    ],
-    "allowUnsupported": true
+    ]
   }
 ]

@@ -87,6 +87,32 @@ public class TypeProperties {
     @SerializedName("symmetrical")
     private Boolean symmetrical;
 
+    // Stack block properties (cuboid-nsew-stack)
+    @SerializedName("noBreakUnder")
+    private Boolean noBreakUnder;
+
+    @SerializedName("allowHalfBreak")
+    private Boolean allowHalfBreak;
+
+    // Vines properties (additional)
+    @SerializedName("hasClimb")
+    private Boolean hasClimb;
+
+    @SerializedName("hasDown")
+    private Boolean hasDown;
+
+    // Wall properties
+    @SerializedName("wallSize")
+    private String wallSize;
+
+    // Bed properties
+    @SerializedName("bedType")
+    private String bedType;
+
+    // Render properties
+    @SerializedName("rotateRandom")
+    private Boolean rotateRandom;
+
     // Getters
     public Boolean getUnconnect() {
         return unconnect;
@@ -160,6 +186,34 @@ public class TypeProperties {
         return symmetrical;
     }
 
+    public Boolean getNoBreakUnder() {
+        return noBreakUnder;
+    }
+
+    public Boolean getAllowHalfBreak() {
+        return allowHalfBreak;
+    }
+
+    public Boolean getHasClimb() {
+        return hasClimb;
+    }
+
+    public Boolean getHasDown() {
+        return hasDown;
+    }
+
+    public String getWallSize() {
+        return wallSize;
+    }
+
+    public String getBedType() {
+        return bedType;
+    }
+
+    public Boolean getRotateRandom() {
+        return rotateRandom;
+    }
+
     // Setters (needed for deserializer and BlockSetExpander)
     public void setUnconnect(Boolean unconnect) {
         this.unconnect = unconnect;
@@ -231,5 +285,33 @@ public class TypeProperties {
 
     public void setSymmetrical(Boolean symmetrical) {
         this.symmetrical = symmetrical;
+    }
+
+    public void setNoBreakUnder(Boolean noBreakUnder) {
+        this.noBreakUnder = noBreakUnder;
+    }
+
+    public void setAllowHalfBreak(Boolean allowHalfBreak) {
+        this.allowHalfBreak = allowHalfBreak;
+    }
+
+    public void setHasClimb(Boolean hasClimb) {
+        this.hasClimb = hasClimb;
+    }
+
+    public void setHasDown(Boolean hasDown) {
+        this.hasDown = hasDown;
+    }
+
+    public void setWallSize(String wallSize) {
+        this.wallSize = wallSize;
+    }
+
+    public void setBedType(String bedType) {
+        this.bedType = bedType;
+    }
+
+    public void setRotateRandom(Boolean rotateRandom) {
+        this.rotateRandom = rotateRandom;
     }
 }

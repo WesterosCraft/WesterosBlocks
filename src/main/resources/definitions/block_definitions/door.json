@@ -6,12 +6,14 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Birch Door",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/birch/door_top",
       "wood/birch/door_bottom"
     ],
-    "customItemTexture": true,
-    "allowUnsupported": true
+    "customItemTexture": true
   },
   {
     "blockName": "eyrie_weirwood_door",
@@ -274,11 +276,13 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Simple Birch Door",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/birch/door_simple_top",
       "wood/birch/door_simple_bottom"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "white_door_2",
@@ -288,11 +292,13 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Fancy White Door",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/white/door_alt_top",
       "wood/white/door_alt_bottom"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "grey_door_2",
@@ -302,11 +308,13 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Fancy Grey Door",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/grey/door_alt_top",
       "wood/grey/door_alt_bottom"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "oak_door_2",
@@ -316,11 +324,13 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Fancy Oak Door",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/oak/door_alt_top",
       "wood/oak/door_alt_bottom"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "spruce_door_2",
@@ -330,11 +340,13 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Fancy Spruce Door",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/spruce/door_alt_top",
       "wood/spruce/door_alt_bottom"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "northern_door_2",
@@ -344,11 +356,13 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Fancy Northern Door",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/northern/door_alt_top",
       "wood/northern/door_alt_bottom"
-    ],
-    "allowUnsupported": true
+    ]
   },
   {
     "blockName": "jungle_door_2",
@@ -357,10 +371,12 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Jungle Fancy Door",
+    "type": {
+      "allowUnsupported": true
+    },
     "textures": [
       "wood/jungle/door_alt_top",
       "wood/jungle/door_alt_bottom"
-    ],
-    "allowUnsupported": true
+    ]
   }
 ]

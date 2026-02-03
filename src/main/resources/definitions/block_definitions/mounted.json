@@ -12,6 +12,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Bracken Heater Shield",
+    "type": {
+      "allowUnsupported": true
+    },
     "renderLayer": "cutout",
     "isCustomModel": true,
     "boundingBox": {
@@ -21,8 +24,7 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "allowUnsupported": true
+    }
   },
   {
     "blockName": "wall_heater_shield_tully",
@@ -38,6 +40,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Tully Heater Shield",
+    "type": {
+      "allowUnsupported": true
+    },
     "renderLayer": "cutout",
     "isCustomModel": true,
     "boundingBox": {
@@ -47,8 +52,7 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "allowUnsupported": true
+    }
   },
   {
     "blockName": "wall_heater_shield_targaryen",
@@ -64,6 +68,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Targaryen Heater Shield",
+    "type": {
+      "allowUnsupported": true
+    },
     "renderLayer": "cutout",
     "isCustomModel": true,
     "boundingBox": {
@@ -73,8 +80,7 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "allowUnsupported": true
+    }
   },
   {
     "blockName": "wall_heater_shield_blackfyre",
@@ -90,6 +96,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Blackfyre Heater Shield",
+    "type": {
+      "allowUnsupported": true
+    },
     "renderLayer": "cutout",
     "isCustomModel": true,
     "boundingBox": {
@@ -99,8 +108,7 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "allowUnsupported": true
+    }
   },
   {
     "blockName": "wall_heater_shield_blackwood",
@@ -116,6 +124,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Blackwood Heater Shield",
+    "type": {
+      "allowUnsupported": true
+    },
     "renderLayer": "cutout",
     "isCustomModel": true,
     "boundingBox": {
@@ -125,8 +136,7 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "allowUnsupported": true
+    }
   },
   {
     "blockName": "wall_heater_shield_hedge_knight",
@@ -142,6 +152,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Hedge Knight Heater Shield",
+    "type": {
+      "allowUnsupported": true
+    },
     "renderLayer": "cutout",
     "isCustomModel": true,
     "boundingBox": {
@@ -151,8 +164,7 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "allowUnsupported": true
+    }
   },
   {
     "blockName": "wall_round_shield_greyjoy",
@@ -168,6 +180,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Greyjoy Round Shield",
+    "type": {
+      "allowUnsupported": true
+    },
     "renderLayer": "cutout",
     "isCustomModel": true,
     "boundingBox": {
@@ -177,8 +192,7 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "allowUnsupported": true
+    }
   },
   {
     "blockName": "wall_kite_shield_stark",
@@ -194,6 +208,9 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Stark Kite Shield",
+    "type": {
+      "allowUnsupported": true
+    },
     "renderLayer": "cutout",
     "isCustomModel": true,
     "boundingBox": {
@@ -203,7 +220,6 @@
       "yMax": 1,
       "zMin": 0,
       "zMax": 1
-    },
-    "allowUnsupported": true
+    }
   }
 ]

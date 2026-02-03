@@ -13,6 +13,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Allyrion Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "stack": [
       {
         "textures": [
@@ -51,9 +55,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "arryn_banner",
@@ -69,6 +71,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Arryn Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -108,9 +114,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "baelish_banner",
@@ -126,6 +130,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Baelish Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -165,9 +173,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "banefort_banner",
@@ -183,6 +189,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Banefort Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -222,9 +232,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "bar_emmon_banner",
@@ -240,6 +248,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Bar Emmon Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -279,9 +291,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "baratheon_banner",
@@ -297,6 +307,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Baratheon Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -336,9 +350,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "beesbury_banner",
@@ -354,6 +366,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Beesbury Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -393,9 +409,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "belmore_banner",
@@ -411,6 +425,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Belmore Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -450,9 +468,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "black_banner",
@@ -468,6 +484,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Black Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -507,9 +527,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "black_wool_banner",
@@ -525,6 +543,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Black Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -564,9 +586,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "blackbar_banner",
@@ -582,6 +602,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Blackbar Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -621,9 +645,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "blackfyre_banner",
@@ -639,6 +661,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Blackfyre Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -678,9 +704,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "blackfyre_old_banner",
@@ -696,6 +720,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Blackfyre Old Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -735,9 +763,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "blackmont_banner",
@@ -753,6 +779,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Blackmont Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -792,9 +822,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "blacktyde_banner",
@@ -810,6 +838,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Blacktyde Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -849,9 +881,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "blackwood_banner",
@@ -867,6 +897,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Blackwood Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -906,9 +940,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "blue_banner",
@@ -924,6 +956,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Blue Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -963,9 +999,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "blue_wool_banner",
@@ -981,6 +1015,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Blue Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1020,9 +1058,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "bolling_banner",
@@ -1038,6 +1074,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Bolling Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1077,9 +1117,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "bolton_banner",
@@ -1095,6 +1133,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Bolton Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1134,9 +1176,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "botley_banner",
@@ -1152,6 +1192,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Botley Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1191,9 +1235,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "bracken_banner",
@@ -1209,6 +1251,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Bracken Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1248,9 +1294,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "bracken_damaged_banner",
@@ -1266,6 +1310,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Bracken Damaged Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1305,9 +1353,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "brax_banner",
@@ -1323,6 +1369,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Brax Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1362,9 +1412,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "broom_banner",
@@ -1380,6 +1428,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Broom Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1419,9 +1471,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "brown_banner",
@@ -1437,6 +1487,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Brown Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1476,9 +1530,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "brown_wool_banner",
@@ -1494,6 +1546,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Brown Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1533,9 +1589,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "buckwell_banner",
@@ -1551,6 +1605,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Buckwell Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1590,9 +1648,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "bulwer_banner",
@@ -1608,6 +1664,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Bulwer Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1647,9 +1707,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "butterwell_banner",
@@ -1665,6 +1723,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Butterwell Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1704,9 +1766,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "caron_banner",
@@ -1722,6 +1782,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Caron Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1761,9 +1825,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "caswell_banner",
@@ -1779,6 +1841,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Caswell Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1818,9 +1884,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "celtigar_banner",
@@ -1836,6 +1900,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Celtigar Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1875,9 +1943,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "cerwyn_banner",
@@ -1893,6 +1959,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Cerwyn Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1932,9 +2002,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "charlton_banner",
@@ -1950,6 +2018,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Charlton Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -1989,9 +2061,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "citadel_banner",
@@ -2007,6 +2077,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Citadel Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2046,9 +2120,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "clegane_banner",
@@ -2064,6 +2136,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Clegane Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2103,9 +2179,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "coldwater_banner",
@@ -2121,6 +2195,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Coldwater Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2160,9 +2238,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "connington_banner",
@@ -2178,6 +2254,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Connington Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2217,9 +2297,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "corbray_banner",
@@ -2235,6 +2313,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Corbray Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2274,9 +2356,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "costayne_banner",
@@ -2292,6 +2372,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Costayne Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2331,9 +2415,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "crakehall_banner",
@@ -2349,6 +2431,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Crakehall Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2388,9 +2474,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "crane_banner",
@@ -2406,6 +2490,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Crane Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2445,9 +2533,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "cream_banner",
@@ -2463,6 +2549,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Cream Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2502,9 +2592,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "cuy_banner",
@@ -2520,6 +2608,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Cuy Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2559,9 +2651,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "cyan_banner",
@@ -2577,6 +2667,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Cyan Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2616,9 +2710,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "cyan_wool_banner",
@@ -2634,6 +2726,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Cyan Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2673,9 +2769,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "darry_banner",
@@ -2691,6 +2785,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Darry Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2730,9 +2828,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "dayne_banner",
@@ -2748,6 +2844,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Dayne Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2787,9 +2887,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "dirty_white_wool_banner",
@@ -2805,6 +2903,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Dirty White Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2844,9 +2946,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "dondarrion_banner",
@@ -2862,6 +2962,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Dondarrion Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2901,9 +3005,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "drumm_banner",
@@ -2919,6 +3021,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Drumm Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -2958,9 +3064,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "dustin_banner",
@@ -2976,6 +3080,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Dustin Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3015,9 +3123,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "egen_banner",
@@ -3033,6 +3139,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Egen Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3072,9 +3182,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "errol_banner",
@@ -3090,6 +3198,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Errol Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3129,9 +3241,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "estermont_banner",
@@ -3147,6 +3257,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Estermont Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3186,9 +3300,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "farman_banner",
@@ -3204,6 +3316,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Farman Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3243,9 +3359,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "flint_banner",
@@ -3261,6 +3375,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Flint Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3300,9 +3418,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "florent_banner",
@@ -3318,6 +3434,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Florent Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3357,9 +3477,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "fossoway_green_banner",
@@ -3375,6 +3493,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Fossoway Green Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3414,9 +3536,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "fossoway_red_banner",
@@ -3432,6 +3552,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Fossoway Red Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3471,9 +3595,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "fowler_banner",
@@ -3489,6 +3611,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Fowler Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3528,9 +3654,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "frey_banner",
@@ -3546,6 +3670,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Frey Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3585,9 +3713,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "gardner_banner",
@@ -3603,6 +3729,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Gardner Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3642,9 +3772,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "gardner_old_banner",
@@ -3660,6 +3788,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Gardner Old Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3699,9 +3831,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "glover_banner",
@@ -3717,6 +3847,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Glover Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3756,9 +3890,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "goodbrother_banner",
@@ -3774,6 +3906,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Goodbrother Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3813,9 +3949,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "grafton_banner",
@@ -3831,6 +3965,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Grafton Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3870,9 +4008,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "green_banner",
@@ -3888,6 +4024,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Green Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3927,9 +4067,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "green_wool_banner",
@@ -3945,6 +4083,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Green Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -3984,9 +4126,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "grey_banner",
@@ -4002,6 +4142,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Grey Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4041,9 +4185,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "grey_wool_banner",
@@ -4059,6 +4201,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Grey Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4098,9 +4244,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "greyjoy_banner",
@@ -4116,6 +4260,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Greyjoy Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4160,9 +4308,7 @@
       {
         "text": "We Do Not Sow"
       }
-    ],
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    ]
   },
   {
     "blockName": "harlaw_banner",
@@ -4178,6 +4324,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Harlaw Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4217,9 +4367,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "harte_banner",
@@ -4235,6 +4383,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Harte Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4274,9 +4426,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "hersy_banner",
@@ -4292,6 +4442,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Hersy Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4331,9 +4485,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "hewett_banner",
@@ -4349,6 +4501,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Hewett Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4388,9 +4544,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "hightower_banner",
@@ -4406,6 +4560,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Hightower Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4445,9 +4603,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "hoare_banner",
@@ -4463,6 +4619,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Hoare Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4502,9 +4662,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "hoare_old_banner",
@@ -4520,6 +4678,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Hoare Old Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4559,9 +4721,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "hornwood_banner",
@@ -4577,6 +4737,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Hornwood Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4616,9 +4780,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "hunter_banner",
@@ -4634,6 +4796,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Hunter Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4673,9 +4839,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "jordayne_banner",
@@ -4691,6 +4855,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Jordayne Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4730,9 +4898,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "karstark_banner",
@@ -4748,6 +4914,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Karstark Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4787,9 +4957,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "lannister_banner",
@@ -4805,6 +4973,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Lannister Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4850,9 +5022,7 @@
         "text": "Hear Me Roar!",
         "format": "GREY"
       }
-    ],
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    ]
   },
   {
     "blockName": "lannister_damaged_banner",
@@ -4868,6 +5038,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Lannister Damaged Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4907,9 +5081,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "lefford_banner",
@@ -4925,6 +5097,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Lefford Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -4964,9 +5140,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "light_blue_wool_banner",
@@ -4982,6 +5156,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Light Blue Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5021,9 +5199,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "light_brown_wool_banner",
@@ -5039,6 +5215,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Light Brown Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5078,9 +5258,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "light_grey_wool_banner",
@@ -5096,6 +5274,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Light Grey Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5135,9 +5317,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "locke_banner",
@@ -5153,6 +5333,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Locke Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5192,9 +5376,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "lord_of_light_rhllor_banner",
@@ -5210,6 +5392,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Lord Of Light Rhllor Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5249,9 +5435,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "lothston_banner",
@@ -5267,6 +5451,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Lothston Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5306,9 +5494,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "lydden_banner",
@@ -5324,6 +5510,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Lydden Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5363,9 +5553,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "mallister_banner",
@@ -5381,6 +5569,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Mallister Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5420,9 +5612,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "manderly_banner",
@@ -5438,6 +5628,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Manderly Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5477,9 +5671,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "marbrand_banner",
@@ -5495,6 +5687,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Marbrand Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5534,9 +5730,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "martell_banner",
@@ -5552,6 +5746,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Martell Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5591,9 +5789,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "massey_banner",
@@ -5609,6 +5805,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Massey Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5648,9 +5848,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "melcolm_banner",
@@ -5666,6 +5864,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Melcolm Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5705,9 +5907,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "merlyn_banner",
@@ -5723,6 +5923,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Merlyn Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5762,9 +5966,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "merryweather_banner",
@@ -5780,6 +5982,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Merryweather Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5819,9 +6025,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "mertyns_banner",
@@ -5837,6 +6041,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Mertyns Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5876,9 +6084,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "mooton_banner",
@@ -5894,6 +6100,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Mooton Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5933,9 +6143,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "mormont_banner",
@@ -5951,6 +6159,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Mormont Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -5990,9 +6202,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "mullendore_banner",
@@ -6008,6 +6218,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Mullendore Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6047,9 +6261,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "musgood_banner",
@@ -6065,6 +6277,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Musgood Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6104,9 +6320,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "nights_watch_banner",
@@ -6122,6 +6336,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Nights Watch Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6161,9 +6379,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "oakheart_banner",
@@ -6179,6 +6395,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Oakheart Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6218,9 +6438,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "orange_banner",
@@ -6236,6 +6454,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Orange Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6275,9 +6497,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "orange_wool_banner",
@@ -6293,6 +6513,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Orange Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6332,9 +6556,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "payne_banner",
@@ -6350,6 +6572,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Payne Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6389,9 +6615,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "peake_banner",
@@ -6407,6 +6631,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Peake Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6446,9 +6674,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "penrose_banner",
@@ -6464,6 +6690,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Penrose Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6503,9 +6733,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "pink_banner",
@@ -6521,6 +6749,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Pink Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6560,9 +6792,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "pink_wool_banner",
@@ -6578,6 +6808,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Pink Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6617,9 +6851,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "piper_banner",
@@ -6635,6 +6867,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Piper Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6674,9 +6910,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "piper_damaged_banner",
@@ -6692,6 +6926,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Piper Damaged Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6731,9 +6969,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "plumm_banner",
@@ -6749,6 +6985,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Plumm Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6788,9 +7028,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "prester_banner",
@@ -6806,6 +7044,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Prester Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6845,9 +7087,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "purple_banner",
@@ -6863,6 +7103,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Purple Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6902,9 +7146,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "purple_wool_banner",
@@ -6920,6 +7162,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Purple Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -6959,9 +7205,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "red_banner",
@@ -6977,6 +7221,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Red Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7016,9 +7264,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "red_keep_banner",
@@ -7034,6 +7280,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Red Keep Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7073,9 +7323,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "red_wool_banner",
@@ -7091,6 +7339,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Red Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7130,9 +7382,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "redfort_banner",
@@ -7148,6 +7398,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Redfort Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7187,9 +7441,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "redwyne_banner",
@@ -7205,6 +7457,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Redwyne Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7244,9 +7500,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "reed_banner",
@@ -7262,6 +7516,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Reed Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7301,9 +7559,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "renly_banner",
@@ -7319,6 +7575,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Renly Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7358,9 +7618,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "reyne_banner",
@@ -7376,6 +7634,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Reyne Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7415,9 +7677,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "rollingford_banner",
@@ -7433,6 +7693,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Rollingford Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7472,9 +7736,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "rosby_banner",
@@ -7490,6 +7752,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Rosby Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7529,9 +7795,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "rowan_banner",
@@ -7547,6 +7811,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Rowan Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7586,9 +7854,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "royce_banner",
@@ -7604,6 +7870,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Royce Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7643,9 +7913,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "ryger_banner",
@@ -7661,6 +7929,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Ryger Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7700,9 +7972,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "rykker_banner",
@@ -7718,6 +7988,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Rykker Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7757,9 +8031,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "ryswell_banner",
@@ -7775,6 +8047,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Ryswell Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7814,9 +8090,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "santagar_banner",
@@ -7832,6 +8106,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Santagar Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7871,9 +8149,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "selmy_banner",
@@ -7889,6 +8165,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Selmy Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7928,9 +8208,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "serrett_banner",
@@ -7946,6 +8224,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Serrett Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -7985,9 +8267,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "stannis_banner",
@@ -8003,6 +8283,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Stannis Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8042,9 +8326,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "stark_banner",
@@ -8060,6 +8342,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Stark Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8104,9 +8390,7 @@
       {
         "text": "Winter Is Coming"
       }
-    ],
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    ]
   },
   {
     "blockName": "stark_damaged_banner",
@@ -8122,6 +8406,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Stark Damaged Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8166,9 +8454,7 @@
       {
         "text": "Winter Is Coming"
       }
-    ],
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    ]
   },
   {
     "blockName": "staunton_banner",
@@ -8184,6 +8470,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Staunton Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8223,9 +8513,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "stokeworth_banner",
@@ -8241,6 +8529,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Stokeworth Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8280,9 +8572,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "stonehouse_banner",
@@ -8298,6 +8588,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Stonehouse Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8337,9 +8631,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "sunderland_banner",
@@ -8355,6 +8647,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Sunderland Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8394,9 +8690,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "sunderly_banner",
@@ -8412,6 +8706,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Sunderly Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8451,9 +8749,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "sunglass_banner",
@@ -8469,6 +8765,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Sunglass Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8508,9 +8808,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "swann_banner",
@@ -8526,6 +8824,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Swann Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8565,9 +8867,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "swyft_banner",
@@ -8583,6 +8883,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Swyft Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8622,9 +8926,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "tallhart_banner",
@@ -8640,6 +8942,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tallhart Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8679,9 +8985,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "tarbeck_banner",
@@ -8697,6 +9001,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tarbeck Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8736,9 +9044,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "targaryen_banner",
@@ -8754,6 +9060,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Targaryen Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8793,9 +9103,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "targaryen_greens_banner",
@@ -8811,6 +9119,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Targaryen Greens Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8850,9 +9162,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "targaryen_old_banner",
@@ -8868,6 +9178,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Targaryen Old Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8907,9 +9221,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "tarly_banner",
@@ -8925,6 +9237,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tarly Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -8964,9 +9280,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "tarth_banner",
@@ -8982,6 +9296,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tarth Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9021,9 +9339,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "tawney_banner",
@@ -9039,6 +9355,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tawney Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9078,9 +9398,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "terrick_banner",
@@ -9096,6 +9414,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Terrick Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9135,9 +9457,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "the_faith_of_the_seven_banner",
@@ -9153,6 +9473,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "The Faith Of The Seven Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9192,9 +9516,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "toland_banner",
@@ -9210,6 +9532,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Toland Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9249,9 +9575,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "trant_banner",
@@ -9267,6 +9591,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Trant Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9306,9 +9634,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "tully_banner",
@@ -9324,6 +9650,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tully Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9363,9 +9693,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "tully_damaged_banner",
@@ -9381,6 +9709,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tully Damaged Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9420,9 +9752,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "tyrell_banner",
@@ -9438,6 +9768,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tyrell Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9477,9 +9811,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "uller_banner",
@@ -9495,6 +9827,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Uller Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9534,9 +9870,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "umber_banner",
@@ -9552,6 +9886,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Umber Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9591,9 +9929,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "vance_atranta_banner",
@@ -9609,6 +9945,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Vance Atranta Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9648,9 +9988,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "vance_wayfarers_banner",
@@ -9666,6 +10004,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Vance Wayfarers Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9705,9 +10047,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "velaryon_banner",
@@ -9723,6 +10063,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Velaryon Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9762,9 +10106,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "vyrwel_banner",
@@ -9780,6 +10122,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Vyrwel Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9819,9 +10165,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "waterman_banner",
@@ -9837,6 +10181,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Waterman Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9876,9 +10224,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "waxley_banner",
@@ -9894,6 +10240,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Waxley Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9933,9 +10283,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "waynwood_banner",
@@ -9951,6 +10299,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Waynwood Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -9990,9 +10342,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "westerling_banner",
@@ -10008,6 +10358,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Westerling Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -10047,9 +10401,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "westeroscraft_banner",
@@ -10065,6 +10417,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Westeroscraft Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -10104,9 +10460,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "whent_banner",
@@ -10122,6 +10476,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Whent Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -10161,9 +10519,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "white_wool_banner",
@@ -10179,6 +10535,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "White Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -10218,9 +10578,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "woodwright_banner",
@@ -10236,6 +10594,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Woodwright Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -10275,9 +10637,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "wull_banner",
@@ -10293,6 +10653,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Wull Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -10332,9 +10696,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "wyl_banner",
@@ -10350,6 +10712,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Wyl Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -10389,9 +10755,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "wylde_banner",
@@ -10407,6 +10771,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Wylde Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -10446,9 +10814,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "wynch_banner",
@@ -10464,6 +10830,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Wynch Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -10503,9 +10873,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "yellow_banner",
@@ -10521,6 +10889,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Yellow Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -10560,9 +10932,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "yellow_wool_banner",
@@ -10578,6 +10948,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Yellow Wool Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -10617,9 +10991,7 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   },
   {
     "blockName": "yronwood_banner",
@@ -10635,6 +11007,10 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Yronwood Banner",
+    "type": {
+      "noBreakUnder": true,
+      "allowHalfBreak": true
+    },
     "renderLayer": "cutout",
     "stack": [
       {
@@ -10674,8 +11050,6 @@
         }
       }
     ],
-    "itemTextureIndex": 2,
-    "allowHalfBreak": true,
-    "noBreakUnder": true
+    "itemTextureIndex": 2
   }
 ]

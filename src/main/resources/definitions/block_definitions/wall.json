@@ -12,10 +12,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Arbor Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/arbor/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "black_brick_engraved_wall",
@@ -30,10 +32,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Black Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/black/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "brown_grey_brick_engraved_wall",
@@ -48,10 +52,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Brown Grey Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/brown_grey/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "coarse_dark_red_carved_sandstone_wall",
@@ -66,10 +72,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Pale Dark Red Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/pale_dark_red/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "coarse_red_carved_sandstone_wall",
@@ -84,10 +92,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Pale Red Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/pale_red/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "dark_grey_brick_engraved_wall",
@@ -102,10 +112,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Dark Grey Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/dark_grey/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "desert_sandstone_engraved_wall",
@@ -120,10 +132,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Sandstone Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/sandstone/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "green_grey_brick_engraved_wall",
@@ -138,10 +152,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Green Grey Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/green_grey/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "grey_brick_engraved_wall",
@@ -156,10 +172,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Normal Grey Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/grey/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "kl_dun_carved_brick_wall",
@@ -174,10 +192,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Dun Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/dun/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "light_grey_brick_engraved_wall",
@@ -192,10 +212,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Light Grey Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/light_grey/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "light_oldtown_brick_engraved_wall",
@@ -210,10 +232,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Light Oldtown Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/light_oldtown/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "marble_wall",
@@ -228,13 +252,15 @@
     ],
     "creativeTab": "westeros_marble_plaster_tab",
     "label": "Marble Wall",
+    "type": {
+      "unconnect": false,
+      "wallSize": "short"
+    },
     "textures": [
       "marble/quartz/wall/top",
       "marble/quartz/wall/top",
       "marble/quartz/wall/side"
-    ],
-    "wallSize": "short",
-    "unconnect": false
+    ]
   },
   {
     "blockName": "monochrome_dark_sandstone_engraved_wall",
@@ -249,10 +275,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Light Brown Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/light_brown/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "monochrome_sandstone_engraved_wall",
@@ -267,10 +295,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Westerlands Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/westerlands/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "piled_bones_wall",
@@ -285,10 +315,12 @@
     ],
     "creativeTab": "westeros_misc_tab",
     "label": "Piled Bones Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "piled_bones/side"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "pink_sandstone_engraved_wall",
@@ -303,10 +335,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Sandy Pink Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/sandy_pink/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "reach_brick_engraved_wall",
@@ -321,10 +355,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Reach Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/reach/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "reach_oak_wood_panelling_wall",
@@ -339,6 +375,9 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Reach Oak Wood Panelling Wall",
+    "type": {
+      "unconnect": false
+    },
     "randomTextures": [
       {
         "textures": [
@@ -361,8 +400,7 @@
           "wood/oak/panelling/side3"
         ]
       }
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "reach_spruce_wood_panelling_wall",
@@ -377,6 +415,9 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Reach Spruce Wood Panelling Wall",
+    "type": {
+      "unconnect": false
+    },
     "randomTextures": [
       {
         "textures": [
@@ -399,8 +440,7 @@
           "wood/spruce/panelling/side3"
         ]
       }
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "sept_crystal_medium",
@@ -415,14 +455,16 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Sept Crystal Medium",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "crystal/wall_top",
       "crystal/wall_top",
       "crystal/wall"
     ],
     "nonOpaque": true,
-    "alphaRender": true,
-    "unconnect": false
+    "alphaRender": true
   },
   {
     "blockName": "stacked_bones_wall",
@@ -437,12 +479,14 @@
     ],
     "creativeTab": "westeros_misc_tab",
     "label": "Stacked Bones Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "stacked_bones/bone_stacked_side",
       "stacked_bones/bone_stacked_side",
       "stacked_bones/bone_stacked_front"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "stormlands_brick_engraved_wall",
@@ -457,10 +501,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Stormlands Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/stormlands/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "terracotta_engraved_wall",
@@ -475,10 +521,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Terracotta Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/terracotta/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "thin_birch_log",
@@ -493,12 +541,14 @@
     ],
     "creativeTab": "westeros_logs_tab",
     "label": "Thin Birch Log",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "bark/birch/wall_top",
       "bark/birch/wall_top",
       "bark/birch/side"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "thin_jungle_log",
@@ -513,12 +563,14 @@
     ],
     "creativeTab": "westeros_logs_tab",
     "label": "Thin Jungle Log",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "bark/jungle/wall_top",
       "bark/jungle/wall_top",
       "bark/jungle/side"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "thin_marble_column",
@@ -533,13 +585,15 @@
     ],
     "creativeTab": "westeros_marble_plaster_tab",
     "label": "Thin Marble Column",
+    "type": {
+      "unconnect": false,
+      "wallSize": "short"
+    },
     "textures": [
       "marble/quartz/wall/top",
       "marble/quartz/wall/top",
       "marble/quartz/wall/column_side"
-    ],
-    "wallSize": "short",
-    "unconnect": false
+    ]
   },
   {
     "blockName": "thin_oak_log",
@@ -554,12 +608,14 @@
     ],
     "creativeTab": "westeros_logs_tab",
     "label": "Thin Oak Log",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "bark/oak/wall_top",
       "bark/oak/wall_top",
       "bark/oak/side"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "thin_palm_log",
@@ -574,12 +630,14 @@
     ],
     "creativeTab": "westeros_logs_tab",
     "label": "Thin Palm Log",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "bark/palm/wall_top",
       "bark/palm/wall_top",
       "bark/palm/side"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "thin_spruce_log",
@@ -594,12 +652,14 @@
     ],
     "creativeTab": "westeros_logs_tab",
     "label": "Thin Spruce Log",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "bark/spruce/wall_top",
       "bark/spruce/wall_top",
       "bark/spruce/side"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "vivid_dark_sandstone_engraved_wall",
@@ -614,10 +674,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Dark Tan Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/dark_tan/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "vivid_sandstone_engraved_wall",
@@ -632,10 +694,12 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved Tan Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/tan/all"
-    ],
-    "unconnect": false
+    ]
   },
   {
     "blockName": "white_brick_engraved_wall",
@@ -650,9 +714,11 @@
     ],
     "creativeTab": "westeros_panelling_carvings_tab",
     "label": "Ashlar Engraved White Wall",
+    "type": {
+      "unconnect": false
+    },
     "textures": [
       "ashlar_engraved/white/all"
-    ],
-    "unconnect": false
+    ]
   }
 ]
