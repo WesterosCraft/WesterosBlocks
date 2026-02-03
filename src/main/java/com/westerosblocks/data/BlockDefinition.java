@@ -55,10 +55,9 @@ public class BlockDefinition {
     @SerializedName("textures")
     private List<String> textures;
 
-    /** Legacy type field - mostly replaced by specific properties */
-    @Deprecated
+    /** Type properties - structured format for block-specific properties */
     @SerializedName("type")
-    private String type;
+    private TypeProperties type;
 
     /** Render layer - "cutout", "cutout_mipped", or "translucent" */
     @SerializedName("renderLayer")
@@ -862,8 +861,8 @@ public class BlockDefinition {
         if (Boolean.TRUE.equals(toggleOnUse)) {
             return true;
         }
-        // Check legacy type field for backward compatibility
-        if (type != null && type.contains("toggleOnUse")) {
+        // Check type properties
+        if (type != null && Boolean.TRUE.equals(type.getToggleOnUse())) {
             return true;
         }
         return false;
@@ -877,7 +876,7 @@ public class BlockDefinition {
         return textures;
     }
 
-    public String getType() {
+    public TypeProperties getType() {
         return type;
     }
 
@@ -1079,8 +1078,8 @@ public class BlockDefinition {
         if (Boolean.TRUE.equals(symmetrical)) {
             return true;
         }
-        // Check legacy type field for backward compatibility
-        if (type != null && type.contains("symmetrical:true")) {
+        // Check type properties
+        if (type != null && Boolean.TRUE.equals(type.getSymmetrical())) {
             return true;
         }
         return false;
@@ -1095,8 +1094,8 @@ public class BlockDefinition {
         if (Boolean.TRUE.equals(connectState)) {
             return true;
         }
-        // Check legacy type field for backward compatibility
-        if (type != null && type.contains("connectstate")) {
+        // Check type properties
+        if (type != null && Boolean.TRUE.equals(type.getConnectstate())) {
             return true;
         }
         return false;
@@ -1136,10 +1135,6 @@ public class BlockDefinition {
         if (woodType != null && !woodType.isEmpty()) {
             return woodType;
         }
-        // Fall back to type field for legacy support
-        if (type != null && !type.isEmpty()) {
-            return type;
-        }
         // Default to oak
         return "oak";
     }
@@ -1149,9 +1144,9 @@ public class BlockDefinition {
     }
 
 
-    /** Whether block has no-climb property (derived from type field) */
+    /** Whether block has no-climb property */
     public boolean isNoClimb() {
-        return type != null && type.contains("no-climb");
+        return type != null && Boolean.TRUE.equals(type.getNoClimb());
     }
 
     /** Whether vines can grow downward (alias for hasDown for backward compatibility) */
@@ -1159,14 +1154,14 @@ public class BlockDefinition {
         return hasDown();
     }
 
-    /** Whether block should not be contained in web (derived from type field) */
+    /** Whether block should not be contained in web */
     public boolean isNoInWeb() {
-        return type != null && type.contains("no-in-web");
+        return type != null && Boolean.TRUE.equals(type.getNoInWeb());
     }
 
-    /** Whether pane uses bars model (derived from type field) */
+    /** Whether pane uses bars model */
     public boolean isBarsModel() {
-        return type != null && (type.contains("bars-model") || "bars".equals(type));
+        return type != null && Boolean.TRUE.equals(type.getBarsModel());
     }
 
     /** Particle type for particle emitter blocks (e.g., "flame", "cascade", "wildfire") */

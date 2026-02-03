@@ -1,6 +1,7 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.data.BlockDefinition;
+import com.westerosblocks.data.TypeProperties;
 import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -80,26 +81,17 @@ public class WCStairBlock extends Block implements Waterloggable {
 
             boolean doToggleOnUse = definition.toggleOnUse();
 
-            // TODO refactor this. Parse type field for special properties
-            boolean doUnconnect = false;
-            boolean doConnectstate = false;
-            boolean noUvlock = false;
+            // Extract type properties
+            TypeProperties type = definition.getType();
+            boolean doUnconnect = type != null && Boolean.TRUE.equals(type.getUnconnect());
+            boolean doConnectstate = type != null && Boolean.TRUE.equals(type.getConnectstate());
+            boolean noUvlock = type != null && Boolean.TRUE.equals(type.getNoUvlock());
 
-            String type = definition.getType();
-            if (type != null) {
-                String[] toks = type.split(",");
-                for (String tok : toks) {
-                    String trimmed = tok.trim();
-                    if (trimmed.equals("unconnect")) {
-                        doUnconnect = true;
-                        tempUNCONNECT = UNCONNECT;
-                    } else if (trimmed.equals("connectstate")) {
-                        doConnectstate = true;
-                        tempCONNECTSTATE = CONNECTSTATE;
-                    } else if (trimmed.equals("no-uvlock")) {
-                        noUvlock = true;
-                    }
-                }
+            if (doUnconnect) {
+                tempUNCONNECT = UNCONNECT;
+            }
+            if (doConnectstate) {
+                tempCONNECTSTATE = CONNECTSTATE;
             }
 
             return new WCStairBlock(settings, definition, doToggleOnUse, doUnconnect, doConnectstate, noUvlock);

@@ -409,11 +409,97 @@
           "default": "flame"
         },
         "type": {
-          "type": "string",
-          "description": "[Deprecated] Legacy type field with encoded properties",
-          "deprecated": true
+          "oneOf": [
+            {
+              "type": "string",
+              "description": "Legacy string format (e.g., 'unconnect:false,no-uvlock')"
+            },
+            {
+              "$ref": "#/$defs/TypeProperties"
+            }
+          ],
+          "description": "Type-specific properties. Supports legacy string format or structured object format."
         }
       }
+    },
+    "TypeProperties": {
+      "type": "object",
+      "description": "Structured type properties for block-specific behavior",
+      "properties": {
+        "unconnect": {
+          "type": "boolean",
+          "description": "Stair/Wall/Fence/Pane: disable automatic connection to adjacent blocks"
+        },
+        "connectstate": {
+          "type": "boolean",
+          "description": "Enable connect state cycling feature"
+        },
+        "noUvlock": {
+          "type": "boolean",
+          "description": "Disable UV lock on block models"
+        },
+        "barsModel": {
+          "type": "boolean",
+          "description": "Pane: use bars model instead of pane model"
+        },
+        "legacyModel": {
+          "type": "boolean",
+          "description": "Pane: use legacy model format"
+        },
+        "noDecay": {
+          "type": "boolean",
+          "description": "Leaves: prevent natural decay"
+        },
+        "betterFoliage": {
+          "type": "boolean",
+          "description": "Leaves: enable Better Foliage rendering"
+        },
+        "overlay": {
+          "type": "boolean",
+          "description": "Leaves: use overlay textures"
+        },
+        "allowUnsupported": {
+          "type": "boolean",
+          "description": "Torch/Ladder/Door: allow placement without support block"
+        },
+        "noParticle": {
+          "type": "boolean",
+          "description": "Torch: disable flame particles"
+        },
+        "locked": {
+          "type": "boolean",
+          "description": "Door/Gate: lock in closed position"
+        },
+        "alwaysOn": {
+          "type": "boolean",
+          "description": "Furnace: always show lit state"
+        },
+        "plantId": {
+          "type": "string",
+          "description": "Flowerpot: ID of the plant to display"
+        },
+        "noInWeb": {
+          "type": "boolean",
+          "description": "Web: don't slow entities"
+        },
+        "noClimb": {
+          "type": "boolean",
+          "description": "Vines: disable climbing"
+        },
+        "toggleOnUse": {
+          "type": "boolean",
+          "description": "Enable state cycling on right-click (creative mode)"
+        },
+        "layerSensitive": {
+          "type": "boolean",
+          "description": "Allow placement on layer blocks"
+        },
+        "symmetrical": {
+          "type": "boolean",
+          "description": "Use symmetrical texture mapping"
+        }
+      },
+      "additionalProperties": false
     },
     "RandomTextureVariant": {
       "type": "object",

@@ -154,12 +154,13 @@ public class BlockSetExpander {
 
         // 6. Handle type attribute
         if (types != null && types.containsKey(variant)) {
+            // User-specified type (string that will be parsed by TypePropertiesDeserializer)
             defMap.put("type", types.get(variant));
         } else {
             // Apply default types for specific variants
-            String defaultType = getDefaultType(variant);
+            TypeProperties defaultType = getDefaultType(variant);
             if (defaultType != null) {
-                defMap.put("type", defaultType);
+                defMap.put("type", convertTypePropertiesToMap(defaultType));
             }
         }
 
@@ -400,16 +401,51 @@ public class BlockSetExpander {
     }
 
     /**
-     * Returns default type attribute for specific variants.
+     * Returns default TypeProperties for specific variants.
      */
-    private static String getDefaultType(String variant) {
-        return switch (variant) {
-            case "stairs", "wall", "fence", "pane" -> "unconnect:false";
+    private static TypeProperties getDefaultType(String variant) {
+        TypeProperties props = new TypeProperties();
+        switch (variant) {
+            case "stairs", "wall", "fence", "pane" -> props.setUnconnect(false);
             case "arrow_slit", "arrow_slit_window", "arrow_slit_ornate",
-                 "window_frame", "window_frame_mullion" -> "connectstate:true";
-            case "cover" -> "allow-unsupported";
-            default -> null;
-        };
+                 "window_frame", "window_frame_mullion" -> props.setConnectstate(true);
+            case "cover" -> props.setAllowUnsupported(true);
+            default -> { return null; }
+        }
+        return props;
+    }
+
+    /**
+     * Converts TypeProperties to a Map for JSON serialization.
+     * Only includes non-null values.
+     */
+    private static Map<String, Object> convertTypePropertiesToMap(TypeProperties props) {
+        if (props == null) {
+            return null;
+        }
+
+        Map<String, Object> map = new HashMap<>();
+
+        if (props.getUnconnect() != null) map.put("unconnect", props.getUnconnect());
+        if (props.getConnectstate() != null) map.put("connectstate", props.getConnectstate());
+        if (props.getNoUvlock() != null) map.put("noUvlock", props.getNoUvlock());
+        if (props.getBarsModel() != null) map.put("barsModel", props.getBarsModel());
+        if (props.getLegacyModel() != null) map.put("legacyModel", props.getLegacyModel());
+        if (props.getNoDecay() != null) map.put("noDecay", props.getNoDecay());
+        if (props.getBetterFoliage() != null) map.put("betterFoliage", props.getBetterFoliage());
+        if (props.getOverlay() != null) map.put("overlay", props.getOverlay());
+        if (props.getAllowUnsupported() != null) map.put("allowUnsupported", props.getAllowUnsupported());
+        if (props.getNoParticle() != null) map.put("noParticle", props.getNoParticle());
+        if (props.getLocked() != null) map.put("locked", props.getLocked());
+        if (props.getAlwaysOn() != null) map.put("alwaysOn", props.getAlwaysOn());
+        if (props.getPlantId() != null) map.put("plantId", props.getPlantId());
+        if (props.getNoInWeb() != null) map.put("noInWeb", props.getNoInWeb());
+        if (props.getNoClimb() != null) map.put("noClimb", props.getNoClimb());
+        if (props.getToggleOnUse() != null) map.put("toggleOnUse", props.getToggleOnUse());
+        if (props.getLayerSensitive() != null) map.put("layerSensitive", props.getLayerSensitive());
+        if (props.getSymmetrical() != null) map.put("symmetrical", props.getSymmetrical());
+
+        return map.isEmpty() ? null : map;
     }
 
     /**
@@ -593,7 +629,9 @@ public class BlockSetExpander {
      * Calls doInit() to normalize the definition after creation.
      */
     private static BlockDefinition convertMapToBlockDefinition(Map<String, Object> defMap) {
-        Gson gson = new GsonBuilder().create();
+        Gson gson = new GsonBuilder()
+            .registerTypeAdapter(TypeProperties.class, new TypePropertiesDeserializer())
+            .create();
         String json = gson.toJson(defMap);
         BlockDefinition definition = gson.fromJson(json, BlockDefinition.class);
 
