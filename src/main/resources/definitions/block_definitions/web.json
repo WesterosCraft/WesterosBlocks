@@ -611,7 +611,7 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_water_air_tab",
     "label": "Smoke",
-    "type": "toggleOnUse,no-in-web",
+    "type": {"toggleOnUse": true, "noInWeb": true},
     "states": [
       {
         "stateID": "random",

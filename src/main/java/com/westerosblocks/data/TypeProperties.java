@@ -4,21 +4,13 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * Represents type-specific properties for blocks.
- * This class replaces the legacy comma-separated string format for the "type" field
- * with a structured object format that supports typed properties.
+ * Uses a structured object format that supports typed properties.
  *
- * Example JSON (new format):
+ * Example JSON:
  * <pre>
  * {"type": {"unconnect": false, "noUvlock": true}}
  * {"type": {"barsModel": true, "legacyModel": true}}
  * {"type": {"plantId": "blue_bells"}}
- * </pre>
- *
- * Legacy format still supported via deserializer:
- * <pre>
- * {"type": "unconnect:false,no-uvlock"}
- * {"type": "bars-model,legacy-model"}
- * {"type": "plant-id:blue_bells"}
  * </pre>
  */
 public class TypeProperties {
