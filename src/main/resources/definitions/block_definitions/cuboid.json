@@ -1564,7 +1564,7 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Hemp Dense",
-    "type": {
+    "options": {
       "rotateRandom": true
     },
     "textures": [
@@ -1587,7 +1587,7 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Hemp Short",
-    "type": {
+    "options": {
       "rotateRandom": true
     },
     "randomTextures": [
@@ -1613,7 +1613,7 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Hemp Tall",
-    "type": {
+    "options": {
       "rotateRandom": true
     },
     "randomTextures": [
@@ -1649,7 +1649,7 @@
     ],
     "creativeTab": "westeros_lighting_tab",
     "label": "Lantern",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -1939,7 +1939,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Lily Pad",
-    "type": {
+    "options": {
       "rotateRandom": true
     },
     "randomTextures": [
@@ -2091,7 +2091,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Pewter Plate",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -2137,7 +2137,7 @@
     ],
     "creativeTab": "westeros_lighting_tab",
     "label": "Red Lantern",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -2427,7 +2427,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Wooden Plate",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [

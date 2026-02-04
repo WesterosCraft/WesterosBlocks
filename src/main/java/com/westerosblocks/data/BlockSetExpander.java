@@ -82,7 +82,7 @@ public class BlockSetExpander {
         List<BlockDefinition> definitions = new ArrayList<>();
 
         // Preprocess maps to handle comma-separated keys
-        Map<String, String> types = preprocessVariantMap(blockSet.getTypes());
+        Map<String, String> options = preprocessVariantMap(blockSet.getOptions());
         Map<String, List<String>> altCustomTags = preprocessVariantMap(blockSet.getAltCustomTags());
         Map<String, List<String>> altTextures = preprocessVariantMap(blockSet.getAltTextures());
 
@@ -95,7 +95,7 @@ public class BlockSetExpander {
                 continue;
             }
 
-            BlockDefinition definition = createVariantDefinition(blockSet, variant, types, altCustomTags, altTextures);
+            BlockDefinition definition = createVariantDefinition(blockSet, variant, options, altCustomTags, altTextures);
             if (definition != null) {
                 definitions.add(definition);
             }
@@ -109,7 +109,7 @@ public class BlockSetExpander {
      * Creates a BlockDefinition for a specific variant.
      */
     private static BlockDefinition createVariantDefinition(BlockSetDefinition blockSet, String variant,
-                                                          Map<String, String> types,
+                                                          Map<String, String> options,
                                                           Map<String, List<String>> altCustomTags,
                                                           Map<String, List<String>> altTextures) {
         // Use reflection to create BlockDefinition (since it has no public constructor)
@@ -152,15 +152,15 @@ public class BlockSetExpander {
             defMap.put("customTags", blockSet.getCustomTags());
         }
 
-        // 6. Handle type attribute
-        if (types != null && types.containsKey(variant)) {
-            // User-specified type (string that will be parsed by TypePropertiesDeserializer)
-            defMap.put("type", types.get(variant));
+        // 6. Handle options attribute
+        if (options != null && options.containsKey(variant)) {
+            // User-specified options (string that will be parsed by OptionsPropertiesDeserializer)
+            defMap.put("options", options.get(variant));
         } else {
-            // Apply default types for specific variants
-            TypeProperties defaultType = getDefaultType(variant);
-            if (defaultType != null) {
-                defMap.put("type", convertTypePropertiesToMap(defaultType));
+            // Apply default options for specific variants
+            OptionsProperties defaultOptions = getDefaultOptions(variant);
+            if (defaultOptions != null) {
+                defMap.put("options", convertOptionsPropertiesToMap(defaultOptions));
             }
         }
 
@@ -401,10 +401,10 @@ public class BlockSetExpander {
     }
 
     /**
-     * Returns default TypeProperties for specific variants.
+     * Returns default OptionsProperties for specific variants.
      */
-    private static TypeProperties getDefaultType(String variant) {
-        TypeProperties props = new TypeProperties();
+    private static OptionsProperties getDefaultOptions(String variant) {
+        OptionsProperties props = new OptionsProperties();
         switch (variant) {
             case "stairs", "wall", "fence", "pane" -> props.setUnconnect(false);
             case "arrow_slit", "arrow_slit_window", "arrow_slit_ornate",
@@ -416,10 +416,10 @@ public class BlockSetExpander {
     }
 
     /**
-     * Converts TypeProperties to a Map for JSON serialization.
+     * Converts OptionsProperties to a Map for JSON serialization.
      * Only includes non-null values.
      */
-    private static Map<String, Object> convertTypePropertiesToMap(TypeProperties props) {
+    private static Map<String, Object> convertOptionsPropertiesToMap(OptionsProperties props) {
         if (props == null) {
             return null;
         }
@@ -630,7 +630,7 @@ public class BlockSetExpander {
      */
     private static BlockDefinition convertMapToBlockDefinition(Map<String, Object> defMap) {
         Gson gson = new GsonBuilder()
-            .registerTypeAdapter(TypeProperties.class, new TypePropertiesDeserializer())
+            .registerTypeAdapter(OptionsProperties.class, new OptionsPropertiesDeserializer())
             .create();
         String json = gson.toJson(defMap);
         BlockDefinition definition = gson.fromJson(json, BlockDefinition.class);

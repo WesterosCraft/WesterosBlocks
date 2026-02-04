@@ -12,7 +12,7 @@
     ],
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Cabbage",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "renderLayer": "cutout",
@@ -40,7 +40,7 @@
     ],
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Purple Cabbage",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "renderLayer": "cutout",
@@ -68,7 +68,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Generic Head",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "textures": [
@@ -101,7 +101,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Helmet",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "textures": [
@@ -135,7 +135,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Skull",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "textures": [
@@ -168,7 +168,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Wight Head",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "textures": [

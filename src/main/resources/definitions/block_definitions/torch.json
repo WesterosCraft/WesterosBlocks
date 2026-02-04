@@ -5,7 +5,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_lighting_tab",
     "label": "Torch",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": ["lighting/torch"],
@@ -18,7 +18,7 @@
     "soundGroup": "powder",
     "creativeTab": "westeros_lighting_tab",
     "label": "Candle",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": ["lighting/candle"],
@@ -31,7 +31,7 @@
     "soundGroup": "powder",
     "creativeTab": "westeros_lighting_tab",
     "label": "Unlit Candle",
-    "type": {
+    "options": {
       "allowUnsupported": true,
       "noParticle": true
     },
@@ -45,7 +45,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_lighting_tab",
     "label": "Unlit Torch",
-    "type": {
+    "options": {
       "allowUnsupported": true,
       "noParticle": true
     },

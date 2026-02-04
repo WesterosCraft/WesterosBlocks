@@ -33,9 +33,9 @@ public class BlockSetDefinition {
     @SerializedName("altLabels")
     private Map<String, String> altLabels;
 
-    /** Type attributes for specific variants (e.g., {"fence_gate": "locked:true"}) */
-    @SerializedName("types")
-    private Map<String, String> types;
+    /** Options attributes for specific variants (e.g., {"fence_gate": {"locked": true}}) */
+    @SerializedName("options")
+    private Map<String, String> options;
 
     /** Custom tags for specific variants (e.g., {"solid": ["wood-ctm"]}) */
     @SerializedName("altCustomTags")
@@ -189,7 +189,7 @@ public class BlockSetDefinition {
     public List<String> getVariants() { return variants; }
     public Map<String, String> getAltNames() { return altNames; }
     public Map<String, String> getAltLabels() { return altLabels; }
-    public Map<String, String> getTypes() { return types; }
+    public Map<String, String> getOptions() { return options; }
     public Map<String, List<String>> getAltCustomTags() { return altCustomTags; }
     public Map<String, List<String>> getAltTextures() { return altTextures; }
 

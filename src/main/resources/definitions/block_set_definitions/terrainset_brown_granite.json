@@ -21,7 +21,7 @@
         }
     ],
     "creativeTab": "westeros_terrain_sets_tab",
-    "types": {
+    "options": {
         "fence": "unconnect:true",
         "fence_gate": "locked:true"
     },

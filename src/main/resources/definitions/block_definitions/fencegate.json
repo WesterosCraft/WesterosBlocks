@@ -6,7 +6,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "Locked Birch Bark Fence Gate",
-    "type": {
+    "options": {
       "locked": true
     },
     "textures": [
@@ -20,7 +20,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "Locked Jungle Bark Fence Gate",
-    "type": {
+    "options": {
       "locked": true
     },
     "textures": [
@@ -34,7 +34,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "Locked Oak Bark Fence Gate",
-    "type": {
+    "options": {
       "locked": true
     },
     "textures": [
@@ -48,7 +48,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "Locked Spruce Bark Fence Gate",
-    "type": {
+    "options": {
       "locked": true
     },
     "textures": [

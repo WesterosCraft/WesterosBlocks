@@ -4,7 +4,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Blue Bells",
-    "type": {
+    "options": {
       "plantId": "blue_bells"
     },
     "textures": [
@@ -19,7 +19,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Blue Chicory",
-    "type": {
+    "options": {
       "plantId": "blue_chicory"
     },
     "randomTextures": [
@@ -59,7 +59,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Blue Flax",
-    "type": {
+    "options": {
       "plantId": "blue_flax"
     },
     "randomTextures": [
@@ -99,7 +99,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Blue Forget-me-nots",
-    "type": {
+    "options": {
       "plantId": "blue_forgetmenots"
     },
     "randomTextures": [
@@ -139,7 +139,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Blue Hyacinth",
-    "type": {
+    "options": {
       "plantId": "blue_hyacinth"
     },
     "randomTextures": [
@@ -179,7 +179,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Blue Orchid",
-    "type": {
+    "options": {
       "plantId": "blue_orchid"
     },
     "randomTextures": [
@@ -212,7 +212,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Blue Swamp Bells",
-    "type": {
+    "options": {
       "plantId": "blue_swamp_bells"
     },
     "textures": [
@@ -227,7 +227,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Bracken",
-    "type": {
+    "options": {
       "plantId": "bracken"
     },
     "randomTextures": [
@@ -295,7 +295,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Brown Mushroom 1",
-    "type": {
+    "options": {
       "plantId": "brown_mushroom_1"
     },
     "textures": [
@@ -310,7 +310,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Brown Mushroom 13",
-    "type": {
+    "options": {
       "plantId": "brown_mushroom_13"
     },
     "textures": [
@@ -325,7 +325,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Brown Mushroom 3",
-    "type": {
+    "options": {
       "plantId": "brown_mushroom_3"
     },
     "textures": [
@@ -340,7 +340,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Brown Mushroom 6",
-    "type": {
+    "options": {
       "plantId": "brown_mushroom_6"
     },
     "textures": [
@@ -355,7 +355,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Cattails",
-    "type": {
+    "options": {
       "plantId": "cattails"
     },
     "randomTextures": [
@@ -424,7 +424,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Cow Parsely",
-    "type": {
+    "options": {
       "plantId": "cow_parsely"
     },
     "randomTextures": [
@@ -450,7 +450,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Dead Bracken",
-    "type": {
+    "options": {
       "plantId": "dead_bracken"
     },
     "randomTextures": [
@@ -546,7 +546,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Dead bush",
-    "type": {
+    "options": {
       "plantId": "dead_bush"
     },
     "randomTextures": [
@@ -579,7 +579,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Dead Scrub Grass",
-    "type": {
+    "options": {
       "plantId": "dead_scrub_grass"
     },
     "randomTextures": [
@@ -654,7 +654,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Potted Dock Leaf",
-    "type": {
+    "options": {
       "plantId": "dock_leaf"
     },
     "randomTextures": [
@@ -680,7 +680,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Fireweed",
-    "type": {
+    "options": {
       "plantId": "fireweed"
     },
     "randomTextures": [
@@ -720,7 +720,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Grass",
-    "type": {
+    "options": {
       "plantId": "fern"
     },
     "randomTextures": [
@@ -775,7 +775,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Green Leafy Herb",
-    "type": {
+    "options": {
       "plantId": "green_leafy_herb"
     },
     "textures": [
@@ -790,7 +790,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Green Scrub Grass",
-    "type": {
+    "options": {
       "plantId": "green_scrub_grass"
     },
     "randomTextures": [
@@ -844,7 +844,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Green Spiny Herb",
-    "type": {
+    "options": {
       "plantId": "green_spiny_herb"
     },
     "randomTextures": [
@@ -891,7 +891,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Heather",
-    "type": {
+    "options": {
       "plantId": "heather"
     },
     "randomTextures": [
@@ -931,7 +931,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Lady Fern",
-    "type": {
+    "options": {
       "plantId": "lady_fern"
     },
     "randomTextures": [
@@ -971,7 +971,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Magenta Roses",
-    "type": {
+    "options": {
       "plantId": "magenta_roses"
     },
     "randomTextures": [
@@ -1011,7 +1011,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Meadow Fescue",
-    "type": {
+    "options": {
       "plantId": "meadow_fescue"
     },
     "randomTextures": [
@@ -1037,7 +1037,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Nettle",
-    "type": {
+    "options": {
       "plantId": "nettle"
     },
     "randomTextures": [
@@ -1070,7 +1070,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Orange Bells",
-    "type": {
+    "options": {
       "plantId": "orange_bells"
     },
     "textures": [
@@ -1085,7 +1085,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Orange Bog Asphodel",
-    "type": {
+    "options": {
       "plantId": "orange_bog_asphodel"
     },
     "randomTextures": [
@@ -1125,7 +1125,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Orange Marigolds",
-    "type": {
+    "options": {
       "plantId": "orange_marigolds"
     },
     "randomTextures": [
@@ -1165,7 +1165,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Orange Sun Star",
-    "type": {
+    "options": {
       "plantId": "orange_sun_star"
     },
     "randomTextures": [
@@ -1191,7 +1191,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Orange Trollius",
-    "type": {
+    "options": {
       "plantId": "orange_trollius"
     },
     "randomTextures": [
@@ -1217,7 +1217,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Pink Allium",
-    "type": {
+    "options": {
       "plantId": "pink_allium"
     },
     "randomTextures": [
@@ -1257,7 +1257,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Pink Primrose",
-    "type": {
+    "options": {
       "plantId": "pink_primrose"
     },
     "randomTextures": [
@@ -1283,7 +1283,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Pink Roses",
-    "type": {
+    "options": {
       "plantId": "pink_roses"
     },
     "randomTextures": [
@@ -1323,7 +1323,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Pink Sweet Peas",
-    "type": {
+    "options": {
       "plantId": "pink_sweet_peas"
     },
     "textures": [
@@ -1338,7 +1338,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Pink Thistle",
-    "type": {
+    "options": {
       "plantId": "pink_thistle"
     },
     "randomTextures": [
@@ -1378,7 +1378,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Pink Tulips",
-    "type": {
+    "options": {
       "plantId": "pink_tulips"
     },
     "randomTextures": [
@@ -1418,7 +1418,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Pink Wildflowers",
-    "type": {
+    "options": {
       "plantId": "pink_wildflowers"
     },
     "textures": [
@@ -1433,7 +1433,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Purple Alpine Sow-thistle",
-    "type": {
+    "options": {
       "plantId": "purple_alpine_sowthistle"
     },
     "randomTextures": [
@@ -1473,7 +1473,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Purple Foxglove",
-    "type": {
+    "options": {
       "plantId": "purple_foxglove"
     },
     "randomTextures": [
@@ -1513,7 +1513,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Purple Lavender",
-    "type": {
+    "options": {
       "plantId": "purple_lavender"
     },
     "randomTextures": [
@@ -1546,7 +1546,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Purple Pansies",
-    "type": {
+    "options": {
       "plantId": "purple_pansies"
     },
     "randomTextures": [
@@ -1586,7 +1586,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Purple Roses",
-    "type": {
+    "options": {
       "plantId": "purple_roses"
     },
     "randomTextures": [
@@ -1626,7 +1626,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Purple Violets",
-    "type": {
+    "options": {
       "plantId": "purple_violets"
     },
     "randomTextures": [
@@ -1659,7 +1659,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Aster",
-    "type": {
+    "options": {
       "plantId": "red_aster"
     },
     "randomTextures": [
@@ -1699,7 +1699,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Carnations",
-    "type": {
+    "options": {
       "plantId": "red_carnations"
     },
     "randomTextures": [
@@ -1739,7 +1739,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Chrysanthemum",
-    "type": {
+    "options": {
       "plantId": "red_chrysanthemum"
     },
     "textures": [
@@ -1754,7 +1754,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Dark Roses",
-    "type": {
+    "options": {
       "plantId": "red_dark_roses"
     },
     "randomTextures": [
@@ -1794,7 +1794,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Red Fern",
-    "type": {
+    "options": {
       "plantId": "red_fern"
     },
     "randomTextures": [
@@ -1827,7 +1827,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Flowering Spiny Herb",
-    "type": {
+    "options": {
       "plantId": "red_flowering_spiny_herb"
     },
     "textures": [
@@ -1842,7 +1842,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Red Mushroom 1",
-    "type": {
+    "options": {
       "plantId": "red_mushroom_1"
     },
     "textures": [
@@ -1857,7 +1857,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Red Mushroom 2",
-    "type": {
+    "options": {
       "plantId": "red_mushroom_2"
     },
     "textures": [
@@ -1872,7 +1872,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Red Mushroom 3",
-    "type": {
+    "options": {
       "plantId": "red_mushroom_3"
     },
     "textures": [
@@ -1887,7 +1887,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Red Mushroom 7",
-    "type": {
+    "options": {
       "plantId": "red_mushroom_7"
     },
     "textures": [
@@ -1902,7 +1902,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Red Mushroom 8",
-    "type": {
+    "options": {
       "plantId": "red_mushroom_8"
     },
     "textures": [
@@ -1917,7 +1917,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Potted Red Mushroom 9",
-    "type": {
+    "options": {
       "plantId": "red_mushroom_9"
     },
     "textures": [
@@ -1932,7 +1932,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Poppies",
-    "type": {
+    "options": {
       "plantId": "red_poppies"
     },
     "randomTextures": [
@@ -1958,7 +1958,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Roses",
-    "type": {
+    "options": {
       "plantId": "red_roses"
     },
     "randomTextures": [
@@ -1998,7 +1998,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Sorrel",
-    "type": {
+    "options": {
       "plantId": "red_sorrel"
     },
     "textures": [
@@ -2013,7 +2013,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Sourleaf Bush",
-    "type": {
+    "options": {
       "plantId": "red_sourleaf_bush"
     },
     "randomTextures": [
@@ -2039,7 +2039,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Red Tulips",
-    "type": {
+    "options": {
       "plantId": "red_tulips"
     },
     "randomTextures": [
@@ -2079,7 +2079,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted White Chamomile",
-    "type": {
+    "options": {
       "plantId": "white_chamomile"
     },
     "randomTextures": [
@@ -2112,7 +2112,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted White Daisies",
-    "type": {
+    "options": {
       "plantId": "white_daisies"
     },
     "randomTextures": [
@@ -2152,7 +2152,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted White Lily-of-the-valley",
-    "type": {
+    "options": {
       "plantId": "white_lilyofthevalley"
     },
     "textures": [
@@ -2167,7 +2167,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted White Peony",
-    "type": {
+    "options": {
       "plantId": "white_peony"
     },
     "textures": [
@@ -2182,7 +2182,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted White Roses",
-    "type": {
+    "options": {
       "plantId": "white_roses"
     },
     "randomTextures": [
@@ -2222,7 +2222,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Bedstraw",
-    "type": {
+    "options": {
       "plantId": "yellow_bedstraw"
     },
     "randomTextures": [
@@ -2255,7 +2255,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Bells",
-    "type": {
+    "options": {
       "plantId": "yellow_bells"
     },
     "textures": [
@@ -2270,7 +2270,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Buttercups",
-    "type": {
+    "options": {
       "plantId": "yellow_buttercups"
     },
     "randomTextures": [
@@ -2310,7 +2310,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Daffodils",
-    "type": {
+    "options": {
       "plantId": "yellow_daffodils"
     },
     "randomTextures": [
@@ -2350,7 +2350,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Daisies",
-    "type": {
+    "options": {
       "plantId": "yellow_daisies"
     },
     "randomTextures": [
@@ -2376,7 +2376,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Dandelions",
-    "type": {
+    "options": {
       "plantId": "yellow_dandelions"
     },
     "randomTextures": [
@@ -2409,7 +2409,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Hellebore",
-    "type": {
+    "options": {
       "plantId": "yellow_hellebore"
     },
     "randomTextures": [
@@ -2435,7 +2435,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Lupine",
-    "type": {
+    "options": {
       "plantId": "yellow_lupine"
     },
     "randomTextures": [
@@ -2475,7 +2475,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Roses",
-    "type": {
+    "options": {
       "plantId": "yellow_roses"
     },
     "randomTextures": [
@@ -2515,7 +2515,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Rudbeckia",
-    "type": {
+    "options": {
       "plantId": "yellow_rudbeckia"
     },
     "textures": [
@@ -2530,7 +2530,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Sunflower",
-    "type": {
+    "options": {
       "plantId": "yellow_sunflower"
     },
     "randomTextures": [
@@ -2563,7 +2563,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Tansy",
-    "type": {
+    "options": {
       "plantId": "yellow_tansy"
     },
     "textures": [
@@ -2578,7 +2578,7 @@
     "blockType": "flowerpot",
     "creativeTab": "westeros_flowers_tab",
     "label": "Potted Yellow Wildflowers",
-    "type": {
+    "options": {
       "plantId": "yellow_wildflowers"
     },
     "textures": [

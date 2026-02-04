@@ -20,7 +20,7 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
-    "types": {
+    "options": {
         "stairs": "unconnect:false,no-uvlock"
     },
     "baseLabel": "Green Slate",

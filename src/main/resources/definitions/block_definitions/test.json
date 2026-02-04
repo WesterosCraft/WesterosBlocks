@@ -98,7 +98,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_test_tab",
     "label": "Vertical CTM (Connectstate)",
-    "type": {
+    "options": {
       "connectstate": true
     },
     "textures": [
@@ -271,7 +271,7 @@
     ],
     "creativeTab": "westeros_test_tab",
     "label": "Test Wall (unconnect)",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -287,7 +287,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_test_tab",
     "label": "Test Fence (unconnect)",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -307,7 +307,7 @@
     ],
     "creativeTab": "westeros_test_tab",
     "label": "Test Stair (unconnect)",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -329,7 +329,7 @@
     ],
     "creativeTab": "westeros_test_tab",
     "label": "Test Pane (unconnect)",
-    "type": {
+    "options": {
       "unconnect": false,
       "barsModel": true
     },
@@ -351,7 +351,7 @@
     ],
     "creativeTab": "westeros_test_tab",
     "label": "Test Block (symmetrical)",
-    "type": {
+    "options": {
       "symmetrical": true
     },
     "textures": [
@@ -409,7 +409,7 @@
     ],
     "creativeTab": "westeros_test_tab",
     "label": "Test Multi-state",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [

@@ -12,7 +12,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Bones",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -118,7 +118,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Ale Merchant",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -279,7 +279,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Apothecary",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -440,7 +440,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Armorer",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -601,7 +601,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Baker",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -762,7 +762,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Barber",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -923,7 +923,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Blacksmith",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -1084,7 +1084,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Bookbinder",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -1245,7 +1245,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Butcher",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -1406,7 +1406,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Carpenter",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -1567,7 +1567,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Cartwright",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -1728,7 +1728,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Chandler",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -1889,7 +1889,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Cobbler",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -2050,7 +2050,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Cooper",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -2211,7 +2211,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Fishmongerer",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -2372,7 +2372,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Flea Bottom Potshop",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -2533,7 +2533,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Fletcher",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -2694,7 +2694,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Furrier",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -2855,7 +2855,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Inn",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -3016,7 +3016,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Jeweller",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -3177,7 +3177,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Mason",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -3338,7 +3338,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Mercer",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -3499,7 +3499,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Net Maker",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -3660,7 +3660,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Potter",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -3821,7 +3821,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Ropemaker",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -3982,7 +3982,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Scribe",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -4143,7 +4143,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Spicer",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -4304,7 +4304,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Stables",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -4465,7 +4465,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Tailor",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -4626,7 +4626,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Tanner",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -4787,7 +4787,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Tavern",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -4948,7 +4948,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Weaponsmith",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -5109,7 +5109,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "City Profession: Wine Merchant",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -5270,7 +5270,7 @@
     ],
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Clothesline",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -5368,7 +5368,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Coins",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -5559,7 +5559,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Westerosi Coins",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [

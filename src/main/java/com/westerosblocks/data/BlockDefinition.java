@@ -55,9 +55,9 @@ public class BlockDefinition {
     @SerializedName("textures")
     private List<String> textures;
 
-    /** Type properties - structured format for block-specific properties */
-    @SerializedName("type")
-    private TypeProperties type;
+    /** Options properties - structured format for block-specific properties */
+    @SerializedName("options")
+    private OptionsProperties options;
 
     /** Render layer - "cutout", "cutout_mipped", or "translucent" */
     @SerializedName("renderLayer")
@@ -771,7 +771,7 @@ public class BlockDefinition {
     }
 
     public boolean toggleOnUse() {
-        return type != null && Boolean.TRUE.equals(type.getToggleOnUse());
+        return options != null && Boolean.TRUE.equals(options.getToggleOnUse());
     }
 
     public String getLabel() {
@@ -782,8 +782,8 @@ public class BlockDefinition {
         return textures;
     }
 
-    public TypeProperties getType() {
-        return type;
+    public OptionsProperties getOptions() {
+        return options;
     }
 
     public List<HarvestLevel> getHarvestLevel() {
@@ -823,7 +823,7 @@ public class BlockDefinition {
     }
 
     public boolean isLayerSensitive() {
-        return type != null && Boolean.TRUE.equals(type.getLayerSensitive());
+        return options != null && Boolean.TRUE.equals(options.getLayerSensitive());
     }
 
     public boolean hasNoCollision() {
@@ -860,19 +860,19 @@ public class BlockDefinition {
     }
 
     public boolean isLocked() {
-        return type != null && Boolean.TRUE.equals(type.getLocked());
+        return options != null && Boolean.TRUE.equals(options.getLocked());
     }
 
     public boolean isAllowUnsupported() {
-        return type != null && Boolean.TRUE.equals(type.getAllowUnsupported());
+        return options != null && Boolean.TRUE.equals(options.getAllowUnsupported());
     }
 
     public boolean isAllowHalfBreak() {
-        return type != null && Boolean.TRUE.equals(type.getAllowHalfBreak());
+        return options != null && Boolean.TRUE.equals(options.getAllowHalfBreak());
     }
 
     public boolean isNoBreakUnder() {
-        return type != null && Boolean.TRUE.equals(type.getNoBreakUnder());
+        return options != null && Boolean.TRUE.equals(options.getNoBreakUnder());
     }
 
     public String getColorMult() {
@@ -940,19 +940,19 @@ public class BlockDefinition {
     }
 
     public boolean hasOverlay() {
-        return type != null && Boolean.TRUE.equals(type.getOverlay());
+        return options != null && Boolean.TRUE.equals(options.getOverlay());
     }
 
     public boolean hasBetterFoliage() {
-        return type != null && Boolean.TRUE.equals(type.getBetterFoliage());
+        return options != null && Boolean.TRUE.equals(options.getBetterFoliage());
     }
 
     public boolean hasRotateRandom() {
-        return type != null && Boolean.TRUE.equals(type.getRotateRandom());
+        return options != null && Boolean.TRUE.equals(options.getRotateRandom());
     }
 
     public boolean isNoDecay() {
-        return type != null && Boolean.TRUE.equals(type.getNoDecay());
+        return options != null && Boolean.TRUE.equals(options.getNoDecay());
     }
 
     public boolean isAlphaRender() {
@@ -960,46 +960,46 @@ public class BlockDefinition {
     }
 
     public boolean isNoParticle() {
-        return type != null && Boolean.TRUE.equals(type.getNoParticle());
+        return options != null && Boolean.TRUE.equals(options.getNoParticle());
     }
 
     public String getBedType() {
-        return type != null ? type.getBedType() : null;
+        return options != null ? options.getBedType() : null;
     }
 
     public boolean hasBedType() {
-        return type != null && type.getBedType() != null && !type.getBedType().isEmpty();
+        return options != null && options.getBedType() != null && !options.getBedType().isEmpty();
     }
 
     public boolean isAlwaysOn() {
-        return type != null && Boolean.TRUE.equals(type.getAlwaysOn());
+        return options != null && Boolean.TRUE.equals(options.getAlwaysOn());
     }
 
     public boolean hasDown() {
-        return type != null && Boolean.TRUE.equals(type.getHasDown());
+        return options != null && Boolean.TRUE.equals(options.getHasDown());
     }
 
     public boolean hasClimb() {
-        return type != null && Boolean.TRUE.equals(type.getHasClimb());
+        return options != null && Boolean.TRUE.equals(options.getHasClimb());
     }
 
     public boolean isSymmetrical() {
-        return type != null && Boolean.TRUE.equals(type.getSymmetrical());
+        return options != null && Boolean.TRUE.equals(options.getSymmetrical());
     }
 
     public String getWallSize() {
-        if (type != null && type.getWallSize() != null) {
-            return type.getWallSize();
+        if (options != null && options.getWallSize() != null) {
+            return options.getWallSize();
         }
         return "normal";
     }
 
     public boolean isConnectState() {
-        return type != null && Boolean.TRUE.equals(type.getConnectstate());
+        return options != null && Boolean.TRUE.equals(options.getConnectstate());
     }
 
     public boolean isUnconnect() {
-        return type != null && Boolean.TRUE.equals(type.getUnconnect());
+        return options != null && Boolean.TRUE.equals(options.getUnconnect());
     }
 
     public List<StackElement> getStack() {
@@ -1042,7 +1042,7 @@ public class BlockDefinition {
     }
 
     public boolean isNoClimb() {
-        return type != null && Boolean.TRUE.equals(type.getNoClimb());
+        return options != null && Boolean.TRUE.equals(options.getNoClimb());
     }
 
     public boolean canGrowDownward() {
@@ -1050,11 +1050,11 @@ public class BlockDefinition {
     }
 
     public boolean isNoInWeb() {
-        return type != null && Boolean.TRUE.equals(type.getNoInWeb());
+        return options != null && Boolean.TRUE.equals(options.getNoInWeb());
     }
 
     public boolean isBarsModel() {
-        return type != null && Boolean.TRUE.equals(type.getBarsModel());
+        return options != null && Boolean.TRUE.equals(options.getBarsModel());
     }
 
     public String getParticle() {

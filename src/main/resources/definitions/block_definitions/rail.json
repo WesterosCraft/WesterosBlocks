@@ -5,7 +5,7 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Fancy Blue Carpet",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": ["carpet/fancy_blue_carpet"],
@@ -17,7 +17,7 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Fancy Red Carpet",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": ["carpet/fancy_red_carpet"],
@@ -28,7 +28,7 @@
     "blockType": "rail",
     "creativeTab": "westeros_metal_tab",
     "label": "Horizontal Chain",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": ["rail_block/chain", "rail_block/chain_turned"],
@@ -40,7 +40,7 @@
     "blockType": "rail",
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Horizontal Net",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": ["rail_block/net_large", "rail_block/net_large_turned"],
@@ -51,7 +51,7 @@
     "blockType": "rail",
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Horizontal Rope",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": ["rail_block/rope", "rail_block/rope_turned"],
@@ -62,7 +62,7 @@
     "blockType": "rail",
     "creativeTab": "westeros_water_air_tab",
     "label": "Packed Snow",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": ["rail_block/packed_snow", "rail_block/packed_snow_turned"],

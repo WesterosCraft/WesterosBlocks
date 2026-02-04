@@ -20,7 +20,7 @@
         }
     ],
     "creativeTab": "westeros_test_tab",
-    "types": {
+    "options": {
         "stairs,wall": "unconnect:false",
         "fence": "unconnect:true",
         "fence_gate": "locked:true"

@@ -7,7 +7,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_misc_tab",
     "label": "Piled Bones Stairs",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": ["piled_bones/side"]
@@ -24,7 +24,7 @@
     ],
     "creativeTab": "westeros_misc_tab",
     "label": "Stacked Bones Stairs",
-    "type": {
+    "options": {
       "unconnect": false,
       "noUvlock": true
     },

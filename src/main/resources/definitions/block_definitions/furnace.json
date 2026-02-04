@@ -7,7 +7,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Arbor",
-    "type": {
+    "options": {
       "alwaysOn": true
     },
     "renderLayer": "cutout",
@@ -24,7 +24,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Orange Brick Furnace",
-    "type": {
+    "options": {
       "alwaysOn": true
     },
     "renderLayer": "cutout",
@@ -41,7 +41,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Dark Grey",
-    "type": {
+    "options": {
       "alwaysOn": true
     },
     "renderLayer": "cutout",
@@ -58,7 +58,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Dornish Mud Furnace",
-    "type": {
+    "options": {
       "alwaysOn": true
     },
     "renderLayer": "cutout",
@@ -75,7 +75,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Dun",
-    "type": {
+    "options": {
       "alwaysOn": true
     },
     "renderLayer": "cutout",
@@ -92,7 +92,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Light Grey",
-    "type": {
+    "options": {
       "alwaysOn": true
     },
     "renderLayer": "cutout",
@@ -109,7 +109,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Oldtown",
-    "type": {
+    "options": {
       "alwaysOn": true
     },
     "renderLayer": "cutout",
@@ -126,7 +126,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Reach",
-    "type": {
+    "options": {
       "alwaysOn": true
     },
     "renderLayer": "cutout",
@@ -143,7 +143,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Light Brown",
-    "type": {
+    "options": {
       "alwaysOn": true
     },
     "renderLayer": "cutout",
@@ -160,7 +160,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Southern Brick Furnace",
-    "type": {
+    "options": {
       "alwaysOn": true
     },
     "renderLayer": "cutout",
@@ -177,7 +177,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Always Active Ashlar Furnace Green Grey",
-    "type": {
+    "options": {
       "alwaysOn": true
     },
     "renderLayer": "cutout",
@@ -209,7 +209,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Ashlar Furnace Dark Grey",
-    "type": {
+    "options": {
       "alwaysOn": false
     },
     "renderLayer": "cutout",
@@ -240,7 +240,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Ashlar Furnace Dun",
-    "type": {
+    "options": {
       "alwaysOn": false
     },
     "renderLayer": "cutout",
@@ -257,7 +257,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Ashlar Furnace Light Grey",
-    "type": {
+    "options": {
       "alwaysOn": false
     },
     "renderLayer": "cutout",
@@ -274,7 +274,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Ashlar Furnace Oldtown",
-    "type": {
+    "options": {
       "alwaysOn": false
     },
     "renderLayer": "cutout",
@@ -305,7 +305,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Ashlar Furnace Reach",
-    "type": {
+    "options": {
       "alwaysOn": false
     },
     "renderLayer": "cutout",
@@ -350,7 +350,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_furniture_tab",
     "label": "Ashlar Furnace Green Grey",
-    "type": {
+    "options": {
       "alwaysOn": false
     },
     "renderLayer": "cutout",

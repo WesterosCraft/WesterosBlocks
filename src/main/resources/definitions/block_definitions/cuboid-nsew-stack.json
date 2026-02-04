@@ -13,7 +13,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Allyrion Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -71,7 +71,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Arryn Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -130,7 +130,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Baelish Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -189,7 +189,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Banefort Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -248,7 +248,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Bar Emmon Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -307,7 +307,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Baratheon Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -366,7 +366,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Beesbury Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -425,7 +425,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Belmore Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -484,7 +484,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Black Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -543,7 +543,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Black Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -602,7 +602,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Blackbar Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -661,7 +661,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Blackfyre Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -720,7 +720,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Blackfyre Old Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -779,7 +779,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Blackmont Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -838,7 +838,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Blacktyde Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -897,7 +897,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Blackwood Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -956,7 +956,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Blue Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1015,7 +1015,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Blue Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1074,7 +1074,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Bolling Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1133,7 +1133,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Bolton Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1192,7 +1192,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Botley Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1251,7 +1251,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Bracken Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1310,7 +1310,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Bracken Damaged Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1369,7 +1369,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Brax Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1428,7 +1428,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Broom Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1487,7 +1487,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Brown Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1546,7 +1546,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Brown Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1605,7 +1605,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Buckwell Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1664,7 +1664,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Bulwer Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1723,7 +1723,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Butterwell Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1782,7 +1782,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Caron Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1841,7 +1841,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Caswell Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1900,7 +1900,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Celtigar Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -1959,7 +1959,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Cerwyn Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2018,7 +2018,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Charlton Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2077,7 +2077,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Citadel Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2136,7 +2136,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Clegane Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2195,7 +2195,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Coldwater Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2254,7 +2254,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Connington Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2313,7 +2313,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Corbray Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2372,7 +2372,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Costayne Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2431,7 +2431,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Crakehall Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2490,7 +2490,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Crane Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2549,7 +2549,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Cream Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2608,7 +2608,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Cuy Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2667,7 +2667,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Cyan Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2726,7 +2726,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Cyan Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2785,7 +2785,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Darry Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2844,7 +2844,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Dayne Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2903,7 +2903,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Dirty White Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -2962,7 +2962,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Dondarrion Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3021,7 +3021,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Drumm Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3080,7 +3080,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Dustin Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3139,7 +3139,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Egen Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3198,7 +3198,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Errol Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3257,7 +3257,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Estermont Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3316,7 +3316,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Farman Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3375,7 +3375,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Flint Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3434,7 +3434,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Florent Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3493,7 +3493,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Fossoway Green Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3552,7 +3552,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Fossoway Red Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3611,7 +3611,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Fowler Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3670,7 +3670,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Frey Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3729,7 +3729,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Gardner Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3788,7 +3788,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Gardner Old Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3847,7 +3847,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Glover Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3906,7 +3906,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Goodbrother Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -3965,7 +3965,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Grafton Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4024,7 +4024,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Green Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4083,7 +4083,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Green Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4142,7 +4142,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Grey Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4201,7 +4201,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Grey Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4260,7 +4260,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Greyjoy Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4324,7 +4324,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Harlaw Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4383,7 +4383,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Harte Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4442,7 +4442,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Hersy Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4501,7 +4501,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Hewett Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4560,7 +4560,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Hightower Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4619,7 +4619,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Hoare Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4678,7 +4678,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Hoare Old Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4737,7 +4737,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Hornwood Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4796,7 +4796,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Hunter Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4855,7 +4855,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Jordayne Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4914,7 +4914,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Karstark Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -4973,7 +4973,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Lannister Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5038,7 +5038,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Lannister Damaged Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5097,7 +5097,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Lefford Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5156,7 +5156,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Light Blue Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5215,7 +5215,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Light Brown Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5274,7 +5274,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Light Grey Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5333,7 +5333,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Locke Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5392,7 +5392,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Lord Of Light Rhllor Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5451,7 +5451,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Lothston Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5510,7 +5510,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Lydden Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5569,7 +5569,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Mallister Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5628,7 +5628,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Manderly Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5687,7 +5687,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Marbrand Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5746,7 +5746,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Martell Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5805,7 +5805,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Massey Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5864,7 +5864,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Melcolm Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5923,7 +5923,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Merlyn Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -5982,7 +5982,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Merryweather Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6041,7 +6041,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Mertyns Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6100,7 +6100,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Mooton Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6159,7 +6159,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Mormont Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6218,7 +6218,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Mullendore Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6277,7 +6277,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Musgood Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6336,7 +6336,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Nights Watch Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6395,7 +6395,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Oakheart Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6454,7 +6454,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Orange Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6513,7 +6513,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Orange Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6572,7 +6572,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Payne Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6631,7 +6631,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Peake Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6690,7 +6690,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Penrose Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6749,7 +6749,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Pink Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6808,7 +6808,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Pink Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6867,7 +6867,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Piper Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6926,7 +6926,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Piper Damaged Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -6985,7 +6985,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Plumm Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7044,7 +7044,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Prester Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7103,7 +7103,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Purple Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7162,7 +7162,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Purple Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7221,7 +7221,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Red Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7280,7 +7280,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Red Keep Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7339,7 +7339,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Red Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7398,7 +7398,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Redfort Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7457,7 +7457,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Redwyne Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7516,7 +7516,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Reed Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7575,7 +7575,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Renly Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7634,7 +7634,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Reyne Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7693,7 +7693,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Rollingford Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7752,7 +7752,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Rosby Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7811,7 +7811,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Rowan Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7870,7 +7870,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Royce Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7929,7 +7929,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Ryger Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -7988,7 +7988,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Rykker Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8047,7 +8047,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Ryswell Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8106,7 +8106,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Santagar Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8165,7 +8165,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Selmy Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8224,7 +8224,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Serrett Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8283,7 +8283,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Stannis Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8342,7 +8342,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Stark Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8406,7 +8406,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Stark Damaged Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8470,7 +8470,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Staunton Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8529,7 +8529,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Stokeworth Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8588,7 +8588,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Stonehouse Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8647,7 +8647,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Sunderland Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8706,7 +8706,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Sunderly Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8765,7 +8765,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Sunglass Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8824,7 +8824,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Swann Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8883,7 +8883,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Swyft Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -8942,7 +8942,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tallhart Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9001,7 +9001,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tarbeck Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9060,7 +9060,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Targaryen Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9119,7 +9119,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Targaryen Greens Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9178,7 +9178,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Targaryen Old Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9237,7 +9237,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tarly Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9296,7 +9296,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tarth Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9355,7 +9355,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tawney Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9414,7 +9414,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Terrick Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9473,7 +9473,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "The Faith Of The Seven Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9532,7 +9532,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Toland Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9591,7 +9591,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Trant Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9650,7 +9650,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tully Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9709,7 +9709,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tully Damaged Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9768,7 +9768,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Tyrell Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9827,7 +9827,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Uller Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9886,7 +9886,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Umber Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -9945,7 +9945,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Vance Atranta Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10004,7 +10004,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Vance Wayfarers Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10063,7 +10063,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Velaryon Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10122,7 +10122,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Vyrwel Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10181,7 +10181,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Waterman Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10240,7 +10240,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Waxley Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10299,7 +10299,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Waynwood Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10358,7 +10358,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Westerling Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10417,7 +10417,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Westeroscraft Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10476,7 +10476,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Whent Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10535,7 +10535,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "White Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10594,7 +10594,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Woodwright Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10653,7 +10653,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Wull Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10712,7 +10712,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Wyl Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10771,7 +10771,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Wylde Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10830,7 +10830,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Wynch Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10889,7 +10889,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Embroidered Yellow Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -10948,7 +10948,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Yellow Wool Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },
@@ -11007,7 +11007,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Yronwood Banner",
-    "type": {
+    "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
     },

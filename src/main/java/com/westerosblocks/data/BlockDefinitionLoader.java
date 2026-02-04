@@ -41,7 +41,7 @@ public class BlockDefinitionLoader {
     private static final Gson GSON = new GsonBuilder()
         .setPrettyPrinting()
         .registerTypeAdapter(BlockDefinition.TooltipEntry.class, TOOLTIP_ENTRY_DESERIALIZER)
-        .registerTypeAdapter(TypeProperties.class, new TypePropertiesDeserializer())
+        .registerTypeAdapter(OptionsProperties.class, new OptionsPropertiesDeserializer())
         .create();
     private final String blockDefinitionsPath;
 

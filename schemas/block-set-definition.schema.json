@@ -40,13 +40,13 @@
       "description": "Alternative labels for specific variants",
       "additionalProperties": { "type": "string" }
     },
-    "types": {
+    "options": {
       "type": "object",
-      "description": "Type attributes for specific variants. Supports legacy string format (e.g., 'locked:true') or structured object format (e.g., {'locked': true})",
+      "description": "Options attributes for specific variants. Supports legacy string format (e.g., 'locked:true') or structured object format (e.g., {'locked': true})",
       "additionalProperties": {
         "oneOf": [
           { "type": "string" },
-          { "$ref": "#/$defs/TypeProperties" }
+          { "$ref": "#/$defs/OptionsProperties" }
         ]
       }
     },
@@ -310,9 +310,9 @@
       },
       "required": ["tool", "level"]
     },
-    "TypeProperties": {
+    "OptionsProperties": {
       "type": "object",
-      "description": "Structured type properties for block-specific behavior",
+      "description": "Structured options properties for block-specific behavior",
       "properties": {
         "unconnect": {
           "type": "boolean",

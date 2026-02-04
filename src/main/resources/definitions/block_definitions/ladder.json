@@ -5,7 +5,7 @@
     "soundGroup": "ladder",
     "creativeTab": "westeros_metal_tab",
     "label": "Iron Rungs",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -20,7 +20,7 @@
     "soundGroup": "ladder",
     "creativeTab": "westeros_metal_tab",
     "label": "Iron Rungs Broken",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "randomTextures": [
@@ -40,7 +40,7 @@
     "soundGroup": "ladder",
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Rope Ladder",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -54,7 +54,7 @@
     "soundGroup": "ladder",
     "creativeTab": "westeros_foliage_tab",
     "label": "Vine Jasmine (Do Not Use)",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "randomTextures": [
@@ -92,7 +92,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_misc_tab",
     "label": "Winterfell Stone Ladder",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "randomTextures": [
@@ -115,7 +115,7 @@
     "soundGroup": "ladder",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Wood Ladder",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [

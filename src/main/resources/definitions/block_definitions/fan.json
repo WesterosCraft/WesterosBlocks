@@ -5,7 +5,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_water_air_tab",
     "label": "Brain Coral Fan",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "randomTextures": [
@@ -28,7 +28,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_water_air_tab",
     "label": "Bubble Coral Fan",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "randomTextures": [
@@ -51,7 +51,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_water_air_tab",
     "label": "Fire Coral Fan",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "randomTextures": [
@@ -74,7 +74,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_water_air_tab",
     "label": "Horn Coral Fan",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "randomTextures": [
@@ -97,7 +97,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_water_air_tab",
     "label": "Tube Coral Fan",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "randomTextures": [

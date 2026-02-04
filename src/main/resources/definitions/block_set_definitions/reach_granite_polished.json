@@ -20,7 +20,7 @@
     "customTags": [
         "polished-stone-ctm"
     ],
-    "types": {
+    "options": {
         "solid,slab": "connectstate:true",
         "stairs,wall": "unconnect:false,connectstate:true"
     },

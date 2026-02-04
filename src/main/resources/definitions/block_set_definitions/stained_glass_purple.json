@@ -21,7 +21,7 @@
     "alphaRender": true,
     "lightOpacity": 0,
     "creativeTab": "westeros_windows_glass_tab",
-    "types": {
+    "options": {
         "pane": "legacy-model,unconnect:false"
     },
     "baseLabel": "Stained Glass Purple",

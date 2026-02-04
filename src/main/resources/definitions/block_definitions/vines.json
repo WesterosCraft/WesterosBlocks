@@ -5,7 +5,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Dappled Moss",
-    "type": {
+    "options": {
       "allowUnsupported": true,
       "hasClimb": true,
       "hasDown": true
@@ -21,7 +21,7 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_water_air_tab",
     "label": "Falling Water Block Four",
-    "type": {
+    "options": {
       "allowUnsupported": true,
       "hasClimb": false
     },
@@ -36,7 +36,7 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_water_air_tab",
     "label": "Falling Water Block One",
-    "type": {
+    "options": {
       "allowUnsupported": true,
       "hasClimb": false
     },
@@ -51,7 +51,7 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_water_air_tab",
     "label": "Falling Water Block Three",
-    "type": {
+    "options": {
       "allowUnsupported": true,
       "hasClimb": false
     },
@@ -66,7 +66,7 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_water_air_tab",
     "label": "Falling Water Block Two",
-    "type": {
+    "options": {
       "allowUnsupported": true,
       "hasClimb": false
     },
@@ -81,7 +81,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Jasmine Vines",
-    "type": {
+    "options": {
       "allowUnsupported": true,
       "hasClimb": true,
       "hasDown": true
@@ -112,7 +112,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Vines",
-    "type": {
+    "options": {
       "allowUnsupported": true,
       "hasClimb": true,
       "hasDown": true

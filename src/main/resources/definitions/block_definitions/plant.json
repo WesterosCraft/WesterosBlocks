@@ -4,7 +4,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_flowers_tab",
     "label": "Blue Bells",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/blue_bells"],
@@ -24,7 +24,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Blue Chicory",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -56,7 +56,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_flowers_tab",
     "label": "Blue Flax",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -88,7 +88,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_flowers_tab",
     "label": "Blue Forget-me-nots",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -121,7 +121,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Blue Hyacinth",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -154,7 +154,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Blue Orchid",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -184,7 +184,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Blue Swamp Bells",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/blue_swamp_bells1"],
@@ -204,7 +204,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Bracken",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -249,7 +249,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Brown Mushroom 1",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["brown_mushroom_block/mushroom_brown_0"],
@@ -269,7 +269,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Brown Mushroom 10",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["brown_mushroom_block/mushroom_brown_9"],
@@ -289,7 +289,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Brown Mushroom 11",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["brown_mushroom_block/mushroom_brown_10"],
@@ -309,7 +309,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Brown Mushroom 12",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["brown_mushroom_block/mushroom_brown_11"],
@@ -329,7 +329,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Brown Mushroom 13",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["brown_mushroom_block/mushroom_brown_12"],
@@ -349,7 +349,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Brown Mushroom 2",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["brown_mushroom_block/mushroom_brown_1"],
@@ -369,7 +369,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Brown Mushroom 3",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["brown_mushroom_block/mushroom_brown_2"],
@@ -389,7 +389,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Brown Mushroom 4",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["brown_mushroom_block/mushroom_brown_3"],
@@ -409,7 +409,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Brown Mushroom 5",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["brown_mushroom_block/mushroom_brown_4"],
@@ -429,7 +429,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Brown Mushroom 6",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["brown_mushroom_block/mushroom_brown_5"],
@@ -449,7 +449,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Brown Mushroom 7",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["brown_mushroom_block/mushroom_brown_6"],
@@ -469,7 +469,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Brown Mushroom 8",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["brown_mushroom_block/mushroom_brown_7"],
@@ -489,7 +489,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Brown Mushroom 9",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["brown_mushroom_block/mushroom_brown_8"],
@@ -508,7 +508,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_water_air_tab",
     "label": "Brain Coral Web",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -534,7 +534,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_water_air_tab",
     "label": "Bubble Coral Web",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -560,7 +560,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_water_air_tab",
     "label": "Fire Coral Web",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -586,7 +586,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_water_air_tab",
     "label": "Horn Coral Web",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -612,7 +612,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_water_air_tab",
     "label": "Tube Coral Web",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -639,7 +639,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Cow Parsely",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -666,7 +666,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Cranberry Bush",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -693,7 +693,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Dead Bracken",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -750,7 +750,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Dead Bush",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -780,7 +780,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Dead Scrub Grass",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -837,7 +837,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Dock Leaf",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -864,7 +864,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Fireweed",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -897,7 +897,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Grass",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -950,7 +950,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Green Leafy Herb",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/green_leafy_herb"],
@@ -969,7 +969,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Green Scrub Grass",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1007,7 +1007,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Green Spiny Herb",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1043,7 +1043,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Heather",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1076,7 +1076,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_water_air_tab",
     "label": "Kelp",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1095,7 +1095,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Lady Fern",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1128,7 +1128,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Magenta Roses",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1161,7 +1161,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Meadow Fescue",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1188,7 +1188,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Nettle",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1217,7 +1217,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_flowers_tab",
     "label": "Orange Bells",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/orange_bells1"],
@@ -1237,7 +1237,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Orange Bog Asphodel",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1269,7 +1269,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_flowers_tab",
     "label": "Orange Marigolds",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1302,7 +1302,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Orange Sun Star",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1328,7 +1328,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_flowers_tab",
     "label": "Orange Trollius",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1355,7 +1355,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Pink Allium",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1388,7 +1388,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Pink Primrose",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1415,7 +1415,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Pink Roses",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1448,7 +1448,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Pink Sweet Peas",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/pink_sweet_peas1"],
@@ -1468,7 +1468,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Pink Thistle",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1501,7 +1501,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Pink Tulips",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1533,7 +1533,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_flowers_tab",
     "label": "Pink Wildflowers",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/pink_wildflowers"],
@@ -1553,7 +1553,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Purple Alpine Sow-thistle",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1586,7 +1586,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Purple Foxglove",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1619,7 +1619,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Purple Lavender",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1649,7 +1649,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Purple Pansies",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1682,7 +1682,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Purple Roses",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1715,7 +1715,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Purple Violets",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1745,7 +1745,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Red Aster",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1778,7 +1778,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Red Carnations",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1811,7 +1811,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Red Chrysanthemum",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/red_chrysanthemum1"],
@@ -1831,7 +1831,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Red Dark Roses",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1864,7 +1864,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Red Fern",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -1894,7 +1894,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Red Flowering Spiny Herb",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/red_flowering_spiny_herb1"],
@@ -1914,7 +1914,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Red Mushroom 1",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["red_mushroom_block/mushroom_red_0"],
@@ -1934,7 +1934,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Red Mushroom 2",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["red_mushroom_block/mushroom_red_1"],
@@ -1954,7 +1954,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Red Mushroom 3",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["red_mushroom_block/mushroom_red_2"],
@@ -1974,7 +1974,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Red Mushroom 4",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["red_mushroom_block/mushroom_red_3"],
@@ -1994,7 +1994,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Red Mushroom 5",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["red_mushroom_block/mushroom_red_4"],
@@ -2014,7 +2014,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Red Mushroom 6",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["red_mushroom_block/mushroom_red_5"],
@@ -2034,7 +2034,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Red Mushroom 7",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["red_mushroom_block/mushroom_red_6"],
@@ -2054,7 +2054,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Red Mushroom 8",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["red_mushroom_block/mushroom_red_7"],
@@ -2074,7 +2074,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Red Mushroom 9",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["red_mushroom_block/mushroom_red_8"],
@@ -2094,7 +2094,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Red Poppies",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2121,7 +2121,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Red Roses",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2154,7 +2154,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Red Sorrel",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/red_sorrel1"],
@@ -2174,7 +2174,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Red Sourleaf Bush",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2201,7 +2201,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Red Tulips",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2234,7 +2234,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Strawberry Bush",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/strawberry"],
@@ -2254,7 +2254,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Thick Grass",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2316,7 +2316,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Unshaded Grass",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2361,7 +2361,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "White Chamomile",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2390,7 +2390,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_flowers_tab",
     "label": "White Daisies",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2423,7 +2423,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "White Lily-of-the-valley",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/white_lily_valley1"],
@@ -2443,7 +2443,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "White Peony",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/white_peony1"],
@@ -2463,7 +2463,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "White Roses",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2495,7 +2495,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_flowers_tab",
     "label": "Yellow Bedstraw",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2525,7 +2525,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Yellow Bells",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/yellow_bells1"],
@@ -2545,7 +2545,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Yellow Buttercups",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2578,7 +2578,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Yellow Daffodils",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2610,7 +2610,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_flowers_tab",
     "label": "Yellow Daisies",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2637,7 +2637,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Yellow Dandelions",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2667,7 +2667,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Yellow Hellebore",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2694,7 +2694,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Yellow Lupine",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2727,7 +2727,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Yellow Roses",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2760,7 +2760,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Yellow Rudbeckia",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/yellow_rudbeckia1"],
@@ -2780,7 +2780,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_flowers_tab",
     "label": "Yellow Sunflower",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "randomTextures": [
@@ -2809,7 +2809,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_flowers_tab",
     "label": "Yellow Tansy",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/yellow_tansy"],
@@ -2828,7 +2828,7 @@
     "blockType": "plant",
     "creativeTab": "westeros_flowers_tab",
     "label": "Yellow Wildflowers",
-    "type": {
+    "options": {
       "layerSensitive": true
     },
     "textures": ["flowers/yellow_wildflowers"],

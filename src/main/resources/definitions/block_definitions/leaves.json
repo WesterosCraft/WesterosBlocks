@@ -5,7 +5,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Apple Fruit Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -53,7 +53,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Apricot Fruit Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -101,7 +101,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Blackberry Bush",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -149,7 +149,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Blueberry Bush",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -197,7 +197,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Cherry Fruit Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -229,7 +229,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Hop Fruit Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -261,7 +261,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Juniper Bush",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -309,7 +309,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Lemon Fruit Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -341,7 +341,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Lime Fruit Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -389,7 +389,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Olive Fruit Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -421,7 +421,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Orange Fruit Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -469,7 +469,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Palm Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "rotateRandom": true
@@ -483,7 +483,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Peach Fruit Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -531,7 +531,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Pink Rose Bush",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -579,7 +579,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Plum Fruit Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -611,7 +611,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Pomegranate Fruit Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -659,7 +659,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Purple Grape Fruit Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -707,7 +707,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Raspberry Bush",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -755,7 +755,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Red Rose Bush",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -803,7 +803,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Snowy Spruce Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "rotateRandom": true
@@ -816,7 +816,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Snowy Weirwood Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "rotateRandom": true
@@ -829,7 +829,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Weirwood Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "rotateRandom": true
@@ -842,7 +842,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "White Grape Fruit Leaves",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -890,7 +890,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "White Rose Bush",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,
@@ -938,7 +938,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_foliage_tab",
     "label": "Yellow Rose Bush",
-    "type": {
+    "options": {
       "noDecay": true,
       "betterFoliage": true,
       "overlay": true,

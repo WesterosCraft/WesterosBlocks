@@ -12,7 +12,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Bracken Heater Shield",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "renderLayer": "cutout",
@@ -40,7 +40,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Tully Heater Shield",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "renderLayer": "cutout",
@@ -68,7 +68,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Targaryen Heater Shield",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "renderLayer": "cutout",
@@ -96,7 +96,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Blackfyre Heater Shield",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "renderLayer": "cutout",
@@ -124,7 +124,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Blackwood Heater Shield",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "renderLayer": "cutout",
@@ -152,7 +152,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Hedge Knight Heater Shield",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "renderLayer": "cutout",
@@ -180,7 +180,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Greyjoy Round Shield",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "renderLayer": "cutout",
@@ -208,7 +208,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Mounted Stark Kite Shield",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "renderLayer": "cutout",

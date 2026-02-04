@@ -442,7 +442,7 @@
           "description": "Particle type for particle emitter blocks",
           "default": "flame"
         },
-        "type": {
+        "options": {
           "oneOf": [
             {
               "type": "string",
@@ -450,101 +450,101 @@
             },
             {
               "type": "object",
-              "description": "Structured type properties (validated based on blockType)"
+              "description": "Structured options properties (validated based on blockType)"
             }
           ],
-          "description": "Type-specific properties. Supports legacy string format or structured object format."
+          "description": "Options-specific properties. Supports legacy string format or structured object format."
         }
       },
       "allOf": [
         {
           "if": { "properties": { "blockType": { "const": "pane" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/PaneTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/PaneOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "wall" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/WallTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/WallOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "stair" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/StairTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/StairOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "fence" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FenceTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FenceOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "fencegate" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FencegateTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FencegateOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "door" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/DoorTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/DoorOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "halfdoor" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/DoorTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/DoorOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "leaves" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/LeavesTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/LeavesOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "torch" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/TorchTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/TorchOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "ladder" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/LadderTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/LadderOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "furnace" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FurnaceTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FurnaceOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "flowerpot" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FlowerpotTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FlowerpotOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "web" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/WebTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/WebOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "vines" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/VinesTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/VinesOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "bed" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/BedTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/BedOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "solid" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/SolidTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/SolidOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "cuboid-nsew-stack" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/CuboidNSEWStackTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/CuboidNSEWStackOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "slab" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/SlabTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/SlabOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "plant" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/PlantTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/PlantOptionsProperties" }] } } }
         },
         {
           "if": { "properties": { "blockType": { "const": "trapdoor" } }, "required": ["blockType"] },
-          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/TrapdoorTypeProperties" }] } } }
+          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/TrapdoorOptionsProperties" }] } } }
         }
       ]
     },
-    "TypeProperties": {
+    "OptionsProperties": {
       "type": "object",
-      "description": "Structured type properties for block-specific behavior. Valid properties depend on blockType.",
+      "description": "Structured options properties for block-specific behavior. Valid properties depend on blockType.",
       "additionalProperties": false
     },
-    "PaneTypeProperties": {
+    "PaneOptionsProperties": {
       "type": "object",
       "description": "Type properties for pane blocks",
       "properties": {
@@ -563,7 +563,7 @@
       },
       "additionalProperties": false
     },
-    "WallTypeProperties": {
+    "WallOptionsProperties": {
       "type": "object",
       "description": "Type properties for wall blocks",
       "properties": {
@@ -587,7 +587,7 @@
       },
       "additionalProperties": false
     },
-    "StairTypeProperties": {
+    "StairOptionsProperties": {
       "type": "object",
       "description": "Type properties for stair blocks",
       "properties": {
@@ -610,7 +610,7 @@
       },
       "additionalProperties": false
     },
-    "FenceTypeProperties": {
+    "FenceOptionsProperties": {
       "type": "object",
       "description": "Type properties for fence blocks",
       "properties": {
@@ -625,7 +625,7 @@
       },
       "additionalProperties": false
     },
-    "FencegateTypeProperties": {
+    "FencegateOptionsProperties": {
       "type": "object",
       "description": "Type properties for fence gate blocks",
       "properties": {
@@ -636,7 +636,7 @@
       },
       "additionalProperties": false
     },
-    "DoorTypeProperties": {
+    "DoorOptionsProperties": {
       "type": "object",
       "description": "Type properties for door and halfdoor blocks",
       "properties": {
@@ -651,7 +651,7 @@
       },
       "additionalProperties": false
     },
-    "LeavesTypeProperties": {
+    "LeavesOptionsProperties": {
       "type": "object",
       "description": "Type properties for leaves blocks",
       "properties": {
@@ -674,7 +674,7 @@
       },
       "additionalProperties": false
     },
-    "TorchTypeProperties": {
+    "TorchOptionsProperties": {
       "type": "object",
       "description": "Type properties for torch blocks",
       "properties": {
@@ -689,7 +689,7 @@
       },
       "additionalProperties": false
     },
-    "LadderTypeProperties": {
+    "LadderOptionsProperties": {
       "type": "object",
       "description": "Type properties for ladder blocks",
       "properties": {
@@ -704,7 +704,7 @@
       },
       "additionalProperties": false
     },
-    "FurnaceTypeProperties": {
+    "FurnaceOptionsProperties": {
       "type": "object",
       "description": "Type properties for furnace blocks",
       "properties": {
@@ -715,7 +715,7 @@
       },
       "additionalProperties": false
     },
-    "FlowerpotTypeProperties": {
+    "FlowerpotOptionsProperties": {
       "type": "object",
       "description": "Type properties for flowerpot blocks",
       "properties": {
@@ -726,7 +726,7 @@
       },
       "additionalProperties": false
     },
-    "WebTypeProperties": {
+    "WebOptionsProperties": {
       "type": "object",
       "description": "Type properties for web blocks",
       "properties": {
@@ -745,7 +745,7 @@
       },
       "additionalProperties": false
     },
-    "VinesTypeProperties": {
+    "VinesOptionsProperties": {
       "type": "object",
       "description": "Type properties for vines blocks",
       "properties": {
@@ -764,7 +764,7 @@
       },
       "additionalProperties": false
     },
-    "BedTypeProperties": {
+    "BedOptionsProperties": {
       "type": "object",
       "description": "Type properties for bed blocks",
       "properties": {
@@ -776,7 +776,7 @@
       },
       "additionalProperties": false
     },
-    "SolidTypeProperties": {
+    "SolidOptionsProperties": {
       "type": "object",
       "description": "Type properties for solid blocks",
       "properties": {
@@ -799,7 +799,7 @@
       },
       "additionalProperties": false
     },
-    "CuboidNSEWStackTypeProperties": {
+    "CuboidNSEWStackOptionsProperties": {
       "type": "object",
       "description": "Type properties for cuboid-nsew-stack blocks",
       "properties": {
@@ -814,7 +814,7 @@
       },
       "additionalProperties": false
     },
-    "SlabTypeProperties": {
+    "SlabOptionsProperties": {
       "type": "object",
       "description": "Type properties for slab blocks",
       "properties": {
@@ -833,7 +833,7 @@
       },
       "additionalProperties": false
     },
-    "PlantTypeProperties": {
+    "PlantOptionsProperties": {
       "type": "object",
       "description": "Type properties for plant blocks",
       "properties": {
@@ -848,7 +848,7 @@
       },
       "additionalProperties": false
     },
-    "TrapdoorTypeProperties": {
+    "TrapdoorOptionsProperties": {
       "type": "object",
       "description": "Type properties for trapdoor blocks",
       "properties": {

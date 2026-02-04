@@ -6,7 +6,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_test_tab",
     "label": "Castle Gate",
-    "type": {
+    "options": {
       "locked": false
     },
     "textures": [

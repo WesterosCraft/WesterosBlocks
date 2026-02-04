@@ -6,7 +6,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "Birch Bark Fence",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -20,7 +20,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Birch Fence with Grapes",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -34,7 +34,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Birch Fence with Vines",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -48,7 +48,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "Jungle Bark Fence",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -62,7 +62,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Jungle Fence with Grapes",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -76,7 +76,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Jungle Fence with Vines",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -90,7 +90,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_marble_plaster_tab",
     "label": "Marble Column Fence",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -104,7 +104,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "Oak Bark Fence",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -118,7 +118,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Oak Fence with Grapes",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -132,7 +132,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Oak Fence with Vines",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -146,7 +146,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_logs_tab",
     "label": "Palm Fence",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -160,7 +160,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Reinforced Oak Fence",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -174,7 +174,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_decor_tab",
     "label": "Sept Crystal Small",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -192,7 +192,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_logs_tab",
     "label": "Spruce Bark Fence",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -206,7 +206,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Spruce Fence with Grapes",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -220,7 +220,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Spruce Fence with Vines",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [
@@ -240,7 +240,7 @@
     ],
     "creativeTab": "westeros_misc_tab",
     "label": "Stacked Bones Fence",
-    "type": {
+    "options": {
       "unconnect": false
     },
     "textures": [

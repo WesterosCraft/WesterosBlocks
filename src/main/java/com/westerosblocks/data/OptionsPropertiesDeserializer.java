@@ -5,13 +5,13 @@ import com.google.gson.*;
 import java.lang.reflect.Type;
 
 /**
- * Custom Gson deserializer for TypeProperties.
+ * Custom Gson deserializer for OptionsProperties.
  * Handles object format: {"unconnect": false, "noUvlock": true}
  */
-public class TypePropertiesDeserializer implements JsonDeserializer<TypeProperties> {
+public class OptionsPropertiesDeserializer implements JsonDeserializer<OptionsProperties> {
 
     @Override
-    public TypeProperties deserialize(JsonElement json, Type typeOfT,
+    public OptionsProperties deserialize(JsonElement json, Type typeOfT,
                                        JsonDeserializationContext context) throws JsonParseException {
         if (json == null || json.isJsonNull()) {
             return null;
@@ -19,7 +19,7 @@ public class TypePropertiesDeserializer implements JsonDeserializer<TypeProperti
 
         if (json.isJsonObject()) {
             Gson defaultGson = new Gson();
-            return defaultGson.fromJson(json, TypeProperties.class);
+            return defaultGson.fromJson(json, OptionsProperties.class);
         }
 
         return null;

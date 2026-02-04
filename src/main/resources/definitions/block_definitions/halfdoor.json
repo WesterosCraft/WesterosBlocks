@@ -6,7 +6,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Birch Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -20,7 +20,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Dorne Red Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -34,7 +34,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Green Lannisport Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -48,7 +48,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Grey Wood Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -62,7 +62,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Jungle Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -76,7 +76,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Northern Wood Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -90,7 +90,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Oak Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -104,7 +104,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Reach Blue Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -118,7 +118,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Spruce Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -132,7 +132,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Simple Birch Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -146,7 +146,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Fancy White Wood Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -160,7 +160,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Fancy Grey Wood Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -174,7 +174,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Fancy Oak Wood Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -188,7 +188,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Fancy Spruce Wood Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -202,7 +202,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Fancy Northern Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -218,7 +218,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Jungle Fancy Window Shutters",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [

@@ -3,17 +3,17 @@ package com.westerosblocks.data;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Represents type-specific properties for blocks.
+ * Represents options-specific properties for blocks.
  * Uses a structured object format that supports typed properties.
  *
  * Example JSON:
  * <pre>
- * {"type": {"unconnect": false, "noUvlock": true}}
- * {"type": {"barsModel": true, "legacyModel": true}}
- * {"type": {"plantId": "blue_bells"}}
+ * {"options": {"unconnect": false, "noUvlock": true}}
+ * {"options": {"barsModel": true, "legacyModel": true}}
+ * {"options": {"plantId": "blue_bells"}}
  * </pre>
  */
-public class TypeProperties {
+public class OptionsProperties {
 
     // Stair/Wall/Fence/Pane connection properties
     @SerializedName("unconnect")

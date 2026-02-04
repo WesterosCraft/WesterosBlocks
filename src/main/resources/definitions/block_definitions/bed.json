@@ -5,7 +5,7 @@
     "soundGroup": "plant",
     "creativeTab": "westeros_furniture_tab",
     "label": "Hammock",
-    "type": {
+    "options": {
       "bedType": "hammock"
     },
     "textures": [
@@ -25,7 +25,7 @@
     "soundGroup": "plant",
     "creativeTab": "westeros_furniture_tab",
     "label": "Itchy Straw Bed",
-    "type": {
+    "options": {
       "bedType": "normal"
     },
     "textures": [
@@ -43,7 +43,7 @@
     "blockType": "bed",
     "creativeTab": "westeros_furniture_tab",
     "label": "Nights Watch Bed",
-    "type": {
+    "options": {
       "bedType": "normal"
     },
     "textures": [
@@ -62,7 +62,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Noble Blue Bed",
-    "type": {
+    "options": {
       "bedType": "raised"
     },
     "textures": [
@@ -82,7 +82,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Noble Red Bed",
-    "type": {
+    "options": {
       "bedType": "raised"
     },
     "textures": [
@@ -102,7 +102,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Northern Bed",
-    "type": {
+    "options": {
       "bedType": "normal"
     },
     "textures": [
@@ -121,7 +121,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Pale Green Bed",
-    "type": {
+    "options": {
       "bedType": "normal"
     },
     "textures": [
@@ -140,7 +140,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_furniture_tab",
     "label": "Pale Red Bed",
-    "type": {
+    "options": {
       "bedType": "normal"
     },
     "textures": [
@@ -159,7 +159,7 @@
     "soundGroup": "plant",
     "creativeTab": "westeros_furniture_tab",
     "label": "Straw Bed",
-    "type": {
+    "options": {
       "bedType": "normal"
     },
     "textures": [

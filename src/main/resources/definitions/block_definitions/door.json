@@ -6,7 +6,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Birch Door",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -22,7 +22,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Eyrie Weirwood Door",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -37,7 +37,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Grey Wood Door",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -53,7 +53,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_misc_tab",
     "label": "Harrenhal Secret Door",
-    "type": {
+    "options": {
       "locked": true,
       "allowUnsupported": true
     },
@@ -70,7 +70,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Jungle Door",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -86,7 +86,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Locked Birch Door",
-    "type": {
+    "options": {
       "locked": true,
       "allowUnsupported": true
     },
@@ -102,7 +102,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Locked Dark Northern Wood Door",
-    "type": {
+    "options": {
       "locked": true,
       "allowUnsupported": true
     },
@@ -119,7 +119,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Locked Grey Wood Door",
-    "type": {
+    "options": {
       "locked": true,
       "allowUnsupported": true
     },
@@ -135,7 +135,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Locked Jungle Door",
-    "type": {
+    "options": {
       "locked": true,
       "allowUnsupported": true
     },
@@ -151,7 +151,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Locked Oak Door",
-    "type": {
+    "options": {
       "locked": true,
       "allowUnsupported": true
     },
@@ -167,7 +167,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Locked Spruce Door",
-    "type": {
+    "options": {
       "locked": true,
       "allowUnsupported": true
     },
@@ -183,7 +183,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Locked White Wood Door",
-    "type": {
+    "options": {
       "locked": true,
       "allowUnsupported": true
     },
@@ -199,7 +199,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Northern Wood Door",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -214,7 +214,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Oak Door",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -229,7 +229,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_misc_tab",
     "label": "Red Keep Secret Door",
-    "type": {
+    "options": {
       "locked": true,
       "allowUnsupported": true
     },
@@ -245,7 +245,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Spruce Door",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -260,7 +260,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "White Wood Door",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -276,7 +276,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Simple Birch Door",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -292,7 +292,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Fancy White Door",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -308,7 +308,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Fancy Grey Door",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -324,7 +324,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Fancy Oak Door",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -340,7 +340,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Fancy Spruce Door",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -356,7 +356,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Fancy Northern Door",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [
@@ -371,7 +371,7 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Jungle Fancy Door",
-    "type": {
+    "options": {
       "allowUnsupported": true
     },
     "textures": [

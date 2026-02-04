@@ -6,7 +6,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Dorne Carved Stone Window",
-    "type": {
+    "options": {
       "legacyModel": true,
       "unconnect": false
     },
@@ -20,7 +20,7 @@
     "soundGroup": "stone",
     "creativeTab": "westeros_windows_glass_tab",
     "label": "Dorne Carved Wooden Window",
-    "type": {
+    "options": {
       "legacyModel": true,
       "unconnect": false
     },
@@ -40,7 +40,7 @@
     ],
     "creativeTab": "westeros_metal_tab",
     "label": "Iron Bars",
-    "type": {
+    "options": {
       "barsModel": true,
       "unconnect": false
     },
@@ -60,7 +60,7 @@
     ],
     "creativeTab": "westeros_metal_tab",
     "label": "Iron Crossbar",
-    "type": {
+    "options": {
       "barsModel": true,
       "unconnect": false
     },
@@ -83,7 +83,7 @@
     ],
     "creativeTab": "westeros_metal_tab",
     "label": "Oxidized Iron Bars",
-    "type": {
+    "options": {
       "barsModel": true,
       "unconnect": false
     },
@@ -103,7 +103,7 @@
     ],
     "creativeTab": "westeros_metal_tab",
     "label": "Oxidized Iron Crossbar",
-    "type": {
+    "options": {
       "barsModel": true,
       "unconnect": false
     },
@@ -120,7 +120,7 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Vertical Net",
-    "type": {
+    "options": {
       "legacyModel": true,
       "unconnect": false
     },

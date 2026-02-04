@@ -78,7 +78,7 @@
     ],
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Cocoa",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -542,7 +542,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Horizontal Paper",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [
@@ -671,7 +671,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Horizontal Scroll",
-    "type": {
+    "options": {
       "toggleOnUse": true
     },
     "states": [

@@ -7,7 +7,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_decor_tab",
     "label": "King's Landing Sewer Manhole",
-    "type": {
+    "options": {
       "locked": false
     },
     "textures": ["trapdoor_block/kings_landing_manhole"],
@@ -21,7 +21,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_decor_tab",
     "label": "Oldtown Sewer Manhole",
-    "type": {
+    "options": {
       "locked": false
     },
     "textures": ["trapdoor_block/oldtown_manhole"],
@@ -35,7 +35,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_decor_tab",
     "label": "Generic Sewer Manhole",
-    "type": {
+    "options": {
       "locked": false
     },
     "textures": ["trapdoor_block/manhole"],
@@ -49,7 +49,7 @@
     "soundGroup": "metal",
     "creativeTab": "westeros_decor_tab",
     "label": "White Harbor Sewer Manhole",
-    "type": {
+    "options": {
       "locked": false
     },
     "textures": ["trapdoor_block/white_harbor_manhole"],

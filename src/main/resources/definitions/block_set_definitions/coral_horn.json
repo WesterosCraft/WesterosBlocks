@@ -18,7 +18,7 @@
         }
     ],
     "creativeTab": "westeros_water_air_tab",
-    "types": {
+    "options": {
         "fence": "unconnect:true"
     },
     "baseLabel": "Horn Coral",

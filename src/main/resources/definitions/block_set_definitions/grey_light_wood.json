@@ -25,7 +25,7 @@
         }
     ],
     "creativeTab": "westeros_wood_planks_tab",
-    "types": {
+    "options": {
         "fence_gate": "locked:true"
     },
     "baseLabel": "Light Grey Wood",
