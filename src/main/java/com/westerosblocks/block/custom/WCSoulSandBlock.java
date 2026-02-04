@@ -5,8 +5,6 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoulSandBlock;
 
-import java.util.Map;
-
 public class WCSoulSandBlock extends SoulSandBlock {
     protected BlockDefinition def;
 

@@ -1,12 +1,10 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.data.BlockDefinition;
-import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.Waterloggable;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.fluid.FluidState;
@@ -25,10 +23,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements Waterloggable {
+public class WCCuboidNSEWStackBlock extends WCCuboidBlock {
     public static final DirectionProperty FACING = DirectionProperty.of("facing", Direction.EAST, Direction.SOUTH, Direction.WEST, Direction.NORTH);
     public static final EnumProperty<DoubleBlockHalf> HALF = Properties.DOUBLE_BLOCK_HALF;
 

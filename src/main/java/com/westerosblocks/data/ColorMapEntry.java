@@ -23,10 +23,6 @@ public class ColorMapEntry {
         return blockNames;
     }
 
-    /**
-     * Gets the colormap texture path or hex color.
-     * @return Colormap path (e.g., "textures/colormap/stone") or hex color
-     */
     public String getColorMult() {
         return colorMult;
     }
@@ -47,18 +43,10 @@ public class ColorMapEntry {
         return colorMult;
     }
 
-    /**
-     * Checks if this entry has a valid colorMult value.
-     * @return true if colorMult is not null and not empty
-     */
     public boolean hasColorMult() {
         return colorMult != null && !colorMult.isEmpty();
     }
 
-    /**
-     * Checks if this entry has block names.
-     * @return true if blockNames is not null and not empty
-     */
     public boolean hasBlockNames() {
         return blockNames != null && !blockNames.isEmpty();
     }

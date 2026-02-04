@@ -57,13 +57,15 @@
             "cuboid-ne",
             "cuboid-nsew",
             "cuboid-nsew-ud",
+            "cuboid-nsewud",
             "cuboid-16way",
             "cuboid-nsew-stack",
             "awning",
             "flowerbed",
             "mounted",
             "bench",
-            "trapdoor"
+            "trapdoor",
+            "bigdoor"
           ]
         },
         "label": {
@@ -92,7 +94,10 @@
             "lantern",
             "nether_bricks",
             "netherite",
-            "powder"
+            "powder",
+            "wet_grass",
+            "tuff",
+            "pot"
           ]
         },
         "creativeTab": {
@@ -444,117 +449,416 @@
               "description": "Legacy string format (e.g., 'unconnect:false,no-uvlock')"
             },
             {
-              "$ref": "#/$defs/TypeProperties"
+              "type": "object",
+              "description": "Structured type properties (validated based on blockType)"
             }
           ],
           "description": "Type-specific properties. Supports legacy string format or structured object format."
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "blockType": { "const": "pane" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/PaneTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "wall" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/WallTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "stair" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/StairTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "fence" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FenceTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "fencegate" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FencegateTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "door" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/DoorTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "halfdoor" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/DoorTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "leaves" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/LeavesTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "torch" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/TorchTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "ladder" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/LadderTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "furnace" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FurnaceTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "flowerpot" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FlowerpotTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "web" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/WebTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "vines" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/VinesTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "bed" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/BedTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "solid" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/SolidTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "cuboid-nsew-stack" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/CuboidNSEWStackTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "slab" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/SlabTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "plant" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/PlantTypeProperties" }] } } }
+        },
+        {
+          "if": { "properties": { "blockType": { "const": "trapdoor" } }, "required": ["blockType"] },
+          "then": { "properties": { "type": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/TrapdoorTypeProperties" }] } } }
+        }
+      ]
     },
     "TypeProperties": {
       "type": "object",
-      "description": "Structured type properties for block-specific behavior",
+      "description": "Structured type properties for block-specific behavior. Valid properties depend on blockType.",
+      "additionalProperties": false
+    },
+    "PaneTypeProperties": {
+      "type": "object",
+      "description": "Type properties for pane blocks",
       "properties": {
-        "unconnect": {
-          "type": "boolean",
-          "description": "Stair/Wall/Fence/Pane: disable automatic connection to adjacent blocks"
-        },
-        "connectstate": {
-          "type": "boolean",
-          "description": "Enable connect state cycling feature"
-        },
-        "noUvlock": {
-          "type": "boolean",
-          "description": "Disable UV lock on block models"
-        },
         "barsModel": {
           "type": "boolean",
-          "description": "Pane: use bars model instead of pane model"
+          "description": "Use bars model instead of pane model"
         },
         "legacyModel": {
           "type": "boolean",
-          "description": "Pane: use legacy model format"
+          "description": "Use legacy model format"
         },
-        "noDecay": {
+        "unconnect": {
           "type": "boolean",
-          "description": "Leaves: prevent natural decay"
-        },
-        "betterFoliage": {
+          "description": "Disable connection to adjacent panes"
+        }
+      },
+      "additionalProperties": false
+    },
+    "WallTypeProperties": {
+      "type": "object",
+      "description": "Type properties for wall blocks",
+      "properties": {
+        "unconnect": {
           "type": "boolean",
-          "description": "Leaves: enable Better Foliage rendering"
+          "description": "Disable connection to adjacent walls"
         },
-        "overlay": {
+        "connectstate": {
           "type": "boolean",
-          "description": "Leaves: use overlay textures"
-        },
-        "allowUnsupported": {
-          "type": "boolean",
-          "description": "Torch/Ladder/Door: allow placement without support block"
-        },
-        "noParticle": {
-          "type": "boolean",
-          "description": "Torch: disable flame particles"
-        },
-        "locked": {
-          "type": "boolean",
-          "description": "Door/Gate: lock in closed position"
-        },
-        "alwaysOn": {
-          "type": "boolean",
-          "description": "Furnace: always show lit state"
-        },
-        "plantId": {
-          "type": "string",
-          "description": "Flowerpot: ID of the plant to display"
-        },
-        "noInWeb": {
-          "type": "boolean",
-          "description": "Web: don't slow entities"
-        },
-        "noClimb": {
-          "type": "boolean",
-          "description": "Vines: disable climbing"
-        },
-        "toggleOnUse": {
-          "type": "boolean",
-          "description": "Enable state cycling on right-click (creative mode)"
-        },
-        "layerSensitive": {
-          "type": "boolean",
-          "description": "Allow placement on layer blocks"
-        },
-        "symmetrical": {
-          "type": "boolean",
-          "description": "Use symmetrical texture mapping"
-        },
-        "noBreakUnder": {
-          "type": "boolean",
-          "description": "Stack blocks: prevent breaking blocks underneath"
-        },
-        "allowHalfBreak": {
-          "type": "boolean",
-          "description": "Stack blocks: allow breaking top half independently"
-        },
-        "hasClimb": {
-          "type": "boolean",
-          "description": "Vines: enable climbing like ladders"
-        },
-        "hasDown": {
-          "type": "boolean",
-          "description": "Vines: can grow/extend downward"
+          "description": "Track connection state with property (0-3 values)"
         },
         "wallSize": {
           "type": "string",
           "enum": ["normal", "short"],
           "description": "Wall height: 'normal' (16 blocks) or 'short' (13 blocks)"
         },
-        "bedType": {
-          "type": "string",
-          "description": "Bed variant type identifier"
+        "toggleOnUse": {
+          "type": "boolean",
+          "description": "Allow creative players to toggle connectstate with right-click"
+        }
+      },
+      "additionalProperties": false
+    },
+    "StairTypeProperties": {
+      "type": "object",
+      "description": "Type properties for stair blocks",
+      "properties": {
+        "unconnect": {
+          "type": "boolean",
+          "description": "Disable connection/corner detection logic"
+        },
+        "connectstate": {
+          "type": "boolean",
+          "description": "Track connection state with property (0-3 values)"
+        },
+        "noUvlock": {
+          "type": "boolean",
+          "description": "Disable UV lock on block models"
+        },
+        "toggleOnUse": {
+          "type": "boolean",
+          "description": "Allow creative players to toggle states"
+        }
+      },
+      "additionalProperties": false
+    },
+    "FenceTypeProperties": {
+      "type": "object",
+      "description": "Type properties for fence blocks",
+      "properties": {
+        "unconnect": {
+          "type": "boolean",
+          "description": "Disable connection to adjacent fences"
+        },
+        "toggleOnUse": {
+          "type": "boolean",
+          "description": "Allow creative players to toggle states"
+        }
+      },
+      "additionalProperties": false
+    },
+    "FencegateTypeProperties": {
+      "type": "object",
+      "description": "Type properties for fence gate blocks",
+      "properties": {
+        "locked": {
+          "type": "boolean",
+          "description": "Gate cannot be opened without creative mode"
+        }
+      },
+      "additionalProperties": false
+    },
+    "DoorTypeProperties": {
+      "type": "object",
+      "description": "Type properties for door and halfdoor blocks",
+      "properties": {
+        "locked": {
+          "type": "boolean",
+          "description": "Door cannot be opened without creative mode"
+        },
+        "allowUnsupported": {
+          "type": "boolean",
+          "description": "Door can be placed without block below"
+        }
+      },
+      "additionalProperties": false
+    },
+    "LeavesTypeProperties": {
+      "type": "object",
+      "description": "Type properties for leaves blocks",
+      "properties": {
+        "noDecay": {
+          "type": "boolean",
+          "description": "Prevent natural leaf decay"
+        },
+        "betterFoliage": {
+          "type": "boolean",
+          "description": "Enable Better Foliage rendering"
+        },
+        "overlay": {
+          "type": "boolean",
+          "description": "Use overlay textures for tinting"
         },
         "rotateRandom": {
           "type": "boolean",
-          "description": "Randomly rotate block model on placement (Y-axis)"
+          "description": "Enable random rotation rendering"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TorchTypeProperties": {
+      "type": "object",
+      "description": "Type properties for torch blocks",
+      "properties": {
+        "allowUnsupported": {
+          "type": "boolean",
+          "description": "Torch can be placed without support block"
+        },
+        "noParticle": {
+          "type": "boolean",
+          "description": "Disable flame particles"
+        }
+      },
+      "additionalProperties": false
+    },
+    "LadderTypeProperties": {
+      "type": "object",
+      "description": "Type properties for ladder blocks",
+      "properties": {
+        "allowUnsupported": {
+          "type": "boolean",
+          "description": "Ladder can be placed without support block"
+        },
+        "noClimb": {
+          "type": "boolean",
+          "description": "Disable climbing (visual-only ladder)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "FurnaceTypeProperties": {
+      "type": "object",
+      "description": "Type properties for furnace blocks",
+      "properties": {
+        "alwaysOn": {
+          "type": "boolean",
+          "description": "Furnace appears always lit"
+        }
+      },
+      "additionalProperties": false
+    },
+    "FlowerpotTypeProperties": {
+      "type": "object",
+      "description": "Type properties for flowerpot blocks",
+      "properties": {
+        "plantId": {
+          "type": "string",
+          "description": "ID of plant to display in pot"
+        }
+      },
+      "additionalProperties": false
+    },
+    "WebTypeProperties": {
+      "type": "object",
+      "description": "Type properties for web blocks",
+      "properties": {
+        "noInWeb": {
+          "type": "boolean",
+          "description": "Entities are not slowed by this web"
+        },
+        "toggleOnUse": {
+          "type": "boolean",
+          "description": "Allow creative players to toggle states"
+        },
+        "layerSensitive": {
+          "type": "boolean",
+          "description": "Block can stack with LAYERS property"
+        }
+      },
+      "additionalProperties": false
+    },
+    "VinesTypeProperties": {
+      "type": "object",
+      "description": "Type properties for vines blocks",
+      "properties": {
+        "allowUnsupported": {
+          "type": "boolean",
+          "description": "Vines can exist without support block"
+        },
+        "hasClimb": {
+          "type": "boolean",
+          "description": "Enable horizontal climbing on vines"
+        },
+        "hasDown": {
+          "type": "boolean",
+          "description": "Vines can extend downward"
+        }
+      },
+      "additionalProperties": false
+    },
+    "BedTypeProperties": {
+      "type": "object",
+      "description": "Type properties for bed blocks",
+      "properties": {
+        "bedType": {
+          "type": "string",
+          "enum": ["normal", "raised", "hammock"],
+          "description": "Type of bed"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SolidTypeProperties": {
+      "type": "object",
+      "description": "Type properties for solid blocks",
+      "properties": {
+        "rotateRandom": {
+          "type": "boolean",
+          "description": "Enable random rotation rendering"
+        },
+        "toggleOnUse": {
+          "type": "boolean",
+          "description": "Allow creative players to toggle states"
+        },
+        "symmetrical": {
+          "type": "boolean",
+          "description": "Add SYMMETRICAL property for blockstate variants"
+        },
+        "connectstate": {
+          "type": "boolean",
+          "description": "Track connection state with property (0-3 values)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CuboidNSEWStackTypeProperties": {
+      "type": "object",
+      "description": "Type properties for cuboid-nsew-stack blocks",
+      "properties": {
+        "noBreakUnder": {
+          "type": "boolean",
+          "description": "Cannot be broken if another stack is above"
+        },
+        "allowHalfBreak": {
+          "type": "boolean",
+          "description": "Allow breaking individual stack halves"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SlabTypeProperties": {
+      "type": "object",
+      "description": "Type properties for slab blocks",
+      "properties": {
+        "toggleOnUse": {
+          "type": "boolean",
+          "description": "Allow creative players to toggle states"
+        },
+        "layerSensitive": {
+          "type": "boolean",
+          "description": "Block respects LAYERS property"
+        },
+        "connectstate": {
+          "type": "boolean",
+          "description": "Track connection state with property (0-3 values)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PlantTypeProperties": {
+      "type": "object",
+      "description": "Type properties for plant blocks",
+      "properties": {
+        "layerSensitive": {
+          "type": "boolean",
+          "description": "Block can stack with LAYERS property"
+        },
+        "toggleOnUse": {
+          "type": "boolean",
+          "description": "Allow creative players to toggle states"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TrapdoorTypeProperties": {
+      "type": "object",
+      "description": "Type properties for trapdoor blocks",
+      "properties": {
+        "locked": {
+          "type": "boolean",
+          "description": "Trapdoor cannot be opened without creative mode"
+        },
+        "allowUnsupported": {
+          "type": "boolean",
+          "description": "Trapdoor can be placed without support"
         }
       },
       "additionalProperties": false
@@ -574,8 +878,7 @@
           "default": 1,
           "description": "Selection weight (higher = more likely)"
         }
-      },
-      "required": ["textures"]
+      }
     },
     "StateVariant": {
       "type": "object",
@@ -686,7 +989,7 @@
       "properties": {
         "tool": {
           "type": "string",
-          "enum": ["pickaxe", "axe", "shovel", "hoe"],
+          "enum": ["pickaxe", "axe", "shovel", "hoe", "sword"],
           "description": "Tool type required"
         },
         "level": {
@@ -717,6 +1020,7 @@
             "DARK_PURPLE",
             "GOLD",
             "GRAY",
+            "GREY",
             "DARK_GRAY",
             "BLUE",
             "GREEN",

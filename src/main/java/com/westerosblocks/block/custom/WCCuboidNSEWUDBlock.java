@@ -5,7 +5,6 @@ import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Waterloggable;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
@@ -17,14 +16,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Cuboid block with 6-directional facing (NORTH, SOUTH, EAST, WEST, UP, DOWN).
  * Supports all directional orientations.
  */
-public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements Waterloggable {
+public class WCCuboidNSEWUDBlock extends WCCuboidBlock {
     public static final DirectionProperty FACING = Properties.FACING;
 
     public static class Factory extends BlockFactory {

@@ -131,12 +131,9 @@ public class BlockDefinition {
     @SerializedName("noCollision")
     private Boolean noCollision;
 
-
-
     /** What block material to connect to (e.g., "material" for webs) */
     @SerializedName("connectTo")
     private String connectTo;
-
 
     /** Uses custom model files instead of generated ones */
     @SerializedName("isCustomModel")
@@ -540,23 +537,11 @@ public class BlockDefinition {
         public boolean[] getNoTint() { return noTint; }
         public String getShape() { return shape; }
     }
-    /** Tracks whether doInit() has been called */
     private transient boolean didInit = false;
 
     /** State property for blocks with multiple states */
     private transient StateProperty stateProperty = null;
 
-    /**
-     * Initializes the block definition after JSON loading.
-     * This method:
-     * - Normalizes texture data (converts simple textures to randomTextures)
-     * - Inherits properties from base definition to states
-     * - Processes stack elements
-     * - Creates state property for multi-state blocks
-     * - Computes derived properties
-     *
-     * Called automatically by BlockDefinitionLoader after JSON parsing.
-     */
     public void doInit() {
         if (didInit) return;
 
@@ -753,7 +738,13 @@ public class BlockDefinition {
         return resistance;
     }
 
-    public Boolean isLegacyModel() { return false; }
+    public boolean isLegacyModel() {
+        return isLegacyModel != null && !isLegacyModel.isEmpty();
+    }
+
+    public String getLegacyModel() {
+        return isLegacyModel;
+    }
 
     public float getHardness() {
         return hardness;
@@ -1015,8 +1006,10 @@ public class BlockDefinition {
         return stack;
     }
 
+    /** @deprecated Use {@link #getStack()} instead */
+    @Deprecated
     public List<StackElement> getStackElements() {
-        return stack;
+        return getStack();
     }
 
     public boolean hasStackElements() {
@@ -1035,7 +1028,6 @@ public class BlockDefinition {
         return cuboids;
     }
 
-    /** Wood type for wooden blocks (e.g., "oak", "spruce", "birch") */
     public String getWoodType() {
         // Use dedicated woodType field if present
         if (woodType != null && !woodType.isEmpty()) {
@@ -1049,28 +1041,22 @@ public class BlockDefinition {
         return woodType != null && !woodType.isEmpty();
     }
 
-
-    /** Whether block has no-climb property */
     public boolean isNoClimb() {
         return type != null && Boolean.TRUE.equals(type.getNoClimb());
     }
 
-    /** Whether vines can grow downward (alias for hasDown for backward compatibility) */
     public boolean canGrowDownward() {
         return hasDown();
     }
 
-    /** Whether block should not be contained in web */
     public boolean isNoInWeb() {
         return type != null && Boolean.TRUE.equals(type.getNoInWeb());
     }
 
-    /** Whether pane uses bars model */
     public boolean isBarsModel() {
         return type != null && Boolean.TRUE.equals(type.getBarsModel());
     }
 
-    /** Particle type for particle emitter blocks (e.g., "flame", "cascade", "wildfire") */
     public String getParticle() {
         return particle != null ? particle : "flame";
     }

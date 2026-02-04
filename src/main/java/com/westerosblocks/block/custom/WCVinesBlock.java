@@ -37,7 +37,6 @@ public class WCVinesBlock extends VineBlock {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     private final boolean allowUnsupported;
-    private final boolean noClimb;
     private final boolean canGrowDownward;
 
     public static class Factory extends BlockFactory {
@@ -45,18 +44,16 @@ public class WCVinesBlock extends VineBlock {
         public WCVinesBlock buildBlockClass(BlockDefinition definition) {
             AbstractBlock.Settings settings = definition.makeSettings();
             boolean allowUnsupported = definition.isAllowUnsupported();
-            boolean noClimb = definition.isNoClimb();
             boolean canGrowDownward = definition.canGrowDownward();
 
-            return new WCVinesBlock(settings, definition, allowUnsupported, noClimb, canGrowDownward);
+            return new WCVinesBlock(settings, definition, allowUnsupported,  canGrowDownward);
         }
     }
 
-    public WCVinesBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean allowUnsupported, boolean noClimb, boolean canGrowDownward) {
+    public WCVinesBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean allowUnsupported, boolean canGrowDownward) {
         super(settings);
         this.def = def;
         this.allowUnsupported = allowUnsupported;
-        this.noClimb = noClimb;
         this.canGrowDownward = canGrowDownward;
         
         this.shapesCache = ImmutableMap.copyOf(getStateManager()

@@ -1,9 +1,5 @@
 package com.westerosblocks.block.custom;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
 
@@ -102,10 +98,6 @@ public class WCSlabBlock extends SlabBlock {
         }
     }
 
-    /**
-     * Gets the BlockDefinition for this block.
-     * @return BlockDefinition if block was created from JSON, null if created programmatically
-     */
     public BlockDefinition getDefinition() {
         return def;
     }

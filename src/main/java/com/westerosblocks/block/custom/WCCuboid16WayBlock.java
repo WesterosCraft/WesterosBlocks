@@ -5,7 +5,6 @@ import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -20,18 +19,10 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
-import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A cuboid block with 16-way rotation (22.5° increments).
- * Supports custom bounding boxes, waterlogging, and state properties.
- */
 public class WCCuboid16WayBlock extends WCCuboidBlock {
     public static final IntProperty ROTATION = Properties.ROTATION;
     private static final int ROTATIONS = 16;

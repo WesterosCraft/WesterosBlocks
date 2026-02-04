@@ -138,9 +138,6 @@ public class WCBenchBlock extends Block {
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 
-    /**
-     * Determines the connection type based on neighboring benches
-     */
     private ConnectionType getConnectionType(BlockView world, BlockPos pos, Direction facing) {
         Direction left = facing.rotateYCounterclockwise();
         Direction right = facing.rotateYClockwise();
@@ -161,9 +158,6 @@ public class WCBenchBlock extends Block {
         }
     }
 
-    /**
-     * Checks if this bench can connect to a neighbor in the given direction
-     */
     private boolean canConnectTo(BlockView world, BlockPos pos, Direction direction, Direction thisFacing) {
         BlockPos neighborPos = pos.offset(direction);
         BlockState neighborState = world.getBlockState(neighborPos);

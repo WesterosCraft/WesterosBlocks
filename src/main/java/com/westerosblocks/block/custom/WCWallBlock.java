@@ -23,7 +23,7 @@ import net.minecraft.world.WorldAccess;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
 
-public class WCWallBlock extends WallBlock implements Waterloggable {
+public class WCWallBlock extends WallBlock {
     protected BlockDefinition def;
 
     public static class Factory extends BlockFactory {

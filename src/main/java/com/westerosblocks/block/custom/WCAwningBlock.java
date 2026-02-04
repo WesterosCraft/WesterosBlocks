@@ -27,7 +27,6 @@ import net.minecraft.world.World;
 /**
  * Awning block with HALF (top/bottom), FACING (4 directions), and RAISED (boolean) properties.
  * Total of 16 blockstate variants (4 directions × 2 halves × 2 raised states).
- * No waterlogging support.
  */
 public class WCAwningBlock extends Block {
     protected BlockDefinition def;
@@ -36,10 +35,7 @@ public class WCAwningBlock extends Block {
     public static final EnumProperty<BlockHalf> HALF = Properties.BLOCK_HALF;
     public static final BooleanProperty RAISED = BooleanProperty.of("raised");
 
-    // VoxelShapes for collision/outline - thin horizontal slabs
-    // Top half shapes (at top of block space)
     protected static final VoxelShape TOP_SHAPE = Block.createCuboidShape(0.0, 12.0, 0.0, 16.0, 16.0, 16.0);
-    // Bottom half shapes (at bottom of block space)
     protected static final VoxelShape BOTTOM_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 8.0, 16.0);
 
     public static class Factory extends BlockFactory {
@@ -89,7 +85,6 @@ public class WCAwningBlock extends Block {
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         Hand hand = player.getActiveHand();
-        // Toggle RAISED when creative player right-clicks with empty hand
         if (player.isCreative() && player.getStackInHand(hand).isEmpty()) {
             state = state.cycle(RAISED);
             world.setBlockState(pos, state, Block.NOTIFY_ALL);

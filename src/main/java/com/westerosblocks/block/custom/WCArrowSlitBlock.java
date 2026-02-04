@@ -21,7 +21,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
 import com.westerosblocks.data.BlockDefinition;
-import com.westerosblocks.block.custom.BlockFactory;
 
 import java.util.Map;
 

@@ -13,9 +13,6 @@ import net.minecraft.world.WorldView;
 
 public class WCLadderBlock extends LadderBlock {
     private boolean allowUnsupported;
-    // no climb decided whether the ladder recieves the "climbable" tag or not
-    // this now happens in ModBlockTagProvider
-    private boolean noClimb;
 
     public static class Factory extends BlockFactory {
         @Override
@@ -32,7 +29,6 @@ public class WCLadderBlock extends LadderBlock {
     protected WCLadderBlock(AbstractBlock.Settings settings, boolean allowUnsupported, boolean noClimb) {
         super(settings);
         this.allowUnsupported = allowUnsupported;
-        this.noClimb = noClimb;
     }
 
     @Override

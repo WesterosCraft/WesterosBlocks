@@ -12,8 +12,6 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import java.util.Map;
-
 public class WCTrapDoorBlock extends TrapdoorBlock {
     protected BlockDefinition def;
     private final boolean locked;

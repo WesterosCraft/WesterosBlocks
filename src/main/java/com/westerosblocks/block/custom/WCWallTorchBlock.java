@@ -13,7 +13,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
 import com.westerosblocks.data.BlockDefinition;
-import java.util.Map;
 
 public class WCWallTorchBlock extends WallTorchBlock {
     protected BlockDefinition def;

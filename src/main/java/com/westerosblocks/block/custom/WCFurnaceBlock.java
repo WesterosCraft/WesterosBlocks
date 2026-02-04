@@ -19,7 +19,6 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
-import java.util.Map;
 
 public class WCFurnaceBlock extends FurnaceBlock {
     protected BlockDefinition def;
