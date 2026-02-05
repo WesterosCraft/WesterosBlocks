@@ -608,6 +608,7 @@
   {
     "blockName": "smoke",
     "blockType": "web",
+    "doOffsetXZ": true,
     "soundGroup": "cloth",
     "creativeTab": "westeros_water_air_tab",
     "label": "Smoke",
@@ -697,6 +698,7 @@
   {
     "blockName": "corn",
     "blockType": "web",
+    "doOffsetXZ": true,
     "soundGroup": "grass",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Corn",
