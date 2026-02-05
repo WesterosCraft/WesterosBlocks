@@ -1,7 +1,6 @@
 package com.westerosblocks.item.custom;
 
 import com.westerosblocks.entity.custom.RopeEntity;
-import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.annotation.Nullable;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.NbtComponent;
 import net.minecraft.entity.player.PlayerEntity;
