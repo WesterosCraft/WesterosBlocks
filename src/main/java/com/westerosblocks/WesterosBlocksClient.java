@@ -10,6 +10,7 @@ import com.westerosblocks.item.client.ModShieldRenderer;
 import mod.azure.azurelib.common.render.item.AzItemRendererRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.registry.Registries;
+import net.minecraft.util.Identifier;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
@@ -98,19 +99,19 @@ public class WesterosBlocksClient implements ClientModInitializer {
 
 
             if (renderLayer != null) {
-                Block block = Registries.BLOCK.get(WesterosBlocks.id(definition.getBlockName()));
-                BlockRenderLayerMap.INSTANCE.putBlock(block, renderLayer);
-
-                // For torch blocks, also apply render layer to wall variant
-                if ("torch".equals(definition.getBlockType())) {
-                    Block wallBlock = Registries.BLOCK.get(WesterosBlocks.id("wall_" + definition.getBlockName()));
-                    BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, renderLayer);
+                Identifier blockId = WesterosBlocks.id(definition.getBlockName());
+                if (Registries.BLOCK.containsId(blockId)) {
+                    Block block = Registries.BLOCK.get(blockId);
+                    BlockRenderLayerMap.INSTANCE.putBlock(block, renderLayer);
                 }
 
-                // For fan blocks, also apply render layer to wall variant
-                if ("fan".equals(definition.getBlockType())) {
-                    Block wallBlock = Registries.BLOCK.get(WesterosBlocks.id("wall_" + definition.getBlockName()));
-                    BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, renderLayer);
+                // For torch and fan blocks, also apply render layer to wall variant
+                if ("torch".equals(definition.getBlockType()) || "fan".equals(definition.getBlockType())) {
+                    Identifier wallId = WesterosBlocks.id("wall_" + definition.getBlockName());
+                    if (Registries.BLOCK.containsId(wallId)) {
+                        Block wallBlock = Registries.BLOCK.get(wallId);
+                        BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, renderLayer);
+                    }
                 }
             }
         }

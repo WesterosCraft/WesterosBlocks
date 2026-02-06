@@ -163,13 +163,13 @@ public class WCWallBlock extends WallBlock {
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (toggleOnUse && STATE != null && player.isCreative() && player.getMainHandStack().isEmpty()) {
-            state = state.cycle(STATE);
-            world.setBlockState(pos, state, Block.NOTIFY_ALL);
-            world.syncWorldEvent(player, 1006, pos, 0);
-            return ActionResult.success(world.isClient);
-        }
-
-        if (toggleOnUse && hasConnectState && player.isCreative() && player.getMainHandStack().isEmpty()) {
+            if (state.contains(STATE)) {
+                state = state.cycle(STATE);
+                world.setBlockState(pos, state, Block.NOTIFY_ALL);
+                world.syncWorldEvent(player, 1006, pos, 0);
+                return ActionResult.success(world.isClient);
+            }
+        } else if (toggleOnUse && hasConnectState && player.isCreative() && player.getMainHandStack().isEmpty()) {
             int currentState = state.get(CONNECT_STATE);
             int nextState = (currentState + 1) % 4;
             world.setBlockState(pos, state.with(CONNECT_STATE, nextState), Block.NOTIFY_ALL);

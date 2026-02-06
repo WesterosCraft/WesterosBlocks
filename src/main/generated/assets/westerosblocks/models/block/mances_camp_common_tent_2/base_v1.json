@@ -1,12 +1,98 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "block/block",
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#txt0",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "cullface": "east",
+          "texture": "#txt5",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#txt2",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "south": {
+          "cullface": "south",
+          "texture": "#txt3",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "up": {
+          "cullface": "up",
+          "texture": "#txt1",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#txt4",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        }
+      },
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": {
+        "angle": 0.0,
+        "axis": "y",
+        "origin": [
+          8.0,
+          8.0,
+          8.0
+        ],
+        "rescale": false
+      },
+      "to": [
+        16.0,
+        16.0,
+        16.0
+      ]
+    }
+  ],
   "textures": {
-    "down": "westerosblocks:block/mances_camp_common_tent/inside",
-    "east": "westerosblocks:block/mances_camp_common_tent/inside",
-    "north": "westerosblocks:block/mances_camp_common_tent/outside2",
     "particle": "westerosblocks:block/mances_camp_common_tent/inside",
-    "south": "westerosblocks:block/mances_camp_common_tent/outside2",
-    "up": "westerosblocks:block/mances_camp_common_tent/outside2",
-    "west": "westerosblocks:block/mances_camp_common_tent/outside2"
+    "txt0": "westerosblocks:block/mances_camp_common_tent/inside",
+    "txt1": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "txt2": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "txt3": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "txt4": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "txt5": "westerosblocks:block/mances_camp_common_tent/inside"
   }
 }

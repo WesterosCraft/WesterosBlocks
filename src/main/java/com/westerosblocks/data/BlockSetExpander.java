@@ -606,15 +606,122 @@ public class BlockSetExpander {
     private static void addHollowHopperGeometry(Map<String, Object> defMap) {
         defMap.put("nonOpaque", true);
         defMap.put("lightOpacity", 0);
+
+        List<Map<String, Object>> cuboids = new ArrayList<>();
+
+        // Bottom spout
+        Map<String, Object> cuboid1 = new HashMap<>();
+        cuboid1.put("xMin", 0.3755);
+        cuboid1.put("yMin", 0.16);
+        cuboid1.put("zMin", 0.3755);
+        cuboid1.put("xMax", 0.6245);
+        cuboid1.put("yMax", 0.275);
+        cuboid1.put("zMax", 0.6245);
+        cuboid1.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
+        cuboids.add(cuboid1);
+
+        // Middle section
+        Map<String, Object> cuboid2 = new HashMap<>();
+        cuboid2.put("xMin", 0.25);
+        cuboid2.put("yMin", 0.275);
+        cuboid2.put("zMin", 0.25);
+        cuboid2.put("xMax", 0.75);
+        cuboid2.put("yMax", 0.625);
+        cuboid2.put("zMax", 0.75);
+        cuboid2.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
+        cuboids.add(cuboid2);
+
+        // Base plate
+        Map<String, Object> cuboid3 = new HashMap<>();
+        cuboid3.put("xMin", 0.0);
+        cuboid3.put("yMin", 0.625);
+        cuboid3.put("zMin", 0.0);
+        cuboid3.put("xMax", 1.0);
+        cuboid3.put("yMax", 0.65);
+        cuboid3.put("zMax", 1.0);
+        cuboid3.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
+        cuboids.add(cuboid3);
+
+        // West wall
+        Map<String, Object> cuboid4 = new HashMap<>();
+        cuboid4.put("xMin", 0.0);
+        cuboid4.put("yMin", 0.625);
+        cuboid4.put("zMin", 0.0);
+        cuboid4.put("xMax", 0.125);
+        cuboid4.put("yMax", 1.0);
+        cuboid4.put("zMax", 1.0);
+        cuboid4.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
+        cuboids.add(cuboid4);
+
+        // East wall
+        Map<String, Object> cuboid5 = new HashMap<>();
+        cuboid5.put("xMin", 0.875);
+        cuboid5.put("yMin", 0.625);
+        cuboid5.put("zMin", 0.0);
+        cuboid5.put("xMax", 1.0);
+        cuboid5.put("yMax", 1.0);
+        cuboid5.put("zMax", 1.0);
+        cuboid5.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
+        cuboids.add(cuboid5);
+
+        // North wall
+        Map<String, Object> cuboid6 = new HashMap<>();
+        cuboid6.put("xMin", 0.0);
+        cuboid6.put("yMin", 0.625);
+        cuboid6.put("zMin", 0.0);
+        cuboid6.put("xMax", 1.0);
+        cuboid6.put("yMax", 1.0);
+        cuboid6.put("zMax", 0.125);
+        cuboid6.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
+        cuboids.add(cuboid6);
+
+        // South wall
+        Map<String, Object> cuboid7 = new HashMap<>();
+        cuboid7.put("xMin", 0.0);
+        cuboid7.put("yMin", 0.625);
+        cuboid7.put("zMin", 0.875);
+        cuboid7.put("xMax", 1.0);
+        cuboid7.put("yMax", 1.0);
+        cuboid7.put("zMax", 1.0);
+        cuboid7.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
+        cuboids.add(cuboid7);
+
+        defMap.put("cuboids", cuboids);
     }
 
     private static void addDirectionalGeometry(Map<String, Object> defMap) {
         // Full cube for directional blocks
+        List<Map<String, Object>> cuboids = new ArrayList<>();
+
+        Map<String, Object> cuboid = new HashMap<>();
+        cuboid.put("xMin", 0.0);
+        cuboid.put("yMin", 0.0);
+        cuboid.put("zMin", 0.0);
+        cuboid.put("xMax", 1.0);
+        cuboid.put("yMax", 1.0);
+        cuboid.put("zMax", 1.0);
+        cuboids.add(cuboid);
+
+        defMap.put("cuboids", cuboids);
     }
 
     private static void addPathGeometry(Map<String, Object> defMap) {
         defMap.put("nonOpaque", true);
         defMap.put("lightOpacity", 0);
+
+        List<Map<String, Object>> cuboids = new ArrayList<>();
+
+        Map<String, Object> cuboid = new HashMap<>();
+        cuboid.put("xMin", 0.0);
+        cuboid.put("yMin", 0.0);
+        cuboid.put("zMin", 0.0);
+        cuboid.put("xMax", 1.0);
+        cuboid.put("yMax", 0.9375);
+        cuboid.put("zMax", 1.0);
+        cuboid.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
+        cuboids.add(cuboid);
+
+        defMap.put("cuboids", cuboids);
     }
 
     private static void addWindowGeometry(Map<String, Object> defMap) {

@@ -1279,7 +1279,7 @@ public class BlockDefinition {
         // Apply luminance (light level 0-15)
         int light = getLuminance();
         if (light > 0) {
-            settings = settings.luminance(lum -> getLuminance());
+            settings = settings.luminance(lum -> light);
         }
 
         // Apply opacity settings

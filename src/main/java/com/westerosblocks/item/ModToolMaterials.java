@@ -5,15 +5,14 @@ import com.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
 
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
     VALYRIAN_STEEL(
-            TagKey.of(RegistryKey.ofRegistry(Identifier.of("blocks")), WesterosBlocks.id("needs_valyrian_steel_tool")),
+            TagKey.of(RegistryKeys.BLOCK, WesterosBlocks.id("needs_valyrian_steel_tool")),
             2500, 12.0F, 5.0F, 20,
             () -> Ingredient.ofItems(ModItems.VALYRIAN_STEEL_INGOT));
 

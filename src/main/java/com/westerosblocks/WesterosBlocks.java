@@ -59,6 +59,7 @@ public class WesterosBlocks implements ModInitializer {
 
         } catch (Exception e) {
             LOGGER.error("Failed to initialize block definitions", e);
+            throw new RuntimeException("WesterosBlocks cannot start without block definitions", e);
         }
     }
 

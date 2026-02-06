@@ -198,8 +198,8 @@ public class RopeEntity extends Entity {
             case 2 -> "Loose";
             case 3 -> "Medium";
             case 4 -> "Medium Loose";
-            case 5 -> "Taught";
-            default -> "Very Taught";
+            case 5 -> "Taut";
+            default -> "Very Taut";
         };
     }
 

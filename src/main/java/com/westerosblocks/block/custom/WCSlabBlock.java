@@ -11,7 +11,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -25,7 +24,7 @@ public class WCSlabBlock extends SlabBlock {
     public static final IntProperty CONNECTSTATE = ModProperties.CONNECTSTATE;
 
     protected static ModProperties.StateProperty tempSTATE;
-    public static ModProperties.StateProperty STATE;
+    protected ModProperties.StateProperty STATE;
 
     public static class Factory extends BlockFactory {
         @Override
@@ -74,15 +73,15 @@ public class WCSlabBlock extends SlabBlock {
 
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        Hand hand = player.getActiveHand();
-        if (this.toggleOnUse && (STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
-            state = state.cycle(STATE);
-            world.setBlockState(pos, state, 10);
-            world.syncWorldEvent(player, 1006, pos, 0);
-            return ActionResult.success(world.isClient);
-        } else {
-            return ActionResult.PASS;
+        if (this.toggleOnUse && (STATE != null) && player.isCreative() && player.getMainHandStack().isEmpty()) {
+            if (state.contains(STATE)) {
+                state = state.cycle(STATE);
+                world.setBlockState(pos, state, Block.NOTIFY_ALL);
+                world.syncWorldEvent(player, 1006, pos, 0);
+                return ActionResult.success(world.isClient);
+            }
         }
+        return ActionResult.PASS;
     }
 
     @Override
@@ -93,6 +92,7 @@ public class WCSlabBlock extends SlabBlock {
             tempCONNECTSTATE = null;
         }
         if (tempSTATE != null) {
+            STATE = tempSTATE;
             builder.add(tempSTATE);
             tempSTATE = null;
         }

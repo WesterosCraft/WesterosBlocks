@@ -13,6 +13,7 @@ import net.minecraft.world.WorldView;
 
 public class WCLadderBlock extends LadderBlock {
     private boolean allowUnsupported;
+    private boolean noClimb;
 
     public static class Factory extends BlockFactory {
         @Override
@@ -29,6 +30,7 @@ public class WCLadderBlock extends LadderBlock {
     protected WCLadderBlock(AbstractBlock.Settings settings, boolean allowUnsupported, boolean noClimb) {
         super(settings);
         this.allowUnsupported = allowUnsupported;
+        this.noClimb = noClimb;
     }
 
     @Override
