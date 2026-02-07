@@ -4,8 +4,8 @@
   "parent": "bunting",
   "texture_size": [32, 32],
   "textures": {
-    "0": "Aseprite:bunting",
-    "particle": "Aseprite:bunting"
+    "0": "westerosblocks:block/bunting/red_bunting",
+    "particle": "westerosblocks:block/bunting/red_bunting"
   },
   "elements": [
     {
