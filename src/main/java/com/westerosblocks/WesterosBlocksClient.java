@@ -113,6 +113,15 @@ public class WesterosBlocksClient implements ClientModInitializer {
                         BlockRenderLayerMap.INSTANCE.putBlock(wallBlock, renderLayer);
                     }
                 }
+
+                // For bunting blocks, also apply render layer to ceiling variant
+                if ("bunting".equals(definition.getBlockType())) {
+                    Identifier ceilingId = WesterosBlocks.id(definition.getBlockName() + "_ceiling");
+                    if (Registries.BLOCK.containsId(ceilingId)) {
+                        Block ceilingBlock = Registries.BLOCK.get(ceilingId);
+                        BlockRenderLayerMap.INSTANCE.putBlock(ceilingBlock, renderLayer);
+                    }
+                }
             }
         }
     }
