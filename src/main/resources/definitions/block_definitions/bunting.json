@@ -13,5 +13,23 @@
     "options": {
       "allowUnsupported": true
     }
+  },
+  {
+    "blockName": "red_square_bunting",
+    "blockType": "bunting",
+    "hardness": 2,
+    "resistance": 2,
+    "soundGroup": "wool",
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "label": "Red Square Bunting",
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "textures": [
+      "bunting/red_square_bunting",
+      "bunting/red_square_bunting_ceiling"
+    ],
+    "options": {
+      "allowUnsupported": true
+    }
   }
 ]

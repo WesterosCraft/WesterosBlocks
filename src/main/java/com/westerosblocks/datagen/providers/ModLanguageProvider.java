@@ -62,6 +62,12 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                         if (definition.getLabel() != null && !definition.getLabel().isEmpty()) {
                                 String translationKey = "block.westerosblocks." + definition.getBlockName();
                                 translationBuilder.add(translationKey, definition.getLabel());
+
+                                // Bunting ceiling blocks share the same label as their wall block
+                                if ("bunting".equals(definition.getBlockType())) {
+                                        String ceilingKey = "block.westerosblocks." + definition.getBlockName() + "_ceiling";
+                                        translationBuilder.add(ceilingKey, definition.getLabel());
+                                }
                         }
 
                         // Generate tooltip translations
