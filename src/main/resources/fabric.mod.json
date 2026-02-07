@@ -4,35 +4,21 @@
   "version": "${version}",
   "name": "WesterosBlocks",
   "description": "A Song Of Ice and Fire themed blocks for a medieval world",
-  "authors": [
-    "geeberry",
-    "Emoticone11",
-    "mikeprimm"
-  ],
+  "authors": ["geeberry", "Emoticone11", "mikeprimm"],
   "contact": {
     "homepage": "https://www.westeroscraft.com",
     "sources": "https://github.com/WesterosCraft/WesterosBlocks"
   },
   "license": "CC0-1.0",
-  "icon": "assets/westerosblocks/icon.png",
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "com.westerosblocks.WesterosBlocks"
-    ],
-    "fabric-datagen": [
-      "com.westerosblocks.WesterosBlocksDataGenerator"
-    ],
-    "client": [
-      "com.westerosblocks.WesterosBlocksClient"
-    ],
-    "modmenu": [
-      "com.westerosblocks.config.ModMenuIntegration"
-    ]
+    "main": ["com.westerosblocks.WesterosBlocks"],
+    "fabric-datagen": ["com.westerosblocks.WesterosBlocksDataGenerator"],
+    "client": ["com.westerosblocks.WesterosBlocksClient"],
+    "modmenu": ["com.westerosblocks.config.ModMenuIntegration"]
   },
-  "mixins": [
-    "westerosblocks.mixins.json"
-  ],
+  "mixins": ["westerosblocks.mixins.json"],
   "depends": {
     "fabricloader": ">=0.16.14",
     "minecraft": "~1.21.1",

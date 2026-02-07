@@ -2,6 +2,7 @@
 - adds red_bunting block
 
 # 1.21.1 Port October 2025
+
 - Changed "stepSound" to "soundGroup" in block definitions
 - removes SoundBlocks and the block type
 - Exporter converted to use datagen utilities
@@ -13,6 +14,7 @@
 - Adds "Purple Cabbage" block
 
 ## Updated wood CTM
+
 - Refreshes wood and bark textures
 - You can now toggle the vertical lines on planks by right clicking with an empty hand
 - Adds repeat CTM for yellow, red, purple, blue, white, orange, green, black, birch, grey wood, spruce, oak, northern wood planks
@@ -20,7 +22,8 @@
 - Adds CTM to bark blocks - spruce, birch, oak, jungle
 - Adds CTM to mossy bark blocks - spruce, birch, oak, jungle
 
-## New wood blocksets, includes CTM:
+## New wood blocksets, includes CTM
+
 - off_white_wood
 - birch_yellow_wood
 - oak_jungle_vertical_planks
@@ -52,6 +55,7 @@
 - white_stripped_log + beam variant
 
 ## New doors alts + halfdoors alts
+
 - Simple Birch Door
 - Simple Birch Window Shutters
 - Fancy White Door
@@ -68,27 +72,32 @@
 - Fancy Northern Wood Window Shutters
 
 ## Snow
+
 - updates Muddy snow block with repeat CTM
 - Adds new Muddy Snow Alt Block + Layer
 - Adds new Muddy Snow Light Block + Layer
 - Adds new Muddy Snow Dark Block + Layer
 
 ## Dirt/Paths/Pebbles
+
 - Adds new blocks - 'Light Dirt', 'Medium Dirt', 'Dark Dirt', 'Pebble Light Stormlands', 'Pebble Dark Stormlands', 'Pebble Dark Mountains Of The Moon', 'Pebble Light Westerlands', 'Pebble Dark Westerlands'
 - Adds repeat CTM to dirt block
 
 ## Ice Update
+
 - Added new ice blocks - 'Light Ice', 'Medium Light Ice', 'Blue Ice', 'Light Blue Ice', 'Dark Blue Ice', 'Dark Blue Medium Ice'
 - Updates ice block textures and adds repeat CTM
 - Adds new packed ice block
 - Adds new "Icicles" block that behaves and looks more like ghostskin
 
 ## Furniture
+
 - Added new table block
 - Added new chair block
 - Adds 5 new bench blocks - Oak Bench, Birch Bench, Spruce Bench, Jungle Bench and Northern Bench
 
 ## Other
+
 - Added Stark Kite Shield
 - Added Tully Heater Shield
 - Added Greyjoy Round Shield
@@ -101,10 +110,12 @@
 - Added "Westerosi Coins" with 7 variants
 - Updates pickaxe, axe, cleaver and pitchfork with 3D models
 
-# 26 Aug 2025:
+# 26 Aug 2025
+
 - Fixed transparent face in wall models when "up" blockstate is set to false.
 
-# 6 Sep 2024:
+# 6 Sep 2024
+
 - Added additional polished stone variants.
 - Added CTM and connectstate to polished stone, allowing for creation of arbitrary block sizes using data cycler tool.
 - Added house banners, generic wool banners, and updates to existing banners.
@@ -134,7 +145,8 @@
 - Fixed transparency issues with fruit leaves and dappled moss.
 - Fixed vanilla farmland dry/moist texture mapping.
 
-# 22 Jan 2024:
+# 22 Jan 2024
+
 - Added a large number of new stone brick and cobblestone sets to fill in gaps in existing block sets, and to remove biome dependencies.
 - Added "smooth" and "rough" plaster blocks and variants, retexturing existing plaster blocks as appropriate.
 - Added new timber frame CTM variants (bressummer, left/righthatch large, left/righthatch studded), and added new CTM to existing crosshatch/frame blocks.
@@ -172,9 +184,10 @@
 - Fixed rendering conflicts w/ Embeddium for blood, table, bread, cheese, fish trap, and cage blocks.
 - Reorganized stone brick and cobblestone sets, using the format "<texture type> <set name>" (e.g., "Half Ashlar Dark Grey").
 
-# 2 Jan 2024:
+# 2 Jan 2024
+
 - Refactored WesterosBlocks.json into "block sets" that are used to auto-generate standard variants (e.g. stairs, slabs, walls, etc.);
- several blocks got additional variants in this process.
+  several blocks got additional variants in this process.
 - Added directional firewood slab.
 - Added vanilla vines as custom block.
 - Added slabs and layers for muddy sand, grassy sand, and ash.
@@ -182,14 +195,16 @@
 - Fixed slate stairs missing uvlock.
 - Fixed northern biome CTM for grassy sand.
 
-# 10 October 2023:
+# 10 October 2023
+
 - Officially migrated WesterosBlocks to minecraft 1.18. The structural changes to the modpack are too vast to fully note here, but some of the block changes are listed below:
 - Migrated many vanilla blocks to custom blocks in order to ensure that remaining vanilla textures resemble the underlying block meaning.
 - Added potted plant blocks for all types of flowers/grasses.
 - Added a "layer" blockstate to plant and web blocks to allow them to be placed on top of layers.
 - Changed vanilla grass to have the grass texture on all sides; added "classic grass" as a custom block.
 
-# 13 November 2021:
+# 13 November 2021
+
 - Added stormlands large brick variants
 - Added variants for remaining wood colors
 - Added light/dark versions of wattle fence
@@ -235,7 +250,8 @@
 - Fixed oak timber white daub lefthatch/righthatch having wrong inventory icons
 - Fixed wattle fence having transparent inventory icon
 
-# 10 September 2020:
+# 10 September 2020
+
 - Added vine model versions of falling water blocks
 - Added renly banner
 - Added slabs/stairs/wall for cushion moss
@@ -249,7 +265,8 @@
 - Changed timber window frames to have filled in corners
 - Fixed dappled moss accidentally being named jasmine vines
 
-# 7 September 2020:
+# 7 September 2020
+
 - Added vivid dark sandstone engraved stone and arrow slits
 - Added red fork pink sandstone/brick variants
 - Added timber window frames
@@ -277,14 +294,17 @@
 - Changed jasmine vine to use vine block model (old ID still exists but is deprecated)
 - Fixed new mob textures changing skull blocks
 
-# 20 June 2020:
+# 20 June 2020
+
 - Changed mob textures to CashBanks textures
 - Fixed vanilla bed texture
 
-# 26 May 2020:
+# 26 May 2020
+
 - Added stairs/slabs/walls/fences for terrainset blocks
 
-# 15 May 2020:
+# 15 May 2020
+
 - Added stairs/slabs/walls for river cobble & small smooth stone brick
 - Added arbor small brick
 - Added normal & ornate arrow slits for small orange brick
@@ -297,14 +317,16 @@
 - Fixed discoloured snow tile
 - Fixed bed bottom textures
 
-# 4 October 2019:
+# 4 October 2019
+
 - Changed coin block to have more varied shapes and types
 - Changed Brown Mushroom 11 and 12 back to original textures
 - Changed short wattle fence texture to get rid of spikes
 - Changed furnace blocks to have small ledge on bottom
 - Fixed cranberry CTM being broken
 
-# 21 September 2019:
+# 21 September 2019
+
 - Added short (non-ctm) wattle fence
 - Added stairs, slabs, vertical planks, etc. for grey & white wood
 - Added stairs, slabs, etc. for reach cobblestone
@@ -337,7 +359,8 @@
 - Changed yellow flower 10 texture slightly
 - Changed yellow flower 2 to have some random ctm
 
-# 16 January 2019:
+# 16 January 2019
+
 - Added two more weirwood faces
 - Added industry utility block
 - Added slab, stairs, wall, fence, hopper of Oldtown cobble
@@ -357,7 +380,8 @@
 - Fixed 3D ladder block model being undone
 - Fixed marble column block models
 
-# 12 July 2018:
+# 12 July 2018
+
 - Added Dreadfort skeleton sconce blocks
 - Added Glass Candle block for Citadel
 - Added Oldtown sewer manhole
@@ -380,7 +404,8 @@
 - Fixed some rogue pixels and inconsistent colors in great house banners
 - Fixed mossy cobblestone not having new wall model
 
-# 17 April 2018:
+# 17 April 2018
+
 - Added block versions of wood half door texture
 - Added light thatch and dark thatch wall blocks
 - Added stair, slab, hopper, wall, fence variants for stormlands cobblestone
@@ -389,7 +414,8 @@
 - Changed normal ladder to have 3D block model
 - Fixed dry and wet pebble textures being mixed rather than seperate
 
-# 10 March 2018:
+# 10 March 2018
+
 - Added pebble sand blocks & layers corresponding to each terrainset
 - Added "done" and "WIP" utility blocks
 - Added wall and fence oxidized bronze blocks
@@ -410,14 +436,16 @@
 - Changed tool blocks to be more realistic
 - Changed oak shutter to be similar texture to oak door
 
-# 14 August 2017:
+# 14 August 2017
+
 - Changed carrot & radish crop textures to be better
 - Changed torch texture to be a little more realistic
 - Changed dirt to be mossy in Jungle biome
 - Changed red sandstone to have horizontal CTM
 - Changed new 1.11.2 vanilla textures to be DO NOT USE
 
-# 13 March 2017:
+# 13 March 2017
+
 - Added MDMeaux’s language pack (En_US) to change names of vanilla blocks
 - Added brick hopper
 - Added bronze wall and fence blocks
@@ -436,7 +464,8 @@
 - Removed grass tile from dirt ctm
 - Removed patches on pale green & pale red beds
 
-# 12 June 2016:
+# 12 June 2016
+
 - Added “House Count” utility block
 - Added White Harbor sewer manhole block
 - Changed nettle hue to be less “plastic-y”
@@ -461,7 +490,8 @@
 - Fixed issue with mipmapping being forced off, even if enabled in settings
 - Removed wheat animation
 
-# 23 December 2015:
+# 23 December 2015
+
 - Added “forest” biome for forests, with similar colors to plains but slightly greener
 - Added “birch forest” biome for Westerlands, with more golden/mediterranean hues
 - Added “jungle edge” biome for Riverlands, with darker, wetter colors
@@ -488,9 +518,10 @@
 - Changed farmland blocks to have new CTM
 - Changed mossy log blocks to be slightly mossier
 - Changed all daub/wattle textures so that the cross-hatches seem more like timber rather
-than “sticks”
+  than “sticks”
 
-# 6 September 2015:
+# 6 September 2015
+
 - Added new cattail block to replace buggy vanilla reed
 - Added bowl of brown potshop profession sign (Flea Bottom only)
 - Added WesterosBlocks brazier block to fix issues with vanilla one
@@ -499,7 +530,8 @@ than “sticks”
 - Changed firewood to not have iron clasps on the sides
 - Fixed mossy small stone brick not having same color overlay as small stone brick in ocean biome
 
-# 24 May 2015:
+# 24 May 2015
+
 - Added “random” variant of iron throne sword texture
 - Added dead rat texture specifically for Flea Bottom
 - Added profession signs (only for use in large cities)
@@ -524,13 +556,15 @@ than “sticks”
 - Fixed oversaturated stained glass
 - Fixed issues with transparent textures disappearing in front of glass blocks
 
-# 3 February 2015:
+# 3 February 2015
+
 - Changed grey stone textures and eastern island terrainset to be darker in Jungle biome
 - Changed oak door texture to be more similar to our other door textures
 - Fixed green grass instead of snow on the sides of grass blocks with snow on top
 - Fixed biomes for minecraft version 1.7
 
-# 25 December 2014:
+# 25 December 2014
+
 - Added KL Dun brick and corresponding stairs, slabs, wall block, hopper, and arrow slit
 - Added KL Dun brick cobble block and ornamental block
 - Added candle altar block
@@ -564,7 +598,8 @@ than “sticks”
 - Fixed sand and sand layer blocks not having sand step sound
 - Fixed Red Keep portrait still having metal borders
 
-# 22 August 2014:
+# 22 August 2014
+
 - Added hanging sourleaf
 - Added “Sunflower” yellow flower variant
 - Added slabs for basket blocks
@@ -577,7 +612,8 @@ than “sticks”
 - Changed ocean & river terrainsets to look nicer
 - Fixed small strip of Oldtown plasters
 
-# 3 August 2014:
+# 3 August 2014
+
 - Added updated night skybox
 - Added flat wheel to replace shields used on wheelbarrows
 - Added hop and olive leaves
@@ -640,7 +676,8 @@ than “sticks”
 - Removed dispenser & dropper textures
 - Removed vanilla hopper texture
 
-# 25 June 2014:
+# 25 June 2014
+
 - Added Reach terrainset
 - Added ocean wave CTM
 - Changed Iron Islands terrainset
@@ -650,7 +687,8 @@ than “sticks”
 - Changed Red Mountains terrainset
 - Removed Winterfell Placeholder 4 (Wolf Gargoyle)
 
-# 19 April 2014:
+# 19 April 2014
+
 - Added sand layer blocks for red & orange sands
 - Added stairs, slabs, fence, arrow slit, hopper, and wall block for pink Reach brick
 - Added stairs, slabs, fence, hopper, and wall block for Stormland dark cobble
@@ -716,7 +754,8 @@ than “sticks”
 - Fixed foliage being white when using Optifine
 - Fixed random dirt CTM on specific slate variants
 
-# 1 December 2013:
+# 1 December 2013
+
 - Added a glass Flagon
 - Added a petwer Flagon
 - Added a banner for the lord of light and the seven
@@ -754,14 +793,14 @@ than “sticks”
 - Changed non-canon potato to turnip crates.
 - Adjusted the brightness on some of the Crate Goods and added a berry and a silver/tin ingot crate
 - Changed Barrel Hoops and Nails on Crates to have a Wraught Iron look
-- Added R'hllor image to dye_power_cyan 
+- Added R'hllor image to dye_power_cyan
 - Fixed bottom of ender portal (jar)
 - Fixed the fence vines and grapes
 - Fixed glass block corners changed to wrought iron
 - Fixed purple wool edges fixed on 176.png and 177.png
 - Added Mossy Log Variants for Spruce, Birch and Jungle
 - Changed netherrack to glowing coals that can be lit of fire.
-- Made stairs that go well with the light stone slabs  
+- Made stairs that go well with the light stone slabs
 - Made Stone Slab Arrowslits
 - Made Lannisport Plaster, Keystone Plaster in orange and yellow
 - Made a shutter block for lannisport
@@ -787,8 +826,8 @@ than “sticks”
 - Fixed the names of the sandstone folder
 - Fixed the names of the smoothstone folder
 
+# 11 October 2013
 
-# 11 October 2013:
 - Added hanging dead fish for smoking and drying
 - Changed the lantern to a non-flickering less greenish orange
 - Made the Colour of the Ocean Biome a darker grey.
@@ -796,7 +835,8 @@ than “sticks”
 - Added Copper Ore, Silver Ore and Tin Ore.
 - Made a clear and amber coloured lantern in both states (On/Off). We are currently using the amber version (On) as the glowstone texture. Let me know if you want a clear version that is toggleable for the redstone lamp.
 
-# 7 October 2013:
+# 7 October 2013
+
 - changed all the chains related textures to a darker Wrought Iron look
 - made a new darker sign texture with a dark and light nail variation
 - changed the sign.png item accordingly
@@ -814,25 +854,27 @@ than “sticks”
 - made the beacon block into a brazier (is a bit derpy but works)
 - changed the glowstone:0 into a lantern with animation.
 
-# 19 September 2013:
+# 19 September 2013
+
 - Removed the Iron, Gold, and Diamond Horse Armor on request by Handsome_Dan
 - Changed the Daylight Detector textures to ìDo Not Useî on request by Handsome_Dan
 - Changed the Enchantment Table textures on request by Handsome_Dan
 - Changed the Enchantment Table Book texture on request by Handsome_Dan
- 
 
-# 28 August 2013: 
+# 28 August 2013
+
 - Fixed CTM on Blue and Ochre Whitewash
 - Added Bog Texture by Moozipan
 
-# 27 August 2013:
+# 27 August 2013
+
 - Merged our Texture Pack Components with the Sound Pack Components. We will now coordinate our releases.
 - Added Sn0wstorms ìnewî bog textures.
 - Removed file debris that wasnít properly converted in the transition to resource packs.
 - Added undead horse according to the specs pizza gave us.
 - Added Blue Whitewash Stone Slab with CTM (159:9) and without (159:10) onto the coloured clay.
 - Added Red Lanterns on 89:2 =>/ctm/lantern_red
-- Added Vertical CTM for Reeds/Cattails and Random CTM for the single reed-block. 
+- Added Vertical CTM for Reeds/Cattails and Random CTM for the single reed-block.
 - Added ìDO NOT USEî Texture for Monster Eggs ( Silverfish Spawn Blocks= 97)
 - Fixed the bottom of the crate blocks
 - Renamed all the Whitewash/plaster folders in /ctm to Plaster
@@ -849,8 +891,8 @@ than “sticks”
 - Added Rivercobble ond 159
 - Changed Oxidized Bronze Texture
 
+# 15 April 2013
 
-# 15 April 2013:
 - Added filled shelves to sponge block
 - Added rich shelves to sponge block
 - Added abandoned shelves to sponge block
@@ -889,7 +931,8 @@ than “sticks”
 - Changed tnt texture to read "Do not use!"
 - Removed emerald crystal texture
 
-# 11 April 2013:
+# 11 April 2013
+
 - Added rusted iron, wrought iron, rusted wrought iron, bronze, and oxidized bronze blocks to blockIron metadata
 - Added gold brick block to blockGold metadata
 - Added pink, light brown, and dark brown wool to plank metadata
@@ -927,11 +970,12 @@ than “sticks”
 - Fixed nails on planks, fence, bookshelf, and sponge tops to be darker and less yellow
 - Fixed ctm on all wood plank tops
 
-# 29 March 2013:
+# 29 March 2013
+
 - Changed color of rain splashes to light blue
 - Changed color of lava drip to blood
 - Removed lily pad color in color.properties
-- Changed color of cats and 
+- Changed color of cats and
 - Changed char.png to metal helmet
 - Changed creeper.png to lighter cabbage head
 - Added better skies
@@ -994,8 +1038,8 @@ than “sticks”
 - Added black, grey, white, and yellow planks
 - Added ctm to wool with borders on corners
 
+# 5 January 2013
 
-# 5 January 2013:
 - Changed potatoes to turnips
 - Changed nether wart to pease
 - Changed sugar cane to cattails
@@ -1010,13 +1054,16 @@ than “sticks”
 - Changed inventory slots for potatoes (turnips) and nether wart (pea pods)
 - Changed inventory slots for music discs to house sigils for item frame use
 
-# 21 August 2012:
+# 21 August 2012
+
 - Updated Texturepack to 1.4 with Textures from Dokucraft
 
-# 21 August 2012:
+# 21 August 2012
+
 - Changed the Jungle wood Texture to a Dark Grey Log.
 
-# 18 August 2012:
+# 18 August 2012
+
 - Improved the resolution of the Red Comet. (Better Skies)
 - Changed the Star Skybox to one that matches our texture resolution better. (Better Skies)
 - Reduced the size of the Sun.
@@ -1024,29 +1071,35 @@ than “sticks”
 - Updated the Cocoa bean texture to those of the Dokucraft TP. (Cocoa Plant By Verruckt)
 - Updated the Tripwire texture to those of the Dokucraft TP. (Tripwire By Noodaa)
 
-# 17 August 2012:
+# 17 August 2012
+
 - Incorporated Better Skies to allow for a stationary red comet. (Using some of Misa's Realistic Texturepack assets temporarily)
 - Reduced the drip rate of the redstone torch (candles).
 
-# 16 August 2012:
+# 16 August 2012
+
 - Changed the TNT block to a Sealed Barrel.
 - Fixed the CTM so it matches our sandstone hue.
 
-# 8 August 2012:
+# 8 August 2012
+
 - Darkened the lighter bricks in the brick texture.
 - Fixed some textures that did not carry over in the 1.3.1 TP update.
 
-# 7 August 2012:
+# 7 August 2012
+
 - Updated Pack for 1.3.1 Compatabilty
 - Retextured Wood Doors to appear more rustic
 - Retextured Nether Warts to look like Carrots (Marken)
 - Retextured Emerald Blocks into a rainbow texture to make your eyes bleed; so don't use it. (Marken)
 
-# 4 August 2012:
+# 4 August 2012
+
 - Retextured Minecart Rails (Corners) to be rope. (Marken)
 - Retextured Endstone into a Reinforced Daub and Waddle. (Marken)
 
-# 26 July 2012:
+# 26 July 2012
+
 - Logs now have darker wood grain. (Marken)
 - Retextured Steel doors as wood to provide more uses. (Marken)
 - Retextured Iron Bars to remove their horizontal bars. (Marken)
@@ -1054,21 +1107,25 @@ than “sticks”
 - Retextured Endstone into a rainbow texture to make your eyes bleed; so don't use it. (Marken)
 - Retextured Wool to a desaturated color scheme. (Marken)
 
-# 21 July 2012:
+# 21 July 2012
+
 - Removed Red Stone Bricks(Endstone).
 
-# 18 July 2012:
+# 18 July 2012
+
 - New and Improved WesterosCraft Logo for main menu.(Hevnlyst)
 - New Game of Blocks Logo replaces Mojang Splash. (Hevnlyst)
 - Retextured Pink wool to act as green planks. (Marken)
 - New Gravel Texture for less eye bleeding. (Marken)
 
-# 2 July 2012:
+# 2 July 2012
+
 - Changed the Red Mushroom back, will be adding the woven looking block when custom blocks happen.
 - Changed Bed item to a slightly darker brown to match the bed blocks(Arezeus)
 - Fixed White Wool not being seamless (Seamless By DeathStar1710)
 
-# 28 June 2012:
+# 28 June 2012
+
 - Changed Wool to a Seamless variant (Seamless By DeathStar1710)
 - Change Endstone to a nice red brick (SMP)
 - Changed Piston Foot to have a wooden to look for better tables (Arezeus)
@@ -1079,11 +1136,14 @@ than “sticks”
 - Added black outline on Main Menu logo text (Arezeus)
 - Removed crosses on the sides of menu buttons (Arezeus)
 
-# 20 June 2012:
+# 20 June 2012
+
 - Added New Artwork by Mgleim
 
-# 19 June 2012:
+# 19 June 2012
+
 Intergrated changes made by Mgleim, SMP, and Teqna
+
 - New title and high-res font provided by Teqna
 - New Glowstone, to look better as a standalone Lantern block
 - Changed Redstone Lamp Texture, removed the vertical bars from the block
@@ -1097,7 +1157,8 @@ Intergrated changes made by Mgleim, SMP, and Teqna
 - Smoke Particles have been changed so they no longer look cartoony
 - Very minor tone changes in certain blocks (SMP - cobble and stone bricks, Mgliem - pistons, furnaces, clay, and bedrock)
 
-# 16 June 2012:
+# 16 June 2012
+
 - Changed Trapdoor to be Windowless, for greater flexibility in detailing
 - Changed Bedrock to look like dark cobblestone
 - Changed Ice blocks to a more white color
@@ -1107,24 +1168,29 @@ Intergrated changes made by Mgleim, SMP, and Teqna
 - Changed Powered-Rail(on) to a Blue Carpet
 - Changed the Grass and vegetation textures so they no longer appear purple in swamps.
 
-# 12 June 2012:
+# 12 June 2012
+
 - Re-Textured the Jungle Log to look like a bleeding werewood face (werewood face by Dutchguard)
 - Re-Textured the diamond axe to look like an Arakh (Dothraki Arakh by Nanocon1)
 - Re-Textured the gold axe to look like an Arakh (Dothraki Arakh by Nanocon1)
 - Re-Textured the gold sword to look like a Dagger (Dagger by Nanocon1)
 - Removed the Grass and vegetation texture changes because of unintended color shifts.
 
-# 11 June 2012:
+# 11 June 2012
+
 - Re-Textured the wood sword to look like an Arakh (Dothraki Arakh by Nanocon1)
 - Changed the Grass and vegetation textures so they no longer appear purple in swamps.
 
-# 03 June 2012:
+# 03 June 2012
+
 - Changed Yellow wool from its Lannister gold variant to a more universally useful one.
 
-# 01 June 2012:
+# 01 June 2012
+
 - Changed "Use the Patcher Noob" to "Use MCPatcher to Fix, Google It."
 
-# 24 May 2012:
+# 24 May 2012
+
 - Created a WesterosCraft to replace the Minecraft Logo.
 - Created a Texture Pack Icon (Game of Blocks)
 - Created a byline for the Texture Pack
