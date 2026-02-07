@@ -1,0 +1,16 @@
+[
+  {
+    "blockName": "red_bunting",
+    "blockType": "bunting",
+    "hardness": 2,
+    "resistance": 2,
+    "soundGroup": "wool",
+    "creativeTab": "westeros_cloth_fibers_tab",
+    "label": "Red Bunting",
+    "renderLayer": "cutout",
+    "textures": ["bunting/red_bunting"],
+    "options": {
+      "allowUnsupported": true
+    }
+  }
+]

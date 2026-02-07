@@ -1,0 +1,21 @@
+{
+  "format_version": "1.9.0",
+  "credit": "Made with Blockbench",
+  "parent": "bunting",
+  "texture_size": [32, 32],
+  "textures": {
+    "0": "Aseprite:bunting",
+    "particle": "Aseprite:bunting"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 8],
+      "to": [16, 16, 8],
+      "rotation": { "angle": 0, "axis": "y", "origin": [8, 8, 8] },
+      "faces": {
+        "north": { "uv": [0, 0, 16, 16], "texture": "#0" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#0" }
+      }
+    }
+  ]
+}

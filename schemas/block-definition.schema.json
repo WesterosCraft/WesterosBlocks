@@ -65,7 +65,8 @@
             "mounted",
             "bench",
             "trapdoor",
-            "bigdoor"
+            "bigdoor",
+            "bunting"
           ]
         },
         "label": {
@@ -458,84 +459,324 @@
       },
       "allOf": [
         {
-          "if": { "properties": { "blockType": { "const": "pane" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/PaneOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "pane" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/PaneOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "wall" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/WallOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "wall" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/WallOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "stair" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/StairOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "stair" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/StairOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "fence" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FenceOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "fence" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/FenceOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "fencegate" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FencegateOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "fencegate" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/FencegateOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "door" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/DoorOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "door" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/DoorOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "halfdoor" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/DoorOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "halfdoor" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/DoorOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "leaves" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/LeavesOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "leaves" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/LeavesOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "torch" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/TorchOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "torch" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/TorchOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "ladder" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/LadderOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "ladder" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/LadderOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "furnace" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FurnaceOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "furnace" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/FurnaceOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "flowerpot" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/FlowerpotOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "flowerpot" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/FlowerpotOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "web" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/WebOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "web" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/WebOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "vines" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/VinesOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "vines" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/VinesOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "bed" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/BedOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "bed" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/BedOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "solid" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/SolidOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "solid" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/SolidOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "cuboid-nsew-stack" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/CuboidNSEWStackOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "cuboid-nsew-stack" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/CuboidNSEWStackOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "slab" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/SlabOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "slab" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/SlabOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "plant" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/PlantOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "plant" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/PlantOptionsProperties" }
+                ]
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "blockType": { "const": "trapdoor" } }, "required": ["blockType"] },
-          "then": { "properties": { "options": { "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/TrapdoorOptionsProperties" }] } } }
+          "if": {
+            "properties": { "blockType": { "const": "trapdoor" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/TrapdoorOptionsProperties" }
+                ]
+              }
+            }
+          }
         }
       ]
     },

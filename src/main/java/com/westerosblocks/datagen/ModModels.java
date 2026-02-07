@@ -80,6 +80,10 @@ public class ModModels {
     public static final Model FLOWERBED_3 = vanillaBlock("flowerbed_3", TextureKey.FLOWERBED, TextureKey.STEM);
     public static final Model FLOWERBED_4 = vanillaBlock("flowerbed_4", TextureKey.FLOWERBED, TextureKey.STEM);
 
+    // Bunting models
+    public static final Model BUNTING_WALL = block("buntings/bunting_wall", ModTextureKey.ZERO, TextureKey.PARTICLE);
+    public static final Model BUNTING_CEILING = block("buntings/bunting_ceiling", ModTextureKey.ZERO, TextureKey.PARTICLE);
+
     // Particle emitter models
     public static final Model PARTICLE_EMITTER_OFF = block("custom/particle_emitter/particle_emitter_off", TextureKey.TEXTURE, TextureKey.PARTICLE);
     public static final Model PARTICLE_EMITTER_ON = block("custom/particle_emitter/particle_emitter_on", TextureKey.TEXTURE, TextureKey.PARTICLE);

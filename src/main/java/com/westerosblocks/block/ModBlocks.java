@@ -128,6 +128,7 @@ public class ModBlocks {
             case "mounted" -> new WCMountedBlock.Factory();
             case "awning" -> new WCAwningBlock.Factory();
             case "bigdoor" -> new WCBigDoorBlock.Factory();
+            case "bunting" -> new WCBuntingBlock.Factory();
             default -> null;
         };
     }
