@@ -54,8 +54,16 @@ public class BuntingBlockExporter extends BaseBlockExporter {
             return;
         }
 
-        // Upload ceiling model
-        Identifier ceilingModelId = uploadModel(ModModels.BUNTING_CEILING, block, "ceiling_v1", textureMap, generator.modelCollector);
+        // Upload ceiling model — use second texture if available
+        String ceilingTexturePath = definition.getTextures().size() > 1
+                ? definition.getTextures().get(1)
+                : definition.getTextures().get(0);
+        Identifier ceilingTextureId = createBlockIdentifier(ceilingTexturePath);
+        TextureMap ceilingTextureMap = new TextureMap()
+                .put(ModTextureKey.ZERO, ceilingTextureId)
+                .put(TextureKey.PARTICLE, ceilingTextureId);
+
+        Identifier ceilingModelId = uploadModel(ModModels.BUNTING_CEILING, block, "ceiling_v1", ceilingTextureMap, generator.modelCollector);
 
         BlockStateVariantMap ceilingVariants = BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
                 .register(Direction.NORTH, createVariant(ceilingModelId))

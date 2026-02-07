@@ -8,7 +8,7 @@
     "creativeTab": "westeros_cloth_fibers_tab",
     "label": "Red Bunting",
     "renderLayer": "cutout",
-    "textures": ["bunting/red_bunting"],
+    "textures": ["bunting/red_bunting", "bunting/red_bunting_ceiling"],
     "options": {
       "allowUnsupported": true
     }
