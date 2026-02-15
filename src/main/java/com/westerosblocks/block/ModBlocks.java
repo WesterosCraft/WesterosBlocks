@@ -122,7 +122,6 @@ public class ModBlocks {
             case "table2" -> new WCTableBlock.Factory();
             case "chair" -> new WCChairBlock.Factory();
             case "bench" -> new WCBenchBlock.Factory();
-            case "branch" -> new WCBranchBlock.Factory();
             case "arrow-slit" -> new WCArrowSlitBlock.Factory();
             case "flowerbed" -> new WCFlowerbedBlock.Factory();
             case "mounted" -> new WCMountedBlock.Factory();

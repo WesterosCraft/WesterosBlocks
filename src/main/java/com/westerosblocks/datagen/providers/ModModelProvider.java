@@ -185,10 +185,6 @@ public class ModModelProvider extends FabricModelProvider {
                     ParticleEmitterExporter.registerCustomParticleEmitterBlock(bsmg, block, definition);
                     break;
 
-                case "branch":
-                    BranchBlockExporter.registerCustomBranchBlock(bsmg, block, definition);
-                    break;
-
                 case "chair":
                     ChairBlockExporter.registerChairBlock(bsmg, block, definition);
                     break;
