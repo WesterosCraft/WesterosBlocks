@@ -36,6 +36,16 @@ public class CrossBlockExporter extends BaseBlockExporter {
             Identifier textureId = createBlockIdentifier(firstTexture);
             TextureMap itemTextures = new TextureMap().put(TextureKey.LAYER0, textureId);
             Models.GENERATED.upload(ModelIds.getItemModelId(block.asItem()), itemTextures, generator.modelCollector);
+        } else {
+            // All states are custom models - use first custom model as item parent
+            for (BlockDefinition.StateVariant state : states) {
+                if (state.isCustomModel()) {
+                    String stateID = state.getStateID() != null ? state.getStateID() : "base";
+                    Identifier customModelId = createCustomModelId(block, getModelName(stateID, 0));
+                    registerParentedItemModel(generator, block, customModelId);
+                    break;
+                }
+            }
         }
     }
 
@@ -62,12 +72,18 @@ public class CrossBlockExporter extends BaseBlockExporter {
                 String stateID = (state.getStateID() == null) ? "base" : state.getStateID();
                 List<BlockStateVariant> variants = new ArrayList<>();
 
-                for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
-                    BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
-                    if (set == null) continue;
+                int textureSetCount = state.getRandomTextureSetCount();
+                if (textureSetCount == 0) {
+                    if (state.isCustomModel()) textureSetCount = 1;
+                    else continue;
+                }
 
-                    int weight = set.getWeight();
-                    Identifier modelId = createNestedModelId(block, getModelName(stateID, setIdx));
+                for (int setIdx = 0; setIdx < textureSetCount; setIdx++) {
+                    BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                    int weight = (set != null) ? set.getWeight() : 1;
+                    Identifier modelId = state.isCustomModel()
+                        ? createCustomModelId(block, getModelName(stateID, setIdx))
+                        : createNestedModelId(block, getModelName(stateID, setIdx));
 
                     for (int rot = 0; rot < rotationCount; rot++) {
                         BlockStateVariant variant = createWeightedVariant(modelId, rot * 90, weight);
@@ -97,12 +113,18 @@ public class CrossBlockExporter extends BaseBlockExporter {
                         id = id + "_layer" + layerIdx;
                     }
 
-                    for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
-                        BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
-                        if (set == null) continue;
+                    int textureSetCount = state.getRandomTextureSetCount();
+                    if (textureSetCount == 0) {
+                        if (state.isCustomModel()) textureSetCount = 1;
+                        else continue;
+                    }
 
-                        int weight = set.getWeight();
-                        Identifier modelId = createNestedModelId(block, getModelName(id, setIdx));
+                    for (int setIdx = 0; setIdx < textureSetCount; setIdx++) {
+                        BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                        int weight = (set != null) ? set.getWeight() : 1;
+                        Identifier modelId = state.isCustomModel()
+                            ? createCustomModelId(block, getModelName(id, setIdx))
+                            : createNestedModelId(block, getModelName(id, setIdx));
 
                         for (int rot = 0; rot < rotationCount; rot++) {
                             BlockStateVariant variant = createWeightedVariant(modelId, rot * 90, weight);
@@ -126,12 +148,18 @@ public class CrossBlockExporter extends BaseBlockExporter {
                 String stateID = state.getStateID();
                 String id = (stateID == null) ? "base" : stateID;
 
-                for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
-                    BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
-                    if (set == null) continue;
+                int textureSetCount = state.getRandomTextureSetCount();
+                if (textureSetCount == 0) {
+                    if (state.isCustomModel()) textureSetCount = 1;
+                    else continue;
+                }
 
-                    int weight = set.getWeight();
-                    Identifier modelId = createNestedModelId(block, getModelName(id, setIdx));
+                for (int setIdx = 0; setIdx < textureSetCount; setIdx++) {
+                    BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                    int weight = (set != null) ? set.getWeight() : 1;
+                    Identifier modelId = state.isCustomModel()
+                        ? createCustomModelId(block, getModelName(id, setIdx))
+                        : createNestedModelId(block, getModelName(id, setIdx));
 
                     for (int rot = 0; rot < rotationCount; rot++) {
                         BlockStateVariant variant = createWeightedVariant(modelId, rot * 90, weight);
@@ -153,7 +181,6 @@ public class CrossBlockExporter extends BaseBlockExporter {
     private static String generateModels(BlockStateModelGenerator generator, Block block,
                                         List<BlockDefinition.StateVariant> states,
                                         boolean isLayerSensitive, boolean isTinted) {
-        String blockName = getBlockName(block);
         int[] layerConds = isLayerSensitive ? new int[] {8, 1, 2, 3, 4, 5, 6, 7} : new int[] {0};
         String firstTexture = null;
 
@@ -197,6 +224,11 @@ public class CrossBlockExporter extends BaseBlockExporter {
         }
 
         return firstTexture;
+    }
+
+    private static Identifier createCustomModelId(Block block, String variant) {
+        String blockName = getBlockName(block);
+        return WesterosBlocks.id("block/custom/" + blockName + "/" + variant);
     }
 
     private static String getModelName(String id, int setIdx) {
