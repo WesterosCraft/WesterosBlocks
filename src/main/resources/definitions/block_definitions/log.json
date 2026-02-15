@@ -534,5 +534,19 @@
       "bark/weirwood/scars",
       "bark/weirwood/side"
     ]
+  },
+  {
+    "blockName": "redwood_log",
+    "blockType": "log",
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_logs_tab",
+    "label": "Redwood Log",
+    "textures": ["bark/redwood/top", "bark/redwood/top", "bark/redwood/side"]
   }
 ]

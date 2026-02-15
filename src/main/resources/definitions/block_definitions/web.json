@@ -612,7 +612,7 @@
     "soundGroup": "cloth",
     "creativeTab": "westeros_water_air_tab",
     "label": "Smoke",
-    "options": {"toggleOnUse": true, "noInWeb": true},
+    "options": { "toggleOnUse": true, "noInWeb": true },
     "states": [
       {
         "stateID": "random",
@@ -711,6 +711,18 @@
         "textures": ["corn/side1"]
       }
     ],
+    "renderLayer": "cutout"
+  },
+  {
+    "blockName": "redwood_leaf_tip",
+    "blockType": "web",
+    "soundGroup": "cloth",
+    "creativeTab": "westeros_logs_tab",
+    "label": "Redwood Leaf Tip",
+    "isCustomModel": true,
+    "options": {
+      "noInWeb": true
+    },
     "renderLayer": "cutout"
   }
 ]

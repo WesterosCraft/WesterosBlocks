@@ -1,7 +1,10 @@
-- adds Awning blocks
-- adds red_bunting block
+# Changelog
 
-# 1.21.1 Port October 2025
+## Febuarary 2026
+
+- Adds bunting blocks for each color
+
+## 1.21.1 Port October 2025
 
 - Changed "stepSound" to "soundGroup" in block definitions
 - removes SoundBlocks and the block type
