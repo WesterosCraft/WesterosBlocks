@@ -76,9 +76,9 @@ public class WCWallBlock extends WallBlock {
         }
     }
 
-    private static VoxelShape[] normalShapes = null;
-    private static VoxelShape[] shortShapes = null;
-    private static VoxelShape[] collisionShapes = null;
+    private static final VoxelShape[] normalShapes = makeShapes(4.0f, 3.0f, 16.0f, 0.0f, 16.0f, 16.0f);
+    private static final VoxelShape[] shortShapes = makeShapes(4.0f, 3.0f, 16.0f, 0.0f, 13.0f, 16.0f);
+    private static final VoxelShape[] collisionShapes = makeShapes(4.0f, 3.0f, 24.0f, 0.0f, 24.0f, 24.0f);
 
     protected WCWallBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean unconnect, boolean connectState, String size, boolean toggleOnUse) {
         super(settings);
@@ -104,17 +104,6 @@ public class WCWallBlock extends WallBlock {
         }
 
         this.setDefaultState(defaultState);
-
-        // Initialize shapes if not already done
-        if (normalShapes == null) {
-            normalShapes = makeShapes(4.0f, 3.0f, 16.0f, 0.0f, 16.0f, 16.0f);
-        }
-        if (shortShapes == null) {
-            shortShapes = makeShapes(4.0f, 3.0f, 16.0f, 0.0f, 13.0f, 16.0f);
-        }
-        if (collisionShapes == null) {
-            collisionShapes = makeShapes(4.0f, 3.0f, 24.0f, 0.0f, 24.0f, 24.0f);
-        }
     }
 
     @Override

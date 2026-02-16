@@ -207,22 +207,24 @@ public class WCArrowSlitBlock extends Block {
         builder.add(TYPE, FACING);
     }
 
+    private static final int MAX_SCAN_DISTANCE = 8;
+
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
                                                 WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (direction == Direction.UP || direction == Direction.DOWN) {
-            // Count blocks upward
+            // Count blocks upward (capped to avoid O(n²) in tall stacks)
             int blocksAbove = 0;
             BlockPos currentPos = pos.up();
-            while (world.getBlockState(currentPos).isOf(this)) {
+            while (blocksAbove < MAX_SCAN_DISTANCE && world.getBlockState(currentPos).isOf(this)) {
                 blocksAbove++;
                 currentPos = currentPos.up();
             }
 
-            // Count blocks downward
+            // Count blocks downward (capped to avoid O(n²) in tall stacks)
             int blocksBelow = 0;
             currentPos = pos.down();
-            while (world.getBlockState(currentPos).isOf(this)) {
+            while (blocksBelow < MAX_SCAN_DISTANCE && world.getBlockState(currentPos).isOf(this)) {
                 blocksBelow++;
                 currentPos = currentPos.down();
             }
