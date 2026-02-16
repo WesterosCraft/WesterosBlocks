@@ -7,6 +7,7 @@ import net.minecraft.util.math.Direction;
 
 import net.minecraft.data.client.VariantSettings.Rotation;
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.utils.ModProperties;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -127,18 +128,19 @@ public abstract class BaseBlockExporter {
     }
 
     /**
-     * Fills texture array to ensure exactly 6 textures for cube models.
-     * Missing slots are filled with the last provided texture (smart fill algorithm).
+     * Fills texture array to the specified target size.
+     * Missing slots are filled with the last provided texture.
      *
-     * @param texturePaths The input texture paths (1-6 textures)
-     * @return Array of exactly 6 texture paths
+     * @param texturePaths The input texture paths
+     * @param targetSize The desired array size
+     * @return Array of exactly targetSize texture paths
      * @throws IllegalArgumentException if texturePaths is null or empty
      */
-    protected static String[] fillTextureArray(String[] texturePaths) {
+    protected static String[] fillTextureArray(String[] texturePaths, int targetSize) {
         validateTexturePaths(texturePaths, 1);
-        
-        String[] filledTextures = new String[6];
-        for (int i = 0; i < 6; i++) {
+
+        String[] filledTextures = new String[targetSize];
+        for (int i = 0; i < targetSize; i++) {
             if (i < texturePaths.length) {
                 filledTextures[i] = texturePaths[i];
             } else {
@@ -146,6 +148,18 @@ public abstract class BaseBlockExporter {
             }
         }
         return filledTextures;
+    }
+
+    /**
+     * Fills texture array to ensure exactly 6 textures for cube models.
+     * Shorthand for {@code fillTextureArray(texturePaths, 6)}.
+     *
+     * @param texturePaths The input texture paths (1-6 textures)
+     * @return Array of exactly 6 texture paths
+     * @throws IllegalArgumentException if texturePaths is null or empty
+     */
+    protected static String[] fillTextureArray(String[] texturePaths) {
+        return fillTextureArray(texturePaths, 6);
     }
 
     /**
@@ -274,6 +288,95 @@ public abstract class BaseBlockExporter {
             case WEST -> 270;
             default -> throw new IllegalArgumentException("Direction must be horizontal: " + direction);
         };
+    }
+
+    /**
+     * Gets the StateProperty from a block's state manager.
+     *
+     * @param block The block to inspect
+     * @return The StateProperty, or null if not found
+     */
+    protected static ModProperties.StateProperty getStateProperty(Block block) {
+        for (var property : block.getStateManager().getProperties()) {
+            if (property instanceof ModProperties.StateProperty sp && "state".equals(property.getName()))
+                return sp;
+        }
+        return null;
+    }
+
+    /**
+     * Checks if a block has a "state" property.
+     *
+     * @param block The block to check
+     * @return true if the block has a state property
+     */
+    protected static boolean hasStateProperty(Block block) {
+        for (var property : block.getStateManager().getProperties()) {
+            if (property.getName().equals("state"))
+                return true;
+        }
+        return false;
+    }
+
+    /**
+     * Creates a model identifier for custom (hand-authored) models.
+     * Path format: {@code block/custom/blockName/variant}
+     *
+     * @param block The block
+     * @param variant The model variant
+     * @return The custom model identifier
+     */
+    protected static Identifier createCustomModelId(Block block, String variant) {
+        String blockName = getBlockName(block);
+        return WesterosBlocks.id("block/custom/" + blockName + "/" + variant);
+    }
+
+    /**
+     * Creates a model identifier for generated models.
+     * Path format: {@code block/blockName/variant}
+     * Equivalent to {@link #createNestedModelId(Block, String)}.
+     *
+     * @param block The block
+     * @param variant The model variant
+     * @return The generated model identifier
+     */
+    protected static Identifier createGeneratedModelId(Block block, String variant) {
+        return createNestedModelId(block, variant);
+    }
+
+    /**
+     * Returns a model name with variant index suffix.
+     * Example: {@code getModelName("base", 0)} returns {@code "base_v1"}.
+     *
+     * @param baseName The base name (e.g., state ID or "base")
+     * @param variantIndex The 0-based variant index
+     * @return The model name with suffix
+     */
+    protected static String getModelName(String baseName, int variantIndex) {
+        return baseName + "_v" + (variantIndex + 1);
+    }
+
+    /**
+     * Returns a model name with variant index and type suffix.
+     * Example: {@code getModelName("base", 0, "bottom")} returns {@code "base_v1_bottom"}.
+     *
+     * @param baseName The base name
+     * @param variantIndex The 0-based variant index
+     * @param suffix The type suffix (e.g., "bottom", "top", "inner")
+     * @return The model name with suffixes
+     */
+    protected static String getModelName(String baseName, int variantIndex, String suffix) {
+        return baseName + "_v" + (variantIndex + 1) + "_" + suffix;
+    }
+
+    /**
+     * Returns the stateID or "base" if null.
+     *
+     * @param stateID The state ID, possibly null
+     * @return The state ID or "base"
+     */
+    protected static String getStateIdOrBase(String stateID) {
+        return stateID == null ? "base" : stateID;
     }
 
     protected static class ModelRegistry {

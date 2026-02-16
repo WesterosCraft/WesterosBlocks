@@ -5,7 +5,6 @@ import com.google.gson.JsonObject;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModTextureKey;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
@@ -48,7 +47,7 @@ public class CuboidBlockExporter extends BaseBlockExporter {
 
         for (BlockDefinition.StateVariant state : states) {
             String stateId = state.getStateID();
-            if (stateId == null) stateId = "base";
+            stateId = getStateIdOrBase(stateId);
 
             List<Identifier> modelIds = new ArrayList<>();
 
@@ -181,7 +180,7 @@ public class CuboidBlockExporter extends BaseBlockExporter {
             }
 
             String stateId = state.getStateID();
-            if (stateId == null) stateId = "base";
+            stateId = getStateIdOrBase(stateId);
             String statePrefix = hasMultipleStates ? stateId : "base";
 
             for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
@@ -246,7 +245,7 @@ public class CuboidBlockExporter extends BaseBlockExporter {
 
         for (BlockDefinition.StateVariant state : states) {
             String stateId = state.getStateID();
-            if (stateId == null) stateId = "base";
+            stateId = getStateIdOrBase(stateId);
             String statePrefix = hasMultipleStates ? stateId : "base";
 
             List<Identifier> modelIds = new ArrayList<>();
@@ -320,13 +319,6 @@ public class CuboidBlockExporter extends BaseBlockExporter {
     }
 
     /**
-     * Helper method to get model name from state ID and set index.
-     */
-    private static String getModelName(String stateId, int setIdx) {
-        return stateId + "_v" + (setIdx + 1);
-    }
-
-    /**
      * Helper method to find state by ID.
      */
     private static BlockDefinition.StateVariant findStateById(List<BlockDefinition.StateVariant> states, String stateId) {
@@ -337,31 +329,6 @@ public class CuboidBlockExporter extends BaseBlockExporter {
         }
         return null;
     }
-
-    /**
-     * Checks if block has STATE property.
-     */
-    private static boolean hasStateProperty(Block block) {
-        for (var property : block.getStateManager().getProperties()) {
-            if (property.getName().equals("state")) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /**
-     * Gets the STATE property from block.
-     */
-    private static ModProperties.StateProperty getStateProperty(Block block) {
-        for (var property : block.getStateManager().getProperties()) {
-            if (property instanceof ModProperties.StateProperty stateProperty) {
-                return stateProperty;
-            }
-        }
-        return null;
-    }
-
 
     /**
      * Creates a custom cuboid model from definition.
@@ -382,32 +349,6 @@ public class CuboidBlockExporter extends BaseBlockExporter {
         cuboidModel.upload(modelId, textureMap, generator.modelCollector);
 
         return modelId;
-    }
-
-    /**
-     * Creates a model identifier for generated cuboid models with the correct path prefix.
-     * Alias for createGeneratedModelId for compatibility with CrossBlockExporter pattern.
-     */
-    public static Identifier createNestedModelId(Block block, String variant) {
-        return createGeneratedModelId(block, variant);
-    }
-
-    /**
-     * Creates a model identifier for generated cuboid models with the correct path prefix.
-     */
-    public static Identifier createGeneratedModelId(Block block, String variant) {
-        String blockName = getBlockName(block);
-        String modelPath = "block/" + blockName + "/" + variant;
-        return WesterosBlocks.id(modelPath);
-    }
-
-    /**
-     * Creates a model identifier for custom cuboid models with the custom path prefix.
-     */
-    public static Identifier createCustomModelId(Block block, String variant) {
-        String blockName = getBlockName(block);
-        String modelPath = "block/custom/" + blockName + "/" + variant;
-        return WesterosBlocks.id(modelPath);
     }
 
     /**

@@ -40,7 +40,7 @@ public class CrossBlockExporter extends BaseBlockExporter {
             // All states are custom models - use first custom model as item parent
             for (BlockDefinition.StateVariant state : states) {
                 if (state.isCustomModel()) {
-                    String stateID = state.getStateID() != null ? state.getStateID() : "base";
+                    String stateID = getStateIdOrBase(state.getStateID());
                     Identifier customModelId = createCustomModelId(block, getModelName(stateID, 0));
                     registerParentedItemModel(generator, block, customModelId);
                     break;
@@ -69,7 +69,7 @@ public class CrossBlockExporter extends BaseBlockExporter {
                 BlockStateVariantMap.create(stateProperty);
 
             for (BlockDefinition.StateVariant state : states) {
-                String stateID = (state.getStateID() == null) ? "base" : state.getStateID();
+                String stateID = getStateIdOrBase(state.getStateID());
                 List<BlockStateVariant> variants = new ArrayList<>();
 
                 int textureSetCount = state.getRandomTextureSetCount();
@@ -108,7 +108,7 @@ public class CrossBlockExporter extends BaseBlockExporter {
 
                 for (BlockDefinition.StateVariant state : states) {
                     String stateID = state.getStateID();
-                    String id = (stateID == null) ? "base" : stateID;
+                    String id = getStateIdOrBase(stateID);
                     if (layerIdx > 0) {
                         id = id + "_layer" + layerIdx;
                     }
@@ -146,7 +146,7 @@ public class CrossBlockExporter extends BaseBlockExporter {
 
             for (BlockDefinition.StateVariant state : states) {
                 String stateID = state.getStateID();
-                String id = (stateID == null) ? "base" : stateID;
+                String id = getStateIdOrBase(stateID);
 
                 int textureSetCount = state.getRandomTextureSetCount();
                 if (textureSetCount == 0) {
@@ -189,7 +189,7 @@ public class CrossBlockExporter extends BaseBlockExporter {
                 if (state.isCustomModel()) continue;
 
                 String stateID = state.getStateID();
-                String id = (stateID == null) ? "base" : stateID;
+                String id = getStateIdOrBase(stateID);
                 if (layerIdx > 0) {
                     id = id + "_layer" + layerIdx;
                 }
@@ -226,30 +226,4 @@ public class CrossBlockExporter extends BaseBlockExporter {
         return firstTexture;
     }
 
-    private static Identifier createCustomModelId(Block block, String variant) {
-        String blockName = getBlockName(block);
-        return WesterosBlocks.id("block/custom/" + blockName + "/" + variant);
-    }
-
-    private static String getModelName(String id, int setIdx) {
-        return id + "_v" + (setIdx + 1);
-    }
-
-    private static boolean hasStateProperty(Block block) {
-        for (var property : block.getStateManager().getProperties()) {
-            if (property.getName().equals("state")) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private static ModProperties.StateProperty getStateProperty(Block block) {
-        for (var property : block.getStateManager().getProperties()) {
-            if (property instanceof ModProperties.StateProperty stateProperty) {
-                return stateProperty;
-            }
-        }
-        return null;
-    }
 }

@@ -3,7 +3,6 @@ package com.westerosblocks.datagen.custom;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -158,12 +157,4 @@ public class LogBlockExporter extends BaseBlockExporter {
         }
     }
 
-    private static Identifier createGeneratedModelId(Block block, String variant) {
-        String blockName = getBlockName(block);
-        return WesterosBlocks.id("block/" + blockName + "/" + variant);
-    }
-
-    private static String getModelName(String axis, int setIdx) {
-        return axis + "_v" + (setIdx + 1);
-    }
 }

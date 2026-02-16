@@ -12,7 +12,59 @@ import net.minecraft.block.Block;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 
+import java.util.Map;
+
 public class ModModelProvider extends FabricModelProvider {
+
+    @FunctionalInterface
+    private interface BlockExporter {
+        void export(BlockStateModelGenerator generator, Block block, BlockDefinition definition);
+    }
+
+    private static final Map<String, BlockExporter> EXPORTERS = Map.ofEntries(
+        Map.entry("solid", SolidBlockExporter::registerCustomSolidBlock),
+        Map.entry("sand", SolidBlockExporter::registerCustomSolidBlock),
+        Map.entry("door", DoorBlockExporter::registerCustomDoorBlock),
+        Map.entry("trapdoor", TrapDoorBlockExporter::registerCustomTrapDoorBlock),
+        Map.entry("log", LogBlockExporter::registerCustomLogBlock),
+        Map.entry("flowerpot", FlowerPotBlockExporter::registerCustomFlowerPotBlock),
+        Map.entry("web", CrossBlockExporter::registerCustomCrossBlock),
+        Map.entry("plant", CrossBlockExporter::registerCustomCrossBlock),
+        Map.entry("slab", SlabBlockExporter::registerCustomSlabBlock),
+        Map.entry("halfdoor", HalfDoorBlockExporter::registerCustomHalfDoorBlock),
+        Map.entry("fire", FireBlockExporter::registerCustomFireBlock),
+        Map.entry("ladder", LadderBlockExporter::registerCustomLadderBlock),
+        Map.entry("vines", VinesBlockExporter::registerCustomVinesBlock),
+        Map.entry("pane", PaneBlockExporter::registerCustomPaneBlock),
+        Map.entry("fence", FenceBlockExporter::registerCustomFenceBlock),
+        Map.entry("fencegate", FenceGateBlockExporter::registerCustomFenceGateBlock),
+        Map.entry("leaves", LeavesBlockExporter::registerCustomLeavesBlock),
+        Map.entry("bed", BedBlockExporter::registerCustomBedBlock),
+        Map.entry("table", TableBlockExporter::registerTableBlock2),
+        Map.entry("bench", BenchBlockExporter::registerCustomBenchBlock),
+        Map.entry("crop", CropBlockExporter::registerCustomCropBlock),
+        Map.entry("torch", TorchBlockExporter::registerTorchBlockFromDefinition),
+        Map.entry("fan", FanBlockExporter::registerFanBlockFromDefinition),
+        Map.entry("rail", RailBlockExporter::registerRailBlockFromDefinition),
+        Map.entry("furnace", FurnaceBlockExporter::registerCustomFurnaceBlock),
+        Map.entry("wall", WallBlockExporter::registerCustomWallBlock),
+        Map.entry("cuboid", CuboidBlockExporter::registerCustomCuboidBlock),
+        Map.entry("beacon", CuboidBlockExporter::registerCustomCuboidBlock),
+        Map.entry("cuboid-nsew", CuboidNSEWBlockExporter::registerCustomCuboidNSEWBlock),
+        Map.entry("cuboid-nsew-stack", CuboidNSEWStackBlockExporter::registerCustomCuboidNSEWStackBlock),
+        Map.entry("cuboid-ne", CuboidNEBlockExporter::registerCustomCuboidNEBlock),
+        Map.entry("cuboid-nsewud", CuboidNSEWUDBlockExporter::registerCustomCuboidNSEWUDBlock),
+        Map.entry("cuboid-16way", Cuboid16WayBlockExporter::registerCustomCuboid16WayBlock),
+        Map.entry("stair", StairBlockExporter::registerCustomStairBlock),
+        Map.entry("layer", LayerBlockExporter::registerCustomLayerBlock),
+        Map.entry("particle", ParticleEmitterExporter::registerCustomParticleEmitterBlock),
+        Map.entry("chair", ChairBlockExporter::registerChairBlock),
+        Map.entry("mounted", MountedBlockExporter::registerMountedBlock),
+        Map.entry("flowerbed", FlowerbedBlockExporter::registerCustomFlowerbedBlock),
+        Map.entry("awning", AwningBlockExporter::registerCustomAwningBlock),
+        Map.entry("bigdoor", BigDoorBlockExporter::registerCustomBigDoorBlock),
+        Map.entry("bunting", BuntingBlockExporter::registerBuntingBlock)
+    );
 
     private final FabricDataOutput output;
 
@@ -46,183 +98,17 @@ public class ModModelProvider extends FabricModelProvider {
      * Generates models for a block from its definition using the appropriate exporter
      */
     private void generateModelFromDefinition(BlockStateModelGenerator bsmg, Block block, BlockDefinition definition) {
-        String blockType = definition.getBlockType();
-
-        try {
-            switch (blockType.toLowerCase()) {
-                case "solid":
-                case "sand":
-                    SolidBlockExporter.registerCustomSolidBlock(bsmg, block, definition);
-                    break;
-
-                case "door":
-                    DoorBlockExporter.registerCustomDoorBlock(bsmg, block, definition);
-                    break;
-
-                case "trapdoor":
-                    TrapDoorBlockExporter.registerCustomTrapDoorBlock(bsmg, block, definition);
-                    break;
-
-                case "log":
-                    LogBlockExporter.registerCustomLogBlock(bsmg, block, definition);
-                    break;
-
-                case "flowerpot":
-                    FlowerPotBlockExporter.registerCustomFlowerPotBlock(bsmg, block, definition);
-                    break;
-
-                case "web":
-                case "plant":
-                    CrossBlockExporter.registerCustomCrossBlock(bsmg, block, definition);
-                    break;
-
-                case "slab":
-                    SlabBlockExporter.registerCustomSlabBlock(bsmg, block, definition);
-                    break;
-
-                case "halfdoor":
-                    HalfDoorBlockExporter.registerCustomHalfDoorBlock(bsmg, block, definition);
-                    break;
-
-                case "fire":
-                    FireBlockExporter.registerCustomFireBlock(bsmg, block, definition);
-                    break;
-
-                case "ladder":
-                    LadderBlockExporter.registerCustomLadderBlock(bsmg, block, definition);
-                    break;
-
-                case "vines":
-                    VinesBlockExporter.registerCustomVinesBlock(bsmg, block, definition);
-                    break;
-
-                case "pane":
-                    PaneBlockExporter.registerCustomPaneBlock(bsmg, block, definition);
-                    break;
-
-                case "fence":
-                    FenceBlockExporter.registerCustomFenceBlock(bsmg, block, definition);
-                    break;
-
-                case "fencegate":
-                    FenceGateBlockExporter.registerCustomFenceGateBlock(bsmg, block, definition);
-                    break;
-
-                case "leaves":
-                    LeavesBlockExporter.registerCustomLeavesBlock(bsmg, block, definition);
-                    break;
-
-                case "bed":
-                    BedBlockExporter.registerCustomBedBlock(bsmg, block, definition);
-                    break;
-
-                case "table":
-                    TableBlockExporter.registerTableBlock2(bsmg, block, definition);
-                    break;
-
-                case "bench":
-                    BenchBlockExporter.registerCustomBenchBlock(bsmg, block, definition);
-                    break;
-
-                case "crop":
-                    CropBlockExporter.registerCustomCropBlock(bsmg, block, definition);
-                    break;
-
-                case "torch":
-                    TorchBlockExporter.registerTorchBlockFromDefinition(bsmg, block, definition);
-                    break;
-
-                case "fan":
-                    FanBlockExporter.registerFanBlockFromDefinition(bsmg, block, definition);
-                    break;
-
-                case "rail":
-                    RailBlockExporter.registerRailBlockFromDefinition(bsmg, block, definition);
-                    break;
-
-                case "furnace":
-                    FurnaceBlockExporter.registerCustomFurnaceBlock(bsmg, block, definition);
-                    break;
-
-                case "wall":
-                    WallBlockExporter.registerCustomWallBlock(bsmg, block, definition);
-                    break;
-
-                case "cuboid",
-                     "beacon":
-                    CuboidBlockExporter.registerCustomCuboidBlock(bsmg, block, definition);
-                    break;
-
-                case "cuboid-nsew":
-                    CuboidNSEWBlockExporter.registerCustomCuboidNSEWBlock(bsmg, block, definition);
-                    break;
-
-                case "cuboid-nsew-stack":
-                    CuboidNSEWStackBlockExporter.registerCustomCuboidNSEWStackBlock(bsmg, block, definition);
-                    break;
-
-                case "cuboid-ne":
-                    CuboidNEBlockExporter.registerCustomCuboidNEBlock(bsmg, block, definition);
-                    break;
-
-                case "cuboid-nsewud":
-                    CuboidNSEWUDBlockExporter.registerCustomCuboidNSEWUDBlock(bsmg, block, definition);
-                    break;
-
-                case "cuboid-16way":
-                    Cuboid16WayBlockExporter.registerCustomCuboid16WayBlock(bsmg, block, definition);
-                    break;
-
-                case "stair":
-                    StairBlockExporter.registerCustomStairBlock(bsmg, block, definition);
-                    break;
-
-                case "layer":
-                    LayerBlockExporter.registerCustomLayerBlock(bsmg, block, definition);
-                    break;
-
-                case "particle":
-                    ParticleEmitterExporter.registerCustomParticleEmitterBlock(bsmg, block, definition);
-                    break;
-
-                case "chair":
-                    ChairBlockExporter.registerChairBlock(bsmg, block, definition);
-                    break;
-
-                case "mounted":
-                    MountedBlockExporter.registerMountedBlock(bsmg, block, definition);
-                    break;
-
-                case "flowerbed":
-                    String[] flowerTextures = definition.getTexturesAsArray();
-                    String stemTex = flowerTextures.length > 0 ? flowerTextures[0] : "";
-                    String flowerTex = flowerTextures.length > 1 ? flowerTextures[1] : "";
-                    FlowerbedBlockExporter.registerCustomFlowerbedBlock(bsmg, block)
-                        .stemTexture(stemTex)
-                        .flowerTexture(flowerTex)
-                        .build();
-                    break;
-
-                case "awning":
-                    AwningBlockExporter.registerCustomAwningBlock(bsmg, block, definition);
-                    break;
-
-                case "bigdoor":
-                    BigDoorBlockExporter.registerCustomBigDoorBlock(bsmg, block, definition);
-                    break;
-
-                case "bunting":
-                    BuntingBlockExporter.registerBuntingBlock(bsmg, block, definition);
-                    break;
-
-                default:
-                    WesterosBlocks.LOGGER.warn("Unsupported block type '{}' for model generation: {}",
-                            blockType, definition.getBlockName());
-                    break;
+        BlockExporter exporter = EXPORTERS.get(definition.getBlockType().toLowerCase());
+        if (exporter != null) {
+            try {
+                exporter.export(bsmg, block, definition);
+            } catch (Exception e) {
+                WesterosBlocks.LOGGER.error("Error generating model for block '{}': {}",
+                        definition.getBlockName(), e.getMessage());
             }
-        } catch (Exception e) {
-            WesterosBlocks.LOGGER.error("Error generating model for block '{}': {}",
-                    definition.getBlockName(), e.getMessage());
+        } else {
+            WesterosBlocks.LOGGER.warn("Unsupported block type '{}' for model generation: {}",
+                    definition.getBlockType(), definition.getBlockName());
         }
     }
 

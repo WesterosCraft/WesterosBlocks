@@ -2,7 +2,6 @@ package com.westerosblocks.datagen.custom;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.custom.WCStairBlock;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
@@ -54,7 +53,7 @@ public class StairBlockExporter extends BaseBlockExporter {
 
         for (BlockDefinition.StateVariant state : states) {
             String stateId = state.getStateID();
-            if (stateId == null) stateId = "base";
+            stateId = getStateIdOrBase(stateId);
 
             List<StairModelSet> modelSets = new ArrayList<>();
 
@@ -540,16 +539,6 @@ public class StairBlockExporter extends BaseBlockExporter {
             // Multiple weighted models
             addWeightedVariant(variants, fullCondition, modelSets, modelType, x, y, noUvlock);
         }
-    }
-
-    private static Identifier createCustomModelId(Block block, String variant) {
-        String blockName = getBlockName(block);
-        return WesterosBlocks.id("block/custom/" + blockName + "/" + variant);
-    }
-
-    private static Identifier createGeneratedModelId(Block block, String variant) {
-        String blockName = getBlockName(block);
-        return WesterosBlocks.id("block/" + blockName + "/" + variant);
     }
 
     /**

@@ -8,7 +8,6 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.block.custom.WCSolidBlock;
 import com.westerosblocks.data.BlockDefinition;
-import com.westerosblocks.utils.ModProperties;
 
 import java.util.List;
 import java.util.Optional;
@@ -35,7 +34,7 @@ public class SolidBlockExporter extends BaseBlockExporter {
         for (int stateIdx = 0; stateIdx < states.size(); stateIdx++) {
             BlockDefinition.StateVariant state = states.get(stateIdx);
             String stateID = state.getStateID();
-            String fname = (stateID == null) ? "base" : stateID;
+            String fname = getStateIdOrBase(stateID);
             boolean isTinted = definition.isTinted() || definition.hasColorMult();
             boolean isOverlay = state.hasOverlayTextures();
 
@@ -53,8 +52,7 @@ public class SolidBlockExporter extends BaseBlockExporter {
         }
 
         // Item model
-        String firstName = states.get(0).getStateID();
-        firstName = (firstName == null) ? "base" : firstName;
+        String firstName = getStateIdOrBase(states.get(0).getStateID());
         Identifier itemModelId = hasSymmetrical
             ? createNestedModelId(block, getModelName(firstName, 0, true))
             : createNestedModelId(block, getModelName(firstName, 0));
@@ -62,25 +60,15 @@ public class SolidBlockExporter extends BaseBlockExporter {
     }
 
 
-    private static String getModelName(String fname, int setIdx) {
-        return fname + "_v" + (setIdx + 1);
-    }
-
     private static String getModelName(String fname, int setIdx, boolean symmetrical) {
         String dir = symmetrical ? "symmetrical" : "asymmetrical";
-        return dir + "/" + fname + "_v" + (setIdx + 1);
+        return dir + "/" + getModelName(fname, setIdx);
     }
 
     private static void generateBlockState(BlockStateModelGenerator generator, Block block,
             List<BlockDefinition.StateVariant> states, boolean hasSymmetrical, boolean hasRotateRandom) {
 
-        ModProperties.StateProperty blockStateProperty = null;
-        for (var property : block.getStateManager().getProperties()) {
-            if (property instanceof ModProperties.StateProperty stateProperty && "state".equals(property.getName())) {
-                blockStateProperty = stateProperty;
-                break;
-            }
-        }
+        var blockStateProperty = getStateProperty(block);
 
         boolean hasMultipleStates = blockStateProperty != null && states.size() > 1;
 
@@ -88,7 +76,7 @@ public class SolidBlockExporter extends BaseBlockExporter {
 
         for (BlockDefinition.StateVariant state : states) {
             String stateID = state.getStateID();
-            String fname = (stateID == null) ? "base" : stateID;
+            String fname = getStateIdOrBase(stateID);
 
             String builderStateID = hasMultipleStates ? stateID : null;
 

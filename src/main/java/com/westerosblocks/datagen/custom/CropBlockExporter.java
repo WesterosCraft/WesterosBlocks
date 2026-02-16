@@ -3,9 +3,7 @@ package com.westerosblocks.datagen.custom;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
-import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
@@ -30,7 +28,7 @@ public class CropBlockExporter extends BaseBlockExporter {
             if (state.isCustomModel()) continue;
 
             String stateID = state.getStateID();
-            String baseName = (stateID == null) ? "base" : stateID;
+            String baseName = getStateIdOrBase(stateID);
 
             int layerCount = layerSensitive ? 8 : 1;
             for (int layer = 8; layer >= (layerSensitive ? 1 : 8); layer--) {
@@ -47,8 +45,8 @@ public class CropBlockExporter extends BaseBlockExporter {
         }
 
         BlockDefinition.StateVariant firstState = states.get(0);
-        String firstName = (firstState.getStateID() == null) ? "base" : firstState.getStateID();
-        Identifier itemModelId = createItemModelId(block, getModelName(firstName, 0));
+        String firstName = getStateIdOrBase(firstState.getStateID());
+        Identifier itemModelId = createGeneratedModelId(block, getModelName(firstName, 0));
         registerParentedItemModel(generator, block, itemModelId);
     }
 
@@ -81,7 +79,7 @@ public class CropBlockExporter extends BaseBlockExporter {
                     for (int stateIdx = 0; stateIdx < states.size(); stateIdx++) {
                         BlockDefinition.StateVariant state = states.get(stateIdx);
                         String stateID = state.getStateID();
-                        String baseName = (stateID == null) ? "base" : stateID;
+                        String baseName = getStateIdOrBase(stateID);
 
                         // Add layer suffix to model name if layer > 0
                         String modelName = baseName;
@@ -192,31 +190,4 @@ public class CropBlockExporter extends BaseBlockExporter {
         }
     }
 
-    private static boolean hasStateProperty(Block block) {
-        for (var property : block.getStateManager().getProperties()) {
-            if (property instanceof ModProperties.StateProperty && "state".equals(property.getName())) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private static Identifier createCustomModelId(Block block, String variant) {
-        String blockName = getBlockName(block);
-        return WesterosBlocks.id("block/custom/" + blockName + "/" + variant);
-    }
-
-    private static Identifier createGeneratedModelId(Block block, String variant) {
-        String blockName = getBlockName(block);
-        return WesterosBlocks.id("block/" + blockName + "/" + variant);
-    }
-
-    private static Identifier createItemModelId(Block block, String variant) {
-        String blockName = getBlockName(block);
-        return WesterosBlocks.id("block/" + blockName + "/" + variant);
-    }
-
-    private static String getModelName(String baseName, int setIdx) {
-        return baseName + "_v" + (setIdx + 1);
-    }
 }

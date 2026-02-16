@@ -306,8 +306,6 @@ public class Cuboid16WayBlockExporter extends CuboidBlockExporter {
         };
     }
 
-    // Note: createCustomModelId is now inherited from CuboidBlockExporter parent class
-
     /**
      * Helper class to hold a model with weight.
      */

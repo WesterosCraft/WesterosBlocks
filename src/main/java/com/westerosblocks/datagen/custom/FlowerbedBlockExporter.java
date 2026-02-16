@@ -5,6 +5,7 @@ import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.state.property.Properties;
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 
 /**
@@ -49,6 +50,16 @@ public class FlowerbedBlockExporter extends BaseBlockExporter {
 
     public static CustomFlowerbedBuilder registerCustomFlowerbedBlock(BlockStateModelGenerator generator, Block block) {
         return new CustomFlowerbedBuilder(generator, block);
+    }
+
+    public static void registerCustomFlowerbedBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        String[] flowerTextures = definition.getTexturesAsArray();
+        String stemTex = flowerTextures.length > 0 ? flowerTextures[0] : "";
+        String flowerTex = flowerTextures.length > 1 ? flowerTextures[1] : "";
+        new CustomFlowerbedBuilder(generator, block)
+            .stemTexture(stemTex)
+            .flowerTexture(flowerTex)
+            .build();
     }
 
     public static void generateCustomFlowerbed(BlockStateModelGenerator generator, Block block, String parentModel, TextureKey stemTextureKey, String stemTexture, String flowerTexture) {

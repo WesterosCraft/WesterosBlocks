@@ -145,8 +145,8 @@ public class FenceBlockExporter extends BaseBlockExporter {
     public static void registerFenceBlock(BlockStateModelGenerator generator, Block block, boolean tinted,
                                          boolean overlay, String[] textures, String[] overlayTextures) {
         // Expand single texture to three if needed
-        String[] expandedTextures = expandTextureArray(textures);
-        String[] expandedOverlays = overlay && overlayTextures != null ? expandTextureArray(overlayTextures) : null;
+        String[] expandedTextures = fillTextureArray(textures, 3);
+        String[] expandedOverlays = overlay && overlayTextures != null ? fillTextureArray(overlayTextures, 3) : null;
 
         // Create texture map
         TextureMap textureMap = createFenceTextureMap(expandedTextures, expandedOverlays);
@@ -179,8 +179,8 @@ public class FenceBlockExporter extends BaseBlockExporter {
 
         for (int i = 0; i < textureSets.size(); i++) {
             BlockDefinition.TextureVariantSet set = textureSets.get(i);
-            String[] expandedTextures = expandTextureArray(set.getTexturesAsArray());
-            String[] expandedOverlays = overlay && set.hasOverlay() ? expandTextureArray(set.getOverlayTexturesAsArray()) : null;
+            String[] expandedTextures = fillTextureArray(set.getTexturesAsArray(), 3);
+            String[] expandedOverlays = overlay && set.hasOverlay() ? fillTextureArray(set.getOverlayTexturesAsArray(), 3) : null;
 
             TextureMap textureMap = createFenceTextureMap(expandedTextures, expandedOverlays);
 
@@ -200,8 +200,8 @@ public class FenceBlockExporter extends BaseBlockExporter {
 
         // Register item model (using first texture set)
         BlockDefinition.TextureVariantSet firstSet = textureSets.get(0);
-        String[] expandedTextures = expandTextureArray(firstSet.getTexturesAsArray());
-        String[] expandedOverlays = overlay && firstSet.hasOverlay() ? expandTextureArray(firstSet.getOverlayTexturesAsArray()) : null;
+        String[] expandedTextures = fillTextureArray(firstSet.getTexturesAsArray(), 3);
+        String[] expandedOverlays = overlay && firstSet.hasOverlay() ? fillTextureArray(firstSet.getOverlayTexturesAsArray(), 3) : null;
         TextureMap itemTextureMap = createFenceTextureMap(expandedTextures, expandedOverlays);
 
         Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
@@ -254,16 +254,4 @@ public class FenceBlockExporter extends BaseBlockExporter {
      * Helper class to hold texture set with weight for random textures.
      */
 
-    /**
-     * Expands a texture array to 3 elements if it has only 1.
-     */
-    private static String[] expandTextureArray(String[] textures) {
-        if (textures.length == 1) {
-            return new String[]{textures[0], textures[0], textures[0]};
-        } else if (textures.length == 3) {
-            return textures;
-        } else {
-            throw new IllegalArgumentException("Fence blocks require 1 or 3 textures, got " + textures.length);
-        }
-    }
 }

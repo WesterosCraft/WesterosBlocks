@@ -25,7 +25,7 @@ public class SlabBlockExporter extends BaseBlockExporter {
         for (int stateIdx = 0; stateIdx < states.size(); stateIdx++) {
             BlockDefinition.StateVariant state = states.get(stateIdx);
             String stateID = state.getStateID();
-            String fname = (stateID == null) ? "base" : stateID;
+            String fname = getStateIdOrBase(stateID);
 
             for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
                 if (definition.hasCustomModel() || state.isCustomModel()) {
@@ -37,7 +37,7 @@ public class SlabBlockExporter extends BaseBlockExporter {
         }
 
         BlockDefinition.StateVariant firstState = states.get(0);
-        String firstName = (firstState.getStateID() == null) ? "base" : firstState.getStateID();
+        String firstName = getStateIdOrBase(firstState.getStateID());
         Identifier itemModelId = createNestedModelId(block, getModelName(firstName, 0, "bottom"));
         registerParentedItemModel(generator, block, itemModelId);
     }
@@ -49,7 +49,7 @@ public class SlabBlockExporter extends BaseBlockExporter {
 
         for (BlockDefinition.StateVariant state : states) {
             String stateID = state.getStateID();
-            String fname = (stateID == null) ? "base" : stateID;
+            String fname = getStateIdOrBase(stateID);
 
             for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
                 BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
@@ -155,7 +155,7 @@ public class SlabBlockExporter extends BaseBlockExporter {
         doubleModel.upload(doubleModelId, textureMap, generator.modelCollector);
     }
 
-    private static String getModelName(String fname, int setIdx, String variant) {
+    protected static String getModelName(String fname, int setIdx, String variant) {
         if (setIdx == 0 && fname.equals("base")) {
             // For base state with single texture set, use simple names
             return variant;
