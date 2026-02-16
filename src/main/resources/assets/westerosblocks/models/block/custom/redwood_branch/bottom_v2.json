@@ -1,0 +1,72 @@
+{
+  "format_version": "1.9.0",
+  "credit": "Made with Blockbench",
+  "ambientocclusion": false,
+  "texture_size": [64, 64],
+  "textures": {
+    "0": "westerosblocks:block/leaves/redwood/branch",
+    "particle": "westerosblocks:block/leaves/redwood/branch"
+  },
+  "elements": [
+    {
+      "from": [9.09719, -6.17958, -1.9],
+      "to": [9.09719, 13.82042, 16.1],
+      "rotation": { "angle": -22.5, "axis": "z", "origin": [8, 3.69552, 6.85] },
+      "faces": {
+        "east": { "uv": [16, 6, 4.25, 16], "texture": "#0" },
+        "west": { "uv": [4.25, 6, 16, 16], "texture": "#0" }
+      }
+    },
+    {
+      "from": [6.90281, -6.17958, -2.9],
+      "to": [6.90281, 13.82042, 16.1],
+      "rotation": { "angle": 22.5, "axis": "z", "origin": [8, 3.69552, 6.85] },
+      "faces": {
+        "east": { "uv": [16, 6, 4.25, 16], "texture": "#0" },
+        "west": { "uv": [4.25, 6, 16, 16], "texture": "#0" }
+      }
+    },
+    {
+      "from": [12.62221, -6, -5.21724],
+      "to": [12.62221, 14, 14.78276],
+      "rotation": { "angle": -22.5, "axis": "y", "origin": [8, 3.69552, 6.85] },
+      "faces": {
+        "east": { "uv": [10, 0, 0, 10], "texture": "#0" },
+        "west": { "uv": [0, 0, 10, 10], "texture": "#0" }
+      }
+    },
+    {
+      "from": [3.37779, -6, -5.21724],
+      "to": [3.37779, 14, 14.78276],
+      "rotation": { "angle": 22.5, "axis": "y", "origin": [8, 3.69552, 6.85] },
+      "faces": {
+        "east": { "uv": [10, 0, 0, 10], "texture": "#0" },
+        "west": { "uv": [0, 0, 10, 10], "texture": "#0" }
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [75, 45, 0],
+      "translation": [0, 2.5, 0],
+      "scale": [0.375, 0.375, 0.375]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [75, 45, 0],
+      "translation": [0, 2.5, 0],
+      "scale": [0.375, 0.375, 0.375]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, 45, 0],
+      "scale": [0.4, 0.4, 0.4]
+    }
+  },
+  "groups": [
+    {
+      "name": "branch",
+      "origin": [8, 7.69552, 6.85],
+      "color": 0,
+      "children": [0, 1, 2, 3]
+    }
+  ]
+}

@@ -20,7 +20,7 @@
 - Fixed hedge/tully shield textures
 - Fixed bunting ceiling render
 - Fixed cullface on various models
-- Fixed model file generation
+od- Fixed model file generation
 - Fixed mod icon
 - Fixed tooltip display
 
