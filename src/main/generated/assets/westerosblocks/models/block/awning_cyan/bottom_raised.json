@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/awnings/awning_raised_bottom",
-  "textures": {
-    "1": "westerosblocks:block/wool/cyan/all",
-    "2": "westerosblocks:block/awning/cyan_awning_side",
-    "particle": "westerosblocks:block/wool/cyan/all"
-  }
-}

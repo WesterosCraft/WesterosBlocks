@@ -1,117 +1,157 @@
 # Changelog
 
-## Febuarary 2026
+## February 2026
 
-- Adds bunting blocks for each color
+### New Blocks
+- Redwood tree blocks (redwood, leaf tip, redwood branch)
+- Mounted slab block (wall-mounted half-height block with facing/half states)
+- Square bunting + additional bunting colors for all color variants
+- New cabbage block model
 
-## 1.21.1 Port October 2025
+### Features
+- Cyclable tooltips for block inspection
+- Block definition refactor: "types" renamed to "options" for consistency
+- Block definition type property refactor (string → key/value)
+- Datagen cleanup and optimization
 
-- Changed "stepSound" to "soundGroup" in block definitions
-- removes SoundBlocks and the block type
+### Bug Fixes
+- Fixed path block rendering
+- Fixed hopper block issues
+- Fixed hedge/tully shield textures
+- Fixed bunting ceiling render
+- Fixed cullface on various models
+- Fixed model file generation
+- Fixed mod icon
+- Fixed tooltip display
+
+## January 2026
+
+### New Blocks
+- Awning block (horizontal roof with top/bottom, facing, and raised toggle)
+- Bunting block and models (wall-mounted decorative with paired ceiling bunting)
+- Big door block (3x3 multi-block door with locked variant)
+
+### Features
+- Rope tool
+- BlockItem class additions
+- ModMenu/Cloth Config GUI integration for in-game settings
+- Table block updates
+- Snowy grass cuboid attempt + terrain set snow fixes
+
+### Bug Fixes
+- Fixed tinted solid block rendering
+- Fixed awning block placement
+- Fixed solid block skipRendering
+- Fixed table item display
+
+## December 2025
+
+- Rebase / maintenance
+
+## November 2025
+
+### New Blocks
+- Mounted block + mounted heater/round/kite shields
+- Bench block (5 wood types with connection states + entity seating)
+- Table block
+- Pebble blocks (Light/Dark Stormlands, Dark Mountains of the Moon, Light/Dark Westerlands)
+- Icicles / ghostskin-style block
+- Muddy snow blocks (alt, light, dark variants + layers)
+- Sand block (falling block with custom dust colors)
+- Smoke particles
+
+### CTM Textures
+- Packed ice, dirt CTM
+- Wood planks CTM: yellow, red, purple, blue, white, orange, green, black, birch, grey, spruce, oak, northern
+- Wood vertical planks CTM
+- Bark block CTM: spruce, birch, oak, jungle + mossy variants
+- Ice block texture updates + CTM
+
+### Refactoring
+- Major block class cleanup (cross/plant, layer, log, crop, slab, torch, fan, cuboid)
+- Exporter refactoring
+- Block definition structure cleanup
+- ConnectState fix
+
+### Bug Fixes
+- Fixed colormult provider for blocks with multiple maps
+- Fixed beacon blocks, solid block export, half door, cross block exporter
+- Fixed weight on cuboids, wall gen, fence gen, fruit leaves
+- Fixed crop candle altar, production bug
+- Fixed cuboid-NSEW, cuboid-NE, pane block export
+- Fixed iron door texture, bench, slab
+- Fixed particle blocks, item display
+- Fixed missing MC color tints
+
+## October 2025 (1.21.1 Port)
+
+### New Blocks & Features
+- Arrow slit block (continued development)
+- Shields (Stark Kite, Tully Heater, Greyjoy Round, Targaryen Heater, Blackfyre Heater, Blackwood Heater, Bracken Heater, Hedge Knight Heater, Laughing Tree Heater) via AzureLib + Shield API
+- Brazier block
+- Cuboid 16-way rotation support
+- Banner blocks
+- Blue ice, light ice blocks + CTM
+- Trapdoors
+- Clover (vanilla Flowerbed type)
+- Particle Emitter block type (Cascade, Cosy Smoke, Signal Smoke)
+- Purple Cabbage block
+- Westerosi Coins (7 variants)
+
+### Infrastructure
+- Config system with JSON config + ModMenu/Cloth Config GUI
+- WorldPainter CSV export support
+- Polytone colormap integration for datagen
+- Block definition structure refactor
+- `makeSettings()` method extraction
+- Changed "stepSound" to "soundGroup" in definitions
+- Removed SoundBlocks block type
 - Exporter converted to use datagen utilities
 - Converts colormaps to use Polytone
-- Adds Azurelib
-- Added "Clover" that uses the vanilla Flowerbed block type
-- Added "Particle Emitter" block type with a Cascade, Cosy Smoke, and Signal Smoke particle emitter blocks
-- Added Shield API mod for shields
-- Adds "Purple Cabbage" block
+- AzureLib dependency added
+- Shield API dependency added
 
-## Updated wood CTM
+### CTM Textures
+- Birch, birch bark, jungle, wood CTM
+- Ice textures (untinted)
+- Block set texture work (multiple rounds)
 
-- Refreshes wood and bark textures
-- You can now toggle the vertical lines on planks by right clicking with an empty hand
-- Adds repeat CTM for yellow, red, purple, blue, white, orange, green, black, birch, grey wood, spruce, oak, northern wood planks
-- Adds repeat CTM for wooden vertical planks
-- Adds CTM to bark blocks - spruce, birch, oak, jungle
-- Adds CTM to mossy bark blocks - spruce, birch, oak, jungle
+### Bug Fixes
+- Fixed shield crash + dependency/shield bugs
+- Fixed torch block, trapdoor gen, cuboid renderlayers
+- Fixed layer sensitive on plant/web, plant export
+- Fixed tags for torch/fan wall blocks, flowers tag
+- Fixed coral fan, cuboid NSEW, particle emitter
+- Fixed test blocks appearing in production
+- Fixed wall model, arrow slit fixes
 
-## New wood blocksets, includes CTM
+### New Wood Blocksets (with CTM)
+- off_white_wood, birch_yellow_wood, grey_blue_wood, dark_grey_wood, blue_grey_wood, light_grey_wood, light_purple_wood
+- oak_jungle, oak_orange, oak_birch + vertical plank variants
+- Stripped log variants (oak, spruce, northern, jungle, birch, grey, white) + beam variants
 
-- off_white_wood
-- birch_yellow_wood
-- oak_jungle_vertical_planks
-- oak_orange_vertical_planks
-- oak_birch_vertical_planks
-- off_white_wood_vertical_planks
-- birch_yellow_wood_vertical_planks
-- grey_blue_wood_vertical_planks
-- dark_grey_wood_vertical_planks
-- blue_grey_wood_vertical_planks
-- light_grey_wood_vertical_planks
-- light_purple_wood_vertical_planks
-- grey_blue_wood
-- dark_grey_wood
-- blue_grey_wood
-- light_grey_wood
-- light_purple_wood
-- oak_jungle
-- oak_orange
-- oak_birch
-- oak_birch_stripped_log
-- oak_stripped_log + beam variant
-- oak_jungle_stripped_log + beam variant
-- spruce_stripped_log + beam variant
-- northern_stripped_log + beam variant
-- jungle_stripped_log + beam variant
-- birch_stripped_log + beam variant
-- grey_stripped_log + beam variant
-- white_stripped_log + beam variant
+### New Doors & Half-Doors
+- Simple Birch Door + Window Shutters
+- Fancy doors + window shutters for: White, Grey, Oak, Spruce, Jungle, Northern wood
 
-## New doors alts + halfdoors alts
+### Updates
+- 3D models for pickaxe, axe, cleaver, pitchfork
+- Updated tool textures
 
-- Simple Birch Door
-- Simple Birch Window Shutters
-- Fancy White Door
-- Fancy White Wood Window Shutters
-- Fancy Grey Door
-- Fancy Grey Wood Window Shutters
-- Fancy Oak Door
-- Fancy Oak Wood Window Shutters
-- Fancy Spruce Door
-- Fancy Spruce Wood Window Shutters
-- Fancy Jungle Door
-- Fancy Jungle Wood Window Shutters
-- Fancy Northern Door
-- Fancy Northern Wood Window Shutters
+### Snow
+- Updated muddy snow block with repeat CTM
+- New Muddy Snow Alt, Light, and Dark blocks + layers
 
-## Snow
+### Ice Update
+- New ice blocks: Light Ice, Medium Light Ice, Blue Ice, Light Blue Ice, Dark Blue Ice, Dark Blue Medium Ice
+- Updated ice block textures with repeat CTM
+- New packed ice block
+- New Icicles block (ghostskin-style)
 
-- updates Muddy snow block with repeat CTM
-- Adds new Muddy Snow Alt Block + Layer
-- Adds new Muddy Snow Light Block + Layer
-- Adds new Muddy Snow Dark Block + Layer
-
-## Dirt/Paths/Pebbles
-
-- Adds new blocks - 'Light Dirt', 'Medium Dirt', 'Dark Dirt', 'Pebble Light Stormlands', 'Pebble Dark Stormlands', 'Pebble Dark Mountains Of The Moon', 'Pebble Light Westerlands', 'Pebble Dark Westerlands'
-- Adds repeat CTM to dirt block
-
-## Ice Update
-
-- Added new ice blocks - 'Light Ice', 'Medium Light Ice', 'Blue Ice', 'Light Blue Ice', 'Dark Blue Ice', 'Dark Blue Medium Ice'
-- Updates ice block textures and adds repeat CTM
-- Adds new packed ice block
-- Adds new "Icicles" block that behaves and looks more like ghostskin
-
-## Furniture
-
-- Added new table block
-- Added new chair block
-- Adds 5 new bench blocks - Oak Bench, Birch Bench, Spruce Bench, Jungle Bench and Northern Bench
-
-## Other
-
-- Added Stark Kite Shield
-- Added Tully Heater Shield
-- Added Greyjoy Round Shield
-- Added Targaryen Heater Shield
-- Added Blackfyre Heater Shield
-- Added Blackwood Heater Shield
-- Added Bracken Heater Shield
-- Added Hedge Knight Heater Shield
-- Added Laughing Tree Heater Shield
-- Added "Westerosi Coins" with 7 variants
-- Updates pickaxe, axe, cleaver and pitchfork with 3D models
+### Furniture
+- New table block
+- New chair block
+- 5 new bench blocks (Oak, Birch, Spruce, Jungle, Northern) with connection states + entity seating
 
 # 26 Aug 2025
 
