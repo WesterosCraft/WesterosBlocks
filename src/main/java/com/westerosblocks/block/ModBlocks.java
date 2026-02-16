@@ -65,6 +65,7 @@ public class ModBlocks {
         Map.entry("arrow-slit", new WCArrowSlitBlock.Factory()),
         Map.entry("flowerbed", new WCFlowerbedBlock.Factory()),
         Map.entry("mounted", new WCMountedBlock.Factory()),
+        Map.entry("mounted_slab", new WCMountedSlabBlock.Factory()),
         Map.entry("awning", new WCAwningBlock.Factory()),
         Map.entry("bigdoor", new WCBigDoorBlock.Factory()),
         Map.entry("bunting", new WCBuntingBlock.Factory())

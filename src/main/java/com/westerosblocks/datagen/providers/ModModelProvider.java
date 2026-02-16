@@ -60,6 +60,7 @@ public class ModModelProvider extends FabricModelProvider {
         Map.entry("particle", ParticleEmitterExporter::registerCustomParticleEmitterBlock),
         Map.entry("chair", ChairBlockExporter::registerChairBlock),
         Map.entry("mounted", MountedBlockExporter::registerMountedBlock),
+        Map.entry("mounted_slab", MountedSlabBlockExporter::registerMountedSlabBlock),
         Map.entry("flowerbed", FlowerbedBlockExporter::registerCustomFlowerbedBlock),
         Map.entry("awning", AwningBlockExporter::registerCustomAwningBlock),
         Map.entry("bigdoor", BigDoorBlockExporter::registerCustomBigDoorBlock),
