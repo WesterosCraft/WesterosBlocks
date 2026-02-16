@@ -53,10 +53,6 @@ public class BlockSetDefinition {
     @SerializedName("soundGroup")
     private String soundGroup;
 
-    /** Generic material type */
-    @SerializedName("material")
-    private String material;
-
     /** Explosion resistance */
     @SerializedName("resistance")
     private Float resistance;
@@ -68,14 +64,6 @@ public class BlockSetDefinition {
     /** Harvest level requirements */
     @SerializedName("harvestLevel")
     private List<BlockDefinition.HarvestLevel> harvestLevel;
-
-    /** Fire spread speed */
-    @SerializedName("fireSpreadSpeed")
-    private Integer fireSpreadSpeed;
-
-    /** Flammability */
-    @SerializedName("flamability")
-    private Integer flamability;
 
     /** Creative tab */
     @SerializedName("creativeTab")
@@ -89,10 +77,6 @@ public class BlockSetDefinition {
     @SerializedName("alphaRender")
     private Boolean alphaRender;
 
-    /** Ambient occlusion */
-    @SerializedName("ambientOcclusion")
-    private Boolean ambientOcclusion;
-
     /** Non-opaque block */
     @SerializedName("nonOpaque")
     private Boolean nonOpaque;
@@ -100,10 +84,6 @@ public class BlockSetDefinition {
     /** Render layer - "cutout", "cutout_mipped", or "translucent" */
     @SerializedName("renderLayer")
     private String renderLayer;
-
-    /** Light emission level (0-15) */
-    @SerializedName("lightValue")
-    private Float lightValue;
 
     /** Color multiplier */
     @SerializedName("colorMult")
@@ -195,7 +175,6 @@ public class BlockSetDefinition {
 
     public Float getHardness() { return hardness; }
     public String getSoundGroup() { return soundGroup; }
-    public String getMaterial() { return material; }
     public Float getResistance() { return resistance; }
     public Integer getLightOpacity() { return lightOpacity; }
     public List<BlockDefinition.HarvestLevel> getHarvestLevel() { return harvestLevel; }
@@ -203,10 +182,8 @@ public class BlockSetDefinition {
     public List<String> getCustomTags() { return customTags; }
 
     public Boolean getAlphaRender() { return alphaRender; }
-    public Boolean getAmbientOcclusion() { return ambientOcclusion; }
     public Boolean getNonOpaque() { return nonOpaque; }
     public String getRenderLayer() { return renderLayer; }
-    public Float getLightValue() { return lightValue; }
     public String getColorMult() { return colorMult; }
 
     public Map<String, String> getTextures() { return textures; }

@@ -20,13 +20,13 @@ public class CuboidNSEWStackBlockExporter extends CuboidBlockExporter {
             throw new IllegalArgumentException("Block must be a WCCuboidNSEWStackBlock instance");
         }
 
-        if (!definition.hasStackElements() || definition.getStackElements().size() < 2) {
+        if (!definition.hasStackElements() || definition.getStack().size() < 2) {
             throw new IllegalArgumentException("CuboidNSEWStackBlock requires at least 2 stack elements");
         }
 
         // Get bottom and top stack elements
-        BlockDefinition.StackElement bottomElement = definition.getStackElements().get(0);
-        BlockDefinition.StackElement topElement = definition.getStackElements().get(1);
+        BlockDefinition.StackElement bottomElement = definition.getStack().get(0);
+        BlockDefinition.StackElement topElement = definition.getStack().get(1);
 
         // Generate models for bottom and top halves
         Identifier bottomModelId;

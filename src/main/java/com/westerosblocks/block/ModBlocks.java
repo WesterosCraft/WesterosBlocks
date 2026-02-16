@@ -22,6 +22,54 @@ import java.util.Map;
 public class ModBlocks {
     private static final Map<String, Block> AUTO_REGISTERED_BLOCKS = new HashMap<>();
 
+    private static final Map<String, BlockFactory> FACTORIES = Map.ofEntries(
+        Map.entry("solid", new WCSolidBlock.Factory()),
+        Map.entry("door", new WCDoorBlock.Factory()),
+        Map.entry("halfdoor", new WCHalfDoorBlock.Factory()),
+        Map.entry("log", new WCLogBlock.Factory()),
+        Map.entry("plant", new WCPlantBlock.Factory()),
+        Map.entry("flowerpot", new WCFlowerPotBlock.Factory()),
+        Map.entry("web", new WCWebBlock.Factory()),
+        Map.entry("slab", new WCSlabBlock.Factory()),
+        Map.entry("fire", new WCFireBlock.Factory()),
+        Map.entry("ladder", new WCLadderBlock.Factory()),
+        Map.entry("vines", new WCVinesBlock.Factory()),
+        Map.entry("pane", new WCPaneBlock.Factory()),
+        Map.entry("fence", new WCFenceBlock.Factory()),
+        Map.entry("fencegate", new WCFenceGateBlock.Factory()),
+        Map.entry("trapdoor", new WCTrapDoorBlock.Factory()),
+        Map.entry("leaves", new WCLeavesBlock.Factory()),
+        Map.entry("bed", new WCBedBlock.Factory()),
+        Map.entry("crop", new WCCropBlock.Factory()),
+        Map.entry("torch", new WCTorchBlock.Factory()),
+        Map.entry("fan", new WCFanBlock.Factory()),
+        Map.entry("rail", new WCRailBlock.Factory()),
+        Map.entry("furnace", new WCFurnaceBlock.Factory()),
+        Map.entry("wall", new WCWallBlock.Factory()),
+        Map.entry("stair", new WCStairBlock.Factory()),
+        Map.entry("cuboid", new WCCuboidBlock.Factory()),
+        Map.entry("cuboid-nsew", new WCCuboidNSEWBlock.Factory()),
+        Map.entry("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory()),
+        Map.entry("cuboid-ne", new WCCuboidNEBlock.Factory()),
+        Map.entry("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory()),
+        Map.entry("cuboid-16way", new WCCuboid16WayBlock.Factory()),
+        Map.entry("layer", new WCLayerBlock.Factory()),
+        Map.entry("beacon", new WCBeaconBlock.Factory()),
+        Map.entry("sand", new WCSandBlock.Factory()),
+        Map.entry("soul-sand", new WCSoulSandBlock.Factory()),
+        Map.entry("particle", new WCParticleEmitterBlock.Factory()),
+        Map.entry("table", new WCTableBlock.Factory()),
+        Map.entry("table2", new WCTableBlock.Factory()),
+        Map.entry("chair", new WCChairBlock.Factory()),
+        Map.entry("bench", new WCBenchBlock.Factory()),
+        Map.entry("arrow-slit", new WCArrowSlitBlock.Factory()),
+        Map.entry("flowerbed", new WCFlowerbedBlock.Factory()),
+        Map.entry("mounted", new WCMountedBlock.Factory()),
+        Map.entry("awning", new WCAwningBlock.Factory()),
+        Map.entry("bigdoor", new WCBigDoorBlock.Factory()),
+        Map.entry("bunting", new WCBuntingBlock.Factory())
+    );
+
     static {
         registerBlocksFromDefinitions();
     }
@@ -82,54 +130,7 @@ public class ModBlocks {
      * Returns the appropriate BlockFactory for a given block type
      */
     private static BlockFactory getFactory(String blockType) {
-        return switch (blockType.toLowerCase()) {
-            case "solid" -> new WCSolidBlock.Factory();
-            case "door" -> new WCDoorBlock.Factory();
-            case "halfdoor" -> new WCHalfDoorBlock.Factory();
-            case "log" -> new WCLogBlock.Factory();
-            case "plant" -> new WCPlantBlock.Factory();
-            case "flowerpot" -> new WCFlowerPotBlock.Factory();
-            case "web" -> new WCWebBlock.Factory();
-            case "slab" -> new WCSlabBlock.Factory();
-            case "fire" -> new WCFireBlock.Factory();
-            case "ladder" -> new WCLadderBlock.Factory();
-            case "vines" -> new WCVinesBlock.Factory();
-            case "pane" -> new WCPaneBlock.Factory();
-            case "fence" -> new WCFenceBlock.Factory();
-            case "fencegate" -> new WCFenceGateBlock.Factory();
-            case "trapdoor" -> new WCTrapDoorBlock.Factory();
-            case "leaves" -> new WCLeavesBlock.Factory();
-            case "bed" -> new WCBedBlock.Factory();
-            case "crop" -> new WCCropBlock.Factory();
-            case "torch" -> new WCTorchBlock.Factory();
-            case "fan" -> new WCFanBlock.Factory();
-            case "rail" -> new WCRailBlock.Factory();
-            case "furnace" -> new WCFurnaceBlock.Factory();
-            case "wall" -> new WCWallBlock.Factory();
-            case "stair" -> new WCStairBlock.Factory();
-            case "cuboid" -> new WCCuboidBlock.Factory();
-            case "cuboid-nsew" -> new WCCuboidNSEWBlock.Factory();
-            case "cuboid-nsew-stack" -> new WCCuboidNSEWStackBlock.Factory();
-            case "cuboid-ne" -> new WCCuboidNEBlock.Factory();
-            case "cuboid-nsewud" -> new WCCuboidNSEWUDBlock.Factory();
-            case "cuboid-16way" -> new WCCuboid16WayBlock.Factory();
-            case "layer" -> new WCLayerBlock.Factory();
-            case "beacon" -> new WCBeaconBlock.Factory();
-            case "sand" -> new WCSandBlock.Factory();
-            case "soul-sand" -> new WCSoulSandBlock.Factory();
-            case "particle" -> new WCParticleEmitterBlock.Factory();
-            case "table" -> new WCTableBlock.Factory();
-            case "table2" -> new WCTableBlock.Factory();
-            case "chair" -> new WCChairBlock.Factory();
-            case "bench" -> new WCBenchBlock.Factory();
-            case "arrow-slit" -> new WCArrowSlitBlock.Factory();
-            case "flowerbed" -> new WCFlowerbedBlock.Factory();
-            case "mounted" -> new WCMountedBlock.Factory();
-            case "awning" -> new WCAwningBlock.Factory();
-            case "bigdoor" -> new WCBigDoorBlock.Factory();
-            case "bunting" -> new WCBuntingBlock.Factory();
-            default -> null;
-        };
+        return FACTORIES.get(blockType.toLowerCase());
     }
 
     /**

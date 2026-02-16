@@ -48,9 +48,9 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock {
         // Initialize stack-specific shapes (uses StackElements, not cuboids)
         this.SHAPE_BY_INDEX = new VoxelShape[8];
 
-        if (def != null && def.hasStackElements() && def.getStackElements().size() >= 2) {
-            BlockDefinition.StackElement bottomElement = def.getStackElements().get(0);
-            BlockDefinition.StackElement topElement = def.getStackElements().get(1);
+        if (def != null && def.hasStackElements() && def.getStack().size() >= 2) {
+            BlockDefinition.StackElement bottomElement = def.getStack().get(0);
+            BlockDefinition.StackElement topElement = def.getStack().get(1);
 
             initializeShapesForHalf(bottomElement, 0);
 

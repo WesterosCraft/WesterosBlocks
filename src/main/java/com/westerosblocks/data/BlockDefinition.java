@@ -38,11 +38,6 @@ public class BlockDefinition {
     @SerializedName("strength")
     private Float strength;
 
-    /** Material type (e.g., "iron", "rock", "wood") - affects various block behaviors */
-    @Deprecated
-    @SerializedName("material")
-    private String material;
-
     /** Which creative mode tab to place this block in */
     @SerializedName("creativeTab")
     private String creativeTab;
@@ -762,14 +757,6 @@ public class BlockDefinition {
         return strength != null;
     }
 
-    public String getMaterial() {
-        return material;
-    }
-
-    public boolean hasMaterial() {
-        return material != null && !material.isEmpty();
-    }
-
     public String getCreativeTab() {
         return creativeTab;
     }
@@ -1012,12 +999,6 @@ public class BlockDefinition {
 
     public List<StackElement> getStack() {
         return stack;
-    }
-
-    /** @deprecated Use {@link #getStack()} instead */
-    @Deprecated
-    public List<StackElement> getStackElements() {
-        return getStack();
     }
 
     public boolean hasStackElements() {
