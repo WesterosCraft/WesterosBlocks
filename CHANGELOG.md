@@ -3,35 +3,40 @@
 ## February 2026
 
 ### New Blocks
+
 - Redwood tree blocks (redwood, leaf tip, redwood branch)
 - Mounted slab block (wall-mounted half-height block with facing/half states)
 - Square bunting + additional bunting colors for all color variants
 - New cabbage block model
 
 ### Features
+
 - Cyclable tooltips for block inspection
 - Block definition refactor: "types" renamed to "options" for consistency
 - Block definition type property refactor (string → key/value)
 - Datagen cleanup and optimization
 
 ### Bug Fixes
+
 - Fixed path block rendering
 - Fixed hopper block issues
 - Fixed hedge/tully shield textures
 - Fixed bunting ceiling render
 - Fixed cullface on various models
-od- Fixed model file generation
+  od- Fixed model file generation
 - Fixed mod icon
 - Fixed tooltip display
 
 ## January 2026
 
 ### New Blocks
+
 - Awning block (horizontal roof with top/bottom, facing, and raised toggle)
 - Bunting block and models (wall-mounted decorative with paired ceiling bunting)
 - Big door block (3x3 multi-block door with locked variant)
 
 ### Features
+
 - Rope tool
 - BlockItem class additions
 - ModMenu/Cloth Config GUI integration for in-game settings
@@ -39,6 +44,7 @@ od- Fixed model file generation
 - Snowy grass cuboid attempt + terrain set snow fixes
 
 ### Bug Fixes
+
 - Fixed tinted solid block rendering
 - Fixed awning block placement
 - Fixed solid block skipRendering
@@ -51,6 +57,7 @@ od- Fixed model file generation
 ## November 2025
 
 ### New Blocks
+
 - Mounted block + mounted heater/round/kite shields
 - Bench block (5 wood types with connection states + entity seating)
 - Table block
@@ -61,6 +68,7 @@ od- Fixed model file generation
 - Smoke particles
 
 ### CTM Textures
+
 - Packed ice, dirt CTM
 - Wood planks CTM: yellow, red, purple, blue, white, orange, green, black, birch, grey, spruce, oak, northern
 - Wood vertical planks CTM
@@ -68,12 +76,14 @@ od- Fixed model file generation
 - Ice block texture updates + CTM
 
 ### Refactoring
+
 - Major block class cleanup (cross/plant, layer, log, crop, slab, torch, fan, cuboid)
 - Exporter refactoring
 - Block definition structure cleanup
 - ConnectState fix
 
 ### Bug Fixes
+
 - Fixed colormult provider for blocks with multiple maps
 - Fixed beacon blocks, solid block export, half door, cross block exporter
 - Fixed weight on cuboids, wall gen, fence gen, fruit leaves
@@ -86,6 +96,7 @@ od- Fixed model file generation
 ## October 2025 (1.21.1 Port)
 
 ### New Blocks & Features
+
 - Arrow slit block (continued development)
 - Shields (Stark Kite, Tully Heater, Greyjoy Round, Targaryen Heater, Blackfyre Heater, Blackwood Heater, Bracken Heater, Hedge Knight Heater, Laughing Tree Heater) via AzureLib + Shield API
 - Brazier block
@@ -99,6 +110,7 @@ od- Fixed model file generation
 - Westerosi Coins (7 variants)
 
 ### Infrastructure
+
 - Config system with JSON config + ModMenu/Cloth Config GUI
 - WorldPainter CSV export support
 - Polytone colormap integration for datagen
@@ -112,11 +124,13 @@ od- Fixed model file generation
 - Shield API dependency added
 
 ### CTM Textures
+
 - Birch, birch bark, jungle, wood CTM
 - Ice textures (untinted)
 - Block set texture work (multiple rounds)
 
 ### Bug Fixes
+
 - Fixed shield crash + dependency/shield bugs
 - Fixed torch block, trapdoor gen, cuboid renderlayers
 - Fixed layer sensitive on plant/web, plant export
@@ -126,29 +140,35 @@ od- Fixed model file generation
 - Fixed wall model, arrow slit fixes
 
 ### New Wood Blocksets (with CTM)
+
 - off_white_wood, birch_yellow_wood, grey_blue_wood, dark_grey_wood, blue_grey_wood, light_grey_wood, light_purple_wood
 - oak_jungle, oak_orange, oak_birch + vertical plank variants
 - Stripped log variants (oak, spruce, northern, jungle, birch, grey, white) + beam variants
 
 ### New Doors & Half-Doors
+
 - Simple Birch Door + Window Shutters
 - Fancy doors + window shutters for: White, Grey, Oak, Spruce, Jungle, Northern wood
 
 ### Updates
+
 - 3D models for pickaxe, axe, cleaver, pitchfork
 - Updated tool textures
 
 ### Snow
+
 - Updated muddy snow block with repeat CTM
 - New Muddy Snow Alt, Light, and Dark blocks + layers
 
 ### Ice Update
+
 - New ice blocks: Light Ice, Medium Light Ice, Blue Ice, Light Blue Ice, Dark Blue Ice, Dark Blue Medium Ice
 - Updated ice block textures with repeat CTM
 - New packed ice block
 - New Icicles block (ghostskin-style)
 
 ### Furniture
+
 - New table block
 - New chair block
 - 5 new bench blocks (Oak, Birch, Spruce, Jungle, Northern) with connection states + entity seating
