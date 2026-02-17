@@ -2,9 +2,9 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "westerosblocks:block/dead_frog/tip2",
-		"1": "westerosblocks:block/dead_frog/trunk",
-		"particle": "westerosblocks:block/dead_frog/tip"
+		"0": "westerosblocks:block/leaves/redwood/tip2",
+		"1": "westerosblocks:block/leaves/redwood/trunk",
+		"particle": "westerosblocks:block/leaves/redwood/tip"
 	},
 	"elements": [
 		{
