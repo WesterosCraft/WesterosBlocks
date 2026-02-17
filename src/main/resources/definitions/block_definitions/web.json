@@ -723,6 +723,7 @@
     "options": {
       "noInWeb": true
     },
+    "randomTextures": [{}, {}],
     "renderLayer": "cutout"
   }
 ]
