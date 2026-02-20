@@ -649,6 +649,11 @@ public class BlockDefinition {
         if ((state.cuboids == null || state.cuboids.isEmpty()) && this.cuboids != null) {
             state.cuboids = new ArrayList<>(this.cuboids);
         }
+
+        // If state now has a boundingBox but still no cuboids, create cuboid from bbox
+        if (state.boundingBox != null && (state.cuboids == null || state.cuboids.isEmpty())) {
+            state.createCuboidFromBoundingBox();
+        }
     }
 
     /**

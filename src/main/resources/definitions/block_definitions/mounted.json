@@ -156,7 +156,7 @@
       "allowUnsupported": true
     },
     "renderLayer": "cutout",
-    "isCustomModel": true,
+    "textures": ["shields/hedge_knight_heater_shield"],
     "boundingBox": {
       "xMin": 0.03,
       "xMax": 0.039,
