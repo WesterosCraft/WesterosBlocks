@@ -423,9 +423,7 @@
     ],
     "creativeTab": "westeros_misc_tab",
     "label": "Flat Wheel",
-    "textures": [
-      "transparent"
-    ],
+    "textures": ["transparent"],
     "renderLayer": "cutout",
     "isCustomModel": true,
     "boundingBox": {
@@ -450,9 +448,7 @@
     ],
     "creativeTab": "westeros_misc_tab",
     "label": "Flat Wheel Large",
-    "textures": [
-      "transparent"
-    ],
+    "textures": ["transparent"],
     "renderLayer": "cutout",
     "isCustomModel": true,
     "boundingBox": {
@@ -477,14 +473,7 @@
     ],
     "creativeTab": "westeros_misc_tab",
     "label": "Ghostskin",
-    "randomTextures": [
-      {},
-      {},
-      {},
-      {},
-      {},
-      {}
-    ],
+    "randomTextures": [{}, {}, {}, {}, {}, {}],
     "renderLayer": "cutout",
     "isCustomModel": true,
     "boundingBox": {
@@ -542,6 +531,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Horizontal Paper",
+    "nonOpaque": true,
     "options": {
       "toggleOnUse": true
     },
@@ -550,102 +540,54 @@
         "stateID": "random",
         "randomTextures": [
           {
-            "textures": [
-              "paper/bottom1",
-              "paper/paperwork1",
-              "transparent"
-            ],
+            "textures": ["paper/bottom1", "paper/paperwork1", "transparent"],
             "weight": 20
           },
           {
-            "textures": [
-              "paper/bottom2",
-              "paper/paperwork2",
-              "transparent"
-            ],
+            "textures": ["paper/bottom2", "paper/paperwork2", "transparent"],
             "weight": 10
           },
           {
-            "textures": [
-              "paper/bottom3",
-              "paper/paperwork3",
-              "transparent"
-            ],
+            "textures": ["paper/bottom3", "paper/paperwork3", "transparent"],
             "weight": 10
           },
           {
-            "textures": [
-              "paper/bottom4",
-              "paper/paperwork4",
-              "transparent"
-            ],
+            "textures": ["paper/bottom4", "paper/paperwork4", "transparent"],
             "weight": 20
           },
           {
-            "textures": [
-              "paper/bottom5",
-              "paper/paperwork5",
-              "transparent"
-            ],
+            "textures": ["paper/bottom5", "paper/paperwork5", "transparent"],
             "weight": 15
           },
           {
-            "textures": [
-              "paper/bottom6",
-              "paper/paperwork6",
-              "transparent"
-            ],
+            "textures": ["paper/bottom6", "paper/paperwork6", "transparent"],
             "weight": 25
           }
         ]
       },
       {
         "stateID": "paperwork1",
-        "textures": [
-          "paper/bottom1",
-          "paper/paperwork1",
-          "transparent"
-        ]
+        "textures": ["paper/bottom1", "paper/paperwork1", "transparent"]
       },
       {
         "stateID": "paperwork2",
-        "textures": [
-          "paper/bottom2",
-          "paper/paperwork2",
-          "transparent"
-        ]
+        "textures": ["paper/bottom2", "paper/paperwork2", "transparent"]
       },
       {
         "stateID": "paperwork3",
-        "textures": [
-          "paper/bottom3",
-          "paper/paperwork3",
-          "transparent"
-        ]
+        "textures": ["paper/bottom3", "paper/paperwork3", "transparent"]
       },
       {
         "stateID": "paperwork4",
-        "textures": [
-          "paper/bottom4",
-          "paper/paperwork4",
-          "transparent"
-        ]
+        "textures": ["paper/bottom4", "paper/paperwork4", "transparent"]
       },
       {
         "stateID": "paperwork5",
-        "textures": [
-          "paper/bottom5",
-          "paper/paperwork5",
-          "transparent"
-        ]
+        "textures": ["paper/bottom5", "paper/paperwork5", "transparent"]
       },
       {
         "stateID": "paperwork6",
-        "textures": [
-          "paper/bottom6",
-          "paper/paperwork6",
-          "transparent"
-        ]
+        "textures": ["paper/bottom6", "paper/paperwork6", "transparent"]
       }
     ],
     "renderLayer": "cutout",
@@ -663,6 +605,7 @@
     "blockType": "cuboid-nsew",
     "strength": 1,
     "soundGroup": "cloth",
+    "nonOpaque": true,
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -1102,9 +1045,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Star Chart 2x2",
-    "textures": [
-      "star_chart/2x2/side"
-    ],
+    "textures": ["star_chart/2x2/side"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.961,
@@ -1128,9 +1069,7 @@
     ],
     "creativeTab": "westeros_decor_tab",
     "label": "Star Chart 3x3",
-    "textures": [
-      "star_chart/3x3/side"
-    ],
+    "textures": ["star_chart/3x3/side"],
     "renderLayer": "cutout",
     "boundingBox": {
       "xMin": 0.961,

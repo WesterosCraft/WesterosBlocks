@@ -46,12 +46,14 @@
     "states": [
         {
             "stateID": "base",
+            "excludeVariants": "window_frame,window_frame_mullion",
             "textures": {
                 "all": "wood/oak/all"
             }
         },
         {
             "stateID": "cut",
+            "excludeVariants": "window_frame,window_frame_mullion",
             "textures": {
                 "all": "wood/oak/all_lines"
             }
