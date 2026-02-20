@@ -1,19 +1,19 @@
 {
   "variants": {
     "facing=east": {
-      "model": "westerosblocks:block/custom/wall_heater_shield_hedge_knight/base_v1",
-      "y": 90
+      "model": "westerosblocks:block/wall_heater_shield_hedge_knight/base_v1"
     },
     "facing=north": {
-      "model": "westerosblocks:block/custom/wall_heater_shield_hedge_knight/base_v1"
+      "model": "westerosblocks:block/wall_heater_shield_hedge_knight/base_v1",
+      "y": 270
     },
     "facing=south": {
-      "model": "westerosblocks:block/custom/wall_heater_shield_hedge_knight/base_v1",
-      "y": 180
+      "model": "westerosblocks:block/wall_heater_shield_hedge_knight/base_v1",
+      "y": 90
     },
     "facing=west": {
-      "model": "westerosblocks:block/custom/wall_heater_shield_hedge_knight/base_v1",
-      "y": 270
+      "model": "westerosblocks:block/wall_heater_shield_hedge_knight/base_v1",
+      "y": 180
     }
   }
 }
