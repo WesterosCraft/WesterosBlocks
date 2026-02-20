@@ -43,7 +43,8 @@ public class WCBlockItem extends BlockItem {
 
         // Add "Cyclable" tooltip for toggleOnUse blocks
         if (def != null && def.toggleOnUse()) {
-            tooltip.add(Text.literal("Cyclable").formatted(Formatting.AQUA));
+            int count = def.getStateCount();
+            tooltip.add(Text.literal(count + " cyclable variants").formatted(Formatting.GOLD));
         }
     }
 }

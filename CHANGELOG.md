@@ -2,30 +2,15 @@
 
 ## February 2026
 
-### New Blocks
-
 - Redwood tree blocks (redwood, leaf tip, redwood branch)
 - Mounted slab block (wall-mounted half-height block with facing/half states)
 - Square bunting + additional bunting colors for all color variants
 - New cabbage block model
-
-### Features
-
+- Chili pepper crop (4 growth stages, layer-sensitive, toggle on use)
+- Chili pepper leaves (birch-tinted with pepper overlay, better foliage)
+- Chili pepper crate and basket slab
 - Cyclable tooltips for block inspection
-- Block definition refactor: "types" renamed to "options" for consistency
-- Block definition type property refactor (string → key/value)
-- Datagen cleanup and optimization
-
-### Bug Fixes
-
-- Fixed path block rendering
-- Fixed hopper block issues
-- Fixed hedge/tully shield textures
-- Fixed bunting ceiling render
-- Fixed cullface on various models
-  od- Fixed model file generation
-- Fixed mod icon
-- Fixed tooltip display
+- Optimized paper block models
 
 ## January 2026
 
