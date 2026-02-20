@@ -280,8 +280,8 @@
   {
     "blockName": "crop_chili_peppers",
     "blockType": "crop",
-    "hardness": 5,
-    "resistance": 0,
+    "hardness": 2,
+    "resistance": 2,
     "soundGroup": "grass",
     "harvestLevel": [
       {

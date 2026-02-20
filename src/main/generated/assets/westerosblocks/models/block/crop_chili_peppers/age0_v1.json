@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/untinted/crop",
+  "textures": {
+    "crop": "westerosblocks:block/chili_pepper/chili_pepper_stage_0"
+  }
+}
