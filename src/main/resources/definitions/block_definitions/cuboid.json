@@ -1301,6 +1301,11 @@
           false
         ]
       }
+    ],
+    "tooltips": [
+      {
+        "text": "A block without Better Grass effects"
+      }
     ]
   },
   {

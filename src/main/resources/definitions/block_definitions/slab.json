@@ -505,5 +505,23 @@
       "crate_block/basket_grape_white",
       "crate_block/basket_side_slab"
     ]
+  },
+  {
+    "blockName": "grass_slab",
+    "blockType": "slab",
+    "strength": 2,
+    "soundGroup": "grass",
+    "harvestLevel": [
+      {
+        "tool": "shovel",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_grass_dirt_tab",
+    "label": "Grass Slab",
+    "colorMult": "textures/colormap/grass",
+    "textures": [
+      "classic_grass_block/top1"
+    ]
   }
 ]
