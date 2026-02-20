@@ -1,4 +1,5 @@
 {
+	"format_version": "1.21.11",
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
@@ -22,10 +23,6 @@
 			"to": [11.20261, 0.01, 7.79759],
 			"rotation": {"angle": 22.5, "axis": "y", "origin": [9.67346, 2.755, 6.71535]},
 			"faces": {
-				"north": {"uv": [0, 0, 3, 0], "texture": "#missing"},
-				"east": {"uv": [0, 0, 3.75, 0], "texture": "#missing"},
-				"south": {"uv": [0, 0, 3, 0], "texture": "#missing"},
-				"west": {"uv": [0, 0, 3.75, 0], "texture": "#missing"},
 				"up": {"uv": [12.75, 1.25, 16, 5.5], "rotation": 90, "texture": "#0"},
 				"down": {"uv": [0, 0, 3.75, 3], "rotation": 270, "texture": "#missing"}
 			}
@@ -41,7 +38,7 @@
 				"south": {"uv": [12.75, 5.75, 14, 7.25], "texture": "#0"},
 				"west": {"uv": [12.75, 5.75, 14, 7.25], "texture": "#0"},
 				"up": {"uv": [12.75, 5.75, 14, 7.25], "rotation": 90, "texture": "#0"},
-				"down": {"uv": [12.75, 5.75, 14, 7.25], "rotation": 270, "texture": "#0"}
+				"down": {"uv": [12.75, 5.75, 14, 7.25], "rotation": 270, "texture": "#0", "cullface": "down"}
 			}
 		},
 		{
@@ -54,8 +51,7 @@
 				"east": {"uv": [13, 5.5, 13.75, 5.75], "texture": "#0"},
 				"south": {"uv": [13, 5.5, 13.75, 5.75], "texture": "#0"},
 				"west": {"uv": [13, 5.5, 13.75, 5.75], "texture": "#0"},
-				"up": {"uv": [14, 6, 14.75, 6.75], "rotation": 90, "texture": "#0"},
-				"down": {"uv": [13, 5.5, 13.75, 5.75], "rotation": 270, "texture": "#0"}
+				"up": {"uv": [14, 6, 14.75, 6.75], "rotation": 90, "texture": "#0"}
 			}
 		},
 		{
@@ -63,10 +59,6 @@
 			"to": [13.38881, 0.02, 15.54189],
 			"rotation": {"angle": 0, "axis": "y", "origin": [9.67346, 2.755, 6.71535]},
 			"faces": {
-				"north": {"uv": [0, 0, 5.25, 0], "texture": "#missing"},
-				"east": {"uv": [0, 0, 4.25, 0], "texture": "#missing"},
-				"south": {"uv": [0, 0, 5.25, 0], "texture": "#missing"},
-				"west": {"uv": [0, 0, 4.25, 0], "texture": "#0"},
 				"up": {"uv": [11.5, 9.25, 16, 16], "rotation": 90, "texture": "#0"},
 				"down": {"uv": [0, 0, 4.25, 5.25], "rotation": 270, "texture": "#missing"}
 			}

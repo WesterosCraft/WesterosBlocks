@@ -1,86 +1,69 @@
 {
-  "parent": "block/block",
-  "elements": [
-    {
-      "faces": {
-        "down": {
-          "texture": "#txt0",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
-        "east": {
-          "cullface": "east",
-          "texture": "#txt5",
-          "uv": [
-            0.0,
-            15.376,
-            16.0,
-            15.52
-          ]
-        },
-        "north": {
-          "cullface": "north",
-          "texture": "#txt2",
-          "uv": [
-            0.0,
-            15.376,
-            16.0,
-            15.52
-          ]
-        },
-        "south": {
-          "cullface": "south",
-          "texture": "#txt3",
-          "uv": [
-            0.0,
-            15.376,
-            16.0,
-            15.52
-          ]
-        },
-        "up": {
-          "texture": "#txt1",
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ]
-        },
-        "west": {
-          "cullface": "west",
-          "texture": "#txt4",
-          "uv": [
-            0.0,
-            15.376,
-            16.0,
-            15.52
-          ]
-        }
-      },
-      "from": [
-        0.0,
-        0.48,
-        0.0
-      ],
-      "to": [
-        16.0,
-        0.624,
-        16.0
-      ]
-    }
-  ],
-  "textures": {
-    "particle": "westerosblocks:block/paper/bottom1",
-    "txt0": "westerosblocks:block/paper/bottom1",
-    "txt1": "westerosblocks:block/paper/paperwork1",
-    "txt2": "westerosblocks:block/transparent",
-    "txt3": "westerosblocks:block/transparent",
-    "txt4": "westerosblocks:block/transparent",
-    "txt5": "westerosblocks:block/transparent"
-  }
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"3": "westerosblocks:block/paper/paperwork1",
+		"particle": "westerosblocks:block/paper/bottom1",
+		"txt0": "westerosblocks:block/paper/bottom1",
+		"txt5": "westerosblocks:block/transparent"
+	},
+	"elements": [
+		{
+			"from": [0, 0.48, 0],
+			"to": [16, 0.624, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0.552, 8]},
+			"faces": {
+				"north": {"uv": [0, 15.376, 16, 15.52], "texture": "#missing", "cullface": "north"},
+				"east": {"uv": [0, 15.376, 16, 15.52], "texture": "#txt5", "cullface": "east"},
+				"south": {"uv": [0, 15.376, 16, 15.52], "texture": "#missing", "cullface": "south"},
+				"west": {"uv": [0, 15.376, 16, 15.52], "texture": "#missing", "cullface": "west"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#txt0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 3],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 2.75],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"translation": [0, 3.5, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -135, 0],
+			"translation": [0, 5.25, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [-90, -45, -180],
+			"translation": [0.5, 0, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"head": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 14.25, 0.5]
+		},
+		"fixed": {
+			"rotation": [-90, -90, 0],
+			"translation": [0, 0, -7]
+		},
+		"on_shelf": {
+			"rotation": [180, -90, 90],
+			"translation": [0, 0, 4.25]
+		}
+	}
 }

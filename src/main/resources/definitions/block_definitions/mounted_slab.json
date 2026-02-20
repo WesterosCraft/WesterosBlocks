@@ -20,10 +20,8 @@
     "isCustomModel": true,
     "randomTextures": [
       {
-        "textures": ["bark/redwood/side"]
       },
       {
-        "textures": ["bark/redwood/side"]
       }
     ],
     "boundingBox": {
