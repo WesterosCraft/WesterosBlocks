@@ -64,7 +64,6 @@
 - Pebble blocks (Light/Dark Stormlands, Dark Mountains of the Moon, Light/Dark Westerlands)
 - Icicles / ghostskin-style block
 - Muddy snow blocks (alt, light, dark variants + layers)
-- Sand block (falling block with custom dust colors)
 - Smoke particles
 
 ### CTM Textures
@@ -144,31 +143,16 @@
 - off_white_wood, birch_yellow_wood, grey_blue_wood, dark_grey_wood, blue_grey_wood, light_grey_wood, light_purple_wood
 - oak_jungle, oak_orange, oak_birch + vertical plank variants
 - Stripped log variants (oak, spruce, northern, jungle, birch, grey, white) + beam variants
-
-### New Doors & Half-Doors
-
 - Simple Birch Door + Window Shutters
 - Fancy doors + window shutters for: White, Grey, Oak, Spruce, Jungle, Northern wood
-
-### Updates
-
 - 3D models for pickaxe, axe, cleaver, pitchfork
 - Updated tool textures
-
-### Snow
-
 - Updated muddy snow block with repeat CTM
 - New Muddy Snow Alt, Light, and Dark blocks + layers
-
-### Ice Update
-
 - New ice blocks: Light Ice, Medium Light Ice, Blue Ice, Light Blue Ice, Dark Blue Ice, Dark Blue Medium Ice
 - Updated ice block textures with repeat CTM
 - New packed ice block
 - New Icicles block (ghostskin-style)
-
-### Furniture
-
 - New table block
 - New chair block
 - 5 new bench blocks (Oak, Birch, Spruce, Jungle, Northern) with connection states + entity seating
