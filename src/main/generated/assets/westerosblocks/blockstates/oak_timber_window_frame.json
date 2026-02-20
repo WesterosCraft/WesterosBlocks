@@ -1,11 +1,7 @@
 {
   "variants": {
-    "state=base": {
+    "": {
       "model": "westerosblocks:block/oak_timber_window_frame/base_v1",
-      "y": 0
-    },
-    "state=cut": {
-      "model": "westerosblocks:block/oak_timber_window_frame/cut_v1",
       "y": 0
     }
   }
