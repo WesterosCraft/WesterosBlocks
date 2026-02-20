@@ -979,5 +979,53 @@
       }
     ],
     "colorMult": "textures/colormap/foliage_oak"
+  },
+  {
+    "blockName": "chili_pepper_leaves",
+    "blockType": "leaves",
+    "soundGroup": "grass",
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Chili Pepper Leaves",
+    "options": {
+      "noDecay": true,
+      "betterFoliage": true,
+      "overlay": true,
+      "rotateRandom": true
+    },
+    "randomTextures": [
+      {
+        "textures": [
+          "leaves/birch/all",
+          "transparent",
+          "leaves/overlay/chili_pepper0"
+        ],
+        "weight": 10
+      },
+      {
+        "textures": [
+          "leaves/birch/all",
+          "transparent",
+          "leaves/overlay/chili_pepper1"
+        ],
+        "weight": 10
+      },
+      {
+        "textures": [
+          "leaves/birch/all",
+          "transparent",
+          "leaves/overlay/chili_pepper2"
+        ],
+        "weight": 10
+      },
+      {
+        "textures": [
+          "leaves/birch/all",
+          "transparent",
+          "leaves/overlay/chili_pepper3"
+        ],
+        "weight": 2
+      }
+    ],
+    "colorMult": "textures/colormap/birch"
   }
 ]
