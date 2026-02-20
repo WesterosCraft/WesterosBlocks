@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
@@ -316,6 +317,101 @@ public class CuboidBlockExporter extends BaseBlockExporter {
         }
 
         return stateModelMap;
+    }
+
+    /**
+     * Configuration for a single facing direction's rotation.
+     */
+    protected record FacingRotation(String facingValue, int yRot, int xRot) {
+        FacingRotation(String facingValue, int yRot) {
+            this(facingValue, yRot, 0);
+        }
+    }
+
+    /**
+     * Provider that returns facing rotations per state.
+     * Allows per-state customization (e.g., different conventions for custom vs generated models).
+     */
+    @FunctionalInterface
+    protected interface FacingRotationProvider {
+        FacingRotation[] getRotations(BlockDefinition.StateVariant state);
+    }
+
+    /**
+     * Shared blockstate generator for all directional cuboid exporters.
+     * Builds facing variant JSON from a rotation configuration, handling:
+     * - Single and multi-state blocks
+     * - Weighted random texture variants
+     * - Per-state rotYOffset
+     * - X-axis rotation (for UP/DOWN directions)
+     */
+    protected static BlockStateSupplier generateFacingBlockState(
+            Block block,
+            Map<String, List<Identifier>> stateModelMap,
+            List<BlockDefinition.StateVariant> states,
+            boolean hasMultipleStates,
+            FacingRotationProvider rotationProvider) {
+        return new BlockStateSupplier() {
+            @Override
+            public Block getBlock() {
+                return block;
+            }
+
+            @Override
+            public JsonElement get() {
+                JsonObject json = new JsonObject();
+                JsonObject variants = new JsonObject();
+
+                for (BlockDefinition.StateVariant state : states) {
+                    String stateId = state.getStateID() != null ? state.getStateID() : "base";
+                    List<Identifier> modelIds = stateModelMap.get(stateId);
+                    if (modelIds == null || modelIds.isEmpty()) continue;
+
+                    int rotYOffset = 0;
+                    if (state.getRotYOffset() != null) {
+                        rotYOffset = state.getRotYOffset().intValue();
+                    }
+
+                    FacingRotation[] rotations = rotationProvider.getRotations(state);
+                    List<BlockDefinition.RandomTextureVariant> randomTextures = state.getRandomTextures();
+                    boolean hasWeights = randomTextures != null && !randomTextures.isEmpty() && modelIds.size() > 1;
+
+                    for (FacingRotation fr : rotations) {
+                        String key = hasMultipleStates
+                                ? "facing=" + fr.facingValue() + ",state=" + stateId
+                                : "facing=" + fr.facingValue();
+
+                        if (hasWeights) {
+                            JsonArray variantArray = new JsonArray();
+                            for (int i = 0; i < modelIds.size() && i < randomTextures.size(); i++) {
+                                int weight = randomTextures.get(i).getWeight();
+                                for (int w = 0; w < weight; w++) {
+                                    variantArray.add(buildVariantJson(modelIds.get(i), fr, rotYOffset));
+                                }
+                            }
+                            variants.add(key, variantArray);
+                        } else {
+                            variants.add(key, buildVariantJson(modelIds.get(0), fr, rotYOffset));
+                        }
+                    }
+                }
+
+                json.add("variants", variants);
+                return json;
+            }
+        };
+    }
+
+    /**
+     * Builds a single variant JSON object with model, y rotation, and optional x rotation.
+     */
+    private static JsonObject buildVariantJson(Identifier modelId, FacingRotation fr, int rotYOffset) {
+        JsonObject variant = new JsonObject();
+        variant.addProperty("model", modelId.toString());
+        int yRot = (fr.yRot() + rotYOffset) % 360;
+        if (yRot > 0) variant.addProperty("y", yRot);
+        if (fr.xRot() != 0) variant.addProperty("x", fr.xRot());
+        return variant;
     }
 
     /**

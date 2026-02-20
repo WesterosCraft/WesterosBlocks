@@ -14078,9 +14078,40 @@
     "blockName": "yellow_stained_clay",
     "blockType": "solid",
     "strength": 5,
-    "soundGroup": "grass",
+    "soundGroup": "wet_grass",
     "creativeTab": "westeros_sand_gravel_tab",
     "label": "Yellow Stained Clay",
     "textures": ["clay/yellow_stained_clay"]
+  },
+  {
+    "blockName": "chili_pepper_crate",
+    "blockType": "solid",
+    "strength": 2,
+    "soundGroup": "wood",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Chili Pepper Crate",
+    "randomTextures": [
+      {
+        "textures": [
+          "crate_block/side_bot1",
+          "crate_block/crate_top_chili_pepper",
+          "crate_block/side_bot1"
+        ]
+      },
+      {
+        "textures": [
+          "crate_block/side_bot2",
+          "crate_block/crate_top_chili_pepper",
+          "crate_block/side_bot2"
+        ]
+      },
+      {
+        "textures": [
+          "crate_block/side_bot3",
+          "crate_block/crate_top_chili_pepper",
+          "crate_block/side_bot3"
+        ]
+      }
+    ]
   }
 ]

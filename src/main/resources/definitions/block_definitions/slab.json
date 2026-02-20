@@ -509,19 +509,39 @@
   {
     "blockName": "grass_slab",
     "blockType": "slab",
-    "strength": 2,
+    "strength": 5,
     "soundGroup": "grass",
+    "isTinted": true,
+    "creativeTab": "westeros_grass_dirt_tab",
+    "label": "Grass Slab",
+    "colorMult": "textures/colormap/grass",
+    "textures": [
+      "classic_grass_block/top1"
+    ],
+    "harvestLevel": [
+      {
+        "tool": "shovel",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "blockName": "chili_pepper_basket_slab",
+    "blockType": "slab",
+    "strength": 2,
+    "soundGroup": "cloth",
     "harvestLevel": [
       {
         "tool": "shovel",
         "level": 1
       }
     ],
-    "creativeTab": "westeros_grass_dirt_tab",
-    "label": "Grass Slab",
-    "colorMult": "textures/colormap/grass",
+    "creativeTab": "westeros_food_blocks_tab",
+    "label": "Chili Pepper Slab",
     "textures": [
-      "classic_grass_block/top1"
+      "crate_block/basket_bottom",
+      "crate_block/basket_chili_pepper",
+      "crate_block/basket_side_slab"
     ]
   }
 ]
