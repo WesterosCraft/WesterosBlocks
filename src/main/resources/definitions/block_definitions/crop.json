@@ -98,7 +98,7 @@
     "soundGroup": "grass",
     "harvestLevel": [
       {
-        "tool": "pickaxe",
+        "tool": "hoe",
         "level": 3
       }
     ],
@@ -132,7 +132,7 @@
     "soundGroup": "grass",
     "harvestLevel": [
       {
-        "tool": "pickaxe",
+        "tool": "hoe",
         "level": 3
       }
     ],
@@ -170,7 +170,7 @@
     "soundGroup": "grass",
     "harvestLevel": [
       {
-        "tool": "pickaxe",
+        "tool": "hoe",
         "level": 3
       }
     ],
@@ -273,6 +273,44 @@
       },
       {
         "textures": ["seagrass/side4"]
+      }
+    ],
+    "renderLayer": "cutout"
+  },
+  {
+    "blockName": "crop_chili_peppers",
+    "blockType": "crop",
+    "hardness": 5,
+    "resistance": 0,
+    "soundGroup": "grass",
+    "harvestLevel": [
+      {
+        "tool": "hoe",
+        "level": 3
+      }
+    ],
+    "creativeTab": "westeros_crops_herbs_tab",
+    "label": "Chili Peppers",
+    "options": {
+      "toggleOnUse": true,
+      "layerSensitive": true
+    },
+    "states": [
+      {
+        "stateID": "age0",
+        "textures": ["chili_pepper/chili_pepper_stage_0"]
+      },
+      {
+        "stateID": "age1",
+        "textures": ["chili_pepper/chili_pepper_stage_1"]
+      },
+      {
+        "stateID": "age2",
+        "textures": ["chili_pepper/chili_pepper_stage_2"]
+      },
+      {
+        "stateID": "age3",
+        "textures": ["chili_pepper/chili_pepper_stage_3"]
       }
     ],
     "renderLayer": "cutout"
