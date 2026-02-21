@@ -2,6 +2,7 @@ package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
+import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.block.enums.BedPart;
 import net.minecraft.data.client.*;
@@ -28,11 +29,8 @@ public class BedBlockExporter extends BaseBlockExporter {
             TextureKey.PARTICLE, ModTextureKey.BED_TOP, ModTextureKey.BED_SIDE, ModTextureKey.BED_END);
     }
 
-    private static Model createBedItemModel(boolean tinted) {
-        String path = tinted ? "item/tinted/bed_item" : "item/untinted/bed_item";
-        return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-            ModTextureKey.BED_TOP, ModTextureKey.BED_TOP2, ModTextureKey.BED_SIDE,
-            ModTextureKey.BED_SIDE2, ModTextureKey.BED_END, ModTextureKey.BED_END2);
+    private static Model getBedItemModel(boolean tinted) {
+        return tinted ? ModModels.BED_ITEM_TINTED : ModModels.BED_ITEM_UNTINTED;
     }
 
     private static TextureMap createBedPartTextureMap(String[] textures, boolean isHead) {
@@ -101,7 +99,7 @@ public class BedBlockExporter extends BaseBlockExporter {
         // Register item model
         TextureMap itemTextureMap = createBedItemTextureMap(textures);
         Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
-        createBedItemModel(tinted).upload(itemModelId, itemTextureMap, generator.modelCollector);
+        getBedItemModel(tinted).upload(itemModelId, itemTextureMap, generator.modelCollector);
     }
 
 

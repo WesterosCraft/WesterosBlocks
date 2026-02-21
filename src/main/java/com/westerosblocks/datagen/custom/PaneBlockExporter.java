@@ -1,6 +1,5 @@
 package com.westerosblocks.datagen.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.state.property.Properties;
@@ -13,14 +12,11 @@ import com.westerosblocks.data.BlockDefinition;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class PaneBlockExporter extends BaseBlockExporter {
 
-    private static Model createPaneSideModel(boolean isBars) {
-        String path = isBars ? "block/untinted/bars_side" : "block/untinted/ctm_pane_side";
-        return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                TextureKey.SIDE, ModTextureKey.CAP);
+    private static Model getPaneSideModel(boolean isBars) {
+        return isBars ? ModModels.PANE_SIDE_BARS : ModModels.PANE_SIDE;
     }
 
     public static void registerPaneBlockWithVariants(BlockStateModelGenerator generator, Block block,
@@ -55,7 +51,7 @@ public class PaneBlockExporter extends BaseBlockExporter {
                 nosideModelIds.add(nosideModelId);
             }
 
-            Identifier sideModelId = createPaneSideModel(isBars).upload(
+            Identifier sideModelId = getPaneSideModel(isBars).upload(
                     createNestedModelId(block, "side" + suffix), paneTextureMap, generator.modelCollector);
             sideModelIds.add(sideModelId);
         }
@@ -115,17 +111,13 @@ public class PaneBlockExporter extends BaseBlockExporter {
      */
     private static void addPaneSideVariant(MultipartBlockStateSupplier supplier, Identifier sideModelId,
                                            int weight, Direction direction, boolean isBars) {
-        // Create variant with uvlock
         BlockStateVariant sideVariant = BlockStateVariant.create()
                 .put(VariantSettings.MODEL, sideModelId)
                 .put(VariantSettings.UVLOCK, true);
 
-        // Add rotation based on direction
-        switch (direction) {
-            case EAST -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R90);
-            case SOUTH -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R180);
-            case WEST -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R270);
-            // NORTH gets no rotation (0 degrees)
+        int yRotation = getRotationForDirection(direction);
+        if (yRotation != 0) {
+            sideVariant = sideVariant.put(VariantSettings.Y, toYRotation(yRotation));
         }
 
         if (weight > 1) {
@@ -174,12 +166,9 @@ public class PaneBlockExporter extends BaseBlockExporter {
                 .put(VariantSettings.MODEL, nosideModelId)
                 .put(VariantSettings.UVLOCK, true);
 
-        // Add rotation based on direction
-        switch (direction) {
-            case EAST -> nosideVariant = nosideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R90);
-            case SOUTH -> nosideVariant = nosideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R180);
-            case WEST -> nosideVariant = nosideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R270);
-            // NORTH gets no rotation (0 degrees)
+        int yRotation = getRotationForDirection(direction);
+        if (yRotation != 0) {
+            nosideVariant = nosideVariant.put(VariantSettings.Y, toYRotation(yRotation));
         }
 
         if (weight > 1) {

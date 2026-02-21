@@ -36,15 +36,14 @@ public class LadderBlockExporter extends BaseBlockExporter {
         for (Direction direction : new Direction[]{Direction.NORTH, Direction.SOUTH, Direction.EAST, Direction.WEST}) {
             List<BlockStateVariant> directionVariants = new ArrayList<>();
 
+            int yRotation = getRotationForDirection(direction);
+
             for (int i = 0; i < modelIds.size(); i++) {
                 BlockStateVariant variant = BlockStateVariant.create()
                         .put(VariantSettings.MODEL, modelIds.get(i));
 
-                // Add rotation for each direction
-                switch (direction) {
-                    case EAST -> variant = variant.put(VariantSettings.Y, VariantSettings.Rotation.R90);
-                    case SOUTH -> variant = variant.put(VariantSettings.Y, VariantSettings.Rotation.R180);
-                    case WEST -> variant = variant.put(VariantSettings.Y, VariantSettings.Rotation.R270);
+                if (yRotation != 0) {
+                    variant = variant.put(VariantSettings.Y, toYRotation(yRotation));
                 }
 
                 if (weights != null && weights.get(i) > 1) {
