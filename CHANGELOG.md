@@ -2,6 +2,7 @@
 
 ## February 2026
 
+- Adds grass slab
 - Redwood tree blocks (redwood, leaf tip, redwood branch)
 - Mounted slab block (wall-mounted half-height block with facing/half states)
 - Square bunting + additional bunting colors for all color variants

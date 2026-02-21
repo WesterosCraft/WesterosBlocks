@@ -2464,5 +2464,36 @@
       "zMax": 1
     },
     "itemTextureIndex": 2
+  },
+  {
+    "blockName": "kernels",
+    "blockType": "cuboid",
+    "strength": 1,
+    "soundGroup": "plant",
+    "creativeTab": "westeros_decor_tab",
+    "label": "Kernels",
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "randomTextures": [
+      {
+        "textures": [
+          "corn/kernels0"
+        ]
+      }
+    ],
+    "boundingBox": {
+      "xMin": 0,
+      "xMax": 1,
+      "yMin": 0.03,
+      "yMax": 0.039,
+      "zMin": 0,
+      "zMax": 1
+    },
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ]
   }
 ]
