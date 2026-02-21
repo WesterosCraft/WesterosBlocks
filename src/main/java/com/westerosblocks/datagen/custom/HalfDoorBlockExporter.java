@@ -1,7 +1,5 @@
 package com.westerosblocks.datagen.custom;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.block.custom.WCHalfDoorBlock;

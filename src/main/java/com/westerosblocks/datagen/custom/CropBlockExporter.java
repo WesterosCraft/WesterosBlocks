@@ -1,13 +1,15 @@
 package com.westerosblocks.datagen.custom;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
+import com.westerosblocks.datagen.ModTextureKey;
+import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.data.BlockDefinition;
+import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CropBlockExporter extends BaseBlockExporter {
@@ -30,17 +32,13 @@ public class CropBlockExporter extends BaseBlockExporter {
             String stateID = state.getStateID();
             String baseName = getStateIdOrBase(stateID);
 
-            int layerCount = layerSensitive ? 8 : 1;
             for (int layer = 8; layer >= (layerSensitive ? 1 : 8); layer--) {
-
                 String layerSuffix = layer != 8 ? "_layer" + layer : "";
                 String modelName = baseName + layerSuffix;
 
-                // Loop over texture sets
                 for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
                     generateCropModel(generator, block, modelName, state, setIdx, tinted, layer, layerSensitive);
                 }
-
             }
         }
 
@@ -53,79 +51,153 @@ public class CropBlockExporter extends BaseBlockExporter {
     private static void generateBlockState(BlockStateModelGenerator generator, Block block,
                                           BlockDefinition definition, List<BlockDefinition.StateVariant> states,
                                           boolean layerSensitive, boolean rotateRandom) {
-        int rotationCount = rotateRandom ? 4 : 1; // 4 rotations if random, 1 if not
+        int rotationCount = rotateRandom ? 4 : 1;
+        ModProperties.StateProperty stateProperty = getStateProperty(block);
+        boolean hasStateProperty = stateProperty != null && states.size() > 1;
 
-        generator.blockStateCollector.accept(new BlockStateSupplier() {
-            @Override
-            public Block getBlock() {
-                return block;
+        if (layerSensitive && hasStateProperty) {
+            // DoubleProperty<Integer, String> on LAYERS + STATE
+            generateLayerStateBlockState(generator, block, states, stateProperty, rotationCount);
+        } else if (layerSensitive) {
+            // SingleProperty<Integer> on LAYERS
+            generateLayerBlockState(generator, block, states, rotationCount);
+        } else if (hasStateProperty) {
+            // SingleProperty<String> on STATE
+            generateStateBlockState(generator, block, states, stateProperty, rotationCount);
+        } else {
+            // No properties — simple variant list
+            generateSimpleBlockState(generator, block, states, rotationCount);
+        }
+    }
+
+    private static void generateLayerStateBlockState(BlockStateModelGenerator generator, Block block,
+                                                     List<BlockDefinition.StateVariant> states,
+                                                     ModProperties.StateProperty stateProperty,
+                                                     int rotationCount) {
+        BlockStateVariantMap.DoubleProperty<Integer, String> variantMap =
+            BlockStateVariantMap.create(Properties.LAYERS, stateProperty);
+
+        // layers=8 first, then layers=1..7 (matches old layerConds order)
+        int[] layerOrder = {8, 1, 2, 3, 4, 5, 6, 7};
+
+        for (int layer : layerOrder) {
+            for (BlockDefinition.StateVariant state : states) {
+                String stateID = state.getStateID();
+                if (stateID == null) continue;
+
+                List<BlockStateVariant> variants = buildCropVariants(block, state, layer, rotationCount);
+                if (variants.size() == 1) {
+                    variantMap.register(layer, stateID, variants.get(0));
+                } else if (!variants.isEmpty()) {
+                    variantMap.register(layer, stateID, variants);
+                }
             }
+        }
 
-            @Override
-            public JsonElement get() {
-                JsonObject json = new JsonObject();
-                JsonObject variants = new JsonObject();
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+        );
+    }
 
-                // Determine layer conditions (matches old layerConds logic)
-                String[] layerConds = layerSensitive
-                    ? new String[]{"layers=8", "layers=1", "layers=2", "layers=3", "layers=4", "layers=5", "layers=6", "layers=7"}
-                    : new String[]{""};
+    private static void generateLayerBlockState(BlockStateModelGenerator generator, Block block,
+                                               List<BlockDefinition.StateVariant> states,
+                                               int rotationCount) {
+        BlockStateVariantMap.SingleProperty<Integer> variantMap =
+            BlockStateVariantMap.create(Properties.LAYERS);
 
-                // Check if block has STATE property (for multi-state crops)
-                boolean hasStateProperty = hasStateProperty(block);
+        int[] layerOrder = {8, 1, 2, 3, 4, 5, 6, 7};
 
-                // Loop: layers → states → texture sets → rotations (matches old nested loop exactly)
-                for (String layerCond : layerConds) {
-                    for (int stateIdx = 0; stateIdx < states.size(); stateIdx++) {
-                        BlockDefinition.StateVariant state = states.get(stateIdx);
-                        String stateID = state.getStateID();
-                        String baseName = getStateIdOrBase(stateID);
+        for (int layer : layerOrder) {
+            List<BlockStateVariant> variants = new ArrayList<>();
+            for (BlockDefinition.StateVariant state : states) {
+                variants.addAll(buildCropVariants(block, state, layer, rotationCount));
+            }
+            if (variants.size() == 1) {
+                variantMap.register(layer, variants.get(0));
+            } else if (!variants.isEmpty()) {
+                variantMap.register(layer, variants);
+            }
+        }
 
-                        // Add layer suffix to model name if layer > 0
-                        String modelName = baseName;
-                        if (layerSensitive && !layerCond.isEmpty() && !layerCond.equals("layers=8")) {
-                            // Extract layer number from condition like "layers=1"
-                            int layerNum = Integer.parseInt(layerCond.substring(layerCond.indexOf('=') + 1));
-                            modelName = baseName + "_layer" + layerNum;
-                        }
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+        );
+    }
 
-                        // Loop over texture sets
-                        for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
-                            BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
-                            if (set == null || set.getTextureCount() == 0) continue;
+    private static void generateStateBlockState(BlockStateModelGenerator generator, Block block,
+                                               List<BlockDefinition.StateVariant> states,
+                                               ModProperties.StateProperty stateProperty,
+                                               int rotationCount) {
+        BlockStateVariantMap.SingleProperty<String> variantMap =
+            BlockStateVariantMap.create(stateProperty);
 
-                            // Loop over rotations
-                            for (int rot = 0; rot < rotationCount; rot++) {
-                                // Build variant key
-                                String variantKey = buildVariantKey(layerCond, stateID, hasStateProperty);
+        for (BlockDefinition.StateVariant state : states) {
+            String stateID = state.getStateID();
+            if (stateID == null) continue;
 
-                                // Create model identifier
-                                Identifier modelId = state.isCustomModel()
-                                    ? createCustomModelId(block, getModelName(modelName, setIdx))
-                                    : createGeneratedModelId(block, getModelName(modelName, setIdx));
+            List<BlockStateVariant> variants = buildCropVariants(block, state, 8, rotationCount);
+            if (variants.size() == 1) {
+                variantMap.register(stateID, variants.get(0));
+            } else if (!variants.isEmpty()) {
+                variantMap.register(stateID, variants);
+            }
+        }
 
-                                // Create variant JSON
-                                JsonObject variant = new JsonObject();
-                                variant.addProperty("model", modelId.toString());
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+        );
+    }
 
-                                if (set.getWeight() > 1) {
-                                    variant.addProperty("weight", set.getWeight());
-                                }
+    private static void generateSimpleBlockState(BlockStateModelGenerator generator, Block block,
+                                                List<BlockDefinition.StateVariant> states,
+                                                int rotationCount) {
+        List<BlockStateVariant> variants = new ArrayList<>();
+        for (BlockDefinition.StateVariant state : states) {
+            variants.addAll(buildCropVariants(block, state, 8, rotationCount));
+        }
 
-                                if (rot > 0) {
-                                    variant.addProperty("y", 90 * rot);
-                                }
+        if (variants.size() == 1) {
+            generator.blockStateCollector.accept(
+                VariantsBlockStateSupplier.create(block, variants.get(0))
+            );
+        } else if (!variants.isEmpty()) {
+            generator.blockStateCollector.accept(
+                VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0]))
+            );
+        }
+    }
 
-                                addVariantToKey(variants, variantKey, variant);
-                            }
-                        }
-                    }
+    private static List<BlockStateVariant> buildCropVariants(Block block, BlockDefinition.StateVariant state,
+                                                            int layer, int rotationCount) {
+        List<BlockStateVariant> variants = new ArrayList<>();
+        String baseName = getStateIdOrBase(state.getStateID());
+        String layerSuffix = layer != 8 ? "_layer" + layer : "";
+        String modelName = baseName + layerSuffix;
+
+        for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
+            BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+            if (set == null || set.getTextureCount() == 0) continue;
+
+            Identifier modelId = state.isCustomModel()
+                ? createCustomModelId(block, getModelName(modelName, setIdx))
+                : createGeneratedModelId(block, getModelName(modelName, setIdx));
+
+            for (int rot = 0; rot < rotationCount; rot++) {
+                BlockStateVariant variant = BlockStateVariant.create()
+                    .put(VariantSettings.MODEL, modelId);
+
+                if (set.getWeight() > 1) {
+                    variant.put(VariantSettings.WEIGHT, set.getWeight());
+                }
+                if (rot > 0) {
+                    variant.put(VariantSettings.Y, toRotation(90 * rot));
                 }
 
-                json.add("variants", variants);
-                return json;
+                variants.add(variant);
             }
-        });
+        }
+
+        return variants;
     }
 
     private static void generateCropModel(BlockStateModelGenerator generator, Block block, String modelName,
@@ -137,57 +209,21 @@ public class CropBlockExporter extends BaseBlockExporter {
         String fullModelName = getModelName(modelName, setIdx);
         Identifier modelId = createGeneratedModelId(block, fullModelName);
 
-        // Determine parent model (matches old parent logic)
-        String parentBase = tinted ? "westerosblocks:block/tinted/crop" : "westerosblocks:block/untinted/crop";
         String layerSuffix = (layerSensitive && layer != 8) ? "_layer" + layer : "";
-        String parent = parentBase + layerSuffix;
+        String parentPath = "crop" + layerSuffix;
 
-        // Create model JSON
-        JsonObject modelJson = new JsonObject();
-        modelJson.addProperty("parent", parent);
+        Model model = createTintedModel(tinted, parentPath, ModTextureKey.CROP);
+        TextureMap textureMap = ModTextureMap.cropTextures(set.getTextureByIndex(0));
 
-        // Add texture
-        JsonObject texturesJson = new JsonObject();
-        texturesJson.addProperty("crop", "westerosblocks:block/" + set.getTextureByIndex(0));
-        modelJson.add("textures", texturesJson);
-
-        // Upload model
-        generator.modelCollector.accept(modelId, () -> modelJson);
+        model.upload(modelId, textureMap, generator.modelCollector);
     }
 
-    private static String buildVariantKey(String layerCond, String stateID, boolean hasStateProperty) {
-        if (layerCond.isEmpty()) {
-            // No layer condition
-            if (stateID != null && hasStateProperty) {
-                return "state=" + stateID;
-            }
-            return "";
-        } else {
-            // Has layer condition
-            if (stateID != null && hasStateProperty) {
-                return layerCond + ",state=" + stateID;
-            }
-            return layerCond;
-        }
+    private static VariantSettings.Rotation toRotation(int degrees) {
+        return switch (degrees) {
+            case 90 -> VariantSettings.Rotation.R90;
+            case 180 -> VariantSettings.Rotation.R180;
+            case 270 -> VariantSettings.Rotation.R270;
+            default -> VariantSettings.Rotation.R0;
+        };
     }
-
-    private static void addVariantToKey(JsonObject variants, String key, JsonObject variant) {
-        if (variants.has(key)) {
-
-            JsonElement existing = variants.get(key);
-            if (existing.isJsonArray()) {
-                existing.getAsJsonArray().add(variant);
-            } else {
-
-                JsonArray array = new JsonArray();
-                array.add(existing);
-                array.add(variant);
-                variants.add(key, array);
-            }
-        } else {
-
-            variants.add(key, variant);
-        }
-    }
-
 }

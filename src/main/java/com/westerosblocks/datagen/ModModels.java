@@ -57,9 +57,19 @@ public class ModModels {
     // Branch models
     public static final Model BRANCH_HORIZONTAL_CONNECTED = block("branches/large_branch_horizontal_connected", TextureKey.TEXTURE);
 
-    // Log models (using vanilla parents)
+    // Log models (using vanilla parents — 2-texture END+SIDE)
     public static final Model LOG = vanillaBlock("cube_column", TextureKey.END, TextureKey.SIDE);
     public static final Model LOG_HORIZONTAL = vanillaBlock("cube_column_horizontal", TextureKey.END, TextureKey.SIDE);
+
+    // Log models (using custom parents — 6-texture per face + particle)
+    public static final Model LOG_6FACE = block("untinted/cube_log",
+            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.WEST, TextureKey.EAST, TextureKey.PARTICLE);
+    public static final Model LOG_6FACE_HORIZONTAL = block("untinted/cube_log_horizontal",
+            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.WEST, TextureKey.EAST, TextureKey.PARTICLE);
+    public static final Model LOG_6FACE_TINTED = block("tinted/cube_log",
+            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.WEST, TextureKey.EAST, TextureKey.PARTICLE);
+    public static final Model LOG_6FACE_HORIZONTAL_TINTED = block("tinted/cube_log_horizontal",
+            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.WEST, TextureKey.EAST, TextureKey.PARTICLE);
 
     // Table models
     public static final Model TABLE = block("tables/table", TextureKey.TEXTURE);

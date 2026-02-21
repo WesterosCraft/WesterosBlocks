@@ -1,15 +1,15 @@
 package com.westerosblocks.datagen.custom;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
+import net.minecraft.block.enums.SlabType;
 import net.minecraft.data.client.*;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SlabBlockExporter extends BaseBlockExporter {
@@ -44,71 +44,52 @@ public class SlabBlockExporter extends BaseBlockExporter {
 
     private static void generateBlockState(BlockStateModelGenerator generator, Block block,
                                           List<BlockDefinition.StateVariant> states) {
-        JsonObject root = new JsonObject();
-        JsonObject variants = new JsonObject();
+        BlockStateVariantMap.SingleProperty<SlabType> variantMap =
+            BlockStateVariantMap.create(Properties.SLAB_TYPE);
+
+        List<BlockStateVariant> bottomVariants = new ArrayList<>();
+        List<BlockStateVariant> topVariants = new ArrayList<>();
+        List<BlockStateVariant> doubleVariants = new ArrayList<>();
 
         for (BlockDefinition.StateVariant state : states) {
-            String stateID = state.getStateID();
-            String fname = getStateIdOrBase(stateID);
+            String fname = getStateIdOrBase(state.getStateID());
 
             for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
                 BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
                 if (set == null) continue;
 
-                int weight = set.getWeight();
-
-                // Build model IDs for the three slab types
                 Identifier bottomModel = createNestedModelId(block, getModelName(fname, setIdx, "bottom"));
                 Identifier topModel = createNestedModelId(block, getModelName(fname, setIdx, "top"));
                 Identifier doubleModel = createNestedModelId(block, getModelName(fname, setIdx, "double"));
 
-                // Add variants for each slab type
-                addSlabVariant(variants, "type=bottom", bottomModel, weight);
-                addSlabVariant(variants, "type=top", topModel, weight);
-                addSlabVariant(variants, "type=double", doubleModel, weight);
+                int weight = set.getWeight();
+                bottomVariants.add(createSlabVariant(bottomModel, weight));
+                topVariants.add(createSlabVariant(topModel, weight));
+                doubleVariants.add(createSlabVariant(doubleModel, weight));
             }
         }
 
-        root.add("variants", variants);
+        if (bottomVariants.size() == 1) {
+            variantMap.register(SlabType.BOTTOM, bottomVariants.get(0));
+            variantMap.register(SlabType.TOP, topVariants.get(0));
+            variantMap.register(SlabType.DOUBLE, doubleVariants.get(0));
+        } else {
+            variantMap.register(SlabType.BOTTOM, bottomVariants);
+            variantMap.register(SlabType.TOP, topVariants);
+            variantMap.register(SlabType.DOUBLE, doubleVariants);
+        }
 
-        // Register the blockstate
-        generator.blockStateCollector.accept(new BlockStateSupplier() {
-            @Override
-            public Block getBlock() {
-                return block;
-            }
-
-            @Override
-            public JsonElement get() {
-                return root;
-            }
-        });
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+        );
     }
 
-    private static void addSlabVariant(JsonObject variants, String variantKey, Identifier modelId, int weight) {
-        JsonObject variantData = new JsonObject();
-        variantData.addProperty("model", modelId.toString());
+    private static BlockStateVariant createSlabVariant(Identifier modelId, int weight) {
+        BlockStateVariant variant = BlockStateVariant.create().put(VariantSettings.MODEL, modelId);
         if (weight > 1) {
-            variantData.addProperty("weight", weight);
+            variant.put(VariantSettings.WEIGHT, weight);
         }
-
-        if (variants.has(variantKey)) {
-            // Already exists - convert to array if needed
-            JsonElement existing = variants.get(variantKey);
-            if (existing.isJsonObject()) {
-                // Convert single object to array
-                JsonArray array = new JsonArray();
-                array.add(existing);
-                array.add(variantData);
-                variants.add(variantKey, array);
-            } else if (existing.isJsonArray()) {
-                // Add to existing array
-                existing.getAsJsonArray().add(variantData);
-            }
-        } else {
-            // First variant for this key
-            variants.add(variantKey, variantData);
-        }
+        return variant;
     }
 
     private static void generateSlabModels(BlockStateModelGenerator generator, Block block,
@@ -116,7 +97,6 @@ public class SlabBlockExporter extends BaseBlockExporter {
                                           BlockDefinition definition) {
         BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
         if (set == null || set.getTextureCount() == 0) {
-            // Fallback to missing texture
             generateSlabModelsWithTextures(generator, block, fname, setIdx,
                 new String[]{"missing"}, false, false);
             return;
@@ -133,7 +113,6 @@ public class SlabBlockExporter extends BaseBlockExporter {
         generateSlabModelsWithTextures(generator, block, fname, setIdx, textures, isTinted, isOverlay);
     }
 
-
     private static void generateSlabModelsWithTextures(BlockStateModelGenerator generator, Block block,
                                                        String fname, int setIdx, String[] textures,
                                                        boolean isTinted, boolean isOverlay) {
@@ -144,7 +123,6 @@ public class SlabBlockExporter extends BaseBlockExporter {
         Model topModel = ModModels.SLAB_TOP;
         Model doubleModel = Models.CUBE;
 
-        // Upload all three models
         Identifier bottomModelId = createNestedModelId(block, getModelName(fname, setIdx, "bottom"));
         bottomModel.upload(bottomModelId, textureMap, generator.modelCollector);
 
@@ -157,7 +135,6 @@ public class SlabBlockExporter extends BaseBlockExporter {
 
     protected static String getModelName(String fname, int setIdx, String variant) {
         if (setIdx == 0 && fname.equals("base")) {
-            // For base state with single texture set, use simple names
             return variant;
         }
         return fname + "_v" + (setIdx + 1) + "_" + variant;
