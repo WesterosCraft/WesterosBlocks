@@ -1,8 +1,8 @@
 package com.westerosblocks.datagen.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.custom.WCVinesBlock;
 import com.westerosblocks.data.BlockDefinition;
+import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
@@ -11,7 +11,6 @@ import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Exporter for vines blocks following block-models.md patterns.
@@ -20,10 +19,11 @@ import java.util.Optional;
 public class VinesBlockExporter extends BaseBlockExporter {
 
 
-    private static Model createVineModel(String vineType, boolean tinted) {
-        String tintPath = tinted ? "block/tinted/" : "block/untinted/";
-        String path = tintPath + "vine_" + vineType;
-        return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(), ModTextureKey.VINES);
+    private static Model getVineModel(String vineType, boolean tinted) {
+        if ("u".equals(vineType)) {
+            return tinted ? ModModels.VINE_TOP_TINTED : ModModels.VINE_TOP_UNTINTED;
+        }
+        return tinted ? ModModels.VINE_SIDE_TINTED : ModModels.VINE_SIDE_UNTINTED;
     }
 
 
@@ -77,9 +77,9 @@ public class VinesBlockExporter extends BaseBlockExporter {
         TextureMap sideTextureMap = createVinesTextureMap(sideTexture);
         TextureMap topTextureMap = createVinesTextureMap(topTexture);
 
-        Identifier sideModelId = createVineModel("1", tinted)
+        Identifier sideModelId = getVineModel("1", tinted)
                 .upload(createNestedModelId(block, "base"), sideTextureMap, generator.modelCollector);
-        Identifier topModelId = createVineModel("u", tinted)
+        Identifier topModelId = getVineModel("u", tinted)
                 .upload(createNestedModelId(block, "top"), topTextureMap, generator.modelCollector);
 
         MultipartBlockStateSupplier blockstate = createVinesBlockstate(block,
@@ -104,9 +104,9 @@ public class VinesBlockExporter extends BaseBlockExporter {
             TextureMap sideTextureMap = createVinesTextureMap(textures[0]);
             TextureMap topTextureMap = createVinesTextureMap(textures.length > 1 ? textures[1] : textures[0]);
 
-            Identifier sideModelId = createVineModel("1", tinted)
+            Identifier sideModelId = getVineModel("1", tinted)
                     .upload(createNestedModelId(block, "base_v" + (i + 1)), sideTextureMap, generator.modelCollector);
-            Identifier topModelId = createVineModel("u", tinted)
+            Identifier topModelId = getVineModel("u", tinted)
                     .upload(createNestedModelId(block, "top_v" + (i + 1)), topTextureMap, generator.modelCollector);
 
             sideModelIds.add(sideModelId);

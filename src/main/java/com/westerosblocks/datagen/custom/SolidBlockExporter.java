@@ -1,16 +1,15 @@
 package com.westerosblocks.datagen.custom;
 
+import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.block.custom.WCSolidBlock;
 import com.westerosblocks.data.BlockDefinition;
 
 import java.util.List;
-import java.util.Optional;
 
 public class SolidBlockExporter extends BaseBlockExporter {
 
@@ -143,12 +142,7 @@ public class SolidBlockExporter extends BaseBlockExporter {
         TextureMap textureMap = ModTextureMap.customAllSides(textures);
 
         if (isTinted) {
-            Model tintedModel = new Model(
-                Optional.of(WesterosBlocks.id("block/tinted/cube")),
-                Optional.empty(),
-                TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST
-            );
-            tintedModel.upload(modelId, textureMap, generator.modelCollector);
+            ModModels.CUBE_TINTED.upload(modelId, textureMap, generator.modelCollector);
         } else {
             Models.CUBE.upload(modelId, textureMap, generator.modelCollector);
         }
@@ -189,14 +183,7 @@ public class SolidBlockExporter extends BaseBlockExporter {
             textureMap.put(ModTextureKey.EAST_OVERLAY, createBlockIdentifier(getOverlayTextureByIndex(overlayTextures, eastIdx)));
         }
 
-        String modelPath = isTinted ? "block/tinted/cube_overlay" : "block/untinted/cube_overlay";
-        Model overlayModel = new Model(
-            Optional.of(WesterosBlocks.id(modelPath)),
-            Optional.empty(),
-            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST,
-                ModTextureKey.DOWN_OVERLAY, ModTextureKey.UP_OVERLAY, ModTextureKey.NORTH_OVERLAY,
-                ModTextureKey.SOUTH_OVERLAY, ModTextureKey.EAST_OVERLAY, ModTextureKey.WEST_OVERLAY
-        );
+        Model overlayModel = isTinted ? ModModels.CUBE_OVERLAY_TINTED : ModModels.CUBE_OVERLAY_UNTINTED;
         overlayModel.upload(modelId, textureMap, generator.modelCollector);
     }
 }

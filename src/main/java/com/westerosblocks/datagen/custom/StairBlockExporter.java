@@ -276,10 +276,10 @@ public class StairBlockExporter extends BaseBlockExporter {
                 .put(VariantSettings.MODEL, model);
 
             if (rot.x() != 0) {
-                variant.put(VariantSettings.X, toRotation(rot.x()));
+                variant.put(VariantSettings.X, toYRotation(rot.x()));
             }
             if (rot.y() != 0) {
-                variant.put(VariantSettings.Y, toRotation(rot.y()));
+                variant.put(VariantSettings.Y, toYRotation(rot.y()));
             }
             if (!noUvlock && (rot.x() != 0 || rot.y() != 0)) {
                 variant.put(VariantSettings.UVLOCK, true);
@@ -294,12 +294,4 @@ public class StairBlockExporter extends BaseBlockExporter {
         return variants;
     }
 
-    private static VariantSettings.Rotation toRotation(int degrees) {
-        return switch (degrees) {
-            case 90 -> VariantSettings.Rotation.R90;
-            case 180 -> VariantSettings.Rotation.R180;
-            case 270 -> VariantSettings.Rotation.R270;
-            default -> VariantSettings.Rotation.R0;
-        };
-    }
 }

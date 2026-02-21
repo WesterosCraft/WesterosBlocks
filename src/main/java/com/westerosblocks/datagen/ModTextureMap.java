@@ -53,6 +53,68 @@ public class ModTextureMap {
     }
 
     /**
+     * Creates a texture map for fence/wall blocks with bottom, top, side, and particle keys.
+     * Particle defaults to the side texture.
+     */
+    public static TextureMap fenceWallTextures(String bottom, String top, String side) {
+        return new TextureMap()
+                .put(TextureKey.BOTTOM, Identifier.of("westerosblocks", "block/" + bottom))
+                .put(TextureKey.TOP, Identifier.of("westerosblocks", "block/" + top))
+                .put(TextureKey.SIDE, Identifier.of("westerosblocks", "block/" + side))
+                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + side));
+    }
+
+    /**
+     * Creates a texture map for fence/wall overlay blocks with base + overlay keys.
+     */
+    public static TextureMap fenceWallOverlayTextures(String bottom, String top, String side,
+                                                       String bottomOv, String topOv, String sideOv) {
+        return fenceWallTextures(bottom, top, side)
+                .put(ModTextureKey.BOTTOM_OVERLAY, Identifier.of("westerosblocks", "block/" + bottomOv))
+                .put(ModTextureKey.TOP_OVERLAY, Identifier.of("westerosblocks", "block/" + topOv))
+                .put(ModTextureKey.SIDE_OVERLAY, Identifier.of("westerosblocks", "block/" + sideOv));
+    }
+
+    /**
+     * Creates a texture map for standard leaves blocks with end, side, and particle keys.
+     * Particle defaults to the side texture.
+     */
+    public static TextureMap leavesTextures(String end, String side) {
+        return new TextureMap()
+                .put(TextureKey.END, Identifier.of("westerosblocks", "block/" + end))
+                .put(TextureKey.SIDE, Identifier.of("westerosblocks", "block/" + side))
+                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + side));
+    }
+
+    /**
+     * Creates a texture map for leaves overlay blocks with base + overlay keys.
+     */
+    public static TextureMap leavesOverlayTextures(String end, String side, String endOv, String sideOv) {
+        return leavesTextures(end, side)
+                .put(ModTextureKey.LEAVES_OVERLAY_END, Identifier.of("westerosblocks", "block/" + endOv))
+                .put(ModTextureKey.LEAVES_OVERLAY_SIDE, Identifier.of("westerosblocks", "block/" + sideOv));
+    }
+
+    /**
+     * Creates a texture map for better foliage leaves with all and particle keys.
+     * Particle defaults to the all texture.
+     */
+    public static TextureMap leavesBetterFoliageTextures(String all) {
+        return new TextureMap()
+                .put(TextureKey.ALL, Identifier.of("westerosblocks", "block/" + all))
+                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + all));
+    }
+
+    /**
+     * Creates a texture map for better foliage leaves overlay with base + overlay keys.
+     */
+    public static TextureMap leavesBetterFoliageOverlayTextures(String all, String endOv, String sideOv) {
+        return leavesBetterFoliageTextures(all)
+                .put(ModTextureKey.LEAVES_OVERLAY_END, Identifier.of("westerosblocks", "block/" + endOv))
+                .put(ModTextureKey.LEAVES_OVERLAY_SIDE, Identifier.of("westerosblocks", "block/" + sideOv));
+    }
+
+    /**
      * Creates a texture map for all six sides of a block with custom textures
      *
      * @param textures Array of texture paths in order: down, up, north, south,

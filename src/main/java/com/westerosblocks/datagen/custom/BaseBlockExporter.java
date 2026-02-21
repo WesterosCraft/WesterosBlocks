@@ -183,14 +183,7 @@ public abstract class BaseBlockExporter {
      * @throws IllegalArgumentException if rotation is not 0, 90, 180, or 270
      */
     protected static BlockStateVariant createVariant(Identifier modelId, int rotation) {
-        Rotation rotationEnum = switch (rotation) {
-            case 0 -> Rotation.R0;
-            case 90 -> Rotation.R90;
-            case 180 -> Rotation.R180;
-            case 270 -> Rotation.R270;
-            default -> throw new IllegalArgumentException("Invalid rotation: " + rotation + ". Must be 0, 90, 180, or 270.");
-        };
-        return BlockStateVariant.create().put(VariantSettings.MODEL, modelId).put(VariantSettings.Y, rotationEnum);
+        return BlockStateVariant.create().put(VariantSettings.MODEL, modelId).put(VariantSettings.Y, toYRotation(rotation));
     }
 
     /**
@@ -273,8 +266,25 @@ public abstract class BaseBlockExporter {
     }
 
     /**
+     * Converts degrees to VariantSettings.Rotation enum.
+     *
+     * @param degrees Rotation in degrees (0, 90, 180, or 270)
+     * @return The corresponding Rotation enum value
+     * @throws IllegalArgumentException if degrees is not 0, 90, 180, or 270
+     */
+    protected static VariantSettings.Rotation toYRotation(int degrees) {
+        return switch (degrees) {
+            case 0 -> Rotation.R0;
+            case 90 -> Rotation.R90;
+            case 180 -> Rotation.R180;
+            case 270 -> Rotation.R270;
+            default -> throw new IllegalArgumentException("Invalid rotation: " + degrees + ". Must be 0, 90, 180, or 270.");
+        };
+    }
+
+    /**
      * Converts a Direction enum to rotation degrees for Y-axis rotation.
-     * Standard mapping for horizontal facings.
+     * Standard mapping where model faces north at 0° rotation.
      *
      * @param direction The direction
      * @return Rotation in degrees (0, 90, 180, or 270)
@@ -287,6 +297,23 @@ public abstract class BaseBlockExporter {
             case SOUTH -> 180;
             case WEST -> 270;
             default -> throw new IllegalArgumentException("Direction must be horizontal: " + direction);
+        };
+    }
+
+    /**
+     * Converts a Direction to rotation degrees for south-default models.
+     * Models that face south at 0° rotation (bench, table, chair).
+     *
+     * @param direction The direction
+     * @return Rotation in degrees (0, 90, 180, or 270)
+     */
+    protected static int getFacingSouthDefaultRotation(Direction direction) {
+        return switch (direction) {
+            case NORTH -> 180;
+            case SOUTH -> 0;
+            case WEST -> 90;
+            case EAST -> 270;
+            default -> 0;
         };
     }
 
@@ -377,6 +404,60 @@ public abstract class BaseBlockExporter {
      */
     protected static String getStateIdOrBase(String stateID) {
         return stateID == null ? "base" : stateID;
+    }
+
+    /**
+     * Builds a list of weighted, optionally-rotated block state variants.
+     * Used by leaves, flower pots, and other blocks that support random rotation.
+     *
+     * @param modelIds List of model identifiers
+     * @param weights List of weights (null for uniform weight)
+     * @param rotateRandom Whether to add 0/90/180/270° rotation variants
+     * @return List of BlockStateVariants
+     */
+    protected static List<BlockStateVariant> buildRotatedVariantList(
+            List<Identifier> modelIds, List<Integer> weights, boolean rotateRandom) {
+        List<BlockStateVariant> variants = new ArrayList<>();
+        int rotationCount = rotateRandom ? 4 : 1;
+
+        for (int i = 0; i < modelIds.size(); i++) {
+            for (int rotation = 0; rotation < rotationCount; rotation++) {
+                BlockStateVariant variant = BlockStateVariant.create()
+                        .put(VariantSettings.MODEL, modelIds.get(i));
+
+                if (weights != null && weights.get(i) > 1) {
+                    variant = variant.put(VariantSettings.WEIGHT, weights.get(i));
+                }
+
+                if (rotation > 0) {
+                    variant = variant.put(VariantSettings.Y, toYRotation(90 * rotation));
+                }
+
+                variants.add(variant);
+            }
+        }
+
+        return variants;
+    }
+
+    /**
+     * Creates a VariantsBlockStateSupplier with optionally-rotated weighted variants.
+     *
+     * @param block The block
+     * @param modelIds List of model identifiers
+     * @param weights List of weights (null for uniform weight)
+     * @param rotateRandom Whether to add 0/90/180/270° rotation variants
+     * @return The block state supplier
+     */
+    protected static VariantsBlockStateSupplier createRotatedVariantsBlockState(
+            Block block, List<Identifier> modelIds, List<Integer> weights, boolean rotateRandom) {
+        List<BlockStateVariant> variants = buildRotatedVariantList(modelIds, weights, rotateRandom);
+
+        if (variants.size() == 1) {
+            return VariantsBlockStateSupplier.create(block, variants.get(0));
+        } else {
+            return VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0]));
+        }
     }
 
     protected static class ModelRegistry {

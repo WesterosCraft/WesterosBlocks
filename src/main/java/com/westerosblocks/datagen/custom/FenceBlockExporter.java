@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
-import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.datagen.ModTextureKey;
+import com.westerosblocks.datagen.ModModels;
+import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
@@ -11,73 +11,31 @@ import net.minecraft.util.math.Direction;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class FenceBlockExporter extends BaseBlockExporter {
 
-    private static Model createFencePostModel(boolean tinted, boolean overlay) {
-        String tintPath = tinted ? "block/tinted/" : "block/untinted/";
-        String overlayPath = overlay ? "fence_post_overlay" : "fence_post";
-        String path = tintPath + overlayPath;
-
-        if (overlay) {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-                ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
-        } else {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-        }
+    private static Model getFencePostModel(boolean tinted, boolean overlay) {
+        if (overlay) return tinted ? ModModels.FENCE_POST_OVERLAY_TINTED : ModModels.FENCE_POST_OVERLAY_UNTINTED;
+        return tinted ? ModModels.FENCE_POST_TINTED : ModModels.FENCE_POST_UNTINTED;
     }
 
-    private static Model createFenceSideModel(boolean tinted, boolean overlay) {
-        String tintPath = tinted ? "block/tinted/" : "block/untinted/";
-        String overlayPath = overlay ? "fence_side_overlay" : "fence_side";
-        String path = tintPath + overlayPath;
-
-        if (overlay) {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-                ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
-        } else {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-        }
+    private static Model getFenceSideModel(boolean tinted, boolean overlay) {
+        if (overlay) return tinted ? ModModels.FENCE_SIDE_OVERLAY_TINTED : ModModels.FENCE_SIDE_OVERLAY_UNTINTED;
+        return tinted ? ModModels.FENCE_SIDE_TINTED : ModModels.FENCE_SIDE_UNTINTED;
     }
 
-    private static Model createFenceInventoryModel(boolean tinted, boolean overlay) {
-        String tintPath = tinted ? "block/tinted/" : "block/untinted/";
-        String overlayPath = overlay ? "fence_inventory_overlay" : "fence_inventory";
-        String path = tintPath + overlayPath;
-
-        if (overlay) {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-                ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
-        } else {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-        }
+    private static Model getFenceInventoryModel(boolean tinted, boolean overlay) {
+        if (overlay) return tinted ? ModModels.FENCE_INVENTORY_OVERLAY_TINTED : ModModels.FENCE_INVENTORY_OVERLAY_UNTINTED;
+        return tinted ? ModModels.FENCE_INVENTORY_TINTED : ModModels.FENCE_INVENTORY_UNTINTED;
     }
 
-    /**
-     * Creates a TextureMap for fence blocks.
-     * Follows block-models.md section 5.3: Using Texture Map.
-     */
     private static TextureMap createFenceTextureMap(String[] textures, String[] overlayTextures) {
-        TextureMap textureMap = new TextureMap()
-                .put(TextureKey.BOTTOM, createBlockIdentifier(textures[0]))
-                .put(TextureKey.TOP, createBlockIdentifier(textures[1]))
-                .put(TextureKey.SIDE, createBlockIdentifier(textures[2]))
-                .put(TextureKey.PARTICLE, createBlockIdentifier(textures[2]));
-
         if (overlayTextures != null) {
-            textureMap.put(ModTextureKey.BOTTOM_OVERLAY, createBlockIdentifier(overlayTextures[0]));
-            textureMap.put(ModTextureKey.TOP_OVERLAY, createBlockIdentifier(overlayTextures[1]));
-            textureMap.put(ModTextureKey.SIDE_OVERLAY, createBlockIdentifier(overlayTextures[2]));
+            return ModTextureMap.fenceWallOverlayTextures(
+                    textures[0], textures[1], textures[2],
+                    overlayTextures[0], overlayTextures[1], overlayTextures[2]);
         }
-
-        return textureMap;
+        return ModTextureMap.fenceWallTextures(textures[0], textures[1], textures[2]);
     }
 
     /**
@@ -118,12 +76,9 @@ public class FenceBlockExporter extends BaseBlockExporter {
                 .put(VariantSettings.MODEL, sideModelId)
                 .put(VariantSettings.UVLOCK, true);
 
-        // Add rotation based on direction
-        switch (direction) {
-            case EAST -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R90);
-            case SOUTH -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R180);
-            case WEST -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R270);
-            // NORTH gets no rotation (0 degrees)
+        int yRotation = getRotationForDirection(direction);
+        if (yRotation != 0) {
+            sideVariant = sideVariant.put(VariantSettings.Y, toYRotation(yRotation));
         }
 
         if (weight > 1) {
@@ -152,9 +107,9 @@ public class FenceBlockExporter extends BaseBlockExporter {
         TextureMap textureMap = createFenceTextureMap(expandedTextures, expandedOverlays);
 
         // Upload post and side models
-        Identifier postModelId = createFencePostModel(tinted, overlay)
+        Identifier postModelId = getFencePostModel(tinted, overlay)
                 .upload(createNestedModelId(block, "post"), textureMap, generator.modelCollector);
-        Identifier sideModelId = createFenceSideModel(tinted, overlay)
+        Identifier sideModelId = getFenceSideModel(tinted, overlay)
                 .upload(createNestedModelId(block, "side"), textureMap, generator.modelCollector);
 
         // Create blockstate
@@ -164,7 +119,7 @@ public class FenceBlockExporter extends BaseBlockExporter {
 
         // Register item model
         Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
-        createFenceInventoryModel(tinted, overlay)
+        getFenceInventoryModel(tinted, overlay)
                 .upload(itemModelId, textureMap, generator.modelCollector);
     }
 
@@ -184,9 +139,9 @@ public class FenceBlockExporter extends BaseBlockExporter {
 
             TextureMap textureMap = createFenceTextureMap(expandedTextures, expandedOverlays);
 
-            Identifier postModelId = createFencePostModel(tinted, overlay)
+            Identifier postModelId = getFencePostModel(tinted, overlay)
                     .upload(createNestedModelId(block, "post_v" + (i + 1)), textureMap, generator.modelCollector);
-            Identifier sideModelId = createFenceSideModel(tinted, overlay)
+            Identifier sideModelId = getFenceSideModel(tinted, overlay)
                     .upload(createNestedModelId(block, "side_v" + (i + 1)), textureMap, generator.modelCollector);
 
             postModelIds.add(postModelId);
@@ -205,7 +160,7 @@ public class FenceBlockExporter extends BaseBlockExporter {
         TextureMap itemTextureMap = createFenceTextureMap(expandedTextures, expandedOverlays);
 
         Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
-        createFenceInventoryModel(tinted, overlay)
+        getFenceInventoryModel(tinted, overlay)
                 .upload(itemModelId, itemTextureMap, generator.modelCollector);
     }
 

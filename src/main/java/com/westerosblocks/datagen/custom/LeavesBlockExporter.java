@@ -2,70 +2,45 @@ package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
-import com.westerosblocks.datagen.ModTextureKey;
+import com.westerosblocks.datagen.ModModels;
+import com.westerosblocks.datagen.ModTextureMap;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class LeavesBlockExporter extends BaseBlockExporter {
 
-    private static Model createLeavesModel(boolean tinted, boolean overlay) {
-        String tintPath = tinted ? "block/tinted/" : "block/untinted/";
-        String overlayPath = overlay ? "leaves_overlay" : "leaves";
-        String path = tintPath + overlayPath;
-
-        if (overlay) {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                TextureKey.END, TextureKey.SIDE, ModTextureKey.LEAVES_OVERLAY_END, ModTextureKey.LEAVES_OVERLAY_SIDE, TextureKey.PARTICLE);
-        } else {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                TextureKey.END, TextureKey.SIDE, TextureKey.PARTICLE);
-        }
+    private static Model getLeavesModel(boolean tinted, boolean overlay) {
+        if (overlay) return tinted ? ModModels.LEAVES_OVERLAY_TINTED : ModModels.LEAVES_OVERLAY_UNTINTED;
+        return tinted ? ModModels.LEAVES_TINTED : ModModels.LEAVES_UNTINTED;
     }
 
-    private static Model createLeavesBetterFoliageModel(boolean tinted, boolean overlay, int variant) {
-        String tintPath = tinted ? "block/tinted/" : "block/untinted/";
-        String overlayPath = overlay ? "leaves_overlay_bf" : "leaves_bf";
-        String path = tintPath + overlayPath + variant;
+    private static final Model[][] BF_MODELS = {
+        { ModModels.LEAVES_BF1_UNTINTED, ModModels.LEAVES_BF1_TINTED, ModModels.LEAVES_BF1_OVERLAY_UNTINTED, ModModels.LEAVES_BF1_OVERLAY_TINTED },
+        { ModModels.LEAVES_BF2_UNTINTED, ModModels.LEAVES_BF2_TINTED, ModModels.LEAVES_BF2_OVERLAY_UNTINTED, ModModels.LEAVES_BF2_OVERLAY_TINTED },
+        { ModModels.LEAVES_BF3_UNTINTED, ModModels.LEAVES_BF3_TINTED, ModModels.LEAVES_BF3_OVERLAY_UNTINTED, ModModels.LEAVES_BF3_OVERLAY_TINTED },
+    };
 
-        if (overlay) {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                TextureKey.ALL, ModTextureKey.LEAVES_OVERLAY_END, ModTextureKey.LEAVES_OVERLAY_SIDE, TextureKey.PARTICLE);
-        } else {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                TextureKey.ALL, TextureKey.PARTICLE);
-        }
+    private static Model getLeavesBetterFoliageModel(boolean tinted, boolean overlay, int variant) {
+        int idx = (tinted ? 1 : 0) + (overlay ? 2 : 0);
+        return BF_MODELS[variant - 1][idx];
     }
 
     private static TextureMap createStandardLeavesTextureMap(String[] textures, boolean hasOverlay) {
-        TextureMap textureMap = new TextureMap()
-                .put(TextureKey.END, createBlockIdentifier(textures[0]))
-                .put(TextureKey.SIDE, createBlockIdentifier(textures[1]))
-                .put(TextureKey.PARTICLE, createBlockIdentifier(textures[1]));
-
         if (hasOverlay && textures.length >= 4) {
-            textureMap.put(ModTextureKey.LEAVES_OVERLAY_END, createBlockIdentifier(textures[2]));
-            textureMap.put(ModTextureKey.LEAVES_OVERLAY_SIDE, createBlockIdentifier(textures[3]));
+            return ModTextureMap.leavesOverlayTextures(textures[0], textures[1], textures[2], textures[3]);
         }
-
-        return textureMap;
+        return ModTextureMap.leavesTextures(textures[0], textures[1]);
     }
 
     private static TextureMap createBetterFoliageTextureMap(String[] textures, boolean hasOverlay) {
-        TextureMap textureMap = new TextureMap()
-                .put(TextureKey.ALL, createBlockIdentifier(textures[0]))
-                .put(TextureKey.PARTICLE, createBlockIdentifier(textures[0]));
-
         if (hasOverlay && textures.length >= 3) {
-            textureMap.put(ModTextureKey.LEAVES_OVERLAY_END, createBlockIdentifier(textures[1]));
-            textureMap.put(ModTextureKey.LEAVES_OVERLAY_SIDE, createBlockIdentifier(textures[2]));
+            return ModTextureMap.leavesBetterFoliageOverlayTextures(textures[0], textures[1], textures[2]);
         }
-
-        return textureMap;
+        return ModTextureMap.leavesBetterFoliageTextures(textures[0]);
     }
 
     public static void registerLeavesBlock(BlockStateModelGenerator generator, Block block, boolean tinted,
@@ -75,19 +50,19 @@ public class LeavesBlockExporter extends BaseBlockExporter {
         if (betterFoliage) {
             TextureMap textureMap = createBetterFoliageTextureMap(textures, overlay);
             for (int i = 1; i <= 3; i++) {
-                Identifier modelId = createLeavesBetterFoliageModel(tinted, overlay, i)
+                Identifier modelId = getLeavesBetterFoliageModel(tinted, overlay, i)
                         .upload(createNestedModelId(block, "bf" + i), textureMap, generator.modelCollector);
                 modelIds.add(modelId);
             }
         } else {
             TextureMap textureMap = createStandardLeavesTextureMap(textures, overlay);
-            Identifier modelId = createLeavesModel(tinted, overlay)
+            Identifier modelId = getLeavesModel(tinted, overlay)
                     .upload(createNestedModelId(block, "base"), textureMap, generator.modelCollector);
             modelIds.add(modelId);
         }
 
         // Create blockstate with rotations
-        VariantsBlockStateSupplier blockstate = createLeavesBlockstate(block, modelIds, rotateRandom, null);
+        VariantsBlockStateSupplier blockstate = createRotatedVariantsBlockState(block, modelIds, null, rotateRandom);
         generator.blockStateCollector.accept(blockstate);
         generator.registerParentedItemModel(block, modelIds.get(0));
     }
@@ -104,52 +79,23 @@ public class LeavesBlockExporter extends BaseBlockExporter {
             if (betterFoliage) {
                 TextureMap textureMap = createBetterFoliageTextureMap(set.getTexturesAsArray(), overlay);
                 for (int bfIdx = 1; bfIdx <= 3; bfIdx++) {
-                    Identifier modelId = createLeavesBetterFoliageModel(tinted, overlay, bfIdx)
+                    Identifier modelId = getLeavesBetterFoliageModel(tinted, overlay, bfIdx)
                             .upload(createNestedModelId(block, "bf" + bfIdx + "_v" + (setIdx + 1)), textureMap, generator.modelCollector);
                     modelIds.add(modelId);
                     weights.add(set.weight);
                 }
             } else {
                 TextureMap textureMap = createStandardLeavesTextureMap(set.getTexturesAsArray(), overlay);
-                Identifier modelId = createLeavesModel(tinted, overlay)
+                Identifier modelId = getLeavesModel(tinted, overlay)
                         .upload(createNestedModelId(block, "base_v" + (setIdx + 1)), textureMap, generator.modelCollector);
                 modelIds.add(modelId);
                 weights.add(set.weight);
             }
         }
 
-        VariantsBlockStateSupplier blockstate = createLeavesBlockstate(block, modelIds, rotateRandom, weights);
+        VariantsBlockStateSupplier blockstate = createRotatedVariantsBlockState(block, modelIds, weights, rotateRandom);
         generator.blockStateCollector.accept(blockstate);
         generator.registerParentedItemModel(block, modelIds.get(0));
-    }
-
-    private static VariantsBlockStateSupplier createLeavesBlockstate(Block block, List<Identifier> modelIds,
-                                                                     boolean rotateRandom, List<Integer> weights) {
-        List<BlockStateVariant> variants = new ArrayList<>();
-        int rotationCount = rotateRandom ? 4 : 1;
-
-        for (int i = 0; i < modelIds.size(); i++) {
-            for (int rotation = 0; rotation < rotationCount; rotation++) {
-                BlockStateVariant variant = BlockStateVariant.create()
-                        .put(VariantSettings.MODEL, modelIds.get(i));
-
-                if (weights != null && weights.get(i) > 1) {
-                    variant = variant.put(VariantSettings.WEIGHT, weights.get(i));
-                }
-
-                if (rotation > 0) {
-                    variant = variant.put(VariantSettings.Y, VariantSettings.Rotation.valueOf("R" + (90 * rotation)));
-                }
-
-                variants.add(variant);
-            }
-        }
-
-        if (variants.size() == 1) {
-            return VariantsBlockStateSupplier.create(block, variants.get(0));
-        } else {
-            return VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0]));
-        }
     }
 
     public static void registerCustomLeavesBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {

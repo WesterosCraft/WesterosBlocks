@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.data.BlockDefinition;
+import com.westerosblocks.datagen.ModModels;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.state.property.Properties;
@@ -205,19 +206,18 @@ public class CrossBlockExporter extends BaseBlockExporter {
                         firstTexture = texturePath;
                     }
 
-                    // Determine parent template
-                    String parentPath;
-                    if (layerIdx > 0) {
-                        parentPath = isTinted ? "block/tinted/cross_layer" + layerIdx : "block/untinted/cross_layer" + layerIdx;
-                    } else {
-                        parentPath = isTinted ? "block/tinted/cross" : "block/untinted/cross";
-                    }
-
                     // Generate model
                     Identifier modelId = createNestedModelId(block, getModelName(id, setIdx));
                     Identifier textureId = createBlockIdentifier(texturePath);
                     TextureMap textureMap = new TextureMap().put(TextureKey.CROSS, textureId);
-                    Model model = new Model(Optional.of(WesterosBlocks.id(parentPath)), Optional.empty(), TextureKey.CROSS);
+
+                    Model model;
+                    if (layerIdx > 0) {
+                        String parentPath = isTinted ? "block/tinted/cross_layer" + layerIdx : "block/untinted/cross_layer" + layerIdx;
+                        model = new Model(Optional.of(WesterosBlocks.id(parentPath)), Optional.empty(), TextureKey.CROSS);
+                    } else {
+                        model = isTinted ? ModModels.CROSS_TINTED : ModModels.CROSS_UNTINTED;
+                    }
                     model.upload(modelId, textureMap, generator.modelCollector);
                 }
             }

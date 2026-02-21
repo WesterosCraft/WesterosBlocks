@@ -1,8 +1,8 @@
 package com.westerosblocks.datagen.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
-import com.westerosblocks.datagen.ModTextureKey;
+import com.westerosblocks.datagen.ModModels;
+import com.westerosblocks.datagen.ModTextureMap;
 import net.minecraft.block.enums.WallShape;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
@@ -11,62 +11,26 @@ import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class WallBlockExporter extends BaseBlockExporter {
 
-    private static Model createWallPostModel(boolean tinted, boolean overlay) {
-        String tintPath = tinted ? "block/tinted/" : "block/untinted/";
-        String overlayPath = overlay ? "_overlay" : "";
-        String path = tintPath + "template_wall_post" + overlayPath;
-
-        if (overlay) {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                    TextureKey.BOTTOM,
-                    TextureKey.TOP,
-                    TextureKey.SIDE,
-                    ModTextureKey.BOTTOM_OVERLAY,
-                    ModTextureKey.TOP_OVERLAY,
-                    ModTextureKey.SIDE_OVERLAY,
-                    TextureKey.PARTICLE);
-        } else {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                    TextureKey.BOTTOM,
-                    TextureKey.TOP,
-                    TextureKey.SIDE,
-                    TextureKey.PARTICLE);
-        }
+    private static Model getWallPostModel(boolean tinted, boolean overlay) {
+        if (overlay) return tinted ? ModModels.WALL_POST_OVERLAY_TINTED : ModModels.WALL_POST_OVERLAY_UNTINTED;
+        return tinted ? ModModels.WALL_POST_TINTED : ModModels.WALL_POST_UNTINTED;
     }
 
-    private static Model createWallSideModel(boolean tinted, boolean overlay, boolean isShort) {
-        String tintPath = tinted ? "block/tinted/" : "block/untinted/";
-        String overlayPath = overlay ? "_overlay" : "";
-        String shortPath = isShort ? "_2" : "";
-        String path = tintPath + "template_wall_side" + shortPath + overlayPath;
-
-        if (overlay) {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-                ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
-        } else {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+    private static Model getWallSideModel(boolean tinted, boolean overlay, boolean isShort) {
+        if (isShort) {
+            if (overlay) return tinted ? ModModels.WALL_SIDE_SHORT_OVERLAY_TINTED : ModModels.WALL_SIDE_SHORT_OVERLAY_UNTINTED;
+            return tinted ? ModModels.WALL_SIDE_SHORT_TINTED : ModModels.WALL_SIDE_SHORT_UNTINTED;
         }
+        if (overlay) return tinted ? ModModels.WALL_SIDE_OVERLAY_TINTED : ModModels.WALL_SIDE_OVERLAY_UNTINTED;
+        return tinted ? ModModels.WALL_SIDE_TINTED : ModModels.WALL_SIDE_UNTINTED;
     }
 
-    private static Model createWallSideTallModel(boolean tinted, boolean overlay) {
-        String tintPath = tinted ? "block/tinted/" : "block/untinted/";
-        String overlayPath = overlay ? "_overlay" : "";
-        String path = tintPath + "template_wall_side_tall" + overlayPath;
-
-        if (overlay) {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-                ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
-        } else {
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-        }
+    private static Model getWallSideTallModel(boolean tinted, boolean overlay) {
+        if (overlay) return tinted ? ModModels.WALL_SIDE_TALL_OVERLAY_TINTED : ModModels.WALL_SIDE_TALL_OVERLAY_UNTINTED;
+        return tinted ? ModModels.WALL_SIDE_TALL_TINTED : ModModels.WALL_SIDE_TALL_UNTINTED;
     }
 
     // ========================================
@@ -74,19 +38,12 @@ public class WallBlockExporter extends BaseBlockExporter {
     // ========================================
 
     private static TextureMap createWallTextureMap(String[] textures, String[] overlayTextures) {
-        TextureMap textureMap = new TextureMap()
-                .put(TextureKey.BOTTOM, createBlockIdentifier(textures[0]))
-                .put(TextureKey.TOP, createBlockIdentifier(textures[1]))
-                .put(TextureKey.SIDE, createBlockIdentifier(textures[2]))
-                .put(TextureKey.PARTICLE, createBlockIdentifier(textures[2]));
-
         if (overlayTextures != null) {
-            textureMap.put(ModTextureKey.BOTTOM_OVERLAY, createBlockIdentifier(overlayTextures[0]));
-            textureMap.put(ModTextureKey.TOP_OVERLAY, createBlockIdentifier(overlayTextures[1]));
-            textureMap.put(ModTextureKey.SIDE_OVERLAY, createBlockIdentifier(overlayTextures[2]));
+            return ModTextureMap.fenceWallOverlayTextures(
+                    textures[0], textures[1], textures[2],
+                    overlayTextures[0], overlayTextures[1], overlayTextures[2]);
         }
-
-        return textureMap;
+        return ModTextureMap.fenceWallTextures(textures[0], textures[1], textures[2]);
     }
 
     private static MultipartBlockStateSupplier createWallVariants(Block block, List<Identifier> postModelIds,
@@ -136,12 +93,14 @@ public class WallBlockExporter extends BaseBlockExporter {
                 .put(VariantSettings.MODEL, sideModelId)
                 .put(VariantSettings.UVLOCK, true);
 
-        // Add rotation based on direction
-        switch (direction) {
-            case "east" -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R90);
-            case "south" -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R180);
-            case "west" -> sideVariant = sideVariant.put(VariantSettings.Y, VariantSettings.Rotation.R270);
-            // NORTH gets no rotation (0 degrees)
+        int yRotation = switch (direction) {
+            case "east" -> 90;
+            case "south" -> 180;
+            case "west" -> 270;
+            default -> 0;
+        };
+        if (yRotation != 0) {
+            sideVariant = sideVariant.put(VariantSettings.Y, toYRotation(yRotation));
         }
 
         if (weight > 1) {
@@ -174,11 +133,11 @@ public class WallBlockExporter extends BaseBlockExporter {
         TextureMap textureMap = createWallTextureMap(expandedTextures, expandedOverlays);
 
         // Upload post, side, and tall models
-        Identifier postModelId = createWallPostModel(tinted, overlay)
+        Identifier postModelId = getWallPostModel(tinted, overlay)
                 .upload(createNestedModelId(block, "post"), textureMap, generator.modelCollector);
-        Identifier sideModelId = createWallSideModel(tinted, overlay, isShort)
+        Identifier sideModelId = getWallSideModel(tinted, overlay, isShort)
                 .upload(createNestedModelId(block, "side"), textureMap, generator.modelCollector);
-        Identifier tallModelId = createWallSideTallModel(tinted, overlay)
+        Identifier tallModelId = getWallSideTallModel(tinted, overlay)
                 .upload(createNestedModelId(block, "side_tall"), textureMap, generator.modelCollector);
 
         // Create blockstate
@@ -207,11 +166,11 @@ public class WallBlockExporter extends BaseBlockExporter {
 
             TextureMap textureMap = createWallTextureMap(expandedTextures, expandedOverlays);
 
-            Identifier postModelId = createWallPostModel(tinted, overlay)
+            Identifier postModelId = getWallPostModel(tinted, overlay)
                     .upload(createNestedModelId(block, "post_v" + (i + 1)), textureMap, generator.modelCollector);
-            Identifier sideModelId = createWallSideModel(tinted, overlay, isShort)
+            Identifier sideModelId = getWallSideModel(tinted, overlay, isShort)
                     .upload(createNestedModelId(block, "side_v" + (i + 1)), textureMap, generator.modelCollector);
-            Identifier tallModelId = createWallSideTallModel(tinted, overlay)
+            Identifier tallModelId = getWallSideTallModel(tinted, overlay)
                     .upload(createNestedModelId(block, "side_tall_v" + (i + 1)), textureMap, generator.modelCollector);
 
             postModelIds.add(postModelId);

@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
+import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
@@ -9,23 +9,13 @@ import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class FlowerPotBlockExporter extends BaseBlockExporter {
-    private static Model createFlowerPotModel(boolean isEmpty, boolean tinted) {
-        String tintPath = tinted ? "block/tinted/" : "block/untinted/";
-        String potType = isEmpty ? "flower_pot" : "flower_pot_cross";
-        String path = tintPath + potType;
-
+    private static Model getFlowerPotModel(boolean isEmpty, boolean tinted) {
         if (isEmpty) {
-            // Empty pot: dirt, flowerpot textures
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                ModTextureKey.DIRT, ModTextureKey.FLOWERPOT, TextureKey.PARTICLE);
-        } else {
-            // Filled pot: dirt, flowerpot, plant textures
-            return new Model(Optional.of(WesterosBlocks.id(path)), Optional.empty(),
-                ModTextureKey.DIRT, ModTextureKey.FLOWERPOT, ModTextureKey.PLANT, TextureKey.PARTICLE);
+            return tinted ? ModModels.FLOWERPOT_EMPTY_TINTED : ModModels.FLOWERPOT_EMPTY_UNTINTED;
         }
+        return tinted ? ModModels.FLOWERPOT_FILLED_TINTED : ModModels.FLOWERPOT_FILLED_UNTINTED;
     }
 
     private static TextureMap createFlowerPotTextureMap(String[] textures, boolean isEmpty) {
@@ -47,44 +37,15 @@ public class FlowerPotBlockExporter extends BaseBlockExporter {
         return textureMap;
     }
 
-    private static VariantsBlockStateSupplier createFlowerPotBlockstate(Block block, List<Identifier> modelIds,
-                                                                        boolean rotateRandom, List<Integer> weights) {
-        List<BlockStateVariant> variants = new ArrayList<>();
-        int rotationCount = rotateRandom ? 4 : 1;
-
-        for (int i = 0; i < modelIds.size(); i++) {
-            for (int rotation = 0; rotation < rotationCount; rotation++) {
-                BlockStateVariant variant = BlockStateVariant.create()
-                        .put(VariantSettings.MODEL, modelIds.get(i));
-
-                if (weights != null && weights.get(i) > 1) {
-                    variant = variant.put(VariantSettings.WEIGHT, weights.get(i));
-                }
-
-                if (rotation > 0) {
-                    variant = variant.put(VariantSettings.Y, VariantSettings.Rotation.valueOf("R" + (90 * rotation)));
-                }
-
-                variants.add(variant);
-            }
-        }
-
-        if (variants.size() == 1) {
-            return VariantsBlockStateSupplier.create(block, variants.get(0));
-        } else {
-            return VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0]));
-        }
-    }
-
     public static void registerFlowerPotBlock(BlockStateModelGenerator generator, Block block, boolean tinted,
                                              boolean rotateRandom, String[] textures) {
         boolean isEmpty = textures.length == 2;
         TextureMap textureMap = createFlowerPotTextureMap(textures, isEmpty);
 
-        Identifier modelId = createFlowerPotModel(isEmpty, tinted)
+        Identifier modelId = getFlowerPotModel(isEmpty, tinted)
                 .upload(createNestedModelId(block, "base"), textureMap, generator.modelCollector);
 
-        VariantsBlockStateSupplier blockstate = createFlowerPotBlockstate(block, List.of(modelId), rotateRandom, List.of(1));
+        VariantsBlockStateSupplier blockstate = createRotatedVariantsBlockState(block, List.of(modelId), List.of(1), rotateRandom);
         generator.blockStateCollector.accept(blockstate);
         generator.registerParentedItemModel(block, modelId);
     }
@@ -100,14 +61,14 @@ public class FlowerPotBlockExporter extends BaseBlockExporter {
             boolean isEmpty = textures.length == 2;
             TextureMap textureMap = createFlowerPotTextureMap(textures, isEmpty);
 
-            Identifier modelId = createFlowerPotModel(isEmpty, tinted)
+            Identifier modelId = getFlowerPotModel(isEmpty, tinted)
                     .upload(createNestedModelId(block, "base_v" + (i + 1)), textureMap, generator.modelCollector);
 
             modelIds.add(modelId);
             weights.add(set.weight);
         }
 
-        VariantsBlockStateSupplier blockstate = createFlowerPotBlockstate(block, modelIds, rotateRandom, weights);
+        VariantsBlockStateSupplier blockstate = createRotatedVariantsBlockState(block, modelIds, weights, rotateRandom);
         generator.blockStateCollector.accept(blockstate);
         generator.registerParentedItemModel(block, modelIds.get(0));
     }
