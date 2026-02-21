@@ -1,13 +1,12 @@
 package com.westerosblocks.datagen.custom;
 
 import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.westerosblocks.block.custom.WCLayerBlock;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.BlockStateSupplier;
+import net.minecraft.data.client.*;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
@@ -49,65 +48,45 @@ public class LayerBlockExporter extends BaseBlockExporter {
                                           WCLayerBlock layerBlock) {
         boolean isCustomModel = definition.hasCustomModel();
 
-        generator.blockStateCollector.accept(new BlockStateSupplier() {
-            @Override
-            public Block getBlock() {
-                return block;
-            }
+        BlockStateVariantMap.SingleProperty<Integer> variantMap =
+            BlockStateVariantMap.create(Properties.LAYERS);
 
-            @Override
-            public JsonElement get() {
-                JsonObject json = new JsonObject();
-                JsonObject variants = new JsonObject();
+        for (int layer = 1; layer <= layerBlock.layerCount; layer++) {
+            if (isCustomModel) {
+                Identifier modelId = createCustomModelId(block, "layer" + layer + "_v1");
+                variantMap.register(layer, BlockStateVariant.create().put(VariantSettings.MODEL, modelId));
+            } else {
+                List<BlockStateVariant> layerVariants = new ArrayList<>();
 
-                // Loop over each layer height (matches old for loop structure)
-                for (int layer = 1; layer <= layerBlock.layerCount; layer++) {
-                    String variantKey = "layers=" + layer;
-
-                    if (isCustomModel) {
-                        // Custom model: single variant per layer
-                        Identifier modelId = createCustomModelId(block, "layer" + layer + "_v1");
-                        JsonObject variant = new JsonObject();
-                        variant.addProperty("model", modelId.toString());
-                        variants.add(variantKey, variant);
-                    } else {
-                        // Generated models: loop over texture sets
-                        List<JsonObject> layerVariants = new ArrayList<>();
-
-                        for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
-                            BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
-                            if (set == null || set.getTextureCount() == 0) {
-                                continue;
-                            }
-
-                            Identifier modelId = createGeneratedModelId(block, getModelName("layer" + layer, setIdx));
-                            JsonObject variant = new JsonObject();
-                            variant.addProperty("model", modelId.toString());
-                            if (set.getWeight() > 1) {
-                                variant.addProperty("weight", set.getWeight());
-                            }
-                            layerVariants.add(variant);
-                        }
-
-
-                        if (layerVariants.size() == 1) {
-                            variants.add(variantKey, layerVariants.getFirst());
-                        } else if (layerVariants.size() > 1) {
-                            JsonArray variantArray = new JsonArray();
-                            for (JsonObject v : layerVariants) {
-                                variantArray.add(v);
-                            }
-                            variants.add(variantKey, variantArray);
-                        }
+                for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
+                    BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                    if (set == null || set.getTextureCount() == 0) {
+                        continue;
                     }
+
+                    Identifier modelId = createGeneratedModelId(block, getModelName("layer" + layer, setIdx));
+                    BlockStateVariant variant = BlockStateVariant.create()
+                        .put(VariantSettings.MODEL, modelId);
+                    if (set.getWeight() > 1) {
+                        variant.put(VariantSettings.WEIGHT, set.getWeight());
+                    }
+                    layerVariants.add(variant);
                 }
 
-                json.add("variants", variants);
-                return json;
+                if (layerVariants.size() == 1) {
+                    variantMap.register(layer, layerVariants.getFirst());
+                } else if (!layerVariants.isEmpty()) {
+                    variantMap.register(layer, layerVariants);
+                }
             }
-        });
+        }
+
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+        );
     }
 
+    // Model generation stays as raw JSON due to custom element geometry
     private static void generateLayerModel(BlockStateModelGenerator generator, Block block,
                                           BlockDefinition definition, BlockDefinition.StateVariant state,
                                           int layer, int setIdx, WCLayerBlock layerBlock) {
@@ -120,11 +99,9 @@ public class LayerBlockExporter extends BaseBlockExporter {
         Identifier modelId = createGeneratedModelId(block, variantName);
         boolean isTinted = definition.isTinted();
 
-        // Create model JSON
         JsonObject modelJson = new JsonObject();
         modelJson.addProperty("parent", "minecraft:block/thin_block");
 
-        // Add textures
         JsonObject texturesJson = new JsonObject();
         int cnt = Math.max(6, set.getTextureCount());
         for (int j = 0; j < cnt; j++) {
@@ -136,14 +113,11 @@ public class LayerBlockExporter extends BaseBlockExporter {
         texturesJson.addProperty("particle", "westerosblocks:block/" + set.getTextureByIndex(0));
         modelJson.add("textures", texturesJson);
 
-        // Calculate height for this layer
         float ymax = (16.0f / layerBlock.layerCount) * layer;
 
-        // Add elements array with single cuboid element
         JsonArray elements = new JsonArray();
         JsonObject element = new JsonObject();
 
-        // From/to coordinates
         JsonArray from = new JsonArray();
         from.add(0);
         from.add(0);
@@ -156,17 +130,10 @@ public class LayerBlockExporter extends BaseBlockExporter {
         to.add(16);
         element.add("to", to);
 
-        // Add faces
         JsonObject faces = new JsonObject();
-
-        // Down face
         addLayerFace(faces, "down", 0, 0, 16, 16, "#txt0", "down", isTinted);
-
-        // Up face (only cullface if at max height)
         String upCullface = (layer >= layerBlock.layerCount) ? "up" : null;
         addLayerFace(faces, "up", 0, 0, 16, 16, "#txt1", upCullface, isTinted);
-
-        // Side faces (UV adjusts for height)
         addLayerFace(faces, "north", 0, 16 - ymax, 16, 16, "#txt2", "north", isTinted);
         addLayerFace(faces, "south", 0, 16 - ymax, 16, 16, "#txt3", "south", isTinted);
         addLayerFace(faces, "west", 0, 16 - ymax, 16, 16, "#txt4", "west", isTinted);
@@ -202,5 +169,4 @@ public class LayerBlockExporter extends BaseBlockExporter {
 
         faces.add(direction, face);
     }
-
 }

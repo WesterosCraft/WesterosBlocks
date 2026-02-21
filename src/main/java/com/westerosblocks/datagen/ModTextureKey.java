@@ -46,6 +46,7 @@ public class ModTextureKey {
     public static final TextureKey BED_SIDE2 = TextureKey.of("bedside2");
     public static final TextureKey CAP = TextureKey.of("cap");
     public static final TextureKey INSIDE = TextureKey.of("inside");
+    public static final TextureKey CROP = TextureKey.of("crop");
     public static final TextureKey FAN = TextureKey.of("fan");
     public static final TextureKey TABLE = TextureKey.of("table");
     public static final TextureKey BENCH = TextureKey.of("bench");

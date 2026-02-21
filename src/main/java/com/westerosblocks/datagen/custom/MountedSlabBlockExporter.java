@@ -1,21 +1,20 @@
 package com.westerosblocks.datagen.custom;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.BlockStateSupplier;
+import net.minecraft.block.enums.BlockHalf;
+import net.minecraft.data.client.*;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MountedSlabBlockExporter extends BaseBlockExporter {
 
+    private static final Direction[] DIRECTIONS = {Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
     private static final int[] ROTATIONS = {0, 90, 180, 270};
-    private static final String[] DIRECTIONS = {"north", "east", "south", "west"};
 
     public static void registerMountedSlabBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         // Determine variant count from randomTextures (or default to 1)
@@ -48,67 +47,56 @@ public class MountedSlabBlockExporter extends BaseBlockExporter {
             bottomModels.add(createCustomModelId(block, "bottom_v" + (i + 1)));
         }
 
-        // Generate blockstate
-        final int vc = variantCount;
-        final List<Integer> w = weights;
+        // Generate blockstate using Fabric API
+        BlockStateVariantMap.DoubleProperty<Direction, BlockHalf> variantMap =
+            BlockStateVariantMap.create(Properties.HORIZONTAL_FACING, Properties.BLOCK_HALF);
 
-        generator.blockStateCollector.accept(new BlockStateSupplier() {
-            @Override
-            public Block getBlock() {
-                return block;
-            }
+        for (int d = 0; d < 4; d++) {
+            Direction dir = DIRECTIONS[d];
+            int rot = ROTATIONS[d];
 
-            @Override
-            public JsonElement get() {
-                JsonObject json = new JsonObject();
-                JsonObject variants = new JsonObject();
-
-                for (int d = 0; d < 4; d++) {
-                    String dir = DIRECTIONS[d];
-                    int rot = ROTATIONS[d];
-
-                    String bottomKey = "facing=" + dir + ",half=bottom";
-                    String topKey = "facing=" + dir + ",half=top";
-
-                    if (vc == 1) {
-                        // Single variant — simple object
-                        variants.add(bottomKey, createVariantJson(bottomModels.get(0), rot));
-                        variants.add(topKey, createVariantJson(topModels.get(0), rot));
-                    } else {
-                        // Multiple variants — array with weights
-                        JsonArray bottomArr = new JsonArray();
-                        JsonArray topArr = new JsonArray();
-                        for (int i = 0; i < vc; i++) {
-                            JsonObject bv = createVariantJson(bottomModels.get(i), rot).getAsJsonObject();
-                            JsonObject tv = createVariantJson(topModels.get(i), rot).getAsJsonObject();
-                            int weight = w.get(i);
-                            if (weight > 1) {
-                                bv.addProperty("weight", weight);
-                                tv.addProperty("weight", weight);
-                            }
-                            bottomArr.add(bv);
-                            topArr.add(tv);
-                        }
-                        variants.add(bottomKey, bottomArr);
-                        variants.add(topKey, topArr);
+            if (variantCount == 1) {
+                // Single variant
+                variantMap.register(dir, BlockHalf.BOTTOM, createVariantWithRotation(bottomModels.get(0), rot));
+                variantMap.register(dir, BlockHalf.TOP, createVariantWithRotation(topModels.get(0), rot));
+            } else {
+                // Multiple variants with weights
+                List<BlockStateVariant> bottomVariants = new ArrayList<>();
+                List<BlockStateVariant> topVariants = new ArrayList<>();
+                for (int i = 0; i < variantCount; i++) {
+                    BlockStateVariant bv = createVariantWithRotation(bottomModels.get(i), rot);
+                    BlockStateVariant tv = createVariantWithRotation(topModels.get(i), rot);
+                    int weight = weights.get(i);
+                    if (weight > 1) {
+                        bv.put(VariantSettings.WEIGHT, weight);
+                        tv.put(VariantSettings.WEIGHT, weight);
                     }
+                    bottomVariants.add(bv);
+                    topVariants.add(tv);
                 }
-
-                json.add("variants", variants);
-                return json;
+                variantMap.register(dir, BlockHalf.BOTTOM, bottomVariants);
+                variantMap.register(dir, BlockHalf.TOP, topVariants);
             }
-        });
+        }
+
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+        );
 
         // Item model parented to first bottom variant
         registerParentedItemModel(generator, block, bottomModels.get(0));
     }
 
-    private static JsonElement createVariantJson(Identifier modelId, int rotation) {
-        JsonObject obj = new JsonObject();
-        obj.addProperty("model", modelId.toString());
+    private static BlockStateVariant createVariantWithRotation(Identifier modelId, int rotation) {
+        BlockStateVariant variant = BlockStateVariant.create().put(VariantSettings.MODEL, modelId);
         if (rotation > 0) {
-            obj.addProperty("y", rotation);
+            variant.put(VariantSettings.Y, switch (rotation) {
+                case 90 -> VariantSettings.Rotation.R90;
+                case 180 -> VariantSettings.Rotation.R180;
+                case 270 -> VariantSettings.Rotation.R270;
+                default -> VariantSettings.Rotation.R0;
+            });
         }
-        return obj;
+        return variant;
     }
 }
