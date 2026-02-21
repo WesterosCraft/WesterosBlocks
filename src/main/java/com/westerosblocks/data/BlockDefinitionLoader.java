@@ -108,7 +108,11 @@ public class BlockDefinitionLoader {
             try {
                 BlockDefinition[] definitionArray = GSON.fromJson(content, BlockDefinition[].class);
 
-                if (definitionArray != null && definitionArray.length > 0) {
+                if (definitionArray != null) {
+                    if (definitionArray.length == 0) {
+                        WesterosBlocks.LOGGER.warn("Block definition file contains an empty array: {}", filePath);
+                        return;
+                    }
                     // Successfully parsed as array - load all definitions
                     WesterosBlocks.LOGGER.debug("Loading {} block definitions from consolidated file: {}",
                         definitionArray.length, filePath);
