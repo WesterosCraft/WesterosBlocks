@@ -131,6 +131,7 @@
     "blockType": "cuboid-nsew",
     "strength": 5,
     "soundGroup": "metal",
+    "isCustomModel": true,
     "harvestLevel": [
       {
         "tool": "pickaxe",
