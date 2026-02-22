@@ -1,10 +1,9 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "westerosblocks:block/tinted/cube",
   "textures": {
     "down": "westerosblocks:block/ashlar_quarter/green_grey/all",
     "east": "westerosblocks:block/ashlar_quarter/green_grey/all",
     "north": "westerosblocks:block/ashlar_quarter/green_grey/all",
-    "particle": "westerosblocks:block/ashlar_quarter/green_grey/all",
     "south": "westerosblocks:block/ashlar_quarter/green_grey/all",
     "up": "westerosblocks:block/ashlar_quarter/green_grey/all",
     "west": "westerosblocks:block/ashlar_quarter/green_grey/all"

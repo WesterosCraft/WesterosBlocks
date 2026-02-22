@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/slab",
+  "parent": "westerosblocks:block/tinted/half_slab",
   "textures": {
     "down": "westerosblocks:block/fieldstone/light_grey/all",
     "east": "westerosblocks:block/fieldstone/light_grey/all",

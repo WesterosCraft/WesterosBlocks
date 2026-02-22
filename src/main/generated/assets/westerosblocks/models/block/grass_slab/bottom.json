@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/slab",
+  "parent": "westerosblocks:block/tinted/half_slab",
   "textures": {
     "down": "westerosblocks:block/classic_grass_block/top1",
     "east": "westerosblocks:block/classic_grass_block/top1",
