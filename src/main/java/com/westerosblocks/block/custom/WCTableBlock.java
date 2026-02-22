@@ -19,7 +19,7 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.Map;
 
-public class WCTableBlock extends Block {
+public class WCTableBlock extends Block implements WCBlockDef {
     protected BlockDefinition def;
 
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;

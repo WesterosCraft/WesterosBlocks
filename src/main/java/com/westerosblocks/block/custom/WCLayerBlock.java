@@ -28,7 +28,7 @@ import java.util.List;
 
 import com.westerosblocks.data.BlockDefinition;
 
-public class WCLayerBlock extends Block {
+public class WCLayerBlock extends Block implements WCBlockDef {
     protected BlockDefinition def;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     public static final IntProperty LAYERS = Properties.LAYERS;

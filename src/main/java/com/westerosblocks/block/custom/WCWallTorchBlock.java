@@ -14,7 +14,7 @@ import net.minecraft.world.WorldView;
 
 import com.westerosblocks.data.BlockDefinition;
 
-public class WCWallTorchBlock extends WallTorchBlock {
+public class WCWallTorchBlock extends WallTorchBlock implements WCBlockDef {
     protected BlockDefinition def;
 
     public static final net.minecraft.state.property.DirectionProperty FACING = Properties.HORIZONTAL_FACING;

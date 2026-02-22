@@ -6,7 +6,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.block.AbstractBlock;
 
-public class WCFlowerPotBlock extends FlowerPotBlock {
+public class WCFlowerPotBlock extends FlowerPotBlock implements WCBlockDef {
     protected BlockDefinition def;
 
     public WCFlowerPotBlock(Block content, AbstractBlock.Settings settings, BlockDefinition def) {

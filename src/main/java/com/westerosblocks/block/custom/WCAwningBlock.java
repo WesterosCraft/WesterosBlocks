@@ -28,7 +28,7 @@ import net.minecraft.world.World;
  * Awning block with HALF (top/bottom), FACING (4 directions), and RAISED (boolean) properties.
  * Total of 16 blockstate variants (4 directions × 2 halves × 2 raised states).
  */
-public class WCAwningBlock extends Block {
+public class WCAwningBlock extends Block implements WCBlockDef {
     protected BlockDefinition def;
 
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;

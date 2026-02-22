@@ -79,20 +79,8 @@ public class TrapDoorBlockExporter extends BaseBlockExporter {
     private static BlockStateVariant createVariant(Identifier modelId, int xRotation, int yRotation) {
         return BlockStateVariant.create()
             .put(VariantSettings.MODEL, modelId)
-            .put(VariantSettings.X, getRotation(xRotation))
-            .put(VariantSettings.Y, getRotation(yRotation));
-    }
-
-    /**
-     * Converts degrees to VariantSettings.Rotation.
-     */
-    private static VariantSettings.Rotation getRotation(int degrees) {
-        return switch (degrees % 360) {
-            case 90 -> VariantSettings.Rotation.R90;
-            case 180 -> VariantSettings.Rotation.R180;
-            case 270 -> VariantSettings.Rotation.R270;
-            default -> VariantSettings.Rotation.R0;
-        };
+            .put(VariantSettings.X, toYRotation(xRotation))
+            .put(VariantSettings.Y, toYRotation(yRotation));
     }
 
     public static void registerCustomTrapDoorBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {

@@ -33,7 +33,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
-public class WCWebBlock extends CobwebBlock {
+public class WCWebBlock extends CobwebBlock implements WCBlockDef {
     protected BlockDefinition def;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 

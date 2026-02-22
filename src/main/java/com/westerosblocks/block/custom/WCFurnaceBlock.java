@@ -20,7 +20,7 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 
-public class WCFurnaceBlock extends FurnaceBlock {
+public class WCFurnaceBlock extends FurnaceBlock implements WCBlockDef {
     protected BlockDefinition def;
     private final boolean alwaysOn;
 

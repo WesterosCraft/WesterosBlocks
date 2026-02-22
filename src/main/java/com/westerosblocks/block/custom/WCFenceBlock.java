@@ -22,7 +22,7 @@ import com.westerosblocks.utils.ModProperties;
 
 import java.util.List;
 
-public class WCFenceBlock extends FenceBlock {
+public class WCFenceBlock extends FenceBlock implements WCBlockDef {
     protected BlockDefinition def;
 
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");

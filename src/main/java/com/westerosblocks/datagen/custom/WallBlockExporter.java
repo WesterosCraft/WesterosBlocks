@@ -2,7 +2,6 @@ package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
-import com.westerosblocks.datagen.ModTextureMap;
 import net.minecraft.block.enums.WallShape;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
@@ -36,15 +35,6 @@ public class WallBlockExporter extends BaseBlockExporter {
     // ========================================
     // Helper Methods (block-models.md 5.3-5.4)
     // ========================================
-
-    private static TextureMap createWallTextureMap(String[] textures, String[] overlayTextures) {
-        if (overlayTextures != null) {
-            return ModTextureMap.fenceWallOverlayTextures(
-                    textures[0], textures[1], textures[2],
-                    overlayTextures[0], overlayTextures[1], overlayTextures[2]);
-        }
-        return ModTextureMap.fenceWallTextures(textures[0], textures[1], textures[2]);
-    }
 
     private static MultipartBlockStateSupplier createWallVariants(Block block, List<Identifier> postModelIds,
                                                                     List<Identifier> sideModelIds, List<Identifier> tallModelIds,
@@ -126,11 +116,11 @@ public class WallBlockExporter extends BaseBlockExporter {
     public static void registerWallBlock(BlockStateModelGenerator generator, Block block, boolean tinted,
                                         boolean overlay, boolean isShort, String[] textures, String[] overlayTextures) {
         // Expand single texture to three if needed
-        String[] expandedTextures = expandTextureArray(textures);
-        String[] expandedOverlays = overlay && overlayTextures != null ? expandTextureArray(overlayTextures) : null;
+        String[] expandedTextures = fillTextureArray(textures, 3);
+        String[] expandedOverlays = overlay && overlayTextures != null ? fillTextureArray(overlayTextures, 3) : null;
 
         // Create texture map
-        TextureMap textureMap = createWallTextureMap(expandedTextures, expandedOverlays);
+        TextureMap textureMap = createFenceWallTextureMap(expandedTextures, expandedOverlays);
 
         // Upload post, side, and tall models
         Identifier postModelId = getWallPostModel(tinted, overlay)
@@ -161,10 +151,10 @@ public class WallBlockExporter extends BaseBlockExporter {
 
         for (int i = 0; i < textureSets.size(); i++) {
             BlockDefinition.TextureVariantSet set = textureSets.get(i);
-            String[] expandedTextures = expandTextureArray(set.getTexturesAsArray());
-            String[] expandedOverlays = overlay && set.hasOverlay() ? expandTextureArray(set.getOverlayTexturesAsArray()) : null;
+            String[] expandedTextures = fillTextureArray(set.getTexturesAsArray(), 3);
+            String[] expandedOverlays = overlay && set.hasOverlay() ? fillTextureArray(set.getOverlayTexturesAsArray(), 3) : null;
 
-            TextureMap textureMap = createWallTextureMap(expandedTextures, expandedOverlays);
+            TextureMap textureMap = createFenceWallTextureMap(expandedTextures, expandedOverlays);
 
             Identifier postModelId = getWallPostModel(tinted, overlay)
                     .upload(createNestedModelId(block, "post_v" + (i + 1)), textureMap, generator.modelCollector);
@@ -185,7 +175,7 @@ public class WallBlockExporter extends BaseBlockExporter {
 
         // Register item model (using first texture set)
         BlockDefinition.TextureVariantSet firstSet = textureSets.get(0);
-        String[] expandedTextures = expandTextureArray(firstSet.getTexturesAsArray());
+        String[] expandedTextures = fillTextureArray(firstSet.getTexturesAsArray(), 3);
         TextureMap itemTextureMap = new TextureMap()
                 .put(TextureKey.WALL, createBlockIdentifier(expandedTextures[2])); // Use side texture
         Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
@@ -238,18 +228,4 @@ public class WallBlockExporter extends BaseBlockExporter {
         }
     }
 
-    // ========================================
-    // Helper Classes
-    // ========================================
-
-
-    private static String[] expandTextureArray(String[] textures) {
-        if (textures.length == 1) {
-            return new String[]{textures[0], textures[0], textures[0]};
-        } else if (textures.length == 3) {
-            return textures;
-        } else {
-            throw new IllegalArgumentException("Wall blocks require 1 or 3 textures, got " + textures.length);
-        }
-    }
 }

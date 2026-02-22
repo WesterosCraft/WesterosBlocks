@@ -8,7 +8,7 @@ import net.minecraft.block.PillarBlock;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 
-public class WCLogBlock extends PillarBlock {
+public class WCLogBlock extends PillarBlock implements WCBlockDef {
     protected BlockDefinition def;
 
     public WCLogBlock(Settings settings, BlockDefinition def) {

@@ -11,7 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-public class WCDoorBlock extends DoorBlock {
+public class WCDoorBlock extends DoorBlock implements WCBlockDef {
     protected BlockDefinition def;
     private final boolean locked;
     private final boolean allowUnsupported;

@@ -5,7 +5,7 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoulSandBlock;
 
-public class WCSoulSandBlock extends SoulSandBlock {
+public class WCSoulSandBlock extends SoulSandBlock implements WCBlockDef {
     protected BlockDefinition def;
 
     public static class Factory extends BlockFactory {

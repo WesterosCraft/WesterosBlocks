@@ -18,7 +18,7 @@ import net.minecraft.world.WorldView;
 
 import java.util.Map;
 
-public class WCMountedBlock extends Block {
+public class WCMountedBlock extends Block implements WCBlockDef {
     protected BlockDefinition def;
     private final boolean allowUnsupported;
 

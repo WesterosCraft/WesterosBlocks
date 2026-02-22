@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class WCFireBlock extends FireBlock {
+public class WCFireBlock extends FireBlock implements WCBlockDef {
     protected BlockDefinition def;
 
     public static class Factory extends BlockFactory {

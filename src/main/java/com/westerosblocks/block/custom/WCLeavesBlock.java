@@ -5,7 +5,7 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.LeavesBlock;
 
-public class WCLeavesBlock extends LeavesBlock {
+public class WCLeavesBlock extends LeavesBlock implements WCBlockDef {
     protected BlockDefinition def;
     public final boolean betterFoliage;
     public final boolean overlay;

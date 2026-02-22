@@ -16,7 +16,7 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 
-public class WCParticleEmitterBlock extends Block implements Waterloggable {
+public class WCParticleEmitterBlock extends Block implements Waterloggable, WCBlockDef {
     protected BlockDefinition def;
     protected static final VoxelShape SHAPE = Block.createCuboidShape(6.0D, 0.0D, 6.0D, 10.0D, 4.0D, 10.0D);
 

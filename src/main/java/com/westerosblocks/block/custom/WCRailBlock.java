@@ -16,7 +16,7 @@ import java.util.List;
 
 import com.westerosblocks.data.BlockDefinition;
 
-public class WCRailBlock extends RailBlock {
+public class WCRailBlock extends RailBlock implements WCBlockDef {
     protected BlockDefinition def;
     private final boolean allowUnsupported;
 

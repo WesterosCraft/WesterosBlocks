@@ -19,7 +19,7 @@ import net.minecraft.world.WorldView;
 
 import java.util.Map;
 
-public class WCBuntingBlock extends Block {
+public class WCBuntingBlock extends Block implements WCBlockDef {
     protected BlockDefinition def;
     private final boolean allowUnsupported;
     private final Block ceilingBlock;

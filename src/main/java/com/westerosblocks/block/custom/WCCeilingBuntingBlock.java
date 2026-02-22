@@ -15,7 +15,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class WCCeilingBuntingBlock extends Block {
+public class WCCeilingBuntingBlock extends Block implements WCBlockDef {
     protected BlockDefinition def;
     private final boolean allowUnsupported;
     private final VoxelShape shape;
