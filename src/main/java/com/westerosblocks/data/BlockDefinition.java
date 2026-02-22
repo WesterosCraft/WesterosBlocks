@@ -630,8 +630,8 @@ public class BlockDefinition {
             ROTY90(new int[]{0,1,4,5,3,2}, new int[]{270,90,0,0,0,0}),
             ROTY180(new int[]{0,1,3,2,5,4}, new int[]{180,180,0,0,0,0}),
             ROTY270(new int[]{0,1,5,4,2,3}, new int[]{90,270,0,0,0,0}),
-            ROTX90(new int[]{5,4,2,3,0,1}, new int[]{270,90,270,90,90,90}),
-            ROTX270(new int[]{4,5,2,3,1,0}, new int[]{90,270,90,270,270,270});
+            ROTZ90(new int[]{5,4,2,3,0,1}, new int[]{270,90,270,90,90,90}),
+            ROTZ270(new int[]{4,5,2,3,1,0}, new int[]{90,270,90,270,270,270});
 
             final int[] txtidx;
             final int[] txtrot;
@@ -678,21 +678,21 @@ public class BlockDefinition {
                     result.zMin = 1.0 - this.xMax;
                     result.zMax = 1.0 - this.xMin;
                     break;
-                case ROTX90:
-                    result.xMin = this.xMin;
-                    result.xMax = this.xMax;
-                    result.yMin = this.zMin;
-                    result.yMax = this.zMax;
-                    result.zMin = 1.0 - this.yMax;
-                    result.zMax = 1.0 - this.yMin;
+                case ROTZ90:
+                    result.xMin = this.yMin;
+                    result.xMax = this.yMax;
+                    result.yMin = 1.0 - this.xMax;
+                    result.yMax = 1.0 - this.xMin;
+                    result.zMin = this.zMin;
+                    result.zMax = this.zMax;
                     break;
-                case ROTX270:
-                    result.xMin = this.xMin;
-                    result.xMax = this.xMax;
-                    result.yMin = 1.0 - this.zMax;
-                    result.yMax = 1.0 - this.zMin;
-                    result.zMin = this.yMin;
-                    result.zMax = this.yMax;
+                case ROTZ270:
+                    result.xMin = 1.0 - this.yMax;
+                    result.xMax = 1.0 - this.yMin;
+                    result.yMin = this.xMin;
+                    result.yMax = this.xMax;
+                    result.zMin = this.zMin;
+                    result.zMax = this.zMax;
                     break;
             }
 

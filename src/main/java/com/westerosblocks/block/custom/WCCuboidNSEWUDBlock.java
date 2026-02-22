@@ -55,8 +55,8 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock {
                     cuboid_by_facing[off + 1].add(cuboid.rotateCuboid(CuboidRotation.ROTY90));   // SOUTH
                     cuboid_by_facing[off + 2].add(cuboid.rotateCuboid(CuboidRotation.ROTY180));  // WEST
                     cuboid_by_facing[off + 3].add(cuboid.rotateCuboid(CuboidRotation.ROTY270));  // NORTH
-                    cuboid_by_facing[off + 4].add(cuboid.rotateCuboid(CuboidRotation.ROTX270));  // UP
-                    cuboid_by_facing[off + 5].add(cuboid.rotateCuboid(CuboidRotation.ROTX90));   // DOWN
+                    cuboid_by_facing[off + 4].add(cuboid.rotateCuboid(CuboidRotation.ROTZ270));  // UP
+                    cuboid_by_facing[off + 5].add(cuboid.rotateCuboid(CuboidRotation.ROTZ90));   // DOWN
                 }
             }
         }
