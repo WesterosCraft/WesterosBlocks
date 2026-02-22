@@ -64,38 +64,8 @@ public class CuboidNSEWUDBlockExporter extends CuboidBlockExporter {
         if (raw == null || raw.isEmpty()) return raw;
         List<BlockDefinition.CuboidElement> rotated = new ArrayList<>();
         for (BlockDefinition.CuboidElement c : raw) {
-            rotated.add(rotateCuboidY270(c));
+            rotated.add(c.rotateCuboid(BlockDefinition.CuboidElement.CuboidRotation.ROTY270));
         }
         return rotated;
-    }
-
-    /**
-     * Rotates a cuboid 270° clockwise around the Y axis (XZ plane, center 0.5,0.5).
-     * Same math as WCCuboidNSEWUDBlock.rotateCuboidY(cuboid, 270).
-     */
-    private static BlockDefinition.CuboidElement rotateCuboidY270(BlockDefinition.CuboidElement cuboid) {
-        double xMin = cuboid.getXMin();
-        double xMax = cuboid.getXMax();
-        double zMin = cuboid.getZMin();
-        double zMax = cuboid.getZMax();
-
-        // 270° Y rotation: newX = z, newZ = 1 - x
-        double newXMin = zMin;
-        double newXMax = zMax;
-        double newZMin = 1.0 - xMax;
-        double newZMax = 1.0 - xMin;
-
-        return new BlockDefinition.CuboidElement() {
-            @Override public double getXMin() { return newXMin; }
-            @Override public double getXMax() { return newXMax; }
-            @Override public double getYMin() { return cuboid.getYMin(); }
-            @Override public double getYMax() { return cuboid.getYMax(); }
-            @Override public double getZMin() { return newZMin; }
-            @Override public double getZMax() { return newZMax; }
-            @Override public int[] getSideTextures() { return cuboid.getSideTextures(); }
-            @Override public int[] getSideRotations() { return cuboid.getSideRotations(); }
-            @Override public boolean[] getNoTint() { return cuboid.getNoTint(); }
-            @Override public String getShape() { return cuboid.getShape(); }
-        };
     }
 }

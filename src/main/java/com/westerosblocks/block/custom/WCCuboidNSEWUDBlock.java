@@ -16,6 +16,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 
+import com.westerosblocks.data.BlockDefinition.CuboidElement.CuboidRotation;
+
 import java.util.List;
 
 /**
@@ -50,11 +52,11 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock {
             List<BlockDefinition.CuboidElement> baseCuboids = cuboid_by_facing[off];
             if (baseCuboids != null && !baseCuboids.isEmpty()) {
                 for (BlockDefinition.CuboidElement cuboid : baseCuboids) {
-                    cuboid_by_facing[off + 1].add(rotateCuboidY(cuboid, 90));   // SOUTH
-                    cuboid_by_facing[off + 2].add(rotateCuboidY(cuboid, 180));  // WEST
-                    cuboid_by_facing[off + 3].add(rotateCuboidY(cuboid, 270));  // NORTH
-                    cuboid_by_facing[off + 4].add(rotateCuboidX(cuboid, 270));  // UP
-                    cuboid_by_facing[off + 5].add(rotateCuboidX(cuboid, 90));   // DOWN
+                    cuboid_by_facing[off + 1].add(cuboid.rotateCuboid(CuboidRotation.ROTY90));   // SOUTH
+                    cuboid_by_facing[off + 2].add(cuboid.rotateCuboid(CuboidRotation.ROTY180));  // WEST
+                    cuboid_by_facing[off + 3].add(cuboid.rotateCuboid(CuboidRotation.ROTY270));  // NORTH
+                    cuboid_by_facing[off + 4].add(cuboid.rotateCuboid(CuboidRotation.ROTX270));  // UP
+                    cuboid_by_facing[off + 5].add(cuboid.rotateCuboid(CuboidRotation.ROTX90));   // DOWN
                 }
             }
         }
@@ -74,126 +76,6 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock {
             defbs = defbs.with(STATE, STATE.defValue);
         }
         this.setDefaultState(defbs);
-    }
-
-    /**
-     * Rotates a cuboid element around the Y-axis (horizontal rotation).
-     * @param cuboid Original cuboid
-     * @param degrees Rotation angle (90, 180, or 270)
-     * @return Rotated cuboid element
-     */
-    private BlockDefinition.CuboidElement rotateCuboidY(BlockDefinition.CuboidElement cuboid, int degrees) {
-        double xMin = cuboid.getXMin();
-        double xMax = cuboid.getXMax();
-        double yMin = cuboid.getYMin();
-        double yMax = cuboid.getYMax();
-        double zMin = cuboid.getZMin();
-        double zMax = cuboid.getZMax();
-
-        double newXMin, newXMax, newZMin, newZMax;
-
-        switch (degrees % 360) {
-            case 90:  // Rotate 90° clockwise (viewed from above)
-                newXMin = 1.0 - zMax;
-                newXMax = 1.0 - zMin;
-                newZMin = xMin;
-                newZMax = xMax;
-                break;
-            case 180:  // Rotate 180°
-                newXMin = 1.0 - xMax;
-                newXMax = 1.0 - xMin;
-                newZMin = 1.0 - zMax;
-                newZMax = 1.0 - zMin;
-                break;
-            case 270:  // Rotate 270° clockwise (or 90° counter-clockwise)
-                newXMin = zMin;
-                newXMax = zMax;
-                newZMin = 1.0 - xMax;
-                newZMax = 1.0 - xMin;
-                break;
-            default:
-                return cuboid;  // No rotation
-        }
-
-        return new BlockDefinition.CuboidElement() {
-            @Override
-            public double getXMin() { return newXMin; }
-            @Override
-            public double getXMax() { return newXMax; }
-            @Override
-            public double getYMin() { return yMin; }
-            @Override
-            public double getYMax() { return yMax; }
-            @Override
-            public double getZMin() { return newZMin; }
-            @Override
-            public double getZMax() { return newZMax; }
-            @Override
-            public int[] getSideTextures() { return cuboid.getSideTextures(); }
-            @Override
-            public int[] getSideRotations() { return cuboid.getSideRotations(); }
-            @Override
-            public boolean[] getNoTint() { return cuboid.getNoTint(); }
-            @Override
-            public String getShape() { return cuboid.getShape(); }
-        };
-    }
-
-    /**
-     * Rotates a cuboid element around the X-axis (vertical rotation).
-     * @param cuboid Original cuboid
-     * @param degrees Rotation angle (90 for DOWN, 270 for UP)
-     * @return Rotated cuboid element
-     */
-    private BlockDefinition.CuboidElement rotateCuboidX(BlockDefinition.CuboidElement cuboid, int degrees) {
-        double xMin = cuboid.getXMin();
-        double xMax = cuboid.getXMax();
-        double yMin = cuboid.getYMin();
-        double yMax = cuboid.getYMax();
-        double zMin = cuboid.getZMin();
-        double zMax = cuboid.getZMax();
-
-        double newYMin, newYMax, newZMin, newZMax;
-
-        switch (degrees % 360) {
-            case 90:  // Rotate 90° (DOWN facing)
-                newYMin = zMin;
-                newYMax = zMax;
-                newZMin = 1.0 - yMax;
-                newZMax = 1.0 - yMin;
-                break;
-            case 270:  // Rotate 270° (UP facing)
-                newYMin = 1.0 - zMax;
-                newYMax = 1.0 - zMin;
-                newZMin = yMin;
-                newZMax = yMax;
-                break;
-            default:
-                return cuboid;  // No rotation
-        }
-
-        return new BlockDefinition.CuboidElement() {
-            @Override
-            public double getXMin() { return xMin; }
-            @Override
-            public double getXMax() { return xMax; }
-            @Override
-            public double getYMin() { return newYMin; }
-            @Override
-            public double getYMax() { return newYMax; }
-            @Override
-            public double getZMin() { return newZMin; }
-            @Override
-            public double getZMax() { return newZMax; }
-            @Override
-            public int[] getSideTextures() { return cuboid.getSideTextures(); }
-            @Override
-            public int[] getSideRotations() { return cuboid.getSideRotations(); }
-            @Override
-            public boolean[] getNoTint() { return cuboid.getNoTint(); }
-            @Override
-            public String getShape() { return cuboid.getShape(); }
-        };
     }
 
     @Override

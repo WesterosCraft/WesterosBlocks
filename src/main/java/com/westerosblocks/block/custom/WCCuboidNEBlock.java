@@ -15,6 +15,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 
+import com.westerosblocks.data.BlockDefinition.CuboidElement.CuboidRotation;
+
 import java.util.List;
 
 public class WCCuboidNEBlock extends WCCuboidBlock {
@@ -45,7 +47,7 @@ public class WCCuboidNEBlock extends WCCuboidBlock {
             List<BlockDefinition.CuboidElement> baseCuboids = cuboid_by_facing[off];
             if (baseCuboids != null && !baseCuboids.isEmpty()) {
                 for (BlockDefinition.CuboidElement cuboid : baseCuboids) {
-                    cuboid_by_facing[off + 1].add(rotateCuboidY(cuboid, 90));  // NORTH
+                    cuboid_by_facing[off + 1].add(cuboid.rotateCuboid(CuboidRotation.ROTY90));  // NORTH
                 }
             }
         }
@@ -65,46 +67,6 @@ public class WCCuboidNEBlock extends WCCuboidBlock {
             defbs = defbs.with(tempSTATE, tempSTATE.defValue);
         }
         this.setDefaultState(defbs);
-    }
-
-    private BlockDefinition.CuboidElement rotateCuboidY(BlockDefinition.CuboidElement cuboid, int degrees) {
-        double xMin = cuboid.getXMin();
-        double xMax = cuboid.getXMax();
-        double yMin = cuboid.getYMin();
-        double yMax = cuboid.getYMax();
-        double zMin = cuboid.getZMin();
-        double zMax = cuboid.getZMax();
-
-        double newXMin, newXMax, newZMin, newZMax;
-
-        // Only 90° rotation for NE blocks
-        newXMin = 1.0 - zMax;
-        newXMax = 1.0 - zMin;
-        newZMin = xMin;
-        newZMax = xMax;
-
-        return new BlockDefinition.CuboidElement() {
-            @Override
-            public double getXMin() { return newXMin; }
-            @Override
-            public double getXMax() { return newXMax; }
-            @Override
-            public double getYMin() { return yMin; }
-            @Override
-            public double getYMax() { return yMax; }
-            @Override
-            public double getZMin() { return newZMin; }
-            @Override
-            public double getZMax() { return newZMax; }
-            @Override
-            public int[] getSideTextures() { return cuboid.getSideTextures(); }
-            @Override
-            public int[] getSideRotations() { return cuboid.getSideRotations(); }
-            @Override
-            public boolean[] getNoTint() { return cuboid.getNoTint(); }
-            @Override
-            public String getShape() { return cuboid.getShape(); }
-        };
     }
 
     @Override

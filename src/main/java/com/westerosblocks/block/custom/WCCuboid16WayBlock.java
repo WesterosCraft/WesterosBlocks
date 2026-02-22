@@ -21,11 +21,16 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
+import com.westerosblocks.data.BlockDefinition.CuboidElement.CuboidRotation;
+
 import java.util.List;
 
 public class WCCuboid16WayBlock extends WCCuboidBlock {
     public static final IntProperty ROTATION = Properties.ROTATION;
     private static final int ROTATIONS = 16;
+    private static final CuboidRotation[] SHAPE_ROTATIONS = {
+        null, CuboidRotation.ROTY90, CuboidRotation.ROTY180, CuboidRotation.ROTY270
+    };
 
     public static class Factory extends BlockFactory {
         @Override
@@ -56,10 +61,10 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
                     // Determine which 90° rotation to use based on quadrant
                     // Rotations 0-3: 0°, 4-7: 90°, 8-11: 180°, 12-15: 270°
                     int quadrant = i / 4;  // 0, 1, 2, or 3
-                    int rotationDegrees = quadrant * 90;
+                    CuboidRotation rot = SHAPE_ROTATIONS[quadrant];
 
                     for (BlockDefinition.CuboidElement cuboid : baseCuboids) {
-                        cuboid_by_facing[idx + i].add(rotateCuboidY(cuboid, rotationDegrees));
+                        cuboid_by_facing[idx + i].add(rot != null ? cuboid.rotateCuboid(rot) : cuboid);
                     }
                 }
             }
@@ -81,71 +86,6 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
             defbs = defbs.with(STATE, STATE.defValue);
         }
         this.setDefaultState(defbs);
-    }
-
-    /**
-     * Rotates a cuboid element around the Y-axis (horizontal rotation).
-     * @param cuboid Original cuboid
-     * @param degrees Rotation angle (0, 90, 180, or 270)
-     * @return Rotated cuboid element
-     */
-    private BlockDefinition.CuboidElement rotateCuboidY(BlockDefinition.CuboidElement cuboid, int degrees) {
-        double xMin = cuboid.getXMin();
-        double xMax = cuboid.getXMax();
-        double yMin = cuboid.getYMin();
-        double yMax = cuboid.getYMax();
-        double zMin = cuboid.getZMin();
-        double zMax = cuboid.getZMax();
-
-        double newXMin, newXMax, newZMin, newZMax;
-
-        switch (degrees % 360) {
-            case 0:    // No rotation
-                return cuboid;
-            case 90:   // Rotate 90° clockwise (viewed from above)
-                newXMin = 1.0 - zMax;
-                newXMax = 1.0 - zMin;
-                newZMin = xMin;
-                newZMax = xMax;
-                break;
-            case 180:  // Rotate 180°
-                newXMin = 1.0 - xMax;
-                newXMax = 1.0 - xMin;
-                newZMin = 1.0 - zMax;
-                newZMax = 1.0 - zMin;
-                break;
-            case 270:  // Rotate 270° clockwise (or 90° counter-clockwise)
-                newXMin = zMin;
-                newXMax = zMax;
-                newZMin = 1.0 - xMax;
-                newZMax = 1.0 - xMin;
-                break;
-            default:
-                return cuboid;  // No rotation for invalid angles
-        }
-
-        return new BlockDefinition.CuboidElement() {
-            @Override
-            public double getXMin() { return newXMin; }
-            @Override
-            public double getXMax() { return newXMax; }
-            @Override
-            public double getYMin() { return yMin; }
-            @Override
-            public double getYMax() { return yMax; }
-            @Override
-            public double getZMin() { return newZMin; }
-            @Override
-            public double getZMax() { return newZMax; }
-            @Override
-            public int[] getSideTextures() { return cuboid.getSideTextures(); }
-            @Override
-            public int[] getSideRotations() { return cuboid.getSideRotations(); }
-            @Override
-            public boolean[] getNoTint() { return cuboid.getNoTint(); }
-            @Override
-            public String getShape() { return cuboid.getShape(); }
-        };
     }
 
     @Override

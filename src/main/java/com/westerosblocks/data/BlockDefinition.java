@@ -621,6 +621,106 @@ public class BlockDefinition {
         @SerializedName("shape")
         private String shape;
 
+        /**
+         * Rotation operations for cuboid elements.
+         * Each enum carries face index remapping (txtidx) and UV rotation (txtrot) arrays.
+         * Face order: 0=bottom(down), 1=top(up), 2=north, 3=south, 4=west, 5=east
+         */
+        public enum CuboidRotation {
+            ROTY90(new int[]{0,1,4,5,3,2}, new int[]{270,90,0,0,0,0}),
+            ROTY180(new int[]{0,1,3,2,5,4}, new int[]{180,180,0,0,0,0}),
+            ROTY270(new int[]{0,1,5,4,2,3}, new int[]{90,270,0,0,0,0}),
+            ROTX90(new int[]{5,4,2,3,0,1}, new int[]{270,90,270,90,90,90}),
+            ROTX270(new int[]{4,5,2,3,1,0}, new int[]{90,270,90,270,270,270});
+
+            final int[] txtidx;
+            final int[] txtrot;
+
+            CuboidRotation(int[] txtidx, int[] txtrot) {
+                this.txtidx = txtidx;
+                this.txtrot = txtrot;
+            }
+        }
+
+        /**
+         * Creates a new CuboidElement rotated by the given rotation.
+         * Transforms coordinates and remaps sideTextures, sideRotations, and noTint arrays.
+         *
+         * @param rot The rotation to apply
+         * @return A new CuboidElement with rotated coordinates and remapped textures
+         */
+        public CuboidElement rotateCuboid(CuboidRotation rot) {
+            CuboidElement result = new CuboidElement();
+
+            // Rotate coordinates
+            switch (rot) {
+                case ROTY90:
+                    result.xMin = 1.0 - this.zMax;
+                    result.xMax = 1.0 - this.zMin;
+                    result.yMin = this.yMin;
+                    result.yMax = this.yMax;
+                    result.zMin = this.xMin;
+                    result.zMax = this.xMax;
+                    break;
+                case ROTY180:
+                    result.xMin = 1.0 - this.xMax;
+                    result.xMax = 1.0 - this.xMin;
+                    result.yMin = this.yMin;
+                    result.yMax = this.yMax;
+                    result.zMin = 1.0 - this.zMax;
+                    result.zMax = 1.0 - this.zMin;
+                    break;
+                case ROTY270:
+                    result.xMin = this.zMin;
+                    result.xMax = this.zMax;
+                    result.yMin = this.yMin;
+                    result.yMax = this.yMax;
+                    result.zMin = 1.0 - this.xMax;
+                    result.zMax = 1.0 - this.xMin;
+                    break;
+                case ROTX90:
+                    result.xMin = this.xMin;
+                    result.xMax = this.xMax;
+                    result.yMin = this.zMin;
+                    result.yMax = this.zMax;
+                    result.zMin = 1.0 - this.yMax;
+                    result.zMax = 1.0 - this.yMin;
+                    break;
+                case ROTX270:
+                    result.xMin = this.xMin;
+                    result.xMax = this.xMax;
+                    result.yMin = 1.0 - this.zMax;
+                    result.yMax = 1.0 - this.zMin;
+                    result.zMin = this.yMin;
+                    result.zMax = this.yMax;
+                    break;
+            }
+
+            // Remap sideTextures via txtidx
+            if (this.sideTextures != null) {
+                result.sideTextures = new int[6];
+                for (int i = 0; i < 6; i++) {
+                    result.sideTextures[i] = this.sideTextures[rot.txtidx[i]];
+                }
+            }
+
+            // Replace sideRotations with txtrot
+            result.sideRotations = rot.txtrot.clone();
+
+            // Remap noTint via txtidx
+            if (this.noTint != null) {
+                result.noTint = new boolean[6];
+                for (int i = 0; i < 6; i++) {
+                    result.noTint[i] = this.noTint[rot.txtidx[i]];
+                }
+            }
+
+            // Copy shape unchanged
+            result.shape = this.shape;
+
+            return result;
+        }
+
         public double getXMin() {
             return xMin;
         }
