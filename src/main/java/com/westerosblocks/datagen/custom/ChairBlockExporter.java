@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.block.custom.WCChairBlock;
 import net.minecraft.block.Block;
@@ -12,7 +13,7 @@ public class ChairBlockExporter extends BaseBlockExporter {
         registerCustomChairBlock(generator, block, texturePath);
     }
 
-    public static void registerChairBlock(BlockStateModelGenerator generator, Block block, com.westerosblocks.data.BlockDefinition definition) {
+    public static void registerChairBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         java.util.List<String> textureList = definition.getTextures();
         String texturePath = (textureList != null && !textureList.isEmpty()) ? textureList.get(0) : "missingno";
         registerCustomChairBlock(generator, block, texturePath);
