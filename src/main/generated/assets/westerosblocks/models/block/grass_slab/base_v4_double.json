@@ -1,0 +1,11 @@
+{
+  "parent": "westerosblocks:block/tinted/cube",
+  "textures": {
+    "down": "westerosblocks:block/classic_grass_block/top4",
+    "east": "westerosblocks:block/classic_grass_block/top4",
+    "north": "westerosblocks:block/classic_grass_block/top4",
+    "south": "westerosblocks:block/classic_grass_block/top4",
+    "up": "westerosblocks:block/classic_grass_block/top4",
+    "west": "westerosblocks:block/classic_grass_block/top4"
+  }
+}

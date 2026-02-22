@@ -515,8 +515,12 @@
     "creativeTab": "westeros_grass_dirt_tab",
     "label": "Grass Slab",
     "colorMult": "textures/colormap/grass",
-    "textures": [
-      "classic_grass_block/top1"
+    "randomTextures": [
+      { "textures": ["classic_grass_block/top1"] },
+      { "textures": ["classic_grass_block/top2"] },
+      { "textures": ["classic_grass_block/top3"] },
+      { "textures": ["classic_grass_block/top4"] },
+      { "textures": ["classic_grass_block/top5"] }
     ],
     "harvestLevel": [
       {

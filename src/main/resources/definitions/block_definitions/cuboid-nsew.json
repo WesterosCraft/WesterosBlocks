@@ -537,35 +537,6 @@
     },
     "states": [
       {
-        "stateID": "random",
-        "randomTextures": [
-          {
-            "textures": ["paper/bottom1", "paper/paperwork1", "transparent"],
-            "weight": 20
-          },
-          {
-            "textures": ["paper/bottom2", "paper/paperwork2", "transparent"],
-            "weight": 10
-          },
-          {
-            "textures": ["paper/bottom3", "paper/paperwork3", "transparent"],
-            "weight": 10
-          },
-          {
-            "textures": ["paper/bottom4", "paper/paperwork4", "transparent"],
-            "weight": 20
-          },
-          {
-            "textures": ["paper/bottom5", "paper/paperwork5", "transparent"],
-            "weight": 15
-          },
-          {
-            "textures": ["paper/bottom6", "paper/paperwork6", "transparent"],
-            "weight": 25
-          }
-        ]
-      },
-      {
         "stateID": "paperwork1",
         "textures": ["paper/bottom1", "paper/paperwork1", "transparent"]
       },
