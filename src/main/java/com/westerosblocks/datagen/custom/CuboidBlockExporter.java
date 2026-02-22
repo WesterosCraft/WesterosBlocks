@@ -233,6 +233,15 @@ public class CuboidBlockExporter extends BaseBlockExporter {
     }
 
     /**
+     * Returns the cuboids to use for model generation. Subclasses can override
+     * to transform cuboids (e.g., rotate for NSEWUD blocks). Returns null to
+     * use the default cuboids from the definition.
+     */
+    protected List<BlockDefinition.CuboidElement> getModelCuboids(BlockDefinition definition) {
+        return null;
+    }
+
+    /**
      * Phase 3 Alternative: Generate model files and return map for directional exporters.
      * Used by child exporters (CuboidNEBlockExporter, etc.) that need the model map
      * to create custom facing-based blockstate variants.
@@ -294,7 +303,7 @@ public class CuboidBlockExporter extends BaseBlockExporter {
                         }
 
                         modelId = createCuboidModel(generator, block, definition,
-                                                   textureList, setIdx, variantName, rotation);
+                                                   textureList, setIdx, variantName, rotation, getModelCuboids(definition));
                     } else {
                         // Generate standard cube models
                         TextureMap textureMap = createCuboidTextureMap(textureList);
@@ -430,7 +439,7 @@ public class CuboidBlockExporter extends BaseBlockExporter {
      * Creates a custom cuboid model from definition.
      */
     static Identifier createCuboidModel(BlockStateModelGenerator generator, Block block, BlockDefinition definition, List<String> textures, int stateIndex, String variant) {
-        return createCuboidModel(generator, block, definition, textures, stateIndex, variant, null);
+        return createCuboidModel(generator, block, definition, textures, stateIndex, variant, null, null);
     }
 
     /**
@@ -438,10 +447,19 @@ public class CuboidBlockExporter extends BaseBlockExporter {
      * @param rotation Y-axis rotation angle in degrees (e.g., -22.5, -45, 22.5) or null for no rotation
      */
     static Identifier createCuboidModel(BlockStateModelGenerator generator, Block block, BlockDefinition definition, List<String> textures, int stateIndex, String variant, Float rotation) {
+        return createCuboidModel(generator, block, definition, textures, stateIndex, variant, rotation, null);
+    }
+
+    /**
+     * Creates a custom cuboid model from definition with optional rotation and cuboid override.
+     * @param rotation Y-axis rotation angle in degrees or null for no rotation
+     * @param cuboidOverride Pre-transformed cuboids to use instead of definition.getCuboids(), or null
+     */
+    static Identifier createCuboidModel(BlockStateModelGenerator generator, Block block, BlockDefinition definition, List<String> textures, int stateIndex, String variant, Float rotation, List<BlockDefinition.CuboidElement> cuboidOverride) {
         TextureMap textureMap = createCustomCuboidTextureMap(textures);
         Identifier modelId = createGeneratedModelId(block, variant);
 
-        Model cuboidModel = createCuboidModelFromDefinition(definition, textures, stateIndex, rotation);
+        Model cuboidModel = createCuboidModelFromDefinition(definition, textures, stateIndex, rotation, cuboidOverride);
         cuboidModel.upload(modelId, textureMap, generator.modelCollector);
 
         return modelId;
@@ -449,8 +467,9 @@ public class CuboidBlockExporter extends BaseBlockExporter {
 
     /**
      * Creates a Model instance from BlockDefinition cuboids.
+     * @param cuboidOverride Pre-transformed cuboids to use instead of definition.getCuboids(), or null
      */
-    private static Model createCuboidModelFromDefinition(BlockDefinition definition, List<String> textures, int stateIndex, Float rotation) {
+    private static Model createCuboidModelFromDefinition(BlockDefinition definition, List<String> textures, int stateIndex, Float rotation, List<BlockDefinition.CuboidElement> cuboidOverride) {
         int requiredTextures = Math.max(6, textures.size());
 
         List<TextureKey> textureKeys = new ArrayList<>();
@@ -470,7 +489,7 @@ public class CuboidBlockExporter extends BaseBlockExporter {
 
                 // Add elements array
                 JsonArray elements = new JsonArray();
-                List<BlockDefinition.CuboidElement> cuboids = definition.getCuboids();
+                List<BlockDefinition.CuboidElement> cuboids = (cuboidOverride != null) ? cuboidOverride : definition.getCuboids();
 
                 if (cuboids != null && !cuboids.isEmpty()) {
                     for (BlockDefinition.CuboidElement cuboid : cuboids) {
