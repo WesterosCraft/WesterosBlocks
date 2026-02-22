@@ -56,6 +56,7 @@
     ],
     "renderLayer": "cutout",
     "isCustomModel": true,
+    "nonOpaque": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -132,6 +133,7 @@
     "strength": 5,
     "soundGroup": "metal",
     "isCustomModel": true,
+    "nonOpaque": true,
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -895,6 +897,7 @@
     ],
     "renderLayer": "cutout",
     "isCustomModel": true,
+    "nonOpaque": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
@@ -993,6 +996,7 @@
       "transparent"
     ],
     "renderLayer": "cutout",
+    "nonOpaque": true,
     "isCustomModel": true,
     "boundingBox": {
       "xMin": 0,
