@@ -20,7 +20,7 @@ import net.minecraft.world.WorldView;
 
 import com.westerosblocks.data.BlockDefinition;
 
-public class WCFanBlock extends Block implements Waterloggable {
+public class WCFanBlock extends Block implements Waterloggable, WCBlockDef {
     protected BlockDefinition def;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 

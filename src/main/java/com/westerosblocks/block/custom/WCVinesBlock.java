@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class WCVinesBlock extends VineBlock {
+public class WCVinesBlock extends VineBlock implements WCBlockDef {
     protected BlockDefinition def;
     public static final BooleanProperty DOWN = Properties.DOWN;
     private static final VoxelShape UP_AABB = Block.createCuboidShape(0.0D, 15.0D, 0.0D, 16.0D, 16.0D, 16.0D);

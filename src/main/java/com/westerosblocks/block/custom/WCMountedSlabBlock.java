@@ -20,7 +20,7 @@ import net.minecraft.world.WorldView;
 
 import java.util.Map;
 
-public class WCMountedSlabBlock extends Block {
+public class WCMountedSlabBlock extends Block implements WCBlockDef {
     protected BlockDefinition def;
     private final boolean allowUnsupported;
 

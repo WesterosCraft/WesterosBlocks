@@ -26,7 +26,7 @@ import java.util.Map;
 
 import com.westerosblocks.data.BlockDefinition;
 
-public class WCChairBlock extends Block {
+public class WCChairBlock extends Block implements WCBlockDef {
     protected BlockDefinition def;
 
     public static final IntProperty ROTATION = IntProperty.of("rotation", 0, 7);

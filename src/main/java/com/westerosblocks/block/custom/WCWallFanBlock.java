@@ -26,7 +26,7 @@ import com.westerosblocks.data.BlockDefinition;
 
 import java.util.Map;
 
-public class WCWallFanBlock extends Block implements Waterloggable {
+public class WCWallFanBlock extends Block implements Waterloggable, WCBlockDef {
     protected BlockDefinition def;
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;

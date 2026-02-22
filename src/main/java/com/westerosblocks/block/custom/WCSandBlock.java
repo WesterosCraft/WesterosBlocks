@@ -9,7 +9,7 @@ import net.minecraft.block.FallingBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
-public class WCSandBlock extends FallingBlock {
+public class WCSandBlock extends FallingBlock implements WCBlockDef {
     protected BlockDefinition def;
     private final int dustColor;
 

@@ -156,16 +156,6 @@ public class SlabBlockExporter extends BaseBlockExporter {
         doubleModel.upload(doubleModelId, textureMap, generator.modelCollector);
     }
 
-    private static String getOverlayTextureByIndex(List<String> overlayTextures, int index) {
-        if (overlayTextures == null || overlayTextures.isEmpty()) {
-            return null;
-        }
-        if (index >= overlayTextures.size()) {
-            index = overlayTextures.size() - 1;
-        }
-        return overlayTextures.get(index);
-    }
-
     protected static String getModelName(String fname, int setIdx, String variant) {
         if (setIdx == 0 && fname.equals("base")) {
             return variant;

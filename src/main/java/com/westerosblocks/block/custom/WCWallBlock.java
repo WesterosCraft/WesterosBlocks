@@ -23,7 +23,7 @@ import net.minecraft.world.WorldAccess;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
 
-public class WCWallBlock extends WallBlock {
+public class WCWallBlock extends WallBlock implements WCBlockDef {
     protected BlockDefinition def;
 
     public static class Factory extends BlockFactory {

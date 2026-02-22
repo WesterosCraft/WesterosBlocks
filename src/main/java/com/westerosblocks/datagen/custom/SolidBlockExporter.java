@@ -148,16 +148,6 @@ public class SolidBlockExporter extends BaseBlockExporter {
         }
     }
 
-    private static String getOverlayTextureByIndex(List<String> overlayTextures, int index) {
-        if (overlayTextures == null || overlayTextures.isEmpty()) {
-            return null;
-        }
-        if (index >= overlayTextures.size()) {
-            index = overlayTextures.size() - 1;
-        }
-        return overlayTextures.get(index);
-    }
-
     private static void generateOverlayModel(BlockStateModelGenerator generator, Identifier modelId,
             BlockDefinition.RandomTextureVariant set, List<String> overlayTextures, boolean isTinted, boolean isSymmetrical) {
 

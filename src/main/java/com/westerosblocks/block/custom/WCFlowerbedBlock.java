@@ -21,7 +21,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-public class WCFlowerbedBlock extends PlantBlock implements Fertilizable {
+public class WCFlowerbedBlock extends PlantBlock implements Fertilizable, WCBlockDef {
     protected BlockDefinition def;
     public static final MapCodec<WCFlowerbedBlock> CODEC = createCodec(WCFlowerbedBlock::new);
     public static final int MIN_FLOWERS = 1;

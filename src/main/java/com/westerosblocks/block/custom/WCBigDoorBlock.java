@@ -28,7 +28,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.event.GameEvent;
 
-public class WCBigDoorBlock extends Block {
+public class WCBigDoorBlock extends Block implements WCBlockDef {
     protected BlockDefinition def;
 
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;

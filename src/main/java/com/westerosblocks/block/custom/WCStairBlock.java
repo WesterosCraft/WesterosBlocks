@@ -32,7 +32,7 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.stream.IntStream;
 
-public class WCStairBlock extends Block implements Waterloggable {
+public class WCStairBlock extends Block implements Waterloggable, WCBlockDef {
     protected BlockDefinition def;
 
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;

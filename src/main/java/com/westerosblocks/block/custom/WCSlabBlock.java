@@ -15,7 +15,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class WCSlabBlock extends SlabBlock {
+public class WCSlabBlock extends SlabBlock implements WCBlockDef {
     protected BlockDefinition def;
     protected boolean toggleOnUse = false;
 

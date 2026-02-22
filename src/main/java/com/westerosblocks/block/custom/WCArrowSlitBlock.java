@@ -24,7 +24,7 @@ import com.westerosblocks.data.BlockDefinition;
 
 import java.util.Map;
 
-public class WCArrowSlitBlock extends Block {
+public class WCArrowSlitBlock extends Block implements WCBlockDef {
     protected BlockDefinition def;
     public static final EnumProperty<ArrowSlitType> TYPE = EnumProperty.of("type", ArrowSlitType.class);
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;

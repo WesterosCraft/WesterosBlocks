@@ -1,7 +1,6 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.datagen.ModModels;
-import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
@@ -27,15 +26,6 @@ public class FenceBlockExporter extends BaseBlockExporter {
     private static Model getFenceInventoryModel(boolean tinted, boolean overlay) {
         if (overlay) return tinted ? ModModels.FENCE_INVENTORY_OVERLAY_TINTED : ModModels.FENCE_INVENTORY_OVERLAY_UNTINTED;
         return tinted ? ModModels.FENCE_INVENTORY_TINTED : ModModels.FENCE_INVENTORY_UNTINTED;
-    }
-
-    private static TextureMap createFenceTextureMap(String[] textures, String[] overlayTextures) {
-        if (overlayTextures != null) {
-            return ModTextureMap.fenceWallOverlayTextures(
-                    textures[0], textures[1], textures[2],
-                    overlayTextures[0], overlayTextures[1], overlayTextures[2]);
-        }
-        return ModTextureMap.fenceWallTextures(textures[0], textures[1], textures[2]);
     }
 
     /**
@@ -104,7 +94,7 @@ public class FenceBlockExporter extends BaseBlockExporter {
         String[] expandedOverlays = overlay && overlayTextures != null ? fillTextureArray(overlayTextures, 3) : null;
 
         // Create texture map
-        TextureMap textureMap = createFenceTextureMap(expandedTextures, expandedOverlays);
+        TextureMap textureMap = createFenceWallTextureMap(expandedTextures, expandedOverlays);
 
         // Upload post and side models
         Identifier postModelId = getFencePostModel(tinted, overlay)
@@ -137,7 +127,7 @@ public class FenceBlockExporter extends BaseBlockExporter {
             String[] expandedTextures = fillTextureArray(set.getTexturesAsArray(), 3);
             String[] expandedOverlays = overlay && set.hasOverlay() ? fillTextureArray(set.getOverlayTexturesAsArray(), 3) : null;
 
-            TextureMap textureMap = createFenceTextureMap(expandedTextures, expandedOverlays);
+            TextureMap textureMap = createFenceWallTextureMap(expandedTextures, expandedOverlays);
 
             Identifier postModelId = getFencePostModel(tinted, overlay)
                     .upload(createNestedModelId(block, "post_v" + (i + 1)), textureMap, generator.modelCollector);
@@ -157,7 +147,7 @@ public class FenceBlockExporter extends BaseBlockExporter {
         BlockDefinition.TextureVariantSet firstSet = textureSets.get(0);
         String[] expandedTextures = fillTextureArray(firstSet.getTexturesAsArray(), 3);
         String[] expandedOverlays = overlay && firstSet.hasOverlay() ? fillTextureArray(firstSet.getOverlayTexturesAsArray(), 3) : null;
-        TextureMap itemTextureMap = createFenceTextureMap(expandedTextures, expandedOverlays);
+        TextureMap itemTextureMap = createFenceWallTextureMap(expandedTextures, expandedOverlays);
 
         Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
         getFenceInventoryModel(tinted, overlay)

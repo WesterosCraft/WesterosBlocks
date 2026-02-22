@@ -16,7 +16,7 @@ import net.minecraft.world.WorldView;
 
 import com.westerosblocks.data.BlockDefinition;
 
-public class WCTorchBlock extends TorchBlock {
+public class WCTorchBlock extends TorchBlock implements WCBlockDef {
     protected BlockDefinition def;
     private final boolean allowUnsupported;
     private final boolean noParticle;

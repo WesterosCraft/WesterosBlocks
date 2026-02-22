@@ -12,7 +12,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class WCTrapDoorBlock extends TrapdoorBlock {
+public class WCTrapDoorBlock extends TrapdoorBlock implements WCBlockDef {
     protected BlockDefinition def;
     private final boolean locked;
 

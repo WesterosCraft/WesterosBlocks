@@ -7,6 +7,7 @@ import net.minecraft.util.math.Direction;
 
 import net.minecraft.data.client.VariantSettings.Rotation;
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.utils.ModProperties;
 
 import java.util.ArrayList;
@@ -636,6 +637,39 @@ public abstract class BaseBlockExporter {
             }
             return null;
         }
+    }
+
+    /**
+     * Gets an overlay texture by index, clamping to the last available texture.
+     *
+     * @param overlayTextures The overlay texture list
+     * @param index The desired index
+     * @return The texture at the index, or the last texture if index exceeds size, or null if empty
+     */
+    protected static String getOverlayTextureByIndex(List<String> overlayTextures, int index) {
+        if (overlayTextures == null || overlayTextures.isEmpty()) {
+            return null;
+        }
+        if (index >= overlayTextures.size()) {
+            index = overlayTextures.size() - 1;
+        }
+        return overlayTextures.get(index);
+    }
+
+    /**
+     * Creates a texture map for fence/wall blocks, with optional overlay textures.
+     *
+     * @param textures Array of 3 textures (top, bottom, side)
+     * @param overlayTextures Array of 3 overlay textures, or null
+     * @return The texture map
+     */
+    protected static TextureMap createFenceWallTextureMap(String[] textures, String[] overlayTextures) {
+        if (overlayTextures != null) {
+            return ModTextureMap.fenceWallOverlayTextures(
+                    textures[0], textures[1], textures[2],
+                    overlayTextures[0], overlayTextures[1], overlayTextures[2]);
+        }
+        return ModTextureMap.fenceWallTextures(textures[0], textures[1], textures[2]);
     }
 
     protected static void registerSimpleItemModel(BlockStateModelGenerator generator, Block block, Identifier textureId) {

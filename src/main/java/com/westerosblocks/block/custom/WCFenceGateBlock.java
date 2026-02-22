@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 
 import com.westerosblocks.utils.ModWoodType;
 
-public class WCFenceGateBlock extends FenceGateBlock {
+public class WCFenceGateBlock extends FenceGateBlock implements WCBlockDef {
     protected BlockDefinition def;
     private final boolean locked;
 

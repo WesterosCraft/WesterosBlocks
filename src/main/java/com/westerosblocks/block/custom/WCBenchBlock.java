@@ -31,7 +31,7 @@ import net.minecraft.world.WorldAccess;
 import java.util.List;
 import java.util.Map;
 
-public class WCBenchBlock extends Block {
+public class WCBenchBlock extends Block implements WCBlockDef {
     protected BlockDefinition def;
 
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;

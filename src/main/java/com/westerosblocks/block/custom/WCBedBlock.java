@@ -27,7 +27,7 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.List;
 
-public class WCBedBlock extends HorizontalFacingBlock {
+public class WCBedBlock extends HorizontalFacingBlock implements WCBlockDef {
     protected BlockDefinition def;
     public static final MapCodec<WCBedBlock> CODEC = createCodec(WCBedBlock::new);
 

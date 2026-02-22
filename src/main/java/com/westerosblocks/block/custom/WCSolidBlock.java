@@ -21,7 +21,7 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-public class WCSolidBlock extends Block {
+public class WCSolidBlock extends Block implements WCBlockDef {
     protected BlockDefinition def;
     protected boolean toggleOnUse = false;
 

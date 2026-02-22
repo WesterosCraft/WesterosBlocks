@@ -23,7 +23,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class WCCuboidNSEWStackBlock extends WCCuboidBlock {
+public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WCBlockDef {
     public static final DirectionProperty FACING = DirectionProperty.of("facing", Direction.EAST, Direction.SOUTH, Direction.WEST, Direction.NORTH);
     public static final EnumProperty<DoubleBlockHalf> HALF = Properties.DOUBLE_BLOCK_HALF;
 

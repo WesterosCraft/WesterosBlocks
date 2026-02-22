@@ -27,7 +27,7 @@ import net.minecraft.world.event.GameEvent;
 
 import com.westerosblocks.data.BlockDefinition;
 
-public class WCHalfDoorBlock extends Block {
+public class WCHalfDoorBlock extends Block implements WCBlockDef {
     protected BlockDefinition def;
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = Properties.OPEN;

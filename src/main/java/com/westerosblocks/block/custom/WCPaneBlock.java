@@ -13,7 +13,7 @@ import net.minecraft.world.WorldAccess;
 
 import com.westerosblocks.data.BlockDefinition;
 
-public class WCPaneBlock extends PaneBlock {
+public class WCPaneBlock extends PaneBlock implements WCBlockDef {
     protected BlockDefinition def;
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
     protected static BooleanProperty tempUNCONNECT;

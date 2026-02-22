@@ -27,7 +27,7 @@ import net.minecraft.world.WorldAccess;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WCCuboidBlock extends Block implements Waterloggable {
+public class WCCuboidBlock extends Block implements Waterloggable, WCBlockDef {
     protected BlockDefinition def;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     protected static ModProperties.StateProperty tempSTATE;
