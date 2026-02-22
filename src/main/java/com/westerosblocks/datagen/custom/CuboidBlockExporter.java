@@ -716,6 +716,12 @@ public class CuboidBlockExporter extends BaseBlockExporter {
         // Set UV coordinates based on face
         JsonArray uv = new JsonArray();
         calculateUVs(face, cuboid, uv);
+
+        // Process rotation: swap U↔V when rotation is 90° or 270°
+        if (siderot[index] == 90 || siderot[index] == 270) {
+            swapUV(uv);
+        }
+
         faceObj.add("uv", uv);
 
         // Get correct texture key
@@ -751,6 +757,12 @@ public class CuboidBlockExporter extends BaseBlockExporter {
         // Set UV coordinates based on face
         JsonArray uv = new JsonArray();
         calculateBoundingBoxUVs(face, bbox, uv);
+
+        // Process rotation: swap U↔V when rotation is 90° or 270° (matches 1.18.2 processRotation)
+        if (siderot[index] == 90 || siderot[index] == 270) {
+            swapUV(uv);
+        }
+
         faceObj.add("uv", uv);
 
         // Get correct texture key
@@ -773,6 +785,19 @@ public class CuboidBlockExporter extends BaseBlockExporter {
         }
 
         faces.add(face, faceObj);
+    }
+
+    /**
+     * Swaps U and V components of UV coordinates (uv[0]↔uv[1], uv[2]↔uv[3]).
+     * Matches 1.18.2 processRotation behavior for 90°/270° face rotations.
+     */
+    private static void swapUV(JsonArray uv) {
+        JsonElement tmp0 = uv.get(0);
+        JsonElement tmp2 = uv.get(2);
+        uv.set(0, uv.get(1));
+        uv.set(1, tmp0);
+        uv.set(2, uv.get(3));
+        uv.set(3, tmp2);
     }
 
     /**
