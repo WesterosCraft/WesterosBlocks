@@ -565,8 +565,8 @@
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
-      "yMin": 0.03,
-      "yMax": 0.039,
+      "yMin": 0,
+      "yMax": 0.125,
       "zMin": 0,
       "zMax": 1
     }
@@ -639,8 +639,8 @@
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
-      "yMin": 0.03,
-      "yMax": 0.039,
+      "yMin": 0,
+      "yMax": 0.125,
       "zMin": 0,
       "zMax": 1
     }
