@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/slab_top",
+  "parent": "westerosblocks:block/tinted/upper_slab",
   "textures": {
     "down": "westerosblocks:block/rubble/river/all4",
     "east": "westerosblocks:block/rubble/river/all4",
