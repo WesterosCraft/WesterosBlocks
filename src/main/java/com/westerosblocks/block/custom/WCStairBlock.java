@@ -120,8 +120,8 @@ public class WCStairBlock extends Block implements Waterloggable, WCBlockDef {
         if (doConnectstate) {
             defbs = defbs.with(CONNECTSTATE, 0);
         }
-        if (tempSTATE != null) {
-            defbs = defbs.with(tempSTATE, tempSTATE.defValue);
+        if (STATE != null) {
+            defbs = defbs.with(STATE, STATE.defValue);
         }
 
         this.setDefaultState(defbs);

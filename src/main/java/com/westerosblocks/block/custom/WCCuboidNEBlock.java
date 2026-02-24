@@ -63,8 +63,8 @@ public class WCCuboidNEBlock extends WCCuboidBlock {
             .with(WATERLOGGED, false)
             .with(FACING, Direction.EAST);
 
-        if (tempSTATE != null) {
-            defbs = defbs.with(tempSTATE, tempSTATE.defValue);
+        if (STATE != null) {
+            defbs = defbs.with(STATE, STATE.defValue);
         }
         this.setDefaultState(defbs);
     }

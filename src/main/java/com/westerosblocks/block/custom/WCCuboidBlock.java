@@ -123,8 +123,8 @@ public class WCCuboidBlock extends Block implements Waterloggable, WCBlockDef {
 
         // Set default state
         BlockState defbs = this.getDefaultState().with(WATERLOGGED, false);
-        if (tempSTATE != null) {
-            defbs = defbs.with(tempSTATE, tempSTATE.defValue);
+        if (STATE != null) {
+            defbs = defbs.with(STATE, STATE.defValue);
         }
         this.setDefaultState(defbs);
     }
