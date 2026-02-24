@@ -101,12 +101,12 @@ public class WCWebBlock extends CobwebBlock implements WCBlockDef {
         BlockState defaultState = this.getDefaultState()
                 .with(WATERLOGGED, Boolean.FALSE);
 
-        if (layerSensitive && tempLAYERS != null) {
-            defaultState = defaultState.with(tempLAYERS, 8);
+        if (layerSensitive && LAYERS != null) {
+            defaultState = defaultState.with(LAYERS, 8);
         }
 
-        if (tempSTATE != null) {
-            defaultState = defaultState.with(tempSTATE, tempSTATE.defValue);
+        if (STATE != null) {
+            defaultState = defaultState.with(STATE, STATE.defValue);
         }
 
         this.setDefaultState(defaultState);
