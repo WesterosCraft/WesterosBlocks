@@ -75,11 +75,11 @@ public class WCPlantBlock extends Block implements WCBlockDef {
         this.toggleOnUse = toggleOnUse;
 
         BlockState defbs = this.getDefaultState().with(WATERLOGGED, false);
-        if (layerSensitive && tempLAYERS != null) {
-            defbs = defbs.with(tempLAYERS, 8); // Default to full height
+        if (layerSensitive && LAYERS != null) {
+            defbs = defbs.with(LAYERS, 8); // Default to full height
         }
-        if (tempSTATE != null) {
-            defbs = defbs.with(tempSTATE, tempSTATE.defValue);
+        if (STATE != null) {
+            defbs = defbs.with(STATE, STATE.defValue);
         }
         this.setDefaultState(defbs);
     }
