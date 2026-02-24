@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "westerosblocks:block/dagger_block/base_v1"
+      "model": "westerosblocks:block/custom/dagger_block/base_v1"
     },
     "facing=north": {
-      "model": "westerosblocks:block/dagger_block/base_v1",
+      "model": "westerosblocks:block/custom/dagger_block/base_v1",
       "y": 270
     },
     "facing=south": {
-      "model": "westerosblocks:block/dagger_block/base_v1",
+      "model": "westerosblocks:block/custom/dagger_block/base_v1",
       "y": 90
     },
     "facing=west": {
-      "model": "westerosblocks:block/dagger_block/base_v1",
+      "model": "westerosblocks:block/custom/dagger_block/base_v1",
       "y": 180
     }
   }
