@@ -314,5 +314,81 @@
       }
     ],
     "renderLayer": "cutout"
+  },
+  {
+    "blockName": "crop_onions",
+    "blockType": "crop",
+    "hardness": 2,
+    "resistance": 2,
+    "soundGroup": "grass",
+    "harvestLevel": [
+      {
+        "tool": "hoe",
+        "level": 3
+      }
+    ],
+    "creativeTab": "westeros_crops_herbs_tab",
+    "label": "Onions",
+    "options": {
+      "toggleOnUse": true,
+      "layerSensitive": true
+    },
+    "states": [
+      {
+        "stateID": "age0",
+        "textures": ["onions/onion_stage_0"]
+      },
+      {
+        "stateID": "age1",
+        "textures": ["onions/onion_stage_1"]
+      },
+      {
+        "stateID": "age2",
+        "textures": ["onions/onion_stage_2"]
+      },
+      {
+        "stateID": "age3",
+        "textures": ["onions/onion_stage_3"]
+      }
+    ],
+    "renderLayer": "cutout"
+  },
+  {
+    "blockName": "crop_red_onions",
+    "blockType": "crop",
+    "hardness": 2,
+    "resistance": 2,
+    "soundGroup": "plant",
+    "harvestLevel": [
+      {
+        "tool": "hoe",
+        "level": 3
+      }
+    ],
+    "creativeTab": "westeros_crops_herbs_tab",
+    "label": "Red Onions",
+    "options": {
+      "toggleOnUse": true,
+      "layerSensitive": true
+    },
+    "states": [
+      {
+        "stateID": "age0",
+        "textures": ["onions/red_onion_stage_0"]
+      },
+      {
+        "stateID": "age1",
+        "textures": ["onions/red_onion_stage_1"]
+      },
+      {
+        "stateID": "age2",
+        "textures": ["onions/red_onion_stage_2"]
+      },
+      {
+        "stateID": "age3",
+        "textures": ["onions/red_onion_stage_3"]
+      }
+    ],
+    "renderLayer": "cutout"
   }
 ]
