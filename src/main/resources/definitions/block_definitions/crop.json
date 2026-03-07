@@ -336,19 +336,19 @@
     "states": [
       {
         "stateID": "age0",
-        "textures": ["onions/onion_stage_0"]
+        "textures": ["onions/onions_stage_0"]
       },
       {
         "stateID": "age1",
-        "textures": ["onions/onion_stage_1"]
+        "textures": ["onions/onions_stage_1"]
       },
       {
         "stateID": "age2",
-        "textures": ["onions/onion_stage_2"]
+        "textures": ["onions/onions_stage_2"]
       },
       {
         "stateID": "age3",
-        "textures": ["onions/onion_stage_3"]
+        "textures": ["onions/onions_stage_3"]
       }
     ],
     "renderLayer": "cutout"
