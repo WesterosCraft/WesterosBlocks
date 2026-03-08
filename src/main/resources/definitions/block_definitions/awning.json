@@ -8,6 +8,9 @@
     "label": "Red Awning",
     "textures": ["wool/red/all", "awning/red_awning_side"],
     "renderLayer": "cutout",
-    "nonOpaque": true
+    "nonOpaque": true,
+    "options": {
+      "toggleOnUse": true
+    }
   }
 ]
