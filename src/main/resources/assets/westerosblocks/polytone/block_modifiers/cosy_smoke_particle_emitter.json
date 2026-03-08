@@ -1,0 +1,9 @@
+{
+  "particle_emitters": [
+    {
+      "particle": "westerosblocks:cosy_smoke",
+      "chance": "0.10",
+      "y": "0.5"
+    }
+  ]
+}
