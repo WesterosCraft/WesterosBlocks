@@ -47,12 +47,12 @@ public class BuntingBlockExporter extends BaseBlockExporter {
 
         // Ceiling variant blockstate
         String ceilingName = definition.getBlockName() + "_ceiling";
-        Block ceilingBlock = Registries.BLOCK.get(WesterosBlocks.id(ceilingName));
-
-        if (ceilingBlock == null || !Registries.BLOCK.containsId(WesterosBlocks.id(ceilingName))) {
+        Identifier ceilingId = WesterosBlocks.id(ceilingName);
+        if (!Registries.BLOCK.containsId(ceilingId)) {
             WesterosBlocks.LOGGER.warn("Could not find ceiling block for bunting: {}", ceilingName);
             return;
         }
+        Block ceilingBlock = Registries.BLOCK.get(ceilingId);
 
         // Upload ceiling model — use second texture if available
         String ceilingTexturePath = definition.getTextures().size() > 1

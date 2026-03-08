@@ -16,7 +16,6 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
-import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -84,8 +83,7 @@ public class WCAwningBlock extends Block implements WCBlockDef {
 
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        Hand hand = player.getActiveHand();
-        if (player.isCreative() && player.getStackInHand(hand).isEmpty()) {
+        if (def.toggleOnUse() && player.isCreative() && player.getMainHandStack().isEmpty()) {
             state = state.cycle(RAISED);
             world.setBlockState(pos, state, Block.NOTIFY_ALL);
             world.syncWorldEvent(player, 1006, pos, 0);

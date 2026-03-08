@@ -1,5 +1,11 @@
 # Changelog
 
+## March 2026
+
+- Onion crop block
+- Rope item texture
+- Fixed missing Polytone block modifier files for foam, cosy smoke, and signal smoke particle emitters
+
 ## February 2026
 
 - Adds grass slab

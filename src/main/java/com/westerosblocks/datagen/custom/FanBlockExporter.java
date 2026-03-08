@@ -15,13 +15,12 @@ import net.minecraft.util.math.Direction;
 public class FanBlockExporter extends BaseBlockExporter {
 
     public static void registerFanBlock(BlockStateModelGenerator generator, Block standingFan, String texturePath) {
-        Block wallFan = Registries.BLOCK.get(WesterosBlocks.id("wall_" + standingFan.getTranslationKey().replace("block.westerosblocks.", "")));
+        Identifier wallFanId = WesterosBlocks.id("wall_" + standingFan.getTranslationKey().replace("block.westerosblocks.", ""));
 
         generateStandingFanBlockState(generator, standingFan, texturePath);
-        
 
-        if (wallFan != null) {
-            generateWallFanBlockState(generator, wallFan, texturePath);
+        if (Registries.BLOCK.containsId(wallFanId)) {
+            generateWallFanBlockState(generator, Registries.BLOCK.get(wallFanId), texturePath);
         }
         
         generateStandingFanItemModel(generator, standingFan, texturePath);

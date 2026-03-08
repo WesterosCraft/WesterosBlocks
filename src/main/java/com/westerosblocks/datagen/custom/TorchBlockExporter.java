@@ -18,12 +18,12 @@ public class TorchBlockExporter extends BaseBlockExporter {
                                                         BlockDefinition definition) {
         String texturePath = getTextureFromDefinition(definition);
 
-        Block wallTorch = Registries.BLOCK.get(WesterosBlocks.id("wall_" + definition.getBlockName()));
-
-        if (wallTorch == null) {
+        Identifier wallTorchId = WesterosBlocks.id("wall_" + definition.getBlockName());
+        if (!Registries.BLOCK.containsId(wallTorchId)) {
             WesterosBlocks.LOGGER.warn("Could not find wall torch for: {}", definition.getBlockName());
             return;
         }
+        Block wallTorch = Registries.BLOCK.get(wallTorchId);
 
         ModelPair models = generateTorchModels(generator, standingTorch, texturePath);
 
