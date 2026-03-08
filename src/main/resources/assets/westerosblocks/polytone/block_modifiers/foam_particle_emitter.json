@@ -2,7 +2,7 @@
   "particle_emitters": [
     {
       "particle": "westerosblocks:foam",
-      "chance": "0.10",
+      "chance": "0.40",
       "y": "0.5"
     }
   ]
