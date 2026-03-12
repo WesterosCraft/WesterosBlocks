@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_fire_up_alt",
-  "textures": {
-    "fire": "westerosblocks:block/wildfire/wildfire_layer_1"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "parent": "westerosblocks:block/buntings/bunting_ceiling",
-  "textures": {
-    "0": "westerosblocks:block/bunting/orange_bunting_ceiling",
-    "particle": "westerosblocks:block/bunting/orange_bunting_ceiling"
-  }
-}

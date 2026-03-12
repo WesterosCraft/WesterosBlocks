@@ -1,8 +1,0 @@
-{
-  "colormap": "westerosblocks:pine",
-  "targets": [
-    "minecraft:spruce_leaves",
-    "westerosblocks:bushy_grass_spruce",
-    "westerosblocks:juniper_bush"
-  ]
-}

@@ -1,8 +1,0 @@
-{
-  "colormap": "westerosblocks:reed",
-  "targets": [
-    "minecraft:sugar_cane",
-    "westerosblocks:cattails",
-    "westerosblocks:potted_cattails"
-  ]
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/cross_layer2",
-  "textures": {
-    "cross": "westerosblocks:block/dock_leaf/side1"
-  }
-}

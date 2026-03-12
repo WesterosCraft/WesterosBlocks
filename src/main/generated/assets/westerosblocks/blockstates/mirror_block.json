@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "": {
-      "model": "westerosblocks:block/mirror_block/base_v1",
-      "y": 0
-    }
-  }
-}
