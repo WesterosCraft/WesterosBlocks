@@ -149,7 +149,7 @@ public class ModBlocks {
                 return null;
             }
         } catch (Exception e) {
-            WesterosBlocks.LOGGER.error("Error creating block from definition: {}", e.getMessage());
+            WesterosBlocks.LOGGER.error("Error creating block from definition: {}", definition.getBlockName(), e);
             return null;
         }
     }

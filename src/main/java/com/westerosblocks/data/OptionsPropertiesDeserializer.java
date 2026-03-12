@@ -9,6 +9,7 @@ import java.lang.reflect.Type;
  * Handles object format: {"unconnect": false, "noUvlock": true}
  */
 public class OptionsPropertiesDeserializer implements JsonDeserializer<OptionsProperties> {
+    private static final Gson DEFAULT_GSON = new Gson();
 
     @Override
     public OptionsProperties deserialize(JsonElement json, Type typeOfT,
@@ -18,8 +19,8 @@ public class OptionsPropertiesDeserializer implements JsonDeserializer<OptionsPr
         }
 
         if (json.isJsonObject()) {
-            Gson defaultGson = new Gson();
-            return defaultGson.fromJson(json, OptionsProperties.class);
+            // Use a plain Gson instance to avoid infinite recursion through this custom deserializer
+            return DEFAULT_GSON.fromJson(json, OptionsProperties.class);
         }
 
         return null;

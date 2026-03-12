@@ -158,5 +158,6 @@ public class BlockSetDefinitionLoader {
             }
         }
 
+        WesterosBlocks.LOGGER.info("Block set validation complete: {} valid, {} with warnings", validCount, warningCount);
     }
 }
