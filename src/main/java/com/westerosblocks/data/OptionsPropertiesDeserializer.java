@@ -18,8 +18,7 @@ public class OptionsPropertiesDeserializer implements JsonDeserializer<OptionsPr
         }
 
         if (json.isJsonObject()) {
-            Gson defaultGson = new Gson();
-            return defaultGson.fromJson(json, OptionsProperties.class);
+            return context.deserialize(json, OptionsProperties.class);
         }
 
         return null;

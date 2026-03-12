@@ -2,6 +2,7 @@ package com.westerosblocks.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.westerosblocks.WesterosBlocks;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.File;
@@ -24,7 +25,7 @@ public class ModConfig {
             try (FileReader reader = new FileReader(CONFIG_FILE)) {
                 return GSON.fromJson(reader, ModConfig.class);
             } catch (IOException e) {
-                System.err.println("Failed to load config, using defaults: " + e.getMessage());
+                WesterosBlocks.LOGGER.error("Failed to load config, using defaults: {}", e.getMessage());
             }
         }
 
@@ -43,7 +44,7 @@ public class ModConfig {
                 GSON.toJson(this, writer);
             }
         } catch (IOException e) {
-            System.err.println("Failed to save config: " + e.getMessage());
+            WesterosBlocks.LOGGER.error("Failed to save config: {}", e.getMessage());
         }
     }
 }

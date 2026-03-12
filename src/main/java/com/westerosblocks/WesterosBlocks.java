@@ -2,13 +2,11 @@ package com.westerosblocks;
 
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.blockentity.ModBlockEntities;
-import com.westerosblocks.command.ParticleEmitterCommand;
 import com.westerosblocks.config.ModConfig;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 import com.westerosblocks.data.WorldPainterExporter;
 import com.westerosblocks.entity.ModEntities;
 import com.westerosblocks.item.ModItems;
-import com.westerosblocks.particle.ModParticles;
 import com.westerosblocks.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 
@@ -32,12 +30,8 @@ public class WesterosBlocks implements ModInitializer {
         ModBlocks.registerModBlocks();
         ModItems.registerModItems();
         ModSounds.registerSounds();
-//        ModParticles.registerParticles();
         ModBlockEntities.registerModBlockEntities();
         ModEntities.registerModEntities();
-
-        // Register commands
-//        ParticleEmitterCommand.register();
 
         // Export WorldPainter CSV if config option is enabled
         if (CONFIG.dumpWorldPainterCSV) {
