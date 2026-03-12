@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/hop_crate/base_v1",
+      "y": 0
+    }
+  }
+}

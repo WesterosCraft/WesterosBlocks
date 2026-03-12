@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/potted_pink_primrose/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/potted_pink_primrose/base_v1",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/potted_pink_primrose/base_v1",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/potted_pink_primrose/base_v1",
+        "y": 270
+      },
+      {
+        "model": "westerosblocks:block/potted_pink_primrose/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/potted_pink_primrose/base_v2",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/potted_pink_primrose/base_v2",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/potted_pink_primrose/base_v2",
+        "y": 270
+      }
+    ]
+  }
+}

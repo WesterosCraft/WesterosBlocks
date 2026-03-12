@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/coral_bubble/base_v1",
+      "y": 0
+    }
+  }
+}

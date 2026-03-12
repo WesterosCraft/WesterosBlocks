@@ -1,0 +1,10 @@
+{
+  "colormap": "westerosblocks:stone",
+  "targets": [
+    "minecraft:gold_ore",
+    "minecraft:iron_ore",
+    "minecraft:stone",
+    "minecraft:stone_button",
+    "minecraft:stone_pressure_plate"
+  ]
+}

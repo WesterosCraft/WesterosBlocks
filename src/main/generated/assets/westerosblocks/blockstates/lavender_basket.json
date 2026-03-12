@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/lavender_basket/base_v1",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/green_slate_tip/base_v1",
+      "y": 0
+    }
+  }
+}

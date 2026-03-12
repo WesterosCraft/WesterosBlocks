@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/bench_drawers/base_v1",
+      "y": 0
+    }
+  }
+}

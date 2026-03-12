@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/buntings/bunting_wall",
+  "textures": {
+    "0": "westerosblocks:block/bunting/black_bunting",
+    "particle": "westerosblocks:block/bunting/black_bunting"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_inventory",
+  "textures": {
+    "bottom": "westerosblocks:block/bark/grey/stripped",
+    "particle": "westerosblocks:block/bark/grey/stripped",
+    "side": "westerosblocks:block/bark/grey/stripped",
+    "top": "westerosblocks:block/bark/grey/stripped"
+  }
+}

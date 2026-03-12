@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/brown_grey_brick_hopper/base_v1",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "westerosblocks:block/plaster/smooth/pale_purple/all"
+  }
+}

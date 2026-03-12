@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/stormlands_dark_cobblestone/base_v1",
+      "y": 0
+    }
+  }
+}

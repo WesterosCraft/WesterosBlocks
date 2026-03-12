@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/oak_orange_vertical_planks_tip/base_v1",
+      "y": 0
+    }
+  }
+}

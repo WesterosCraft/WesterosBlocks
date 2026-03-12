@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/custom/bushy_grass_oak/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/custom/bushy_grass_oak/base_v2",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/custom/bushy_grass_oak/base_v3",
+        "y": 0
+      }
+    ]
+  }
+}

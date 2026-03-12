@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "state=base": {
+      "model": "westerosblocks:block/hollow_oak_birch_hopper/base_v1",
+      "y": 0
+    },
+    "state=cut": {
+      "model": "westerosblocks:block/hollow_oak_birch_hopper/cut_v1",
+      "y": 0
+    }
+  }
+}

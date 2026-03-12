@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/brown_grey_dark_cobblestone_hopper/base_v1",
+      "y": 0
+    }
+  }
+}

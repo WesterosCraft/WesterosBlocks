@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/template_wall_side_tall",
+  "textures": {
+    "bottom": "westerosblocks:block/fieldstone/grey/all",
+    "particle": "westerosblocks:block/fieldstone/grey/all",
+    "side": "westerosblocks:block/fieldstone/grey/all",
+    "top": "westerosblocks:block/fieldstone/grey/all"
+  }
+}

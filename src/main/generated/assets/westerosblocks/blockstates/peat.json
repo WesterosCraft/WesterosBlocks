@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/peat/base_v1",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/house_count_utility_block/base_v1",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "east": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "north": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "particle": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "south": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "up": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "west": "westerosblocks:block/ashlar_quarter_rounded/white/all"
+  }
+}

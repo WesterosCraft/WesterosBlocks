@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/slab_top",
+  "textures": {
+    "down": "westerosblocks:block/terrainset/north/heavy_snow/all",
+    "east": "westerosblocks:block/terrainset/north/heavy_snow/all",
+    "north": "westerosblocks:block/terrainset/north/heavy_snow/all",
+    "particle": "westerosblocks:block/terrainset/north/heavy_snow/all",
+    "south": "westerosblocks:block/terrainset/north/heavy_snow/all",
+    "up": "westerosblocks:block/terrainset/north/heavy_snow/all",
+    "west": "westerosblocks:block/terrainset/north/heavy_snow/all"
+  }
+}

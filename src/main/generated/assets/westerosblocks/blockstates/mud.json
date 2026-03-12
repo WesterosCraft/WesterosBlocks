@@ -1,0 +1,43 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/mud/base_v1",
+        "weight": 20,
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/mud/base_v2",
+        "weight": 20,
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/mud/base_v3",
+        "weight": 20,
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/mud/base_v4",
+        "weight": 20,
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/mud/base_v5",
+        "weight": 20,
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/mud/base_v6",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/mud/base_v7",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/mud/base_v8",
+        "y": 0
+      }
+    ]
+  }
+}

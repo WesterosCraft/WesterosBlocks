@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/slab_top",
+  "textures": {
+    "down": "westerosblocks:block/wood/oak_birch/all",
+    "east": "westerosblocks:block/wood/oak_birch/all",
+    "north": "westerosblocks:block/wood/oak_birch/all",
+    "particle": "westerosblocks:block/wood/oak_birch/all",
+    "south": "westerosblocks:block/wood/oak_birch/all",
+    "up": "westerosblocks:block/wood/oak_birch/all",
+    "west": "westerosblocks:block/wood/oak_birch/all"
+  }
+}

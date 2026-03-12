@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "westerosblocks:block/coral_brain_fan/coral_brain_fan"
+    },
+    "waterlogged=true": {
+      "model": "westerosblocks:block/coral_brain_fan/coral_brain_fan"
+    }
+  }
+}

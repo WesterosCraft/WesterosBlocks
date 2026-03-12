@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/tinted/cross",
+  "textures": {
+    "cross": "minecraft:block/fern/fern3"
+  }
+}

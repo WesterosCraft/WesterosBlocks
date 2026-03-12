@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/cosy_smoke_particle_emitter/on"
+    }
+  }
+}

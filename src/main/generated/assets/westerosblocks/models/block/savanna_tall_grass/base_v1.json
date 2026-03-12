@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/tinted/cross",
+  "textures": {
+    "cross": "westerosblocks:block/savanna_tall_grass/savanna_tall_grass"
+  }
+}

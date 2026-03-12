@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/bees/base_v1",
+      "y": 0
+    }
+  }
+}

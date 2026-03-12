@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/flagstone/base_v1",
+      "y": 0
+    }
+  }
+}

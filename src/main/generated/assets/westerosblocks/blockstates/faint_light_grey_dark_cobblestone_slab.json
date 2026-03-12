@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/faint_light_grey_dark_cobblestone_slab/bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/faint_light_grey_dark_cobblestone_slab/double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/faint_light_grey_dark_cobblestone_slab/top"
+    }
+  }
+}

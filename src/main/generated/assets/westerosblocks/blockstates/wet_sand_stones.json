@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/wet_sand_stones/base_v1",
+      "y": 0
+    }
+  }
+}

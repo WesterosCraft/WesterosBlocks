@@ -1,0 +1,7 @@
+{
+  "colormap": "westerosblocks:foliage_vine",
+  "targets": [
+    "minecraft:vine",
+    "westerosblocks:vines"
+  ]
+}

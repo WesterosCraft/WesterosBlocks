@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/dorne_light_terracotta/base_v1",
+      "y": 0
+    }
+  }
+}

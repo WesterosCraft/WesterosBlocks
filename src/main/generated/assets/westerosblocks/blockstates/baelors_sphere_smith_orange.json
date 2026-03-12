@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/baelors_sphere_smith_orange/base_v1",
+      "y": 0
+    }
+  }
+}

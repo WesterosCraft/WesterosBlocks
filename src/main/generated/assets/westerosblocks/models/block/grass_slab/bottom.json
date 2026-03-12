@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/tinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/classic_grass_block/top1",
+    "east": "westerosblocks:block/classic_grass_block/top1",
+    "north": "westerosblocks:block/classic_grass_block/top1",
+    "particle": "westerosblocks:block/classic_grass_block/top1",
+    "south": "westerosblocks:block/classic_grass_block/top1",
+    "up": "westerosblocks:block/classic_grass_block/top1",
+    "west": "westerosblocks:block/classic_grass_block/top1"
+  }
+}

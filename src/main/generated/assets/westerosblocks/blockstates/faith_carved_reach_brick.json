@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/faith_carved_reach_brick/base_v1",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/terracotta_arrow_slit_window/base_v1",
+      "y": 0
+    }
+  }
+}

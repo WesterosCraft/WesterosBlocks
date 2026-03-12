@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/table/wood_table_right",
+  "textures": {
+    "particle": "westerosblocks:block/tables/wood_table_northern",
+    "table": "westerosblocks:block/tables/wood_table_northern"
+  }
+}

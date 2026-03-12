@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/grey_light_wood_vertical_planks_carpet/base_v1",
+      "y": 0
+    }
+  }
+}

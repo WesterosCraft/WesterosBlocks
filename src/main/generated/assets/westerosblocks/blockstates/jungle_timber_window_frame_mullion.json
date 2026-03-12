@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/jungle_timber_window_frame_mullion/base_v1",
+      "y": 0
+    }
+  }
+}

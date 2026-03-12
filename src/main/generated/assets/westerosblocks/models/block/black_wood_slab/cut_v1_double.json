@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/wood/black/all_lines",
+    "east": "westerosblocks:block/wood/black/all_lines",
+    "north": "westerosblocks:block/wood/black/all_lines",
+    "particle": "westerosblocks:block/wood/black/all_lines",
+    "south": "westerosblocks:block/wood/black/all_lines",
+    "up": "westerosblocks:block/wood/black/all_lines",
+    "west": "westerosblocks:block/wood/black/all_lines"
+  }
+}

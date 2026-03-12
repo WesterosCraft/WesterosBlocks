@@ -1,0 +1,17 @@
+{
+  "colormap": "westerosblocks:eastern_island",
+  "targets": [
+    "westerosblocks:pebbles_dry_eastern_islands",
+    "westerosblocks:pebbles_dry_eastern_islands_layer",
+    "westerosblocks:pebbles_wet_eastern_islands",
+    "westerosblocks:pebbles_wet_eastern_islands_layer",
+    "westerosblocks:terrainset_eastern_islands",
+    "westerosblocks:terrainset_eastern_islands_fence",
+    "westerosblocks:terrainset_eastern_islands_fence_gate",
+    "westerosblocks:terrainset_eastern_islands_hopper",
+    "westerosblocks:terrainset_eastern_islands_slab",
+    "westerosblocks:terrainset_eastern_islands_stairs",
+    "westerosblocks:terrainset_eastern_islands_tip",
+    "westerosblocks:terrainset_eastern_islands_wall"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "westerosblocks:block/custom/cleaver_block/base_v1"
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/custom/cleaver_block/base_v1",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "westerosblocks:block/custom/cleaver_block/base_v1",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "westerosblocks:block/custom/cleaver_block/base_v1",
+      "y": 180
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fire_side_alt",
+  "textures": {
+    "fire": "westerosblocks:block/wildfire/wildfire_layer_1"
+  }
+}

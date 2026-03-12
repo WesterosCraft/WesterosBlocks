@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/untinted/crop_layer1",
+  "textures": {
+    "crop": "westerosblocks:block/carrots/carrots_stage_3"
+  }
+}

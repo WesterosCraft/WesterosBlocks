@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/wood/birch_yellow/all",
+    "particle": "westerosblocks:block/wood/birch_yellow/all",
+    "side": "westerosblocks:block/wood/birch_yellow/all",
+    "top": "westerosblocks:block/wood/birch_yellow/all"
+  }
+}

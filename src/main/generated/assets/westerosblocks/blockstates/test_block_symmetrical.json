@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "symmetrical=false": {
+      "model": "westerosblocks:block/test_block_symmetrical/asymmetrical/base_v1",
+      "y": 0
+    },
+    "symmetrical=true": {
+      "model": "westerosblocks:block/test_block_symmetrical/symmetrical/base_v1",
+      "y": 0
+    }
+  }
+}

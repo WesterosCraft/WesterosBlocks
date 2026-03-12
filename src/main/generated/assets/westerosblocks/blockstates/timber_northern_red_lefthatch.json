@@ -1,0 +1,44 @@
+{
+  "variants": {
+    "state=state0,symmetrical=false": {
+      "model": "westerosblocks:block/timber_northern_red_lefthatch/asymmetrical/state0_v1",
+      "y": 0
+    },
+    "state=state0,symmetrical=true": {
+      "model": "westerosblocks:block/timber_northern_red_lefthatch/symmetrical/state0_v1",
+      "y": 0
+    },
+    "state=state1,symmetrical=false": {
+      "model": "westerosblocks:block/timber_northern_red_lefthatch/asymmetrical/state1_v1",
+      "y": 0
+    },
+    "state=state1,symmetrical=true": {
+      "model": "westerosblocks:block/timber_northern_red_lefthatch/symmetrical/state1_v1",
+      "y": 0
+    },
+    "state=state2,symmetrical=false": {
+      "model": "westerosblocks:block/timber_northern_red_lefthatch/asymmetrical/state2_v1",
+      "y": 0
+    },
+    "state=state2,symmetrical=true": {
+      "model": "westerosblocks:block/timber_northern_red_lefthatch/symmetrical/state2_v1",
+      "y": 0
+    },
+    "state=state3,symmetrical=false": {
+      "model": "westerosblocks:block/timber_northern_red_lefthatch/asymmetrical/state3_v1",
+      "y": 0
+    },
+    "state=state3,symmetrical=true": {
+      "model": "westerosblocks:block/timber_northern_red_lefthatch/symmetrical/state3_v1",
+      "y": 0
+    },
+    "state=state4,symmetrical=false": {
+      "model": "westerosblocks:block/timber_northern_red_lefthatch/asymmetrical/state4_v1",
+      "y": 0
+    },
+    "state=state4,symmetrical=true": {
+      "model": "westerosblocks:block/timber_northern_red_lefthatch/symmetrical/state4_v1",
+      "y": 0
+    }
+  }
+}

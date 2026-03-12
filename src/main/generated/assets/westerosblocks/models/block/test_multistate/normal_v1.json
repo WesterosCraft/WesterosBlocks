@@ -1,0 +1,13 @@
+{
+  "parent": "block/block",
+  "elements": [],
+  "textures": {
+    "particle": "westerosblocks:block/piled_bones/side",
+    "txt0": "westerosblocks:block/piled_bones/side",
+    "txt1": "westerosblocks:block/piled_bones/side",
+    "txt2": "westerosblocks:block/piled_bones/side",
+    "txt3": "westerosblocks:block/piled_bones/side",
+    "txt4": "westerosblocks:block/piled_bones/side",
+    "txt5": "westerosblocks:block/piled_bones/side"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/pebbles_dry_red_granite/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/pebbles_dry_red_granite/base_v2",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/pebbles_dry_red_granite/base_v3",
+        "y": 0
+      }
+    ]
+  }
+}

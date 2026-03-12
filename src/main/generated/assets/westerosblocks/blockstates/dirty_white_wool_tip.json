@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/dirty_white_wool_tip/base_v1",
+      "y": 0
+    }
+  }
+}

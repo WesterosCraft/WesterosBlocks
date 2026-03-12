@@ -1,0 +1,68 @@
+{
+  "variants": {
+    "connection=left,facing=east": {
+      "model": "westerosblocks:block/northern_table/left",
+      "y": 270
+    },
+    "connection=left,facing=north": {
+      "model": "westerosblocks:block/northern_table/left",
+      "y": 180
+    },
+    "connection=left,facing=south": {
+      "model": "westerosblocks:block/northern_table/left",
+      "y": 0
+    },
+    "connection=left,facing=west": {
+      "model": "westerosblocks:block/northern_table/left",
+      "y": 90
+    },
+    "connection=middle,facing=east": {
+      "model": "westerosblocks:block/northern_table/middle",
+      "y": 270
+    },
+    "connection=middle,facing=north": {
+      "model": "westerosblocks:block/northern_table/middle",
+      "y": 180
+    },
+    "connection=middle,facing=south": {
+      "model": "westerosblocks:block/northern_table/middle",
+      "y": 0
+    },
+    "connection=middle,facing=west": {
+      "model": "westerosblocks:block/northern_table/middle",
+      "y": 90
+    },
+    "connection=right,facing=east": {
+      "model": "westerosblocks:block/northern_table/right",
+      "y": 270
+    },
+    "connection=right,facing=north": {
+      "model": "westerosblocks:block/northern_table/right",
+      "y": 180
+    },
+    "connection=right,facing=south": {
+      "model": "westerosblocks:block/northern_table/right",
+      "y": 0
+    },
+    "connection=right,facing=west": {
+      "model": "westerosblocks:block/northern_table/right",
+      "y": 90
+    },
+    "connection=single,facing=east": {
+      "model": "westerosblocks:block/northern_table/single",
+      "y": 270
+    },
+    "connection=single,facing=north": {
+      "model": "westerosblocks:block/northern_table/single",
+      "y": 180
+    },
+    "connection=single,facing=south": {
+      "model": "westerosblocks:block/northern_table/single",
+      "y": 0
+    },
+    "connection=single,facing=west": {
+      "model": "westerosblocks:block/northern_table/single",
+      "y": 90
+    }
+  }
+}

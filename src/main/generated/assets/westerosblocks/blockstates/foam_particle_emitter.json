@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/foam_particle_emitter/on"
+    }
+  }
+}

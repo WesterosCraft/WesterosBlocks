@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/light_blue_plaster_tip/base_v1",
+      "y": 0
+    }
+  }
+}

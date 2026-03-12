@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/tinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/fieldstone/grey/all",
+    "east": "westerosblocks:block/fieldstone/grey/all",
+    "north": "westerosblocks:block/fieldstone/grey/all",
+    "particle": "westerosblocks:block/fieldstone/grey/all",
+    "south": "westerosblocks:block/fieldstone/grey/all",
+    "up": "westerosblocks:block/fieldstone/grey/all",
+    "west": "westerosblocks:block/fieldstone/grey/all"
+  }
+}

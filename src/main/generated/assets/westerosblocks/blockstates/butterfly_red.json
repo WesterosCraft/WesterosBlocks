@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/butterfly_red/base_v1",
+      "y": 0
+    }
+  }
+}

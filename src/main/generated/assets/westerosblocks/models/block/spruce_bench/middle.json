@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/bench/wood_bench_middle",
+  "textures": {
+    "bench": "westerosblocks:block/benches/wood_bench_spruce",
+    "particle": "westerosblocks:block/benches/wood_bench_spruce"
+  }
+}

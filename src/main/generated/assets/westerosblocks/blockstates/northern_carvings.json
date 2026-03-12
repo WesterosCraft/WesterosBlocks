@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/northern_carvings/base_v1",
+      "y": 0
+    }
+  }
+}

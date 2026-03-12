@@ -1,0 +1,28 @@
+{
+  "colormap": "westerosblocks:cobblestone",
+  "targets": [
+    "minecraft:cobblestone",
+    "minecraft:cobblestone_slab",
+    "minecraft:cobblestone_stairs",
+    "minecraft:cobblestone_wall",
+    "minecraft:lever",
+    "minecraft:mossy_cobblestone",
+    "minecraft:mossy_cobblestone_wall",
+    "minecraft:stone_stairs",
+    "westerosblocks:cobblestone",
+    "westerosblocks:cobblestone_fence",
+    "westerosblocks:cobblestone_hopper",
+    "westerosblocks:cobblestone_slab",
+    "westerosblocks:cobblestone_stairs",
+    "westerosblocks:cobblestone_stairs",
+    "westerosblocks:cobblestone_tip",
+    "westerosblocks:cobblestone_wall",
+    "westerosblocks:mossy_cobblestone",
+    "westerosblocks:mossy_cobblestone_fence",
+    "westerosblocks:mossy_cobblestone_hopper",
+    "westerosblocks:mossy_cobblestone_slab",
+    "westerosblocks:mossy_cobblestone_stairs",
+    "westerosblocks:mossy_cobblestone_tip",
+    "westerosblocks:mossy_cobblestone_wall"
+  ]
+}

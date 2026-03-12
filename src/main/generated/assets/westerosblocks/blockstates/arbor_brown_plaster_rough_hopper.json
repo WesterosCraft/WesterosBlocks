@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/arbor_brown_plaster_rough_hopper/base_v1",
+        "y": 0
+      },
+      {
+        "model": "westerosblocks:block/arbor_brown_plaster_rough_hopper/base_v2",
+        "y": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/spit_roast/base_v1",
+      "y": 0
+    }
+  }
+}

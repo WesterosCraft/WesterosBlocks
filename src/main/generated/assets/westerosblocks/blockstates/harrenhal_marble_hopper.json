@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/harrenhal_marble_hopper/base_v1",
+      "y": 0
+    }
+  }
+}

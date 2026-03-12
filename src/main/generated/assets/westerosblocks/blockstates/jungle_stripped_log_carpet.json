@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "state=base": {
+      "model": "westerosblocks:block/jungle_stripped_log_carpet/base_v1",
+      "y": 0
+    },
+    "state=cut": {
+      "model": "westerosblocks:block/jungle_stripped_log_carpet/cut_v1",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/ctm_simple/base_v1",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/winterfell_carving/base_v1",
+      "y": 0
+    }
+  }
+}

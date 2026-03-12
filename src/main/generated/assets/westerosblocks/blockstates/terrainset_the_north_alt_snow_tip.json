@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/terrainset_the_north_alt_snow_tip/base_v1",
+      "y": 0
+    }
+  }
+}

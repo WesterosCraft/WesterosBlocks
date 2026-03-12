@@ -1,0 +1,96 @@
+{
+  "parent": "block/block",
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "texture": "#txt0",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "east": {
+          "cullface": "east",
+          "texture": "#txt5",
+          "uv": [
+            0.0,
+            15.504,
+            16.0,
+            15.52
+          ]
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#txt2",
+          "uv": [
+            0.0,
+            15.504,
+            16.0,
+            15.52
+          ]
+        },
+        "south": {
+          "cullface": "south",
+          "texture": "#txt3",
+          "uv": [
+            0.0,
+            15.504,
+            16.0,
+            15.52
+          ]
+        },
+        "up": {
+          "texture": "#txt1",
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ]
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#txt4",
+          "uv": [
+            0.0,
+            15.504,
+            16.0,
+            15.52
+          ]
+        }
+      },
+      "from": [
+        0.0,
+        0.48,
+        0.0
+      ],
+      "rotation": {
+        "angle": 0.0,
+        "axis": "y",
+        "origin": [
+          8.0,
+          8.0,
+          8.0
+        ],
+        "rescale": false
+      },
+      "to": [
+        16.0,
+        0.496,
+        16.0
+      ]
+    }
+  ],
+  "textures": {
+    "particle": "westerosblocks:block/lily_pad/side7",
+    "txt0": "westerosblocks:block/lily_pad/side7",
+    "txt1": "westerosblocks:block/lily_pad/side7",
+    "txt2": "westerosblocks:block/lily_pad/side7",
+    "txt3": "westerosblocks:block/lily_pad/side7",
+    "txt4": "westerosblocks:block/lily_pad/side7",
+    "txt5": "westerosblocks:block/lily_pad/side7"
+  }
+}

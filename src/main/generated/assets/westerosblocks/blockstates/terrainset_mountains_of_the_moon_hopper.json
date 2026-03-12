@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/terrainset_mountains_of_the_moon_hopper/base_v1",
+      "y": 0
+    }
+  }
+}

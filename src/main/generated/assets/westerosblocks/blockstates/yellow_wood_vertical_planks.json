@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/yellow_wood_vertical_planks/base_v1",
+      "y": 0
+    }
+  }
+}

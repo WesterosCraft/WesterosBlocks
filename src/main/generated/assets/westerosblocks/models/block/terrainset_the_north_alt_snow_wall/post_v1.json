@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_post",
+  "textures": {
+    "bottom": "westerosblocks:block/terrainset/north_alt/snow/all",
+    "particle": "westerosblocks:block/terrainset/north_alt/snow/all",
+    "side": "westerosblocks:block/terrainset/north_alt/snow/all",
+    "top": "westerosblocks:block/terrainset/north_alt/snow/all"
+  }
+}

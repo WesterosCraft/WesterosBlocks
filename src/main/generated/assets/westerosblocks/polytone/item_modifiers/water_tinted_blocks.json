@@ -1,0 +1,8 @@
+{
+  "colormap": "westerosblocks:water",
+  "targets": [
+    "minecraft:bubble_column",
+    "minecraft:water",
+    "minecraft:water_cauldron"
+  ]
+}
