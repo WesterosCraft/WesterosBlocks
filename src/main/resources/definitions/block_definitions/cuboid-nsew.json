@@ -864,6 +864,8 @@
     ],
     "renderLayer": "cutout",
     "isCustomModel": true,
+    "nonOpaque": true,
+    "alphaRender": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,
