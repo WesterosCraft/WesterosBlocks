@@ -13,6 +13,7 @@
     ],
     "creativeTab": "westeros_banners_tab",
     "label": "Allyrion Banner",
+    "renderLayer": "cutout",
     "options": {
       "noBreakUnder": true,
       "allowHalfBreak": true
