@@ -2,8 +2,8 @@
 	"format_version": "1.21.1",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "westerosblocks:weapons",
-		"particle": "westerosblocks:weapons"
+		"0": "westerosblocks:block/tools/weapons",
+		"particle": "westerosblocks:block/tools/weapons"
 	},
 	"elements": [
 		{
