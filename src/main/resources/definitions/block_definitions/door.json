@@ -291,7 +291,7 @@
     "resistance": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "label": "Fancy White Door",
+    "label": "Reinforced White Door",
     "options": {
       "allowUnsupported": true
     },
@@ -307,7 +307,7 @@
     "resistance": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "label": "Fancy Grey Door",
+    "label": "Reinforced Grey Door",
     "options": {
       "allowUnsupported": true
     },
@@ -323,7 +323,7 @@
     "resistance": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "label": "Fancy Oak Door",
+    "label": "Reinforced Oak Door",
     "options": {
       "allowUnsupported": true
     },
@@ -339,7 +339,7 @@
     "resistance": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "label": "Fancy Spruce Door",
+    "label": "Reinforced Spruce Door",
     "options": {
       "allowUnsupported": true
     },
@@ -355,7 +355,7 @@
     "resistance": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "label": "Fancy Northern Door",
+    "label": "Reinforced Northern Door",
     "nonOpaque": true,
     "renderLayer": "cutout",
     "options": {
@@ -372,7 +372,7 @@
     "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "label": "Jungle Fancy Door",
+    "label": "Reinforced Jungle Door",
     "options": {
       "allowUnsupported": true
     },

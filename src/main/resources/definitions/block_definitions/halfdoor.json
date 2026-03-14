@@ -145,7 +145,7 @@
     "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
-    "label": "Fancy White Wood Window Shutters",
+    "label": "Reinforced White Wood Window Shutters",
     "options": {
       "allowUnsupported": true
     },
@@ -159,7 +159,7 @@
     "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
-    "label": "Fancy Grey Wood Window Shutters",
+    "label": "Reinforced Grey Wood Window Shutters",
     "options": {
       "allowUnsupported": true
     },
@@ -173,7 +173,7 @@
     "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
-    "label": "Fancy Oak Wood Window Shutters",
+    "label": "Reinforced Oak Wood Window Shutters",
     "options": {
       "allowUnsupported": true
     },
@@ -187,7 +187,7 @@
     "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
-    "label": "Fancy Spruce Wood Window Shutters",
+    "label": "Reinforced Spruce Wood Window Shutters",
     "options": {
       "allowUnsupported": true
     },
@@ -201,7 +201,7 @@
     "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
-    "label": "Fancy Northern Window Shutters",
+    "label": "Reinforced Northern Window Shutters",
     "options": {
       "allowUnsupported": true
     },
@@ -217,7 +217,7 @@
     "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
-    "label": "Jungle Fancy Window Shutters",
+    "label": "Reinforced Jungle Window Shutters",
     "options": {
       "allowUnsupported": true
     },
