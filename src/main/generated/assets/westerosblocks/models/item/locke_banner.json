@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/locke/top",
     "txt1": "westerosblocks:block/banner/house/locke/top",
     "txt2": "westerosblocks:block/banner/house/locke/bottom",
-    "txt5": "westerosblocks:block/banner/house/locke/top"
+    "txt5": "westerosblocks:block/banner/house/locke/top",
+    "txt6": "westerosblocks:block/banner/house/locke/bottom"
   }
 }

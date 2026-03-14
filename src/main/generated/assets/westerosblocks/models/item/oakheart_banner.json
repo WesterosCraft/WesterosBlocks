@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/oakheart/top",
     "txt1": "westerosblocks:block/banner/house/oakheart/top",
     "txt2": "westerosblocks:block/banner/house/oakheart/bottom",
-    "txt5": "westerosblocks:block/banner/house/oakheart/top"
+    "txt5": "westerosblocks:block/banner/house/oakheart/top",
+    "txt6": "westerosblocks:block/banner/house/oakheart/bottom"
   }
 }

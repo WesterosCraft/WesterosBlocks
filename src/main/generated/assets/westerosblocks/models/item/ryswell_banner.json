@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/ryswell/top",
     "txt1": "westerosblocks:block/banner/house/ryswell/top",
     "txt2": "westerosblocks:block/banner/house/ryswell/bottom",
-    "txt5": "westerosblocks:block/banner/house/ryswell/top"
+    "txt5": "westerosblocks:block/banner/house/ryswell/top",
+    "txt6": "westerosblocks:block/banner/house/ryswell/bottom"
   }
 }

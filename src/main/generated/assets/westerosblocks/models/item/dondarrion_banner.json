@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/dondarrion/top",
     "txt1": "westerosblocks:block/banner/house/dondarrion/top",
     "txt2": "westerosblocks:block/banner/house/dondarrion/bottom",
-    "txt5": "westerosblocks:block/banner/house/dondarrion/top"
+    "txt5": "westerosblocks:block/banner/house/dondarrion/top",
+    "txt6": "westerosblocks:block/banner/house/dondarrion/bottom"
   }
 }

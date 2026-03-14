@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/sunderland/top",
     "txt1": "westerosblocks:block/banner/house/sunderland/top",
     "txt2": "westerosblocks:block/banner/house/sunderland/bottom",
-    "txt5": "westerosblocks:block/banner/house/sunderland/top"
+    "txt5": "westerosblocks:block/banner/house/sunderland/top",
+    "txt6": "westerosblocks:block/banner/house/sunderland/bottom"
   }
 }

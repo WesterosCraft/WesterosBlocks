@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/tallhart/top",
     "txt1": "westerosblocks:block/banner/house/tallhart/top",
     "txt2": "westerosblocks:block/banner/house/tallhart/bottom",
-    "txt5": "westerosblocks:block/banner/house/tallhart/top"
+    "txt5": "westerosblocks:block/banner/house/tallhart/top",
+    "txt6": "westerosblocks:block/banner/house/tallhart/bottom"
   }
 }

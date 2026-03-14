@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/hunter/top",
     "txt1": "westerosblocks:block/banner/house/hunter/top",
     "txt2": "westerosblocks:block/banner/house/hunter/bottom",
-    "txt5": "westerosblocks:block/banner/house/hunter/top"
+    "txt5": "westerosblocks:block/banner/house/hunter/top",
+    "txt6": "westerosblocks:block/banner/house/hunter/bottom"
   }
 }

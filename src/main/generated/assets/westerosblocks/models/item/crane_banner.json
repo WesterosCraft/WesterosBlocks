@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/crane/top",
     "txt1": "westerosblocks:block/banner/house/crane/top",
     "txt2": "westerosblocks:block/banner/house/crane/bottom",
-    "txt5": "westerosblocks:block/banner/house/crane/top"
+    "txt5": "westerosblocks:block/banner/house/crane/top",
+    "txt6": "westerosblocks:block/banner/house/crane/bottom"
   }
 }

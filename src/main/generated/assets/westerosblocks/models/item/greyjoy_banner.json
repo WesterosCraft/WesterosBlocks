@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/greyjoy/top",
     "txt1": "westerosblocks:block/banner/house/greyjoy/top",
     "txt2": "westerosblocks:block/banner/house/greyjoy/bottom",
-    "txt5": "westerosblocks:block/banner/house/greyjoy/top"
+    "txt5": "westerosblocks:block/banner/house/greyjoy/top",
+    "txt6": "westerosblocks:block/banner/house/greyjoy/bottom"
   }
 }

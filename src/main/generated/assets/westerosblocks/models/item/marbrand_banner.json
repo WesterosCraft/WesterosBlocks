@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/marbrand/top",
     "txt1": "westerosblocks:block/banner/house/marbrand/top",
     "txt2": "westerosblocks:block/banner/house/marbrand/bottom",
-    "txt5": "westerosblocks:block/banner/house/marbrand/top"
+    "txt5": "westerosblocks:block/banner/house/marbrand/top",
+    "txt6": "westerosblocks:block/banner/house/marbrand/bottom"
   }
 }

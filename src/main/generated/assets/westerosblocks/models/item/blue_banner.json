@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/embroidered/blue/top",
     "txt1": "westerosblocks:block/banner/embroidered/blue/top",
     "txt2": "westerosblocks:block/banner/embroidered/blue/bottom",
-    "txt5": "westerosblocks:block/banner/embroidered/blue/top"
+    "txt5": "westerosblocks:block/banner/embroidered/blue/top",
+    "txt6": "westerosblocks:block/banner/embroidered/blue/bottom"
   }
 }

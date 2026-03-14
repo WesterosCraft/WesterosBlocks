@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/santagar/top",
     "txt1": "westerosblocks:block/banner/house/santagar/top",
     "txt2": "westerosblocks:block/banner/house/santagar/bottom",
-    "txt5": "westerosblocks:block/banner/house/santagar/top"
+    "txt5": "westerosblocks:block/banner/house/santagar/top",
+    "txt6": "westerosblocks:block/banner/house/santagar/bottom"
   }
 }

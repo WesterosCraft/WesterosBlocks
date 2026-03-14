@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/beesbury/top",
     "txt1": "westerosblocks:block/banner/house/beesbury/top",
     "txt2": "westerosblocks:block/banner/house/beesbury/bottom",
-    "txt5": "westerosblocks:block/banner/house/beesbury/top"
+    "txt5": "westerosblocks:block/banner/house/beesbury/top",
+    "txt6": "westerosblocks:block/banner/house/beesbury/bottom"
   }
 }

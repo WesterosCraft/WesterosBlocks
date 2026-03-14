@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/staunton/top",
     "txt1": "westerosblocks:block/banner/house/staunton/top",
     "txt2": "westerosblocks:block/banner/house/staunton/bottom",
-    "txt5": "westerosblocks:block/banner/house/staunton/top"
+    "txt5": "westerosblocks:block/banner/house/staunton/top",
+    "txt6": "westerosblocks:block/banner/house/staunton/bottom"
   }
 }

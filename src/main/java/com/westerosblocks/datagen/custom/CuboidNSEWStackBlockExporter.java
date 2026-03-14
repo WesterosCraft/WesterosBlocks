@@ -84,6 +84,7 @@ public class CuboidNSEWStackBlockExporter extends CuboidBlockExporter {
                 .put(ModTextureKey.TEXTURE_1, createBlockIdentifier(topElement.getTextures().get(4)))
                 .put(ModTextureKey.TEXTURE_2, createBlockIdentifier(bottomElement.getTextures().get(4)))
                 .put(ModTextureKey.TEXTURE_5, createBlockIdentifier(topElement.getTextures().get(5)))
+                .put(ModTextureKey.TEXTURE_6, createBlockIdentifier(bottomElement.getTextures().get(5)))
                 .put(TextureKey.PARTICLE, createBlockIdentifier(topElement.getTextures().get(4)));
         Identifier itemModelId = WesterosBlocks.id("item/" + definition.getBlockName());
         Model combinedItemModel = ModModels.CUBOID_NSEW_STACK_ITEM();

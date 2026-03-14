@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/targaryen_greens/top",
     "txt1": "westerosblocks:block/banner/house/targaryen_greens/top",
     "txt2": "westerosblocks:block/banner/house/targaryen_greens/bottom",
-    "txt5": "westerosblocks:block/banner/house/targaryen_greens/top"
+    "txt5": "westerosblocks:block/banner/house/targaryen_greens/top",
+    "txt6": "westerosblocks:block/banner/house/targaryen_greens/bottom"
   }
 }

@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/other/westeroscraft/top",
     "txt1": "westerosblocks:block/banner/other/westeroscraft/top",
     "txt2": "westerosblocks:block/banner/other/westeroscraft/bottom",
-    "txt5": "westerosblocks:block/banner/other/westeroscraft/top"
+    "txt5": "westerosblocks:block/banner/other/westeroscraft/top",
+    "txt6": "westerosblocks:block/banner/other/westeroscraft/bottom"
   }
 }

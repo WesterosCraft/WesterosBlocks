@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/hewett/top",
     "txt1": "westerosblocks:block/banner/house/hewett/top",
     "txt2": "westerosblocks:block/banner/house/hewett/bottom",
-    "txt5": "westerosblocks:block/banner/house/hewett/top"
+    "txt5": "westerosblocks:block/banner/house/hewett/top",
+    "txt6": "westerosblocks:block/banner/house/hewett/bottom"
   }
 }

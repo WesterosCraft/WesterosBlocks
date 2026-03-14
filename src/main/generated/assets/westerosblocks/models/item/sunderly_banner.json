@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/sunderly/top",
     "txt1": "westerosblocks:block/banner/house/sunderly/top",
     "txt2": "westerosblocks:block/banner/house/sunderly/bottom",
-    "txt5": "westerosblocks:block/banner/house/sunderly/top"
+    "txt5": "westerosblocks:block/banner/house/sunderly/top",
+    "txt6": "westerosblocks:block/banner/house/sunderly/bottom"
   }
 }

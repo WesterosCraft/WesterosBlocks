@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/sunglass/top",
     "txt1": "westerosblocks:block/banner/house/sunglass/top",
     "txt2": "westerosblocks:block/banner/house/sunglass/bottom",
-    "txt5": "westerosblocks:block/banner/house/sunglass/top"
+    "txt5": "westerosblocks:block/banner/house/sunglass/top",
+    "txt6": "westerosblocks:block/banner/house/sunglass/bottom"
   }
 }

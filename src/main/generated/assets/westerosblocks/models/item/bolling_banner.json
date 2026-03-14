@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/bolling/top",
     "txt1": "westerosblocks:block/banner/house/bolling/top",
     "txt2": "westerosblocks:block/banner/house/bolling/bottom",
-    "txt5": "westerosblocks:block/banner/house/bolling/top"
+    "txt5": "westerosblocks:block/banner/house/bolling/top",
+    "txt6": "westerosblocks:block/banner/house/bolling/bottom"
   }
 }

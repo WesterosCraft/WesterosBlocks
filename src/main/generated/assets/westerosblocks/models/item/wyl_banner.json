@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/wyl/top",
     "txt1": "westerosblocks:block/banner/house/wyl/top",
     "txt2": "westerosblocks:block/banner/house/wyl/bottom",
-    "txt5": "westerosblocks:block/banner/house/wyl/top"
+    "txt5": "westerosblocks:block/banner/house/wyl/top",
+    "txt6": "westerosblocks:block/banner/house/wyl/bottom"
   }
 }

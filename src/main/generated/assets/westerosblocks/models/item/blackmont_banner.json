@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/blackmont/top",
     "txt1": "westerosblocks:block/banner/house/blackmont/top",
     "txt2": "westerosblocks:block/banner/house/blackmont/bottom",
-    "txt5": "westerosblocks:block/banner/house/blackmont/top"
+    "txt5": "westerosblocks:block/banner/house/blackmont/top",
+    "txt6": "westerosblocks:block/banner/house/blackmont/bottom"
   }
 }

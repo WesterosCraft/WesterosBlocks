@@ -296,7 +296,8 @@ public class ModModels {
                 TextureKey.PARTICLE,
                 ModTextureKey.TEXTURE_1,
                 ModTextureKey.TEXTURE_2,
-                ModTextureKey.TEXTURE_5);
+                ModTextureKey.TEXTURE_5,
+                ModTextureKey.TEXTURE_6);
     }
 
 

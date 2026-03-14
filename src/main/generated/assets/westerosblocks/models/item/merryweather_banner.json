@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/merryweather/top",
     "txt1": "westerosblocks:block/banner/house/merryweather/top",
     "txt2": "westerosblocks:block/banner/house/merryweather/bottom",
-    "txt5": "westerosblocks:block/banner/house/merryweather/top"
+    "txt5": "westerosblocks:block/banner/house/merryweather/top",
+    "txt6": "westerosblocks:block/banner/house/merryweather/bottom"
   }
 }

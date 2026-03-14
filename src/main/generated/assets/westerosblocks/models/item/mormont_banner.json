@@ -4,6 +4,7 @@
     "particle": "westerosblocks:block/banner/house/mormont/top",
     "txt1": "westerosblocks:block/banner/house/mormont/top",
     "txt2": "westerosblocks:block/banner/house/mormont/bottom",
-    "txt5": "westerosblocks:block/banner/house/mormont/top"
+    "txt5": "westerosblocks:block/banner/house/mormont/top",
+    "txt6": "westerosblocks:block/banner/house/mormont/bottom"
   }
 }
