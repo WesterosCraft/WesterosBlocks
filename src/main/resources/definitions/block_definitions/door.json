@@ -356,6 +356,8 @@
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
     "label": "Fancy Northern Door",
+    "nonOpaque": true,
+    "renderLayer": "cutout",
     "options": {
       "allowUnsupported": true
     },
