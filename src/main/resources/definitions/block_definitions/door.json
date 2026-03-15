@@ -244,7 +244,7 @@
     "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "label": "Spruce Door",
+    "label": "Reinforced Spruce Door",
     "options": {
       "allowUnsupported": true
     },
@@ -339,7 +339,7 @@
     "resistance": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_wood_planks_tab",
-    "label": "Reinforced Spruce Door",
+    "label": "Spruce Door",
     "options": {
       "allowUnsupported": true
     },

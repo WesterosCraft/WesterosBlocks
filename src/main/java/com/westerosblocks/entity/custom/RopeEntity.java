@@ -64,6 +64,7 @@ public class RopeEntity extends Entity {
     public boolean damage(net.minecraft.entity.damage.DamageSource source, float amount) {
         if (this.getWorld().isClient) return true;
         if (source.getAttacker() instanceof net.minecraft.entity.player.PlayerEntity player) {
+            if (!player.isCreative()) return false;
             this.dropItem(ModItems.ROPE);
             this.discard();
             return true;
@@ -229,6 +230,7 @@ public class RopeEntity extends Entity {
     public ActionResult interact(PlayerEntity player, Hand hand) {
         if (hand != Hand.MAIN_HAND) return ActionResult.PASS;
         if (this.getWorld().isClient) return ActionResult.SUCCESS;
+        if (!player.isCreative()) return ActionResult.PASS;
         if (player.isSneaking()) {
             this.discard();
             return ActionResult.SUCCESS;
