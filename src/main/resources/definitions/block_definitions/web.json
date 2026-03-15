@@ -730,7 +730,7 @@
     "options": {
       "noInWeb": true
     },
-    "randomTextures": [{}, {}],
+    "colorMult": "textures/colormap/pine",
     "renderLayer": "cutout"
   }
 ]

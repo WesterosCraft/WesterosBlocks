@@ -1,0 +1,54 @@
+{
+  "parent": "block/block",
+  "texture_size": [64, 64],
+  "textures": {
+    "0": "westerosblocks:block/leaves/spruce/all",
+    "particle": "westerosblocks:block/leaves/spruce/all"
+  },
+  "elements": [
+    {
+      "from": [8, 7, -4],
+      "to": [8, 19, 20],
+      "rotation": {"angle": 45, "axis": "y", "origin": [8, 9, 8]},
+      "faces": {
+        "east": {"uv": [0, 0, 12, 6], "texture": "#0", "tintindex": 0},
+        "west": {"uv": [0, 0, 12, 6], "texture": "#0", "tintindex": 0}
+      }
+    },
+    {
+      "from": [-4, 7, 8],
+      "to": [20, 19, 8],
+      "rotation": {"angle": 45, "axis": "y", "origin": [8, 9, 8]},
+      "faces": {
+        "north": {"uv": [0, 0, 12, 6], "texture": "#0", "tintindex": 0},
+        "south": {"uv": [0, 0, 12, 6], "texture": "#0", "tintindex": 0}
+      }
+    },
+    {
+      "from": [-3, 12, -3],
+      "to": [19, 12, 19],
+      "rotation": {"angle": -22.5, "axis": "x", "origin": [8, 12, 5]},
+      "faces": {
+        "up": {"uv": [5, 5, 16, 16], "rotation": 180, "texture": "#0", "tintindex": 0},
+        "down": {"uv": [5, 5, 16, 16], "texture": "#0", "tintindex": 0}
+      }
+    },
+    {
+      "from": [-3, 12, -3],
+      "to": [19, 12, 19],
+      "rotation": {"angle": 22.5, "axis": "x", "origin": [8, 12, 11]},
+      "faces": {
+        "up": {"uv": [5, 5, 16, 16], "texture": "#0", "tintindex": 0},
+        "down": {"uv": [5, 5, 16, 16], "rotation": 180, "texture": "#0", "tintindex": 0}
+      }
+    }
+  ],
+  "groups": [
+    {
+      "name": "leaves",
+      "origin": [8, 9, 8],
+      "color": 0,
+      "children": [0, 1, 2, 3]
+    }
+  ]
+}

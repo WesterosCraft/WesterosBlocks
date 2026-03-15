@@ -32,5 +32,18 @@
       "zMin": 0.125,
       "zMax": 0.875
     }
+  },
+  {
+    "blockName": "spruce_leaves_slab",
+    "blockType": "mounted_slab",
+    "isCustomModel": true,
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Spruce Leaves Slab",
+    "colorMult": "textures/colormap/pine",
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "options": {
+      "allowUnsupported": true
+    }
   }
 ]

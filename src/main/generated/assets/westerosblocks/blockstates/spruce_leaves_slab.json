@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,half=bottom": {
+      "model": "westerosblocks:block/custom/spruce_leaves_slab/bottom_v1",
+      "y": 90
+    },
+    "facing=east,half=top": {
+      "model": "westerosblocks:block/custom/spruce_leaves_slab/top_v1",
+      "y": 90
+    },
+    "facing=north,half=bottom": {
+      "model": "westerosblocks:block/custom/spruce_leaves_slab/bottom_v1"
+    },
+    "facing=north,half=top": {
+      "model": "westerosblocks:block/custom/spruce_leaves_slab/top_v1"
+    },
+    "facing=south,half=bottom": {
+      "model": "westerosblocks:block/custom/spruce_leaves_slab/bottom_v1",
+      "y": 180
+    },
+    "facing=south,half=top": {
+      "model": "westerosblocks:block/custom/spruce_leaves_slab/top_v1",
+      "y": 180
+    },
+    "facing=west,half=bottom": {
+      "model": "westerosblocks:block/custom/spruce_leaves_slab/bottom_v1",
+      "y": 270
+    },
+    "facing=west,half=top": {
+      "model": "westerosblocks:block/custom/spruce_leaves_slab/top_v1",
+      "y": 270
+    }
+  }
+}
