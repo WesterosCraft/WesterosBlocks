@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/classic_grass_block/top2",
+    "particle": "westerosblocks:block/classic_grass_block/top2",
+    "side": "westerosblocks:block/classic_grass_block/top2",
+    "top": "westerosblocks:block/classic_grass_block/top2"
+  }
+}

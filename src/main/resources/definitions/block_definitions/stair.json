@@ -34,5 +34,28 @@
       "stacked_bones/bone_stacked_rotated"
     ],
     "isCustomModel": true
+  },
+  {
+    "blockName": "grass_stairs",
+    "blockType": "stair",
+    "strength": 5,
+    "soundGroup": "grass",
+    "isTinted": true,
+    "creativeTab": "westeros_grass_dirt_tab",
+    "label": "Grass Stairs",
+    "colorMult": "textures/colormap/grass",
+    "randomTextures": [
+      { "textures": ["classic_grass_block/top1"] },
+      { "textures": ["classic_grass_block/top2"] },
+      { "textures": ["classic_grass_block/top3"] },
+      { "textures": ["classic_grass_block/top4"] },
+      { "textures": ["classic_grass_block/top5"] }
+    ],
+    "harvestLevel": [
+      {
+        "tool": "shovel",
+        "level": 1
+      }
+    ]
   }
 ]

@@ -144,6 +144,7 @@
     "hardness": 5,
     "resistance": 5,
     "soundGroup": "wood",
+    "isCustomModel": true,
     "harvestLevel": [
       {
         "tool": "axe",
