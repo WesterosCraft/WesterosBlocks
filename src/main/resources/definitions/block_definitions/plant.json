@@ -9,15 +9,7 @@
       "layerSensitive": true
     },
     "textures": ["flowers/blue_bells"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
+    "renderLayer": "cutout"
   },
   {
     "blockName": "blue_chicory",

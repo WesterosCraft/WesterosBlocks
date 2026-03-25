@@ -313,5 +313,23 @@
         ]
       }
     ]
+  },
+  {
+    "blockName": "oak_beam_brace",
+    "blockType": "cuboid-nsewud",
+    "hardness": 3,
+    "resistance": 5,
+    "soundGroup": "wood",
+    "harvestLevel": [
+      {
+        "tool": "axe",
+        "level": 1
+      }
+    ],
+    "creativeTab": "westeros_tool_blocks_tab",
+    "label": "Oak Beam Brace",
+    "renderLayer": "cutout",
+    "nonOpaque": true,
+    "isCustomModel": true
   }
 ]

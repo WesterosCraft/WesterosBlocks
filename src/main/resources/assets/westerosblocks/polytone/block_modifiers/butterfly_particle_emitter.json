@@ -1,0 +1,9 @@
+{
+  "particle_emitters": [
+    {
+      "particle": "westerosblocks:butterfly",
+      "chance": "1",
+      "y": "0.5"
+    }
+  ]
+}

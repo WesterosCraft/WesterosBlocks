@@ -1,0 +1,33 @@
+{
+  "render_type": "translucent",
+  "has_physics": false,
+  "kill_when_still": false,
+  "kill_on_contact": false,
+  "random_sprite": false,
+  "rotation_mode": "look_at_xyz",
+  "liquid_affinity": "non_liquids",
+  "limit": 1,
+
+  "initializer": {
+    "lifetime": "6000 + rand() * 6000",
+    "size": "0.15 + rand() * 0.10",
+    "alpha": "0.9",
+    "friction": "0.96",
+    "dx": "(rand() - 0.5) * 0.10",
+    "dy": "rand() * 0.04",
+    "dz": "(rand() - 0.5) * 0.10",
+    "roll": "0",
+    "red": "0.4 + rand() * 0.6",
+    "green": "0.4 + rand() * 0.6",
+    "blue": "0.4 + rand() * 0.6",
+    "custom": "rand() * 6.28"
+  },
+
+  "ticker": {
+    "dx": "DX + 0.004 * (cos(AGE * 0.12 + CUSTOM) + 0.5 * cos(AGE * 0.31 + CUSTOM * 2)) + gaussian() * 0.003",
+    "dy": "max(DY, 0) * (1 - min(AGE * 0.005, 0.8)) + 0.003 * sin(AGE * 0.08 + CUSTOM * 0.5) + 0.001 * sin(AGE * 0.19) + gaussian() * 0.0008",
+    "dz": "DZ + 0.004 * (sin(AGE * 0.12 + CUSTOM * 1.5) + 0.5 * sin(AGE * 0.31 + CUSTOM)) + gaussian() * 0.003",
+    "alpha": "0.9 * min(max(AGE / 5, 0), 1) * (1 - min(max((AGE - LIFETIME + 20) / 20, 0), 1))",
+    "size": "(0.9 + CUSTOM * 0.15) * 0.14 * min(max(AGE / 5, 0), 1)"
+  }
+}
