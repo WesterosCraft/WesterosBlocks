@@ -1,6 +1,5 @@
 package com.westerosblocks.datagen.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
@@ -8,9 +7,7 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Exporter for fence gate blocks following block-models.md patterns.
@@ -101,24 +98,24 @@ public class FenceGateBlockExporter extends BaseBlockExporter {
      * Registers a fence gate block with random texture variants.
      */
     public static void registerFenceGateBlockWithRandomTextures(BlockStateModelGenerator generator, Block block,
-                                                               boolean tinted, List<TextureVariant> textureVariants) {
+                                                               boolean tinted, List<BlockDefinition.TextureVariantSet> textureSets) {
         ModelRegistry gateRegistry = new ModelRegistry();
         ModelRegistry gateOpenRegistry = new ModelRegistry();
         ModelRegistry gateWallRegistry = new ModelRegistry();
         ModelRegistry gateWallOpenRegistry = new ModelRegistry();
 
-        for (int i = 0; i < textureVariants.size(); i++) {
-            TextureVariant variant = textureVariants.get(i);
-            TextureMap textureMap = createFenceGateTextureMap(variant.texture);
+        for (int i = 0; i < textureSets.size(); i++) {
+            BlockDefinition.TextureVariantSet set = textureSets.get(i);
+            TextureMap textureMap = createFenceGateTextureMap(set.getTexturesAsArray()[0]);
 
             gateRegistry.add(uploadModel(createFenceGateModel(tinted), block, "gate_v" + (i + 1),
-                                        textureMap, generator.modelCollector), variant.weight);
+                                        textureMap, generator.modelCollector), set.weight);
             gateOpenRegistry.add(uploadModel(createFenceGateOpenModel(tinted), block, "gate_open_v" + (i + 1),
-                                            textureMap, generator.modelCollector), variant.weight);
+                                            textureMap, generator.modelCollector), set.weight);
             gateWallRegistry.add(uploadModel(createFenceGateWallModel(tinted), block, "gate_wall_v" + (i + 1),
-                                            textureMap, generator.modelCollector), variant.weight);
+                                            textureMap, generator.modelCollector), set.weight);
             gateWallOpenRegistry.add(uploadModel(createFenceGateWallOpenModel(tinted), block, "gate_wall_open_v" + (i + 1),
-                                                textureMap, generator.modelCollector), variant.weight);
+                                                textureMap, generator.modelCollector), set.weight);
         }
 
         // Create blockstate with weighted random textures
@@ -128,7 +125,7 @@ public class FenceGateBlockExporter extends BaseBlockExporter {
                 gateRegistry.getWeights()));
 
         // Register item model (using first texture)
-        TextureMap itemTextureMap = createFenceGateTextureMap(textureVariants.get(0).texture);
+        TextureMap itemTextureMap = createFenceGateTextureMap(textureSets.get(0).getTexturesAsArray()[0]);
         Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
         createFenceGateModel(tinted).upload(itemModelId, itemTextureMap, generator.modelCollector);
     }
@@ -174,38 +171,11 @@ public class FenceGateBlockExporter extends BaseBlockExporter {
         List<String> textureList = definition.getTextures();
 
         if (definition.hasRandomTextures()) {
-            List<TextureVariant> textureVariants = new ArrayList<>();
-            List<BlockDefinition.RandomTextureVariant> randomTextures = definition.getRandomTextures();
-
-            for (BlockDefinition.RandomTextureVariant randomTexture : randomTextures) {
-                List<String> textures = randomTexture.getTextures();
-                int weight = randomTexture.getWeight();
-
-                if (textures != null && !textures.isEmpty()) {
-                    textureVariants.add(new TextureVariant(weight, textures.get(0)));
-                } else {
-                    textureVariants.add(new TextureVariant(weight, "missingno"));
-                }
-            }
-
-            registerFenceGateBlockWithRandomTextures(generator, block, tinted, textureVariants);
+            registerFenceGateBlockWithRandomTextures(generator, block, tinted, extractTextureVariantSets(definition));
         } else if (textureList != null && !textureList.isEmpty()) {
             registerFenceGateBlock(generator, block, tinted, textureList.get(0));
         } else {
             registerFenceGateBlock(generator, block, tinted, "missingno");
-        }
-    }
-
-    /**
-     * Helper class for texture variants with weight.
-     */
-    public static class TextureVariant {
-        public final int weight;
-        public final String texture;
-
-        public TextureVariant(int weight, String texture) {
-            this.weight = weight;
-            this.texture = texture;
         }
     }
 }

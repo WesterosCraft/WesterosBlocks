@@ -160,28 +160,7 @@ public class FenceBlockExporter extends BaseBlockExporter {
         List<String> textureList = definition.getTextures();
 
         if (definition.hasRandomTextures()) {
-            List<BlockDefinition.TextureVariantSet> textureSets = new ArrayList<>();
-            List<BlockDefinition.TextureVariantSet> variants = definition.getRandomTextureVariantSets();
-
-            for (BlockDefinition.TextureVariantSet variant : variants) {
-                List<String> textures = variant.textures;
-                int weight = variant.weight;
-
-                if (!textures.isEmpty()) {
-                    String[] textureArray = textures.toArray(new String[0]);
-                    String[] overlayArray = null;
-
-                    if (overlay && definition.getOverlayTextures() != null && definition.getOverlayTextures().size() >= textures.size()) {
-                        overlayArray = definition.getOverlayTextures().subList(0, textures.size()).toArray(new String[0]);
-                    }
-
-                    textureSets.add(new BlockDefinition.TextureVariantSet(textureArray, weight, overlayArray));
-                } else {
-                    textureSets.add(new BlockDefinition.TextureVariantSet(new String[]{"missingno"}, weight, null));
-                }
-            }
-
-            registerFenceBlockWithRandomTextures(generator, block, tinted, overlay, textureSets);
+            registerFenceBlockWithRandomTextures(generator, block, tinted, overlay, extractTextureVariantSets(definition));
         } else if (textureList != null && !textureList.isEmpty()) {
             String[] textures = textureList.toArray(new String[0]);
             String[] overlays = overlay && definition.getOverlayTextures() != null
@@ -190,13 +169,7 @@ public class FenceBlockExporter extends BaseBlockExporter {
 
             registerFenceBlock(generator, block, tinted, overlay, textures, overlays);
         } else {
-            // Fallback
             registerFenceBlock(generator, block, tinted, overlay, new String[]{"missingno"}, null);
         }
     }
-
-    /**
-     * Helper class to hold texture set with weight for random textures.
-     */
-
 }

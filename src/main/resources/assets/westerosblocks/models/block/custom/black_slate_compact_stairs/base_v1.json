@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/untinted/compact_stairs",
+  "textures": {
+    "0": "westerosblocks:block/slate/black/all",
+    "particle": "westerosblocks:block/slate/black/all"
+  }
+}

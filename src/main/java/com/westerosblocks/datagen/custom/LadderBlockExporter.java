@@ -119,27 +119,13 @@ public class LadderBlockExporter extends BaseBlockExporter {
         boolean isCustomModel = definition.hasCustomModel();
 
         if (definition.hasRandomTextures()) {
-            List<BlockDefinition.RandomTextureVariant> randomTextures = definition.getRandomTextures();
-
             // If custom model, just reference existing models
             if (isCustomModel) {
-                registerLadderBlockCustomModel(generator, block, definition.getBlockName(), randomTextures.size());
+                registerLadderBlockCustomModel(generator, block, definition.getBlockName(), definition.getRandomTextures().size());
                 return;
             }
 
-            // Generate models with textures
-            List<BlockDefinition.TextureVariantSet> textureSets = new ArrayList<>();
-            for (BlockDefinition.RandomTextureVariant randomTexture : randomTextures) {
-                List<String> textures = randomTexture.getTextures();
-                int weight = randomTexture.getWeight();
-
-                if (textures != null && !textures.isEmpty()) {
-                    textureSets.add(new BlockDefinition.TextureVariantSet(textures.get(0), weight));
-                } else {
-                    textureSets.add(new BlockDefinition.TextureVariantSet("missingno", weight));
-                }
-            }
-            registerLadderBlockWithRandomTextures(generator, block, tinted, textureSets);
+            registerLadderBlockWithRandomTextures(generator, block, tinted, extractTextureVariantSets(definition));
         } else if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
             // Single texture case
             if (isCustomModel) {

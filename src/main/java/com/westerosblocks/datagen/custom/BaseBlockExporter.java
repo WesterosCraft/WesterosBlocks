@@ -7,6 +7,7 @@ import net.minecraft.util.math.Direction;
 
 import net.minecraft.data.client.VariantSettings.Rotation;
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.utils.ModProperties;
 
@@ -637,6 +638,37 @@ public abstract class BaseBlockExporter {
             }
             return null;
         }
+    }
+
+    /**
+     * Extracts texture variant sets from a BlockDefinition's random textures.
+     * Handles the common pattern of converting RandomTextureVariant list to TextureVariantSet list,
+     * merging overlay textures from the definition when present.
+     *
+     * @param definition The block definition with random textures
+     * @return List of TextureVariantSets ready for use by registration methods
+     */
+    protected static List<BlockDefinition.TextureVariantSet> extractTextureVariantSets(BlockDefinition definition) {
+        List<BlockDefinition.TextureVariantSet> sets = new ArrayList<>();
+        boolean overlay = definition.hasOverlayTextures();
+
+        for (BlockDefinition.RandomTextureVariant rv : definition.getRandomTextures()) {
+            List<String> textures = rv.getTextures();
+            int weight = rv.getWeight();
+
+            if (textures != null && !textures.isEmpty()) {
+                String[] textureArray = textures.toArray(new String[0]);
+                String[] overlayArray = null;
+                if (overlay && definition.getOverlayTextures() != null
+                        && definition.getOverlayTextures().size() >= textures.size()) {
+                    overlayArray = definition.getOverlayTextures().subList(0, textures.size()).toArray(new String[0]);
+                }
+                sets.add(new BlockDefinition.TextureVariantSet(textureArray, weight, overlayArray));
+            } else {
+                sets.add(new BlockDefinition.TextureVariantSet(new String[]{"missingno"}, weight, null));
+            }
+        }
+        return sets;
     }
 
     /**

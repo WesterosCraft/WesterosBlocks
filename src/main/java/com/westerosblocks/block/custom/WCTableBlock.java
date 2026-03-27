@@ -25,8 +25,8 @@ public class WCTableBlock extends Block implements WCBlockDef {
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final EnumProperty<ConnectionType> CONNECTION = EnumProperty.of("connection", ConnectionType.class);
 
-    private static final VoxelShape TABLE_SHAPE_NS = Block.createCuboidShape(1, 0, 3, 15, 14, 13);
-    private static final VoxelShape TABLE_SHAPE_EW = Block.createCuboidShape(3, 0, 1, 13, 14, 15);
+    private static final VoxelShape TABLE_SHAPE_NS = Block.createCuboidShape(0, 15, 0, 16, 16, 16);
+    private static final VoxelShape TABLE_SHAPE_EW = Block.createCuboidShape(0, 15, 0, 16, 16, 16);
 
     private final Map<BlockState, VoxelShape> shapeByIndex;
 

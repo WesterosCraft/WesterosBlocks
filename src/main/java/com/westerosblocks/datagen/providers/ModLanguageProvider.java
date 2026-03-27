@@ -39,6 +39,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("item.westerosblocks.rope", "Rope");
 
                 // Config translations
+                translationBuilder.add("item_obliterator.disabled_item", "Disabled Item");
                 translationBuilder.add("config.westerosblocks.title", "WesterosBlocks Config");
                 translationBuilder.add("config.westerosblocks.category.general", "General");
                 translationBuilder.add("config.westerosblocks.dumpWorldPainterCSV", "Dump WorldPainter CSV");

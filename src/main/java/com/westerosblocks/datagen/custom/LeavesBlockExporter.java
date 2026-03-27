@@ -105,14 +105,7 @@ public class LeavesBlockExporter extends BaseBlockExporter {
         boolean rotateRandom = definition.hasRotateRandom();
 
         if (definition.hasRandomTextures()) {
-            List<BlockDefinition.TextureVariantSet> textureSets = new ArrayList<>();
-            for (BlockDefinition.RandomTextureVariant randomTexture : definition.getRandomTextures()) {
-                List<String> textures = randomTexture.getTextures();
-                if (textures != null && !textures.isEmpty()) {
-                    textureSets.add(new BlockDefinition.TextureVariantSet(textures.toArray(new String[0]), randomTexture.getWeight()));
-                }
-            }
-            registerLeavesBlockWithRandomTextures(generator, block, tinted, overlay, betterFoliage, rotateRandom, textureSets);
+            registerLeavesBlockWithRandomTextures(generator, block, tinted, overlay, betterFoliage, rotateRandom, extractTextureVariantSets(definition));
         } else if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
             String[] textures = definition.getTextures().toArray(new String[0]);
             registerLeavesBlock(generator, block, tinted, overlay, betterFoliage, rotateRandom, textures);

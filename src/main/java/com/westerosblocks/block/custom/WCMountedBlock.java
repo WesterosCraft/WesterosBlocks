@@ -12,10 +12,12 @@ import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
+import java.util.List;
 import java.util.Map;
 
 public class WCMountedBlock extends Block implements WCBlockDef {
@@ -40,9 +42,56 @@ public class WCMountedBlock extends Block implements WCBlockDef {
         @Override
         public Block buildBlockClass(BlockDefinition definition) {
             AbstractBlock.Settings settings = definition.makeSettings();
-            Map<Direction, VoxelShape> shapes = createRotatedShapes(definition);
+            // Try cuboids first (NORTH-based), then fall back to boundingBox (EAST-based)
+            Map<Direction, VoxelShape> shapes = createRotatedShapesFromCuboids(definition);
+            if (shapes == null) {
+                shapes = createRotatedShapes(definition);
+            }
             boolean allowUnsupported = definition.isAllowUnsupported();
             return new WCMountedBlock(settings, definition, shapes, allowUnsupported);
+        }
+
+        /**
+         * Creates rotated VoxelShapes from multiple cuboids defined in NORTH orientation.
+         * Cuboids are in NORTH orientation to match custom model at 0° rotation.
+         * Returns null if no cuboids are defined.
+         */
+        private static Map<Direction, VoxelShape> createRotatedShapesFromCuboids(BlockDefinition definition) {
+            List<BlockDefinition.CuboidElement> cuboids = definition.getCuboids();
+            if (cuboids == null || cuboids.isEmpty()) {
+                return null;
+            }
+
+            VoxelShape northShape = VoxelShapes.empty();
+            VoxelShape eastShape = VoxelShapes.empty();
+            VoxelShape southShape = VoxelShapes.empty();
+            VoxelShape westShape = VoxelShapes.empty();
+
+            for (BlockDefinition.CuboidElement c : cuboids) {
+                double xMin = c.getXMin(), xMax = c.getXMax();
+                double yMin = c.getYMin(), yMax = c.getYMax();
+                double zMin = c.getZMin(), zMax = c.getZMax();
+
+                // NORTH (0°): mirror X and Z
+                northShape = VoxelShapes.union(northShape,
+                    Block.createCuboidShape((1-xMax)*16, yMin*16, (1-zMax)*16, (1-xMin)*16, yMax*16, (1-zMin)*16));
+                // EAST (90° CW): x'=z, z'=1-x
+                eastShape = VoxelShapes.union(eastShape,
+                    Block.createCuboidShape(zMin*16, yMin*16, (1-xMax)*16, zMax*16, yMax*16, (1-xMin)*16));
+                // SOUTH (180°): as-is
+                southShape = VoxelShapes.union(southShape,
+                    Block.createCuboidShape(xMin*16, yMin*16, zMin*16, xMax*16, yMax*16, zMax*16));
+                // WEST (270° CW): x'=1-z, z'=x
+                westShape = VoxelShapes.union(westShape,
+                    Block.createCuboidShape((1-zMax)*16, yMin*16, xMin*16, (1-zMin)*16, yMax*16, xMax*16));
+            }
+
+            return ImmutableMap.of(
+                Direction.NORTH, northShape,
+                Direction.EAST, eastShape,
+                Direction.SOUTH, southShape,
+                Direction.WEST, westShape
+            );
         }
 
         /**

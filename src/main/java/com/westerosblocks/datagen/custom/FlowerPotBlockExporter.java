@@ -78,13 +78,7 @@ public class FlowerPotBlockExporter extends BaseBlockExporter {
         boolean rotateRandom = true; // Always rotate flower pots
 
         if (definition.hasRandomTextures()) {
-            List<BlockDefinition.TextureVariantSet> textureSets = new ArrayList<>();
-            for (BlockDefinition.RandomTextureVariant randomTexture : definition.getRandomTextures()) {
-                String[] textures = randomTexture.getTextures().toArray(new String[0]);
-                int weight = randomTexture.getWeight();
-                textureSets.add(new BlockDefinition.TextureVariantSet(textures, weight, null));
-            }
-            registerFlowerPotBlockWithRandomTextures(generator, block, tinted, rotateRandom, textureSets);
+            registerFlowerPotBlockWithRandomTextures(generator, block, tinted, rotateRandom, extractTextureVariantSets(definition));
         } else if (definition.getTextures() != null && !definition.getTextures().isEmpty()) {
             String[] textures = definition.getTextures().toArray(new String[0]);
             registerFlowerPotBlock(generator, block, tinted, rotateRandom, textures);

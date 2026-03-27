@@ -193,28 +193,7 @@ public class WallBlockExporter extends BaseBlockExporter {
         List<String> textureList = definition.getTextures();
 
         if (definition.hasRandomTextures()) {
-            List<BlockDefinition.TextureVariantSet> textureSets = new ArrayList<>();
-            List<BlockDefinition.TextureVariantSet> variants = definition.getRandomTextureVariantSets();
-
-            for (BlockDefinition.TextureVariantSet variant : variants) {
-                List<String> textures = variant.textures;
-                int weight = variant.weight;
-
-                if (!textures.isEmpty()) {
-                    String[] textureArray = textures.toArray(new String[0]);
-                    String[] overlayArray = null;
-
-                    if (overlay && definition.getOverlayTextures() != null && definition.getOverlayTextures().size() >= textures.size()) {
-                        overlayArray = definition.getOverlayTextures().subList(0, textures.size()).toArray(new String[0]);
-                    }
-
-                    textureSets.add(new BlockDefinition.TextureVariantSet(textureArray, weight, overlayArray));
-                } else {
-                    textureSets.add(new BlockDefinition.TextureVariantSet(new String[]{"missingno"}, weight, null));
-                }
-            }
-
-            registerWallBlockWithRandomTextures(generator, block, tinted, overlay, isShort, textureSets);
+            registerWallBlockWithRandomTextures(generator, block, tinted, overlay, isShort, extractTextureVariantSets(definition));
         } else if (textureList != null && !textureList.isEmpty()) {
             String[] textures = textureList.toArray(new String[0]);
             String[] overlays = overlay && definition.getOverlayTextures() != null
@@ -223,7 +202,6 @@ public class WallBlockExporter extends BaseBlockExporter {
 
             registerWallBlock(generator, block, tinted, overlay, isShort, textures, overlays);
         } else {
-            // Fallback
             registerWallBlock(generator, block, tinted, overlay, isShort, new String[]{"missingno"}, null);
         }
     }
