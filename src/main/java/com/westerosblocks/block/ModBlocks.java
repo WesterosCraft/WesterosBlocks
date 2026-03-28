@@ -68,7 +68,8 @@ public class ModBlocks {
         Map.entry("mounted_slab", new WCMountedSlabBlock.Factory()),
         Map.entry("awning", new WCAwningBlock.Factory()),
         Map.entry("bigdoor", new WCBigDoorBlock.Factory()),
-        Map.entry("bunting", new WCBuntingBlock.Factory())
+        Map.entry("bunting", new WCBuntingBlock.Factory()),
+        Map.entry("balcony", new WCBalconyBlock.Factory())
     );
 
     static {

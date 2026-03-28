@@ -286,6 +286,12 @@ public class ModModels {
     public static final Model BUNTING_WALL = block("buntings/bunting_wall", ModTextureKey.ZERO, TextureKey.PARTICLE);
     public static final Model BUNTING_CEILING = block("buntings/bunting_ceiling", ModTextureKey.ZERO, TextureKey.PARTICLE);
 
+    // Balcony models — untinted/tinted
+    public static final Model BALCONY_SIDE_UNTINTED = block("untinted/balcony_side",
+            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+    public static final Model BALCONY_SIDE_TINTED = block("tinted/balcony_side",
+            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+
     // Particle emitter models
     public static final Model PARTICLE_EMITTER_OFF = block("custom/particle_emitter/particle_emitter_off", TextureKey.TEXTURE, TextureKey.PARTICLE);
     public static final Model PARTICLE_EMITTER_ON = block("custom/particle_emitter/particle_emitter_on", TextureKey.TEXTURE, TextureKey.PARTICLE);

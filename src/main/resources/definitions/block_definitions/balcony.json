@@ -1,0 +1,13 @@
+[
+  {
+    "blockName": "wood_balcony",
+    "blockType": "balcony",
+    "strength": 2,
+    "soundGroup": "wood",
+    "creativeTab": "westeros_test_tab",
+    "label": "Wood Balcony",
+    "textures": [
+      "wood/oak/all"
+    ]
+  }
+]
