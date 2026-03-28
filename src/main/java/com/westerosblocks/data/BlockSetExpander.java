@@ -14,12 +14,12 @@ import java.util.*;
 public class BlockSetExpander {
 
     // Default variants created if none specified
-    private static final List<String> DEFAULT_VARIANTS = Arrays.asList(
+    static final List<String> DEFAULT_VARIANTS = Arrays.asList(
             "solid", "stairs", "slab", "wall", "fence", "hopper"
     );
 
     // All supported variant types
-    private static final List<String> SUPPORTED_VARIANTS = Arrays.asList(
+    static final List<String> SUPPORTED_VARIANTS = Arrays.asList(
             "solid", "stairs", "slab", "wall", "fence", "hopper", "tip",
             "carpet", "fence_gate", "half_door", "cover", "hollow_hopper",
             "log", "directional", "layer", "pane", "sand", "path",

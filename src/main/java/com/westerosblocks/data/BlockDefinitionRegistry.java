@@ -9,6 +9,7 @@ public class BlockDefinitionRegistry {
     private static BlockDefinitionRegistry instance;
     private final Map<String, BlockDefinition> definitions;
     private final Map<String, List<BlockDefinition>> definitionsByType;
+    private List<BlockSetDefinition> blockSetDefinitions = new ArrayList<>();
     private ColorMapDefinition colorMaps;
     private boolean initialized = false;
 
@@ -47,6 +48,7 @@ public class BlockDefinitionRegistry {
             Map<String, BlockSetDefinition> loadedBlockSets = setLoader.loadAllDefinitions();
 
             if (!loadedBlockSets.isEmpty()) {
+                blockSetDefinitions = new ArrayList<>(loadedBlockSets.values());
                 int expandedCount = 0;
 
                 for (BlockSetDefinition blockSet : loadedBlockSets.values()) {
@@ -114,6 +116,13 @@ public class BlockDefinitionRegistry {
             throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
         }
         return colorMaps;
+    }
+
+    public List<BlockSetDefinition> getBlockSetDefinitions() {
+        if (!initialized) {
+            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
+        }
+        return Collections.unmodifiableList(blockSetDefinitions);
     }
 
     public int getCount() {

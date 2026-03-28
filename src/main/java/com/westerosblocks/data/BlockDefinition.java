@@ -1230,6 +1230,10 @@ public class BlockDefinition {
     }
 
     public boolean isUnconnect() {
+        return options != null && options.getUnconnect() != null;
+    }
+
+    public boolean getUnconnectDefault() {
         return options != null && Boolean.TRUE.equals(options.getUnconnect());
     }
 

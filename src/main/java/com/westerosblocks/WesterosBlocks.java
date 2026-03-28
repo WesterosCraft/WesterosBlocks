@@ -4,6 +4,7 @@ import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.blockentity.ModBlockEntities;
 import com.westerosblocks.config.ModConfig;
 import com.westerosblocks.data.BlockDefinitionRegistry;
+import com.westerosblocks.data.BlockSetExporter;
 import com.westerosblocks.data.WorldPainterExporter;
 import com.westerosblocks.entity.ModEntities;
 import com.westerosblocks.item.ModItems;
@@ -37,6 +38,11 @@ public class WesterosBlocks implements ModInitializer {
         if (CONFIG.dumpWorldPainterCSV) {
             LOGGER.info("WorldPainter CSV export enabled in config");
             WorldPainterExporter.exportToCSV();
+        }
+
+        // Export block sets JSON if config option is enabled
+        if (CONFIG.exportBlockDefinitions) {
+            BlockSetExporter.export();
         }
 
         LOGGER.info("WesterosBlocks mod initialization complete!");

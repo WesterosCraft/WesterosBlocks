@@ -41,6 +41,7 @@ public class WCFenceBlock extends FenceBlock implements WCBlockDef {
             ModProperties.StateProperty stateProperty = definition.buildStateProperty();
 
             boolean unconnect = definition.isUnconnect();
+            boolean unconnectDefault = definition.getUnconnectDefault();
             boolean toggleOnUse = definition.toggleOnUse();
 
             if (unconnect) {
@@ -51,15 +52,15 @@ public class WCFenceBlock extends FenceBlock implements WCBlockDef {
                 tempSTATE = stateProperty;
             }
 
-            return new WCFenceBlock(settings, definition, unconnect, toggleOnUse);
+            return new WCFenceBlock(settings, definition, unconnect, unconnectDefault, toggleOnUse);
         }
     }
 
-    protected WCFenceBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean unconnect, boolean toggleOnUse) {
+    protected WCFenceBlock(AbstractBlock.Settings settings, BlockDefinition def, boolean unconnect, boolean unconnectDefault, boolean toggleOnUse) {
         super(settings);
         this.def = def;
         this.unconnect = unconnect;
-        this.unconnectDefault = unconnect;
+        this.unconnectDefault = unconnectDefault;
         this.toggleOnUse = toggleOnUse;
 
         BlockState defaultState = this.getStateManager().getDefaultState()
