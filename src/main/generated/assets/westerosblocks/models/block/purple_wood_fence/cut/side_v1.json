@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_side",
+  "textures": {
+    "bottom": "westerosblocks:block/wood/purple/all_lines",
+    "particle": "westerosblocks:block/wood/purple/all_lines",
+    "side": "westerosblocks:block/wood/purple/all_lines",
+    "top": "westerosblocks:block/wood/purple/all_lines"
+  }
+}

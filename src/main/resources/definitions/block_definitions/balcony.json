@@ -4,7 +4,7 @@
     "blockType": "balcony",
     "strength": 2,
     "soundGroup": "wood",
-    "creativeTab": "westeros_test_tab",
+    "creativeTab": "westeros_decor_tab",
     "label": "Wood Balcony",
     "textures": [
       "wood/oak/all"

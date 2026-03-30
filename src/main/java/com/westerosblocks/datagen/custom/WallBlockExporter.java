@@ -2,6 +2,7 @@ package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
+import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.enums.WallShape;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
@@ -9,7 +10,9 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class WallBlockExporter extends BaseBlockExporter {
 
@@ -32,38 +35,67 @@ public class WallBlockExporter extends BaseBlockExporter {
         return tinted ? ModModels.WALL_SIDE_TALL_TINTED : ModModels.WALL_SIDE_TALL_UNTINTED;
     }
 
+    private record WallModelSet(List<Identifier> postModelIds, List<Identifier> sideModelIds,
+                                List<Identifier> tallModelIds, List<Integer> weights) {}
+
     // ========================================
-    // Helper Methods (block-models.md 5.3-5.4)
+    // Helper Methods
     // ========================================
 
+    /**
+     * Creates multipart blockstate supplier for wall blocks without states.
+     */
     private static MultipartBlockStateSupplier createWallVariants(Block block, List<Identifier> postModelIds,
                                                                     List<Identifier> sideModelIds, List<Identifier> tallModelIds,
                                                                     List<Integer> weights) {
         MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
+        addWallEntries(supplier, postModelIds, sideModelIds, tallModelIds, weights, null, null);
+        return supplier;
+    }
 
-        // Single loop: for each texture variant, add post + all directional sides (low + tall)
-        for (int i = 0; i < postModelIds.size(); i++) {
-            // Add post model (when up=true)
-            addPostVariant(supplier, postModelIds.get(i), weights.get(i));
+    /**
+     * Creates multipart blockstate supplier for wall blocks with state property.
+     */
+    private static MultipartBlockStateSupplier createWallVariantsWithStates(Block block,
+            Map<String, WallModelSet> stateModels, ModProperties.StateProperty stateProperty) {
+        MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
 
-            // Add side models for each direction (low and tall)
-            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), "north", WallShape.LOW);
-            addSideVariant(supplier, tallModelIds.get(i), weights.get(i), "north", WallShape.TALL);
-            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), "east", WallShape.LOW);
-            addSideVariant(supplier, tallModelIds.get(i), weights.get(i), "east", WallShape.TALL);
-            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), "south", WallShape.LOW);
-            addSideVariant(supplier, tallModelIds.get(i), weights.get(i), "south", WallShape.TALL);
-            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), "west", WallShape.LOW);
-            addSideVariant(supplier, tallModelIds.get(i), weights.get(i), "west", WallShape.TALL);
+        for (Map.Entry<String, WallModelSet> entry : stateModels.entrySet()) {
+            String stateId = entry.getKey();
+            WallModelSet models = entry.getValue();
+            addWallEntries(supplier, models.postModelIds, models.sideModelIds, models.tallModelIds,
+                    models.weights, stateProperty, stateId);
         }
 
         return supplier;
     }
 
     /**
-     * Adds a single post variant.
+     * Adds wall post and side entries to the multipart supplier.
+     * If stateProperty and stateId are non-null, adds state condition to when clauses.
      */
-    private static void addPostVariant(MultipartBlockStateSupplier supplier, Identifier postModelId, int weight) {
+    private static void addWallEntries(MultipartBlockStateSupplier supplier, List<Identifier> postModelIds,
+            List<Identifier> sideModelIds, List<Identifier> tallModelIds, List<Integer> weights,
+            ModProperties.StateProperty stateProperty, String stateId) {
+        for (int i = 0; i < postModelIds.size(); i++) {
+            addPostVariant(supplier, postModelIds.get(i), weights.get(i), stateProperty, stateId);
+
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), "north", WallShape.LOW, stateProperty, stateId);
+            addSideVariant(supplier, tallModelIds.get(i), weights.get(i), "north", WallShape.TALL, stateProperty, stateId);
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), "east", WallShape.LOW, stateProperty, stateId);
+            addSideVariant(supplier, tallModelIds.get(i), weights.get(i), "east", WallShape.TALL, stateProperty, stateId);
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), "south", WallShape.LOW, stateProperty, stateId);
+            addSideVariant(supplier, tallModelIds.get(i), weights.get(i), "south", WallShape.TALL, stateProperty, stateId);
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), "west", WallShape.LOW, stateProperty, stateId);
+            addSideVariant(supplier, tallModelIds.get(i), weights.get(i), "west", WallShape.TALL, stateProperty, stateId);
+        }
+    }
+
+    /**
+     * Adds a single post variant, optionally with state condition.
+     */
+    private static void addPostVariant(MultipartBlockStateSupplier supplier, Identifier postModelId, int weight,
+                                       ModProperties.StateProperty stateProperty, String stateId) {
         BlockStateVariant postVariant = BlockStateVariant.create()
                 .put(VariantSettings.MODEL, postModelId);
 
@@ -71,14 +103,21 @@ public class WallBlockExporter extends BaseBlockExporter {
             postVariant = postVariant.put(VariantSettings.WEIGHT, weight);
         }
 
-        supplier.with(When.create().set(Properties.UP, true), postVariant);
+        When.PropertyCondition condition = When.create().set(Properties.UP, true);
+        if (stateProperty != null && stateId != null) {
+            condition.set(stateProperty, stateId);
+        }
+
+        supplier.with(condition, postVariant);
     }
 
     /**
-     * Adds a single side variant for a specific direction and shape (low or tall).
+     * Adds a single side variant for a specific direction and shape (low or tall),
+     * optionally with state condition.
      */
     private static void addSideVariant(MultipartBlockStateSupplier supplier, Identifier sideModelId,
-                                       int weight, String direction, WallShape shape) {
+                                       int weight, String direction, WallShape shape,
+                                       ModProperties.StateProperty stateProperty, String stateId) {
         BlockStateVariant sideVariant = BlockStateVariant.create()
                 .put(VariantSettings.MODEL, sideModelId)
                 .put(VariantSettings.UVLOCK, true);
@@ -97,8 +136,7 @@ public class WallBlockExporter extends BaseBlockExporter {
             sideVariant = sideVariant.put(VariantSettings.WEIGHT, weight);
         }
 
-        // Create condition based on direction and shape
-        When condition = switch (direction) {
+        When.PropertyCondition condition = switch (direction) {
             case "north" -> When.create().set(Properties.NORTH_WALL_SHAPE, shape);
             case "east" -> When.create().set(Properties.EAST_WALL_SHAPE, shape);
             case "south" -> When.create().set(Properties.SOUTH_WALL_SHAPE, shape);
@@ -106,23 +144,142 @@ public class WallBlockExporter extends BaseBlockExporter {
             default -> throw new IllegalArgumentException("Unknown direction: " + direction);
         };
 
+        if (stateProperty != null && stateId != null) {
+            condition.set(stateProperty, stateId);
+        }
+
         supplier.with(condition, sideVariant);
     }
 
+    /**
+     * Uploads wall post, side, and tall models for a given set of random textures.
+     */
+    private static WallModelSet uploadWallModels(BlockStateModelGenerator generator, Block block,
+            boolean tinted, boolean overlay, boolean isShort, String modelPrefix,
+            List<BlockDefinition.RandomTextureVariant> randomSets, List<String> overlayTextures) {
+        List<Identifier> postModelIds = new ArrayList<>();
+        List<Identifier> sideModelIds = new ArrayList<>();
+        List<Identifier> tallModelIds = new ArrayList<>();
+        List<Integer> weights = new ArrayList<>();
+
+        for (int i = 0; i < randomSets.size(); i++) {
+            BlockDefinition.RandomTextureVariant set = randomSets.get(i);
+            String[] textures = new String[set.getTextureCount()];
+            for (int t = 0; t < set.getTextureCount(); t++) {
+                textures[t] = set.getTextureByIndex(t);
+            }
+            String[] expandedTextures = fillTextureArray(textures, 3);
+
+            String[] expandedOverlays = null;
+            if (overlay && overlayTextures != null && !overlayTextures.isEmpty()) {
+                expandedOverlays = fillTextureArray(overlayTextures.toArray(new String[0]), 3);
+            }
+
+            TextureMap textureMap = createFenceWallTextureMap(expandedTextures, expandedOverlays);
+
+            String postName = modelPrefix + "post_v" + (i + 1);
+            String sideName = modelPrefix + "side_v" + (i + 1);
+            String tallName = modelPrefix + "side_tall_v" + (i + 1);
+
+            Identifier postModelId = getWallPostModel(tinted, overlay)
+                    .upload(createNestedModelId(block, postName), textureMap, generator.modelCollector);
+            Identifier sideModelId = getWallSideModel(tinted, overlay, isShort)
+                    .upload(createNestedModelId(block, sideName), textureMap, generator.modelCollector);
+            Identifier tallModelId = getWallSideTallModel(tinted, overlay)
+                    .upload(createNestedModelId(block, tallName), textureMap, generator.modelCollector);
+
+            postModelIds.add(postModelId);
+            sideModelIds.add(sideModelId);
+            tallModelIds.add(tallModelId);
+            weights.add(set.getWeight());
+        }
+
+        return new WallModelSet(postModelIds, sideModelIds, tallModelIds, weights);
+    }
+
     // ========================================
-    // Public Registration Methods (block-models.md 5.5)
+    // Public Registration Methods
     // ========================================
 
-    public static void registerWallBlock(BlockStateModelGenerator generator, Block block, boolean tinted,
+    public static void registerCustomWallBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        boolean tinted = definition.isTinted() || definition.hasColorMult();
+        boolean isShort = "short".equals(definition.getWallSize());
+
+        var states = definition.getStates();
+        ModProperties.StateProperty stateProperty = getStateProperty(block);
+        boolean hasMultipleStates = stateProperty != null && states != null && states.size() > 1;
+
+        if (hasMultipleStates) {
+            // Multi-state wall: generate per-state models and state-aware blockstate
+            Map<String, WallModelSet> stateModels = new LinkedHashMap<>();
+            String firstSideTexture = null;
+
+            for (BlockDefinition.StateVariant state : states) {
+                String stateId = getStateIdOrBase(state.getStateID());
+                boolean stateOverlay = state.hasOverlayTextures();
+                String modelPrefix = stateId + "/";
+
+                // After doInit(), randomTextures is always populated
+                List<BlockDefinition.RandomTextureVariant> randomSets = new ArrayList<>();
+                for (int i = 0; i < state.getRandomTextureSetCount(); i++) {
+                    randomSets.add(state.getRandomTextureSet(i));
+                }
+
+                if (randomSets.isEmpty()) continue;
+
+                WallModelSet modelSet = uploadWallModels(generator, block, tinted, stateOverlay, isShort,
+                        modelPrefix, randomSets, state.getOverlayTextures());
+                stateModels.put(state.getStateID(), modelSet);
+
+                // Capture first state's side texture for item model
+                if (firstSideTexture == null) {
+                    BlockDefinition.RandomTextureVariant firstSet = randomSets.get(0);
+                    String[] textures = new String[firstSet.getTextureCount()];
+                    for (int t = 0; t < firstSet.getTextureCount(); t++) {
+                        textures[t] = firstSet.getTextureByIndex(t);
+                    }
+                    String[] expanded = fillTextureArray(textures, 3);
+                    firstSideTexture = expanded[2]; // side texture
+                }
+            }
+
+            if (!stateModels.isEmpty()) {
+                MultipartBlockStateSupplier blockstate = createWallVariantsWithStates(block, stateModels, stateProperty);
+                generator.blockStateCollector.accept(blockstate);
+
+                // Item model from first state's side texture
+                TextureMap itemTextureMap = new TextureMap()
+                        .put(TextureKey.WALL, createBlockIdentifier(firstSideTexture));
+                Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
+                Models.WALL_INVENTORY.upload(itemModelId, itemTextureMap, generator.modelCollector);
+            }
+        } else {
+            // Single-state wall: existing behavior
+            boolean overlay = definition.hasOverlayTextures();
+            if (definition.hasRandomTextures()) {
+                registerWallBlockWithRandomTextures(generator, block, tinted, overlay, isShort, extractTextureVariantSets(definition));
+            } else {
+                List<String> textureList = definition.getTextures();
+                if (textureList != null && !textureList.isEmpty()) {
+                    String[] textures = textureList.toArray(new String[0]);
+                    String[] overlays = overlay && definition.getOverlayTextures() != null
+                            ? definition.getOverlayTextures().toArray(new String[0])
+                            : null;
+                    registerWallBlock(generator, block, tinted, overlay, isShort, textures, overlays);
+                } else {
+                    registerWallBlock(generator, block, tinted, overlay, isShort, new String[]{"missingno"}, null);
+                }
+            }
+        }
+    }
+
+    private static void registerWallBlock(BlockStateModelGenerator generator, Block block, boolean tinted,
                                         boolean overlay, boolean isShort, String[] textures, String[] overlayTextures) {
-        // Expand single texture to three if needed
         String[] expandedTextures = fillTextureArray(textures, 3);
         String[] expandedOverlays = overlay && overlayTextures != null ? fillTextureArray(overlayTextures, 3) : null;
 
-        // Create texture map
         TextureMap textureMap = createFenceWallTextureMap(expandedTextures, expandedOverlays);
 
-        // Upload post, side, and tall models
         Identifier postModelId = getWallPostModel(tinted, overlay)
                 .upload(createNestedModelId(block, "post"), textureMap, generator.modelCollector);
         Identifier sideModelId = getWallSideModel(tinted, overlay, isShort)
@@ -130,19 +287,17 @@ public class WallBlockExporter extends BaseBlockExporter {
         Identifier tallModelId = getWallSideTallModel(tinted, overlay)
                 .upload(createNestedModelId(block, "side_tall"), textureMap, generator.modelCollector);
 
-        // Create blockstate
         MultipartBlockStateSupplier blockstate = createWallVariants(block,
                 List.of(postModelId), List.of(sideModelId), List.of(tallModelId), List.of(1));
         generator.blockStateCollector.accept(blockstate);
 
-        // Register item model
         TextureMap itemTextureMap = new TextureMap()
-                .put(TextureKey.WALL, createBlockIdentifier(expandedTextures[2])); // Use side texture
+                .put(TextureKey.WALL, createBlockIdentifier(expandedTextures[2]));
         Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
         Models.WALL_INVENTORY.upload(itemModelId, itemTextureMap, generator.modelCollector);
     }
 
-    public static void registerWallBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, boolean tinted,
+    private static void registerWallBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, boolean tinted,
                                                            boolean overlay, boolean isShort, List<BlockDefinition.TextureVariantSet> textureSets) {
         List<Identifier> postModelIds = new ArrayList<>();
         List<Identifier> sideModelIds = new ArrayList<>();
@@ -169,41 +324,14 @@ public class WallBlockExporter extends BaseBlockExporter {
             weights.add(set.weight);
         }
 
-        // Create blockstate
         MultipartBlockStateSupplier blockstate = createWallVariants(block, postModelIds, sideModelIds, tallModelIds, weights);
         generator.blockStateCollector.accept(blockstate);
 
-        // Register item model (using first texture set)
         BlockDefinition.TextureVariantSet firstSet = textureSets.get(0);
         String[] expandedTextures = fillTextureArray(firstSet.getTexturesAsArray(), 3);
         TextureMap itemTextureMap = new TextureMap()
-                .put(TextureKey.WALL, createBlockIdentifier(expandedTextures[2])); // Use side texture
+                .put(TextureKey.WALL, createBlockIdentifier(expandedTextures[2]));
         Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
         Models.WALL_INVENTORY.upload(itemModelId, itemTextureMap, generator.modelCollector);
     }
-
-    // ========================================
-    // BlockDefinition Integration (block-models.md 5.6)
-    // ========================================
-
-    public static void registerCustomWallBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
-        boolean tinted = definition.isTinted() || definition.hasColorMult();
-        boolean overlay = definition.hasOverlayTextures();
-        boolean isShort = "short".equals(definition.getWallSize());
-        List<String> textureList = definition.getTextures();
-
-        if (definition.hasRandomTextures()) {
-            registerWallBlockWithRandomTextures(generator, block, tinted, overlay, isShort, extractTextureVariantSets(definition));
-        } else if (textureList != null && !textureList.isEmpty()) {
-            String[] textures = textureList.toArray(new String[0]);
-            String[] overlays = overlay && definition.getOverlayTextures() != null
-                    ? definition.getOverlayTextures().toArray(new String[0])
-                    : null;
-
-            registerWallBlock(generator, block, tinted, overlay, isShort, textures, overlays);
-        } else {
-            registerWallBlock(generator, block, tinted, overlay, isShort, new String[]{"missingno"}, null);
-        }
-    }
-
 }

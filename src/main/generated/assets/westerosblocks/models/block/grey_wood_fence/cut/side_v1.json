@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_side",
+  "textures": {
+    "bottom": "westerosblocks:block/wood/grey/all_lines",
+    "particle": "westerosblocks:block/wood/grey/all_lines",
+    "side": "westerosblocks:block/wood/grey/all_lines",
+    "top": "westerosblocks:block/wood/grey/all_lines"
+  }
+}
