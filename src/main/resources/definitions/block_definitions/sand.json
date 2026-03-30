@@ -7,7 +7,6 @@
     "creativeTab": "westeros_sand_gravel_tab",
     "label": "Sand Skeleton",
     "textures": ["sand_block/sand_skeleton"],
-    "colorMult": "textures/colormap/sand",
-    "material": "sand"
+    "colorMult": "textures/colormap/sand"
   }
 ]

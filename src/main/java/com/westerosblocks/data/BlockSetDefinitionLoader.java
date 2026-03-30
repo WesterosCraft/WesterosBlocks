@@ -18,7 +18,10 @@ import java.util.stream.Stream;
  * Loads BlockSetDefinition instances from JSON files in the definitions/block_set_definitions directory.
  */
 public class BlockSetDefinitionLoader {
-    private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
+    private static final Gson GSON = new GsonBuilder()
+        .setPrettyPrinting()
+        .registerTypeAdapter(OptionsProperties.class, new OptionsPropertiesDeserializer())
+        .create();
     private final String blockSetDefinitionsPath;
 
     public BlockSetDefinitionLoader(String blockSetDefinitionsPath) {

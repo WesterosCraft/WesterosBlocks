@@ -59,7 +59,6 @@ public class ModBlocks {
         Map.entry("soul-sand", new WCSoulSandBlock.Factory()),
         Map.entry("particle", new WCParticleEmitterBlock.Factory()),
         Map.entry("table", new WCTableBlock.Factory()),
-        Map.entry("table2", new WCTableBlock.Factory()),
         Map.entry("chair", new WCChairBlock.Factory()),
         Map.entry("bench", new WCBenchBlock.Factory()),
         Map.entry("arrow-slit", new WCArrowSlitBlock.Factory()),

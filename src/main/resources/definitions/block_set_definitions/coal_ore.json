@@ -8,7 +8,6 @@
     ],
     "hardness": 3,
     "soundGroup": "stone",
-    "material": "rock",
     "resistance": 10,
     "creativeTab": "westeros_terrain_sets_tab",
     "baseLabel": "Coal Ore",

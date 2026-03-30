@@ -12,7 +12,6 @@
     },
     "hardness": 5,
     "soundGroup": "metal",
-    "material": "iron",
     "resistance": 10,
     "harvestLevel": [
         {

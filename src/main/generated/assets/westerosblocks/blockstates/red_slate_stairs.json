@@ -2,7 +2,6 @@
   "variants": {
     "facing=east,half=bottom,shape=inner_left": {
       "model": "westerosblocks:block/red_slate_stairs/inner_v1",
-      "uvlock": true,
       "y": 270
     },
     "facing=east,half=bottom,shape=inner_right": {
@@ -10,7 +9,6 @@
     },
     "facing=east,half=bottom,shape=outer_left": {
       "model": "westerosblocks:block/red_slate_stairs/outer_v1",
-      "uvlock": true,
       "y": 270
     },
     "facing=east,half=bottom,shape=outer_right": {
@@ -21,81 +19,66 @@
     },
     "facing=east,half=top,shape=inner_left": {
       "model": "westerosblocks:block/red_slate_stairs/inner_v1",
-      "uvlock": true,
       "x": 180
     },
     "facing=east,half=top,shape=inner_right": {
       "model": "westerosblocks:block/red_slate_stairs/inner_v1",
-      "uvlock": true,
       "x": 180,
       "y": 90
     },
     "facing=east,half=top,shape=outer_left": {
       "model": "westerosblocks:block/red_slate_stairs/outer_v1",
-      "uvlock": true,
       "x": 180
     },
     "facing=east,half=top,shape=outer_right": {
       "model": "westerosblocks:block/red_slate_stairs/outer_v1",
-      "uvlock": true,
       "x": 180,
       "y": 90
     },
     "facing=east,half=top,shape=straight": {
       "model": "westerosblocks:block/red_slate_stairs/base_v1",
-      "uvlock": true,
       "x": 180
     },
     "facing=north,half=bottom,shape=inner_left": {
       "model": "westerosblocks:block/red_slate_stairs/inner_v1",
-      "uvlock": true,
       "y": 180
     },
     "facing=north,half=bottom,shape=inner_right": {
       "model": "westerosblocks:block/red_slate_stairs/inner_v1",
-      "uvlock": true,
       "y": 270
     },
     "facing=north,half=bottom,shape=outer_left": {
       "model": "westerosblocks:block/red_slate_stairs/outer_v1",
-      "uvlock": true,
       "y": 180
     },
     "facing=north,half=bottom,shape=outer_right": {
       "model": "westerosblocks:block/red_slate_stairs/outer_v1",
-      "uvlock": true,
       "y": 270
     },
     "facing=north,half=bottom,shape=straight": {
       "model": "westerosblocks:block/red_slate_stairs/base_v1",
-      "uvlock": true,
       "y": 270
     },
     "facing=north,half=top,shape=inner_left": {
       "model": "westerosblocks:block/red_slate_stairs/inner_v1",
-      "uvlock": true,
       "x": 180,
       "y": 270
     },
     "facing=north,half=top,shape=inner_right": {
       "model": "westerosblocks:block/red_slate_stairs/inner_v1",
-      "uvlock": true,
       "x": 180
     },
     "facing=north,half=top,shape=outer_left": {
       "model": "westerosblocks:block/red_slate_stairs/outer_v1",
-      "uvlock": true,
       "x": 180,
       "y": 270
     },
     "facing=north,half=top,shape=outer_right": {
       "model": "westerosblocks:block/red_slate_stairs/outer_v1",
-      "uvlock": true,
       "x": 180
     },
     "facing=north,half=top,shape=straight": {
       "model": "westerosblocks:block/red_slate_stairs/base_v1",
-      "uvlock": true,
       "x": 180,
       "y": 270
     },
@@ -104,7 +87,6 @@
     },
     "facing=south,half=bottom,shape=inner_right": {
       "model": "westerosblocks:block/red_slate_stairs/inner_v1",
-      "uvlock": true,
       "y": 90
     },
     "facing=south,half=bottom,shape=outer_left": {
@@ -112,96 +94,79 @@
     },
     "facing=south,half=bottom,shape=outer_right": {
       "model": "westerosblocks:block/red_slate_stairs/outer_v1",
-      "uvlock": true,
       "y": 90
     },
     "facing=south,half=bottom,shape=straight": {
       "model": "westerosblocks:block/red_slate_stairs/base_v1",
-      "uvlock": true,
       "y": 90
     },
     "facing=south,half=top,shape=inner_left": {
       "model": "westerosblocks:block/red_slate_stairs/inner_v1",
-      "uvlock": true,
       "x": 180,
       "y": 90
     },
     "facing=south,half=top,shape=inner_right": {
       "model": "westerosblocks:block/red_slate_stairs/inner_v1",
-      "uvlock": true,
       "x": 180,
       "y": 180
     },
     "facing=south,half=top,shape=outer_left": {
       "model": "westerosblocks:block/red_slate_stairs/outer_v1",
-      "uvlock": true,
       "x": 180,
       "y": 90
     },
     "facing=south,half=top,shape=outer_right": {
       "model": "westerosblocks:block/red_slate_stairs/outer_v1",
-      "uvlock": true,
       "x": 180,
       "y": 180
     },
     "facing=south,half=top,shape=straight": {
       "model": "westerosblocks:block/red_slate_stairs/base_v1",
-      "uvlock": true,
       "x": 180,
       "y": 90
     },
     "facing=west,half=bottom,shape=inner_left": {
       "model": "westerosblocks:block/red_slate_stairs/inner_v1",
-      "uvlock": true,
       "y": 90
     },
     "facing=west,half=bottom,shape=inner_right": {
       "model": "westerosblocks:block/red_slate_stairs/inner_v1",
-      "uvlock": true,
       "y": 180
     },
     "facing=west,half=bottom,shape=outer_left": {
       "model": "westerosblocks:block/red_slate_stairs/outer_v1",
-      "uvlock": true,
       "y": 90
     },
     "facing=west,half=bottom,shape=outer_right": {
       "model": "westerosblocks:block/red_slate_stairs/outer_v1",
-      "uvlock": true,
       "y": 180
     },
     "facing=west,half=bottom,shape=straight": {
       "model": "westerosblocks:block/red_slate_stairs/base_v1",
-      "uvlock": true,
       "y": 180
     },
     "facing=west,half=top,shape=inner_left": {
       "model": "westerosblocks:block/red_slate_stairs/inner_v1",
-      "uvlock": true,
       "x": 180,
       "y": 180
     },
     "facing=west,half=top,shape=inner_right": {
       "model": "westerosblocks:block/red_slate_stairs/inner_v1",
-      "uvlock": true,
       "x": 180,
       "y": 270
     },
     "facing=west,half=top,shape=outer_left": {
       "model": "westerosblocks:block/red_slate_stairs/outer_v1",
-      "uvlock": true,
       "x": 180,
       "y": 180
     },
     "facing=west,half=top,shape=outer_right": {
       "model": "westerosblocks:block/red_slate_stairs/outer_v1",
-      "uvlock": true,
       "x": 180,
       "y": 270
     },
     "facing=west,half=top,shape=straight": {
       "model": "westerosblocks:block/red_slate_stairs/base_v1",
-      "uvlock": true,
       "x": 180,
       "y": 180
     }

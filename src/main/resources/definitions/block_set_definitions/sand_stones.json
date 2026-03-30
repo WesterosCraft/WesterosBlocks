@@ -6,7 +6,6 @@
     ],
     "hardness": 0.5,
     "soundGroup": "sand",
-    "material": "sand",
     "resistance": 1,
     "harvestLevel": [
         {

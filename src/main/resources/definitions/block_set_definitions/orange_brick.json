@@ -14,7 +14,6 @@
     },
     "hardness": 1.5,
     "soundGroup": "stone",
-    "material": "rock",
     "resistance": 10,
     "harvestLevel": [
         {

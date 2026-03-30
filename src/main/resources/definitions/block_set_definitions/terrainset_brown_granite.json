@@ -12,7 +12,6 @@
     ],
     "hardness": 5,
     "soundGroup": "stone",
-    "material": "rock",
     "resistance": 10,
     "harvestLevel": [
         {
@@ -22,8 +21,8 @@
     ],
     "creativeTab": "westeros_terrain_sets_tab",
     "options": {
-        "fence": "unconnect:true",
-        "fence_gate": "locked:true"
+        "fence": {"unconnect": true},
+        "fence_gate": {"locked": true}
     },
     "baseLabel": "TerrainSet Brown Granite",
     "textures": {

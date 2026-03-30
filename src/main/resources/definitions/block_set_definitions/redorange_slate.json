@@ -11,7 +11,6 @@
     ],
     "hardness": 1.5,
     "soundGroup": "stone",
-    "material": "rock",
     "resistance": 10,
     "harvestLevel": [
         {
@@ -21,7 +20,7 @@
     ],
     "creativeTab": "westeros_roofing_tab",
     "options": {
-        "stairs": "unconnect:false,no-uvlock"
+        "stairs": {"unconnect": false, "noUvlock": true}
     },
     "baseLabel": "Red-Orange Slate",
     "textures": {

@@ -10,7 +10,6 @@
     ],
     "hardness": 5,
     "soundGroup": "gravel",
-    "material": "craftedSnow",
     "resistance": 10,
     "creativeTab": "westeros_water_air_tab",
     "baseLabel": "Snow",

@@ -7,7 +7,6 @@
     ],
     "hardness": 2,
     "soundGroup": "gravel",
-    "material": "ground",
     "resistance": 2,
     "harvestLevel": [
         {

@@ -8,7 +8,6 @@
     ],
     "hardness": 2,
     "soundGroup": "grass",
-    "material": "plants",
     "resistance": 5,
     "creativeTab": "westeros_foliage_tab",
     "baseLabel": "Cushion Moss",

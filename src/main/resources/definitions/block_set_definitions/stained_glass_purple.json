@@ -9,7 +9,6 @@
     },
     "hardness": 1,
     "soundGroup": "glass",
-    "material": "glass",
     "resistance": 2,
     "harvestLevel": [
         {
@@ -22,7 +21,7 @@
     "lightOpacity": 0,
     "creativeTab": "westeros_windows_glass_tab",
     "options": {
-        "pane": "legacy-model,unconnect:false"
+        "pane": {"legacyModel": true, "unconnect": false}
     },
     "baseLabel": "Stained Glass Purple",
     "textures": {

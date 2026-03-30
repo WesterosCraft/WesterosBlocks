@@ -21,8 +21,8 @@
     ],
     "creativeTab": "westeros_terrain_sets_tab",
     "options": {
-        "fence": "unconnect:true",
-        "fence_gate": "locked:true"
+        "fence": {"unconnect": true},
+        "fence_gate": {"locked": true}
     },
     "baseLabel": "TerrainSet The North Alt Light Snow",
     "textures": {

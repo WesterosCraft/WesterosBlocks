@@ -82,7 +82,7 @@ public class BlockSetExpander {
         List<BlockDefinition> definitions = new ArrayList<>();
 
         // Preprocess maps to handle comma-separated keys
-        Map<String, String> options = preprocessVariantMap(blockSet.getOptions());
+        Map<String, OptionsProperties> options = preprocessVariantMap(blockSet.getOptions());
         Map<String, List<String>> altCustomTags = preprocessVariantMap(blockSet.getAltCustomTags());
         Map<String, List<String>> altTextures = preprocessVariantMap(blockSet.getAltTextures());
 
@@ -109,7 +109,7 @@ public class BlockSetExpander {
      * Creates a BlockDefinition for a specific variant.
      */
     private static BlockDefinition createVariantDefinition(BlockSetDefinition blockSet, String variant,
-                                                          Map<String, String> options,
+                                                          Map<String, OptionsProperties> options,
                                                           Map<String, List<String>> altCustomTags,
                                                           Map<String, List<String>> altTextures) {
         // Use reflection to create BlockDefinition (since it has no public constructor)
@@ -152,8 +152,7 @@ public class BlockSetExpander {
 
         // 6. Handle options attribute
         if (options != null && options.containsKey(variant)) {
-            // User-specified options (string that will be parsed by OptionsPropertiesDeserializer)
-            defMap.put("options", options.get(variant));
+            defMap.put("options", convertOptionsPropertiesToMap(options.get(variant)));
         } else {
             // Apply default options for specific variants
             OptionsProperties defaultOptions = getDefaultOptions(variant);

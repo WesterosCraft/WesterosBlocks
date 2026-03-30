@@ -6,7 +6,6 @@
     ],
     "hardness": 2,
     "soundGroup": "grass",
-    "material": "ground",
     "resistance": 2,
     "harvestLevel": [
         {

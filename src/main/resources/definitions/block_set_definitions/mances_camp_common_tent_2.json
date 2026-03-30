@@ -16,7 +16,6 @@
     },
     "hardness": 2,
     "soundGroup": "cloth",
-    "material": "wood",
     "resistance": 5,
     "harvestLevel": [
         {

@@ -56,6 +56,9 @@ public class BlockDefinition {
     @SerializedName("creativeTab")
     private String creativeTab;
 
+    @SerializedName("customTags")
+    private List<String> customTags;
+
     /**
      * Display name shown in-game (e.g., "Oak Table", "Stone Wall")
      */
@@ -993,6 +996,10 @@ public class BlockDefinition {
 
     public String getCreativeTab() {
         return creativeTab;
+    }
+
+    public List<String> getCustomTags() {
+        return customTags;
     }
 
     public boolean toggleOnUse() {

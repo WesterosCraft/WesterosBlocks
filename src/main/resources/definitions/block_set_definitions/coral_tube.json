@@ -9,7 +9,6 @@
     ],
     "hardness": 5,
     "soundGroup": "stone",
-    "material": "rock",
     "resistance": 10,
     "harvestLevel": [
         {
@@ -19,7 +18,7 @@
     ],
     "creativeTab": "westeros_water_air_tab",
     "options": {
-        "fence": "unconnect:true"
+        "fence": {"unconnect": true}
     },
     "baseLabel": "Tube Coral",
     "textures": {

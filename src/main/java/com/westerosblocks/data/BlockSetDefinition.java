@@ -35,7 +35,7 @@ public class BlockSetDefinition {
 
     /** Options attributes for specific variants (e.g., {"fence_gate": {"locked": true}}) */
     @SerializedName("options")
-    private Map<String, String> options;
+    private Map<String, OptionsProperties> options;
 
     /** Custom tags for specific variants (e.g., {"solid": ["wood-ctm"]}) */
     @SerializedName("altCustomTags")
@@ -169,7 +169,7 @@ public class BlockSetDefinition {
     public List<String> getVariants() { return variants; }
     public Map<String, String> getAltNames() { return altNames; }
     public Map<String, String> getAltLabels() { return altLabels; }
-    public Map<String, String> getOptions() { return options; }
+    public Map<String, OptionsProperties> getOptions() { return options; }
     public Map<String, List<String>> getAltCustomTags() { return altCustomTags; }
     public Map<String, List<String>> getAltTextures() { return altTextures; }
 
