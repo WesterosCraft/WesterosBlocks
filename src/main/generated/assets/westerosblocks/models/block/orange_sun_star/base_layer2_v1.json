@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross_layer2",
   "textures": {
-    "cross": "westerosblocks:block/flowers/orange_sun_star1"
+    "cross": "westerosblocks:block/flowers/orange_sun_star1",
+    "particle": "westerosblocks:block/flowers/orange_sun_star1"
   }
 }

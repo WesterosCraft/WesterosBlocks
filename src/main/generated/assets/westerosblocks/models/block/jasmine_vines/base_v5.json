@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/vine_1",
   "textures": {
+    "particle": "westerosblocks:block/jasmine_vines/side5",
     "vines": "westerosblocks:block/jasmine_vines/side5"
   }
 }

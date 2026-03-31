@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/rail_flat",
   "textures": {
+    "particle": "westerosblocks:block/wood/oak_orange/all",
     "rail": "westerosblocks:block/wood/oak_orange/all"
   }
 }

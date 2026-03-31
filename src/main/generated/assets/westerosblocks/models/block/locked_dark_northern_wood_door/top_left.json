@@ -2,6 +2,7 @@
   "parent": "minecraft:block/door_top_left",
   "textures": {
     "bottom": "westerosblocks:block/wood/northern/door_locked_bottom",
+    "particle": "westerosblocks:block/wood/northern/door_locked_bottom",
     "top": "westerosblocks:block/wood/northern/door_locked_top"
   }
 }

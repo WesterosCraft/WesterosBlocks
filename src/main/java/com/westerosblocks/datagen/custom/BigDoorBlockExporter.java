@@ -78,7 +78,8 @@ public class BigDoorBlockExporter extends BaseBlockExporter {
 
                 TextureMap textureMap = new TextureMap()
                         .put(TextureKey.ALL, textureId)
-                        .put(TextureKey.TEXTURE, textureId);
+                        .put(TextureKey.TEXTURE, textureId)
+                        .put(TextureKey.PARTICLE, textureId);
 
                 uploadModel(model, block, variant, textureMap, generator.modelCollector);
             }
@@ -137,7 +138,8 @@ public class BigDoorBlockExporter extends BaseBlockExporter {
                 Optional.of(WesterosBlocks.id(parentPath)),
                 Optional.empty(),
                 TextureKey.ALL,
-                TextureKey.TEXTURE
+                TextureKey.TEXTURE,
+                TextureKey.PARTICLE
         );
     }
 

@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/tinted/cross_layer4",
   "textures": {
-    "cross": "westerosblocks:block/jungle_tall_fern/side"
+    "cross": "westerosblocks:block/jungle_tall_fern/side",
+    "particle": "westerosblocks:block/jungle_tall_fern/side"
   }
 }

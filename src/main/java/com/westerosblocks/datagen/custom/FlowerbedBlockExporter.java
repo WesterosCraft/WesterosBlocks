@@ -69,7 +69,8 @@ public class FlowerbedBlockExporter extends BaseBlockExporter {
 
         TextureMap textureMap = new TextureMap()
                 .put(stemTextureKey, createBlockIdentifier(actualStemTexture))
-                .put(TextureKey.FLOWERBED, createBlockIdentifier(actualFlowerTexture));
+                .put(TextureKey.FLOWERBED, createBlockIdentifier(actualFlowerTexture))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(actualStemTexture));
 
         // Create models for different flower amounts (1-4)
         Identifier model1 = ModModels.FLOWERBED_1.upload(createBlockIdentifier(getBlockName(block) + "/" + getBlockName(block) + "_1"), textureMap, generator.modelCollector);

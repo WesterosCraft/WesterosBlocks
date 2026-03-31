@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross_layer6",
   "textures": {
-    "cross": "westerosblocks:block/deadbush/side5"
+    "cross": "westerosblocks:block/deadbush/side5",
+    "particle": "westerosblocks:block/deadbush/side5"
   }
 }

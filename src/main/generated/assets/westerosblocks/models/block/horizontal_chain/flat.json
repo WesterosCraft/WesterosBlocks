@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/rail_flat",
   "textures": {
+    "particle": "westerosblocks:block/rail_block/chain",
     "rail": "westerosblocks:block/rail_block/chain"
   }
 }

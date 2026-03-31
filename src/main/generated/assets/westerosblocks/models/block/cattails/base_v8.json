@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/tinted/cross",
   "textures": {
-    "cross": "westerosblocks:block/cattails/side8"
+    "cross": "westerosblocks:block/cattails/side8",
+    "particle": "westerosblocks:block/cattails/side8"
   }
 }

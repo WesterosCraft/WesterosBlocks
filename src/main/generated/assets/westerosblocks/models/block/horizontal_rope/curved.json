@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/rail_curved",
   "textures": {
+    "particle": "westerosblocks:block/rail_block/rope_turned",
     "rail": "westerosblocks:block/rail_block/rope_turned"
   }
 }

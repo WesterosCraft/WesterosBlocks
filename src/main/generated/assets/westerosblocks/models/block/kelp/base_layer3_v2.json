@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross_layer3",
   "textures": {
-    "cross": "westerosblocks:block/kelp/side2"
+    "cross": "westerosblocks:block/kelp/side2",
+    "particle": "westerosblocks:block/kelp/side2"
   }
 }

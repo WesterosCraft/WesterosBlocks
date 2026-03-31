@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross_layer5",
   "textures": {
-    "cross": "westerosblocks:block/coral/tube/web2"
+    "cross": "westerosblocks:block/coral/tube/web2",
+    "particle": "westerosblocks:block/coral/tube/web2"
   }
 }

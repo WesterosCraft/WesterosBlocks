@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/rail_curved",
   "textures": {
+    "particle": "westerosblocks:block/wood/jungle/all",
     "rail": "westerosblocks:block/wood/jungle/all"
   }
 }

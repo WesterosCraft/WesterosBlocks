@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross",
   "textures": {
-    "cross": "westerosblocks:block/dead_fowl/fowl2"
+    "cross": "westerosblocks:block/dead_fowl/fowl2",
+    "particle": "westerosblocks:block/dead_fowl/fowl2"
   }
 }

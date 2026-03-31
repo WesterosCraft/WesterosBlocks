@@ -7,6 +7,7 @@
     "east_ov": "westerosblocks:block/timber/oak/lefthatch",
     "north": "westerosblocks:block/brick/orange/all1",
     "north_ov": "westerosblocks:block/timber/oak/lefthatch",
+    "particle": "westerosblocks:block/brick/orange/all1",
     "south": "westerosblocks:block/brick/orange/all1",
     "south_ov": "westerosblocks:block/timber/oak/lefthatch",
     "up": "westerosblocks:block/wood/oak/all",

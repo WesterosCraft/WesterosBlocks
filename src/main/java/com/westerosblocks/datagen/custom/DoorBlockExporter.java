@@ -101,7 +101,8 @@ public class DoorBlockExporter extends BaseBlockExporter {
                                               String bottomTexture, String variant, Model model) {
         TextureMap textureMap = new TextureMap()
                 .put(TextureKey.TOP, createBlockIdentifier(topTexture))
-                .put(TextureKey.BOTTOM, createBlockIdentifier(bottomTexture));
+                .put(TextureKey.BOTTOM, createBlockIdentifier(bottomTexture))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(bottomTexture));
 
         Identifier modelId = createNestedModelId(block, variant);
         model.upload(modelId, textureMap, generator.modelCollector);

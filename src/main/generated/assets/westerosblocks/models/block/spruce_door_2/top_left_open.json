@@ -2,6 +2,7 @@
   "parent": "minecraft:block/door_top_left_open",
   "textures": {
     "bottom": "westerosblocks:block/wood/spruce/door_alt_bottom",
+    "particle": "westerosblocks:block/wood/spruce/door_alt_bottom",
     "top": "westerosblocks:block/wood/spruce/door_alt_top"
   }
 }

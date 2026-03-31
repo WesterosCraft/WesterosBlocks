@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross",
   "textures": {
-    "cross": "westerosblocks:block/web_block/bug_dragonfly"
+    "cross": "westerosblocks:block/web_block/bug_dragonfly",
+    "particle": "westerosblocks:block/web_block/bug_dragonfly"
   }
 }

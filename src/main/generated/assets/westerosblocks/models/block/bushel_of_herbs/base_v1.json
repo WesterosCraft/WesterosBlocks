@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross",
   "textures": {
-    "cross": "westerosblocks:block/web_block/food_herbs"
+    "cross": "westerosblocks:block/web_block/food_herbs",
+    "particle": "westerosblocks:block/web_block/food_herbs"
   }
 }

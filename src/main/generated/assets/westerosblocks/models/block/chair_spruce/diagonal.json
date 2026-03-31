@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/chair/simple_chair_45",
   "textures": {
-    "all": "westerosblocks:block/bark/spruce/side"
+    "all": "westerosblocks:block/bark/spruce/side",
+    "particle": "westerosblocks:block/bark/spruce/side"
   }
 }

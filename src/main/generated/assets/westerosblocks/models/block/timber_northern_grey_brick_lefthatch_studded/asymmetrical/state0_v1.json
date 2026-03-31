@@ -7,6 +7,7 @@
     "east_ov": "westerosblocks:block/timber/northern/righthatch_studded",
     "north": "westerosblocks:block/fieldstone/grey/all",
     "north_ov": "westerosblocks:block/timber/northern/lefthatch_studded",
+    "particle": "westerosblocks:block/fieldstone/grey/all",
     "south": "westerosblocks:block/fieldstone/grey/all",
     "south_ov": "westerosblocks:block/timber/northern/lefthatch_studded",
     "up": "westerosblocks:block/wood/northern/all",

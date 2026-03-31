@@ -7,6 +7,7 @@
     "east_ov": "westerosblocks:block/ctm/vertical_overlay",
     "north": "westerosblocks:block/piled_bones/side",
     "north_ov": "westerosblocks:block/ctm/vertical_overlay",
+    "particle": "westerosblocks:block/piled_bones/side",
     "south": "westerosblocks:block/piled_bones/side",
     "south_ov": "westerosblocks:block/ctm/vertical_overlay",
     "up": "westerosblocks:block/piled_bones/side",

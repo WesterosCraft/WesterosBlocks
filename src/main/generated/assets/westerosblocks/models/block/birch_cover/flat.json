@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/rail_flat",
   "textures": {
+    "particle": "westerosblocks:block/wood/birch/all",
     "rail": "westerosblocks:block/wood/birch/all"
   }
 }

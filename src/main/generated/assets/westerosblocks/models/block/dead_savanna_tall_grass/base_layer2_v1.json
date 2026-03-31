@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross_layer2",
   "textures": {
-    "cross": "westerosblocks:block/dead_savanna_tall_grass/dead_savanna_tall_grass"
+    "cross": "westerosblocks:block/dead_savanna_tall_grass/dead_savanna_tall_grass",
+    "particle": "westerosblocks:block/dead_savanna_tall_grass/dead_savanna_tall_grass"
   }
 }

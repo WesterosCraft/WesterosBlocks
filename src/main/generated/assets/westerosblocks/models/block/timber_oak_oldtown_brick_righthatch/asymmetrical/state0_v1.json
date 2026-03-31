@@ -7,6 +7,7 @@
     "east_ov": "westerosblocks:block/timber/oak/lefthatch",
     "north": "westerosblocks:block/fieldstone/oldtown/all",
     "north_ov": "westerosblocks:block/timber/oak/righthatch",
+    "particle": "westerosblocks:block/fieldstone/oldtown/all",
     "south": "westerosblocks:block/fieldstone/oldtown/all",
     "south_ov": "westerosblocks:block/timber/oak/righthatch",
     "up": "westerosblocks:block/wood/oak/all",

@@ -7,6 +7,7 @@
     "east_ov": "westerosblocks:block/plaster_keystone/ashlar_quarter_rounded_dark_red/side",
     "north": "westerosblocks:block/plaster/smooth/brown_white/all",
     "north_ov": "westerosblocks:block/plaster_keystone/ashlar_quarter_rounded_dark_red/side",
+    "particle": "westerosblocks:block/ashlar_quarter_rounded/dark_red/all",
     "south": "westerosblocks:block/plaster/smooth/brown_white/all",
     "south_ov": "westerosblocks:block/plaster_keystone/ashlar_quarter_rounded_dark_red/side",
     "up": "westerosblocks:block/ashlar_quarter_rounded/dark_red/all",

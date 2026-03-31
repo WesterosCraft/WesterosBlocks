@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross_layer1",
   "textures": {
-    "cross": "westerosblocks:block/bracken/side4"
+    "cross": "westerosblocks:block/bracken/side4",
+    "particle": "westerosblocks:block/bracken/side4"
   }
 }

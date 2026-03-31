@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/template_rail_raised_ne",
   "textures": {
+    "particle": "westerosblocks:block/wood/oak_birch/all",
     "rail": "westerosblocks:block/wood/oak_birch/all"
   }
 }

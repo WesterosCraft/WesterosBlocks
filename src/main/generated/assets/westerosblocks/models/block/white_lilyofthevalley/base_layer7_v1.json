@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross_layer7",
   "textures": {
-    "cross": "westerosblocks:block/flowers/white_lily_valley1"
+    "cross": "westerosblocks:block/flowers/white_lily_valley1",
+    "particle": "westerosblocks:block/flowers/white_lily_valley1"
   }
 }

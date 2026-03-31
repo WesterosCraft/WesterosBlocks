@@ -42,7 +42,9 @@ public class HalfDoorBlockExporter extends BaseBlockExporter {
 
     private static TextureMap createHalfDoorTextureMap(String texturePath) {
 
-        return new TextureMap().put(TextureKey.BOTTOM, createBlockIdentifier(texturePath));
+        return new TextureMap()
+                .put(TextureKey.BOTTOM, createBlockIdentifier(texturePath))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(texturePath));
     }
 
     private static BlockStateVariantMap createHalfDoorVariants(Identifier leftModelId, Identifier rightModelId,
@@ -81,7 +83,7 @@ public class HalfDoorBlockExporter extends BaseBlockExporter {
         Model doorModel = new Model(
             Optional.of(WesterosBlocks.id(parentModelPath)),
             Optional.empty(),
-            TextureKey.BOTTOM
+            TextureKey.BOTTOM, TextureKey.PARTICLE
         );
         doorModel.upload(modelId, textureMap, generator.modelCollector);
 

@@ -2,6 +2,7 @@
   "parent": "westerosblocks:block/untinted/ctm_pane_noside",
   "textures": {
     "cap": "westerosblocks:block/vertical_net/vertical_net3",
+    "particle": "westerosblocks:block/vertical_net/vertical_net3",
     "side": "westerosblocks:block/vertical_net/vertical_net3"
   }
 }

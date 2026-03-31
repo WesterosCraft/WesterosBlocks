@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/tinted/cross_layer6",
   "textures": {
-    "cross": "westerosblocks:block/savanna_tall_grass/savanna_tall_grass"
+    "cross": "westerosblocks:block/savanna_tall_grass/savanna_tall_grass",
+    "particle": "westerosblocks:block/savanna_tall_grass/savanna_tall_grass"
   }
 }

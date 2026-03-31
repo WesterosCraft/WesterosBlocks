@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/crop",
   "textures": {
-    "crop": "westerosblocks:block/seagrass/side2"
+    "crop": "westerosblocks:block/seagrass/side2",
+    "particle": "westerosblocks:block/seagrass/side2"
   }
 }

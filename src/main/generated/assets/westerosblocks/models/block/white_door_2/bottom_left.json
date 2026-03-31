@@ -2,6 +2,7 @@
   "parent": "westerosblocks:block/untinted/door_bottom_left",
   "textures": {
     "bottom": "westerosblocks:block/wood/white/door_alt_bottom",
+    "particle": "westerosblocks:block/wood/white/door_alt_bottom",
     "top": "westerosblocks:block/wood/white/door_alt_top"
   }
 }

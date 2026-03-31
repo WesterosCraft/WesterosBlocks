@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/tinted/cross_layer2",
   "textures": {
-    "cross": "minecraft:block/fern/fern7"
+    "cross": "minecraft:block/fern/fern7",
+    "particle": "minecraft:block/fern/fern7"
   }
 }

@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross_layer7",
   "textures": {
-    "cross": "westerosblocks:block/cow_parsely/side1"
+    "cross": "westerosblocks:block/cow_parsely/side1",
+    "particle": "westerosblocks:block/cow_parsely/side1"
   }
 }

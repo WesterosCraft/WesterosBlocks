@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/tinted/cross",
   "textures": {
-    "cross": "westerosblocks:block/dorne_bush_thorny/side2"
+    "cross": "westerosblocks:block/dorne_bush_thorny/side2",
+    "particle": "westerosblocks:block/dorne_bush_thorny/side2"
   }
 }

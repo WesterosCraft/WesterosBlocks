@@ -7,6 +7,7 @@
     "east_ov": "westerosblocks:block/timber/red/righthatch_studded",
     "north": "westerosblocks:block/plaster/rough/white_daub/all1",
     "north_ov": "westerosblocks:block/timber/red/lefthatch_studded",
+    "particle": "westerosblocks:block/plaster/rough/white_daub/all1",
     "south": "westerosblocks:block/plaster/rough/white_daub/all1",
     "south_ov": "westerosblocks:block/timber/red/lefthatch_studded",
     "up": "westerosblocks:block/wood/red/all",

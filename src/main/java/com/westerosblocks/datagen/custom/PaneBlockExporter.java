@@ -36,7 +36,8 @@ public class PaneBlockExporter extends BaseBlockExporter {
 
             TextureMap paneTextureMap = new TextureMap()
                     .put(TextureKey.SIDE, createBlockIdentifier(sideTexture))
-                    .put(ModTextureKey.CAP, createBlockIdentifier(capTexture));
+                    .put(ModTextureKey.CAP, createBlockIdentifier(capTexture))
+                    .put(TextureKey.PARTICLE, createBlockIdentifier(sideTexture));
 
             // Upload models with _v1, _v2, etc. suffix
             String suffix = "_v" + (i + 1);

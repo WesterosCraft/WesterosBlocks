@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/crop",
   "textures": {
-    "crop": "westerosblocks:block/lighting/candle_altar/unlit2"
+    "crop": "westerosblocks:block/lighting/candle_altar/unlit2",
+    "particle": "westerosblocks:block/lighting/candle_altar/unlit2"
   }
 }

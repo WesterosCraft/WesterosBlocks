@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/tinted/cross_layer5",
   "textures": {
-    "cross": "minecraft:block/grass/grass7"
+    "cross": "minecraft:block/grass/grass7",
+    "particle": "minecraft:block/grass/grass7"
   }
 }

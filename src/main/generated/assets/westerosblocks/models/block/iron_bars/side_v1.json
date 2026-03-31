@@ -2,6 +2,7 @@
   "parent": "westerosblocks:block/untinted/bars_side",
   "textures": {
     "cap": "westerosblocks:block/transparent",
+    "particle": "westerosblocks:block/bars_iron_block/iron_bars",
     "side": "westerosblocks:block/bars_iron_block/iron_bars"
   }
 }

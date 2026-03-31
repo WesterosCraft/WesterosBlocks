@@ -65,7 +65,8 @@ public class FanBlockExporter extends BaseBlockExporter {
     private static Identifier createStandingFanModel(BlockStateModelGenerator generator, Block block, String texturePath) {
         // Create texture map for standing fan
         TextureMap textureMap = new TextureMap()
-            .put(ModTextureKey.FAN, createBlockIdentifier(texturePath));
+            .put(ModTextureKey.FAN, createBlockIdentifier(texturePath))
+            .put(TextureKey.PARTICLE, createBlockIdentifier(texturePath));
 
         // Create model identifier
         Identifier modelId = createModelId(block);
@@ -79,7 +80,8 @@ public class FanBlockExporter extends BaseBlockExporter {
     private static Identifier createWallFanModel(BlockStateModelGenerator generator, Block block, String texturePath) {
         // Create texture map for wall fan
         TextureMap textureMap = new TextureMap()
-            .put(ModTextureKey.FAN, createBlockIdentifier(texturePath));
+            .put(ModTextureKey.FAN, createBlockIdentifier(texturePath))
+            .put(TextureKey.PARTICLE, createBlockIdentifier(texturePath));
 
         // Create model identifier
         Identifier modelId = createModelId(block);

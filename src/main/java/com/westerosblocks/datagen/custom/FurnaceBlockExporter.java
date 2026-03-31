@@ -17,14 +17,15 @@ import java.util.Optional;
 public class FurnaceBlockExporter extends BaseBlockExporter {
 
     private static Model createFurnaceModel(boolean tinted) {
-        return createTintedModel(tinted, "orientable", TextureKey.TOP, TextureKey.FRONT, TextureKey.SIDE);
+        return createTintedModel(tinted, "orientable", TextureKey.TOP, TextureKey.FRONT, TextureKey.SIDE, TextureKey.PARTICLE);
     }
 
     private static TextureMap createFurnaceTextureMap(String top, String side, String front) {
         return new TextureMap()
                 .put(TextureKey.TOP, createBlockIdentifier(top))
                 .put(TextureKey.SIDE, createBlockIdentifier(side))
-                .put(TextureKey.FRONT, createBlockIdentifier(front));
+                .put(TextureKey.FRONT, createBlockIdentifier(front))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(side));
     }
 
     private static VariantsBlockStateSupplier createFurnaceBlockstate(Block block, Identifier litModelId,

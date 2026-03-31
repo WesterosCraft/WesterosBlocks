@@ -7,6 +7,7 @@
     "east_ov": "westerosblocks:block/timber/oak/bressummer",
     "north": "westerosblocks:block/fieldstone/westerlands/all",
     "north_ov": "westerosblocks:block/timber/oak/bressummer",
+    "particle": "westerosblocks:block/fieldstone/westerlands/all",
     "south": "westerosblocks:block/fieldstone/westerlands/all",
     "south_ov": "westerosblocks:block/timber/oak/bressummer",
     "up": "westerosblocks:block/wood/oak/all",

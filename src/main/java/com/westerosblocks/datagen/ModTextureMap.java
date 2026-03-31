@@ -49,7 +49,8 @@ public class ModTextureMap {
      */
     public static TextureMap cropTextures(String crop) {
         return new TextureMap()
-                .put(ModTextureKey.CROP, Identifier.of("westerosblocks", "block/" + crop));
+                .put(ModTextureKey.CROP, Identifier.of("westerosblocks", "block/" + crop))
+                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + crop));
     }
 
     /**

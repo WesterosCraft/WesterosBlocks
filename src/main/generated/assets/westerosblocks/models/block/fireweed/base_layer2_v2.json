@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross_layer2",
   "textures": {
-    "cross": "westerosblocks:block/fireweed/side2"
+    "cross": "westerosblocks:block/fireweed/side2",
+    "particle": "westerosblocks:block/fireweed/side2"
   }
 }

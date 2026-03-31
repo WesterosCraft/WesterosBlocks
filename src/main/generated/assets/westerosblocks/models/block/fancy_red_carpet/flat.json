@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/rail_flat",
   "textures": {
+    "particle": "westerosblocks:block/carpet/fancy_red_carpet",
     "rail": "westerosblocks:block/carpet/fancy_red_carpet"
   }
 }

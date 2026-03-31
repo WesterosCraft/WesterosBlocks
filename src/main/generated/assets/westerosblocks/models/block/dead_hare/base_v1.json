@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross",
   "textures": {
-    "cross": "westerosblocks:block/dead_hare/rabbit_dead1"
+    "cross": "westerosblocks:block/dead_hare/rabbit_dead1",
+    "particle": "westerosblocks:block/dead_hare/rabbit_dead1"
   }
 }

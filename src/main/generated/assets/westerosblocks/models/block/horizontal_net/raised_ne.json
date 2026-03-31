@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/template_rail_raised_ne",
   "textures": {
+    "particle": "westerosblocks:block/rail_block/net_large",
     "rail": "westerosblocks:block/rail_block/net_large"
   }
 }

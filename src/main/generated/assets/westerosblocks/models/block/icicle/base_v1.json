@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross",
   "textures": {
-    "cross": "westerosblocks:block/icicle/side"
+    "cross": "westerosblocks:block/icicle/side",
+    "particle": "westerosblocks:block/icicle/side"
   }
 }

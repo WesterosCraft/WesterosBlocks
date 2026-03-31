@@ -179,7 +179,8 @@ public class RailBlockExporter extends BaseBlockExporter {
 
     private static void generateRailModel(BlockStateModelGenerator generator, String blockName, String modelType, String texture, String variantSuffix) {
         TextureMap textureMap = new TextureMap()
-                .put(TextureKey.RAIL, createBlockIdentifier(texture));
+                .put(TextureKey.RAIL, createBlockIdentifier(texture))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(texture));
 
         Model model = switch(modelType) {
             case "flat" -> ModModels.RAIL_FLAT;

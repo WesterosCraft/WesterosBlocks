@@ -555,6 +555,7 @@
     "strength": 1,
     "soundGroup": "cloth",
     "nonOpaque": true,
+    "isCustomModel": true,
     "harvestLevel": [
       {
         "tool": "pickaxe",
@@ -613,7 +614,6 @@
       }
     ],
     "renderLayer": "cutout",
-    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0,
       "xMax": 1,

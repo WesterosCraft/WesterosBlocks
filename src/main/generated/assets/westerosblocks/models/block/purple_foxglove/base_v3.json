@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross",
   "textures": {
-    "cross": "westerosblocks:block/flowers/purple_foxglove3"
+    "cross": "westerosblocks:block/flowers/purple_foxglove3",
+    "particle": "westerosblocks:block/flowers/purple_foxglove3"
   }
 }

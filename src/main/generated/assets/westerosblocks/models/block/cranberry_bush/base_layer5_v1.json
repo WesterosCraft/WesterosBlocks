@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross_layer5",
   "textures": {
-    "cross": "westerosblocks:block/cranberry/base1"
+    "cross": "westerosblocks:block/cranberry/base1",
+    "particle": "westerosblocks:block/cranberry/base1"
   }
 }

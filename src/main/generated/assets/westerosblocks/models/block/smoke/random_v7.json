@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross",
   "textures": {
-    "cross": "westerosblocks:block/smoke/smoke7"
+    "cross": "westerosblocks:block/smoke/smoke7",
+    "particle": "westerosblocks:block/smoke/smoke7"
   }
 }

@@ -81,7 +81,9 @@ public class TorchBlockExporter extends BaseBlockExporter {
     }
 
     private static TextureMap createTorchTextureMap(String texturePath) {
-        return new TextureMap().put(TextureKey.TORCH, createBlockIdentifier(texturePath));
+        return new TextureMap()
+                .put(TextureKey.TORCH, createBlockIdentifier(texturePath))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(texturePath));
     }
 
     private static String getTextureFromDefinition(BlockDefinition definition) {

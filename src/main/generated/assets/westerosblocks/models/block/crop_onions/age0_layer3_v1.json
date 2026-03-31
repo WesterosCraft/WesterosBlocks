@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/crop_layer3",
   "textures": {
-    "crop": "westerosblocks:block/onions/onions_stage_0"
+    "crop": "westerosblocks:block/onions/onions_stage_0",
+    "particle": "westerosblocks:block/onions/onions_stage_0"
   }
 }

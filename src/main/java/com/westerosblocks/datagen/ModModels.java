@@ -17,7 +17,8 @@ public class ModModels {
             TextureKey.NORTH,
             TextureKey.SOUTH,
             TextureKey.EAST,
-            TextureKey.WEST);
+            TextureKey.WEST,
+            TextureKey.PARTICLE);
 
     // Custom slab models with all six face texture keys
     public static final Model SLAB_BOTTOM = ModModels.block("untinted/slab",
@@ -48,36 +49,36 @@ public class ModModels {
             ModTextureKey.SOUTH_OVERLAY, ModTextureKey.EAST_OVERLAY, ModTextureKey.WEST_OVERLAY, TextureKey.PARTICLE);
 
     // Door models - using custom untinted models
-    public static final Model DOOR_BOTTOM_LEFT = block("untinted/door_bottom_left", TextureKey.TOP, TextureKey.BOTTOM);
-    public static final Model DOOR_BOTTOM_RIGHT = block("untinted/door_bottom_right", TextureKey.TOP, TextureKey.BOTTOM);
-    public static final Model DOOR_BOTTOM_LEFT_OPEN = block("untinted/door_bottom_left_open", TextureKey.TOP, TextureKey.BOTTOM);
-    public static final Model DOOR_BOTTOM_RIGHT_OPEN = block("untinted/door_bottom_right_open", TextureKey.TOP, TextureKey.BOTTOM);
-    public static final Model DOOR_TOP_LEFT = vanillaBlock("door_top_left", TextureKey.TOP, TextureKey.BOTTOM);
-    public static final Model DOOR_TOP_RIGHT = vanillaBlock("door_top_right", TextureKey.TOP, TextureKey.BOTTOM);
-    public static final Model DOOR_TOP_LEFT_OPEN = vanillaBlock("door_top_left_open", TextureKey.TOP, TextureKey.BOTTOM);
-    public static final Model DOOR_TOP_RIGHT_OPEN = vanillaBlock("door_top_right_open", TextureKey.TOP, TextureKey.BOTTOM);
+    public static final Model DOOR_BOTTOM_LEFT = block("untinted/door_bottom_left", TextureKey.TOP, TextureKey.BOTTOM, TextureKey.PARTICLE);
+    public static final Model DOOR_BOTTOM_RIGHT = block("untinted/door_bottom_right", TextureKey.TOP, TextureKey.BOTTOM, TextureKey.PARTICLE);
+    public static final Model DOOR_BOTTOM_LEFT_OPEN = block("untinted/door_bottom_left_open", TextureKey.TOP, TextureKey.BOTTOM, TextureKey.PARTICLE);
+    public static final Model DOOR_BOTTOM_RIGHT_OPEN = block("untinted/door_bottom_right_open", TextureKey.TOP, TextureKey.BOTTOM, TextureKey.PARTICLE);
+    public static final Model DOOR_TOP_LEFT = vanillaBlock("door_top_left", TextureKey.TOP, TextureKey.BOTTOM, TextureKey.PARTICLE);
+    public static final Model DOOR_TOP_RIGHT = vanillaBlock("door_top_right", TextureKey.TOP, TextureKey.BOTTOM, TextureKey.PARTICLE);
+    public static final Model DOOR_TOP_LEFT_OPEN = vanillaBlock("door_top_left_open", TextureKey.TOP, TextureKey.BOTTOM, TextureKey.PARTICLE);
+    public static final Model DOOR_TOP_RIGHT_OPEN = vanillaBlock("door_top_right_open", TextureKey.TOP, TextureKey.BOTTOM, TextureKey.PARTICLE);
 
     // Half door (shutter) models
-    public static final Model HALF_DOOR_LEFT = block("untinted/half_door_left", TextureKey.TEXTURE);
-    public static final Model HALF_DOOR_RIGHT = block("untinted/half_door_right", TextureKey.TEXTURE);
-    public static final Model HALF_DOOR_LEFT_OPEN = block("untinted/half_door_left_open", TextureKey.TEXTURE);
-    public static final Model HALF_DOOR_RIGHT_OPEN = block("untinted/half_door_right_open", TextureKey.TEXTURE);
+    public static final Model HALF_DOOR_LEFT = block("untinted/half_door_left", TextureKey.TEXTURE, TextureKey.PARTICLE);
+    public static final Model HALF_DOOR_RIGHT = block("untinted/half_door_right", TextureKey.TEXTURE, TextureKey.PARTICLE);
+    public static final Model HALF_DOOR_LEFT_OPEN = block("untinted/half_door_left_open", TextureKey.TEXTURE, TextureKey.PARTICLE);
+    public static final Model HALF_DOOR_RIGHT_OPEN = block("untinted/half_door_right_open", TextureKey.TEXTURE, TextureKey.PARTICLE);
 
     // Pane models
-    public static final Model PANE_POST = block("untinted/ctm_pane_post", TextureKey.SIDE, ModTextureKey.CAP);
-    public static final Model PANE_SIDE = block("untinted/ctm_pane_side", TextureKey.SIDE, ModTextureKey.CAP);
-    public static final Model PANE_NOSIDE = block("untinted/ctm_pane_noside", TextureKey.SIDE, ModTextureKey.CAP);
+    public static final Model PANE_POST = block("untinted/ctm_pane_post", TextureKey.SIDE, ModTextureKey.CAP, TextureKey.PARTICLE);
+    public static final Model PANE_SIDE = block("untinted/ctm_pane_side", TextureKey.SIDE, ModTextureKey.CAP, TextureKey.PARTICLE);
+    public static final Model PANE_NOSIDE = block("untinted/ctm_pane_noside", TextureKey.SIDE, ModTextureKey.CAP, TextureKey.PARTICLE);
 
     // Torch models
-    public static final Model TORCH = block("untinted/template_torch", TextureKey.TORCH);
-    public static final Model TORCH_WALL = block("untinted/template_torch_wall", TextureKey.TORCH);
+    public static final Model TORCH = block("untinted/template_torch", TextureKey.TORCH, TextureKey.PARTICLE);
+    public static final Model TORCH_WALL = block("untinted/template_torch_wall", TextureKey.TORCH, TextureKey.PARTICLE);
 
     // Chair models
-    public static final Model CHAIR = block("chair/simple_chair", TextureKey.ALL);
-    public static final Model CHAIR_45 = block("chair/simple_chair_45", TextureKey.ALL);
+    public static final Model CHAIR = block("chair/simple_chair", TextureKey.ALL, TextureKey.PARTICLE);
+    public static final Model CHAIR_45 = block("chair/simple_chair_45", TextureKey.ALL, TextureKey.PARTICLE);
 
     // Branch models
-    public static final Model BRANCH_HORIZONTAL_CONNECTED = block("branches/large_branch_horizontal_connected", TextureKey.TEXTURE);
+    public static final Model BRANCH_HORIZONTAL_CONNECTED = block("branches/large_branch_horizontal_connected", TextureKey.TEXTURE, TextureKey.PARTICLE);
 
     // Log models (using vanilla parents — 2-texture END+SIDE)
     public static final Model LOG = vanillaBlock("cube_column", TextureKey.END, TextureKey.SIDE);
@@ -223,15 +224,15 @@ public class ModModels {
 
     // Solid cube models (tinted and overlay variants)
     public static final Model CUBE_TINTED = block("tinted/cube",
-            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST);
+            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST, TextureKey.PARTICLE);
     public static final Model CUBE_OVERLAY_UNTINTED = block("untinted/cube_overlay",
             TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST,
             ModTextureKey.DOWN_OVERLAY, ModTextureKey.UP_OVERLAY, ModTextureKey.NORTH_OVERLAY,
-            ModTextureKey.SOUTH_OVERLAY, ModTextureKey.EAST_OVERLAY, ModTextureKey.WEST_OVERLAY);
+            ModTextureKey.SOUTH_OVERLAY, ModTextureKey.EAST_OVERLAY, ModTextureKey.WEST_OVERLAY, TextureKey.PARTICLE);
     public static final Model CUBE_OVERLAY_TINTED = block("tinted/cube_overlay",
             TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST,
             ModTextureKey.DOWN_OVERLAY, ModTextureKey.UP_OVERLAY, ModTextureKey.NORTH_OVERLAY,
-            ModTextureKey.SOUTH_OVERLAY, ModTextureKey.EAST_OVERLAY, ModTextureKey.WEST_OVERLAY);
+            ModTextureKey.SOUTH_OVERLAY, ModTextureKey.EAST_OVERLAY, ModTextureKey.WEST_OVERLAY, TextureKey.PARTICLE);
 
     // Bed item models
     public static final Model BED_ITEM_UNTINTED = new Model(
@@ -254,33 +255,33 @@ public class ModModels {
             ModTextureKey.DIRT, ModTextureKey.FLOWERPOT, ModTextureKey.PLANT, TextureKey.PARTICLE);
 
     // Cross models (base only — layer variants are parameterized)
-    public static final Model CROSS_UNTINTED = block("untinted/cross", TextureKey.CROSS);
-    public static final Model CROSS_TINTED = block("tinted/cross", TextureKey.CROSS);
+    public static final Model CROSS_UNTINTED = block("untinted/cross", TextureKey.CROSS, TextureKey.PARTICLE);
+    public static final Model CROSS_TINTED = block("tinted/cross", TextureKey.CROSS, TextureKey.PARTICLE);
 
     // Vine models
-    public static final Model VINE_SIDE_UNTINTED = block("untinted/vine_1", ModTextureKey.VINES);
-    public static final Model VINE_SIDE_TINTED = block("tinted/vine_1", ModTextureKey.VINES);
-    public static final Model VINE_TOP_UNTINTED = block("untinted/vine_u", ModTextureKey.VINES);
-    public static final Model VINE_TOP_TINTED = block("tinted/vine_u", ModTextureKey.VINES);
+    public static final Model VINE_SIDE_UNTINTED = block("untinted/vine_1", ModTextureKey.VINES, TextureKey.PARTICLE);
+    public static final Model VINE_SIDE_TINTED = block("tinted/vine_1", ModTextureKey.VINES, TextureKey.PARTICLE);
+    public static final Model VINE_TOP_UNTINTED = block("untinted/vine_u", ModTextureKey.VINES, TextureKey.PARTICLE);
+    public static final Model VINE_TOP_TINTED = block("tinted/vine_u", ModTextureKey.VINES, TextureKey.PARTICLE);
 
     // Pane side model (bars variant — regular pane side already defined as PANE_SIDE)
-    public static final Model PANE_SIDE_BARS = block("untinted/bars_side", TextureKey.SIDE, ModTextureKey.CAP);
+    public static final Model PANE_SIDE_BARS = block("untinted/bars_side", TextureKey.SIDE, ModTextureKey.CAP, TextureKey.PARTICLE);
 
     // Rail models
-    public static final Model RAIL_FLAT = vanillaBlock("rail_flat", TextureKey.RAIL);
-    public static final Model RAIL_CURVED = vanillaBlock("rail_curved", TextureKey.RAIL);
-    public static final Model TEMPLATE_RAIL_RAISED_NE = vanillaBlock("template_rail_raised_ne", TextureKey.RAIL);
-    public static final Model TEMPLATE_RAIL_RAISED_SW = vanillaBlock("template_rail_raised_sw", TextureKey.RAIL);
+    public static final Model RAIL_FLAT = vanillaBlock("rail_flat", TextureKey.RAIL, TextureKey.PARTICLE);
+    public static final Model RAIL_CURVED = vanillaBlock("rail_curved", TextureKey.RAIL, TextureKey.PARTICLE);
+    public static final Model TEMPLATE_RAIL_RAISED_NE = vanillaBlock("template_rail_raised_ne", TextureKey.RAIL, TextureKey.PARTICLE);
+    public static final Model TEMPLATE_RAIL_RAISED_SW = vanillaBlock("template_rail_raised_sw", TextureKey.RAIL, TextureKey.PARTICLE);
 
     // Fan models
-    public static final Model FAN = block("untinted/fan", ModTextureKey.FAN);
-    public static final Model WALL_FAN = block("untinted/wall_fan", ModTextureKey.FAN);
+    public static final Model FAN = block("untinted/fan", ModTextureKey.FAN, TextureKey.PARTICLE);
+    public static final Model WALL_FAN = block("untinted/wall_fan", ModTextureKey.FAN, TextureKey.PARTICLE);
 
     // Flowerbed models (using vanilla parents)
-    public static final Model FLOWERBED_1 = vanillaBlock("flowerbed_1", TextureKey.FLOWERBED, TextureKey.STEM);
-    public static final Model FLOWERBED_2 = vanillaBlock("flowerbed_2", TextureKey.FLOWERBED, TextureKey.STEM);
-    public static final Model FLOWERBED_3 = vanillaBlock("flowerbed_3", TextureKey.FLOWERBED, TextureKey.STEM);
-    public static final Model FLOWERBED_4 = vanillaBlock("flowerbed_4", TextureKey.FLOWERBED, TextureKey.STEM);
+    public static final Model FLOWERBED_1 = vanillaBlock("flowerbed_1", TextureKey.FLOWERBED, TextureKey.STEM, TextureKey.PARTICLE);
+    public static final Model FLOWERBED_2 = vanillaBlock("flowerbed_2", TextureKey.FLOWERBED, TextureKey.STEM, TextureKey.PARTICLE);
+    public static final Model FLOWERBED_3 = vanillaBlock("flowerbed_3", TextureKey.FLOWERBED, TextureKey.STEM, TextureKey.PARTICLE);
+    public static final Model FLOWERBED_4 = vanillaBlock("flowerbed_4", TextureKey.FLOWERBED, TextureKey.STEM, TextureKey.PARTICLE);
 
     // Bunting models
     public static final Model BUNTING_WALL = block("buntings/bunting_wall", ModTextureKey.ZERO, TextureKey.PARTICLE);

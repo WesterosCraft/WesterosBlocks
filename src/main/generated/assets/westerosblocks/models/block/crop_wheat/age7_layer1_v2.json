@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/crop_layer1",
   "textures": {
-    "crop": "westerosblocks:block/wheat/stage7_2"
+    "crop": "westerosblocks:block/wheat/stage7_2",
+    "particle": "westerosblocks:block/wheat/stage7_2"
   }
 }

@@ -4,6 +4,7 @@
     "down": "westerosblocks:block/classic_grass_block/top3",
     "east": "westerosblocks:block/classic_grass_block/top3",
     "north": "westerosblocks:block/classic_grass_block/top3",
+    "particle": "westerosblocks:block/classic_grass_block/top3",
     "south": "westerosblocks:block/classic_grass_block/top3",
     "up": "westerosblocks:block/classic_grass_block/top3",
     "west": "westerosblocks:block/classic_grass_block/top3"

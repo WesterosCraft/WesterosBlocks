@@ -28,7 +28,9 @@ public class VinesBlockExporter extends BaseBlockExporter {
 
 
     private static TextureMap createVinesTextureMap(String texture) {
-        return new TextureMap().put(ModTextureKey.VINES, createBlockIdentifier(texture));
+        return new TextureMap()
+                .put(ModTextureKey.VINES, createBlockIdentifier(texture))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(texture));
     }
 
     private static MultipartBlockStateSupplier createVinesBlockstate(Block block, List<Identifier> sideModelIds,

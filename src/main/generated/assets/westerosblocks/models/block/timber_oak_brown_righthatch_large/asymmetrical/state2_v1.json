@@ -7,6 +7,7 @@
     "east_ov": "westerosblocks:block/timber/oak/lefthatch_large",
     "north": "westerosblocks:block/plaster/smooth/dark_mud/all",
     "north_ov": "westerosblocks:block/timber/oak/righthatch_large",
+    "particle": "westerosblocks:block/plaster/smooth/dark_mud/all",
     "south": "westerosblocks:block/plaster/smooth/dark_mud/all",
     "south_ov": "westerosblocks:block/timber/oak/righthatch_large",
     "up": "westerosblocks:block/wood/oak/all",

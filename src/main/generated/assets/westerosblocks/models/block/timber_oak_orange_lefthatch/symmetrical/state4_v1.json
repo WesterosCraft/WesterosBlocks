@@ -7,6 +7,7 @@
     "east_ov": "westerosblocks:block/timber/oak/lefthatch",
     "north": "westerosblocks:block/plaster/wattle/lannisport_orange/all",
     "north_ov": "westerosblocks:block/timber/oak/lefthatch",
+    "particle": "westerosblocks:block/plaster/wattle/lannisport_orange/all",
     "south": "westerosblocks:block/plaster/wattle/lannisport_orange/all",
     "south_ov": "westerosblocks:block/timber/oak/lefthatch",
     "up": "westerosblocks:block/wood/oak/all",

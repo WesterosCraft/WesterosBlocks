@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/template_rail_raised_ne",
   "textures": {
+    "particle": "westerosblocks:block/carpet/fancy_blue_carpet",
     "rail": "westerosblocks:block/carpet/fancy_blue_carpet"
   }
 }

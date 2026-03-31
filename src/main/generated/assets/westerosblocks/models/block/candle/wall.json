@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/template_torch_wall",
   "textures": {
+    "particle": "westerosblocks:block/lighting/candle",
     "torch": "westerosblocks:block/lighting/candle"
   }
 }

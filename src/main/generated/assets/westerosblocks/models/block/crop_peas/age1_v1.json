@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/crop",
   "textures": {
-    "crop": "westerosblocks:block/peas/peas_stage_1"
+    "crop": "westerosblocks:block/peas/peas_stage_1",
+    "particle": "westerosblocks:block/peas/peas_stage_1"
   }
 }

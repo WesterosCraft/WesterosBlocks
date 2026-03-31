@@ -46,7 +46,8 @@ public class ChairBlockExporter extends BaseBlockExporter {
         Identifier modelId = WesterosBlocks.id(modelPath);
 
         TextureMap textureMap = new TextureMap()
-                .put(TextureKey.ALL, createBlockIdentifier(texturePath));
+                .put(TextureKey.ALL, createBlockIdentifier(texturePath))
+                .put(TextureKey.PARTICLE, createBlockIdentifier(texturePath));
 
         model.upload(modelId, textureMap, generator.modelCollector);
 

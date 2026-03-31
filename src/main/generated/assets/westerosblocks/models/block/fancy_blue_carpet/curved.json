@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/rail_curved",
   "textures": {
+    "particle": "westerosblocks:block/carpet/fancy_blue_carpet",
     "rail": "westerosblocks:block/carpet/fancy_blue_carpet"
   }
 }

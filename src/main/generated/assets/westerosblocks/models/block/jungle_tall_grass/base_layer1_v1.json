@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/tinted/cross_layer1",
   "textures": {
-    "cross": "westerosblocks:block/jungle_tall_grass/down_side1"
+    "cross": "westerosblocks:block/jungle_tall_grass/down_side1",
+    "particle": "westerosblocks:block/jungle_tall_grass/down_side1"
   }
 }

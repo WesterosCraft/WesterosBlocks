@@ -7,6 +7,7 @@
     "east_ov": "westerosblocks:block/timber/oak/vertical",
     "north": "westerosblocks:block/ashlar_quarter_rounded/westerlands/all",
     "north_ov": "westerosblocks:block/timber/oak/vertical",
+    "particle": "westerosblocks:block/ashlar_quarter_rounded/westerlands/all",
     "south": "westerosblocks:block/ashlar_quarter_rounded/westerlands/all",
     "south_ov": "westerosblocks:block/timber/oak/vertical",
     "up": "westerosblocks:block/wood/oak/all",

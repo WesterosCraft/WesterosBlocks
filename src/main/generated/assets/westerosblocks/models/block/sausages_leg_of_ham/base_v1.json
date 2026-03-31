@@ -1,6 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/cross",
   "textures": {
-    "cross": "westerosblocks:block/sausages_leg_of_ham/default"
+    "cross": "westerosblocks:block/sausages_leg_of_ham/default",
+    "particle": "westerosblocks:block/sausages_leg_of_ham/default"
   }
 }

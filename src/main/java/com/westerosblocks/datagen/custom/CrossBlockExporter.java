@@ -209,12 +209,14 @@ public class CrossBlockExporter extends BaseBlockExporter {
                     // Generate model
                     Identifier modelId = createNestedModelId(block, getModelName(id, setIdx));
                     Identifier textureId = createBlockIdentifier(texturePath);
-                    TextureMap textureMap = new TextureMap().put(TextureKey.CROSS, textureId);
+                    TextureMap textureMap = new TextureMap()
+                            .put(TextureKey.CROSS, textureId)
+                            .put(TextureKey.PARTICLE, textureId);
 
                     Model model;
                     if (layerIdx > 0) {
                         String parentPath = isTinted ? "block/tinted/cross_layer" + layerIdx : "block/untinted/cross_layer" + layerIdx;
-                        model = new Model(Optional.of(WesterosBlocks.id(parentPath)), Optional.empty(), TextureKey.CROSS);
+                        model = new Model(Optional.of(WesterosBlocks.id(parentPath)), Optional.empty(), TextureKey.CROSS, TextureKey.PARTICLE);
                     } else {
                         model = isTinted ? ModModels.CROSS_TINTED : ModModels.CROSS_UNTINTED;
                     }

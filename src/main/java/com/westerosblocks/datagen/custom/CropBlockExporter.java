@@ -212,7 +212,7 @@ public class CropBlockExporter extends BaseBlockExporter {
         String layerSuffix = (layerSensitive && layer != 8) ? "_layer" + layer : "";
         String parentPath = "crop" + layerSuffix;
 
-        Model model = createTintedModel(tinted, parentPath, ModTextureKey.CROP);
+        Model model = createTintedModel(tinted, parentPath, ModTextureKey.CROP, TextureKey.PARTICLE);
         TextureMap textureMap = ModTextureMap.cropTextures(set.getTextureByIndex(0));
 
         model.upload(modelId, textureMap, generator.modelCollector);
