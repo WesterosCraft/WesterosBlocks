@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.11",
+	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
@@ -171,18 +171,21 @@
 		{
 			"name": "Red Seal",
 			"origin": [22.5, 9, 9.5],
+			"scope": 0,
 			"color": 0,
 			"children": [0, 1, 2]
 		},
 		{
 			"name": "Blue Seal",
 			"origin": [22.5, 9, 22],
+			"scope": 0,
 			"color": 0,
 			"children": [3, 4, 5]
 		},
 		{
 			"name": "No Seal",
 			"origin": [22.5, 9, 9.5],
+			"scope": 0,
 			"color": 0,
 			"children": [6, 7, 8]
 		}
