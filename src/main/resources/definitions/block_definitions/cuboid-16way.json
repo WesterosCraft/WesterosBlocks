@@ -113,6 +113,7 @@
       "helmet/north"
     ],
     "renderLayer": "cutout",
+    "isCustomModel": true,
     "boundingBox": {
       "xMin": 0.25,
       "xMax": 0.75,
