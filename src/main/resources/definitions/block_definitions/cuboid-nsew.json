@@ -544,7 +544,7 @@
       "xMin": 0,
       "xMax": 1,
       "yMin": 0,
-      "yMax": 0.125,
+      "yMax": 0.01,
       "zMin": 0,
       "zMax": 1
     }

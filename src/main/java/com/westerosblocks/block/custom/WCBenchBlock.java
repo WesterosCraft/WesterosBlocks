@@ -36,8 +36,8 @@ public class WCBenchBlock extends Block implements WCBlockDef {
 
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final EnumProperty<ConnectionType> CONNECTION = EnumProperty.of("connection", ConnectionType.class);
-    private static final VoxelShape BENCH_SHAPE_NS = Block.createCuboidShape(1, 0, 3, 15, 8, 13);
-    private static final VoxelShape BENCH_SHAPE_EW = Block.createCuboidShape(3, 0, 1, 13, 8, 15);
+    private static final VoxelShape BENCH_SHAPE_NS = Block.createCuboidShape(1, 6, 3, 15, 8, 13);
+    private static final VoxelShape BENCH_SHAPE_EW = Block.createCuboidShape(3, 6, 1, 13, 8, 15);
 
     private final Map<BlockState, VoxelShape> shapeByIndex;
 

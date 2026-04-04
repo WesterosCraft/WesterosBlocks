@@ -44,6 +44,14 @@
     "nonOpaque": true,
     "options": {
       "allowUnsupported": true
+    },
+    "boundingBox": {
+      "xMin": 0.0,
+      "xMax": 1.0,
+      "yMin": 0.0,
+      "yMax": 0.5,
+      "zMin": 0.0,
+      "zMax": 1.0
     }
   }
 ]
