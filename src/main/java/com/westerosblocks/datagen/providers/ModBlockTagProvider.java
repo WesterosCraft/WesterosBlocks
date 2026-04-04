@@ -1,13 +1,20 @@
 package com.westerosblocks.datagen.providers;
+import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
+import com.westerosblocks.data.BlockTagDefinition;
+import com.westerosblocks.data.BlockTagEntry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.Identifier;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 import com.westerosblocks.block.ModBlocks;
@@ -51,6 +58,20 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
         FabricTagProvider<Block>.FabricTagBuilder wallTagBuilder = getOrCreateTagBuilder(BlockTags.WALLS);
         FabricTagProvider<Block>.FabricTagBuilder coralTagBuilder = getOrCreateTagBuilder(BlockTags.CORALS);
         FabricTagProvider<Block>.FabricTagBuilder wallCoralTagBuilder = getOrCreateTagBuilder(BlockTags.WALL_CORALS);
+
+        // Initialize custom tag builders and seed with external block IDs from block_tags.json
+        Map<String, FabricTagProvider<Block>.FabricTagBuilder> customTagBuilders = new HashMap<>();
+        BlockTagDefinition blockTagDef = registry.getBlockTags();
+        if (blockTagDef != null) {
+            for (BlockTagEntry entry : blockTagDef.getBlockTags()) {
+                TagKey<Block> tagKey = TagKey.of(RegistryKeys.BLOCK, WesterosBlocks.id(entry.getCustomTag()));
+                FabricTagProvider<Block>.FabricTagBuilder builder = getOrCreateTagBuilder(tagKey);
+                for (String blockId : entry.getBlockNames()) {
+                    builder.addOptional(Identifier.of(blockId));
+                }
+                customTagBuilders.put(entry.getCustomTag(), builder);
+            }
+        }
 
         // Single loop through all definitions
         for (BlockDefinition definition : registry.getAllDefinitions()) {
@@ -167,6 +188,17 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
                 // Other block types don't need tags
                 default:
                     break;
+            }
+
+            // Add to custom tags declared in block definitions (e.g., polished-stone-ctm, wool-ctm)
+            List<String> customTags = definition.getCustomTags();
+            if (customTags != null) {
+                for (String tag : customTags) {
+                    FabricTagProvider<Block>.FabricTagBuilder builder = customTagBuilders.computeIfAbsent(
+                        tag, t -> getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, WesterosBlocks.id(t)))
+                    );
+                    builder.add(block);
+                }
             }
         }
     }

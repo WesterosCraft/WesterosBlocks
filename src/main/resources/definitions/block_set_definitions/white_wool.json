@@ -20,11 +20,11 @@
     ],
     "creativeTab": "westeros_cloth_fibers_tab",
     "customTags": [
-        "wool-ctm"
+        "wool_ctm"
     ],
     "altCustomTags": {
         "solid": [
-            "wool-block-ctm"
+            "wool_block_ctm"
         ]
     },
     "baseLabel": "White Wool",

@@ -1,0 +1,76 @@
+{
+  "values": [
+    {
+      "id": "minecraft:black_wool",
+      "required": false
+    },
+    {
+      "id": "minecraft:blue_wool",
+      "required": false
+    },
+    {
+      "id": "minecraft:brown_wool",
+      "required": false
+    },
+    {
+      "id": "minecraft:cyan_wool",
+      "required": false
+    },
+    {
+      "id": "minecraft:gray_wool",
+      "required": false
+    },
+    {
+      "id": "minecraft:green_wool",
+      "required": false
+    },
+    {
+      "id": "minecraft:light_blue_wool",
+      "required": false
+    },
+    {
+      "id": "minecraft:light_gray_wool",
+      "required": false
+    },
+    {
+      "id": "minecraft:orange_wool",
+      "required": false
+    },
+    {
+      "id": "minecraft:pink_wool",
+      "required": false
+    },
+    {
+      "id": "minecraft:purple_wool",
+      "required": false
+    },
+    {
+      "id": "minecraft:red_wool",
+      "required": false
+    },
+    {
+      "id": "minecraft:white_wool",
+      "required": false
+    },
+    {
+      "id": "minecraft:yellow_wool",
+      "required": false
+    },
+    "westerosblocks:yellow_wool",
+    "westerosblocks:blue_wool",
+    "westerosblocks:orange_wool",
+    "westerosblocks:pink_wool",
+    "westerosblocks:red_wool",
+    "westerosblocks:black_wool",
+    "westerosblocks:purple_wool",
+    "westerosblocks:white_wool",
+    "westerosblocks:light_grey_wool",
+    "westerosblocks:dirty_white_wool",
+    "westerosblocks:green_wool",
+    "westerosblocks:light_brown_wool",
+    "westerosblocks:grey_wool",
+    "westerosblocks:light_blue_wool",
+    "westerosblocks:cyan_wool",
+    "westerosblocks:brown_wool"
+  ]
+}

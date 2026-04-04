@@ -17,7 +17,7 @@
     ],
     "creativeTab": "westeros_polished_stone_tab",
     "customTags": [
-        "polished-stone-ctm"
+        "polished_stone_ctm"
     ],
     "options": {
         "solid,slab": {"connectstate": true},

@@ -11,6 +11,7 @@ public class BlockDefinitionRegistry {
     private final Map<String, List<BlockDefinition>> definitionsByType;
     private List<BlockSetDefinition> blockSetDefinitions = new ArrayList<>();
     private ColorMapDefinition colorMaps;
+    private BlockTagDefinition blockTags;
     private boolean initialized = false;
 
     private BlockDefinitionRegistry() {
@@ -81,6 +82,10 @@ public class BlockDefinitionRegistry {
             colorMapLoader.validateDefinition(this.colorMaps);
         }
 
+        // Load block tag seed lists
+        BlockTagLoader blockTagLoader = new BlockTagLoader("definitions/block_tags.json");
+        this.blockTags = blockTagLoader.loadDefinition();
+
         initialized = true;
         WesterosBlocks.LOGGER.info("BlockDefinitionRegistry initialized with {} total definitions.",
             definitions.size());
@@ -116,6 +121,13 @@ public class BlockDefinitionRegistry {
             throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
         }
         return colorMaps;
+    }
+
+    public BlockTagDefinition getBlockTags() {
+        if (!initialized) {
+            throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
+        }
+        return blockTags;
     }
 
     public List<BlockSetDefinition> getBlockSetDefinitions() {
