@@ -84,14 +84,6 @@
     },
     {
       "blockNames": [
-        "minecraft:water",
-        "minecraft:bubble_column",
-        "minecraft:water_cauldron"
-      ],
-      "colorMult": "textures/colormap/water"
-    },
-    {
-      "blockNames": [
         "minecraft:lily_pad"
       ],
       "colorMult": "#FFFFFF"
