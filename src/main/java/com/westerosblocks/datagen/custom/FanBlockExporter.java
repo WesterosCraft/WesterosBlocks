@@ -7,7 +7,7 @@ import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
@@ -31,13 +31,13 @@ public class FanBlockExporter extends BaseBlockExporter {
         Identifier standingModelId = createStandingFanModel(generator, block, texturePath);
 
 
-        BlockStateVariantMap variants = BlockStateVariantMap.create(WCFanBlock.WATERLOGGED)
+        BlockStateVariantMap<WeightedVariant> variants = BlockStateVariantMap.models(WCFanBlock.WATERLOGGED)
             .register(false, createVariant(standingModelId))
             .register(true, createVariant(standingModelId));
 
 
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block).coordinate(variants)
+            VariantsBlockModelDefinitionCreator.of(block).with(variants)
         );
     }
 
@@ -46,7 +46,7 @@ public class FanBlockExporter extends BaseBlockExporter {
         Identifier wallModelId = createWallFanModel(generator, block, texturePath);
 
         // Create variants for each facing direction and waterlogged state
-        BlockStateVariantMap variants = BlockStateVariantMap.create(WCWallFanBlock.FACING, WCWallFanBlock.WATERLOGGED)
+        BlockStateVariantMap<WeightedVariant> variants = BlockStateVariantMap.models(WCWallFanBlock.FACING, WCWallFanBlock.WATERLOGGED)
             .register(Direction.NORTH, false, createVariant(wallModelId))
             .register(Direction.NORTH, true, createVariant(wallModelId))
             .register(Direction.EAST, false, createVariant(wallModelId, 90))
@@ -58,7 +58,7 @@ public class FanBlockExporter extends BaseBlockExporter {
 
         // Register the block state
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block).coordinate(variants)
+            VariantsBlockModelDefinitionCreator.of(block).with(variants)
         );
     }
 

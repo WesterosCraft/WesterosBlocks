@@ -4,7 +4,10 @@ import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
 import net.minecraft.block.TrapdoorBlock;
 import net.minecraft.block.enums.BlockHalf;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 
@@ -48,9 +51,9 @@ public class TrapDoorBlockExporter extends BaseBlockExporter {
     /**
      * Creates trapdoor blockstate with all variants (open/closed, top/bottom, facing).
      */
-    private static BlockStateSupplier createTrapdoorBlockState(Block block, Identifier bottomModel, Identifier topModel, Identifier openModel) {
-        return VariantsBlockStateSupplier.create(block)
-            .coordinate(BlockStateVariantMap.create(TrapdoorBlock.FACING, TrapdoorBlock.HALF, TrapdoorBlock.OPEN)
+    private static BlockModelDefinitionCreator createTrapdoorBlockState(Block block, Identifier bottomModel, Identifier topModel, Identifier openModel) {
+        return VariantsBlockModelDefinitionCreator.of(block)
+            .apply(BlockStateVariantMap.models(TrapdoorBlock.FACING, TrapdoorBlock.HALF, TrapdoorBlock.OPEN)
                 // Bottom variants
                 .register(Direction.NORTH, BlockHalf.BOTTOM, false, createVariant(bottomModel))
                 .register(Direction.SOUTH, BlockHalf.BOTTOM, false, createVariant(bottomModel, 180))
@@ -76,11 +79,10 @@ public class TrapDoorBlockExporter extends BaseBlockExporter {
     /**
      * Helper to create a variant with x and y rotations.
      */
-    private static BlockStateVariant createVariant(Identifier modelId, int xRotation, int yRotation) {
-        return BlockStateVariant.create()
-            .put(VariantSettings.MODEL, modelId)
-            .put(VariantSettings.X, toYRotation(xRotation))
-            .put(VariantSettings.Y, toYRotation(yRotation));
+    private static WeightedVariant createVariant(Identifier modelId, int xRotation, int yRotation) {
+        return BlockStateModelGenerator.createWeightedVariant(modelId)
+            .put(ModelVariantOperator.ROTATION_X, toYRotation(xRotation))
+            .put(ModelVariantOperator.ROTATION_Y, toYRotation(yRotation));
     }
 
     public static void registerCustomTrapDoorBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {

@@ -53,7 +53,7 @@ public class WCFurnaceBlock extends FurnaceBlock implements WCBlockDef {
             double d2 = (double) pos.getZ() + 0.5D;
 
             if (random.nextDouble() < 0.1D) {
-                world.playSound(d0, d1, d2, SoundEvents.BLOCK_FURNACE_FIRE_CRACKLE,
+                world.playSoundClient(d0, d1, d2, SoundEvents.BLOCK_FURNACE_FIRE_CRACKLE,
                         SoundCategory.BLOCKS, 1.0F, 1.0F, false);
             }
 
@@ -64,8 +64,8 @@ public class WCFurnaceBlock extends FurnaceBlock implements WCBlockDef {
             double d6 = random.nextDouble() * 6.0D / 16.0D;
             double d7 = axis == Direction.Axis.Z ? (double) direction.getOffsetZ() * 0.52D : d4;
 
-            world.addParticle(ParticleTypes.SMOKE, d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
-            world.addParticle(ParticleTypes.FLAME, d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
+            world.addParticleClient(ParticleTypes.SMOKE, d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
+            world.addParticleClient(ParticleTypes.FLAME, d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
         }
     }
 

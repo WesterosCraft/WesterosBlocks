@@ -5,13 +5,12 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import com.westerosblocks.WesterosBlocks;
 
 import java.util.function.BiConsumer;
-import java.util.function.Supplier;
 
 public class ParticleEmitterExporter extends BaseBlockExporter {
 
@@ -22,7 +21,8 @@ public class ParticleEmitterExporter extends BaseBlockExporter {
         Identifier textureId = WesterosBlocks.id("block/particle_emitter/on");
         uploadParticleEmitterModel(modelId, textureId, 6, 0, 6, 10, 4, 10, generator.modelCollector);
 
-        generator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(block, modelId));
+        generator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(block,
+                BlockStateModelGenerator.createWeightedVariant(modelId)));
 
         if (definition.hasCustomItemTexture()) {
             String blockName = getBlockName(block);
@@ -39,7 +39,7 @@ public class ParticleEmitterExporter extends BaseBlockExporter {
     private static void uploadParticleEmitterModel(Identifier modelId, Identifier textureId,
                                                    double fromX, double fromY, double fromZ,
                                                    double toX, double toY, double toZ,
-                                                   BiConsumer<Identifier, Supplier<JsonElement>> modelCollector) {
+                                                   BiConsumer<Identifier, ModelSupplier> modelCollector) {
         JsonObject modelJson = new JsonObject();
 
         // Add textures

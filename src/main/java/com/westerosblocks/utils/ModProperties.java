@@ -7,7 +7,10 @@ import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Property;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 public class ModProperties {
     public static final StateProperty STATE = new StateProperty(List.of("default"));
@@ -41,13 +44,22 @@ public class ModProperties {
         }
 
         @Override
-        public Collection<String> getValues() {
+        public List<String> getValues() {
             return this.values;
         }
 
         @Override
         public String name(String value) {
             return value;
+        }
+
+        @Override
+        public int ordinal(String value) {
+            int index = this.values.indexOf(value);
+            if (index == -1) {
+                throw new IllegalArgumentException("Unknown value: " + value);
+            }
+            return index;
         }
 
         @Override

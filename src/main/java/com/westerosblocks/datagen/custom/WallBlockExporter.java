@@ -4,7 +4,11 @@ import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.enums.WallShape;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
+import net.minecraft.client.render.model.json.MultipartModelConditionBuilder;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.block.Block;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
@@ -45,10 +49,10 @@ public class WallBlockExporter extends BaseBlockExporter {
     /**
      * Creates multipart blockstate supplier for wall blocks without states.
      */
-    private static MultipartBlockStateSupplier createWallVariants(Block block, List<Identifier> postModelIds,
+    private static MultipartBlockModelDefinitionCreator createWallVariants(Block block, List<Identifier> postModelIds,
                                                                     List<Identifier> sideModelIds, List<Identifier> tallModelIds,
                                                                     List<Integer> weights) {
-        MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
+        MultipartBlockModelDefinitionCreator supplier = MultipartBlockModelDefinitionCreator.create(block);
         addWallEntries(supplier, postModelIds, sideModelIds, tallModelIds, weights, null, null);
         return supplier;
     }
@@ -56,9 +60,9 @@ public class WallBlockExporter extends BaseBlockExporter {
     /**
      * Creates multipart blockstate supplier for wall blocks with state property.
      */
-    private static MultipartBlockStateSupplier createWallVariantsWithStates(Block block,
+    private static MultipartBlockModelDefinitionCreator createWallVariantsWithStates(Block block,
             Map<String, WallModelSet> stateModels, ModProperties.StateProperty stateProperty) {
-        MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
+        MultipartBlockModelDefinitionCreator supplier = MultipartBlockModelDefinitionCreator.create(block);
 
         for (Map.Entry<String, WallModelSet> entry : stateModels.entrySet()) {
             String stateId = entry.getKey();
@@ -74,7 +78,7 @@ public class WallBlockExporter extends BaseBlockExporter {
      * Adds wall post and side entries to the multipart supplier.
      * If stateProperty and stateId are non-null, adds state condition to when clauses.
      */
-    private static void addWallEntries(MultipartBlockStateSupplier supplier, List<Identifier> postModelIds,
+    private static void addWallEntries(MultipartBlockModelDefinitionCreator supplier, List<Identifier> postModelIds,
             List<Identifier> sideModelIds, List<Identifier> tallModelIds, List<Integer> weights,
             ModProperties.StateProperty stateProperty, String stateId) {
         for (int i = 0; i < postModelIds.size(); i++) {
@@ -94,16 +98,14 @@ public class WallBlockExporter extends BaseBlockExporter {
     /**
      * Adds a single post variant, optionally with state condition.
      */
-    private static void addPostVariant(MultipartBlockStateSupplier supplier, Identifier postModelId, int weight,
+    private static void addPostVariant(MultipartBlockModelDefinitionCreator supplier, Identifier postModelId, int weight,
                                        ModProperties.StateProperty stateProperty, String stateId) {
-        BlockStateVariant postVariant = BlockStateVariant.create()
-                .put(VariantSettings.MODEL, postModelId);
+        WeightedVariant postVariant = BlockStateModelGenerator.createWeightedVariant(postModelId);
 
         if (weight > 1) {
-            postVariant = postVariant.put(VariantSettings.WEIGHT, weight);
         }
 
-        When.PropertyCondition condition = When.create().set(Properties.UP, true);
+        MultipartModelConditionBuilder condition = new MultipartModelConditionBuilder().put(Properties.UP, true);
         if (stateProperty != null && stateId != null) {
             condition.set(stateProperty, stateId);
         }
@@ -115,12 +117,11 @@ public class WallBlockExporter extends BaseBlockExporter {
      * Adds a single side variant for a specific direction and shape (low or tall),
      * optionally with state condition.
      */
-    private static void addSideVariant(MultipartBlockStateSupplier supplier, Identifier sideModelId,
+    private static void addSideVariant(MultipartBlockModelDefinitionCreator supplier, Identifier sideModelId,
                                        int weight, String direction, WallShape shape,
                                        ModProperties.StateProperty stateProperty, String stateId) {
-        BlockStateVariant sideVariant = BlockStateVariant.create()
-                .put(VariantSettings.MODEL, sideModelId)
-                .put(VariantSettings.UVLOCK, true);
+        WeightedVariant sideVariant = BlockStateModelGenerator.createWeightedVariant(sideModelId)
+                .withUVLock(true);
 
         int yRotation = switch (direction) {
             case "east" -> 90;
@@ -129,18 +130,17 @@ public class WallBlockExporter extends BaseBlockExporter {
             default -> 0;
         };
         if (yRotation != 0) {
-            sideVariant = sideVariant.put(VariantSettings.Y, toYRotation(yRotation));
+            sideVariant = sideVariant.put(ModelVariantOperator.ROTATION_Y, toYRotation(yRotation));
         }
 
         if (weight > 1) {
-            sideVariant = sideVariant.put(VariantSettings.WEIGHT, weight);
         }
 
-        When.PropertyCondition condition = switch (direction) {
-            case "north" -> When.create().set(Properties.NORTH_WALL_SHAPE, shape);
-            case "east" -> When.create().set(Properties.EAST_WALL_SHAPE, shape);
-            case "south" -> When.create().set(Properties.SOUTH_WALL_SHAPE, shape);
-            case "west" -> When.create().set(Properties.WEST_WALL_SHAPE, shape);
+        MultipartModelConditionBuilder condition = switch (direction) {
+            case "north" -> new MultipartModelConditionBuilder().put(Properties.NORTH_WALL_SHAPE, shape);
+            case "east" -> new MultipartModelConditionBuilder().put(Properties.EAST_WALL_SHAPE, shape);
+            case "south" -> new MultipartModelConditionBuilder().put(Properties.SOUTH_WALL_SHAPE, shape);
+            case "west" -> new MultipartModelConditionBuilder().put(Properties.WEST_WALL_SHAPE, shape);
             default -> throw new IllegalArgumentException("Unknown direction: " + direction);
         };
 
@@ -244,7 +244,7 @@ public class WallBlockExporter extends BaseBlockExporter {
             }
 
             if (!stateModels.isEmpty()) {
-                MultipartBlockStateSupplier blockstate = createWallVariantsWithStates(block, stateModels, stateProperty);
+                MultipartBlockModelDefinitionCreator blockstate = createWallVariantsWithStates(block, stateModels, stateProperty);
                 generator.blockStateCollector.accept(blockstate);
 
                 // Item model from first state's side texture
@@ -287,7 +287,7 @@ public class WallBlockExporter extends BaseBlockExporter {
         Identifier tallModelId = getWallSideTallModel(tinted, overlay)
                 .upload(createNestedModelId(block, "side_tall"), textureMap, generator.modelCollector);
 
-        MultipartBlockStateSupplier blockstate = createWallVariants(block,
+        MultipartBlockModelDefinitionCreator blockstate = createWallVariants(block,
                 List.of(postModelId), List.of(sideModelId), List.of(tallModelId), List.of(1));
         generator.blockStateCollector.accept(blockstate);
 
@@ -324,7 +324,7 @@ public class WallBlockExporter extends BaseBlockExporter {
             weights.add(set.weight);
         }
 
-        MultipartBlockStateSupplier blockstate = createWallVariants(block, postModelIds, sideModelIds, tallModelIds, weights);
+        MultipartBlockModelDefinitionCreator blockstate = createWallVariants(block, postModelIds, sideModelIds, tallModelIds, weights);
         generator.blockStateCollector.accept(blockstate);
 
         BlockDefinition.TextureVariantSet firstSet = textureSets.get(0);

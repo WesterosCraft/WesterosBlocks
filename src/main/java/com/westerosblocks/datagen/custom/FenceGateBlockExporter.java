@@ -1,7 +1,9 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.data.BlockDefinition;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.block.Block;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
@@ -46,7 +48,7 @@ public class FenceGateBlockExporter extends BaseBlockExporter {
      */
     private static BlockStateVariantMap createFenceGateVariants(Identifier gateModelId, Identifier gateOpenModelId,
                                                                 Identifier gateWallModelId, Identifier gateWallOpenModelId) {
-        return BlockStateVariantMap.create(Properties.HORIZONTAL_FACING, Properties.OPEN, Properties.IN_WALL)
+        return BlockStateVariantMap.models(Properties.HORIZONTAL_FACING, Properties.OPEN, Properties.IN_WALL)
                 // EAST facing
                 .register(Direction.EAST, false, false, createVariant(gateModelId, 270))
                 .register(Direction.EAST, false, true, createVariant(gateWallModelId, 270))
@@ -87,7 +89,7 @@ public class FenceGateBlockExporter extends BaseBlockExporter {
 
         // Create blockstate
         BlockStateVariantMap variants = createFenceGateVariants(gateModelId, gateOpenModelId, gateWallModelId, gateWallOpenModelId);
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block).with(variants));
 
         // Register item model
         Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
@@ -133,12 +135,12 @@ public class FenceGateBlockExporter extends BaseBlockExporter {
     /**
      * Creates blockstate supplier with weighted random texture variants.
      */
-    private static VariantsBlockStateSupplier createFenceGateBlockstateWithRandomTextures(Block block,
+    private static VariantsBlockModelDefinitionCreator createFenceGateBlockstateWithRandomTextures(Block block,
             List<Identifier> gateIds, List<Identifier> gateOpenIds, List<Identifier> gateWallIds,
             List<Identifier> gateWallOpenIds, List<Integer> weights) {
 
-        return VariantsBlockStateSupplier.create(block).coordinate(
-                BlockStateVariantMap.create(Properties.HORIZONTAL_FACING, Properties.OPEN, Properties.IN_WALL)
+        return VariantsBlockModelDefinitionCreator.of(block).with(
+                BlockStateVariantMap.models(Properties.HORIZONTAL_FACING, Properties.OPEN, Properties.IN_WALL)
                         // EAST facing
                         .register(Direction.EAST, false, false, createWeightedVariants(gateIds, weights, 270))
                         .register(Direction.EAST, false, true, createWeightedVariants(gateWallIds, weights, 270))

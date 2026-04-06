@@ -32,7 +32,7 @@ public class RopeItem extends Item {
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
         World world = context.getWorld();
-        if (world.isClient) {
+        if (world.isClient()) {
             return ActionResult.PASS;
         }
         ItemStack stack = context.getStack();

@@ -1,7 +1,11 @@
 package com.westerosblocks.datagen.custom;
 
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
+import net.minecraft.client.render.model.json.MultipartModelConditionBuilder;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
@@ -58,7 +62,7 @@ public class PaneBlockExporter extends BaseBlockExporter {
         }
 
         // Create multipart blockstate
-        MultipartBlockStateSupplier supplier = createPaneBlockState(block, paneBlock,
+        MultipartBlockModelDefinitionCreator supplier = createPaneBlockState(block, paneBlock,
                 postModelIds, sideModelIds, nosideModelIds, weights);
         generator.blockStateCollector.accept(supplier);
 
@@ -67,11 +71,11 @@ public class PaneBlockExporter extends BaseBlockExporter {
         registerSimpleItemModel(generator, block, createBlockIdentifier(firstTextures[0]));
     }
 
-    private static MultipartBlockStateSupplier createPaneBlockState(Block block, WCPaneBlock paneBlock,
+    private static MultipartBlockModelDefinitionCreator createPaneBlockState(Block block, WCPaneBlock paneBlock,
             List<Identifier> postModelIds, List<Identifier> sideModelIds,
             List<Identifier> nosideModelIds, List<Integer> weights) {
 
-        MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
+        MultipartBlockModelDefinitionCreator supplier = MultipartBlockModelDefinitionCreator.create(block);
         boolean isBars = paneBlock.isBarsModel();
 
         // Add all variants (for random textures)
@@ -80,11 +84,7 @@ public class PaneBlockExporter extends BaseBlockExporter {
 
             // Post model (always present for non-bars models)
             if (!isBars) {
-                BlockStateVariant postVariant = BlockStateVariant.create()
-                        .put(VariantSettings.MODEL, postModelIds.get(i));
-                if (weight > 1) {
-                    postVariant = postVariant.put(VariantSettings.WEIGHT, weight);
-                }
+                WeightedVariant postVariant = BlockStateModelGenerator.createWeightedVariant(postModelIds.get(i));
                 supplier = supplier.with(postVariant);
             }
 
@@ -110,78 +110,69 @@ public class PaneBlockExporter extends BaseBlockExporter {
      * Adds a pane side variant for a specific direction.
      * For bars models, uses OR logic: direction=true OR all_directions=false
      */
-    private static void addPaneSideVariant(MultipartBlockStateSupplier supplier, Identifier sideModelId,
+    private static void addPaneSideVariant(MultipartBlockModelDefinitionCreator supplier, Identifier sideModelId,
                                            int weight, Direction direction, boolean isBars) {
-        BlockStateVariant sideVariant = BlockStateVariant.create()
-                .put(VariantSettings.MODEL, sideModelId)
-                .put(VariantSettings.UVLOCK, true);
+        ModelVariant mv = new ModelVariant(sideModelId).withUVLock(true);
 
         int yRotation = getRotationForDirection(direction);
         if (yRotation != 0) {
-            sideVariant = sideVariant.put(VariantSettings.Y, toYRotation(yRotation));
+            mv = mv.withRotationY(toYRotation(yRotation));
         }
 
-        if (weight > 1) {
-            sideVariant = sideVariant.put(VariantSettings.WEIGHT, weight);
-        }
+        WeightedVariant sideVariant = BlockStateModelGenerator.createWeightedVariant(mv);
 
         // Create condition
-        When condition;
         if (isBars) {
             // For bars: direction=true OR all_directions=false
-            When directionTrue = switch (direction) {
-                case NORTH -> When.create().set(Properties.NORTH, true);
-                case EAST -> When.create().set(Properties.EAST, true);
-                case SOUTH -> When.create().set(Properties.SOUTH, true);
-                case WEST -> When.create().set(Properties.WEST, true);
+            MultipartModelConditionBuilder directionTrue = switch (direction) {
+                case NORTH -> new MultipartModelConditionBuilder().put(Properties.NORTH, true);
+                case EAST -> new MultipartModelConditionBuilder().put(Properties.EAST, true);
+                case SOUTH -> new MultipartModelConditionBuilder().put(Properties.SOUTH, true);
+                case WEST -> new MultipartModelConditionBuilder().put(Properties.WEST, true);
                 default -> throw new IllegalArgumentException("Invalid direction: " + direction);
             };
 
-            When allFalse = When.create()
-                    .set(Properties.NORTH, false)
-                    .set(Properties.EAST, false)
-                    .set(Properties.SOUTH, false)
-                    .set(Properties.WEST, false);
+            MultipartModelConditionBuilder allFalse = new MultipartModelConditionBuilder()
+                    .put(Properties.NORTH, false)
+                    .put(Properties.EAST, false)
+                    .put(Properties.SOUTH, false)
+                    .put(Properties.WEST, false);
 
-            condition = When.anyOf(directionTrue, allFalse);
+            supplier.with(BlockStateModelGenerator.or(directionTrue, allFalse), sideVariant);
         } else {
             // For regular panes: just direction=true
-            condition = switch (direction) {
-                case NORTH -> When.create().set(Properties.NORTH, true);
-                case EAST -> When.create().set(Properties.EAST, true);
-                case SOUTH -> When.create().set(Properties.SOUTH, true);
-                case WEST -> When.create().set(Properties.WEST, true);
+            MultipartModelConditionBuilder condition = switch (direction) {
+                case NORTH -> new MultipartModelConditionBuilder().put(Properties.NORTH, true);
+                case EAST -> new MultipartModelConditionBuilder().put(Properties.EAST, true);
+                case SOUTH -> new MultipartModelConditionBuilder().put(Properties.SOUTH, true);
+                case WEST -> new MultipartModelConditionBuilder().put(Properties.WEST, true);
                 default -> throw new IllegalArgumentException("Invalid direction: " + direction);
             };
-        }
 
-        supplier.with(condition, sideVariant);
+            supplier.with(condition, sideVariant);
+        }
     }
 
     /**
      * Adds a pane noside variant for a specific direction (non-bars models only).
      */
-    private static void addPaneNosideVariant(MultipartBlockStateSupplier supplier, Identifier nosideModelId,
+    private static void addPaneNosideVariant(MultipartBlockModelDefinitionCreator supplier, Identifier nosideModelId,
                                              int weight, Direction direction) {
-        BlockStateVariant nosideVariant = BlockStateVariant.create()
-                .put(VariantSettings.MODEL, nosideModelId)
-                .put(VariantSettings.UVLOCK, true);
+        ModelVariant mv = new ModelVariant(nosideModelId).withUVLock(true);
 
         int yRotation = getRotationForDirection(direction);
         if (yRotation != 0) {
-            nosideVariant = nosideVariant.put(VariantSettings.Y, toYRotation(yRotation));
+            mv = mv.withRotationY(toYRotation(yRotation));
         }
 
-        if (weight > 1) {
-            nosideVariant = nosideVariant.put(VariantSettings.WEIGHT, weight);
-        }
+        WeightedVariant nosideVariant = BlockStateModelGenerator.createWeightedVariant(mv);
 
         // Condition: direction=false
-        When condition = switch (direction) {
-            case NORTH -> When.create().set(Properties.NORTH, false);
-            case EAST -> When.create().set(Properties.EAST, false);
-            case SOUTH -> When.create().set(Properties.SOUTH, false);
-            case WEST -> When.create().set(Properties.WEST, false);
+        MultipartModelConditionBuilder condition = switch (direction) {
+            case NORTH -> new MultipartModelConditionBuilder().put(Properties.NORTH, false);
+            case EAST -> new MultipartModelConditionBuilder().put(Properties.EAST, false);
+            case SOUTH -> new MultipartModelConditionBuilder().put(Properties.SOUTH, false);
+            case WEST -> new MultipartModelConditionBuilder().put(Properties.WEST, false);
             default -> throw new IllegalArgumentException("Invalid direction: " + direction);
         };
 

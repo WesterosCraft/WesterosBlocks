@@ -7,13 +7,14 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.EnumProperty;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Direction;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
@@ -26,7 +27,7 @@ public class WCFlowerbedBlock extends PlantBlock implements Fertilizable, WCBloc
     public static final MapCodec<WCFlowerbedBlock> CODEC = createCodec(WCFlowerbedBlock::new);
     public static final int MIN_FLOWERS = 1;
     public static final int MAX_FLOWERS = 4;
-    public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
+    public static final EnumProperty<Direction> FACING = Properties.HORIZONTAL_FACING;
     public static final IntProperty FLOWER_AMOUNT = Properties.FLOWER_AMOUNT;
 
     // Precomputed shapes: [facingHorizontalIndex][flowerAmount - 1]
@@ -45,10 +46,10 @@ public class WCFlowerbedBlock extends PlantBlock implements Fertilizable, WCBloc
             for (int amount = 1; amount <= 4; amount++) {
                 VoxelShape combinedShape = VoxelShapes.empty();
                 for (int i = 0; i < amount; i++) {
-                    int shapeIndex = Math.floorMod(i - facing.getHorizontal(), 4);
+                    int shapeIndex = Math.floorMod(i - facing.getHorizontalQuarterTurns(), 4);
                     combinedShape = VoxelShapes.union(combinedShape, quarterShapes[shapeIndex]);
                 }
-                shapes[facing.getHorizontal()][amount - 1] = combinedShape.asCuboid();
+                shapes[facing.getHorizontalQuarterTurns()][amount - 1] = combinedShape.asCuboid();
             }
         }
         return shapes;
@@ -97,7 +98,7 @@ public class WCFlowerbedBlock extends PlantBlock implements Fertilizable, WCBloc
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return SHAPES[state.get(FACING).getHorizontal()][state.get(FLOWER_AMOUNT) - 1];
+        return SHAPES[state.get(FACING).getHorizontalQuarterTurns()][state.get(FLOWER_AMOUNT) - 1];
     }
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {

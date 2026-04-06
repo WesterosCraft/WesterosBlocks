@@ -5,6 +5,7 @@ import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.blockentity.custom.WCFurnaceBlockEntity;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
@@ -33,10 +34,10 @@ public class ModBlockEntities {
             Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
             if (block != null) {
                 BlockEntityType<?> blockEntityType = register(definition.getBlockName(),
-                        BlockEntityType.Builder.create(
+                        FabricBlockEntityTypeBuilder.create(
                                 (pos, state) -> new WCFurnaceBlockEntity(pos, state, definition.getBlockName()),
                                 block
-                        ).build(null)
+                        ).build()
                 );
                 customEntitiesByName.put(definition.getBlockName(), blockEntityType);
             }

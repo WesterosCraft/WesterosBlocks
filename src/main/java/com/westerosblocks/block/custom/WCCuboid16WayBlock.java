@@ -129,7 +129,7 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
                 state = state.cycle(this.STATE);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);
                 world.syncWorldEvent(player, 1006, pos, 0);
-                return ActionResult.success(world.isClient);
+                return ActionResult.SUCCESS;
             }
 
             else if (state.contains(ROTATION)) {
@@ -138,7 +138,7 @@ public class WCCuboid16WayBlock extends WCCuboidBlock {
                 state = state.with(ROTATION, newRotation);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);
                 world.syncWorldEvent(player, 1006, pos, 0);
-                return ActionResult.success(world.isClient);
+                return ActionResult.SUCCESS;
             }
         }
 

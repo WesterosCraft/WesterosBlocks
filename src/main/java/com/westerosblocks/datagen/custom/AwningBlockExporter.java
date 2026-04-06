@@ -5,7 +5,7 @@ import com.westerosblocks.block.custom.WCAwningBlock;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.BlockHalf;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 
@@ -50,7 +50,7 @@ public class AwningBlockExporter extends BaseBlockExporter {
         // Generate blockstate with all 16 variants
         BlockStateVariantMap variants = createAwningVariants(
                 topNormalModel, bottomNormalModel, topRaisedModel, bottomRaisedModel);
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block).with(variants));
 
         // Register item model using one of the generated models
         registerParentedItemModel(generator, block, bottomNormalModel);
@@ -99,7 +99,7 @@ public class AwningBlockExporter extends BaseBlockExporter {
             Identifier topNormal, Identifier bottomNormal,
             Identifier topRaised, Identifier bottomRaised) {
 
-        return BlockStateVariantMap.create(WCAwningBlock.FACING, WCAwningBlock.HALF, WCAwningBlock.RAISED)
+        return BlockStateVariantMap.models(WCAwningBlock.FACING, WCAwningBlock.HALF, WCAwningBlock.RAISED)
                 // NORTH facing (y=0)
                 .register(Direction.NORTH, BlockHalf.TOP, false, createVariant(topNormal, 0))
                 .register(Direction.NORTH, BlockHalf.TOP, true, createVariant(topRaised, 0))

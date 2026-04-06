@@ -23,7 +23,11 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
+import net.minecraft.world.attribute.BedRule;
+import net.minecraft.world.attribute.EnvironmentAttributes;
+import net.minecraft.world.WorldView;
+import net.minecraft.world.tick.ScheduledTickView;
+import net.minecraft.util.math.random.Random;
 
 import java.util.List;
 
@@ -88,7 +92,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements WCBlockDef {
 
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        if (world.isClient) {
+        if (world.isClient()) {
             return ActionResult.CONSUME;
         } else {
             if (state.get(PART) != BedPart.HEAD) {
@@ -119,7 +123,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements WCBlockDef {
             } else {
                 player.trySleep(pos).ifLeft((failure) -> {
                     if (failure != null) {
-                        player.sendMessage(failure.getMessage(), true);
+                        player.sendMessage(failure.message(), true);
                     }
 
                 });
@@ -130,7 +134,8 @@ public class WCBedBlock extends HorizontalFacingBlock implements WCBlockDef {
     }
 
     public static boolean canSetSpawn(World world) {
-        return world.getDimension().bedWorks();
+        BedRule bedRule = world.getEnvironmentAttributes().getAttributeValue(EnvironmentAttributes.BED_RULE_GAMEPLAY);
+        return !bedRule.explodes();
     }
 
     private boolean kickVillagerOutOfBed(World world, BlockPos pos) {
@@ -169,12 +174,12 @@ public class WCBedBlock extends HorizontalFacingBlock implements WCBlockDef {
     }
 
     @Override
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
-                                                WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView,
+                                                BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
         if (direction == getNeighbourDirection(state.get(PART), state.get(FACING))) {
             return neighborState.isOf(this) && neighborState.get(PART) != state.get(PART) ? state.with(OCCUPIED, neighborState.get(OCCUPIED)) : Blocks.AIR.getDefaultState();
         } else {
-            return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+            return super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
         }
     }
 
@@ -231,7 +236,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements WCBlockDef {
 
     public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
         super.onPlaced(world, pos, state, placer, stack);
-        if (!world.isClient) {
+        if (!world.isClient()) {
             BlockPos headPos = pos.offset(state.get(FACING));
             world.setBlockState(headPos, state.with(PART, BedPart.HEAD), Block.NOTIFY_ALL);
             world.updateNeighbors(pos, Blocks.AIR);

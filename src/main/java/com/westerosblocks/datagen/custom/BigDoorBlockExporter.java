@@ -5,7 +5,10 @@ import com.westerosblocks.block.custom.WCBigDoorBlock;
 import com.westerosblocks.block.custom.WCBigDoorBlock.BigDoorPart;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariant;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.util.math.AxisRotation;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 
@@ -37,8 +40,8 @@ public class BigDoorBlockExporter extends BaseBlockExporter {
     private static void registerCustomModelBigDoor(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         String blockName = getBlockName(block);
 
-        BlockStateVariantMap.TripleProperty<Direction, Boolean, BigDoorPart> variants =
-                BlockStateVariantMap.create(WCBigDoorBlock.FACING, WCBigDoorBlock.OPEN, WCBigDoorBlock.PART);
+        BlockStateVariantMap.TripleProperty<WeightedVariant, Direction, Boolean, BigDoorPart> variants =
+                BlockStateVariantMap.models(WCBigDoorBlock.FACING, WCBigDoorBlock.OPEN, WCBigDoorBlock.PART);
 
         for (Direction facing : Direction.Type.HORIZONTAL) {
             for (boolean open : new boolean[]{false, true}) {
@@ -53,7 +56,7 @@ public class BigDoorBlockExporter extends BaseBlockExporter {
             }
         }
 
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block).with(variants));
 
         // Register item model
         Identifier itemModelId = WesterosBlocks.id("block/custom/bigdoor/" + blockName + "/bottom_center_closed");
@@ -86,8 +89,8 @@ public class BigDoorBlockExporter extends BaseBlockExporter {
         }
 
         // Create blockstate variants
-        BlockStateVariantMap.TripleProperty<Direction, Boolean, BigDoorPart> variants =
-                BlockStateVariantMap.create(WCBigDoorBlock.FACING, WCBigDoorBlock.OPEN, WCBigDoorBlock.PART);
+        BlockStateVariantMap.TripleProperty<WeightedVariant, Direction, Boolean, BigDoorPart> variants =
+                BlockStateVariantMap.models(WCBigDoorBlock.FACING, WCBigDoorBlock.OPEN, WCBigDoorBlock.PART);
 
         for (Direction facing : Direction.Type.HORIZONTAL) {
             for (boolean open : new boolean[]{false, true}) {
@@ -102,7 +105,7 @@ public class BigDoorBlockExporter extends BaseBlockExporter {
             }
         }
 
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block).with(variants));
 
         // Register item model using bottom_center_closed
         Identifier itemModelId = createNestedModelId(block, "bottom_center_closed");

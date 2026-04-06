@@ -6,7 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.DoorBlock;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.block.enums.DoorHinge;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 
@@ -31,7 +31,7 @@ public class DoorBlockExporter extends BaseBlockExporter {
                 bottomLeftModelId, bottomRightModelId, bottomLeftOpenModelId, bottomRightOpenModelId,
                 topLeftModelId, topRightModelId, topLeftOpenModelId, topRightOpenModelId);
 
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block).with(variants));
 
         Identifier itemTextureId;
         if (definition.hasCustomItemTexture()) {
@@ -51,7 +51,7 @@ public class DoorBlockExporter extends BaseBlockExporter {
             Identifier topLeftModelId, Identifier topRightModelId,
             Identifier topLeftOpenModelId, Identifier topRightOpenModelId) {
 
-        return BlockStateVariantMap.create(DoorBlock.FACING, DoorBlock.HALF, DoorBlock.HINGE, DoorBlock.OPEN)
+        return BlockStateVariantMap.models(DoorBlock.FACING, DoorBlock.HALF, DoorBlock.HINGE, DoorBlock.OPEN)
                 // EAST facing
                 .register(Direction.EAST, DoubleBlockHalf.LOWER, DoorHinge.LEFT, false, createVariant(bottomLeftModelId))
                 .register(Direction.EAST, DoubleBlockHalf.LOWER, DoorHinge.LEFT, true, createVariant(bottomLeftOpenModelId, 90))

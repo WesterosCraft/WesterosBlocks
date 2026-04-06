@@ -6,13 +6,10 @@ import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
 
 import net.minecraft.block.Block;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.BlockStateVariant;
-import net.minecraft.data.client.BlockStateVariantMap;
-import net.minecraft.data.client.TextureKey;
-import net.minecraft.data.client.TextureMap;
-import net.minecraft.data.client.VariantSettings;
-import net.minecraft.data.client.VariantsBlockStateSupplier;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariant;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.util.math.AxisRotation;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 
@@ -42,40 +39,32 @@ public class BenchBlockExporter extends BaseBlockExporter {
 
         // Create variant map for FACING × CONNECTION
         BlockStateVariantMap.DoubleProperty<Direction, WCBenchBlock.ConnectionType> variantMap =
-            BlockStateVariantMap.create(WCBenchBlock.FACING, WCBenchBlock.CONNECTION);
+            BlockStateVariantMap.models(WCBenchBlock.FACING, WCBenchBlock.CONNECTION);
 
         // Register all combinations of facing and connection
         for (Direction facing : Direction.Type.HORIZONTAL) {
-            VariantSettings.Rotation rotation = toYRotation(getFacingSouthDefaultRotation(facing));
+            AxisRotation rotation = toYRotation(getFacingSouthDefaultRotation(facing));
 
             // SINGLE connection
             variantMap.register(facing, WCBenchBlock.ConnectionType.SINGLE,
-                    BlockStateVariant.create()
-                            .put(VariantSettings.MODEL, singleModelId)
-                            .put(VariantSettings.Y, rotation));
+                    BlockStateModelGenerator.createWeightedVariant(new ModelVariant(singleModelId).withRotationY(rotation)));
 
             // LEFT connection
             variantMap.register(facing, WCBenchBlock.ConnectionType.LEFT,
-                    BlockStateVariant.create()
-                            .put(VariantSettings.MODEL, leftModelId)
-                            .put(VariantSettings.Y, rotation));
+                    BlockStateModelGenerator.createWeightedVariant(new ModelVariant(leftModelId).withRotationY(rotation)));
 
             // RIGHT connection
             variantMap.register(facing, WCBenchBlock.ConnectionType.RIGHT,
-                    BlockStateVariant.create()
-                            .put(VariantSettings.MODEL, rightModelId)
-                            .put(VariantSettings.Y, rotation));
+                    BlockStateModelGenerator.createWeightedVariant(new ModelVariant(rightModelId).withRotationY(rotation)));
 
             // MIDDLE connection
             variantMap.register(facing, WCBenchBlock.ConnectionType.MIDDLE,
-                    BlockStateVariant.create()
-                            .put(VariantSettings.MODEL, middleModelId)
-                            .put(VariantSettings.Y, rotation));
+                    BlockStateModelGenerator.createWeightedVariant(new ModelVariant(middleModelId).withRotationY(rotation)));
         }
 
         // Register the blockstate with all variants
         generator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(block).coordinate(variantMap));
+                VariantsBlockModelDefinitionCreator.of(block).with(variantMap));
 
         // Register item model using the single variant
         registerParentedItemModel(generator, block, singleModelId);

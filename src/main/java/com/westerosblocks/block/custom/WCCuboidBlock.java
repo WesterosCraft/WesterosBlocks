@@ -22,7 +22,9 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
+import net.minecraft.world.tick.ScheduledTickView;
+import net.minecraft.util.math.random.Random;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -150,12 +152,12 @@ public class WCCuboidBlock extends Block implements Waterloggable, WCBlockDef {
     }
 
     @Override
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
-            WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView,
+            BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
         if (state.get(WATERLOGGED)) {
-            world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+            tickView.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
-        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+        return super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
     }
 
     @Override
@@ -170,7 +172,7 @@ public class WCCuboidBlock extends Block implements Waterloggable, WCBlockDef {
                 state = state.cycle(this.STATE);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);
                 world.syncWorldEvent(player, 1006, pos, 0);
-                return ActionResult.success(world.isClient);
+                return ActionResult.SUCCESS;
             }
         }
         return ActionResult.PASS;
@@ -199,7 +201,7 @@ public class WCCuboidBlock extends Block implements Waterloggable, WCBlockDef {
     }
 
     @Override
-    public VoxelShape getCullingShape(BlockState state, BlockView world, BlockPos pos) {
+    public VoxelShape getCullingShape(BlockState state) {
         return SHAPE_BY_INDEX[getIndexFromState(state)];
     }
 

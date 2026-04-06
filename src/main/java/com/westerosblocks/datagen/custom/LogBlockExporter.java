@@ -4,7 +4,11 @@ import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureMap;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
+import net.minecraft.util.math.AxisRotation;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
@@ -38,15 +42,15 @@ public class LogBlockExporter extends BaseBlockExporter {
 
     private static void generateBlockState(BlockStateModelGenerator generator, Block block,
                                           BlockDefinition.StateVariant state) {
-        BlockStateVariantMap.SingleProperty<Direction.Axis> variantMap =
-            BlockStateVariantMap.create(Properties.AXIS);
+        BlockStateVariantMap.SingleProperty<WeightedVariant, Direction.Axis> variantMap =
+            BlockStateVariantMap.models(Properties.AXIS);
 
         for (Direction.Axis axis : Direction.Axis.values()) {
-            String axisName = axis.getName(); // "x", "y", "z"
+            String axisName = axis.asString(); // "x", "y", "z"
             int xRot = axis == Direction.Axis.Y ? 0 : 90;
             int yRot = axis == Direction.Axis.X ? 90 : 0;
 
-            List<BlockStateVariant> variants = new ArrayList<>();
+            net.minecraft.util.collection.Pool.Builder<ModelVariant> poolBuilder = net.minecraft.util.collection.Pool.builder();
 
             for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
                 BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
@@ -54,31 +58,22 @@ public class LogBlockExporter extends BaseBlockExporter {
 
                 Identifier modelId = createGeneratedModelId(block, getModelName(axisName, setIdx));
 
-                BlockStateVariant variant = BlockStateVariant.create()
-                    .put(VariantSettings.MODEL, modelId);
-
+                ModelVariant mv = new ModelVariant(modelId);
                 if (xRot > 0) {
-                    variant.put(VariantSettings.X, xRot == 90 ? VariantSettings.Rotation.R90 : VariantSettings.Rotation.R0);
+                    mv = mv.withRotationX(AxisRotation.R90);
                 }
                 if (yRot > 0) {
-                    variant.put(VariantSettings.Y, yRot == 90 ? VariantSettings.Rotation.R90 : VariantSettings.Rotation.R0);
-                }
-                if (set.getWeight() > 1) {
-                    variant.put(VariantSettings.WEIGHT, set.getWeight());
+                    mv = mv.withRotationY(AxisRotation.R90);
                 }
 
-                variants.add(variant);
+                poolBuilder.add(mv, set.getWeight());
             }
 
-            if (variants.size() == 1) {
-                variantMap.register(axis, variants.get(0));
-            } else if (!variants.isEmpty()) {
-                variantMap.register(axis, variants);
-            }
+            variantMap.register(axis, new WeightedVariant(poolBuilder.build()));
         }
 
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+            VariantsBlockModelDefinitionCreator.of(block).with(variantMap)
         );
     }
 

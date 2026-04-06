@@ -6,7 +6,9 @@ import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.SlabType;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
@@ -45,12 +47,12 @@ public class SlabBlockExporter extends BaseBlockExporter {
 
     private static void generateBlockState(BlockStateModelGenerator generator, Block block,
                                           List<BlockDefinition.StateVariant> states) {
-        BlockStateVariantMap.SingleProperty<SlabType> variantMap =
-            BlockStateVariantMap.create(Properties.SLAB_TYPE);
+        BlockStateVariantMap.SingleProperty<WeightedVariant, SlabType> variantMap =
+            BlockStateVariantMap.models(Properties.SLAB_TYPE);
 
-        List<BlockStateVariant> bottomVariants = new ArrayList<>();
-        List<BlockStateVariant> topVariants = new ArrayList<>();
-        List<BlockStateVariant> doubleVariants = new ArrayList<>();
+        List<WeightedVariant> bottomVariants = new ArrayList<>();
+        List<WeightedVariant> topVariants = new ArrayList<>();
+        List<WeightedVariant> doubleVariants = new ArrayList<>();
 
         for (BlockDefinition.StateVariant state : states) {
             String fname = getStateIdOrBase(state.getStateID());
@@ -70,27 +72,17 @@ public class SlabBlockExporter extends BaseBlockExporter {
             }
         }
 
-        if (bottomVariants.size() == 1) {
-            variantMap.register(SlabType.BOTTOM, bottomVariants.get(0));
-            variantMap.register(SlabType.TOP, topVariants.get(0));
-            variantMap.register(SlabType.DOUBLE, doubleVariants.get(0));
-        } else {
-            variantMap.register(SlabType.BOTTOM, bottomVariants);
-            variantMap.register(SlabType.TOP, topVariants);
-            variantMap.register(SlabType.DOUBLE, doubleVariants);
-        }
+        variantMap.register(SlabType.BOTTOM, mergeVariants(bottomVariants));
+        variantMap.register(SlabType.TOP, mergeVariants(topVariants));
+        variantMap.register(SlabType.DOUBLE, mergeVariants(doubleVariants));
 
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+            VariantsBlockModelDefinitionCreator.of(block).with(variantMap)
         );
     }
 
-    private static BlockStateVariant createSlabVariant(Identifier modelId, int weight) {
-        BlockStateVariant variant = BlockStateVariant.create().put(VariantSettings.MODEL, modelId);
-        if (weight > 1) {
-            variant.put(VariantSettings.WEIGHT, weight);
-        }
-        return variant;
+    private static WeightedVariant createSlabVariant(Identifier modelId, int weight) {
+        return createWeightedVariant(modelId, 0, weight);
     }
 
     private static void generateSlabModels(BlockStateModelGenerator generator, Block block,

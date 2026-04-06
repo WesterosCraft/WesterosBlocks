@@ -2,7 +2,7 @@ package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
 import net.minecraft.block.Block;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
@@ -28,10 +28,10 @@ public class FurnaceBlockExporter extends BaseBlockExporter {
                 .put(TextureKey.PARTICLE, createBlockIdentifier(side));
     }
 
-    private static VariantsBlockStateSupplier createFurnaceBlockstate(Block block, Identifier litModelId,
+    private static VariantsBlockModelDefinitionCreator createFurnaceBlockstate(Block block, Identifier litModelId,
                                                                       Identifier unlitModelId) {
-        return VariantsBlockStateSupplier.create(block)
-                .coordinate(BlockStateVariantMap.create(Properties.HORIZONTAL_FACING, Properties.LIT)
+        return VariantsBlockModelDefinitionCreator.of(block)
+                .with(BlockStateVariantMap.models(Properties.HORIZONTAL_FACING, Properties.LIT)
                         // Unlit states
                         .register(Direction.NORTH, false, createVariant(unlitModelId, getRotationForDirection(Direction.NORTH)))
                         .register(Direction.SOUTH, false, createVariant(unlitModelId, getRotationForDirection(Direction.SOUTH)))
@@ -57,7 +57,7 @@ public class FurnaceBlockExporter extends BaseBlockExporter {
         Identifier unlitModelId = uploadModel(createFurnaceModel(tinted), block, "base", unlitTextureMap, generator.modelCollector);
 
         // Create blockstate
-        VariantsBlockStateSupplier blockstate = createFurnaceBlockstate(block, litModelId, unlitModelId);
+        VariantsBlockModelDefinitionCreator blockstate = createFurnaceBlockstate(block, litModelId, unlitModelId);
         generator.blockStateCollector.accept(blockstate);
 
         // Register item model using unlit state
@@ -74,7 +74,7 @@ public class FurnaceBlockExporter extends BaseBlockExporter {
         Identifier unlitModelId = WesterosBlocks.id("block/custom/" + blockName + "/base_v1");
 
         // Create blockstate
-        VariantsBlockStateSupplier blockstate = createFurnaceBlockstate(block, litModelId, unlitModelId);
+        VariantsBlockModelDefinitionCreator blockstate = createFurnaceBlockstate(block, litModelId, unlitModelId);
         generator.blockStateCollector.accept(blockstate);
 
         // Register item model using unlit state

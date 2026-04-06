@@ -8,7 +8,10 @@ import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.BlockHalf;
 import net.minecraft.block.enums.StairShape;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
@@ -216,21 +219,16 @@ public class StairBlockExporter extends BaseBlockExporter {
     // Single-state blockstate: TripleProperty<Direction, BlockHalf, StairShape>
     private static void generateBlockState(BlockStateModelGenerator generator, Block block,
                                           List<StairModelSet> modelSets, boolean noUvlock) {
-        BlockStateVariantMap.TripleProperty<Direction, BlockHalf, StairShape> variantMap =
-            BlockStateVariantMap.create(Properties.HORIZONTAL_FACING, Properties.BLOCK_HALF, Properties.STAIR_SHAPE);
+        BlockStateVariantMap.TripleProperty<WeightedVariant, Direction, BlockHalf, StairShape> variantMap =
+                BlockStateVariantMap.models(Properties.HORIZONTAL_FACING, Properties.BLOCK_HALF, Properties.STAIR_SHAPE);
 
         for (StairRotation rot : STAIR_ROTATIONS) {
-            List<BlockStateVariant> variants = buildVariantsForRotation(rot, modelSets, noUvlock);
-
-            if (variants.size() == 1) {
-                variantMap.register(rot.facing(), rot.half(), rot.shape(), variants.get(0));
-            } else {
-                variantMap.register(rot.facing(), rot.half(), rot.shape(), variants);
-            }
+            List<WeightedVariant> variants = buildVariantsForRotation(rot, modelSets, noUvlock);
+            variantMap.register(rot.facing(), rot.half(), rot.shape(), mergeVariants(variants));
         }
 
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+            VariantsBlockModelDefinitionCreator.of(block).with(variantMap)
         );
     }
 
@@ -239,31 +237,27 @@ public class StairBlockExporter extends BaseBlockExporter {
                                                      Map<String, List<StairModelSet>> stateModelMap,
                                                      ModProperties.StateProperty stateProperty,
                                                      boolean noUvlock) {
-        BlockStateVariantMap.QuadrupleProperty<Direction, BlockHalf, StairShape, String> variantMap =
-            BlockStateVariantMap.create(Properties.HORIZONTAL_FACING, Properties.BLOCK_HALF, Properties.STAIR_SHAPE, stateProperty);
+        BlockStateVariantMap.QuadrupleProperty<WeightedVariant, Direction, BlockHalf, StairShape, String> variantMap =
+            BlockStateVariantMap.models(Properties.HORIZONTAL_FACING, Properties.BLOCK_HALF, Properties.STAIR_SHAPE, stateProperty);
 
         for (Map.Entry<String, List<StairModelSet>> entry : stateModelMap.entrySet()) {
             String stateId = entry.getKey();
             List<StairModelSet> modelSets = entry.getValue();
 
             for (StairRotation rot : STAIR_ROTATIONS) {
-                List<BlockStateVariant> variants = buildVariantsForRotation(rot, modelSets, noUvlock);
+                List<WeightedVariant> variants = buildVariantsForRotation(rot, modelSets, noUvlock);
 
-                if (variants.size() == 1) {
-                    variantMap.register(rot.facing(), rot.half(), rot.shape(), stateId, variants.get(0));
-                } else {
-                    variantMap.register(rot.facing(), rot.half(), rot.shape(), stateId, variants);
-                }
+                variantMap.register(rot.facing(), rot.half(), rot.shape(), stateId, mergeVariants(variants));
             }
         }
 
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+            VariantsBlockModelDefinitionCreator.of(block).with(variantMap)
         );
     }
 
-    private static List<BlockStateVariant> buildVariantsForRotation(StairRotation rot, List<StairModelSet> modelSets, boolean noUvlock) {
-        List<BlockStateVariant> variants = new ArrayList<>();
+    private static List<WeightedVariant> buildVariantsForRotation(StairRotation rot, List<StairModelSet> modelSets, boolean noUvlock) {
+        List<WeightedVariant> variants = new ArrayList<>();
 
         for (StairModelSet modelSet : modelSets) {
             Identifier model = switch (rot.modelType()) {
@@ -272,23 +266,22 @@ public class StairBlockExporter extends BaseBlockExporter {
                 default -> modelSet.base();
             };
 
-            BlockStateVariant variant = BlockStateVariant.create()
-                .put(VariantSettings.MODEL, model);
-
+            ModelVariant mv = new ModelVariant(model);
             if (rot.x() != 0) {
-                variant.put(VariantSettings.X, toYRotation(rot.x()));
+                mv = mv.withRotationX(toYRotation(rot.x()));
             }
             if (rot.y() != 0) {
-                variant.put(VariantSettings.Y, toYRotation(rot.y()));
+                mv = mv.withRotationY(toYRotation(rot.y()));
             }
             if (!noUvlock && (rot.x() != 0 || rot.y() != 0)) {
-                variant.put(VariantSettings.UVLOCK, true);
-            }
-            if (modelSet.weight() > 1) {
-                variant.put(VariantSettings.WEIGHT, modelSet.weight());
+                mv = mv.withUVLock(true);
             }
 
-            variants.add(variant);
+            if (modelSet.weight() > 1) {
+                variants.add(new WeightedVariant(net.minecraft.util.collection.Pool.builder().add(mv, modelSet.weight()).build()));
+            } else {
+                variants.add(BlockStateModelGenerator.createWeightedVariant(mv));
+            }
         }
 
         return variants;

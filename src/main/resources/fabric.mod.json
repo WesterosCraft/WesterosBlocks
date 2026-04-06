@@ -20,8 +20,8 @@
   },
   "mixins": ["westerosblocks.mixins.json"],
   "depends": {
-    "fabricloader": ">=0.16.14",
-    "minecraft": "1.21.1",
+    "fabricloader": ">=0.18.6",
+    "minecraft": "1.21.11",
     "java": ">=21",
     "fabric-api": "*"
   },

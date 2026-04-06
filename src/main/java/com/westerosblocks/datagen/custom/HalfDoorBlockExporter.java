@@ -6,10 +6,10 @@ import com.westerosblocks.block.custom.WCHalfDoorBlock;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.DoorHinge;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
-import net.minecraft.data.client.VariantSettings.Rotation;
+import net.minecraft.util.math.AxisRotation;
 
 import java.util.List;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public class HalfDoorBlockExporter extends BaseBlockExporter {
         Identifier rightOpenModelId = createHalfDoorModel(generator, block, texturePath, "right_open", ModModels.HALF_DOOR_RIGHT_OPEN);
 
         BlockStateVariantMap variants = createHalfDoorVariants(leftModelId, rightModelId, leftOpenModelId, rightOpenModelId);
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block).with(variants));
 
         registerSimpleItemModel(generator, block, createBlockIdentifier(texturePath));
     }
@@ -49,7 +49,7 @@ public class HalfDoorBlockExporter extends BaseBlockExporter {
 
     private static BlockStateVariantMap createHalfDoorVariants(Identifier leftModelId, Identifier rightModelId,
                                                                 Identifier leftOpenModelId, Identifier rightOpenModelId) {
-        return BlockStateVariantMap.create(WCHalfDoorBlock.FACING, WCHalfDoorBlock.HINGE, WCHalfDoorBlock.OPEN)
+        return BlockStateVariantMap.models(WCHalfDoorBlock.FACING, WCHalfDoorBlock.HINGE, WCHalfDoorBlock.OPEN)
             // EAST facing
             .register(Direction.EAST, DoorHinge.LEFT, false, createVariant(leftModelId))
             .register(Direction.EAST, DoorHinge.LEFT, true, createVariant(leftOpenModelId, 90))

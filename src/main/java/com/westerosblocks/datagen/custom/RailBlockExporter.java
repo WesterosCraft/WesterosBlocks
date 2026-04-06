@@ -3,7 +3,11 @@ package com.westerosblocks.datagen.custom;
 import net.minecraft.block.Block;
 import net.minecraft.block.RailBlock;
 import net.minecraft.block.enums.RailShape;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
+import net.minecraft.util.math.AxisRotation;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.util.Identifier;
 
 import java.util.*;
@@ -95,26 +99,19 @@ public class RailBlockExporter extends BaseBlockExporter {
         String blockName = getBlockName(block);
         
         // Create variants map like the old working version
-        Map<String, BlockStateVariant> variantMap = new HashMap<>();
+        Map<String, WeightedVariant> variantMap = new HashMap<>();
         
         for (int i = 0; i < SHAPES.length; i++) {
             String modelType = MODEL_TYPES[i];
             int rotation = ROTATIONS[i];
-            
+
             Identifier modelId = WesterosBlocks.id("block/" + blockName + "/" + modelType);
-            BlockStateVariant variant = BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId);
-            
-            if (rotation != 0) {
-                variant = variant.put(VariantSettings.Y, VariantSettings.Rotation.valueOf("R" + rotation));
-            }
-            
-            variantMap.put(SHAPES[i], variant);
+            variantMap.put(SHAPES[i], createVariant(modelId, rotation));
         }
-        
+
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block)
-                .coordinate(BlockStateVariantMap.create(RailBlock.SHAPE)
+            VariantsBlockModelDefinitionCreator.of(block)
+                .with(BlockStateVariantMap.models(RailBlock.SHAPE)
                     .register(RailShape.NORTH_SOUTH, variantMap.get("shape=north_south"))
                     .register(RailShape.EAST_WEST, variantMap.get("shape=east_west"))
                     .register(RailShape.ASCENDING_EAST, variantMap.get("shape=ascending_east"))
@@ -134,14 +131,14 @@ public class RailBlockExporter extends BaseBlockExporter {
         
         // For random textures, we'll simplify and just create random variants for the flat model
         // This follows the pattern of other exporters like SolidBlockExporter for random textures
-        List<BlockStateVariant> variants = new ArrayList<>();
+        List<WeightedVariant> variants = new ArrayList<>();
         for (int setIdx = 0; setIdx < textureArrays.length; setIdx++) {
             Identifier modelId = WesterosBlocks.id("block/" + blockName + "/flat_v" + (setIdx + 1));
-            variants.add(BlockStateVariant.create().put(VariantSettings.MODEL, modelId));
+            variants.add(BlockStateModelGenerator.createWeightedVariant(modelId));
         }
         
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0]))
+            VariantsBlockModelDefinitionCreator.of(block, mergeVariants(variants))
         );
     }
 

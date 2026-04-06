@@ -9,7 +9,9 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
+import net.minecraft.world.tick.ScheduledTickView;
+import net.minecraft.util.math.random.Random;
 
 import com.westerosblocks.data.BlockDefinition;
 
@@ -66,21 +68,23 @@ public class WCPaneBlock extends PaneBlock implements WCBlockDef {
     }
 
     @Override
-    public BlockState getStateForNeighborUpdate(
+    protected BlockState getStateForNeighborUpdate(
             BlockState state,
-            Direction direction,
-            BlockState neighborState,
-            WorldAccess world,
+            WorldView world,
+            ScheduledTickView tickView,
             BlockPos pos,
-            BlockPos neighborPos
+            Direction direction,
+            BlockPos neighborPos,
+            BlockState neighborState,
+            Random random
     ) {
         if (unconnect && state.get(UNCONNECT)) {
             if (state.get(WATERLOGGED)) {
-                world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+                tickView.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
             }
             return state;
         }
-        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+        return super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
     }
 
     public boolean isLegacyModel() {

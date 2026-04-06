@@ -15,8 +15,8 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
+import net.minecraft.world.tick.ScheduledTickView;
 
 public class WCFireBlock extends FireBlock implements WCBlockDef {
     protected BlockDefinition def;
@@ -35,7 +35,8 @@ public class WCFireBlock extends FireBlock implements WCBlockDef {
     }
 
     @Override
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView,
+            BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
         return state;
     }
 
@@ -52,7 +53,7 @@ public class WCFireBlock extends FireBlock implements WCBlockDef {
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         if (random.nextInt(24) == 0) {
-            world.playSound(
+            world.playSoundClient(
                     pos.getX() + 0.5,
                     pos.getY() + 0.5,
                     pos.getZ() + 0.5,

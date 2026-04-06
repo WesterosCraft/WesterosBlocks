@@ -10,15 +10,16 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.EnumProperty;
+import net.minecraft.state.property.EnumProperty;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Direction;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -30,7 +31,7 @@ import net.minecraft.world.World;
 public class WCAwningBlock extends Block implements WCBlockDef {
     protected BlockDefinition def;
 
-    public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
+    public static final EnumProperty<Direction> FACING = Properties.HORIZONTAL_FACING;
     public static final EnumProperty<BlockHalf> HALF = Properties.BLOCK_HALF;
     public static final BooleanProperty RAISED = BooleanProperty.of("raised");
 
@@ -87,7 +88,7 @@ public class WCAwningBlock extends Block implements WCBlockDef {
             state = state.cycle(RAISED);
             world.setBlockState(pos, state, Block.NOTIFY_ALL);
             world.syncWorldEvent(player, 1006, pos, 0);
-            return ActionResult.success(world.isClient);
+            return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;
     }

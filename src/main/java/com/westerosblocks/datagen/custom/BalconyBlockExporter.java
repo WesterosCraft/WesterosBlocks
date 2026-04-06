@@ -2,7 +2,11 @@ package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.data.BlockDefinition;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.MultipartModelConditionBuilder;
+import net.minecraft.client.render.model.json.ModelVariant;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.util.math.AxisRotation;
 import net.minecraft.block.Block;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
@@ -17,8 +21,8 @@ public class BalconyBlockExporter extends BaseBlockExporter {
         return tinted ? ModModels.BALCONY_SIDE_TINTED : ModModels.BALCONY_SIDE_UNTINTED;
     }
 
-    private static MultipartBlockStateSupplier createBalconyVariants(Block block, List<Identifier> sideModelIds, List<Integer> weights) {
-        MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
+    private static MultipartBlockModelDefinitionCreator createBalconyVariants(Block block, List<Identifier> sideModelIds, List<Integer> weights) {
+        MultipartBlockModelDefinitionCreator supplier = MultipartBlockModelDefinitionCreator.create(block);
 
         for (int i = 0; i < sideModelIds.size(); i++) {
             addSideVariant(supplier, sideModelIds.get(i), weights.get(i), Direction.NORTH);
@@ -30,26 +34,22 @@ public class BalconyBlockExporter extends BaseBlockExporter {
         return supplier;
     }
 
-    private static void addSideVariant(MultipartBlockStateSupplier supplier, Identifier sideModelId,
+    private static void addSideVariant(MultipartBlockModelDefinitionCreator supplier, Identifier sideModelId,
                                        int weight, Direction direction) {
-        BlockStateVariant sideVariant = BlockStateVariant.create()
-                .put(VariantSettings.MODEL, sideModelId)
-                .put(VariantSettings.UVLOCK, true);
+        ModelVariant mv = new ModelVariant(sideModelId).withUVLock(true);
 
         int yRotation = getRotationForDirection(direction);
         if (yRotation != 0) {
-            sideVariant = sideVariant.put(VariantSettings.Y, toYRotation(yRotation));
+            mv = mv.withRotationY(toYRotation(yRotation));
         }
 
-        if (weight > 1) {
-            sideVariant = sideVariant.put(VariantSettings.WEIGHT, weight);
-        }
+        WeightedVariant sideVariant = BlockStateModelGenerator.createWeightedVariant(mv);
 
-        When condition = switch (direction) {
-            case NORTH -> When.create().set(Properties.NORTH, true);
-            case EAST -> When.create().set(Properties.EAST, true);
-            case SOUTH -> When.create().set(Properties.SOUTH, true);
-            case WEST -> When.create().set(Properties.WEST, true);
+        MultipartModelConditionBuilder condition = switch (direction) {
+            case NORTH -> new MultipartModelConditionBuilder().put(Properties.NORTH, true);
+            case EAST -> new MultipartModelConditionBuilder().put(Properties.EAST, true);
+            case SOUTH -> new MultipartModelConditionBuilder().put(Properties.SOUTH, true);
+            case WEST -> new MultipartModelConditionBuilder().put(Properties.WEST, true);
             default -> null;
         };
 
@@ -63,7 +63,7 @@ public class BalconyBlockExporter extends BaseBlockExporter {
         Identifier sideModelId = getBalconySideModel(tinted)
                 .upload(createNestedModelId(block, "side"), textureMap, generator.modelCollector);
 
-        MultipartBlockStateSupplier blockstate = createBalconyVariants(block,
+        MultipartBlockModelDefinitionCreator blockstate = createBalconyVariants(block,
                 List.of(sideModelId), List.of(1));
         generator.blockStateCollector.accept(blockstate);
 
@@ -87,7 +87,7 @@ public class BalconyBlockExporter extends BaseBlockExporter {
             weights.add(set.weight);
         }
 
-        MultipartBlockStateSupplier blockstate = createBalconyVariants(block, sideModelIds, weights);
+        MultipartBlockModelDefinitionCreator blockstate = createBalconyVariants(block, sideModelIds, weights);
         generator.blockStateCollector.accept(blockstate);
 
         registerParentedItemModel(generator, block, sideModelIds.get(0));

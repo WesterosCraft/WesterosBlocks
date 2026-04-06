@@ -4,7 +4,7 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.custom.WCCuboidNSEWBlock;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
 import net.minecraft.util.Identifier;
 
 import java.util.List;

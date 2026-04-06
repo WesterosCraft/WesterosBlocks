@@ -78,7 +78,7 @@ public class WCSlabBlock extends SlabBlock implements WCBlockDef {
                 state = state.cycle(STATE);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);
                 world.syncWorldEvent(player, 1006, pos, 0);
-                return ActionResult.success(world.isClient);
+                return ActionResult.SUCCESS;
             }
         }
         return ActionResult.PASS;

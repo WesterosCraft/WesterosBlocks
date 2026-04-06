@@ -11,6 +11,7 @@ import net.minecraft.block.ShapeContext;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SnowBlock;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityCollisionHandler;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
@@ -30,7 +31,9 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
+import net.minecraft.world.tick.ScheduledTickView;
+import net.minecraft.util.math.random.Random;
 
 public class WCWebBlock extends CobwebBlock implements WCBlockDef {
     protected BlockDefinition def;
@@ -173,12 +176,12 @@ public class WCWebBlock extends CobwebBlock implements WCBlockDef {
     }
     
     @Override
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, 
-                                              WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView,
+                                              BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
         if (state.get(WATERLOGGED)) {
-            world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+            tickView.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
-        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+        return super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
     }
     
     @Override
@@ -192,9 +195,9 @@ public class WCWebBlock extends CobwebBlock implements WCBlockDef {
     }
     
     @Override
-    public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+    protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity, EntityCollisionHandler collisionHandler, boolean pushed) {
         if (!noInWeb) {
-            super.onEntityCollision(state, world, pos, entity);
+            super.onEntityCollision(state, world, pos, entity, collisionHandler, pushed);
         }
     }
     
@@ -205,7 +208,7 @@ public class WCWebBlock extends CobwebBlock implements WCBlockDef {
                 state = state.cycle(STATE);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);
                 world.syncWorldEvent(player, 1006, pos, 0);
-                return ActionResult.success(world.isClient);
+                return ActionResult.SUCCESS;
             }
         }
         return ActionResult.PASS;

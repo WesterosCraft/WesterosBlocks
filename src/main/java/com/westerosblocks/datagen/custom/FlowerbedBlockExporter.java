@@ -1,7 +1,11 @@
 package com.westerosblocks.datagen.custom;
 
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.util.math.AxisRotation;
+import net.minecraft.client.render.model.json.MultipartModelConditionBuilder;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.state.property.Properties;
@@ -79,46 +83,46 @@ public class FlowerbedBlockExporter extends BaseBlockExporter {
         Identifier model4 = ModModels.FLOWERBED_4.upload(createBlockIdentifier(getBlockName(block) + "/" + getBlockName(block) + "_4"), textureMap, generator.modelCollector);
 
         // Create blockstate with multipart for FACING and FLOWER_AMOUNT properties (like vanilla pink_petals)
-        generator.blockStateCollector.accept(MultipartBlockStateSupplier.create(block)
+        generator.blockStateCollector.accept(MultipartBlockModelDefinitionCreator.create(block)
                 // Model 1 for flower_amount 1, 2, 3, 4
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 1, 2, 3, 4).set(Properties.HORIZONTAL_FACING, Direction.NORTH),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model1))
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 1, 2, 3, 4).set(Properties.HORIZONTAL_FACING, Direction.EAST),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model1).put(VariantSettings.Y, VariantSettings.Rotation.R90))
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 1, 2, 3, 4).set(Properties.HORIZONTAL_FACING, Direction.SOUTH),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model1).put(VariantSettings.Y, VariantSettings.Rotation.R180))
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 1, 2, 3, 4).set(Properties.HORIZONTAL_FACING, Direction.WEST),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model1).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 1, 2, 3, 4).put(Properties.HORIZONTAL_FACING, Direction.NORTH),
+                        BlockStateModelGenerator.createWeightedVariant(model1))
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 1, 2, 3, 4).put(Properties.HORIZONTAL_FACING, Direction.EAST),
+                        BlockStateModelGenerator.createWeightedVariant(new ModelVariant(model1).withRotationY(AxisRotation.R90)))
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 1, 2, 3, 4).put(Properties.HORIZONTAL_FACING, Direction.SOUTH),
+                        BlockStateModelGenerator.createWeightedVariant(new ModelVariant(model1).withRotationY(AxisRotation.R180)))
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 1, 2, 3, 4).put(Properties.HORIZONTAL_FACING, Direction.WEST),
+                        BlockStateModelGenerator.createWeightedVariant(new ModelVariant(model1).withRotationY(AxisRotation.R270)))
 
                 // Model 2 for flower_amount 2, 3, 4
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 2, 3, 4).set(Properties.HORIZONTAL_FACING, Direction.NORTH),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model2))
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 2, 3, 4).set(Properties.HORIZONTAL_FACING, Direction.EAST),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model2).put(VariantSettings.Y, VariantSettings.Rotation.R90))
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 2, 3, 4).set(Properties.HORIZONTAL_FACING, Direction.SOUTH),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model2).put(VariantSettings.Y, VariantSettings.Rotation.R180))
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 2, 3, 4).set(Properties.HORIZONTAL_FACING, Direction.WEST),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model2).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 2, 3, 4).put(Properties.HORIZONTAL_FACING, Direction.NORTH),
+                        BlockStateModelGenerator.createWeightedVariant(model2))
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 2, 3, 4).put(Properties.HORIZONTAL_FACING, Direction.EAST),
+                        BlockStateModelGenerator.createWeightedVariant(new ModelVariant(model2).withRotationY(AxisRotation.R90)))
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 2, 3, 4).put(Properties.HORIZONTAL_FACING, Direction.SOUTH),
+                        BlockStateModelGenerator.createWeightedVariant(new ModelVariant(model2).withRotationY(AxisRotation.R180)))
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 2, 3, 4).put(Properties.HORIZONTAL_FACING, Direction.WEST),
+                        BlockStateModelGenerator.createWeightedVariant(new ModelVariant(model2).withRotationY(AxisRotation.R270)))
 
                 // Model 3 for flower_amount 3, 4
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 3, 4).set(Properties.HORIZONTAL_FACING, Direction.NORTH),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model3))
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 3, 4).set(Properties.HORIZONTAL_FACING, Direction.EAST),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model3).put(VariantSettings.Y, VariantSettings.Rotation.R90))
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 3, 4).set(Properties.HORIZONTAL_FACING, Direction.SOUTH),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model3).put(VariantSettings.Y, VariantSettings.Rotation.R180))
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 3, 4).set(Properties.HORIZONTAL_FACING, Direction.WEST),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model3).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 3, 4).put(Properties.HORIZONTAL_FACING, Direction.NORTH),
+                        BlockStateModelGenerator.createWeightedVariant(model3))
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 3, 4).put(Properties.HORIZONTAL_FACING, Direction.EAST),
+                        BlockStateModelGenerator.createWeightedVariant(new ModelVariant(model3).withRotationY(AxisRotation.R90)))
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 3, 4).put(Properties.HORIZONTAL_FACING, Direction.SOUTH),
+                        BlockStateModelGenerator.createWeightedVariant(new ModelVariant(model3).withRotationY(AxisRotation.R180)))
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 3, 4).put(Properties.HORIZONTAL_FACING, Direction.WEST),
+                        BlockStateModelGenerator.createWeightedVariant(new ModelVariant(model3).withRotationY(AxisRotation.R270)))
 
                 // Model 4 for flower_amount 4 only
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 4).set(Properties.HORIZONTAL_FACING, Direction.NORTH),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model4))
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 4).set(Properties.HORIZONTAL_FACING, Direction.EAST),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model4).put(VariantSettings.Y, VariantSettings.Rotation.R90))
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 4).set(Properties.HORIZONTAL_FACING, Direction.SOUTH),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model4).put(VariantSettings.Y, VariantSettings.Rotation.R180))
-                .with(When.create().set(Properties.FLOWER_AMOUNT, 4).set(Properties.HORIZONTAL_FACING, Direction.WEST),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, model4).put(VariantSettings.Y, VariantSettings.Rotation.R270)));
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 4).put(Properties.HORIZONTAL_FACING, Direction.NORTH),
+                        BlockStateModelGenerator.createWeightedVariant(model4))
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 4).put(Properties.HORIZONTAL_FACING, Direction.EAST),
+                        BlockStateModelGenerator.createWeightedVariant(new ModelVariant(model4).withRotationY(AxisRotation.R90)))
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 4).put(Properties.HORIZONTAL_FACING, Direction.SOUTH),
+                        BlockStateModelGenerator.createWeightedVariant(new ModelVariant(model4).withRotationY(AxisRotation.R180)))
+                .with(new MultipartModelConditionBuilder().put(Properties.FLOWER_AMOUNT, 4).put(Properties.HORIZONTAL_FACING, Direction.WEST),
+                        BlockStateModelGenerator.createWeightedVariant(new ModelVariant(model4).withRotationY(AxisRotation.R270))));
 
         // Register item model
         generator.registerParentedItemModel(block, model1);

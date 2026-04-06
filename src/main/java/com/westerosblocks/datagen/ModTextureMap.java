@@ -1,7 +1,7 @@
 package com.westerosblocks.datagen;
 
-import net.minecraft.data.client.TextureKey;
-import net.minecraft.data.client.TextureMap;
+import net.minecraft.client.data.TextureKey;
+import net.minecraft.client.data.TextureMap;
 import net.minecraft.util.Identifier;
 
 public class ModTextureMap {

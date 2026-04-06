@@ -4,7 +4,7 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
@@ -63,7 +63,7 @@ public class TorchBlockExporter extends BaseBlockExporter {
                                                     Block wallTorch,
                                                     Identifier modelId) {
         BlockStateVariantMap variants = createWallTorchVariants(modelId);
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(wallTorch).coordinate(variants));
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(wallTorch).with(variants));
     }
 
     private static void generateTorchItemModel(BlockStateModelGenerator generator,
@@ -73,7 +73,7 @@ public class TorchBlockExporter extends BaseBlockExporter {
     }
 
     private static BlockStateVariantMap createWallTorchVariants(Identifier modelId) {
-        return BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
+        return BlockStateVariantMap.models(Properties.HORIZONTAL_FACING)
             .register(Direction.EAST, createVariant(modelId))
             .register(Direction.SOUTH, createVariant(modelId, 90))
             .register(Direction.WEST, createVariant(modelId, 180))

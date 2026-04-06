@@ -4,7 +4,11 @@ import com.westerosblocks.block.custom.WCVinesBlock;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.util.math.AxisRotation;
+import net.minecraft.client.render.model.json.MultipartModelConditionBuilder;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.block.Block;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
@@ -33,9 +37,9 @@ public class VinesBlockExporter extends BaseBlockExporter {
                 .put(TextureKey.PARTICLE, createBlockIdentifier(texture));
     }
 
-    private static MultipartBlockStateSupplier createVinesBlockstate(Block block, List<Identifier> sideModelIds,
+    private static MultipartBlockModelDefinitionCreator createVinesBlockstate(Block block, List<Identifier> sideModelIds,
                                                                      List<Identifier> topModelIds, List<Integer> weights) {
-        MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
+        MultipartBlockModelDefinitionCreator supplier = MultipartBlockModelDefinitionCreator.create(block);
 
         for (int i = 0; i < sideModelIds.size(); i++) {
             Identifier sideModelId = sideModelIds.get(i);
@@ -48,28 +52,26 @@ public class VinesBlockExporter extends BaseBlockExporter {
         return supplier;
     }
 
-    private static void addDirectionalVariants(MultipartBlockStateSupplier supplier, Identifier sideModelId,
+    private static void addDirectionalVariants(MultipartBlockModelDefinitionCreator supplier, Identifier sideModelId,
                                                Identifier topModelId, int weight) {
         // South attachment (no rotation)
-        supplier.with(When.create().set(Properties.SOUTH, true), createWeightedVariant(sideModelId, 0, weight));
+        supplier.with(new MultipartModelConditionBuilder().put(Properties.SOUTH, true), createWeightedVariant(sideModelId, 0, weight));
         // West attachment (90° rotation)
-        supplier.with(When.create().set(Properties.WEST, true), createWeightedVariant(sideModelId, 90, weight));
+        supplier.with(new MultipartModelConditionBuilder().put(Properties.WEST, true), createWeightedVariant(sideModelId, 90, weight));
         // North attachment (180° rotation)
-        supplier.with(When.create().set(Properties.NORTH, true), createWeightedVariant(sideModelId, 180, weight));
+        supplier.with(new MultipartModelConditionBuilder().put(Properties.NORTH, true), createWeightedVariant(sideModelId, 180, weight));
         // East attachment (270° rotation)
-        supplier.with(When.create().set(Properties.EAST, true), createWeightedVariant(sideModelId, 270, weight));
+        supplier.with(new MultipartModelConditionBuilder().put(Properties.EAST, true), createWeightedVariant(sideModelId, 270, weight));
         // Up attachment
-        supplier.with(When.create().set(Properties.UP, true), createWeightedVariant(topModelId, 0, weight));
+        supplier.with(new MultipartModelConditionBuilder().put(Properties.UP, true), createWeightedVariant(topModelId, 0, weight));
         // Down attachment (180° X rotation)
-        supplier.with(When.create().set(WCVinesBlock.DOWN, true), createWeightedVariantX(topModelId, weight));
+        supplier.with(new MultipartModelConditionBuilder().put(WCVinesBlock.DOWN, true), createWeightedVariantX(topModelId, weight));
     }
 
-    private static BlockStateVariant createWeightedVariantX(Identifier modelId, int weight) {
-        BlockStateVariant variant = BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelId)
-                .put(VariantSettings.X, VariantSettings.Rotation.R180);
+    private static WeightedVariant createWeightedVariantX(Identifier modelId, int weight) {
+        WeightedVariant variant = BlockStateModelGenerator.createWeightedVariant(modelId)
+                .withRotationX(AxisRotation.R180);
         if (weight > 1) {
-            variant = variant.put(VariantSettings.WEIGHT, weight);
         }
         return variant;
     }
@@ -84,7 +86,7 @@ public class VinesBlockExporter extends BaseBlockExporter {
         Identifier topModelId = getVineModel("u", tinted)
                 .upload(createNestedModelId(block, "top"), topTextureMap, generator.modelCollector);
 
-        MultipartBlockStateSupplier blockstate = createVinesBlockstate(block,
+        MultipartBlockModelDefinitionCreator blockstate = createVinesBlockstate(block,
                 List.of(sideModelId), List.of(topModelId), List.of(1));
         generator.blockStateCollector.accept(blockstate);
 
@@ -116,7 +118,7 @@ public class VinesBlockExporter extends BaseBlockExporter {
             weights.add(set.weight);
         }
 
-        MultipartBlockStateSupplier blockstate = createVinesBlockstate(block, sideModelIds, topModelIds, weights);
+        MultipartBlockModelDefinitionCreator blockstate = createVinesBlockstate(block, sideModelIds, topModelIds, weights);
         generator.blockStateCollector.accept(blockstate);
 
         // Register item model using first side texture

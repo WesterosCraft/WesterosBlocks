@@ -4,23 +4,19 @@ import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
+import net.minecraft.world.tick.ScheduledTickView;
+import net.minecraft.util.math.random.Random;
 import com.westerosblocks.utils.ModProperties;
-
-import java.util.List;
 
 public class WCFenceBlock extends FenceBlock implements WCBlockDef {
     protected BlockDefinition def;
@@ -106,21 +102,23 @@ public class WCFenceBlock extends FenceBlock implements WCBlockDef {
     }
 
     @Override
-    public BlockState getStateForNeighborUpdate(
+    protected BlockState getStateForNeighborUpdate(
             BlockState state,
-            Direction direction,
-            BlockState neighborState,
-            WorldAccess world,
+            WorldView world,
+            ScheduledTickView tickView,
             BlockPos pos,
-            BlockPos neighborPos
+            Direction direction,
+            BlockPos neighborPos,
+            BlockState neighborState,
+            Random random
     ) {
         if (unconnect && state.get(UNCONNECT)) {
             if (state.get(WATERLOGGED)) {
-                world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+                tickView.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
             }
             return state;
         }
-        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+        return super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
     }
 
     @Override
@@ -142,15 +140,10 @@ public class WCFenceBlock extends FenceBlock implements WCBlockDef {
                 state = state.cycle(this.STATE);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);
                 world.syncWorldEvent(player, 1006, pos, 0);
-                return ActionResult.success(world.isClient);
+                return ActionResult.SUCCESS;
             }
         }
         return ActionResult.PASS;
-    }
-
-    @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        super.appendTooltip(stack, context, tooltip, options);
     }
 
     public BlockDefinition getDefinition() {

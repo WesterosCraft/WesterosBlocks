@@ -4,7 +4,7 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureMap;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
 import net.minecraft.block.Block;
 import net.minecraft.util.Identifier;
 
@@ -62,7 +62,7 @@ public class LeavesBlockExporter extends BaseBlockExporter {
         }
 
         // Create blockstate with rotations
-        VariantsBlockStateSupplier blockstate = createRotatedVariantsBlockState(block, modelIds, null, rotateRandom);
+        VariantsBlockModelDefinitionCreator blockstate = createRotatedVariantsBlockState(block, modelIds, null, rotateRandom);
         generator.blockStateCollector.accept(blockstate);
         generator.registerParentedItemModel(block, modelIds.get(0));
     }
@@ -93,7 +93,7 @@ public class LeavesBlockExporter extends BaseBlockExporter {
             }
         }
 
-        VariantsBlockStateSupplier blockstate = createRotatedVariantsBlockState(block, modelIds, weights, rotateRandom);
+        VariantsBlockModelDefinitionCreator blockstate = createRotatedVariantsBlockState(block, modelIds, weights, rotateRandom);
         generator.blockStateCollector.accept(blockstate);
         generator.registerParentedItemModel(block, modelIds.get(0));
     }

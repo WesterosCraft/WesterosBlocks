@@ -5,7 +5,7 @@ import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.block.enums.BedPart;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
 import net.minecraft.block.Block;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
@@ -61,10 +61,10 @@ public class BedBlockExporter extends BaseBlockExporter {
                 .put(ModTextureKey.BED_END2, createBlockIdentifier(textures[5]));
     }
 
-    private static VariantsBlockStateSupplier createBedBlockstate(Block block, Identifier headModelId, Identifier footModelId) {
-        return VariantsBlockStateSupplier.create(block)
-                .coordinate(
-                        BlockStateVariantMap.create(Properties.HORIZONTAL_FACING, Properties.BED_PART)
+    private static VariantsBlockModelDefinitionCreator createBedBlockstate(Block block, Identifier headModelId, Identifier footModelId) {
+        return VariantsBlockModelDefinitionCreator.of(block)
+                .with(
+                        BlockStateVariantMap.models(Properties.HORIZONTAL_FACING, Properties.BED_PART)
                                 .register(Direction.NORTH, BedPart.FOOT, createVariant(footModelId, 180))
                                 .register(Direction.EAST, BedPart.FOOT, createVariant(footModelId, 270))
                                 .register(Direction.SOUTH, BedPart.FOOT, createVariant(footModelId, 0))
@@ -93,7 +93,7 @@ public class BedBlockExporter extends BaseBlockExporter {
                 .upload(createNestedModelId(block, "foot"), footTextureMap, generator.modelCollector);
 
         // Create blockstate
-        VariantsBlockStateSupplier blockstate = createBedBlockstate(block, headModelId, footModelId);
+        VariantsBlockModelDefinitionCreator blockstate = createBedBlockstate(block, headModelId, footModelId);
         generator.blockStateCollector.accept(blockstate);
 
         // Register item model

@@ -9,8 +9,6 @@ import com.westerosblocks.item.custom.ValyrianSteelSwordItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
-import net.minecraft.item.SwordItem;
-import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
@@ -18,9 +16,9 @@ import java.util.List;
 
 public class ModItems {
     public static final Item LONGCLAW = registerItem("longclaw",
-            new ValyrianSteelSwordItem(ModToolMaterials.VALYRIAN_STEEL, new Item.Settings()
-                    .maxDamage(3000)
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.VALYRIAN_STEEL, 8, -2.8f))));
+            new ValyrianSteelSwordItem(new Item.Settings()
+                    .sword(ModToolMaterials.VALYRIAN_STEEL, 8, -2.8f)
+                    .maxDamage(3000)));
 
     public static final Item VALYRIAN_STEEL_INGOT = registerItem("valyrian_steel_ingot",
             new Item(new Item.Settings()));
@@ -33,72 +31,48 @@ public class ModItems {
             new ModShieldItem(
                     WesterosBlocks.id("geo/item/targaryen_heater_shield.geo.json"),
                     WesterosBlocks.id("textures/item/targaryen_heater_shield.png"),
-                    null, // equipSound
-                    () -> Ingredient.ofItems(VALYRIAN_STEEL_INGOT),
-                    List.of(), // Empty list - we'll set attributes after registration
                     new Item.Settings().maxDamage(2800)));
 
     public static final ModShieldItem BLACKFYRE_HEATER_SHIELD = (ModShieldItem) registerItem("blackfyre_heater_shield",
             new ModShieldItem(
                     WesterosBlocks.id("geo/item/blackfyre_heater_shield.geo.json"),
                     WesterosBlocks.id("textures/item/blackfyre_heater_shield.png"),
-                    null,
-                    () -> Ingredient.ofItems(VALYRIAN_STEEL_INGOT),
-                    List.of(), // Empty list - we'll set attributes after registration
                     new Item.Settings().maxDamage(2800)));
 
     public static final ModShieldItem BLACKWOOD_HEATER_SHIELD = (ModShieldItem) registerItem("blackwood_heater_shield",
             new ModShieldItem(
                     WesterosBlocks.id("geo/item/blackwood_heater_shield.geo.json"),
                     WesterosBlocks.id("textures/item/blackwood_heater_shield.png"),
-                    null,
-                    () -> Ingredient.ofItems(VALYRIAN_STEEL_INGOT),
-                    List.of(), // Empty list - we'll set attributes after registration
                     new Item.Settings().maxDamage(2800)));
 
     public static final ModShieldItem BRACKEN_HEATER_SHIELD = (ModShieldItem) registerItem("bracken_heater_shield",
             new ModShieldItem(
                     WesterosBlocks.id("geo/item/bracken_heater_shield.geo.json"),
                     WesterosBlocks.id("textures/item/bracken_heater_shield.png"),
-                    null,
-                    () -> Ingredient.ofItems(VALYRIAN_STEEL_INGOT),
-                    List.of(), // Empty list - we'll set attributes after registration
                     new Item.Settings().maxDamage(2800)));
 
     public static final ModShieldItem TULLY_HEATER_SHIELD = (ModShieldItem) registerItem("tully_heater_shield",
             new ModShieldItem(
                     WesterosBlocks.id("geo/item/tully_heater_shield.geo.json"),
                     WesterosBlocks.id("textures/item/tully_heater_shield.png"),
-                    null,
-                    () -> Ingredient.ofItems(VALYRIAN_STEEL_INGOT),
-                    List.of(), // Empty list - we'll set attributes after registration
                     new Item.Settings().maxDamage(2800)));
 
     public static final ModShieldItem HEDGE_KNIGHT_HEATER_SHIELD = (ModShieldItem) registerItem("hedge_knight_heater_shield",
             new ModShieldItem(
                     WesterosBlocks.id("geo/item/hedge_knight_heater_shield.geo.json"),
                     WesterosBlocks.id("textures/item/hedge_knight_heater_shield.png"),
-                    null,
-                    () -> Ingredient.ofItems(VALYRIAN_STEEL_INGOT),
-                    List.of(), // Empty list - we'll set attributes after registration
                     new Item.Settings().maxDamage(2800)));
 
     public static final ModShieldItem LAUGHING_TREE_HEATER_SHIELD = (ModShieldItem) registerItem("laughing_tree_heater_shield",
             new ModShieldItem(
                     WesterosBlocks.id("geo/item/laughing_tree_heater_shield.geo.json"),
                     WesterosBlocks.id("textures/item/laughing_tree_heater_shield.png"),
-                    null,
-                    () -> Ingredient.ofItems(VALYRIAN_STEEL_INGOT),
-                    List.of(), // Empty list - we'll set attributes after registration
                     new Item.Settings().maxDamage(2800)));
 
     public static final ModShieldItem GREYJOY_ROUND_SHIELD = (ModShieldItem) registerItem("greyjoy_round_shield",
             new ModShieldItem(
                     WesterosBlocks.id("geo/item/greyjoy_round_shield.geo.json"),
                     WesterosBlocks.id("textures/item/greyjoy_round_shield.png"),
-                    null,
-                    () -> Ingredient.ofItems(VALYRIAN_STEEL_INGOT),
-                    List.of(), // Empty list - we'll set attributes after registration
                     new Item.Settings().maxDamage(2800)));
 
     public static final Item ROPE = registerItem("rope", new RopeItem(new Item.Settings()));

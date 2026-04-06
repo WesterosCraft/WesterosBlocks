@@ -121,7 +121,7 @@ public class WCSolidBlock extends Block implements WCBlockDef {
                 state = state.cycle(STATE);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);
                 world.syncWorldEvent(player, 1006, pos, 0);
-                return ActionResult.success(world.isClient);
+                return ActionResult.SUCCESS;
             }
         }
         return ActionResult.PASS;
@@ -150,7 +150,7 @@ public class WCSolidBlock extends Block implements WCBlockDef {
     }
 
     @Override
-    public VoxelShape getCullingShape(BlockState state, BlockView world, BlockPos pos) {
+    public VoxelShape getCullingShape(BlockState state) {
         if (def.isNonOpaque()) {
             return VoxelShapes.empty();
         }
@@ -163,7 +163,7 @@ public class WCSolidBlock extends Block implements WCBlockDef {
     }
 
     @Override
-    public boolean isTransparent(BlockState state, BlockView world, BlockPos pos) {
+    public boolean isTransparent(BlockState state) {
         return def.isNonOpaque();
     }
 }

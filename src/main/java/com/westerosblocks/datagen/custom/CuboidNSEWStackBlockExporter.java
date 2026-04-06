@@ -4,7 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.westerosblocks.datagen.ModModels;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
 import net.minecraft.util.Identifier;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModTextureKey;
@@ -43,11 +43,9 @@ public class CuboidNSEWStackBlockExporter extends CuboidBlockExporter {
         }
 
         // Create blockstate with facing and half variants
-        VariantsBlockStateSupplier blockStateSupplier = VariantsBlockStateSupplier.create(block);
-
         // Bottom half variants (facing=north,east,south,west with half=lower)
-        blockStateSupplier.coordinate(
-            BlockStateVariantMap.create(
+        VariantsBlockModelDefinitionCreator blockStateSupplier = VariantsBlockModelDefinitionCreator.of(block).with(
+            BlockStateVariantMap.models(
                 WCCuboidNSEWStackBlock.FACING,
                 WCCuboidNSEWStackBlock.HALF
             )

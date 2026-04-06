@@ -10,17 +10,18 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.EnumProperty;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
-import net.minecraft.util.math.Direction;
 
 import com.westerosblocks.data.BlockDefinition.CuboidElement.CuboidRotation;
 
 import java.util.List;
 
 public class WCCuboidNSEWBlock extends WCCuboidBlock {
-    public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
+    public static final EnumProperty<Direction> FACING = HorizontalFacingBlock.FACING;
 
     public static class Factory extends BlockFactory {
         @Override

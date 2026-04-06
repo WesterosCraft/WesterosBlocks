@@ -6,13 +6,15 @@ import com.westerosblocks.entity.ModEntities;
 import com.westerosblocks.entity.client.ChairRenderer;
 import com.westerosblocks.entity.client.RopeRenderer;
 import com.westerosblocks.item.ModItems;
-import com.westerosblocks.item.client.ModShieldRenderer;
-import mod.azure.azurelib.common.render.item.AzItemRendererRegistry;
+// TODO: re-enable when AzureLib supports 1.21.11
+// import com.westerosblocks.item.client.ModShieldRenderer;
+// TODO: re-enable when AzureLib supports 1.21.11
+// import mod.azure.azurelib.common.render.item.AzItemRendererRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
 
@@ -29,54 +31,55 @@ public class WesterosBlocksClient implements ClientModInitializer {
 //        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CLOVER, RenderLayer.getCutout());
 
 
+        // TODO: re-enable when AzureLib supports 1.21.11
         // Shields Azurelib
-        AzItemRendererRegistry.register(ModItems.TARGARYEN_HEATER_SHIELD,
-                () -> new ModShieldRenderer(
-                        (ModItems.TARGARYEN_HEATER_SHIELD).getGeoPath(),
-                        (ModItems.TARGARYEN_HEATER_SHIELD).getTexPath()
-                ));
-
-        AzItemRendererRegistry.register(ModItems.BLACKFYRE_HEATER_SHIELD,
-                () -> new ModShieldRenderer(
-                        (ModItems.BLACKFYRE_HEATER_SHIELD).getGeoPath(),
-                        (ModItems.BLACKFYRE_HEATER_SHIELD).getTexPath()
-                ));
-
-        AzItemRendererRegistry.register(ModItems.BLACKWOOD_HEATER_SHIELD,
-                () -> new ModShieldRenderer(
-                        (ModItems.BLACKWOOD_HEATER_SHIELD).getGeoPath(),
-                        (ModItems.BLACKWOOD_HEATER_SHIELD).getTexPath()
-                ));
-
-        AzItemRendererRegistry.register(ModItems.BRACKEN_HEATER_SHIELD,
-                () -> new ModShieldRenderer(
-                        (ModItems.BRACKEN_HEATER_SHIELD).getGeoPath(),
-                        (ModItems.BRACKEN_HEATER_SHIELD).getTexPath()
-                ));
-
-        AzItemRendererRegistry.register(ModItems.TULLY_HEATER_SHIELD,
-                () -> new ModShieldRenderer(
-                        (ModItems.TULLY_HEATER_SHIELD).getGeoPath(),
-                        (ModItems.TULLY_HEATER_SHIELD).getTexPath()
-                ));
-
-        AzItemRendererRegistry.register(ModItems.HEDGE_KNIGHT_HEATER_SHIELD,
-                () -> new ModShieldRenderer(
-                        (ModItems.HEDGE_KNIGHT_HEATER_SHIELD).getGeoPath(),
-                        (ModItems.HEDGE_KNIGHT_HEATER_SHIELD).getTexPath()
-                ));
-
-        AzItemRendererRegistry.register(ModItems.LAUGHING_TREE_HEATER_SHIELD,
-                () -> new ModShieldRenderer(
-                        (ModItems.LAUGHING_TREE_HEATER_SHIELD).getGeoPath(),
-                        (ModItems.LAUGHING_TREE_HEATER_SHIELD).getTexPath()
-                ));
-
-        AzItemRendererRegistry.register(ModItems.GREYJOY_ROUND_SHIELD,
-                () -> new ModShieldRenderer(
-                        (ModItems.GREYJOY_ROUND_SHIELD).getGeoPath(),
-                        (ModItems.GREYJOY_ROUND_SHIELD).getTexPath()
-                ));
+        // AzItemRendererRegistry.register(ModItems.TARGARYEN_HEATER_SHIELD,
+        //         () -> new ModShieldRenderer(
+        //                 (ModItems.TARGARYEN_HEATER_SHIELD).getGeoPath(),
+        //                 (ModItems.TARGARYEN_HEATER_SHIELD).getTexPath()
+        //         ));
+        //
+        // AzItemRendererRegistry.register(ModItems.BLACKFYRE_HEATER_SHIELD,
+        //         () -> new ModShieldRenderer(
+        //                 (ModItems.BLACKFYRE_HEATER_SHIELD).getGeoPath(),
+        //                 (ModItems.BLACKFYRE_HEATER_SHIELD).getTexPath()
+        //         ));
+        //
+        // AzItemRendererRegistry.register(ModItems.BLACKWOOD_HEATER_SHIELD,
+        //         () -> new ModShieldRenderer(
+        //                 (ModItems.BLACKWOOD_HEATER_SHIELD).getGeoPath(),
+        //                 (ModItems.BLACKWOOD_HEATER_SHIELD).getTexPath()
+        //         ));
+        //
+        // AzItemRendererRegistry.register(ModItems.BRACKEN_HEATER_SHIELD,
+        //         () -> new ModShieldRenderer(
+        //                 (ModItems.BRACKEN_HEATER_SHIELD).getGeoPath(),
+        //                 (ModItems.BRACKEN_HEATER_SHIELD).getTexPath()
+        //         ));
+        //
+        // AzItemRendererRegistry.register(ModItems.TULLY_HEATER_SHIELD,
+        //         () -> new ModShieldRenderer(
+        //                 (ModItems.TULLY_HEATER_SHIELD).getGeoPath(),
+        //                 (ModItems.TULLY_HEATER_SHIELD).getTexPath()
+        //         ));
+        //
+        // AzItemRendererRegistry.register(ModItems.HEDGE_KNIGHT_HEATER_SHIELD,
+        //         () -> new ModShieldRenderer(
+        //                 (ModItems.HEDGE_KNIGHT_HEATER_SHIELD).getGeoPath(),
+        //                 (ModItems.HEDGE_KNIGHT_HEATER_SHIELD).getTexPath()
+        //         ));
+        //
+        // AzItemRendererRegistry.register(ModItems.LAUGHING_TREE_HEATER_SHIELD,
+        //         () -> new ModShieldRenderer(
+        //                 (ModItems.LAUGHING_TREE_HEATER_SHIELD).getGeoPath(),
+        //                 (ModItems.LAUGHING_TREE_HEATER_SHIELD).getTexPath()
+        //         ));
+        //
+        // AzItemRendererRegistry.register(ModItems.GREYJOY_ROUND_SHIELD,
+        //         () -> new ModShieldRenderer(
+        //                 (ModItems.GREYJOY_ROUND_SHIELD).getGeoPath(),
+        //                 (ModItems.GREYJOY_ROUND_SHIELD).getTexPath()
+        //         ));
     }
 
     private void applyRenderLayersFromDefinitions() {

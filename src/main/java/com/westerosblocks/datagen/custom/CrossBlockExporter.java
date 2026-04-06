@@ -3,7 +3,9 @@ package com.westerosblocks.datagen.custom;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.state.property.Properties;
 
 import net.minecraft.util.Identifier;
@@ -66,12 +68,12 @@ public class CrossBlockExporter extends BaseBlockExporter {
         if (useStateMap && !isLayerSensitive) {
             ModProperties.StateProperty stateProperty = getStateProperty(block);
 
-            BlockStateVariantMap.SingleProperty<String> stateMap =
-                BlockStateVariantMap.create(stateProperty);
+            BlockStateVariantMap.SingleProperty<WeightedVariant, String> stateMap =
+            BlockStateVariantMap.models(stateProperty);
 
             for (BlockDefinition.StateVariant state : states) {
                 String stateID = getStateIdOrBase(state.getStateID());
-                List<BlockStateVariant> variants = new ArrayList<>();
+                List<WeightedVariant> variants = new ArrayList<>();
 
                 int textureSetCount = state.getRandomTextureSetCount();
                 if (textureSetCount == 0) {
@@ -87,25 +89,25 @@ public class CrossBlockExporter extends BaseBlockExporter {
                         : createNestedModelId(block, getModelName(stateID, setIdx));
 
                     for (int rot = 0; rot < rotationCount; rot++) {
-                        BlockStateVariant variant = createWeightedVariant(modelId, rot * 90, weight);
+                        WeightedVariant variant = createWeightedVariant(modelId, rot * 90, weight);
                         variants.add(variant);
                     }
                 }
 
-                stateMap.register(stateID, variants);
+                stateMap.register(stateID, mergeVariants(variants));
             }
 
             generator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(block).coordinate(stateMap)
+                VariantsBlockModelDefinitionCreator.of(block).with(stateMap)
             );
         }
         else if (isLayerSensitive) {
-            BlockStateVariantMap.SingleProperty<Integer> layerMap =
-                BlockStateVariantMap.create(Properties.LAYERS);
+            BlockStateVariantMap.SingleProperty<WeightedVariant, Integer> layerMap =
+            BlockStateVariantMap.models(Properties.LAYERS);
 
             for (int layerIdx = 0; layerIdx < layerConds.length; layerIdx++) {
                 int layerValue = layerConds[layerIdx];
-                List<BlockStateVariant> variants = new ArrayList<>();
+                List<WeightedVariant> variants = new ArrayList<>();
 
                 for (BlockDefinition.StateVariant state : states) {
                     String stateID = state.getStateID();
@@ -128,22 +130,22 @@ public class CrossBlockExporter extends BaseBlockExporter {
                             : createNestedModelId(block, getModelName(id, setIdx));
 
                         for (int rot = 0; rot < rotationCount; rot++) {
-                            BlockStateVariant variant = createWeightedVariant(modelId, rot * 90, weight);
+                            WeightedVariant variant = createWeightedVariant(modelId, rot * 90, weight);
                             variants.add(variant);
                         }
                     }
                 }
 
-                layerMap.register(layerValue, variants);
+                layerMap.register(layerValue, mergeVariants(variants));
             }
 
             generator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(block).coordinate(layerMap)
+                VariantsBlockModelDefinitionCreator.of(block).with(layerMap)
             );
         }
         else {
             // Single-state block: Simple variant list
-            List<BlockStateVariant> variants = new ArrayList<>();
+            List<WeightedVariant> variants = new ArrayList<>();
 
             for (BlockDefinition.StateVariant state : states) {
                 String stateID = state.getStateID();
@@ -163,14 +165,14 @@ public class CrossBlockExporter extends BaseBlockExporter {
                         : createNestedModelId(block, getModelName(id, setIdx));
 
                     for (int rot = 0; rot < rotationCount; rot++) {
-                        BlockStateVariant variant = createWeightedVariant(modelId, rot * 90, weight);
+                        WeightedVariant variant = createWeightedVariant(modelId, rot * 90, weight);
                         variants.add(variant);
                     }
                 }
             }
 
             generator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0]))
+                VariantsBlockModelDefinitionCreator.of(block, mergeVariants(variants))
             );
         }
     }

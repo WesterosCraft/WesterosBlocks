@@ -5,7 +5,11 @@ import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
+import net.minecraft.util.math.AxisRotation;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
@@ -74,8 +78,8 @@ public class CropBlockExporter extends BaseBlockExporter {
                                                      List<BlockDefinition.StateVariant> states,
                                                      ModProperties.StateProperty stateProperty,
                                                      int rotationCount) {
-        BlockStateVariantMap.DoubleProperty<Integer, String> variantMap =
-            BlockStateVariantMap.create(Properties.LAYERS, stateProperty);
+        BlockStateVariantMap.DoubleProperty<WeightedVariant, Integer, String> variantMap =
+            BlockStateVariantMap.models(Properties.LAYERS, stateProperty);
 
         // layers=8 first, then layers=1..7 (matches old layerConds order)
         int[] layerOrder = {8, 1, 2, 3, 4, 5, 6, 7};
@@ -85,42 +89,42 @@ public class CropBlockExporter extends BaseBlockExporter {
                 String stateID = state.getStateID();
                 if (stateID == null) continue;
 
-                List<BlockStateVariant> variants = buildCropVariants(block, state, layer, rotationCount);
+                List<WeightedVariant> variants = buildCropVariants(block, state, layer, rotationCount);
                 if (variants.size() == 1) {
                     variantMap.register(layer, stateID, variants.get(0));
                 } else if (!variants.isEmpty()) {
-                    variantMap.register(layer, stateID, variants);
+                    variantMap.register(layer, stateID, mergeVariants(variants));
                 }
             }
         }
 
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+            VariantsBlockModelDefinitionCreator.of(block).with(variantMap)
         );
     }
 
     private static void generateLayerBlockState(BlockStateModelGenerator generator, Block block,
                                                List<BlockDefinition.StateVariant> states,
                                                int rotationCount) {
-        BlockStateVariantMap.SingleProperty<Integer> variantMap =
-            BlockStateVariantMap.create(Properties.LAYERS);
+        BlockStateVariantMap.SingleProperty<WeightedVariant, Integer> variantMap =
+            BlockStateVariantMap.models(Properties.LAYERS);
 
         int[] layerOrder = {8, 1, 2, 3, 4, 5, 6, 7};
 
         for (int layer : layerOrder) {
-            List<BlockStateVariant> variants = new ArrayList<>();
+            List<WeightedVariant> variants = new ArrayList<>();
             for (BlockDefinition.StateVariant state : states) {
                 variants.addAll(buildCropVariants(block, state, layer, rotationCount));
             }
             if (variants.size() == 1) {
                 variantMap.register(layer, variants.get(0));
             } else if (!variants.isEmpty()) {
-                variantMap.register(layer, variants);
+                variantMap.register(layer, mergeVariants(variants));
             }
         }
 
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+            VariantsBlockModelDefinitionCreator.of(block).with(variantMap)
         );
     }
 
@@ -128,48 +132,44 @@ public class CropBlockExporter extends BaseBlockExporter {
                                                List<BlockDefinition.StateVariant> states,
                                                ModProperties.StateProperty stateProperty,
                                                int rotationCount) {
-        BlockStateVariantMap.SingleProperty<String> variantMap =
-            BlockStateVariantMap.create(stateProperty);
+        BlockStateVariantMap.SingleProperty<WeightedVariant, String> variantMap =
+            BlockStateVariantMap.models(stateProperty);
 
         for (BlockDefinition.StateVariant state : states) {
             String stateID = state.getStateID();
             if (stateID == null) continue;
 
-            List<BlockStateVariant> variants = buildCropVariants(block, state, 8, rotationCount);
+            List<WeightedVariant> variants = buildCropVariants(block, state, 8, rotationCount);
             if (variants.size() == 1) {
                 variantMap.register(stateID, variants.get(0));
             } else if (!variants.isEmpty()) {
-                variantMap.register(stateID, variants);
+                variantMap.register(stateID, mergeVariants(variants));
             }
         }
 
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+            VariantsBlockModelDefinitionCreator.of(block).with(variantMap)
         );
     }
 
     private static void generateSimpleBlockState(BlockStateModelGenerator generator, Block block,
                                                 List<BlockDefinition.StateVariant> states,
                                                 int rotationCount) {
-        List<BlockStateVariant> variants = new ArrayList<>();
+        List<WeightedVariant> variants = new ArrayList<>();
         for (BlockDefinition.StateVariant state : states) {
             variants.addAll(buildCropVariants(block, state, 8, rotationCount));
         }
 
-        if (variants.size() == 1) {
+        if (!variants.isEmpty()) {
             generator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(block, variants.get(0))
-            );
-        } else if (!variants.isEmpty()) {
-            generator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0]))
+                VariantsBlockModelDefinitionCreator.of(block, mergeVariants(variants))
             );
         }
     }
 
-    private static List<BlockStateVariant> buildCropVariants(Block block, BlockDefinition.StateVariant state,
+    private static List<WeightedVariant> buildCropVariants(Block block, BlockDefinition.StateVariant state,
                                                             int layer, int rotationCount) {
-        List<BlockStateVariant> variants = new ArrayList<>();
+        List<WeightedVariant> variants = new ArrayList<>();
         String baseName = getStateIdOrBase(state.getStateID());
         String layerSuffix = layer != 8 ? "_layer" + layer : "";
         String modelName = baseName + layerSuffix;
@@ -183,17 +183,7 @@ public class CropBlockExporter extends BaseBlockExporter {
                 : createGeneratedModelId(block, getModelName(modelName, setIdx));
 
             for (int rot = 0; rot < rotationCount; rot++) {
-                BlockStateVariant variant = BlockStateVariant.create()
-                    .put(VariantSettings.MODEL, modelId);
-
-                if (set.getWeight() > 1) {
-                    variant.put(VariantSettings.WEIGHT, set.getWeight());
-                }
-                if (rot > 0) {
-                    variant.put(VariantSettings.Y, toRotation(90 * rot));
-                }
-
-                variants.add(variant);
+                variants.add(createWeightedVariant(modelId, rot * 90, set.getWeight()));
             }
         }
 
@@ -218,12 +208,12 @@ public class CropBlockExporter extends BaseBlockExporter {
         model.upload(modelId, textureMap, generator.modelCollector);
     }
 
-    private static VariantSettings.Rotation toRotation(int degrees) {
+    private static AxisRotation toRotation(int degrees) {
         return switch (degrees) {
-            case 90 -> VariantSettings.Rotation.R90;
-            case 180 -> VariantSettings.Rotation.R180;
-            case 270 -> VariantSettings.Rotation.R270;
-            default -> VariantSettings.Rotation.R0;
+            case 90 -> AxisRotation.R90;
+            case 180 -> AxisRotation.R180;
+            case 270 -> AxisRotation.R270;
+            default -> AxisRotation.R0;
         };
     }
 }

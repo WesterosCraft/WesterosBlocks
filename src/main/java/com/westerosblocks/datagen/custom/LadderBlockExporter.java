@@ -2,7 +2,10 @@ package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.data.BlockDefinition;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.block.Block;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
@@ -29,34 +32,24 @@ public class LadderBlockExporter extends BaseBlockExporter {
                 .put(TextureKey.PARTICLE, createBlockIdentifier(texture));
     }
 
-    private static VariantsBlockStateSupplier createLadderBlockstate(Block block, List<Identifier> modelIds,
+    private static VariantsBlockModelDefinitionCreator createLadderBlockstate(Block block, List<Identifier> modelIds,
                                                                      List<Integer> weights) {
-        BlockStateVariantMap.SingleProperty<Direction> variantMap = BlockStateVariantMap.create(Properties.HORIZONTAL_FACING);
+        BlockStateVariantMap.SingleProperty<WeightedVariant, Direction> variantMap =
+            BlockStateVariantMap.models(Properties.HORIZONTAL_FACING);
 
         for (Direction direction : new Direction[]{Direction.NORTH, Direction.SOUTH, Direction.EAST, Direction.WEST}) {
-            List<BlockStateVariant> directionVariants = new ArrayList<>();
-
             int yRotation = getRotationForDirection(direction);
 
+            List<WeightedVariant> directionVariants = new ArrayList<>();
             for (int i = 0; i < modelIds.size(); i++) {
-                BlockStateVariant variant = BlockStateVariant.create()
-                        .put(VariantSettings.MODEL, modelIds.get(i));
-
-                if (yRotation != 0) {
-                    variant = variant.put(VariantSettings.Y, toYRotation(yRotation));
-                }
-
-                if (weights != null && weights.get(i) > 1) {
-                    variant = variant.put(VariantSettings.WEIGHT, weights.get(i));
-                }
-
-                directionVariants.add(variant);
+                int weight = (weights != null) ? weights.get(i) : 1;
+                directionVariants.add(createWeightedVariant(modelIds.get(i), yRotation, weight));
             }
 
-            variantMap.register(direction, directionVariants);
+            variantMap.register(direction, mergeVariants(directionVariants));
         }
 
-        return VariantsBlockStateSupplier.create(block).coordinate(variantMap);
+        return VariantsBlockModelDefinitionCreator.of(block).with(variantMap);
     }
 
     // ========================================
@@ -67,7 +60,7 @@ public class LadderBlockExporter extends BaseBlockExporter {
         TextureMap textureMap = createLadderTextureMap(texture);
         Identifier modelId = uploadModel(createLadderModel(tinted), block, "base", textureMap, generator.modelCollector);
 
-        VariantsBlockStateSupplier blockstate = createLadderBlockstate(block, List.of(modelId), List.of(1));
+        VariantsBlockModelDefinitionCreator blockstate = createLadderBlockstate(block, List.of(modelId), List.of(1));
         generator.blockStateCollector.accept(blockstate);
         registerParentedItemModel(generator, block, modelId);
     }
@@ -84,7 +77,7 @@ public class LadderBlockExporter extends BaseBlockExporter {
             registry.add(modelId, set.weight);
         }
 
-        VariantsBlockStateSupplier blockstate = createLadderBlockstate(block,
+        VariantsBlockModelDefinitionCreator blockstate = createLadderBlockstate(block,
                                                                        registry.getModelIds(), registry.getWeights());
         generator.blockStateCollector.accept(blockstate);
         registerParentedItemModel(generator, block, registry.getModelIds().get(0));
@@ -105,7 +98,7 @@ public class LadderBlockExporter extends BaseBlockExporter {
             weights.add(1); // Default weight
         }
 
-        VariantsBlockStateSupplier blockstate = createLadderBlockstate(block, modelIds, weights);
+        VariantsBlockModelDefinitionCreator blockstate = createLadderBlockstate(block, modelIds, weights);
         generator.blockStateCollector.accept(blockstate);
         generator.registerParentedItemModel(block, modelIds.get(0));
     }

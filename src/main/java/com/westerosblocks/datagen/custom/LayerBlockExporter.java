@@ -5,9 +5,12 @@ import com.google.gson.JsonObject;
 import com.westerosblocks.block.custom.WCLayerBlock;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariant;
+import net.minecraft.client.render.model.json.WeightedVariant;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.collection.Pool;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,15 +51,16 @@ public class LayerBlockExporter extends BaseBlockExporter {
                                           WCLayerBlock layerBlock) {
         boolean isCustomModel = definition.hasCustomModel();
 
-        BlockStateVariantMap.SingleProperty<Integer> variantMap =
-            BlockStateVariantMap.create(Properties.LAYERS);
+        BlockStateVariantMap.SingleProperty<WeightedVariant, Integer> variantMap =
+            BlockStateVariantMap.models(Properties.LAYERS);
 
         for (int layer = 1; layer <= layerBlock.layerCount; layer++) {
             if (isCustomModel) {
                 Identifier modelId = createCustomModelId(block, "layer" + layer + "_v1");
-                variantMap.register(layer, BlockStateVariant.create().put(VariantSettings.MODEL, modelId));
+                variantMap.register(layer, BlockStateModelGenerator.createWeightedVariant(modelId));
             } else {
-                List<BlockStateVariant> layerVariants = new ArrayList<>();
+                Pool.Builder<ModelVariant> poolBuilder = Pool.builder();
+                boolean hasVariants = false;
 
                 for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
                     BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
@@ -65,24 +69,18 @@ public class LayerBlockExporter extends BaseBlockExporter {
                     }
 
                     Identifier modelId = createGeneratedModelId(block, getModelName("layer" + layer, setIdx));
-                    BlockStateVariant variant = BlockStateVariant.create()
-                        .put(VariantSettings.MODEL, modelId);
-                    if (set.getWeight() > 1) {
-                        variant.put(VariantSettings.WEIGHT, set.getWeight());
-                    }
-                    layerVariants.add(variant);
+                    poolBuilder.add(new ModelVariant(modelId), set.getWeight());
+                    hasVariants = true;
                 }
 
-                if (layerVariants.size() == 1) {
-                    variantMap.register(layer, layerVariants.getFirst());
-                } else if (!layerVariants.isEmpty()) {
-                    variantMap.register(layer, layerVariants);
+                if (hasVariants) {
+                    variantMap.register(layer, new WeightedVariant(poolBuilder.build()));
                 }
             }
         }
 
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+            VariantsBlockModelDefinitionCreator.of(block).with(variantMap)
         );
     }
 

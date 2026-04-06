@@ -3,7 +3,11 @@ package com.westerosblocks.datagen.custom;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
+import net.minecraft.client.render.model.json.MultipartModelConditionBuilder;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.block.Block;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
@@ -36,9 +40,9 @@ public class FenceBlockExporter extends BaseBlockExporter {
     /**
      * Creates multipart blockstate supplier for fence blocks without states.
      */
-    private static MultipartBlockStateSupplier createFenceVariants(Block block, List<Identifier> postModelIds,
+    private static MultipartBlockModelDefinitionCreator createFenceVariants(Block block, List<Identifier> postModelIds,
                                                                     List<Identifier> sideModelIds, List<Integer> weights) {
-        MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
+        MultipartBlockModelDefinitionCreator supplier = MultipartBlockModelDefinitionCreator.create(block);
         addFenceEntries(supplier, postModelIds, sideModelIds, weights, null, null);
         return supplier;
     }
@@ -46,9 +50,9 @@ public class FenceBlockExporter extends BaseBlockExporter {
     /**
      * Creates multipart blockstate supplier for fence blocks with state property.
      */
-    private static MultipartBlockStateSupplier createFenceVariantsWithStates(Block block,
+    private static MultipartBlockModelDefinitionCreator createFenceVariantsWithStates(Block block,
             Map<String, FenceModelSet> stateModels, ModProperties.StateProperty stateProperty) {
-        MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
+        MultipartBlockModelDefinitionCreator supplier = MultipartBlockModelDefinitionCreator.create(block);
 
         for (Map.Entry<String, FenceModelSet> entry : stateModels.entrySet()) {
             String stateId = entry.getKey();
@@ -63,19 +67,15 @@ public class FenceBlockExporter extends BaseBlockExporter {
      * Adds fence post and side entries to the multipart supplier.
      * If stateProperty and stateId are non-null, adds state condition to when clauses.
      */
-    private static void addFenceEntries(MultipartBlockStateSupplier supplier, List<Identifier> postModelIds,
+    private static void addFenceEntries(MultipartBlockModelDefinitionCreator supplier, List<Identifier> postModelIds,
             List<Identifier> sideModelIds, List<Integer> weights,
             ModProperties.StateProperty stateProperty, String stateId) {
         for (int i = 0; i < postModelIds.size(); i++) {
             // Add post model
-            BlockStateVariant postVariant = BlockStateVariant.create()
-                    .put(VariantSettings.MODEL, postModelIds.get(i));
-            if (weights.get(i) > 1) {
-                postVariant = postVariant.put(VariantSettings.WEIGHT, weights.get(i));
-            }
+            WeightedVariant postVariant = createWeightedVariant(postModelIds.get(i), 0, weights.get(i));
 
             if (stateProperty != null && stateId != null) {
-                supplier.with(When.create().set(stateProperty, stateId), postVariant);
+                supplier.with(new MultipartModelConditionBuilder().put(stateProperty, stateId), postVariant);
             } else {
                 supplier.with(postVariant);
             }
@@ -91,32 +91,28 @@ public class FenceBlockExporter extends BaseBlockExporter {
     /**
      * Adds a single side variant for a specific direction, optionally with state condition.
      */
-    private static void addSideVariant(MultipartBlockStateSupplier supplier, Identifier sideModelId,
+    private static void addSideVariant(MultipartBlockModelDefinitionCreator supplier, Identifier sideModelId,
                                        int weight, Direction direction,
                                        ModProperties.StateProperty stateProperty, String stateId) {
-        BlockStateVariant sideVariant = BlockStateVariant.create()
-                .put(VariantSettings.MODEL, sideModelId)
-                .put(VariantSettings.UVLOCK, true);
-
+        ModelVariant mv = new ModelVariant(sideModelId).withUVLock(true);
         int yRotation = getRotationForDirection(direction);
         if (yRotation != 0) {
-            sideVariant = sideVariant.put(VariantSettings.Y, toYRotation(yRotation));
+            mv = mv.withRotationY(toYRotation(yRotation));
         }
+        WeightedVariant sideVariant = weight > 1
+            ? new WeightedVariant(net.minecraft.util.collection.Pool.builder().add(mv, weight).build())
+            : BlockStateModelGenerator.createWeightedVariant(mv);
 
-        if (weight > 1) {
-            sideVariant = sideVariant.put(VariantSettings.WEIGHT, weight);
-        }
-
-        When.PropertyCondition condition = switch (direction) {
-            case NORTH -> When.create().set(Properties.NORTH, true);
-            case EAST -> When.create().set(Properties.EAST, true);
-            case SOUTH -> When.create().set(Properties.SOUTH, true);
-            case WEST -> When.create().set(Properties.WEST, true);
+        MultipartModelConditionBuilder condition = switch (direction) {
+            case NORTH -> new MultipartModelConditionBuilder().put(Properties.NORTH, true);
+            case EAST -> new MultipartModelConditionBuilder().put(Properties.EAST, true);
+            case SOUTH -> new MultipartModelConditionBuilder().put(Properties.SOUTH, true);
+            case WEST -> new MultipartModelConditionBuilder().put(Properties.WEST, true);
             default -> null;
         };
 
         if (condition != null && stateProperty != null && stateId != null) {
-            condition.set(stateProperty, stateId);
+            condition.put(stateProperty, stateId);
         }
 
         supplier.with(condition, sideVariant);
@@ -210,7 +206,7 @@ public class FenceBlockExporter extends BaseBlockExporter {
             }
 
             if (!stateModels.isEmpty()) {
-                MultipartBlockStateSupplier blockstate = createFenceVariantsWithStates(block, stateModels, stateProperty);
+                MultipartBlockModelDefinitionCreator blockstate = createFenceVariantsWithStates(block, stateModels, stateProperty);
                 generator.blockStateCollector.accept(blockstate);
 
                 // Item model from first state
@@ -251,7 +247,7 @@ public class FenceBlockExporter extends BaseBlockExporter {
         Identifier sideModelId = getFenceSideModel(tinted, overlay)
                 .upload(createNestedModelId(block, "side"), textureMap, generator.modelCollector);
 
-        MultipartBlockStateSupplier blockstate = createFenceVariants(block,
+        MultipartBlockModelDefinitionCreator blockstate = createFenceVariants(block,
                 List.of(postModelId), List.of(sideModelId), List.of(1));
         generator.blockStateCollector.accept(blockstate);
 
@@ -283,7 +279,7 @@ public class FenceBlockExporter extends BaseBlockExporter {
             weights.add(set.weight);
         }
 
-        MultipartBlockStateSupplier blockstate = createFenceVariants(block, postModelIds, sideModelIds, weights);
+        MultipartBlockModelDefinitionCreator blockstate = createFenceVariants(block, postModelIds, sideModelIds, weights);
         generator.blockStateCollector.accept(blockstate);
 
         BlockDefinition.TextureVariantSet firstSet = textureSets.get(0);

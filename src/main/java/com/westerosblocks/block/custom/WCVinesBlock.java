@@ -15,8 +15,9 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
+import net.minecraft.world.tick.ScheduledTickView;
+import net.minecraft.util.math.random.Random;
 import com.google.common.collect.ImmutableMap;
 
 import java.util.Map;
@@ -190,20 +191,22 @@ public class WCVinesBlock extends VineBlock implements WCBlockDef {
     }
 
     @Override
-    public BlockState getStateForNeighborUpdate(
+    protected BlockState getStateForNeighborUpdate(
             BlockState state,
-            Direction direction,
-            BlockState neighborState,
-            WorldAccess world,
+            WorldView world,
+            ScheduledTickView tickView,
             BlockPos pos,
-            BlockPos neighborPos
+            Direction direction,
+            BlockPos neighborPos,
+            BlockState neighborState,
+            Random random
     ) {
         if (state.get(WATERLOGGED)) {
-            world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+            tickView.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
 
         if ((!canGrowDownward) && (direction == Direction.DOWN)) {
-            return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+            return super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
         } else {
             BlockState blockstate = this.getUpdatedState(state, world, pos);
             return !this.hasFaces(blockstate) ? Blocks.AIR.getDefaultState() : blockstate;

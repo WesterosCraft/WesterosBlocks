@@ -3,7 +3,11 @@ package com.westerosblocks.datagen.custom;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
+import net.minecraft.util.math.AxisRotation;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
@@ -141,24 +145,20 @@ public class Cuboid16WayBlockExporter extends CuboidBlockExporter {
     // Single-state: SingleProperty<Integer> on ROTATION
     private static void generateBlockState(BlockStateModelGenerator generator, Block block,
                                           Map<String, List<ModelSet16Way>> rotationModelSets) {
-        BlockStateVariantMap.SingleProperty<Integer> variantMap =
-            BlockStateVariantMap.create(Properties.ROTATION);
+        BlockStateVariantMap.SingleProperty<WeightedVariant, Integer> variantMap =
+            BlockStateVariantMap.models(Properties.ROTATION);
 
         for (int rotation = 0; rotation < 16; rotation++) {
             int modelIndex = rotation % 4;
             List<ModelSet16Way> modelSets = rotationModelSets.get(MODEL_SUFFIXES[modelIndex]);
             int yRotation = (90 * (rotation / 4)) % 360;
 
-            List<BlockStateVariant> variants = buildRotationVariants(modelSets, yRotation);
-            if (variants.size() == 1) {
-                variantMap.register(rotation, variants.get(0));
-            } else {
-                variantMap.register(rotation, variants);
-            }
+            List<WeightedVariant> variants = buildRotationVariants(modelSets, yRotation);
+            variantMap.register(rotation, mergeVariants(variants));
         }
 
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+            VariantsBlockModelDefinitionCreator.of(block).with(variantMap)
         );
     }
 
@@ -166,8 +166,8 @@ public class Cuboid16WayBlockExporter extends CuboidBlockExporter {
     private static void generateBlockStateWithStates(BlockStateModelGenerator generator, Block block,
                                                      Map<String, Map<String, List<ModelSet16Way>>> stateRotationModelSets,
                                                      ModProperties.StateProperty stateProperty) {
-        BlockStateVariantMap.DoubleProperty<Integer, String> variantMap =
-            BlockStateVariantMap.create(Properties.ROTATION, stateProperty);
+        BlockStateVariantMap.DoubleProperty<WeightedVariant, Integer, String> variantMap =
+            BlockStateVariantMap.models(Properties.ROTATION, stateProperty);
 
         for (Map.Entry<String, Map<String, List<ModelSet16Way>>> stateEntry : stateRotationModelSets.entrySet()) {
             String stateId = stateEntry.getKey();
@@ -180,46 +180,32 @@ public class Cuboid16WayBlockExporter extends CuboidBlockExporter {
 
                 if (modelSets == null || modelSets.isEmpty()) continue;
 
-                List<BlockStateVariant> variants = buildRotationVariants(modelSets, yRotation);
-                if (variants.size() == 1) {
-                    variantMap.register(rotation, stateId, variants.get(0));
-                } else {
-                    variantMap.register(rotation, stateId, variants);
-                }
+                List<WeightedVariant> variants = buildRotationVariants(modelSets, yRotation);
+                variantMap.register(rotation, stateId, mergeVariants(variants));
             }
         }
 
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+            VariantsBlockModelDefinitionCreator.of(block).with(variantMap)
         );
     }
 
-    private static List<BlockStateVariant> buildRotationVariants(List<ModelSet16Way> modelSets, int yRotation) {
-        List<BlockStateVariant> variants = new ArrayList<>();
+    private static List<WeightedVariant> buildRotationVariants(List<ModelSet16Way> modelSets, int yRotation) {
+        List<WeightedVariant> variants = new ArrayList<>();
 
         for (ModelSet16Way modelSet : modelSets) {
-            BlockStateVariant variant = BlockStateVariant.create()
-                .put(VariantSettings.MODEL, modelSet.model());
-
-            if (yRotation > 0) {
-                variant.put(VariantSettings.Y, toRotation(yRotation));
-            }
-            if (modelSet.weight() > 1) {
-                variant.put(VariantSettings.WEIGHT, modelSet.weight());
-            }
-
-            variants.add(variant);
+            variants.add(createWeightedVariant(modelSet.model(), yRotation, modelSet.weight()));
         }
 
         return variants;
     }
 
-    private static VariantSettings.Rotation toRotation(int degrees) {
+    private static AxisRotation toRotation(int degrees) {
         return switch (degrees) {
-            case 90 -> VariantSettings.Rotation.R90;
-            case 180 -> VariantSettings.Rotation.R180;
-            case 270 -> VariantSettings.Rotation.R270;
-            default -> VariantSettings.Rotation.R0;
+            case 90 -> AxisRotation.R90;
+            case 180 -> AxisRotation.R180;
+            case 270 -> AxisRotation.R270;
+            default -> AxisRotation.R0;
         };
     }
 }

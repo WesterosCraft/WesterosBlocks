@@ -18,7 +18,9 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
+import net.minecraft.world.tick.ScheduledTickView;
+import net.minecraft.util.math.random.Random;
 
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.utils.ModProperties;
@@ -90,10 +92,10 @@ public class WCWallBlock extends WallBlock implements WCBlockDef {
 
         BlockState defaultState = this.stateManager.getDefaultState()
                 .with(UP, true)
-                .with(NORTH_SHAPE, WallShape.NONE)
-                .with(EAST_SHAPE, WallShape.NONE)
-                .with(SOUTH_SHAPE, WallShape.NONE)
-                .with(WEST_SHAPE, WallShape.NONE)
+                .with(NORTH_WALL_SHAPE, WallShape.NONE)
+                .with(EAST_WALL_SHAPE, WallShape.NONE)
+                .with(SOUTH_WALL_SHAPE, WallShape.NONE)
+                .with(WEST_WALL_SHAPE, WallShape.NONE)
                 .with(WATERLOGGED, false);
 
         if (hasUnconnect) {
@@ -137,16 +139,17 @@ public class WCWallBlock extends WallBlock implements WCBlockDef {
     }
 
     @Override
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView,
+            BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
         if (state.get(WATERLOGGED)) {
-            world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+            tickView.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
 
         if (hasUnconnect && state.get(UNCONNECT)) {
             return state;
         }
 
-        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+        return super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
     }
 
     @Override
@@ -156,14 +159,14 @@ public class WCWallBlock extends WallBlock implements WCBlockDef {
                 state = state.cycle(STATE);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);
                 world.syncWorldEvent(player, 1006, pos, 0);
-                return ActionResult.success(world.isClient);
+                return ActionResult.SUCCESS;
             }
         } else if (toggleOnUse && hasConnectState && player.isCreative() && player.getMainHandStack().isEmpty()) {
             int currentState = state.get(CONNECT_STATE);
             int nextState = (currentState + 1) % 4;
             world.setBlockState(pos, state.with(CONNECT_STATE, nextState), Block.NOTIFY_ALL);
             world.syncWorldEvent(player, 1006, pos, 0);
-            return ActionResult.success(world.isClient);
+            return ActionResult.SUCCESS;
         }
 
         return ActionResult.PASS;
@@ -178,20 +181,20 @@ public class WCWallBlock extends WallBlock implements WCBlockDef {
     public BlockState rotate(BlockState state, BlockRotation rotation) {
         switch (rotation) {
             case CLOCKWISE_180:
-                return state.with(NORTH_SHAPE, state.get(SOUTH_SHAPE))
-                        .with(EAST_SHAPE, state.get(WEST_SHAPE))
-                        .with(SOUTH_SHAPE, state.get(NORTH_SHAPE))
-                        .with(WEST_SHAPE, state.get(EAST_SHAPE));
+                return state.with(NORTH_WALL_SHAPE, state.get(SOUTH_WALL_SHAPE))
+                        .with(EAST_WALL_SHAPE, state.get(WEST_WALL_SHAPE))
+                        .with(SOUTH_WALL_SHAPE, state.get(NORTH_WALL_SHAPE))
+                        .with(WEST_WALL_SHAPE, state.get(EAST_WALL_SHAPE));
             case COUNTERCLOCKWISE_90:
-                return state.with(NORTH_SHAPE, state.get(EAST_SHAPE))
-                        .with(EAST_SHAPE, state.get(SOUTH_SHAPE))
-                        .with(SOUTH_SHAPE, state.get(WEST_SHAPE))
-                        .with(WEST_SHAPE, state.get(NORTH_SHAPE));
+                return state.with(NORTH_WALL_SHAPE, state.get(EAST_WALL_SHAPE))
+                        .with(EAST_WALL_SHAPE, state.get(SOUTH_WALL_SHAPE))
+                        .with(SOUTH_WALL_SHAPE, state.get(WEST_WALL_SHAPE))
+                        .with(WEST_WALL_SHAPE, state.get(NORTH_WALL_SHAPE));
             case CLOCKWISE_90:
-                return state.with(NORTH_SHAPE, state.get(WEST_SHAPE))
-                        .with(EAST_SHAPE, state.get(NORTH_SHAPE))
-                        .with(SOUTH_SHAPE, state.get(EAST_SHAPE))
-                        .with(WEST_SHAPE, state.get(SOUTH_SHAPE));
+                return state.with(NORTH_WALL_SHAPE, state.get(WEST_WALL_SHAPE))
+                        .with(EAST_WALL_SHAPE, state.get(NORTH_WALL_SHAPE))
+                        .with(SOUTH_WALL_SHAPE, state.get(EAST_WALL_SHAPE))
+                        .with(WEST_WALL_SHAPE, state.get(SOUTH_WALL_SHAPE));
             default:
                 return state;
         }
@@ -201,11 +204,11 @@ public class WCWallBlock extends WallBlock implements WCBlockDef {
     public BlockState mirror(BlockState state, BlockMirror mirror) {
         switch (mirror) {
             case LEFT_RIGHT:
-                return state.with(NORTH_SHAPE, state.get(SOUTH_SHAPE))
-                        .with(SOUTH_SHAPE, state.get(NORTH_SHAPE));
+                return state.with(NORTH_WALL_SHAPE, state.get(SOUTH_WALL_SHAPE))
+                        .with(SOUTH_WALL_SHAPE, state.get(NORTH_WALL_SHAPE));
             case FRONT_BACK:
-                return state.with(EAST_SHAPE, state.get(WEST_SHAPE))
-                        .with(WEST_SHAPE, state.get(EAST_SHAPE));
+                return state.with(EAST_WALL_SHAPE, state.get(WEST_WALL_SHAPE))
+                        .with(WEST_WALL_SHAPE, state.get(EAST_WALL_SHAPE));
             default:
                 return super.mirror(state, mirror);
         }
@@ -213,10 +216,10 @@ public class WCWallBlock extends WallBlock implements WCBlockDef {
 
     private static int getShapeIndex(BlockState state) {
         int up = state.get(UP) ? 1 : 0;
-        int north = state.get(NORTH_SHAPE).ordinal();
-        int east = state.get(EAST_SHAPE).ordinal();
-        int south = state.get(SOUTH_SHAPE).ordinal();
-        int west = state.get(WEST_SHAPE).ordinal();
+        int north = state.get(NORTH_WALL_SHAPE).ordinal();
+        int east = state.get(EAST_WALL_SHAPE).ordinal();
+        int south = state.get(SOUTH_WALL_SHAPE).ordinal();
+        int west = state.get(WEST_WALL_SHAPE).ordinal();
 
         return up + (east * 2) + (west * 6) + (north * 18) + (south * 54);
     }
@@ -242,10 +245,10 @@ public class WCWallBlock extends WallBlock implements WCBlockDef {
         VoxelShape[] shapes = new VoxelShape[2 * 3 * 3 * 3 * 3]; // up * north * east * south * west
 
         for (Boolean up : UP.getValues()) {
-            for (WallShape north : NORTH_SHAPE.getValues()) {
-                for (WallShape east : EAST_SHAPE.getValues()) {
-                    for (WallShape south : SOUTH_SHAPE.getValues()) {
-                        for (WallShape west : WEST_SHAPE.getValues()) {
+            for (WallShape north : NORTH_WALL_SHAPE.getValues()) {
+                for (WallShape east : EAST_WALL_SHAPE.getValues()) {
+                    for (WallShape south : SOUTH_WALL_SHAPE.getValues()) {
+                        for (WallShape west : WEST_WALL_SHAPE.getValues()) {
                             VoxelShape shape = VoxelShapes.empty();
 
                             // Add side shapes

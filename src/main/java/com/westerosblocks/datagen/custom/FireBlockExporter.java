@@ -1,7 +1,12 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.data.BlockDefinition;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
+import net.minecraft.util.math.AxisRotation;
+import net.minecraft.client.render.model.json.MultipartModelConditionBuilder;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.block.Block;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
@@ -34,17 +39,17 @@ public class FireBlockExporter extends BaseBlockExporter {
         Identifier upAlt1 = Models.TEMPLATE_FIRE_UP_ALT.upload(createNestedModelId(block, "up_alt1"), textureMap1, generator.modelCollector);
 
         // Create multipart blockstate
-        MultipartBlockStateSupplier blockstate = MultipartBlockStateSupplier.create(block);
+        MultipartBlockModelDefinitionCreator blockstate = MultipartBlockModelDefinitionCreator.create(block);
 
         // Base case: floor fire when no sides are connected
-        blockstate.with(When.create()
-                        .set(Properties.NORTH, false)
-                        .set(Properties.SOUTH, false)
-                        .set(Properties.EAST, false)
-                        .set(Properties.WEST, false)
-                        .set(Properties.UP, false),
-                BlockStateVariant.create().put(VariantSettings.MODEL, floor0),
-                BlockStateVariant.create().put(VariantSettings.MODEL, floor1));
+        blockstate.with(new MultipartModelConditionBuilder()
+                        .put(Properties.NORTH, false)
+                        .put(Properties.SOUTH, false)
+                        .put(Properties.EAST, false)
+                        .put(Properties.WEST, false)
+                        .put(Properties.UP, false),
+                BlockStateModelGenerator.createWeightedVariant(
+                        new ModelVariant(floor0), new ModelVariant(floor1)));
 
         // Directional fire variants
         addDirectionalFireVariants(blockstate, Properties.NORTH, 0, side0, side1, sideAlt0, sideAlt1);
@@ -53,35 +58,34 @@ public class FireBlockExporter extends BaseBlockExporter {
         addDirectionalFireVariants(blockstate, Properties.WEST, 270, side0, side1, sideAlt0, sideAlt1);
 
         // Up case: ceiling fire
-        blockstate.with(When.create().set(Properties.UP, true),
-                BlockStateVariant.create().put(VariantSettings.MODEL, up0),
-                BlockStateVariant.create().put(VariantSettings.MODEL, up1),
-                BlockStateVariant.create().put(VariantSettings.MODEL, upAlt0),
-                BlockStateVariant.create().put(VariantSettings.MODEL, upAlt1));
+        blockstate.with(new MultipartModelConditionBuilder().put(Properties.UP, true),
+                BlockStateModelGenerator.createWeightedVariant(
+                        new ModelVariant(up0), new ModelVariant(up1),
+                        new ModelVariant(upAlt0), new ModelVariant(upAlt1)));
 
         generator.blockStateCollector.accept(blockstate);
         generator.registerParentedItemModel(block, floor0);
     }
 
-    private static void addDirectionalFireVariants(MultipartBlockStateSupplier blockstate, Property<Boolean> direction,
+    private static void addDirectionalFireVariants(MultipartBlockModelDefinitionCreator blockstate, Property<Boolean> direction,
                                                    int rotation, Identifier side0, Identifier side1,
                                                    Identifier sideAlt0, Identifier sideAlt1) {
-        BlockStateVariant rotationVariant = BlockStateVariant.create()
-                .put(VariantSettings.Y, getRotation(rotation));
+        AxisRotation rot = getRotation(rotation);
 
-        blockstate.with(When.create().set(direction, true),
-                BlockStateVariant.union(BlockStateVariant.create().put(VariantSettings.MODEL, side0), rotationVariant),
-                BlockStateVariant.union(BlockStateVariant.create().put(VariantSettings.MODEL, side1), rotationVariant),
-                BlockStateVariant.union(BlockStateVariant.create().put(VariantSettings.MODEL, sideAlt0), rotationVariant),
-                BlockStateVariant.union(BlockStateVariant.create().put(VariantSettings.MODEL, sideAlt1), rotationVariant));
+        blockstate.with(new MultipartModelConditionBuilder().put(direction, true),
+                BlockStateModelGenerator.createWeightedVariant(
+                        new ModelVariant(side0).withRotationY(rot),
+                        new ModelVariant(side1).withRotationY(rot),
+                        new ModelVariant(sideAlt0).withRotationY(rot),
+                        new ModelVariant(sideAlt1).withRotationY(rot)));
     }
 
-    private static VariantSettings.Rotation getRotation(int rotation) {
+    private static AxisRotation getRotation(int rotation) {
         return switch (rotation) {
-            case 90 -> VariantSettings.Rotation.R90;
-            case 180 -> VariantSettings.Rotation.R180;
-            case 270 -> VariantSettings.Rotation.R270;
-            default -> VariantSettings.Rotation.R0;
+            case 90 -> AxisRotation.R90;
+            case 180 -> AxisRotation.R180;
+            case 270 -> AxisRotation.R270;
+            default -> AxisRotation.R0;
         };
     }
 

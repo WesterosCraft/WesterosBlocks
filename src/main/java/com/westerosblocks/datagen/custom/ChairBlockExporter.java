@@ -5,7 +5,7 @@ import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.block.custom.WCChairBlock;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
 import net.minecraft.util.Identifier;
 
 public class ChairBlockExporter extends BaseBlockExporter {
@@ -23,7 +23,7 @@ public class ChairBlockExporter extends BaseBlockExporter {
         Identifier cardinalModelId = createChairModel(generator, block, texturePath, "cardinal", ModModels.CHAIR);
         Identifier diagonalModelId = createChairModel(generator, block, texturePath, "diagonal", ModModels.CHAIR_45);
 
-        BlockStateVariantMap variants = BlockStateVariantMap.create(WCChairBlock.ROTATION)
+        BlockStateVariantMap<WeightedVariant> variants = BlockStateVariantMap.models(WCChairBlock.ROTATION)
                 // Cardinal directions (0, 2, 4, 6) use the base model with rotations
                 .register(0, createVariant(cardinalModelId))
                 .register(2, createVariant(cardinalModelId, 90))
@@ -35,7 +35,7 @@ public class ChairBlockExporter extends BaseBlockExporter {
                 .register(5, createVariant(diagonalModelId, 180))
                 .register(7, createVariant(diagonalModelId, 270));
 
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block).with(variants));
 
         generator.registerParentedItemModel(block, cardinalModelId);
     }

@@ -16,26 +16,29 @@ import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.EnumProperty;
+import net.minecraft.state.property.EnumProperty;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Direction;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
+import net.minecraft.world.tick.ScheduledTickView;
+import net.minecraft.util.math.random.Random;
 
 import java.util.stream.IntStream;
 
 public class WCStairBlock extends Block implements Waterloggable, WCBlockDef {
     protected BlockDefinition def;
 
-    public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
+    public static final EnumProperty<Direction> FACING = Properties.HORIZONTAL_FACING;
     public static final EnumProperty<BlockHalf> HALF = Properties.BLOCK_HALF;
     public static final EnumProperty<StairShape> SHAPE = Properties.STAIR_SHAPE;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
@@ -170,10 +173,10 @@ public class WCStairBlock extends Block implements Waterloggable, WCBlockDef {
     }
 
     @Override
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
-            WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView,
+            BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
         if (state.get(WATERLOGGED)) {
-            world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+            tickView.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
 
         if (unconnect && state.get(UNCONNECT)) {
@@ -184,7 +187,7 @@ public class WCStairBlock extends Block implements Waterloggable, WCBlockDef {
             return state.with(SHAPE, getStairShape(state, world, pos));
         }
 
-        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+        return super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
     }
 
     @Override
@@ -204,14 +207,14 @@ public class WCStairBlock extends Block implements Waterloggable, WCBlockDef {
                 state = state.cycle(this.STATE);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);
                 world.syncWorldEvent(player, 1006, pos, 0);
-                return ActionResult.success(world.isClient);
+                return ActionResult.SUCCESS;
             }
         }
         return ActionResult.PASS;
     }
 
     private int getShapeIndex(BlockState state) {
-        return state.get(SHAPE).ordinal() * 4 + state.get(FACING).getHorizontal();
+        return state.get(SHAPE).ordinal() * 4 + state.get(FACING).getHorizontalQuarterTurns();
     }
 
     private static StairShape getStairShape(BlockState state, BlockView world, BlockPos pos) {

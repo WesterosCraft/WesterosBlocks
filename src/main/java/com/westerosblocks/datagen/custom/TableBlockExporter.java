@@ -5,7 +5,10 @@ import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.util.math.AxisRotation;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 
@@ -40,40 +43,32 @@ public class TableBlockExporter extends BaseBlockExporter {
 
         // Create blockstate variant map (FACING first, then CONNECTION)
         BlockStateVariantMap.DoubleProperty<Direction, WCTableBlock.ConnectionType> variantMap =
-            BlockStateVariantMap.create(WCTableBlock.FACING, WCTableBlock.CONNECTION);
+            BlockStateVariantMap.models(WCTableBlock.FACING, WCTableBlock.CONNECTION);
 
         // Register all combinations of facing and connection
         for (Direction facing : Direction.Type.HORIZONTAL) {
-            VariantSettings.Rotation rotation = toYRotation(getFacingSouthDefaultRotation(facing));
+            AxisRotation rotation = toYRotation(getFacingSouthDefaultRotation(facing));
 
             // SINGLE connection
             variantMap.register(facing, WCTableBlock.ConnectionType.SINGLE,
-                    BlockStateVariant.create()
-                            .put(VariantSettings.MODEL, singleModelId)
-                            .put(VariantSettings.Y, rotation));
+                    BlockStateModelGenerator.createWeightedVariant(new ModelVariant(singleModelId).withRotationY(rotation)));
 
             // LEFT connection
             variantMap.register(facing, WCTableBlock.ConnectionType.LEFT,
-                    BlockStateVariant.create()
-                            .put(VariantSettings.MODEL, leftModelId)
-                            .put(VariantSettings.Y, rotation));
+                    BlockStateModelGenerator.createWeightedVariant(new ModelVariant(leftModelId).withRotationY(rotation)));
 
             // RIGHT connection
             variantMap.register(facing, WCTableBlock.ConnectionType.RIGHT,
-                    BlockStateVariant.create()
-                            .put(VariantSettings.MODEL, rightModelId)
-                            .put(VariantSettings.Y, rotation));
+                    BlockStateModelGenerator.createWeightedVariant(new ModelVariant(rightModelId).withRotationY(rotation)));
 
             // MIDDLE connection
             variantMap.register(facing, WCTableBlock.ConnectionType.MIDDLE,
-                    BlockStateVariant.create()
-                            .put(VariantSettings.MODEL, middleModelId)
-                            .put(VariantSettings.Y, rotation));
+                    BlockStateModelGenerator.createWeightedVariant(new ModelVariant(middleModelId).withRotationY(rotation)));
         }
 
         // Register the blockstate with all variants
         generator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(block).coordinate(variantMap));
+                VariantsBlockModelDefinitionCreator.of(block).with(variantMap));
 
         // Register item model (uses single variant)
         registerParentedItemModel(generator, block, singleModelId);

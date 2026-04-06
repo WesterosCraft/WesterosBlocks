@@ -4,7 +4,9 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.util.Identifier;
 import com.westerosblocks.datagen.ModTextureKey;
 import com.westerosblocks.data.BlockDefinition;
@@ -91,13 +93,13 @@ public class CuboidBlockExporter extends BaseBlockExporter {
         if (hasMultipleStates && hasStateProperty(block)) {
             // Multi-state block with STATE property
             ModProperties.StateProperty stateProperty = getStateProperty(block);
-            BlockStateVariantMap.SingleProperty<String> stateMap =
-                BlockStateVariantMap.create(stateProperty);
+            BlockStateVariantMap.SingleProperty<WeightedVariant, String> stateMap =
+            BlockStateVariantMap.models(stateProperty);
 
             for (Map.Entry<String, List<Identifier>> entry : stateModelIds.entrySet()) {
                 String stateId = entry.getKey();
                 List<Identifier> modelIds = entry.getValue();
-                List<BlockStateVariant> variants = new ArrayList<>();
+                List<WeightedVariant> variants = new ArrayList<>();
 
                 for (int i = 0; i < modelIds.size(); i++) {
                     Identifier modelId = modelIds.get(i);
@@ -114,21 +116,21 @@ public class CuboidBlockExporter extends BaseBlockExporter {
 
                     // Add rotation variants
                     for (int rot = 0; rot < rotationCount; rot++) {
-                        BlockStateVariant variant = createWeightedVariant(modelId, rot * 90, weight);
+                        WeightedVariant variant = createWeightedVariant(modelId, rot * 90, weight);
                         variants.add(variant);
                     }
                 }
 
-                stateMap.register(stateId, variants);
+                stateMap.register(stateId, mergeVariants(variants));
             }
 
             generator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(block).coordinate(stateMap)
+                VariantsBlockModelDefinitionCreator.of(block).with(stateMap)
             );
         } else {
             // Single state block or block without STATE property
             List<Identifier> modelIds = stateModelIds.values().iterator().next();
-            List<BlockStateVariant> variants = new ArrayList<>();
+            List<WeightedVariant> variants = new ArrayList<>();
 
             BlockDefinition.StateVariant state = states.get(0);
 
@@ -146,13 +148,13 @@ public class CuboidBlockExporter extends BaseBlockExporter {
 
                 // Add rotation variants
                 for (int rot = 0; rot < rotationCount; rot++) {
-                    BlockStateVariant variant = createWeightedVariant(modelId, rot * 90, weight);
+                    WeightedVariant variant = createWeightedVariant(modelId, rot * 90, weight);
                     variants.add(variant);
                 }
             }
 
             generator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0]))
+                VariantsBlockModelDefinitionCreator.of(block, mergeVariants(variants))
             );
         }
     }
@@ -348,79 +350,109 @@ public class CuboidBlockExporter extends BaseBlockExporter {
 
     /**
      * Shared blockstate generator for all directional cuboid exporters.
-     * Builds facing variant JSON from a rotation configuration, handling:
+     * Builds facing variants from a rotation configuration, handling:
      * - Single and multi-state blocks
      * - Weighted random texture variants
      * - Per-state rotYOffset
      * - X-axis rotation (for UP/DOWN directions)
      */
-    protected static BlockStateSupplier generateFacingBlockState(
+    protected static BlockModelDefinitionCreator generateFacingBlockState(
             Block block,
             Map<String, List<Identifier>> stateModelMap,
             List<BlockDefinition.StateVariant> states,
             boolean hasMultipleStates,
             FacingRotationProvider rotationProvider) {
-        return new BlockStateSupplier() {
-            @Override
-            public Block getBlock() {
-                return block;
+
+        // Determine facing property from the block
+        net.minecraft.state.property.Property<?> facingProperty = null;
+        com.westerosblocks.utils.ModProperties.StateProperty stateProperty = null;
+        for (var prop : block.getStateManager().getProperties()) {
+            if (prop.getName().equals("facing")) facingProperty = prop;
+            if (prop.getName().equals("state") && prop instanceof com.westerosblocks.utils.ModProperties.StateProperty sp) stateProperty = sp;
+        }
+
+        if (facingProperty == null) {
+            throw new IllegalStateException("Block " + getBlockName(block) + " has no facing property");
+        }
+
+        // Build a map of (facing_value, stateId) -> WeightedVariant
+        Map<String, net.minecraft.client.render.model.json.WeightedVariant> variantEntries = new java.util.LinkedHashMap<>();
+
+        for (BlockDefinition.StateVariant state : states) {
+            String stateId = state.getStateID() != null ? state.getStateID() : "base";
+            List<Identifier> modelIds = stateModelMap.get(stateId);
+            if (modelIds == null || modelIds.isEmpty()) continue;
+
+            int rotYOffset = 0;
+            if (state.getRotYOffset() != null) {
+                rotYOffset = state.getRotYOffset().intValue();
             }
 
-            @Override
-            public JsonElement get() {
-                JsonObject json = new JsonObject();
-                JsonObject variants = new JsonObject();
+            FacingRotation[] rotations = rotationProvider.getRotations(state);
+            List<BlockDefinition.RandomTextureVariant> randomTextures = state.getRandomTextures();
+            boolean hasWeights = randomTextures != null && !randomTextures.isEmpty() && modelIds.size() > 1;
 
-                for (BlockDefinition.StateVariant state : states) {
-                    String stateId = state.getStateID() != null ? state.getStateID() : "base";
-                    List<Identifier> modelIds = stateModelMap.get(stateId);
-                    if (modelIds == null || modelIds.isEmpty()) continue;
+            for (FacingRotation fr : rotations) {
+                String key = hasMultipleStates
+                        ? fr.facingValue() + "," + stateId
+                        : fr.facingValue();
 
-                    int rotYOffset = 0;
-                    if (state.getRotYOffset() != null) {
-                        rotYOffset = state.getRotYOffset().intValue();
+                net.minecraft.client.render.model.json.WeightedVariant wv;
+                if (hasWeights) {
+                    net.minecraft.util.collection.Pool.Builder<net.minecraft.client.render.model.json.ModelVariant> poolBuilder = net.minecraft.util.collection.Pool.builder();
+                    for (int i = 0; i < modelIds.size() && i < randomTextures.size(); i++) {
+                        int weight = randomTextures.get(i).getWeight();
+                        poolBuilder.add(buildModelVariant(modelIds.get(i), fr, rotYOffset), weight);
                     }
-
-                    FacingRotation[] rotations = rotationProvider.getRotations(state);
-                    List<BlockDefinition.RandomTextureVariant> randomTextures = state.getRandomTextures();
-                    boolean hasWeights = randomTextures != null && !randomTextures.isEmpty() && modelIds.size() > 1;
-
-                    for (FacingRotation fr : rotations) {
-                        String key = hasMultipleStates
-                                ? "facing=" + fr.facingValue() + ",state=" + stateId
-                                : "facing=" + fr.facingValue();
-
-                        if (hasWeights) {
-                            JsonArray variantArray = new JsonArray();
-                            for (int i = 0; i < modelIds.size() && i < randomTextures.size(); i++) {
-                                int weight = randomTextures.get(i).getWeight();
-                                for (int w = 0; w < weight; w++) {
-                                    variantArray.add(buildVariantJson(modelIds.get(i), fr, rotYOffset));
-                                }
-                            }
-                            variants.add(key, variantArray);
-                        } else {
-                            variants.add(key, buildVariantJson(modelIds.get(0), fr, rotYOffset));
-                        }
-                    }
+                    wv = new net.minecraft.client.render.model.json.WeightedVariant(poolBuilder.build());
+                } else {
+                    wv = BlockStateModelGenerator.createWeightedVariant(buildModelVariant(modelIds.get(0), fr, rotYOffset));
                 }
-
-                json.add("variants", variants);
-                return json;
+                variantEntries.put(key, wv);
             }
-        };
+        }
+
+        // Build appropriate BlockStateVariantMap based on property types
+        @SuppressWarnings("unchecked")
+        net.minecraft.state.property.EnumProperty<net.minecraft.util.math.Direction> dirProp =
+            (net.minecraft.state.property.EnumProperty<net.minecraft.util.math.Direction>) facingProperty;
+
+        if (hasMultipleStates && stateProperty != null) {
+            final com.westerosblocks.utils.ModProperties.StateProperty sp = stateProperty;
+            BlockStateVariantMap.DoubleProperty<net.minecraft.client.render.model.json.WeightedVariant, net.minecraft.util.math.Direction, String> variantMap =
+                BlockStateVariantMap.models(dirProp, sp);
+
+            for (Map.Entry<String, net.minecraft.client.render.model.json.WeightedVariant> entry : variantEntries.entrySet()) {
+                String[] parts = entry.getKey().split(",", 2);
+                net.minecraft.util.math.Direction dir = net.minecraft.util.math.Direction.byName(parts[0]);
+                String sid = parts[1];
+                variantMap.register(dir, sid, entry.getValue());
+            }
+
+            return VariantsBlockModelDefinitionCreator.of(block).with(variantMap);
+        } else {
+            BlockStateVariantMap.SingleProperty<net.minecraft.client.render.model.json.WeightedVariant, net.minecraft.util.math.Direction> variantMap =
+                BlockStateVariantMap.models(dirProp);
+
+            for (Map.Entry<String, net.minecraft.client.render.model.json.WeightedVariant> entry : variantEntries.entrySet()) {
+                String facingName = entry.getKey().contains(",") ? entry.getKey().split(",")[0] : entry.getKey();
+                net.minecraft.util.math.Direction dir = net.minecraft.util.math.Direction.byName(facingName);
+                variantMap.register(dir, entry.getValue());
+            }
+
+            return VariantsBlockModelDefinitionCreator.of(block).with(variantMap);
+        }
     }
 
     /**
-     * Builds a single variant JSON object with model, y rotation, and optional x rotation.
+     * Builds a ModelVariant with model, y rotation (including offset), and optional x rotation.
      */
-    private static JsonObject buildVariantJson(Identifier modelId, FacingRotation fr, int rotYOffset) {
-        JsonObject variant = new JsonObject();
-        variant.addProperty("model", modelId.toString());
+    private static net.minecraft.client.render.model.json.ModelVariant buildModelVariant(Identifier modelId, FacingRotation fr, int rotYOffset) {
+        net.minecraft.client.render.model.json.ModelVariant mv = new net.minecraft.client.render.model.json.ModelVariant(modelId);
         int yRot = (fr.yRot() + rotYOffset) % 360;
-        if (yRot > 0) variant.addProperty("y", yRot);
-        if (fr.xRot() != 0) variant.addProperty("x", fr.xRot());
-        return variant;
+        if (yRot > 0) mv = mv.withRotationY(toYRotation(yRot));
+        if (fr.xRot() != 0) mv = mv.withRotationX(toYRotation(fr.xRot()));
+        return mv;
     }
 
     /**
@@ -456,84 +488,76 @@ public class CuboidBlockExporter extends BaseBlockExporter {
      * @param cuboidOverride Pre-transformed cuboids to use instead of definition.getCuboids(), or null
      */
     static Identifier createCuboidModel(BlockStateModelGenerator generator, Block block, BlockDefinition definition, List<String> textures, int stateIndex, String variant, Float rotation, List<BlockDefinition.CuboidElement> cuboidOverride) {
-        TextureMap textureMap = createCustomCuboidTextureMap(textures);
         Identifier modelId = createGeneratedModelId(block, variant);
 
-        Model cuboidModel = createCuboidModelFromDefinition(definition, textures, stateIndex, rotation, cuboidOverride);
-        cuboidModel.upload(modelId, textureMap, generator.modelCollector);
+        uploadCuboidModelFromDefinition(modelId, definition, textures, stateIndex, rotation, cuboidOverride, generator.modelCollector);
 
         return modelId;
     }
 
     /**
-     * Creates a Model instance from BlockDefinition cuboids.
+     * Builds cuboid model JSON and uploads it directly via the model collector.
      * @param cuboidOverride Pre-transformed cuboids to use instead of definition.getCuboids(), or null
      */
-    private static Model createCuboidModelFromDefinition(BlockDefinition definition, List<String> textures, int stateIndex, Float rotation, List<BlockDefinition.CuboidElement> cuboidOverride) {
+    private static void uploadCuboidModelFromDefinition(Identifier modelId, BlockDefinition definition,
+            List<String> textures, int stateIndex, Float rotation, List<BlockDefinition.CuboidElement> cuboidOverride,
+            java.util.function.BiConsumer<Identifier, ModelSupplier> modelCollector) {
         int requiredTextures = Math.max(6, textures.size());
 
-        List<TextureKey> textureKeys = new ArrayList<>();
-        textureKeys.add(TextureKey.PARTICLE);
+        // Build the JSON model directly
+        JsonObject json = new JsonObject();
+        json.addProperty("parent", "block/block");
 
+        // Add textures
+        JsonObject texturesJson = new JsonObject();
         for (int i = 0; i < requiredTextures; i++) {
-            textureKeys.add(ModTextureKey.getTextureNKey(i));
+            String texture = i < textures.size() ? textures.get(i) : textures.get(textures.size() - 1);
+            texturesJson.addProperty("txt" + i, createBlockIdentifier(texture).toString());
         }
+        texturesJson.addProperty("particle", createBlockIdentifier(textures.get(0)).toString());
+        json.add("textures", texturesJson);
 
-        return new Model(Optional.empty(), Optional.empty(), textureKeys.toArray(new TextureKey[0])) {
-            @Override
-            public JsonObject createJson(Identifier id, Map<TextureKey, Identifier> textures) {
-                JsonObject json = super.createJson(id, textures);
-                json.addProperty("parent", "block/block");
+        // Add elements array
+        JsonArray elements = new JsonArray();
+        List<BlockDefinition.CuboidElement> cuboids = (cuboidOverride != null) ? cuboidOverride : definition.getCuboids();
 
-                // Display properties would be added here if supported in BlockDefinition
+        if (cuboids != null && !cuboids.isEmpty()) {
+            for (BlockDefinition.CuboidElement cuboid : cuboids) {
+                if ("crossed".equals(cuboid.getShape())) {
+                    json.addProperty("ambientocclusion", false);
 
-                // Add elements array
-                JsonArray elements = new JsonArray();
-                List<BlockDefinition.CuboidElement> cuboids = (cuboidOverride != null) ? cuboidOverride : definition.getCuboids();
-
-                if (cuboids != null && !cuboids.isEmpty()) {
-                    for (BlockDefinition.CuboidElement cuboid : cuboids) {
-                        if ("crossed".equals(cuboid.getShape())) {
-                            // Handle crossed shape (like plants)
-                            json.addProperty("ambientocclusion", false);
-
-                            // First diagonal
-                            JsonObject element1 = createCrossedElement(cuboid, true, definition.isTinted());
-                            if (rotation != null) {
-                                addRotation(element1, rotation);
-                            }
-                            elements.add(element1);
-
-                            // Second diagonal
-                            JsonObject element2 = createCrossedElement(cuboid, false, definition.isTinted());
-                            if (rotation != null) {
-                                addRotation(element2, rotation);
-                            }
-                            elements.add(element2);
-                        } else {
-                            JsonObject element = new JsonObject();
-                            addCuboidElement(element, cuboid, definition.isTinted());
-                            if (rotation != null) {
-                                addRotation(element, rotation);
-                            }
-                            elements.add(element);
-                        }
+                    JsonObject element1 = createCrossedElement(cuboid, true, definition.isTinted());
+                    if (rotation != null) {
+                        addRotation(element1, rotation);
                     }
-                } else if (definition.hasBoundingBox()) {
-                    // Create a single cuboid element from the bounding box
-                    BlockDefinition.BoundingBox bbox = definition.getBoundingBox();
+                    elements.add(element1);
+
+                    JsonObject element2 = createCrossedElement(cuboid, false, definition.isTinted());
+                    if (rotation != null) {
+                        addRotation(element2, rotation);
+                    }
+                    elements.add(element2);
+                } else {
                     JsonObject element = new JsonObject();
-                    addBoundingBoxElement(element, bbox, definition.isTinted());
+                    addCuboidElement(element, cuboid, definition.isTinted());
                     if (rotation != null) {
                         addRotation(element, rotation);
                     }
                     elements.add(element);
                 }
-
-                json.add("elements", elements);
-                return json;
             }
-        };
+        } else if (definition.hasBoundingBox()) {
+            BlockDefinition.BoundingBox bbox = definition.getBoundingBox();
+            JsonObject element = new JsonObject();
+            addBoundingBoxElement(element, bbox, definition.isTinted());
+            if (rotation != null) {
+                addRotation(element, rotation);
+            }
+            elements.add(element);
+        }
+
+        json.add("elements", elements);
+        modelCollector.accept(modelId, () -> json);
     }
 
     /**

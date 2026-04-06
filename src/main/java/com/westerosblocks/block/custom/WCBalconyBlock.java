@@ -25,7 +25,9 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
+import net.minecraft.world.tick.ScheduledTickView;
+import net.minecraft.util.math.random.Random;
 
 public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
     protected BlockDefinition def;
@@ -117,7 +119,7 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
     }
 
     @Override
-    public VoxelShape getCullingShape(BlockState state, BlockView world, BlockPos pos) {
+    public VoxelShape getCullingShape(BlockState state) {
         return VoxelShapes.empty();
     }
 
@@ -131,13 +133,13 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
                 state = state.cycle(this.STATE);
                 world.setBlockState(pos, state, Block.NOTIFY_ALL);
                 world.syncWorldEvent(player, 1006, pos, 0);
-                return ActionResult.success(world.isClient);
+                return ActionResult.SUCCESS;
             }
         }
 
         // Add direction when holding a balcony item
         if (heldItem.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof WCBalconyBlock) {
-            if (world.isClient) {
+            if (world.isClient()) {
                 return ActionResult.SUCCESS;
             }
 
@@ -163,7 +165,7 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
 
     @Override
     public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        if (!world.isClient && !player.isCreative()) {
+        if (!world.isClient() && !player.isCreative()) {
             int dropCount = 0;
             if (state.get(NORTH)) dropCount++;
             if (state.get(SOUTH)) dropCount++;
@@ -184,12 +186,12 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
     }
 
     @Override
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
-            WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView,
+            BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
         if (state.get(WATERLOGGED)) {
-            world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+            tickView.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
-        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+        return super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
     }
 
     @Override

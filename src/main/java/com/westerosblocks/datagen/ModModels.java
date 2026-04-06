@@ -4,8 +4,8 @@ import java.util.Optional;
 
 import com.westerosblocks.WesterosBlocks;
 
-import net.minecraft.data.client.Model;
-import net.minecraft.data.client.TextureKey;
+import net.minecraft.client.data.Model;
+import net.minecraft.client.data.TextureKey;
 import net.minecraft.util.Identifier;
 import com.westerosblocks.datagen.ModTextureKey;
 

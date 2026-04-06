@@ -3,7 +3,7 @@ package com.westerosblocks.datagen.custom;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
 import net.minecraft.block.Block;
 import net.minecraft.util.Identifier;
 
@@ -45,7 +45,7 @@ public class FlowerPotBlockExporter extends BaseBlockExporter {
         Identifier modelId = getFlowerPotModel(isEmpty, tinted)
                 .upload(createNestedModelId(block, "base"), textureMap, generator.modelCollector);
 
-        VariantsBlockStateSupplier blockstate = createRotatedVariantsBlockState(block, List.of(modelId), List.of(1), rotateRandom);
+        VariantsBlockModelDefinitionCreator blockstate = createRotatedVariantsBlockState(block, List.of(modelId), List.of(1), rotateRandom);
         generator.blockStateCollector.accept(blockstate);
         generator.registerParentedItemModel(block, modelId);
     }
@@ -68,7 +68,7 @@ public class FlowerPotBlockExporter extends BaseBlockExporter {
             weights.add(set.weight);
         }
 
-        VariantsBlockStateSupplier blockstate = createRotatedVariantsBlockState(block, modelIds, weights, rotateRandom);
+        VariantsBlockModelDefinitionCreator blockstate = createRotatedVariantsBlockState(block, modelIds, weights, rotateRandom);
         generator.blockStateCollector.accept(blockstate);
         generator.registerParentedItemModel(block, modelIds.get(0));
     }

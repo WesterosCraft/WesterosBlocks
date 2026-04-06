@@ -6,7 +6,11 @@ import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.BlockHalf;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
+import net.minecraft.util.math.AxisRotation;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
@@ -67,8 +71,8 @@ public class MountedSlabBlockExporter extends BaseBlockExporter {
         }
 
         // Generate blockstate using Fabric API
-        BlockStateVariantMap.DoubleProperty<Direction, BlockHalf> variantMap =
-            BlockStateVariantMap.create(Properties.HORIZONTAL_FACING, Properties.BLOCK_HALF);
+        BlockStateVariantMap.DoubleProperty<WeightedVariant, Direction, BlockHalf> variantMap =
+            BlockStateVariantMap.models(Properties.HORIZONTAL_FACING, Properties.BLOCK_HALF);
 
         for (int d = 0; d < 4; d++) {
             Direction dir = DIRECTIONS[d];
@@ -80,26 +84,25 @@ public class MountedSlabBlockExporter extends BaseBlockExporter {
                 variantMap.register(dir, BlockHalf.TOP, createVariantWithRotation(topModels.get(0), rot));
             } else {
                 // Multiple variants with weights
-                List<BlockStateVariant> bottomVariants = new ArrayList<>();
-                List<BlockStateVariant> topVariants = new ArrayList<>();
+                List<WeightedVariant> bottomVariants = new ArrayList<>();
+                List<WeightedVariant> topVariants = new ArrayList<>();
                 for (int i = 0; i < variantCount; i++) {
-                    BlockStateVariant bv = createVariantWithRotation(bottomModels.get(i), rot);
-                    BlockStateVariant tv = createVariantWithRotation(topModels.get(i), rot);
+                    WeightedVariant bv = createVariantWithRotation(bottomModels.get(i), rot);
+                    WeightedVariant tv = createVariantWithRotation(topModels.get(i), rot);
                     int weight = weights.get(i);
                     if (weight > 1) {
-                        bv.put(VariantSettings.WEIGHT, weight);
-                        tv.put(VariantSettings.WEIGHT, weight);
+
                     }
                     bottomVariants.add(bv);
                     topVariants.add(tv);
                 }
-                variantMap.register(dir, BlockHalf.BOTTOM, bottomVariants);
-                variantMap.register(dir, BlockHalf.TOP, topVariants);
+                variantMap.register(dir, BlockHalf.BOTTOM, mergeVariants(bottomVariants));
+                variantMap.register(dir, BlockHalf.TOP, mergeVariants(topVariants));
             }
         }
 
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+            VariantsBlockModelDefinitionCreator.of(block).with(variantMap)
         );
 
         // Item model parented to first bottom variant
@@ -165,16 +168,7 @@ public class MountedSlabBlockExporter extends BaseBlockExporter {
         topModel.upload(topModelId, textureMap, generator.modelCollector);
     }
 
-    private static BlockStateVariant createVariantWithRotation(Identifier modelId, int rotation) {
-        BlockStateVariant variant = BlockStateVariant.create().put(VariantSettings.MODEL, modelId);
-        if (rotation > 0) {
-            variant.put(VariantSettings.Y, switch (rotation) {
-                case 90 -> VariantSettings.Rotation.R90;
-                case 180 -> VariantSettings.Rotation.R180;
-                case 270 -> VariantSettings.Rotation.R270;
-                default -> VariantSettings.Rotation.R0;
-            });
-        }
-        return variant;
+    private static WeightedVariant createVariantWithRotation(Identifier modelId, int rotation) {
+        return createWeightedVariant(modelId, rotation, 1);
     }
 }
