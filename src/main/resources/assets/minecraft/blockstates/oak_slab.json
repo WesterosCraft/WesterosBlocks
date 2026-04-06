@@ -1,13 +1,13 @@
 {
   "variants": {
     "type=bottom": {
-      "model": "minecraft:block/oak_slab"
+      "model": "westerosblocks:block/oak_slab/bottom"
     },
     "type=double": {
-      "model": "minecraft:block/oak_slab_double"
+      "model": "westerosblocks:block/oak_slab/double"
     },
     "type=top": {
-      "model": "minecraft:block/oak_slab_top"
+      "model": "westerosblocks:block/oak_slab/top"
     }
   }
 }

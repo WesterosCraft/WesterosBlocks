@@ -139,6 +139,7 @@
     "options": {
       "toggleOnUse": true
     },
+    "renderLayer": "cutout",
     "textures": [
       "skull/down",
       "skull/up",

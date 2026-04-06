@@ -117,7 +117,7 @@
     "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
-    "label": "Spruce Window Shutters",
+    "label": "Reinforced Spruce Wood Window Shutters",
     "options": {
       "allowUnsupported": true
     },
@@ -131,7 +131,7 @@
     "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
-    "label": "Simple Birch Window Shutters",
+    "label": "Birch Window Shutters",
     "options": {
       "allowUnsupported": true
     },
@@ -187,7 +187,7 @@
     "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_windows_glass_tab",
-    "label": "Reinforced Spruce Wood Window Shutters",
+    "label": "Spruce Window Shutters",
     "options": {
       "allowUnsupported": true
     },
