@@ -37,7 +37,7 @@ public class BlockSetDefinition {
     @SerializedName("options")
     private Map<String, OptionsProperties> options;
 
-    /** Custom tags for specific variants (e.g., {"solid": ["wood-ctm"]}) */
+    /** Custom tags for specific variants (e.g., {"solid": ["wood_ctm"]}) */
     @SerializedName("altCustomTags")
     private Map<String, List<String>> altCustomTags;
 

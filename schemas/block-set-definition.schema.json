@@ -52,7 +52,7 @@
     },
     "altCustomTags": {
       "type": "object",
-      "description": "Custom tags for specific variants (e.g., {'solid': ['wood-ctm']})",
+      "description": "Custom tags for specific variants (e.g., {'solid': ['wood_ctm']})",
       "additionalProperties": {
         "type": "array",
         "items": { "type": "string" }

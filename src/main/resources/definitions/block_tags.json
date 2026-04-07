@@ -1,53 +1,74 @@
 {
-    "blockTags": [
-        {
-            "customTag": "plank_ctm",
-            "blockNames": [
-                "minecraft:oak_stairs",
-                "minecraft:oak_slab",
-                "minecraft:birch_stairs",
-                "minecraft:birch_slab",
-                "minecraft:spruce_stairs",
-                "minecraft:spruce_slab",
-                "minecraft:jungle_stairs",
-                "minecraft:jungle_slab"
-            ]
-        },
-        {
-            "customTag": "wood_ctm",
-            "blockNames": [
-                "minecraft:oak_planks",
-                "minecraft:birch_planks",
-                "minecraft:spruce_planks",
-                "minecraft:jungle_planks"
-            ]
-        },
-        {
-            "customTag": "wool_block_ctm",
-            "blockNames": [
-                "minecraft:black_wool",
-                "minecraft:blue_wool",
-                "minecraft:brown_wool",
-                "minecraft:cyan_wool",
-                "minecraft:gray_wool",
-                "minecraft:green_wool",
-                "minecraft:light_blue_wool",
-                "minecraft:light_gray_wool",
-                "minecraft:orange_wool",
-                "minecraft:pink_wool",
-                "minecraft:purple_wool",
-                "minecraft:red_wool",
-                "minecraft:white_wool",
-                "minecraft:yellow_wool"
-            ]
-        },
-        {
-            "customTag": "wool_ctm",
-            "blockNames": []
-        },
-        {
-            "customTag": "polished_stone_ctm",
-            "blockNames": []
-        }
-    ]
+  "blockTags": [
+    {
+      "customTag": "plank_ctm",
+      "blockNames": [
+        "minecraft:oak_stairs",
+        "minecraft:oak_slab",
+        "minecraft:birch_stairs",
+        "minecraft:birch_slab",
+        "minecraft:spruce_stairs",
+        "minecraft:spruce_slab",
+        "minecraft:jungle_stairs",
+        "minecraft:jungle_slab"
+      ]
+    },
+    {
+      "customTag": "wood_ctm",
+      "blockNames": [
+        "minecraft:oak_planks",
+        "minecraft:birch_planks",
+        "minecraft:spruce_planks",
+        "minecraft:jungle_planks"
+      ]
+    },
+    {
+      "customTag": "wool_block_ctm",
+      "blockNames": [
+        "minecraft:black_wool",
+        "minecraft:blue_wool",
+        "minecraft:brown_wool",
+        "minecraft:cyan_wool",
+        "minecraft:gray_wool",
+        "minecraft:green_wool",
+        "minecraft:light_blue_wool",
+        "minecraft:light_gray_wool",
+        "minecraft:orange_wool",
+        "minecraft:pink_wool",
+        "minecraft:purple_wool",
+        "minecraft:red_wool",
+        "minecraft:white_wool",
+        "minecraft:yellow_wool"
+      ]
+    },
+    {
+      "customTag": "connect_muddy_sand",
+      "blockNames": [
+        "westerosblocks:wet_sand",
+        "westerosblocks:wet_sand_layer",
+        "westerosblocks:muddy_sand",
+        "westerosblocks:muddy_sand_slab",
+        "westerosblocks:muddy_sand_layer"
+      ]
+    },
+    {
+      "customTag": "connect_grassy_sand",
+      "blockNames": [
+        "minecraft:sand",
+        "westerosblocks:desert_sand",
+        "westerosblocks:desert_sand_layer",
+        "westerosblocks:grassy_sand",
+        "westerosblocks:grassy_sand_slab",
+        "westerosblocks:grassy_sand_layer"
+      ]
+    },
+    {
+      "customTag": "wool_ctm",
+      "blockNames": []
+    },
+    {
+      "customTag": "polished_stone_ctm",
+      "blockNames": []
+    }
+  ]
 }

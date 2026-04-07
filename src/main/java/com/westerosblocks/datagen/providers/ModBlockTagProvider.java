@@ -190,7 +190,7 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
                     break;
             }
 
-            // Add to custom tags declared in block definitions (e.g., polished-stone-ctm, wool-ctm)
+            // Add to custom tags declared in block definitions (e.g., polished_stone_ctm, wool_ctm)
             List<String> customTags = definition.getCustomTags();
             if (customTags != null) {
                 for (String tag : customTags) {

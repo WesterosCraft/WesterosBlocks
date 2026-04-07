@@ -200,7 +200,7 @@ public class WCCuboidBlock extends Block implements Waterloggable, WCBlockDef {
 
     @Override
     public VoxelShape getCullingShape(BlockState state, BlockView world, BlockPos pos) {
-        return SHAPE_BY_INDEX[getIndexFromState(state)];
+        return VoxelShapes.empty();
     }
 
     public BlockDefinition getDefinition() {
