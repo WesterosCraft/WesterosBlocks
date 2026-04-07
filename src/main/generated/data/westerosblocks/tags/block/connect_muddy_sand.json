@@ -1,0 +1,24 @@
+{
+  "values": [
+    {
+      "id": "westerosblocks:wet_sand",
+      "required": false
+    },
+    {
+      "id": "westerosblocks:wet_sand_layer",
+      "required": false
+    },
+    {
+      "id": "westerosblocks:muddy_sand",
+      "required": false
+    },
+    {
+      "id": "westerosblocks:muddy_sand_slab",
+      "required": false
+    },
+    {
+      "id": "westerosblocks:muddy_sand_layer",
+      "required": false
+    }
+  ]
+}

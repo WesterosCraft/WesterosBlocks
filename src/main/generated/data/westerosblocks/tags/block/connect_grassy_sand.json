@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "minecraft:sand",
+      "required": false
+    },
+    {
+      "id": "westerosblocks:desert_sand",
+      "required": false
+    },
+    {
+      "id": "westerosblocks:desert_sand_layer",
+      "required": false
+    },
+    {
+      "id": "westerosblocks:grassy_sand",
+      "required": false
+    },
+    {
+      "id": "westerosblocks:grassy_sand_slab",
+      "required": false
+    },
+    {
+      "id": "westerosblocks:grassy_sand_layer",
+      "required": false
+    }
+  ]
+}
