@@ -15,12 +15,6 @@ To debug:
 - Some processed tiles appear to be incorrect when previewed with CV2.imshow
 
 Continuity limitations:
-- Custom connect methods such as `connect_to_state` and `connect_to_tag` are used extensively in our pack; these do not
-  appear to be supported by Continuity, which only has the following connect values: block, tile, or state. The `state`
-  connect type is equivalent to the default CTM connect setting, whereas `block` is equivalent to our `ignore_state` setting.
-  In contrast, `connect_to_state` takes a *particular* state (e.g., type) as an argument and causes blocks to connect if they
-  both contain this state with equivalent values (e.g., =bottom). Unless the devs are willing to implement these custom methods,
-  we will need to create a custom fork of Continuity in order to add support.
 - Continuity doesn't appear to support `layer` as a generic property anymore (though this needs to be confirmed). We use this in
   many CTMs to force a texture onto a particular render layer, without setting the entire block to that render layer in
   WesterosBlocks.json. An example of this is the fruit leaf overlay textures, which use `westeros_single_cond` to force the
@@ -51,6 +45,7 @@ CTM_EXT = 'mcmeta'
 
 # Property values supported by Optifine for validation
 VALID_CONNECT = ['block', 'tile', 'state']
+VALID_CONNECT_PREFIXES = ['state:', 'tag:']
 VALID_LAYER = ['cutout_mipped', 'cutout', 'translucent']
 
 MIN_HEIGHT = -64
@@ -84,6 +79,7 @@ FINISHED_CTM = {}
 ERROR_CTM = {}
 IGNORED_CTM = set()
 TYPE_STATS = {}
+NEW_TAGS = {}
 
 
 # =======================================================
@@ -179,6 +175,23 @@ class CTMProp:
       ret += p.iterate_props()
     return ret
   
+  def _get_connect_props(self):
+    if not self.connect:
+      return {}
+
+    connect_props = {}
+    for part in self.connect.split(","):
+      part = part.strip()
+      if "state:" in part:
+        connect_props["connect_to_states"] = ":".join(part.split(":")[1:])
+      elif "tag:" in part:
+        connect_props["connect_to_tag"] = ":".join(part.split(":")[1:])
+      else:
+        if "connect" in connect_props:
+          print(f"** Multiple values for 'connect' found; overwriting: {part}")
+        connect_props["connect"] = part
+    return connect_props
+  
   def to_files(self, name, label=None, conds=None, nested=False):
     label = label if label is not None else name
     source_tile = get_stem(name) if nested else path_to_namespace(name)
@@ -188,10 +201,13 @@ class CTMProp:
     contents = {
       'method': self.method,
       'matchTiles': source_tile,
-      'layer': self.layer,
-      'connect': self.connect,
-      'tiles': tile_refs
     }
+  
+    contents |= self._get_connect_props()
+
+    contents["layer"] = self.layer
+    contents["tiles"] = tile_refs
+
     contents |= self.method_props
     contents |= (conds if conds is not None else {})
     contents_str = '\n'.join([
@@ -347,7 +363,7 @@ def get_method(ctm):
   return METHOD_MAP[typ] if typ in METHOD_MAP else typ
 
 
-def get_connect(ctm, default='state'):
+def get_connect(ctm, default='state', name=''):
   """Get the Optifine/Continuity connect value corresponding to the given CTM definition."""
   if 'extra' in ctm:
     connects = []
@@ -363,8 +379,15 @@ def get_connect(ctm, default='state'):
       tag = ctm['extra']['connect_to_tag']
       connects.append(f'tag:{tag}')
     if 'connect_to' in ctm['extra']:
-      lst = str(ctm['extra']['connect_to'])
-      connects.append(f'{lst}')
+      new_tag = f"connect_{get_blockname(name)}"
+      new_tag_contents = []
+      for pred in ctm['extra']['connect_to']:
+        if "block" in pred:
+          new_tag_contents.append(pred["block"])
+        else:
+          print(f"** Unsupported connect_to predicate; skipping: {pred}")
+      NEW_TAGS[new_tag] = new_tag_contents
+      connects.append(f'tag:{new_tag}')
     if connects:
       return ','.join(connects)
     else:
@@ -547,10 +570,23 @@ def validate_tile_len(method, l):
   return True
 
 
+def validate_connect(connect):
+  """Validate that a connect value is supported."""
+  if connect and "," in connect:
+    return all([validate_connect(p.strip()) for p in connect.split(",")])
+  if (
+    connect
+    and connect not in VALID_CONNECT
+    and not any([connect.startswith(pre) for pre in VALID_CONNECT_PREFIXES])
+  ):
+    return False
+  return True
+
+
 def validate_ctm(ctm: CTMDef):
   """Validate a CTM definition."""
   for prop in ctm.iterate_props():
-    if prop.connect and prop.connect not in VALID_CONNECT:
+    if not validate_connect(prop.connect):
       return False
     if prop.layer and prop.layer not in VALID_LAYER:
       return False
@@ -603,7 +639,7 @@ def parse_ctm(root: CTMRoot):
   method = get_method(root.ctm)
   ctm.prop.method = method
   ctm.prop.layer = get_layer(root.ctm)
-  ctm.prop.connect = get_connect(root.ctm, default='state')
+  ctm.prop.connect = get_connect(root.ctm, default='state', name=root.name)
   texture_ctm = get_texture_path(root.ctm['textures'][0])
   ctm.prop.tiles = [read_image(root.texture)]
   ctm.prop.tiles += get_tiles(read_image(texture_ctm), method)
@@ -669,7 +705,7 @@ def parse_ctm_directional(root: CTMRoot):
   method = get_method(root.ctm)
   ctm.prop.method = method
   ctm.prop.layer = get_layer(root.ctm)
-  ctm.prop.connect = get_connect(root.ctm, default='state')
+  ctm.prop.connect = get_connect(root.ctm, default='state', name=root.name)
   ctm.prop.tiles = get_tiles(read_image(root.texture), method)
   return ctm
 
@@ -679,7 +715,7 @@ def parse_ctm_directional_cond(root: CTMRoot):
   type = root.ctm['type'].replace('_cond', '')
   method = get_method(root.ctm)
   layer = get_layer(root.ctm)
-  connect = get_connect(root.ctm, default='state')
+  connect = get_connect(root.ctm, default='state', name=root.name)
 
   texture_cond = get_texture_path(root.ctm['textures'][0])
   for ctm_cond in root.ctm['extra']['conds']:
@@ -702,7 +738,7 @@ def parse_westeros_ctm_single(root: CTMRoot):
   method = get_method(root.ctm)
   ctm.prop.method = method
   ctm.prop.layer = get_layer(root.ctm)
-  ctm.prop.connect = get_connect(root.ctm, default='state')
+  ctm.prop.connect = get_connect(root.ctm, default='state', name=root.name)
   texture_ctm = get_texture_path(root.ctm['textures'][0])
   ctm.prop.tiles = get_tiles(read_image(texture_ctm), method)
   return ctm
@@ -713,7 +749,7 @@ def parse_westeros_ctm(root: CTMRoot):
   method = get_method(root.ctm)
   ctm.prop.method = method
   ctm.prop.layer = get_layer(root.ctm)
-  ctm.prop.connect = get_connect(root.ctm, default='state')
+  ctm.prop.connect = get_connect(root.ctm, default='state', name=root.name)
   ctm.prop.tiles = [read_image(get_texture_path(t)) for t in root.ctm['textures']]
   if len(ctm.prop.tiles) < 48:
     if len(ctm.prop.tiles) != 47:
@@ -726,7 +762,7 @@ def parse_westeros_ctm(root: CTMRoot):
 def parse_westeros_ctm_pattern(root: CTMRoot):
   ctm = CTMSingleDef(root.name)
   layer = get_layer(root.ctm)
-  connect = get_connect(root.ctm, default='state')
+  connect = get_connect(root.ctm, default='state', name=root.name)
   texture_ctm = get_texture_path(root.ctm['textures'][0])
   texture_repeat = get_texture_path(root.ctm['textures'][1])
 
@@ -750,7 +786,7 @@ def parse_westeros_ctm_pattern(root: CTMRoot):
 def parse_westeros_ctm_pattern_cond(root: CTMRoot):
   ctm = CTMCondDef(root.name)
   layer = get_layer(root.ctm)
-  connect = get_connect(root.ctm, default='state')
+  connect = get_connect(root.ctm, default='state', name=root.name)
   texture_ctm = get_texture_path(root.ctm['textures'][0])
   texture_repeat = get_texture_path(root.ctm['textures'][1])
   texture_cond = get_texture_path(root.ctm['textures'][2])
@@ -802,7 +838,7 @@ def parse_westeros_cond(root: CTMRoot):
 
   ctm = CTMCondDef(root.name)
   layer = get_layer(root.ctm)
-  connect = get_connect(root.ctm, default='state')
+  connect = get_connect(root.ctm, default='state', name=root.name)
 
   texture_cond = get_texture_path(root.ctm['textures'][0])
   for ctm_cond in root.ctm['extra']['conds']:
@@ -837,7 +873,7 @@ def parse_westeros_single_cond(root: CTMRoot):
   root.ctm['extra']['conds'] = [c for c in root.ctm['extra']['conds'] if 'type' not in c or c['type'] != 'null']
   
   layer = get_layer(root.ctm)
-  connect = get_connect(root.ctm, default='state')
+  connect = get_connect(root.ctm, default='state', name=root.name)
 
   # Sometimes this CTM type is used only to force a fixed texture onto the CUTOUT_MIPPED layer
   if not root.ctm['extra']['conds']:
@@ -967,6 +1003,14 @@ def get_texture_path(name):
 def get_stem(name):
   """Get the stem of a texture path."""
   return name.split('/')[-1]
+
+
+def get_blockname(name):
+  """Get the blockname of a texture path."""
+  try:
+    return name.split('/')[-2]
+  except Exception:
+    return get_stem(name)
 
 
 def clear_dir(path):
@@ -1334,6 +1378,12 @@ def main(roots, verbose=False):
     print('\nCTM type stats:')
     for k,v in sorted(TYPE_STATS.items(), key=lambda x: x[1], reverse=True):
       print(f'{k}: {v}')
+
+  print('\nNew tags needed:')
+  for k,v in NEW_TAGS.items():
+    print(f'  - {k}')
+    for t in v:
+      print(f'    * {t}')
 
   dump(roots)
 
