@@ -403,6 +403,7 @@
     "soundGroup": "grass",
     "creativeTab": "westeros_grasses_shrubs_tab",
     "label": "Dead Jungle Tall Grass",
+    "doOffsetXZ": true,
     "options": {
       "noInWeb": true,
       "layerSensitive": true
@@ -454,6 +455,7 @@
       "noInWeb": true,
       "layerSensitive": true
     },
+    "doOffsetXZ": true,
     "textures": ["dead_savanna_tall_grass/dead_savanna_tall_grass"],
     "renderLayer": "cutout"
   },
@@ -549,6 +551,7 @@
       "noInWeb": true,
       "layerSensitive": true
     },
+    "doOffsetXZ": true,
     "textures": ["jungle_tall_fern/side"],
     "renderLayer": "cutout",
     "colorMult": "textures/colormap/grass"
@@ -563,6 +566,7 @@
       "noInWeb": true,
       "layerSensitive": true
     },
+    "doOffsetXZ": true,
     "textures": ["jungle_tall_grass/down_side1"],
     "renderLayer": "cutout",
     "colorMult": "textures/colormap/grass"
@@ -601,6 +605,7 @@
       "noInWeb": true,
       "layerSensitive": true
     },
+    "doOffsetXZ": true,
     "textures": ["savanna_tall_grass/savanna_tall_grass"],
     "renderLayer": "cutout",
     "colorMult": "textures/colormap/grass"
@@ -699,7 +704,7 @@
     "blockName": "corn",
     "blockType": "web",
     "doOffsetXZ": true,
-    "soundGroup": "grass",
+    "soundGroup": "plant",
     "creativeTab": "westeros_crops_herbs_tab",
     "label": "Corn",
     "options": {
@@ -722,7 +727,7 @@
   {
     "blockName": "redwood_leaf_tip",
     "blockType": "web",
-    "soundGroup": "cloth",
+    "soundGroup": "plant",
     "creativeTab": "westeros_logs_tab",
     "label": "Redwood Leaf Tip",
     "isCustomModel": true,
@@ -731,6 +736,18 @@
       "noInWeb": true
     },
     "colorMult": "textures/colormap/pine",
+    "renderLayer": "cutout"
+  },
+  {
+    "blockName": "hanging_flowers_purple",
+    "blockType": "web",
+    "soundGroup": "plant",
+    "creativeTab": "westeros_test_tab",
+    "label": "Hanging Flowers Purple",
+    "options": {
+      "noInWeb": true
+    },
+    "textures": ["flowers_hanging/purple"],
     "renderLayer": "cutout"
   }
 ]

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/hanging_flowers_purple/base_v1",
+      "y": 0
+    }
+  }
+}

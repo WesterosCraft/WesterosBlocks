@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/untinted/cross",
+  "textures": {
+    "cross": "westerosblocks:block/flowers_hanging/purple",
+    "particle": "westerosblocks:block/flowers_hanging/purple"
+  }
+}
