@@ -293,6 +293,12 @@ public class ModModels {
     public static final Model BALCONY_SIDE_TINTED = block("tinted/balcony_side",
             TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
 
+    // Arrow slit models
+    public static final Model ARROW_SLIT_SINGLE = block("arrow_slits/arrow_slit_single", TextureKey.TEXTURE, TextureKey.PARTICLE);
+    public static final Model ARROW_SLIT_BOTTOM = block("arrow_slits/arrow_slit_bottom", TextureKey.TEXTURE, TextureKey.PARTICLE);
+    public static final Model ARROW_SLIT_TOP = block("arrow_slits/arrow_slit_top", TextureKey.TEXTURE, TextureKey.PARTICLE);
+    public static final Model ARROW_SLIT_MIDDLE = block("arrow_slits/arrow_slit_middle", TextureKey.TEXTURE, TextureKey.PARTICLE);
+
     // Particle emitter models
     public static final Model PARTICLE_EMITTER_OFF = block("custom/particle_emitter/particle_emitter_off", TextureKey.TEXTURE, TextureKey.PARTICLE);
     public static final Model PARTICLE_EMITTER_ON = block("custom/particle_emitter/particle_emitter_on", TextureKey.TEXTURE, TextureKey.PARTICLE);

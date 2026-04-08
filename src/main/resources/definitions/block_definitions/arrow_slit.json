@@ -1,0 +1,12 @@
+[
+  {
+    "blockName": "test_arrow_slit",
+    "blockType": "arrow-slit",
+    "soundGroup": "stone",
+    "creativeTab": "westeros_test_tab",
+    "label": "Test Arrow Slit",
+    "textures": ["ashlar_smooth/black/arrow_slit"],
+    "nonOpaque": true,
+    "lightOpacity": 0
+  }
+]

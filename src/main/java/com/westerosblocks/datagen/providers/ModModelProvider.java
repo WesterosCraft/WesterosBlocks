@@ -65,7 +65,8 @@ public class ModModelProvider extends FabricModelProvider {
         Map.entry("awning", AwningBlockExporter::registerCustomAwningBlock),
         Map.entry("bigdoor", BigDoorBlockExporter::registerCustomBigDoorBlock),
         Map.entry("bunting", BuntingBlockExporter::registerBuntingBlock),
-        Map.entry("balcony", BalconyBlockExporter::registerCustomBalconyBlock)
+        Map.entry("balcony", BalconyBlockExporter::registerCustomBalconyBlock),
+        Map.entry("arrow-slit", ArrowSlitBlockExporter::registerCustomArrowSlitBlock)
     );
 
     private final FabricDataOutput output;

@@ -55,7 +55,6 @@
             "cuboid",
             "cuboid-ne",
             "cuboid-nsew",
-            "cuboid-nsew-ud",
             "cuboid-nsewud",
             "cuboid-16way",
             "cuboid-nsew-stack",
@@ -65,7 +64,9 @@
             "bench",
             "trapdoor",
             "bigdoor",
-            "bunting"
+            "bunting",
+            "mounted_slab",
+            "balcony"
           ]
         },
         "label": {
@@ -776,6 +777,262 @@
               }
             }
           }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "cuboid" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/CuboidOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "cuboid-nsew" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/ToggleOnUseOnlyOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "cuboid-ne" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/ToggleOnUseOnlyOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "cuboid-nsewud" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/ToggleOnUseOnlyOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "cuboid-16way" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/ToggleOnUseOnlyOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "rail" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/AllowUnsupportedOnlyOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "fan" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/AllowUnsupportedOnlyOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "mounted" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/AllowUnsupportedOnlyOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "mounted_slab" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/AllowUnsupportedOnlyOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "bunting" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/AllowUnsupportedOnlyOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "balcony" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/ToggleOnUseOnlyOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "awning" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/ToggleOnUseOnlyOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "bigdoor" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/BigdoorOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "crop" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/CropOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "beacon" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/RotateRandomOnlyOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "sand" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/RotateRandomOnlyOptionsProperties" }
+                ]
+              }
+            }
+          }
         }
       ]
     },
@@ -846,6 +1103,10 @@
         "toggleOnUse": {
           "type": "boolean",
           "description": "Allow creative players to toggle states"
+        },
+        "overlay": {
+          "type": "boolean",
+          "description": "Use overlay textures for tinted rendering"
         }
       },
       "additionalProperties": false
@@ -981,6 +1242,10 @@
         "layerSensitive": {
           "type": "boolean",
           "description": "Block can stack with LAYERS property"
+        },
+        "rotateRandom": {
+          "type": "boolean",
+          "description": "Randomly rotate block model on placement (Y-axis)"
         }
       },
       "additionalProperties": false
@@ -1084,6 +1349,10 @@
         "toggleOnUse": {
           "type": "boolean",
           "description": "Allow creative players to toggle states"
+        },
+        "rotateRandom": {
+          "type": "boolean",
+          "description": "Randomly rotate block model on placement (Y-axis)"
         }
       },
       "additionalProperties": false
@@ -1099,6 +1368,84 @@
         "allowUnsupported": {
           "type": "boolean",
           "description": "Trapdoor can be placed without support"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ToggleOnUseOnlyOptionsProperties": {
+      "type": "object",
+      "description": "Type properties for blocks that only support toggleOnUse",
+      "properties": {
+        "toggleOnUse": {
+          "type": "boolean",
+          "description": "Allow creative players to toggle states"
+        }
+      },
+      "additionalProperties": false
+    },
+    "AllowUnsupportedOnlyOptionsProperties": {
+      "type": "object",
+      "description": "Type properties for blocks that only support allowUnsupported",
+      "properties": {
+        "allowUnsupported": {
+          "type": "boolean",
+          "description": "Block can be placed without a support block"
+        }
+      },
+      "additionalProperties": false
+    },
+    "RotateRandomOnlyOptionsProperties": {
+      "type": "object",
+      "description": "Type properties for blocks that only support rotateRandom",
+      "properties": {
+        "rotateRandom": {
+          "type": "boolean",
+          "description": "Randomly rotate block model on placement (Y-axis)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CuboidOptionsProperties": {
+      "type": "object",
+      "description": "Type properties for cuboid blocks",
+      "properties": {
+        "toggleOnUse": {
+          "type": "boolean",
+          "description": "Allow creative players to toggle states"
+        },
+        "rotateRandom": {
+          "type": "boolean",
+          "description": "Randomly rotate block model on placement (Y-axis)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "BigdoorOptionsProperties": {
+      "type": "object",
+      "description": "Type properties for big door blocks",
+      "properties": {
+        "locked": {
+          "type": "boolean",
+          "description": "Door cannot be opened without creative mode"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CropOptionsProperties": {
+      "type": "object",
+      "description": "Type properties for crop blocks",
+      "properties": {
+        "layerSensitive": {
+          "type": "boolean",
+          "description": "Block can stack with LAYERS property"
+        },
+        "toggleOnUse": {
+          "type": "boolean",
+          "description": "Allow creative players to toggle states"
+        },
+        "rotateRandom": {
+          "type": "boolean",
+          "description": "Randomly rotate block model on placement (Y-axis)"
         }
       },
       "additionalProperties": false

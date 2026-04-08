@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/arrow_slits/arrow_slit_top",
+  "textures": {
+    "particle": "westerosblocks:block/ashlar_smooth/black/arrow_slit",
+    "texture": "westerosblocks:block/ashlar_smooth/black/arrow_slit"
+  }
+}
