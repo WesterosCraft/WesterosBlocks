@@ -53,7 +53,7 @@ public class WCWallBlock extends WallBlock implements WCBlockDef {
     }
 
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
-    public static final IntProperty CONNECT_STATE = IntProperty.of("connectstate", 0, 3);
+    public static final IntProperty CONNECT_STATE = ModProperties.CONNECTSTATE;
     protected static BooleanProperty tempUNCONNECT;
     protected static IntProperty tempCONNECT_STATE;
     protected static ModProperties.StateProperty tempSTATE;

@@ -40,7 +40,7 @@ public class WCStairBlock extends Block implements Waterloggable, WCBlockDef {
     public static final EnumProperty<StairShape> SHAPE = Properties.STAIR_SHAPE;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
-    public static final IntProperty CONNECTSTATE = IntProperty.of("connectstate", 0, 3);
+    public static final IntProperty CONNECTSTATE = ModProperties.CONNECTSTATE;
 
     protected static ModProperties.StateProperty tempSTATE;
     public ModProperties.StateProperty STATE;

@@ -150,12 +150,14 @@ public class BlockSetExpander {
             defMap.put("customTags", blockSet.getCustomTags());
         }
 
-        // 6. Capture options (applied directly after Gson round-trip to avoid data loss)
         OptionsProperties variantOptions = null;
         if (options != null && options.containsKey(variant)) {
             variantOptions = options.get(variant);
         } else {
             variantOptions = getDefaultOptions(variant);
+        }
+        if (variantOptions != null) {
+            defMap.put("options", variantOptions);
         }
 
         // 7. Handle textures
@@ -237,6 +239,7 @@ public class BlockSetExpander {
                 // Copy to avoid mutating the shared instance from preprocessVariantMap
                 variantOptions = new OptionsProperties(variantOptions);
                 variantOptions.setToggleOnUse(true);
+                defMap.put("options", variantOptions);
             }
         }
 
