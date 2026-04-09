@@ -34,13 +34,11 @@ public class WesterosBlocks implements ModInitializer {
         ModBlockEntities.registerModBlockEntities();
         ModEntities.registerModEntities();
 
-        // Export WorldPainter CSV if config option is enabled
         if (CONFIG.dumpWorldPainterCSV) {
             LOGGER.info("WorldPainter CSV export enabled in config");
             WorldPainterExporter.exportToCSV();
         }
 
-        // Export block sets JSON if config option is enabled
         if (CONFIG.exportBlockDefinitions) {
             BlockSetExporter.export();
         }
@@ -50,7 +48,6 @@ public class WesterosBlocks implements ModInitializer {
 
     private void initializeBlockDefinitions() {
         try {
-            // Load block definitions and block set definitions from resources directory
             String blockDefinitionsPath = "definitions/block_definitions";
             String blockSetDefinitionsPath = "definitions/block_set_definitions";
 

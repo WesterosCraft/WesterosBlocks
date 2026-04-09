@@ -15,6 +15,7 @@ Usage:
 import argparse
 import json
 import os
+import shutil
 import sys
 from pathlib import Path
 
@@ -136,6 +137,43 @@ def strip_mc_block(identifier):
 # File System Index — single-pass walk to avoid repeated rglobs
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# Vanilla Resource Pack Index
+# ---------------------------------------------------------------------------
+
+class VanillaIndex:
+    """Index the vanilla Minecraft resource pack for cross-referencing."""
+
+    def __init__(self, vanilla_dir):
+        self.block_textures = set()   # relative, no ext (e.g., "stone")
+        self.particle_textures = set()
+        self.block_models = set()
+        self.particles = set()
+        self._build(vanilla_dir)
+
+    def _build(self, base):
+        for subdir, target_set, ext in [
+            ("textures/block", self.block_textures, ".png"),
+            ("textures/particle", self.particle_textures, ".png"),
+            ("models/block", self.block_models, ".json"),
+            ("particles", self.particles, ".json"),
+        ]:
+            full = os.path.join(base, subdir)
+            if not os.path.isdir(full):
+                continue
+            for dirpath, _, filenames in os.walk(full):
+                for fn in filenames:
+                    if fn.endswith(ext):
+                        rel = os.path.relpath(
+                            os.path.join(dirpath, fn), full
+                        ).replace("\\", "/")
+                        target_set.add(rel[:-len(ext)])
+
+
+# ---------------------------------------------------------------------------
+# File System Index — single-pass walk to avoid repeated rglobs
+# ---------------------------------------------------------------------------
+
 class FileIndex:
     """Pre-index all files under resources/ in a single os.walk pass."""
 
@@ -155,6 +193,8 @@ class FileIndex:
         self.mc_ctm_pngs = set()         # full paths relative to resources
         self.wb_ctm_properties = []      # (dirpath, filename) for .properties
         self.mc_ctm_properties = []      # (dirpath, filename) for .properties
+        self.wb_continuity_properties = []  # (dirpath, filename) for .properties in textures/block/
+        self.wb_entity_pngs = set()      # relative to textures/entity/, no ext
 
         self._build_index()
 
@@ -206,6 +246,11 @@ class FileIndex:
                     png_path = os.path.join(dirpath, fn[:-7])  # strip .mcmeta
                     self.all_mcmeta.append((rel_file, png_path))
 
+                # WB entity textures
+                prefix = "assets/westerosblocks/textures/entity/"
+                if rel_file.startswith(prefix) and fn.endswith(".png"):
+                    self.wb_entity_pngs.add(rel_file[len(prefix):-4])
+
                 # OptiFine CTM PNGs and properties
                 if "optifine/ctm" in rel_dir:
                     if fn.endswith(".png"):
@@ -218,6 +263,11 @@ class FileIndex:
                             self.wb_ctm_properties.append((dirpath, fn))
                         elif rel_file.startswith("assets/minecraft/"):
                             self.mc_ctm_properties.append((dirpath, fn))
+
+                # Continuity CTM .properties in textures/block/
+                prefix = "assets/westerosblocks/textures/block/"
+                if rel_file.startswith(prefix) and fn.endswith(".properties"):
+                    self.wb_continuity_properties.append((dirpath, fn))
 
             # Custom model directories
             if rel_dir == "assets/westerosblocks/models/block/custom":
@@ -241,6 +291,7 @@ class ReferenceCollector:
         # Referenced texture paths
         self.wb_block_textures = set()
         self.wb_item_textures = set()
+        self.wb_entity_textures = set()
         self.mc_block_textures = set()
         self.mc_particle_textures = set()
         self.wb_particle_textures = set()
@@ -253,11 +304,15 @@ class ReferenceCollector:
         self._collect_block_definitions()
         self._collect_block_set_definitions()
         self._collect_color_maps()
-        self._collect_custom_model_refs()
+        self._collect_all_model_refs()
         self._collect_mc_blockstate_refs()
         self._collect_mc_model_refs()
         self._collect_optifine_refs()
+        self._collect_continuity_refs()
         self._collect_particle_refs()
+        self._collect_entity_refs()
+        # Must run last — depends on wb_block_textures being fully populated
+        self._collect_continuity_companions()
 
     # -- Block Definitions --------------------------------------------------
 
@@ -406,6 +461,18 @@ class ReferenceCollector:
                     if isinstance(t, str):
                         self.wb_block_textures.add(t)
 
+        # altRandomTextures (per-variant random texture overrides)
+        alt_random = bs.get("altRandomTextures")
+        if isinstance(alt_random, dict):
+            expanded = preprocess_variant_map(alt_random)
+            for variant in variants:
+                if variant in expanded:
+                    for rt_entry in expanded[variant]:
+                        if isinstance(rt_entry, dict):
+                            for t in (rt_entry.get("textures") or []):
+                                if isinstance(t, str):
+                                    self.wb_block_textures.add(t)
+
         # states
         for state_rec in (bs.get("states") or []):
             if not isinstance(state_rec, dict):
@@ -448,29 +515,32 @@ class ReferenceCollector:
             if isinstance(cm, str) and cm.startswith("textures/colormap/"):
                 self.colormap_names.add(cm.rsplit("/", 1)[-1])
 
-    # -- Custom Models (texture refs inside model JSONs) --------------------
+    # -- Model texture refs (all WB model directories) ----------------------
 
-    def _collect_custom_model_refs(self):
-        custom_dir = os.path.join(self.wb_assets, "models", "block", "custom")
-        if not os.path.isdir(custom_dir):
-            return
-        for dirpath, _, filenames in os.walk(custom_dir):
-            for fn in filenames:
-                if not fn.endswith(".json"):
-                    continue
-                fpath = os.path.join(dirpath, fn)
-                try:
-                    with open(fpath) as f:
-                        data = json.load(f)
-                except (json.JSONDecodeError, OSError):
-                    continue
-                for key, value in (data.get("textures") or {}).items():
-                    if not isinstance(value, str):
+    def _collect_all_model_refs(self):
+        for subdir in ("models/block", "models/item"):
+            base = os.path.join(self.wb_assets, subdir)
+            if not os.path.isdir(base):
+                continue
+            for dirpath, _, filenames in os.walk(base):
+                for fn in filenames:
+                    if not fn.endswith(".json"):
                         continue
-                    if value.startswith("westerosblocks:block/"):
-                        self.wb_block_textures.add(strip_wb_block(value))
-                    elif value.startswith("minecraft:block/"):
-                        self.mc_block_textures.add(strip_mc_block(value))
+                    fpath = os.path.join(dirpath, fn)
+                    try:
+                        with open(fpath) as f:
+                            data = json.load(f)
+                    except (json.JSONDecodeError, OSError):
+                        continue
+                    for key, value in (data.get("textures") or {}).items():
+                        if not isinstance(value, str) or value.startswith("#"):
+                            continue
+                        if value.startswith("westerosblocks:block/"):
+                            self.wb_block_textures.add(strip_wb_block(value))
+                        elif value.startswith("westerosblocks:item/"):
+                            self.wb_item_textures.add(value.split(":", 1)[1][5:])
+                        elif value.startswith("minecraft:block/"):
+                            self.mc_block_textures.add(strip_mc_block(value))
 
     # -- Minecraft Blockstate Overrides --------------------------------------
 
@@ -591,6 +661,129 @@ class ReferenceCollector:
                     if isinstance(tex, str) and tex.startswith("minecraft:"):
                         self.mc_particle_textures.add(tex[10:])
 
+    # -- Continuity CTM in textures/block/ ------------------------------------
+
+    def _collect_continuity_refs(self):
+        """Parse .properties files found inside textures/block/ (Continuity CTM format).
+
+        These tile PNGs live under textures/block/ so they show up in wb_block_pngs.
+        We must add them to wb_block_textures so they aren't flagged as unused.
+        """
+        tex_block_dir = os.path.join(
+            self.wb_assets, "textures", "block") + os.sep
+        for dirpath, fn in self.index.wb_continuity_properties:
+            fpath = os.path.join(dirpath, fn)
+            self._parse_ctm_properties(fpath, dirpath)
+            # Also parse tiles= to add relative paths to wb_block_textures
+            try:
+                with open(fpath) as f:
+                    content = f.read()
+            except OSError:
+                continue
+            for line in content.splitlines():
+                line = line.strip()
+                if line.startswith("tiles="):
+                    for tile in line[6:].strip().split():
+                        tile = tile.strip()
+                        if tile:
+                            abs_png = os.path.normpath(
+                                os.path.join(dirpath, tile + ".png"))
+                            if abs_png.startswith(tex_block_dir):
+                                rel = abs_png[len(tex_block_dir):]
+                                rel = rel.replace("\\", "/")
+                                if rel.endswith(".png"):
+                                    rel = rel[:-4]
+                                self.wb_block_textures.add(rel)
+
+    # -- Continuity Companion Files -------------------------------------------
+
+    CONTINUITY_SUFFIXES = [
+        "_ctm", "_single", "_2x2", "_3x3", "_both", "_up", "_down",
+        "_cutout_3x3", "_cutout_2x2",
+    ]
+
+    def _collect_continuity_companions(self):
+        """Mark Continuity auto-loaded companion textures as used.
+
+        Handles two patterns:
+        1. Suffix companions: 'foo/all' → 'foo/all_ctm.png', 'foo/all_single.png', etc.
+        2. Tile directories: 'foo/all' → 'foo/all/0.png', 'foo/all/1.png', etc.
+        """
+        # Build parent→children index for tile directory lookups
+        tile_dir_children = {}
+        for on_disk in self.index.wb_block_pngs:
+            idx = on_disk.rfind("/")
+            if idx > 0:
+                parent = on_disk[:idx]
+                tile_dir_children.setdefault(parent, []).append(on_disk)
+
+        companions = set()
+        for base in self.wb_block_textures:
+            # Suffix companions
+            for suffix in self.CONTINUITY_SUFFIXES:
+                candidate = base + suffix
+                if candidate in self.index.wb_block_pngs:
+                    companions.add(candidate)
+            # Tile directory: any PNG under base/ is an auto-loaded CTM tile
+            if base in tile_dir_children:
+                companions.update(tile_dir_children[base])
+        self.wb_block_textures |= companions
+
+    # -- Entity Textures (hardcoded in Java) ----------------------------------
+
+    def _collect_entity_refs(self):
+        """Entity textures referenced by RopeRenderer.java (not in any JSON)."""
+        self.wb_entity_textures.add("chain")
+        self.wb_entity_textures.add("straight_rope")
+
+
+# ---------------------------------------------------------------------------
+# Audit Helpers
+# ---------------------------------------------------------------------------
+
+def _resolve_file_path(resources_dir, rel_path):
+    """Resolve a relative unused-file path to an absolute path on disk."""
+    if rel_path.startswith("assets/"):
+        return os.path.join(resources_dir, rel_path)
+    return os.path.join(resources_dir, "assets", "westerosblocks", rel_path)
+
+
+def _annotate_vanilla(result, unused_keys, vanilla_set, path_prefix, ext):
+    """Split unused files into vanilla-matched overrides vs. no-match (stale/renamed).
+
+    Adds 'vanilla_overrides' and 'no_vanilla_match' lists to result dict.
+    """
+    overrides = []
+    no_match = []
+    for key in unused_keys:
+        rel = f"{path_prefix}{key}{ext}"
+        if key in vanilla_set:
+            overrides.append(rel)
+        else:
+            no_match.append(rel)
+    result["vanilla_overrides"] = sorted(overrides)
+    result["no_vanilla_match"] = sorted(no_match)
+
+
+def _compute_unused_size(resources_dir, rel_paths):
+    """Sum byte sizes of unused files; returns total bytes."""
+    total = 0
+    for rp in rel_paths:
+        fpath = _resolve_file_path(resources_dir, rp)
+        try:
+            total += os.path.getsize(fpath)
+        except OSError:
+            pass
+    return total
+
+
+def _fmt_size(nbytes):
+    if nbytes >= 1_048_576:
+        return f"{nbytes / 1_048_576:.1f} MB"
+    if nbytes >= 1024:
+        return f"{nbytes / 1024:.1f} KB"
+    return f"{nbytes} B"
+
 
 # ---------------------------------------------------------------------------
 # Audit Functions
@@ -601,12 +794,14 @@ def audit_block_textures(collector, index):
     on_disk = index.wb_block_pngs
     referenced = collector.wb_block_textures
     unused = sorted(on_disk - referenced)
+    rel_paths = [f"textures/block/{p}.png" for p in unused]
     return {
         "category": "Block Textures (westerosblocks)",
         "total": len(on_disk),
         "referenced": len(on_disk) - len(unused),
         "unused_count": len(unused),
-        "unused": [f"textures/block/{p}.png" for p in unused],
+        "unused": rel_paths,
+        "unused_size_bytes": _compute_unused_size(collector.resources, rel_paths),
     }
 
 
@@ -615,12 +810,30 @@ def audit_item_textures(collector, index):
     on_disk = index.wb_item_pngs
     referenced = collector.wb_item_textures
     unused = sorted(on_disk - referenced)
+    rel_paths = [f"textures/item/{p}.png" for p in unused]
     return {
         "category": "Item Textures (westerosblocks)",
         "total": len(on_disk),
         "referenced": len(on_disk) - len(unused),
         "unused_count": len(unused),
-        "unused": [f"textures/item/{p}.png" for p in unused],
+        "unused": rel_paths,
+        "unused_size_bytes": _compute_unused_size(collector.resources, rel_paths),
+    }
+
+
+def audit_entity_textures(collector, index):
+    """Unused entity textures (westerosblocks)"""
+    on_disk = index.wb_entity_pngs
+    referenced = collector.wb_entity_textures
+    unused = sorted(on_disk - referenced)
+    rel_paths = [f"textures/entity/{p}.png" for p in unused]
+    return {
+        "category": "Entity Textures (westerosblocks)",
+        "total": len(on_disk),
+        "referenced": len(on_disk) - len(unused),
+        "unused_count": len(unused),
+        "unused": rel_paths,
+        "unused_size_bytes": _compute_unused_size(collector.resources, rel_paths),
     }
 
 
@@ -635,6 +848,7 @@ def audit_custom_models(collector, index):
         "referenced": len(on_disk) - len(unused),
         "unused_count": len(unused),
         "unused": [f"models/block/custom/{d}/" for d in unused],
+        "unused_size_bytes": 0,
     }
 
 
@@ -650,6 +864,7 @@ def audit_mcmeta_files(collector, index):
         "referenced": len(index.all_mcmeta) - len(orphaned),
         "unused_count": len(orphaned),
         "unused": sorted(orphaned),
+        "unused_size_bytes": 0,
     }
 
 
@@ -658,12 +873,14 @@ def audit_colormaps(collector, index):
     on_disk = index.colormap_pngs
     referenced = collector.colormap_names
     unused = sorted(on_disk - referenced)
+    rel_paths = [f"polytone/colormaps/{n}.png" for n in unused]
     return {
         "category": "Polytone Colormaps",
         "total": len(on_disk),
         "referenced": len(on_disk) - len(unused),
         "unused_count": len(unused),
-        "unused": [f"polytone/colormaps/{n}.png" for n in unused],
+        "unused": rel_paths,
+        "unused_size_bytes": _compute_unused_size(collector.resources, rel_paths),
     }
 
 
@@ -672,44 +889,58 @@ def audit_wb_particles(collector, index):
     on_disk = index.wb_particle_pngs
     referenced = collector.wb_particle_textures
     unused = sorted(on_disk - referenced)
+    rel_paths = [f"textures/particle/{p}.png" for p in unused]
     return {
         "category": "Particle Textures (westerosblocks)",
         "total": len(on_disk),
         "referenced": len(on_disk) - len(unused),
         "unused_count": len(unused),
-        "unused": [f"textures/particle/{p}.png" for p in unused],
+        "unused": rel_paths,
+        "unused_size_bytes": _compute_unused_size(collector.resources, rel_paths),
     }
 
 
-def audit_mc_particles(collector, index):
+def audit_mc_particles(collector, index, vanilla=None):
     """Unused particle textures (minecraft)"""
     on_disk = index.mc_particle_pngs
     referenced = collector.mc_particle_textures
     unused = sorted(on_disk - referenced)
-    return {
+    rel_paths = [f"assets/minecraft/textures/particle/{p}.png" for p in unused]
+    result = {
         "category": "Particle Textures (minecraft)",
         "total": len(on_disk),
         "referenced": len(on_disk) - len(unused),
         "unused_count": len(unused),
-        "unused": [f"assets/minecraft/textures/particle/{p}.png" for p in unused],
+        "unused": rel_paths,
+        "unused_size_bytes": _compute_unused_size(collector.resources, rel_paths),
     }
+    if vanilla:
+        _annotate_vanilla(result, unused, vanilla.particle_textures,
+                          "assets/minecraft/textures/particle/", ".png")
+    return result
 
 
-def audit_mc_block_textures(collector, index):
+def audit_mc_block_textures(collector, index, vanilla=None):
     """Unused minecraft block texture overrides"""
     on_disk = index.mc_block_pngs
     referenced = collector.mc_block_textures
     unused = sorted(on_disk - referenced)
-    return {
+    rel_paths = [f"assets/minecraft/textures/block/{p}.png" for p in unused]
+    result = {
         "category": "Block Textures (minecraft overrides)",
         "total": len(on_disk),
         "referenced": len(on_disk) - len(unused),
         "unused_count": len(unused),
-        "unused": [f"assets/minecraft/textures/block/{p}.png" for p in unused],
+        "unused": rel_paths,
+        "unused_size_bytes": _compute_unused_size(collector.resources, rel_paths),
     }
+    if vanilla:
+        _annotate_vanilla(result, unused, vanilla.block_textures,
+                          "assets/minecraft/textures/block/", ".png")
+    return result
 
 
-def audit_mc_models(collector, index):
+def audit_mc_models(collector, index, vanilla=None):
     """Unused minecraft model overrides"""
     on_disk = index.mc_model_jsons
     # Collect model refs from blockstates
@@ -743,13 +974,19 @@ def audit_mc_models(collector, index):
                     referenced.add(parent[16:])
 
     unused = sorted(on_disk - referenced)
-    return {
+    rel_paths = [f"assets/minecraft/models/block/{m}.json" for m in unused]
+    result = {
         "category": "Model Overrides (minecraft)",
         "total": len(on_disk),
         "referenced": len(on_disk) - len(unused),
         "unused_count": len(unused),
-        "unused": [f"assets/minecraft/models/block/{m}.json" for m in unused],
+        "unused": rel_paths,
+        "unused_size_bytes": _compute_unused_size(collector.resources, rel_paths),
     }
+    if vanilla:
+        _annotate_vanilla(result, unused, vanilla.block_models,
+                          "assets/minecraft/models/block/", ".json")
+    return result
 
 
 def _collect_mc_model_ids(blockstate_data, result_set):
@@ -780,12 +1017,22 @@ def audit_optifine_ctm(collector, index):
             rel = os.path.relpath(png_path, collector.resources).replace("\\", "/")
             orphaned.append(rel)
 
+    size = 0
+    for png_path in sorted(all_ctm_pngs):
+        normalized = os.path.normpath(png_path)
+        if normalized not in referenced:
+            try:
+                size += os.path.getsize(png_path)
+            except OSError:
+                pass
+
     return {
         "category": "OptiFine CTM Orphaned PNGs",
         "total": len(all_ctm_pngs),
         "referenced": len(all_ctm_pngs) - len(orphaned),
         "unused_count": len(orphaned),
         "unused": sorted(orphaned),
+        "unused_size_bytes": size,
     }
 
 
@@ -797,16 +1044,48 @@ def format_markdown(results):
     lines = ["# WesterosBlocks Resource Audit Report", ""]
     total_unused = sum(r["unused_count"] for r in results)
     total_files = sum(r["total"] for r in results)
+    total_size = sum(r.get("unused_size_bytes", 0) for r in results)
     lines.append(f"**Total files scanned:** {total_files}")
-    lines.append(f"**Total unused/orphaned:** {total_unused}")
+    lines.append(f"**Total unused/orphaned:** {total_unused} ({_fmt_size(total_size)})")
     lines.append("")
 
     for r in results:
+        size_str = _fmt_size(r.get("unused_size_bytes", 0))
         lines.append(f"## {r['category']}")
         lines.append(f"Scanned: {r['total']} | Referenced: {r['referenced']} | "
-                      f"**Unused: {r['unused_count']}**")
+                      f"**Unused: {r['unused_count']}** ({size_str})")
         lines.append("")
-        if r["unused"]:
+
+        # Vanilla split display
+        if "vanilla_overrides" in r:
+            vo = r["vanilla_overrides"]
+            nm = r["no_vanilla_match"]
+            lines.append(f"### Valid vanilla overrides: {len(vo)}")
+            lines.append("These override a texture that exists in vanilla 1.21.1 — "
+                          "likely intentional.")
+            lines.append("")
+            if vo:
+                shown = vo[:50]
+                for f in shown:
+                    lines.append(f"- `{f}`")
+                remaining = len(vo) - len(shown)
+                if remaining > 0:
+                    lines.append(f"- ... and {remaining} more")
+                lines.append("")
+
+            lines.append(f"### No vanilla match: {len(nm)}")
+            lines.append("No matching file in vanilla 1.21.1 — possibly stale, renamed, "
+                          "or targeting a removed asset.")
+            lines.append("")
+            if nm:
+                shown = nm[:50]
+                for f in shown:
+                    lines.append(f"- `{f}`")
+                remaining = len(nm) - len(shown)
+                if remaining > 0:
+                    lines.append(f"- ... and {remaining} more")
+                lines.append("")
+        elif r["unused"]:
             # Show first 50 per category, with count of remaining
             shown = r["unused"][:50]
             for f in shown:
@@ -829,6 +1108,7 @@ def format_markdown(results):
 CATEGORIES = {
     "textures":     audit_block_textures,
     "items":        audit_item_textures,
+    "entities":     audit_entity_textures,
     "custom":       audit_custom_models,
     "mcmeta":       audit_mcmeta_files,
     "colormaps":    audit_colormaps,
@@ -840,6 +1120,30 @@ CATEGORIES = {
 }
 
 
+def _move_unused_files(resources_dir, results, dest_dir, confirm=False):
+    """Move unused files to a backup directory preserving structure."""
+    moved = 0
+    skipped = 0
+    total_bytes = 0
+    for r in results:
+        for rel in r["unused"]:
+            src = _resolve_file_path(resources_dir, rel)
+            if not os.path.isfile(src):
+                skipped += 1
+                continue
+            dst = os.path.join(dest_dir, rel)
+            if confirm:
+                os.makedirs(os.path.dirname(dst), exist_ok=True)
+                total_bytes += os.path.getsize(src)
+                shutil.move(src, dst)
+                moved += 1
+            else:
+                total_bytes += os.path.getsize(src)
+                moved += 1
+
+    return moved, skipped, total_bytes
+
+
 def main():
     parser = argparse.ArgumentParser(description="Audit WesterosBlocks for unused resources")
     parser.add_argument("--json", action="store_true", help="Output as JSON")
@@ -848,6 +1152,12 @@ def main():
     parser.add_argument("--root", default=".", help="Project root directory")
     parser.add_argument("--full", action="store_true",
                         help="Show all unused files (no truncation)")
+    parser.add_argument("--vanilla", metavar="DIR",
+                        help="Path to vanilla 1.21.1 resource pack for MC override analysis")
+    parser.add_argument("--move-to", metavar="DIR",
+                        help="Move unused files to this backup directory")
+    parser.add_argument("--confirm", action="store_true",
+                        help="Actually move files (without this, --move-to is dry-run)")
     args = parser.parse_args()
 
     root = os.path.realpath(args.root)
@@ -863,7 +1173,10 @@ def main():
     index = FileIndex(resources)
     print(f"  WB block textures on disk: {len(index.wb_block_pngs)}", file=sys.stderr)
     print(f"  Custom model dirs: {len(index.custom_model_dirs)}", file=sys.stderr)
-    print(f"  CTM properties: {len(index.wb_ctm_properties) + len(index.mc_ctm_properties)}",
+    print(f"  CTM properties (optifine): "
+          f"{len(index.wb_ctm_properties) + len(index.mc_ctm_properties)}",
+          file=sys.stderr)
+    print(f"  CTM properties (continuity): {len(index.wb_continuity_properties)}",
           file=sys.stderr)
     print(f"  CTM PNGs: {len(index.wb_ctm_pngs) + len(index.mc_ctm_pngs)}", file=sys.stderr)
 
@@ -876,6 +1189,22 @@ def main():
     print(f"  Colormap refs: {len(collector.colormap_names)}", file=sys.stderr)
     print(f"  CTM tile refs: {len(collector.ctm_referenced_pngs)}", file=sys.stderr)
 
+    # Vanilla index (optional)
+    vanilla = None
+    if args.vanilla:
+        vpath = os.path.realpath(args.vanilla)
+        if not os.path.isdir(vpath):
+            print(f"ERROR: vanilla path not found: {vpath}", file=sys.stderr)
+            sys.exit(2)
+        print("Indexing vanilla resource pack...", file=sys.stderr)
+        vanilla = VanillaIndex(vpath)
+        print(f"  Vanilla block textures: {len(vanilla.block_textures)}", file=sys.stderr)
+        print(f"  Vanilla block models: {len(vanilla.block_models)}", file=sys.stderr)
+        print(f"  Vanilla particle textures: {len(vanilla.particle_textures)}", file=sys.stderr)
+
+    # MC audit functions that accept vanilla kwarg
+    MC_AUDITS = {audit_mc_particles, audit_mc_block_textures, audit_mc_models}
+
     # Run audits
     if args.category:
         audits = [CATEGORIES[args.category]]
@@ -885,20 +1214,39 @@ def main():
     results = []
     for audit_fn in audits:
         print(f"Auditing: {audit_fn.__doc__}...", file=sys.stderr)
-        results.append(audit_fn(collector, index))
+        if audit_fn in MC_AUDITS:
+            results.append(audit_fn(collector, index, vanilla=vanilla))
+        else:
+            results.append(audit_fn(collector, index))
 
     # Output
     if args.json:
         print(json.dumps(results, indent=2))
     else:
         if args.full:
-            # Override truncation
             for r in results:
                 r["_show_all"] = True
         print(format_markdown(results))
 
     total_unused = sum(r["unused_count"] for r in results)
-    print(f"\nDone. {total_unused} unused/orphaned files found.", file=sys.stderr)
+    total_size = sum(r.get("unused_size_bytes", 0) for r in results)
+    print(f"\nDone. {total_unused} unused/orphaned files found ({_fmt_size(total_size)}).",
+          file=sys.stderr)
+
+    # Move unused files if requested
+    if args.move_to:
+        dest = os.path.realpath(args.move_to)
+        moved, skipped, nbytes = _move_unused_files(
+            resources, results, dest, confirm=args.confirm)
+        if args.confirm:
+            print(f"\nMoved {moved} files to {dest} ({_fmt_size(nbytes)}).", file=sys.stderr)
+            if skipped:
+                print(f"  Skipped {skipped} files (not found on disk).", file=sys.stderr)
+        else:
+            print(f"\n[DRY RUN] Would move {moved} files to {dest} ({_fmt_size(nbytes)}).",
+                  file=sys.stderr)
+            print("  Pass --confirm to actually move files.", file=sys.stderr)
+
     sys.exit(1 if total_unused > 0 else 0)
 
 
