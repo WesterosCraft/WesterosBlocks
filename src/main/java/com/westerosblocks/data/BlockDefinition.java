@@ -1018,6 +1018,10 @@ public class BlockDefinition {
         return options;
     }
 
+    public void setOptions(OptionsProperties options) {
+        this.options = options;
+    }
+
     public List<HarvestLevel> getHarvestLevel() {
         return harvestLevel;
     }

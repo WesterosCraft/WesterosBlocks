@@ -20,6 +20,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         public void generateTranslations(WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
                 generateTranslationsFromDefinitions(translationBuilder);
 
+                translationBuilder.add("container.westerosblocks.furnace", "Furnace");
                 // Items
                 translationBuilder.add("tag.item.westerosblocks.c.shield", "shield");
                 translationBuilder.add("item.westerosblocks.longclaw", "Longclaw");

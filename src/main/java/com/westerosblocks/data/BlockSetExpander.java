@@ -150,15 +150,12 @@ public class BlockSetExpander {
             defMap.put("customTags", blockSet.getCustomTags());
         }
 
-        // 6. Handle options attribute
+        // 6. Capture options (applied directly after Gson round-trip to avoid data loss)
+        OptionsProperties variantOptions = null;
         if (options != null && options.containsKey(variant)) {
-            defMap.put("options", convertOptionsPropertiesToMap(options.get(variant)));
+            variantOptions = options.get(variant);
         } else {
-            // Apply default options for specific variants
-            OptionsProperties defaultOptions = getDefaultOptions(variant);
-            if (defaultOptions != null) {
-                defMap.put("options", convertOptionsPropertiesToMap(defaultOptions));
-            }
+            variantOptions = getDefaultOptions(variant);
         }
 
         // 7. Handle textures
@@ -236,8 +233,10 @@ public class BlockSetExpander {
             if (statesList.size() >= 2) {
                 defMap.put("states", statesList);
 
-                // Add toggleOnUse property automatically when states are present
-                defMap.put("toggleOnUse", true);
+                // toggleOnUse must go through options (BlockDefinition has no top-level field)
+                // Copy to avoid mutating the shared instance from preprocessVariantMap
+                variantOptions = new OptionsProperties(variantOptions);
+                variantOptions.setToggleOnUse(true);
             }
         }
 
@@ -245,7 +244,14 @@ public class BlockSetExpander {
         addSpecialGeometry(defMap, variant);
 
         // Convert map to JSON and then to BlockDefinition
-        return convertMapToBlockDefinition(defMap);
+        BlockDefinition definition = convertMapToBlockDefinition(defMap);
+
+        // Apply options directly, bypassing the lossy Gson round-trip
+        if (definition != null && variantOptions != null) {
+            definition.setOptions(variantOptions);
+        }
+
+        return definition;
     }
 
     /**
@@ -412,38 +418,6 @@ public class BlockSetExpander {
         return props;
     }
 
-    /**
-     * Converts OptionsProperties to a Map for JSON serialization.
-     * Only includes non-null values.
-     */
-    private static Map<String, Object> convertOptionsPropertiesToMap(OptionsProperties props) {
-        if (props == null) {
-            return null;
-        }
-
-        Map<String, Object> map = new HashMap<>();
-
-        if (props.getUnconnect() != null) map.put("unconnect", props.getUnconnect());
-        if (props.getConnectstate() != null) map.put("connectstate", props.getConnectstate());
-        if (props.getNoUvlock() != null) map.put("noUvlock", props.getNoUvlock());
-        if (props.getBarsModel() != null) map.put("barsModel", props.getBarsModel());
-        if (props.getLegacyModel() != null) map.put("legacyModel", props.getLegacyModel());
-        if (props.getNoDecay() != null) map.put("noDecay", props.getNoDecay());
-        if (props.getBetterFoliage() != null) map.put("betterFoliage", props.getBetterFoliage());
-        if (props.getOverlay() != null) map.put("overlay", props.getOverlay());
-        if (props.getAllowUnsupported() != null) map.put("allowUnsupported", props.getAllowUnsupported());
-        if (props.getNoParticle() != null) map.put("noParticle", props.getNoParticle());
-        if (props.getLocked() != null) map.put("locked", props.getLocked());
-        if (props.getAlwaysOn() != null) map.put("alwaysOn", props.getAlwaysOn());
-        if (props.getPlantId() != null) map.put("plantId", props.getPlantId());
-        if (props.getNoInWeb() != null) map.put("noInWeb", props.getNoInWeb());
-        if (props.getNoClimb() != null) map.put("noClimb", props.getNoClimb());
-        if (props.getToggleOnUse() != null) map.put("toggleOnUse", props.getToggleOnUse());
-        if (props.getLayerSensitive() != null) map.put("layerSensitive", props.getLayerSensitive());
-        if (props.getSymmetrical() != null) map.put("symmetrical", props.getSymmetrical());
-
-        return map.isEmpty() ? null : map;
-    }
 
     /**
      * Checks if a variant should be excluded based on the excludeVariants string.

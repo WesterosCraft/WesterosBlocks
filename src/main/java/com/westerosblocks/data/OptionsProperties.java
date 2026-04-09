@@ -15,6 +15,37 @@ import com.google.gson.annotations.SerializedName;
  */
 public class OptionsProperties {
 
+    public OptionsProperties() {}
+
+    public OptionsProperties(OptionsProperties other) {
+        if (other == null) return;
+        this.unconnect = other.unconnect;
+        this.connectstate = other.connectstate;
+        this.noUvlock = other.noUvlock;
+        this.barsModel = other.barsModel;
+        this.legacyModel = other.legacyModel;
+        this.noDecay = other.noDecay;
+        this.betterFoliage = other.betterFoliage;
+        this.overlay = other.overlay;
+        this.allowUnsupported = other.allowUnsupported;
+        this.noParticle = other.noParticle;
+        this.locked = other.locked;
+        this.alwaysOn = other.alwaysOn;
+        this.plantId = other.plantId;
+        this.noInWeb = other.noInWeb;
+        this.noClimb = other.noClimb;
+        this.toggleOnUse = other.toggleOnUse;
+        this.layerSensitive = other.layerSensitive;
+        this.symmetrical = other.symmetrical;
+        this.noBreakUnder = other.noBreakUnder;
+        this.allowHalfBreak = other.allowHalfBreak;
+        this.hasClimb = other.hasClimb;
+        this.hasDown = other.hasDown;
+        this.wallSize = other.wallSize;
+        this.bedType = other.bedType;
+        this.rotateRandom = other.rotateRandom;
+    }
+
     // Stair/Wall/Fence/Pane connection properties
     @SerializedName("unconnect")
     private Boolean unconnect;
