@@ -20,7 +20,6 @@ import java.util.stream.Stream;
 public class BlockSetDefinitionLoader {
     private static final Gson GSON = new GsonBuilder()
         .setPrettyPrinting()
-        .registerTypeAdapter(OptionsProperties.class, new OptionsPropertiesDeserializer())
         .create();
     private final String blockSetDefinitionsPath;
 
