@@ -17,95 +17,56 @@ public class BlockDefinition {
     /**
      * The unique identifier for this block (e.g., "oak_table", "stone_wall")
      */
+    // Fields that BlockSetExpander sets directly are package-private (not private).
+    // Gson still works with package-private fields via Field.setAccessible(true).
+
     @SerializedName("blockName")
-    private String blockName;
+    String blockName;
 
-    /**
-     * The block type determines which class to use (e.g., "solid", "door", "wall", "slab")
-     */
     @SerializedName("blockType")
-    private String blockType;
+    String blockType;
 
-    /**
-     * Sound effect when walking/placing/breaking (e.g., "wood", "stone", "metal", "grass")
-     */
     @SerializedName("soundGroup")
-    private String soundGroup;
+    String soundGroup;
 
-    /**
-     * The blast resistance of the block.
-     */
     @SerializedName("resistance")
-    private float resistance;
+    float resistance;
 
-    /**
-     * The hardness of the block.
-     */
     @SerializedName("hardness")
-    private float hardness;
+    float hardness;
 
-    /**
-     * Shorthand property that sets both hardness and resistance to the same value
-     */
     @SerializedName("strength")
     private Float strength;
 
-    /**
-     * Which creative mode tab to place this block in
-     */
     @SerializedName("creativeTab")
-    private String creativeTab;
+    String creativeTab;
 
     @SerializedName("customTags")
-    private List<String> customTags;
+    List<String> customTags;
 
-    /**
-     * Display name shown in-game (e.g., "Oak Table", "Stone Wall")
-     */
     @SerializedName("label")
-    private String label;
+    String label;
 
-    /**
-     * Texture file paths (relative to textures/block/) - order varies by block type
-     */
     @SerializedName("textures")
-    private List<String> textures;
+    List<String> textures;
 
-    /**
-     * Options properties - structured format for block-specific properties
-     */
     @SerializedName("options")
-    private OptionsProperties options;
+    OptionsProperties options;
 
-    /**
-     * Render layer - "cutout", "cutout_mipped", or "translucent"
-     */
     @SerializedName("renderLayer")
-    private String renderLayer;
+    String renderLayer;
 
-    /**
-     * Multiple texture variants with weights for random selection
-     */
     @SerializedName("randomTextures")
-    private List<RandomTextureVariant> randomTextures;
+    List<RandomTextureVariant> randomTextures;
 
-    /**
-     * Different texture sets for different block states
-     */
     @SerializedName("states")
-    private List<StateVariant> states;
+    List<StateVariant> states;
 
-    /**
-     * Additional overlay textures (for tinted blocks)
-     */
     @SerializedName("overlayTextures")
-    private List<String> overlayTextures;
+    List<String> overlayTextures;
 
-    /**
-     * Hex color for texture tinting (e.g., "#FF0000" for red)
-     */
     @SerializedName("colorMult")
-    private String colorMult;
+    String colorMult;
 
     /**
      * Array of colormap paths for multi-colormap tinting (e.g., ["textures/colormap/grass", "textures/colormap/birch"])
@@ -147,13 +108,10 @@ public class BlockDefinition {
      * Light level emitted by block (0-15)
      */
     @SerializedName("luminance")
-    private Integer luminance;
+    Integer luminance;
 
-    /**
-     * Tools required to break this block efficiently
-     */
     @SerializedName("harvestLevel")
-    private List<HarvestLevel> harvestLevel;
+    List<HarvestLevel> harvestLevel;
 
     /**
      * Block requires correct tool to harvest (drops nothing without correct tool)
@@ -165,7 +123,7 @@ public class BlockDefinition {
      * How much light the block blocks (0 = transparent, 15 = fully opaque)
      */
     @SerializedName("lightOpacity")
-    private Integer lightOpacity;
+    Integer lightOpacity;
 
     /**
      * Array of collision boxes for complex collision shapes
@@ -177,7 +135,7 @@ public class BlockDefinition {
      * Block is transparent/non-opaque (lets light through)
      */
     @SerializedName("nonOpaque")
-    private Boolean nonOpaque;
+    Boolean nonOpaque;
 
     /**
      * Block has no collision box (can walk through)
@@ -213,7 +171,7 @@ public class BlockDefinition {
      * Block uses alpha/translucent rendering
      */
     @SerializedName("alphaRender")
-    private Boolean alphaRender;
+    Boolean alphaRender;
 
     /**
      * Legacy model for pane blocks
@@ -231,13 +189,10 @@ public class BlockDefinition {
      * Bounding box for cuboid blocks
      */
     @SerializedName("boundingBox")
-    private BoundingBox boundingBox;
+    BoundingBox boundingBox;
 
-    /**
-     * Cuboid elements for complex cuboid blocks
-     */
     @SerializedName("cuboids")
-    private List<CuboidElement> cuboids;
+    List<CuboidElement> cuboids;
 
     /**
      * Wood type for wooden blocks (e.g., "oak", "spruce", "birch")
@@ -297,10 +252,10 @@ public class BlockDefinition {
 
     public static class RandomTextureVariant {
         @SerializedName("textures")
-        private List<String> textures;
+        List<String> textures;
 
         @SerializedName("weight")
-        private Integer weight;
+        Integer weight;
 
         public List<String> getTextures() {
             return textures;
@@ -327,28 +282,34 @@ public class BlockDefinition {
 
     public static class StateVariant {
         @SerializedName("stateID")
-        private String stateID;
+        String stateID;
 
         @SerializedName("textures")
-        private List<String> textures;
+        List<String> textures;
 
         @SerializedName("randomTextures")
-        private List<RandomTextureVariant> randomTextures;
+        List<RandomTextureVariant> randomTextures;
 
         @SerializedName("overlayTextures")
-        private List<String> overlayTextures;
+        List<String> overlayTextures;
+
+        @SerializedName("luminance")
+        Integer luminance;
+
+        @SerializedName("colorMult")
+        String colorMult;
 
         @SerializedName("boundingBox")
-        private BoundingBox boundingBox;
+        BoundingBox boundingBox;
 
         @SerializedName("cuboids")
-        private List<CuboidElement> cuboids;
+        List<CuboidElement> cuboids;
 
         @SerializedName("rotYOffset")
-        private Integer rotYOffset;
+        Integer rotYOffset;
 
         @SerializedName("isCustomModel")
-        private Boolean isCustomModel;
+        Boolean isCustomModel;
 
         public String getStateID() {
             return stateID;
@@ -551,22 +512,29 @@ public class BlockDefinition {
 
     public static class BoundingBox {
         @SerializedName("xMin")
-        private double xMin;
+        double xMin;
 
         @SerializedName("xMax")
-        private double xMax;
+        double xMax;
 
         @SerializedName("yMin")
-        private double yMin;
+        double yMin;
 
         @SerializedName("yMax")
-        private double yMax;
+        double yMax;
 
         @SerializedName("zMin")
-        private double zMin;
+        double zMin;
 
         @SerializedName("zMax")
-        private double zMax;
+        double zMax;
+
+        public BoundingBox() {}
+
+        public BoundingBox(double xMin, double yMin, double zMin, double xMax, double yMax, double zMax) {
+            this.xMin = xMin; this.yMin = yMin; this.zMin = zMin;
+            this.xMax = xMax; this.yMax = yMax; this.zMax = zMax;
+        }
 
         public double getXMin() {
             return xMin;
@@ -595,25 +563,25 @@ public class BlockDefinition {
 
     public static class CuboidElement {
         @SerializedName("xMin")
-        private double xMin;
+        double xMin;
 
         @SerializedName("xMax")
-        private double xMax;
+        double xMax;
 
         @SerializedName("yMin")
-        private double yMin;
+        double yMin;
 
         @SerializedName("yMax")
-        private double yMax;
+        double yMax;
 
         @SerializedName("zMin")
-        private double zMin;
+        double zMin;
 
         @SerializedName("zMax")
-        private double zMax;
+        double zMax;
 
         @SerializedName("sideTextures")
-        private int[] sideTextures;
+        int[] sideTextures;
 
         @SerializedName("sideRotations")
         private int[] sideRotations;
@@ -1016,10 +984,6 @@ public class BlockDefinition {
 
     public OptionsProperties getOptions() {
         return options;
-    }
-
-    public void setOptions(OptionsProperties options) {
-        this.options = options;
     }
 
     public List<HarvestLevel> getHarvestLevel() {

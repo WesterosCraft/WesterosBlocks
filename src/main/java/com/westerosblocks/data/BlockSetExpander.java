@@ -1,7 +1,5 @@
 package com.westerosblocks.data;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.westerosblocks.WesterosBlocks;
 
 import java.util.*;
@@ -106,155 +104,107 @@ public class BlockSetExpander {
     }
 
     /**
-     * Creates a BlockDefinition for a specific variant.
+     * Creates a BlockDefinition for a specific variant by direct field assignment.
+     * No Gson round-trip — fields are set directly (like 1.18.2's generateBlockDefs).
      */
     private static BlockDefinition createVariantDefinition(BlockSetDefinition blockSet, String variant,
                                                           Map<String, OptionsProperties> options,
                                                           Map<String, List<String>> altCustomTags,
                                                           Map<String, List<String>> altTextures) {
-        // Use reflection to create BlockDefinition (since it has no public constructor)
-        // We'll create a JSON string and parse it with Gson
-        Map<String, Object> defMap = new HashMap<>();
+        BlockDefinition def = new BlockDefinition();
 
-        // 1. Derive block name
-        String blockName = deriveBlockName(blockSet, variant);
-        defMap.put("blockName", blockName);
+        // 1. Core identity
+        def.blockName = deriveBlockName(blockSet, variant);
+        def.blockType = VARIANT_TYPES.getOrDefault(variant, variant);
+        def.label = deriveLabel(blockSet, variant);
 
-        // 2. Derive block type
-        String blockType = VARIANT_TYPES.getOrDefault(variant, variant);
-        defMap.put("blockType", blockType);
+        // 2. Common properties
+        if (blockSet.getHardness() != null) def.hardness = blockSet.getHardness();
+        if (blockSet.getSoundGroup() != null) def.soundGroup = blockSet.getSoundGroup();
+        if (blockSet.getResistance() != null) def.resistance = blockSet.getResistance();
+        if (blockSet.getLightOpacity() != null) def.lightOpacity = blockSet.getLightOpacity();
+        if (blockSet.getHarvestLevel() != null) def.harvestLevel = blockSet.getHarvestLevel();
+        if (blockSet.getCreativeTab() != null) def.creativeTab = blockSet.getCreativeTab();
+        if (blockSet.getAlphaRender() != null) def.alphaRender = blockSet.getAlphaRender();
+        if (blockSet.getNonOpaque() != null) def.nonOpaque = blockSet.getNonOpaque();
+        if (blockSet.getRenderLayer() != null) def.renderLayer = blockSet.getRenderLayer();
+        if (blockSet.getColorMult() != null) def.colorMult = blockSet.getColorMult();
 
-        // 3. Derive label
-        String label = deriveLabel(blockSet, variant);
-        defMap.put("label", label);
-
-        // 4. Copy common properties
-        if (blockSet.getHardness() != null) defMap.put("hardness", blockSet.getHardness());
-        if (blockSet.getSoundGroup() != null) defMap.put("soundGroup", blockSet.getSoundGroup());
-        if (blockSet.getResistance() != null) defMap.put("resistance", blockSet.getResistance());
-        if (blockSet.getLightOpacity() != null) defMap.put("lightOpacity", blockSet.getLightOpacity());
-        if (blockSet.getHarvestLevel() != null) defMap.put("harvestLevel", blockSet.getHarvestLevel());
-        if (blockSet.getCreativeTab() != null) defMap.put("creativeTab", blockSet.getCreativeTab());
-        if (blockSet.getAlphaRender() != null) defMap.put("alphaRender", blockSet.getAlphaRender());
-        if (blockSet.getNonOpaque() != null) defMap.put("nonOpaque", blockSet.getNonOpaque());
-        if (blockSet.getRenderLayer() != null) defMap.put("renderLayer", blockSet.getRenderLayer());
-        if (blockSet.getColorMult() != null) defMap.put("colorMult", blockSet.getColorMult());
-
-        // 5. Handle custom tags
+        // 3. Custom tags
         if (altCustomTags != null && altCustomTags.containsKey(variant)) {
             List<String> tags = altCustomTags.get(variant);
-            if (!tags.isEmpty()) {
-                defMap.put("customTags", tags);
-            }
+            if (!tags.isEmpty()) def.customTags = tags;
         } else if (blockSet.getCustomTags() != null) {
-            defMap.put("customTags", blockSet.getCustomTags());
+            def.customTags = blockSet.getCustomTags();
         }
 
-        OptionsProperties variantOptions = null;
+        // 4. Options — direct assignment, no Gson
         if (options != null && options.containsKey(variant)) {
-            variantOptions = options.get(variant);
+            def.options = options.get(variant);
         } else {
-            variantOptions = getDefaultOptions(variant);
-        }
-        if (variantOptions != null) {
-            defMap.put("options", variantOptions);
+            def.options = getDefaultOptions(variant);
         }
 
-        // 7. Handle textures
+        // 5. Textures
         List<String> textures = pickVariantTextures(blockSet.getTextures(), altTextures, variant);
-        if (textures != null && !textures.isEmpty()) {
-            defMap.put("textures", textures);
-        }
+        if (textures != null && !textures.isEmpty()) def.textures = textures;
 
-        // 7b. Handle random textures
+        // 5b. Random textures
         if (blockSet.getRandomTextures() != null && !blockSet.getRandomTextures().isEmpty()) {
-            List<Map<String, Object>> randomTexturesList = new ArrayList<>();
+            List<BlockDefinition.RandomTextureVariant> rtList = new ArrayList<>();
             for (BlockSetDefinition.RandomTextureEntry entry : blockSet.getRandomTextures()) {
-                // Process the texture map for this variant
                 Map<String, String> processedMap = preprocessTextureMap(entry.getTextures());
                 List<String> variantTextures = getTexturesForVariant(processedMap, variant);
-
                 if (variantTextures != null && !variantTextures.isEmpty()) {
-                    Map<String, Object> randomTextureMap = new HashMap<>();
-                    randomTextureMap.put("textures", variantTextures);
-                    randomTextureMap.put("weight", entry.getWeight());
-                    randomTexturesList.add(randomTextureMap);
+                    BlockDefinition.RandomTextureVariant rtv = new BlockDefinition.RandomTextureVariant();
+                    rtv.textures = variantTextures;
+                    rtv.weight = entry.getWeight();
+                    rtList.add(rtv);
                 }
             }
-
-            if (!randomTexturesList.isEmpty()) {
-                defMap.put("randomTextures", randomTexturesList);
-            }
+            if (!rtList.isEmpty()) def.randomTextures = rtList;
         }
 
-        // 8. Handle states if present
+        // 6. States
         if (blockSet.hasStates()) {
-            List<Map<String, Object>> statesList = new ArrayList<>();
-
+            List<BlockDefinition.StateVariant> statesList = new ArrayList<>();
             for (BlockSetDefinition.StateRecord stateRec : blockSet.getStates()) {
-                // Check if this variant should be excluded from this state
-                if (isVariantExcluded(variant, stateRec.getExcludeVariants())) {
-                    continue;
-                }
+                if (isVariantExcluded(variant, stateRec.getExcludeVariants())) continue;
 
-                // Create state definition map
-                Map<String, Object> stateMap = new HashMap<>();
-                stateMap.put("stateID", stateRec.getStateID());
+                BlockDefinition.StateVariant sv = new BlockDefinition.StateVariant();
+                sv.stateID = stateRec.getStateID();
 
-                // Process state textures (expand "all" and "sides", pick for variant)
                 List<String> stateTextures = pickVariantTextures(
-                    stateRec.getTextures(),
-                    stateRec.getAltTextures(),
-                    variant
-                );
-                if (stateTextures != null && !stateTextures.isEmpty()) {
-                    stateMap.put("textures", stateTextures);
-                }
+                    stateRec.getTextures(), stateRec.getAltTextures(), variant);
+                if (stateTextures != null && !stateTextures.isEmpty()) sv.textures = stateTextures;
 
-                // Process state overlay textures if present
                 if (stateRec.getOverlayTextures() != null && !stateRec.getOverlayTextures().isEmpty()) {
                     Map<String, String> overlayMap = preprocessTextureMap(stateRec.getOverlayTextures());
                     List<String> overlayTextures = getTexturesForVariant(overlayMap, variant);
-                    if (overlayTextures != null && !overlayTextures.isEmpty()) {
-                        stateMap.put("overlayTextures", overlayTextures);
-                    }
+                    if (overlayTextures != null && !overlayTextures.isEmpty()) sv.overlayTextures = overlayTextures;
                 }
 
-                // Copy other state properties
-                if (stateRec.getLightValue() != null) {
-                    stateMap.put("luminance", stateRec.getLightValue().intValue());
-                }
-                if (stateRec.getColorMult() != null) {
-                    stateMap.put("colorMult", stateRec.getColorMult());
-                }
+                if (stateRec.getLightValue() != null) sv.luminance = stateRec.getLightValue().intValue();
+                if (stateRec.getColorMult() != null) sv.colorMult = stateRec.getColorMult();
 
-                statesList.add(stateMap);
+                statesList.add(sv);
             }
 
-            // Only add states if 2+ remain after exclusions
             if (statesList.size() >= 2) {
-                defMap.put("states", statesList);
-
-                // toggleOnUse must go through options (BlockDefinition has no top-level field)
-                // Copy to avoid mutating the shared instance from preprocessVariantMap
-                variantOptions = new OptionsProperties(variantOptions);
-                variantOptions.setToggleOnUse(true);
-                defMap.put("options", variantOptions);
+                def.states = statesList;
+                // Copy options to avoid mutating the shared instance, then add toggleOnUse
+                def.options = new OptionsProperties(def.options);
+                def.options.setToggleOnUse(true);
             }
         }
 
-        // 9. Handle special geometry for certain variants
-        addSpecialGeometry(defMap, variant);
+        // 7. Special geometry
+        addSpecialGeometry(def, variant);
 
-        // Convert map to JSON and then to BlockDefinition
-        BlockDefinition definition = convertMapToBlockDefinition(defMap);
+        // 8. Initialize (normalizes textures, creates synthetic base state, etc.)
+        def.doInit();
 
-        // Apply options directly, bypassing the lossy Gson round-trip
-        if (definition != null && variantOptions != null) {
-            definition.setOptions(variantOptions);
-        }
-
-        return definition;
+        return def;
     }
 
     /**
@@ -444,283 +394,78 @@ public class BlockSetExpander {
     /**
      * Adds special geometry (cuboids, bounding boxes) for variants that need them.
      */
-    private static void addSpecialGeometry(Map<String, Object> defMap, String variant) {
+    private static void addSpecialGeometry(BlockDefinition def, String variant) {
         switch (variant) {
-            case "hopper" -> addHopperGeometry(defMap);
-            case "tip" -> addTipGeometry(defMap);
-            case "carpet" -> addCarpetGeometry(defMap);
-            case "half_door" -> addHalfDoorGeometry(defMap);
-            case "hollow_hopper" -> addHollowHopperGeometry(defMap);
-            case "directional" -> addDirectionalGeometry(defMap);
-            case "path" -> addPathGeometry(defMap);
+            case "hopper" -> addHopperGeometry(def);
+            case "tip" -> addTipGeometry(def);
+            case "carpet" -> addCarpetGeometry(def);
+            case "half_door" -> def.boundingBox = new BlockDefinition.BoundingBox(0, 0, 0, 0.1875, 1, 1);
+            case "hollow_hopper" -> addHollowHopperGeometry(def);
+            case "directional" -> def.cuboids = List.of(cuboid(0, 0, 0, 1, 1, 1, null));
+            case "path" -> addPathGeometry(def);
             case "arrow_slit", "arrow_slit_window", "arrow_slit_ornate",
-                 "window_frame", "window_frame_mullion" -> addWindowGeometry(defMap);
+                 "window_frame", "window_frame_mullion" -> {
+                def.nonOpaque = true;
+                def.lightOpacity = 0;
+                def.renderLayer = "cutout";
+            }
         }
     }
 
-    private static void addHopperGeometry(Map<String, Object> defMap) {
-        // Mark as non-opaque
-        defMap.put("nonOpaque", true);
-        defMap.put("lightOpacity", 0);
+    private static final int[] SIDES_ALL = {0, 0, 0, 0, 0, 0};
 
-        // Add hopper cuboid geometry
-        List<Map<String, Object>> cuboids = new ArrayList<>();
-
-        // Bottom spout
-        Map<String, Object> cuboid1 = new HashMap<>();
-        cuboid1.put("xMin", 0.3755);
-        cuboid1.put("yMin", 0.0);
-        cuboid1.put("zMin", 0.3755);
-        cuboid1.put("xMax", 0.6245);
-        cuboid1.put("yMax", 0.275);
-        cuboid1.put("zMax", 0.6245);
-        cuboid1.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
-        cuboids.add(cuboid1);
-
-        // Middle section
-        Map<String, Object> cuboid2 = new HashMap<>();
-        cuboid2.put("xMin", 0.25);
-        cuboid2.put("yMin", 0.275);
-        cuboid2.put("zMin", 0.25);
-        cuboid2.put("xMax", 0.75);
-        cuboid2.put("yMax", 0.625);
-        cuboid2.put("zMax", 0.75);
-        cuboid2.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
-        cuboids.add(cuboid2);
-
-        // Top rim
-        Map<String, Object> cuboid3 = new HashMap<>();
-        cuboid3.put("xMin", 0.0);
-        cuboid3.put("yMin", 0.625);
-        cuboid3.put("zMin", 0.0);
-        cuboid3.put("xMax", 1.0);
-        cuboid3.put("yMax", 1.0);
-        cuboid3.put("zMax", 1.0);
-        cuboid3.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
-        cuboids.add(cuboid3);
-
-        defMap.put("cuboids", cuboids);
+    private static BlockDefinition.CuboidElement cuboid(double x1, double y1, double z1,
+                                                         double x2, double y2, double z2, int[] sides) {
+        BlockDefinition.CuboidElement c = new BlockDefinition.CuboidElement();
+        c.xMin = x1; c.yMin = y1; c.zMin = z1;
+        c.xMax = x2; c.yMax = y2; c.zMax = z2;
+        c.sideTextures = sides;
+        return c;
     }
 
-    private static void addTipGeometry(Map<String, Object> defMap) {
-        defMap.put("nonOpaque", true);
-        defMap.put("lightOpacity", 0);
-
-        // Add tip cuboid geometry (inverted hopper)
-        List<Map<String, Object>> cuboids = new ArrayList<>();
-
-        // Top spout
-        Map<String, Object> cuboid1 = new HashMap<>();
-        cuboid1.put("xMin", 0.3755);
-        cuboid1.put("yMin", 0.625);
-        cuboid1.put("zMin", 0.3755);
-        cuboid1.put("xMax", 0.6245);
-        cuboid1.put("yMax", 1.0);
-        cuboid1.put("zMax", 0.6245);
-        cuboid1.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
-        cuboids.add(cuboid1);
-
-        // Middle section
-        Map<String, Object> cuboid2 = new HashMap<>();
-        cuboid2.put("xMin", 0.25);
-        cuboid2.put("yMin", 0.275);
-        cuboid2.put("zMin", 0.25);
-        cuboid2.put("xMax", 0.75);
-        cuboid2.put("yMax", 0.625);
-        cuboid2.put("zMax", 0.75);
-        cuboid2.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
-        cuboids.add(cuboid2);
-
-        // Bottom base
-        Map<String, Object> cuboid3 = new HashMap<>();
-        cuboid3.put("xMin", 0.0);
-        cuboid3.put("yMin", 0.0);
-        cuboid3.put("zMin", 0.0);
-        cuboid3.put("xMax", 1.0);
-        cuboid3.put("yMax", 0.275);
-        cuboid3.put("zMax", 1.0);
-        cuboid3.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
-        cuboids.add(cuboid3);
-
-        defMap.put("cuboids", cuboids);
+    private static void addHopperGeometry(BlockDefinition def) {
+        def.nonOpaque = true;
+        def.lightOpacity = 0;
+        def.cuboids = List.of(
+            cuboid(0.3755, 0, 0.3755, 0.6245, 0.275, 0.6245, SIDES_ALL),
+            cuboid(0.25, 0.275, 0.25, 0.75, 0.625, 0.75, SIDES_ALL),
+            cuboid(0, 0.625, 0, 1, 1, 1, SIDES_ALL)
+        );
     }
 
-    private static void addCarpetGeometry(Map<String, Object> defMap) {
-        defMap.put("nonOpaque", true);
-        defMap.put("lightOpacity", 0);
-
-        // Add carpet cuboid geometry (thin layer)
-        List<Map<String, Object>> cuboids = new ArrayList<>();
-
-        Map<String, Object> cuboid = new HashMap<>();
-        cuboid.put("xMin", 0.0);
-        cuboid.put("yMin", 0.0);
-        cuboid.put("zMin", 0.0);
-        cuboid.put("xMax", 1.0);
-        cuboid.put("yMax", 0.0625);
-        cuboid.put("zMax", 1.0);
-        cuboid.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
-        cuboids.add(cuboid);
-
-        defMap.put("cuboids", cuboids);
+    private static void addTipGeometry(BlockDefinition def) {
+        def.nonOpaque = true;
+        def.lightOpacity = 0;
+        def.cuboids = List.of(
+            cuboid(0.3755, 0.625, 0.3755, 0.6245, 1, 0.6245, SIDES_ALL),
+            cuboid(0.25, 0.275, 0.25, 0.75, 0.625, 0.75, SIDES_ALL),
+            cuboid(0, 0, 0, 1, 0.275, 1, SIDES_ALL)
+        );
     }
 
-    private static void addHalfDoorGeometry(Map<String, Object> defMap) {
-        // Add bounding box for half door
-        Map<String, Double> boundingBox = new HashMap<>();
-        boundingBox.put("xMin", 0.0);
-        boundingBox.put("yMin", 0.0);
-        boundingBox.put("zMin", 0.0);
-        boundingBox.put("xMax", 0.1875);
-        boundingBox.put("yMax", 1.0);
-        boundingBox.put("zMax", 1.0);
-        defMap.put("boundingBox", boundingBox);
+    private static void addCarpetGeometry(BlockDefinition def) {
+        def.nonOpaque = true;
+        def.lightOpacity = 0;
+        def.cuboids = List.of(cuboid(0, 0, 0, 1, 0.0625, 1, SIDES_ALL));
     }
 
-    private static void addHollowHopperGeometry(Map<String, Object> defMap) {
-        defMap.put("nonOpaque", true);
-        defMap.put("lightOpacity", 0);
-
-        List<Map<String, Object>> cuboids = new ArrayList<>();
-
-        // Bottom spout
-        Map<String, Object> cuboid1 = new HashMap<>();
-        cuboid1.put("xMin", 0.3755);
-        cuboid1.put("yMin", 0.16);
-        cuboid1.put("zMin", 0.3755);
-        cuboid1.put("xMax", 0.6245);
-        cuboid1.put("yMax", 0.275);
-        cuboid1.put("zMax", 0.6245);
-        cuboid1.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
-        cuboids.add(cuboid1);
-
-        // Middle section
-        Map<String, Object> cuboid2 = new HashMap<>();
-        cuboid2.put("xMin", 0.25);
-        cuboid2.put("yMin", 0.275);
-        cuboid2.put("zMin", 0.25);
-        cuboid2.put("xMax", 0.75);
-        cuboid2.put("yMax", 0.625);
-        cuboid2.put("zMax", 0.75);
-        cuboid2.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
-        cuboids.add(cuboid2);
-
-        // Base plate
-        Map<String, Object> cuboid3 = new HashMap<>();
-        cuboid3.put("xMin", 0.0);
-        cuboid3.put("yMin", 0.625);
-        cuboid3.put("zMin", 0.0);
-        cuboid3.put("xMax", 1.0);
-        cuboid3.put("yMax", 0.65);
-        cuboid3.put("zMax", 1.0);
-        cuboid3.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
-        cuboids.add(cuboid3);
-
-        // West wall
-        Map<String, Object> cuboid4 = new HashMap<>();
-        cuboid4.put("xMin", 0.0);
-        cuboid4.put("yMin", 0.625);
-        cuboid4.put("zMin", 0.0);
-        cuboid4.put("xMax", 0.125);
-        cuboid4.put("yMax", 1.0);
-        cuboid4.put("zMax", 1.0);
-        cuboid4.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
-        cuboids.add(cuboid4);
-
-        // East wall
-        Map<String, Object> cuboid5 = new HashMap<>();
-        cuboid5.put("xMin", 0.875);
-        cuboid5.put("yMin", 0.625);
-        cuboid5.put("zMin", 0.0);
-        cuboid5.put("xMax", 1.0);
-        cuboid5.put("yMax", 1.0);
-        cuboid5.put("zMax", 1.0);
-        cuboid5.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
-        cuboids.add(cuboid5);
-
-        // North wall
-        Map<String, Object> cuboid6 = new HashMap<>();
-        cuboid6.put("xMin", 0.0);
-        cuboid6.put("yMin", 0.625);
-        cuboid6.put("zMin", 0.0);
-        cuboid6.put("xMax", 1.0);
-        cuboid6.put("yMax", 1.0);
-        cuboid6.put("zMax", 0.125);
-        cuboid6.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
-        cuboids.add(cuboid6);
-
-        // South wall
-        Map<String, Object> cuboid7 = new HashMap<>();
-        cuboid7.put("xMin", 0.0);
-        cuboid7.put("yMin", 0.625);
-        cuboid7.put("zMin", 0.875);
-        cuboid7.put("xMax", 1.0);
-        cuboid7.put("yMax", 1.0);
-        cuboid7.put("zMax", 1.0);
-        cuboid7.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
-        cuboids.add(cuboid7);
-
-        defMap.put("cuboids", cuboids);
+    private static void addHollowHopperGeometry(BlockDefinition def) {
+        def.nonOpaque = true;
+        def.lightOpacity = 0;
+        def.cuboids = List.of(
+            cuboid(0.3755, 0.16, 0.3755, 0.6245, 0.275, 0.6245, SIDES_ALL),
+            cuboid(0.25, 0.275, 0.25, 0.75, 0.625, 0.75, SIDES_ALL),
+            cuboid(0, 0.625, 0, 1, 0.65, 1, SIDES_ALL),
+            cuboid(0, 0.625, 0, 0.125, 1, 1, SIDES_ALL),
+            cuboid(0.875, 0.625, 0, 1, 1, 1, SIDES_ALL),
+            cuboid(0, 0.625, 0, 1, 1, 0.125, SIDES_ALL),
+            cuboid(0, 0.625, 0.875, 1, 1, 1, SIDES_ALL)
+        );
     }
 
-    private static void addDirectionalGeometry(Map<String, Object> defMap) {
-        // Full cube for directional blocks
-        List<Map<String, Object>> cuboids = new ArrayList<>();
-
-        Map<String, Object> cuboid = new HashMap<>();
-        cuboid.put("xMin", 0.0);
-        cuboid.put("yMin", 0.0);
-        cuboid.put("zMin", 0.0);
-        cuboid.put("xMax", 1.0);
-        cuboid.put("yMax", 1.0);
-        cuboid.put("zMax", 1.0);
-        cuboids.add(cuboid);
-
-        defMap.put("cuboids", cuboids);
-    }
-
-    private static void addPathGeometry(Map<String, Object> defMap) {
-        defMap.put("nonOpaque", true);
-        defMap.put("lightOpacity", 0);
-
-        List<Map<String, Object>> cuboids = new ArrayList<>();
-
-        Map<String, Object> cuboid = new HashMap<>();
-        cuboid.put("xMin", 0.0);
-        cuboid.put("yMin", 0.0);
-        cuboid.put("zMin", 0.0);
-        cuboid.put("xMax", 1.0);
-        cuboid.put("yMax", 0.9375);
-        cuboid.put("zMax", 1.0);
-        cuboid.put("sideTextures", new int[]{0, 0, 0, 0, 0, 0});
-        cuboids.add(cuboid);
-
-        defMap.put("cuboids", cuboids);
-    }
-
-    private static void addWindowGeometry(Map<String, Object> defMap) {
-        defMap.put("nonOpaque", true);
-        defMap.put("lightOpacity", 0);
-        defMap.put("renderLayer", "cutout");
-        // Collision boxes and support boxes would be added here
-    }
-
-    /**
-     * Converts a map to a BlockDefinition using Gson.
-     * Calls doInit() to normalize the definition after creation.
-     */
-    private static BlockDefinition convertMapToBlockDefinition(Map<String, Object> defMap) {
-        Gson gson = new GsonBuilder()
-            .registerTypeAdapter(OptionsProperties.class, new OptionsPropertiesDeserializer())
-            .create();
-        String json = gson.toJson(defMap);
-        BlockDefinition definition = gson.fromJson(json, BlockDefinition.class);
-
-        // Initialize the definition to normalize textures and create synthetic base state
-        if (definition != null) {
-            definition.doInit();
-        }
-
-        return definition;
+    private static void addPathGeometry(BlockDefinition def) {
+        def.nonOpaque = true;
+        def.lightOpacity = 0;
+        def.cuboids = List.of(cuboid(0, 0, 0, 1, 0.9375, 1, SIDES_ALL));
     }
 }
