@@ -1,9 +1,20 @@
 {
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
 	"ambientocclusion": false,
 	"textures": {
 		"particle": "#torch"
 	},
 	"elements": [
+		{
+			"from": [7, 0, 7],
+			"to": [9, 10, 9],
+			"shade": false,
+			"faces": {
+				"up": {"uv": [7, 6, 9, 8], "texture": "#torch"},
+				"down": {"uv": [7, 13, 9, 15], "texture": "#torch"}
+			}
+		},
 		{
 			"from": [7, 0, 0],
 			"to": [9, 16, 16],

@@ -16,8 +16,6 @@ public class TorchBlockExporter extends BaseBlockExporter {
     public static void registerTorchBlockFromDefinition(BlockStateModelGenerator generator,
                                                         Block standingTorch,
                                                         BlockDefinition definition) {
-        String texturePath = getTextureFromDefinition(definition);
-
         Identifier wallTorchId = WesterosBlocks.id("wall_" + definition.getBlockName());
         if (!Registries.BLOCK.containsId(wallTorchId)) {
             WesterosBlocks.LOGGER.warn("Could not find wall torch for: {}", definition.getBlockName());
@@ -25,12 +23,21 @@ public class TorchBlockExporter extends BaseBlockExporter {
         }
         Block wallTorch = Registries.BLOCK.get(wallTorchId);
 
-        ModelPair models = generateTorchModels(generator, standingTorch, texturePath);
+        if (definition.hasCustomModel()) {
+            Identifier standingModelId = createCustomModelId(standingTorch, "base");
+            Identifier wallModelId = createCustomModelId(standingTorch, "wall");
 
-        generateStandingTorchBlockState(generator, standingTorch, models.standingModel);
-        generateWallTorchBlockState(generator, wallTorch, models.wallModel);
+            generateStandingTorchBlockState(generator, standingTorch, standingModelId);
+            generateWallTorchBlockState(generator, wallTorch, wallModelId);
+            registerParentedItemModel(generator, standingTorch, standingModelId);
+        } else {
+            String texturePath = getTextureFromDefinition(definition);
+            ModelPair models = generateTorchModels(generator, standingTorch, texturePath);
 
-        generateTorchItemModel(generator, standingTorch, texturePath);
+            generateStandingTorchBlockState(generator, standingTorch, models.standingModel);
+            generateWallTorchBlockState(generator, wallTorch, models.wallModel);
+            generateTorchItemModel(generator, standingTorch, texturePath);
+        }
     }
 
     private static ModelPair generateTorchModels(BlockStateModelGenerator generator,

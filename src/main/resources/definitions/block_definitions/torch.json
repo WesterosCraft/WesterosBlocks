@@ -37,6 +37,7 @@
     },
     "textures": ["lighting/candle_unlit"],
     "renderLayer": "cutout",
+    "isCustomModel": true,
     "luminance": 0
   },
   {
@@ -51,6 +52,7 @@
     },
     "textures": ["lighting/torch_unlit"],
     "renderLayer": "cutout",
+    "isCustomModel": true,
     "luminance": 0
   }
 ]
