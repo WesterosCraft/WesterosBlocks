@@ -185,6 +185,11 @@ public class ModModels {
             TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
             ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
 
+    public static final Model WALL_INVENTORY_UNTINTED = block("untinted/wall_inventory",
+            TextureKey.WALL);
+    public static final Model WALL_INVENTORY_TINTED = block("tinted/wall_inventory",
+            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+
     // Leaves models — standard (END+SIDE) and better foliage (ALL)
     public static final Model LEAVES_UNTINTED = block("untinted/leaves",
             TextureKey.END, TextureKey.SIDE, TextureKey.PARTICLE);

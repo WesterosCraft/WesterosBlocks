@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/wall_inventory",
+  "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
     "wall": "westerosblocks:block/plaster/rough/blue/all1"
   }

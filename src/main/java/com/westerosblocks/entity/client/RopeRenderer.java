@@ -170,38 +170,10 @@ public class RopeRenderer extends EntityRenderer<RopeEntity> {
         return entity.getVariant() == 1 ? CHAIN_TEXTURE : ROPE_TEXTURE;
     }
 
-    private void renderCenterDebugMarker(RopeEntity entity,
-                                         MatrixStack matrices,
-                                         VertexConsumerProvider vertexConsumers,
-                                         Vec3d startWorld,
-                                         Vec3d endWorld) {
-
-        MinecraftClient client = MinecraftClient.getInstance();
-        HitResult hr = client.crosshairTarget;
-
-        if (!(hr instanceof EntityHitResult ehr)) return;
-        if (ehr.getEntity() != entity) return;
-        Vec3d mid = startWorld.add(endWorld).multiply(0.5);
-        double r = 0.10;
-        Vec3d cam = client.gameRenderer.getCamera().getPos();
-        double x = mid.x - cam.x;
-        double y = mid.y - cam.y;
-        double z = mid.z - cam.z;
-
-        Box box = new Box(x - r, y - r, z - r, x + r, y + r, z + r);
-        VertexConsumer vc = vertexConsumers.getBuffer(RenderLayer.getLines());
-        WorldRenderer.drawBox(matrices, vc, box, 1f, 1f, 1f, 1f);
-    }
-
     private boolean isLookingAtThisRope(RopeEntity entity) {
         MinecraftClient client = MinecraftClient.getInstance();
         HitResult hr = client.crosshairTarget;
         if (!(hr instanceof EntityHitResult ehr)) return false;
         return ehr.getEntity() == entity;
-    }
-
-    private Vec3d toRenderSpace(Vec3d world) {
-        Vec3d cam = MinecraftClient.getInstance().gameRenderer.getCamera().getPos();
-        return world.subtract(cam);
     }
 }

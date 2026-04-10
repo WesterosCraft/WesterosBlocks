@@ -25,10 +25,6 @@ public class WesterosBlocksClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
         EntityRendererRegistry.register(ModEntities.ROPE_ENTITY, RopeRenderer::new);
 
-        // flowerbed blocks
-//        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CLOVER, RenderLayer.getCutout());
-
-
         // Shields Azurelib
         AzItemRendererRegistry.register(ModItems.TARGARYEN_HEATER_SHIELD,
                 () -> new ModShieldRenderer(

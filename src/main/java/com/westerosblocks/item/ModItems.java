@@ -25,9 +25,7 @@ public class ModItems {
     public static final Item VALYRIAN_STEEL_INGOT = registerItem("valyrian_steel_ingot",
             new Item(new Item.Settings()));
 
-//    public static final Item STARK_KITE_SHIELD = registerItem("stark_kite_shield",
-//            new KiteShieldItem(new Item.Settings().maxDamage(3200), 6, 18, Items.NETHERITE_INGOT, "stark_kite_shield"));
-//
+
 
     public static final ModShieldItem TARGARYEN_HEATER_SHIELD = (ModShieldItem) registerItem("targaryen_heater_shield",
             new ModShieldItem(
@@ -113,7 +111,6 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             // weapons
             entries.add(LONGCLAW);
-//            entries.add(STARK_KITE_SHIELD);
             entries.add(TARGARYEN_HEATER_SHIELD);
             entries.add(GREYJOY_ROUND_SHIELD);
             entries.add(BLACKFYRE_HEATER_SHIELD);
@@ -131,14 +128,5 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(VALYRIAN_STEEL_INGOT);
         });
-//
-//        TARGARYEN_HEATER_SHIELD.applyAttributes(2.0);
-//        BLACKFYRE_HEATER_SHIELD.applyAttributes(2.0);
-//        BLACKWOOD_HEATER_SHIELD.applyAttributes(2.0);
-//        BRACKEN_HEATER_SHIELD.applyAttributes(2.0);
-//        TULLY_HEATER_SHIELD.applyAttributes(2.0);
-//        HEDGE_KNIGHT_HEATER_SHIELD.applyAttributes(2.0);
-//        LAUGHING_TREE_HEATER_SHIELD.applyAttributes(2.0);
-//        GREYJOY_ROUND_SHIELD.applyAttributes(2.0);
     }
 }

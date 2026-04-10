@@ -1,6 +1,9 @@
 {
-  "parent": "minecraft:block/wall_inventory",
+  "parent": "westerosblocks:block/tinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/ashlar_quarter_rounded/grey/all"
+    "bottom": "westerosblocks:block/ashlar_quarter_rounded/grey/all",
+    "particle": "westerosblocks:block/ashlar_quarter_rounded/grey/all",
+    "side": "westerosblocks:block/ashlar_quarter_rounded/grey/all",
+    "top": "westerosblocks:block/ashlar_quarter_rounded/grey/all"
   }
 }
