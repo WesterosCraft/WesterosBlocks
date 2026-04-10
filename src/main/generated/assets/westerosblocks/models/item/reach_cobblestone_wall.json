@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/cobblestone/reach/all1"
+    "bottom": "westerosblocks:block/cobblestone/reach/all1",
+    "particle": "westerosblocks:block/cobblestone/reach/all1",
+    "side": "westerosblocks:block/cobblestone/reach/all1",
+    "top": "westerosblocks:block/cobblestone/reach/all1"
   }
 }

@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/ashlar_full/terracotta/all"
+    "bottom": "westerosblocks:block/ashlar_full/terracotta/all",
+    "particle": "westerosblocks:block/ashlar_full/terracotta/all",
+    "side": "westerosblocks:block/ashlar_full/terracotta/all",
+    "top": "westerosblocks:block/ashlar_full/terracotta/all"
   }
 }

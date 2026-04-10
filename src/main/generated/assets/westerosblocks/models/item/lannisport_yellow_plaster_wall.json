@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/plaster/smooth/lannisport_yellow/all"
+    "bottom": "westerosblocks:block/plaster/smooth/lannisport_yellow/all",
+    "particle": "westerosblocks:block/plaster/smooth/lannisport_yellow/all",
+    "side": "westerosblocks:block/plaster/smooth/lannisport_yellow/all",
+    "top": "westerosblocks:block/plaster/smooth/lannisport_yellow/all"
   }
 }

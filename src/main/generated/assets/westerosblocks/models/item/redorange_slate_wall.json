@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/slate/redorange/all"
+    "bottom": "westerosblocks:block/slate/redorange/all",
+    "particle": "westerosblocks:block/slate/redorange/all",
+    "side": "westerosblocks:block/slate/redorange/all",
+    "top": "westerosblocks:block/slate/redorange/all"
   }
 }

@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/bark/birch/stripped"
+    "bottom": "westerosblocks:block/bark/birch/stripped",
+    "particle": "westerosblocks:block/bark/birch/stripped",
+    "side": "westerosblocks:block/bark/birch/stripped",
+    "top": "westerosblocks:block/bark/birch/stripped"
   }
 }

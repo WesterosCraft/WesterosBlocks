@@ -252,16 +252,10 @@ public class WallBlockExporter extends BaseBlockExporter {
                 generator.blockStateCollector.accept(blockstate);
 
                 // Item model from first state's side texture
+                String[] expandedItemTextures = fillTextureArray(new String[]{firstSideTexture}, 3);
+                TextureMap itemTextureMap = createFenceWallTextureMap(expandedItemTextures, null);
                 Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
-                if (tinted) {
-                    String[] expandedTextures = fillTextureArray(new String[]{firstSideTexture}, 3);
-                    TextureMap itemTextureMap = createFenceWallTextureMap(expandedTextures, null);
-                    getWallInventoryModel(true).upload(itemModelId, itemTextureMap, generator.modelCollector);
-                } else {
-                    TextureMap itemTextureMap = new TextureMap()
-                            .put(TextureKey.WALL, createBlockIdentifier(firstSideTexture));
-                    getWallInventoryModel(false).upload(itemModelId, itemTextureMap, generator.modelCollector);
-                }
+                getWallInventoryModel(tinted).upload(itemModelId, itemTextureMap, generator.modelCollector);
             }
         } else {
             // Single-state wall: existing behavior
@@ -302,13 +296,7 @@ public class WallBlockExporter extends BaseBlockExporter {
         generator.blockStateCollector.accept(blockstate);
 
         Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
-        if (tinted) {
-            getWallInventoryModel(true).upload(itemModelId, textureMap, generator.modelCollector);
-        } else {
-            TextureMap itemTextureMap = new TextureMap()
-                    .put(TextureKey.WALL, createBlockIdentifier(expandedTextures[2]));
-            getWallInventoryModel(false).upload(itemModelId, itemTextureMap, generator.modelCollector);
-        }
+        getWallInventoryModel(tinted).upload(itemModelId, textureMap, generator.modelCollector);
     }
 
     private static void registerWallBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, boolean tinted,
@@ -345,14 +333,8 @@ public class WallBlockExporter extends BaseBlockExporter {
         String[] expandedTextures = fillTextureArray(firstSet.getTexturesAsArray(), 3);
         String[] expandedOverlays = overlay && firstSet.hasOverlay() ? fillTextureArray(firstSet.getOverlayTexturesAsArray(), 3) : null;
 
+        TextureMap itemTextureMap = createFenceWallTextureMap(expandedTextures, expandedOverlays);
         Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
-        if (tinted) {
-            TextureMap itemTextureMap = createFenceWallTextureMap(expandedTextures, expandedOverlays);
-            getWallInventoryModel(true).upload(itemModelId, itemTextureMap, generator.modelCollector);
-        } else {
-            TextureMap itemTextureMap = new TextureMap()
-                    .put(TextureKey.WALL, createBlockIdentifier(expandedTextures[2]));
-            getWallInventoryModel(false).upload(itemModelId, itemTextureMap, generator.modelCollector);
-        }
+        getWallInventoryModel(tinted).upload(itemModelId, itemTextureMap, generator.modelCollector);
     }
 }

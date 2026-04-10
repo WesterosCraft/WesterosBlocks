@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/terrainset/flowstone/all1"
+    "bottom": "westerosblocks:block/terrainset/flowstone/all1",
+    "particle": "westerosblocks:block/terrainset/flowstone/all1",
+    "side": "westerosblocks:block/terrainset/flowstone/all1",
+    "top": "westerosblocks:block/terrainset/flowstone/all1"
   }
 }

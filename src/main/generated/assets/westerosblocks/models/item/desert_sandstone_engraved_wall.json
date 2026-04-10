@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/ashlar_engraved/sandstone/all"
+    "bottom": "westerosblocks:block/ashlar_engraved/sandstone/all",
+    "particle": "westerosblocks:block/ashlar_engraved/sandstone/all",
+    "side": "westerosblocks:block/ashlar_engraved/sandstone/all",
+    "top": "westerosblocks:block/ashlar_engraved/sandstone/all"
   }
 }

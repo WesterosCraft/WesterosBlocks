@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/stacked_bones/bone_stacked_front"
+    "bottom": "westerosblocks:block/stacked_bones/bone_stacked_side",
+    "particle": "westerosblocks:block/stacked_bones/bone_stacked_front",
+    "side": "westerosblocks:block/stacked_bones/bone_stacked_front",
+    "top": "westerosblocks:block/stacked_bones/bone_stacked_side"
   }
 }

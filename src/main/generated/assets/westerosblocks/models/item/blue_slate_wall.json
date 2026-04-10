@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/slate/blue/all"
+    "bottom": "westerosblocks:block/slate/blue/all",
+    "particle": "westerosblocks:block/slate/blue/all",
+    "side": "westerosblocks:block/slate/blue/all",
+    "top": "westerosblocks:block/slate/blue/all"
   }
 }

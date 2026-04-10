@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/ashlar_smooth/arbor/all"
+    "bottom": "westerosblocks:block/ashlar_smooth/arbor/all",
+    "particle": "westerosblocks:block/ashlar_smooth/arbor/all",
+    "side": "westerosblocks:block/ashlar_smooth/arbor/all",
+    "top": "westerosblocks:block/ashlar_smooth/arbor/all"
   }
 }

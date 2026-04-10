@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/wool/orange/all"
+    "bottom": "westerosblocks:block/wool/orange/all",
+    "particle": "westerosblocks:block/wool/orange/all",
+    "side": "westerosblocks:block/wool/orange/all",
+    "top": "westerosblocks:block/wool/orange/all"
   }
 }

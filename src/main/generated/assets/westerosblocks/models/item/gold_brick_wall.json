@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/metal/gold_brick/all"
+    "bottom": "westerosblocks:block/metal/gold_brick/all",
+    "particle": "westerosblocks:block/metal/gold_brick/all",
+    "side": "westerosblocks:block/metal/gold_brick/all",
+    "top": "westerosblocks:block/metal/gold_brick/all"
   }
 }

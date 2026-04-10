@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/ashlar_half/westerlands/all"
+    "bottom": "westerosblocks:block/ashlar_half/westerlands/all",
+    "particle": "westerosblocks:block/ashlar_half/westerlands/all",
+    "side": "westerosblocks:block/ashlar_half/westerlands/all",
+    "top": "westerosblocks:block/ashlar_half/westerlands/all"
   }
 }

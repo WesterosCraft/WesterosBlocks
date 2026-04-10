@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/wood/grey_light/vertical"
+    "bottom": "westerosblocks:block/wood/grey_light/vertical",
+    "particle": "westerosblocks:block/wood/grey_light/vertical",
+    "side": "westerosblocks:block/wood/grey_light/vertical",
+    "top": "westerosblocks:block/wood/grey_light/vertical"
   }
 }

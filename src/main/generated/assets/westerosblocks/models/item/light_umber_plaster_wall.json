@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/plaster/smooth/light_umber/all"
+    "bottom": "westerosblocks:block/plaster/smooth/light_umber/all",
+    "particle": "westerosblocks:block/plaster/smooth/light_umber/all",
+    "side": "westerosblocks:block/plaster/smooth/light_umber/all",
+    "top": "westerosblocks:block/plaster/smooth/light_umber/all"
   }
 }

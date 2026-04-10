@@ -186,7 +186,7 @@ public class ModModels {
             ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
 
     public static final Model WALL_INVENTORY_UNTINTED = block("untinted/wall_inventory",
-            TextureKey.WALL);
+            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
     public static final Model WALL_INVENTORY_TINTED = block("tinted/wall_inventory",
             TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
 

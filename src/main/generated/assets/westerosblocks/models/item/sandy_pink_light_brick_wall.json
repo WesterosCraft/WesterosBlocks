@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/fieldstone/sandy_pink/all"
+    "bottom": "westerosblocks:block/fieldstone/sandy_pink/all",
+    "particle": "westerosblocks:block/fieldstone/sandy_pink/all",
+    "side": "westerosblocks:block/fieldstone/sandy_pink/all",
+    "top": "westerosblocks:block/fieldstone/sandy_pink/all"
   }
 }

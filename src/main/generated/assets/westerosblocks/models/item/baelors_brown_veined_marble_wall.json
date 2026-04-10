@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/marble/baelors_brown_veined/all"
+    "bottom": "westerosblocks:block/marble/baelors_brown_veined/all",
+    "particle": "westerosblocks:block/marble/baelors_brown_veined/all",
+    "side": "westerosblocks:block/marble/baelors_brown_veined/all",
+    "top": "westerosblocks:block/marble/baelors_brown_veined/all"
   }
 }

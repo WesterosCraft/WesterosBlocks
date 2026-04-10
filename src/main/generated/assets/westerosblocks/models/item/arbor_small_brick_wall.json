@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/fieldstone/arbor/all"
+    "bottom": "westerosblocks:block/fieldstone/arbor/all",
+    "particle": "westerosblocks:block/fieldstone/arbor/all",
+    "side": "westerosblocks:block/fieldstone/arbor/all",
+    "top": "westerosblocks:block/fieldstone/arbor/all"
   }
 }

@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/terrainset/north_alt/light_snow/all"
+    "bottom": "westerosblocks:block/terrainset/north_alt/light_snow/all",
+    "particle": "westerosblocks:block/terrainset/north_alt/light_snow/all",
+    "side": "westerosblocks:block/terrainset/north_alt/light_snow/all",
+    "top": "westerosblocks:block/terrainset/north_alt/light_snow/all"
   }
 }

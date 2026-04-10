@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/terrainset/magma/all"
+    "bottom": "westerosblocks:block/terrainset/magma/all",
+    "particle": "westerosblocks:block/terrainset/magma/all",
+    "side": "westerosblocks:block/terrainset/magma/all",
+    "top": "westerosblocks:block/terrainset/magma/all"
   }
 }

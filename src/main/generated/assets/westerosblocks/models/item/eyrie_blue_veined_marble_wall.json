@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/marble/eyrie_blue_veined/all"
+    "bottom": "westerosblocks:block/marble/eyrie_blue_veined/all",
+    "particle": "westerosblocks:block/marble/eyrie_blue_veined/all",
+    "side": "westerosblocks:block/marble/eyrie_blue_veined/all",
+    "top": "westerosblocks:block/marble/eyrie_blue_veined/all"
   }
 }

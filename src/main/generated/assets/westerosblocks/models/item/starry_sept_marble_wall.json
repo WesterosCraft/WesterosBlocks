@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/marble/starry_sept/all"
+    "bottom": "westerosblocks:block/marble/starry_sept/all",
+    "particle": "westerosblocks:block/marble/starry_sept/all",
+    "side": "westerosblocks:block/marble/starry_sept/all",
+    "top": "westerosblocks:block/marble/starry_sept/all"
   }
 }

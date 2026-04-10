@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/thatch/dark/all"
+    "bottom": "westerosblocks:block/thatch/dark/all",
+    "particle": "westerosblocks:block/thatch/dark/all",
+    "side": "westerosblocks:block/thatch/dark/all",
+    "top": "westerosblocks:block/thatch/dark/all"
   }
 }

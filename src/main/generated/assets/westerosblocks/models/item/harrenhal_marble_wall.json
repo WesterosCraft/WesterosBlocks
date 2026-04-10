@@ -1,6 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "wall": "westerosblocks:block/marble/harrenhal/all"
+    "bottom": "westerosblocks:block/marble/harrenhal/all",
+    "particle": "westerosblocks:block/marble/harrenhal/all",
+    "side": "westerosblocks:block/marble/harrenhal/all",
+    "top": "westerosblocks:block/marble/harrenhal/all"
   }
 }
