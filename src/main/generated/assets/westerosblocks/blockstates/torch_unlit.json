@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/torch_unlit/base"
+      "model": "westerosblocks:block/custom/torch_unlit/base"
     }
   }
 }

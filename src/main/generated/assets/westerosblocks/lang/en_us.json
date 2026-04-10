@@ -4588,6 +4588,7 @@
   "config.westerosblocks.dumpWorldPainterCSV.tooltip": "Export block data to WorldPainter CSV format",
   "config.westerosblocks.title": "WesterosBlocks Config",
   "container.westerosblocks.furnace": "Furnace",
+  "entity.westerosblocks.rope_entity": "Rope",
   "item.westerosblocks.blackfyre_heater_shield": "Blackfyre Heater Shield",
   "item.westerosblocks.blackwood_heater_shield": "Blackwood Heater Shield",
   "item.westerosblocks.bracken_heater_shield": "Bracken Heater Shield",

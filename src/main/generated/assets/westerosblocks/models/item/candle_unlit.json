@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "westerosblocks:block/lighting/candle_unlit"
-  }
+  "parent": "westerosblocks:block/custom/candle_unlit/base"
 }

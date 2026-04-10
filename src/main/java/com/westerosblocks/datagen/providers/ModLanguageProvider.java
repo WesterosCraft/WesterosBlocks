@@ -21,6 +21,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 generateTranslationsFromDefinitions(translationBuilder);
 
                 translationBuilder.add("container.westerosblocks.furnace", "Furnace");
+                translationBuilder.add("entity.westerosblocks.rope_entity", "Rope");
                 // Items
                 translationBuilder.add("tag.item.westerosblocks.c.shield", "shield");
                 translationBuilder.add("item.westerosblocks.longclaw", "Longclaw");

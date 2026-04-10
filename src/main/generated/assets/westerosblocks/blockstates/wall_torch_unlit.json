@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "westerosblocks:block/torch_unlit/wall"
+      "model": "westerosblocks:block/custom/torch_unlit/wall"
     },
     "facing=north": {
-      "model": "westerosblocks:block/torch_unlit/wall",
+      "model": "westerosblocks:block/custom/torch_unlit/wall",
       "y": 270
     },
     "facing=south": {
-      "model": "westerosblocks:block/torch_unlit/wall",
+      "model": "westerosblocks:block/custom/torch_unlit/wall",
       "y": 90
     },
     "facing=west": {
-      "model": "westerosblocks:block/torch_unlit/wall",
+      "model": "westerosblocks:block/custom/torch_unlit/wall",
       "y": 180
     }
   }
