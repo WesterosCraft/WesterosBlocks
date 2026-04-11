@@ -3,6 +3,9 @@
 	"package": "com.westerosblocks.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [],
+	"client": [
+		"client.PaintingEntityRendererMixin"
+	],
 	"injectors": {
 		"defaultRequire": 1
 	},
