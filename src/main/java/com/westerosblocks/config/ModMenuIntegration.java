@@ -32,6 +32,14 @@ public class ModMenuIntegration implements ModMenuApi {
                     .setSaveConsumer(newValue -> config.dumpWorldPainterCSV = newValue)
                     .build());
 
+            general.addEntry(entryBuilder.startBooleanToggle(
+                    Text.translatable("config.westerosblocks.translucencyPaintings"),
+                    config.translucencyPaintings)
+                    .setDefaultValue(true)
+                    .setTooltip(Text.translatable("config.westerosblocks.translucencyPaintings.tooltip"))
+                    .setSaveConsumer(newValue -> config.translucencyPaintings = newValue)
+                    .build());
+
             return builder.build();
         };
     }

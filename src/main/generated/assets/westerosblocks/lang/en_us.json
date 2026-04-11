@@ -4586,6 +4586,8 @@
   "config.westerosblocks.category.general": "General",
   "config.westerosblocks.dumpWorldPainterCSV": "Dump WorldPainter CSV",
   "config.westerosblocks.dumpWorldPainterCSV.tooltip": "Export block data to WorldPainter CSV format",
+  "config.westerosblocks.translucencyPaintings": "Translucent Paintings",
+  "config.westerosblocks.translucencyPaintings.tooltip": "Allow alpha transparency in painting textures. Requires a restart to take effect.",
   "config.westerosblocks.title": "WesterosBlocks Config",
   "container.westerosblocks.furnace": "Furnace",
   "entity.westerosblocks.rope_entity": "Rope",

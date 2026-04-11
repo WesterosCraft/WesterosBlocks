@@ -1,5 +1,6 @@
 package com.westerosblocks.mixin.client;
 
+import com.westerosblocks.WesterosBlocks;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 import net.fabricmc.api.EnvType;
@@ -19,13 +20,16 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public class PaintingEntityRendererMixin {
 
     @Redirect(
-        method = "render",
-        at = @At(
-            value = "INVOKE",
-            target = "Lnet/minecraft/client/render/RenderLayer;getEntitySolid(Lnet/minecraft/util/Identifier;)Lnet/minecraft/client/render/RenderLayer;"
-        )
+            method = "render",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/client/render/RenderLayer;getEntitySolid(Lnet/minecraft/util/Identifier;)Lnet/minecraft/client/render/RenderLayer;"
+            )
     )
     private RenderLayer westerosblocks$redirectPaintingToTranslucent(Identifier textureId) {
-        return RenderLayer.getEntityTranslucentCull(textureId);
+        if (WesterosBlocks.CONFIG != null && WesterosBlocks.CONFIG.translucencyPaintings) {
+            return RenderLayer.getEntityTranslucentCull(textureId);
+        }
+        return RenderLayer.getEntitySolid(textureId);
     }
 }

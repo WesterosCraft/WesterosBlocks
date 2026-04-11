@@ -16,6 +16,7 @@ public class ModConfig {
 
     public boolean dumpWorldPainterCSV = false;
     public boolean exportBlockDefinitions = false;
+    public boolean translucencyPaintings = true;
 
     /**
      * Load the config from file, or create a new one with defaults

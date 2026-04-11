@@ -1,9 +1,5 @@
 {
   "variants": {
-    "facing=down": {
-      "model": "westerosblocks:block/custom/oak_beam_brace/base_v1",
-      "x": 90
-    },
     "facing=east": {
       "model": "westerosblocks:block/custom/oak_beam_brace/base_v1",
       "y": 90
@@ -14,10 +10,6 @@
     "facing=south": {
       "model": "westerosblocks:block/custom/oak_beam_brace/base_v1",
       "y": 180
-    },
-    "facing=up": {
-      "model": "westerosblocks:block/custom/oak_beam_brace/base_v1",
-      "x": 270
     },
     "facing=west": {
       "model": "westerosblocks:block/custom/oak_beam_brace/base_v1",
