@@ -47,6 +47,7 @@
     "westerosblocks:grey_light_wood_vertical_planks_fence",
     "westerosblocks:oak_fence",
     "westerosblocks:birch_yellow_wood_fence",
+    "westerosblocks:birch_horizontal_stripped_log_fence",
     "westerosblocks:light_purple_wood_fence",
     "westerosblocks:grey_blue_wood_fence",
     "westerosblocks:spruce_fence_with_vines",
@@ -63,7 +64,7 @@
     "westerosblocks:dark_northern_wood_fence",
     "westerosblocks:birch_bark_fence",
     "westerosblocks:oak_stripped_log_fence",
-    "westerosblocks:birch_stripped_log_fence",
+    "westerosblocks:birch_vertical_stripped_log_fence",
     "westerosblocks:grey_blue_wood_vertical_planks_fence",
     "westerosblocks:dark_grey_wood_fence"
   ]
