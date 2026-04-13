@@ -1,0 +1,45 @@
+{
+    "baseBlockName": "grey_horizontal_stripped_log",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip",
+        "carpet",
+        "half_door"
+    ],
+    "altNames": {
+        "half_door": "grey_horizontal_stripped_log_half_door"
+    },
+    "hardness": 5,
+    "soundGroup": "wood",
+    "resistance": 4,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 3
+        }
+    ],
+    "creativeTab": "westeros_wood_planks_tab",
+    "baseLabel": "Stripped Horizontal Grey Log",
+    "textures": {
+        "all": "bark/grey/horizontal_stripped"
+    },
+    "states": [
+        {
+            "stateID": "base",
+            "textures": {
+                "all": "bark/grey/horizontal_stripped"
+            }
+        },
+        {
+            "stateID": "cut",
+            "textures": {
+                "all": "bark/grey/horizontal_stripped_lines"
+            }
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/bark/oak_jungle/horizontal_stripped",
+    "particle": "westerosblocks:block/bark/oak_jungle/horizontal_stripped",
+    "side": "westerosblocks:block/bark/oak_jungle/horizontal_stripped",
+    "top": "westerosblocks:block/bark/oak_jungle/horizontal_stripped"
+  }
+}

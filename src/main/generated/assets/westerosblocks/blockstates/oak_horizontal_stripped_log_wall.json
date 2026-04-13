@@ -1,0 +1,194 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/base/post_v1"
+      },
+      "when": {
+        "state": "base",
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/base/side_v1",
+        "uvlock": true
+      },
+      "when": {
+        "north": "low",
+        "state": "base"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/base/side_tall_v1",
+        "uvlock": true
+      },
+      "when": {
+        "north": "tall",
+        "state": "base"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/base/side_v1",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "low",
+        "state": "base"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/base/side_tall_v1",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "tall",
+        "state": "base"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/base/side_v1",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "low",
+        "state": "base"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/base/side_tall_v1",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "tall",
+        "state": "base"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/base/side_v1",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "state": "base",
+        "west": "low"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/base/side_tall_v1",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "state": "base",
+        "west": "tall"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/cut/post_v1"
+      },
+      "when": {
+        "state": "cut",
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/cut/side_v1",
+        "uvlock": true
+      },
+      "when": {
+        "north": "low",
+        "state": "cut"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/cut/side_tall_v1",
+        "uvlock": true
+      },
+      "when": {
+        "north": "tall",
+        "state": "cut"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/cut/side_v1",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "low",
+        "state": "cut"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/cut/side_tall_v1",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "tall",
+        "state": "cut"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/cut/side_v1",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "low",
+        "state": "cut"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/cut/side_tall_v1",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "tall",
+        "state": "cut"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/cut/side_v1",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "state": "cut",
+        "west": "low"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_horizontal_stripped_log_wall/cut/side_tall_v1",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "state": "cut",
+        "west": "tall"
+      }
+    }
+  ]
+}

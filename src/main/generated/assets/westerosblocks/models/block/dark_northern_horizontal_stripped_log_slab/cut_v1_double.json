@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/bark/northern/horizontal_stripped_lines",
+    "east": "westerosblocks:block/bark/northern/horizontal_stripped_lines",
+    "north": "westerosblocks:block/bark/northern/horizontal_stripped_lines",
+    "particle": "westerosblocks:block/bark/northern/horizontal_stripped_lines",
+    "south": "westerosblocks:block/bark/northern/horizontal_stripped_lines",
+    "up": "westerosblocks:block/bark/northern/horizontal_stripped_lines",
+    "west": "westerosblocks:block/bark/northern/horizontal_stripped_lines"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/oak_birch_vertical_stripped_log_hopper/base_v1",
+      "y": 0
+    }
+  }
+}

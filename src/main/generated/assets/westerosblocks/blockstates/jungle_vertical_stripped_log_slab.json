@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "type=bottom": [
+      {
+        "model": "westerosblocks:block/jungle_vertical_stripped_log_slab/bottom"
+      },
+      {
+        "model": "westerosblocks:block/jungle_vertical_stripped_log_slab/cut_v1_bottom"
+      }
+    ],
+    "type=double": [
+      {
+        "model": "westerosblocks:block/jungle_vertical_stripped_log_slab/double"
+      },
+      {
+        "model": "westerosblocks:block/jungle_vertical_stripped_log_slab/cut_v1_double"
+      }
+    ],
+    "type=top": [
+      {
+        "model": "westerosblocks:block/jungle_vertical_stripped_log_slab/top"
+      },
+      {
+        "model": "westerosblocks:block/jungle_vertical_stripped_log_slab/cut_v1_top"
+      }
+    ]
+  }
+}

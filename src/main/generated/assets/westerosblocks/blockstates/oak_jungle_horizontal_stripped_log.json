@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "state=base": {
+      "model": "westerosblocks:block/oak_jungle_horizontal_stripped_log/base_v1",
+      "y": 0
+    },
+    "state=cut": {
+      "model": "westerosblocks:block/oak_jungle_horizontal_stripped_log/cut_v1",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/bark/jungle/horizontal_stripped",
+    "east": "westerosblocks:block/bark/jungle/horizontal_stripped",
+    "north": "westerosblocks:block/bark/jungle/horizontal_stripped",
+    "particle": "westerosblocks:block/bark/jungle/horizontal_stripped",
+    "south": "westerosblocks:block/bark/jungle/horizontal_stripped",
+    "up": "westerosblocks:block/bark/jungle/horizontal_stripped",
+    "west": "westerosblocks:block/bark/jungle/horizontal_stripped"
+  }
+}

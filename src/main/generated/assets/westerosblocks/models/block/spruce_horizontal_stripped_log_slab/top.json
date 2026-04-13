@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/slab_top",
+  "textures": {
+    "down": "westerosblocks:block/bark/spruce/horizontal_stripped",
+    "east": "westerosblocks:block/bark/spruce/horizontal_stripped",
+    "north": "westerosblocks:block/bark/spruce/horizontal_stripped",
+    "particle": "westerosblocks:block/bark/spruce/horizontal_stripped",
+    "south": "westerosblocks:block/bark/spruce/horizontal_stripped",
+    "up": "westerosblocks:block/bark/spruce/horizontal_stripped",
+    "west": "westerosblocks:block/bark/spruce/horizontal_stripped"
+  }
+}
