@@ -190,6 +190,16 @@ public class ModModels {
     public static final Model WALL_INVENTORY_TINTED = block("tinted/wall_inventory",
             TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
 
+    // Hedge wall models (always tinted — hedges always have colorMult)
+    public static final Model HEDGE_POST_TINTED = block("tinted/template_hedge_wall_post",
+            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+    public static final Model HEDGE_SIDE_TINTED = block("tinted/template_hedge_wall_side",
+            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+    public static final Model HEDGE_SIDE_TALL_TINTED = block("tinted/template_hedge_wall_side_tall",
+            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+    public static final Model HEDGE_INVENTORY_TINTED = block("tinted/hedge_wall_inventory",
+            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+
     // Leaves models — standard (END+SIDE) and better foliage (ALL)
     public static final Model LEAVES_UNTINTED = block("untinted/leaves",
             TextureKey.END, TextureKey.SIDE, TextureKey.PARTICLE);

@@ -1200,6 +1200,13 @@ public class BlockDefinition {
         return "normal";
     }
 
+    public String getWallModel() {
+        if (options != null && options.getWallModel() != null) {
+            return options.getWallModel();
+        }
+        return "normal";
+    }
+
     public boolean isConnectState() {
         return options != null && Boolean.TRUE.equals(options.getConnectstate());
     }

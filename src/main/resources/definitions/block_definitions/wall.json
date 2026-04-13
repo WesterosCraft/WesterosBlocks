@@ -288,7 +288,7 @@
     "creativeTab": "westeros_foliage_tab",
     "label": "Oak Hedge",
     "options": {
-      "unconnect": false
+      "wallModel": "hedge"
     },
     "textures": ["leaves/oak/all"],
     "nonOpaque": true,
@@ -309,7 +309,7 @@
     "creativeTab": "westeros_foliage_tab",
     "label": "Birch Hedge",
     "options": {
-      "unconnect": false
+      "wallModel": "hedge"
     },
     "textures": ["leaves/birch/all"],
     "nonOpaque": true,
@@ -330,7 +330,7 @@
     "creativeTab": "westeros_foliage_tab",
     "label": "Jungle Hedge",
     "options": {
-      "unconnect": false
+      "wallModel": "hedge"
     },
     "textures": ["leaves/jungle/all"],
     "nonOpaque": true,
@@ -351,7 +351,7 @@
     "creativeTab": "westeros_foliage_tab",
     "label": "Spruce Hedge",
     "options": {
-      "unconnect": false
+      "wallModel": "hedge"
     },
     "textures": ["leaves/spruce/all"],
     "nonOpaque": true,

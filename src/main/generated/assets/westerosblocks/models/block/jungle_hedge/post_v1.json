@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/tinted/template_wall_post",
+  "parent": "westerosblocks:block/tinted/template_hedge_wall_post",
   "textures": {
     "bottom": "westerosblocks:block/leaves/jungle/all",
     "particle": "westerosblocks:block/leaves/jungle/all",

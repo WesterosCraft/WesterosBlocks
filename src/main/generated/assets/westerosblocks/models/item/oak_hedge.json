@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/tinted/wall_inventory",
+  "parent": "westerosblocks:block/tinted/hedge_wall_inventory",
   "textures": {
     "bottom": "westerosblocks:block/leaves/oak/all",
     "particle": "westerosblocks:block/leaves/oak/all",

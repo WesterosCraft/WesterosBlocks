@@ -16,12 +16,14 @@ import java.util.Map;
 
 public class WallBlockExporter extends BaseBlockExporter {
 
-    private static Model getWallPostModel(boolean tinted, boolean overlay) {
+    private static Model getWallPostModel(boolean tinted, boolean overlay, boolean isHedge) {
+        if (isHedge) return ModModels.HEDGE_POST_TINTED;
         if (overlay) return tinted ? ModModels.WALL_POST_OVERLAY_TINTED : ModModels.WALL_POST_OVERLAY_UNTINTED;
         return tinted ? ModModels.WALL_POST_TINTED : ModModels.WALL_POST_UNTINTED;
     }
 
-    private static Model getWallSideModel(boolean tinted, boolean overlay, boolean isShort) {
+    private static Model getWallSideModel(boolean tinted, boolean overlay, boolean isShort, boolean isHedge) {
+        if (isHedge) return ModModels.HEDGE_SIDE_TINTED;
         if (isShort) {
             if (overlay) return tinted ? ModModels.WALL_SIDE_SHORT_OVERLAY_TINTED : ModModels.WALL_SIDE_SHORT_OVERLAY_UNTINTED;
             return tinted ? ModModels.WALL_SIDE_SHORT_TINTED : ModModels.WALL_SIDE_SHORT_UNTINTED;
@@ -30,12 +32,14 @@ public class WallBlockExporter extends BaseBlockExporter {
         return tinted ? ModModels.WALL_SIDE_TINTED : ModModels.WALL_SIDE_UNTINTED;
     }
 
-    private static Model getWallSideTallModel(boolean tinted, boolean overlay) {
+    private static Model getWallSideTallModel(boolean tinted, boolean overlay, boolean isHedge) {
+        if (isHedge) return ModModels.HEDGE_SIDE_TALL_TINTED;
         if (overlay) return tinted ? ModModels.WALL_SIDE_TALL_OVERLAY_TINTED : ModModels.WALL_SIDE_TALL_OVERLAY_UNTINTED;
         return tinted ? ModModels.WALL_SIDE_TALL_TINTED : ModModels.WALL_SIDE_TALL_UNTINTED;
     }
 
-    private static Model getWallInventoryModel(boolean tinted) {
+    private static Model getWallInventoryModel(boolean tinted, boolean isHedge) {
+        if (isHedge) return ModModels.HEDGE_INVENTORY_TINTED;
         return tinted ? ModModels.WALL_INVENTORY_TINTED : ModModels.WALL_INVENTORY_UNTINTED;
     }
 
@@ -159,7 +163,7 @@ public class WallBlockExporter extends BaseBlockExporter {
      * Uploads wall post, side, and tall models for a given set of random textures.
      */
     private static WallModelSet uploadWallModels(BlockStateModelGenerator generator, Block block,
-            boolean tinted, boolean overlay, boolean isShort, String modelPrefix,
+            boolean tinted, boolean overlay, boolean isShort, boolean isHedge, String modelPrefix,
             List<BlockDefinition.RandomTextureVariant> randomSets, List<String> overlayTextures) {
         List<Identifier> postModelIds = new ArrayList<>();
         List<Identifier> sideModelIds = new ArrayList<>();
@@ -185,11 +189,11 @@ public class WallBlockExporter extends BaseBlockExporter {
             String sideName = modelPrefix + "side_v" + (i + 1);
             String tallName = modelPrefix + "side_tall_v" + (i + 1);
 
-            Identifier postModelId = getWallPostModel(tinted, overlay)
+            Identifier postModelId = getWallPostModel(tinted, overlay, isHedge)
                     .upload(createNestedModelId(block, postName), textureMap, generator.modelCollector);
-            Identifier sideModelId = getWallSideModel(tinted, overlay, isShort)
+            Identifier sideModelId = getWallSideModel(tinted, overlay, isShort, isHedge)
                     .upload(createNestedModelId(block, sideName), textureMap, generator.modelCollector);
-            Identifier tallModelId = getWallSideTallModel(tinted, overlay)
+            Identifier tallModelId = getWallSideTallModel(tinted, overlay, isHedge)
                     .upload(createNestedModelId(block, tallName), textureMap, generator.modelCollector);
 
             postModelIds.add(postModelId);
@@ -208,6 +212,7 @@ public class WallBlockExporter extends BaseBlockExporter {
     public static void registerCustomWallBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         boolean tinted = definition.isTinted() || definition.hasColorMult();
         boolean isShort = "short".equals(definition.getWallSize());
+        boolean isHedge = "hedge".equals(definition.getWallModel());
 
         var states = definition.getStates();
         ModProperties.StateProperty stateProperty = getStateProperty(block);
@@ -231,7 +236,7 @@ public class WallBlockExporter extends BaseBlockExporter {
 
                 if (randomSets.isEmpty()) continue;
 
-                WallModelSet modelSet = uploadWallModels(generator, block, tinted, stateOverlay, isShort,
+                WallModelSet modelSet = uploadWallModels(generator, block, tinted, stateOverlay, isShort, isHedge,
                         modelPrefix, randomSets, state.getOverlayTextures());
                 stateModels.put(state.getStateID(), modelSet);
 
@@ -255,13 +260,13 @@ public class WallBlockExporter extends BaseBlockExporter {
                 String[] expandedItemTextures = fillTextureArray(new String[]{firstSideTexture}, 3);
                 TextureMap itemTextureMap = createFenceWallTextureMap(expandedItemTextures, null);
                 Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
-                getWallInventoryModel(tinted).upload(itemModelId, itemTextureMap, generator.modelCollector);
+                getWallInventoryModel(tinted, isHedge).upload(itemModelId, itemTextureMap, generator.modelCollector);
             }
         } else {
             // Single-state wall: existing behavior
             boolean overlay = definition.hasOverlayTextures();
             if (definition.hasRandomTextures()) {
-                registerWallBlockWithRandomTextures(generator, block, tinted, overlay, isShort, extractTextureVariantSets(definition));
+                registerWallBlockWithRandomTextures(generator, block, tinted, overlay, isShort, isHedge, extractTextureVariantSets(definition));
             } else {
                 List<String> textureList = definition.getTextures();
                 if (textureList != null && !textureList.isEmpty()) {
@@ -269,26 +274,27 @@ public class WallBlockExporter extends BaseBlockExporter {
                     String[] overlays = overlay && definition.getOverlayTextures() != null
                             ? definition.getOverlayTextures().toArray(new String[0])
                             : null;
-                    registerWallBlock(generator, block, tinted, overlay, isShort, textures, overlays);
+                    registerWallBlock(generator, block, tinted, overlay, isShort, isHedge, textures, overlays);
                 } else {
-                    registerWallBlock(generator, block, tinted, overlay, isShort, new String[]{"missingno"}, null);
+                    registerWallBlock(generator, block, tinted, overlay, isShort, isHedge, new String[]{"missingno"}, null);
                 }
             }
         }
     }
 
     private static void registerWallBlock(BlockStateModelGenerator generator, Block block, boolean tinted,
-                                        boolean overlay, boolean isShort, String[] textures, String[] overlayTextures) {
+                                        boolean overlay, boolean isShort, boolean isHedge,
+                                        String[] textures, String[] overlayTextures) {
         String[] expandedTextures = fillTextureArray(textures, 3);
         String[] expandedOverlays = overlay && overlayTextures != null ? fillTextureArray(overlayTextures, 3) : null;
 
         TextureMap textureMap = createFenceWallTextureMap(expandedTextures, expandedOverlays);
 
-        Identifier postModelId = getWallPostModel(tinted, overlay)
+        Identifier postModelId = getWallPostModel(tinted, overlay, isHedge)
                 .upload(createNestedModelId(block, "post"), textureMap, generator.modelCollector);
-        Identifier sideModelId = getWallSideModel(tinted, overlay, isShort)
+        Identifier sideModelId = getWallSideModel(tinted, overlay, isShort, isHedge)
                 .upload(createNestedModelId(block, "side"), textureMap, generator.modelCollector);
-        Identifier tallModelId = getWallSideTallModel(tinted, overlay)
+        Identifier tallModelId = getWallSideTallModel(tinted, overlay, isHedge)
                 .upload(createNestedModelId(block, "side_tall"), textureMap, generator.modelCollector);
 
         MultipartBlockStateSupplier blockstate = createWallVariants(block,
@@ -296,11 +302,12 @@ public class WallBlockExporter extends BaseBlockExporter {
         generator.blockStateCollector.accept(blockstate);
 
         Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
-        getWallInventoryModel(tinted).upload(itemModelId, textureMap, generator.modelCollector);
+        getWallInventoryModel(tinted, isHedge).upload(itemModelId, textureMap, generator.modelCollector);
     }
 
     private static void registerWallBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, boolean tinted,
-                                                           boolean overlay, boolean isShort, List<BlockDefinition.TextureVariantSet> textureSets) {
+                                                           boolean overlay, boolean isShort, boolean isHedge,
+                                                           List<BlockDefinition.TextureVariantSet> textureSets) {
         List<Identifier> postModelIds = new ArrayList<>();
         List<Identifier> sideModelIds = new ArrayList<>();
         List<Identifier> tallModelIds = new ArrayList<>();
@@ -313,11 +320,11 @@ public class WallBlockExporter extends BaseBlockExporter {
 
             TextureMap textureMap = createFenceWallTextureMap(expandedTextures, expandedOverlays);
 
-            Identifier postModelId = getWallPostModel(tinted, overlay)
+            Identifier postModelId = getWallPostModel(tinted, overlay, isHedge)
                     .upload(createNestedModelId(block, "post_v" + (i + 1)), textureMap, generator.modelCollector);
-            Identifier sideModelId = getWallSideModel(tinted, overlay, isShort)
+            Identifier sideModelId = getWallSideModel(tinted, overlay, isShort, isHedge)
                     .upload(createNestedModelId(block, "side_v" + (i + 1)), textureMap, generator.modelCollector);
-            Identifier tallModelId = getWallSideTallModel(tinted, overlay)
+            Identifier tallModelId = getWallSideTallModel(tinted, overlay, isHedge)
                     .upload(createNestedModelId(block, "side_tall_v" + (i + 1)), textureMap, generator.modelCollector);
 
             postModelIds.add(postModelId);
@@ -335,6 +342,6 @@ public class WallBlockExporter extends BaseBlockExporter {
 
         TextureMap itemTextureMap = createFenceWallTextureMap(expandedTextures, expandedOverlays);
         Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
-        getWallInventoryModel(tinted).upload(itemModelId, itemTextureMap, generator.modelCollector);
+        getWallInventoryModel(tinted, isHedge).upload(itemModelId, itemTextureMap, generator.modelCollector);
     }
 }

@@ -42,6 +42,7 @@ public class OptionsProperties {
         this.hasClimb = other.hasClimb;
         this.hasDown = other.hasDown;
         this.wallSize = other.wallSize;
+        this.wallModel = other.wallModel;
         this.bedType = other.bedType;
         this.rotateRandom = other.rotateRandom;
     }
@@ -127,6 +128,9 @@ public class OptionsProperties {
     // Wall properties
     @SerializedName("wallSize")
     private String wallSize;
+
+    @SerializedName("wallModel")
+    private String wallModel;
 
     // Bed properties
     @SerializedName("bedType")
@@ -229,6 +233,10 @@ public class OptionsProperties {
         return wallSize;
     }
 
+    public String getWallModel() {
+        return wallModel;
+    }
+
     public String getBedType() {
         return bedType;
     }
@@ -328,6 +336,10 @@ public class OptionsProperties {
 
     public void setWallSize(String wallSize) {
         this.wallSize = wallSize;
+    }
+
+    public void setWallModel(String wallModel) {
+        this.wallModel = wallModel;
     }
 
     public void setBedType(String bedType) {

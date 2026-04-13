@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/tinted/template_wall_side_tall",
+  "parent": "westerosblocks:block/tinted/template_hedge_wall_side_tall",
   "textures": {
     "bottom": "westerosblocks:block/leaves/oak/all",
     "particle": "westerosblocks:block/leaves/oak/all",

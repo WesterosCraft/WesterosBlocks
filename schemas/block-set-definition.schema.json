@@ -407,6 +407,11 @@
           "enum": ["normal", "short"],
           "description": "Wall height: 'normal' (16 blocks) or 'short' (13 blocks)"
         },
+        "wallModel": {
+          "type": "string",
+          "enum": ["normal", "hedge"],
+          "description": "Model variant: 'normal' (solid wall) or 'hedge' (leafy crossing-plane geometry)"
+        },
         "bedType": {
           "type": "string",
           "description": "Bed variant type identifier"

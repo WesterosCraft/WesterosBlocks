@@ -1,49 +1,18 @@
 {
-	"format_version": "1.21.11",
-	"credit": "Made with Blockbench",
-	"textures": {
-		"particle": "westerosblocks:block/leaves/oak/all",
-		"side": "westerosblocks:block/leaves/oak/all"
-	},
-	"elements": [
-		{
-			"name": "wall",
-			"from": [4, 0, 0],
-			"to": [12, 16, 8],
-			"faces": {
-				"north": {"uv": [4, 0, 12, 16], "texture": "#side", "cullface": "north", "tintindex": 0},
-				"east": {"uv": [8, 0, 16, 16], "texture": "#side", "tintindex": 0},
-				"south": {"uv": [4, 0, 12, 16], "texture": "#side", "tintindex": 0},
-				"west": {"uv": [0, 0, 8, 16], "texture": "#side", "tintindex": 0},
-				"up": {"uv": [4, 0, 12, 8], "texture": "#missing", "tintindex": 0},
-				"down": {"uv": [4, 8, 12, 16], "texture": "#missing", "cullface": "down", "tintindex": 0}
-			}
-		},
-		{
-			"from": [2, 0, 7],
-			"to": [16, 16, 7],
-			"rotation": {"angle": 45, "axis": "y", "origin": [5, 0, 7]},
-			"faces": {
-				"north": {"uv": [0, 0, 14, 16], "texture": "#side"},
-				"east": {"uv": [2, 0, 2, 16], "texture": "#side"},
-				"south": {"uv": [0, 0, 14, 16], "texture": "#side"},
-				"west": {"uv": [0, 0, 0, 16], "texture": "#side"},
-				"up": {"uv": [0, 0, 14, 0], "texture": "#side"},
-				"down": {"uv": [0, 2, 14, 2], "texture": "#side"}
-			}
-		},
-		{
-			"from": [8, 0, 7],
-			"to": [22, 16, 7],
-			"rotation": {"x": 0, "y": 135, "z": 0, "origin": [11, 0, 7]},
-			"faces": {
-				"north": {"uv": [0, 0, 14, 16], "texture": "#side"},
-				"east": {"uv": [2, 0, 2, 16], "texture": "#side"},
-				"south": {"uv": [0, 0, 14, 16], "texture": "#side"},
-				"west": {"uv": [0, 0, 0, 16], "texture": "#side"},
-				"up": {"uv": [0, 0, 14, 0], "texture": "#side"},
-				"down": {"uv": [0, 2, 14, 2], "texture": "#side"}
-			}
-		}
-	]
+    "textures": {
+        "particle": "#side"
+    },
+    "elements": [
+        {   "from": [ 4, 0, 0 ],
+            "to": [ 12, 16, 8 ],
+            "faces": {
+                "down":  { "texture": "#bottom", "cullface": "down", "tintindex": 0 },
+                "up":    { "texture": "#top", "tintindex": 0 },
+                "north": { "texture": "#side", "cullface": "north", "tintindex": 0 },
+                "west":  { "texture": "#side", "tintindex": 0 },
+                "south": { "texture": "#side", "tintindex": 0 },
+                "east":  { "texture": "#side", "tintindex": 0 }
+            }
+        }
+    ]
 }
