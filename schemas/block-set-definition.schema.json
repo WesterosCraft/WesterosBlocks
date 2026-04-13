@@ -298,7 +298,7 @@
       "properties": {
         "tool": {
           "type": "string",
-          "enum": ["pickaxe", "axe", "shovel", "hoe"],
+          "enum": ["pickaxe", "axe", "shovel", "hoe", "sword", "shears"],
           "description": "Tool type required"
         },
         "level": {

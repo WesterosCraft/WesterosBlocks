@@ -275,6 +275,90 @@
     "textures": ["ashlar_engraved/westerlands/all"]
   },
   {
+    "blockName": "oak_hedge",
+    "blockType": "wall",
+    "strength": 0.2,
+    "soundGroup": "grass",
+    "harvestLevel": [
+      {
+        "tool": "shears",
+        "level": 0
+      }
+    ],
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Oak Hedge",
+    "options": {
+      "unconnect": false
+    },
+    "textures": ["leaves/oak/all"],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "colorMult": "textures/colormap/foliage_oak"
+  },
+  {
+    "blockName": "birch_hedge",
+    "blockType": "wall",
+    "strength": 0.2,
+    "soundGroup": "grass",
+    "harvestLevel": [
+      {
+        "tool": "shears",
+        "level": 0
+      }
+    ],
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Birch Hedge",
+    "options": {
+      "unconnect": false
+    },
+    "textures": ["leaves/birch/all"],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "colorMult": "textures/colormap/birch"
+  },
+  {
+    "blockName": "jungle_hedge",
+    "blockType": "wall",
+    "strength": 0.2,
+    "soundGroup": "grass",
+    "harvestLevel": [
+      {
+        "tool": "shears",
+        "level": 0
+      }
+    ],
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Jungle Hedge",
+    "options": {
+      "unconnect": false
+    },
+    "textures": ["leaves/jungle/all"],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "colorMult": "textures/colormap/foliage_jungle"
+  },
+  {
+    "blockName": "spruce_hedge",
+    "blockType": "wall",
+    "strength": 0.2,
+    "soundGroup": "grass",
+    "harvestLevel": [
+      {
+        "tool": "shears",
+        "level": 0
+      }
+    ],
+    "creativeTab": "westeros_foliage_tab",
+    "label": "Spruce Hedge",
+    "options": {
+      "unconnect": false
+    },
+    "textures": ["leaves/spruce/all"],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "colorMult": "textures/colormap/pine"
+  },
+  {
     "blockName": "piled_bones_wall",
     "blockType": "wall",
     "strength": 1.5,

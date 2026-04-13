@@ -1,13 +1,14 @@
 [
   {
-    "blockName": "wood_balcony",
+    "blockName": "oak_balcony",
     "blockType": "balcony",
     "strength": 2,
     "soundGroup": "wood",
     "creativeTab": "westeros_decor_tab",
-    "label": "Wood Balcony",
+    "label": "Oak Balcony",
     "textures": [
-      "wood/oak/all"
+      "bark/oak/side",
+      "bark/oak/stripped"
     ]
   }
 ]

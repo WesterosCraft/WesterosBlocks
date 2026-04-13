@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/wall_inventory",
+  "textures": {
+    "bottom": "westerosblocks:block/leaves/spruce/all",
+    "particle": "westerosblocks:block/leaves/spruce/all",
+    "side": "westerosblocks:block/leaves/spruce/all",
+    "top": "westerosblocks:block/leaves/spruce/all"
+  }
+}

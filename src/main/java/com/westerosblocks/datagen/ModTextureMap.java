@@ -76,6 +76,13 @@ public class ModTextureMap {
                 .put(ModTextureKey.SIDE_OVERLAY, Identifier.of("westerosblocks", "block/" + sideOv));
     }
 
+    public static TextureMap balconyTextures(String rail, String middle) {
+        return new TextureMap()
+                .put(TextureKey.RAIL, Identifier.of("westerosblocks", "block/" + rail))
+                .put(ModTextureKey.MIDDLE, Identifier.of("westerosblocks", "block/" + middle))
+                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + rail));
+    }
+
     /**
      * Creates a texture map for standard leaves blocks with end, side, and particle keys.
      * Particle defaults to the side texture.

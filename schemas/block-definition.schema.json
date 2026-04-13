@@ -444,17 +444,8 @@
           "default": "flame"
         },
         "options": {
-          "oneOf": [
-            {
-              "type": "string",
-              "description": "Legacy string format (e.g., 'unconnect:false,no-uvlock')"
-            },
-            {
-              "type": "object",
-              "description": "Structured options properties (validated based on blockType)"
-            }
-          ],
-          "description": "Options-specific properties. Supports legacy string format or structured object format."
+          "type": ["string", "object"],
+          "description": "Options-specific properties. Supports legacy string format or structured object format. Validated per blockType by the allOf conditions below."
         }
       },
       "allOf": [
@@ -1576,7 +1567,7 @@
       "properties": {
         "tool": {
           "type": "string",
-          "enum": ["pickaxe", "axe", "shovel", "hoe", "sword"],
+          "enum": ["pickaxe", "axe", "shovel", "hoe", "sword", "shears"],
           "description": "Tool type required"
         },
         "level": {

@@ -40,19 +40,16 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
     protected boolean toggleOnUse = false;
 
     // Outline shapes (visual bounds)
-    private static final VoxelShape VEAST = Block.createCuboidShape(16, 0, 0, 18, 15, 16);
-    private static final VoxelShape VSOUTH = Block.createCuboidShape(0, 0, 16, 16, 15, 18);
-    private static final VoxelShape VWEST = Block.createCuboidShape(-2, 0, 0, 0, 15, 16);
-    private static final VoxelShape VNORTH = Block.createCuboidShape(0, 0, -2, 16, 15, 0);
+    private static final VoxelShape VEAST = Block.createCuboidShape(16, 0, 0, 18, 14, 16);
+    private static final VoxelShape VSOUTH = Block.createCuboidShape(0, 0, 16, 16, 14, 18);
+    private static final VoxelShape VWEST = Block.createCuboidShape(-2, 0, 0, 0, 14, 16);
+    private static final VoxelShape VNORTH = Block.createCuboidShape(0, 0, -2, 16, 14, 0);
 
     // Collision shapes (taller to prevent falling)
     private static final VoxelShape E_COLLISION = Block.createCuboidShape(14, 0, 0, 16, 26, 16);
     private static final VoxelShape S_COLLISION = Block.createCuboidShape(0, 0, 14, 16, 26, 16);
-    private static final VoxelShape W_COLLISION = Block.createCuboidShape(0, 0, 0, 1, 26, 16);
-    private static final VoxelShape N_COLLISION = Block.createCuboidShape(0, 0, 0, 16, 26, 1);
-
-    // Tiny base so the block always has a hitbox
-    private static final VoxelShape VBASE = Block.createCuboidShape(0, 0, 0, 16, 0.01, 16);
+    private static final VoxelShape W_COLLISION = Block.createCuboidShape(0, 0, 0, 2, 26, 16);
+    private static final VoxelShape N_COLLISION = Block.createCuboidShape(0, 0, 0, 16, 26, 2);
 
     private static final VoxelShape[] OUTLINE_SHAPES = precomputeShapes(VNORTH, VSOUTH, VEAST, VWEST);
     private static final VoxelShape[] COLLISION_SHAPES = precomputeShapes(N_COLLISION, S_COLLISION, E_COLLISION, W_COLLISION);
@@ -224,7 +221,7 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
     private static VoxelShape[] precomputeShapes(VoxelShape north, VoxelShape south, VoxelShape east, VoxelShape west) {
         VoxelShape[] shapes = new VoxelShape[16];
         for (int i = 0; i < 16; i++) {
-            VoxelShape shape = VBASE;
+            VoxelShape shape = VoxelShapes.empty();
             if ((i & 1) != 0) shape = VoxelShapes.union(shape, north);
             if ((i & 2) != 0) shape = VoxelShapes.union(shape, south);
             if ((i & 4) != 0) shape = VoxelShapes.union(shape, east);

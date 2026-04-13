@@ -1,6 +1,7 @@
 package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.datagen.ModModels;
+import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.data.client.*;
 import net.minecraft.block.Block;
@@ -57,8 +58,8 @@ public class BalconyBlockExporter extends BaseBlockExporter {
     }
 
     public static void registerBalconyBlock(BlockStateModelGenerator generator, Block block, boolean tinted, String[] textures) {
-        String[] expandedTextures = fillTextureArray(textures, 3);
-        TextureMap textureMap = createFenceWallTextureMap(expandedTextures, null);
+        String[] expandedTextures = fillTextureArray(textures, 2);
+        TextureMap textureMap = ModTextureMap.balconyTextures(expandedTextures[0], expandedTextures[1]);
 
         Identifier sideModelId = getBalconySideModel(tinted)
                 .upload(createNestedModelId(block, "side"), textureMap, generator.modelCollector);
@@ -77,8 +78,8 @@ public class BalconyBlockExporter extends BaseBlockExporter {
 
         for (int i = 0; i < textureSets.size(); i++) {
             BlockDefinition.TextureVariantSet set = textureSets.get(i);
-            String[] expandedTextures = fillTextureArray(set.getTexturesAsArray(), 3);
-            TextureMap textureMap = createFenceWallTextureMap(expandedTextures, null);
+            String[] expandedTextures = fillTextureArray(set.getTexturesAsArray(), 2);
+            TextureMap textureMap = ModTextureMap.balconyTextures(expandedTextures[0], expandedTextures[1]);
 
             Identifier sideModelId = getBalconySideModel(tinted)
                     .upload(createNestedModelId(block, "side_v" + (i + 1)), textureMap, generator.modelCollector);

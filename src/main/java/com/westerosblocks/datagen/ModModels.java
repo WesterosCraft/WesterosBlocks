@@ -294,9 +294,9 @@ public class ModModels {
 
     // Balcony models — untinted/tinted
     public static final Model BALCONY_SIDE_UNTINTED = block("untinted/balcony_side",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+            TextureKey.RAIL, ModTextureKey.MIDDLE, TextureKey.PARTICLE);
     public static final Model BALCONY_SIDE_TINTED = block("tinted/balcony_side",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+            TextureKey.RAIL, ModTextureKey.MIDDLE, TextureKey.PARTICLE);
 
     // Arrow slit models
     public static final Model ARROW_SLIT_SINGLE = block("arrow_slits/arrow_slit_single", TextureKey.TEXTURE, TextureKey.PARTICLE);

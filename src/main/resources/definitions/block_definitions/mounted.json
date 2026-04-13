@@ -231,7 +231,7 @@
     "hardness": 5,
     "resistance": 5,
     "soundGroup": "wood",
-    "creativeTab": "westeros_roofing_tab",
+    "creativeTab": "westeros_test_tab",
     "options": {
       "allowUnsupported": true
     },

@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/template_wall_side_tall",
+  "textures": {
+    "bottom": "westerosblocks:block/leaves/birch/all",
+    "particle": "westerosblocks:block/leaves/birch/all",
+    "side": "westerosblocks:block/leaves/birch/all",
+    "top": "westerosblocks:block/leaves/birch/all"
+  }
+}

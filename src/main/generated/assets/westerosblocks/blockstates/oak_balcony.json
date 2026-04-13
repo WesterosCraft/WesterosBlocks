@@ -2,7 +2,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "westerosblocks:block/wood_balcony/side_v1",
+        "model": "westerosblocks:block/oak_balcony/side_v1",
         "uvlock": true
       },
       "when": {
@@ -11,7 +11,7 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/wood_balcony/side_v1",
+        "model": "westerosblocks:block/oak_balcony/side_v1",
         "uvlock": true,
         "y": 90
       },
@@ -21,7 +21,7 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/wood_balcony/side_v1",
+        "model": "westerosblocks:block/oak_balcony/side_v1",
         "uvlock": true,
         "y": 180
       },
@@ -31,7 +31,7 @@
     },
     {
       "apply": {
-        "model": "westerosblocks:block/wood_balcony/side_v1",
+        "model": "westerosblocks:block/oak_balcony/side_v1",
         "uvlock": true,
         "y": 270
       },
