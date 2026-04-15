@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/wood/birch/door_locked_bottom"
+    "layer0": "westerosblocks:item/locked_birch_door"
   }
 }

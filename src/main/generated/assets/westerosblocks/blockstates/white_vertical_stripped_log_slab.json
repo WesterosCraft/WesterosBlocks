@@ -1,28 +1,22 @@
 {
   "variants": {
-    "type=bottom": [
-      {
-        "model": "westerosblocks:block/white_vertical_stripped_log_slab/bottom"
-      },
-      {
-        "model": "westerosblocks:block/white_vertical_stripped_log_slab/cut_v1_bottom"
-      }
-    ],
-    "type=double": [
-      {
-        "model": "westerosblocks:block/white_vertical_stripped_log_slab/double"
-      },
-      {
-        "model": "westerosblocks:block/white_vertical_stripped_log_slab/cut_v1_double"
-      }
-    ],
-    "type=top": [
-      {
-        "model": "westerosblocks:block/white_vertical_stripped_log_slab/top"
-      },
-      {
-        "model": "westerosblocks:block/white_vertical_stripped_log_slab/cut_v1_top"
-      }
-    ]
+    "state=base,type=bottom": {
+      "model": "westerosblocks:block/white_vertical_stripped_log_slab/bottom"
+    },
+    "state=base,type=double": {
+      "model": "westerosblocks:block/white_vertical_stripped_log_slab/double"
+    },
+    "state=base,type=top": {
+      "model": "westerosblocks:block/white_vertical_stripped_log_slab/top"
+    },
+    "state=cut,type=bottom": {
+      "model": "westerosblocks:block/white_vertical_stripped_log_slab/cut_v1_bottom"
+    },
+    "state=cut,type=double": {
+      "model": "westerosblocks:block/white_vertical_stripped_log_slab/cut_v1_double"
+    },
+    "state=cut,type=top": {
+      "model": "westerosblocks:block/white_vertical_stripped_log_slab/cut_v1_top"
+    }
   }
 }

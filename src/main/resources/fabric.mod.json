@@ -23,12 +23,15 @@
     "fabricloader": ">=0.18.4",
     "minecraft": "1.21.1",
     "java": ">=21",
-    "fabric-api": "*"
+    "fabric-api": "*",
+    "azurelib": "*",
+    "shield_api": "*"
   },
   "suggests": {
     "polytone": "*",
     "westeroscontinuity": "*",
-    "azurelib": "*"
+    "modmenu": "*",
+    "cloth-config": "*"
   },
   "custom": {
     "modmenu": {

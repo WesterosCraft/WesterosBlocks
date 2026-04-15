@@ -4,6 +4,7 @@ import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
 import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.data.BlockDefinition;
+import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.SlabType;
 import net.minecraft.data.client.*;
@@ -21,7 +22,14 @@ public class SlabBlockExporter extends BaseBlockExporter {
             throw new IllegalStateException("Block definition states should never be null/empty after doInit() for block: " + getBlockName(block));
         }
 
-        generateBlockState(generator, block, states);
+        ModProperties.StateProperty stateProperty = getStateProperty(block);
+        boolean hasMultipleStates = stateProperty != null && states.size() > 1;
+
+        if (hasMultipleStates) {
+            generateBlockStateWithStates(generator, block, states, stateProperty);
+        } else {
+            generateBlockState(generator, block, states);
+        }
 
         for (int stateIdx = 0; stateIdx < states.size(); stateIdx++) {
             BlockDefinition.StateVariant state = states.get(stateIdx);
@@ -78,6 +86,50 @@ public class SlabBlockExporter extends BaseBlockExporter {
             variantMap.register(SlabType.BOTTOM, bottomVariants);
             variantMap.register(SlabType.TOP, topVariants);
             variantMap.register(SlabType.DOUBLE, doubleVariants);
+        }
+
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
+        );
+    }
+
+    private static void generateBlockStateWithStates(BlockStateModelGenerator generator, Block block,
+                                                     List<BlockDefinition.StateVariant> states,
+                                                     ModProperties.StateProperty stateProperty) {
+        BlockStateVariantMap.DoubleProperty<SlabType, String> variantMap =
+            BlockStateVariantMap.create(Properties.SLAB_TYPE, stateProperty);
+
+        for (BlockDefinition.StateVariant state : states) {
+            String stateId = state.getStateID();
+            String fname = getStateIdOrBase(stateId);
+
+            List<BlockStateVariant> bottomVariants = new ArrayList<>();
+            List<BlockStateVariant> topVariants = new ArrayList<>();
+            List<BlockStateVariant> doubleVariants = new ArrayList<>();
+
+            for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
+                BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
+                if (set == null) continue;
+
+                Identifier bottomModel = createNestedModelId(block, getModelName(fname, setIdx, "bottom"));
+                Identifier topModel = createNestedModelId(block, getModelName(fname, setIdx, "top"));
+                Identifier doubleModel = createNestedModelId(block, getModelName(fname, setIdx, "double"));
+
+                int weight = set.getWeight();
+                bottomVariants.add(createSlabVariant(bottomModel, weight));
+                topVariants.add(createSlabVariant(topModel, weight));
+                doubleVariants.add(createSlabVariant(doubleModel, weight));
+            }
+
+            if (bottomVariants.size() == 1) {
+                variantMap.register(SlabType.BOTTOM, stateId, bottomVariants.get(0));
+                variantMap.register(SlabType.TOP, stateId, topVariants.get(0));
+                variantMap.register(SlabType.DOUBLE, stateId, doubleVariants.get(0));
+            } else {
+                variantMap.register(SlabType.BOTTOM, stateId, bottomVariants);
+                variantMap.register(SlabType.TOP, stateId, topVariants);
+                variantMap.register(SlabType.DOUBLE, stateId, doubleVariants);
+            }
         }
 
         generator.blockStateCollector.accept(
