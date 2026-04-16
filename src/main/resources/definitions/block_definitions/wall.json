@@ -293,6 +293,7 @@
     "textures": ["leaves/oak/all"],
     "nonOpaque": true,
     "alphaRender": true,
+    "renderLayer": "cutout_mipped",
     "colorMult": "textures/colormap/foliage_oak"
   },
   {
@@ -314,6 +315,7 @@
     "textures": ["leaves/birch/all"],
     "nonOpaque": true,
     "alphaRender": true,
+    "renderLayer": "cutout_mipped",
     "colorMult": "textures/colormap/birch"
   },
   {
@@ -335,6 +337,7 @@
     "textures": ["leaves/jungle/all"],
     "nonOpaque": true,
     "alphaRender": true,
+    "renderLayer": "cutout_mipped",
     "colorMult": "textures/colormap/foliage_jungle"
   },
   {
@@ -356,6 +359,7 @@
     "textures": ["leaves/spruce/all"],
     "nonOpaque": true,
     "alphaRender": true,
+    "renderLayer": "cutout_mipped",
     "colorMult": "textures/colormap/pine"
   },
   {
