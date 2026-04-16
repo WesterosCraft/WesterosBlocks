@@ -307,6 +307,10 @@ public class ModModels {
             TextureKey.RAIL, ModTextureKey.MIDDLE, TextureKey.PARTICLE);
     public static final Model BALCONY_SIDE_TINTED = block("tinted/balcony_side",
             TextureKey.RAIL, ModTextureKey.MIDDLE, TextureKey.PARTICLE);
+    public static final Model BALCONY_SIDE_WALL_UNTINTED = block("untinted/balcony_side_wall",
+            TextureKey.RAIL, ModTextureKey.MIDDLE, TextureKey.PARTICLE);
+    public static final Model BALCONY_SIDE_WALL_TINTED = block("tinted/balcony_side_wall",
+            TextureKey.RAIL, ModTextureKey.MIDDLE, TextureKey.PARTICLE);
 
     // Arrow slit models
     public static final Model ARROW_SLIT_SINGLE = block("arrow_slits/arrow_slit_single", TextureKey.TEXTURE, TextureKey.PARTICLE);

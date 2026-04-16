@@ -6,7 +6,8 @@
         "uvlock": true
       },
       "when": {
-        "north": "true"
+        "north": "true",
+        "wall": "false"
       }
     },
     {
@@ -16,7 +17,8 @@
         "y": 90
       },
       "when": {
-        "east": "true"
+        "east": "true",
+        "wall": "false"
       }
     },
     {
@@ -26,7 +28,8 @@
         "y": 180
       },
       "when": {
-        "south": "true"
+        "south": "true",
+        "wall": "false"
       }
     },
     {
@@ -36,6 +39,50 @@
         "y": 270
       },
       "when": {
+        "wall": "false",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_balcony/side_wall_v1",
+        "uvlock": true
+      },
+      "when": {
+        "north": "true",
+        "wall": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_balcony/side_wall_v1",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "true",
+        "wall": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_balcony/side_wall_v1",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "true",
+        "wall": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/oak_balcony/side_wall_v1",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "wall": "true",
         "west": "true"
       }
     }

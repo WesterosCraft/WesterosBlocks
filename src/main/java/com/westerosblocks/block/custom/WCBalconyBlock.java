@@ -34,16 +34,23 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
     public static final BooleanProperty EAST = Properties.EAST;
     public static final BooleanProperty WEST = Properties.WEST;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
+    public static final BooleanProperty WALL = BooleanProperty.of("wall");
 
     protected static ModProperties.StateProperty tempSTATE;
     public ModProperties.StateProperty STATE;
     protected boolean toggleOnUse = false;
 
-    // Outline shapes (visual bounds)
+    // Outline shapes — normal (outside block space)
     private static final VoxelShape VEAST = Block.createCuboidShape(16, 0, 0, 18, 14, 16);
     private static final VoxelShape VSOUTH = Block.createCuboidShape(0, 0, 16, 16, 14, 18);
     private static final VoxelShape VWEST = Block.createCuboidShape(-2, 0, 0, 0, 14, 16);
     private static final VoxelShape VNORTH = Block.createCuboidShape(0, 0, -2, 16, 14, 0);
+
+    // Outline shapes — wall (inside block space)
+    private static final VoxelShape VEAST_WALL = Block.createCuboidShape(14, 0, 0, 16, 14, 16);
+    private static final VoxelShape VSOUTH_WALL = Block.createCuboidShape(0, 0, 14, 16, 14, 16);
+    private static final VoxelShape VWEST_WALL = Block.createCuboidShape(0, 0, 0, 2, 14, 16);
+    private static final VoxelShape VNORTH_WALL = Block.createCuboidShape(0, 0, 0, 16, 14, 2);
 
     // Collision shapes (taller to prevent falling)
     private static final VoxelShape E_COLLISION = Block.createCuboidShape(14, 0, 0, 16, 26, 16);
@@ -52,6 +59,7 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
     private static final VoxelShape N_COLLISION = Block.createCuboidShape(0, 0, 0, 16, 26, 2);
 
     private static final VoxelShape[] OUTLINE_SHAPES = precomputeShapes(VNORTH, VSOUTH, VEAST, VWEST);
+    private static final VoxelShape[] WALL_OUTLINE_SHAPES = precomputeShapes(VNORTH_WALL, VSOUTH_WALL, VEAST_WALL, VWEST_WALL);
     private static final VoxelShape[] COLLISION_SHAPES = precomputeShapes(N_COLLISION, S_COLLISION, E_COLLISION, W_COLLISION);
 
     public static class Factory extends BlockFactory {
@@ -77,6 +85,7 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
                 .with(SOUTH, false)
                 .with(EAST, false)
                 .with(WEST, false)
+                .with(WALL, false)
                 .with(WATERLOGGED, false);
         if (STATE != null) {
             defbs = defbs.with(STATE, STATE.defValue);
@@ -86,7 +95,7 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(NORTH, SOUTH, EAST, WEST, WATERLOGGED);
+        builder.add(NORTH, SOUTH, EAST, WEST, WALL, WATERLOGGED);
         if (tempSTATE != null) {
             STATE = tempSTATE;
             tempSTATE = null;
@@ -98,14 +107,22 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
         Direction direction = ctx.getHorizontalPlayerFacing();
-        return this.getDefaultState()
+        BlockState state = this.getDefaultState()
                 .with(getPropertyForDirection(direction), true)
                 .with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
+
+        // Check if facing direction has a solid wall
+        BlockPos neighborPos = ctx.getBlockPos().offset(direction);
+        BlockState neighborState = ctx.getWorld().getBlockState(neighborPos);
+        if (neighborState.isSideSolidFullSquare(ctx.getWorld(), neighborPos, direction.getOpposite())) {
+            state = state.with(WALL, true);
+        }
+        return state;
     }
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return OUTLINE_SHAPES[getShapeIndex(state)];
+        return state.get(WALL) ? WALL_OUTLINE_SHAPES[getShapeIndex(state)] : OUTLINE_SHAPES[getShapeIndex(state)];
     }
 
     @Override
@@ -143,6 +160,8 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
 
             if (!state.get(directionProperty)) {
                 BlockState newState = state.with(directionProperty, true);
+                // Recheck wall adjacency with the new direction added
+                newState = newState.with(WALL, hasAnyWallAdjacent(newState, world, pos));
                 world.setBlockState(pos, newState, Block.NOTIFY_ALL);
 
                 if (!player.getAbilities().creativeMode) {
@@ -186,7 +205,11 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
         if (state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
-        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+        // Recheck wall adjacency when a horizontal neighbor changes
+        if (direction.getAxis().isHorizontal()) {
+            state = state.with(WALL, hasAnyWallAdjacent(state, world, pos));
+        }
+        return state;
     }
 
     @Override
@@ -229,5 +252,19 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
             shapes[i] = shape;
         }
         return shapes;
+    }
+
+    private boolean hasAnyWallAdjacent(BlockState state, WorldAccess world, BlockPos pos) {
+        Direction[] directions = {Direction.NORTH, Direction.SOUTH, Direction.EAST, Direction.WEST};
+        for (Direction dir : directions) {
+            if (state.get(getPropertyForDirection(dir))) {
+                BlockPos neighborPos = pos.offset(dir);
+                BlockState neighborState = world.getBlockState(neighborPos);
+                if (neighborState.isSideSolidFullSquare(world, neighborPos, dir.getOpposite())) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

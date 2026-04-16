@@ -1,5 +1,6 @@
 package com.westerosblocks.datagen.custom;
 
+import com.westerosblocks.block.custom.WCBalconyBlock;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.data.BlockDefinition;
@@ -18,21 +19,33 @@ public class BalconyBlockExporter extends BaseBlockExporter {
         return tinted ? ModModels.BALCONY_SIDE_TINTED : ModModels.BALCONY_SIDE_UNTINTED;
     }
 
-    private static MultipartBlockStateSupplier createBalconyVariants(Block block, List<Identifier> sideModelIds, List<Integer> weights) {
+    private static Model getBalconySideWallModel(boolean tinted) {
+        return tinted ? ModModels.BALCONY_SIDE_WALL_TINTED : ModModels.BALCONY_SIDE_WALL_UNTINTED;
+    }
+
+    private static MultipartBlockStateSupplier createBalconyVariants(Block block,
+            List<Identifier> sideModelIds, List<Identifier> wallModelIds, List<Integer> weights) {
         MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
 
         for (int i = 0; i < sideModelIds.size(); i++) {
-            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), Direction.NORTH);
-            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), Direction.EAST);
-            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), Direction.SOUTH);
-            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), Direction.WEST);
+            // Normal variants (wall=false)
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), Direction.NORTH, false);
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), Direction.EAST, false);
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), Direction.SOUTH, false);
+            addSideVariant(supplier, sideModelIds.get(i), weights.get(i), Direction.WEST, false);
+
+            // Wall variants (wall=true)
+            addSideVariant(supplier, wallModelIds.get(i), weights.get(i), Direction.NORTH, true);
+            addSideVariant(supplier, wallModelIds.get(i), weights.get(i), Direction.EAST, true);
+            addSideVariant(supplier, wallModelIds.get(i), weights.get(i), Direction.SOUTH, true);
+            addSideVariant(supplier, wallModelIds.get(i), weights.get(i), Direction.WEST, true);
         }
 
         return supplier;
     }
 
     private static void addSideVariant(MultipartBlockStateSupplier supplier, Identifier sideModelId,
-                                       int weight, Direction direction) {
+                                       int weight, Direction direction, boolean isWall) {
         BlockStateVariant sideVariant = BlockStateVariant.create()
                 .put(VariantSettings.MODEL, sideModelId)
                 .put(VariantSettings.UVLOCK, true);
@@ -46,13 +59,14 @@ public class BalconyBlockExporter extends BaseBlockExporter {
             sideVariant = sideVariant.put(VariantSettings.WEIGHT, weight);
         }
 
-        When condition = switch (direction) {
-            case NORTH -> When.create().set(Properties.NORTH, true);
-            case EAST -> When.create().set(Properties.EAST, true);
-            case SOUTH -> When.create().set(Properties.SOUTH, true);
-            case WEST -> When.create().set(Properties.WEST, true);
-            default -> null;
-        };
+        When.PropertyCondition condition = When.create();
+        switch (direction) {
+            case NORTH -> condition.set(Properties.NORTH, true);
+            case EAST -> condition.set(Properties.EAST, true);
+            case SOUTH -> condition.set(Properties.SOUTH, true);
+            case WEST -> condition.set(Properties.WEST, true);
+        }
+        condition.set(WCBalconyBlock.WALL, isWall);
 
         supplier.with(condition, sideVariant);
     }
@@ -64,8 +78,11 @@ public class BalconyBlockExporter extends BaseBlockExporter {
         Identifier sideModelId = getBalconySideModel(tinted)
                 .upload(createNestedModelId(block, "side"), textureMap, generator.modelCollector);
 
+        Identifier wallModelId = getBalconySideWallModel(tinted)
+                .upload(createNestedModelId(block, "side_wall"), textureMap, generator.modelCollector);
+
         MultipartBlockStateSupplier blockstate = createBalconyVariants(block,
-                List.of(sideModelId), List.of(1));
+                List.of(sideModelId), List.of(wallModelId), List.of(1));
         generator.blockStateCollector.accept(blockstate);
 
         registerParentedItemModel(generator, block, sideModelId);
@@ -74,6 +91,7 @@ public class BalconyBlockExporter extends BaseBlockExporter {
     public static void registerBalconyBlockWithRandomTextures(BlockStateModelGenerator generator, Block block, boolean tinted,
                                                               List<BlockDefinition.TextureVariantSet> textureSets) {
         List<Identifier> sideModelIds = new ArrayList<>();
+        List<Identifier> wallModelIds = new ArrayList<>();
         List<Integer> weights = new ArrayList<>();
 
         for (int i = 0; i < textureSets.size(); i++) {
@@ -83,12 +101,15 @@ public class BalconyBlockExporter extends BaseBlockExporter {
 
             Identifier sideModelId = getBalconySideModel(tinted)
                     .upload(createNestedModelId(block, "side_v" + (i + 1)), textureMap, generator.modelCollector);
+            Identifier wallModelId = getBalconySideWallModel(tinted)
+                    .upload(createNestedModelId(block, "side_wall_v" + (i + 1)), textureMap, generator.modelCollector);
 
             sideModelIds.add(sideModelId);
+            wallModelIds.add(wallModelId);
             weights.add(set.weight);
         }
 
-        MultipartBlockStateSupplier blockstate = createBalconyVariants(block, sideModelIds, weights);
+        MultipartBlockStateSupplier blockstate = createBalconyVariants(block, sideModelIds, wallModelIds, weights);
         generator.blockStateCollector.accept(blockstate);
 
         registerParentedItemModel(generator, block, sideModelIds.get(0));
