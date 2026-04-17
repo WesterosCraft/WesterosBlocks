@@ -21,6 +21,21 @@ public class ModModelProvider extends FabricModelProvider {
         void export(BlockStateModelGenerator generator, Block block, BlockDefinition definition);
     }
 
+    @FunctionalInterface
+    private interface ItemModelExporter {
+        void export(ItemModelGenerator generator, Block block, BlockDefinition definition);
+    }
+
+    /**
+     * Dispatch for item-model generation. Block types absent from this map keep their
+     * item-model registration in the block pass (status quo). As exporters are migrated
+     * to the Fabric-idiomatic split, add an entry here and remove the item-model upload
+     * from the exporter's block-pass method.
+     */
+    private static final Map<String, ItemModelExporter> ITEM_EXPORTERS = Map.ofEntries(
+        Map.entry("halfdoor", HalfDoorBlockExporter::registerCustomHalfDoorItemModel)
+    );
+
     private static final Map<String, BlockExporter> EXPORTERS = Map.ofEntries(
         Map.entry("solid", SolidBlockExporter::registerCustomSolidBlock),
         Map.entry("sand", SolidBlockExporter::registerCustomSolidBlock),
@@ -40,7 +55,7 @@ public class ModModelProvider extends FabricModelProvider {
         Map.entry("fencegate", FenceGateBlockExporter::registerCustomFenceGateBlock),
         Map.entry("leaves", LeavesBlockExporter::registerCustomLeavesBlock),
         Map.entry("bed", BedBlockExporter::registerCustomBedBlock),
-        Map.entry("table", TableBlockExporter::registerTableBlock2),
+        Map.entry("table", TableBlockExporter::registerCustomTableBlock),
         Map.entry("bench", BenchBlockExporter::registerCustomBenchBlock),
         Map.entry("crop", CropBlockExporter::registerCustomCropBlock),
         Map.entry("torch", TorchBlockExporter::registerTorchBlockFromDefinition),
@@ -117,6 +132,24 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        // Item models are now handled automatically by the block exporters
+        BlockDefinitionRegistry registry = BlockDefinitionRegistry.getInstance();
+        if (!registry.isInitialized()) {
+            return;
+        }
+
+        for (BlockDefinition definition : registry.getAllDefinitions()) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block == null) continue;
+
+            ItemModelExporter exporter = ITEM_EXPORTERS.get(definition.getBlockType().toLowerCase());
+            if (exporter == null) continue;
+
+            try {
+                exporter.export(itemModelGenerator, block, definition);
+            } catch (Exception e) {
+                WesterosBlocks.LOGGER.error("Error generating item model for block '{}': {}",
+                        definition.getBlockName(), e.getMessage());
+            }
+        }
     }
 }

@@ -597,4 +597,19 @@ public abstract class BaseBlockExporter {
     protected static void registerParentedItemModel(BlockStateModelGenerator generator, Block block, Identifier modelId) {
         generator.registerParentedItemModel(block, modelId);
     }
+
+    /** Item-pass variant of {@link #registerSimpleItemModel(BlockStateModelGenerator, Block, Identifier)}. */
+    protected static void registerSimpleItemModel(ItemModelGenerator generator, Block block, Identifier textureId) {
+        Models.GENERATED.upload(ModelIds.getItemModelId(block.asItem()),
+                TextureMap.layer0(textureId), generator.writer);
+    }
+
+    /** Item-pass variant of {@link #registerParentedItemModel(BlockStateModelGenerator, Block, Identifier)}. Writes a plain {@code {"parent": modelId}} JSON. */
+    protected static void registerParentedItemModel(ItemModelGenerator generator, Block block, Identifier modelId) {
+        generator.writer.accept(ModelIds.getItemModelId(block.asItem()), () -> {
+            com.google.gson.JsonObject json = new com.google.gson.JsonObject();
+            json.addProperty("parent", modelId.toString());
+            return json;
+        });
+    }
 }

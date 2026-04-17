@@ -21,18 +21,20 @@ public class HalfDoorBlockExporter extends BaseBlockExporter {
 
         BlockStateVariantMap variants = createHalfDoorVariants(leftModelId, rightModelId, leftOpenModelId, rightOpenModelId);
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
-
-        registerSimpleItemModel(generator, block, createBlockIdentifier(texturePath));
     }
 
     public static void registerCustomHalfDoorBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        registerHalfDoorBlock(generator, block, resolveTexturePath(definition));
+    }
+
+    /** Item-model pass: generates an {@code item/generated} model with layer0 = the block's bottom texture. */
+    public static void registerCustomHalfDoorItemModel(ItemModelGenerator generator, Block block, BlockDefinition definition) {
+        registerSimpleItemModel(generator, block, createBlockIdentifier(resolveTexturePath(definition)));
+    }
+
+    private static String resolveTexturePath(BlockDefinition definition) {
         List<String> textureList = definition.getTextures();
-        if (textureList != null && !textureList.isEmpty()) {
-            String texturePath = textureList.get(0);
-            registerHalfDoorBlock(generator, block, texturePath);
-        } else {
-            registerHalfDoorBlock(generator, block, "missingno");
-        }
+        return (textureList != null && !textureList.isEmpty()) ? textureList.get(0) : "missingno";
     }
 
     private static TextureMap createHalfDoorTextureMap(String texturePath) {
