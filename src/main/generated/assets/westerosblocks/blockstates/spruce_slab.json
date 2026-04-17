@@ -1,13 +1,13 @@
 {
   "variants": {
     "state=base,type=bottom": {
-      "model": "westerosblocks:block/spruce_slab/bottom"
+      "model": "westerosblocks:block/spruce_slab/bottom_v1"
     },
     "state=base,type=double": {
-      "model": "westerosblocks:block/spruce_slab/double"
+      "model": "westerosblocks:block/spruce_slab/double_v1"
     },
     "state=base,type=top": {
-      "model": "westerosblocks:block/spruce_slab/top"
+      "model": "westerosblocks:block/spruce_slab/top_v1"
     },
     "state=cut,type=bottom": {
       "model": "westerosblocks:block/spruce_slab/cut_v1_bottom"

@@ -31,18 +31,11 @@ public class SlabBlockExporter extends BaseBlockExporter {
             generateBlockState(generator, block, states);
         }
 
-        for (int stateIdx = 0; stateIdx < states.size(); stateIdx++) {
-            BlockDefinition.StateVariant state = states.get(stateIdx);
-            String stateID = state.getStateID();
-            String fname = getStateIdOrBase(stateID);
-
-            for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
-                if (definition.hasCustomModel() || state.isCustomModel()) {
-                    continue;
-                } else {
-                    generateSlabModels(generator, block, fname, setIdx, state, definition);
-                }
-            }
+        for (BlockDefinition.StateVariant state : states) {
+            if (definition.hasCustomModel() || state.isCustomModel()) continue;
+            String fname = getStateIdOrBase(state.getStateID());
+            state.forEachTextureSet((setIdx, set) ->
+                generateSlabModels(generator, block, fname, setIdx, state, definition));
         }
 
         BlockDefinition.StateVariant firstState = states.get(0);
@@ -51,46 +44,46 @@ public class SlabBlockExporter extends BaseBlockExporter {
         registerParentedItemModel(generator, block, itemModelId);
     }
 
+    /**
+     * Collects bottom/top/double slab variants for a single state, appending to
+     * the provided lists. Skips texture sets with null {@code RandomTextureVariant}.
+     */
+    private static void collectSlabVariantsForState(Block block, BlockDefinition.StateVariant state,
+            List<BlockStateVariant> bottom, List<BlockStateVariant> top, List<BlockStateVariant> dbl) {
+        String fname = getStateIdOrBase(state.getStateID());
+        state.forEachTextureSet((setIdx, set) -> {
+            if (set == null) return;
+            int weight = set.getWeight();
+            bottom.add(createSlabVariant(createNestedModelId(block, getModelName(fname, setIdx, "bottom")), weight));
+            top.add(createSlabVariant(createNestedModelId(block, getModelName(fname, setIdx, "top")), weight));
+            dbl.add(createSlabVariant(createNestedModelId(block, getModelName(fname, setIdx, "double")), weight));
+        });
+    }
+
     private static void generateBlockState(BlockStateModelGenerator generator, Block block,
                                           List<BlockDefinition.StateVariant> states) {
         BlockStateVariantMap.SingleProperty<SlabType> variantMap =
             BlockStateVariantMap.create(Properties.SLAB_TYPE);
 
-        List<BlockStateVariant> bottomVariants = new ArrayList<>();
-        List<BlockStateVariant> topVariants = new ArrayList<>();
-        List<BlockStateVariant> doubleVariants = new ArrayList<>();
-
+        List<BlockStateVariant> bottom = new ArrayList<>();
+        List<BlockStateVariant> top = new ArrayList<>();
+        List<BlockStateVariant> dbl = new ArrayList<>();
         for (BlockDefinition.StateVariant state : states) {
-            String fname = getStateIdOrBase(state.getStateID());
-
-            for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
-                BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
-                if (set == null) continue;
-
-                Identifier bottomModel = createNestedModelId(block, getModelName(fname, setIdx, "bottom"));
-                Identifier topModel = createNestedModelId(block, getModelName(fname, setIdx, "top"));
-                Identifier doubleModel = createNestedModelId(block, getModelName(fname, setIdx, "double"));
-
-                int weight = set.getWeight();
-                bottomVariants.add(createSlabVariant(bottomModel, weight));
-                topVariants.add(createSlabVariant(topModel, weight));
-                doubleVariants.add(createSlabVariant(doubleModel, weight));
-            }
+            collectSlabVariantsForState(block, state, bottom, top, dbl);
         }
 
-        if (bottomVariants.size() == 1) {
-            variantMap.register(SlabType.BOTTOM, bottomVariants.get(0));
-            variantMap.register(SlabType.TOP, topVariants.get(0));
-            variantMap.register(SlabType.DOUBLE, doubleVariants.get(0));
+        if (bottom.size() == 1) {
+            variantMap.register(SlabType.BOTTOM, bottom.get(0));
+            variantMap.register(SlabType.TOP, top.get(0));
+            variantMap.register(SlabType.DOUBLE, dbl.get(0));
         } else {
-            variantMap.register(SlabType.BOTTOM, bottomVariants);
-            variantMap.register(SlabType.TOP, topVariants);
-            variantMap.register(SlabType.DOUBLE, doubleVariants);
+            variantMap.register(SlabType.BOTTOM, bottom);
+            variantMap.register(SlabType.TOP, top);
+            variantMap.register(SlabType.DOUBLE, dbl);
         }
 
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
-        );
+            VariantsBlockStateSupplier.create(block).coordinate(variantMap));
     }
 
     private static void generateBlockStateWithStates(BlockStateModelGenerator generator, Block block,
@@ -101,40 +94,24 @@ public class SlabBlockExporter extends BaseBlockExporter {
 
         for (BlockDefinition.StateVariant state : states) {
             String stateId = state.getStateID();
-            String fname = getStateIdOrBase(stateId);
+            List<BlockStateVariant> bottom = new ArrayList<>();
+            List<BlockStateVariant> top = new ArrayList<>();
+            List<BlockStateVariant> dbl = new ArrayList<>();
+            collectSlabVariantsForState(block, state, bottom, top, dbl);
 
-            List<BlockStateVariant> bottomVariants = new ArrayList<>();
-            List<BlockStateVariant> topVariants = new ArrayList<>();
-            List<BlockStateVariant> doubleVariants = new ArrayList<>();
-
-            for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
-                BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
-                if (set == null) continue;
-
-                Identifier bottomModel = createNestedModelId(block, getModelName(fname, setIdx, "bottom"));
-                Identifier topModel = createNestedModelId(block, getModelName(fname, setIdx, "top"));
-                Identifier doubleModel = createNestedModelId(block, getModelName(fname, setIdx, "double"));
-
-                int weight = set.getWeight();
-                bottomVariants.add(createSlabVariant(bottomModel, weight));
-                topVariants.add(createSlabVariant(topModel, weight));
-                doubleVariants.add(createSlabVariant(doubleModel, weight));
-            }
-
-            if (bottomVariants.size() == 1) {
-                variantMap.register(SlabType.BOTTOM, stateId, bottomVariants.get(0));
-                variantMap.register(SlabType.TOP, stateId, topVariants.get(0));
-                variantMap.register(SlabType.DOUBLE, stateId, doubleVariants.get(0));
+            if (bottom.size() == 1) {
+                variantMap.register(SlabType.BOTTOM, stateId, bottom.get(0));
+                variantMap.register(SlabType.TOP, stateId, top.get(0));
+                variantMap.register(SlabType.DOUBLE, stateId, dbl.get(0));
             } else {
-                variantMap.register(SlabType.BOTTOM, stateId, bottomVariants);
-                variantMap.register(SlabType.TOP, stateId, topVariants);
-                variantMap.register(SlabType.DOUBLE, stateId, doubleVariants);
+                variantMap.register(SlabType.BOTTOM, stateId, bottom);
+                variantMap.register(SlabType.TOP, stateId, top);
+                variantMap.register(SlabType.DOUBLE, stateId, dbl);
             }
         }
 
         generator.blockStateCollector.accept(
-            VariantsBlockStateSupplier.create(block).coordinate(variantMap)
-        );
+            VariantsBlockStateSupplier.create(block).coordinate(variantMap));
     }
 
     private static BlockStateVariant createSlabVariant(Identifier modelId, int weight) {
@@ -209,8 +186,10 @@ public class SlabBlockExporter extends BaseBlockExporter {
     }
 
     protected static String getModelName(String fname, int setIdx, String variant) {
+        // Default state (base), first texture set: emit <variant>_v1 to match legacy 1.18.2 naming
+        // (bottom_v1/top_v1/double_v1). Other cases keep the existing state_v<n>_variant shape.
         if (setIdx == 0 && fname.equals("base")) {
-            return variant;
+            return variant + "_v1";
         }
         return fname + "_v" + (setIdx + 1) + "_" + variant;
     }

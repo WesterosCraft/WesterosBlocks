@@ -113,7 +113,10 @@ public class StairBlockExporter extends BaseBlockExporter {
                     textures[i] = set.getTextureByIndex(i);
                 }
 
-                String prefix = hasMultipleStates ? stateId + "_" : "";
+                // Skip the stateId prefix for the default "base" state so single-state (or default-state) stairs
+                // emit base_v1/inner_v1/outer_v1, matching legacy 1.18.2 naming. Non-default states still get
+                // prefixed (e.g. cut_base_v1) to disambiguate.
+                String prefix = (hasMultipleStates && !"base".equals(stateId)) ? stateId + "_" : "";
                 Identifier baseModel = generateStairModel(generator, block, definition, textures, prefix + "base", setIdx);
                 Identifier innerModel = generateStairModel(generator, block, definition, textures, prefix + "inner", setIdx);
                 Identifier outerModel = generateStairModel(generator, block, definition, textures, prefix + "outer", setIdx);

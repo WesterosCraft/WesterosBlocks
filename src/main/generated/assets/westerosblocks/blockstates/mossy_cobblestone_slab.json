@@ -2,7 +2,7 @@
   "variants": {
     "type=bottom": [
       {
-        "model": "westerosblocks:block/mossy_cobblestone_slab/bottom",
+        "model": "westerosblocks:block/mossy_cobblestone_slab/bottom_v1",
         "weight": 5
       },
       {
@@ -24,7 +24,7 @@
     ],
     "type=double": [
       {
-        "model": "westerosblocks:block/mossy_cobblestone_slab/double",
+        "model": "westerosblocks:block/mossy_cobblestone_slab/double_v1",
         "weight": 5
       },
       {
@@ -46,7 +46,7 @@
     ],
     "type=top": [
       {
-        "model": "westerosblocks:block/mossy_cobblestone_slab/top",
+        "model": "westerosblocks:block/mossy_cobblestone_slab/top_v1",
         "weight": 5
       },
       {

@@ -1,13 +1,13 @@
 {
   "variants": {
     "state=base,type=bottom": {
-      "model": "westerosblocks:block/birch_horizontal_stripped_log_slab/bottom"
+      "model": "westerosblocks:block/birch_horizontal_stripped_log_slab/bottom_v1"
     },
     "state=base,type=double": {
-      "model": "westerosblocks:block/birch_horizontal_stripped_log_slab/double"
+      "model": "westerosblocks:block/birch_horizontal_stripped_log_slab/double_v1"
     },
     "state=base,type=top": {
-      "model": "westerosblocks:block/birch_horizontal_stripped_log_slab/top"
+      "model": "westerosblocks:block/birch_horizontal_stripped_log_slab/top_v1"
     },
     "state=cut,type=bottom": {
       "model": "westerosblocks:block/birch_horizontal_stripped_log_slab/cut_v1_bottom"

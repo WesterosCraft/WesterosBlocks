@@ -1,13 +1,13 @@
 {
   "variants": {
     "type=bottom": {
-      "model": "westerosblocks:block/stool/bottom"
+      "model": "westerosblocks:block/stool/bottom_v1"
     },
     "type=double": {
-      "model": "westerosblocks:block/stool/double"
+      "model": "westerosblocks:block/stool/double_v1"
     },
     "type=top": {
-      "model": "westerosblocks:block/stool/top"
+      "model": "westerosblocks:block/stool/top_v1"
     }
   }
 }

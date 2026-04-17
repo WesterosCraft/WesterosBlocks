@@ -1,7 +1,7 @@
 {
   "variants": {
     "facing=east,half=bottom,shape=inner_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1",
       "uvlock": true,
       "y": 270
     },
@@ -11,13 +11,13 @@
       "y": 270
     },
     "facing=east,half=bottom,shape=inner_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1"
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1"
     },
     "facing=east,half=bottom,shape=inner_right,state=cut": {
       "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/cut_inner_v1"
     },
     "facing=east,half=bottom,shape=outer_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1",
       "uvlock": true,
       "y": 270
     },
@@ -27,19 +27,19 @@
       "y": 270
     },
     "facing=east,half=bottom,shape=outer_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1"
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1"
     },
     "facing=east,half=bottom,shape=outer_right,state=cut": {
       "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/cut_outer_v1"
     },
     "facing=east,half=bottom,shape=straight,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_base_v1"
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_v1"
     },
     "facing=east,half=bottom,shape=straight,state=cut": {
       "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/cut_base_v1"
     },
     "facing=east,half=top,shape=inner_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1",
       "uvlock": true,
       "x": 180
     },
@@ -49,7 +49,7 @@
       "x": 180
     },
     "facing=east,half=top,shape=inner_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1",
       "uvlock": true,
       "x": 180,
       "y": 90
@@ -61,7 +61,7 @@
       "y": 90
     },
     "facing=east,half=top,shape=outer_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1",
       "uvlock": true,
       "x": 180
     },
@@ -71,7 +71,7 @@
       "x": 180
     },
     "facing=east,half=top,shape=outer_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1",
       "uvlock": true,
       "x": 180,
       "y": 90
@@ -83,7 +83,7 @@
       "y": 90
     },
     "facing=east,half=top,shape=straight,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_base_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_v1",
       "uvlock": true,
       "x": 180
     },
@@ -93,7 +93,7 @@
       "x": 180
     },
     "facing=north,half=bottom,shape=inner_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1",
       "uvlock": true,
       "y": 180
     },
@@ -103,7 +103,7 @@
       "y": 180
     },
     "facing=north,half=bottom,shape=inner_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1",
       "uvlock": true,
       "y": 270
     },
@@ -113,7 +113,7 @@
       "y": 270
     },
     "facing=north,half=bottom,shape=outer_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1",
       "uvlock": true,
       "y": 180
     },
@@ -123,7 +123,7 @@
       "y": 180
     },
     "facing=north,half=bottom,shape=outer_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1",
       "uvlock": true,
       "y": 270
     },
@@ -133,7 +133,7 @@
       "y": 270
     },
     "facing=north,half=bottom,shape=straight,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_base_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_v1",
       "uvlock": true,
       "y": 270
     },
@@ -143,7 +143,7 @@
       "y": 270
     },
     "facing=north,half=top,shape=inner_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1",
       "uvlock": true,
       "x": 180,
       "y": 270
@@ -155,7 +155,7 @@
       "y": 270
     },
     "facing=north,half=top,shape=inner_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1",
       "uvlock": true,
       "x": 180
     },
@@ -165,7 +165,7 @@
       "x": 180
     },
     "facing=north,half=top,shape=outer_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1",
       "uvlock": true,
       "x": 180,
       "y": 270
@@ -177,7 +177,7 @@
       "y": 270
     },
     "facing=north,half=top,shape=outer_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1",
       "uvlock": true,
       "x": 180
     },
@@ -187,7 +187,7 @@
       "x": 180
     },
     "facing=north,half=top,shape=straight,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_base_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_v1",
       "uvlock": true,
       "x": 180,
       "y": 270
@@ -199,13 +199,13 @@
       "y": 270
     },
     "facing=south,half=bottom,shape=inner_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1"
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1"
     },
     "facing=south,half=bottom,shape=inner_left,state=cut": {
       "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/cut_inner_v1"
     },
     "facing=south,half=bottom,shape=inner_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1",
       "uvlock": true,
       "y": 90
     },
@@ -215,13 +215,13 @@
       "y": 90
     },
     "facing=south,half=bottom,shape=outer_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1"
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1"
     },
     "facing=south,half=bottom,shape=outer_left,state=cut": {
       "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/cut_outer_v1"
     },
     "facing=south,half=bottom,shape=outer_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1",
       "uvlock": true,
       "y": 90
     },
@@ -231,7 +231,7 @@
       "y": 90
     },
     "facing=south,half=bottom,shape=straight,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_base_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_v1",
       "uvlock": true,
       "y": 90
     },
@@ -241,7 +241,7 @@
       "y": 90
     },
     "facing=south,half=top,shape=inner_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1",
       "uvlock": true,
       "x": 180,
       "y": 90
@@ -253,7 +253,7 @@
       "y": 90
     },
     "facing=south,half=top,shape=inner_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1",
       "uvlock": true,
       "x": 180,
       "y": 180
@@ -265,7 +265,7 @@
       "y": 180
     },
     "facing=south,half=top,shape=outer_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1",
       "uvlock": true,
       "x": 180,
       "y": 90
@@ -277,7 +277,7 @@
       "y": 90
     },
     "facing=south,half=top,shape=outer_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1",
       "uvlock": true,
       "x": 180,
       "y": 180
@@ -289,7 +289,7 @@
       "y": 180
     },
     "facing=south,half=top,shape=straight,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_base_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_v1",
       "uvlock": true,
       "x": 180,
       "y": 90
@@ -301,7 +301,7 @@
       "y": 90
     },
     "facing=west,half=bottom,shape=inner_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1",
       "uvlock": true,
       "y": 90
     },
@@ -311,7 +311,7 @@
       "y": 90
     },
     "facing=west,half=bottom,shape=inner_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1",
       "uvlock": true,
       "y": 180
     },
@@ -321,7 +321,7 @@
       "y": 180
     },
     "facing=west,half=bottom,shape=outer_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1",
       "uvlock": true,
       "y": 90
     },
@@ -331,7 +331,7 @@
       "y": 90
     },
     "facing=west,half=bottom,shape=outer_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1",
       "uvlock": true,
       "y": 180
     },
@@ -341,7 +341,7 @@
       "y": 180
     },
     "facing=west,half=bottom,shape=straight,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_base_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_v1",
       "uvlock": true,
       "y": 180
     },
@@ -351,7 +351,7 @@
       "y": 180
     },
     "facing=west,half=top,shape=inner_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1",
       "uvlock": true,
       "x": 180,
       "y": 180
@@ -363,7 +363,7 @@
       "y": 180
     },
     "facing=west,half=top,shape=inner_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_inner_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/inner_v1",
       "uvlock": true,
       "x": 180,
       "y": 270
@@ -375,7 +375,7 @@
       "y": 270
     },
     "facing=west,half=top,shape=outer_left,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1",
       "uvlock": true,
       "x": 180,
       "y": 180
@@ -387,7 +387,7 @@
       "y": 180
     },
     "facing=west,half=top,shape=outer_right,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_outer_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/outer_v1",
       "uvlock": true,
       "x": 180,
       "y": 270
@@ -399,7 +399,7 @@
       "y": 270
     },
     "facing=west,half=top,shape=straight,state=base": {
-      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_base_v1",
+      "model": "westerosblocks:block/dark_northern_vertical_stripped_log_stairs/base_v1",
       "uvlock": true,
       "x": 180,
       "y": 180

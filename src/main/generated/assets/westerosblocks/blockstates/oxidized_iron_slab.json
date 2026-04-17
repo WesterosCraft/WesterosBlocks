@@ -2,7 +2,7 @@
   "variants": {
     "type=bottom": [
       {
-        "model": "westerosblocks:block/oxidized_iron_slab/bottom"
+        "model": "westerosblocks:block/oxidized_iron_slab/bottom_v1"
       },
       {
         "model": "westerosblocks:block/oxidized_iron_slab/base_v2_bottom"
@@ -13,7 +13,7 @@
     ],
     "type=double": [
       {
-        "model": "westerosblocks:block/oxidized_iron_slab/double"
+        "model": "westerosblocks:block/oxidized_iron_slab/double_v1"
       },
       {
         "model": "westerosblocks:block/oxidized_iron_slab/base_v2_double"
@@ -24,7 +24,7 @@
     ],
     "type=top": [
       {
-        "model": "westerosblocks:block/oxidized_iron_slab/top"
+        "model": "westerosblocks:block/oxidized_iron_slab/top_v1"
       },
       {
         "model": "westerosblocks:block/oxidized_iron_slab/base_v2_top"
