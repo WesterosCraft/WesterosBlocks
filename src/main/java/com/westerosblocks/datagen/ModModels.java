@@ -11,42 +11,19 @@ import com.westerosblocks.datagen.ModTextureKey;
 
 public class ModModels {
     // Custom model with cube_all parent and all six face texture keys
-    public static final Model CUSTOM_CUBE_ALL = ModModels.block("cube_all",
-            TextureKey.DOWN,
-            TextureKey.UP,
-            TextureKey.NORTH,
-            TextureKey.SOUTH,
-            TextureKey.EAST,
-            TextureKey.WEST,
-            TextureKey.PARTICLE);
+    public static final Model CUSTOM_CUBE_ALL = sixFace("cube_all");
 
     // Custom slab models with all six face texture keys
-    public static final Model SLAB_BOTTOM = ModModels.block("untinted/slab",
-            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST, TextureKey.PARTICLE);
-    public static final Model SLAB_TOP = ModModels.block("untinted/slab_top",
-            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST, TextureKey.PARTICLE);
-    public static final Model SLAB_BOTTOM_TINTED = ModModels.block("tinted/half_slab",
-            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST, TextureKey.PARTICLE);
-    public static final Model SLAB_TOP_TINTED = ModModels.block("tinted/upper_slab",
-            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST, TextureKey.PARTICLE);
+    public static final Model SLAB_BOTTOM = sixFace("untinted/slab");
+    public static final Model SLAB_TOP = sixFace("untinted/slab_top");
+    public static final Model SLAB_BOTTOM_TINTED = sixFace("tinted/half_slab");
+    public static final Model SLAB_TOP_TINTED = sixFace("tinted/upper_slab");
 
     // Slab overlay models
-    public static final Model SLAB_BOTTOM_OVERLAY_UNTINTED = ModModels.block("untinted/half_slab_overlay",
-            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST,
-            ModTextureKey.DOWN_OVERLAY, ModTextureKey.UP_OVERLAY, ModTextureKey.NORTH_OVERLAY,
-            ModTextureKey.SOUTH_OVERLAY, ModTextureKey.EAST_OVERLAY, ModTextureKey.WEST_OVERLAY, TextureKey.PARTICLE);
-    public static final Model SLAB_BOTTOM_OVERLAY_TINTED = ModModels.block("tinted/half_slab_overlay",
-            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST,
-            ModTextureKey.DOWN_OVERLAY, ModTextureKey.UP_OVERLAY, ModTextureKey.NORTH_OVERLAY,
-            ModTextureKey.SOUTH_OVERLAY, ModTextureKey.EAST_OVERLAY, ModTextureKey.WEST_OVERLAY, TextureKey.PARTICLE);
-    public static final Model SLAB_TOP_OVERLAY_UNTINTED = ModModels.block("untinted/upper_slab_overlay",
-            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST,
-            ModTextureKey.DOWN_OVERLAY, ModTextureKey.UP_OVERLAY, ModTextureKey.NORTH_OVERLAY,
-            ModTextureKey.SOUTH_OVERLAY, ModTextureKey.EAST_OVERLAY, ModTextureKey.WEST_OVERLAY, TextureKey.PARTICLE);
-    public static final Model SLAB_TOP_OVERLAY_TINTED = ModModels.block("tinted/upper_slab_overlay",
-            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST,
-            ModTextureKey.DOWN_OVERLAY, ModTextureKey.UP_OVERLAY, ModTextureKey.NORTH_OVERLAY,
-            ModTextureKey.SOUTH_OVERLAY, ModTextureKey.EAST_OVERLAY, ModTextureKey.WEST_OVERLAY, TextureKey.PARTICLE);
+    public static final Model SLAB_BOTTOM_OVERLAY_UNTINTED = sixFaceOverlay("untinted/half_slab_overlay");
+    public static final Model SLAB_BOTTOM_OVERLAY_TINTED = sixFaceOverlay("tinted/half_slab_overlay");
+    public static final Model SLAB_TOP_OVERLAY_UNTINTED = sixFaceOverlay("untinted/upper_slab_overlay");
+    public static final Model SLAB_TOP_OVERLAY_TINTED = sixFaceOverlay("tinted/upper_slab_overlay");
 
     // Door models - using custom untinted models
     public static final Model DOOR_BOTTOM_LEFT = block("untinted/door_bottom_left", TextureKey.TOP, TextureKey.BOTTOM, TextureKey.PARTICLE);
@@ -58,11 +35,11 @@ public class ModModels {
     public static final Model DOOR_TOP_LEFT_OPEN = vanillaBlock("door_top_left_open", TextureKey.TOP, TextureKey.BOTTOM, TextureKey.PARTICLE);
     public static final Model DOOR_TOP_RIGHT_OPEN = vanillaBlock("door_top_right_open", TextureKey.TOP, TextureKey.BOTTOM, TextureKey.PARTICLE);
 
-    // Half door (shutter) models
-    public static final Model HALF_DOOR_LEFT = block("untinted/half_door_left", TextureKey.TEXTURE, TextureKey.PARTICLE);
-    public static final Model HALF_DOOR_RIGHT = block("untinted/half_door_right", TextureKey.TEXTURE, TextureKey.PARTICLE);
-    public static final Model HALF_DOOR_LEFT_OPEN = block("untinted/half_door_left_open", TextureKey.TEXTURE, TextureKey.PARTICLE);
-    public static final Model HALF_DOOR_RIGHT_OPEN = block("untinted/half_door_right_open", TextureKey.TEXTURE, TextureKey.PARTICLE);
+    // Half door (shutter) models — parent templates use #bottom
+    public static final Model HALF_DOOR_LEFT = block("untinted/half_door_left", TextureKey.BOTTOM, TextureKey.PARTICLE);
+    public static final Model HALF_DOOR_RIGHT = block("untinted/half_door_right", TextureKey.BOTTOM, TextureKey.PARTICLE);
+    public static final Model HALF_DOOR_LEFT_OPEN = block("untinted/half_door_left_open", TextureKey.BOTTOM, TextureKey.PARTICLE);
+    public static final Model HALF_DOOR_RIGHT_OPEN = block("untinted/half_door_right_open", TextureKey.BOTTOM, TextureKey.PARTICLE);
 
     // Pane models
     public static final Model PANE_POST = block("untinted/ctm_pane_post", TextureKey.SIDE, ModTextureKey.CAP, TextureKey.PARTICLE);
@@ -107,98 +84,50 @@ public class ModModels {
     public static final Model TABLE_MIDDLE = block("table/wood_table_middle", ModTextureKey.TABLE, TextureKey.PARTICLE);
 
     // Fence models — untinted/tinted × with/without overlay
-    public static final Model FENCE_POST_UNTINTED = block("untinted/fence_post",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model FENCE_POST_TINTED = block("tinted/fence_post",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model FENCE_POST_OVERLAY_UNTINTED = block("untinted/fence_post_overlay",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-            ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
-    public static final Model FENCE_POST_OVERLAY_TINTED = block("tinted/fence_post_overlay",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-            ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
+    public static final Model FENCE_POST_UNTINTED = connectorShape("fence_post", false, false);
+    public static final Model FENCE_POST_TINTED = connectorShape("fence_post", true, false);
+    public static final Model FENCE_POST_OVERLAY_UNTINTED = connectorShape("fence_post", false, true);
+    public static final Model FENCE_POST_OVERLAY_TINTED = connectorShape("fence_post", true, true);
 
-    public static final Model FENCE_SIDE_UNTINTED = block("untinted/fence_side",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model FENCE_SIDE_TINTED = block("tinted/fence_side",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model FENCE_SIDE_OVERLAY_UNTINTED = block("untinted/fence_side_overlay",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-            ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
-    public static final Model FENCE_SIDE_OVERLAY_TINTED = block("tinted/fence_side_overlay",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-            ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
+    public static final Model FENCE_SIDE_UNTINTED = connectorShape("fence_side", false, false);
+    public static final Model FENCE_SIDE_TINTED = connectorShape("fence_side", true, false);
+    public static final Model FENCE_SIDE_OVERLAY_UNTINTED = connectorShape("fence_side", false, true);
+    public static final Model FENCE_SIDE_OVERLAY_TINTED = connectorShape("fence_side", true, true);
 
-    public static final Model FENCE_INVENTORY_UNTINTED = block("untinted/fence_inventory",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model FENCE_INVENTORY_TINTED = block("tinted/fence_inventory",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model FENCE_INVENTORY_OVERLAY_UNTINTED = block("untinted/fence_inventory_overlay",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-            ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
-    public static final Model FENCE_INVENTORY_OVERLAY_TINTED = block("tinted/fence_inventory_overlay",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-            ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
+    public static final Model FENCE_INVENTORY_UNTINTED = connectorShape("fence_inventory", false, false);
+    public static final Model FENCE_INVENTORY_TINTED = connectorShape("fence_inventory", true, false);
+    public static final Model FENCE_INVENTORY_OVERLAY_UNTINTED = connectorShape("fence_inventory", false, true);
+    public static final Model FENCE_INVENTORY_OVERLAY_TINTED = connectorShape("fence_inventory", true, true);
 
     // Wall models — untinted/tinted × with/without overlay
-    public static final Model WALL_POST_UNTINTED = block("untinted/template_wall_post",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model WALL_POST_TINTED = block("tinted/template_wall_post",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model WALL_POST_OVERLAY_UNTINTED = block("untinted/template_wall_post_overlay",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-            ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
-    public static final Model WALL_POST_OVERLAY_TINTED = block("tinted/template_wall_post_overlay",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-            ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
+    public static final Model WALL_POST_UNTINTED = connectorShape("template_wall_post", false, false);
+    public static final Model WALL_POST_TINTED = connectorShape("template_wall_post", true, false);
+    public static final Model WALL_POST_OVERLAY_UNTINTED = connectorShape("template_wall_post", false, true);
+    public static final Model WALL_POST_OVERLAY_TINTED = connectorShape("template_wall_post", true, true);
 
-    public static final Model WALL_SIDE_UNTINTED = block("untinted/template_wall_side",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model WALL_SIDE_TINTED = block("tinted/template_wall_side",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model WALL_SIDE_OVERLAY_UNTINTED = block("untinted/template_wall_side_overlay",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-            ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
-    public static final Model WALL_SIDE_OVERLAY_TINTED = block("tinted/template_wall_side_overlay",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-            ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
+    public static final Model WALL_SIDE_UNTINTED = connectorShape("template_wall_side", false, false);
+    public static final Model WALL_SIDE_TINTED = connectorShape("template_wall_side", true, false);
+    public static final Model WALL_SIDE_OVERLAY_UNTINTED = connectorShape("template_wall_side", false, true);
+    public static final Model WALL_SIDE_OVERLAY_TINTED = connectorShape("template_wall_side", true, true);
 
-    public static final Model WALL_SIDE_SHORT_UNTINTED = block("untinted/template_wall_side_2",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model WALL_SIDE_SHORT_TINTED = block("tinted/template_wall_side_2",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model WALL_SIDE_SHORT_OVERLAY_UNTINTED = block("untinted/template_wall_side_2_overlay",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-            ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
-    public static final Model WALL_SIDE_SHORT_OVERLAY_TINTED = block("tinted/template_wall_side_2_overlay",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-            ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
+    public static final Model WALL_SIDE_SHORT_UNTINTED = connectorShape("template_wall_side_2", false, false);
+    public static final Model WALL_SIDE_SHORT_TINTED = connectorShape("template_wall_side_2", true, false);
+    public static final Model WALL_SIDE_SHORT_OVERLAY_UNTINTED = connectorShape("template_wall_side_2", false, true);
+    public static final Model WALL_SIDE_SHORT_OVERLAY_TINTED = connectorShape("template_wall_side_2", true, true);
 
-    public static final Model WALL_SIDE_TALL_UNTINTED = block("untinted/template_wall_side_tall",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model WALL_SIDE_TALL_TINTED = block("tinted/template_wall_side_tall",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model WALL_SIDE_TALL_OVERLAY_UNTINTED = block("untinted/template_wall_side_tall_overlay",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-            ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
-    public static final Model WALL_SIDE_TALL_OVERLAY_TINTED = block("tinted/template_wall_side_tall_overlay",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
-            ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE);
+    public static final Model WALL_SIDE_TALL_UNTINTED = connectorShape("template_wall_side_tall", false, false);
+    public static final Model WALL_SIDE_TALL_TINTED = connectorShape("template_wall_side_tall", true, false);
+    public static final Model WALL_SIDE_TALL_OVERLAY_UNTINTED = connectorShape("template_wall_side_tall", false, true);
+    public static final Model WALL_SIDE_TALL_OVERLAY_TINTED = connectorShape("template_wall_side_tall", true, true);
 
-    public static final Model WALL_INVENTORY_UNTINTED = block("untinted/wall_inventory",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model WALL_INVENTORY_TINTED = block("tinted/wall_inventory",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+    public static final Model WALL_INVENTORY_UNTINTED = connectorShape("wall_inventory", false, false);
+    public static final Model WALL_INVENTORY_TINTED = connectorShape("wall_inventory", true, false);
 
     // Hedge wall models (always tinted — hedges always have colorMult)
-    public static final Model HEDGE_POST_TINTED = block("tinted/template_hedge_wall_post",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model HEDGE_SIDE_TINTED = block("tinted/template_hedge_wall_side",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model HEDGE_SIDE_TALL_TINTED = block("tinted/template_hedge_wall_side_tall",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
-    public static final Model HEDGE_INVENTORY_TINTED = block("tinted/hedge_wall_inventory",
-            TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+    public static final Model HEDGE_POST_TINTED = connectorShape("template_hedge_wall_post", true, false);
+    public static final Model HEDGE_SIDE_TINTED = connectorShape("template_hedge_wall_side", true, false);
+    public static final Model HEDGE_SIDE_TALL_TINTED = connectorShape("template_hedge_wall_side_tall", true, false);
+    public static final Model HEDGE_INVENTORY_TINTED = connectorShape("hedge_wall_inventory", true, false);
 
     // Leaves models — standard (END+SIDE) and better foliage (ALL)
     public static final Model LEAVES_UNTINTED = block("untinted/leaves",
@@ -238,16 +167,9 @@ public class ModModels {
             TextureKey.ALL, ModTextureKey.LEAVES_OVERLAY_END, ModTextureKey.LEAVES_OVERLAY_SIDE, TextureKey.PARTICLE);
 
     // Solid cube models (tinted and overlay variants)
-    public static final Model CUBE_TINTED = block("tinted/cube",
-            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST, TextureKey.PARTICLE);
-    public static final Model CUBE_OVERLAY_UNTINTED = block("untinted/cube_overlay",
-            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST,
-            ModTextureKey.DOWN_OVERLAY, ModTextureKey.UP_OVERLAY, ModTextureKey.NORTH_OVERLAY,
-            ModTextureKey.SOUTH_OVERLAY, ModTextureKey.EAST_OVERLAY, ModTextureKey.WEST_OVERLAY, TextureKey.PARTICLE);
-    public static final Model CUBE_OVERLAY_TINTED = block("tinted/cube_overlay",
-            TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST,
-            ModTextureKey.DOWN_OVERLAY, ModTextureKey.UP_OVERLAY, ModTextureKey.NORTH_OVERLAY,
-            ModTextureKey.SOUTH_OVERLAY, ModTextureKey.EAST_OVERLAY, ModTextureKey.WEST_OVERLAY, TextureKey.PARTICLE);
+    public static final Model CUBE_TINTED = sixFace("tinted/cube");
+    public static final Model CUBE_OVERLAY_UNTINTED = sixFaceOverlay("untinted/cube_overlay");
+    public static final Model CUBE_OVERLAY_TINTED = sixFaceOverlay("tinted/cube_overlay");
 
     // Bed item models
     public static final Model BED_ITEM_UNTINTED = new Model(
@@ -323,7 +245,7 @@ public class ModModels {
     public static final Model PARTICLE_EMITTER_ON = block("custom/particle_emitter/particle_emitter_on", TextureKey.TEXTURE, TextureKey.PARTICLE);
 
     public static Model CUBOID_NSEW_STACK_ITEM() {
-        return new Model(Optional.of(Identifier.of("westerosblocks", "item/cuboid_nsew_stack_item")),
+        return new Model(Optional.of(WesterosBlocks.id("item/cuboid_nsew_stack_item")),
                 Optional.empty(),
                 TextureKey.PARTICLE,
                 ModTextureKey.TEXTURE_1,
@@ -349,5 +271,31 @@ public class ModModels {
     private static Model vanillaBlock(String parent, TextureKey... requiredTextureKeys) {
         return new Model(Optional.of(Identifier.ofVanilla("block/" + parent)), Optional.empty(),
                 requiredTextureKeys);
+    }
+
+    /**
+     * Multipart connector shape (fence/wall/hedge): bottom/top/side, optional overlays, particle.
+     * Path format: {@code (tinted|untinted)/<kind>[_overlay]}.
+     */
+    private static Model connectorShape(String kind, boolean tinted, boolean overlay) {
+        String path = (tinted ? "tinted/" : "untinted/") + kind + (overlay ? "_overlay" : "");
+        return overlay
+                ? block(path, TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE,
+                        ModTextureKey.BOTTOM_OVERLAY, ModTextureKey.TOP_OVERLAY, ModTextureKey.SIDE_OVERLAY, TextureKey.PARTICLE)
+                : block(path, TextureKey.BOTTOM, TextureKey.TOP, TextureKey.SIDE, TextureKey.PARTICLE);
+    }
+
+    /** 6-face cube shape: down/up/north/south/east/west + particle. Full path (no prefix added). */
+    private static Model sixFace(String path) {
+        return block(path,
+                TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST, TextureKey.PARTICLE);
+    }
+
+    /** 6-face cube shape with per-face overlays + particle. Full path (no prefix added). */
+    private static Model sixFaceOverlay(String path) {
+        return block(path,
+                TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.EAST, TextureKey.WEST,
+                ModTextureKey.DOWN_OVERLAY, ModTextureKey.UP_OVERLAY, ModTextureKey.NORTH_OVERLAY,
+                ModTextureKey.SOUTH_OVERLAY, ModTextureKey.EAST_OVERLAY, ModTextureKey.WEST_OVERLAY, TextureKey.PARTICLE);
     }
 }

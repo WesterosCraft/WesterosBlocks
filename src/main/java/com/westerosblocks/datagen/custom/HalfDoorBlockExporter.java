@@ -1,6 +1,5 @@
 package com.westerosblocks.datagen.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.block.custom.WCHalfDoorBlock;
 import com.westerosblocks.data.BlockDefinition;
@@ -9,12 +8,8 @@ import net.minecraft.block.enums.DoorHinge;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
-import net.minecraft.data.client.VariantSettings.Rotation;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.function.BiConsumer;
-import java.util.function.Supplier;
 
 public class HalfDoorBlockExporter extends BaseBlockExporter {
 
@@ -75,28 +70,9 @@ public class HalfDoorBlockExporter extends BaseBlockExporter {
     private static Identifier createHalfDoorModel(BlockStateModelGenerator generator, Block block, String texturePath,
                                                    String variant, Model model) {
         String blockName = getBlockName(block);
-        Identifier modelId = WesterosBlocks.id("block/" + blockName + "/" + blockName + "_" + variant);
-
+        Identifier modelId = createNestedModelId(block, blockName + "_" + variant);
         TextureMap textureMap = createHalfDoorTextureMap(texturePath);
-
-        String parentModelPath = "block/untinted/" + getParentModelName(variant);
-        Model doorModel = new Model(
-            Optional.of(WesterosBlocks.id(parentModelPath)),
-            Optional.empty(),
-            TextureKey.BOTTOM, TextureKey.PARTICLE
-        );
-        doorModel.upload(modelId, textureMap, generator.modelCollector);
-
+        model.upload(modelId, textureMap, generator.modelCollector);
         return modelId;
-    }
-
-    private static String getParentModelName(String variant) {
-        return switch (variant) {
-            case "left" -> "half_door_left";
-            case "right" -> "half_door_right";
-            case "left_open" -> "half_door_left_open";
-            case "right_open" -> "half_door_right_open";
-            default -> throw new IllegalArgumentException("Unknown half door variant: " + variant);
-        };
     }
 }

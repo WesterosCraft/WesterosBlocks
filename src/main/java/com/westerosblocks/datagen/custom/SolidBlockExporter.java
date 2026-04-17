@@ -2,6 +2,7 @@ package com.westerosblocks.datagen.custom;
 
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.datagen.ModTextureKey;
+import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
@@ -9,6 +10,7 @@ import com.westerosblocks.datagen.ModTextureMap;
 import com.westerosblocks.block.custom.WCSolidBlock;
 import com.westerosblocks.data.BlockDefinition;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SolidBlockExporter extends BaseBlockExporter {
@@ -29,15 +31,12 @@ public class SolidBlockExporter extends BaseBlockExporter {
         // Generate blockstates
         generateBlockState(generator, block, states, hasSymmetrical, hasRotateRandom);
 
-        // Generate models
-        for (int stateIdx = 0; stateIdx < states.size(); stateIdx++) {
-            BlockDefinition.StateVariant state = states.get(stateIdx);
-            String stateID = state.getStateID();
-            String fname = getStateIdOrBase(stateID);
-            boolean isTinted = definition.isTinted() || definition.hasColorMult();
+        boolean isTinted = definition.isTinted() || definition.hasColorMult();
+        for (BlockDefinition.StateVariant state : states) {
+            String fname = getStateIdOrBase(state.getStateID());
             boolean isOverlay = state.hasOverlayTextures();
 
-            for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
+            state.forEachTextureSet((setIdx, set) -> {
                 if (hasSymmetrical) {
                     generateSolidModel(generator, block, getModelName(fname, setIdx, true),
                         state, setIdx, isTinted, isOverlay, true);
@@ -47,7 +46,7 @@ public class SolidBlockExporter extends BaseBlockExporter {
                     generateSolidModel(generator, block, getModelName(fname, setIdx),
                         state, setIdx, isTinted, isOverlay, false);
                 }
-            }
+            });
         }
 
         // Item model
@@ -67,42 +66,61 @@ public class SolidBlockExporter extends BaseBlockExporter {
     private static void generateBlockState(BlockStateModelGenerator generator, Block block,
             List<BlockDefinition.StateVariant> states, boolean hasSymmetrical, boolean hasRotateRandom) {
 
-        var blockStateProperty = getStateProperty(block);
+        ModProperties.StateProperty stateProperty = getStateProperty(block);
+        boolean hasMultipleStates = stateProperty != null && states.size() > 1;
+        int rotationCount = hasRotateRandom ? 4 : 1;
 
-        boolean hasMultipleStates = blockStateProperty != null && states.size() > 1;
-
-        BlockStateBuilder builder = new BlockStateBuilder(block, blockStateProperty);
-
-        for (BlockDefinition.StateVariant state : states) {
-            String stateID = state.getStateID();
-            String fname = getStateIdOrBase(stateID);
-
-            String builderStateID = hasMultipleStates ? stateID : null;
-
-            for (int setIdx = 0; setIdx < state.getRandomTextureSetCount(); setIdx++) {
-                BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
-                if (set == null) continue;
-
-                int cnt = hasRotateRandom ? 4 : 1;
-                for (int i = 0; i < cnt; i++) {
-                    int rotation = i * 90;
-                    int weight = set.getWeight();
-
-                    if (hasSymmetrical) {
-                        Identifier symModel = createNestedModelId(block, getModelName(fname, setIdx, true));
-                        builder.addVariant("symmetrical=true", createWeightedVariant(symModel, rotation, weight), builderStateID);
-
-                        Identifier asymModel = createNestedModelId(block, getModelName(fname, setIdx, false));
-                        builder.addVariant("symmetrical=false", createWeightedVariant(asymModel, rotation, weight), builderStateID);
-                    } else {
-                        Identifier modelId = createNestedModelId(block, getModelName(fname, setIdx));
-                        builder.addVariant("", createWeightedVariant(modelId, rotation, weight), builderStateID);
-                    }
-                }
+        if (hasSymmetrical && hasMultipleStates) {
+            var map = BlockStateVariantMap.create(WCSolidBlock.SYMMETRICAL, stateProperty);
+            for (BlockDefinition.StateVariant state : states) {
+                map.register(true, state.getStateID(), buildSolidVariants(block, state, rotationCount, true));
+                map.register(false, state.getStateID(), buildSolidVariants(block, state, rotationCount, false));
             }
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(map));
+        } else if (hasMultipleStates) {
+            var map = BlockStateVariantMap.create(stateProperty);
+            for (BlockDefinition.StateVariant state : states) {
+                map.register(state.getStateID(), buildSolidVariants(block, state, rotationCount, null));
+            }
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(map));
+        } else if (hasSymmetrical) {
+            List<BlockStateVariant> symVariants = new ArrayList<>();
+            List<BlockStateVariant> asymVariants = new ArrayList<>();
+            for (BlockDefinition.StateVariant state : states) {
+                symVariants.addAll(buildSolidVariants(block, state, rotationCount, true));
+                asymVariants.addAll(buildSolidVariants(block, state, rotationCount, false));
+            }
+            var map = BlockStateVariantMap.create(WCSolidBlock.SYMMETRICAL)
+                    .register(true, symVariants)
+                    .register(false, asymVariants);
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(map));
+        } else {
+            List<BlockStateVariant> variants = new ArrayList<>();
+            for (BlockDefinition.StateVariant state : states) {
+                variants.addAll(buildSolidVariants(block, state, rotationCount, null));
+            }
+            generator.blockStateCollector.accept(
+                    VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0])));
         }
+    }
 
-        builder.register(generator);
+    /** Build weighted, optionally-rotated variants for one state. {@code symmetrical} is null for non-symmetrical blocks. */
+    private static List<BlockStateVariant> buildSolidVariants(Block block, BlockDefinition.StateVariant state,
+            int rotationCount, Boolean symmetrical) {
+        String fname = getStateIdOrBase(state.getStateID());
+        List<BlockStateVariant> variants = new ArrayList<>();
+        state.forEachTextureSet((setIdx, set) -> {
+            if (set == null) return;
+            int weight = set.getWeight();
+            String modelName = (symmetrical == null)
+                    ? getModelName(fname, setIdx)
+                    : getModelName(fname, setIdx, symmetrical);
+            Identifier modelId = createNestedModelId(block, modelName);
+            for (int rot = 0; rot < rotationCount; rot++) {
+                variants.add(createWeightedVariant(modelId, rot * 90, weight));
+            }
+        });
+        return variants;
     }
 
     private static void generateSolidModel(BlockStateModelGenerator generator, Block block, String modelName,
