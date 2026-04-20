@@ -98,7 +98,7 @@ public class BedBlockExporter extends BaseBlockExporter {
 
         // Register item model
         TextureMap itemTextureMap = createBedItemTextureMap(textures);
-        Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
+        Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
         getBedItemModel(tinted).upload(itemModelId, itemTextureMap, generator.modelCollector);
     }
 

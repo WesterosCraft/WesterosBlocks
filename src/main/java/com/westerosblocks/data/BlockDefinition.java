@@ -366,6 +366,36 @@ public class BlockDefinition {
             return randomTextures.get(index);
         }
 
+        @FunctionalInterface
+        public interface TextureSetVisitor {
+            /**
+             * @param setIdx 0-based texture set index
+             * @param set    the texture set, or {@code null} for the synthetic
+             *               single iteration performed when a custom-model state
+             *               has no texture sets defined
+             */
+            void visit(int setIdx, RandomTextureVariant set);
+        }
+
+        /**
+         * Iterates every texture set in this state. For custom-model states with
+         * no texture sets, performs exactly one iteration with {@code set=null}
+         * so callers can still emit a model reference. Non-custom states with no
+         * texture sets iterate zero times.
+         */
+        public void forEachTextureSet(TextureSetVisitor visitor) {
+            int count = getRandomTextureSetCount();
+            if (count == 0) {
+                if (isCustomModel()) {
+                    visitor.visit(0, null);
+                }
+                return;
+            }
+            for (int i = 0; i < count; i++) {
+                visitor.visit(i, randomTextures.get(i));
+            }
+        }
+
         public String getTextureByIndex(int index) {
             // Try to get from first random texture set
             if (randomTextures != null && !randomTextures.isEmpty()) {

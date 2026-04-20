@@ -8,7 +8,6 @@ import net.minecraft.state.property.Properties;
 
 import net.minecraft.util.Identifier;
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.utils.ModProperties;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,129 +49,56 @@ public class CrossBlockExporter extends BaseBlockExporter {
         }
     }
 
-    /**
-     * Phase 1: Generate blockstate JSON
-     * Matches old doBlockStateExport pattern with state tracking
-     */
     private static void generateBlockState(BlockStateModelGenerator generator, Block block,
                                           List<BlockDefinition.StateVariant> states,
                                           boolean isLayerSensitive, int rotationCount) {
-        int[] layerConds = isLayerSensitive ? new int[] {8, 1, 2, 3, 4, 5, 6, 7} : new int[] {0};
-
         boolean useStateMap = states.size() > 1
             && states.stream().allMatch(s -> s.getStateID() != null)
             && hasStateProperty(block);
 
         if (useStateMap && !isLayerSensitive) {
-            ModProperties.StateProperty stateProperty = getStateProperty(block);
-
             BlockStateVariantMap.SingleProperty<String> stateMap =
-                BlockStateVariantMap.create(stateProperty);
+                BlockStateVariantMap.create(getStateProperty(block));
 
             for (BlockDefinition.StateVariant state : states) {
                 String stateID = getStateIdOrBase(state.getStateID());
-                List<BlockStateVariant> variants = new ArrayList<>();
-
-                int textureSetCount = state.getRandomTextureSetCount();
-                if (textureSetCount == 0) {
-                    if (state.isCustomModel()) textureSetCount = 1;
-                    else continue;
-                }
-
-                for (int setIdx = 0; setIdx < textureSetCount; setIdx++) {
-                    BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
-                    int weight = (set != null) ? set.getWeight() : 1;
-                    Identifier modelId = state.isCustomModel()
-                        ? createCustomModelId(block, getModelName(stateID, setIdx))
-                        : createNestedModelId(block, getModelName(stateID, setIdx));
-
-                    for (int rot = 0; rot < rotationCount; rot++) {
-                        BlockStateVariant variant = createWeightedVariant(modelId, rot * 90, weight);
-                        variants.add(variant);
-                    }
-                }
-
+                List<BlockStateVariant> variants = buildStateVariants(block, state, stateID, rotationCount);
+                if (variants.isEmpty()) continue;
                 stateMap.register(stateID, variants);
             }
 
             generator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(block).coordinate(stateMap)
-            );
+                VariantsBlockStateSupplier.create(block).coordinate(stateMap));
+            return;
         }
-        else if (isLayerSensitive) {
+
+        if (isLayerSensitive) {
+            int[] layerConds = {8, 1, 2, 3, 4, 5, 6, 7};
             BlockStateVariantMap.SingleProperty<Integer> layerMap =
                 BlockStateVariantMap.create(Properties.LAYERS);
 
             for (int layerIdx = 0; layerIdx < layerConds.length; layerIdx++) {
-                int layerValue = layerConds[layerIdx];
                 List<BlockStateVariant> variants = new ArrayList<>();
-
                 for (BlockDefinition.StateVariant state : states) {
-                    String stateID = state.getStateID();
-                    String id = getStateIdOrBase(stateID);
-                    if (layerIdx > 0) {
-                        id = id + "_layer" + layerIdx;
-                    }
-
-                    int textureSetCount = state.getRandomTextureSetCount();
-                    if (textureSetCount == 0) {
-                        if (state.isCustomModel()) textureSetCount = 1;
-                        else continue;
-                    }
-
-                    for (int setIdx = 0; setIdx < textureSetCount; setIdx++) {
-                        BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
-                        int weight = (set != null) ? set.getWeight() : 1;
-                        Identifier modelId = state.isCustomModel()
-                            ? createCustomModelId(block, getModelName(id, setIdx))
-                            : createNestedModelId(block, getModelName(id, setIdx));
-
-                        for (int rot = 0; rot < rotationCount; rot++) {
-                            BlockStateVariant variant = createWeightedVariant(modelId, rot * 90, weight);
-                            variants.add(variant);
-                        }
-                    }
+                    String id = getStateIdOrBase(state.getStateID());
+                    if (layerIdx > 0) id = id + "_layer" + layerIdx;
+                    variants.addAll(buildStateVariants(block, state, id, rotationCount));
                 }
-
-                layerMap.register(layerValue, variants);
+                layerMap.register(layerConds[layerIdx], variants);
             }
 
             generator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(block).coordinate(layerMap)
-            );
+                VariantsBlockStateSupplier.create(block).coordinate(layerMap));
+            return;
         }
-        else {
-            // Single-state block: Simple variant list
-            List<BlockStateVariant> variants = new ArrayList<>();
 
-            for (BlockDefinition.StateVariant state : states) {
-                String stateID = state.getStateID();
-                String id = getStateIdOrBase(stateID);
-
-                int textureSetCount = state.getRandomTextureSetCount();
-                if (textureSetCount == 0) {
-                    if (state.isCustomModel()) textureSetCount = 1;
-                    else continue;
-                }
-
-                for (int setIdx = 0; setIdx < textureSetCount; setIdx++) {
-                    BlockDefinition.RandomTextureVariant set = state.getRandomTextureSet(setIdx);
-                    int weight = (set != null) ? set.getWeight() : 1;
-                    Identifier modelId = state.isCustomModel()
-                        ? createCustomModelId(block, getModelName(id, setIdx))
-                        : createNestedModelId(block, getModelName(id, setIdx));
-
-                    for (int rot = 0; rot < rotationCount; rot++) {
-                        BlockStateVariant variant = createWeightedVariant(modelId, rot * 90, weight);
-                        variants.add(variant);
-                    }
-                }
-            }
-
-            generator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0]))
-            );
+        List<BlockStateVariant> variants = new ArrayList<>();
+        for (BlockDefinition.StateVariant state : states) {
+            String id = getStateIdOrBase(state.getStateID());
+            variants.addAll(buildStateVariants(block, state, id, rotationCount));
         }
+        generator.blockStateCollector.accept(
+            VariantsBlockStateSupplier.create(block, variants.toArray(new BlockStateVariant[0])));
     }
 
     /**

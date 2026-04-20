@@ -16,19 +16,19 @@
       "id": "minecraft:jungle_planks",
       "required": false
     },
-    "westerosblocks:yellow_wood",
-    "westerosblocks:blue_wood",
-    "westerosblocks:orange_wood",
-    "westerosblocks:oak_planks",
-    "westerosblocks:black_wood",
-    "westerosblocks:red_wood",
-    "westerosblocks:purple_wood",
-    "westerosblocks:jungle_planks",
-    "westerosblocks:white_wood",
     "westerosblocks:birch_planks",
-    "westerosblocks:spruce_planks",
+    "westerosblocks:black_wood",
+    "westerosblocks:blue_wood",
+    "westerosblocks:dark_northern_wood",
     "westerosblocks:green_wood",
     "westerosblocks:grey_wood",
-    "westerosblocks:dark_northern_wood"
+    "westerosblocks:jungle_planks",
+    "westerosblocks:oak_planks",
+    "westerosblocks:orange_wood",
+    "westerosblocks:purple_wood",
+    "westerosblocks:red_wood",
+    "westerosblocks:spruce_planks",
+    "westerosblocks:white_wood",
+    "westerosblocks:yellow_wood"
   ]
 }

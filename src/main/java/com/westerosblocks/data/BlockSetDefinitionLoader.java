@@ -10,7 +10,8 @@ import net.fabricmc.loader.api.ModContainer;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.HashMap;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Stream;
 
@@ -33,7 +34,7 @@ public class BlockSetDefinitionLoader {
      * @return Map of base block name to BlockSetDefinition
      */
     public Map<String, BlockSetDefinition> loadAllDefinitions() {
-        Map<String, BlockSetDefinition> definitions = new HashMap<>();
+        Map<String, BlockSetDefinition> definitions = new LinkedHashMap<>();
 
         try {
             loadDefinitionsFromResources(definitions);
@@ -77,6 +78,7 @@ public class BlockSetDefinitionLoader {
         try (Stream<Path> paths = Files.walk(directory)) {
             paths.filter(Files::isRegularFile)
                  .filter(path -> path.toString().endsWith(".json"))
+                 .sorted(Comparator.comparing(Path::toString))
                  .forEach(path -> loadDefinitionFile(path, definitions));
         }
     }

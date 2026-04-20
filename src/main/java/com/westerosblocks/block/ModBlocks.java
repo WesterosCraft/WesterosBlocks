@@ -15,8 +15,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -172,8 +172,11 @@ public class ModBlocks {
                 return;
             }
 
-            // Group blocks by creative tab, keeping their label for sorting
-            Map<String, List<Map.Entry<String, Block>>> blocksByTab = new HashMap<>();
+            // Group blocks by creative tab. LinkedHashMap preserves JSON declaration
+            // order so each tab lists blocks in the order their definitions were loaded
+            // (file-walk order, then JSON array order within each file) rather than
+            // alphabetically by label.
+            Map<String, List<Block>> blocksByTab = new LinkedHashMap<>();
 
             for (BlockDefinition definition : registry.getAllDefinitions()) {
                 String creativeTab = definition.getCreativeTab();
@@ -182,28 +185,21 @@ public class ModBlocks {
                 Block block = AUTO_REGISTERED_BLOCKS.get(blockName);
 
                 if (block != null && creativeTab != null && !creativeTab.isEmpty()) {
-                    String label = definition.getLabel() != null ? definition.getLabel() : blockName;
                     blocksByTab.computeIfAbsent(creativeTab, k -> new ArrayList<>())
-                               .add(Map.entry(label, block));
+                               .add(block);
                 }
             }
 
-            // Register blocks to their creative tabs, sorted alphabetically by label
             int totalRegistered = 0;
-            for (Map.Entry<String, List<Map.Entry<String, Block>>> entry : blocksByTab.entrySet()) {
+            for (Map.Entry<String, List<Block>> entry : blocksByTab.entrySet()) {
                 String tabName = entry.getKey();
-                List<Map.Entry<String, Block>> labeledBlocks = entry.getValue();
+                List<Block> blocks = entry.getValue();
 
-                labeledBlocks.sort(Comparator.comparing(e -> e.getKey().toLowerCase()));
+                if (!blocks.isEmpty()) {
+                    WesterosCreativeModeTabs.addToTab(tabName, blocks.toArray(new Block[0]));
 
-                if (!labeledBlocks.isEmpty()) {
-                    Block[] blockArray = labeledBlocks.stream()
-                        .map(Map.Entry::getValue)
-                        .toArray(Block[]::new);
-                    WesterosCreativeModeTabs.addToTab(tabName, blockArray);
-
-                    totalRegistered += labeledBlocks.size();
-                    WesterosBlocks.LOGGER.info("Added {} blocks to creative tab '{}'", labeledBlocks.size(), tabName);
+                    totalRegistered += blocks.size();
+                    WesterosBlocks.LOGGER.info("Added {} blocks to creative tab '{}'", blocks.size(), tabName);
                 }
             }
 

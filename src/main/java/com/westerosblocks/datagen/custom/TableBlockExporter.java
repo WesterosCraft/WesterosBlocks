@@ -12,19 +12,19 @@ import net.minecraft.util.math.Direction;
 import java.util.List;
 
 /**
- * Exporter for WCTableBlock2 - generates blockstate and model JSON files
- * for table blocks with connection-based model variants.
+ * Exporter for WCTableBlock — generates blockstate and model JSON files for
+ * table blocks with connection-based model variants.
  */
 public class TableBlockExporter extends BaseBlockExporter {
 
-    public static void registerTableBlock2(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+    public static void registerCustomTableBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         List<String> textureList = definition.getTextures();
         String texturePath = (textureList != null && !textureList.isEmpty()) ? textureList.get(0) : "missingno";
 
-        registerTableBlock2(generator, block, texturePath, texturePath);
+        registerCustomTableBlock(generator, block, texturePath, texturePath);
     }
 
-    private static void registerTableBlock2(BlockStateModelGenerator generator, Block block, String texturePath, String particleTexture) {
+    private static void registerCustomTableBlock(BlockStateModelGenerator generator, Block block, String texturePath, String particleTexture) {
         String blockName = getBlockName(block);
 
         // Use ModTextureKey.TABLE and TextureKey.PARTICLE

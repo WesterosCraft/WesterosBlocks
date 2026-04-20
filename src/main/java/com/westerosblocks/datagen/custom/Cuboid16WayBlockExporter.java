@@ -76,7 +76,7 @@ public class Cuboid16WayBlockExporter extends CuboidBlockExporter {
                         }
 
                         List<String> textureList = java.util.Arrays.asList(textures);
-                        modelId = CuboidBlockExporter.createCuboidModel(generator, block, definition, textureList, setIdx, variantName, MODEL_ROTATIONS[rotIdx]);
+                        modelId = CuboidModelBuilder.createCuboidModel(generator, block, definition, textureList, setIdx, variantName, MODEL_ROTATIONS[rotIdx]);
                         weight = set.getWeight();
                     }
 
@@ -130,7 +130,7 @@ public class Cuboid16WayBlockExporter extends CuboidBlockExporter {
 
         for (int i = 0; i < MODEL_SUFFIXES.length; i++) {
             String modelName = "base" + MODEL_SUFFIXES[i] + "_v1";
-            Identifier modelId = CuboidBlockExporter.createCuboidModel(generator, block, definition, fallbackTextures, 0, modelName, MODEL_ROTATIONS[i]);
+            Identifier modelId = CuboidModelBuilder.createCuboidModel(generator, block, definition, fallbackTextures, 0, modelName, MODEL_ROTATIONS[i]);
             rotationModelSets.put(MODEL_SUFFIXES[i], List.of(new ModelSet16Way(modelId, 1)));
         }
 

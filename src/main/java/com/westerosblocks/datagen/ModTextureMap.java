@@ -1,156 +1,133 @@
 package com.westerosblocks.datagen;
 
+import com.westerosblocks.WesterosBlocks;
 import net.minecraft.data.client.TextureKey;
 import net.minecraft.data.client.TextureMap;
 import net.minecraft.util.Identifier;
 
+/**
+ * Factory methods for {@link TextureMap}s keyed to this mod's block texture paths.
+ * All methods resolve their string arguments as {@code westerosblocks:block/<path>}.
+ */
 public class ModTextureMap {
 
-    /**
-     * Creates a texture map for stair models with bottom, top, side, and particle keys.
-     * Particle defaults to the side texture.
-     */
-    public static TextureMap stairTextures(String bottom, String top, String side) {
-        return new TextureMap()
-                .put(TextureKey.BOTTOM, Identifier.of("westerosblocks", "block/" + bottom))
-                .put(TextureKey.TOP, Identifier.of("westerosblocks", "block/" + top))
-                .put(TextureKey.SIDE, Identifier.of("westerosblocks", "block/" + side))
-                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + side));
+    private static Identifier block(String path) {
+        return WesterosBlocks.id("block/" + path);
     }
 
-    /**
-     * Creates a texture map for stair overlay models with base + overlay keys.
-     */
+    /** Stair model: bottom/top/side + particle (defaults to side). */
+    public static TextureMap stairTextures(String bottom, String top, String side) {
+        return new TextureMap()
+                .put(TextureKey.BOTTOM, block(bottom))
+                .put(TextureKey.TOP, block(top))
+                .put(TextureKey.SIDE, block(side))
+                .put(TextureKey.PARTICLE, block(side));
+    }
+
+    /** Stair overlay model: base + overlay textures. */
     public static TextureMap stairOverlayTextures(String bottom, String top, String side,
                                                    String bottomOv, String topOv, String sideOv) {
         return stairTextures(bottom, top, side)
-                .put(ModTextureKey.BOTTOM_OVERLAY, Identifier.of("westerosblocks", "block/" + bottomOv))
-                .put(ModTextureKey.TOP_OVERLAY, Identifier.of("westerosblocks", "block/" + topOv))
-                .put(ModTextureKey.SIDE_OVERLAY, Identifier.of("westerosblocks", "block/" + sideOv));
+                .put(ModTextureKey.BOTTOM_OVERLAY, block(bottomOv))
+                .put(ModTextureKey.TOP_OVERLAY, block(topOv))
+                .put(ModTextureKey.SIDE_OVERLAY, block(sideOv));
     }
 
-    /**
-     * Creates a texture map for 6-face log models (down, up, north, south, west, east + particle).
-     * Particle defaults to the north texture.
-     */
+    /** 6-face log model (down/up/north/south/west/east + particle defaulting to north). */
     public static TextureMap logTextures(String down, String up, String north, String south, String west, String east) {
         return new TextureMap()
-                .put(TextureKey.DOWN, Identifier.of("westerosblocks", "block/" + down))
-                .put(TextureKey.UP, Identifier.of("westerosblocks", "block/" + up))
-                .put(TextureKey.NORTH, Identifier.of("westerosblocks", "block/" + north))
-                .put(TextureKey.SOUTH, Identifier.of("westerosblocks", "block/" + south))
-                .put(TextureKey.WEST, Identifier.of("westerosblocks", "block/" + west))
-                .put(TextureKey.EAST, Identifier.of("westerosblocks", "block/" + east))
-                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + north));
+                .put(TextureKey.DOWN, block(down))
+                .put(TextureKey.UP, block(up))
+                .put(TextureKey.NORTH, block(north))
+                .put(TextureKey.SOUTH, block(south))
+                .put(TextureKey.WEST, block(west))
+                .put(TextureKey.EAST, block(east))
+                .put(TextureKey.PARTICLE, block(north));
     }
 
-    /**
-     * Creates a texture map for crop models with a single crop key.
-     */
+    /** Crop model: single crop texture. */
     public static TextureMap cropTextures(String crop) {
         return new TextureMap()
-                .put(ModTextureKey.CROP, Identifier.of("westerosblocks", "block/" + crop))
-                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + crop));
+                .put(ModTextureKey.CROP, block(crop))
+                .put(TextureKey.PARTICLE, block(crop));
     }
 
-    /**
-     * Creates a texture map for fence/wall blocks with bottom, top, side, and particle keys.
-     * Particle defaults to the side texture.
-     */
+    /** Fence/wall model: bottom/top/side + particle (defaults to side). */
     public static TextureMap fenceWallTextures(String bottom, String top, String side) {
         return new TextureMap()
-                .put(TextureKey.BOTTOM, Identifier.of("westerosblocks", "block/" + bottom))
-                .put(TextureKey.TOP, Identifier.of("westerosblocks", "block/" + top))
-                .put(TextureKey.SIDE, Identifier.of("westerosblocks", "block/" + side))
-                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + side));
+                .put(TextureKey.BOTTOM, block(bottom))
+                .put(TextureKey.TOP, block(top))
+                .put(TextureKey.SIDE, block(side))
+                .put(TextureKey.PARTICLE, block(side));
     }
 
-    /**
-     * Creates a texture map for fence/wall overlay blocks with base + overlay keys.
-     */
+    /** Fence/wall overlay model: base + overlay textures. */
     public static TextureMap fenceWallOverlayTextures(String bottom, String top, String side,
                                                        String bottomOv, String topOv, String sideOv) {
         return fenceWallTextures(bottom, top, side)
-                .put(ModTextureKey.BOTTOM_OVERLAY, Identifier.of("westerosblocks", "block/" + bottomOv))
-                .put(ModTextureKey.TOP_OVERLAY, Identifier.of("westerosblocks", "block/" + topOv))
-                .put(ModTextureKey.SIDE_OVERLAY, Identifier.of("westerosblocks", "block/" + sideOv));
+                .put(ModTextureKey.BOTTOM_OVERLAY, block(bottomOv))
+                .put(ModTextureKey.TOP_OVERLAY, block(topOv))
+                .put(ModTextureKey.SIDE_OVERLAY, block(sideOv));
     }
 
     public static TextureMap balconyTextures(String rail, String middle) {
         return new TextureMap()
-                .put(TextureKey.RAIL, Identifier.of("westerosblocks", "block/" + rail))
-                .put(ModTextureKey.MIDDLE, Identifier.of("westerosblocks", "block/" + middle))
-                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + rail));
+                .put(TextureKey.RAIL, block(rail))
+                .put(ModTextureKey.MIDDLE, block(middle))
+                .put(TextureKey.PARTICLE, block(rail));
     }
 
-    /**
-     * Creates a texture map for standard leaves blocks with end, side, and particle keys.
-     * Particle defaults to the side texture.
-     */
+    /** Standard leaves model: end/side + particle (defaults to side). */
     public static TextureMap leavesTextures(String end, String side) {
         return new TextureMap()
-                .put(TextureKey.END, Identifier.of("westerosblocks", "block/" + end))
-                .put(TextureKey.SIDE, Identifier.of("westerosblocks", "block/" + side))
-                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + side));
+                .put(TextureKey.END, block(end))
+                .put(TextureKey.SIDE, block(side))
+                .put(TextureKey.PARTICLE, block(side));
     }
 
-    /**
-     * Creates a texture map for leaves overlay blocks with base + overlay keys.
-     */
+    /** Leaves overlay model: base + overlay textures. */
     public static TextureMap leavesOverlayTextures(String end, String side, String endOv, String sideOv) {
         return leavesTextures(end, side)
-                .put(ModTextureKey.LEAVES_OVERLAY_END, Identifier.of("westerosblocks", "block/" + endOv))
-                .put(ModTextureKey.LEAVES_OVERLAY_SIDE, Identifier.of("westerosblocks", "block/" + sideOv));
+                .put(ModTextureKey.LEAVES_OVERLAY_END, block(endOv))
+                .put(ModTextureKey.LEAVES_OVERLAY_SIDE, block(sideOv));
     }
 
-    /**
-     * Creates a texture map for better foliage leaves with all and particle keys.
-     * Particle defaults to the all texture.
-     */
+    /** Better-foliage leaves: single ALL texture + particle. */
     public static TextureMap leavesBetterFoliageTextures(String all) {
         return new TextureMap()
-                .put(TextureKey.ALL, Identifier.of("westerosblocks", "block/" + all))
-                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + all));
+                .put(TextureKey.ALL, block(all))
+                .put(TextureKey.PARTICLE, block(all));
     }
 
-    /**
-     * Creates a texture map for better foliage leaves overlay with base + overlay keys.
-     */
+    /** Better-foliage leaves overlay: base + overlay textures. */
     public static TextureMap leavesBetterFoliageOverlayTextures(String all, String endOv, String sideOv) {
         return leavesBetterFoliageTextures(all)
-                .put(ModTextureKey.LEAVES_OVERLAY_END, Identifier.of("westerosblocks", "block/" + endOv))
-                .put(ModTextureKey.LEAVES_OVERLAY_SIDE, Identifier.of("westerosblocks", "block/" + sideOv));
+                .put(ModTextureKey.LEAVES_OVERLAY_END, block(endOv))
+                .put(ModTextureKey.LEAVES_OVERLAY_SIDE, block(sideOv));
     }
 
     /**
-     * Creates a texture map for all six sides of a block with custom textures
-     *
-     * @param textures Array of texture paths in order: down, up, north, south,
-     *                 east, west
-     * @return TextureMap with all sides configured
+     * Custom all-sides cube texture map. Accepts 1-6 textures in the order
+     * {@code down, up, north, south, east, west}; any missing slots repeat the
+     * last provided texture. Particle defaults to the {@code down} texture.
      */
     public static TextureMap customAllSides(String... textures) {
         if (textures.length == 0) {
             throw new IllegalArgumentException("At least one texture path is required");
         }
 
-        // Fill remaining slots with the last texture if less than 6 provided
-        String[] filledTextures = new String[6];
+        String[] filled = new String[6];
         for (int i = 0; i < 6; i++) {
-            if (i < textures.length) {
-                filledTextures[i] = textures[i];
-            } else {
-                filledTextures[i] = textures[textures.length - 1];
-            }
+            filled[i] = i < textures.length ? textures[i] : textures[textures.length - 1];
         }
 
         return new TextureMap()
-                .put(TextureKey.DOWN, Identifier.of("westerosblocks", "block/" + filledTextures[0]))
-                .put(TextureKey.UP, Identifier.of("westerosblocks", "block/" + filledTextures[1]))
-                .put(TextureKey.NORTH, Identifier.of("westerosblocks", "block/" + filledTextures[2]))
-                .put(TextureKey.SOUTH, Identifier.of("westerosblocks", "block/" + filledTextures[3]))
-                .put(TextureKey.EAST, Identifier.of("westerosblocks", "block/" + filledTextures[4]))
-                .put(TextureKey.WEST, Identifier.of("westerosblocks", "block/" + filledTextures[5]))
-                .put(TextureKey.PARTICLE, Identifier.of("westerosblocks", "block/" + filledTextures[0]));
+                .put(TextureKey.DOWN, block(filled[0]))
+                .put(TextureKey.UP, block(filled[1]))
+                .put(TextureKey.NORTH, block(filled[2]))
+                .put(TextureKey.SOUTH, block(filled[3]))
+                .put(TextureKey.EAST, block(filled[4]))
+                .put(TextureKey.WEST, block(filled[5]))
+                .put(TextureKey.PARTICLE, block(filled[0]));
     }
 }

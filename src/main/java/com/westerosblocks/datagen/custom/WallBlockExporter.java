@@ -259,7 +259,7 @@ public class WallBlockExporter extends BaseBlockExporter {
                 // Item model from first state's side texture
                 String[] expandedItemTextures = fillTextureArray(new String[]{firstSideTexture}, 3);
                 TextureMap itemTextureMap = createFenceWallTextureMap(expandedItemTextures, null);
-                Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
+                Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
                 getWallInventoryModel(tinted, isHedge).upload(itemModelId, itemTextureMap, generator.modelCollector);
             }
         } else {
@@ -301,7 +301,7 @@ public class WallBlockExporter extends BaseBlockExporter {
                 List.of(postModelId), List.of(sideModelId), List.of(tallModelId), List.of(1));
         generator.blockStateCollector.accept(blockstate);
 
-        Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
+        Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
         getWallInventoryModel(tinted, isHedge).upload(itemModelId, textureMap, generator.modelCollector);
     }
 
@@ -341,7 +341,7 @@ public class WallBlockExporter extends BaseBlockExporter {
         String[] expandedOverlays = overlay && firstSet.hasOverlay() ? fillTextureArray(firstSet.getOverlayTexturesAsArray(), 3) : null;
 
         TextureMap itemTextureMap = createFenceWallTextureMap(expandedTextures, expandedOverlays);
-        Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
+        Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
         getWallInventoryModel(tinted, isHedge).upload(itemModelId, itemTextureMap, generator.modelCollector);
     }
 }

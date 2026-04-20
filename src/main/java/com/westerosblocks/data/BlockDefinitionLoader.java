@@ -9,7 +9,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
@@ -49,7 +50,7 @@ public class BlockDefinitionLoader {
     }
 
     public Map<String, BlockDefinition> loadAllDefinitions() {
-        Map<String, BlockDefinition> definitions = new HashMap<>();
+        Map<String, BlockDefinition> definitions = new LinkedHashMap<>();
 
         WesterosBlocks.LOGGER.info("Loading block definitions from resources: {}", blockDefinitionsPath);
 
@@ -95,6 +96,7 @@ public class BlockDefinitionLoader {
         try (Stream<Path> paths = Files.walk(directory)) {
             paths.filter(Files::isRegularFile)
                  .filter(path -> path.toString().endsWith(".json"))
+                 .sorted(Comparator.comparing(Path::toString))
                  .forEach(path -> loadDefinitionFile(path, definitions));
         }
     }
@@ -187,7 +189,7 @@ public class BlockDefinitionLoader {
     }
 
     public Map<String, List<BlockDefinition>> groupByType(Map<String, BlockDefinition> definitions) {
-        Map<String, List<BlockDefinition>> groupedDefinitions = new HashMap<>();
+        Map<String, List<BlockDefinition>> groupedDefinitions = new LinkedHashMap<>();
 
         for (BlockDefinition definition : definitions.values()) {
             String blockType = definition.getBlockType();

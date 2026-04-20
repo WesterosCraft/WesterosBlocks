@@ -2,11 +2,11 @@
   "values": [
     "westerosblocks:torch",
     "westerosblocks:wall_torch",
-    "westerosblocks:torch_unlit",
-    "westerosblocks:wall_torch_unlit",
+    "westerosblocks:candle",
+    "westerosblocks:wall_candle",
     "westerosblocks:candle_unlit",
     "westerosblocks:wall_candle_unlit",
-    "westerosblocks:candle",
-    "westerosblocks:wall_candle"
+    "westerosblocks:torch_unlit",
+    "westerosblocks:wall_torch_unlit"
   ]
 }

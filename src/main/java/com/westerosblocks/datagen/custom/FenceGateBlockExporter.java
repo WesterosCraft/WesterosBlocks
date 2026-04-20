@@ -90,7 +90,7 @@ public class FenceGateBlockExporter extends BaseBlockExporter {
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
 
         // Register item model
-        Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
+        Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
         createFenceGateModel(tinted).upload(itemModelId, textureMap, generator.modelCollector);
     }
 
@@ -126,7 +126,7 @@ public class FenceGateBlockExporter extends BaseBlockExporter {
 
         // Register item model (using first texture)
         TextureMap itemTextureMap = createFenceGateTextureMap(textureSets.get(0).getTexturesAsArray()[0]);
-        Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
+        Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
         createFenceGateModel(tinted).upload(itemModelId, itemTextureMap, generator.modelCollector);
     }
 

@@ -1,5 +1,6 @@
 package com.westerosblocks.datagen.custom;
 
+import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.datagen.ModModels;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.Block;
@@ -35,8 +36,7 @@ public class DoorBlockExporter extends BaseBlockExporter {
 
         Identifier itemTextureId;
         if (definition.hasCustomItemTexture()) {
-            String blockName = getBlockName(block);
-            itemTextureId = Identifier.of("westerosblocks", "item/" + blockName);
+            itemTextureId = WesterosBlocks.id("item/" + getBlockName(block));
         } else if (definition.hasItemTexture()) {
             itemTextureId = createBlockIdentifier(definition.getItemTexture());
         } else {

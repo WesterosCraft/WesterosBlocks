@@ -215,7 +215,7 @@ public class FenceBlockExporter extends BaseBlockExporter {
 
                 // Item model from first state
                 boolean firstOverlay = states.get(0).hasOverlayTextures();
-                Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
+                Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
                 getFenceInventoryModel(tinted, firstOverlay)
                         .upload(itemModelId, firstItemTextureMap, generator.modelCollector);
             }
@@ -255,7 +255,7 @@ public class FenceBlockExporter extends BaseBlockExporter {
                 List.of(postModelId), List.of(sideModelId), List.of(1));
         generator.blockStateCollector.accept(blockstate);
 
-        Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
+        Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
         getFenceInventoryModel(tinted, overlay)
                 .upload(itemModelId, textureMap, generator.modelCollector);
     }
@@ -291,7 +291,7 @@ public class FenceBlockExporter extends BaseBlockExporter {
         String[] expandedOverlays = overlay && firstSet.hasOverlay() ? fillTextureArray(firstSet.getOverlayTexturesAsArray(), 3) : null;
         TextureMap itemTextureMap = createFenceWallTextureMap(expandedTextures, expandedOverlays);
 
-        Identifier itemModelId = Identifier.of("westerosblocks", "item/" + getBlockName(block));
+        Identifier itemModelId = ModelIds.getItemModelId(block.asItem());
         getFenceInventoryModel(tinted, overlay)
                 .upload(itemModelId, itemTextureMap, generator.modelCollector);
     }

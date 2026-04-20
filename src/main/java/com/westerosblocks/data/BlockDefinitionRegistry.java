@@ -15,8 +15,10 @@ public class BlockDefinitionRegistry {
     private boolean initialized = false;
 
     private BlockDefinitionRegistry() {
-        this.definitions = new HashMap<>();
-        this.definitionsByType = new HashMap<>();
+        // LinkedHashMap preserves JSON load order so creative-tab ordering is
+        // deterministic and follows the declaration order of definition files.
+        this.definitions = new LinkedHashMap<>();
+        this.definitionsByType = new LinkedHashMap<>();
     }
 
     public static synchronized BlockDefinitionRegistry getInstance() {

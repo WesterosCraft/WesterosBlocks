@@ -90,7 +90,7 @@ public class VinesBlockExporter extends BaseBlockExporter {
 
         // Register item model using side texture
         TextureMap itemTextureMap = new TextureMap().put(TextureKey.LAYER0, createBlockIdentifier(sideTexture));
-        Models.GENERATED.upload(Identifier.of("westerosblocks", "item/" + getBlockName(block)),
+        Models.GENERATED.upload(ModelIds.getItemModelId(block.asItem()),
                 itemTextureMap, generator.modelCollector);
     }
 
@@ -123,7 +123,7 @@ public class VinesBlockExporter extends BaseBlockExporter {
         String[] firstTextures = textureSets.get(0).getTexturesAsArray();
         TextureMap itemTextureMap = new TextureMap()
                 .put(TextureKey.LAYER0, createBlockIdentifier(firstTextures[0]));
-        Models.GENERATED.upload(Identifier.of("westerosblocks", "item/" + getBlockName(block)),
+        Models.GENERATED.upload(ModelIds.getItemModelId(block.asItem()),
                 itemTextureMap, generator.modelCollector);
     }
 
