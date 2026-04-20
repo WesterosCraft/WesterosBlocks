@@ -1,5 +1,133 @@
 # Changelog
 
+## 1.21.1 Port Snapshot — New Blocks Since 1.18.2
+
+This section enumerates the 540 block IDs that exist on `1.21.1-fabric` but were not present on `origin/1.18.2`. Grouped by category. Set-expansion variants (stairs/slab/wall/fence/hopper/tip/carpet/half_door) are summarized under their base where every variant is new.
+
+### Wood Plank Sets (new colors)
+
+All with full variants (`_stairs`, `_slab`, `_wall`, `_fence`, `_hopper`, `_tip`, `_carpet`, where applicable):
+
+- `birch_yellow_wood` (+ `birch_yellow_wood_vertical_planks`)
+- `dark_grey_wood`
+- `grey_blue_wood` (+ `grey_blue_wood_vertical_planks`)
+- `light_grey_wood`
+- `light_purple_wood`
+- `off_white_wood` (+ `off_white_wood_vertical_planks`)
+- `oak_birch` (planks as `oak_birch_planks`)
+- `oak_jungle` (planks as `oak_jungle_planks`, + `oak_jungle_vertical_planks`)
+- `oak_orange` (planks as `oak_orange_planks`, + `oak_orange_vertical_planks`)
+- `grey_dark_wood_vertical_planks`, `grey_light_wood_vertical_planks`, `purple_light_wood_vertical_planks`
+- Added half-doors for `grey_dark_wood`, `grey_light_wood`, `purple_light_wood`
+
+### Stripped Logs (horizontal + vertical)
+
+Each with full variants (`_stairs`, `_slab`, `_wall`, `_fence`, `_hopper`, `_tip`, `_carpet`, `_half_door`):
+
+- `birch_horizontal_stripped_log`, `birch_vertical_stripped_log`
+- `spruce_horizontal_stripped_log`, `spruce_vertical_stripped_log`
+- `oak_horizontal_stripped_log`, `oak_vertical_stripped_log`
+- `jungle_horizontal_stripped_log`, `jungle_vertical_stripped_log`
+- `grey_horizontal_stripped_log`, `grey_vertical_stripped_log`
+- `white_horizontal_stripped_log`, `white_vertical_stripped_log`
+- `dark_northern_horizontal_stripped_log`, `dark_northern_vertical_stripped_log`
+- `oak_birch_horizontal_stripped_log`, `oak_birch_vertical_stripped_log`
+- `oak_jungle_horizontal_stripped_log`, `oak_jungle_vertical_stripped_log`
+
+### Beam Braces
+
+- `oak_beam_brace`, `spruce_beam_brace`, `jungle_beam_brace`, `grey_beam_brace`, `oak_jungle_beam_brace`, `birch_beam_brace`
+
+### Benches, Tables, Chairs, Hedges
+
+- Benches: `oak_bench`, `spruce_bench`, `birch_bench`, `jungle_bench`, `northern_bench`
+- Tables: `oak_table`, `spruce_table`, `birch_table`, `jungle_table`, `northern_table`
+- Chairs: `chair_oak`, `chair_spruce`
+- Hedges: `oak_hedge`, `spruce_hedge`, `birch_hedge`, `jungle_hedge`
+
+### Fancy Doors & Window Shutters (v2)
+
+- Doors: `oak_door_2`, `spruce_door_2`, `birch_door_2`, `jungle_door_2`, `northern_door_2`, `grey_door_2`, `white_door_2`
+- Shutters: `oak_window_shutters_2`, `spruce_window_shutters_2`, `birch_window_shutters_2`, `jungle_window_shutters_2`, `northern_window_shutters_2`, `grey_wood_window_shutters_2`, `white_wood_window_shutters_2`
+
+### Locked Fence Gates (for new wood types)
+
+- `locked_birch_yellow_wood_fence_gate`, `locked_dark_grey_wood_fence_gate`, `locked_grey_blue_wood_fence_gate`, `locked_light_grey_wood_fence_gate`, `locked_light_purple_wood_fence_gate`, `locked_oak_birch_fence_gate`, `locked_oak_jungle_fence_gate`, `locked_oak_orange_fence_gate`, `locked_off_white_wood_fence_gate`
+
+### Hollow Hoppers
+
+- `hollow_oak_birch_hopper`, `hollow_oak_jungle_hopper`, `hollow_oak_orange_hopper`
+
+### Crops, Food & Plants
+
+- Crops: `corn`, `kernels`, `crop_onions`, `crop_red_onions`, `crop_chili_peppers`
+- Chili pepper family: `chili_pepper_leaves`, `chili_pepper_basket_slab`, `chili_pepper_crate`
+- Other: `purple_cabbage`, `hanging_flowers_purple`, `spruce_leaves_slab`
+
+### Ice Blocks
+
+Base + full variants (`_fence`, `_slab`, `_stairs`, `_wall`):
+
+- `ice_blue`, `ice_blue_dark`, `ice_blue_light`, `ice_blue_medium_dark`
+- `ice_light`, `ice_medium_light`
+- `ice_packed`
+- `icicles` (standalone, no variants)
+
+### Muddy Snow (alt/dark/light)
+
+Base + `_layer` + `_slab`:
+
+- `muddy_snow_alt`, `muddy_snow_dark`, `muddy_snow_light`
+
+### Snow / Grass
+
+- `grassy_snow`, `snowy_grass`, `snowy_grass_slab`
+- `grass_slab`, `grass_stairs`
+
+### Pebbles (regional)
+
+Base + `_layer`:
+
+- `pebbles_dark_mountains_of_the_moon`, `pebbles_dark_stormlands`, `pebbles_dark_westerlands`, `pebbles_light_stormlands`, `pebbles_light_westerlands`
+
+### Dirt & Paths
+
+- `dirt_light`, `dirt_medium` (+ `_slab`)
+- `path_dirt_light`, `path_dirt_medium`
+
+### Terrainset The North Snow Variants
+
+Four snow depths (`_light_snow`, `_medium_snow`, `_snow`, `_heavy_snow`) for both regular and `_alt` sets, each with full variants (`_fence`, `_fence_gate`, `_hopper`, `_slab`, `_stairs`, `_tip`, `_wall`):
+
+- `terrainset_the_north_light_snow`, `terrainset_the_north_medium_snow`, `terrainset_the_north_snow`, `terrainset_the_north_heavy_snow`
+- `terrainset_the_north_alt_light_snow`, `terrainset_the_north_alt_medium_snow`, `terrainset_the_north_alt_snow`, `terrainset_the_north_alt_heavy_snow`
+
+### Bunting (colors)
+
+- `black_bunting`, `blue_bunting`, `brown_bunting`, `cyan_bunting`, `dirty_white_bunting`, `green_bunting`, `grey_bunting`, `light_blue_bunting`, `light_brown_bunting`, `light_grey_bunting`, `orange_bunting`, `pink_bunting`, `purple_bunting`, `red_bunting`, `red_square_bunting`, `white_bunting`, `yellow_bunting`
+
+### Particle Emitters
+
+- `bat_particle_emitter`, `butterfly_particle_emitter`, `cosy_smoke_particle_emitter`, `foam_particle_emitter`, `signal_smoke_particle_emitter`
+
+### Wall-Mounted Shields
+
+- Heater: `wall_heater_shield_blackfyre`, `wall_heater_shield_blackwood`, `wall_heater_shield_bracken`, `wall_heater_shield_hedge_knight`, `wall_heater_shield_targaryen`, `wall_heater_shield_tully`
+- Kite: `wall_kite_shield_stark`
+- Round: `wall_round_shield_greyjoy`
+
+### Redwood Tree
+
+- `redwood_log`, `redwood_branch`, `redwood_leaf_tip`
+
+### Misc New Blocks
+
+- `awning_red`, `horizontal_scroll`, `long_vase`, `oak_balcony`, `pitchfork_block`, `westerosi_coins`, `wildfire`, `black_slate_compact_stairs`, `test_arrow_slit`
+
+## April 2026
+
+- Beam brace variants: `spruce_beam_brace`, `jungle_beam_brace`, `grey_beam_brace`, `oak_jungle_beam_brace`, `birch_beam_brace`
+
 ## March 2026
 
 - Onion crop block
