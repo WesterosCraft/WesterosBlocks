@@ -96,6 +96,14 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
                     doorTagBuilder.add(block);
                     break;
 
+                case "bigdoor": {
+                    FabricTagProvider<Block>.FabricTagBuilder bigDoorBuilder = customTagBuilders.computeIfAbsent(
+                        "big_door", t -> getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, WesterosBlocks.id(t)))
+                    );
+                    bigDoorBuilder.add(block);
+                    break;
+                }
+
                 case "log":
                     logTagBuilder.add(block);
                     break;

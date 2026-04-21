@@ -148,11 +148,14 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
         if (part.isCenterColumn()) {
             return VoxelShapes.empty();
         }
-        // Open: leaf hinged at the outer-forward corner of the block, swinging
-        // to lie 3 pixels outside the outer face, extending 21 pixels past the
-        // FACING face. Matches the 24-pixel leaf mesh after it rotates 90°.
+        // Open: 3-px slab on the column's outer wall, inside the block. The
+        // geo's new pivot (center of the leaf's thickness axis) means the
+        // rotated leaf lies flush with the outer face from the inside, so the
+        // open-state collision occupies the same 3×16×16 voxel footprint as
+        // the closed-state slab — just on a perpendicular face. The 21-px
+        // ornamental tail past the FACING face is visual-only, no collision.
         Direction outer = part.isLeftColumn() ? facing.rotateYCounterclockwise() : facing.rotateYClockwise();
-        return openLeafSlab(outer, facing);
+        return slab(outer);
     }
 
     private static VoxelShape slab(Direction face) {
@@ -165,44 +168,6 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
         };
     }
 
-    /**
-     * Collision of the open-door leaf, matching the geo after 90° rotation.
-     * <p>
-     * Geometry: the leaf is 3 px thick, 24 px long (1.5 blocks), hinged at the
-     * block corner where the {@code outer} face meets the {@code forward} face.
-     * The hinge sits 3 px INSIDE the block from the {@code forward} face. When
-     * the leaf rotates 90° open, it ends up:
-     * <ul>
-     *   <li>Thickness: 3 px OUTSIDE the outer face (protruding past the wall).</li>
-     *   <li>Length: spans from 3 px inside the block on the forward side, to
-     *       21 px past the forward face (so 3 px of the leaf sits inside the
-     *       block and 21 px protrudes forward into the adjacent block).</li>
-     * </ul>
-     * {@code outer} and {@code forward} must be perpendicular horizontal directions.
-     * VoxelShape supports coordinates outside {@code [0, 16]}.
-     */
-    private static VoxelShape openLeafSlab(Direction outer, Direction forward) {
-        double minX = 0, minZ = 0, maxX = 16, maxZ = 16;
-
-        // Thickness axis: 3 px outside the outer face.
-        switch (outer) {
-            case NORTH -> { minZ = -3; maxZ = 0; }
-            case SOUTH -> { minZ = 16; maxZ = 19; }
-            case WEST -> { minX = -3; maxX = 0; }
-            case EAST -> { minX = 16; maxX = 19; }
-            default -> { return VoxelShapes.empty(); }
-        }
-        // Length axis (perpendicular to thickness): 24 px total, starting 3 px
-        // inside the block from the forward face, extending 21 px past it.
-        switch (forward) {
-            case NORTH -> { minZ = -21; maxZ = 3; }   // forward face at z=0
-            case SOUTH -> { minZ = 13; maxZ = 37; }   // forward face at z=16
-            case WEST -> { minX = -21; maxX = 3; }    // forward face at x=0
-            case EAST -> { minX = 13; maxX = 37; }    // forward face at x=16
-            default -> { return VoxelShapes.empty(); }
-        }
-        return Block.createCuboidShape(minX, 0, minZ, maxX, 16, maxZ);
-    }
 
     // --- Multiblock iteration helpers ---
 
