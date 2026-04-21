@@ -206,8 +206,16 @@ public class BlockDefinitionLoader {
         for (BlockDefinition definition : definitions.values()) {
             boolean isValid = true;
 
-            // Check textures (skip for custom model blocks as they handle textures in model files)
-            if (!definition.hasCustomModel()) {
+            // Check textures (skip for custom model blocks as they handle textures in model files,
+            // for particle emitters which have no block textures by design, and for definitions
+            // whose states are all flagged as custom models)
+            boolean stateLevelCustomModel = definition.getStates() != null
+                    && !definition.getStates().isEmpty()
+                    && definition.getStates().stream().allMatch(s -> s.isCustomModel());
+            boolean skipTextureCheck = definition.hasCustomModel()
+                    || stateLevelCustomModel
+                    || "particle".equals(definition.getBlockType());
+            if (!skipTextureCheck) {
                 // Check if block has textures defined either directly, in randomTextures, or in states
                 boolean hasTextures = false;
 
