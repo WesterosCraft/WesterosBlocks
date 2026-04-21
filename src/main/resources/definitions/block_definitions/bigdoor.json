@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "blockName": "oak_bigdoor",
+    "blockType": "bigdoor",
+    "strength": 2,
+    "soundGroup": "wood",
+    "creativeTab": "westeros_windows_glass_tab",
+    "label": "Oak Big Door",
+    "textures": [
+      "wood/oak/door_bottom"
+    ]
+  }
+]

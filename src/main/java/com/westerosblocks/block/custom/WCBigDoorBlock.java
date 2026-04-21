@@ -1,13 +1,16 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.block.blockentity.custom.WCBigDoorBlockEntity;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
@@ -16,6 +19,7 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -26,42 +30,34 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
-import net.minecraft.world.event.GameEvent;
+import org.jetbrains.annotations.Nullable;
 
-public class WCBigDoorBlock extends Block implements WCBlockDef {
+import java.util.function.BiConsumer;
+import java.util.function.BiPredicate;
+
+public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProvider {
     protected BlockDefinition def;
 
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = Properties.OPEN;
     public static final EnumProperty<BigDoorPart> PART = EnumProperty.of("part", BigDoorPart.class);
 
-    // Door thickness: 3 pixels (0.1875 blocks)
-    private static final double THICKNESS = 3.0;
-
-    // Collision shapes for closed door (thin wall)
-    protected static final VoxelShape NORTH_SHAPE = Block.createCuboidShape(0.0, 0.0, 13.0, 16.0, 16.0, 16.0);
-    protected static final VoxelShape SOUTH_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 3.0);
-    protected static final VoxelShape EAST_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 3.0, 16.0, 16.0);
-    protected static final VoxelShape WEST_SHAPE = Block.createCuboidShape(13.0, 0.0, 0.0, 16.0, 16.0, 16.0);
-
-    // Open shapes for side columns (door swings inward)
-    // Left column when open - door panel on the left side
-    protected static final VoxelShape NORTH_OPEN_LEFT = Block.createCuboidShape(0.0, 0.0, 0.0, 3.0, 16.0, 16.0);
-    protected static final VoxelShape SOUTH_OPEN_LEFT = Block.createCuboidShape(13.0, 0.0, 0.0, 16.0, 16.0, 16.0);
-    protected static final VoxelShape EAST_OPEN_LEFT = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 3.0);
-    protected static final VoxelShape WEST_OPEN_LEFT = Block.createCuboidShape(0.0, 0.0, 13.0, 16.0, 16.0, 16.0);
-
-    // Right column when open - door panel on the right side
-    protected static final VoxelShape NORTH_OPEN_RIGHT = Block.createCuboidShape(13.0, 0.0, 0.0, 16.0, 16.0, 16.0);
-    protected static final VoxelShape SOUTH_OPEN_RIGHT = Block.createCuboidShape(0.0, 0.0, 0.0, 3.0, 16.0, 16.0);
-    protected static final VoxelShape EAST_OPEN_RIGHT = Block.createCuboidShape(0.0, 0.0, 13.0, 16.0, 16.0, 16.0);
-    protected static final VoxelShape WEST_OPEN_RIGHT = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 3.0);
+    // Thin 3-pixel slabs along each cardinal face of a 1x1 block. All door collision
+    // shapes — closed panel, open-left leaf, open-right leaf — are one of these four,
+    // selected by direction at query time.
+    private static final VoxelShape NORTH_SLAB = Block.createCuboidShape(0, 0, 0, 16, 16, 3);
+    private static final VoxelShape SOUTH_SLAB = Block.createCuboidShape(0, 0, 13, 16, 16, 16);
+    private static final VoxelShape WEST_SLAB = Block.createCuboidShape(0, 0, 0, 3, 16, 16);
+    private static final VoxelShape EAST_SLAB = Block.createCuboidShape(13, 0, 0, 16, 16, 16);
 
     private final boolean locked;
 
-    /**
-     * Enum representing the 9 positions in the 3x3 door grid
-     */
+    // Suppresses the AIR-return in getStateForNeighborUpdate while onBreak is
+    // already tearing the multiblock down. Without this, the NOTIFY_ALL flags
+    // used by onBreak would bounce into sibling parts' neighbor-update path,
+    // which drops items (ignoring our SKIP_DROPS on the original setBlockState).
+    private static final ThreadLocal<Boolean> CLEANUP_IN_PROGRESS = ThreadLocal.withInitial(() -> false);
+
     public enum BigDoorPart implements StringIdentifiable {
         BOTTOM_LEFT("bottom_left", 0, 0),
         BOTTOM_CENTER("bottom_center", 1, 0),
@@ -74,8 +70,8 @@ public class WCBigDoorBlock extends Block implements WCBlockDef {
         TOP_RIGHT("top_right", 2, 2);
 
         private final String name;
-        private final int horizontalOffset; // 0=left, 1=center, 2=right
-        private final int verticalOffset;   // 0=bottom, 1=middle, 2=top
+        private final int horizontalOffset;
+        private final int verticalOffset;
 
         BigDoorPart(String name, int horizontalOffset, int verticalOffset) {
             this.name = name;
@@ -88,72 +84,32 @@ public class WCBigDoorBlock extends Block implements WCBlockDef {
             return this.name;
         }
 
-        public int getHorizontalOffset() {
-            return horizontalOffset;
-        }
-
-        public int getVerticalOffset() {
-            return verticalOffset;
-        }
-
-        /**
-         * Returns true if this part is in the center column (passable when open)
-         */
         public boolean isCenterColumn() {
             return horizontalOffset == 1;
         }
 
-        /**
-         * Returns true if this part is in the left column
-         */
         public boolean isLeftColumn() {
             return horizontalOffset == 0;
         }
 
-        /**
-         * Returns true if this part is in the right column
-         */
         public boolean isRightColumn() {
             return horizontalOffset == 2;
         }
 
-        /**
-         * Get the world offset from the origin (bottom_center) for this part, given a facing direction.
-         * The door is placed with bottom_center at the clicked position.
-         */
         public Vec3i getOffset(Direction facing) {
-            // Horizontal offset: -1 for left, 0 for center, 1 for right (relative to facing)
-            int relativeHorizontal = horizontalOffset - 1;
-            // Vertical offset is always Y
-            int y = verticalOffset;
-
-            // Calculate X and Z based on facing
+            // LEFT (0) -> +1 toward facing.left(); CENTER (1) -> 0; RIGHT (2) -> -1.
+            int relativeHorizontal = 1 - horizontalOffset;
             Direction left = facing.rotateYCounterclockwise();
             int x = left.getOffsetX() * relativeHorizontal;
             int z = left.getOffsetZ() * relativeHorizontal;
-
-            return new Vec3i(x, y, z);
-        }
-
-        /**
-         * Get the part at the given offsets
-         */
-        public static BigDoorPart fromOffsets(int horizontal, int vertical) {
-            for (BigDoorPart part : values()) {
-                if (part.horizontalOffset == horizontal && part.verticalOffset == vertical) {
-                    return part;
-                }
-            }
-            return BOTTOM_CENTER; // fallback
+            return new Vec3i(x, verticalOffset, z);
         }
     }
 
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(BlockDefinition definition) {
-            AbstractBlock.Settings settings = definition.makeSettings();
-            boolean locked = definition.isLocked();
-            return new WCBigDoorBlock(settings, definition, locked);
+            return new WCBigDoorBlock(definition.makeSettings(), definition, definition.isLocked());
         }
     }
 
@@ -181,165 +137,163 @@ public class WCBigDoorBlock extends Block implements WCBlockDef {
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         Direction facing = state.get(FACING);
-        boolean open = state.get(OPEN);
         BigDoorPart part = state.get(PART);
 
-        if (!open) {
-            // Closed: all blocks have the thin wall shape
-            return getClosedShape(facing);
-        } else {
-            // Open: center column is passable, side columns have door panels
-            // Left column gets right shape (door swings to outer edge)
-            // Right column gets left shape (door swings to outer edge)
-            if (part.isCenterColumn()) {
-                return VoxelShapes.empty();
-            } else if (part.isLeftColumn()) {
-                return getOpenRightShape(facing);
-            } else {
-                return getOpenLeftShape(facing);
-            }
+        if (!state.get(OPEN)) {
+            // Closed: thin back panel — slab on the face opposite the door's FACING.
+            return slab(facing.getOpposite());
         }
-    }
-
-    private VoxelShape getClosedShape(Direction facing) {
-        return switch (facing) {
-            case NORTH -> NORTH_SHAPE;
-            case SOUTH -> SOUTH_SHAPE;
-            case EAST -> EAST_SHAPE;
-            case WEST -> WEST_SHAPE;
-            default -> NORTH_SHAPE;
-        };
-    }
-
-    private VoxelShape getOpenLeftShape(Direction facing) {
-        return switch (facing) {
-            case NORTH -> NORTH_OPEN_LEFT;
-            case SOUTH -> SOUTH_OPEN_LEFT;
-            case EAST -> EAST_OPEN_LEFT;
-            case WEST -> WEST_OPEN_LEFT;
-            default -> NORTH_OPEN_LEFT;
-        };
-    }
-
-    private VoxelShape getOpenRightShape(Direction facing) {
-        return switch (facing) {
-            case NORTH -> NORTH_OPEN_RIGHT;
-            case SOUTH -> SOUTH_OPEN_RIGHT;
-            case EAST -> EAST_OPEN_RIGHT;
-            case WEST -> WEST_OPEN_RIGHT;
-            default -> NORTH_OPEN_RIGHT;
-        };
-    }
-
-    @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        BlockPos pos = ctx.getBlockPos();
-        World world = ctx.getWorld();
-        Direction facing = ctx.getHorizontalPlayerFacing();
-
-        // Check if all 9 positions are available
-        if (!canPlaceAt(world, pos, facing, ctx)) {
-            return null;
+        if (part.isCenterColumn()) {
+            return VoxelShapes.empty();
         }
+        // Open: leaf lies on the outer side wall of its column and extends
+        // 1.5 blocks total, matching the 24-pixel leaf mesh in bigdoor.geo.json.
+        // The extra 8 pixels extend past the block's FACING face (away from the
+        // player, where the leaf swings to) into the adjacent block — VoxelShape
+        // supports coordinates outside [0, 16].
+        Direction outer = part.isLeftColumn() ? facing.rotateYCounterclockwise() : facing.rotateYClockwise();
+        return openLeafSlab(outer, facing);
+    }
 
-        return this.getDefaultState()
-                .with(FACING, facing)
-                .with(OPEN, false)
-                .with(PART, BigDoorPart.BOTTOM_CENTER);
+    private static VoxelShape slab(Direction face) {
+        return switch (face) {
+            case NORTH -> NORTH_SLAB;
+            case SOUTH -> SOUTH_SLAB;
+            case WEST -> WEST_SLAB;
+            case EAST -> EAST_SLAB;
+            default -> VoxelShapes.empty();
+        };
     }
 
     /**
-     * Check if the 3x3 area is free for placement
+     * 3-pixel-thick slab flush against the {@code outer} face, extended 8 pixels
+     * past the block's {@code forward} face. Total length along the
+     * outer-wall axis is 24 pixels = 1.5 blocks, matching the geo leaf.
+     * {@code outer} and {@code forward} must be perpendicular horizontal directions.
      */
-    private boolean canPlaceAt(World world, BlockPos origin, Direction facing, ItemPlacementContext ctx) {
-        for (BigDoorPart part : BigDoorPart.values()) {
-            Vec3i offset = part.getOffset(facing);
-            BlockPos checkPos = origin.add(offset);
+    private static VoxelShape openLeafSlab(Direction outer, Direction forward) {
+        double minX = 0, minZ = 0, maxX = 16, maxZ = 16;
+        switch (outer) {
+            case NORTH -> maxZ = 3;
+            case SOUTH -> minZ = 13;
+            case WEST -> maxX = 3;
+            case EAST -> minX = 13;
+            default -> { return VoxelShapes.empty(); }
+        }
+        switch (forward) {
+            case NORTH -> minZ -= 8;
+            case SOUTH -> maxZ += 8;
+            case WEST -> minX -= 8;
+            case EAST -> maxX += 8;
+            default -> { return VoxelShapes.empty(); }
+        }
+        return Block.createCuboidShape(minX, 0, minZ, maxX, 16, maxZ);
+    }
 
-            if (!world.getBlockState(checkPos).canReplace(ctx)) {
-                return false;
-            }
-            if (!world.getWorldBorder().contains(checkPos)) {
+    // --- Multiblock iteration helpers ---
+
+    /** Iterate all 9 parts of the door relative to origin. */
+    private static void forEachPart(BlockPos origin, Direction facing, BiConsumer<BigDoorPart, BlockPos> action) {
+        for (BigDoorPart part : BigDoorPart.values()) {
+            action.accept(part, origin.add(part.getOffset(facing)));
+        }
+    }
+
+    /** Test every part position; return false on the first failure. */
+    private static boolean allParts(BlockPos origin, Direction facing, BiPredicate<BigDoorPart, BlockPos> test) {
+        for (BigDoorPart part : BigDoorPart.values()) {
+            if (!test.test(part, origin.add(part.getOffset(facing)))) {
                 return false;
             }
         }
         return true;
     }
 
+    /** Return true if any part position satisfies the predicate. */
+    private static boolean anyPart(BlockPos origin, Direction facing, BiPredicate<BigDoorPart, BlockPos> test) {
+        for (BigDoorPart part : BigDoorPart.values()) {
+            if (test.test(part, origin.add(part.getOffset(facing)))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /** World position of the origin (BOTTOM_CENTER) for any part of the door. */
+    private static BlockPos originPos(BlockPos pos, Direction facing, BigDoorPart part) {
+        Vec3i offset = part.getOffset(facing);
+        return pos.add(-offset.getX(), -offset.getY(), -offset.getZ());
+    }
+
+    private static BlockPos originPos(BlockPos pos, BlockState state) {
+        return originPos(pos, state.get(FACING), state.get(PART));
+    }
+
     @Override
-    public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        Direction facing = ctx.getHorizontalPlayerFacing();
+        if (!canPlaceAt(ctx, facing)) {
+            return null;
+        }
+        return this.getDefaultState()
+                .with(FACING, facing)
+                .with(OPEN, false)
+                .with(PART, BigDoorPart.BOTTOM_CENTER);
+    }
+
+    private boolean canPlaceAt(ItemPlacementContext ctx, Direction facing) {
+        World world = ctx.getWorld();
+        return allParts(ctx.getBlockPos(), facing, (part, partPos) ->
+                world.getBlockState(partPos).canReplace(ctx) && world.getWorldBorder().contains(partPos));
+    }
+
+    @Override
+    public void onPlaced(World world, BlockPos origin, BlockState state, LivingEntity placer, ItemStack stack) {
         if (world.isClient()) {
             return;
         }
-
-        Direction facing = state.get(FACING);
-
-        // Place all 9 blocks
-        for (BigDoorPart part : BigDoorPart.values()) {
-            if (part == BigDoorPart.BOTTOM_CENTER) {
-                continue; // Already placed
+        forEachPart(origin, state.get(FACING), (part, partPos) -> {
+            if (part != BigDoorPart.BOTTOM_CENTER) {
+                world.setBlockState(partPos, state.with(PART, part), Block.NOTIFY_ALL);
             }
-
-            Vec3i offset = part.getOffset(facing);
-            BlockPos partPos = pos.add(offset);
-
-            world.setBlockState(partPos, state.with(PART, part), Block.NOTIFY_ALL);
-        }
+        });
     }
 
     @Override
     public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         if (!world.isClient()) {
-            Direction facing = state.get(FACING);
-            BigDoorPart thisPart = state.get(PART);
-
-            // Find the origin (bottom_center) position
-            Vec3i thisOffset = thisPart.getOffset(facing);
-            BlockPos origin = pos.add(-thisOffset.getX(), -thisOffset.getY(), -thisOffset.getZ());
-
-            // Remove all other parts
-            for (BigDoorPart part : BigDoorPart.values()) {
-                Vec3i offset = part.getOffset(facing);
-                BlockPos partPos = origin.add(offset);
-
-                if (!partPos.equals(pos)) {
+            CLEANUP_IN_PROGRESS.set(Boolean.TRUE);
+            try {
+                BlockPos origin = originPos(pos, state);
+                forEachPart(origin, state.get(FACING), (part, partPos) -> {
+                    if (partPos.equals(pos)) {
+                        return;
+                    }
                     BlockState partState = world.getBlockState(partPos);
                     if (partState.isOf(this)) {
                         world.setBlockState(partPos, Blocks.AIR.getDefaultState(), Block.NOTIFY_ALL | Block.SKIP_DROPS);
                         world.syncWorldEvent(player, 2001, partPos, Block.getRawIdFromState(partState));
                     }
-                }
+                });
+            } finally {
+                CLEANUP_IN_PROGRESS.set(Boolean.FALSE);
             }
         }
-
         return super.onBreak(world, pos, state, player);
     }
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
                                                 WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        // Check if a neighboring part was removed
-        Direction facing = state.get(FACING);
-        BigDoorPart thisPart = state.get(PART);
-
-        // Calculate where the neighbor should be
-        Vec3i thisOffset = thisPart.getOffset(facing);
-        BlockPos origin = pos.add(-thisOffset.getX(), -thisOffset.getY(), -thisOffset.getZ());
-
-        // Check if the neighborPos is one of our parts
-        for (BigDoorPart part : BigDoorPart.values()) {
-            Vec3i offset = part.getOffset(facing);
-            BlockPos expectedPos = origin.add(offset);
-
-            if (expectedPos.equals(neighborPos)) {
-                // This neighbor should be part of our door
-                if (!neighborState.isOf(this)) {
-                    // Part was removed, destroy this block too
-                    return Blocks.AIR.getDefaultState();
-                }
-            }
+        if (CLEANUP_IN_PROGRESS.get()) {
+            return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
         }
-
+        BlockPos origin = originPos(pos, state);
+        boolean neighborIsExpectedPart = anyPart(origin, state.get(FACING),
+                (part, partPos) -> partPos.equals(neighborPos));
+        if (neighborIsExpectedPart && !neighborState.isOf(this)) {
+            return Blocks.AIR.getDefaultState();
+        }
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 
@@ -348,55 +302,53 @@ public class WCBigDoorBlock extends Block implements WCBlockDef {
         if (this.locked) {
             return ActionResult.PASS;
         }
-
         if (world.isClient()) {
             return ActionResult.SUCCESS;
         }
 
-        // Toggle all 9 blocks
-        toggleDoor(world, pos, state, player);
-        return ActionResult.CONSUME;
-    }
+        boolean targetOpen = !state.get(OPEN);
+        BlockPos origin = originPos(pos, state);
 
-    private void toggleDoor(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        Direction facing = state.get(FACING);
-        BigDoorPart thisPart = state.get(PART);
-        boolean newOpen = !state.get(OPEN);
-
-        // Find the origin
-        Vec3i thisOffset = thisPart.getOffset(facing);
-        BlockPos origin = pos.add(-thisOffset.getX(), -thisOffset.getY(), -thisOffset.getZ());
-
-        // Update all 9 parts
-        for (BigDoorPart part : BigDoorPart.values()) {
-            Vec3i offset = part.getOffset(facing);
-            BlockPos partPos = origin.add(offset);
-
+        // Start the swing before flipping OPEN so the BE sync packet is queued
+        // before the 9 blockstate updates. Client then processes the swing first
+        // (swingDir=OPENING/CLOSING) and renders the leaf mid-swing when OPEN
+        // flips, avoiding a 1-frame snap to the far-end rest pose.
+        if (world.getBlockEntity(origin) instanceof WCBigDoorBlockEntity bde) {
+            bde.startSwingAnimation(player, targetOpen);
+        }
+        forEachPart(origin, state.get(FACING), (part, partPos) -> {
             BlockState partState = world.getBlockState(partPos);
             if (partState.isOf(this)) {
-                world.setBlockState(partPos, partState.with(OPEN, newOpen), Block.NOTIFY_LISTENERS | Block.REDRAW_ON_MAIN_THREAD);
+                world.setBlockState(partPos, partState.with(OPEN, targetOpen), Block.NOTIFY_LISTENERS);
             }
-        }
-
-        // Play sound and emit game event
-        playToggleSound(world, origin, newOpen);
-        world.emitGameEvent(player, newOpen ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, origin);
-    }
-
-    private void playToggleSound(World world, BlockPos pos, boolean open) {
-        world.playSound(
-                null,
-                pos,
-                open ? SoundEvents.BLOCK_WOODEN_DOOR_OPEN : SoundEvents.BLOCK_WOODEN_DOOR_CLOSE,
-                SoundCategory.BLOCKS,
-                1.0F,
-                world.getRandom().nextFloat() * 0.1F + 0.9F
-        );
+        });
+        return ActionResult.CONSUME;
     }
 
     @Override
     public BlockRenderType getRenderType(BlockState state) {
-        return BlockRenderType.MODEL;
+        return BlockRenderType.ENTITYBLOCK_ANIMATED;
+    }
+
+    @Override
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        if (state.get(PART) != BigDoorPart.BOTTOM_CENTER) {
+            return null;
+        }
+        return new WCBigDoorBlockEntity(pos, state, def.getBlockName());
+    }
+
+    @Override
+    @Nullable
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        if (world.isClient()) {
+            return null;
+        }
+        return (w, pos, s, be) -> {
+            if (be instanceof WCBigDoorBlockEntity bde) {
+                WCBigDoorBlockEntity.serverTick(w, pos, s, bde);
+            }
+        };
     }
 
     @Override
@@ -411,5 +363,19 @@ public class WCBigDoorBlock extends Block implements WCBlockDef {
 
     public BlockDefinition getDefinition() {
         return def;
+    }
+
+    // Pilot placeholders. Scale-up path: read per-door geo/texture paths from
+    // the BlockDefinition (e.g. new bigdoorGeo/bigdoorTexture fields) and return
+    // them here so each door type renders with its own atlas + mesh.
+    private static final Identifier DEFAULT_GEO = WesterosBlocks.id("geo/block/bigdoor.geo.json");
+    private static final Identifier DEFAULT_TEXTURE = WesterosBlocks.id("textures/block/debug/bigdoor_test.png");
+
+    public Identifier getGeoLocation() {
+        return DEFAULT_GEO;
+    }
+
+    public Identifier getTextureLocation() {
+        return DEFAULT_TEXTURE;
     }
 }

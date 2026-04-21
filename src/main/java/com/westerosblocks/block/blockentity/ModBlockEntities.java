@@ -2,6 +2,7 @@ package com.westerosblocks.block.blockentity;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
+import com.westerosblocks.block.blockentity.custom.WCBigDoorBlockEntity;
 import com.westerosblocks.block.blockentity.custom.WCFurnaceBlockEntity;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
@@ -18,6 +19,7 @@ public class ModBlockEntities {
 
     static {
         registerFurnaceBlockEntities();
+        registerBigDoorBlockEntities();
     }
 
     private static void registerFurnaceBlockEntities() {
@@ -35,6 +37,28 @@ public class ModBlockEntities {
                 BlockEntityType<?> blockEntityType = register(definition.getBlockName(),
                         BlockEntityType.Builder.create(
                                 (pos, state) -> new WCFurnaceBlockEntity(pos, state, definition.getBlockName()),
+                                block
+                        ).build(null)
+                );
+                customEntitiesByName.put(definition.getBlockName(), blockEntityType);
+            }
+        }
+    }
+
+    private static void registerBigDoorBlockEntities() {
+        BlockDefinitionRegistry registry = BlockDefinitionRegistry.getInstance();
+
+        if (!registry.isInitialized()) {
+            WesterosBlocks.LOGGER.warn("BlockDefinitionRegistry not initialized - skipping big door block entity registration");
+            return;
+        }
+
+        for (BlockDefinition definition : registry.getByType("bigdoor")) {
+            Block block = ModBlocks.getAutoRegisteredBlock(definition.getBlockName());
+            if (block != null) {
+                BlockEntityType<?> blockEntityType = register(definition.getBlockName(),
+                        BlockEntityType.Builder.create(
+                                (pos, state) -> new WCBigDoorBlockEntity(pos, state, definition.getBlockName()),
                                 block
                         ).build(null)
                 );

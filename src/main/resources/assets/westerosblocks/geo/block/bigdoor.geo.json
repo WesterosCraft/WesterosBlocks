@@ -1,0 +1,59 @@
+{
+	"format_version": "1.21.20",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.westerosblocks.bigdoor",
+				"texture_width": 96,
+				"texture_height": 96,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [-8, 0, -21]
+				},
+				{
+					"name": "left_leaf",
+					"parent": "root",
+					"pivot": [-24, 0, -5],
+					"cubes": [
+						{
+							"origin": [-24, 0, -8],
+							"size": [24, 48, 3],
+							"uv": {
+								"north": {"uv": [0,  0], "uv_size": [48, 96]},
+								"south": {"uv": [0,  0], "uv_size": [48, 96]},
+								"east":  {"uv": [0,  0], "uv_size": [ 6, 96]},
+								"west":  {"uv": [0,  0], "uv_size": [ 6, 96]},
+								"up":    {"uv": [0,  0], "uv_size": [48,  6]},
+								"down":  {"uv": [0,  0], "uv_size": [48,  6]}
+							}
+						}
+					]
+				},
+				{
+					"name": "right_leaf",
+					"parent": "root",
+					"pivot": [24, 0, -5],
+					"cubes": [
+						{
+							"origin": [0, 0, -8],
+							"size": [24, 48, 3],
+							"uv": {
+								"north": {"uv": [48, 0], "uv_size": [48, 96]},
+								"south": {"uv": [48, 0], "uv_size": [48, 96]},
+								"east":  {"uv": [48, 0], "uv_size": [ 6, 96]},
+								"west":  {"uv": [48, 0], "uv_size": [ 6, 96]},
+								"up":    {"uv": [48, 0], "uv_size": [48,  6]},
+								"down":  {"uv": [48, 0], "uv_size": [48,  6]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,5 +1,8 @@
 package com.westerosblocks;
 
+import com.westerosblocks.block.blockentity.ModBlockEntities;
+import com.westerosblocks.block.blockentity.client.WCBigDoorBlockEntityRenderer;
+import com.westerosblocks.block.blockentity.custom.WCBigDoorBlockEntity;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 import com.westerosblocks.entity.ModEntities;
@@ -9,6 +12,8 @@ import com.westerosblocks.item.ModItems;
 import com.westerosblocks.item.client.ModShieldRenderer;
 import mod.azure.azurelib.common.render.item.AzItemRendererRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.fabricmc.api.ClientModInitializer;
@@ -73,6 +78,26 @@ public class WesterosBlocksClient implements ClientModInitializer {
                         (ModItems.GREYJOY_ROUND_SHIELD).getGeoPath(),
                         (ModItems.GREYJOY_ROUND_SHIELD).getTexPath()
                 ));
+
+        registerBigDoorRenderers();
+    }
+
+    @SuppressWarnings("unchecked")
+    private void registerBigDoorRenderers() {
+        BlockDefinitionRegistry registry = BlockDefinitionRegistry.getInstance();
+        if (!registry.isInitialized()) {
+            return;
+        }
+
+        for (BlockDefinition definition : registry.getByType("bigdoor")) {
+            BlockEntityType<?> type = ModBlockEntities.getBlockEntityType(definition.getBlockName());
+            if (type != null) {
+                BlockEntityRendererFactories.register(
+                        (BlockEntityType<WCBigDoorBlockEntity>) type,
+                        WCBigDoorBlockEntityRenderer::new
+                );
+            }
+        }
     }
 
     private void applyRenderLayersFromDefinitions() {

@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/bigdoor/open_center",
+  "textures": {
+    "all": "westerosblocks:block/wood/oak/door_bottom",
+    "particle": "westerosblocks:block/wood/oak/door_bottom",
+    "texture": "westerosblocks:block/wood/oak/door_bottom"
+  }
+}
