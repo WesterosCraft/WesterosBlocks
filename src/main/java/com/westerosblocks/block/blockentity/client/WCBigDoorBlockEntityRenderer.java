@@ -5,14 +5,14 @@ import com.westerosblocks.block.blockentity.custom.WCBigDoorBlockEntity;
 import com.westerosblocks.block.custom.WCBigDoorBlock;
 import mod.azure.azurelib.common.render.block.AzBlockEntityRenderer;
 import mod.azure.azurelib.common.render.block.AzBlockEntityRendererConfig;
-import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.RotationAxis;
-import org.jetbrains.annotations.NotNull;
 
+/**
+ * The base AzBlockEntityModelRenderer already centers and rotates the geo by
+ * the FACING property (N=0°, W=90°, S=180°, E=270° around Y). Do NOT add a
+ * second translate/rotate here or the non-NORTH facings will be double-rotated.
+ */
 public class WCBigDoorBlockEntityRenderer extends AzBlockEntityRenderer<WCBigDoorBlockEntity> {
 
     private static final Identifier FALLBACK_MODEL = WesterosBlocks.id("geo/block/bigdoor.geo.json");
@@ -38,30 +38,5 @@ public class WCBigDoorBlockEntityRenderer extends AzBlockEntityRenderer<WCBigDoo
             return block.getTextureLocation();
         }
         return FALLBACK_TEXTURE;
-    }
-
-    @Override
-    public void render(@NotNull WCBigDoorBlockEntity entity, float partialTick, @NotNull MatrixStack poseStack,
-                       @NotNull VertexConsumerProvider source, int packedLight, int packedOverlay) {
-        Direction facing = entity.getCachedState().get(WCBigDoorBlock.FACING);
-        float yaw = facingToYaw(facing);
-
-        poseStack.push();
-        poseStack.translate(0.5, 0.0, 0.5);
-        poseStack.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(yaw));
-        poseStack.translate(-0.5, 0.0, -0.5);
-
-        super.render(entity, partialTick, poseStack, source, packedLight, packedOverlay);
-
-        poseStack.pop();
-    }
-
-    private static float facingToYaw(Direction facing) {
-        return switch (facing) {
-            case SOUTH -> 180.0f;
-            case WEST -> 90.0f;
-            case EAST -> 270.0f;
-            default -> 0.0f;
-        };
     }
 }

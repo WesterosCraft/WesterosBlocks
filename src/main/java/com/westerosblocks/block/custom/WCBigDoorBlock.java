@@ -140,17 +140,17 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
         BigDoorPart part = state.get(PART);
 
         if (!state.get(OPEN)) {
-            // Closed: thin back panel — slab on the face opposite the door's FACING.
-            return slab(facing.getOpposite());
+            // Closed: the geo's closed leaves sit on the FACING-direction face
+            // of the block (e.g. z=0..3 for FACING=NORTH). The multiblock's
+            // back wall is at `facing`, not `facing.getOpposite()`.
+            return slab(facing);
         }
         if (part.isCenterColumn()) {
             return VoxelShapes.empty();
         }
-        // Open: leaf lies on the outer side wall of its column and extends
-        // 1.5 blocks total, matching the 24-pixel leaf mesh in bigdoor.geo.json.
-        // The extra 8 pixels extend past the block's FACING face (away from the
-        // player, where the leaf swings to) into the adjacent block — VoxelShape
-        // supports coordinates outside [0, 16].
+        // Open: leaf hinged at the outer-forward corner of the block, swinging
+        // to lie 3 pixels outside the outer face, extending 21 pixels past the
+        // FACING face. Matches the 24-pixel leaf mesh after it rotates 90°.
         Direction outer = part.isLeftColumn() ? facing.rotateYCounterclockwise() : facing.rotateYClockwise();
         return openLeafSlab(outer, facing);
     }
@@ -166,25 +166,39 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
     }
 
     /**
-     * 3-pixel-thick slab flush against the {@code outer} face, extended 8 pixels
-     * past the block's {@code forward} face. Total length along the
-     * outer-wall axis is 24 pixels = 1.5 blocks, matching the geo leaf.
+     * Collision of the open-door leaf, matching the geo after 90° rotation.
+     * <p>
+     * Geometry: the leaf is 3 px thick, 24 px long (1.5 blocks), hinged at the
+     * block corner where the {@code outer} face meets the {@code forward} face.
+     * The hinge sits 3 px INSIDE the block from the {@code forward} face. When
+     * the leaf rotates 90° open, it ends up:
+     * <ul>
+     *   <li>Thickness: 3 px OUTSIDE the outer face (protruding past the wall).</li>
+     *   <li>Length: spans from 3 px inside the block on the forward side, to
+     *       21 px past the forward face (so 3 px of the leaf sits inside the
+     *       block and 21 px protrudes forward into the adjacent block).</li>
+     * </ul>
      * {@code outer} and {@code forward} must be perpendicular horizontal directions.
+     * VoxelShape supports coordinates outside {@code [0, 16]}.
      */
     private static VoxelShape openLeafSlab(Direction outer, Direction forward) {
         double minX = 0, minZ = 0, maxX = 16, maxZ = 16;
+
+        // Thickness axis: 3 px outside the outer face.
         switch (outer) {
-            case NORTH -> maxZ = 3;
-            case SOUTH -> minZ = 13;
-            case WEST -> maxX = 3;
-            case EAST -> minX = 13;
+            case NORTH -> { minZ = -3; maxZ = 0; }
+            case SOUTH -> { minZ = 16; maxZ = 19; }
+            case WEST -> { minX = -3; maxX = 0; }
+            case EAST -> { minX = 16; maxX = 19; }
             default -> { return VoxelShapes.empty(); }
         }
+        // Length axis (perpendicular to thickness): 24 px total, starting 3 px
+        // inside the block from the forward face, extending 21 px past it.
         switch (forward) {
-            case NORTH -> minZ -= 8;
-            case SOUTH -> maxZ += 8;
-            case WEST -> minX -= 8;
-            case EAST -> maxX += 8;
+            case NORTH -> { minZ = -21; maxZ = 3; }   // forward face at z=0
+            case SOUTH -> { minZ = 13; maxZ = 37; }   // forward face at z=16
+            case WEST -> { minX = -21; maxX = 3; }    // forward face at x=0
+            case EAST -> { minX = 13; maxX = 37; }    // forward face at x=16
             default -> { return VoxelShapes.empty(); }
         }
         return Block.createCuboidShape(minX, 0, minZ, maxX, 16, maxZ);

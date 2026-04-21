@@ -50,14 +50,21 @@ public class WCBigDoorBlockAnimator extends AzBlockAnimator<WCBigDoorBlockEntity
         }
         float angle = be.getLeafAngleRadians(partialTicks);
 
+        // AzureLib's cube baker flips bedrock +X to Minecraft -X, so the
+        // geo-named "left_leaf" (bedrock x=-24..0) actually renders on the
+        // east/right side of the door, and "right_leaf" on the west/left.
+        // Positive rotY is CCW viewed from above; to swing the leaves AWAY
+        // from the player (toward FACING) we need left_leaf=-angle and
+        // right_leaf=+angle. The previous (left=+, right=-) swung them
+        // toward the player.
         AzBone leftLeaf = bakedModel.getBoneOrNull(LEFT_LEAF);
         if (leftLeaf != null) {
-            leftLeaf.setRotY(angle);
+            leftLeaf.setRotY(-angle);
         }
 
         AzBone rightLeaf = bakedModel.getBoneOrNull(RIGHT_LEAF);
         if (rightLeaf != null) {
-            rightLeaf.setRotY(-angle);
+            rightLeaf.setRotY(angle);
         }
     }
 }
