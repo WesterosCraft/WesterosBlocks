@@ -148,14 +148,47 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
         if (part.isCenterColumn()) {
             return VoxelShapes.empty();
         }
-        // Open: 3-px slab on the column's outer wall, inside the block. The
-        // geo's new pivot (center of the leaf's thickness axis) means the
-        // rotated leaf lies flush with the outer face from the inside, so the
-        // open-state collision occupies the same 3×16×16 voxel footprint as
-        // the closed-state slab — just on a perpendicular face. The 21-px
-        // ornamental tail past the FACING face is visual-only, no collision.
+        // Open: leaf flush INSIDE the outer wall (thickness 3 px), 24 px long
+        // along the FACING axis — 3 px inside the block from the FACING face
+        // plus 21 px past it. Matches the geo's 1.5-block leaf after 90°
+        // rotation around the thickness-centered pivot at (±22.5, 0, -6.5).
         Direction outer = part.isLeftColumn() ? facing.rotateYCounterclockwise() : facing.rotateYClockwise();
-        return slab(outer);
+        return openLeafSlab(outer, facing);
+    }
+
+    /**
+     * Collision matching the open-door leaf mesh after the animator rotates it
+     * 90° around the center-of-thickness pivot. The leaf ends up:
+     * <ul>
+     *   <li>Thickness: 3 px flush against the INSIDE of the {@code outer} face.</li>
+     *   <li>Length: 24 px along the {@code forward} axis — 3 px inside the block
+     *       from the forward face, then 21 px past the forward face into the
+     *       adjacent block.</li>
+     * </ul>
+     * {@code outer} and {@code forward} must be perpendicular horizontal directions.
+     * VoxelShape supports coordinates outside {@code [0, 16]}.
+     */
+    private static VoxelShape openLeafSlab(Direction outer, Direction forward) {
+        double minX = 0, minZ = 0, maxX = 16, maxZ = 16;
+
+        // Thickness axis: 3 px inside the block, flush with the outer face.
+        switch (outer) {
+            case NORTH -> maxZ = 3;
+            case SOUTH -> minZ = 13;
+            case WEST -> maxX = 3;
+            case EAST -> minX = 13;
+            default -> { return VoxelShapes.empty(); }
+        }
+        // Length axis (perpendicular to thickness): 24 px, from 3 px inside
+        // the block on the forward side, extending 21 px past the forward face.
+        switch (forward) {
+            case NORTH -> { minZ = -21; maxZ = 3; }   // forward face at z=0
+            case SOUTH -> { minZ = 13; maxZ = 37; }   // forward face at z=16
+            case WEST -> { minX = -21; maxX = 3; }    // forward face at x=0
+            case EAST -> { minX = 13; maxX = 37; }    // forward face at x=16
+            default -> { return VoxelShapes.empty(); }
+        }
+        return Block.createCuboidShape(minX, 0, minZ, maxX, 16, maxZ);
     }
 
     private static VoxelShape slab(Direction face) {
@@ -287,6 +320,15 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
 
         boolean targetOpen = !state.get(OPEN);
         BlockPos origin = originPos(pos, state);
+        Direction facing = state.get(FACING);
+
+        // Block the open swing if anything with collision occupies the blocks
+        // the leaves would swing into (one block past FACING from each of the
+        // 6 side-column parts). Closing is always allowed — the leaves are
+        // collapsing back into the frame.
+        if (targetOpen && !swingPathClear(world, origin, facing)) {
+            return ActionResult.CONSUME;
+        }
 
         // Start the swing before flipping OPEN so the BE sync packet is queued
         // before the 9 blockstate updates. Client then processes the swing first
@@ -295,13 +337,35 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
         if (world.getBlockEntity(origin) instanceof WCBigDoorBlockEntity bde) {
             bde.startSwingAnimation(player, targetOpen);
         }
-        forEachPart(origin, state.get(FACING), (part, partPos) -> {
+        forEachPart(origin, facing, (part, partPos) -> {
             BlockState partState = world.getBlockState(partPos);
             if (partState.isOf(this)) {
                 world.setBlockState(partPos, partState.with(OPEN, targetOpen), Block.NOTIFY_LISTENERS);
             }
         });
         return ActionResult.CONSUME;
+    }
+
+    /**
+     * True if every block the leaves will occupy when open (one block past
+     * FACING from each side-column part) has an empty collision shape.
+     */
+    private boolean swingPathClear(World world, BlockPos origin, Direction facing) {
+        for (BigDoorPart part : BigDoorPart.values()) {
+            if (part.isCenterColumn()) {
+                continue;
+            }
+            BlockPos partPos = origin.add(part.getOffset(facing));
+            BlockPos swingPos = partPos.offset(facing);
+            BlockState neighborState = world.getBlockState(swingPos);
+            if (neighborState.isOf(this)) {
+                continue;
+            }
+            if (!neighborState.getCollisionShape(world, swingPos).isEmpty()) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
