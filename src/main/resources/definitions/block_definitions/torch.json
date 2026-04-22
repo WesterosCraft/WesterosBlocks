@@ -10,7 +10,7 @@
     },
     "textures": ["lighting/torch"],
     "renderLayer": "cutout",
-    "luminance": 13
+    "luminance": 14
   },
   {
     "blockName": "candle",
