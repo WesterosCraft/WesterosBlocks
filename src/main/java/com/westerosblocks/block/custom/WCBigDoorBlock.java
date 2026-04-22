@@ -11,6 +11,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
@@ -37,6 +39,7 @@ import java.util.function.BiPredicate;
 
 public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProvider {
     protected BlockDefinition def;
+    private final Identifier textureLocation;
 
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = Properties.OPEN;
@@ -117,11 +120,20 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
         super(settings.nonOpaque());
         this.def = def;
         this.locked = locked;
+        this.textureLocation = resolveTextureLocation(def);
 
         this.setDefaultState(this.stateManager.getDefaultState()
                 .with(FACING, Direction.NORTH)
                 .with(OPEN, false)
                 .with(PART, BigDoorPart.BOTTOM_CENTER));
+    }
+
+    private static Identifier resolveTextureLocation(BlockDefinition def) {
+        String[] textures = def.getTexturesAsArray();
+        if (textures.length > 0) {
+            return WesterosBlocks.id("textures/block/" + textures[0] + ".png");
+        }
+        return DEFAULT_TEXTURE;
     }
 
     @Override
@@ -314,9 +326,6 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
         if (this.locked) {
             return ActionResult.PASS;
         }
-        if (world.isClient()) {
-            return ActionResult.SUCCESS;
-        }
 
         boolean targetOpen = !state.get(OPEN);
         BlockPos origin = originPos(pos, state);
@@ -325,9 +334,21 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
         // Block the open swing if anything with collision occupies the blocks
         // the leaves would swing into (one block past FACING from each of the
         // 6 side-column parts). Closing is always allowed — the leaves are
-        // collapsing back into the frame.
+        // collapsing back into the frame. Run on BOTH sides so the client
+        // doesn't play a hand-swing for a denied interaction; block states of
+        // the neighbors are synced so the check gives the same result.
         if (targetOpen && !swingPathClear(world, origin, facing)) {
-            return ActionResult.CONSUME;
+            // Vanilla pattern (matches DoorBlock.playOpenCloseSound): pass the
+            // acting player as `except` on both sides. Client: plays locally
+            // for the acting player only (prediction, zero latency). Server:
+            // broadcasts to every other tracking client. No double-play.
+            world.playSound(player, pos, SoundEvents.BLOCK_WOOD_HIT,
+                    SoundCategory.BLOCKS, 0.4f, 0.6f);
+            return ActionResult.FAIL;
+        }
+
+        if (world.isClient()) {
+            return ActionResult.SUCCESS;
         }
 
         // Start the swing before flipping OPEN so the BE sync packet is queued
@@ -408,17 +429,16 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
         return def;
     }
 
-    // Pilot placeholders. Scale-up path: read per-door geo/texture paths from
-    // the BlockDefinition (e.g. new bigdoorGeo/bigdoorTexture fields) and return
-    // them here so each door type renders with its own atlas + mesh.
+    // Shared geo for all bigdoor variants (one mesh). Per-door texture is
+    // resolved from BlockDefinition.textures[0] in resolveTextureLocation.
     private static final Identifier DEFAULT_GEO = WesterosBlocks.id("geo/block/bigdoor.geo.json");
-    private static final Identifier DEFAULT_TEXTURE = WesterosBlocks.id("textures/block/debug/bigdoor_test.png");
+    private static final Identifier DEFAULT_TEXTURE = WesterosBlocks.id("textures/block/_doors/bigdoor_test.png");
 
     public Identifier getGeoLocation() {
         return DEFAULT_GEO;
     }
 
     public Identifier getTextureLocation() {
-        return DEFAULT_TEXTURE;
+        return textureLocation;
     }
 }

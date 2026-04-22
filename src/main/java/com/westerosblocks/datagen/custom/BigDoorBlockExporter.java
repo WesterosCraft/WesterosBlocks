@@ -14,7 +14,8 @@ import java.util.Optional;
 /**
  * Exporter for big door (3x3 multiblock) blocks.
  * The animated BlockEntity renderer draws the door, so blockstate variants all
- * resolve to an empty model regardless of OPEN. The item model uses a dedicated icon.
+ * resolve to an empty model regardless of OPEN. The inventory uses a flat 2D
+ * sprite via the standard {@code minecraft:item/generated} parent.
  */
 public class BigDoorBlockExporter extends BaseBlockExporter {
 
@@ -22,13 +23,10 @@ public class BigDoorBlockExporter extends BaseBlockExporter {
         String[] textures = definition.getTexturesAsArray();
         validateTexturePaths(textures, 1);
 
-        String texture = textures[0];
-        boolean isCustomModel = definition.hasCustomModel();
-
-        if (isCustomModel) {
+        if (definition.hasCustomModel()) {
             registerCustomModelBigDoor(generator, block, definition);
         } else {
-            registerGeneratedBigDoor(generator, block, texture);
+            registerGeneratedBigDoor(generator, block, definition);
         }
     }
 
@@ -52,21 +50,22 @@ public class BigDoorBlockExporter extends BaseBlockExporter {
 
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
 
-        Identifier itemModelId = WesterosBlocks.id("block/custom/bigdoor/" + blockName + "/bottom_center");
-        registerParentedItemModel(generator, block, itemModelId);
+        registerSimpleItemModel(generator, block, resolveItemTextureId(block, definition, definition.getTexturesAsArray()[0]));
     }
 
-    private static void registerGeneratedBigDoor(BlockStateModelGenerator generator, Block block, String texture) {
+    private static void registerGeneratedBigDoor(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
+        String texture = definition.getTexturesAsArray()[0];
         Identifier textureId = createBlockIdentifier(texture);
 
         // One empty model per part; the animated BE draws the full door.
+        // `#all` drives any faces in parent models; `#particle` is declared
+        // explicitly so the break-particle resolves even if a future parent
+        // drops its "particle": "#all" alias.
+        TextureMap textureMap = new TextureMap()
+                .put(TextureKey.ALL, textureId)
+                .put(TextureKey.PARTICLE, textureId);
         for (BigDoorPart part : BigDoorPart.values()) {
-            Model model = emptyModel();
-            TextureMap textureMap = new TextureMap()
-                    .put(TextureKey.ALL, textureId)
-                    .put(TextureKey.TEXTURE, textureId)
-                    .put(TextureKey.PARTICLE, textureId);
-            uploadModel(model, block, part.asString(), textureMap, generator.modelCollector);
+            uploadModel(emptyModel(), block, part.asString(), textureMap, generator.modelCollector);
         }
 
         // OPEN is omitted from the variant key: the animated BE draws the door,
@@ -85,8 +84,22 @@ public class BigDoorBlockExporter extends BaseBlockExporter {
 
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variants));
 
-        Identifier itemModelId = registerIconModel(generator, block, textureId);
-        registerParentedItemModel(generator, block, itemModelId);
+        registerSimpleItemModel(generator, block, resolveItemTextureId(block, definition, texture));
+    }
+
+    /**
+     * Three-tier fallback chain matching {@code DoorBlockExporter}: explicit
+     * {@code customItemTexture} → explicit {@code itemTexture} override → block's
+     * primary texture. Drives the flat {@code item/generated} layer0 sprite.
+     */
+    private static Identifier resolveItemTextureId(Block block, BlockDefinition definition, String fallbackBlockTexture) {
+        if (definition.hasCustomItemTexture()) {
+            return WesterosBlocks.id("item/" + getBlockName(block));
+        }
+        if (definition.hasItemTexture()) {
+            return createBlockIdentifier(definition.getItemTexture());
+        }
+        return createBlockIdentifier(fallbackBlockTexture);
     }
 
     private static Model emptyModel() {
@@ -94,23 +107,7 @@ public class BigDoorBlockExporter extends BaseBlockExporter {
                 Optional.of(WesterosBlocks.id("block/bigdoor/open_center")),
                 Optional.empty(),
                 TextureKey.ALL,
-                TextureKey.TEXTURE,
                 TextureKey.PARTICLE
         );
-    }
-
-    private static Identifier registerIconModel(BlockStateModelGenerator generator, Block block, Identifier textureId) {
-        Model iconModel = new Model(
-                Optional.of(WesterosBlocks.id("block/bigdoor/closed_center")),
-                Optional.empty(),
-                TextureKey.ALL,
-                TextureKey.TEXTURE,
-                TextureKey.PARTICLE
-        );
-        TextureMap textureMap = new TextureMap()
-                .put(TextureKey.ALL, textureId)
-                .put(TextureKey.TEXTURE, textureId)
-                .put(TextureKey.PARTICLE, textureId);
-        return uploadModel(iconModel, block, "icon", textureMap, generator.modelCollector);
     }
 }
