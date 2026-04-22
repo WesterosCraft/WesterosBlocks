@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/bigdoor/open_center",
+  "textures": {
+    "all": "westerosblocks:block/doors/bigdoor_test",
+    "particle": "westerosblocks:block/doors/bigdoor_test"
+  }
+}

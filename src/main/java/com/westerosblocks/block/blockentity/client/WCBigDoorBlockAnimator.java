@@ -10,7 +10,7 @@ import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Drives the door-leaf bones directly from the BE's swing progress.
+ * Drives the door bones directly from the BE's swing progress.
  * No AzAnimationControllers are registered — we write bone rotations in
  * setCustomAnimations, which runs each render frame after the (empty) controller
  * update. This guarantees visual and server state never desync: both sides
@@ -20,13 +20,13 @@ import org.jetbrains.annotations.NotNull;
  * abstract so we must return an Identifier, but with zero controllers the
  * animation cache is never queried. Keep the JSON empty so no-one mistakes
  * stale keyframes for the source of truth — the angle constant in
- * WCBigDoorBlockEntity.MAX_LEAF_ANGLE_DEGREES is authoritative.
+ * WCBigDoorBlockEntity.MAX_DOOR_ANGLE_DEGREES is authoritative.
  */
 public class WCBigDoorBlockAnimator extends AzBlockAnimator<WCBigDoorBlockEntity> {
 
     private static final Identifier ANIMATIONS = WesterosBlocks.id("animations/block/bigdoor.animation.json");
-    private static final String LEFT_LEAF = "left_leaf";
-    private static final String RIGHT_LEAF = "right_leaf";
+    private static final String LEFT_DOOR = "left_door";
+    private static final String RIGHT_DOOR = "right_door";
 
     public WCBigDoorBlockAnimator() {
         super(AzAnimatorConfig.defaultConfig());
@@ -48,23 +48,23 @@ public class WCBigDoorBlockAnimator extends AzBlockAnimator<WCBigDoorBlockEntity
         if (bakedModel == null) {
             return;
         }
-        float angle = be.getLeafAngleRadians(partialTicks);
+        float angle = be.getDoorAngleRadians(partialTicks);
 
         // AzureLib's cube baker flips bedrock +X to Minecraft -X, so the
-        // geo-named "left_leaf" (bedrock x=-24..0) actually renders on the
-        // east/right side of the door, and "right_leaf" on the west/left.
-        // Positive rotY is CCW viewed from above; to swing the leaves AWAY
-        // from the player (toward FACING) we need left_leaf=-angle and
-        // right_leaf=+angle. The previous (left=+, right=-) swung them
+        // geo-named "left_door" (bedrock x=-24..0) actually renders on the
+        // east/right side of the door, and "right_door" on the west/left.
+        // Positive rotY is CCW viewed from above; to swing the doors AWAY
+        // from the player (toward FACING) we need left_door=-angle and
+        // right_door=+angle. The previous (left=+, right=-) swung them
         // toward the player.
-        AzBone leftLeaf = bakedModel.getBoneOrNull(LEFT_LEAF);
-        if (leftLeaf != null) {
-            leftLeaf.setRotY(-angle);
+        AzBone leftDoor = bakedModel.getBoneOrNull(LEFT_DOOR);
+        if (leftDoor != null) {
+            leftDoor.setRotY(-angle);
         }
 
-        AzBone rightLeaf = bakedModel.getBoneOrNull(RIGHT_LEAF);
-        if (rightLeaf != null) {
-            rightLeaf.setRotY(angle);
+        AzBone rightDoor = bakedModel.getBoneOrNull(RIGHT_DOOR);
+        if (rightDoor != null) {
+            rightDoor.setRotY(angle);
         }
     }
 }

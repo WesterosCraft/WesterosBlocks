@@ -27,7 +27,7 @@ import org.jetbrains.annotations.Nullable;
 public class WCBigDoorBlockEntity extends BlockEntity {
 
     public static final int SWING_DURATION_TICKS = 40;
-    public static final float MAX_LEAF_ANGLE_DEGREES = 90.0f;
+    public static final float MAX_DOOR_ANGLE_DEGREES = 90.0f;
 
     public enum SwingDirection {
         NONE, OPENING, CLOSING
@@ -59,16 +59,16 @@ public class WCBigDoorBlockEntity extends BlockEntity {
         // opposite of targetOpen.
         float currentDegrees;
         switch (swingDir) {
-            case OPENING -> currentDegrees = getSwingProgress(0f) * MAX_LEAF_ANGLE_DEGREES;
-            case CLOSING -> currentDegrees = (1f - getSwingProgress(0f)) * MAX_LEAF_ANGLE_DEGREES;
-            default -> currentDegrees = targetOpen ? 0f : MAX_LEAF_ANGLE_DEGREES;
+            case OPENING -> currentDegrees = getSwingProgress(0f) * MAX_DOOR_ANGLE_DEGREES;
+            case CLOSING -> currentDegrees = (1f - getSwingProgress(0f)) * MAX_DOOR_ANGLE_DEGREES;
+            default -> currentDegrees = targetOpen ? 0f : MAX_DOOR_ANGLE_DEGREES;
         }
 
         SwingDirection newDir = targetOpen ? SwingDirection.OPENING : SwingDirection.CLOSING;
         // Progress (post-easing) needed so the new direction's angle equals currentDegrees.
         float easedProgress = (newDir == SwingDirection.OPENING)
-                ? currentDegrees / MAX_LEAF_ANGLE_DEGREES
-                : 1f - currentDegrees / MAX_LEAF_ANGLE_DEGREES;
+                ? currentDegrees / MAX_DOOR_ANGLE_DEGREES
+                : 1f - currentDegrees / MAX_DOOR_ANGLE_DEGREES;
         easedProgress = Math.max(0f, Math.min(1f, easedProgress));
         // Invert quadratic easing (p = t^2 -> t = sqrt(p)) to recover the linear t.
         float linearT = (float) Math.sqrt(easedProgress);
@@ -95,15 +95,15 @@ public class WCBigDoorBlockEntity extends BlockEntity {
 
     /**
      * Leaf rotation in radians for animation rendering.
-     * Drives both leaves; apply +value to left_leaf, -value to right_leaf.
+     * Drives both doors; apply -value to left_door, +value to right_door.
      */
-    public float getLeafAngleRadians(float partialTicks) {
+    public float getDoorAngleRadians(float partialTicks) {
         boolean open = getCachedState().get(WCBigDoorBlock.OPEN);
         float degrees;
         switch (swingDir) {
-            case OPENING -> degrees = getSwingProgress(partialTicks) * MAX_LEAF_ANGLE_DEGREES;
-            case CLOSING -> degrees = (1.0f - getSwingProgress(partialTicks)) * MAX_LEAF_ANGLE_DEGREES;
-            default -> degrees = open ? MAX_LEAF_ANGLE_DEGREES : 0.0f;
+            case OPENING -> degrees = getSwingProgress(partialTicks) * MAX_DOOR_ANGLE_DEGREES;
+            case CLOSING -> degrees = (1.0f - getSwingProgress(partialTicks)) * MAX_DOOR_ANGLE_DEGREES;
+            default -> degrees = open ? MAX_DOOR_ANGLE_DEGREES : 0.0f;
         }
         return (float) Math.toRadians(degrees);
     }

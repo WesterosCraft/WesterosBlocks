@@ -1,0 +1,148 @@
+{
+  "variants": {
+    "facing=east,part=bottom_center": {
+      "model": "westerosblocks:block/big_door/bottom_center",
+      "y": 90
+    },
+    "facing=east,part=bottom_left": {
+      "model": "westerosblocks:block/big_door/bottom_left",
+      "y": 90
+    },
+    "facing=east,part=bottom_right": {
+      "model": "westerosblocks:block/big_door/bottom_right",
+      "y": 90
+    },
+    "facing=east,part=middle_center": {
+      "model": "westerosblocks:block/big_door/middle_center",
+      "y": 90
+    },
+    "facing=east,part=middle_left": {
+      "model": "westerosblocks:block/big_door/middle_left",
+      "y": 90
+    },
+    "facing=east,part=middle_right": {
+      "model": "westerosblocks:block/big_door/middle_right",
+      "y": 90
+    },
+    "facing=east,part=top_center": {
+      "model": "westerosblocks:block/big_door/top_center",
+      "y": 90
+    },
+    "facing=east,part=top_left": {
+      "model": "westerosblocks:block/big_door/top_left",
+      "y": 90
+    },
+    "facing=east,part=top_right": {
+      "model": "westerosblocks:block/big_door/top_right",
+      "y": 90
+    },
+    "facing=north,part=bottom_center": {
+      "model": "westerosblocks:block/big_door/bottom_center",
+      "y": 0
+    },
+    "facing=north,part=bottom_left": {
+      "model": "westerosblocks:block/big_door/bottom_left",
+      "y": 0
+    },
+    "facing=north,part=bottom_right": {
+      "model": "westerosblocks:block/big_door/bottom_right",
+      "y": 0
+    },
+    "facing=north,part=middle_center": {
+      "model": "westerosblocks:block/big_door/middle_center",
+      "y": 0
+    },
+    "facing=north,part=middle_left": {
+      "model": "westerosblocks:block/big_door/middle_left",
+      "y": 0
+    },
+    "facing=north,part=middle_right": {
+      "model": "westerosblocks:block/big_door/middle_right",
+      "y": 0
+    },
+    "facing=north,part=top_center": {
+      "model": "westerosblocks:block/big_door/top_center",
+      "y": 0
+    },
+    "facing=north,part=top_left": {
+      "model": "westerosblocks:block/big_door/top_left",
+      "y": 0
+    },
+    "facing=north,part=top_right": {
+      "model": "westerosblocks:block/big_door/top_right",
+      "y": 0
+    },
+    "facing=south,part=bottom_center": {
+      "model": "westerosblocks:block/big_door/bottom_center",
+      "y": 180
+    },
+    "facing=south,part=bottom_left": {
+      "model": "westerosblocks:block/big_door/bottom_left",
+      "y": 180
+    },
+    "facing=south,part=bottom_right": {
+      "model": "westerosblocks:block/big_door/bottom_right",
+      "y": 180
+    },
+    "facing=south,part=middle_center": {
+      "model": "westerosblocks:block/big_door/middle_center",
+      "y": 180
+    },
+    "facing=south,part=middle_left": {
+      "model": "westerosblocks:block/big_door/middle_left",
+      "y": 180
+    },
+    "facing=south,part=middle_right": {
+      "model": "westerosblocks:block/big_door/middle_right",
+      "y": 180
+    },
+    "facing=south,part=top_center": {
+      "model": "westerosblocks:block/big_door/top_center",
+      "y": 180
+    },
+    "facing=south,part=top_left": {
+      "model": "westerosblocks:block/big_door/top_left",
+      "y": 180
+    },
+    "facing=south,part=top_right": {
+      "model": "westerosblocks:block/big_door/top_right",
+      "y": 180
+    },
+    "facing=west,part=bottom_center": {
+      "model": "westerosblocks:block/big_door/bottom_center",
+      "y": 270
+    },
+    "facing=west,part=bottom_left": {
+      "model": "westerosblocks:block/big_door/bottom_left",
+      "y": 270
+    },
+    "facing=west,part=bottom_right": {
+      "model": "westerosblocks:block/big_door/bottom_right",
+      "y": 270
+    },
+    "facing=west,part=middle_center": {
+      "model": "westerosblocks:block/big_door/middle_center",
+      "y": 270
+    },
+    "facing=west,part=middle_left": {
+      "model": "westerosblocks:block/big_door/middle_left",
+      "y": 270
+    },
+    "facing=west,part=middle_right": {
+      "model": "westerosblocks:block/big_door/middle_right",
+      "y": 270
+    },
+    "facing=west,part=top_center": {
+      "model": "westerosblocks:block/big_door/top_center",
+      "y": 270
+    },
+    "facing=west,part=top_left": {
+      "model": "westerosblocks:block/big_door/top_left",
+      "y": 270
+    },
+    "facing=west,part=top_right": {
+      "model": "westerosblocks:block/big_door/top_right",
+      "y": 270
+    }
+  }
+}

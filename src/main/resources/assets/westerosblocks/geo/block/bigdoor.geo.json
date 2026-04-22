@@ -16,7 +16,7 @@
 					"pivot": [0, 0, -5]
 				},
 				{
-					"name": "left_leaf",
+					"name": "left_door",
 					"parent": "root",
 					"pivot": [-22.5, 0, -6.5],
 					"cubes": [
@@ -35,7 +35,7 @@
 					]
 				},
 				{
-					"name": "right_leaf",
+					"name": "right_door",
 					"parent": "root",
 					"pivot": [22.5, 0, -6.5],
 					"cubes": [
@@ -44,9 +44,9 @@
 							"size": [24, 48, 3],
 							"uv": {
 								"north": {"uv": [48, 0], "uv_size": [48, 96]},
-								"east": {"uv": [48, 0], "uv_size": [6, 96]},
+								"east": {"uv": [90, 0], "uv_size": [6, 96]},
 								"south": {"uv": [48, 0], "uv_size": [48, 96]},
-								"west": {"uv": [48, 0], "uv_size": [6, 96]},
+								"west": {"uv": [90, 0], "uv_size": [6, 96]},
 								"up": {"uv": [48, 0], "uv_size": [48, 6]},
 								"down": {"uv": [48, 0], "uv_size": [48, 6]}
 							}
