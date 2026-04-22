@@ -128,6 +128,20 @@ Four snow depths (`_light_snow`, `_medium_snow`, `_snow`, `_heavy_snow`) for bot
 
 - Beam brace variants: `spruce_beam_brace`, `jungle_beam_brace`, `grey_beam_brace`, `oak_jungle_beam_brace`, `birch_beam_brace`
 - Pilot `oak_bigdoor` block. First bigdoor definition wired to AzureLib-animated open/close swing via a new `WCBigDoorBlockEntity` + `WCBigDoorBlockEntityRenderer`. Static per-part models are emitted empty; the BlockEntity renderer draws the full 3×3 door. Geo/animation assets at `assets/westerosblocks/geo/block/bigdoor.geo.json` and `assets/westerosblocks/animations/block/bigdoor.animation.json` are scaffolded starter files — refine in Blockbench. Note: `BigDoorPart.getOffset` was corrected so the LEFT column is placed on the door's actual left (CCW of FACING) — any doors placed from builds prior to this change will have inverted L/R columns and should be re-placed.
+- `oak_bigdoor` follow-ups: hinge pivot fix, collision detection fix, item icon fix
+- Hedge models + connectivity tweaks for `oak_hedge`, `spruce_hedge`, `birch_hedge`, `jungle_hedge`
+- `oak_balcony` wall model + updated balcony textures
+- Birch horizontal stripped log textures + CTM: `birch_horizontal_stripped_log`
+- Custom torch model + candle model tweaks; unlit torch fix
+- Painting transparency fixes (via new painting mixin)
+- Wall tinting + inventory tinting fixes on tinted solid blocks
+- Water tint fix
+- Grass fix; vanilla slab/stair and vanilla wood fixes
+- Fancy door item texture fixes: `oak_door_2`, `spruce_door_2`, `birch_door_2`, `jungle_door_2`, `northern_door_2`, `grey_door_2`, `white_door_2`
+- Paper, slab, and bench block fixes
+- `chili_pepper_crate` (chili ristra) texture desaturated
+- `test_arrow_slit` validation pass
+- Purple hanging flowers (`hanging_flowers_purple`) + web polish
 
 ## March 2026
 
