@@ -46,8 +46,7 @@
     "textures": [
       "rope_ladder/side"
     ],
-    "renderLayer": "cutout",
-    "isCustomModel": true
+    "renderLayer": "cutout"
   },
   {
     "blockName": "vine_jasmine",

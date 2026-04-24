@@ -126,6 +126,7 @@ Four snow depths (`_light_snow`, `_medium_snow`, `_snow`, `_heavy_snow`) for bot
 
 ## April 2026
 
+- Modified: `rope_ladder` reverted to the 1.18.2 flat-plane ladder model. Removed `isCustomModel` from the definition and deleted the custom 3D model files under `models/block/custom/rope_ladder/`; datagen now emits the standard `block/untinted/ladder` parented model.
 - Beam brace variants: `spruce_beam_brace`, `jungle_beam_brace`, `grey_beam_brace`, `oak_jungle_beam_brace`, `birch_beam_brace`
 - Pilot `oak_bigdoor` block. First bigdoor definition wired to AzureLib-animated open/close swing via a new `WCBigDoorBlockEntity` + `WCBigDoorBlockEntityRenderer`. Static per-part models are emitted empty; the BlockEntity renderer draws the full 3×3 door. Geo/animation assets at `assets/westerosblocks/geo/block/bigdoor.geo.json` and `assets/westerosblocks/animations/block/bigdoor.animation.json` are scaffolded starter files — refine in Blockbench. Note: `BigDoorPart.getOffset` was corrected so the LEFT column is placed on the door's actual left (CCW of FACING) — any doors placed from builds prior to this change will have inverted L/R columns and should be re-placed.
 - `oak_bigdoor` follow-ups: hinge pivot fix, collision detection fix, item icon fix
