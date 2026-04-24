@@ -29,6 +29,13 @@ public class WCFurnaceBlock extends FurnaceBlock implements WCBlockDef {
         public Block buildBlockClass(BlockDefinition definition) {
             AbstractBlock.Settings settings = definition.makeSettings();
             boolean alwaysOn = definition.isAlwaysOn();
+            int light = definition.getLuminance();
+            if (light > 0) {
+                settings = settings.luminance(state -> {
+                    if (alwaysOn) return light;
+                    return state.contains(LIT) && state.get(LIT) ? light : 0;
+                });
+            }
             return new WCFurnaceBlock(settings, definition, alwaysOn);
         }
     }

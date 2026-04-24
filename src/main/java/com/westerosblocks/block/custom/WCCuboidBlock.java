@@ -41,8 +41,8 @@ public class WCCuboidBlock extends Block implements Waterloggable, WCBlockDef {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(BlockDefinition definition) {
-            AbstractBlock.Settings settings = definition.makeSettings();
             ModProperties.StateProperty stateProperty = definition.buildStateProperty();
+            AbstractBlock.Settings settings = definition.applyStateLuminance(definition.makeSettings(), stateProperty);
             boolean doToggleOnUse = definition.toggleOnUse();
 
             // Set the STATE property for constructor

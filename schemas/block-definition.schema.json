@@ -1495,6 +1495,17 @@
           "items": { "$ref": "#/$defs/CuboidElement" },
           "description": "Cuboid elements for this state"
         },
+        "luminance": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 15,
+          "description": "Light level emitted while this state is active (0-15). Overrides the top-level luminance for that state."
+        },
+        "colorMult": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "description": "Color multiplier applied while this state is active"
+        },
         "rotYOffset": {
           "type": "integer",
           "description": "Y-axis rotation offset in degrees"

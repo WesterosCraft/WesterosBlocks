@@ -52,8 +52,10 @@ public class WCPlantBlock extends Block implements WCBlockDef {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(BlockDefinition definition) {
-            AbstractBlock.Settings settings = definition.makeSettings().noCollision().breakInstantly();
             ModProperties.StateProperty stateProperty = definition.buildStateProperty();
+            AbstractBlock.Settings settings = definition.applyStateLuminance(
+                    definition.makeSettings().noCollision().breakInstantly(),
+                    stateProperty);
 
             boolean layerSensitive = definition.isLayerSensitive();
             boolean toggleOnUse = definition.toggleOnUse();

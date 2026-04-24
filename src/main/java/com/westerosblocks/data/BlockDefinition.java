@@ -1167,6 +1167,42 @@ public class BlockDefinition {
         return luminance != null ? luminance : 0;
     }
 
+    public boolean hasPerStateLuminance() {
+        if (states == null) return false;
+        for (StateVariant sv : states) {
+            if (sv.luminance != null) return true;
+        }
+        return false;
+    }
+
+    /**
+     * Overrides the settings luminance function with one that reads the
+     * per-state {@code luminance} field from {@link StateVariant}. Falls back
+     * to the top-level luminance when a state has none. If no state defines
+     * a luminance, the settings are returned unchanged so the top-level value
+     * already applied by {@link #makeSettings()} remains in effect.
+     */
+    public AbstractBlock.Settings applyStateLuminance(
+            AbstractBlock.Settings settings,
+            ModProperties.StateProperty stateProperty) {
+        if (!hasPerStateLuminance() || stateProperty == null || states == null) {
+            return settings;
+        }
+        int fallback = getLuminance();
+        Map<String, Integer> byState = new HashMap<>();
+        for (StateVariant sv : states) {
+            int lum = sv.luminance != null ? sv.luminance : fallback;
+            byState.put(sv.getStateID(), lum);
+        }
+        return settings.luminance(state -> {
+            if (state.contains(stateProperty)) {
+                Integer v = byState.get(state.get(stateProperty));
+                if (v != null) return v;
+            }
+            return fallback;
+        });
+    }
+
     public boolean hasCustomModel() {
         return Boolean.TRUE.equals(isCustomModel);
     }

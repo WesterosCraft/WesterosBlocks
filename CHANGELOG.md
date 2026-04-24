@@ -142,6 +142,7 @@ Four snow depths (`_light_snow`, `_medium_snow`, `_snow`, `_heavy_snow`) for bot
 - `chili_pepper_crate` (chili ristra) texture desaturated
 - `test_arrow_slit` validation pass
 - Purple hanging flowers (`hanging_flowers_purple`) + web polish
+- Modified: Light emission fix for `safe_fire`, `lantern`, `red_lantern`, `candle_altar`. `StateVariant.luminance` is now applied at runtime (previously only the top-level `luminance` was wired to `AbstractBlock.Settings.luminance`), so lit/unlit states drive block light. Also bumped `safe_fire` luminance from 1 to 15 to match vanilla fire.
 
 ## March 2026
 

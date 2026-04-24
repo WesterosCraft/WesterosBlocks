@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.11",
+	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
 		"particle": "westerosblocks:block/leaves/oak/all",
@@ -18,7 +18,7 @@
 		{
 			"from": [8, 0, 7],
 			"to": [22, 16, 7],
-			"rotation": {"x": 0, "y": 135, "z": 0, "origin": [11, 0, 7]},
+			"rotation": {"angle": 135, "axis": "y", "origin": [11, 0, 7]},
 			"faces": {
 				"north": {"uv": [0, 0, 14, 16], "texture": "#side", "tintindex": 0},
 				"south": {"uv": [0, 0, 14, 16], "texture": "#side", "tintindex": 0}
@@ -27,7 +27,8 @@
 		{
 			"from": [8.27215, 0.27728, 6.64877],
 			"to": [20.27215, 12.27728, 6.64877],
-			"rotation": {"x": 0, "y": 45, "z": -103, "origin": [11.79496, 9.20039, 4.17157]},
+			"rotation": {"angle": 45, "axis": "y", "origin": [11.79496, 9.20039, 4.17157]},
+			"rotated": [0, 45, -103],
 			"faces": {
 				"north": {"uv": [0, 0, 14, 16], "texture": "#side", "tintindex": 0},
 				"south": {"uv": [0, 0, 14, 16], "texture": "#side", "tintindex": 0}
@@ -36,7 +37,8 @@
 		{
 			"from": [1.27215, 3.1235, 1.69438],
 			"to": [13.27215, 15.1235, 1.69438],
-			"rotation": {"x": 180, "y": 45, "z": 77, "origin": [4.79496, 6.20039, 4.17157]},
+			"rotation": {"angle": 180, "axis": "x", "origin": [4.79496, 6.20039, 4.17157]},
+			"rotated": [180, 45, 77],
 			"faces": {
 				"north": {"uv": [0, 0, 14, 16], "texture": "#side", "tintindex": 0},
 				"south": {"uv": [0, 0, 14, 16], "texture": "#side", "tintindex": 0}
