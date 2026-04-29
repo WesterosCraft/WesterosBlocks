@@ -6,6 +6,7 @@
     ],
     "hardness": 2,
     "soundGroup": "grass",
+    "mapColor": "TERRACOTTA_GRAY",
     "resistance": 2,
     "harvestLevel": [
         {

@@ -1,61 +1,86 @@
 [
-  {
-    "blockName": "piled_bones_stairs",
-    "blockType": "stair",
-    "hardness": 5,
-    "resistance": 10,
-    "soundGroup": "stone",
-    "creativeTab": "westeros_misc_tab",
-    "label": "Piled Bones Stairs",
-    "options": {
-      "unconnect": false
+    {
+        "blockName": "piled_bones_stairs",
+        "blockType": "stair",
+        "hardness": 5,
+        "resistance": 10,
+        "soundGroup": "stone",
+        "mapColor": "TERRACOTTA_LIGHT_GRAY",
+        "creativeTab": "westeros_misc_tab",
+        "label": "Piled Bones Stairs",
+        "options": {
+            "unconnect": false
+        },
+        "textures": [
+            "piled_bones/side"
+        ]
     },
-    "textures": ["piled_bones/side"]
-  },
-  {
-    "blockName": "stacked_bones_stairs",
-    "blockType": "stair",
-    "soundGroup": "stone",
-    "harvestLevel": [
-      {
-        "tool": "axe",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_misc_tab",
-    "label": "Stacked Bones Stairs",
-    "options": {
-      "unconnect": false,
-      "noUvlock": true
+    {
+        "blockName": "stacked_bones_stairs",
+        "blockType": "stair",
+        "soundGroup": "stone",
+        "mapColor": "TERRACOTTA_CYAN",
+        "harvestLevel": [
+            {
+                "tool": "axe",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_misc_tab",
+        "label": "Stacked Bones Stairs",
+        "options": {
+            "unconnect": false,
+            "noUvlock": true
+        },
+        "textures": [
+            "stacked_bones/bone_stacked_front",
+            "stacked_bones/bone_stacked_front",
+            "stacked_bones/bone_stacked_rotated"
+        ],
+        "isCustomModel": true
     },
-    "textures": [
-      "stacked_bones/bone_stacked_front",
-      "stacked_bones/bone_stacked_front",
-      "stacked_bones/bone_stacked_rotated"
-    ],
-    "isCustomModel": true
-  },
-  {
-    "blockName": "grass_stairs",
-    "blockType": "stair",
-    "strength": 5,
-    "soundGroup": "grass",
-    "isTinted": true,
-    "creativeTab": "westeros_grass_dirt_tab",
-    "label": "Grass Stairs",
-    "colorMult": "textures/colormap/grass",
-    "randomTextures": [
-      { "textures": ["classic_grass_block/top1"] },
-      { "textures": ["classic_grass_block/top2"] },
-      { "textures": ["classic_grass_block/top3"] },
-      { "textures": ["classic_grass_block/top4"] },
-      { "textures": ["classic_grass_block/top5"] }
-    ],
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ]
-  }
+    {
+        "blockName": "grass_stairs",
+        "blockType": "stair",
+        "strength": 5,
+        "soundGroup": "grass",
+        "mapColor": "IRON_GRAY",
+        "isTinted": true,
+        "creativeTab": "westeros_grass_dirt_tab",
+        "label": "Grass Stairs",
+        "colorMult": "textures/colormap/grass",
+        "randomTextures": [
+            {
+                "textures": [
+                    "classic_grass_block/top1"
+                ]
+            },
+            {
+                "textures": [
+                    "classic_grass_block/top2"
+                ]
+            },
+            {
+                "textures": [
+                    "classic_grass_block/top3"
+                ]
+            },
+            {
+                "textures": [
+                    "classic_grass_block/top4"
+                ]
+            },
+            {
+                "textures": [
+                    "classic_grass_block/top5"
+                ]
+            }
+        ],
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ]
+    }
 ]

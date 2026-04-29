@@ -204,6 +204,11 @@
           "items": { "type": "string" },
           "description": "Array of colormap paths for multi-colormap tinting"
         },
+        "mapColor": {
+          "type": "string",
+          "description": "MapColor used by paper maps and minimap mods (Xaero, Dynmap). Name of a constant on net.minecraft.block.MapColor (case-insensitive), e.g. 'STONE_GRAY', 'OAK_TAN', 'PALE_YELLOW'. If omitted, derived from soundGroup.",
+          "examples": ["STONE_GRAY", "OAK_TAN", "PALE_YELLOW", "DIRT_BROWN", "WHITE_GRAY", "IRON_GRAY", "DARK_GREEN", "PALE_GREEN", "DARK_RED", "BLACK", "WHITE", "CLEAR"]
+        },
         "renderLayer": {
           "type": "string",
           "enum": ["cutout", "cutout_mipped", "translucent"],

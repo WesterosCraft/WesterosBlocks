@@ -1,21 +1,22 @@
 {
-  "baseBlockName": "pebbles_dark_stormlands",
-  "variants": [
-    "solid",
-    "layer"
-  ],
-  "hardness": 5,
-  "soundGroup": "gravel",
-  "resistance": 10,
-  "harvestLevel": [
-    {
-      "tool": "shovel",
-      "level": 1
+    "baseBlockName": "pebbles_dark_stormlands",
+    "variants": [
+        "solid",
+        "layer"
+    ],
+    "hardness": 5,
+    "soundGroup": "gravel",
+    "mapColor": "BROWN",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_sand_gravel_tab",
+    "baseLabel": "Pebbles Dark Stormlands",
+    "textures": {
+        "all": "pebble/stormlands/dark"
     }
-  ],
-  "creativeTab": "westeros_sand_gravel_tab",
-  "baseLabel": "Pebbles Dark Stormlands",
-  "textures": {
-    "all": "pebble/stormlands/dark"
-  }
 }

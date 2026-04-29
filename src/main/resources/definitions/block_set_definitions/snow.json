@@ -10,6 +10,7 @@
     ],
     "hardness": 5,
     "soundGroup": "gravel",
+    "mapColor": "OFF_WHITE",
     "resistance": 10,
     "creativeTab": "westeros_water_air_tab",
     "baseLabel": "Snow",

@@ -1,21 +1,22 @@
 {
-  "baseBlockName": "pebbles_light_westerlands",
-  "variants": [
-    "solid",
-    "layer"
-  ],
-  "hardness": 5,
-  "soundGroup": "gravel",
-  "resistance": 10,
-  "harvestLevel": [
-    {
-      "tool": "shovel",
-      "level": 1
+    "baseBlockName": "pebbles_light_westerlands",
+    "variants": [
+        "solid",
+        "layer"
+    ],
+    "hardness": 5,
+    "soundGroup": "gravel",
+    "mapColor": "LIGHT_GRAY",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_sand_gravel_tab",
+    "baseLabel": "Pebbles Light Westerlands",
+    "textures": {
+        "all": "pebble/westerlands/light"
     }
-  ],
-  "creativeTab": "westeros_sand_gravel_tab",
-  "baseLabel": "Pebbles Light Westerlands",
-  "textures": {
-    "all": "pebble/westerlands/light"
-  }
 }

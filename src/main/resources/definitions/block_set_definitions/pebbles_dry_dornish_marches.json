@@ -6,6 +6,7 @@
     ],
     "hardness": 5,
     "soundGroup": "gravel",
+    "mapColor": "TERRACOTTA_PURPLE",
     "resistance": 10,
     "harvestLevel": [
         {

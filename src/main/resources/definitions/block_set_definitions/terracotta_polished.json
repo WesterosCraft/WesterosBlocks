@@ -8,6 +8,7 @@
     ],
     "hardness": 1.5,
     "soundGroup": "stone",
+    "mapColor": "DIRT_BROWN",
     "resistance": 10,
     "harvestLevel": [
         {
@@ -20,8 +21,13 @@
         "polished_stone_ctm"
     ],
     "options": {
-        "solid,slab": {"connectstate": true},
-        "stairs,wall": {"unconnect": false, "connectstate": true}
+        "solid,slab": {
+            "connectstate": true
+        },
+        "stairs,wall": {
+            "unconnect": false,
+            "connectstate": true
+        }
     },
     "baseLabel": "Polished Stone Terracotta",
     "textures": {

@@ -8,6 +8,7 @@
     ],
     "hardness": 2,
     "soundGroup": "grass",
+    "mapColor": "TERRACOTTA_GREEN",
     "resistance": 5,
     "creativeTab": "westeros_foliage_tab",
     "baseLabel": "Cushion Moss",

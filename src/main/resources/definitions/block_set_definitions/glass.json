@@ -6,6 +6,7 @@
     ],
     "hardness": 1,
     "soundGroup": "glass",
+    "mapColor": "GRAY",
     "resistance": 2,
     "harvestLevel": [
         {
@@ -18,7 +19,10 @@
     "lightOpacity": 0,
     "creativeTab": "westeros_windows_glass_tab",
     "options": {
-        "pane": {"legacyModel": true, "unconnect": false}
+        "pane": {
+            "legacyModel": true,
+            "unconnect": false
+        }
     },
     "baseLabel": "Glass",
     "textures": {

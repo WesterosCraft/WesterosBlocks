@@ -6,6 +6,7 @@
     ],
     "hardness": 5,
     "soundGroup": "gravel",
+    "mapColor": "GRAY",
     "resistance": 10,
     "harvestLevel": [
         {

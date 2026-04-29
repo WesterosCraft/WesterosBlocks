@@ -1,12 +1,15 @@
 [
-  {
-    "blockName": "sand_skeleton",
-    "blockType": "sand",
-    "hardness": 0.5,
-    "soundGroup": "sand",
-    "creativeTab": "westeros_sand_gravel_tab",
-    "label": "Sand Skeleton",
-    "textures": ["sand_block/sand_skeleton"],
-    "colorMult": "textures/colormap/sand"
-  }
+    {
+        "blockName": "sand_skeleton",
+        "blockType": "sand",
+        "hardness": 0.5,
+        "soundGroup": "sand",
+        "mapColor": "TERRACOTTA_WHITE",
+        "creativeTab": "westeros_sand_gravel_tab",
+        "label": "Sand Skeleton",
+        "textures": [
+            "sand_block/sand_skeleton"
+        ],
+        "colorMult": "textures/colormap/sand"
+    }
 ]

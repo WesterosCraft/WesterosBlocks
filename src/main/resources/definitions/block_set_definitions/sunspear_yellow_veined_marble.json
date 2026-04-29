@@ -11,6 +11,7 @@
     ],
     "hardness": 5,
     "soundGroup": "stone",
+    "mapColor": "RAW_IRON_PINK",
     "resistance": 4,
     "harvestLevel": [
         {

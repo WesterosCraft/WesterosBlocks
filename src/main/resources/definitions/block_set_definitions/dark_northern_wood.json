@@ -24,6 +24,7 @@
     },
     "hardness": 5,
     "soundGroup": "wood",
+    "mapColor": "TERRACOTTA_GRAY",
     "resistance": 4,
     "harvestLevel": [
         {
@@ -33,11 +34,17 @@
     ],
     "creativeTab": "westeros_wood_planks_tab",
     "altCustomTags": {
-        "solid": ["wood_ctm"],
-        "stairs,slab,wall,hopper,tip": ["plank_ctm"]
+        "solid": [
+            "wood_ctm"
+        ],
+        "stairs,slab,wall,hopper,tip": [
+            "plank_ctm"
+        ]
     },
     "options": {
-        "fence_gate": {"locked": true}
+        "fence_gate": {
+            "locked": true
+        }
     },
     "baseLabel": "Dark Northern Wood",
     "textures": {

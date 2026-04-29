@@ -8,6 +8,7 @@
     ],
     "hardness": 3,
     "soundGroup": "stone",
+    "mapColor": "BROWN",
     "resistance": 10,
     "creativeTab": "westeros_terrain_sets_tab",
     "baseLabel": "Iron Ore",

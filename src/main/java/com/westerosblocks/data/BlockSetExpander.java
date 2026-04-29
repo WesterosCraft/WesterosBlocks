@@ -129,6 +129,7 @@ public class BlockSetExpander {
         if (blockSet.getNonOpaque() != null) def.nonOpaque = blockSet.getNonOpaque();
         if (blockSet.getRenderLayer() != null) def.renderLayer = blockSet.getRenderLayer();
         if (blockSet.getColorMult() != null) def.colorMult = blockSet.getColorMult();
+        if (blockSet.getMapColor() != null) def.mapColor = blockSet.getMapColor();
 
         // 3. Custom tags
         if (altCustomTags != null && altCustomTags.containsKey(variant)) {

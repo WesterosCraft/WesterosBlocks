@@ -14,6 +14,7 @@
     },
     "hardness": 2,
     "soundGroup": "plant",
+    "mapColor": "DEEPSLATE_GRAY",
     "resistance": 5,
     "harvestLevel": [
         {

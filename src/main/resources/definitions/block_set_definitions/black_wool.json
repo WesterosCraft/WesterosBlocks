@@ -11,6 +11,7 @@
     ],
     "hardness": 1.5,
     "soundGroup": "cloth",
+    "mapColor": "BLACK",
     "resistance": 4,
     "harvestLevel": [
         {

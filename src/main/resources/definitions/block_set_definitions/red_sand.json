@@ -6,6 +6,7 @@
     ],
     "hardness": 0.5,
     "soundGroup": "sand",
+    "mapColor": "TERRACOTTA_PINK",
     "resistance": 1,
     "harvestLevel": [
         {

@@ -7,6 +7,7 @@
     ],
     "hardness": 2,
     "soundGroup": "snow",
+    "mapColor": "TERRACOTTA_LIGHT_GRAY",
     "resistance": 2,
     "harvestLevel": [
         {

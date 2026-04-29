@@ -11,6 +11,7 @@
     ],
     "hardness": 5,
     "soundGroup": "stone",
+    "mapColor": "TERRACOTTA_WHITE",
     "resistance": 4,
     "harvestLevel": [
         {

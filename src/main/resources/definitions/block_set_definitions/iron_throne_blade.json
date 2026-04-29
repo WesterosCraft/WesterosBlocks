@@ -12,6 +12,7 @@
     },
     "hardness": 5,
     "soundGroup": "metal",
+    "mapColor": "TERRACOTTA_GRAY",
     "resistance": 10,
     "harvestLevel": [
         {

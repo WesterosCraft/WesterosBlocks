@@ -1,20 +1,26 @@
 [
-  {
-    "blockName": "chair_oak",
-    "blockType": "chair",
-    "soundGroup": "wood",
-    "creativeTab": "westeros_furniture_tab",
-    "label": "Oak Chair",
-    "textures": ["bark/oak/side"],
-    "isCustomModel": true
-  },
-  {
-    "blockName": "chair_spruce",
-    "blockType": "chair",
-    "soundGroup": "wood",
-    "creativeTab": "westeros_furniture_tab",
-    "label": "Spruce Chair",
-    "textures": ["bark/spruce/side"],
-    "isCustomModel": true
-  }
+    {
+        "blockName": "chair_oak",
+        "blockType": "chair",
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_furniture_tab",
+        "label": "Oak Chair",
+        "textures": [
+            "bark/oak/side"
+        ],
+        "isCustomModel": true
+    },
+    {
+        "blockName": "chair_spruce",
+        "blockType": "chair",
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_furniture_tab",
+        "label": "Spruce Chair",
+        "textures": [
+            "bark/spruce/side"
+        ],
+        "isCustomModel": true
+    }
 ]

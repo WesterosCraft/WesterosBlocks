@@ -11,6 +11,7 @@
     ],
     "hardness": 1.5,
     "soundGroup": "stone",
+    "mapColor": "TERRACOTTA_GRAY",
     "resistance": 10,
     "harvestLevel": [
         {
@@ -20,7 +21,10 @@
     ],
     "creativeTab": "westeros_roofing_tab",
     "options": {
-        "stairs": {"unconnect": false, "noUvlock": true}
+        "stairs": {
+            "unconnect": false,
+            "noUvlock": true
+        }
     },
     "baseLabel": "Black Slate",
     "textures": {

@@ -1,16 +1,20 @@
 [
-  {
-    "blockName": "awning_red",
-    "blockType": "awning",
-    "strength": 0.5,
-    "soundGroup": "wool",
-    "creativeTab": "westeros_decor_tab",
-    "label": "Red Awning",
-    "textures": ["wool/red/all", "awning/red_awning_side"],
-    "renderLayer": "cutout",
-    "nonOpaque": true,
-    "options": {
-      "toggleOnUse": true
+    {
+        "blockName": "awning_red",
+        "blockType": "awning",
+        "strength": 0.5,
+        "soundGroup": "wool",
+        "mapColor": "BROWN",
+        "creativeTab": "westeros_decor_tab",
+        "label": "Red Awning",
+        "textures": [
+            "wool/red/all",
+            "awning/red_awning_side"
+        ],
+        "renderLayer": "cutout",
+        "nonOpaque": true,
+        "options": {
+            "toggleOnUse": true
+        }
     }
-  }
 ]

@@ -12,6 +12,7 @@
     ],
     "hardness": 5,
     "soundGroup": "stone",
+    "mapColor": "TERRACOTTA_GREEN",
     "resistance": 10,
     "harvestLevel": [
         {
@@ -21,8 +22,12 @@
     ],
     "creativeTab": "westeros_terrain_sets_tab",
     "options": {
-        "fence": {"unconnect": true},
-        "fence_gate": {"locked": true}
+        "fence": {
+            "unconnect": true
+        },
+        "fence_gate": {
+            "locked": true
+        }
     },
     "baseLabel": "TerrainSet River Rocks",
     "textures": {

@@ -1,551 +1,614 @@
 [
-  {
-    "blockName": "apple_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Apple Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_apple",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "apricot_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Apricot Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_apricot",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "berry_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Berry Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_berry",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "carrot_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Carrot Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_carrot",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "closed_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_decor_tab",
-    "label": "Closed Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_top_closed",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "cut_grain_flour_sack",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "gravel",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Cut Grain Flour Sack",
-    "textures": [
-      "grain_sack/all",
-      "grain_sack/cut",
-      "grain_sack/front",
-      "grain_sack/front",
-      "grain_sack/side"
-    ]
-  },
-  {
-    "blockName": "date_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Date Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_dates",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "firewood_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "wood",
-    "harvestLevel": [
-      {
-        "tool": "axe",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_decor_tab",
-    "label": "Firewood Slab",
-    "textures": ["firewood/side", "firewood/side", "firewood/top"]
-  },
-  {
-    "blockName": "fish_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Fish Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_fish",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "grain_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Grain Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_grain",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "grain_flour_sack",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "gravel",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Grain Flour Sack",
-    "textures": [
-      "grain_sack/all",
-      "grain_sack/all",
-      "grain_sack/front",
-      "grain_sack/front",
-      "grain_sack/side"
-    ]
-  },
-  {
-    "blockName": "hop_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Hop Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_hop",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "lavender_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Lavender Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_lavender",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "lemon_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Lemon Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_lemons",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "lime_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Lime Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_limes",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "olive_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Olive Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_olives",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "open_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_decor_tab",
-    "label": "Open Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_top",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "orange_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Orange Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_oranges",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "piled_bones_slab",
-    "blockType": "slab",
-    "strength": 3,
-    "soundGroup": "stone",
-    "harvestLevel": [
-      {
-        "tool": "pickaxe",
-        "level": 2
-      }
-    ],
-    "creativeTab": "westeros_misc_tab",
-    "label": "Piled Bones Slab",
-    "textures": ["piled_bones/side"]
-  },
-  {
-    "blockName": "pomegranate_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Pomegranate Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_pomegranates",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "purple_grape_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Purple Grape Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_grape_purple",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "sourleaf_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Sourleaf Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_sourleaf",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "stacked_bones_slab",
-    "blockType": "slab",
-    "strength": 3,
-    "soundGroup": "stone",
-    "harvestLevel": [
-      {
-        "tool": "pickaxe",
-        "level": 2
-      }
-    ],
-    "creativeTab": "westeros_misc_tab",
-    "label": "Stacked Bones Slab",
-    "textures": [
-      "stacked_bones/bone_stacked_side",
-      "stacked_bones/bone_stacked_side",
-      "stacked_bones/bone_stacked_front"
-    ]
-  },
-  {
-    "blockName": "stool",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "wood",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_furniture_tab",
-    "label": "Stool",
-    "textures": ["seat/bottom", "seat/top", "seat/side"],
-    "renderLayer": "cutout",
-    "nonOpaque": true,
-    "lightOpacity": 0
-  },
-  {
-    "blockName": "stool_cushion",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "wood",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_furniture_tab",
-    "label": "Stool Cushion",
-    "textures": ["seat/bottom", "seat/top_cushion", "seat/side_cushion"],
-    "renderLayer": "cutout",
-    "nonOpaque": true,
-    "lightOpacity": 0
-  },
-  {
-    "blockName": "turnip_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Turnip Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_turnip",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "white_grape_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "White Grape Basket Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_grape_white",
-      "crate_block/basket_side_slab"
-    ]
-  },
-  {
-    "blockName": "grass_slab",
-    "blockType": "slab",
-    "strength": 5,
-    "soundGroup": "grass",
-    "isTinted": true,
-    "creativeTab": "westeros_grass_dirt_tab",
-    "label": "Grass Slab",
-    "colorMult": "textures/colormap/grass",
-    "randomTextures": [
-      { "textures": ["classic_grass_block/top1"] },
-      { "textures": ["classic_grass_block/top2"] },
-      { "textures": ["classic_grass_block/top3"] },
-      { "textures": ["classic_grass_block/top4"] },
-      { "textures": ["classic_grass_block/top5"] }
-    ],
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "blockName": "chili_pepper_basket_slab",
-    "blockType": "slab",
-    "strength": 2,
-    "soundGroup": "cloth",
-    "harvestLevel": [
-      {
-        "tool": "shovel",
-        "level": 1
-      }
-    ],
-    "creativeTab": "westeros_food_blocks_tab",
-    "label": "Chili Pepper Slab",
-    "textures": [
-      "crate_block/basket_bottom",
-      "crate_block/basket_chili_pepper",
-      "crate_block/basket_side_slab"
-    ]
-  }
+    {
+        "blockName": "apple_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Apple Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_apple",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "apricot_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Apricot Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_apricot",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "berry_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Berry Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_berry",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "carrot_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Carrot Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_carrot",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "closed_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_decor_tab",
+        "label": "Closed Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_top_closed",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "cut_grain_flour_sack",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "gravel",
+        "mapColor": "TERRACOTTA_LIGHT_GRAY",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Cut Grain Flour Sack",
+        "textures": [
+            "grain_sack/all",
+            "grain_sack/cut",
+            "grain_sack/front",
+            "grain_sack/front",
+            "grain_sack/side"
+        ]
+    },
+    {
+        "blockName": "date_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Date Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_dates",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "firewood_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "harvestLevel": [
+            {
+                "tool": "axe",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_decor_tab",
+        "label": "Firewood Slab",
+        "textures": [
+            "firewood/side",
+            "firewood/side",
+            "firewood/top"
+        ]
+    },
+    {
+        "blockName": "fish_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "GRAY",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Fish Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_fish",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "grain_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Grain Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_grain",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "grain_flour_sack",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "gravel",
+        "mapColor": "TERRACOTTA_LIGHT_GRAY",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Grain Flour Sack",
+        "textures": [
+            "grain_sack/all",
+            "grain_sack/all",
+            "grain_sack/front",
+            "grain_sack/front",
+            "grain_sack/side"
+        ]
+    },
+    {
+        "blockName": "hop_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_GREEN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Hop Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_hop",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "lavender_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Lavender Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_lavender",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "lemon_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Lemon Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_lemons",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "lime_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_GREEN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Lime Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_limes",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "olive_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Olive Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_olives",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "open_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_decor_tab",
+        "label": "Open Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_top",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "orange_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Orange Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_oranges",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "piled_bones_slab",
+        "blockType": "slab",
+        "strength": 3,
+        "soundGroup": "stone",
+        "mapColor": "TERRACOTTA_LIGHT_GRAY",
+        "harvestLevel": [
+            {
+                "tool": "pickaxe",
+                "level": 2
+            }
+        ],
+        "creativeTab": "westeros_misc_tab",
+        "label": "Piled Bones Slab",
+        "textures": [
+            "piled_bones/side"
+        ]
+    },
+    {
+        "blockName": "pomegranate_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Pomegranate Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_pomegranates",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "purple_grape_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Purple Grape Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_grape_purple",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "sourleaf_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Sourleaf Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_sourleaf",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "stacked_bones_slab",
+        "blockType": "slab",
+        "strength": 3,
+        "soundGroup": "stone",
+        "mapColor": "DEEPSLATE_GRAY",
+        "harvestLevel": [
+            {
+                "tool": "pickaxe",
+                "level": 2
+            }
+        ],
+        "creativeTab": "westeros_misc_tab",
+        "label": "Stacked Bones Slab",
+        "textures": [
+            "stacked_bones/bone_stacked_side",
+            "stacked_bones/bone_stacked_side",
+            "stacked_bones/bone_stacked_front"
+        ]
+    },
+    {
+        "blockName": "stool",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_furniture_tab",
+        "label": "Stool",
+        "textures": [
+            "seat/bottom",
+            "seat/top",
+            "seat/side"
+        ],
+        "renderLayer": "cutout",
+        "nonOpaque": true,
+        "lightOpacity": 0
+    },
+    {
+        "blockName": "stool_cushion",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_furniture_tab",
+        "label": "Stool Cushion",
+        "textures": [
+            "seat/bottom",
+            "seat/top_cushion",
+            "seat/side_cushion"
+        ],
+        "renderLayer": "cutout",
+        "nonOpaque": true,
+        "lightOpacity": 0
+    },
+    {
+        "blockName": "turnip_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Turnip Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_turnip",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "white_grape_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "White Grape Basket Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_grape_white",
+            "crate_block/basket_side_slab"
+        ]
+    },
+    {
+        "blockName": "grass_slab",
+        "blockType": "slab",
+        "strength": 5,
+        "soundGroup": "grass",
+        "mapColor": "IRON_GRAY",
+        "isTinted": true,
+        "creativeTab": "westeros_grass_dirt_tab",
+        "label": "Grass Slab",
+        "colorMult": "textures/colormap/grass",
+        "randomTextures": [
+            {
+                "textures": [
+                    "classic_grass_block/top1"
+                ]
+            },
+            {
+                "textures": [
+                    "classic_grass_block/top2"
+                ]
+            },
+            {
+                "textures": [
+                    "classic_grass_block/top3"
+                ]
+            },
+            {
+                "textures": [
+                    "classic_grass_block/top4"
+                ]
+            },
+            {
+                "textures": [
+                    "classic_grass_block/top5"
+                ]
+            }
+        ],
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "blockName": "chili_pepper_basket_slab",
+        "blockType": "slab",
+        "strength": 2,
+        "soundGroup": "cloth",
+        "mapColor": "BROWN",
+        "harvestLevel": [
+            {
+                "tool": "shovel",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_food_blocks_tab",
+        "label": "Chili Pepper Slab",
+        "textures": [
+            "crate_block/basket_bottom",
+            "crate_block/basket_chili_pepper",
+            "crate_block/basket_side_slab"
+        ]
+    }
 ]

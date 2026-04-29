@@ -1,12 +1,15 @@
 package com.westerosblocks.data;
 
 import com.google.gson.annotations.SerializedName;
+import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.utils.ModProperties;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.MapColor;
 import net.minecraft.sound.BlockSoundGroup;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.UnaryOperator;
 
 /**
@@ -73,6 +76,14 @@ public class BlockDefinition {
      */
     @SerializedName("colorMults")
     private List<String> colorMults;
+
+    /**
+     * Map color used by paper maps and minimap mods (Xaero, Dynmap). Name of a constant from
+     * {@link net.minecraft.block.MapColor} (e.g. "STONE_GRAY", "OAK_TAN"). Optional — if omitted,
+     * a sensible color is derived from {@link #soundGroup}.
+     */
+    @SerializedName("mapColor")
+    String mapColor;
 
     /**
      * Custom texture path for item form (overrides default block texture)
@@ -1502,6 +1513,86 @@ public class BlockDefinition {
         return SOUND_GROUP_MAP.getOrDefault(soundGroup.toLowerCase(), BlockSoundGroup.STONE);
     }
 
+    public String getMapColor() {
+        return mapColor;
+    }
+
+    public boolean hasMapColor() {
+        return mapColor != null && !mapColor.isEmpty();
+    }
+
+    private static final Map<String, MapColor> SOUND_GROUP_TO_MAP_COLOR = createSoundGroupMapColorMap();
+
+    private static Map<String, MapColor> createSoundGroupMapColorMap() {
+        Map<String, MapColor> map = new HashMap<>();
+        map.put("wood", MapColor.OAK_TAN);
+        map.put("bamboo", MapColor.OAK_TAN);
+        map.put("ladder", MapColor.OAK_TAN);
+        map.put("stone", MapColor.STONE_GRAY);
+        map.put("anvil", MapColor.STONE_GRAY);
+        map.put("gravel", MapColor.STONE_GRAY);
+        map.put("nether_bricks", MapColor.DARK_RED);
+        map.put("netherite", MapColor.BLACK);
+        map.put("metal", MapColor.IRON_GRAY);
+        map.put("lantern", MapColor.IRON_GRAY);
+        map.put("sand", MapColor.PALE_YELLOW);
+        map.put("powder", MapColor.PALE_YELLOW);
+        map.put("snow", MapColor.WHITE);
+        map.put("grass", MapColor.DIRT_BROWN);
+        map.put("plant", MapColor.DARK_GREEN);
+        map.put("cloth", MapColor.WHITE_GRAY);
+        map.put("wool", MapColor.WHITE_GRAY);
+        map.put("glass", MapColor.CLEAR);
+        map.put("slime", MapColor.PALE_GREEN);
+        return map;
+    }
+
+    private static final Map<String, MapColor> NAMED_MAP_COLOR_CACHE = new ConcurrentHashMap<>();
+
+    /**
+     * Resolves a {@link MapColor} from a string name matching a public static field on
+     * {@code MapColor} (e.g. "STONE_GRAY"). Case-insensitive. Returns null on miss.
+     */
+    private static MapColor resolveNamedMapColor(String name) {
+        if (name == null || name.isEmpty()) {
+            return null;
+        }
+        String key = name.toUpperCase(Locale.ROOT);
+        if (NAMED_MAP_COLOR_CACHE.containsKey(key)) {
+            return NAMED_MAP_COLOR_CACHE.get(key);
+        }
+        try {
+            java.lang.reflect.Field field = MapColor.class.getField(key);
+            Object value = field.get(null);
+            if (value instanceof MapColor mc) {
+                NAMED_MAP_COLOR_CACHE.put(key, mc);
+                return mc;
+            }
+        } catch (NoSuchFieldException | IllegalAccessException ignored) {
+        }
+        return null;
+    }
+
+    /**
+     * Resolves the effective {@link MapColor} for this definition. Checks the explicit
+     * {@code mapColor} field first, then falls back to a soundGroup-derived default.
+     * Returns null if no sensible color can be determined (caller should leave settings unchanged).
+     */
+    public MapColor resolveMapColor() {
+        if (hasMapColor()) {
+            MapColor named = resolveNamedMapColor(mapColor);
+            if (named != null) {
+                return named;
+            }
+            WesterosBlocks.LOGGER.warn("Unknown mapColor '{}' on block '{}' — using soundGroup fallback",
+                    mapColor, blockName);
+        }
+        if (soundGroup != null) {
+            return SOUND_GROUP_TO_MAP_COLOR.get(soundGroup.toLowerCase(Locale.ROOT));
+        }
+        return null;
+    }
+
     /**
      * Creates AbstractBlock.Settings from this block definition.
      * This is the primary method for creating block settings with default behavior.
@@ -1544,6 +1635,16 @@ public class BlockDefinition {
 
         // Apply sound group
         settings = settings.sounds(getBlockSoundGroup());
+
+        // Apply map color (used by paper maps + minimap mods like Xaero/Dynmap).
+        // Explicit mapColor wins; otherwise derive from soundGroup. Skip when copyFrom
+        // is set with no explicit override so we inherit the source block's color.
+        if (hasMapColor() || copyFrom == null) {
+            MapColor resolved = resolveMapColor();
+            if (resolved != null) {
+                settings = settings.mapColor(resolved);
+            }
+        }
 
         // Apply luminance (light level 0-15)
         int light = getLuminance();

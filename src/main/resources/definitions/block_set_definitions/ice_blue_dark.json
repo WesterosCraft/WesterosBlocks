@@ -9,6 +9,7 @@
     ],
     "hardness": 2,
     "soundGroup": "glass",
+    "mapColor": "LIGHT_BLUE",
     "nonOpaque": true,
     "alphaRender": true,
     "resistance": 2,

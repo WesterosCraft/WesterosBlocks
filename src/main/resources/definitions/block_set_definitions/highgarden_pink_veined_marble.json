@@ -11,6 +11,7 @@
     ],
     "hardness": 5,
     "soundGroup": "stone",
+    "mapColor": "WHITE_GRAY",
     "resistance": 4,
     "harvestLevel": [
         {

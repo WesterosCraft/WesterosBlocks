@@ -9,6 +9,7 @@
     ],
     "hardness": 5,
     "soundGroup": "stone",
+    "mapColor": "TERRACOTTA_BLUE",
     "resistance": 10,
     "harvestLevel": [
         {
@@ -18,7 +19,9 @@
     ],
     "creativeTab": "westeros_water_air_tab",
     "options": {
-        "fence": {"unconnect": true}
+        "fence": {
+            "unconnect": true
+        }
     },
     "baseLabel": "Brain Coral",
     "textures": {

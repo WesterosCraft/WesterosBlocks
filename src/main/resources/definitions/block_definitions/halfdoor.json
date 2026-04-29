@@ -1,228 +1,244 @@
 [
-  {
-    "blockName": "birch_window_shutters",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Birch Window Shutters",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "birch_window_shutters",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "BROWN",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Birch Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "wood/birch/shutters"
+        ]
     },
-    "textures": [
-      "wood/birch/shutters"
-    ]
-  },
-  {
-    "blockName": "dorne_red_window_shutters",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Dorne Red Window Shutters",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "dorne_red_window_shutters",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Dorne Red Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "shutter_block/shutters_dorne"
+        ]
     },
-    "textures": [
-      "shutter_block/shutters_dorne"
-    ]
-  },
-  {
-    "blockName": "green_lannisport_window_shutters",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Green Lannisport Window Shutters",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "green_lannisport_window_shutters",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Green Lannisport Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "shutter_block/shutters_lannisport"
+        ]
     },
-    "textures": [
-      "shutter_block/shutters_lannisport"
-    ]
-  },
-  {
-    "blockName": "grey_wood_window_shutters",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Grey Wood Window Shutters",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "grey_wood_window_shutters",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Grey Wood Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "wood/grey/shutters"
+        ]
     },
-    "textures": [
-      "wood/grey/shutters"
-    ]
-  },
-  {
-    "blockName": "jungle_window_shutters",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Jungle Window Shutters",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "jungle_window_shutters",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Jungle Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "wood/jungle/shutters"
+        ]
     },
-    "textures": [
-      "wood/jungle/shutters"
-    ]
-  },
-  {
-    "blockName": "northern_wood_window_shutters",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Northern Wood Window Shutters",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "northern_wood_window_shutters",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Northern Wood Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "wood/northern/shutters"
+        ]
     },
-    "textures": [
-      "wood/northern/shutters"
-    ]
-  },
-  {
-    "blockName": "oak_window_shutters",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Oak Window Shutters",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "oak_window_shutters",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Oak Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "wood/oak/shutters"
+        ]
     },
-    "textures": [
-      "wood/oak/shutters"
-    ]
-  },
-  {
-    "blockName": "reach_blue_window_shutters",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Reach Blue Window Shutters",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "reach_blue_window_shutters",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Reach Blue Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "shutter_block/shutters_reach"
+        ]
     },
-    "textures": [
-      "shutter_block/shutters_reach"
-    ]
-  },
-  {
-    "blockName": "spruce_window_shutters",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Reinforced Spruce Wood Window Shutters",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "spruce_window_shutters",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Reinforced Spruce Wood Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "wood/spruce/shutters"
+        ]
     },
-    "textures": [
-      "wood/spruce/shutters"
-    ]
-  },
-  {
-    "blockName": "birch_window_shutters_2",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Birch Window Shutters",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "birch_window_shutters_2",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "BROWN",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Birch Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "wood/birch/shutters_alt"
+        ]
     },
-    "textures": [
-      "wood/birch/shutters_alt"
-    ]
-  },
-  {
-    "blockName": "white_wood_window_shutters_2",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Reinforced White Wood Window Shutters",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "white_wood_window_shutters_2",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "STONE_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Reinforced White Wood Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "wood/white/shutters_alt"
+        ]
     },
-    "textures": [
-      "wood/white/shutters_alt"
-    ]
-  },
-  {
-    "blockName": "grey_wood_window_shutters_2",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Reinforced Grey Wood Window Shutters",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "grey_wood_window_shutters_2",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Reinforced Grey Wood Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "wood/grey/shutters_alt"
+        ]
     },
-    "textures": [
-      "wood/grey/shutters_alt"
-    ]
-  },
-  {
-    "blockName": "oak_window_shutters_2",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Reinforced Oak Wood Window Shutters",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "oak_window_shutters_2",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Reinforced Oak Wood Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "wood/oak/shutters_alt"
+        ]
     },
-    "textures": [
-      "wood/oak/shutters_alt"
-    ]
-  },
-  {
-    "blockName": "spruce_window_shutters_2",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Spruce Window Shutters",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "spruce_window_shutters_2",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Spruce Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "wood/spruce/shutters_alt"
+        ]
     },
-    "textures": [
-      "wood/spruce/shutters_alt"
-    ]
-  },
-  {
-    "blockName": "northern_window_shutters_2",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Reinforced Northern Window Shutters",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "northern_window_shutters_2",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Reinforced Northern Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "wood/northern/shutters_alt"
+        ],
+        "renderLayer": "cutout",
+        "nonOpaque": true
     },
-    "textures": [
-      "wood/northern/shutters_alt"
-    ],
-    "renderLayer": "cutout",
-    "nonOpaque": true
-  },
-  {
-    "blockName": "jungle_window_shutters_2",
-    "blockType": "halfdoor",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_windows_glass_tab",
-    "label": "Reinforced Jungle Window Shutters",
-    "options": {
-      "allowUnsupported": true
-    },
-    "textures": [
-      "wood/jungle/shutters_alt"
-    ]
-  }
+    {
+        "blockName": "jungle_window_shutters_2",
+        "blockType": "halfdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Reinforced Jungle Window Shutters",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "wood/jungle/shutters_alt"
+        ]
+    }
 ]

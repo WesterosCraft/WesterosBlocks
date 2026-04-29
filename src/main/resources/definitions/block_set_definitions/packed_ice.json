@@ -9,6 +9,7 @@
     ],
     "hardness": 2,
     "soundGroup": "glass",
+    "mapColor": "WHITE_GRAY",
     "resistance": 2,
     "harvestLevel": [
         {

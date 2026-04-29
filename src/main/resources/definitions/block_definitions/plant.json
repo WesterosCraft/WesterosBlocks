@@ -1,2939 +1,3607 @@
 [
-  {
-    "blockName": "blue_bells",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Blue Bells",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/blue_bells"],
-    "renderLayer": "cutout"
-  },
-  {
-    "blockName": "blue_chicory",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Blue Chicory",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/blue_chicory/side1"]
-      },
-      {
-        "textures": ["flowers/blue_chicory/side2"]
-      },
-      {
-        "textures": ["flowers/blue_chicory/side3"]
-      },
-      {
-        "textures": ["flowers/blue_chicory/side4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
+    {
+        "blockName": "blue_bells",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_flowers_tab",
+        "mapColor": "GRAY",
+        "label": "Blue Bells",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/blue_bells"
+        ],
+        "renderLayer": "cutout"
+    },
+    {
+        "blockName": "blue_chicory",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GREEN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Blue Chicory",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/blue_chicory/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/blue_chicory/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/blue_chicory/side3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/blue_chicory/side4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "blue_flax",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_flowers_tab",
+        "mapColor": "TERRACOTTA_GRAY",
+        "label": "Blue Flax",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/blue_flax1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/blue_flax2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/blue_flax3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/blue_flax4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "blue_forgetmenots",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_flowers_tab",
+        "mapColor": "GRAY",
+        "label": "Blue Forget-me-nots",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/blue_forgetmenots1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/blue_forgetmenots2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/blue_forgetmenots3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/blue_forgetmenots4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "blue_hyacinth",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "GRAY",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Blue Hyacinth",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/blue_hyacinth1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/blue_hyacinth2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/blue_hyacinth3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/blue_hyacinth4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "blue_orchid",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "GRAY",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Blue Orchid",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/blue_orchid1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/blue_orchid2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/blue_orchid3"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "blue_swamp_bells",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Blue Swamp Bells",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/blue_swamp_bells1"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "bracken",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Bracken",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "bracken/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "bracken/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "bracken/side3"
+                ]
+            },
+            {
+                "textures": [
+                    "bracken/side4"
+                ]
+            },
+            {
+                "textures": [
+                    "bracken/side5"
+                ]
+            },
+            {
+                "textures": [
+                    "bracken/side6"
+                ]
+            },
+            {
+                "textures": [
+                    "bracken/side7"
+                ]
+            },
+            {
+                "textures": [
+                    "bracken/side8"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "brown_mushroom_1",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "GRAY",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Brown Mushroom 1",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "brown_mushroom_block/mushroom_brown_0"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "brown_mushroom_10",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_CYAN",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Brown Mushroom 10",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "brown_mushroom_block/mushroom_brown_9"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "brown_mushroom_11",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Brown Mushroom 11",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "brown_mushroom_block/mushroom_brown_10"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "brown_mushroom_12",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "BROWN",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Brown Mushroom 12",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "brown_mushroom_block/mushroom_brown_11"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "brown_mushroom_13",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_CYAN",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Brown Mushroom 13",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "brown_mushroom_block/mushroom_brown_12"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "brown_mushroom_2",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_LIGHT_GRAY",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Brown Mushroom 2",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "brown_mushroom_block/mushroom_brown_1"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "brown_mushroom_3",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_LIGHT_GRAY",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Brown Mushroom 3",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "brown_mushroom_block/mushroom_brown_2"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "brown_mushroom_4",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_LIGHT_GRAY",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Brown Mushroom 4",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "brown_mushroom_block/mushroom_brown_3"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "brown_mushroom_5",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_LIGHT_GRAY",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Brown Mushroom 5",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "brown_mushroom_block/mushroom_brown_4"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "brown_mushroom_6",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "CYAN",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Brown Mushroom 6",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "brown_mushroom_block/mushroom_brown_5"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "brown_mushroom_7",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_LIGHT_GRAY",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Brown Mushroom 7",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "brown_mushroom_block/mushroom_brown_6"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "brown_mushroom_8",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "GRAY",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Brown Mushroom 8",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "brown_mushroom_block/mushroom_brown_7"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "brown_mushroom_9",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "DEEPSLATE_GRAY",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Brown Mushroom 9",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "brown_mushroom_block/mushroom_brown_8"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "coral_brain_web",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_water_air_tab",
+        "mapColor": "TERRACOTTA_PURPLE",
+        "label": "Brain Coral Web",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "coral/brain/web1"
+                ]
+            },
+            {
+                "textures": [
+                    "coral/brain/web2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "coral_bubble_web",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_water_air_tab",
+        "mapColor": "CYAN",
+        "label": "Bubble Coral Web",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "coral/bubble/web1"
+                ]
+            },
+            {
+                "textures": [
+                    "coral/bubble/web2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "coral_fire_web",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_water_air_tab",
+        "mapColor": "SPRUCE_BROWN",
+        "label": "Fire Coral Web",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "coral/fire/web1"
+                ]
+            },
+            {
+                "textures": [
+                    "coral/fire/web2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "coral_horn_web",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_water_air_tab",
+        "mapColor": "TERRACOTTA_YELLOW",
+        "label": "Horn Coral Web",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "coral/horn/web1"
+                ]
+            },
+            {
+                "textures": [
+                    "coral/horn/web2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "coral_tube_web",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_water_air_tab",
+        "mapColor": "TERRACOTTA_BLUE",
+        "label": "Tube Coral Web",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "coral/tube/web1"
+                ]
+            },
+            {
+                "textures": [
+                    "coral/tube/web2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "cow_parsely",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "IRON_GRAY",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Cow Parsely",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "cow_parsely/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "cow_parsely/side2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "cranberry_bush",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_crops_herbs_tab",
+        "label": "Cranberry Bush",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "cranberry/base1"
+                ]
+            },
+            {
+                "textures": [
+                    "cranberry/base2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "dead_bracken",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Dead Bracken",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "dead_bracken/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "dead_bracken/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "dead_bracken/side3"
+                ]
+            },
+            {
+                "textures": [
+                    "dead_bracken/side4"
+                ]
+            },
+            {
+                "textures": [
+                    "dead_bracken/side5"
+                ]
+            },
+            {
+                "textures": [
+                    "dead_bracken/side6"
+                ]
+            },
+            {
+                "textures": [
+                    "dead_bracken/side7"
+                ]
+            },
+            {
+                "textures": [
+                    "dead_bracken/side8"
+                ]
+            },
+            {
+                "textures": [
+                    "dead_bracken/side9"
+                ]
+            },
+            {
+                "textures": [
+                    "dead_bracken/side10"
+                ]
+            },
+            {
+                "textures": [
+                    "dead_bracken/side11"
+                ]
+            },
+            {
+                "textures": [
+                    "dead_bracken/side12"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "dead_bush",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "BROWN",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Dead Bush",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "dorne_bush_thorny/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "dorne_bush_thorny/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "dorne_bush_thorny/side3"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "colorMult": "textures/colormap/dead_bush",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "dead_scrub_grass",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "mapColor": "BROWN",
+        "label": "Dead Scrub Grass",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/dead_scrub_grass1"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "flowers/dead_scrub_grass2"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "flowers/dead_scrub_grass3"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "flowers/dead_scrub_grass4"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "flowers/dead_scrub_grass5"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "flowers/dead_scrub_grass6"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "flowers/dead_scrub_grass7"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "flowers/dead_scrub_grass8"
+                ],
+                "weight": 15
+            },
+            {
+                "textures": [
+                    "flowers/dead_scrub_grass9"
+                ],
+                "weight": 15
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "dock_leaf",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_crops_herbs_tab",
+        "label": "Dock Leaf",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "dock_leaf/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "dock_leaf/side2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "fireweed",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "DARK_DULL_PINK",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Fireweed",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "fireweed/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "fireweed/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "fireweed/side3"
+                ]
+            },
+            {
+                "textures": [
+                    "fireweed/side4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "grass",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Grass",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "minecraft:block/fern/fern1"
+                ],
+                "weight": 5
+            },
+            {
+                "textures": [
+                    "minecraft:block/fern/fern2"
+                ],
+                "weight": 5
+            },
+            {
+                "textures": [
+                    "minecraft:block/fern/fern3"
+                ],
+                "weight": 15
+            },
+            {
+                "textures": [
+                    "minecraft:block/fern/fern4"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "minecraft:block/fern/fern5"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "minecraft:block/fern/fern6"
+                ],
+                "weight": 15
+            },
+            {
+                "textures": [
+                    "minecraft:block/fern/fern7"
+                ],
+                "weight": 25
+            },
+            {
+                "textures": [
+                    "minecraft:block/fern/fern8"
+                ],
+                "weight": 15
+            }
+        ],
+        "renderLayer": "cutout",
+        "colorMult": "textures/colormap/grass",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "green_leafy_herb",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "mapColor": "TERRACOTTA_GREEN",
+        "label": "Green Leafy Herb",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/green_leafy_herb"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "green_scrub_grass",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "mapColor": "TERRACOTTA_GREEN",
+        "label": "Green Scrub Grass",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/green_scrub_grass1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/green_scrub_grass2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/green_scrub_grass3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/green_scrub_grass4"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/green_scrub_grass5"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/green_scrub_grass6"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "green_spiny_herb",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "mapColor": "TERRACOTTA_GRAY",
+        "label": "Green Spiny Herb",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/green_spiny_herb1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/green_spiny_herb2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/green_spiny_herb3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/green_spiny_herb4"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/green_spiny_herb5"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "heather",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Heather",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "heather/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "heather/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "heather/side3"
+                ]
+            },
+            {
+                "textures": [
+                    "heather/side4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "kelp",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "SPRUCE_BROWN",
+        "creativeTab": "westeros_water_air_tab",
+        "label": "Kelp",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "kelp/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "kelp/side2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout"
+    },
+    {
+        "blockName": "lady_fern",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Lady Fern",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "lady_fern/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "lady_fern/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "lady_fern/side3"
+                ]
+            },
+            {
+                "textures": [
+                    "lady_fern/side4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "magenta_roses",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "DARK_DULL_PINK",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Magenta Roses",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/magenta_roses1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/magenta_roses2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/magenta_roses3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/magenta_roses4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "meadow_fescue",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GREEN",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Meadow Fescue",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/meadow_fescue/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/meadow_fescue/side2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "nettle",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Nettle",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "nettle/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "nettle/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "nettle/side3"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "orange_bells",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_flowers_tab",
+        "mapColor": "TERRACOTTA_GREEN",
+        "label": "Orange Bells",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/orange_bells1"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "orange_bog_asphodel",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GREEN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Orange Bog Asphodel",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/orange_bog_asphodel1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/orange_bog_asphodel2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/orange_bog_asphodel3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/orange_bog_asphodel4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "orange_marigolds",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_flowers_tab",
+        "mapColor": "TERRACOTTA_GREEN",
+        "label": "Orange Marigolds",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/orange_marigolds1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/orange_marigolds2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/orange_marigolds3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/orange_marigolds4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "orange_sun_star",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Orange Sun Star",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/orange_sun_star1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/orange_sun_star2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "orange_trollius",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_flowers_tab",
+        "mapColor": "TERRACOTTA_GREEN",
+        "label": "Orange Trollius",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/orange_trollius1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/orange_trollius2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "pink_allium",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "GRAY",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Pink Allium",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/pink_allium1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/pink_allium2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/pink_allium3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/pink_allium4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "pink_primrose",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Pink Primrose",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/pink_primrose1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/pink_primrose2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "pink_roses",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_PURPLE",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Pink Roses",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/pink_roses1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/pink_roses2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/pink_roses3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/pink_roses4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "pink_sweet_peas",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Pink Sweet Peas",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/pink_sweet_peas1"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "pink_thistle",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "GRAY",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Pink Thistle",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/pink_thistle/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/pink_thistle/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/pink_thistle/side3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/pink_thistle/side4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "pink_tulips",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Pink Tulips",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/pink_tulips1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/pink_tulips2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/pink_tulips3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/pink_tulips4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "pink_wildflowers",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_flowers_tab",
+        "mapColor": "TERRACOTTA_BROWN",
+        "label": "Pink Wildflowers",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/pink_wildflowers"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "purple_alpine_sowthistle",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Purple Alpine Sow-thistle",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/purple_alpine_sowthistle/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_alpine_sowthistle/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_alpine_sowthistle/side3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_alpine_sowthistle/side4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "purple_foxglove",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BLUE",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Purple Foxglove",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/purple_foxglove1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_foxglove2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_foxglove3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_foxglove4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "purple_lavender",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "GRAY",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Purple Lavender",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/purple_lavender1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_lavender2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_lavender3"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "purple_pansies",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Purple Pansies",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/purple_pansies1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_pansies2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_pansies3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_pansies4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "purple_roses",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "DARK_DULL_PINK",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Purple Roses",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/purple_roses1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_roses2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_roses3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_roses4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "purple_violets",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "GRAY",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Purple Violets",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/purple_violets1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_violets2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/purple_violets3"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_aster",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Red Aster",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/red_aster1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_aster2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_aster3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_aster4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_carnations",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Red Carnations",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/red_carnations1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_carnations2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_carnations3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_carnations4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_chrysanthemum",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Red Chrysanthemum",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/red_chrysanthemum1"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_dark_roses",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Red Dark Roses",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/red_dark_roses1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_dark_roses2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_dark_roses3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_dark_roses4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_fern",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Red Fern",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "red_fern/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "red_fern/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "red_fern/side3"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_flowering_spiny_herb",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Red Flowering Spiny Herb",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/red_flowering_spiny_herb1"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_mushroom_1",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "DIRT_BROWN",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Red Mushroom 1",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "red_mushroom_block/mushroom_red_0"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_mushroom_2",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "BROWN",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Red Mushroom 2",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "red_mushroom_block/mushroom_red_1"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_mushroom_3",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "GRAY",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Red Mushroom 3",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "red_mushroom_block/mushroom_red_2"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_mushroom_4",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "SPRUCE_BROWN",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Red Mushroom 4",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "red_mushroom_block/mushroom_red_3"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_mushroom_5",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "SPRUCE_BROWN",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Red Mushroom 5",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "red_mushroom_block/mushroom_red_4"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_mushroom_6",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_PURPLE",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Red Mushroom 6",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "red_mushroom_block/mushroom_red_5"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_mushroom_7",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_RED",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Red Mushroom 7",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "red_mushroom_block/mushroom_red_6"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_mushroom_8",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "DIRT_BROWN",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Red Mushroom 8",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "red_mushroom_block/mushroom_red_7"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_mushroom_9",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_PINK",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Red Mushroom 9",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "red_mushroom_block/mushroom_red_8"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_poppies",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Red Poppies",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/red_poppies1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_poppies2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_roses",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "DARK_CRIMSON",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Red Roses",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/red_roses1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_roses2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_roses3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_roses4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_sorrel",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Red Sorrel",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/red_sorrel1"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_sourleaf_bush",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_BLACK",
+        "creativeTab": "westeros_crops_herbs_tab",
+        "label": "Red Sourleaf Bush",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/red_sourleaf_bush1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_sourleaf_bush2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "red_tulips",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Red Tulips",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/red_tulips1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_tulips2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_tulips3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/red_tulips4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "strawberry_bush",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GREEN",
+        "creativeTab": "westeros_crops_herbs_tab",
+        "label": "Strawberry Bush",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/strawberry"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "thick_grass",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Thick Grass",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "minecraft:block/grass/grass1"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "minecraft:block/grass/grass2"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "minecraft:block/grass/grass3"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "minecraft:block/grass/grass4"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "minecraft:block/grass/grass5"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "minecraft:block/grass/grass6"
+                ],
+                "weight": 5
+            },
+            {
+                "textures": [
+                    "minecraft:block/grass/grass7"
+                ],
+                "weight": 5
+            },
+            {
+                "textures": [
+                    "minecraft:block/grass/grass8"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "minecraft:block/grass/grass9"
+                ],
+                "weight": 10
+            },
+            {
+                "textures": [
+                    "minecraft:block/grass/grass10"
+                ],
+                "weight": 10
+            }
+        ],
+        "renderLayer": "cutout",
+        "colorMult": "textures/colormap/grass",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "unshaded_grass",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_grasses_shrubs_tab",
+        "label": "Unshaded Grass",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "deadbush/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "deadbush/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "deadbush/side3"
+                ]
+            },
+            {
+                "textures": [
+                    "deadbush/side4"
+                ]
+            },
+            {
+                "textures": [
+                    "deadbush/side5"
+                ]
+            },
+            {
+                "textures": [
+                    "deadbush/side6"
+                ]
+            },
+            {
+                "textures": [
+                    "deadbush/side7"
+                ]
+            },
+            {
+                "textures": [
+                    "deadbush/side8"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "white_chamomile",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_CYAN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "White Chamomile",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/white_chamomile1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/white_chamomile2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/white_chamomile3"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "white_daisies",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_flowers_tab",
+        "mapColor": "GRAY",
+        "label": "White Daisies",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/white_daisies1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/white_daisies2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/white_daisies3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/white_daisies4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "white_lilyofthevalley",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "DEEPSLATE_GRAY",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "White Lily-of-the-valley",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/white_lily_valley1"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "white_peony",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "DEEPSLATE_GRAY",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "White Peony",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/white_peony1"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "white_roses",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "STONE_GRAY",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "White Roses",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/white_roses1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/white_roses2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/white_roses3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/white_roses4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "yellow_bedstraw",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_flowers_tab",
+        "mapColor": "TERRACOTTA_GREEN",
+        "label": "Yellow Bedstraw",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/yellow_bedstraw/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_bedstraw/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_bedstraw/side3"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "yellow_bells",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GREEN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Yellow Bells",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/yellow_bells1"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "yellow_buttercups",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GREEN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Yellow Buttercups",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/yellow_buttercups1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_buttercups2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_buttercups3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_buttercups4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "yellow_daffodils",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GREEN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Yellow Daffodils",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/yellow_daffodils1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_daffodils2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_daffodils3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_daffodils4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "yellow_daisies",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_flowers_tab",
+        "mapColor": "TERRACOTTA_GREEN",
+        "label": "Yellow Daisies",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/yellow_daisies1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_daisies2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "yellow_dandelions",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GREEN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Yellow Dandelions",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/yellow_dandelions1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_dandelions2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_dandelions3"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "yellow_hellebore",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GREEN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Yellow Hellebore",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/yellow_hellebore1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_hellebore2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "yellow_lupine",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_LIME",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Yellow Lupine",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/yellow_lupine1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_lupine2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_lupine3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_lupine4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "yellow_roses",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_LIME",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Yellow Roses",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/yellow_roses1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_roses2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_roses3"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_roses4"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "yellow_rudbeckia",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "TERRACOTTA_GREEN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Yellow Rudbeckia",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/yellow_rudbeckia1"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "yellow_sunflower",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "soundGroup": "grass",
+        "mapColor": "OAK_TAN",
+        "creativeTab": "westeros_flowers_tab",
+        "label": "Yellow Sunflower",
+        "options": {
+            "layerSensitive": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "flowers/yellow_sunflower/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_sunflower/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "flowers/yellow_sunflower/side3"
+                ]
+            }
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "yellow_tansy",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_flowers_tab",
+        "mapColor": "TERRACOTTA_GREEN",
+        "label": "Yellow Tansy",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/yellow_tansy"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
+    },
+    {
+        "blockName": "yellow_wildflowers",
+        "blockType": "plant",
+        "doOffsetXZ": true,
+        "creativeTab": "westeros_flowers_tab",
+        "mapColor": "TERRACOTTA_BROWN",
+        "label": "Yellow Wildflowers",
+        "options": {
+            "layerSensitive": true
+        },
+        "textures": [
+            "flowers/yellow_wildflowers"
+        ],
+        "renderLayer": "cutout",
+        "boundingBox": {
+            "xMin": 0.3,
+            "xMax": 0.7,
+            "yMin": 0,
+            "yMax": 0.6,
+            "zMin": 0.3,
+            "zMax": 0.7
+        }
     }
-  },
-  {
-    "blockName": "blue_flax",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Blue Flax",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/blue_flax1"]
-      },
-      {
-        "textures": ["flowers/blue_flax2"]
-      },
-      {
-        "textures": ["flowers/blue_flax3"]
-      },
-      {
-        "textures": ["flowers/blue_flax4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "blue_forgetmenots",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Blue Forget-me-nots",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/blue_forgetmenots1"]
-      },
-      {
-        "textures": ["flowers/blue_forgetmenots2"]
-      },
-      {
-        "textures": ["flowers/blue_forgetmenots3"]
-      },
-      {
-        "textures": ["flowers/blue_forgetmenots4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "blue_hyacinth",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Blue Hyacinth",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/blue_hyacinth1"]
-      },
-      {
-        "textures": ["flowers/blue_hyacinth2"]
-      },
-      {
-        "textures": ["flowers/blue_hyacinth3"]
-      },
-      {
-        "textures": ["flowers/blue_hyacinth4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "blue_orchid",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Blue Orchid",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/blue_orchid1"]
-      },
-      {
-        "textures": ["flowers/blue_orchid2"]
-      },
-      {
-        "textures": ["flowers/blue_orchid3"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "blue_swamp_bells",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Blue Swamp Bells",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/blue_swamp_bells1"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "bracken",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Bracken",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["bracken/side1"]
-      },
-      {
-        "textures": ["bracken/side2"]
-      },
-      {
-        "textures": ["bracken/side3"]
-      },
-      {
-        "textures": ["bracken/side4"]
-      },
-      {
-        "textures": ["bracken/side5"]
-      },
-      {
-        "textures": ["bracken/side6"]
-      },
-      {
-        "textures": ["bracken/side7"]
-      },
-      {
-        "textures": ["bracken/side8"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "brown_mushroom_1",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Brown Mushroom 1",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["brown_mushroom_block/mushroom_brown_0"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "brown_mushroom_10",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Brown Mushroom 10",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["brown_mushroom_block/mushroom_brown_9"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "brown_mushroom_11",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Brown Mushroom 11",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["brown_mushroom_block/mushroom_brown_10"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "brown_mushroom_12",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Brown Mushroom 12",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["brown_mushroom_block/mushroom_brown_11"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "brown_mushroom_13",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Brown Mushroom 13",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["brown_mushroom_block/mushroom_brown_12"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "brown_mushroom_2",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Brown Mushroom 2",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["brown_mushroom_block/mushroom_brown_1"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "brown_mushroom_3",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Brown Mushroom 3",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["brown_mushroom_block/mushroom_brown_2"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "brown_mushroom_4",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Brown Mushroom 4",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["brown_mushroom_block/mushroom_brown_3"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "brown_mushroom_5",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Brown Mushroom 5",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["brown_mushroom_block/mushroom_brown_4"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "brown_mushroom_6",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Brown Mushroom 6",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["brown_mushroom_block/mushroom_brown_5"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "brown_mushroom_7",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Brown Mushroom 7",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["brown_mushroom_block/mushroom_brown_6"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "brown_mushroom_8",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Brown Mushroom 8",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["brown_mushroom_block/mushroom_brown_7"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "brown_mushroom_9",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Brown Mushroom 9",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["brown_mushroom_block/mushroom_brown_8"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "coral_brain_web",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_water_air_tab",
-    "label": "Brain Coral Web",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["coral/brain/web1"]
-      },
-      {
-        "textures": ["coral/brain/web2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "coral_bubble_web",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_water_air_tab",
-    "label": "Bubble Coral Web",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["coral/bubble/web1"]
-      },
-      {
-        "textures": ["coral/bubble/web2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "coral_fire_web",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_water_air_tab",
-    "label": "Fire Coral Web",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["coral/fire/web1"]
-      },
-      {
-        "textures": ["coral/fire/web2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "coral_horn_web",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_water_air_tab",
-    "label": "Horn Coral Web",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["coral/horn/web1"]
-      },
-      {
-        "textures": ["coral/horn/web2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "coral_tube_web",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_water_air_tab",
-    "label": "Tube Coral Web",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["coral/tube/web1"]
-      },
-      {
-        "textures": ["coral/tube/web2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "cow_parsely",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Cow Parsely",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["cow_parsely/side1"]
-      },
-      {
-        "textures": ["cow_parsely/side2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "cranberry_bush",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_crops_herbs_tab",
-    "label": "Cranberry Bush",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["cranberry/base1"]
-      },
-      {
-        "textures": ["cranberry/base2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "dead_bracken",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Dead Bracken",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["dead_bracken/side1"]
-      },
-      {
-        "textures": ["dead_bracken/side2"]
-      },
-      {
-        "textures": ["dead_bracken/side3"]
-      },
-      {
-        "textures": ["dead_bracken/side4"]
-      },
-      {
-        "textures": ["dead_bracken/side5"]
-      },
-      {
-        "textures": ["dead_bracken/side6"]
-      },
-      {
-        "textures": ["dead_bracken/side7"]
-      },
-      {
-        "textures": ["dead_bracken/side8"]
-      },
-      {
-        "textures": ["dead_bracken/side9"]
-      },
-      {
-        "textures": ["dead_bracken/side10"]
-      },
-      {
-        "textures": ["dead_bracken/side11"]
-      },
-      {
-        "textures": ["dead_bracken/side12"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "dead_bush",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Dead Bush",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["dorne_bush_thorny/side1"]
-      },
-      {
-        "textures": ["dorne_bush_thorny/side2"]
-      },
-      {
-        "textures": ["dorne_bush_thorny/side3"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "colorMult": "textures/colormap/dead_bush",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "dead_scrub_grass",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Dead Scrub Grass",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/dead_scrub_grass1"],
-        "weight": 10
-      },
-      {
-        "textures": ["flowers/dead_scrub_grass2"],
-        "weight": 10
-      },
-      {
-        "textures": ["flowers/dead_scrub_grass3"],
-        "weight": 10
-      },
-      {
-        "textures": ["flowers/dead_scrub_grass4"],
-        "weight": 10
-      },
-      {
-        "textures": ["flowers/dead_scrub_grass5"],
-        "weight": 10
-      },
-      {
-        "textures": ["flowers/dead_scrub_grass6"],
-        "weight": 10
-      },
-      {
-        "textures": ["flowers/dead_scrub_grass7"],
-        "weight": 10
-      },
-      {
-        "textures": ["flowers/dead_scrub_grass8"],
-        "weight": 15
-      },
-      {
-        "textures": ["flowers/dead_scrub_grass9"],
-        "weight": 15
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "dock_leaf",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_crops_herbs_tab",
-    "label": "Dock Leaf",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["dock_leaf/side1"]
-      },
-      {
-        "textures": ["dock_leaf/side2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "fireweed",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Fireweed",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["fireweed/side1"]
-      },
-      {
-        "textures": ["fireweed/side2"]
-      },
-      {
-        "textures": ["fireweed/side3"]
-      },
-      {
-        "textures": ["fireweed/side4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "grass",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Grass",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["minecraft:block/fern/fern1"],
-        "weight": 5
-      },
-      {
-        "textures": ["minecraft:block/fern/fern2"],
-        "weight": 5
-      },
-      {
-        "textures": ["minecraft:block/fern/fern3"],
-        "weight": 15
-      },
-      {
-        "textures": ["minecraft:block/fern/fern4"],
-        "weight": 10
-      },
-      {
-        "textures": ["minecraft:block/fern/fern5"],
-        "weight": 10
-      },
-      {
-        "textures": ["minecraft:block/fern/fern6"],
-        "weight": 15
-      },
-      {
-        "textures": ["minecraft:block/fern/fern7"],
-        "weight": 25
-      },
-      {
-        "textures": ["minecraft:block/fern/fern8"],
-        "weight": 15
-      }
-    ],
-    "renderLayer": "cutout",
-    "colorMult": "textures/colormap/grass",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "green_leafy_herb",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Green Leafy Herb",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/green_leafy_herb"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "green_scrub_grass",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Green Scrub Grass",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/green_scrub_grass1"]
-      },
-      {
-        "textures": ["flowers/green_scrub_grass2"]
-      },
-      {
-        "textures": ["flowers/green_scrub_grass3"]
-      },
-      {
-        "textures": ["flowers/green_scrub_grass4"]
-      },
-      {
-        "textures": ["flowers/green_scrub_grass5"]
-      },
-      {
-        "textures": ["flowers/green_scrub_grass6"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "green_spiny_herb",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Green Spiny Herb",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/green_spiny_herb1"]
-      },
-      {
-        "textures": ["flowers/green_spiny_herb2"]
-      },
-      {
-        "textures": ["flowers/green_spiny_herb3"]
-      },
-      {
-        "textures": ["flowers/green_spiny_herb4"]
-      },
-      {
-        "textures": ["flowers/green_spiny_herb5"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "heather",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Heather",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["heather/side1"]
-      },
-      {
-        "textures": ["heather/side2"]
-      },
-      {
-        "textures": ["heather/side3"]
-      },
-      {
-        "textures": ["heather/side4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "kelp",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_water_air_tab",
-    "label": "Kelp",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["kelp/side1"]
-      },
-      {
-        "textures": ["kelp/side2"]
-      }
-    ],
-    "renderLayer": "cutout"
-  },
-  {
-    "blockName": "lady_fern",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Lady Fern",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["lady_fern/side1"]
-      },
-      {
-        "textures": ["lady_fern/side2"]
-      },
-      {
-        "textures": ["lady_fern/side3"]
-      },
-      {
-        "textures": ["lady_fern/side4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "magenta_roses",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Magenta Roses",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/magenta_roses1"]
-      },
-      {
-        "textures": ["flowers/magenta_roses2"]
-      },
-      {
-        "textures": ["flowers/magenta_roses3"]
-      },
-      {
-        "textures": ["flowers/magenta_roses4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "meadow_fescue",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Meadow Fescue",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/meadow_fescue/side1"]
-      },
-      {
-        "textures": ["flowers/meadow_fescue/side2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "nettle",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Nettle",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["nettle/side1"]
-      },
-      {
-        "textures": ["nettle/side2"]
-      },
-      {
-        "textures": ["nettle/side3"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "orange_bells",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Orange Bells",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/orange_bells1"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "orange_bog_asphodel",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Orange Bog Asphodel",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/orange_bog_asphodel1"]
-      },
-      {
-        "textures": ["flowers/orange_bog_asphodel2"]
-      },
-      {
-        "textures": ["flowers/orange_bog_asphodel3"]
-      },
-      {
-        "textures": ["flowers/orange_bog_asphodel4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "orange_marigolds",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Orange Marigolds",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/orange_marigolds1"]
-      },
-      {
-        "textures": ["flowers/orange_marigolds2"]
-      },
-      {
-        "textures": ["flowers/orange_marigolds3"]
-      },
-      {
-        "textures": ["flowers/orange_marigolds4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "orange_sun_star",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Orange Sun Star",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/orange_sun_star1"]
-      },
-      {
-        "textures": ["flowers/orange_sun_star2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "orange_trollius",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Orange Trollius",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/orange_trollius1"]
-      },
-      {
-        "textures": ["flowers/orange_trollius2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "pink_allium",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Pink Allium",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/pink_allium1"]
-      },
-      {
-        "textures": ["flowers/pink_allium2"]
-      },
-      {
-        "textures": ["flowers/pink_allium3"]
-      },
-      {
-        "textures": ["flowers/pink_allium4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "pink_primrose",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Pink Primrose",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/pink_primrose1"]
-      },
-      {
-        "textures": ["flowers/pink_primrose2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "pink_roses",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Pink Roses",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/pink_roses1"]
-      },
-      {
-        "textures": ["flowers/pink_roses2"]
-      },
-      {
-        "textures": ["flowers/pink_roses3"]
-      },
-      {
-        "textures": ["flowers/pink_roses4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "pink_sweet_peas",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Pink Sweet Peas",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/pink_sweet_peas1"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "pink_thistle",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Pink Thistle",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/pink_thistle/side1"]
-      },
-      {
-        "textures": ["flowers/pink_thistle/side2"]
-      },
-      {
-        "textures": ["flowers/pink_thistle/side3"]
-      },
-      {
-        "textures": ["flowers/pink_thistle/side4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "pink_tulips",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Pink Tulips",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/pink_tulips1"]
-      },
-      {
-        "textures": ["flowers/pink_tulips2"]
-      },
-      {
-        "textures": ["flowers/pink_tulips3"]
-      },
-      {
-        "textures": ["flowers/pink_tulips4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "pink_wildflowers",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Pink Wildflowers",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/pink_wildflowers"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "purple_alpine_sowthistle",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Purple Alpine Sow-thistle",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/purple_alpine_sowthistle/side1"]
-      },
-      {
-        "textures": ["flowers/purple_alpine_sowthistle/side2"]
-      },
-      {
-        "textures": ["flowers/purple_alpine_sowthistle/side3"]
-      },
-      {
-        "textures": ["flowers/purple_alpine_sowthistle/side4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "purple_foxglove",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Purple Foxglove",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/purple_foxglove1"]
-      },
-      {
-        "textures": ["flowers/purple_foxglove2"]
-      },
-      {
-        "textures": ["flowers/purple_foxglove3"]
-      },
-      {
-        "textures": ["flowers/purple_foxglove4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "purple_lavender",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Purple Lavender",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/purple_lavender1"]
-      },
-      {
-        "textures": ["flowers/purple_lavender2"]
-      },
-      {
-        "textures": ["flowers/purple_lavender3"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "purple_pansies",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Purple Pansies",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/purple_pansies1"]
-      },
-      {
-        "textures": ["flowers/purple_pansies2"]
-      },
-      {
-        "textures": ["flowers/purple_pansies3"]
-      },
-      {
-        "textures": ["flowers/purple_pansies4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "purple_roses",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Purple Roses",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/purple_roses1"]
-      },
-      {
-        "textures": ["flowers/purple_roses2"]
-      },
-      {
-        "textures": ["flowers/purple_roses3"]
-      },
-      {
-        "textures": ["flowers/purple_roses4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "purple_violets",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Purple Violets",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/purple_violets1"]
-      },
-      {
-        "textures": ["flowers/purple_violets2"]
-      },
-      {
-        "textures": ["flowers/purple_violets3"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_aster",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Red Aster",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/red_aster1"]
-      },
-      {
-        "textures": ["flowers/red_aster2"]
-      },
-      {
-        "textures": ["flowers/red_aster3"]
-      },
-      {
-        "textures": ["flowers/red_aster4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_carnations",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Red Carnations",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/red_carnations1"]
-      },
-      {
-        "textures": ["flowers/red_carnations2"]
-      },
-      {
-        "textures": ["flowers/red_carnations3"]
-      },
-      {
-        "textures": ["flowers/red_carnations4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_chrysanthemum",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Red Chrysanthemum",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/red_chrysanthemum1"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_dark_roses",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Red Dark Roses",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/red_dark_roses1"]
-      },
-      {
-        "textures": ["flowers/red_dark_roses2"]
-      },
-      {
-        "textures": ["flowers/red_dark_roses3"]
-      },
-      {
-        "textures": ["flowers/red_dark_roses4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_fern",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Red Fern",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["red_fern/side1"]
-      },
-      {
-        "textures": ["red_fern/side2"]
-      },
-      {
-        "textures": ["red_fern/side3"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_flowering_spiny_herb",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Red Flowering Spiny Herb",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/red_flowering_spiny_herb1"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_mushroom_1",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Red Mushroom 1",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["red_mushroom_block/mushroom_red_0"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_mushroom_2",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Red Mushroom 2",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["red_mushroom_block/mushroom_red_1"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_mushroom_3",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Red Mushroom 3",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["red_mushroom_block/mushroom_red_2"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_mushroom_4",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Red Mushroom 4",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["red_mushroom_block/mushroom_red_3"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_mushroom_5",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Red Mushroom 5",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["red_mushroom_block/mushroom_red_4"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_mushroom_6",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Red Mushroom 6",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["red_mushroom_block/mushroom_red_5"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_mushroom_7",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Red Mushroom 7",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["red_mushroom_block/mushroom_red_6"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_mushroom_8",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Red Mushroom 8",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["red_mushroom_block/mushroom_red_7"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_mushroom_9",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Red Mushroom 9",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["red_mushroom_block/mushroom_red_8"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_poppies",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Red Poppies",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/red_poppies1"]
-      },
-      {
-        "textures": ["flowers/red_poppies2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_roses",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Red Roses",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/red_roses1"]
-      },
-      {
-        "textures": ["flowers/red_roses2"]
-      },
-      {
-        "textures": ["flowers/red_roses3"]
-      },
-      {
-        "textures": ["flowers/red_roses4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_sorrel",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Red Sorrel",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/red_sorrel1"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_sourleaf_bush",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_crops_herbs_tab",
-    "label": "Red Sourleaf Bush",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/red_sourleaf_bush1"]
-      },
-      {
-        "textures": ["flowers/red_sourleaf_bush2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "red_tulips",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Red Tulips",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/red_tulips1"]
-      },
-      {
-        "textures": ["flowers/red_tulips2"]
-      },
-      {
-        "textures": ["flowers/red_tulips3"]
-      },
-      {
-        "textures": ["flowers/red_tulips4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "strawberry_bush",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_crops_herbs_tab",
-    "label": "Strawberry Bush",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/strawberry"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "thick_grass",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Thick Grass",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["minecraft:block/grass/grass1"],
-        "weight": 10
-      },
-      {
-        "textures": ["minecraft:block/grass/grass2"],
-        "weight": 10
-      },
-      {
-        "textures": ["minecraft:block/grass/grass3"],
-        "weight": 10
-      },
-      {
-        "textures": ["minecraft:block/grass/grass4"],
-        "weight": 10
-      },
-      {
-        "textures": ["minecraft:block/grass/grass5"],
-        "weight": 10
-      },
-      {
-        "textures": ["minecraft:block/grass/grass6"],
-        "weight": 5
-      },
-      {
-        "textures": ["minecraft:block/grass/grass7"],
-        "weight": 5
-      },
-      {
-        "textures": ["minecraft:block/grass/grass8"],
-        "weight": 10
-      },
-      {
-        "textures": ["minecraft:block/grass/grass9"],
-        "weight": 10
-      },
-      {
-        "textures": ["minecraft:block/grass/grass10"],
-        "weight": 10
-      }
-    ],
-    "renderLayer": "cutout",
-    "colorMult": "textures/colormap/grass",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "unshaded_grass",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_grasses_shrubs_tab",
-    "label": "Unshaded Grass",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["deadbush/side1"]
-      },
-      {
-        "textures": ["deadbush/side2"]
-      },
-      {
-        "textures": ["deadbush/side3"]
-      },
-      {
-        "textures": ["deadbush/side4"]
-      },
-      {
-        "textures": ["deadbush/side5"]
-      },
-      {
-        "textures": ["deadbush/side6"]
-      },
-      {
-        "textures": ["deadbush/side7"]
-      },
-      {
-        "textures": ["deadbush/side8"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "white_chamomile",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "White Chamomile",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/white_chamomile1"]
-      },
-      {
-        "textures": ["flowers/white_chamomile2"]
-      },
-      {
-        "textures": ["flowers/white_chamomile3"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "white_daisies",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_flowers_tab",
-    "label": "White Daisies",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/white_daisies1"]
-      },
-      {
-        "textures": ["flowers/white_daisies2"]
-      },
-      {
-        "textures": ["flowers/white_daisies3"]
-      },
-      {
-        "textures": ["flowers/white_daisies4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "white_lilyofthevalley",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "White Lily-of-the-valley",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/white_lily_valley1"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "white_peony",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "White Peony",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/white_peony1"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "white_roses",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "White Roses",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/white_roses1"]
-      },
-      {
-        "textures": ["flowers/white_roses2"]
-      },
-      {
-        "textures": ["flowers/white_roses3"]
-      },
-      {
-        "textures": ["flowers/white_roses4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "yellow_bedstraw",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Yellow Bedstraw",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/yellow_bedstraw/side1"]
-      },
-      {
-        "textures": ["flowers/yellow_bedstraw/side2"]
-      },
-      {
-        "textures": ["flowers/yellow_bedstraw/side3"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "yellow_bells",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Yellow Bells",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/yellow_bells1"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "yellow_buttercups",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Yellow Buttercups",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/yellow_buttercups1"]
-      },
-      {
-        "textures": ["flowers/yellow_buttercups2"]
-      },
-      {
-        "textures": ["flowers/yellow_buttercups3"]
-      },
-      {
-        "textures": ["flowers/yellow_buttercups4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "yellow_daffodils",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Yellow Daffodils",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/yellow_daffodils1"]
-      },
-      {
-        "textures": ["flowers/yellow_daffodils2"]
-      },
-      {
-        "textures": ["flowers/yellow_daffodils3"]
-      },
-      {
-        "textures": ["flowers/yellow_daffodils4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "yellow_daisies",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Yellow Daisies",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/yellow_daisies1"]
-      },
-      {
-        "textures": ["flowers/yellow_daisies2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "yellow_dandelions",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Yellow Dandelions",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/yellow_dandelions1"]
-      },
-      {
-        "textures": ["flowers/yellow_dandelions2"]
-      },
-      {
-        "textures": ["flowers/yellow_dandelions3"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "yellow_hellebore",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Yellow Hellebore",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/yellow_hellebore1"]
-      },
-      {
-        "textures": ["flowers/yellow_hellebore2"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "yellow_lupine",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Yellow Lupine",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/yellow_lupine1"]
-      },
-      {
-        "textures": ["flowers/yellow_lupine2"]
-      },
-      {
-        "textures": ["flowers/yellow_lupine3"]
-      },
-      {
-        "textures": ["flowers/yellow_lupine4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "yellow_roses",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Yellow Roses",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/yellow_roses1"]
-      },
-      {
-        "textures": ["flowers/yellow_roses2"]
-      },
-      {
-        "textures": ["flowers/yellow_roses3"]
-      },
-      {
-        "textures": ["flowers/yellow_roses4"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "yellow_rudbeckia",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Yellow Rudbeckia",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/yellow_rudbeckia1"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "yellow_sunflower",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "soundGroup": "grass",
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Yellow Sunflower",
-    "options": {
-      "layerSensitive": true
-    },
-    "randomTextures": [
-      {
-        "textures": ["flowers/yellow_sunflower/side1"]
-      },
-      {
-        "textures": ["flowers/yellow_sunflower/side2"]
-      },
-      {
-        "textures": ["flowers/yellow_sunflower/side3"]
-      }
-    ],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "yellow_tansy",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Yellow Tansy",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/yellow_tansy"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  },
-  {
-    "blockName": "yellow_wildflowers",
-    "blockType": "plant",
-    "doOffsetXZ": true,
-    "creativeTab": "westeros_flowers_tab",
-    "label": "Yellow Wildflowers",
-    "options": {
-      "layerSensitive": true
-    },
-    "textures": ["flowers/yellow_wildflowers"],
-    "renderLayer": "cutout",
-    "boundingBox": {
-      "xMin": 0.3,
-      "xMax": 0.7,
-      "yMin": 0,
-      "yMax": 0.6,
-      "zMin": 0.3,
-      "zMax": 0.7
-    }
-  }
 ]

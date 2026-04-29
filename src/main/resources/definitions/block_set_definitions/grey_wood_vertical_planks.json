@@ -16,6 +16,7 @@
     },
     "hardness": 5,
     "soundGroup": "wood",
+    "mapColor": "TERRACOTTA_CYAN",
     "resistance": 4,
     "harvestLevel": [
         {

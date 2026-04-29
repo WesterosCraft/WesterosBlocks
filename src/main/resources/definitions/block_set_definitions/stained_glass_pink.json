@@ -9,6 +9,7 @@
     },
     "hardness": 1,
     "soundGroup": "glass",
+    "mapColor": "TERRACOTTA_GRAY",
     "resistance": 2,
     "harvestLevel": [
         {
@@ -21,7 +22,10 @@
     "lightOpacity": 0,
     "creativeTab": "westeros_windows_glass_tab",
     "options": {
-        "pane": {"legacyModel": true, "unconnect": false}
+        "pane": {
+            "legacyModel": true,
+            "unconnect": false
+        }
     },
     "baseLabel": "Stained Glass Pink",
     "textures": {

@@ -11,6 +11,7 @@
     ],
     "hardness": 1.5,
     "soundGroup": "cloth",
+    "mapColor": "TERRACOTTA_RED",
     "resistance": 4,
     "harvestLevel": [
         {

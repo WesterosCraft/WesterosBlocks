@@ -1,27 +1,28 @@
 {
-  "baseBlockName": "dirt_medium",
-  "variants": [
-    "solid",
-    "slab",
-    "path"
-  ],
-  "altNames": {
-    "path": "path_dirt_medium"
-  },
-  "hardness": 2,
-  "soundGroup": "gravel",
-  "resistance": 2,
-  "harvestLevel": [
-    {
-      "tool": "shovel",
-      "level": 1
+    "baseBlockName": "dirt_medium",
+    "variants": [
+        "solid",
+        "slab",
+        "path"
+    ],
+    "altNames": {
+        "path": "path_dirt_medium"
+    },
+    "hardness": 2,
+    "soundGroup": "gravel",
+    "mapColor": "TERRACOTTA_LIGHT_GRAY",
+    "resistance": 2,
+    "harvestLevel": [
+        {
+            "tool": "shovel",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_grass_dirt_tab",
+    "baseLabel": "Medium Dirt",
+    "textures": {
+        "bottom": "dirt_medium/all",
+        "top": "dirt_medium/all",
+        "sides": "dirt_medium/all"
     }
-  ],
-  "creativeTab": "westeros_grass_dirt_tab",
-  "baseLabel": "Medium Dirt",
-  "textures": {
-    "bottom": "dirt_medium/all",
-    "top": "dirt_medium/all",
-    "sides": "dirt_medium/all"
-  }
 }

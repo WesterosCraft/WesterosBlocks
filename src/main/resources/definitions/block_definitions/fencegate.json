@@ -1,58 +1,62 @@
 [
-  {
-    "blockName": "locked_birch_bark_fence_gate",
-    "blockType": "fencegate",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_logs_tab",
-    "label": "Locked Birch Bark Fence Gate",
-    "options": {
-      "locked": true
+    {
+        "blockName": "locked_birch_bark_fence_gate",
+        "blockType": "fencegate",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "IRON_GRAY",
+        "creativeTab": "westeros_logs_tab",
+        "label": "Locked Birch Bark Fence Gate",
+        "options": {
+            "locked": true
+        },
+        "textures": [
+            "bark/birch/side"
+        ]
     },
-    "textures": [
-      "bark/birch/side"
-    ]
-  },
-  {
-    "blockName": "locked_jungle_bark_fence_gate",
-    "blockType": "fencegate",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_logs_tab",
-    "label": "Locked Jungle Bark Fence Gate",
-    "options": {
-      "locked": true
+    {
+        "blockName": "locked_jungle_bark_fence_gate",
+        "blockType": "fencegate",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_logs_tab",
+        "label": "Locked Jungle Bark Fence Gate",
+        "options": {
+            "locked": true
+        },
+        "textures": [
+            "bark/jungle/side"
+        ]
     },
-    "textures": [
-      "bark/jungle/side"
-    ]
-  },
-  {
-    "blockName": "locked_oak_bark_fence_gate",
-    "blockType": "fencegate",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_logs_tab",
-    "label": "Locked Oak Bark Fence Gate",
-    "options": {
-      "locked": true
+    {
+        "blockName": "locked_oak_bark_fence_gate",
+        "blockType": "fencegate",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_logs_tab",
+        "label": "Locked Oak Bark Fence Gate",
+        "options": {
+            "locked": true
+        },
+        "textures": [
+            "bark/oak/side"
+        ]
     },
-    "textures": [
-      "bark/oak/side"
-    ]
-  },
-  {
-    "blockName": "locked_spruce_bark_fence_gate",
-    "blockType": "fencegate",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_logs_tab",
-    "label": "Locked Spruce Bark Fence Gate",
-    "options": {
-      "locked": true
-    },
-    "textures": [
-      "bark/spruce/side"
-    ]
-  }
+    {
+        "blockName": "locked_spruce_bark_fence_gate",
+        "blockType": "fencegate",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_logs_tab",
+        "label": "Locked Spruce Bark Fence Gate",
+        "options": {
+            "locked": true
+        },
+        "textures": [
+            "bark/spruce/side"
+        ]
+    }
 ]

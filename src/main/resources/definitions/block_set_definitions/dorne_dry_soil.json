@@ -10,6 +10,7 @@
     },
     "hardness": 2,
     "soundGroup": "gravel",
+    "mapColor": "RAW_IRON_PINK",
     "resistance": 2,
     "harvestLevel": [
         {

@@ -1,58 +1,70 @@
 [
-  {
-    "blockName": "torch",
-    "blockType": "torch",
-    "soundGroup": "metal",
-    "creativeTab": "westeros_lighting_tab",
-    "label": "Torch",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "torch",
+        "blockType": "torch",
+        "soundGroup": "metal",
+        "mapColor": "BROWN",
+        "creativeTab": "westeros_lighting_tab",
+        "label": "Torch",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "lighting/torch"
+        ],
+        "renderLayer": "cutout",
+        "luminance": 14
     },
-    "textures": ["lighting/torch"],
-    "renderLayer": "cutout",
-    "luminance": 14
-  },
-  {
-    "blockName": "candle",
-    "blockType": "torch",
-    "soundGroup": "powder",
-    "creativeTab": "westeros_lighting_tab",
-    "label": "Candle",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "candle",
+        "blockType": "torch",
+        "soundGroup": "powder",
+        "mapColor": "RAW_IRON_PINK",
+        "creativeTab": "westeros_lighting_tab",
+        "label": "Candle",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "lighting/candle"
+        ],
+        "renderLayer": "cutout",
+        "luminance": 10
     },
-    "textures": ["lighting/candle"],
-    "renderLayer": "cutout",
-    "luminance": 10
-  },
-  {
-    "blockName": "candle_unlit",
-    "blockType": "torch",
-    "soundGroup": "powder",
-    "creativeTab": "westeros_lighting_tab",
-    "label": "Unlit Candle",
-    "options": {
-      "allowUnsupported": true,
-      "noParticle": true
+    {
+        "blockName": "candle_unlit",
+        "blockType": "torch",
+        "soundGroup": "powder",
+        "mapColor": "TERRACOTTA_WHITE",
+        "creativeTab": "westeros_lighting_tab",
+        "label": "Unlit Candle",
+        "options": {
+            "allowUnsupported": true,
+            "noParticle": true
+        },
+        "textures": [
+            "lighting/candle_unlit"
+        ],
+        "renderLayer": "cutout",
+        "isCustomModel": true,
+        "luminance": 0
     },
-    "textures": ["lighting/candle_unlit"],
-    "renderLayer": "cutout",
-    "isCustomModel": true,
-    "luminance": 0
-  },
-  {
-    "blockName": "torch_unlit",
-    "blockType": "torch",
-    "soundGroup": "metal",
-    "creativeTab": "westeros_lighting_tab",
-    "label": "Unlit Torch",
-    "options": {
-      "allowUnsupported": true,
-      "noParticle": true
-    },
-    "textures": ["lighting/torch_unlit"],
-    "renderLayer": "cutout",
-    "isCustomModel": true,
-    "luminance": 0
-  }
+    {
+        "blockName": "torch_unlit",
+        "blockType": "torch",
+        "soundGroup": "metal",
+        "mapColor": "BLACK",
+        "creativeTab": "westeros_lighting_tab",
+        "label": "Unlit Torch",
+        "options": {
+            "allowUnsupported": true,
+            "noParticle": true
+        },
+        "textures": [
+            "lighting/torch_unlit"
+        ],
+        "renderLayer": "cutout",
+        "isCustomModel": true,
+        "luminance": 0
+    }
 ]

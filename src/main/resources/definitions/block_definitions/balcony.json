@@ -1,14 +1,15 @@
 [
-  {
-    "blockName": "oak_balcony",
-    "blockType": "balcony",
-    "strength": 2,
-    "soundGroup": "wood",
-    "creativeTab": "westeros_decor_tab",
-    "label": "Oak Balcony",
-    "textures": [
-      "bark/oak/side",
-      "bark/oak/stripped"
-    ]
-  }
+    {
+        "blockName": "oak_balcony",
+        "blockType": "balcony",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_decor_tab",
+        "label": "Oak Balcony",
+        "textures": [
+            "bark/oak/side",
+            "bark/oak/stripped"
+        ]
+    }
 ]

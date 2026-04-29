@@ -6,6 +6,7 @@
     ],
     "hardness": 2,
     "soundGroup": "grass",
+    "mapColor": "BROWN",
     "resistance": 2,
     "harvestLevel": [
         {

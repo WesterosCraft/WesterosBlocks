@@ -20,6 +20,7 @@
     },
     "hardness": 5,
     "soundGroup": "wood",
+    "mapColor": "BROWN",
     "resistance": 4,
     "harvestLevel": [
         {
@@ -29,7 +30,9 @@
     ],
     "creativeTab": "westeros_wood_planks_tab",
     "options": {
-        "fence_gate": {"locked": true}
+        "fence_gate": {
+            "locked": true
+        }
     },
     "baseLabel": "Oak Birch Wood",
     "textures": {

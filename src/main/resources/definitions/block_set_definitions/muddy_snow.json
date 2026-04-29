@@ -6,6 +6,7 @@
     ],
     "hardness": 2,
     "soundGroup": "snow",
+    "mapColor": "LIGHT_GRAY",
     "resistance": 2,
     "harvestLevel": [
         {

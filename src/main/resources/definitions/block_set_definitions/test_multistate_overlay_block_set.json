@@ -8,6 +8,7 @@
     ],
     "hardness": 3,
     "soundGroup": "wood",
+    "mapColor": "YELLOW",
     "resistance": 2,
     "harvestLevel": [
         {

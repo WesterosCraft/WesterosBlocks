@@ -11,6 +11,7 @@
     ],
     "hardness": 5,
     "soundGroup": "metal",
+    "mapColor": "OAK_TAN",
     "resistance": 10,
     "harvestLevel": [
         {

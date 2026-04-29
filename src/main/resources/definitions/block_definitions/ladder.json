@@ -1,127 +1,132 @@
 [
-  {
-    "blockName": "iron_rungs",
-    "blockType": "ladder",
-    "soundGroup": "ladder",
-    "creativeTab": "westeros_metal_tab",
-    "label": "Iron Rungs",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "iron_rungs",
+        "blockType": "ladder",
+        "soundGroup": "ladder",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_metal_tab",
+        "label": "Iron Rungs",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "iron_rungs/ladder"
+        ],
+        "renderLayer": "cutout",
+        "isCustomModel": true
     },
-    "textures": [
-      "iron_rungs/ladder"
-    ],
-    "renderLayer": "cutout",
-    "isCustomModel": true
-  },
-  {
-    "blockName": "iron_rungs_broken",
-    "blockType": "ladder",
-    "soundGroup": "ladder",
-    "creativeTab": "westeros_metal_tab",
-    "label": "Iron Rungs Broken",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "iron_rungs_broken",
+        "blockType": "ladder",
+        "soundGroup": "ladder",
+        "creativeTab": "westeros_metal_tab",
+        "label": "Iron Rungs Broken",
+        "options": {
+            "allowUnsupported": true
+        },
+        "randomTextures": [
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+        ],
+        "renderLayer": "cutout",
+        "isCustomModel": true
     },
-    "randomTextures": [
-      {},
-      {},
-      {},
-      {},
-      {},
-      {}
-    ],
-    "renderLayer": "cutout",
-    "isCustomModel": true
-  },
-  {
-    "blockName": "rope_ladder",
-    "blockType": "ladder",
-    "soundGroup": "ladder",
-    "creativeTab": "westeros_cloth_fibers_tab",
-    "label": "Rope Ladder",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "rope_ladder",
+        "blockType": "ladder",
+        "soundGroup": "ladder",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_cloth_fibers_tab",
+        "label": "Rope Ladder",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "rope_ladder/side"
+        ],
+        "renderLayer": "cutout"
     },
-    "textures": [
-      "rope_ladder/side"
-    ],
-    "renderLayer": "cutout"
-  },
-  {
-    "blockName": "vine_jasmine",
-    "blockType": "ladder",
-    "soundGroup": "ladder",
-    "creativeTab": "westeros_foliage_tab",
-    "label": "Vine Jasmine (Do Not Use)",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "vine_jasmine",
+        "blockType": "ladder",
+        "soundGroup": "ladder",
+        "mapColor": "TERRACOTTA_GREEN",
+        "creativeTab": "westeros_foliage_tab",
+        "label": "Vine Jasmine (Do Not Use)",
+        "options": {
+            "allowUnsupported": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "jasmine_vines/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "jasmine_vines/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "jasmine_vines/side3"
+                ]
+            },
+            {
+                "textures": [
+                    "jasmine_vines/side4"
+                ]
+            },
+            {
+                "textures": [
+                    "jasmine_vines/side5"
+                ]
+            }
+        ],
+        "renderLayer": "cutout"
     },
-    "randomTextures": [
-      {
-        "textures": [
-          "jasmine_vines/side1"
-        ]
-      },
-      {
-        "textures": [
-          "jasmine_vines/side2"
-        ]
-      },
-      {
-        "textures": [
-          "jasmine_vines/side3"
-        ]
-      },
-      {
-        "textures": [
-          "jasmine_vines/side4"
-        ]
-      },
-      {
-        "textures": [
-          "jasmine_vines/side5"
-        ]
-      }
-    ],
-    "renderLayer": "cutout"
-  },
-  {
-    "blockName": "winterfell_stone_ladder",
-    "blockType": "ladder",
-    "soundGroup": "stone",
-    "creativeTab": "westeros_misc_tab",
-    "label": "Winterfell Stone Ladder",
-    "options": {
-      "allowUnsupported": true
+    {
+        "blockName": "winterfell_stone_ladder",
+        "blockType": "ladder",
+        "soundGroup": "stone",
+        "mapColor": "TERRACOTTA_CYAN",
+        "creativeTab": "westeros_misc_tab",
+        "label": "Winterfell Stone Ladder",
+        "options": {
+            "allowUnsupported": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "winterfell_stone_ladder/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "winterfell_stone_ladder/side2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout"
     },
-    "randomTextures": [
-      {
+    {
+        "blockName": "wood_ladder",
+        "blockType": "ladder",
+        "soundGroup": "ladder",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_wood_planks_tab",
+        "label": "Wood Ladder",
+        "options": {
+            "allowUnsupported": true
+        },
         "textures": [
-          "winterfell_stone_ladder/side1"
-        ]
-      },
-      {
-        "textures": [
-          "winterfell_stone_ladder/side2"
-        ]
-      }
-    ],
-    "renderLayer": "cutout"
-  },
-  {
-    "blockName": "wood_ladder",
-    "blockType": "ladder",
-    "soundGroup": "ladder",
-    "creativeTab": "westeros_wood_planks_tab",
-    "label": "Wood Ladder",
-    "options": {
-      "allowUnsupported": true
-    },
-    "textures": [
-      "wood_ladder/side"
-    ],
-    "renderLayer": "cutout",
-    "isCustomModel": true
-  }
+            "wood_ladder/side"
+        ],
+        "renderLayer": "cutout",
+        "isCustomModel": true
+    }
 ]

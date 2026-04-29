@@ -15,6 +15,7 @@
     },
     "hardness": 1.5,
     "soundGroup": "stone",
+    "mapColor": "BROWN",
     "resistance": 10,
     "harvestLevel": [
         {

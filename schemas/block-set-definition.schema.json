@@ -229,6 +229,11 @@
       "type": "string",
       "pattern": "^#[0-9A-Fa-f]{6}$",
       "description": "Color multiplier (hex)"
+    },
+    "mapColor": {
+      "type": "string",
+      "description": "MapColor used by paper maps and minimap mods (Xaero, Dynmap). Name of a constant on net.minecraft.block.MapColor (case-insensitive), e.g. 'STONE_GRAY', 'OAK_TAN', 'PALE_YELLOW'. If omitted, derived from soundGroup.",
+      "examples": ["STONE_GRAY", "OAK_TAN", "PALE_YELLOW", "DIRT_BROWN", "WHITE_GRAY", "IRON_GRAY", "DARK_GREEN", "PALE_GREEN", "DARK_RED", "BLACK", "WHITE", "CLEAR"]
     }
   },
   "$defs": {

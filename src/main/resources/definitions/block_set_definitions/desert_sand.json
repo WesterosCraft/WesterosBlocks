@@ -6,6 +6,7 @@
     ],
     "hardness": 0.5,
     "soundGroup": "sand",
+    "mapColor": "PALE_YELLOW",
     "resistance": 1,
     "harvestLevel": [
         {

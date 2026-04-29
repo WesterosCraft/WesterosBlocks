@@ -89,6 +89,10 @@ public class BlockSetDefinition {
     @SerializedName("colorMult")
     private String colorMult;
 
+    /** Map color name (constant on net.minecraft.block.MapColor, e.g. "STONE_GRAY"). Optional override. */
+    @SerializedName("mapColor")
+    private String mapColor;
+
     /**
      * Texture map for variants.
      * Supports special keys: "all", "sides", "bottom", "top", "west", "east", "south", "north"
@@ -185,6 +189,7 @@ public class BlockSetDefinition {
     public Boolean getNonOpaque() { return nonOpaque; }
     public String getRenderLayer() { return renderLayer; }
     public String getColorMult() { return colorMult; }
+    public String getMapColor() { return mapColor; }
 
     public Map<String, String> getTextures() { return textures; }
     public Map<String, String> getOverlayTextures() { return overlayTextures; }
