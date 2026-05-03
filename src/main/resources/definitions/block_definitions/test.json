@@ -401,6 +401,7 @@
         "blockName": "test_multi_colormap",
         "blockType": "cuboid",
         "soundGroup": "wood",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_test_tab",
         "label": "Test Multi-Colormap",
         "textures": [

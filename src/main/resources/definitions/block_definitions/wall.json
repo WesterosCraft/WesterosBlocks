@@ -322,7 +322,7 @@
         "blockType": "wall",
         "strength": 0.2,
         "soundGroup": "grass",
-        "mapColor": "LIGHT_GRAY",
+        "mapColor": "DARK_GREEN",
         "harvestLevel": [
             {
                 "tool": "shears",
@@ -347,7 +347,7 @@
         "blockType": "wall",
         "strength": 0.2,
         "soundGroup": "grass",
-        "mapColor": "STONE_GRAY",
+        "mapColor": "PALE_GREEN",
         "harvestLevel": [
             {
                 "tool": "shears",
@@ -372,7 +372,7 @@
         "blockType": "wall",
         "strength": 0.2,
         "soundGroup": "grass",
-        "mapColor": "LIGHT_GRAY",
+        "mapColor": "DARK_GREEN",
         "harvestLevel": [
             {
                 "tool": "shears",
@@ -397,7 +397,7 @@
         "blockType": "wall",
         "strength": 0.2,
         "soundGroup": "grass",
-        "mapColor": "TERRACOTTA_CYAN",
+        "mapColor": "DARK_GREEN",
         "harvestLevel": [
             {
                 "tool": "shears",

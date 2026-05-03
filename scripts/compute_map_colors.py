@@ -311,6 +311,65 @@ def insert_map_color(definition, map_color_name):
     definition.update(new_def)
 
 
+# Colormap-tinted blocks render with a biome- or texture-driven color overlay applied to a
+# grayscale (or near-grayscale) base texture. Sampling the base texture gives a misleading
+# answer (e.g. gray for grass), so when the colormap is dramatic-enough to dominate the final
+# look we override the sampled value with a sensible MapColor.
+COLORMAP_OVERRIDES = {
+    "textures/colormap/grass":          "PALE_GREEN",
+    "textures/colormap/foliage_oak":    "DARK_GREEN",
+    "textures/colormap/foliage_jungle": "DARK_GREEN",
+    "textures/colormap/foliage_palm":   "DARK_GREEN",
+    "textures/colormap/foliage_vine":   "DARK_GREEN",
+    "textures/colormap/pine":           "DARK_GREEN",
+    "textures/colormap/birch":          "PALE_GREEN",
+}
+
+
+def _colormap_override_for(definition):
+    """If the definition's colorMult points at a colormap that drastically recolors the base
+    texture (grass/foliage/pine/birch), return the MapColor name to use; otherwise None.
+    Subtle stone/sand colormaps don't qualify — their base textures are already representative."""
+    cm = definition.get("colorMult")
+    if isinstance(cm, str) and cm in COLORMAP_OVERRIDES:
+        return COLORMAP_OVERRIDES[cm]
+    cms = definition.get("colorMults")
+    if isinstance(cms, list):
+        for entry in cms:
+            if isinstance(entry, str) and entry in COLORMAP_OVERRIDES:
+                return COLORMAP_OVERRIDES[entry]
+    return None
+
+
+# When all texture refs are vanilla-namespaced (`minecraft:...`) we can't resolve them on
+# disk, so sampling fails. For grass/foliage textures we still know what color they render
+# at — Minecraft's built-in foliage colorizer makes them green at runtime regardless.
+VANILLA_PATH_HINTS = (
+    ("minecraft:block/grass/",     "PALE_GREEN"),
+    ("minecraft:block/foliage",    "DARK_GREEN"),
+    ("minecraft:block/leaves/",    "DARK_GREEN"),
+    ("minecraft:block/oak_leaves", "DARK_GREEN"),
+    ("minecraft:block/sugar_cane", "PALE_GREEN"),
+    ("minecraft:block/fern",       "DARK_GREEN"),
+    ("minecraft:block/seagrass",   "DARK_GREEN"),
+    ("minecraft:block/kelp",       "DARK_GREEN"),
+)
+
+
+def _vanilla_texture_hint(refs):
+    """If every texture ref is minecraft-namespaced and any matches a known foliage hint,
+    return the override MapColor name."""
+    if not refs:
+        return None
+    if not all(isinstance(r, str) and r.startswith("minecraft:") for r in refs):
+        return None
+    for ref in refs:
+        for prefix, color in VANILLA_PATH_HINTS:
+            if ref.startswith(prefix):
+                return color
+    return None
+
+
 def process_definition(definition, force):
     """Returns (status, sample_tuple, skip_info).
     status: 'updated', 'skipped_existing', 'skipped_no_texture'.
@@ -320,9 +379,23 @@ def process_definition(definition, force):
     if existing and not force:
         return "skipped_existing", None, None
 
-    avg, used_refs = average_definition_color(definition)
     label = definition.get("blockName") or definition.get("baseBlockName") or "?"
+
+    # Colormap-driven override wins over sampling — base textures for these blocks are
+    # grayscale by design and would mis-sample as gray when they actually render green.
+    override = _colormap_override_for(definition)
+    if override is not None:
+        avg, used_refs = average_definition_color(definition)
+        return "updated", (label, used_refs[:2] if used_refs else [], avg or (0, 0, 0), override, existing), None
+
+    avg, used_refs = average_definition_color(definition)
     if avg is None:
+        # Fall back to vanilla-texture-path hints before giving up — handles grass plants
+        # whose only texture refs are minecraft:block/grass/* etc.
+        refs_for_hint = collect_texture_refs(definition)
+        hint = _vanilla_texture_hint(refs_for_hint)
+        if hint is not None:
+            return "updated", (label, refs_for_hint[:2], (0, 0, 0), hint, existing), None
         return "skipped_no_texture", None, (label, used_refs)
 
     name = nearest_map_color(avg)

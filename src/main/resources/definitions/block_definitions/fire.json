@@ -11,7 +11,7 @@
         ],
         "renderLayer": "cutout",
         "nonOpaque": true,
-        "luminance": 1
+        "luminance": 15
     },
     {
         "blockName": "wildfire",

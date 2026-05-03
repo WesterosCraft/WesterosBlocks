@@ -146,7 +146,7 @@
         "blockName": "vines",
         "blockType": "vines",
         "soundGroup": "grass",
-        "mapColor": "TERRACOTTA_LIGHT_BLUE",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Vines",
         "options": {

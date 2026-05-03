@@ -889,6 +889,7 @@
         "blockName": "bushy_grass_birch",
         "blockType": "cuboid",
         "soundGroup": "grass",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_grass_dirt_tab",
         "label": "Bushy Grass Birch",
         "randomTextures": [
@@ -915,6 +916,7 @@
         "blockName": "bushy_grass_jungle",
         "blockType": "cuboid",
         "soundGroup": "grass",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_grass_dirt_tab",
         "label": "Bushy Grass Jungle",
         "randomTextures": [
@@ -941,6 +943,7 @@
         "blockName": "bushy_grass_oak",
         "blockType": "cuboid",
         "soundGroup": "grass",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_grass_dirt_tab",
         "label": "Bushy Grass Oak",
         "randomTextures": [
@@ -967,6 +970,7 @@
         "blockName": "bushy_grass_palm",
         "blockType": "cuboid",
         "soundGroup": "grass",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_grass_dirt_tab",
         "label": "Bushy Grass Palm",
         "randomTextures": [
@@ -1013,6 +1017,7 @@
         "blockName": "bushy_grass_spruce",
         "blockType": "cuboid",
         "soundGroup": "grass",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_grass_dirt_tab",
         "label": "Bushy Grass Spruce",
         "randomTextures": [
@@ -1211,7 +1216,7 @@
         "blockType": "cuboid",
         "strength": 5,
         "soundGroup": "grass",
-        "mapColor": "LIGHT_GRAY",
+        "mapColor": "PALE_GREEN",
         "harvestLevel": [
             {
                 "tool": "shovel",
@@ -1326,7 +1331,7 @@
         "blockType": "cuboid",
         "strength": 5,
         "soundGroup": "grass",
-        "mapColor": "IRON_GRAY",
+        "mapColor": "PALE_GREEN",
         "harvestLevel": [
             {
                 "tool": "shovel",

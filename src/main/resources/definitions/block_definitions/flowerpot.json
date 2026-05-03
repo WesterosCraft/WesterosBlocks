@@ -738,6 +738,7 @@
         "blockName": "potted_grass",
         "blockType": "flowerpot",
         "creativeTab": "westeros_grasses_shrubs_tab",
+        "mapColor": "PALE_GREEN",
         "label": "Potted Grass",
         "options": {
             "plantId": "fern"

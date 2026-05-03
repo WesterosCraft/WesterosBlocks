@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/wood/oak/panelling/top_bottom",
+    "down": "westerosblocks:block/wood/oak/all_lines",
     "east": "westerosblocks:block/wood/oak/panelling/side2",
     "north": "westerosblocks:block/wood/oak/panelling/side2",
-    "particle": "westerosblocks:block/wood/oak/panelling/top_bottom",
+    "particle": "westerosblocks:block/wood/oak/all_lines",
     "south": "westerosblocks:block/wood/oak/panelling/side2",
-    "up": "westerosblocks:block/wood/oak/panelling/top_bottom",
+    "up": "westerosblocks:block/wood/oak/all_lines",
     "west": "westerosblocks:block/wood/oak/panelling/side2"
   }
 }

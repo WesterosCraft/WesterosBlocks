@@ -9,7 +9,6 @@ import net.minecraft.block.MapColor;
 import net.minecraft.sound.BlockSoundGroup;
 
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.UnaryOperator;
 
 /**
@@ -1547,30 +1546,92 @@ public class BlockDefinition {
         return map;
     }
 
-    private static final Map<String, MapColor> NAMED_MAP_COLOR_CACHE = new ConcurrentHashMap<>();
+    /**
+     * Lookup table from MapColor name (our public JSON API) to the actual constant.
+     * <p>Direct field references — not reflection — because Loom remaps Yarn names
+     * (e.g. {@code MapColor.OAK_TAN}) to intermediary names (e.g. {@code field_16005})
+     * during build. Reflection by raw string fails on the production-remapped jar
+     * (server side), even though it works in dev. See: server boot logs reporting
+     * "Unknown mapColor 'OAK_TAN'" while dev/runDatagen reports none.
+     */
+    private static final Map<String, MapColor> NAMED_MAP_COLORS = createNamedMapColors();
+
+    private static Map<String, MapColor> createNamedMapColors() {
+        Map<String, MapColor> m = new HashMap<>();
+        m.put("CLEAR", MapColor.CLEAR);
+        m.put("PALE_GREEN", MapColor.PALE_GREEN);
+        m.put("PALE_YELLOW", MapColor.PALE_YELLOW);
+        m.put("WHITE_GRAY", MapColor.WHITE_GRAY);
+        m.put("BRIGHT_RED", MapColor.BRIGHT_RED);
+        m.put("PALE_PURPLE", MapColor.PALE_PURPLE);
+        m.put("IRON_GRAY", MapColor.IRON_GRAY);
+        m.put("DARK_GREEN", MapColor.DARK_GREEN);
+        m.put("WHITE", MapColor.WHITE);
+        m.put("LIGHT_BLUE_GRAY", MapColor.LIGHT_BLUE_GRAY);
+        m.put("DIRT_BROWN", MapColor.DIRT_BROWN);
+        m.put("STONE_GRAY", MapColor.STONE_GRAY);
+        m.put("WATER_BLUE", MapColor.WATER_BLUE);
+        m.put("OAK_TAN", MapColor.OAK_TAN);
+        m.put("OFF_WHITE", MapColor.OFF_WHITE);
+        m.put("ORANGE", MapColor.ORANGE);
+        m.put("MAGENTA", MapColor.MAGENTA);
+        m.put("LIGHT_BLUE", MapColor.LIGHT_BLUE);
+        m.put("YELLOW", MapColor.YELLOW);
+        m.put("LIME", MapColor.LIME);
+        m.put("PINK", MapColor.PINK);
+        m.put("GRAY", MapColor.GRAY);
+        m.put("LIGHT_GRAY", MapColor.LIGHT_GRAY);
+        m.put("CYAN", MapColor.CYAN);
+        m.put("PURPLE", MapColor.PURPLE);
+        m.put("BLUE", MapColor.BLUE);
+        m.put("BROWN", MapColor.BROWN);
+        m.put("GREEN", MapColor.GREEN);
+        m.put("RED", MapColor.RED);
+        m.put("BLACK", MapColor.BLACK);
+        m.put("GOLD", MapColor.GOLD);
+        m.put("DIAMOND_BLUE", MapColor.DIAMOND_BLUE);
+        m.put("LAPIS_BLUE", MapColor.LAPIS_BLUE);
+        m.put("EMERALD_GREEN", MapColor.EMERALD_GREEN);
+        m.put("SPRUCE_BROWN", MapColor.SPRUCE_BROWN);
+        m.put("DARK_RED", MapColor.DARK_RED);
+        m.put("TERRACOTTA_WHITE", MapColor.TERRACOTTA_WHITE);
+        m.put("TERRACOTTA_ORANGE", MapColor.TERRACOTTA_ORANGE);
+        m.put("TERRACOTTA_MAGENTA", MapColor.TERRACOTTA_MAGENTA);
+        m.put("TERRACOTTA_LIGHT_BLUE", MapColor.TERRACOTTA_LIGHT_BLUE);
+        m.put("TERRACOTTA_YELLOW", MapColor.TERRACOTTA_YELLOW);
+        m.put("TERRACOTTA_LIME", MapColor.TERRACOTTA_LIME);
+        m.put("TERRACOTTA_PINK", MapColor.TERRACOTTA_PINK);
+        m.put("TERRACOTTA_GRAY", MapColor.TERRACOTTA_GRAY);
+        m.put("TERRACOTTA_LIGHT_GRAY", MapColor.TERRACOTTA_LIGHT_GRAY);
+        m.put("TERRACOTTA_CYAN", MapColor.TERRACOTTA_CYAN);
+        m.put("TERRACOTTA_PURPLE", MapColor.TERRACOTTA_PURPLE);
+        m.put("TERRACOTTA_BLUE", MapColor.TERRACOTTA_BLUE);
+        m.put("TERRACOTTA_BROWN", MapColor.TERRACOTTA_BROWN);
+        m.put("TERRACOTTA_GREEN", MapColor.TERRACOTTA_GREEN);
+        m.put("TERRACOTTA_RED", MapColor.TERRACOTTA_RED);
+        m.put("TERRACOTTA_BLACK", MapColor.TERRACOTTA_BLACK);
+        m.put("DULL_RED", MapColor.DULL_RED);
+        m.put("DULL_PINK", MapColor.DULL_PINK);
+        m.put("DARK_CRIMSON", MapColor.DARK_CRIMSON);
+        m.put("TEAL", MapColor.TEAL);
+        m.put("DARK_AQUA", MapColor.DARK_AQUA);
+        m.put("DARK_DULL_PINK", MapColor.DARK_DULL_PINK);
+        m.put("BRIGHT_TEAL", MapColor.BRIGHT_TEAL);
+        m.put("DEEPSLATE_GRAY", MapColor.DEEPSLATE_GRAY);
+        m.put("RAW_IRON_PINK", MapColor.RAW_IRON_PINK);
+        m.put("LICHEN_GREEN", MapColor.LICHEN_GREEN);
+        return m;
+    }
 
     /**
-     * Resolves a {@link MapColor} from a string name matching a public static field on
-     * {@code MapColor} (e.g. "STONE_GRAY"). Case-insensitive. Returns null on miss.
+     * Resolves a {@link MapColor} from a string name matching a constant on
+     * {@link MapColor} (e.g. "STONE_GRAY"). Case-insensitive. Returns null on miss.
      */
     private static MapColor resolveNamedMapColor(String name) {
         if (name == null || name.isEmpty()) {
             return null;
         }
-        String key = name.toUpperCase(Locale.ROOT);
-        if (NAMED_MAP_COLOR_CACHE.containsKey(key)) {
-            return NAMED_MAP_COLOR_CACHE.get(key);
-        }
-        try {
-            java.lang.reflect.Field field = MapColor.class.getField(key);
-            Object value = field.get(null);
-            if (value instanceof MapColor mc) {
-                NAMED_MAP_COLOR_CACHE.put(key, mc);
-                return mc;
-            }
-        } catch (NoSuchFieldException | IllegalAccessException ignored) {
-        }
-        return null;
+        return NAMED_MAP_COLORS.get(name.toUpperCase(Locale.ROOT));
     }
 
     /**

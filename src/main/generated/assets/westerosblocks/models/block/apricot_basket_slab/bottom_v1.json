@@ -1,10 +1,10 @@
 {
   "parent": "westerosblocks:block/untinted/slab",
   "textures": {
-    "down": "westerosblocks:block/crate_block/basket_bottom",
+    "down": "westerosblocks:block/wood/oak/all_lines",
     "east": "westerosblocks:block/crate_block/basket_side_slab",
     "north": "westerosblocks:block/crate_block/basket_side_slab",
-    "particle": "westerosblocks:block/crate_block/basket_bottom",
+    "particle": "westerosblocks:block/wood/oak/all_lines",
     "south": "westerosblocks:block/crate_block/basket_side_slab",
     "up": "westerosblocks:block/crate_block/basket_apricot",
     "west": "westerosblocks:block/crate_block/basket_side_slab"

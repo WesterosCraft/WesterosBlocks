@@ -69,7 +69,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Apple Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_apple",
             "crate_block/basket_side"
         ]
@@ -134,7 +134,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Apricot Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_apricot",
             "crate_block/basket_side"
         ]
@@ -160,7 +160,7 @@
         "creativeTab": "westeros_furniture_tab",
         "label": "Bench Butcher Knives",
         "textures": [
-            "bench_block/spruce_top",
+            "wood/spruce/all_lines",
             "bench_block/crafting_table_top",
             "bench_block/bench_butcher_knives"
         ]
@@ -174,7 +174,7 @@
         "creativeTab": "westeros_furniture_tab",
         "label": "Bench Carpentry Hammer Saw",
         "textures": [
-            "bench_block/spruce_top",
+            "wood/spruce/all_lines",
             "bench_block/crafting_table_top",
             "bench_block/bench_carpentry_hammer_saw"
         ]
@@ -188,7 +188,7 @@
         "creativeTab": "westeros_furniture_tab",
         "label": "Bench Drawers",
         "textures": [
-            "bench_block/spruce_top",
+            "wood/spruce/all_lines",
             "bench_block/crafting_table_top",
             "bench_block/bench_drawers"
         ]
@@ -202,7 +202,7 @@
         "creativeTab": "westeros_furniture_tab",
         "label": "Bench Kitchen Knives",
         "textures": [
-            "bench_block/spruce_top",
+            "wood/spruce/all_lines",
             "bench_block/crafting_table_top",
             "bench_block/bench_kitchen_knives"
         ]
@@ -216,7 +216,7 @@
         "creativeTab": "westeros_furniture_tab",
         "label": "Bench Kitchen Pans",
         "textures": [
-            "bench_block/spruce_top",
+            "wood/spruce/all_lines",
             "bench_block/crafting_table_top",
             "bench_block/bench_kitchen_pans"
         ]
@@ -230,7 +230,7 @@
         "creativeTab": "westeros_furniture_tab",
         "label": "Bench Mason Hammer Mallet",
         "textures": [
-            "bench_block/spruce_top",
+            "wood/spruce/all_lines",
             "bench_block/crafting_table_top",
             "bench_block/bench_mason_hammer_mallet"
         ]
@@ -244,7 +244,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Berry Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_berry",
             "crate_block/basket_side"
         ]
@@ -328,15 +328,15 @@
         "randomTextures": [
             {
                 "textures": [
-                    "bench_block/spruce_top",
-                    "bench_block/spruce_top",
+                    "wood/spruce/all_lines",
+                    "wood/spruce/all_lines",
                     "bookshelf_abandoned/side1"
                 ]
             },
             {
                 "textures": [
-                    "bench_block/spruce_top",
-                    "bench_block/spruce_top",
+                    "wood/spruce/all_lines",
+                    "wood/spruce/all_lines",
                     "bookshelf_abandoned/side2"
                 ]
             }
@@ -353,22 +353,22 @@
         "randomTextures": [
             {
                 "textures": [
-                    "bench_block/spruce_top",
-                    "bench_block/spruce_top",
+                    "wood/spruce/all_lines",
+                    "wood/spruce/all_lines",
                     "bookshelf_library/side1"
                 ]
             },
             {
                 "textures": [
-                    "bench_block/spruce_top",
-                    "bench_block/spruce_top",
+                    "wood/spruce/all_lines",
+                    "wood/spruce/all_lines",
                     "bookshelf_library/side2"
                 ]
             },
             {
                 "textures": [
-                    "bench_block/spruce_top",
-                    "bench_block/spruce_top",
+                    "wood/spruce/all_lines",
+                    "wood/spruce/all_lines",
                     "bookshelf_library/side3"
                 ]
             }
@@ -385,43 +385,43 @@
         "randomTextures": [
             {
                 "textures": [
-                    "bench_block/spruce_top",
-                    "bench_block/spruce_top",
+                    "wood/spruce/all_lines",
+                    "wood/spruce/all_lines",
                     "bookshelf_maester/side1"
                 ]
             },
             {
                 "textures": [
-                    "bench_block/spruce_top",
-                    "bench_block/spruce_top",
+                    "wood/spruce/all_lines",
+                    "wood/spruce/all_lines",
                     "bookshelf_maester/side2"
                 ]
             },
             {
                 "textures": [
-                    "bench_block/spruce_top",
-                    "bench_block/spruce_top",
+                    "wood/spruce/all_lines",
+                    "wood/spruce/all_lines",
                     "bookshelf_maester/side3"
                 ]
             },
             {
                 "textures": [
-                    "bench_block/spruce_top",
-                    "bench_block/spruce_top",
+                    "wood/spruce/all_lines",
+                    "wood/spruce/all_lines",
                     "bookshelf_maester/side4"
                 ]
             },
             {
                 "textures": [
-                    "bench_block/spruce_top",
-                    "bench_block/spruce_top",
+                    "wood/spruce/all_lines",
+                    "wood/spruce/all_lines",
                     "bookshelf_maester/side5"
                 ]
             },
             {
                 "textures": [
-                    "bench_block/spruce_top",
-                    "bench_block/spruce_top",
+                    "wood/spruce/all_lines",
+                    "wood/spruce/all_lines",
                     "bookshelf_maester/side6"
                 ]
             }
@@ -436,8 +436,8 @@
         "creativeTab": "westeros_furniture_tab",
         "label": "Broken Cabinet",
         "textures": [
-            "cabinet/top_bottom",
-            "cabinet/top_bottom",
+            "wood/oak/all_lines",
+            "wood/oak/all_lines",
             "bench_block/cabinet_broken"
         ]
     },
@@ -464,15 +464,15 @@
         "randomTextures": [
             {
                 "textures": [
-                    "cabinet/top_bottom",
-                    "cabinet/top_bottom",
+                    "wood/oak/all_lines",
+                    "wood/oak/all_lines",
                     "cabinet/drawer/side1"
                 ]
             },
             {
                 "textures": [
-                    "cabinet/top_bottom",
-                    "cabinet/top_bottom",
+                    "wood/oak/all_lines",
+                    "wood/oak/all_lines",
                     "cabinet/drawer/side2"
                 ]
             }
@@ -514,7 +514,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Carrot Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_carrot",
             "crate_block/basket_side"
         ]
@@ -560,7 +560,7 @@
         "creativeTab": "westeros_decor_tab",
         "label": "Closed Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_top_closed",
             "crate_block/basket_side"
         ]
@@ -574,8 +574,8 @@
         "creativeTab": "westeros_furniture_tab",
         "label": "Closed Cabinet",
         "textures": [
-            "cabinet/top_bottom",
-            "cabinet/top_bottom",
+            "wood/oak/all_lines",
+            "wood/oak/all_lines",
             "cabinet/closed/side"
         ]
     },
@@ -763,7 +763,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Date Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_dates",
             "crate_block/basket_side"
         ]
@@ -892,8 +892,8 @@
         "creativeTab": "westeros_furniture_tab",
         "label": "Empty Cabinet",
         "textures": [
-            "cabinet/top_bottom",
-            "cabinet/top_bottom",
+            "wood/oak/all_lines",
+            "wood/oak/all_lines",
             "cabinet/empty/side"
         ]
     },
@@ -1099,7 +1099,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Fish Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_fish",
             "crate_block/basket_side"
         ]
@@ -1174,8 +1174,8 @@
         "creativeTab": "westeros_furniture_tab",
         "label": "Full Cabinet",
         "textures": [
-            "cabinet/top_bottom",
-            "cabinet/top_bottom",
+            "wood/oak/all_lines",
+            "wood/oak/all_lines",
             "cabinet/full/side"
         ]
     },
@@ -1201,7 +1201,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Grain Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_grain",
             "crate_block/basket_side"
         ]
@@ -1303,7 +1303,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Hop Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_hop",
             "crate_block/basket_side"
         ]
@@ -1471,7 +1471,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Lavender Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_lavender",
             "crate_block/basket_side"
         ]
@@ -1499,7 +1499,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Lemon Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_lemons",
             "crate_block/basket_side"
         ]
@@ -1556,7 +1556,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Lime Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_limes",
             "crate_block/basket_side"
         ]
@@ -1691,7 +1691,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Olive Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_olives",
             "crate_block/basket_side"
         ]
@@ -1705,7 +1705,7 @@
         "creativeTab": "westeros_decor_tab",
         "label": "Open Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_top",
             "crate_block/basket_side"
         ]
@@ -1751,7 +1751,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Orange Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_oranges",
             "crate_block/basket_side"
         ]
@@ -1910,7 +1910,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Pomegranate Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_pomegranates",
             "crate_block/basket_side"
         ]
@@ -1924,7 +1924,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Purple Grape Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_grape_purple",
             "crate_block/basket_side"
         ]
@@ -1966,22 +1966,22 @@
         "randomTextures": [
             {
                 "textures": [
-                    "wood/oak/panelling/top_bottom",
-                    "wood/oak/panelling/top_bottom",
+                    "wood/oak/all_lines",
+                    "wood/oak/all_lines",
                     "wood/oak/panelling/side1"
                 ]
             },
             {
                 "textures": [
-                    "wood/oak/panelling/top_bottom",
-                    "wood/oak/panelling/top_bottom",
+                    "wood/oak/all_lines",
+                    "wood/oak/all_lines",
                     "wood/oak/panelling/side2"
                 ]
             },
             {
                 "textures": [
-                    "wood/oak/panelling/top_bottom",
-                    "wood/oak/panelling/top_bottom",
+                    "wood/oak/all_lines",
+                    "wood/oak/all_lines",
                     "wood/oak/panelling/side3"
                 ]
             }
@@ -1998,22 +1998,22 @@
         "randomTextures": [
             {
                 "textures": [
-                    "wood/spruce/panelling/top_bottom",
-                    "wood/spruce/panelling/top_bottom",
+                    "wood/oak/all_lines",
+                    "wood/oak/all_lines",
                     "wood/spruce/panelling/side1"
                 ]
             },
             {
                 "textures": [
-                    "wood/spruce/panelling/top_bottom",
-                    "wood/spruce/panelling/top_bottom",
+                    "wood/oak/all_lines",
+                    "wood/oak/all_lines",
                     "wood/spruce/panelling/side2"
                 ]
             },
             {
                 "textures": [
-                    "wood/spruce/panelling/top_bottom",
-                    "wood/spruce/panelling/top_bottom",
+                    "wood/oak/all_lines",
+                    "wood/oak/all_lines",
                     "wood/spruce/panelling/side3"
                 ]
             }
@@ -2308,7 +2308,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Sourleaf Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_sourleaf",
             "crate_block/basket_side"
         ]
@@ -2460,7 +2460,7 @@
         "creativeTab": "westeros_furniture_tab",
         "label": "Table Books",
         "textures": [
-            "bench_block/spruce_top",
+            "wood/spruce/all_lines",
             "bench_block/table_top",
             "bench_block/table_drawer_books_side"
         ]
@@ -2474,7 +2474,7 @@
         "creativeTab": "westeros_furniture_tab",
         "label": "Table Drawers",
         "textures": [
-            "bench_block/spruce_top",
+            "wood/spruce/all_lines",
             "bench_block/table_top",
             "bench_block/table_drawers_side"
         ]
@@ -2488,7 +2488,7 @@
         "creativeTab": "westeros_furniture_tab",
         "label": "Table Widgets",
         "textures": [
-            "bench_block/spruce_top",
+            "wood/spruce/all_lines",
             "bench_block/table_top",
             "bench_block/table_drawer_widgets_side"
         ]
@@ -2510,7 +2510,7 @@
         "blockType": "solid",
         "strength": 5,
         "soundGroup": "grass",
-        "mapColor": "LIGHT_GRAY",
+        "mapColor": "PALE_GREEN",
         "harvestLevel": [
             {
                 "tool": "shovel",
@@ -14502,7 +14502,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Turnip Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_turnip",
             "crate_block/basket_side"
         ]
@@ -14647,7 +14647,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "White Grape Basket",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_grape_white",
             "crate_block/basket_side"
         ]

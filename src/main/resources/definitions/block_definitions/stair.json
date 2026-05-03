@@ -44,7 +44,7 @@
         "blockType": "stair",
         "strength": 5,
         "soundGroup": "grass",
-        "mapColor": "IRON_GRAY",
+        "mapColor": "PALE_GREEN",
         "isTinted": true,
         "creativeTab": "westeros_grass_dirt_tab",
         "label": "Grass Stairs",

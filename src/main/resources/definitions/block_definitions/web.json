@@ -720,7 +720,7 @@
         "blockName": "jungle_tall_fern",
         "blockType": "web",
         "soundGroup": "grass",
-        "mapColor": "LIGHT_GRAY",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_grasses_shrubs_tab",
         "label": "Jungle Tall Fern",
         "options": {
@@ -738,7 +738,7 @@
         "blockName": "jungle_tall_grass",
         "blockType": "web",
         "soundGroup": "grass",
-        "mapColor": "LIGHT_GRAY",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_grasses_shrubs_tab",
         "label": "Jungle Tall Grass",
         "options": {
@@ -786,7 +786,7 @@
         "blockName": "savanna_tall_grass",
         "blockType": "web",
         "soundGroup": "grass",
-        "mapColor": "TERRACOTTA_LIGHT_BLUE",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_grasses_shrubs_tab",
         "label": "Savanna Tall Grass",
         "options": {
@@ -963,6 +963,7 @@
         "blockName": "redwood_leaf_tip",
         "blockType": "web",
         "soundGroup": "plant",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_logs_tab",
         "label": "Redwood Leaf Tip",
         "isCustomModel": true,

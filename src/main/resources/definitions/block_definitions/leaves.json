@@ -3,7 +3,7 @@
         "blockName": "apple_fruit_leaves",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "TERRACOTTA_PURPLE",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Apple Fruit Leaves",
         "options": {
@@ -52,7 +52,7 @@
         "blockName": "apricot_fruit_leaves",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "OAK_TAN",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Apricot Fruit Leaves",
         "options": {
@@ -101,7 +101,7 @@
         "blockName": "blackberry_bush",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "GRAY",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Blackberry Bush",
         "options": {
@@ -150,7 +150,7 @@
         "blockName": "blueberry_bush",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "TERRACOTTA_LIGHT_BLUE",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Blueberry Bush",
         "options": {
@@ -199,7 +199,7 @@
         "blockName": "cherry_fruit_leaves",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "TERRACOTTA_LIGHT_GRAY",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Cherry Fruit Leaves",
         "options": {
@@ -248,7 +248,7 @@
         "blockName": "hop_fruit_leaves",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "TERRACOTTA_LIME",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Hop Fruit Leaves",
         "options": {
@@ -297,7 +297,7 @@
         "blockName": "juniper_bush",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "DEEPSLATE_GRAY",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Juniper Bush",
         "options": {
@@ -346,7 +346,7 @@
         "blockName": "lemon_fruit_leaves",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "RAW_IRON_PINK",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Lemon Fruit Leaves",
         "options": {
@@ -395,7 +395,7 @@
         "blockName": "lime_fruit_leaves",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "LICHEN_GREEN",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Lime Fruit Leaves",
         "options": {
@@ -444,7 +444,7 @@
         "blockName": "olive_fruit_leaves",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "OAK_TAN",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Olive Fruit Leaves",
         "options": {
@@ -493,7 +493,7 @@
         "blockName": "orange_fruit_leaves",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "DIRT_BROWN",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Orange Fruit Leaves",
         "options": {
@@ -542,7 +542,7 @@
         "blockName": "palm_leaves",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "TERRACOTTA_CYAN",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Palm Leaves",
         "options": {
@@ -559,7 +559,7 @@
         "blockName": "peach_fruit_leaves",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "DIRT_BROWN",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Peach Fruit Leaves",
         "options": {
@@ -608,7 +608,7 @@
         "blockName": "pink_rose_bush",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "TERRACOTTA_LIGHT_GRAY",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Pink Rose Bush",
         "options": {
@@ -657,7 +657,7 @@
         "blockName": "plum_fruit_leaves",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "TERRACOTTA_LIGHT_BLUE",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Plum Fruit Leaves",
         "options": {
@@ -706,7 +706,7 @@
         "blockName": "pomegranate_fruit_leaves",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "TERRACOTTA_PURPLE",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Pomegranate Fruit Leaves",
         "options": {
@@ -755,7 +755,7 @@
         "blockName": "purple_grape_fruit_leaves",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "TERRACOTTA_CYAN",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Purple Grape Fruit Leaves",
         "options": {
@@ -804,7 +804,7 @@
         "blockName": "raspberry_bush",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "TERRACOTTA_MAGENTA",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Raspberry Bush",
         "options": {
@@ -853,7 +853,7 @@
         "blockName": "red_rose_bush",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "TERRACOTTA_LIGHT_GRAY",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Red Rose Bush",
         "options": {
@@ -950,7 +950,7 @@
         "blockName": "white_grape_fruit_leaves",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "LIGHT_GRAY",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "White Grape Fruit Leaves",
         "options": {
@@ -999,7 +999,7 @@
         "blockName": "white_rose_bush",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "IRON_GRAY",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "White Rose Bush",
         "options": {
@@ -1048,7 +1048,7 @@
         "blockName": "yellow_rose_bush",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "OAK_TAN",
+        "mapColor": "DARK_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Yellow Rose Bush",
         "options": {
@@ -1097,7 +1097,7 @@
         "blockName": "chili_pepper_leaves",
         "blockType": "leaves",
         "soundGroup": "grass",
-        "mapColor": "TERRACOTTA_PURPLE",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_foliage_tab",
         "label": "Chili Pepper Leaves",
         "options": {

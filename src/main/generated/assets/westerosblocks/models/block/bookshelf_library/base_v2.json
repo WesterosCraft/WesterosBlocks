@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/bench_block/spruce_top",
+    "down": "westerosblocks:block/wood/spruce/all_lines",
     "east": "westerosblocks:block/bookshelf_library/side2",
     "north": "westerosblocks:block/bookshelf_library/side2",
-    "particle": "westerosblocks:block/bench_block/spruce_top",
+    "particle": "westerosblocks:block/wood/spruce/all_lines",
     "south": "westerosblocks:block/bookshelf_library/side2",
-    "up": "westerosblocks:block/bench_block/spruce_top",
+    "up": "westerosblocks:block/wood/spruce/all_lines",
     "west": "westerosblocks:block/bookshelf_library/side2"
   }
 }

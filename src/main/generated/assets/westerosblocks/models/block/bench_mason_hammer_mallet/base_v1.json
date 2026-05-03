@@ -1,10 +1,10 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/bench_block/spruce_top",
+    "down": "westerosblocks:block/wood/spruce/all_lines",
     "east": "westerosblocks:block/bench_block/bench_mason_hammer_mallet",
     "north": "westerosblocks:block/bench_block/bench_mason_hammer_mallet",
-    "particle": "westerosblocks:block/bench_block/spruce_top",
+    "particle": "westerosblocks:block/wood/spruce/all_lines",
     "south": "westerosblocks:block/bench_block/bench_mason_hammer_mallet",
     "up": "westerosblocks:block/bench_block/crafting_table_top",
     "west": "westerosblocks:block/bench_block/bench_mason_hammer_mallet"

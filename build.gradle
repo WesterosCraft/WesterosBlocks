@@ -87,6 +87,8 @@ jar {
     }
 }
 
+apply from: 'gradle/dynmap-modsupport.gradle'
+
 // configure the maven publication
 publishing {
     publications {

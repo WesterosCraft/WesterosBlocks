@@ -14,7 +14,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Apple Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_apple",
             "crate_block/basket_side_slab"
         ]
@@ -34,7 +34,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Apricot Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_apricot",
             "crate_block/basket_side_slab"
         ]
@@ -54,7 +54,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Berry Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_berry",
             "crate_block/basket_side_slab"
         ]
@@ -74,7 +74,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Carrot Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_carrot",
             "crate_block/basket_side_slab"
         ]
@@ -94,7 +94,7 @@
         "creativeTab": "westeros_decor_tab",
         "label": "Closed Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_top_closed",
             "crate_block/basket_side_slab"
         ]
@@ -136,7 +136,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Date Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_dates",
             "crate_block/basket_side_slab"
         ]
@@ -176,7 +176,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Fish Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_fish",
             "crate_block/basket_side_slab"
         ]
@@ -196,7 +196,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Grain Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_grain",
             "crate_block/basket_side_slab"
         ]
@@ -238,7 +238,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Hop Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_hop",
             "crate_block/basket_side_slab"
         ]
@@ -258,7 +258,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Lavender Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_lavender",
             "crate_block/basket_side_slab"
         ]
@@ -278,7 +278,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Lemon Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_lemons",
             "crate_block/basket_side_slab"
         ]
@@ -298,7 +298,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Lime Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_limes",
             "crate_block/basket_side_slab"
         ]
@@ -318,7 +318,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Olive Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_olives",
             "crate_block/basket_side_slab"
         ]
@@ -338,7 +338,7 @@
         "creativeTab": "westeros_decor_tab",
         "label": "Open Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_top",
             "crate_block/basket_side_slab"
         ]
@@ -358,7 +358,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Orange Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_oranges",
             "crate_block/basket_side_slab"
         ]
@@ -396,7 +396,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Pomegranate Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_pomegranates",
             "crate_block/basket_side_slab"
         ]
@@ -416,7 +416,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Purple Grape Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_grape_purple",
             "crate_block/basket_side_slab"
         ]
@@ -436,7 +436,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Sourleaf Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_sourleaf",
             "crate_block/basket_side_slab"
         ]
@@ -522,7 +522,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Turnip Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_turnip",
             "crate_block/basket_side_slab"
         ]
@@ -542,7 +542,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "White Grape Basket Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_grape_white",
             "crate_block/basket_side_slab"
         ]
@@ -552,7 +552,7 @@
         "blockType": "slab",
         "strength": 5,
         "soundGroup": "grass",
-        "mapColor": "IRON_GRAY",
+        "mapColor": "PALE_GREEN",
         "isTinted": true,
         "creativeTab": "westeros_grass_dirt_tab",
         "label": "Grass Slab",
@@ -606,7 +606,7 @@
         "creativeTab": "westeros_food_blocks_tab",
         "label": "Chili Pepper Slab",
         "textures": [
-            "crate_block/basket_bottom",
+            "wood/oak/all_lines",
             "crate_block/basket_chili_pepper",
             "crate_block/basket_side_slab"
         ]

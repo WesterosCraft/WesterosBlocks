@@ -1126,6 +1126,7 @@
         "blockType": "plant",
         "doOffsetXZ": true,
         "soundGroup": "grass",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_grasses_shrubs_tab",
         "label": "Grass",
         "options": {
@@ -2848,6 +2849,7 @@
         "blockType": "plant",
         "doOffsetXZ": true,
         "soundGroup": "grass",
+        "mapColor": "PALE_GREEN",
         "creativeTab": "westeros_grasses_shrubs_tab",
         "label": "Thick Grass",
         "options": {
