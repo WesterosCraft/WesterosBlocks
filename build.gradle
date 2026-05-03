@@ -87,7 +87,9 @@ jar {
     }
 }
 
-apply from: 'gradle/dynmap-modsupport.gradle'
+if (gradle.startParameter.taskNames.any { it.toLowerCase().contains('dynmap') }) {
+    apply from: 'gradle/dynmap-modsupport.gradle'
+}
 
 // configure the maven publication
 publishing {
