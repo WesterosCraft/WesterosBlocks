@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/rail_curved",
   "textures": {
-    "particle": "westerosblocks:block/wood/oak_orange/all",
-    "rail": "westerosblocks:block/wood/oak_orange/all"
+    "particle": "westerosblocks:block/wood/oak_orange/all_lines",
+    "rail": "westerosblocks:block/wood/oak_orange/all_lines"
   }
 }

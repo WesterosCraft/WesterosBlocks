@@ -55,17 +55,17 @@
     },
     "states": [
         {
-            "stateID": "base",
-            "excludeVariants": "window_frame,window_frame_mullion",
-            "textures": {
-                "all": "wood/spruce/all"
-            }
-        },
-        {
             "stateID": "cut",
             "excludeVariants": "window_frame,window_frame_mullion",
             "textures": {
                 "all": "wood/spruce/all_lines"
+            }
+        },
+        {
+            "stateID": "base",
+            "excludeVariants": "window_frame,window_frame_mullion",
+            "textures": {
+                "all": "wood/spruce/all"
             }
         }
     ]

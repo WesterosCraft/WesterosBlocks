@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/template_rail_raised_ne",
   "textures": {
-    "particle": "westerosblocks:block/wood/oak_orange/all",
-    "rail": "westerosblocks:block/wood/oak_orange/all"
+    "particle": "westerosblocks:block/wood/oak_orange/all_lines",
+    "rail": "westerosblocks:block/wood/oak_orange/all_lines"
   }
 }

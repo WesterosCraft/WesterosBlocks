@@ -40,15 +40,15 @@
     },
     "states": [
         {
-            "stateID": "base",
-            "textures": {
-                "all": "wood/oak_jungle/all"
-            }
-        },
-        {
             "stateID": "cut",
             "textures": {
                 "all": "wood/oak_jungle/all_lines"
+            }
+        },
+        {
+            "stateID": "base",
+            "textures": {
+                "all": "wood/oak_jungle/all"
             }
         }
     ]

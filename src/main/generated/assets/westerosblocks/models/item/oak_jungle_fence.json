@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/fence_inventory",
   "textures": {
-    "bottom": "westerosblocks:block/wood/oak_jungle/all",
-    "particle": "westerosblocks:block/wood/oak_jungle/all",
-    "side": "westerosblocks:block/wood/oak_jungle/all",
-    "top": "westerosblocks:block/wood/oak_jungle/all"
+    "bottom": "westerosblocks:block/wood/oak_jungle/all_lines",
+    "particle": "westerosblocks:block/wood/oak_jungle/all_lines",
+    "side": "westerosblocks:block/wood/oak_jungle/all_lines",
+    "top": "westerosblocks:block/wood/oak_jungle/all_lines"
   }
 }

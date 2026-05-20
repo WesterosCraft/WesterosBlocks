@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "bottom": "westerosblocks:block/bark/jungle/stripped",
-    "particle": "westerosblocks:block/bark/jungle/stripped",
-    "side": "westerosblocks:block/bark/jungle/stripped",
-    "top": "westerosblocks:block/bark/jungle/stripped"
+    "bottom": "westerosblocks:block/bark/jungle/stripped_lines",
+    "particle": "westerosblocks:block/bark/jungle/stripped_lines",
+    "side": "westerosblocks:block/bark/jungle/stripped_lines",
+    "top": "westerosblocks:block/bark/jungle/stripped_lines"
   }
 }

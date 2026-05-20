@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/wood/jungle/all"
+    "layer0": "westerosblocks:block/wood/jungle/all_lines"
   }
 }

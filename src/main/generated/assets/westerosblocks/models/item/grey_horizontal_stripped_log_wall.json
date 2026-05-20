@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "bottom": "westerosblocks:block/bark/grey/horizontal_stripped",
-    "particle": "westerosblocks:block/bark/grey/horizontal_stripped",
-    "side": "westerosblocks:block/bark/grey/horizontal_stripped",
-    "top": "westerosblocks:block/bark/grey/horizontal_stripped"
+    "bottom": "westerosblocks:block/bark/grey/horizontal_stripped_lines",
+    "particle": "westerosblocks:block/bark/grey/horizontal_stripped_lines",
+    "side": "westerosblocks:block/bark/grey/horizontal_stripped_lines",
+    "top": "westerosblocks:block/bark/grey/horizontal_stripped_lines"
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "bottom": "westerosblocks:block/wood/black/all",
-    "particle": "westerosblocks:block/wood/black/all",
-    "side": "westerosblocks:block/wood/black/all",
-    "top": "westerosblocks:block/wood/black/all"
+    "bottom": "westerosblocks:block/wood/black/all_lines",
+    "particle": "westerosblocks:block/wood/black/all_lines",
+    "side": "westerosblocks:block/wood/black/all_lines",
+    "top": "westerosblocks:block/wood/black/all_lines"
   }
 }

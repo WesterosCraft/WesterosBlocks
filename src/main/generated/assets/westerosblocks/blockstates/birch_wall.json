@@ -2,101 +2,6 @@
   "multipart": [
     {
       "apply": {
-        "model": "westerosblocks:block/birch_wall/base/post_v1"
-      },
-      "when": {
-        "state": "base",
-        "up": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "westerosblocks:block/birch_wall/base/side_v1",
-        "uvlock": true
-      },
-      "when": {
-        "north": "low",
-        "state": "base"
-      }
-    },
-    {
-      "apply": {
-        "model": "westerosblocks:block/birch_wall/base/side_tall_v1",
-        "uvlock": true
-      },
-      "when": {
-        "north": "tall",
-        "state": "base"
-      }
-    },
-    {
-      "apply": {
-        "model": "westerosblocks:block/birch_wall/base/side_v1",
-        "uvlock": true,
-        "y": 90
-      },
-      "when": {
-        "east": "low",
-        "state": "base"
-      }
-    },
-    {
-      "apply": {
-        "model": "westerosblocks:block/birch_wall/base/side_tall_v1",
-        "uvlock": true,
-        "y": 90
-      },
-      "when": {
-        "east": "tall",
-        "state": "base"
-      }
-    },
-    {
-      "apply": {
-        "model": "westerosblocks:block/birch_wall/base/side_v1",
-        "uvlock": true,
-        "y": 180
-      },
-      "when": {
-        "south": "low",
-        "state": "base"
-      }
-    },
-    {
-      "apply": {
-        "model": "westerosblocks:block/birch_wall/base/side_tall_v1",
-        "uvlock": true,
-        "y": 180
-      },
-      "when": {
-        "south": "tall",
-        "state": "base"
-      }
-    },
-    {
-      "apply": {
-        "model": "westerosblocks:block/birch_wall/base/side_v1",
-        "uvlock": true,
-        "y": 270
-      },
-      "when": {
-        "state": "base",
-        "west": "low"
-      }
-    },
-    {
-      "apply": {
-        "model": "westerosblocks:block/birch_wall/base/side_tall_v1",
-        "uvlock": true,
-        "y": 270
-      },
-      "when": {
-        "state": "base",
-        "west": "tall"
-      }
-    },
-    {
-      "apply": {
         "model": "westerosblocks:block/birch_wall/cut/post_v1"
       },
       "when": {
@@ -187,6 +92,101 @@
       },
       "when": {
         "state": "cut",
+        "west": "tall"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/birch_wall/base/post_v1"
+      },
+      "when": {
+        "state": "base",
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/birch_wall/base/side_v1",
+        "uvlock": true
+      },
+      "when": {
+        "north": "low",
+        "state": "base"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/birch_wall/base/side_tall_v1",
+        "uvlock": true
+      },
+      "when": {
+        "north": "tall",
+        "state": "base"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/birch_wall/base/side_v1",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "low",
+        "state": "base"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/birch_wall/base/side_tall_v1",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "tall",
+        "state": "base"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/birch_wall/base/side_v1",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "low",
+        "state": "base"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/birch_wall/base/side_tall_v1",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "tall",
+        "state": "base"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/birch_wall/base/side_v1",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "state": "base",
+        "west": "low"
+      }
+    },
+    {
+      "apply": {
+        "model": "westerosblocks:block/birch_wall/base/side_tall_v1",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "state": "base",
         "west": "tall"
       }
     }

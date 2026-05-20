@@ -36,15 +36,15 @@
     },
     "states": [
         {
-            "stateID": "base",
-            "textures": {
-                "all": "wood/off_white/all"
-            }
-        },
-        {
             "stateID": "cut",
             "textures": {
                 "all": "wood/off_white/all_lines"
+            }
+        },
+        {
+            "stateID": "base",
+            "textures": {
+                "all": "wood/off_white/all"
             }
         }
     ]

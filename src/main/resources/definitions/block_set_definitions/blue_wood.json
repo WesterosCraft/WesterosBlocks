@@ -44,15 +44,15 @@
     },
     "states": [
         {
-            "stateID": "base",
-            "textures": {
-                "all": "wood/blue/all"
-            }
-        },
-        {
             "stateID": "cut",
             "textures": {
                 "all": "wood/blue/all_lines"
+            }
+        },
+        {
+            "stateID": "base",
+            "textures": {
+                "all": "wood/blue/all"
             }
         }
     ]

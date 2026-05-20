@@ -31,15 +31,15 @@
     },
     "states": [
         {
-            "stateID": "base",
-            "textures": {
-                "all": "bark/birch/stripped"
-            }
-        },
-        {
             "stateID": "cut",
             "textures": {
                 "all": "bark/birch/stripped_lines"
+            }
+        },
+        {
+            "stateID": "base",
+            "textures": {
+                "all": "bark/birch/stripped"
             }
         }
     ]
