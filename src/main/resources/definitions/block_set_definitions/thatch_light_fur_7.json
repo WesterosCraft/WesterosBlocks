@@ -1,0 +1,30 @@
+{
+    "baseBlockName": "thatch_light_fur_7",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "thatch_light_wall_7"
+    },
+    "hardness": 2,
+    "soundGroup": "plant",
+    "mapColor": "DEEPSLATE_GRAY",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Thatch Brown Fur 7",
+    "textures": {
+        "all": "thatch/light/all7"
+    }
+}

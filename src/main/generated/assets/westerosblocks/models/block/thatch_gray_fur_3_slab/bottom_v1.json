@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/slab",
+  "textures": {
+    "down": "westerosblocks:block/thatch/gray/all3",
+    "east": "westerosblocks:block/thatch/gray/all3",
+    "north": "westerosblocks:block/thatch/gray/all3",
+    "particle": "westerosblocks:block/thatch/gray/all3",
+    "south": "westerosblocks:block/thatch/gray/all3",
+    "up": "westerosblocks:block/thatch/gray/all3",
+    "west": "westerosblocks:block/thatch/gray/all3"
+  }
+}

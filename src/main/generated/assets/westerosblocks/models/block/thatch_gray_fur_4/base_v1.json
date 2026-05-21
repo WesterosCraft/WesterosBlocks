@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/thatch/gray/all4",
+    "east": "westerosblocks:block/thatch/gray/all4",
+    "north": "westerosblocks:block/thatch/gray/all4",
+    "particle": "westerosblocks:block/thatch/gray/all4",
+    "south": "westerosblocks:block/thatch/gray/all4",
+    "up": "westerosblocks:block/thatch/gray/all4",
+    "west": "westerosblocks:block/thatch/gray/all4"
+  }
+}

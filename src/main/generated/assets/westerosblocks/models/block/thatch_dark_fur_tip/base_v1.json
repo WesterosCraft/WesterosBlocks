@@ -243,12 +243,12 @@
     }
   ],
   "textures": {
-    "particle": "westerosblocks:block/thatch/dark/all",
-    "txt0": "westerosblocks:block/thatch/dark/all",
-    "txt1": "westerosblocks:block/thatch/dark/all",
-    "txt2": "westerosblocks:block/thatch/dark/all",
-    "txt3": "westerosblocks:block/thatch/dark/all",
-    "txt4": "westerosblocks:block/thatch/dark/all",
-    "txt5": "westerosblocks:block/thatch/dark/all"
+    "particle": "westerosblocks:block/thatch/light/all6",
+    "txt0": "westerosblocks:block/thatch/light/all6",
+    "txt1": "westerosblocks:block/thatch/light/all6",
+    "txt2": "westerosblocks:block/thatch/light/all6",
+    "txt3": "westerosblocks:block/thatch/light/all6",
+    "txt4": "westerosblocks:block/thatch/light/all6",
+    "txt5": "westerosblocks:block/thatch/light/all6"
   }
 }

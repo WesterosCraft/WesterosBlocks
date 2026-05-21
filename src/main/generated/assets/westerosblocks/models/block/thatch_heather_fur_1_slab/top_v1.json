@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/slab_top",
+  "textures": {
+    "down": "westerosblocks:block/thatch/heather/heather1",
+    "east": "westerosblocks:block/thatch/heather/heather1",
+    "north": "westerosblocks:block/thatch/heather/heather1",
+    "particle": "westerosblocks:block/thatch/heather/heather1",
+    "south": "westerosblocks:block/thatch/heather/heather1",
+    "up": "westerosblocks:block/thatch/heather/heather1",
+    "west": "westerosblocks:block/thatch/heather/heather1"
+  }
+}

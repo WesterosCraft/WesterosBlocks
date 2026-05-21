@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/fence_inventory",
   "textures": {
-    "bottom": "westerosblocks:block/thatch/light/all",
-    "particle": "westerosblocks:block/thatch/light/all",
-    "side": "westerosblocks:block/thatch/light/all",
-    "top": "westerosblocks:block/thatch/light/all"
+    "bottom": "westerosblocks:block/thatch/light/all2",
+    "particle": "westerosblocks:block/thatch/light/all2",
+    "side": "westerosblocks:block/thatch/light/all2",
+    "top": "westerosblocks:block/thatch/light/all2"
   }
 }

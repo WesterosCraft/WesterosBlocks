@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/thatch/heather/heather2",
+    "east": "westerosblocks:block/thatch/heather/heather2",
+    "north": "westerosblocks:block/thatch/heather/heather2",
+    "particle": "westerosblocks:block/thatch/heather/heather2",
+    "south": "westerosblocks:block/thatch/heather/heather2",
+    "up": "westerosblocks:block/thatch/heather/heather2",
+    "west": "westerosblocks:block/thatch/heather/heather2"
+  }
+}

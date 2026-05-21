@@ -124,6 +124,14 @@ Four snow depths (`_light_snow`, `_medium_snow`, `_snow`, `_heavy_snow`) for bot
 
 - `awning_red`, `horizontal_scroll`, `long_vase`, `oak_balcony`, `pitchfork_block`, `westerosi_coins`, `wildfire`, `black_slate_compact_stairs`, `test_arrow_slit`
 
+## May 2026
+
+- Thatch fur CTM expansion: added 3×3 repeat CTM for light, gray, and heather thatch variants. Each variant's source 96×96 texture is split into nine 32×32 tiles under `optifine/ctm/thatch/thatch_<color>_fur/repeat[N]/`, with an `all[N].properties` (or `heather[N].properties`) file driving the repeat. Base block textures replaced with the center tile so the non-CTM render still tiles cleanly.
+- New thatch block sets (full `solid`/`stairs`/`slab`/`wall`/`fence`/`tip`/`carpet` variants):
+  - `thatch_light_fur_1..7` (mapColors cycle `OAK_TAN` / `DIRT_BROWN` / `SPRUCE_BROWN`; replaces the prior `DEEPSLATE_GRAY` on light thatch)
+  - `thatch_gray_fur_1..7` (mapColors cycle `STONE_GRAY` / `IRON_GRAY` / `LIGHT_GRAY` / `TERRACOTTA_LIGHT_GRAY` / `DEEPSLATE_GRAY` / `TERRACOTTA_GRAY` / `GRAY`)
+  - `thatch_heather_fur_1..2` (mapColors `TERRACOTTA_PURPLE`, `TERRACOTTA_PINK`)
+
 ## April 2026
 
 - Modified: `rope_ladder` reverted to the 1.18.2 flat-plane ladder model. Removed `isCustomModel` from the definition and deleted the custom 3D model files under `models/block/custom/rope_ladder/`; datagen now emits the standard `block/untinted/ladder` parented model.
