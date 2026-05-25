@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "top": "westerosblocks:block/wood/jungle/all",
-    "side": "westerosblocks:block/wood/jungle/all",
-    "bottom": "westerosblocks:block/wood/jungle/all"
+    "top": "westerosblocks:block/wood/jungle/all_lines",
+    "side": "westerosblocks:block/wood/jungle/all_lines",
+    "bottom": "westerosblocks:block/wood/jungle/all_lines"
   }
 }

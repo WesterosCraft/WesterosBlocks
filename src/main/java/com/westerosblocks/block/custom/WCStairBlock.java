@@ -82,7 +82,7 @@ public class WCStairBlock extends Block implements Waterloggable, WCBlockDef {
 
             // Extract options properties
             OptionsProperties opts = definition.getOptions();
-            boolean doUnconnect = opts != null && Boolean.TRUE.equals(opts.getUnconnect());
+            boolean doUnconnect = definition.isUnconnect();
             boolean doConnectstate = opts != null && Boolean.TRUE.equals(opts.getConnectstate());
             boolean noUvlock = opts != null && Boolean.TRUE.equals(opts.getNoUvlock());
 

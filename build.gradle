@@ -81,10 +81,19 @@ java {
 
 jar {
     inputs.property "archivesName", project.base.archivesName
+    zip64 = true
 
     from("LICENSE") {
         rename { "${it}_${inputs.properties.archivesName}" }
     }
+}
+
+tasks.withType(AbstractArchiveTask).configureEach {
+    zip64 = true
+}
+
+remapJar {
+    zip64 = true
 }
 
 if (gradle.startParameter.taskNames.any { it.toLowerCase().contains('dynmap') }) {

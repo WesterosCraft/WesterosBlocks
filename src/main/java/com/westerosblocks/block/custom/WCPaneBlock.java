@@ -44,7 +44,7 @@ public class WCPaneBlock extends PaneBlock implements WCBlockDef {
         this.unconnect = doUnconnect;
         this.legacy_model = legacy_model;
         this.bars_model = bars_model;
-        
+
         if (doUnconnect) {
             this.setDefaultState(this.getDefaultState()
                     .with(NORTH, Boolean.FALSE)
