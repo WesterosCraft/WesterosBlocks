@@ -9,10 +9,14 @@
         "hopper",
         "tip",
         "carpet",
-        "fence_gate"
+        "fence_gate",
+        "window_frame",
+        "window_frame_mullion"
     ],
     "altNames": {
-        "fence_gate": "locked_blue_wood_fence_gate"
+        "fence_gate": "locked_blue_wood_fence_gate",
+        "window_frame": "blue_timber_window_frame",
+        "window_frame_mullion": "blue_timber_window_frame_mullion"
     },
     "hardness": 5,
     "soundGroup": "wood",
@@ -40,17 +44,21 @@
     },
     "baseLabel": "Blue Wood",
     "textures": {
-        "all": "wood/blue/all"
+        "all": "wood/blue/all",
+        "window-frame": "timber/blue/window_frame",
+        "window-frame-mullion": "timber/blue/window_frame_mullion"
     },
     "states": [
         {
             "stateID": "cut",
+            "excludeVariants": "window_frame,window_frame_mullion",
             "textures": {
                 "all": "wood/blue/all_lines"
             }
         },
         {
             "stateID": "base",
+            "excludeVariants": "window_frame,window_frame_mullion",
             "textures": {
                 "all": "wood/blue/all"
             }
