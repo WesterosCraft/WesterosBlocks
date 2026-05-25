@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_post",
+  "textures": {
+    "bottom": "westerosblocks:block/roofing/shingle/wood_shingle_17",
+    "particle": "westerosblocks:block/roofing/shingle/wood_shingle_17",
+    "side": "westerosblocks:block/roofing/shingle/wood_shingle_17",
+    "top": "westerosblocks:block/roofing/shingle/wood_shingle_17"
+  }
+}

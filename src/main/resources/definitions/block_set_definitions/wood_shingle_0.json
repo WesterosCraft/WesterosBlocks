@@ -1,0 +1,30 @@
+{
+    "baseBlockName": "wood_shingle_0",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "wood_shingle_wall_0"
+    },
+    "hardness": 2,
+    "soundGroup": "wood",
+    "mapColor": "OAK_TAN",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Wood Shingle 1",
+    "textures": {
+        "all": "roofing/shingle/wood_shingle_0"
+    }
+}

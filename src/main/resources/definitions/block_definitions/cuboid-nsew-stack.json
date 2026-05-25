@@ -960,6 +960,126 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "blanetree_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Blanetree Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/blanetree/bottom",
+                    "banner/house/blanetree/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/blanetree/top",
+                    "banner/house/blanetree/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "blount_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Blount Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/blount/bottom",
+                    "banner/house/blount/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/blount/top",
+                    "banner/house/blount/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "blue_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -1620,6 +1740,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "brune_of_brownhollow_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Brune Of Brownhollow Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/brune_of_brownhollow/bottom",
+                    "banner/house/brune_of_brownhollow/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/brune_of_brownhollow/top",
+                    "banner/house/brune_of_brownhollow/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "buckwell_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -1740,6 +1920,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "burley_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Burley Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/burley/bottom",
+                    "banner/house/burley/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/burley/top",
+                    "banner/house/burley/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "butterwell_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -1800,6 +2040,126 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "byrch_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Byrch Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/byrch/bottom",
+                    "banner/house/byrch/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/byrch/top",
+                    "banner/house/byrch/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "bywater_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Bywater Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/bywater/bottom",
+                    "banner/house/bywater/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/bywater/top",
+                    "banner/house/bywater/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "caron_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -1846,6 +2206,66 @@
                     "transparent",
                     "banner/house/caron/top",
                     "banner/house/caron/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "cassel_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Cassel Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/cassel/bottom",
+                    "banner/house/cassel/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/cassel/top",
+                    "banner/house/cassel/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -2100,6 +2520,126 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "chelsted_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Chelsted Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/chelsted/bottom",
+                    "banner/house/chelsted/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/chelsted/top",
+                    "banner/house/chelsted/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "chyttering_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Chyttering Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/chyttering/bottom",
+                    "banner/house/chyttering/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/chyttering/top",
+                    "banner/house/chyttering/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "citadel_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -2220,6 +2760,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "codd_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Codd Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/codd/bottom",
+                    "banner/house/codd/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/codd/top",
+                    "banner/house/codd/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "coldwater_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -2266,6 +2866,66 @@
                     "transparent",
                     "banner/house/coldwater/top",
                     "banner/house/coldwater/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "condon_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Condon Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/condon/bottom",
+                    "banner/house/condon/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/condon/top",
+                    "banner/house/condon/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -2626,6 +3286,126 @@
                     "transparent",
                     "banner/embroidered/cream/top",
                     "banner/embroidered/cream/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "cressey_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Cressey Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/cressey/bottom",
+                    "banner/house/cressey/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/cressey/top",
+                    "banner/house/cressey/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "crowl_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Crowl Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/crowl/bottom",
+                    "banner/house/crowl/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/crowl/top",
+                    "banner/house/crowl/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -3180,6 +3960,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "edgerton_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Edgerton Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/edgerton/bottom",
+                    "banner/house/edgerton/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/edgerton/top",
+                    "banner/house/edgerton/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "egen_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -3226,6 +4066,66 @@
                     "transparent",
                     "banner/house/egen/top",
                     "banner/house/egen/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "erenford_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Erenford Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/erenford/bottom",
+                    "banner/house/erenford/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/erenford/top",
+                    "banner/house/erenford/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -3420,6 +4320,186 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "farring_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Farring Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/farring/bottom",
+                    "banner/house/farring/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/farring/top",
+                    "banner/house/farring/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "farwynd_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Farwynd Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/farwynd/bottom",
+                    "banner/house/farwynd/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/farwynd/top",
+                    "banner/house/farwynd/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "fenn_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Fenn Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/fenn/bottom",
+                    "banner/house/fenn/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/fenn/top",
+                    "banner/house/fenn/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "flint_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -3480,6 +4560,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "flint_of_flints_finger_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Flint Of Flints Finger Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/flint_of_flints_finger/bottom",
+                    "banner/house/flint_of_flints_finger/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/flint_of_flints_finger/top",
+                    "banner/house/flint_of_flints_finger/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "florent_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -3526,6 +4666,66 @@
                     "transparent",
                     "banner/house/florent/top",
                     "banner/house/florent/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "follard_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Follard Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/follard/bottom",
+                    "banner/house/follard/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/follard/top",
+                    "banner/house/follard/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -3900,6 +5100,126 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "gargalen_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Gargalen Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/gargalen/bottom",
+                    "banner/house/gargalen/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/gargalen/top",
+                    "banner/house/gargalen/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "gaunt_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Gaunt Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/gaunt/bottom",
+                    "banner/house/gaunt/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/gaunt/top",
+                    "banner/house/gaunt/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "glover_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -3946,6 +5266,66 @@
                     "transparent",
                     "banner/house/glover/top",
                     "banner/house/glover/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "goddbrook_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Goddbrook Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/goddbrook/bottom",
+                    "banner/house/goddbrook/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/goddbrook/top",
+                    "banner/house/goddbrook/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -4200,6 +5580,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "grell_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Grell Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/grell/bottom",
+                    "banner/house/grell/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/grell/top",
+                    "banner/house/grell/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "grey_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -4385,6 +5825,126 @@
         ]
     },
     {
+        "blockName": "haigh_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Haigh Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/haigh/bottom",
+                    "banner/house/haigh/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/haigh/top",
+                    "banner/house/haigh/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "harclay_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Harclay Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/harclay/bottom",
+                    "banner/house/harclay/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/harclay/top",
+                    "banner/house/harclay/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "harlaw_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -4445,6 +6005,246 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "harlaw_of_grey_garden_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Harlaw Of Grey Garden Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/harlaw_of_grey_garden/bottom",
+                    "banner/house/harlaw_of_grey_garden/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/harlaw_of_grey_garden/top",
+                    "banner/house/harlaw_of_grey_garden/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "harlaw_of_harlaw_hall_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Harlaw Of Harlaw Hall Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/harlaw_of_harlaw_hall/bottom",
+                    "banner/house/harlaw_of_harlaw_hall/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/harlaw_of_harlaw_hall/top",
+                    "banner/house/harlaw_of_harlaw_hall/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "harlaw_of_harridan_hill_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Harlaw Of Harridan Hill Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/harlaw_of_harridan_hill/bottom",
+                    "banner/house/harlaw_of_harridan_hill/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/harlaw_of_harridan_hill/top",
+                    "banner/house/harlaw_of_harridan_hill/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "harlaw_of_the_tower_of_glimmering_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Harlaw Of The Tower Of Glimmering Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/harlaw_of_the_tower_of_glimmering/bottom",
+                    "banner/house/harlaw_of_the_tower_of_glimmering/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/harlaw_of_the_tower_of_glimmering/top",
+                    "banner/house/harlaw_of_the_tower_of_glimmering/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "harte_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -4491,6 +6291,126 @@
                     "transparent",
                     "banner/house/harte/top",
                     "banner/house/harte/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "hawick_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Hawick Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/hawick/bottom",
+                    "banner/house/hawick/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/hawick/top",
+                    "banner/house/hawick/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "hayford_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Hayford Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/hayford/bottom",
+                    "banner/house/hayford/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/hayford/top",
+                    "banner/house/hayford/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -4925,6 +6845,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "ironsmith_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Ironsmith Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/ironsmith/bottom",
+                    "banner/house/ironsmith/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/ironsmith/top",
+                    "banner/house/ironsmith/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "jordayne_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -5031,6 +7011,366 @@
                     "transparent",
                     "banner/house/karstark/top",
                     "banner/house/karstark/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "keath_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Keath Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/keath/bottom",
+                    "banner/house/keath/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/keath/top",
+                    "banner/house/keath/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "kenning_of_harlaw_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Kenning Of Harlaw Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/kenning_of_harlaw/bottom",
+                    "banner/house/kenning_of_harlaw/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/kenning_of_harlaw/top",
+                    "banner/house/kenning_of_harlaw/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "kettleblack_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Kettleblack Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/kettleblack/bottom",
+                    "banner/house/kettleblack/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/kettleblack/top",
+                    "banner/house/kettleblack/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "knott_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Knott Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/knott/bottom",
+                    "banner/house/knott/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/knott/top",
+                    "banner/house/knott/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "lake_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Lake Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/lake/bottom",
+                    "banner/house/lake/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/lake/top",
+                    "banner/house/lake/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "langward_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Langward Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/langward/bottom",
+                    "banner/house/langward/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/langward/top",
+                    "banner/house/langward/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -5231,6 +7571,126 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "lemonwood_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Lemonwood Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/lemonwood/bottom",
+                    "banner/house/lemonwood/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/lemonwood/top",
+                    "banner/house/lemonwood/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "liddle_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Liddle Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/liddle/bottom",
+                    "banner/house/liddle/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/liddle/top",
+                    "banner/house/liddle/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "light_blue_wool_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -5411,6 +7871,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "lightfoot_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Lightfoot Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/lightfoot/bottom",
+                    "banner/house/lightfoot/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/lightfoot/top",
+                    "banner/house/lightfoot/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "locke_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -5457,6 +7977,66 @@
                     "transparent",
                     "banner/house/locke/top",
                     "banner/house/locke/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "lolliston_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Lolliston Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/lolliston/bottom",
+                    "banner/house/lolliston/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/lolliston/top",
+                    "banner/house/lolliston/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -5591,6 +8171,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "lychester_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Lychester Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/lychester/bottom",
+                    "banner/house/lychester/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/lychester/top",
+                    "banner/house/lychester/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "lydden_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -5637,6 +8277,126 @@
                     "transparent",
                     "banner/house/lydden/top",
                     "banner/house/lydden/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "magnar_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Magnar Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/magnar/bottom",
+                    "banner/house/magnar/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/magnar/top",
+                    "banner/house/magnar/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "mallery_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Mallery Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/mallery/bottom",
+                    "banner/house/mallery/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/mallery/top",
+                    "banner/house/mallery/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -5771,6 +8531,126 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "manning_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Manning Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/manning/bottom",
+                    "banner/house/manning/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/manning/top",
+                    "banner/house/manning/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "manwoody_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Manwoody Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/manwoody/bottom",
+                    "banner/house/manwoody/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/manwoody/top",
+                    "banner/house/manwoody/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "marbrand_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -5817,6 +8697,66 @@
                     "transparent",
                     "banner/house/marbrand/top",
                     "banner/house/marbrand/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "marsh_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Marsh Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/marsh/bottom",
+                    "banner/house/marsh/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/marsh/top",
+                    "banner/house/marsh/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -6191,6 +9131,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "mollen_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Mollen Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/mollen/bottom",
+                    "banner/house/mollen/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/mollen/top",
+                    "banner/house/mollen/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "mooton_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -6297,6 +9297,126 @@
                     "transparent",
                     "banner/house/mormont/top",
                     "banner/house/mormont/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "moss_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Moss Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/moss/bottom",
+                    "banner/house/moss/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/moss/top",
+                    "banner/house/moss/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "mudd_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Mudd Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/mudd/bottom",
+                    "banner/house/mudd/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/mudd/top",
+                    "banner/house/mudd/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -6431,6 +9551,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "myre_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Myre Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/myre/bottom",
+                    "banner/house/myre/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/myre/top",
+                    "banner/house/myre/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "nights_watch_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -6477,6 +9657,66 @@
                     "transparent",
                     "banner/house/nights_watch/top",
                     "banner/house/nights_watch/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "norrey_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Norrey Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/norrey/bottom",
+                    "banner/house/norrey/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/norrey/top",
+                    "banner/house/norrey/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -6657,6 +9897,186 @@
                     "transparent",
                     "banner/solid/orange_wool/top",
                     "banner/solid/orange_wool/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "orkwood_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Orkwood Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/orkwood/bottom",
+                    "banner/house/orkwood/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/orkwood/top",
+                    "banner/house/orkwood/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "overton_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Overton Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/overton/bottom",
+                    "banner/house/overton/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/overton/top",
+                    "banner/house/overton/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "paege_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Paege Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/paege/bottom",
+                    "banner/house/paege/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/paege/top",
+                    "banner/house/paege/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -7151,6 +10571,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "poole_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Poole Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/poole/bottom",
+                    "banner/house/poole/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/poole/top",
+                    "banner/house/poole/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "prester_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -7317,6 +10797,186 @@
                     "transparent",
                     "banner/solid/purple_wool/top",
                     "banner/solid/purple_wool/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "pyle_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Pyle Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/pyle/bottom",
+                    "banner/house/pyle/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/pyle/top",
+                    "banner/house/pyle/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "qorgyle_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Qorgyle Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/qorgyle/bottom",
+                    "banner/house/qorgyle/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/qorgyle/top",
+                    "banner/house/qorgyle/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "rambton_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Rambton Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/rambton/bottom",
+                    "banner/house/rambton/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/rambton/top",
+                    "banner/house/rambton/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -7871,6 +11531,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "roote_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Roote Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/roote/bottom",
+                    "banner/house/roote/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/roote/top",
+                    "banner/house/roote/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "rosby_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -8231,6 +11951,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "saltcliffe_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Saltcliffe Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/saltcliffe/bottom",
+                    "banner/house/saltcliffe/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/saltcliffe/top",
+                    "banner/house/saltcliffe/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "santagar_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -8397,6 +12177,306 @@
                     "transparent",
                     "banner/house/serrett/top",
                     "banner/house/serrett/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "shawney_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Shawney Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/shawney/bottom",
+                    "banner/house/shawney/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/shawney/top",
+                    "banner/house/shawney/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "slate_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Slate Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/slate/bottom",
+                    "banner/house/slate/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/slate/top",
+                    "banner/house/slate/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "smallwood_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Smallwood Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/smallwood/bottom",
+                    "banner/house/smallwood/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/smallwood/top",
+                    "banner/house/smallwood/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "sparr_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Sparr Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/sparr/bottom",
+                    "banner/house/sparr/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/sparr/top",
+                    "banner/house/sparr/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "stane_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Stane Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/stane/bottom",
+                    "banner/house/stane/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/stane/top",
+                    "banner/house/stane/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -8767,6 +12847,126 @@
                     "transparent",
                     "banner/house/stonehouse/top",
                     "banner/house/stonehouse/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "stonetree_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Stonetree Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/stonetree/bottom",
+                    "banner/house/stonetree/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/stonetree/top",
+                    "banner/house/stonetree/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "stout_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Stout Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/stout/bottom",
+                    "banner/house/stout/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/stout/top",
+                    "banner/house/stout/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -9681,6 +13881,126 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "thenn_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Thenn Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/thenn/bottom",
+                    "banner/house/thenn/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/thenn/top",
+                    "banner/house/thenn/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "thorne_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Thorne Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/thorne/bottom",
+                    "banner/house/thorne/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/thorne/top",
+                    "banner/house/thorne/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "toland_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -10101,6 +14421,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "vaith_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Vaith Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/vaith/bottom",
+                    "banner/house/vaith/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/vaith/top",
+                    "banner/house/vaith/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "vance_atranta_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -10267,6 +14647,126 @@
                     "transparent",
                     "banner/house/velaryon/top",
                     "banner/house/velaryon/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "volmark_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Volmark Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/volmark/bottom",
+                    "banner/house/volmark/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/volmark/top",
+                    "banner/house/volmark/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "vypren_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Vypren Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/vypren/bottom",
+                    "banner/house/vypren/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/vypren/top",
+                    "banner/house/vypren/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -10461,6 +14961,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "wayn_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Wayn Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/wayn/bottom",
+                    "banner/house/wayn/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/wayn/top",
+                    "banner/house/wayn/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "waynwood_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -10507,6 +15067,126 @@
                     "transparent",
                     "banner/house/waynwood/top",
                     "banner/house/waynwood/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "wells_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Wells Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/wells/bottom",
+                    "banner/house/wells/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/wells/top",
+                    "banner/house/wells/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "wendwater_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Wendwater Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/wendwater/bottom",
+                    "banner/house/wendwater/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/wendwater/top",
+                    "banner/house/wendwater/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,
@@ -10761,6 +15441,126 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "whitehill_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Whitehill Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/whitehill/bottom",
+                    "banner/house/whitehill/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/whitehill/top",
+                    "banner/house/whitehill/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "wode_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Wode Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/wode/bottom",
+                    "banner/house/wode/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/wode/top",
+                    "banner/house/wode/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "woodwright_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -10807,6 +15607,66 @@
                     "transparent",
                     "banner/house/woodwright/top",
                     "banner/house/woodwright/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
+        "blockName": "woolfield_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Woolfield Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/woolfield/bottom",
+                    "banner/house/woolfield/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/woolfield/top",
+                    "banner/house/woolfield/top"
                 ],
                 "boundingBox": {
                     "xMin": 0.96875,

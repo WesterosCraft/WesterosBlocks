@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/slab_top",
+  "textures": {
+    "down": "westerosblocks:block/roofing/shingle/wood_shingle_10",
+    "east": "westerosblocks:block/roofing/shingle/wood_shingle_10",
+    "north": "westerosblocks:block/roofing/shingle/wood_shingle_10",
+    "particle": "westerosblocks:block/roofing/shingle/wood_shingle_10",
+    "south": "westerosblocks:block/roofing/shingle/wood_shingle_10",
+    "up": "westerosblocks:block/roofing/shingle/wood_shingle_10",
+    "west": "westerosblocks:block/roofing/shingle/wood_shingle_10"
+  }
+}

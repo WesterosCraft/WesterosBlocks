@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/roofing/shingle/wood_shingle_8",
+    "east": "westerosblocks:block/roofing/shingle/wood_shingle_8",
+    "north": "westerosblocks:block/roofing/shingle/wood_shingle_8",
+    "particle": "westerosblocks:block/roofing/shingle/wood_shingle_8",
+    "south": "westerosblocks:block/roofing/shingle/wood_shingle_8",
+    "up": "westerosblocks:block/roofing/shingle/wood_shingle_8",
+    "west": "westerosblocks:block/roofing/shingle/wood_shingle_8"
+  }
+}

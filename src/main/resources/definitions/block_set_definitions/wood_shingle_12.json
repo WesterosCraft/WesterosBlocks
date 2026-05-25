@@ -1,0 +1,30 @@
+{
+    "baseBlockName": "wood_shingle_12",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "wood_shingle_wall_12"
+    },
+    "hardness": 2,
+    "soundGroup": "wood",
+    "mapColor": "DEEPSLATE_GRAY",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Gray Wooden Shingle 5",
+    "textures": {
+        "all": "roofing/shingle/wood_shingle_12"
+    }
+}

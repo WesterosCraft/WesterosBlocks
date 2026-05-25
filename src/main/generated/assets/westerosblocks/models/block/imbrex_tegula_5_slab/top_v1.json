@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/slab_top",
+  "textures": {
+    "down": "westerosblocks:block/roofing/imbrex/imbrex_tegula_5",
+    "east": "westerosblocks:block/roofing/imbrex/imbrex_tegula_5",
+    "north": "westerosblocks:block/roofing/imbrex/imbrex_tegula_5",
+    "particle": "westerosblocks:block/roofing/imbrex/imbrex_tegula_5",
+    "south": "westerosblocks:block/roofing/imbrex/imbrex_tegula_5",
+    "up": "westerosblocks:block/roofing/imbrex/imbrex_tegula_5",
+    "west": "westerosblocks:block/roofing/imbrex/imbrex_tegula_5"
+  }
+}

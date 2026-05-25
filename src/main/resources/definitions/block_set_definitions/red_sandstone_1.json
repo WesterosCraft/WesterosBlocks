@@ -1,0 +1,27 @@
+{
+    "baseBlockName": "red_sandstone_1",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "hopper",
+        "tip"
+    ],
+    "hardness": 1.5,
+    "soundGroup": "stone",
+    "mapColor": "TERRACOTTA_RED",
+    "resistance": 10,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_medium_ashlar_tab",
+    "baseLabel": "Red Sandstone 1",
+    "textures": {
+        "all": "sandstone/red_sandstone_1"
+    }
+}

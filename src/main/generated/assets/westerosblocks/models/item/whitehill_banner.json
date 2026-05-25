@@ -1,0 +1,10 @@
+{
+  "parent": "westerosblocks:item/cuboid_nsew_stack_item",
+  "textures": {
+    "particle": "westerosblocks:block/banner/house/whitehill/top",
+    "txt1": "westerosblocks:block/banner/house/whitehill/top",
+    "txt2": "westerosblocks:block/banner/house/whitehill/bottom",
+    "txt5": "westerosblocks:block/banner/house/whitehill/top",
+    "txt6": "westerosblocks:block/banner/house/whitehill/bottom"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "westerosblocks:item/cuboid_nsew_stack_item",
+  "textures": {
+    "particle": "westerosblocks:block/banner/house/erenford/top",
+    "txt1": "westerosblocks:block/banner/house/erenford/top",
+    "txt2": "westerosblocks:block/banner/house/erenford/bottom",
+    "txt5": "westerosblocks:block/banner/house/erenford/top",
+    "txt6": "westerosblocks:block/banner/house/erenford/bottom"
+  }
+}

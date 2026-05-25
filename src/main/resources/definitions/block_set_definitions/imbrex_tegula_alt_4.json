@@ -1,0 +1,30 @@
+{
+    "baseBlockName": "imbrex_tegula_alt_4",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "imbrex_tegula_alt_wall_4"
+    },
+    "hardness": 2,
+    "soundGroup": "stone",
+    "mapColor": "SPRUCE_BROWN",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Terracotta Imbrex and Tegula Alt 5",
+    "textures": {
+        "all": "roofing/imbrex/imbrex_tegula_alt_4"
+    }
+}

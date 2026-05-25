@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/red_sandstone_9_hopper/base_v1",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/imbrex_tegula_7/base_v1",
+      "y": 0
+    }
+  }
+}
