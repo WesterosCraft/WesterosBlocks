@@ -86,12 +86,12 @@
     }
   ],
   "textures": {
-    "particle": "westerosblocks:block/roofing/shingle/wood_shingle_6",
-    "txt0": "westerosblocks:block/roofing/shingle/wood_shingle_6",
-    "txt1": "westerosblocks:block/roofing/shingle/wood_shingle_6",
-    "txt2": "westerosblocks:block/roofing/shingle/wood_shingle_6",
-    "txt3": "westerosblocks:block/roofing/shingle/wood_shingle_6",
-    "txt4": "westerosblocks:block/roofing/shingle/wood_shingle_6",
-    "txt5": "westerosblocks:block/roofing/shingle/wood_shingle_6"
+    "particle": "westerosblocks:block/roofing/shingle/wood_shingle_5",
+    "txt0": "westerosblocks:block/roofing/shingle/wood_shingle_5",
+    "txt1": "westerosblocks:block/roofing/shingle/wood_shingle_5",
+    "txt2": "westerosblocks:block/roofing/shingle/wood_shingle_5",
+    "txt3": "westerosblocks:block/roofing/shingle/wood_shingle_5",
+    "txt4": "westerosblocks:block/roofing/shingle/wood_shingle_5",
+    "txt5": "westerosblocks:block/roofing/shingle/wood_shingle_5"
   }
 }

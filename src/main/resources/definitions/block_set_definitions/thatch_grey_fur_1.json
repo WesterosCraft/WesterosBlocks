@@ -1,0 +1,30 @@
+{
+    "baseBlockName": "thatch_grey_fur_1",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "thatch_grey_wall_1"
+    },
+    "hardness": 2,
+    "soundGroup": "plant",
+    "mapColor": "STONE_GRAY",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Thatch Grey Fur 1",
+    "textures": {
+        "all": "thatch/grey/all"
+    }
+}

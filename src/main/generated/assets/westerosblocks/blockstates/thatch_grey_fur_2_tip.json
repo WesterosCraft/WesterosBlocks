@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/thatch_grey_fur_2_tip/base_v1",
+      "y": 0
+    }
+  }
+}
