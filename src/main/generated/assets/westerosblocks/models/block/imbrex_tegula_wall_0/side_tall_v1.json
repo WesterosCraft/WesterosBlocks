@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side_tall",
-  "textures": {
-    "bottom": "westerosblocks:block/roofing/imbrex/imbrex_tegula_0",
-    "particle": "westerosblocks:block/roofing/imbrex/imbrex_tegula_0",
-    "side": "westerosblocks:block/roofing/imbrex/imbrex_tegula_0",
-    "top": "westerosblocks:block/roofing/imbrex/imbrex_tegula_0"
-  }
-}

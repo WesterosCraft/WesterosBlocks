@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/template_wall_side",
   "textures": {
-    "bottom": "westerosblocks:block/roofing/imbrex/imbrex_tegula_6",
-    "particle": "westerosblocks:block/roofing/imbrex/imbrex_tegula_6",
-    "side": "westerosblocks:block/roofing/imbrex/imbrex_tegula_6",
-    "top": "westerosblocks:block/roofing/imbrex/imbrex_tegula_6"
+    "bottom": "westerosblocks:block/roofing/imbrex/imbrex_tegula_5",
+    "particle": "westerosblocks:block/roofing/imbrex/imbrex_tegula_5",
+    "side": "westerosblocks:block/roofing/imbrex/imbrex_tegula_5",
+    "top": "westerosblocks:block/roofing/imbrex/imbrex_tegula_5"
   }
 }

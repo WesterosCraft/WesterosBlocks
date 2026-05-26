@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/roofing/imbrex/imbrex_tegula_8",
-    "east": "westerosblocks:block/roofing/imbrex/imbrex_tegula_8",
-    "north": "westerosblocks:block/roofing/imbrex/imbrex_tegula_8",
-    "particle": "westerosblocks:block/roofing/imbrex/imbrex_tegula_8",
-    "south": "westerosblocks:block/roofing/imbrex/imbrex_tegula_8",
-    "up": "westerosblocks:block/roofing/imbrex/imbrex_tegula_8",
-    "west": "westerosblocks:block/roofing/imbrex/imbrex_tegula_8"
+    "down": "westerosblocks:block/roofing/imbrex/imbrex_tegula_7",
+    "east": "westerosblocks:block/roofing/imbrex/imbrex_tegula_7",
+    "north": "westerosblocks:block/roofing/imbrex/imbrex_tegula_7",
+    "particle": "westerosblocks:block/roofing/imbrex/imbrex_tegula_7",
+    "south": "westerosblocks:block/roofing/imbrex/imbrex_tegula_7",
+    "up": "westerosblocks:block/roofing/imbrex/imbrex_tegula_7",
+    "west": "westerosblocks:block/roofing/imbrex/imbrex_tegula_7"
   }
 }

@@ -5280,7 +5280,7 @@
         "itemTextureIndex": 2
     },
     {
-        "blockName": "goddbrook_banner",
+        "blockName": "goodbrook_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
         "resistance": 0,
@@ -5293,7 +5293,7 @@
             }
         ],
         "creativeTab": "westeros_banners_tab",
-        "label": "Goddbrook Banner",
+        "label": "Goodbrook Banner",
         "options": {
             "noBreakUnder": true,
             "allowHalfBreak": true

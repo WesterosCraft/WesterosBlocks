@@ -14,7 +14,7 @@
     },
     "hardness": 2,
     "soundGroup": "wood",
-    "mapColor": "SPRUCE_BROWN",
+    "mapColor": "DIRT_BROWN",
     "resistance": 5,
     "harvestLevel": [
         {
@@ -23,8 +23,8 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
-    "baseLabel": "Wood Shingle 3",
+    "baseLabel": "Wood Shingle 2",
     "textures": {
-        "all": "roofing/shingle/wood_shingle_2"
+        "all": "roofing/shingle/wood_shingle_1"
     }
 }

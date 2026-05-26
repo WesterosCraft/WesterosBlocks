@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/fence_inventory",
   "textures": {
-    "bottom": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_2",
-    "particle": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_2",
-    "side": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_2",
-    "top": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_2"
+    "bottom": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_1",
+    "particle": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_1",
+    "side": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_1",
+    "top": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_1"
   }
 }

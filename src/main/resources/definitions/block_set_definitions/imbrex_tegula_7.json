@@ -14,7 +14,7 @@
     },
     "hardness": 2,
     "soundGroup": "stone",
-    "mapColor": "TERRACOTTA_RED",
+    "mapColor": "TERRACOTTA_BROWN",
     "resistance": 5,
     "harvestLevel": [
         {
@@ -23,8 +23,8 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
-    "baseLabel": "Terracotta Imbrex and Tegula 8",
+    "baseLabel": "Terracotta Imbrex and Tegula 7",
     "textures": {
-        "all": "roofing/imbrex/imbrex_tegula_7"
+        "all": "roofing/imbrex/imbrex_tegula_6"
     }
 }

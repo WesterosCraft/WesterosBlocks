@@ -1,9 +1,5 @@
 # Changelog
 
-## 1.21.1 Port Snapshot — New Blocks Since 1.18.2
-
-This section enumerates the 540 block IDs that exist on `1.21.1-fabric` but were not present on `origin/1.18.2`. Grouped by category. Set-expansion variants (stairs/slab/wall/fence/hopper/tip/carpet/half_door) are summarized under their base where every variant is new.
-
 ### Wood Plank Sets (new colors)
 
 All with full variants (`_stairs`, `_slab`, `_wall`, `_fence`, `_hopper`, `_tip`, `_carpet`, where applicable):
@@ -120,9 +116,61 @@ Four snow depths (`_light_snow`, `_medium_snow`, `_snow`, `_heavy_snow`) for bot
 
 - `redwood_log`, `redwood_branch`, `redwood_leaf_tip`
 
+### Roofing Tiles (Imbrex & Tegula)
+
+Each with full variants (`_stairs`, `_slab`, `_wall`, `_fence`, `_tip`, `_carpet`):
+
+- `imbrex_tegula_1` through `imbrex_tegula_11`
+- `imbrex_tegula_alt_1` through `imbrex_tegula_alt_6`
+
+### Wood Shingles
+
+Each with full variants (`_stairs`, `_slab`, `_wall`, `_fence`, `_tip`, `_carpet`):
+
+- `wood_shingle_1` through `wood_shingle_8`
+- `wood_shingle_gray_1` through `wood_shingle_gray_10`
+
+### Red Sandstone Variants
+
+Each with full variants (`_stairs`, `_slab`, `_wall`, `_fence`, `_hopper`, `_tip`):
+
+- `red_sandstone_1` through `red_sandstone_9`
+
+### Thatch Fur
+
+Each with full variants (`_stairs`, `_slab`, `_wall`, `_fence`, `_tip`, `_carpet`):
+
+- Light: `thatch_light_fur_1`, `thatch_light_fur_3`, `thatch_light_fur_4`, `thatch_light_fur_5`, `thatch_light_fur_7`
+- Gray: `thatch_gray_fur_1` through `thatch_gray_fur_7`
+- Heather: `thatch_heather_fur_1`, `thatch_heather_fur_2`
+
+### Banners (minor houses)
+
+- `blanetree_banner`, `blount_banner`, `brune_of_brownhollow_banner`, `burley_banner`
+- `byrch_banner`, `bywater_banner`, `cassel_banner`, `chelsted_banner`
+- `chyttering_banner`, `codd_banner`, `condon_banner`, `cressey_banner`
+- `crowl_banner`, `edgerton_banner`, `erenford_banner`, `farring_banner`
+- `farwynd_banner`, `fenn_banner`, `flint_of_flints_finger_banner`, `follard_banner`
+- `gargalen_banner`, `gaunt_banner`, `goodbrook_banner`, `grell_banner`
+- `haigh_banner`, `harclay_banner`, `harlaw_of_grey_garden_banner`, `harlaw_of_harlaw_hall_banner`
+- `harlaw_of_harridan_hill_banner`, `harlaw_of_the_tower_of_glimmering_banner`, `hawick_banner`, `hayford_banner`
+- `ironsmith_banner`, `keath_banner`, `kenning_of_harlaw_banner`, `kettleblack_banner`
+- `knott_banner`, `lake_banner`, `langward_banner`, `lemonwood_banner`
+- `liddle_banner`, `lightfoot_banner`, `lolliston_banner`, `lychester_banner`
+- `magnar_banner`, `mallery_banner`, `manning_banner`, `manwoody_banner`
+- `marsh_banner`, `mollen_banner`, `moss_banner`, `mudd_banner`
+- `myre_banner`, `norrey_banner`, `orkwood_banner`, `overton_banner`
+- `paege_banner`, `poole_banner`, `pyle_banner`, `qorgyle_banner`
+- `rambton_banner`, `roote_banner`, `saltcliffe_banner`, `shawney_banner`
+- `slate_banner`, `smallwood_banner`, `sparr_banner`, `stane_banner`
+- `stonetree_banner`, `stout_banner`, `thenn_banner`, `thorne_banner`
+- `vaith_banner`, `volmark_banner`, `vypren_banner`, `wayn_banner`
+- `wells_banner`, `wendwater_banner`, `whitehill_banner`, `wode_banner`
+- `woolfield_banner`
+
 ### Misc New Blocks
 
-- `awning_red`, `horizontal_scroll`, `long_vase`, `oak_balcony`, `pitchfork_block`, `westerosi_coins`, `wildfire`, `black_slate_compact_stairs`, `test_arrow_slit`
+- `awning_red`, `horizontal_scroll`, `long_vase`, `oak_balcony`, `pitchfork_block`, `westerosi_coins`, `wildfire`, `black_slate_compact_stairs`, `test_arrow_slit`, `big_door` (pilot)
 
 ## May 2026
 

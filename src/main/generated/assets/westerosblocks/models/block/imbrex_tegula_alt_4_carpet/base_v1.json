@@ -86,12 +86,12 @@
     }
   ],
   "textures": {
-    "particle": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_4",
-    "txt0": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_4",
-    "txt1": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_4",
-    "txt2": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_4",
-    "txt3": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_4",
-    "txt4": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_4",
-    "txt5": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_4"
+    "particle": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_3",
+    "txt0": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_3",
+    "txt1": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_3",
+    "txt2": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_3",
+    "txt3": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_3",
+    "txt4": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_3",
+    "txt5": "westerosblocks:block/roofing/imbrex/imbrex_tegula_alt_3"
   }
 }

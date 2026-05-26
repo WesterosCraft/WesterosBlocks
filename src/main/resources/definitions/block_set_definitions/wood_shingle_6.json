@@ -14,7 +14,7 @@
     },
     "hardness": 2,
     "soundGroup": "wood",
-    "mapColor": "OAK_TAN",
+    "mapColor": "SPRUCE_BROWN",
     "resistance": 5,
     "harvestLevel": [
         {
@@ -23,8 +23,8 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
-    "baseLabel": "Wood Shingle 7",
+    "baseLabel": "Wood Shingle 6",
     "textures": {
-        "all": "roofing/shingle/wood_shingle_6"
+        "all": "roofing/shingle/wood_shingle_5"
     }
 }
