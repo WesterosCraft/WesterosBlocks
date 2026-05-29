@@ -291,7 +291,7 @@
         "resistance": 2,
         "soundGroup": "wool",
         "mapColor": "TERRACOTTA_RED",
-        "creativeTab": "westeros_cloth_fibers_tab",
+        "creativeTab": "westeros_test_tab",
         "label": "Red Square Bunting",
         "renderLayer": "cutout",
         "nonOpaque": true,

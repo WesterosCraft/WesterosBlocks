@@ -1,0 +1,30 @@
+{
+    "baseBlockName": "thatch_dark_fur",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "thatch_dark_wall"
+    },
+    "hardness": 2,
+    "soundGroup": "plant",
+    "mapColor": "TERRACOTTA_BROWN",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Dark Brown Thatch",
+    "textures": {
+        "all": "thatch/light/all6"
+    }
+}

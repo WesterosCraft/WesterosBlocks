@@ -11,7 +11,7 @@
                 "level": 0
             }
         ],
-        "creativeTab": "westeros_decor_tab",
+        "creativeTab": "westeros_test_tab",
         "label": "Redwood Branch",
         "options": {
             "allowUnsupported": true
@@ -35,7 +35,7 @@
         "blockName": "spruce_leaves_slab",
         "blockType": "mounted_slab",
         "isCustomModel": true,
-        "creativeTab": "westeros_foliage_tab",
+        "creativeTab": "westeros_test_tab",
         "mapColor": "DARK_GREEN",
         "label": "Spruce Leaves Slab",
         "colorMult": "textures/colormap/pine",

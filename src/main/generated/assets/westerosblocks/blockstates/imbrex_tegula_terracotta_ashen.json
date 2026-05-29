@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/imbrex_tegula_terracotta_ashen/base_v1",
+      "y": 0
+    }
+  }
+}

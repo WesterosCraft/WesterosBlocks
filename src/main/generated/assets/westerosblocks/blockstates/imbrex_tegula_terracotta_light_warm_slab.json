@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/imbrex_tegula_terracotta_light_warm_slab/bottom_v1"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/imbrex_tegula_terracotta_light_warm_slab/double_v1"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/imbrex_tegula_terracotta_light_warm_slab/top_v1"
+    }
+  }
+}

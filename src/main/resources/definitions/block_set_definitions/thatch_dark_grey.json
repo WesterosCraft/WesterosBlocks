@@ -1,0 +1,30 @@
+{
+    "baseBlockName": "thatch_dark_grey",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "thatch_dark_grey_wall"
+    },
+    "hardness": 2,
+    "soundGroup": "plant",
+    "mapColor": "TERRACOTTA_LIGHT_GRAY",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Dark Gray Thatch",
+    "textures": {
+        "all": "thatch/grey/all4"
+    }
+}

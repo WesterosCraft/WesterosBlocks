@@ -1,0 +1,30 @@
+{
+    "baseBlockName": "wood_shingle_gray_pale",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "wood_shingle_gray_pale_wall"
+    },
+    "hardness": 2,
+    "soundGroup": "wood",
+    "mapColor": "IRON_GRAY",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Pale Grey Wooden Shingle",
+    "textures": {
+        "all": "roofing/shingle/wood_shingle_9"
+    }
+}

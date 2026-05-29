@@ -1,0 +1,30 @@
+{
+    "baseBlockName": "thatch_light_heather",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "thatch_light_heather_wall"
+    },
+    "hardness": 2,
+    "soundGroup": "plant",
+    "mapColor": "TERRACOTTA_PURPLE",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Light Heather Thatch",
+    "textures": {
+        "all": "thatch/heather/heather1"
+    }
+}

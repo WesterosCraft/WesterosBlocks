@@ -19,7 +19,7 @@
             "level": 1
         }
     ],
-    "creativeTab": "westeros_medium_ashlar_tab",
+    "creativeTab": "westeros_test_tab",
     "baseLabel": "Red Sandstone 3",
     "textures": {
         "all": "sandstone/red_sandstone_3"

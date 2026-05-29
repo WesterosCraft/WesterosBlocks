@@ -1,6 +1,6 @@
 [
     {
-        "blockName": "oak_table",
+        "blockName": "table_oak",
         "blockType": "table",
         "soundGroup": "wood",
         "mapColor": "BROWN",
@@ -13,7 +13,7 @@
         "woodType": "oak"
     },
     {
-        "blockName": "birch_table",
+        "blockName": "table_birch",
         "blockType": "table",
         "soundGroup": "wood",
         "mapColor": "BROWN",
@@ -26,7 +26,7 @@
         "woodType": "birch"
     },
     {
-        "blockName": "jungle_table",
+        "blockName": "table_jungle",
         "blockType": "table",
         "soundGroup": "wood",
         "mapColor": "TERRACOTTA_BROWN",
@@ -39,7 +39,7 @@
         "woodType": "birch"
     },
     {
-        "blockName": "northern_table",
+        "blockName": "table_northern",
         "blockType": "table",
         "soundGroup": "wood",
         "mapColor": "TERRACOTTA_BROWN",
@@ -52,7 +52,7 @@
         "woodType": "birch"
     },
     {
-        "blockName": "spruce_table",
+        "blockName": "table_spruce",
         "blockType": "table",
         "soundGroup": "wood",
         "mapColor": "TERRACOTTA_BROWN",

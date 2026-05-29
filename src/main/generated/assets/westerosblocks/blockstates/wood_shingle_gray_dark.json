@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/wood_shingle_gray_dark/base_v1",
+      "y": 0
+    }
+  }
+}

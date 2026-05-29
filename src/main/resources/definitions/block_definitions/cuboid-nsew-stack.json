@@ -4513,7 +4513,7 @@
             }
         ],
         "creativeTab": "westeros_banners_tab",
-        "label": "Flint Banner",
+        "label": "Flint of Widow's Watch Banner",
         "options": {
             "noBreakUnder": true,
             "allowHalfBreak": true
@@ -4753,7 +4753,7 @@
             }
         ],
         "creativeTab": "westeros_banners_tab",
-        "label": "Fossoway Green Banner",
+        "label": "Fossoway of New Barrel Banner",
         "options": {
             "noBreakUnder": true,
             "allowHalfBreak": true
@@ -4813,7 +4813,7 @@
             }
         ],
         "creativeTab": "westeros_banners_tab",
-        "label": "Fossoway Red Banner",
+        "label": "Fossoway of Cider Hall Banner",
         "options": {
             "noBreakUnder": true,
             "allowHalfBreak": true
@@ -7571,7 +7571,7 @@
         "itemTextureIndex": 2
     },
     {
-        "blockName": "lemonwood_banner",
+        "blockName": "dalt_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
         "resistance": 0,
@@ -7584,7 +7584,7 @@
             }
         ],
         "creativeTab": "westeros_banners_tab",
-        "label": "Lemonwood Banner",
+        "label": "Dalt Banner",
         "options": {
             "noBreakUnder": true,
             "allowHalfBreak": true
@@ -14494,7 +14494,7 @@
             }
         ],
         "creativeTab": "westeros_banners_tab",
-        "label": "Vance Atranta Banner",
+        "label": "Vance of Atranta Banner",
         "options": {
             "noBreakUnder": true,
             "allowHalfBreak": true
@@ -14554,7 +14554,7 @@
             }
         ],
         "creativeTab": "westeros_banners_tab",
-        "label": "Vance Wayfarers Banner",
+        "label": "Vance of Wayfarer's Rest Banner",
         "options": {
             "noBreakUnder": true,
             "allowHalfBreak": true

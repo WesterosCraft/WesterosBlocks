@@ -1,0 +1,30 @@
+{
+    "baseBlockName": "imbrex_tegula_terracotta_alt_warm",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "imbrex_tegula_terracotta_alt_warm_wall"
+    },
+    "hardness": 2,
+    "soundGroup": "stone",
+    "mapColor": "ORANGE",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Warm Terracotta Imbrex and Tegula Alt",
+    "textures": {
+        "all": "roofing/imbrex/imbrex_tegula_alt_2"
+    }
+}

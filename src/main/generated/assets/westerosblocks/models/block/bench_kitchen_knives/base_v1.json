@@ -6,7 +6,7 @@
     "north": "westerosblocks:block/bench_block/bench_kitchen_knives",
     "particle": "westerosblocks:block/wood/spruce/all_lines",
     "south": "westerosblocks:block/bench_block/bench_kitchen_knives",
-    "up": "westerosblocks:block/bench_block/crafting_table_top",
+    "up": "westerosblocks:block/wood/oak/all_lines",
     "west": "westerosblocks:block/bench_block/bench_kitchen_knives"
   }
 }

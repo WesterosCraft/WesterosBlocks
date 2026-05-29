@@ -161,7 +161,7 @@
         "label": "Bench Butcher Knives",
         "textures": [
             "wood/spruce/all_lines",
-            "bench_block/crafting_table_top",
+            "wood/oak/all_lines",
             "bench_block/bench_butcher_knives"
         ]
     },
@@ -175,7 +175,7 @@
         "label": "Bench Carpentry Hammer Saw",
         "textures": [
             "wood/spruce/all_lines",
-            "bench_block/crafting_table_top",
+            "wood/oak/all_lines",
             "bench_block/bench_carpentry_hammer_saw"
         ]
     },
@@ -189,7 +189,7 @@
         "label": "Bench Drawers",
         "textures": [
             "wood/spruce/all_lines",
-            "bench_block/crafting_table_top",
+            "wood/oak/all_lines",
             "bench_block/bench_drawers"
         ]
     },
@@ -203,7 +203,7 @@
         "label": "Bench Kitchen Knives",
         "textures": [
             "wood/spruce/all_lines",
-            "bench_block/crafting_table_top",
+            "wood/oak/all_lines",
             "bench_block/bench_kitchen_knives"
         ]
     },
@@ -217,7 +217,7 @@
         "label": "Bench Kitchen Pans",
         "textures": [
             "wood/spruce/all_lines",
-            "bench_block/crafting_table_top",
+            "wood/oak/all_lines",
             "bench_block/bench_kitchen_pans"
         ]
     },
@@ -231,7 +231,7 @@
         "label": "Bench Mason Hammer Mallet",
         "textures": [
             "wood/spruce/all_lines",
-            "bench_block/crafting_table_top",
+            "wood/oak/all_lines",
             "bench_block/bench_mason_hammer_mallet"
         ]
     },

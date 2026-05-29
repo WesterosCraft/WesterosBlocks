@@ -1,0 +1,30 @@
+{
+    "baseBlockName": "wood_shingle_oak_light",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "wood_shingle_oak_light_wall"
+    },
+    "hardness": 2,
+    "soundGroup": "wood",
+    "mapColor": "SPRUCE_BROWN",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Light Oak Wood Shingle",
+    "textures": {
+        "all": "roofing/shingle/wood_shingle_5"
+    }
+}

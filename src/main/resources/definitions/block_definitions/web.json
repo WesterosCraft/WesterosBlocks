@@ -964,7 +964,7 @@
         "blockType": "web",
         "soundGroup": "plant",
         "mapColor": "DARK_GREEN",
-        "creativeTab": "westeros_logs_tab",
+        "creativeTab": "westeros_test_tab",
         "label": "Redwood Leaf Tip",
         "isCustomModel": true,
         "randomTextures": [

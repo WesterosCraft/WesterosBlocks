@@ -1,0 +1,30 @@
+{
+    "baseBlockName": "imbrex_tegula_terracotta_light_ashen",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "imbrex_tegula_terracotta_light_ashen_wall"
+    },
+    "hardness": 2,
+    "soundGroup": "stone",
+    "mapColor": "DIRT_BROWN",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "pickaxe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Light Ashen Terracotta Imbrex Tegula",
+    "textures": {
+        "all": "roofing/imbrex/imbrex_tegula_9"
+    }
+}

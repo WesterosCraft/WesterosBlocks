@@ -1,0 +1,30 @@
+{
+    "baseBlockName": "thatch_tan_brown",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "thatch_tan_brown_wall"
+    },
+    "hardness": 2,
+    "soundGroup": "plant",
+    "mapColor": "OAK_TAN",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Tan Brown Thatch",
+    "textures": {
+        "all": "thatch/light/all4"
+    }
+}

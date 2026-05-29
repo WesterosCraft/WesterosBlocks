@@ -2504,7 +2504,7 @@
         "strength": 1,
         "soundGroup": "plant",
         "mapColor": "TERRACOTTA_YELLOW",
-        "creativeTab": "westeros_decor_tab",
+        "creativeTab": "westeros_test_tab",
         "label": "Kernels",
         "renderLayer": "cutout",
         "nonOpaque": true,

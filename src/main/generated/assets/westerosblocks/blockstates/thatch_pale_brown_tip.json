@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/thatch_pale_brown_tip/base_v1",
+      "y": 0
+    }
+  }
+}

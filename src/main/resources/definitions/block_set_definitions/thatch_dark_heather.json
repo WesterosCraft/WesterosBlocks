@@ -1,0 +1,30 @@
+{
+    "baseBlockName": "thatch_dark_heather",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "thatch_dark_heather_wall"
+    },
+    "hardness": 2,
+    "soundGroup": "plant",
+    "mapColor": "TERRACOTTA_PINK",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "baseLabel": "Dark Heather Thatch",
+    "textures": {
+        "all": "thatch/heather/heather2"
+    }
+}
