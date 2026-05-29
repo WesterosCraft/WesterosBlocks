@@ -52,11 +52,11 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
     private static final VoxelShape VWEST_WALL = Block.createCuboidShape(0, 0, 0, 2, 14, 16);
     private static final VoxelShape VNORTH_WALL = Block.createCuboidShape(0, 0, 0, 16, 14, 2);
 
-    // Collision shapes (taller to prevent falling)
-    private static final VoxelShape E_COLLISION = Block.createCuboidShape(14, 0, 0, 16, 26, 16);
-    private static final VoxelShape S_COLLISION = Block.createCuboidShape(0, 0, 14, 16, 26, 16);
-    private static final VoxelShape W_COLLISION = Block.createCuboidShape(0, 0, 0, 2, 26, 16);
-    private static final VoxelShape N_COLLISION = Block.createCuboidShape(0, 0, 0, 16, 26, 2);
+    // Collision shapes — match outline height so players can jump over
+    private static final VoxelShape E_COLLISION = Block.createCuboidShape(14, 0, 0, 16, 14, 16);
+    private static final VoxelShape S_COLLISION = Block.createCuboidShape(0, 0, 14, 16, 14, 16);
+    private static final VoxelShape W_COLLISION = Block.createCuboidShape(0, 0, 0, 2, 14, 16);
+    private static final VoxelShape N_COLLISION = Block.createCuboidShape(0, 0, 0, 16, 14, 2);
 
     private static final VoxelShape[] OUTLINE_SHAPES = precomputeShapes(VNORTH, VSOUTH, VEAST, VWEST);
     private static final VoxelShape[] WALL_OUTLINE_SHAPES = precomputeShapes(VNORTH_WALL, VSOUTH_WALL, VEAST_WALL, VWEST_WALL);
