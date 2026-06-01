@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/ctm_pane_side",
-  "textures": {
-    "cap": "westerosblocks:block/glass/pane_top",
-    "particle": "westerosblocks:block/glass/green/all",
-    "side": "westerosblocks:block/glass/green/all"
-  }
-}

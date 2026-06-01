@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_side",
-  "textures": {
-    "bottom": "westerosblocks:block/bark/grey/horizontal_stripped",
-    "particle": "westerosblocks:block/bark/grey/horizontal_stripped",
-    "side": "westerosblocks:block/bark/grey/horizontal_stripped",
-    "top": "westerosblocks:block/bark/grey/horizontal_stripped"
-  }
-}

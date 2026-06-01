@@ -1,7 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/cross_layer3",
-  "textures": {
-    "cross": "westerosblocks:block/flowers/orange_bog_asphodel2",
-    "particle": "westerosblocks:block/flowers/orange_bog_asphodel2"
-  }
-}

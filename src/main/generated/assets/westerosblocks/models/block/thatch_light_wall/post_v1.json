@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_post",
-  "textures": {
-    "bottom": "westerosblocks:block/thatch/light/all2",
-    "particle": "westerosblocks:block/thatch/light/all2",
-    "side": "westerosblocks:block/thatch/light/all2",
-    "top": "westerosblocks:block/thatch/light/all2"
-  }
-}

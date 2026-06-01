@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/rail_curved",
-  "textures": {
-    "particle": "westerosblocks:block/rail_block/packed_snow_turned",
-    "rail": "westerosblocks:block/rail_block/packed_snow_turned"
-  }
-}

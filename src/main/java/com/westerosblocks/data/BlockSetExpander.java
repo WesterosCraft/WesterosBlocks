@@ -154,6 +154,14 @@ public class BlockSetExpander {
         List<String> textures = pickVariantTextures(blockSet.getTextures(), altTextures, variant);
         if (textures != null && !textures.isEmpty()) def.textures = textures;
 
+        // 5a. Overlay textures (set-level — applies to all variants; doInit() propagates to states.
+        //     Mirrors the state-level overlay handling below.)
+        if (blockSet.getOverlayTextures() != null && !blockSet.getOverlayTextures().isEmpty()) {
+            Map<String, String> overlayMap = preprocessTextureMap(blockSet.getOverlayTextures());
+            List<String> overlayTextures = getTexturesForVariant(overlayMap, variant);
+            if (overlayTextures != null && !overlayTextures.isEmpty()) def.overlayTextures = overlayTextures;
+        }
+
         // 5b. Random textures
         if (blockSet.getRandomTextures() != null && !blockSet.getRandomTextures().isEmpty()) {
             List<BlockDefinition.RandomTextureVariant> rtList = new ArrayList<>();

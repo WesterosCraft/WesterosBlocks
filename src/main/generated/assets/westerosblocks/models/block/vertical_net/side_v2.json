@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/ctm_pane_side",
-  "textures": {
-    "cap": "westerosblocks:block/vertical_net/vertical_net2",
-    "particle": "westerosblocks:block/vertical_net/vertical_net2",
-    "side": "westerosblocks:block/vertical_net/vertical_net2"
-  }
-}

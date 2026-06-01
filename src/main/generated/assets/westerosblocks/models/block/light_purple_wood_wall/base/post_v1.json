@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_post",
-  "textures": {
-    "bottom": "westerosblocks:block/wood/purple_light/all",
-    "particle": "westerosblocks:block/wood/purple_light/all",
-    "side": "westerosblocks:block/wood/purple_light/all",
-    "top": "westerosblocks:block/wood/purple_light/all"
-  }
-}

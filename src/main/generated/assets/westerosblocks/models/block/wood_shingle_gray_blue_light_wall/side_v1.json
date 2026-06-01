@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side",
-  "textures": {
-    "bottom": "westerosblocks:block/roofing/shingle/wood_shingle_14",
-    "particle": "westerosblocks:block/roofing/shingle/wood_shingle_14",
-    "side": "westerosblocks:block/roofing/shingle/wood_shingle_14",
-    "top": "westerosblocks:block/roofing/shingle/wood_shingle_14"
-  }
-}

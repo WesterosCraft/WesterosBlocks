@@ -178,7 +178,9 @@ public class StairBlockExporter extends BaseBlockExporter {
         Identifier modelId = createGeneratedModelId(block, variantName);
 
         boolean isTinted = definition.isTinted();
-        boolean hasOverlay = definition.hasOverlay();
+        // Detect overlays via overlayTextures presence too (consistent with solid/slab exporters),
+        // not just the options.overlay flag.
+        boolean hasOverlay = definition.hasOverlay() || definition.hasOverlayTextures();
 
         // Extract the pure model type (strip state prefix like "base_" from "base_inner")
         String modelType;

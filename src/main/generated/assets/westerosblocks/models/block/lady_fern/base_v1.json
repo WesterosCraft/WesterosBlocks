@@ -1,7 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/cross",
-  "textures": {
-    "cross": "westerosblocks:block/lady_fern/side1",
-    "particle": "westerosblocks:block/lady_fern/side1"
-  }
-}

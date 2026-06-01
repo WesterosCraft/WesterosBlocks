@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/outer_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/roofing/shingle/wood_shingle_11",
-    "particle": "westerosblocks:block/roofing/shingle/wood_shingle_11",
-    "side": "westerosblocks:block/roofing/shingle/wood_shingle_11",
-    "top": "westerosblocks:block/roofing/shingle/wood_shingle_11"
-  }
-}

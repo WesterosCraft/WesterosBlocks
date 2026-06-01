@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/rail_flat",
-  "textures": {
-    "particle": "westerosblocks:block/wood/oak/all_lines",
-    "rail": "westerosblocks:block/wood/oak/all_lines"
-  }
-}

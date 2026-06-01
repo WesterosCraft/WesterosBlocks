@@ -1,7 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/crop",
-  "textures": {
-    "crop": "westerosblocks:block/turnips/turnips_stage_0",
-    "particle": "westerosblocks:block/turnips/turnips_stage_0"
-  }
-}

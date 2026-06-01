@@ -1,7 +1,0 @@
-{
-  "parent": "westerosblocks:block/tinted/vine_u",
-  "textures": {
-    "particle": "westerosblocks:block/vines/side4",
-    "vines": "westerosblocks:block/vines/side4"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/balcony_side_wall",
-  "textures": {
-    "middle": "westerosblocks:block/bark/oak/stripped",
-    "particle": "westerosblocks:block/bark/oak/side",
-    "rail": "westerosblocks:block/bark/oak/side"
-  }
-}

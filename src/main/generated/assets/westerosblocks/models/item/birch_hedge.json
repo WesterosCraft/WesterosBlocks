@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/tinted/hedge_wall_inventory",
-  "textures": {
-    "bottom": "westerosblocks:block/leaves/birch/all",
-    "particle": "westerosblocks:block/leaves/birch/all",
-    "side": "westerosblocks:block/leaves/birch/all",
-    "top": "westerosblocks:block/leaves/birch/all"
-  }
-}

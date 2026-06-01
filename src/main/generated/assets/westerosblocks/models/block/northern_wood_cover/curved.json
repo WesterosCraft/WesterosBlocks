@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/rail_curved",
-  "textures": {
-    "particle": "westerosblocks:block/wood/northern/all_lines",
-    "rail": "westerosblocks:block/wood/northern/all_lines"
-  }
-}

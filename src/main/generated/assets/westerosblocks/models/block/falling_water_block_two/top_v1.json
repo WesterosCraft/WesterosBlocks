@@ -1,7 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/vine_u",
-  "textures": {
-    "particle": "westerosblocks:block/alyssas_tears_mist/mist2",
-    "vines": "westerosblocks:block/alyssas_tears_mist/mist2"
-  }
-}

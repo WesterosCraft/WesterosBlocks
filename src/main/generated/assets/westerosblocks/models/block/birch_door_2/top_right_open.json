@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_right_open",
-  "textures": {
-    "bottom": "westerosblocks:block/wood/birch/door_simple_bottom",
-    "particle": "westerosblocks:block/wood/birch/door_simple_bottom",
-    "top": "westerosblocks:block/wood/birch/door_simple_top"
-  }
-}

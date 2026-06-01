@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/tinted/template_hedge_wall_post",
-  "textures": {
-    "bottom": "westerosblocks:block/leaves/spruce/all",
-    "particle": "westerosblocks:block/leaves/spruce/all",
-    "side": "westerosblocks:block/leaves/spruce/all",
-    "top": "westerosblocks:block/leaves/spruce/all"
-  }
-}

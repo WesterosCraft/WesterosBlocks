@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_right_open",
-  "textures": {
-    "bottom": "westerosblocks:block/wood/jungle/door_alt_bottom",
-    "particle": "westerosblocks:block/wood/jungle/door_alt_bottom",
-    "top": "westerosblocks:block/wood/jungle/door_alt_top"
-  }
-}

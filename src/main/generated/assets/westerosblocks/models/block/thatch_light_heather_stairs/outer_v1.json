@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/outer_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/thatch/heather/heather1",
-    "particle": "westerosblocks:block/thatch/heather/heather1",
-    "side": "westerosblocks:block/thatch/heather/heather1",
-    "top": "westerosblocks:block/thatch/heather/heather1"
-  }
-}
