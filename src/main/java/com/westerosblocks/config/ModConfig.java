@@ -16,7 +16,11 @@ public class ModConfig {
 
     public boolean dumpWorldPainterCSV = false;
     public boolean exportBlockDefinitions = false;
+    // When true, write definitions/known_blocks.json (the world-compatibility baseline) to the
+    // config dir, and downgrade the compatibility guard to report-only so it can be regenerated.
+    public boolean exportKnownBlocks = false;
     public boolean translucencyPaintings = true;
+    public boolean allowRopeUnsupported = true;
 
     /**
      * Load the config from file, or create a new one with defaults

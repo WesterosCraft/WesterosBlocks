@@ -17,11 +17,6 @@ import java.util.HashMap;
 public class ModBlockEntities {
     public static HashMap<String, BlockEntityType<?>> customEntitiesByName = new HashMap<>();
 
-    static {
-        registerFurnaceBlockEntities();
-        registerBigDoorBlockEntities();
-    }
-
     private static void registerFurnaceBlockEntities() {
         BlockDefinitionRegistry registry = BlockDefinitionRegistry.getInstance();
 
@@ -77,5 +72,9 @@ public class ModBlockEntities {
 
     public static void registerModBlockEntities() {
         WesterosBlocks.LOGGER.info("Registering Mod Entities for " + WesterosBlocks.MOD_ID);
+        // Registration is invoked explicitly here (from onInitialize, after ModBlocks has
+        // registered the blocks these entities attach to) rather than via a static initializer.
+        registerFurnaceBlockEntities();
+        registerBigDoorBlockEntities();
     }
 }

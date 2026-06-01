@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,state=left": {
+      "model": "westerosblocks:block/custom/mirror_test/left",
+      "y": 90
+    },
+    "facing=east,state=right": {
+      "model": "westerosblocks:block/custom/mirror_test/right",
+      "y": 90
+    },
+    "facing=north,state=left": {
+      "model": "westerosblocks:block/custom/mirror_test/left"
+    },
+    "facing=north,state=right": {
+      "model": "westerosblocks:block/custom/mirror_test/right"
+    },
+    "facing=south,state=left": {
+      "model": "westerosblocks:block/custom/mirror_test/left",
+      "y": 180
+    },
+    "facing=south,state=right": {
+      "model": "westerosblocks:block/custom/mirror_test/right",
+      "y": 180
+    },
+    "facing=west,state=left": {
+      "model": "westerosblocks:block/custom/mirror_test/left",
+      "y": 270
+    },
+    "facing=west,state=right": {
+      "model": "westerosblocks:block/custom/mirror_test/right",
+      "y": 270
+    }
+  }
+}

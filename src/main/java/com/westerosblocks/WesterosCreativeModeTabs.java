@@ -11,6 +11,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.block.Block;
+import com.westerosblocks.data.BlockDefinition;
 
 import java.util.HashMap;
 import java.util.List;
@@ -20,6 +21,14 @@ import java.util.ArrayList;
 public class WesterosCreativeModeTabs {
     public static final Map<String, RegistryKey<ItemGroup>> TABS = new HashMap<>();
     private static final Map<String, List<Block>> TAB_BLOCKS = new HashMap<>();
+
+    /** Creative tab id for dev-only test blocks; excluded from production (non-dev) builds. */
+    public static final String TEST_TAB_NAME = "westeros_test_tab";
+
+    /** True if the definition belongs to the dev-only test tab. */
+    public static boolean isTestBlock(BlockDefinition definition) {
+        return definition != null && TEST_TAB_NAME.equals(definition.getCreativeTab());
+    }
 
     public record TabDefinition(String id, String label, String iconItem, boolean devOnly) {
         public TabDefinition(String id, String label, String iconItem) {
@@ -43,7 +52,7 @@ public class WesterosCreativeModeTabs {
             new TabDefinition("westeros_panelling_carvings_tab", "Panelling and Carvings", "dragon_carving"),
             new TabDefinition("westeros_metal_tab", "Metal", "oxidized_bronze_block"),
             new TabDefinition("westeros_windows_glass_tab", "Windows and Glass", "coloured_sept_window"),
-            new TabDefinition("westeros_furniture_tab", "Furniture", "oak_table"),
+            new TabDefinition("westeros_furniture_tab", "Furniture", "table_oak"),
             new TabDefinition("westeros_decor_tab", "Decor", "dead_hare"),
             new TabDefinition("westeros_lighting_tab", "Lighting", "red_lantern2"),
             new TabDefinition("westeros_tool_blocks_tab", "Tool Blocks", "piston_extension"),
@@ -62,7 +71,7 @@ public class WesterosCreativeModeTabs {
             new TabDefinition("westeros_misc_tab", "Miscellaneous", "piled_bones"),
             new TabDefinition("westeros_utility_tab", "Utility", "approval_utility_block"),
             new TabDefinition("westeros_do_not_use_tab", "Do Not Use", "note_utility_block"),
-            new TabDefinition("westeros_test_tab", "Test", "test_block", true),
+            new TabDefinition(TEST_TAB_NAME, "Test", "test_block", true),
     };
 
     public static void registerCreativeModeTabs() {

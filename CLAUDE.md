@@ -64,6 +64,19 @@ Set definition (`block_set_definitions/`): defines `baseBlockName`, `variants` a
 - **Wall variants**: Torch/fan wall variants are named `"wall_" + blockName`
 - **Registry lookups**: `Registries.BLOCK.get()` returns `air` (not null) for missing IDs — always use `containsId()` first
 - **Lambda captures**: In `BlockDefinition.makeSettings()`, capture local variables (not `this.method()`) to avoid stale references
+- **Layer blocks**: `softLayer` is an `options` flag (`OptionsProperties` / `BlockDefinition.isSoftLayer()`); plants/snow sink into soft layers. `layerCount` is fixed at 8 (as in the 1.18.2 source).
+
+### Registration ordering
+
+Block/item/block-entity registration is invoked **explicitly and in order** from `WesterosBlocks.onInitialize()` (`initializeBlockDefinitions()` → `ModBlocks.registerModBlocks()` → … → `ModBlockEntities.registerModBlockEntities()`). Do **not** reintroduce `static {}` initializer blocks to trigger registration — registration must run *after* `BlockDefinitionRegistry` is initialized, and the explicit call order guarantees that.
+
+### World-Save Compatibility Guard
+
+`BlockCompatibilityValidator` (run from `WesterosBlocks.initializeBlockDefinitions()`) protects existing worlds from broken block IDs, porting the 1.18.2 `sanityCheck()`/`compareBlockDefs()`:
+- **Sanity**: block names must be non-empty and unique (duplicates → hard fail at startup).
+- **Subsume**: every block name + state ID in the committed baseline `src/main/resources/definitions/known_blocks.json` must still exist; removing or renaming one is a hard fail. Skipped if no baseline is bundled.
+
+To (re)establish the baseline after an intentional add/remove/rename: set `exportKnownBlocks: true` in the config, run the game or datagen once (this also downgrades the guard to report-only), then copy the generated `<config>/known_blocks.json` into `src/main/resources/definitions/` and commit it. This mirrors maintaining the original's `oldWesterosBlocks.json`.
 
 ### Dependencies
 

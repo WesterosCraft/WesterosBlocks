@@ -44,9 +44,15 @@ public class BlockDefinitionLoader {
         .registerTypeAdapter(BlockDefinition.TooltipEntry.class, TOOLTIP_ENTRY_DESERIALIZER)
         .create();
     private final String blockDefinitionsPath;
+    private final List<String> duplicateNames = new ArrayList<>();
 
     public BlockDefinitionLoader(String blockDefinitionsPath) {
         this.blockDefinitionsPath = blockDefinitionsPath;
+    }
+
+    /** Block names that were seen in more than one individual definition (collapsed in the map). */
+    public List<String> getDuplicateNames() {
+        return duplicateNames;
     }
 
     public Map<String, BlockDefinition> loadAllDefinitions() {
@@ -179,6 +185,7 @@ public class BlockDefinitionLoader {
         if (definitions.containsKey(definition.getBlockName())) {
             WesterosBlocks.LOGGER.warn("Duplicate block definition found for '{}' in file: {}",
                 definition.getBlockName(), filePath);
+            duplicateNames.add(definition.getBlockName());
         }
 
         definitions.put(definition.getBlockName(), definition);

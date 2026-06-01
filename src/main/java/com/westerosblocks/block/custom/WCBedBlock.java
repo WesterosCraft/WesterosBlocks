@@ -44,6 +44,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements WCBlockDef {
         }
     }
 
+    // Single-arg constructor required by createCodec(WCBedBlock::new) above (block CODEC) - do not remove.
     protected WCBedBlock(AbstractBlock.Settings settings) {
         this(settings, null);
     }

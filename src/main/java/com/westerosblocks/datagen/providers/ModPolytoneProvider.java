@@ -3,6 +3,7 @@ package com.westerosblocks.datagen.providers;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 import com.westerosblocks.data.ColorMapDefinition;
@@ -42,7 +43,7 @@ public class ModPolytoneProvider implements DataProvider {
         // Group blocks by their colorMult value(s) and collect blocks with xz offset
         for (BlockDefinition definition : registry.getAllDefinitions()) {
             // Skip test blocks (blocks in westeros_test_tab)
-            if ("westeros_test_tab".equals(definition.getCreativeTab())) {
+            if (WesterosCreativeModeTabs.isTestBlock(definition)) {
                 continue;
             }
 

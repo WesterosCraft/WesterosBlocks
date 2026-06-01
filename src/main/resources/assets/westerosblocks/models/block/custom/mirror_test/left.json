@@ -1,0 +1,22 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "all": "westerosblocks:block/bark/oak/horizontal_stripped",
+    "particle": "westerosblocks:block/bark/oak/horizontal_stripped"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 6],
+      "to": [4, 16, 10],
+      "faces": {
+        "down":  {"uv": [0, 6, 4, 10], "texture": "#all"},
+        "up":    {"uv": [0, 6, 4, 10], "texture": "#all"},
+        "north": {"uv": [0, 0, 4, 16], "texture": "#all"},
+        "south": {"uv": [0, 0, 4, 16], "texture": "#all"},
+        "west":  {"uv": [6, 0, 10, 16], "texture": "#all"},
+        "east":  {"uv": [6, 0, 10, 16], "texture": "#all"}
+      }
+    }
+  ]
+}

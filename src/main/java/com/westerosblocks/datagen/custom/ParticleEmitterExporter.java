@@ -13,6 +13,11 @@ import com.westerosblocks.WesterosBlocks;
 import java.util.function.BiConsumer;
 import java.util.function.Supplier;
 
+/**
+ * Exporter for {@code particle} emitter blocks. Builds model JSON by hand (Gson) because the
+ * emitter uses a custom 4x4x4 element not expressible via a vanilla {@code Model} template;
+ * the JSON is still emitted through {@code generator.modelCollector} (the idiomatic sink).
+ */
 public class ParticleEmitterExporter extends BaseBlockExporter {
 
     public static void registerCustomParticleEmitterBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {

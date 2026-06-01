@@ -48,9 +48,11 @@ public class WCLayerBlock extends Block implements WCBlockDef {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(BlockDefinition definition) {
-            // TODO: Add getLayerCount() and isSoftLayer() to BlockDefinition
-            int layerCount = 8; // default value
-            boolean softLayer = false; // default value
+            // layerCount stays at 8, matching the 1.18.2 source (which also hardcoded it).
+            // softLayer is read from the definition so plants/snow can sink into soft layers
+            // (consumed by WCPlantBlock when placed on top of a layer block).
+            int layerCount = 8;
+            boolean softLayer = definition.isSoftLayer();
 
             // Apply custom block vision settings for layers
             AbstractBlock.Settings settings = definition.makeSettings()

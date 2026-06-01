@@ -14,6 +14,11 @@ import com.westerosblocks.data.BlockDefinition;
 import java.util.*;
 
 
+/**
+ * Exporter for {@code cuboid-nsew-stack} blocks. Builds model JSON by hand (Gson) because stack
+ * elements describe arbitrary box geometry/faces that vanilla {@code Model} templates cannot
+ * express; the JSON is still emitted through {@code generator.modelCollector} (the idiomatic sink).
+ */
 public class CuboidNSEWStackBlockExporter extends CuboidBlockExporter {
     public static void registerCustomCuboidNSEWStackBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {
         if (!(block instanceof WCCuboidNSEWStackBlock stackBlock)) {

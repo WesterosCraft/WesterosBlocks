@@ -1,5 +1,6 @@
 package com.westerosblocks.entity.custom;
 
+import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.entity.ModEntities;
 import com.westerosblocks.item.ModItems;
 import net.minecraft.entity.Entity;
@@ -94,9 +95,10 @@ public class RopeEntity extends Entity {
             if (this.age >= 10 || (!start.equals(BlockPos.ORIGIN) && !end.equals(BlockPos.ORIGIN))) {
                 if (!start.equals(BlockPos.ORIGIN) && !end.equals(BlockPos.ORIGIN)) {
                     if (this.getWorld().isChunkLoaded(start) && this.getWorld().isChunkLoaded(end)) {
-                        if (!this.getWorld().getBlockState(start).isAir() &&
-                                !this.getWorld().getBlockState(end).isAir()) {
-                        } else {
+                        boolean allowUnsupported = WesterosBlocks.CONFIG != null && WesterosBlocks.CONFIG.allowRopeUnsupported;
+                        if (!allowUnsupported &&
+                                (this.getWorld().getBlockState(start).isAir() ||
+                                 this.getWorld().getBlockState(end).isAir())) {
                             this.discard();
                         }
                     }

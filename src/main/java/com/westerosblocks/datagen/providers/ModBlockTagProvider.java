@@ -1,5 +1,6 @@
 package com.westerosblocks.datagen.providers;
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 import com.westerosblocks.data.BlockTagDefinition;
@@ -29,7 +30,7 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
      * Check if a block definition is a test block (should be excluded from production)
      */
     private boolean isTestBlock(BlockDefinition definition) {
-        return "westeros_test_tab".equals(definition.getCreativeTab());
+        return WesterosCreativeModeTabs.isTestBlock(definition);
     }
 
     @Override

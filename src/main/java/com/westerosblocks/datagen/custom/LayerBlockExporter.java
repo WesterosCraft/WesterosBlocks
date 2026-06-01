@@ -12,6 +12,11 @@ import net.minecraft.util.Identifier;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Exporter for {@code layer} blocks. Builds per-layer-height model JSON by hand (Gson) because
+ * each layer needs custom element geometry not expressible via a vanilla {@code Model} template;
+ * the JSON is still emitted through {@code generator.modelCollector} (the idiomatic sink).
+ */
 public class LayerBlockExporter extends BaseBlockExporter {
 
     public static void registerCustomLayerBlock(BlockStateModelGenerator generator, Block block, BlockDefinition definition) {

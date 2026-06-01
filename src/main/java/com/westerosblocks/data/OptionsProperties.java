@@ -36,6 +36,7 @@ public class OptionsProperties {
         this.noClimb = other.noClimb;
         this.toggleOnUse = other.toggleOnUse;
         this.layerSensitive = other.layerSensitive;
+        this.softLayer = other.softLayer;
         this.symmetrical = other.symmetrical;
         this.noBreakUnder = other.noBreakUnder;
         this.allowHalfBreak = other.allowHalfBreak;
@@ -107,6 +108,10 @@ public class OptionsProperties {
 
     @SerializedName("layerSensitive")
     private Boolean layerSensitive;
+
+    // Layer block: plants/snow placed on top sink into the layer (soft surface)
+    @SerializedName("softLayer")
+    private Boolean softLayer;
 
     @SerializedName("symmetrical")
     private Boolean symmetrical;
@@ -207,6 +212,10 @@ public class OptionsProperties {
 
     public Boolean getLayerSensitive() {
         return layerSensitive;
+    }
+
+    public Boolean getSoftLayer() {
+        return softLayer;
     }
 
     public Boolean getSymmetrical() {
@@ -312,6 +321,10 @@ public class OptionsProperties {
 
     public void setLayerSensitive(Boolean layerSensitive) {
         this.layerSensitive = layerSensitive;
+    }
+
+    public void setSoftLayer(Boolean softLayer) {
+        this.softLayer = softLayer;
     }
 
     public void setSymmetrical(Boolean symmetrical) {

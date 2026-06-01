@@ -69,6 +69,7 @@ public class WCFlowerbedBlock extends PlantBlock implements Fertilizable, WCBloc
         }
     }
 
+    // Single-arg constructor required by createCodec(WCFlowerbedBlock::new) above (block CODEC) - do not remove.
     public WCFlowerbedBlock(AbstractBlock.Settings settings) {
         this(settings, null);
     }

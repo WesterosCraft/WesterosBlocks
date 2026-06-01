@@ -2,6 +2,7 @@ package com.westerosblocks.datagen.providers;
 
 import java.util.concurrent.CompletableFuture;
 
+import com.westerosblocks.WesterosCreativeModeTabs;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -26,9 +27,6 @@ public class ModLanguageProvider extends FabricLanguageProvider {
                 translationBuilder.add("tag.item.westerosblocks.c.shield", "shield");
                 translationBuilder.add("item.westerosblocks.longclaw", "Longclaw");
                 translationBuilder.add("item.westerosblocks.valyrian_steel_ingot", "Valyrian Steel Ingot");
-                // translationBuilder.add("item.westerosblocks.lannister_shield", "Lannister
-                // Shield");
-//                translationBuilder.add("item.westerosblocks.stark_kite_shield", "Stark Kite Shield");
                 translationBuilder.add("item.westerosblocks.tully_heater_shield", "Tully Heater Shield");
                 translationBuilder.add("item.westerosblocks.hedge_knight_heater_shield", "Hedge Knight Heater Shield");
                 translationBuilder.add("item.westerosblocks.laughing_tree_heater_shield", "Laughing Tree Heater Shield");
@@ -58,7 +56,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
                 for (BlockDefinition definition : registry.getAllDefinitions()) {
                         // Skip test blocks
-                        if ("westeros_test_tab".equals(definition.getCreativeTab())) {
+                        if (WesterosCreativeModeTabs.isTestBlock(definition)) {
                                 continue;
                         }
 

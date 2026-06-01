@@ -3,8 +3,10 @@ package com.westerosblocks;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.blockentity.ModBlockEntities;
 import com.westerosblocks.config.ModConfig;
+import com.westerosblocks.data.BlockCompatibilityValidator;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 import com.westerosblocks.data.BlockSetExporter;
+import com.westerosblocks.data.KnownBlocksExporter;
 import com.westerosblocks.data.WorldPainterExporter;
 import com.westerosblocks.entity.ModEntities;
 import com.westerosblocks.item.ModItems;
@@ -43,6 +45,10 @@ public class WesterosBlocks implements ModInitializer {
             BlockSetExporter.export();
         }
 
+        if (CONFIG.exportKnownBlocks) {
+            KnownBlocksExporter.export();
+        }
+
         LOGGER.info("WesterosBlocks mod initialization complete!");
     }
 
@@ -51,8 +57,16 @@ public class WesterosBlocks implements ModInitializer {
             String blockDefinitionsPath = "definitions/block_definitions";
             String blockSetDefinitionsPath = "definitions/block_set_definitions";
 
-            BlockDefinitionRegistry.getInstance().initialize(blockDefinitionsPath, blockSetDefinitionsPath);
-            BlockDefinitionRegistry.getInstance().printStatistics();
+            BlockDefinitionRegistry registry = BlockDefinitionRegistry.getInstance();
+            registry.initialize(blockDefinitionsPath, blockSetDefinitionsPath);
+            registry.printStatistics();
+
+            // World-save compatibility guard: fail fast if block names/states regress against the
+            // committed baseline (definitions/known_blocks.json). In export mode we only report
+            // problems so a fresh baseline can be regenerated. See BlockCompatibilityValidator.
+            boolean reportOnly = CONFIG != null && CONFIG.exportKnownBlocks;
+            BlockCompatibilityValidator.validate(
+                    registry.getAllDefinitions(), registry.getDuplicateBlockNames(), reportOnly);
 
         } catch (Exception e) {
             LOGGER.error("Failed to initialize block definitions", e);

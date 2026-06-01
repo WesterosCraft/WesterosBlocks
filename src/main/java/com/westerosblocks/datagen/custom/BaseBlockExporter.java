@@ -268,6 +268,21 @@ public abstract class BaseBlockExporter {
     }
 
     /**
+     * Creates a variant carrying only a Y-axis rotation (no model). Used by exporters that
+     * supply the model via a separate blockstate coordinate (e.g. beam, mounted_mirror).
+     * The rotation is omitted entirely when {@code rotation == 0}.
+     *
+     * @param rotation Y-axis rotation in degrees (0, 90, 180, or 270)
+     */
+    protected static BlockStateVariant rotationOnlyVariant(int rotation) {
+        BlockStateVariant variant = BlockStateVariant.create();
+        if (rotation != 0) {
+            variant.put(VariantSettings.Y, toYRotation(rotation));
+        }
+        return variant;
+    }
+
+    /**
      * Converts degrees to VariantSettings.Rotation enum.
      *
      * @param degrees Rotation in degrees (0, 90, 180, or 270)

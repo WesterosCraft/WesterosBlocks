@@ -3600,6 +3600,66 @@
         "itemTextureIndex": 2
     },
     {
+        "blockName": "dalt_banner",
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "resistance": 0,
+        "soundGroup": "cloth",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "sword",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_banners_tab",
+        "label": "Dalt Banner",
+        "options": {
+            "noBreakUnder": true,
+            "allowHalfBreak": true
+        },
+        "renderLayer": "cutout",
+        "stack": [
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/lemonwood/bottom",
+                    "banner/house/lemonwood/bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            },
+            {
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner/house/lemonwood/top",
+                    "banner/house/lemonwood/top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }
+            }
+        ],
+        "itemTextureIndex": 2
+    },
+    {
         "blockName": "darry_banner",
         "blockType": "cuboid-nsew-stack",
         "hardness": 1,
@@ -7570,66 +7630,7 @@
         ],
         "itemTextureIndex": 2
     },
-    {
-        "blockName": "dalt_banner",
-        "blockType": "cuboid-nsew-stack",
-        "hardness": 1,
-        "resistance": 0,
-        "soundGroup": "cloth",
-        "mapColor": "TERRACOTTA_BROWN",
-        "harvestLevel": [
-            {
-                "tool": "sword",
-                "level": 1
-            }
-        ],
-        "creativeTab": "westeros_banners_tab",
-        "label": "Dalt Banner",
-        "options": {
-            "noBreakUnder": true,
-            "allowHalfBreak": true
-        },
-        "renderLayer": "cutout",
-        "stack": [
-            {
-                "textures": [
-                    "transparent",
-                    "transparent",
-                    "transparent",
-                    "transparent",
-                    "banner/house/lemonwood/bottom",
-                    "banner/house/lemonwood/bottom"
-                ],
-                "boundingBox": {
-                    "xMin": 0.96875,
-                    "xMax": 1,
-                    "yMin": 0,
-                    "yMax": 1,
-                    "zMin": 0,
-                    "zMax": 1
-                }
-            },
-            {
-                "textures": [
-                    "transparent",
-                    "transparent",
-                    "transparent",
-                    "transparent",
-                    "banner/house/lemonwood/top",
-                    "banner/house/lemonwood/top"
-                ],
-                "boundingBox": {
-                    "xMin": 0.96875,
-                    "xMax": 1,
-                    "yMin": 0,
-                    "yMax": 1,
-                    "zMin": 0,
-                    "zMax": 1
-                }
-            }
-        ],
-        "itemTextureIndex": 2
-    },
+
     {
         "blockName": "liddle_banner",
         "blockType": "cuboid-nsew-stack",

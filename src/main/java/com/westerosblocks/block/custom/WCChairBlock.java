@@ -3,7 +3,6 @@ package com.westerosblocks.block.custom;
 import com.google.common.collect.ImmutableMap;
 import com.westerosblocks.entity.ModEntities;
 import com.westerosblocks.entity.custom.ChairEntity;
-import com.westerosblocks.utils.ModWoodType;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SpawnReason;
@@ -34,15 +33,7 @@ public class WCChairBlock extends Block implements WCBlockDef {
 
     private final Map<BlockState, VoxelShape> shapeByIndex;
 
-    public WCChairBlock(AbstractBlock.Settings settings) {
-        this(settings, null, "chair", "building_blocks", "oak");
-    }
-
-    public WCChairBlock(AbstractBlock.Settings settings, BlockDefinition def, String blockName, String creativeTab, String woodType) {
-        this(settings, def, blockName, creativeTab, ModWoodType.getWoodType(woodType));
-    }
-
-    public WCChairBlock(AbstractBlock.Settings settings, BlockDefinition def, String blockName, String creativeTab, WoodType woodType) {
+    public WCChairBlock(AbstractBlock.Settings settings, BlockDefinition def) {
         super(settings);
         this.def = def;
 
@@ -58,11 +49,8 @@ public class WCChairBlock extends Block implements WCBlockDef {
             AbstractBlock.Settings settings = definition != null
                     ? definition.makeSettings()
                     : AbstractBlock.Settings.create();
-            String blockName = definition != null ? definition.getBlockName() : "chair";
-            String creativeTab = definition != null ? definition.getCreativeTab() : "building_blocks";
-            String woodType = definition != null ? definition.getWoodType() : "oak";
 
-            return new WCChairBlock(settings, definition, blockName, creativeTab, woodType);
+            return new WCChairBlock(settings, definition);
         }
     }
 

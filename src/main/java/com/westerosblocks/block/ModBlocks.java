@@ -66,15 +66,13 @@ public class ModBlocks {
         Map.entry("flowerbed", new WCFlowerbedBlock.Factory()),
         Map.entry("mounted", new WCMountedBlock.Factory()),
         Map.entry("mounted_slab", new WCMountedSlabBlock.Factory()),
+        Map.entry("beam_horizontal", new WCBeamBlock.Factory()),
         Map.entry("awning", new WCAwningBlock.Factory()),
         Map.entry("bigdoor", new WCBigDoorBlock.Factory()),
         Map.entry("bunting", new WCBuntingBlock.Factory()),
-        Map.entry("balcony", new WCBalconyBlock.Factory())
+        Map.entry("balcony", new WCBalconyBlock.Factory()),
+        Map.entry("mounted_mirror", new WCMountedMirrorBlock.Factory())
     );
-
-    static {
-        registerBlocksFromDefinitions();
-    }
 
     private static void registerBlocksFromDefinitions() {
         try {
@@ -94,7 +92,7 @@ public class ModBlocks {
             for (BlockDefinition definition : registry.getAllDefinitions()) {
                 try {
                     // Skip test blocks in production (blocks in westeros_test_tab)
-                    if (!isDevelopment && "westeros_test_tab".equals(definition.getCreativeTab())) {
+                    if (!isDevelopment && WesterosCreativeModeTabs.isTestBlock(definition)) {
                         skippedCount++;
                         WesterosBlocks.LOGGER.debug("Skipped test block (production): {}", definition.getBlockName());
                         continue;
@@ -214,6 +212,10 @@ public class ModBlocks {
     public static void registerModBlocks() {
         WesterosBlocks.LOGGER.info("Registering Mod Blocks for " + WesterosBlocks.MOD_ID);
 
+        // Build and register all blocks from JSON definitions, then group them into
+        // creative tabs. Called explicitly (and in order) from WesterosBlocks.onInitialize()
+        // after the BlockDefinitionRegistry has been initialized — no static-init side effects.
+        registerBlocksFromDefinitions();
         registerAutoBlocksToCreativeTabs();
     }
 

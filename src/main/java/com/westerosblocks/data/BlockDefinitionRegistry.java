@@ -13,6 +13,7 @@ public class BlockDefinitionRegistry {
     private ColorMapDefinition colorMaps;
     private BlockTagDefinition blockTags;
     private boolean initialized = false;
+    private final List<String> duplicateBlockNames = new ArrayList<>();
 
     private BlockDefinitionRegistry() {
         // LinkedHashMap preserves JSON load order so creative-tab ordering is
@@ -44,6 +45,7 @@ public class BlockDefinitionRegistry {
 
         definitions.putAll(loadedDefinitions);
         loader.validateDefinitions(loadedDefinitions);
+        duplicateBlockNames.addAll(loader.getDuplicateNames());
 
         // Load block set definitions and expand them
         if (blockSetDefinitionsPath != null) {
@@ -116,6 +118,11 @@ public class BlockDefinitionRegistry {
             throw new IllegalStateException("BlockDefinitionRegistry not initialized!");
         }
         return Collections.unmodifiableCollection(definitions.values());
+    }
+
+    /** Block names the loaders saw more than once. Used by the world-compatibility guard. */
+    public List<String> getDuplicateBlockNames() {
+        return Collections.unmodifiableList(duplicateBlockNames);
     }
 
     public ColorMapDefinition getColorMaps() {

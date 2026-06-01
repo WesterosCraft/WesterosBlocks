@@ -22,8 +22,7 @@ public class BlockSetExpander {
             "carpet", "fence_gate", "half_door", "cover", "hollow_hopper",
             "log", "directional", "layer", "pane", "sand", "path",
             "window_frame", "window_frame_mullion",
-            "arrow_slit", "arrow_slit_window", "arrow_slit_ornate",
-            "bench"
+            "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"
     );
 
     // Maps variant names to block types
@@ -73,7 +72,6 @@ public class BlockSetExpander {
         VARIANT_TEXTURES.put("arrow_slit", new String[]{"window-topbottom", "window-topbottom", "arrow-slit"});
         VARIANT_TEXTURES.put("arrow_slit_window", new String[]{"window-topbottom", "window-topbottom", "arrow-slit-window"});
         VARIANT_TEXTURES.put("arrow_slit_ornate", new String[]{"window-topbottom", "window-topbottom", "arrow-slit-ornate"});
-        VARIANT_TEXTURES.put("bench", new String[]{"sides"});
     }
 
     public static List<BlockDefinition> expand(BlockSetDefinition blockSet) {
@@ -84,14 +82,20 @@ public class BlockSetExpander {
         Map<String, List<String>> altCustomTags = preprocessVariantMap(blockSet.getAltCustomTags());
         Map<String, List<String>> altTextures = preprocessVariantMap(blockSet.getAltTextures());
 
-        // Determine which variants to create
-        List<String> variantsToCreate = blockSet.hasVariants() ? blockSet.getVariants() : DEFAULT_VARIANTS;
+        // Variants this set enables (the order they appear in the JSON is ignored)
+        List<String> enabledVariants = blockSet.hasVariants() ? blockSet.getVariants() : DEFAULT_VARIANTS;
 
-        for (String variant : variantsToCreate) {
+        // Preserve the old warning for variants the JSON enables but we don't support
+        for (String variant : enabledVariants) {
             if (!SUPPORTED_VARIANTS.contains(variant)) {
                 WesterosBlocks.LOGGER.warn("Unsupported variant '{}' in block set '{}'", variant, blockSet.getBaseBlockName());
-                continue;
             }
+        }
+
+        // Emit in the fixed SUPPORTED_VARIANTS order (matches 1.18.2 generateBlockDefs)
+        // so each block's variants register/appear in the canonical sequence.
+        for (String variant : SUPPORTED_VARIANTS) {
+            if (!enabledVariants.contains(variant)) continue;
 
             BlockDefinition definition = createVariantDefinition(blockSet, variant, options, altCustomTags, altTextures);
             if (definition != null) {

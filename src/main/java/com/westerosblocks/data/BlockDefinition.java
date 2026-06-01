@@ -1066,6 +1066,10 @@ public class BlockDefinition {
         return options != null && Boolean.TRUE.equals(options.getLayerSensitive());
     }
 
+    public boolean isSoftLayer() {
+        return options != null && Boolean.TRUE.equals(options.getSoftLayer());
+    }
+
     public boolean hasNoCollision() {
         return Boolean.TRUE.equals(noCollision);
     }

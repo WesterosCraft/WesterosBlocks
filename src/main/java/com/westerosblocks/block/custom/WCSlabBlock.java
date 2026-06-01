@@ -47,11 +47,6 @@ public class WCSlabBlock extends SlabBlock implements WCBlockDef {
         }
     }
 
-    public WCSlabBlock(Settings settings) {
-        super(settings);
-        this.def = null;
-    }
-
     public WCSlabBlock(Settings settings, BlockDefinition def, boolean doConnectState, boolean doToggleOnUse, boolean doAddStates) {
         super(settings);
         this.def = def;

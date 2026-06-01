@@ -23,7 +23,7 @@ public class WCRailBlock extends RailBlock implements WCBlockDef {
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(BlockDefinition definition) {
-            AbstractBlock.Settings settings = definition.makeSettings().nonOpaque();
+            AbstractBlock.Settings settings = definition.makeSettings().nonOpaque().noCollision();
             boolean allowUnsupported = definition.isAllowUnsupported();
             return new WCRailBlock(settings, definition, allowUnsupported);
         }

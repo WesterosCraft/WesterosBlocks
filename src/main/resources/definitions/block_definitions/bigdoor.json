@@ -5,7 +5,7 @@
         "strength": 2,
         "soundGroup": "wood",
         "mapColor": "TERRACOTTA_BROWN",
-        "creativeTab": "westeros_decor_tab",
+        "creativeTab": "westeros_test_tab",
         "label": "B I G  D O O R",
         "textures": [
             "doors/bigdoor_test"

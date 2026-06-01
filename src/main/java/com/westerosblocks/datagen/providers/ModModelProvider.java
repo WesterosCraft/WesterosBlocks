@@ -39,6 +39,7 @@ public class ModModelProvider extends FabricModelProvider {
     private static final Map<String, BlockExporter> EXPORTERS = Map.ofEntries(
         Map.entry("solid", SolidBlockExporter::registerCustomSolidBlock),
         Map.entry("sand", SolidBlockExporter::registerCustomSolidBlock),
+        Map.entry("soul-sand", SolidBlockExporter::registerCustomSolidBlock),
         Map.entry("door", DoorBlockExporter::registerCustomDoorBlock),
         Map.entry("trapdoor", TrapDoorBlockExporter::registerCustomTrapDoorBlock),
         Map.entry("log", LogBlockExporter::registerCustomLogBlock),
@@ -76,12 +77,14 @@ public class ModModelProvider extends FabricModelProvider {
         Map.entry("chair", ChairBlockExporter::registerChairBlock),
         Map.entry("mounted", MountedBlockExporter::registerMountedBlock),
         Map.entry("mounted_slab", MountedSlabBlockExporter::registerMountedSlabBlock),
+        Map.entry("beam_horizontal", BeamBlockExporter::registerBeamBlock),
         Map.entry("flowerbed", FlowerbedBlockExporter::registerCustomFlowerbedBlock),
         Map.entry("awning", AwningBlockExporter::registerCustomAwningBlock),
         Map.entry("bigdoor", BigDoorBlockExporter::registerCustomBigDoorBlock),
         Map.entry("bunting", BuntingBlockExporter::registerBuntingBlock),
         Map.entry("balcony", BalconyBlockExporter::registerCustomBalconyBlock),
-        Map.entry("arrow-slit", ArrowSlitBlockExporter::registerCustomArrowSlitBlock)
+        Map.entry("arrow-slit", ArrowSlitBlockExporter::registerCustomArrowSlitBlock),
+        Map.entry("mounted_mirror", MountedMirrorBlockExporter::registerMountedMirrorBlock)
     );
 
     private final FabricDataOutput output;
