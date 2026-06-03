@@ -25,7 +25,7 @@
         }
     ],
     "creativeTab": "westeros_wood_planks_tab",
-    "baseLabel": "Spruce Vertical Planks",
+    "baseLabel": "Spruce Wood Vertical Planks",
     "textures": {
         "all": "wood/spruce/vertical"
     }

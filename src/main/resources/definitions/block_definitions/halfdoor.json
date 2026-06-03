@@ -96,7 +96,7 @@
         "soundGroup": "wood",
         "mapColor": "TERRACOTTA_BROWN",
         "creativeTab": "westeros_windows_glass_tab",
-        "label": "Oak Window Shutters",
+        "label": "Oak Wood Window Shutters",
         "options": {
             "allowUnsupported": true
         },
