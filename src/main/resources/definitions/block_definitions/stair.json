@@ -49,6 +49,9 @@
         "creativeTab": "westeros_grass_dirt_tab",
         "label": "Grass Stairs",
         "colorMult": "textures/colormap/grass",
+        "options": {
+            "unconnect": false
+        },
         "randomTextures": [
             {
                 "textures": [
