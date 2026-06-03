@@ -777,8 +777,27 @@
         "options": {
             "noInWeb": true
         },
-        "textures": [
-            "sausages_leg_of_ham/default"
+        "randomTextures": [
+            {
+                "textures": [
+                    "sausages_leg_of_ham/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "sausages_leg_of_ham/side2"
+                ]
+            },
+            {
+                "textures": [
+                    "sausages_leg_of_ham/side3"
+                ]
+            },
+            {
+                "textures": [
+                    "sausages_leg_of_ham/side4"
+                ]
+            }
         ],
         "renderLayer": "cutout"
     },
