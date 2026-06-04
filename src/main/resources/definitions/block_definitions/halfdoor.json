@@ -141,7 +141,7 @@
         "soundGroup": "wood",
         "mapColor": "BROWN",
         "creativeTab": "westeros_windows_glass_tab",
-        "label": "Birch Window Shutters",
+        "label": "Simple Birch Window Shutters",
         "options": {
             "allowUnsupported": true
         },

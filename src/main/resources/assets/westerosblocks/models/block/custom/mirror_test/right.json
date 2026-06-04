@@ -1,22 +1,25 @@
 {
-  "parent": "minecraft:block/block",
-  "ambientocclusion": false,
-  "textures": {
-    "all": "westerosblocks:block/bark/oak/horizontal_stripped",
-    "particle": "westerosblocks:block/bark/oak/horizontal_stripped"
-  },
-  "elements": [
-    {
-      "from": [12, 0, 6],
-      "to": [16, 16, 10],
-      "faces": {
-        "down":  {"uv": [12, 6, 16, 10], "texture": "#all"},
-        "up":    {"uv": [12, 6, 16, 10], "texture": "#all"},
-        "north": {"uv": [12, 0, 16, 16], "texture": "#all"},
-        "south": {"uv": [12, 0, 16, 16], "texture": "#all"},
-        "west":  {"uv": [6, 0, 10, 16], "texture": "#all"},
-        "east":  {"uv": [6, 0, 10, 16], "texture": "#all"}
-      }
-    }
-  ]
+    "format_version": "1.9.0",
+    "credit": "Made with Blockbench",
+    "parent": "block",
+    "texture_size": [32, 32],
+    "textures": {
+        "particle": "westerosblocks:block/bark/oak/horizontal_stripped",
+        "texture": "westerosblocks:block/bark/oak/horizontal_stripped"
+    },
+    "elements": [
+        {
+            "from": [9, -3, 6],
+            "to": [13, 21, 10],
+            "rotation": {"angle": 45, "axis": "z", "origin": [11, 5, 8]},
+            "faces": {
+                "north": {"uv": [16, 6.5, 0, 10.5], "rotation": 90, "texture": "#texture"},
+                "east": {"uv": [16, 6.5, 0, 10.5], "rotation": 270, "texture": "#texture"},
+                "south": {"uv": [16, 6.5, 0, 10.5], "rotation": 90, "texture": "#texture"},
+                "west": {"uv": [16, 6.5, 0, 10.5], "rotation": 90, "texture": "#texture"},
+                "up": {"uv": [0, 10.5, 4, 6.5], "texture": "#texture"},
+                "down": {"uv": [12, 10.5, 16, 6.5], "rotation": 180, "texture": "#texture"}
+            }
+        }
+    ]
 }
