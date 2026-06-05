@@ -11,7 +11,7 @@
                 "level": 0
             }
         ],
-        "creativeTab": "westeros_tool_blocks_tab",
+        "creativeTab": "westeros_test_tab",
         "label": "Oak Horizontal Beam",
         "renderLayer": "cutout",
         "nonOpaque": true,

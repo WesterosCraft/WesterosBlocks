@@ -2,6 +2,7 @@ package com.westerosblocks.entity.client;
 
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.entity.custom.RopeEntity;
+import com.westerosblocks.item.ModItems;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.*;
 import net.minecraft.client.render.entity.EntityRenderer;
@@ -85,10 +86,15 @@ public class RopeRenderer extends EntityRenderer<RopeEntity> {
             prevPoint = currPoint;
             vCoord = vNext;
         }
-        if (isLookingAtThisRope(rope)) {
+        boolean lookingAt = isLookingAtThisRope(rope);
+        if (lookingAt || shouldHighlightAllRopes()) {
             VertexConsumer lineVc = vertexConsumers.getBuffer(RenderLayer.getLines());
             Box localBox = rope.getBoundingBox().offset(-entityPos.x, -entityPos.y, -entityPos.z);
-            WorldRenderer.drawBox(matrices, lineVc, localBox, 1f, 1f, 1f, 1f);
+            if (lookingAt) {
+                WorldRenderer.drawBox(matrices, lineVc, localBox, 1f, 1f, 1f, 1f);      // white when aimed
+            } else {
+                WorldRenderer.drawBox(matrices, lineVc, localBox, 0.2f, 0.9f, 1f, 1f);  // cyan finder
+            }
         }
         matrices.pop();
         super.render(rope, yaw, tickDelta, matrices, vertexConsumers, light);
@@ -191,6 +197,13 @@ public class RopeRenderer extends EntityRenderer<RopeEntity> {
         Box box = new Box(x - r, y - r, z - r, x + r, y + r, z + r);
         VertexConsumer vc = vertexConsumers.getBuffer(RenderLayer.getLines());
         WorldRenderer.drawBox(matrices, vc, box, 1f, 1f, 1f, 1f);
+    }
+
+    private boolean shouldHighlightAllRopes() {
+        MinecraftClient client = MinecraftClient.getInstance();
+        if (client.player == null || !client.player.isCreative()) return false;
+        return client.player.getMainHandStack().isOf(ModItems.ROPE)
+                || client.player.getOffHandStack().isOf(ModItems.ROPE);
     }
 
     private boolean isLookingAtThisRope(RopeEntity entity) {
