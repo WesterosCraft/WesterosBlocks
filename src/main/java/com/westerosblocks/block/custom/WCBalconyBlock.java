@@ -21,6 +21,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
@@ -155,7 +156,7 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
                 return ActionResult.SUCCESS;
             }
 
-            Direction direction = player.getHorizontalFacing();
+            Direction direction = getClickedHorizontalDirection(hit, pos);
             BooleanProperty directionProperty = getPropertyForDirection(direction);
 
             if (!state.get(directionProperty)) {
@@ -205,10 +206,9 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
         if (state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
-        // Recheck wall adjacency when a horizontal neighbor changes
-        if (direction.getAxis().isHorizontal()) {
-            state = state.with(WALL, hasAnyWallAdjacent(state, world, pos));
-        }
+        // WALL is fixed at placement (and when rails are added via onUse). Don't
+        // recompute it on neighbor changes — breaking an adjacent block must not
+        // pop the rail in/out and visually disconnect it from the rest of the run.
         return state;
     }
 
@@ -220,6 +220,25 @@ public class WCBalconyBlock extends Block implements Waterloggable, WCBlockDef {
     @Override
     public BlockDefinition getDefinition() {
         return def;
+    }
+
+    // Pick the rail side from the clicked face. A horizontal face maps directly;
+    // clicking the top/bottom falls back to the nearest horizontal edge of the hit.
+    private static Direction getClickedHorizontalDirection(BlockHitResult hit, BlockPos pos) {
+        Direction side = hit.getSide();
+        if (side.getAxis().isHorizontal()) {
+            return side;
+        }
+        Vec3d local = hit.getPos().subtract(Vec3d.of(pos));
+        double dWest = local.x;          // distance to x=0
+        double dEast = 1.0 - local.x;    // distance to x=1
+        double dNorth = local.z;         // distance to z=0
+        double dSouth = 1.0 - local.z;   // distance to z=1
+        double min = Math.min(Math.min(dNorth, dSouth), Math.min(dWest, dEast));
+        if (min == dNorth) return Direction.NORTH;
+        if (min == dSouth) return Direction.SOUTH;
+        if (min == dWest) return Direction.WEST;
+        return Direction.EAST;
     }
 
     private static BooleanProperty getPropertyForDirection(Direction direction) {

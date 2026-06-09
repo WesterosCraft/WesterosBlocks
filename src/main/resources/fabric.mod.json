@@ -15,10 +15,10 @@
   "entrypoints": {
     "main": ["com.westerosblocks.WesterosBlocks"],
     "fabric-datagen": ["com.westerosblocks.WesterosBlocksDataGenerator"],
-    "client": ["com.westerosblocks.WesterosBlocksClient"],
-    "modmenu": ["com.westerosblocks.config.ModMenuIntegration"]
+    "client": ["com.westerosblocks.WesterosBlocksClient"]
   },
   "mixins": ["westerosblocks.mixins.json"],
+  "accessWidener": "westerosblocks.accesswidener",
   "depends": {
     "fabricloader": ">=0.18.4",
     "minecraft": "1.21.1",
@@ -29,16 +29,6 @@
   },
   "suggests": {
     "polytone": "*",
-    "westeroscontinuity": "*",
-    "modmenu": "*",
-    "cloth-config": "*"
-  },
-  "custom": {
-    "modmenu": {
-      "links": {
-        "modmenu.discord": "https://discord.com/invite/pBS5TH4"
-      },
-      "update_checker": true
-    }
+    "westeroscontinuity": "*"
   }
 }

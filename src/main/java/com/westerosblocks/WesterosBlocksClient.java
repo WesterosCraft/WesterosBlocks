@@ -3,6 +3,7 @@ package com.westerosblocks;
 import com.westerosblocks.block.blockentity.ModBlockEntities;
 import com.westerosblocks.block.blockentity.client.WCBigDoorBlockEntityRenderer;
 import com.westerosblocks.block.blockentity.custom.WCBigDoorBlockEntity;
+import com.westerosblocks.client.ParticleEmitterHighlighter;
 import com.westerosblocks.data.BlockDefinition;
 import com.westerosblocks.data.BlockDefinitionRegistry;
 import com.westerosblocks.entity.ModEntities;
@@ -29,6 +30,9 @@ public class WesterosBlocksClient implements ClientModInitializer {
         // Chair Blocks
         EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
         EntityRendererRegistry.register(ModEntities.ROPE_ENTITY, RopeRenderer::new);
+
+        // Highlight particle emitter blocks (invisible) when held in creative
+        ParticleEmitterHighlighter.register();
 
         // Shields Azurelib
         AzItemRendererRegistry.register(ModItems.TARGARYEN_HEATER_SHIELD,

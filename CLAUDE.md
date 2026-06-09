@@ -80,4 +80,4 @@ To (re)establish the baseline after an intentional add/remove/rename: set `expor
 
 ### Dependencies
 
-Fabric API, AzureLib (shield rendering), Shield API, ModMenu, Cloth Config. Versions managed in `gradle.properties`.
+Fabric API, AzureLib (shield rendering), Shield API. Versions managed in `gradle.properties`.
