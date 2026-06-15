@@ -64,6 +64,7 @@
             "bench",
             "trapdoor",
             "bigdoor",
+            "bignarrowdoor",
             "bunting",
             "mounted_slab",
             "beam_horizontal",
@@ -977,7 +978,7 @@
               "options": {
                 "oneOf": [
                   { "type": "string" },
-                  { "$ref": "#/$defs/AllowUnsupportedOnlyOptionsProperties" }
+                  { "$ref": "#/$defs/MountedSlabOptionsProperties" }
                 ]
               }
             }
@@ -1050,6 +1051,22 @@
         {
           "if": {
             "properties": { "blockType": { "const": "bigdoor" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/BigdoorOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "blockType": { "const": "bignarrowdoor" } },
             "required": ["blockType"]
           },
           "then": {
@@ -1488,6 +1505,22 @@
         "allowUnsupported": {
           "type": "boolean",
           "description": "Block can be placed without a support block"
+        }
+      },
+      "additionalProperties": false
+    },
+    "MountedSlabOptionsProperties": {
+      "type": "object",
+      "description": "Type properties for mounted_slab blocks",
+      "properties": {
+        "allowUnsupported": {
+          "type": "boolean",
+          "description": "Block can be placed without a support block"
+        },
+        "mountedSlabDefault": {
+          "type": "string",
+          "enum": ["top", "bottom"],
+          "description": "Which HALF a default/legacy-loaded block uses when no 'half' is stored (default: bottom)"
         }
       },
       "additionalProperties": false

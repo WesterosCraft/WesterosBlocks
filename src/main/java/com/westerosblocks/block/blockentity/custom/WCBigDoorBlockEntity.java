@@ -54,9 +54,10 @@ public class WCBigDoorBlockEntity extends BlockEntity {
         if (world == null || world.isClient()) {
             return;
         }
-        // Angle currently being displayed, BEFORE we change any state. When at rest,
-        // onUse has already flipped OPEN to targetOpen, so the old rest pose is the
-        // opposite of targetOpen.
+        // Angle currently being displayed, BEFORE we change any state. Derived
+        // from targetOpen, not the OPEN blockstate: onUse calls this BEFORE
+        // flipping OPEN (so the BE sync packet precedes the blockstate updates),
+        // and at rest the displayed pose is the opposite of targetOpen.
         float currentDegrees;
         switch (swingDir) {
             case OPENING -> currentDegrees = getSwingProgress(0f) * MAX_DOOR_ANGLE_DEGREES;

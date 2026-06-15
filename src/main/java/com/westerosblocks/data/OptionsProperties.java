@@ -28,6 +28,7 @@ public class OptionsProperties {
         this.betterFoliage = other.betterFoliage;
         this.overlay = other.overlay;
         this.allowUnsupported = other.allowUnsupported;
+        this.mountedSlabDefault = other.mountedSlabDefault;
         this.noParticle = other.noParticle;
         this.locked = other.locked;
         this.alwaysOn = other.alwaysOn;
@@ -78,6 +79,10 @@ public class OptionsProperties {
     // Torch/Ladder properties
     @SerializedName("allowUnsupported")
     private Boolean allowUnsupported;
+
+    // Mounted slab properties: which HALF a freshly-loaded/default block uses ("top" or "bottom")
+    @SerializedName("mountedSlabDefault")
+    private String mountedSlabDefault;
 
     @SerializedName("noParticle")
     private Boolean noParticle;
@@ -180,6 +185,10 @@ public class OptionsProperties {
 
     public Boolean getAllowUnsupported() {
         return allowUnsupported;
+    }
+
+    public String getMountedSlabDefault() {
+        return mountedSlabDefault;
     }
 
     public Boolean getNoParticle() {
@@ -289,6 +298,10 @@ public class OptionsProperties {
 
     public void setAllowUnsupported(Boolean allowUnsupported) {
         this.allowUnsupported = allowUnsupported;
+    }
+
+    public void setMountedSlabDefault(String mountedSlabDefault) {
+        this.mountedSlabDefault = mountedSlabDefault;
     }
 
     public void setNoParticle(Boolean noParticle) {

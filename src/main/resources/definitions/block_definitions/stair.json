@@ -85,5 +85,23 @@
                 "level": 1
             }
         ]
+    },
+    {
+        "blockName": "oak_step_stairs",
+        "blockType": "stair",
+        "soundGroup": "wood",
+        "creativeTab": "westeros_wood_planks_tab",
+        "label": "Oak Step Stairs",
+        "nonOpaque": true,
+        "options": {
+            "unconnect": false,
+            "noUvlock": true
+        },
+        "textures": [
+            "minecraft:block/oak_planks",
+            "minecraft:block/oak_planks",
+            "minecraft:block/oak_planks"
+        ],
+        "isCustomModel": true
     }
 ]

@@ -39,5 +39,4 @@ replay_*.log
 *.hprof
 *.jfr
 .claude
-src/main/generated/.cache/
-src/main/generated/.cache
+src/main/generated/

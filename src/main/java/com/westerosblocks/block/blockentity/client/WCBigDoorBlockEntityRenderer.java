@@ -16,7 +16,7 @@ import net.minecraft.util.Identifier;
 public class WCBigDoorBlockEntityRenderer extends AzBlockEntityRenderer<WCBigDoorBlockEntity> {
 
     private static final Identifier FALLBACK_MODEL = WesterosBlocks.id("geo/block/bigdoor.geo.json");
-    private static final Identifier FALLBACK_TEXTURE = WesterosBlocks.id("textures/block/_doors/bigdoor_test.png");
+    private static final Identifier FALLBACK_TEXTURE = WesterosBlocks.id("textures/block/doors/bigdoor_test.png");
 
     public WCBigDoorBlockEntityRenderer(BlockEntityRendererFactory.Context ctx) {
         super(AzBlockEntityRendererConfig.<WCBigDoorBlockEntity>builder(

@@ -1117,6 +1117,10 @@ public class BlockDefinition {
         return options != null && Boolean.TRUE.equals(options.getAllowUnsupported());
     }
 
+    public boolean isMountedSlabDefaultTop() {
+        return options != null && "top".equalsIgnoreCase(options.getMountedSlabDefault());
+    }
+
     public boolean isAllowHalfBreak() {
         return options != null && Boolean.TRUE.equals(options.getAllowHalfBreak());
     }

@@ -5,6 +5,7 @@ import com.westerosblocks.block.blockentity.custom.WCBigDoorBlockEntity;
 import com.westerosblocks.data.BlockDefinition;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.LivingEntity;
@@ -45,13 +46,28 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
     public static final BooleanProperty OPEN = Properties.OPEN;
     public static final EnumProperty<BigDoorPart> PART = EnumProperty.of("part", BigDoorPart.class);
 
-    // Thin 3-pixel slabs along each cardinal face of a 1x1 block. All door collision
-    // shapes — closed panel, open-left leaf, open-right leaf — are one of these four,
-    // selected by direction at query time.
+    // Closed-door collision: a thin 3-pixel slab on each cardinal face of a 1x1
+    // block, selected by direction at query time.
     private static final VoxelShape NORTH_SLAB = Block.createCuboidShape(0, 0, 0, 16, 16, 3);
     private static final VoxelShape SOUTH_SLAB = Block.createCuboidShape(0, 0, 13, 16, 16, 16);
     private static final VoxelShape WEST_SLAB = Block.createCuboidShape(0, 0, 0, 3, 16, 16);
     private static final VoxelShape EAST_SLAB = Block.createCuboidShape(13, 0, 0, 16, 16, 16);
+
+    // Open-leaf collision, precomputed once per (hinge outer, forward facing)
+    // pair the same way the closed slabs are cached — collision/outline queries
+    // are hot, so we don't rebuild these per call. Indexed by Direction ordinal;
+    // only the 8 perpendicular-horizontal pairs are populated (the only ones
+    // hingeOuter can produce), the rest stay null.
+    private static final VoxelShape[][] OPEN_LEAF_SLABS = new VoxelShape[6][6];
+    static {
+        for (Direction forward : Direction.Type.HORIZONTAL) {
+            for (Direction outer : Direction.Type.HORIZONTAL) {
+                if (outer.getAxis() != forward.getAxis()) {
+                    OPEN_LEAF_SLABS[forward.ordinal()][outer.ordinal()] = buildOpenLeafSlab(outer, forward);
+                }
+            }
+        }
+    }
 
     private final boolean locked;
 
@@ -117,7 +133,9 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
     }
 
     public WCBigDoorBlock(Settings settings, BlockDefinition def, boolean locked) {
-        super(settings.nonOpaque());
+        // PistonBehavior.BLOCK: a piston pushing one part would orphan it and
+        // cascade the rest of the multiblock to air with no drops.
+        super(settings.nonOpaque().pistonBehavior(PistonBehavior.BLOCK));
         this.def = def;
         this.locked = locked;
         this.textureLocation = resolveTextureLocation(def);
@@ -157,30 +175,53 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
             // back wall is at `facing`, not `facing.getOpposite()`.
             return slab(facing);
         }
-        if (part.isCenterColumn()) {
-            return VoxelShapes.empty();
-        }
-        // Open: leaf flush INSIDE the outer wall (thickness 3 px), 24 px long
-        // along the FACING axis — 3 px inside the block from the FACING face
-        // plus 21 px past it. Matches the geo's 1.5-block leaf after 90°
-        // rotation around the thickness-centered pivot at (±22.5, 0, -6.5).
-        Direction outer = part.isLeftColumn() ? facing.rotateYCounterclockwise() : facing.rotateYClockwise();
-        return openLeafSlab(outer, facing);
+        // Open: each leaf flush INSIDE its outer wall (thickness 3 px), running
+        // along the FACING axis from 3 px inside the FACING face to 16 px past
+        // it. A null hinge means this column is the empty gap between the two
+        // leaves (the center column).
+        Direction outer = hingeOuter(part, facing);
+        return outer == null ? VoxelShapes.empty() : openLeafSlab(outer, facing);
     }
 
     /**
-     * Collision matching the open-door leaf mesh after the animator rotates it
-     * 90° around the center-of-thickness pivot. The leaf ends up:
+     * The hinge (outer) edge a column's open leaf swings about, or {@code null}
+     * for the center column (the empty gap between the two leaves). LEFT = west
+     * leaf (hinge facing.left), RIGHT = east leaf (hinge facing.right).
+     */
+    @Nullable
+    private static Direction hingeOuter(BigDoorPart part, Direction facing) {
+        if (part.isLeftColumn()) {
+            return facing.rotateYCounterclockwise();
+        }
+        if (part.isRightColumn()) {
+            return facing.rotateYClockwise();
+        }
+        return null; // center column = gap
+    }
+
+    /**
+     * Collision for the open-door leaf after the animator rotates it 90°
+     * around the center-of-thickness pivot:
      * <ul>
      *   <li>Thickness: 3 px flush against the INSIDE of the {@code outer} face.</li>
-     *   <li>Length: 24 px along the {@code forward} axis — 3 px inside the block
-     *       from the forward face, then 21 px past the forward face into the
+     *   <li>Length: 19 px along the {@code forward} axis — 3 px inside the block
+     *       from the forward face, then 16 px past the forward face into the
      *       adjacent block.</li>
      * </ul>
+     * The visible mesh extends 21 px past the forward face, but 16 px is a HARD
+     * ceiling for the collision overhang — do NOT extend it to match the mesh.
+     * {@code BlockCollisionSpliterator} only scans blocks within 1 block of an
+     * entity's bounding box, so a shape overhanging more than 16 px is invisible
+     * to entities approaching from the far side; once an entity penetrates an
+     * unscanned shape, vanilla no longer constrains overlapping boxes and it can
+     * walk clean through the leaf. The last 5 px of the leaf tip is visual-only.
      * {@code outer} and {@code forward} must be perpendicular horizontal directions.
      * VoxelShape supports coordinates outside {@code [0, 16]}.
+     *
+     * <p>Called only at class load to populate {@link #OPEN_LEAF_SLABS}; runtime
+     * queries go through {@link #openLeafSlab(Direction, Direction)}.
      */
-    private static VoxelShape openLeafSlab(Direction outer, Direction forward) {
+    private static VoxelShape buildOpenLeafSlab(Direction outer, Direction forward) {
         double minX = 0, minZ = 0, maxX = 16, maxZ = 16;
 
         // Thickness axis: 3 px inside the block, flush with the outer face.
@@ -191,16 +232,23 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
             case EAST -> minX = 13;
             default -> { return VoxelShapes.empty(); }
         }
-        // Length axis (perpendicular to thickness): 24 px, from 3 px inside
-        // the block on the forward side, extending 21 px past the forward face.
+        // Length axis (perpendicular to thickness): 19 px, from 3 px inside
+        // the block on the forward side, extending 16 px past the forward face
+        // (the maximum reliable overhang — see javadoc).
         switch (forward) {
-            case NORTH -> { minZ = -21; maxZ = 3; }   // forward face at z=0
-            case SOUTH -> { minZ = 13; maxZ = 37; }   // forward face at z=16
-            case WEST -> { minX = -21; maxX = 3; }    // forward face at x=0
-            case EAST -> { minX = 13; maxX = 37; }    // forward face at x=16
+            case NORTH -> { minZ = -16; maxZ = 3; }   // forward face at z=0
+            case SOUTH -> { minZ = 13; maxZ = 32; }   // forward face at z=16
+            case WEST -> { minX = -16; maxX = 3; }    // forward face at x=0
+            case EAST -> { minX = 13; maxX = 32; }    // forward face at x=16
             default -> { return VoxelShapes.empty(); }
         }
         return Block.createCuboidShape(minX, 0, minZ, maxX, 16, maxZ);
+    }
+
+    /** Cached open-leaf shape lookup; see {@link #OPEN_LEAF_SLABS}. */
+    private static VoxelShape openLeafSlab(Direction outer, Direction forward) {
+        VoxelShape shape = OPEN_LEAF_SLABS[forward.ordinal()][outer.ordinal()];
+        return shape != null ? shape : VoxelShapes.empty();
     }
 
     private static VoxelShape slab(Direction face) {
@@ -373,8 +421,8 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
      */
     private boolean swingPathClear(World world, BlockPos origin, Direction facing) {
         for (BigDoorPart part : BigDoorPart.values()) {
-            if (part.isCenterColumn()) {
-                continue;
+            if (hingeOuter(part, facing) == null) {
+                continue; // gap column (center) has no leaf to swing
             }
             BlockPos partPos = origin.add(part.getOffset(facing));
             BlockPos swingPos = partPos.offset(facing);
@@ -432,7 +480,7 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
     // Shared geo for all bigdoor variants (one mesh). Per-door texture is
     // resolved from BlockDefinition.textures[0] in resolveTextureLocation.
     private static final Identifier DEFAULT_GEO = WesterosBlocks.id("geo/block/bigdoor.geo.json");
-    private static final Identifier DEFAULT_TEXTURE = WesterosBlocks.id("textures/block/_doors/bigdoor_test.png");
+    private static final Identifier DEFAULT_TEXTURE = WesterosBlocks.id("textures/block/doors/bigdoor_test.png");
 
     public Identifier getGeoLocation() {
         return DEFAULT_GEO;

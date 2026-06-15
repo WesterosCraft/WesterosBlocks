@@ -1,176 +1,25 @@
 # Changelog
 
-### Wood Plank Sets (new colors)
+## June 2026
 
-All with full variants (`_stairs`, `_slab`, `_wall`, `_fence`, `_hopper`, `_tip`, `_carpet`, where applicable):
-
-- `birch_yellow_wood` (+ `birch_yellow_wood_vertical_planks`)
-- `dark_grey_wood`
-- `grey_blue_wood` (+ `grey_blue_wood_vertical_planks`)
-- `light_grey_wood`
-- `light_purple_wood`
-- `off_white_wood` (+ `off_white_wood_vertical_planks`)
-- `oak_birch` (planks as `oak_birch_planks`)
-- `oak_jungle` (planks as `oak_jungle_planks`, + `oak_jungle_vertical_planks`)
-- `oak_orange` (planks as `oak_orange_planks`, + `oak_orange_vertical_planks`)
-- `grey_dark_wood_vertical_planks`, `grey_light_wood_vertical_planks`, `purple_light_wood_vertical_planks`
-- Added half-doors for `grey_dark_wood`, `grey_light_wood`, `purple_light_wood`
-
-### Stripped Logs (horizontal + vertical)
-
-Each with full variants (`_stairs`, `_slab`, `_wall`, `_fence`, `_hopper`, `_tip`, `_carpet`, `_half_door`):
-
-- `birch_horizontal_stripped_log`, `birch_vertical_stripped_log`
-- `spruce_horizontal_stripped_log`, `spruce_vertical_stripped_log`
-- `oak_horizontal_stripped_log`, `oak_vertical_stripped_log`
-- `jungle_horizontal_stripped_log`, `jungle_vertical_stripped_log`
-- `grey_horizontal_stripped_log`, `grey_vertical_stripped_log`
-- `white_horizontal_stripped_log`, `white_vertical_stripped_log`
-- `dark_northern_horizontal_stripped_log`, `dark_northern_vertical_stripped_log`
-- `oak_birch_horizontal_stripped_log`, `oak_birch_vertical_stripped_log`
-- `oak_jungle_horizontal_stripped_log`, `oak_jungle_vertical_stripped_log`
-
-### Beam Braces
-
-- `oak_beam_brace`, `spruce_beam_brace`, `jungle_beam_brace`, `grey_beam_brace`, `oak_jungle_beam_brace`, `birch_beam_brace`
-
-### Benches, Tables, Chairs, Hedges
-
-- Benches: `oak_bench`, `spruce_bench`, `birch_bench`, `jungle_bench`, `northern_bench`
-- Tables: `oak_table`, `spruce_table`, `birch_table`, `jungle_table`, `northern_table`
-- Chairs: `chair_oak`, `chair_spruce`
-- Hedges: `oak_hedge`, `spruce_hedge`, `birch_hedge`, `jungle_hedge`
-
-### Fancy Doors & Window Shutters (v2)
-
-- Doors: `oak_door_2`, `spruce_door_2`, `birch_door_2`, `jungle_door_2`, `northern_door_2`, `grey_door_2`, `white_door_2`
-- Shutters: `oak_window_shutters_2`, `spruce_window_shutters_2`, `birch_window_shutters_2`, `jungle_window_shutters_2`, `northern_window_shutters_2`, `grey_wood_window_shutters_2`, `white_wood_window_shutters_2`
-
-### Locked Fence Gates (for new wood types)
-
-- `locked_birch_yellow_wood_fence_gate`, `locked_dark_grey_wood_fence_gate`, `locked_grey_blue_wood_fence_gate`, `locked_light_grey_wood_fence_gate`, `locked_light_purple_wood_fence_gate`, `locked_oak_birch_fence_gate`, `locked_oak_jungle_fence_gate`, `locked_oak_orange_fence_gate`, `locked_off_white_wood_fence_gate`
-
-### Hollow Hoppers
-
-- `hollow_oak_birch_hopper`, `hollow_oak_jungle_hopper`, `hollow_oak_orange_hopper`
-
-### Crops, Food & Plants
-
-- Crops: `corn`, `kernels`, `crop_onions`, `crop_red_onions`, `crop_chili_peppers`
-- Chili pepper family: `chili_pepper_leaves`, `chili_pepper_basket_slab`, `chili_pepper_crate`
-- Other: `purple_cabbage`, `hanging_flowers_purple`, `spruce_leaves_slab`
-
-### Ice Blocks
-
-Base + full variants (`_fence`, `_slab`, `_stairs`, `_wall`):
-
-- `ice_blue`, `ice_blue_dark`, `ice_blue_light`, `ice_blue_medium_dark`
-- `ice_light`, `ice_medium_light`
-- `ice_packed`
-- `icicles` (standalone, no variants)
-
-### Muddy Snow (alt/dark/light)
-
-Base + `_layer` + `_slab`:
-
-- `muddy_snow_alt`, `muddy_snow_dark`, `muddy_snow_light`
-
-### Snow / Grass
-
-- `grassy_snow`, `snowy_grass`, `snowy_grass_slab`
-- `grass_slab`, `grass_stairs`
-
-### Pebbles (regional)
-
-Base + `_layer`:
-
-- `pebbles_dark_mountains_of_the_moon`, `pebbles_dark_stormlands`, `pebbles_dark_westerlands`, `pebbles_light_stormlands`, `pebbles_light_westerlands`
-
-### Dirt & Paths
-
-- `dirt_light`, `dirt_medium` (+ `_slab`)
-- `path_dirt_light`, `path_dirt_medium`
-
-### Terrainset The North Snow Variants
-
-Four snow depths (`_light_snow`, `_medium_snow`, `_snow`, `_heavy_snow`) for both regular and `_alt` sets, each with full variants (`_fence`, `_fence_gate`, `_hopper`, `_slab`, `_stairs`, `_tip`, `_wall`):
-
-- `terrainset_the_north_light_snow`, `terrainset_the_north_medium_snow`, `terrainset_the_north_snow`, `terrainset_the_north_heavy_snow`
-- `terrainset_the_north_alt_light_snow`, `terrainset_the_north_alt_medium_snow`, `terrainset_the_north_alt_snow`, `terrainset_the_north_alt_heavy_snow`
-
-### Bunting (colors)
-
-- `black_bunting`, `blue_bunting`, `brown_bunting`, `cyan_bunting`, `dirty_white_bunting`, `green_bunting`, `grey_bunting`, `light_blue_bunting`, `light_brown_bunting`, `light_grey_bunting`, `orange_bunting`, `pink_bunting`, `purple_bunting`, `red_bunting`, `red_square_bunting`, `white_bunting`, `yellow_bunting`
-
-### Particle Emitters
-
-- `bat_particle_emitter`, `butterfly_particle_emitter`, `cosy_smoke_particle_emitter`, `foam_particle_emitter`, `signal_smoke_particle_emitter`
-
-### Wall-Mounted Shields
-
-- Heater: `wall_heater_shield_blackfyre`, `wall_heater_shield_blackwood`, `wall_heater_shield_bracken`, `wall_heater_shield_hedge_knight`, `wall_heater_shield_targaryen`, `wall_heater_shield_tully`
-- Kite: `wall_kite_shield_stark`
-- Round: `wall_round_shield_greyjoy`
-
-### Redwood Tree
-
-- `redwood_log`, `redwood_branch`, `redwood_leaf_tip`
-
-### Roofing Tiles (Imbrex & Tegula)
-
-Each with full variants (`_stairs`, `_slab`, `_wall`, `_fence`, `_tip`, `_carpet`):
-
-- `imbrex_tegula_1` through `imbrex_tegula_11`
-- `imbrex_tegula_alt_1` through `imbrex_tegula_alt_6`
-
-### Wood Shingles
-
-Each with full variants (`_stairs`, `_slab`, `_wall`, `_fence`, `_tip`, `_carpet`):
-
-- `wood_shingle_1` through `wood_shingle_8`
-- `wood_shingle_gray_1` through `wood_shingle_gray_10`
-
-### Red Sandstone Variants
-
-Each with full variants (`_stairs`, `_slab`, `_wall`, `_fence`, `_hopper`, `_tip`):
-
-- `red_sandstone_1` through `red_sandstone_9`
-
-### Thatch Fur
-
-Each with full variants (`_stairs`, `_slab`, `_wall`, `_fence`, `_tip`, `_carpet`):
-
-- Light: `thatch_light_fur_1`, `thatch_light_fur_3`, `thatch_light_fur_4`, `thatch_light_fur_5`, `thatch_light_fur_7`
-- Gray: `thatch_gray_fur_1` through `thatch_gray_fur_7`
-- Heather: `thatch_heather_fur_1`, `thatch_heather_fur_2`
-
-### Banners (minor houses)
-
-- `blanetree_banner`, `blount_banner`, `brune_of_brownhollow_banner`, `burley_banner`
-- `byrch_banner`, `bywater_banner`, `cassel_banner`, `chelsted_banner`
-- `chyttering_banner`, `codd_banner`, `condon_banner`, `cressey_banner`
-- `crowl_banner`, `edgerton_banner`, `erenford_banner`, `farring_banner`
-- `farwynd_banner`, `fenn_banner`, `flint_of_flints_finger_banner`, `follard_banner`
-- `gargalen_banner`, `gaunt_banner`, `goodbrook_banner`, `grell_banner`
-- `haigh_banner`, `harclay_banner`, `harlaw_of_grey_garden_banner`, `harlaw_of_harlaw_hall_banner`
-- `harlaw_of_harridan_hill_banner`, `harlaw_of_the_tower_of_glimmering_banner`, `hawick_banner`, `hayford_banner`
-- `ironsmith_banner`, `keath_banner`, `kenning_of_harlaw_banner`, `kettleblack_banner`
-- `knott_banner`, `lake_banner`, `langward_banner`, `lemonwood_banner`
-- `liddle_banner`, `lightfoot_banner`, `lolliston_banner`, `lychester_banner`
-- `magnar_banner`, `mallery_banner`, `manning_banner`, `manwoody_banner`
-- `marsh_banner`, `mollen_banner`, `moss_banner`, `mudd_banner`
-- `myre_banner`, `norrey_banner`, `orkwood_banner`, `overton_banner`
-- `paege_banner`, `poole_banner`, `pyle_banner`, `qorgyle_banner`
-- `rambton_banner`, `roote_banner`, `saltcliffe_banner`, `shawney_banner`
-- `slate_banner`, `smallwood_banner`, `sparr_banner`, `stane_banner`
-- `stonetree_banner`, `stout_banner`, `thenn_banner`, `thorne_banner`
-- `vaith_banner`, `volmark_banner`, `vypren_banner`, `wayn_banner`
-- `wells_banner`, `wendwater_banner`, `whitehill_banner`, `wode_banner`
-- `woolfield_banner`
-
-### Misc New Blocks
-
-- `awning_red`, `horizontal_scroll`, `long_vase`, `oak_balcony`, `pitchfork_block`, `westerosi_coins`, `wildfire`, `black_slate_compact_stairs`, `test_arrow_slit`, `big_door` (pilot)
+- `big_narrow_door` — narrow variant of the big door, via a new `bignarrowdoor` block type (`WCBigNarrowDoorBlock` + `BigNarrowDoorBlockExporter`, models, and `doors/bignarrowdoor` texture).
+- `beam_horizontal_oak` — horizontal beam block via a new `beam_horizontal` block type (`BeamBlockExporter`), with `allowUnsupported`/`toggleOnUse` options and corner/T/straight top & bottom models.
+- Snowy grass block sets: `snowy_grass` plus depth variants `snowy_grass_light`, `snowy_grass_medium`, `snowy_grass_heavy` (`solid`/`slab`/`stairs`), each a biome-tinted grass base with an untinted snow overlay and repeat CTM.
+- Thatch fur sets renamed from numbered IDs to descriptive names (world-affecting): `thatch_light_fur_1`→`thatch_pale_brown`, `_2`→`thatch_light_fur`, `_3`→`thatch_light_tan_brown`, `_4`→`thatch_tan_brown`, `_5`→`thatch_dark_tan_brown`, `_6`→`thatch_dark_fur`, `_7`→`thatch_deep_brown`; `thatch_grey_fur_1`→`thatch_pale_grey`, `_2`→`thatch_light_grey`, `_3`→`thatch_ashy_grey`, `_4`→`thatch_dark_grey`, `_5`→`thatch_deep_grey`, `_6`→`thatch_grey_brown`, `_7`→`thatch_light_grey_brown`; `thatch_heather_fur_1`→`thatch_light_heather`, `_2`→`thatch_dark_heather`.
+- Wood shingle sets renamed from numbered IDs to descriptive names (world-affecting): `wood_shingle_1`→`wood_shingle_birch_pale`, `_2`→`wood_shingle_birch_light`, `_3`→`wood_shingle_birch`, `_4`→`wood_shingle_birch_dark`, `_5`→`wood_shingle_oak_pale`, `_6`→`wood_shingle_oak_light`, `_7`→`wood_shingle_oak`, `_8`→`wood_shingle_oak_dark`; `wood_shingle_gray_1`→`wood_shingle_grey_birch`, `_2`→`wood_shingle_gray_pale`, `_3`→`wood_shingle_grey_light`, `_4`→`wood_shingle_grey`, `_5`→`wood_shingle_gray_dark`, `_6`→`wood_shingle_gray_deep`, `_7`→`wood_shingle_gray_blue_light`, `_8`→`wood_shingle_grey_blue`, `_9`→`wood_shingle_grey_blue_dark`, `_10`→`wood_shingle_gray_blue_deep`.
+- Thatch gray textures/definitions renamed `gray`→`grey` (`textures/block/thatch/gray/*` → `…/grey/*`).
+- Fixed `*_vertical_planks` naming for birch, jungle, spruce, oak_jungle, and oak_orange (and a `halfdoor` texture reference).
+- Reworked beam brace models: split the single `base_v1` into separate `top_v1` and `bottom_v1` models for `oak`, `spruce`, `jungle`, `grey`, `oak_jungle`, and `birch` braces, sharing a new `beam_brace_bottom` template.
+- Major `mounted_slab` definition expansion (additional states/variants); `WCMountedSlabBlock` updated to match.
+- Reworked `WorldPainterExporter` (CSV export).
+- Added `westerosblocks.accesswidener`.
+- Dependency bumps and `fabric.mod.json` / `build.gradle` / `gradle.properties` updates.
+- Grass stairs: fixed stair connect/"unconnect" behaviour (`stair.json`) and corrected `grass_block` CTM properties.
+- Fixed `WCBalconyBlock` collision (two passes).
+- Fixed `sausages_leg_of_ham` CTM and added cold (snowy-biome) texture variants.
+- Hedge wall model tweaks (`template_hedge_wall_post`/`_side`/`_side_tall`) for `oak`/`spruce`/`birch`/`jungle_hedge`.
+- Added raised 3D rail templates (`template_3d_rail_raised_ne`/`_sw`).
+- `web` definition update; dirt CTM `all.properties` cleanup; `RopeRenderer`/rope entity tweaks.
 
 ## May 2026
 

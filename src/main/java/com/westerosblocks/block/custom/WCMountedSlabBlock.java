@@ -29,14 +29,14 @@ public class WCMountedSlabBlock extends Block implements WCBlockDef {
 
     private final Map<Direction, Map<BlockHalf, VoxelShape>> shapesByState;
 
-    public WCMountedSlabBlock(Settings settings, BlockDefinition def, Map<Direction, Map<BlockHalf, VoxelShape>> shapes, boolean allowUnsupported) {
+    public WCMountedSlabBlock(Settings settings, BlockDefinition def, Map<Direction, Map<BlockHalf, VoxelShape>> shapes, boolean allowUnsupported, boolean defaultTop) {
         super(settings);
         this.def = def;
         this.allowUnsupported = allowUnsupported;
         this.shapesByState = shapes != null ? shapes : createDefaultShapes();
         this.setDefaultState(this.getStateManager().getDefaultState()
                 .with(FACING, Direction.NORTH)
-                .with(HALF, BlockHalf.BOTTOM));
+                .with(HALF, defaultTop ? BlockHalf.TOP : BlockHalf.BOTTOM));
     }
 
     public static class Factory extends BlockFactory {
@@ -45,7 +45,8 @@ public class WCMountedSlabBlock extends Block implements WCBlockDef {
             AbstractBlock.Settings settings = definition.makeSettings();
             Map<Direction, Map<BlockHalf, VoxelShape>> shapes = createRotatedShapes(definition);
             boolean allowUnsupported = definition.isAllowUnsupported();
-            return new WCMountedSlabBlock(settings, definition, shapes, allowUnsupported);
+            boolean defaultTop = definition.isMountedSlabDefaultTop();
+            return new WCMountedSlabBlock(settings, definition, shapes, allowUnsupported, defaultTop);
         }
 
         /**

@@ -69,6 +69,7 @@ public class ModBlocks {
         Map.entry("beam_horizontal", new WCBeamBlock.Factory()),
         Map.entry("awning", new WCAwningBlock.Factory()),
         Map.entry("bigdoor", new WCBigDoorBlock.Factory()),
+        Map.entry("bignarrowdoor", new WCBigNarrowDoorBlock.Factory()),
         Map.entry("bunting", new WCBuntingBlock.Factory()),
         Map.entry("balcony", new WCBalconyBlock.Factory()),
         Map.entry("mounted_mirror", new WCMountedMirrorBlock.Factory())

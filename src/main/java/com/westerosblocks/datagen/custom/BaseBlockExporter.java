@@ -79,10 +79,9 @@ public abstract class BaseBlockExporter {
         }
         
         // If the texture path includes a namespace
-        if (texturePath.contains(":")) {
-            String namespace = texturePath.substring(0, texturePath.indexOf(':'));
-            String path = texturePath.substring(texturePath.indexOf(':') + 1);
-            return Identifier.of(namespace, path);
+        int colon = texturePath.indexOf(':');
+        if (colon >= 0) {
+            return Identifier.of(texturePath.substring(0, colon), texturePath.substring(colon + 1));
         }
         // No namespace, use mod ID and prepend "block/"
         return WesterosBlocks.id("block/" + texturePath);
@@ -398,19 +397,6 @@ public abstract class BaseBlockExporter {
      */
     protected static String getModelName(String baseName, int variantIndex) {
         return baseName + "_v" + (variantIndex + 1);
-    }
-
-    /**
-     * Returns a model name with variant index and type suffix.
-     * Example: {@code getModelName("base", 0, "bottom")} returns {@code "base_v1_bottom"}.
-     *
-     * @param baseName The base name
-     * @param variantIndex The 0-based variant index
-     * @param suffix The type suffix (e.g., "bottom", "top", "inner")
-     * @return The model name with suffixes
-     */
-    protected static String getModelName(String baseName, int variantIndex, String suffix) {
-        return baseName + "_v" + (variantIndex + 1) + "_" + suffix;
     }
 
     /**
