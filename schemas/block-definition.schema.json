@@ -36,6 +36,7 @@
             "log",
             "torch",
             "ladder",
+            "oriented_ladder",
             "fire",
             "bed",
             "chair",
@@ -682,6 +683,22 @@
         },
         {
           "if": {
+            "properties": { "blockType": { "const": "oriented_ladder" } },
+            "required": ["blockType"]
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "$ref": "#/$defs/OrientedLadderOptionsProperties" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
             "properties": { "blockType": { "const": "furnace" } },
             "required": ["blockType"]
           },
@@ -1316,6 +1333,25 @@
         "noClimb": {
           "type": "boolean",
           "description": "Disable climbing (visual-only ladder)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "OrientedLadderOptionsProperties": {
+      "type": "object",
+      "description": "Type properties for oriented_ladder blocks (floor/wall mount + ROTATED toggle)",
+      "properties": {
+        "allowUnsupported": {
+          "type": "boolean",
+          "description": "Ladder can be placed without a support block"
+        },
+        "noClimb": {
+          "type": "boolean",
+          "description": "Disable climbing (visual-only ladder)"
+        },
+        "toggleOnUse": {
+          "type": "boolean",
+          "description": "Allow creative players to toggle the ROTATED state by right-clicking with an empty hand"
         }
       },
       "additionalProperties": false

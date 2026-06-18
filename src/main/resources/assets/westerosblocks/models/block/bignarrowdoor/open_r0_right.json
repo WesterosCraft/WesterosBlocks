@@ -1,0 +1,77 @@
+{
+    "ambientocclusion": false,
+    "textures": {
+        "particle": "#all"
+    },
+    "elements": [
+        {
+            "__comment": "Open row0 hinge right (canonical NORTH): 2-deep panel, full door width u[0,16] v[10.67,16.0].",
+            "from": [
+                13,
+                0,
+                -16
+            ],
+            "to": [
+                16,
+                16,
+                16
+            ],
+            "faces": {
+                "north": {
+                    "uv": [
+                        0.0,
+                        10.6667,
+                        16.0,
+                        16.0
+                    ],
+                    "texture": "#all"
+                },
+                "south": {
+                    "uv": [
+                        0.0,
+                        10.6667,
+                        16.0,
+                        16.0
+                    ],
+                    "texture": "#all"
+                },
+                "east": {
+                    "uv": [
+                        0.0,
+                        10.6667,
+                        16.0,
+                        16.0
+                    ],
+                    "texture": "#all"
+                },
+                "west": {
+                    "uv": [
+                        16.0,
+                        10.6667,
+                        0.0,
+                        16.0
+                    ],
+                    "texture": "#all"
+                },
+                "up": {
+                    "uv": [
+                        0.0,
+                        10.6667,
+                        16.0,
+                        16.0
+                    ],
+                    "texture": "#all"
+                },
+                "down": {
+                    "uv": [
+                        0.0,
+                        10.6667,
+                        16.0,
+                        16.0
+                    ],
+                    "texture": "#all"
+                }
+            }
+        }
+    ]
+}

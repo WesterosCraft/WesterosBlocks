@@ -37,6 +37,30 @@
         ]
     },
     {
+        "blockName": "6sided_redwood",
+        "blockType": "solid",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_logs_tab",
+        "label": "6-Sided Redwood",
+        "textures": [
+            "bark/redwood/side"
+        ]
+    },
+    {
+        "blockName": "6sided_weirwood",
+        "blockType": "solid",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "WHITE_GRAY",
+        "creativeTab": "westeros_logs_tab",
+        "label": "6-Sided Weirwood",
+        "textures": [
+            "bark/weirwood/side"
+        ]
+    },
+    {
         "blockName": "6sided_spruce",
         "blockType": "solid",
         "strength": 2,

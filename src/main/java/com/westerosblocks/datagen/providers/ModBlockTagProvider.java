@@ -122,6 +122,7 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
                     break;
 
                 case "ladder":
+                case "oriented_ladder":
                     // Only add if climbable
                     if (!definition.isNoClimb()) {
                         ladderTagBuilder.add(block);

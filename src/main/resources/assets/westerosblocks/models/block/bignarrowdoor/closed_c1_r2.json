@@ -1,0 +1,77 @@
+{
+    "ambientocclusion": false,
+    "textures": {
+        "particle": "#all"
+    },
+    "elements": [
+        {
+            "__comment": "Closed col1 row2: 2x3 grid slice u[8.0,16.0] v[0.0,5.33] in 0-16 space.",
+            "from": [
+                0,
+                0,
+                13
+            ],
+            "to": [
+                16,
+                16,
+                16
+            ],
+            "faces": {
+                "north": {
+                    "uv": [
+                        8.0,
+                        0.0,
+                        16.0,
+                        5.3333
+                    ],
+                    "texture": "#all"
+                },
+                "south": {
+                    "uv": [
+                        16.0,
+                        0.0,
+                        8.0,
+                        5.3333
+                    ],
+                    "texture": "#all"
+                },
+                "east": {
+                    "uv": [
+                        8.0,
+                        0.0,
+                        16.0,
+                        5.3333
+                    ],
+                    "texture": "#all"
+                },
+                "west": {
+                    "uv": [
+                        8.0,
+                        0.0,
+                        16.0,
+                        5.3333
+                    ],
+                    "texture": "#all"
+                },
+                "up": {
+                    "uv": [
+                        8.0,
+                        0.0,
+                        16.0,
+                        5.3333
+                    ],
+                    "texture": "#all"
+                },
+                "down": {
+                    "uv": [
+                        8.0,
+                        0.0,
+                        16.0,
+                        5.3333
+                    ],
+                    "texture": "#all"
+                }
+            }
+        }
+    ]
+}

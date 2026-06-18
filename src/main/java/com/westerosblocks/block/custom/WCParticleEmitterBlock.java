@@ -25,7 +25,11 @@ public class WCParticleEmitterBlock extends Block implements Waterloggable, WCBl
     public static class Factory extends BlockFactory {
         @Override
         public Block buildBlockClass(BlockDefinition definition) {
-            AbstractBlock.Settings settings = definition.makeSettings();
+            // Emitters are always a tiny 4x4x4 cutout cube. Force non-opaque so the
+            // block isn't treated as a full opaque occluder, which would cull the faces
+            // of neighbors below it (e.g. fences rendered invisible). See definition's
+            // renderLayer:cutout — that only sets the render layer, not opacity.
+            AbstractBlock.Settings settings = definition.makeSettings().nonOpaque();
             return new WCParticleEmitterBlock(settings, definition);
         }
     }

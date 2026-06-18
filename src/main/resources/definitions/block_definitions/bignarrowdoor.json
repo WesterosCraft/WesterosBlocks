@@ -1,0 +1,14 @@
+[
+    {
+        "blockName": "big_narrow_door",
+        "blockType": "bignarrowdoor",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_test_tab",
+        "label": "big narrow door",
+        "textures": [
+            "doors/bignarrowdoor"
+        ]
+    }
+]

@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/ladder/wall_rotated",
+  "textures": {
+    "0": "westerosblocks:block/bark/birch/stripped",
+    "particle": "westerosblocks:block/bark/birch/stripped"
+  }
+}

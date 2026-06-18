@@ -4,7 +4,10 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.block.Waterloggable;
 import net.minecraft.entity.ai.pathing.NavigationType;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.Item;
@@ -28,7 +31,7 @@ import java.util.List;
 
 import com.westerosblocks.data.BlockDefinition;
 
-public class WCLayerBlock extends Block implements WCBlockDef {
+public class WCLayerBlock extends Block implements WCBlockDef, Waterloggable {
     protected BlockDefinition def;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     public static final IntProperty LAYERS = Properties.LAYERS;
@@ -128,6 +131,18 @@ public class WCLayerBlock extends Block implements WCBlockDef {
     @Override
     public FluidState getFluidState(BlockState state) {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+    }
+
+    // A full layer block (LAYERS == layerCount) is a solid cube and cannot hold water;
+    // only partial layers waterlog. Mirrors the 1.18.2 placeLiquid/canPlaceLiquid guards.
+    @Override
+    public boolean canFillWithFluid(PlayerEntity player, BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
+        return state.get(LAYERS) < layerCount && Waterloggable.super.canFillWithFluid(player, world, pos, state, fluid);
+    }
+
+    @Override
+    public boolean tryFillWithFluid(WorldAccess world, BlockPos pos, BlockState state, FluidState fluidState) {
+        return state.get(LAYERS) < layerCount && Waterloggable.super.tryFillWithFluid(world, pos, state, fluidState);
     }
 
     @Override

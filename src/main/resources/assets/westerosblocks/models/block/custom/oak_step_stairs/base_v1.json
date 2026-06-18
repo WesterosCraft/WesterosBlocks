@@ -1,0 +1,111 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/stairs",
+	"textures": {
+		"0": "westerosblocks:block/wood/oak/all_lines",
+		"1": "westerosblocks:block/bark/oak/horizontal_stripped",
+		"particle": "westerosblocks:block/wood/oak/all_lines"
+	},
+	"elements": [
+		{
+			"from": [8, 12, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 9.89189, 8]},
+			"faces": {
+				"north": {"uv": [8, 0, 0, 4], "texture": "#1"},
+				"east": {"uv": [16, 0, 0, 4], "texture": "#1"},
+				"south": {"uv": [16, 0, 8, 4], "texture": "#1"},
+				"west": {"uv": [16, 0, 0, 4], "texture": "#1"},
+				"up": {"uv": [0, 8, 16, 0], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 9, 16, 0], "rotation": 270, "texture": "#1"}
+			}
+		},
+		{
+			"from": [0, 4, 0],
+			"to": [8, 8, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 9.89189, 8]},
+			"faces": {
+				"north": {"uv": [16, 9, 8, 13], "texture": "#1"},
+				"east": {"uv": [16, 9, 0, 13], "texture": "#1"},
+				"south": {"uv": [8, 9, 0, 13], "texture": "#1"},
+				"west": {"uv": [16, 9, 0, 13], "texture": "#1"},
+				"up": {"uv": [0, 8, 16, 16], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 9, 16, 0], "rotation": 270, "texture": "#1"}
+			}
+		},
+		{
+			"from": [3.89164, 2.34327, 13.5],
+			"to": [7.89164, 24.84327, 15.5],
+			"rotation": {"angle": 135, "axis": "z", "origin": [8, 9.89189, 8]},
+			"faces": {
+				"north": {"uv": [0, 11.5, 16, 15.5], "rotation": 90, "texture": "#1"},
+				"east": {"uv": [0, 8, 16, 10], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 4], "rotation": 90, "texture": "#1"},
+				"west": {"uv": [0, 14, 16, 16], "rotation": 90, "texture": "#1"},
+				"up": {"uv": [0, 0, 4, 2], "texture": "#1"}
+			}
+		},
+		{
+			"from": [3.89164, 2.34327, 0.5],
+			"to": [7.89164, 24.84327, 2.5],
+			"rotation": {"angle": 135, "axis": "z", "origin": [8, 9.89189, 8]},
+			"faces": {
+				"north": {"uv": [0, 11.5, 16, 15.5], "rotation": 90, "texture": "#1"},
+				"east": {"uv": [0, 8, 16, 10], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [0, 12, 16, 16], "rotation": 90, "texture": "#1"},
+				"west": {"uv": [0, 11.5, 16, 13.5], "rotation": 90, "texture": "#1"},
+				"up": {"uv": [0, 0, 4, 2], "texture": "#1"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -135, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [22.5, 45, 0],
+			"translation": [0.75, 0.5, 0],
+			"scale": [0.475, 0.475, 0.475]
+		},
+		"head": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 13, 7]
+		},
+		"fixed": {
+			"rotation": [0, -90, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"on_shelf": {
+			"rotation": [0, 90, 0]
+		}
+	},
+	"groups": [
+		{
+			"name": "stair",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		}
+	]
+}

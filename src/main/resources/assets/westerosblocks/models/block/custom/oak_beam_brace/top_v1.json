@@ -1,0 +1,7 @@
+{
+    "parent": "westerosblocks:block/beam_brace",
+    "textures": {
+        "texture": "westerosblocks:block/bark/oak/horizontal_stripped",
+        "particle": "westerosblocks:block/bark/oak/horizontal_stripped"
+    }
+}
