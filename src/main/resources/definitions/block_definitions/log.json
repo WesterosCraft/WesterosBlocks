@@ -137,7 +137,7 @@
         "blockName": "mossy_birch_log",
         "blockType": "log",
         "soundGroup": "wood",
-        "mapColor": "STONE_GRAY",
+        "mapColor": "PALE_GREEN",
         "harvestLevel": [
             {
                 "tool": "axe",
@@ -150,6 +150,25 @@
             "bark/birch/mossy/bottom",
             "bark/birch/mossy/top",
             "bark/birch/mossy/side"
+        ]
+    },
+    {
+        "blockName": "mossy_weirwood_log",
+        "blockType": "log",
+        "soundGroup": "wood",
+        "mapColor": "PALE_GREEN",
+        "harvestLevel": [
+            {
+                "tool": "axe",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_logs_tab",
+        "label": "Mossy Weirwood Log",
+        "textures": [
+            "bark/weirwood/mossy/bottom",
+            "bark/weirwood/mossy/top",
+            "bark/weirwood/mossy/side"
         ]
     },
     {

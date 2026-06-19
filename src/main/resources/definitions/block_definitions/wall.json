@@ -676,6 +676,29 @@
         ]
     },
     {
+        "blockName": "thin_weirwood_log",
+        "blockType": "wall",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "WHITE_GRAY",
+        "harvestLevel": [
+            {
+                "tool": "axe",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_logs_tab",
+        "label": "Thin Weirwood Log",
+        "options": {
+            "unconnect": false
+        },
+        "textures": [
+            "bark/weirwood/wall_top",
+            "bark/weirwood/wall_top",
+            "bark/weirwood/side"
+        ]
+    },
+    {
         "blockName": "thin_jungle_log",
         "blockType": "wall",
         "strength": 2,

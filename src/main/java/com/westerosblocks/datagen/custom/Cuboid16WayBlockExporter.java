@@ -147,7 +147,7 @@ public class Cuboid16WayBlockExporter extends CuboidBlockExporter {
         for (int rotation = 0; rotation < 16; rotation++) {
             int modelIndex = rotation % 4;
             List<ModelSet16Way> modelSets = rotationModelSets.get(MODEL_SUFFIXES[modelIndex]);
-            int yRotation = (90 * (rotation / 4)) % 360;
+            int yRotation = (90 * (((rotation + 1) % 16) / 4)) % 360;
 
             List<BlockStateVariant> variants = buildRotationVariants(modelSets, yRotation);
             if (variants.size() == 1) {
@@ -176,7 +176,7 @@ public class Cuboid16WayBlockExporter extends CuboidBlockExporter {
             for (int rotation = 0; rotation < 16; rotation++) {
                 int modelIndex = rotation % 4;
                 List<ModelSet16Way> modelSets = rotationModelSets.get(MODEL_SUFFIXES[modelIndex]);
-                int yRotation = (90 * (rotation / 4)) % 360;
+                int yRotation = (90 * (((rotation + 1) % 16) / 4)) % 360;
 
                 if (modelSets == null || modelSets.isEmpty()) continue;
 
