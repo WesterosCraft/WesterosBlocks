@@ -722,6 +722,213 @@
         ]
     },
     {
+        "blockName": "thin_stripped_birch_log",
+        "blockType": "wall",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "OAK_TAN",
+        "harvestLevel": [
+            {
+                "tool": "axe",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_logs_tab",
+        "label": "Thin Stripped Birch Log",
+        "options": {
+            "unconnect": false
+        },
+        "textures": [
+            "bark/birch/stripped_wall_top",
+            "bark/birch/stripped_wall_top",
+            "bark/birch/stripped"
+        ]
+    },
+    {
+        "blockName": "thin_stripped_grey_log",
+        "blockType": "wall",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_CYAN",
+        "harvestLevel": [
+            {
+                "tool": "axe",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_logs_tab",
+        "label": "Thin Stripped Grey Log",
+        "options": {
+            "unconnect": false
+        },
+        "textures": [
+            "bark/grey/stripped_wall_top",
+            "bark/grey/stripped_wall_top",
+            "bark/grey/stripped"
+        ]
+    },
+    {
+        "blockName": "thin_stripped_jungle_log",
+        "blockType": "wall",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "harvestLevel": [
+            {
+                "tool": "axe",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_logs_tab",
+        "label": "Thin Stripped Jungle Log",
+        "options": {
+            "unconnect": false
+        },
+        "textures": [
+            "bark/jungle/stripped_wall_top",
+            "bark/jungle/stripped_wall_top",
+            "bark/jungle/stripped"
+        ]
+    },
+    {
+        "blockName": "thin_stripped_dark_northern_log",
+        "blockType": "wall",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "GRAY",
+        "harvestLevel": [
+            {
+                "tool": "axe",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_logs_tab",
+        "label": "Thin Stripped Dark Northern Log",
+        "options": {
+            "unconnect": false
+        },
+        "textures": [
+            "bark/northern/stripped_wall_top",
+            "bark/northern/stripped_wall_top",
+            "bark/northern/stripped"
+        ]
+    },
+    {
+        "blockName": "thin_stripped_oak_log",
+        "blockType": "wall",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "axe",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_logs_tab",
+        "label": "Thin Stripped Oak Log",
+        "options": {
+            "unconnect": false
+        },
+        "textures": [
+            "bark/oak/stripped_wall_top",
+            "bark/oak/stripped_wall_top",
+            "bark/oak/stripped"
+        ]
+    },
+    {
+        "blockName": "thin_stripped_oak_birch_log",
+        "blockType": "wall",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "BROWN",
+        "harvestLevel": [
+            {
+                "tool": "axe",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_logs_tab",
+        "label": "Thin Stripped Oak Birch Log",
+        "options": {
+            "unconnect": false
+        },
+        "textures": [
+            "bark/oak_birch/stripped_wall_top",
+            "bark/oak_birch/stripped_wall_top",
+            "bark/oak_birch/stripped"
+        ]
+    },
+    {
+        "blockName": "thin_stripped_oak_jungle_log",
+        "blockType": "wall",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_BROWN",
+        "harvestLevel": [
+            {
+                "tool": "axe",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_logs_tab",
+        "label": "Thin Stripped Oak Jungle Log",
+        "options": {
+            "unconnect": false
+        },
+        "textures": [
+            "bark/oak_jungle/stripped_wall_top",
+            "bark/oak_jungle/stripped_wall_top",
+            "bark/oak_jungle/stripped"
+        ]
+    },
+    {
+        "blockName": "thin_stripped_spruce_log",
+        "blockType": "wall",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "harvestLevel": [
+            {
+                "tool": "axe",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_logs_tab",
+        "label": "Thin Stripped Spruce Log",
+        "options": {
+            "unconnect": false
+        },
+        "textures": [
+            "bark/spruce/stripped_wall_top",
+            "bark/spruce/stripped_wall_top",
+            "bark/spruce/stripped"
+        ]
+    },
+    {
+        "blockName": "thin_stripped_white_log",
+        "blockType": "wall",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "STONE_GRAY",
+        "harvestLevel": [
+            {
+                "tool": "axe",
+                "level": 1
+            }
+        ],
+        "creativeTab": "westeros_logs_tab",
+        "label": "Thin Stripped White Log",
+        "options": {
+            "unconnect": false
+        },
+        "textures": [
+            "bark/white/stripped_wall_top",
+            "bark/white/stripped_wall_top",
+            "bark/white/stripped"
+        ]
+    },
+    {
         "blockName": "thin_marble_column",
         "blockType": "wall",
         "strength": 1.5,
