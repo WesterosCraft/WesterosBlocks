@@ -1214,7 +1214,7 @@
         "blockType": "cuboid-nsew",
         "strength": 5,
         "soundGroup": "wood",
-        "creativeTab": "westeros_decor_tab",
+        "creativeTab": "westeros_test_tab",
         "label": "Steep Oak Ladder",
         "renderLayer": "cutout",
         "nonOpaque": true,

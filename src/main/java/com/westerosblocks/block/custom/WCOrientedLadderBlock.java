@@ -6,8 +6,11 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.block.Waterloggable;
 import net.minecraft.block.enums.BlockFace;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
@@ -39,13 +42,14 @@ import net.minecraft.world.WorldView;
  * Climbing is provided by the {@code minecraft:climbable} block tag (added in
  * {@code ModBlockTagProvider} unless {@code noClimb} is set), mirroring {@code WCLadderBlock}.
  */
-public class WCOrientedLadderBlock extends Block implements WCBlockDef {
+public class WCOrientedLadderBlock extends Block implements WCBlockDef, Waterloggable {
 
     // Only FLOOR and WALL are used (no CEILING) — EnumProperty.of accepts a value subset.
     public static final EnumProperty<BlockFace> FACE =
             EnumProperty.of("face", BlockFace.class, BlockFace.FLOOR, BlockFace.WALL);
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty ROTATED = BooleanProperty.of("rotated");
+    public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     protected final BlockDefinition def;
     private final boolean allowUnsupported;
@@ -60,7 +64,8 @@ public class WCOrientedLadderBlock extends Block implements WCBlockDef {
         this.setDefaultState(this.getStateManager().getDefaultState()
                 .with(FACE, BlockFace.WALL)
                 .with(FACING, Direction.NORTH)
-                .with(ROTATED, false));
+                .with(ROTATED, false)
+                .with(WATERLOGGED, false));
     }
 
     public static class Factory extends BlockFactory {
@@ -74,14 +79,15 @@ public class WCOrientedLadderBlock extends Block implements WCBlockDef {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACE, FACING, ROTATED);
+        builder.add(FACE, FACING, ROTATED, WATERLOGGED);
     }
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         WorldView world = ctx.getWorld();
         BlockPos pos = ctx.getBlockPos();
-        BlockState base = this.getDefaultState().with(ROTATED, false);
+        boolean waterlogged = world.getFluidState(pos).getFluid() == Fluids.WATER;
+        BlockState base = this.getDefaultState().with(ROTATED, false).with(WATERLOGGED, waterlogged);
 
         // Clicking the top of a block → floor-mounted ladder.
         if (ctx.getSide() == Direction.UP) {
@@ -125,7 +131,15 @@ public class WCOrientedLadderBlock extends Block implements WCBlockDef {
         if (!this.allowUnsupported && direction == supportDirection(state) && !this.canPlaceAt(state, world, pos)) {
             return Blocks.AIR.getDefaultState();
         }
+        if (state.get(WATERLOGGED)) {
+            world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+        }
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+    }
+
+    @Override
+    public FluidState getFluidState(BlockState state) {
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
     /** Direction toward the block this ladder is attached to. */

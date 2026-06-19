@@ -48,8 +48,7 @@
                         0,
                         12
                     ],
-                    "texture": "#texture",
-                    "cullface": "east"
+                    "texture": "#texture"
                 },
                 "south": {
                     "uv": [
@@ -58,8 +57,7 @@
                         0,
                         12
                     ],
-                    "texture": "#texture",
-                    "cullface": "north"
+                    "texture": "#texture"
                 },
                 "west": {
                     "uv": [
@@ -88,8 +86,7 @@
                         4.5
                     ],
                     "rotation": 90,
-                    "texture": "#texture",
-                    "cullface": "up"
+                    "texture": "#texture"
                 }
             }
         },
@@ -162,8 +159,7 @@
                         11
                     ],
                     "rotation": 90,
-                    "texture": "#texture",
-                    "cullface": "south"
+                    "texture": "#texture"
                 }
             }
         },
@@ -213,8 +209,7 @@
                         14,
                         12
                     ],
-                    "texture": "#texture",
-                    "cullface": "north"
+                    "texture": "#texture"
                 },
                 "west": {
                     "uv": [
@@ -223,8 +218,7 @@
                         0,
                         12
                     ],
-                    "texture": "#texture",
-                    "cullface": "west"
+                    "texture": "#texture"
                 },
                 "up": {
                     "uv": [
@@ -244,8 +238,7 @@
                         2.5
                     ],
                     "rotation": 90,
-                    "texture": "#texture",
-                    "cullface": "up"
+                    "texture": "#texture"
                 }
             }
         },
@@ -318,8 +311,7 @@
                         12
                     ],
                     "rotation": 90,
-                    "texture": "#texture",
-                    "cullface": "south"
+                    "texture": "#texture"
                 }
             }
         }

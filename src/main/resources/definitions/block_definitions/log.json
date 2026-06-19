@@ -358,7 +358,7 @@
         "textures": [
             "bark/weirwood/face_0",
             "bark/weirwood/face_0",
-            "bark/weirwood/side"
+            "bark/weirwood/face_side"
         ],
         "display": {
             "gui": {
@@ -396,7 +396,7 @@
         "textures": [
             "bark/weirwood/face_1",
             "bark/weirwood/face_1",
-            "bark/weirwood/side"
+            "bark/weirwood/face_side"
         ],
         "display": {
             "gui": {
@@ -434,7 +434,7 @@
         "textures": [
             "bark/weirwood/face_2",
             "bark/weirwood/face_2",
-            "bark/weirwood/side"
+            "bark/weirwood/face_side"
         ],
         "display": {
             "gui": {
@@ -472,7 +472,7 @@
         "textures": [
             "bark/weirwood/face_3",
             "bark/weirwood/face_3",
-            "bark/weirwood/side"
+            "bark/weirwood/face_side"
         ],
         "display": {
             "gui": {
@@ -510,7 +510,7 @@
         "textures": [
             "bark/weirwood/face_4",
             "bark/weirwood/face_4",
-            "bark/weirwood/side"
+            "bark/weirwood/face_side"
         ],
         "display": {
             "gui": {
@@ -548,7 +548,7 @@
         "textures": [
             "bark/weirwood/face_5",
             "bark/weirwood/face_5",
-            "bark/weirwood/side"
+            "bark/weirwood/face_side"
         ],
         "display": {
             "gui": {
@@ -586,7 +586,7 @@
         "textures": [
             "bark/weirwood/face_6",
             "bark/weirwood/face_6",
-            "bark/weirwood/side"
+            "bark/weirwood/face_side"
         ],
         "display": {
             "gui": {
@@ -624,7 +624,7 @@
         "textures": [
             "bark/weirwood/face_7",
             "bark/weirwood/face_7",
-            "bark/weirwood/side"
+            "bark/weirwood/face_side"
         ],
         "display": {
             "gui": {
@@ -662,7 +662,7 @@
         "textures": [
             "bark/weirwood/face_8",
             "bark/weirwood/face_8",
-            "bark/weirwood/side"
+            "bark/weirwood/face_side"
         ],
         "display": {
             "gui": {
@@ -700,7 +700,7 @@
         "textures": [
             "bark/weirwood/scars",
             "bark/weirwood/scars",
-            "bark/weirwood/side"
+            "bark/weirwood/face_side"
         ]
     },
     {

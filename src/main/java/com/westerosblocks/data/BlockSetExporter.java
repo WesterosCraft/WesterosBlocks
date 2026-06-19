@@ -51,12 +51,14 @@ public class BlockSetExporter {
                 bsfSet.altname = blockSet.getBaseLabel().replaceAll(" ", "_").toLowerCase();
             }
 
-            List<String> variantsToCreate = blockSet.hasVariants()
+            List<String> enabledVariants = blockSet.hasVariants()
                     ? blockSet.getVariants()
                     : BlockSetExpander.DEFAULT_VARIANTS;
 
-            for (String variant : variantsToCreate) {
-                if (!BlockSetExpander.SUPPORTED_VARIANTS.contains(variant)) continue;
+            // Emit in the fixed SUPPORTED_VARIANTS order (matches 1.18.2 dumpBlockSets
+            // and BlockSetExpander.expand), not the order variants are listed in the JSON.
+            for (String variant : BlockSetExpander.SUPPORTED_VARIANTS) {
+                if (!enabledVariants.contains(variant)) continue;
 
                 BlockSetFileDef bsfDef = new BlockSetFileDef();
                 Map<String, String> altNames = blockSet.getAltNames();

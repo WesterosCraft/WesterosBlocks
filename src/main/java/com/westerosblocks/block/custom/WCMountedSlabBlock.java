@@ -14,6 +14,7 @@ import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
@@ -199,6 +200,14 @@ public class WCMountedSlabBlock extends Block implements WCBlockDef {
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return shapesByState.get(state.get(FACING)).get(state.get(HALF));
+    }
+
+    // The collision/outline shape is a full-footprint slab, but the visible model is only a thin
+    // brace. Returning an empty culling shape stops the block from occluding its neighbors' faces
+    // (which made the block above a top-half brace, or below a bottom-half brace, appear transparent).
+    @Override
+    public VoxelShape getCullingShape(BlockState state, BlockView world, BlockPos pos) {
+        return VoxelShapes.empty();
     }
 
     @Override

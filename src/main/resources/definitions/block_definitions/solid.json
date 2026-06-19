@@ -1214,7 +1214,7 @@
         "textures": [
             "lighting/coals_glowing"
         ],
-        "luminance": 2
+        "luminance": 8
     },
     {
         "blockName": "grain_basket",
