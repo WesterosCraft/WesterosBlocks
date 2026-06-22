@@ -36,6 +36,7 @@ public class WCBenchBlock extends Block implements WCBlockDef {
 
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final EnumProperty<ConnectionType> CONNECTION = EnumProperty.of("connection", ConnectionType.class);
+    public static final EnumProperty<OffsetType> OFFSET = EnumProperty.of("offset", OffsetType.class);
     private static final VoxelShape BENCH_SHAPE_NS = Block.createCuboidShape(1, 6, 3, 15, 8, 13);
     private static final VoxelShape BENCH_SHAPE_EW = Block.createCuboidShape(3, 6, 1, 13, 8, 15);
 
@@ -46,7 +47,8 @@ public class WCBenchBlock extends Block implements WCBlockDef {
         this.def = def;
         this.setDefaultState(this.getDefaultState()
                 .with(FACING, Direction.NORTH)
-                .with(CONNECTION, ConnectionType.SINGLE));
+                .with(CONNECTION, ConnectionType.SINGLE)
+                .with(OFFSET, OffsetType.MIDDLE));
         this.shapeByIndex = this.makeShapes();
     }
 
@@ -81,6 +83,31 @@ public class WCBenchBlock extends Block implements WCBlockDef {
         }
     }
 
+    // Manual depth position of the bench model within the block space — shifts forward/back
+    // along the facing axis (perpendicular to a connected row, so it won't overlap neighbors).
+    // Independent of CONNECTION (which is auto-detected from neighbors). Cycled by sneak + use.
+    public enum OffsetType implements StringIdentifiable {
+        LEFT("left"),
+        MIDDLE("middle"),
+        RIGHT("right");
+
+        private final String name;
+
+        OffsetType(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public String asString() {
+            return this.name;
+        }
+
+        @Override
+        public String toString() {
+            return this.name;
+        }
+    }
+
     private Map<BlockState, VoxelShape> makeShapes() {
         ImmutableMap.Builder<BlockState, VoxelShape> builder = ImmutableMap.builder();
 
@@ -89,12 +116,17 @@ public class WCBenchBlock extends Block implements WCBlockDef {
                     ? BENCH_SHAPE_NS
                     : BENCH_SHAPE_EW;
 
+            // Shape depends only on facing; OFFSET only shifts the visual model, so the
+            // selection/collision box stays centered (a shifted box would leave the block).
             for (ConnectionType connection : ConnectionType.values()) {
-                BlockState state = this.getDefaultState()
-                        .with(FACING, facing)
-                        .with(CONNECTION, connection);
+                for (OffsetType offset : OffsetType.values()) {
+                    BlockState state = this.getDefaultState()
+                            .with(FACING, facing)
+                            .with(CONNECTION, connection)
+                            .with(OFFSET, offset);
 
-                builder.put(state, shape);
+                    builder.put(state, shape);
+                }
             }
         }
 
@@ -103,7 +135,7 @@ public class WCBenchBlock extends Block implements WCBlockDef {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, CONNECTION);
+        builder.add(FACING, CONNECTION, OFFSET);
     }
 
     @Override
@@ -116,7 +148,8 @@ public class WCBenchBlock extends Block implements WCBlockDef {
 
         return this.getDefaultState()
                 .with(FACING, facing)
-                .with(CONNECTION, connectionType);
+                .with(CONNECTION, connectionType)
+                .with(OFFSET, OffsetType.MIDDLE);
     }
 
     @Override
@@ -174,6 +207,14 @@ public class WCBenchBlock extends Block implements WCBlockDef {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+        // Sneak + empty hand cycles the manual model offset (left -> middle -> right).
+        if (player.isSneaking() && player.getMainHandStack().isEmpty()) {
+            if (!world.isClient()) {
+                world.setBlockState(pos, state.cycle(OFFSET), Block.NOTIFY_ALL);
+            }
+            return ActionResult.success(world.isClient());
+        }
+
         if (!world.isClient()) {
             Entity entity = null;
             List<ChairEntity> entities = world.getEntitiesByType(ModEntities.CHAIR, new Box(pos), chair -> true);

@@ -28,57 +28,54 @@ public class BenchBlockExporter extends BaseBlockExporter {
     }
 
     private static void registerCustomBenchBlock(BlockStateModelGenerator generator, Block block, String texturePath, String particleTexture) {
-        String blockName = getBlockName(block);
-
         TextureMap textureMap = new TextureMap()
                 .put(ModTextureKey.BENCH, createBlockIdentifier(texturePath))
                 .put(TextureKey.PARTICLE, createBlockIdentifier(particleTexture));
 
-        // Upload models with block-specific texture mapping
-        Identifier singleModelId = ModModels.BENCH_SINGLE.upload(createNestedModelId(block, "single"), textureMap, generator.modelCollector);
-        Identifier leftModelId = ModModels.BENCH_LEFT.upload(createNestedModelId(block, "left"), textureMap, generator.modelCollector);
-        Identifier rightModelId = ModModels.BENCH_RIGHT.upload(createNestedModelId(block, "right"), textureMap, generator.modelCollector);
-        Identifier middleModelId = ModModels.BENCH_MIDDLE.upload(createNestedModelId(block, "middle"), textureMap, generator.modelCollector);
+        // Upload all 12 models (4 connection templates × 3 offsets) with block-specific textures.
+        Identifier singleMiddle = ModModels.BENCH_SINGLE_MIDDLE.upload(createNestedModelId(block, "single_middle"), textureMap, generator.modelCollector);
+        Identifier singleLeft = ModModels.BENCH_SINGLE_LEFT.upload(createNestedModelId(block, "single_left"), textureMap, generator.modelCollector);
+        Identifier singleRight = ModModels.BENCH_SINGLE_RIGHT.upload(createNestedModelId(block, "single_right"), textureMap, generator.modelCollector);
+        Identifier leftMiddle = ModModels.BENCH_LEFT_MIDDLE.upload(createNestedModelId(block, "left_middle"), textureMap, generator.modelCollector);
+        Identifier leftLeft = ModModels.BENCH_LEFT_LEFT.upload(createNestedModelId(block, "left_left"), textureMap, generator.modelCollector);
+        Identifier leftRight = ModModels.BENCH_LEFT_RIGHT.upload(createNestedModelId(block, "left_right"), textureMap, generator.modelCollector);
+        Identifier rightMiddle = ModModels.BENCH_RIGHT_MIDDLE.upload(createNestedModelId(block, "right_middle"), textureMap, generator.modelCollector);
+        Identifier rightLeft = ModModels.BENCH_RIGHT_LEFT.upload(createNestedModelId(block, "right_left"), textureMap, generator.modelCollector);
+        Identifier rightRight = ModModels.BENCH_RIGHT_RIGHT.upload(createNestedModelId(block, "right_right"), textureMap, generator.modelCollector);
+        Identifier middleMiddle = ModModels.BENCH_MIDDLE_MIDDLE.upload(createNestedModelId(block, "middle_middle"), textureMap, generator.modelCollector);
+        Identifier middleLeft = ModModels.BENCH_MIDDLE_LEFT.upload(createNestedModelId(block, "middle_left"), textureMap, generator.modelCollector);
+        Identifier middleRight = ModModels.BENCH_MIDDLE_RIGHT.upload(createNestedModelId(block, "middle_right"), textureMap, generator.modelCollector);
 
-        // Create variant map for FACING × CONNECTION
-        BlockStateVariantMap.DoubleProperty<Direction, WCBenchBlock.ConnectionType> variantMap =
-            BlockStateVariantMap.create(WCBenchBlock.FACING, WCBenchBlock.CONNECTION);
+        // The model file is chosen jointly by CONNECTION × OFFSET.
+        BlockStateVariantMap.DoubleProperty<WCBenchBlock.ConnectionType, WCBenchBlock.OffsetType> modelMap =
+            BlockStateVariantMap.create(WCBenchBlock.CONNECTION, WCBenchBlock.OFFSET);
+        modelMap.register(WCBenchBlock.ConnectionType.SINGLE, WCBenchBlock.OffsetType.MIDDLE, BlockStateVariant.create().put(VariantSettings.MODEL, singleMiddle));
+        modelMap.register(WCBenchBlock.ConnectionType.SINGLE, WCBenchBlock.OffsetType.LEFT, BlockStateVariant.create().put(VariantSettings.MODEL, singleLeft));
+        modelMap.register(WCBenchBlock.ConnectionType.SINGLE, WCBenchBlock.OffsetType.RIGHT, BlockStateVariant.create().put(VariantSettings.MODEL, singleRight));
+        modelMap.register(WCBenchBlock.ConnectionType.LEFT, WCBenchBlock.OffsetType.MIDDLE, BlockStateVariant.create().put(VariantSettings.MODEL, leftMiddle));
+        modelMap.register(WCBenchBlock.ConnectionType.LEFT, WCBenchBlock.OffsetType.LEFT, BlockStateVariant.create().put(VariantSettings.MODEL, leftLeft));
+        modelMap.register(WCBenchBlock.ConnectionType.LEFT, WCBenchBlock.OffsetType.RIGHT, BlockStateVariant.create().put(VariantSettings.MODEL, leftRight));
+        modelMap.register(WCBenchBlock.ConnectionType.RIGHT, WCBenchBlock.OffsetType.MIDDLE, BlockStateVariant.create().put(VariantSettings.MODEL, rightMiddle));
+        modelMap.register(WCBenchBlock.ConnectionType.RIGHT, WCBenchBlock.OffsetType.LEFT, BlockStateVariant.create().put(VariantSettings.MODEL, rightLeft));
+        modelMap.register(WCBenchBlock.ConnectionType.RIGHT, WCBenchBlock.OffsetType.RIGHT, BlockStateVariant.create().put(VariantSettings.MODEL, rightRight));
+        modelMap.register(WCBenchBlock.ConnectionType.MIDDLE, WCBenchBlock.OffsetType.MIDDLE, BlockStateVariant.create().put(VariantSettings.MODEL, middleMiddle));
+        modelMap.register(WCBenchBlock.ConnectionType.MIDDLE, WCBenchBlock.OffsetType.LEFT, BlockStateVariant.create().put(VariantSettings.MODEL, middleLeft));
+        modelMap.register(WCBenchBlock.ConnectionType.MIDDLE, WCBenchBlock.OffsetType.RIGHT, BlockStateVariant.create().put(VariantSettings.MODEL, middleRight));
 
-        // Register all combinations of facing and connection
+        // The Y rotation is chosen by FACING alone.
+        BlockStateVariantMap.SingleProperty<Direction> facingMap = BlockStateVariantMap.create(WCBenchBlock.FACING);
         for (Direction facing : Direction.Type.HORIZONTAL) {
-            VariantSettings.Rotation rotation = toYRotation(getFacingSouthDefaultRotation(facing));
-
-            // SINGLE connection
-            variantMap.register(facing, WCBenchBlock.ConnectionType.SINGLE,
-                    BlockStateVariant.create()
-                            .put(VariantSettings.MODEL, singleModelId)
-                            .put(VariantSettings.Y, rotation));
-
-            // LEFT connection
-            variantMap.register(facing, WCBenchBlock.ConnectionType.LEFT,
-                    BlockStateVariant.create()
-                            .put(VariantSettings.MODEL, leftModelId)
-                            .put(VariantSettings.Y, rotation));
-
-            // RIGHT connection
-            variantMap.register(facing, WCBenchBlock.ConnectionType.RIGHT,
-                    BlockStateVariant.create()
-                            .put(VariantSettings.MODEL, rightModelId)
-                            .put(VariantSettings.Y, rotation));
-
-            // MIDDLE connection
-            variantMap.register(facing, WCBenchBlock.ConnectionType.MIDDLE,
-                    BlockStateVariant.create()
-                            .put(VariantSettings.MODEL, middleModelId)
-                            .put(VariantSettings.Y, rotation));
+            facingMap.register(facing, BlockStateVariant.create()
+                    .put(VariantSettings.Y, toYRotation(getFacingSouthDefaultRotation(facing))));
         }
 
-        // Register the blockstate with all variants
+        // Chaining the two coordinate maps produces the CONNECTION × OFFSET × FACING product,
+        // merging the MODEL and Y settings into each variant.
         generator.blockStateCollector.accept(
-                VariantsBlockStateSupplier.create(block).coordinate(variantMap));
+                VariantsBlockStateSupplier.create(block).coordinate(modelMap).coordinate(facingMap));
 
-        // Register item model using the single variant
-        registerParentedItemModel(generator, block, singleModelId);
+        // Register item model using the default (single, middle offset) variant.
+        registerParentedItemModel(generator, block, singleMiddle);
     }
 
 }

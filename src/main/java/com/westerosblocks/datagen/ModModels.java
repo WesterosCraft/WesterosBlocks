@@ -71,11 +71,21 @@ public class ModModels {
     public static final Model LOG_6FACE_HORIZONTAL_TINTED = block("tinted/cube_log_horizontal",
             TextureKey.DOWN, TextureKey.UP, TextureKey.NORTH, TextureKey.SOUTH, TextureKey.WEST, TextureKey.EAST, TextureKey.PARTICLE);
 
-    // Bench models
-    public static final Model BENCH_SINGLE = block("bench/wood_bench_1x1", ModTextureKey.BENCH, TextureKey.PARTICLE);
-    public static final Model BENCH_LEFT = block("bench/wood_bench_edge", ModTextureKey.BENCH, TextureKey.PARTICLE);
-    public static final Model BENCH_RIGHT = block("bench/wood_bench_right", ModTextureKey.BENCH, TextureKey.PARTICLE);
-    public static final Model BENCH_MIDDLE = block("bench/wood_bench_middle", ModTextureKey.BENCH, TextureKey.PARTICLE);
+    // Bench models — named <connection>_<offset>. Connection picks the base template
+    // (auto-detected), offset shifts it forward/back along facing (manual). The *_MIDDLE offsets reuse the
+    // original unshifted templates; *_LEFT/*_RIGHT use the generated translated copies.
+    public static final Model BENCH_SINGLE_MIDDLE = block("bench/wood_bench_1x1", ModTextureKey.BENCH, TextureKey.PARTICLE);
+    public static final Model BENCH_SINGLE_LEFT = block("bench/wood_bench_1x1_offset_left", ModTextureKey.BENCH, TextureKey.PARTICLE);
+    public static final Model BENCH_SINGLE_RIGHT = block("bench/wood_bench_1x1_offset_right", ModTextureKey.BENCH, TextureKey.PARTICLE);
+    public static final Model BENCH_LEFT_MIDDLE = block("bench/wood_bench_edge", ModTextureKey.BENCH, TextureKey.PARTICLE);
+    public static final Model BENCH_LEFT_LEFT = block("bench/wood_bench_edge_offset_left", ModTextureKey.BENCH, TextureKey.PARTICLE);
+    public static final Model BENCH_LEFT_RIGHT = block("bench/wood_bench_edge_offset_right", ModTextureKey.BENCH, TextureKey.PARTICLE);
+    public static final Model BENCH_RIGHT_MIDDLE = block("bench/wood_bench_right", ModTextureKey.BENCH, TextureKey.PARTICLE);
+    public static final Model BENCH_RIGHT_LEFT = block("bench/wood_bench_right_offset_left", ModTextureKey.BENCH, TextureKey.PARTICLE);
+    public static final Model BENCH_RIGHT_RIGHT = block("bench/wood_bench_right_offset_right", ModTextureKey.BENCH, TextureKey.PARTICLE);
+    public static final Model BENCH_MIDDLE_MIDDLE = block("bench/wood_bench_middle", ModTextureKey.BENCH, TextureKey.PARTICLE);
+    public static final Model BENCH_MIDDLE_LEFT = block("bench/wood_bench_middle_offset_left", ModTextureKey.BENCH, TextureKey.PARTICLE);
+    public static final Model BENCH_MIDDLE_RIGHT = block("bench/wood_bench_middle_offset_right", ModTextureKey.BENCH, TextureKey.PARTICLE);
 
     // Table models
     public static final Model TABLE_SINGLE = block("table/wood_table_1x1", ModTextureKey.TABLE, TextureKey.PARTICLE);

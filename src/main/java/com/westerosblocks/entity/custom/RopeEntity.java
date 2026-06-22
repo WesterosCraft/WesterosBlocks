@@ -66,7 +66,6 @@ public class RopeEntity extends Entity {
         if (this.getWorld().isClient) return true;
         if (source.getAttacker() instanceof net.minecraft.entity.player.PlayerEntity player) {
             if (!player.isCreative()) return false;
-            this.dropItem(ModItems.ROPE);
             this.discard();
             return true;
         }
