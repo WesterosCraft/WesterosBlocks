@@ -23,8 +23,20 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
+    "options": {
+        "stairs": {
+            "noUvlock": true
+        }
+    },
     "baseLabel": "Light Ashen Terracotta Imbrex Tegula",
     "textures": {
         "all": "roofing/imbrex/imbrex_tegula_9"
+    },
+    "altTextures": {
+        "stairs": [
+            "roofing/imbrex/imbrex_tegula_9_rotated",
+            "roofing/imbrex/imbrex_tegula_9_rotated",
+            "roofing/imbrex/imbrex_tegula_9"
+        ]
     }
 }

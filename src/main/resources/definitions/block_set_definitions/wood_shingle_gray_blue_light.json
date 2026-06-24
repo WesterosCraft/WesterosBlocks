@@ -23,8 +23,20 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
+    "options": {
+        "stairs": {
+            "noUvlock": true
+        }
+    },
     "baseLabel": "Light Blue Gray Wooden Shingle",
     "textures": {
         "all": "roofing/shingle/wood_shingle_14"
+    },
+    "altTextures": {
+        "stairs": [
+            "roofing/shingle/wood_shingle_14_rotated",
+            "roofing/shingle/wood_shingle_14_rotated",
+            "roofing/shingle/wood_shingle_14"
+        ]
     }
 }

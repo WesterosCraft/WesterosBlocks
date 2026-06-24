@@ -23,8 +23,20 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
+    "options": {
+        "stairs": {
+            "noUvlock": true
+        }
+    },
     "baseLabel": "Birch Wood Shingle",
     "textures": {
         "all": "roofing/shingle/wood_shingle_2"
+    },
+    "altTextures": {
+        "stairs": [
+            "roofing/shingle/wood_shingle_2_rotated",
+            "roofing/shingle/wood_shingle_2_rotated",
+            "roofing/shingle/wood_shingle_2"
+        ]
     }
 }

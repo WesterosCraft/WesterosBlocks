@@ -23,8 +23,20 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
+    "options": {
+        "stairs": {
+            "noUvlock": true
+        }
+    },
     "baseLabel": "Pale Brown Thatch",
     "textures": {
         "all": "thatch/light/all"
+    },
+    "altTextures": {
+        "stairs": [
+            "thatch/light/all_rotated",
+            "thatch/light/all_rotated",
+            "thatch/light/all"
+        ]
     }
 }

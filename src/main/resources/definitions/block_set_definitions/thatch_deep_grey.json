@@ -23,8 +23,20 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
+    "options": {
+        "stairs": {
+            "noUvlock": true
+        }
+    },
     "baseLabel": "Deep Grey Thatch",
     "textures": {
         "all": "thatch/grey/all5"
+    },
+    "altTextures": {
+        "stairs": [
+            "thatch/grey/all5_rotated",
+            "thatch/grey/all5_rotated",
+            "thatch/grey/all5"
+        ]
     }
 }

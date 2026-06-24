@@ -23,8 +23,20 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
+    "options": {
+        "stairs": {
+            "noUvlock": true
+        }
+    },
     "baseLabel": "Light Tan Brown Thatch",
     "textures": {
         "all": "thatch/light/all3"
+    },
+    "altTextures": {
+        "stairs": [
+            "thatch/light/all3_rotated",
+            "thatch/light/all3_rotated",
+            "thatch/light/all3"
+        ]
     }
 }

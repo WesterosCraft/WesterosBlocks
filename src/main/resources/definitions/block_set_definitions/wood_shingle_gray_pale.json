@@ -23,8 +23,20 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
+    "options": {
+        "stairs": {
+            "noUvlock": true
+        }
+    },
     "baseLabel": "Pale Grey Wooden Shingle",
     "textures": {
         "all": "roofing/shingle/wood_shingle_9"
+    },
+    "altTextures": {
+        "stairs": [
+            "roofing/shingle/wood_shingle_9_rotated",
+            "roofing/shingle/wood_shingle_9_rotated",
+            "roofing/shingle/wood_shingle_9"
+        ]
     }
 }

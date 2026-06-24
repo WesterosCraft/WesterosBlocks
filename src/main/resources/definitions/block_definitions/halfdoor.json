@@ -240,5 +240,357 @@
         "textures": [
             "wood/jungle/shutters_alt"
         ]
+    },
+    {
+        "blockName": "birch_window_shutters_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "BROWN",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Birch Window Shutters (Flat)",
+        "textures": [
+            "wood/birch/shutters"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout_mipped",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
+    },
+    {
+        "blockName": "dorne_red_window_shutters_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Dorne Red Window Shutters (Flat)",
+        "textures": [
+            "shutter_block/shutters_dorne"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout_mipped",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
+    },
+    {
+        "blockName": "green_lannisport_window_shutters_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Green Lannisport Window Shutters (Flat)",
+        "textures": [
+            "shutter_block/shutters_lannisport"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout_mipped",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
+    },
+    {
+        "blockName": "grey_wood_window_shutters_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Grey Wood Window Shutters (Flat)",
+        "textures": [
+            "wood/grey/shutters"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout_mipped",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
+    },
+    {
+        "blockName": "jungle_window_shutters_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Jungle Window Shutters (Flat)",
+        "textures": [
+            "wood/jungle/shutters"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout_mipped",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
+    },
+    {
+        "blockName": "northern_wood_window_shutters_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Northern Wood Window Shutters (Flat)",
+        "textures": [
+            "wood/northern/shutters"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout_mipped",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
+    },
+    {
+        "blockName": "oak_window_shutters_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Oak Wood Window Shutters (Flat)",
+        "textures": [
+            "wood/oak/shutters"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout_mipped",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
+    },
+    {
+        "blockName": "reach_blue_window_shutters_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Reach Blue Window Shutters (Flat)",
+        "textures": [
+            "shutter_block/shutters_reach"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout_mipped",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
+    },
+    {
+        "blockName": "spruce_window_shutters_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Reinforced Spruce Wood Window Shutters (Flat)",
+        "textures": [
+            "wood/spruce/shutters"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout_mipped",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
+    },
+    {
+        "blockName": "birch_window_shutters_2_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "BROWN",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Simple Birch Window Shutters (Flat)",
+        "textures": [
+            "wood/birch/shutters_alt"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout_mipped",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
+    },
+    {
+        "blockName": "white_wood_window_shutters_2_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "STONE_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Reinforced White Wood Window Shutters (Flat)",
+        "textures": [
+            "wood/white/shutters_alt"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout_mipped",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
+    },
+    {
+        "blockName": "grey_wood_window_shutters_2_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Reinforced Grey Wood Window Shutters (Flat)",
+        "textures": [
+            "wood/grey/shutters_alt"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout_mipped",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
+    },
+    {
+        "blockName": "oak_window_shutters_2_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Reinforced Oak Wood Window Shutters (Flat)",
+        "textures": [
+            "wood/oak/shutters_alt"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout_mipped",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
+    },
+    {
+        "blockName": "spruce_window_shutters_2_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Spruce Window Shutters (Flat)",
+        "textures": [
+            "wood/spruce/shutters_alt"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout_mipped",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
+    },
+    {
+        "blockName": "northern_window_shutters_2_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Reinforced Northern Window Shutters (Flat)",
+        "textures": [
+            "wood/northern/shutters_alt"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
+    },
+    {
+        "blockName": "jungle_window_shutters_2_flat",
+        "blockType": "cuboid-nsew",
+        "strength": 2,
+        "soundGroup": "wood",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_windows_glass_tab",
+        "label": "Reinforced Jungle Window Shutters (Flat)",
+        "textures": [
+            "wood/jungle/shutters_alt"
+        ],
+        "nonOpaque": true,
+        "renderLayer": "cutout_mipped",
+        "cuboids": [
+            {
+                "xMin": 0.0, "xMax": 1.0,
+                "yMin": 0.0, "yMax": 0.1875,
+                "zMin": 0.0, "zMax": 1.0,
+                "sideTextures": [0, 0, 0, 0, 0, 0]
+            }
+        ]
     }
 ]

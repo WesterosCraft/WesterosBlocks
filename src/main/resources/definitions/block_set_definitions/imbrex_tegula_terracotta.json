@@ -23,8 +23,20 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
+    "options": {
+        "stairs": {
+            "noUvlock": true
+        }
+    },
     "baseLabel": "Terracotta Imbrex Tegula",
     "textures": {
         "all": "roofing/imbrex/imbrex_tegula_5"
+    },
+    "altTextures": {
+        "stairs": [
+            "roofing/imbrex/imbrex_tegula_5_rotated",
+            "roofing/imbrex/imbrex_tegula_5_rotated",
+            "roofing/imbrex/imbrex_tegula_5"
+        ]
     }
 }

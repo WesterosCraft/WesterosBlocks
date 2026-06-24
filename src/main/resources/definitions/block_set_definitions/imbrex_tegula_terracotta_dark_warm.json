@@ -23,8 +23,20 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
+    "options": {
+        "stairs": {
+            "noUvlock": true
+        }
+    },
     "baseLabel": "Dark Warm Terracotta Imbrex Tegula",
     "textures": {
         "all": "roofing/imbrex/imbrex_tegula_4"
+    },
+    "altTextures": {
+        "stairs": [
+            "roofing/imbrex/imbrex_tegula_4_rotated",
+            "roofing/imbrex/imbrex_tegula_4_rotated",
+            "roofing/imbrex/imbrex_tegula_4"
+        ]
     }
 }

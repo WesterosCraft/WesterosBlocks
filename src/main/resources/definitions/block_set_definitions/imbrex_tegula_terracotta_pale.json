@@ -23,8 +23,20 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
+    "options": {
+        "stairs": {
+            "noUvlock": true
+        }
+    },
     "baseLabel": "Pale Terracotta Imbrex Tegula",
     "textures": {
         "all": "roofing/imbrex/imbrex_tegula_0"
+    },
+    "altTextures": {
+        "stairs": [
+            "roofing/imbrex/imbrex_tegula_0_rotated",
+            "roofing/imbrex/imbrex_tegula_0_rotated",
+            "roofing/imbrex/imbrex_tegula_0"
+        ]
     }
 }

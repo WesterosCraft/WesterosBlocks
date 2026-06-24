@@ -23,8 +23,20 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
+    "options": {
+        "stairs": {
+            "noUvlock": true
+        }
+    },
     "baseLabel": "Light Heather Thatch",
     "textures": {
         "all": "thatch/heather/heather1"
+    },
+    "altTextures": {
+        "stairs": [
+            "thatch/heather/heather1_rotated",
+            "thatch/heather/heather1_rotated",
+            "thatch/heather/heather1"
+        ]
     }
 }

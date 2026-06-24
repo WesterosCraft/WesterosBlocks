@@ -3,7 +3,8 @@
     "variants": [
         "solid",
         "slab",
-        "path"
+        "path",
+        "layer"
     ],
     "altNames": {
         "path": "path_dirt_light"

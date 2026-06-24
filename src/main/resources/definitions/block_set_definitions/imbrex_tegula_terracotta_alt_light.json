@@ -23,8 +23,20 @@
         }
     ],
     "creativeTab": "westeros_roofing_tab",
+    "options": {
+        "stairs": {
+            "noUvlock": true
+        }
+    },
     "baseLabel": "Light Terracotta Imbrex and Tegula Alt",
     "textures": {
         "all": "roofing/imbrex/imbrex_tegula_alt_1"
+    },
+    "altTextures": {
+        "stairs": [
+            "roofing/imbrex/imbrex_tegula_alt_1_rotated",
+            "roofing/imbrex/imbrex_tegula_alt_1_rotated",
+            "roofing/imbrex/imbrex_tegula_alt_1"
+        ]
     }
 }
