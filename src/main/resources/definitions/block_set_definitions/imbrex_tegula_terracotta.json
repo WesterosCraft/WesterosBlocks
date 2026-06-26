@@ -22,21 +22,21 @@
             "level": 1
         }
     ],
-    "creativeTab": "westeros_roofing_tab",
+    "creativeTab": "westeros_roofing_tab",
     "options": {
-        "stairs": {
-            "noUvlock": true
-        }
+        "stairs": { "unconnect": false, "noUvlock": true }
+    },
+    "altTextures": {
+        "solid": ["roofing/imbrex/imbrex_tegula_5_top", "roofing/imbrex/imbrex_tegula_5_top", "roofing/imbrex/imbrex_tegula_5", "roofing/imbrex/imbrex_tegula_5", "roofing/imbrex/imbrex_tegula_5", "roofing/imbrex/imbrex_tegula_5"],
+        "stairs": ["roofing/imbrex/imbrex_tegula_5_top", "roofing/imbrex/imbrex_tegula_5_top", "roofing/imbrex/imbrex_tegula_5"],
+        "slab": ["roofing/imbrex/imbrex_tegula_5_top", "roofing/imbrex/imbrex_tegula_5_top", "roofing/imbrex/imbrex_tegula_5"],
+        "wall": ["roofing/imbrex/imbrex_tegula_5_top", "roofing/imbrex/imbrex_tegula_5_top", "roofing/imbrex/imbrex_tegula_5"],
+        "fence": ["roofing/imbrex/imbrex_tegula_5_top", "roofing/imbrex/imbrex_tegula_5_top", "roofing/imbrex/imbrex_tegula_5"],
+        "tip": ["roofing/imbrex/imbrex_tegula_5", "roofing/imbrex/imbrex_tegula_5_top"],
+        "carpet": ["roofing/imbrex/imbrex_tegula_5", "roofing/imbrex/imbrex_tegula_5_top"]
     },
     "baseLabel": "Terracotta Imbrex Tegula",
     "textures": {
         "all": "roofing/imbrex/imbrex_tegula_5"
-    },
-    "altTextures": {
-        "stairs": [
-            "roofing/imbrex/imbrex_tegula_5_rotated",
-            "roofing/imbrex/imbrex_tegula_5_rotated",
-            "roofing/imbrex/imbrex_tegula_5"
-        ]
     }
 }

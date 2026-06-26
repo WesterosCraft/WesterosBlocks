@@ -1,0 +1,42 @@
+{
+    "baseBlockName": "beavertail_shingle_oak",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "beavertail_shingle_oak_wall"
+    },
+    "hardness": 2,
+    "soundGroup": "wood",
+    "mapColor": "OAK_TAN",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "options": {
+        "stairs": { "unconnect": false, "noUvlock": true }
+    },
+    "altTextures": {
+        "solid": ["roofing/beavertail/oak_top", "roofing/beavertail/oak_top", "roofing/beavertail/oak", "roofing/beavertail/oak", "roofing/beavertail/oak", "roofing/beavertail/oak"],
+        "stairs": ["roofing/beavertail/oak_top", "roofing/beavertail/oak_top", "roofing/beavertail/oak"],
+        "slab": ["roofing/beavertail/oak_top", "roofing/beavertail/oak_top", "roofing/beavertail/oak"],
+        "wall": ["roofing/beavertail/oak_top", "roofing/beavertail/oak_top", "roofing/beavertail/oak"],
+        "fence": ["roofing/beavertail/oak_top", "roofing/beavertail/oak_top", "roofing/beavertail/oak"],
+        "tip": ["roofing/beavertail/oak", "roofing/beavertail/oak_top"],
+        "carpet": ["roofing/beavertail/oak", "roofing/beavertail/oak_top"]
+    },
+    "baseLabel": "Oak Beavertail Shingle",
+    "textures": {
+        "all": "roofing/beavertail/oak"
+    }
+}

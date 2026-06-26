@@ -24,19 +24,19 @@
     ],
     "creativeTab": "westeros_roofing_tab",
     "options": {
-        "stairs": {
-            "noUvlock": true
-        }
+        "stairs": { "unconnect": false, "noUvlock": true }
+    },
+    "altTextures": {
+        "solid": ["roofing/shingle/wood_shingle_2_top", "roofing/shingle/wood_shingle_2_top", "roofing/shingle/wood_shingle_2", "roofing/shingle/wood_shingle_2", "roofing/shingle/wood_shingle_2", "roofing/shingle/wood_shingle_2"],
+        "stairs": ["roofing/shingle/wood_shingle_2_top", "roofing/shingle/wood_shingle_2_top", "roofing/shingle/wood_shingle_2"],
+        "slab": ["roofing/shingle/wood_shingle_2_top", "roofing/shingle/wood_shingle_2_top", "roofing/shingle/wood_shingle_2"],
+        "wall": ["roofing/shingle/wood_shingle_2_top", "roofing/shingle/wood_shingle_2_top", "roofing/shingle/wood_shingle_2"],
+        "fence": ["roofing/shingle/wood_shingle_2_top", "roofing/shingle/wood_shingle_2_top", "roofing/shingle/wood_shingle_2"],
+        "tip": ["roofing/shingle/wood_shingle_2", "roofing/shingle/wood_shingle_2_top"],
+        "carpet": ["roofing/shingle/wood_shingle_2", "roofing/shingle/wood_shingle_2_top"]
     },
     "baseLabel": "Birch Wood Shingle",
     "textures": {
         "all": "roofing/shingle/wood_shingle_2"
-    },
-    "altTextures": {
-        "stairs": [
-            "roofing/shingle/wood_shingle_2_rotated",
-            "roofing/shingle/wood_shingle_2_rotated",
-            "roofing/shingle/wood_shingle_2"
-        ]
     }
 }

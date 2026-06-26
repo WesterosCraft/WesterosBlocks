@@ -2,32 +2,123 @@
 
 ## June 2026
 
-- Added flat variants of the 16 wood window-shutter half doors — the half-door model laid flat on the ground — so the shutter textures can be used on flat surfaces. Each is a brand-new, separate block using the existing `cuboid-nsew` block type: a 3px-tall, 16×16 slab (`cuboids` box `yMax: 0.1875`) textured with its upright sibling's single shutter texture (`mapColor`/`soundGroup` carried over), placeable in 4 directions (`FACING`, rotated per placement). No Java/exporter/schema changes and the existing `halfdoor`-type blocks are untouched. Decorative only (no open/swing/redstone). Defined alongside the upright shutters in `definitions/block_definitions/halfdoor.json`. Adds block_ids: `birch_window_shutters_flat`, `dorne_red_window_shutters_flat`, `green_lannisport_window_shutters_flat`, `grey_wood_window_shutters_flat`, `jungle_window_shutters_flat`, `northern_wood_window_shutters_flat`, `oak_window_shutters_flat`, `reach_blue_window_shutters_flat`, `spruce_window_shutters_flat`, `birch_window_shutters_2_flat`, `white_wood_window_shutters_2_flat`, `grey_wood_window_shutters_2_flat`, `oak_window_shutters_2_flat`, `spruce_window_shutters_2_flat`, `northern_window_shutters_2_flat`, `jungle_window_shutters_2_flat`.
-- Made thatch, imbrex tegula, and wood shingle **stairs** directional, matching the existing slate roofing convention. Two parts: (1) disabled uvlock (`options.stairs.noUvlock: true`) so the directional roof texture rotates with the block instead of being locked to world axes — it previously appeared rotated 90° ("side-facing") on N/S-facing stairs; (2) added `altTextures.stairs` pointing the stair top (tread) and bottom (underside) faces at a new 90°-rotated copy of each set's texture (`<texture>_rotated.png`, generated via a clockwise `ROTATE_270` transform, exactly as slate's `rotated.png`), since with uvlock off those faces sit 90° off from the sides. 51 new `*_rotated.png` textures added. Definition-only change otherwise (no Java/schema change); regenerated the `*_stairs` blockstates (drop `uvlock`) and stair models (rotated top/bottom). Snowy thatch excluded. Affects block_ids: `thatch_ashy_grey_stairs`, `thatch_dark_fur_stairs`, `thatch_dark_grey_stairs`, `thatch_dark_heather_stairs`, `thatch_dark_tan_brown_stairs`, `thatch_deep_brown_stairs`, `thatch_deep_grey_stairs`, `thatch_grey_brown_stairs`, `thatch_light_fur_stairs`, `thatch_light_grey_stairs`, `thatch_light_grey_brown_stairs`, `thatch_light_heather_stairs`, `thatch_light_tan_brown_stairs`, `thatch_pale_brown_stairs`, `thatch_pale_grey_stairs`, `thatch_tan_brown_stairs`, `imbrex_tegula_terracotta_stairs`, `imbrex_tegula_terracotta_alt_stairs`, `imbrex_tegula_terracotta_alt_dark_stairs`, `imbrex_tegula_terracotta_alt_deep_stairs`, `imbrex_tegula_terracotta_alt_light_stairs`, `imbrex_tegula_terracotta_alt_pale_stairs`, `imbrex_tegula_terracotta_alt_warm_stairs`, `imbrex_tegula_terracotta_ashen_stairs`, `imbrex_tegula_terracotta_dark_stairs`, `imbrex_tegula_terracotta_dark_warm_stairs`, `imbrex_tegula_terracotta_deep_stairs`, `imbrex_tegula_terracotta_ember_stairs`, `imbrex_tegula_terracotta_light_stairs`, `imbrex_tegula_terracotta_light_ashen_stairs`, `imbrex_tegula_terracotta_light_warm_stairs`, `imbrex_tegula_terracotta_pale_stairs`, `imbrex_tegula_terracotta_warm_stairs`, `wood_shingle_birch_stairs`, `wood_shingle_birch_dark_stairs`, `wood_shingle_birch_light_stairs`, `wood_shingle_birch_pale_stairs`, `wood_shingle_gray_blue_deep_stairs`, `wood_shingle_gray_blue_light_stairs`, `wood_shingle_gray_dark_stairs`, `wood_shingle_gray_deep_stairs`, `wood_shingle_gray_pale_stairs`, `wood_shingle_grey_stairs`, `wood_shingle_grey_birch_stairs`, `wood_shingle_grey_blue_stairs`, `wood_shingle_grey_blue_dark_stairs`, `wood_shingle_grey_light_stairs`, `wood_shingle_oak_stairs`, `wood_shingle_oak_dark_stairs`, `wood_shingle_oak_light_stairs`, `wood_shingle_oak_pale_stairs`.
-- Added `layer` variants to the three dirt block sets, alongside their existing `solid`/`slab`/`path` variants. Each uses the set's existing `sides` texture (the `layer` variant's required texture key). Adds block_ids: `dirt_layer`, `dirt_light_layer`, `dirt_medium_layer`.
-- Modified bench blocks: added a manual `offset` blockstate property (`left`/`middle`/`right`, default `middle`) that shifts the bench model forward/back along the facing axis (perpendicular to a connected row, so it doesn't overlap neighbors), toggled by sneak + right-click (empty hand). It is independent of and layered on top of the existing auto-detected `connection` property (which still picks the single/left/right/middle base model from neighbors). `WCBenchBlock` gains the `OffsetType` enum/`OFFSET` property; `BenchBlockExporter` now emits `connection × facing × offset` (48) blockstate variants with 12 `<connection>_<offset>` models per block (the `*_offset_left`/`*_offset_right` model templates are translated copies of the four base bench templates). Purely additive — existing benches keep their `connection`/`facing` and default to `offset=middle` (unshifted), so they render unchanged. Affects block_ids: `oak_bench`, `birch_bench`, `spruce_bench`, `jungle_bench`, `northern_bench`.
-- Added thin stripped log wall blocks for the remaining wood types, matching the existing `thin_stripped_birch_log`. Each is a `wall`-type block using a new `bark/<type>/stripped_wall_top` top/bottom texture (the wood's `stripped` log masked to the wall-post cross shape, generated from the `bark/birch/wall_top` template) with `bark/<type>/stripped` sides. Adds block_ids: `thin_stripped_grey_log`, `thin_stripped_jungle_log`, `thin_stripped_dark_northern_log`, `thin_stripped_oak_log`, `thin_stripped_oak_birch_log`, `thin_stripped_oak_jungle_log`, `thin_stripped_spruce_log`, `thin_stripped_white_log`.
-- `oriented_ladder` blocks are now waterloggable. `WCOrientedLadderBlock` declares the `WATERLOGGED` property and `implements Waterloggable`, with `getPlacementState` waterlogging on placement in water, `getFluidState` returning still water, and `getStateForNeighborUpdate` scheduling a water tick — mirroring vanilla `LadderBlock`. The blockstate variant map only coordinates `FACE`/`FACING`/`ROTATED`, so the unmentioned `WATERLOGGED` value matches either state (no datagen change). Affects block_ids: `oak_ladder`, `spruce_ladder`, `northern_ladder`, `birch_ladder`.
-- Removed the mirror test block definition (`mounted_mirror_test.json`). Removes block_id: `mirror_test`. The `mounted_mirror` block type, `WCMountedMirrorBlock`, and `MountedMirrorBlockExporter` remain for future use.
-- New `oriented_ladder` block type (`WCOrientedLadderBlock` + `OrientedLadderBlockExporter`): a climbable ladder with `FACE` (FLOOR/WALL), `FACING`, and a `ROTATED` toggle, giving four combined states — floor upright, floor flat, wall normal, wall 90°-rotated. `ROTATED` toggles via right-click (empty hand, creative) when `toggleOnUse` is set; added to `minecraft:climbable` unless `noClimb`. Uses hand-authored custom models `block/custom/<name>/{floor,floor_rotated,wall,wall_rotated}_v1`. Adds block_ids: `oak_ladder`, `spruce_ladder`, `northern_ladder`, `birch_ladder` (thin per-wood stubs under `models/block/custom/<name>/` that parent to shared geometry templates at `models/block/ladder/{wall,wall_rotated,floor,floor_rotated}` and override only the bark texture).
-- Fixed `layer` blocks being destroyed by flowing/updating water instead of becoming waterlogged (a 1.21.1 port regression — the 1.18.2 `WCLayerBlock` implemented `SimpleWaterloggedBlock`, but that interface was dropped in the rewrite). `WCLayerBlock` declared the `WATERLOGGED` property and `getFluidState` but did not implement `Waterloggable`, so vanilla fluid-spread treated it as non-fillable and broke it at any `LAYERS` value. Now `implements Waterloggable`, with `canFillWithFluid`/`tryFillWithFluid` guarded so a full (`LAYERS == 8`) block won't waterlog — restoring 1.18.2 parity. Affects all `layer`-variant block_ids (e.g. the `layer` variants of `ash`, `desert_sand`, `grassy_sand`, `muddy_sand`, `muddy_snow_*`, `pebbles_*`, etc.).
-- Fixed plaster blocks using the `grass` sound group instead of `stone` (placed/broken with a grass sound). Corrected across both the smooth and rough sets — affects block_ids (all `solid`/`stairs`/`slab`/`wall`/`fence`/`hopper`/`tip` variants of): `warm_pink_plaster`, `warm_pink_plaster_rough`, `umber_plaster`, `umber_plaster_rough`, `sandy_pink_plaster`, `sandy_pink_plaster_rough`, `light_umber_plaster`, `light_umber_plaster_rough`.
-- Fixed particle emitters being treated as full opaque cubes, which culled the faces of neighboring blocks below them (e.g. fences rendered invisible). `WCParticleEmitterBlock.Factory` now forces `.nonOpaque()` to match the block's tiny 4×4×4 shape. Affects block_ids: `foam_particle_emitter`, `cosy_smoke_particle_emitter`, `signal_smoke_particle_emitter`, `bat_particle_emitter`, `butterfly_particle_emitter`.
-- `big_narrow_door` — narrow variant of the big door, via a new `bignarrowdoor` block type (`WCBigNarrowDoorBlock` + `BigNarrowDoorBlockExporter`, models, and `doors/bignarrowdoor` texture).
-- Snowy grass block sets: `snowy_grass` plus depth variants `snowy_grass_light`, `snowy_grass_medium`, `snowy_grass_heavy` (`solid`/`slab`/`stairs`), each a biome-tinted grass base with an untinted snow overlay and repeat CTM.
-- Thatch fur sets renamed from numbered IDs to descriptive names (world-affecting): `thatch_light_fur_1`→`thatch_pale_brown`, `_2`→`thatch_light_fur`, `_3`→`thatch_light_tan_brown`, `_4`→`thatch_tan_brown`, `_5`→`thatch_dark_tan_brown`, `_6`→`thatch_dark_fur`, `_7`→`thatch_deep_brown`; `thatch_grey_fur_1`→`thatch_pale_grey`, `_2`→`thatch_light_grey`, `_3`→`thatch_ashy_grey`, `_4`→`thatch_dark_grey`, `_5`→`thatch_deep_grey`, `_6`→`thatch_grey_brown`, `_7`→`thatch_light_grey_brown`; `thatch_heather_fur_1`→`thatch_light_heather`, `_2`→`thatch_dark_heather`.
-- Wood shingle sets renamed from numbered IDs to descriptive names (world-affecting): `wood_shingle_1`→`wood_shingle_birch_pale`, `_2`→`wood_shingle_birch_light`, `_3`→`wood_shingle_birch`, `_4`→`wood_shingle_birch_dark`, `_5`→`wood_shingle_oak_pale`, `_6`→`wood_shingle_oak_light`, `_7`→`wood_shingle_oak`, `_8`→`wood_shingle_oak_dark`; `wood_shingle_gray_1`→`wood_shingle_grey_birch`, `_2`→`wood_shingle_gray_pale`, `_3`→`wood_shingle_grey_light`, `_4`→`wood_shingle_grey`, `_5`→`wood_shingle_gray_dark`, `_6`→`wood_shingle_gray_deep`, `_7`→`wood_shingle_gray_blue_light`, `_8`→`wood_shingle_grey_blue`, `_9`→`wood_shingle_grey_blue_dark`, `_10`→`wood_shingle_gray_blue_deep`.
-- Thatch gray textures/definitions renamed `gray`→`grey` (`textures/block/thatch/gray/*` → `…/grey/*`).
-- Fixed `*_vertical_planks` naming for birch, jungle, spruce, oak_jungle, and oak_orange (and a `halfdoor` texture reference).
-- Reworked beam brace models: split the single `base_v1` into separate `top_v1` and `bottom_v1` models for `oak`, `spruce`, `jungle`, `grey`, `oak_jungle`, and `birch` braces, sharing a new `beam_brace_bottom` template.
-- Major `mounted_slab` definition expansion (additional states/variants); `WCMountedSlabBlock` updated to match.
+### New Blocksets
+
+- `beavertail_shingle_oak_bleached` — solid/stairs/slab/wall/fence/tip/carpet
+- `beavertail_shingle_oak_pale` — solid/stairs/slab/wall/fence/tip/carpet
+- `beavertail_shingle_oak_light` — solid/stairs/slab/wall/fence/tip/carpet
+- `beavertail_shingle_oak` — solid/stairs/slab/wall/fence/tip/carpet
+- `beavertail_shingle_oak_dark` — solid/stairs/slab/wall/fence/tip/carpet
+- `beavertail_shingle_oak_deep` — solid/stairs/slab/wall/fence/tip/carpet
+- `snowy_grass_light` — solid/slab/stairs
+- `snowy_grass_medium` — solid/slab/stairs
+- `snowy_grass_heavy` — solid/slab/stairs
+
+### New Blocks
+
+- `big_narrow_door`
+- `oak_step_stairs`
+- `dirt_layer`
+- `dirt_light_layer`
+- `dirt_medium_layer`
+- `weirwood_log`
+- `mossy_weirwood_log`
+- `thin_weirwood_log`
+- `6sided_weirwood`
+- `6sided_redwood`
+- `oak_ladder`
+- `spruce_ladder`
+- `northern_ladder`
+- `birch_ladder`
+- `steep_oak_ladder`
+- `thin_stripped_birch_log`
+- `thin_stripped_dark_northern_log`
+- `thin_stripped_grey_log`
+- `thin_stripped_jungle_log`
+- `thin_stripped_oak_birch_log`
+- `thin_stripped_oak_jungle_log`
+- `thin_stripped_oak_log`
+- `thin_stripped_spruce_log`
+- `thin_stripped_white_log`
+- `birch_window_shutters_flat`
+- `birch_window_shutters_2_flat`
+- `dorne_red_window_shutters_flat`
+- `green_lannisport_window_shutters_flat`
+- `grey_wood_window_shutters_flat`
+- `grey_wood_window_shutters_2_flat`
+- `jungle_window_shutters_flat`
+- `jungle_window_shutters_2_flat`
+- `northern_wood_window_shutters_flat`
+- `northern_window_shutters_2_flat`
+- `oak_window_shutters_flat`
+- `oak_window_shutters_2_flat`
+- `reach_blue_window_shutters_flat`
+- `spruce_window_shutters_flat`
+- `spruce_window_shutters_2_flat`
+- `white_wood_window_shutters_2_flat`
+- `borrell_banner`
+- `breakstone_banner`
+- `buckler_banner`
+- `cafferen_banner`
+- `cole_banner`
+- `donniger_banner`
+- `elesham_banner`
+- `fell_banner`
+- `gower_banner`
+- `grandison_banner`
+- `hardyng_banner`
+- `hasty_banner`
+- `herston_banner`
+- `horpe_banner`
+- `kellington_banner`
+- `lipps_banner`
+- `lonmouth_banner`
+- `lynderly_banner`
+- `moore_banner`
+- `morrigen_banner`
+- `peasebury_banner`
+- `pryor_banner`
+- `rogers_banner`
+- `royce_of_the_moongate_banner`
+- `ruthermont_banner`
+- `seaworth_banner`
+- `shett_of_gull_tower_banner`
+- `shett_of_gulltown_banner`
+- `staedmon_banner`
+- `swygert_banner`
+- `templeton_banner`
+- `tollett_banner`
+- `tudbury_banner`
+- `upcliff_banner`
+- `wagstaff_banner`
+- `wensington_banner`
+- `wydman_banner`
+
+### Updated Blocks
+
+- Bench blocks gained a manual `offset` (left/middle/right) toggle via sneak + right-click: `oak`/`birch`/`spruce`/`jungle`/`northern_bench`.
+- Oriented ladders are now waterloggable.
+- Fixed `layer` blocks being destroyed by flowing water instead of waterlogging (restored `Waterloggable`).
+- Fixed plaster blocks using the `grass` sound group instead of `stone` (smooth + rough sets).
+- Fixed particle emitters culling neighbouring block faces (now `nonOpaque`).
+- Renamed thatch fur sets from numbered ids to descriptive names (world-affecting).
+- Renamed wood shingle sets from numbered ids to descriptive names (world-affecting).
+- Renamed thatch `gray`→`grey` textures/definitions.
+- Fixed `*_vertical_planks` naming (birch, jungle, spruce, oak_jungle, oak_orange).
+- Reworked beam brace models into separate top/bottom (oak/spruce/jungle/grey/oak_jungle/birch).
+- Expanded `mounted_slab` definition (additional states/variants).
+- Fixed grass stairs connect behaviour and `grass_block` CTM.
+- Fixed `WCBalconyBlock` collision.
+- Fixed `sausages_leg_of_ham` CTM and added cold (snowy-biome) texture variants.
+- Hedge wall model tweaks (oak/spruce/birch/jungle hedge).
+- Removed the mirror test block (`mirror_test`).
+- Thatch and roof-tile sets are now directional on every variant (solid/stairs/slab/wall/fence/tip/carpet) — the top/bottom faces use a 90°-rotated `*_top` sprite (sides keep the original) so the tile run stays consistent instead of flipping side-facing, with matching `repeat` CTM for the rotated tops. Stairs use `noUvlock`. Applied to all `imbrex_tegula_*`, `wood_shingle_*`, `beavertail_shingle_*`, and non-snowy `thatch_*` sets.
+
+### Other
+
 - Reworked `WorldPainterExporter` (CSV export).
 - Added `westerosblocks.accesswidener`.
 - Dependency bumps and `fabric.mod.json` / `build.gradle` / `gradle.properties` updates.
-- Grass stairs: fixed stair connect/"unconnect" behaviour (`stair.json`) and corrected `grass_block` CTM properties.
-- Fixed `WCBalconyBlock` collision (two passes).
-- Fixed `sausages_leg_of_ham` CTM and added cold (snowy-biome) texture variants.
-- Hedge wall model tweaks (`template_hedge_wall_post`/`_side`/`_side_tall`) for `oak`/`spruce`/`birch`/`jungle_hedge`.
 - Added raised 3D rail templates (`template_3d_rail_raised_ne`/`_sw`).
 - `web` definition update; dirt CTM `all.properties` cleanup; `RopeRenderer`/rope entity tweaks.
 

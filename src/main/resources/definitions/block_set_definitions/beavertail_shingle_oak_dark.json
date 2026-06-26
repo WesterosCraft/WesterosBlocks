@@ -1,0 +1,42 @@
+{
+    "baseBlockName": "beavertail_shingle_oak_dark",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "beavertail_shingle_oak_dark_wall"
+    },
+    "hardness": 2,
+    "soundGroup": "wood",
+    "mapColor": "OAK_TAN",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "options": {
+        "stairs": { "unconnect": false, "noUvlock": true }
+    },
+    "altTextures": {
+        "solid": ["roofing/beavertail/oak_dark_top", "roofing/beavertail/oak_dark_top", "roofing/beavertail/oak_dark", "roofing/beavertail/oak_dark", "roofing/beavertail/oak_dark", "roofing/beavertail/oak_dark"],
+        "stairs": ["roofing/beavertail/oak_dark_top", "roofing/beavertail/oak_dark_top", "roofing/beavertail/oak_dark"],
+        "slab": ["roofing/beavertail/oak_dark_top", "roofing/beavertail/oak_dark_top", "roofing/beavertail/oak_dark"],
+        "wall": ["roofing/beavertail/oak_dark_top", "roofing/beavertail/oak_dark_top", "roofing/beavertail/oak_dark"],
+        "fence": ["roofing/beavertail/oak_dark_top", "roofing/beavertail/oak_dark_top", "roofing/beavertail/oak_dark"],
+        "tip": ["roofing/beavertail/oak_dark", "roofing/beavertail/oak_dark_top"],
+        "carpet": ["roofing/beavertail/oak_dark", "roofing/beavertail/oak_dark_top"]
+    },
+    "baseLabel": "Dark Oak Beavertail Shingle",
+    "textures": {
+        "all": "roofing/beavertail/oak_dark"
+    }
+}

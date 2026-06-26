@@ -22,21 +22,21 @@
             "level": 1
         }
     ],
-    "creativeTab": "westeros_roofing_tab",
+    "creativeTab": "westeros_roofing_tab",
     "options": {
-        "stairs": {
-            "noUvlock": true
-        }
+        "stairs": { "unconnect": false, "noUvlock": true }
+    },
+    "altTextures": {
+        "solid": ["thatch/light/all3_top", "thatch/light/all3_top", "thatch/light/all3", "thatch/light/all3", "thatch/light/all3", "thatch/light/all3"],
+        "stairs": ["thatch/light/all3_top", "thatch/light/all3_top", "thatch/light/all3"],
+        "slab": ["thatch/light/all3_top", "thatch/light/all3_top", "thatch/light/all3"],
+        "wall": ["thatch/light/all3_top", "thatch/light/all3_top", "thatch/light/all3"],
+        "fence": ["thatch/light/all3_top", "thatch/light/all3_top", "thatch/light/all3"],
+        "tip": ["thatch/light/all3", "thatch/light/all3_top"],
+        "carpet": ["thatch/light/all3", "thatch/light/all3_top"]
     },
     "baseLabel": "Light Tan Brown Thatch",
     "textures": {
         "all": "thatch/light/all3"
-    },
-    "altTextures": {
-        "stairs": [
-            "thatch/light/all3_rotated",
-            "thatch/light/all3_rotated",
-            "thatch/light/all3"
-        ]
     }
 }

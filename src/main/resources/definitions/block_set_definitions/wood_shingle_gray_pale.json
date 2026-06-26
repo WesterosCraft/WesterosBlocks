@@ -24,19 +24,19 @@
     ],
     "creativeTab": "westeros_roofing_tab",
     "options": {
-        "stairs": {
-            "noUvlock": true
-        }
+        "stairs": { "unconnect": false, "noUvlock": true }
+    },
+    "altTextures": {
+        "solid": ["roofing/shingle/wood_shingle_9_top", "roofing/shingle/wood_shingle_9_top", "roofing/shingle/wood_shingle_9", "roofing/shingle/wood_shingle_9", "roofing/shingle/wood_shingle_9", "roofing/shingle/wood_shingle_9"],
+        "stairs": ["roofing/shingle/wood_shingle_9_top", "roofing/shingle/wood_shingle_9_top", "roofing/shingle/wood_shingle_9"],
+        "slab": ["roofing/shingle/wood_shingle_9_top", "roofing/shingle/wood_shingle_9_top", "roofing/shingle/wood_shingle_9"],
+        "wall": ["roofing/shingle/wood_shingle_9_top", "roofing/shingle/wood_shingle_9_top", "roofing/shingle/wood_shingle_9"],
+        "fence": ["roofing/shingle/wood_shingle_9_top", "roofing/shingle/wood_shingle_9_top", "roofing/shingle/wood_shingle_9"],
+        "tip": ["roofing/shingle/wood_shingle_9", "roofing/shingle/wood_shingle_9_top"],
+        "carpet": ["roofing/shingle/wood_shingle_9", "roofing/shingle/wood_shingle_9_top"]
     },
     "baseLabel": "Pale Grey Wooden Shingle",
     "textures": {
         "all": "roofing/shingle/wood_shingle_9"
-    },
-    "altTextures": {
-        "stairs": [
-            "roofing/shingle/wood_shingle_9_rotated",
-            "roofing/shingle/wood_shingle_9_rotated",
-            "roofing/shingle/wood_shingle_9"
-        ]
     }
 }

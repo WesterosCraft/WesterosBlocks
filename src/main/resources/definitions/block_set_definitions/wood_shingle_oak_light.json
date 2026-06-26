@@ -24,19 +24,19 @@
     ],
     "creativeTab": "westeros_roofing_tab",
     "options": {
-        "stairs": {
-            "noUvlock": true
-        }
+        "stairs": { "unconnect": false, "noUvlock": true }
+    },
+    "altTextures": {
+        "solid": ["roofing/shingle/wood_shingle_5_top", "roofing/shingle/wood_shingle_5_top", "roofing/shingle/wood_shingle_5", "roofing/shingle/wood_shingle_5", "roofing/shingle/wood_shingle_5", "roofing/shingle/wood_shingle_5"],
+        "stairs": ["roofing/shingle/wood_shingle_5_top", "roofing/shingle/wood_shingle_5_top", "roofing/shingle/wood_shingle_5"],
+        "slab": ["roofing/shingle/wood_shingle_5_top", "roofing/shingle/wood_shingle_5_top", "roofing/shingle/wood_shingle_5"],
+        "wall": ["roofing/shingle/wood_shingle_5_top", "roofing/shingle/wood_shingle_5_top", "roofing/shingle/wood_shingle_5"],
+        "fence": ["roofing/shingle/wood_shingle_5_top", "roofing/shingle/wood_shingle_5_top", "roofing/shingle/wood_shingle_5"],
+        "tip": ["roofing/shingle/wood_shingle_5", "roofing/shingle/wood_shingle_5_top"],
+        "carpet": ["roofing/shingle/wood_shingle_5", "roofing/shingle/wood_shingle_5_top"]
     },
     "baseLabel": "Light Oak Wood Shingle",
     "textures": {
         "all": "roofing/shingle/wood_shingle_5"
-    },
-    "altTextures": {
-        "stairs": [
-            "roofing/shingle/wood_shingle_5_rotated",
-            "roofing/shingle/wood_shingle_5_rotated",
-            "roofing/shingle/wood_shingle_5"
-        ]
     }
 }

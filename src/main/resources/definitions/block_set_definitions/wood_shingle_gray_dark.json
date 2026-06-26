@@ -24,19 +24,19 @@
     ],
     "creativeTab": "westeros_roofing_tab",
     "options": {
-        "stairs": {
-            "noUvlock": true
-        }
+        "stairs": { "unconnect": false, "noUvlock": true }
+    },
+    "altTextures": {
+        "solid": ["roofing/shingle/wood_shingle_12_top", "roofing/shingle/wood_shingle_12_top", "roofing/shingle/wood_shingle_12", "roofing/shingle/wood_shingle_12", "roofing/shingle/wood_shingle_12", "roofing/shingle/wood_shingle_12"],
+        "stairs": ["roofing/shingle/wood_shingle_12_top", "roofing/shingle/wood_shingle_12_top", "roofing/shingle/wood_shingle_12"],
+        "slab": ["roofing/shingle/wood_shingle_12_top", "roofing/shingle/wood_shingle_12_top", "roofing/shingle/wood_shingle_12"],
+        "wall": ["roofing/shingle/wood_shingle_12_top", "roofing/shingle/wood_shingle_12_top", "roofing/shingle/wood_shingle_12"],
+        "fence": ["roofing/shingle/wood_shingle_12_top", "roofing/shingle/wood_shingle_12_top", "roofing/shingle/wood_shingle_12"],
+        "tip": ["roofing/shingle/wood_shingle_12", "roofing/shingle/wood_shingle_12_top"],
+        "carpet": ["roofing/shingle/wood_shingle_12", "roofing/shingle/wood_shingle_12_top"]
     },
     "baseLabel": "Dark Gray Wooden Shingle",
     "textures": {
         "all": "roofing/shingle/wood_shingle_12"
-    },
-    "altTextures": {
-        "stairs": [
-            "roofing/shingle/wood_shingle_12_rotated",
-            "roofing/shingle/wood_shingle_12_rotated",
-            "roofing/shingle/wood_shingle_12"
-        ]
     }
 }

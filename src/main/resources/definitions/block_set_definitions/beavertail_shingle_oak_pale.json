@@ -1,0 +1,42 @@
+{
+    "baseBlockName": "beavertail_shingle_oak_pale",
+    "variants": [
+        "solid",
+        "stairs",
+        "slab",
+        "wall",
+        "fence",
+        "tip",
+        "carpet"
+    ],
+    "altNames": {
+        "wall": "beavertail_shingle_oak_pale_wall"
+    },
+    "hardness": 2,
+    "soundGroup": "wood",
+    "mapColor": "OAK_TAN",
+    "resistance": 5,
+    "harvestLevel": [
+        {
+            "tool": "axe",
+            "level": 1
+        }
+    ],
+    "creativeTab": "westeros_roofing_tab",
+    "options": {
+        "stairs": { "unconnect": false, "noUvlock": true }
+    },
+    "altTextures": {
+        "solid": ["roofing/beavertail/oak_pale_top", "roofing/beavertail/oak_pale_top", "roofing/beavertail/oak_pale", "roofing/beavertail/oak_pale", "roofing/beavertail/oak_pale", "roofing/beavertail/oak_pale"],
+        "stairs": ["roofing/beavertail/oak_pale_top", "roofing/beavertail/oak_pale_top", "roofing/beavertail/oak_pale"],
+        "slab": ["roofing/beavertail/oak_pale_top", "roofing/beavertail/oak_pale_top", "roofing/beavertail/oak_pale"],
+        "wall": ["roofing/beavertail/oak_pale_top", "roofing/beavertail/oak_pale_top", "roofing/beavertail/oak_pale"],
+        "fence": ["roofing/beavertail/oak_pale_top", "roofing/beavertail/oak_pale_top", "roofing/beavertail/oak_pale"],
+        "tip": ["roofing/beavertail/oak_pale", "roofing/beavertail/oak_pale_top"],
+        "carpet": ["roofing/beavertail/oak_pale", "roofing/beavertail/oak_pale_top"]
+    },
+    "baseLabel": "Pale Oak Beavertail Shingle",
+    "textures": {
+        "all": "roofing/beavertail/oak_pale"
+    }
+}

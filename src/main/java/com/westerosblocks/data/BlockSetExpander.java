@@ -454,12 +454,25 @@ public class BlockSetExpander {
             cuboid(0.25, 0.275, 0.25, 0.75, 0.625, 0.75, SIDES_ALL),
             cuboid(0, 0, 0, 1, 0.275, 1, SIDES_ALL)
         );
+        applyDirectionalTopBottom(def);
     }
 
     private static void addCarpetGeometry(BlockDefinition def) {
         def.nonOpaque = true;
         def.lightOpacity = 0;
         def.cuboids = List.of(cuboid(0, 0, 0, 1, 0.0625, 1, SIDES_ALL));
+        applyDirectionalTopBottom(def);
+    }
+
+    // Routes the second texture (the rotated *_top sprite) to the up/down faces of every cuboid.
+    // Triggered for directional roofing/thatch tip/carpet, whose altTextures supply [sides, top].
+    private static final int[] SIDES_TOPBOTTOM_ALT = {1, 1, 0, 0, 0, 0};
+
+    private static void applyDirectionalTopBottom(BlockDefinition def) {
+        if (def.cuboids == null || def.textures == null || def.textures.size() < 2) return;
+        for (BlockDefinition.CuboidElement c : def.cuboids) {
+            c.sideTextures = SIDES_TOPBOTTOM_ALT.clone();
+        }
     }
 
     private static void addHollowHopperGeometry(BlockDefinition def) {

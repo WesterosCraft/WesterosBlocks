@@ -22,21 +22,21 @@
             "level": 1
         }
     ],
-    "creativeTab": "westeros_roofing_tab",
+    "creativeTab": "westeros_roofing_tab",
     "options": {
-        "stairs": {
-            "noUvlock": true
-        }
+        "stairs": { "unconnect": false, "noUvlock": true }
+    },
+    "altTextures": {
+        "solid": ["thatch/grey/all_top", "thatch/grey/all_top", "thatch/grey/all", "thatch/grey/all", "thatch/grey/all", "thatch/grey/all"],
+        "stairs": ["thatch/grey/all_top", "thatch/grey/all_top", "thatch/grey/all"],
+        "slab": ["thatch/grey/all_top", "thatch/grey/all_top", "thatch/grey/all"],
+        "wall": ["thatch/grey/all_top", "thatch/grey/all_top", "thatch/grey/all"],
+        "fence": ["thatch/grey/all_top", "thatch/grey/all_top", "thatch/grey/all"],
+        "tip": ["thatch/grey/all", "thatch/grey/all_top"],
+        "carpet": ["thatch/grey/all", "thatch/grey/all_top"]
     },
     "baseLabel": "Pale Grey Thatch",
     "textures": {
         "all": "thatch/grey/all"
-    },
-    "altTextures": {
-        "stairs": [
-            "thatch/grey/all_rotated",
-            "thatch/grey/all_rotated",
-            "thatch/grey/all"
-        ]
     }
 }

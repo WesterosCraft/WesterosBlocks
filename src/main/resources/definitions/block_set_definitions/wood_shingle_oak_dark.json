@@ -24,19 +24,19 @@
     ],
     "creativeTab": "westeros_roofing_tab",
     "options": {
-        "stairs": {
-            "noUvlock": true
-        }
+        "stairs": { "unconnect": false, "noUvlock": true }
+    },
+    "altTextures": {
+        "solid": ["roofing/shingle/wood_shingle_7_top", "roofing/shingle/wood_shingle_7_top", "roofing/shingle/wood_shingle_7", "roofing/shingle/wood_shingle_7", "roofing/shingle/wood_shingle_7", "roofing/shingle/wood_shingle_7"],
+        "stairs": ["roofing/shingle/wood_shingle_7_top", "roofing/shingle/wood_shingle_7_top", "roofing/shingle/wood_shingle_7"],
+        "slab": ["roofing/shingle/wood_shingle_7_top", "roofing/shingle/wood_shingle_7_top", "roofing/shingle/wood_shingle_7"],
+        "wall": ["roofing/shingle/wood_shingle_7_top", "roofing/shingle/wood_shingle_7_top", "roofing/shingle/wood_shingle_7"],
+        "fence": ["roofing/shingle/wood_shingle_7_top", "roofing/shingle/wood_shingle_7_top", "roofing/shingle/wood_shingle_7"],
+        "tip": ["roofing/shingle/wood_shingle_7", "roofing/shingle/wood_shingle_7_top"],
+        "carpet": ["roofing/shingle/wood_shingle_7", "roofing/shingle/wood_shingle_7_top"]
     },
     "baseLabel": "Dark Oak Wood Shingle",
     "textures": {
         "all": "roofing/shingle/wood_shingle_7"
-    },
-    "altTextures": {
-        "stairs": [
-            "roofing/shingle/wood_shingle_7_rotated",
-            "roofing/shingle/wood_shingle_7_rotated",
-            "roofing/shingle/wood_shingle_7"
-        ]
     }
 }
