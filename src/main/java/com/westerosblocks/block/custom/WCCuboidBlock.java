@@ -117,8 +117,11 @@ public class WCCuboidBlock extends Block implements Waterloggable, WCBlockDef {
                 }
             }
 
-            // Compute support shape (same as base shape for simple blocks)
-            SUPPORT_BY_INDEX[i] = SHAPE_BY_INDEX[i * modelsPerState];
+            // Compute support shape. Ports 1.18.2's makeSupportBoxShape: cuboid blocks
+            // expose an empty support/sides shape by default so walls, fences, panes, etc.
+            // do not treat their (often full-square) collision face as sturdy and connect
+            // to them (e.g. banners). A non-empty default would reintroduce that bug.
+            SUPPORT_BY_INDEX[i] = VoxelShapes.empty();
         }
 
         // Set default state
@@ -201,6 +204,19 @@ public class WCCuboidBlock extends Block implements Waterloggable, WCBlockDef {
     @Override
     public VoxelShape getCullingShape(BlockState state, BlockView world, BlockPos pos) {
         return VoxelShapes.empty();
+    }
+
+    /**
+     * Ports 1.18.2's getBlockSupportShape override. The sides shape is what walls,
+     * fences, panes and redstone read via isSideSolidFullSquare/isFaceSturdy to decide
+     * whether a neighbor presents a sturdy face. Cuboid blocks return their support
+     * shape (empty by default) rather than the full outline shape, so decorative cuboids
+     * like banners are not connected to. Indexed per-state (not per-facing).
+     */
+    @Override
+    public VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
+        int idx = (STATE != null) ? STATE.getIndex(state.get(STATE)) : 0;
+        return SUPPORT_BY_INDEX[idx];
     }
 
     public BlockDefinition getDefinition() {

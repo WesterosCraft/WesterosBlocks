@@ -55,7 +55,7 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
         FabricTagProvider<Block>.FabricTagBuilder flowersTagBuilder = getOrCreateTagBuilder(BlockTags.FLOWERS);
         FabricTagProvider<Block>.FabricTagBuilder railTagBuilder = getOrCreateTagBuilder(BlockTags.RAILS);
         FabricTagProvider<Block>.FabricTagBuilder sandTagBuilder = getOrCreateTagBuilder(BlockTags.SAND);
-        FabricTagProvider<Block>.FabricTagBuilder torchBuilder = getOrCreateTagBuilder(BlockTags.WALL_POST_OVERRIDE);
+        FabricTagProvider<Block>.FabricTagBuilder wallPostOverrideBuilder = getOrCreateTagBuilder(BlockTags.WALL_POST_OVERRIDE);
         FabricTagProvider<Block>.FabricTagBuilder wallTagBuilder = getOrCreateTagBuilder(BlockTags.WALLS);
         FabricTagProvider<Block>.FabricTagBuilder coralTagBuilder = getOrCreateTagBuilder(BlockTags.CORALS);
         FabricTagProvider<Block>.FabricTagBuilder wallCoralTagBuilder = getOrCreateTagBuilder(BlockTags.WALL_CORALS);
@@ -174,11 +174,11 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
                     break;
 
                 case "torch":
-                    torchBuilder.add(block);
+                    wallPostOverrideBuilder.add(block);
                     // Also add the wall variant if it exists
                     Block wallTorchBlock = ModBlocks.getAutoRegisteredBlock("wall_" + blockName);
                     if (wallTorchBlock != null) {
-                        torchBuilder.add(wallTorchBlock);
+                        wallPostOverrideBuilder.add(wallTorchBlock);
                     }
                     break;
 
@@ -212,4 +212,4 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
             }
         }
     }
-}
+}
