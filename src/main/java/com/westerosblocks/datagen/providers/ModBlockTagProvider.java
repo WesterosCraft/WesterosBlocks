@@ -200,6 +200,12 @@ public class ModBlockTagProvider extends FabricTagProvider<Block> {
                     break;
             }
 
+            // Blocks that opt in via the hasClimb option (e.g. steep ladders, which are
+            // cuboid-nsew rather than the "ladder" type) join the climbable tag.
+            if (definition.hasClimb()) {
+                ladderTagBuilder.add(block);
+            }
+
             // Add to custom tags declared in block definitions (e.g., polished_stone_ctm, wool_ctm)
             List<String> customTags = definition.getCustomTags();
             if (customTags != null) {

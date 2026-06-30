@@ -81,6 +81,8 @@ public class BlockSetExpander {
         Map<String, OptionsProperties> options = preprocessVariantMap(blockSet.getOptions());
         Map<String, List<String>> altCustomTags = preprocessVariantMap(blockSet.getAltCustomTags());
         Map<String, List<String>> altTextures = preprocessVariantMap(blockSet.getAltTextures());
+        Map<String, List<BlockSetDefinition.AltRandomTextureEntry>> altRandomTextures =
+                preprocessVariantMap(blockSet.getAltRandomTextures());
 
         // Variants this set enables (the order they appear in the JSON is ignored)
         List<String> enabledVariants = blockSet.hasVariants() ? blockSet.getVariants() : DEFAULT_VARIANTS;
@@ -97,7 +99,7 @@ public class BlockSetExpander {
         for (String variant : SUPPORTED_VARIANTS) {
             if (!enabledVariants.contains(variant)) continue;
 
-            BlockDefinition definition = createVariantDefinition(blockSet, variant, options, altCustomTags, altTextures);
+            BlockDefinition definition = createVariantDefinition(blockSet, variant, options, altCustomTags, altTextures, altRandomTextures);
             if (definition != null) {
                 definitions.add(definition);
             }
@@ -114,7 +116,8 @@ public class BlockSetExpander {
     private static BlockDefinition createVariantDefinition(BlockSetDefinition blockSet, String variant,
                                                           Map<String, OptionsProperties> options,
                                                           Map<String, List<String>> altCustomTags,
-                                                          Map<String, List<String>> altTextures) {
+                                                          Map<String, List<String>> altTextures,
+                                                          Map<String, List<BlockSetDefinition.AltRandomTextureEntry>> altRandomTextures) {
         BlockDefinition def = new BlockDefinition();
 
         // 1. Core identity
@@ -162,8 +165,16 @@ public class BlockSetExpander {
             if (overlayTextures != null && !overlayTextures.isEmpty()) def.overlayTextures = overlayTextures;
         }
 
-        // 5b. Random textures
-        if (blockSet.getRandomTextures() != null && !blockSet.getRandomTextures().isEmpty()) {
+        // 5b. Per-variant random textures (altRandomTextures). Takes precedence over the
+        //     set-level randomTextures below. Entry textures are positional lists (like
+        //     altTextures), so they are used directly without map-key resolution.
+        if (altRandomTextures != null && altRandomTextures.containsKey(variant)) {
+            def.randomTextures = buildRandomTextureVariants(altRandomTextures.get(variant));
+        }
+
+        // 5c. Set-level random textures (applied to all variants), unless 5b already supplied them.
+        if ((def.randomTextures == null || def.randomTextures.isEmpty())
+                && blockSet.getRandomTextures() != null && !blockSet.getRandomTextures().isEmpty()) {
             List<BlockDefinition.RandomTextureVariant> rtList = new ArrayList<>();
             for (BlockSetDefinition.RandomTextureEntry entry : blockSet.getRandomTextures()) {
                 Map<String, String> processedMap = preprocessTextureMap(entry.getTextures());
@@ -190,6 +201,11 @@ public class BlockSetExpander {
                 List<String> stateTextures = pickVariantTextures(
                     stateRec.getTextures(), stateRec.getAltTextures(), variant);
                 if (stateTextures != null && !stateTextures.isEmpty()) sv.textures = stateTextures;
+
+                if (stateRec.getAltRandomTextures() != null
+                        && stateRec.getAltRandomTextures().containsKey(variant)) {
+                    sv.randomTextures = buildRandomTextureVariants(stateRec.getAltRandomTextures().get(variant));
+                }
 
                 if (stateRec.getOverlayTextures() != null && !stateRec.getOverlayTextures().isEmpty()) {
                     Map<String, String> overlayMap = preprocessTextureMap(stateRec.getOverlayTextures());
@@ -308,6 +324,27 @@ public class BlockSetExpander {
 
         // Use base textures
         return getTexturesForVariant(preprocessTextureMap(textures), variant);
+    }
+
+    /**
+     * Converts per-variant {@code altRandomTextures} entries into
+     * {@link BlockDefinition.RandomTextureVariant}s. Entry textures are positional lists
+     * (same convention as {@code altTextures}) and are used directly. Returns {@code null}
+     * if there are no usable entries.
+     */
+    private static List<BlockDefinition.RandomTextureVariant> buildRandomTextureVariants(
+            List<BlockSetDefinition.AltRandomTextureEntry> entries) {
+        if (entries == null || entries.isEmpty()) return null;
+        List<BlockDefinition.RandomTextureVariant> rtList = new ArrayList<>();
+        for (BlockSetDefinition.AltRandomTextureEntry entry : entries) {
+            List<String> entryTextures = entry.getTextures();
+            if (entryTextures == null || entryTextures.isEmpty()) continue;
+            BlockDefinition.RandomTextureVariant rtv = new BlockDefinition.RandomTextureVariant();
+            rtv.textures = entryTextures;
+            rtv.weight = entry.getWeight();
+            rtList.add(rtv);
+        }
+        return rtList.isEmpty() ? null : rtList;
     }
 
     /**

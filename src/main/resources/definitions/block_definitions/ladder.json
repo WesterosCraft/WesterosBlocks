@@ -40,7 +40,7 @@
         "blockType": "ladder",
         "soundGroup": "ladder",
         "mapColor": "TERRACOTTA_GRAY",
-        "creativeTab": "westeros_cloth_fibers_tab",
+        "creativeTab": "westeros_decor_tab",
         "label": "Rope Ladder",
         "options": {
             "allowUnsupported": true
@@ -118,7 +118,7 @@
         "blockType": "ladder",
         "soundGroup": "ladder",
         "mapColor": "TERRACOTTA_GRAY",
-        "creativeTab": "westeros_wood_planks_tab",
+        "creativeTab": "westeros_decor_tab",
         "label": "Wood Ladder",
         "options": {
             "allowUnsupported": true

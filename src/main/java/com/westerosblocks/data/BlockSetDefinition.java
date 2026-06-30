@@ -45,6 +45,16 @@ public class BlockSetDefinition {
     @SerializedName("altTextures")
     private Map<String, List<String>> altTextures;
 
+    /**
+     * Alternative <em>random</em> textures for specific variants, e.g.
+     * {"slab": [{"textures": ["all", "directional1", "all"]}, ...]}. Each entry is a
+     * positional texture list (same convention as {@link #altTextures}) plus an optional
+     * weight; the variant picks randomly among them. Needed for CTM blocks like slate
+     * whose slab face cycles through several connected-texture tiles.
+     */
+    @SerializedName("altRandomTextures")
+    private Map<String, List<AltRandomTextureEntry>> altRandomTextures;
+
     /** Block hardness */
     @SerializedName("hardness")
     private Float hardness;
@@ -127,6 +137,21 @@ public class BlockSetDefinition {
         public Integer getWeight() { return weight != null ? weight : 1; }
     }
 
+    /**
+     * Per-variant random texture entry. Unlike {@link RandomTextureEntry}, the textures are
+     * a positional list (same convention as {@code altTextures}), not a keyed map.
+     */
+    public static class AltRandomTextureEntry {
+        @SerializedName("textures")
+        private List<String> textures;
+
+        @SerializedName("weight")
+        private Integer weight;
+
+        public List<String> getTextures() { return textures; }
+        public Integer getWeight() { return weight != null ? weight : 1; }
+    }
+
     /** State records for blocks with multiple states */
     @SerializedName("states")
     private List<StateRecord> states;
@@ -151,6 +176,9 @@ public class BlockSetDefinition {
         @SerializedName("altTextures")
         private Map<String, List<String>> altTextures;
 
+        @SerializedName("altRandomTextures")
+        private Map<String, List<AltRandomTextureEntry>> altRandomTextures;
+
         @SerializedName("textures")
         private Map<String, String> textures;
 
@@ -162,6 +190,7 @@ public class BlockSetDefinition {
         public Float getLightValue() { return lightValue; }
         public String getColorMult() { return colorMult; }
         public Map<String, List<String>> getAltTextures() { return altTextures; }
+        public Map<String, List<AltRandomTextureEntry>> getAltRandomTextures() { return altRandomTextures; }
         public Map<String, String> getTextures() { return textures; }
         public Map<String, String> getOverlayTextures() { return overlayTextures; }
     }
@@ -176,6 +205,7 @@ public class BlockSetDefinition {
     public Map<String, OptionsProperties> getOptions() { return options; }
     public Map<String, List<String>> getAltCustomTags() { return altCustomTags; }
     public Map<String, List<String>> getAltTextures() { return altTextures; }
+    public Map<String, List<AltRandomTextureEntry>> getAltRandomTextures() { return altRandomTextures; }
 
     public Float getHardness() { return hardness; }
     public String getSoundGroup() { return soundGroup; }

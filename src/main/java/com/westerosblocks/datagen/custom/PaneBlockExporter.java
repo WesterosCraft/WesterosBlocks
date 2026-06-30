@@ -73,6 +73,7 @@ public class PaneBlockExporter extends BaseBlockExporter {
 
         MultipartBlockStateSupplier supplier = MultipartBlockStateSupplier.create(block);
         boolean isBars = paneBlock.isBarsModel();
+        boolean isLegacy = paneBlock.isLegacyModel();
 
         // Add all variants (for random textures)
         for (int i = 0; i < sideModelIds.size(); i++) {
@@ -89,10 +90,10 @@ public class PaneBlockExporter extends BaseBlockExporter {
             }
 
             // Add side connections for all 4 directions with proper rotation and uvlock
-            addPaneSideVariant(supplier, sideModelIds.get(i), weight, Direction.NORTH, isBars);
-            addPaneSideVariant(supplier, sideModelIds.get(i), weight, Direction.EAST, isBars);
-            addPaneSideVariant(supplier, sideModelIds.get(i), weight, Direction.SOUTH, isBars);
-            addPaneSideVariant(supplier, sideModelIds.get(i), weight, Direction.WEST, isBars);
+            addPaneSideVariant(supplier, sideModelIds.get(i), weight, Direction.NORTH, isBars, isLegacy);
+            addPaneSideVariant(supplier, sideModelIds.get(i), weight, Direction.EAST, isBars, isLegacy);
+            addPaneSideVariant(supplier, sideModelIds.get(i), weight, Direction.SOUTH, isBars, isLegacy);
+            addPaneSideVariant(supplier, sideModelIds.get(i), weight, Direction.WEST, isBars, isLegacy);
 
             // No-side connections for non-bars models (all 4 directions)
             if (!isBars) {
@@ -108,10 +109,11 @@ public class PaneBlockExporter extends BaseBlockExporter {
 
     /**
      * Adds a pane side variant for a specific direction.
-     * For bars models, uses OR logic: direction=true OR all_directions=false
+     * For bars and legacy models, uses OR logic: direction=true OR all_directions=false
+     * (matches the 1.18.2 PaneBlockModelExport, which applied this for is_legacy || is_bars).
      */
     private static void addPaneSideVariant(MultipartBlockStateSupplier supplier, Identifier sideModelId,
-                                           int weight, Direction direction, boolean isBars) {
+                                           int weight, Direction direction, boolean isBars, boolean isLegacy) {
         BlockStateVariant sideVariant = BlockStateVariant.create()
                 .put(VariantSettings.MODEL, sideModelId)
                 .put(VariantSettings.UVLOCK, true);
@@ -127,8 +129,8 @@ public class PaneBlockExporter extends BaseBlockExporter {
 
         // Create condition
         When condition;
-        if (isBars) {
-            // For bars: direction=true OR all_directions=false
+        if (isBars || isLegacy) {
+            // For bars and legacy: direction=true OR all_directions=false
             When directionTrue = switch (direction) {
                 case NORTH -> When.create().set(Properties.NORTH, true);
                 case EAST -> When.create().set(Properties.EAST, true);

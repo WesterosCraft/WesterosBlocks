@@ -983,7 +983,7 @@ public class BlockDefinition {
     }
 
     public boolean isLegacyModel() {
-        return isLegacyModel != null && !isLegacyModel.isEmpty();
+        return options != null && Boolean.TRUE.equals(options.getLegacyModel());
     }
 
     public String getLegacyModel() {

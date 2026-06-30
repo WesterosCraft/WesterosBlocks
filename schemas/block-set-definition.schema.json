@@ -66,6 +66,14 @@
         "items": { "type": "string" }
       }
     },
+    "altRandomTextures": {
+      "type": "object",
+      "description": "Per-variant random texture sets (e.g. {'slab': [{'textures': ['all','directional1','all']}, ...]}). The variant picks randomly among the entries; used for CTM blocks like slate.",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "$ref": "#/$defs/AltRandomTextureEntry" }
+      }
+    },
     "textures": {
       "type": "object",
       "description": "Texture map for variants. Keys: 'all', 'sides', 'bottom', 'top', 'north', 'south', 'east', 'west', 'arrow-slit', 'window-frame', 'cover', etc.",
@@ -318,6 +326,24 @@
       },
       "required": ["textures"]
     },
+    "AltRandomTextureEntry": {
+      "type": "object",
+      "description": "Per-variant random texture entry. Textures are a positional list (same convention as altTextures), not a keyed map.",
+      "properties": {
+        "textures": {
+          "type": "array",
+          "description": "Positional texture list for the variant",
+          "items": { "type": "string" }
+        },
+        "weight": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1,
+          "description": "Selection weight"
+        }
+      },
+      "required": ["textures"]
+    },
     "StateRecord": {
       "type": "object",
       "description": "State record for multi-state block sets",
@@ -345,6 +371,14 @@
           "additionalProperties": {
             "type": "array",
             "items": { "type": "string" }
+          }
+        },
+        "altRandomTextures": {
+          "type": "object",
+          "description": "Per-variant random texture sets for this state",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/AltRandomTextureEntry" }
           }
         },
         "textures": {
