@@ -2,8 +2,8 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "westerosblocks:stripped",
-		"particle": "westerosblocks:stripped"
+		"0": "westerosblocks:block/bark/oak/stripped",
+		"particle": "westerosblocks:block/bark/oak/stripped"
 	},
 	"elements": [
 		{
