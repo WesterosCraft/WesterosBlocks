@@ -26,17 +26,11 @@
     "options": {
         "stairs": { "unconnect": false, "noUvlock": true }
     },
-    "altTextures": {
-        "solid": ["roofing/beavertail/oak_bleached_top", "roofing/beavertail/oak_bleached_top", "roofing/beavertail/oak_bleached", "roofing/beavertail/oak_bleached", "roofing/beavertail/oak_bleached", "roofing/beavertail/oak_bleached"],
-        "stairs": ["roofing/beavertail/oak_bleached_top", "roofing/beavertail/oak_bleached_top", "roofing/beavertail/oak_bleached"],
-        "slab": ["roofing/beavertail/oak_bleached_top", "roofing/beavertail/oak_bleached_top", "roofing/beavertail/oak_bleached"],
-        "wall": ["roofing/beavertail/oak_bleached_top", "roofing/beavertail/oak_bleached_top", "roofing/beavertail/oak_bleached"],
-        "fence": ["roofing/beavertail/oak_bleached_top", "roofing/beavertail/oak_bleached_top", "roofing/beavertail/oak_bleached"],
-        "tip": ["roofing/beavertail/oak_bleached", "roofing/beavertail/oak_bleached_top"],
-        "carpet": ["roofing/beavertail/oak_bleached", "roofing/beavertail/oak_bleached_top"]
-    },
     "baseLabel": "Bleached Oak Beavertail Shingle",
     "textures": {
         "all": "roofing/beavertail/oak_bleached"
+    },
+    "altTextures": {
+        "stairs": ["roofing/beavertail/oak_bleached_top", "roofing/beavertail/oak_bleached_top", "roofing/beavertail/oak_bleached"]
     }
 }

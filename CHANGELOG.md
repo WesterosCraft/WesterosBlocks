@@ -112,7 +112,7 @@
 - Fixed `sausages_leg_of_ham` CTM and added cold (snowy-biome) texture variants.
 - Hedge wall model tweaks (oak/spruce/birch/jungle hedge).
 - Removed the mirror test block (`mirror_test`).
-- Thatch and roof-tile sets are now directional on every variant (solid/stairs/slab/wall/fence/tip/carpet) — the top/bottom faces use a 90°-rotated `*_top` sprite (sides keep the original) so the tile run stays consistent instead of flipping side-facing, with matching `repeat` CTM for the rotated tops. Stairs use `noUvlock`. Applied to all `imbrex_tegula_*`, `wood_shingle_*`, `beavertail_shingle_*`, and non-snowy `thatch_*` sets.
+- Thatch and roof-tile stairs are now directional — the stair top/bottom faces use a 90°-rotated `*_top` sprite (sides keep the original) with `noUvlock`, so the tile run follows the slope instead of flipping side-facing. Other variants (solid/slab/wall/fence/tip/carpet) render the plain tile texture. Applied to all `imbrex_tegula_*`, `wood_shingle_*`, `beavertail_shingle_*`, and non-snowy `thatch_*` sets.
 
 ### Other
 

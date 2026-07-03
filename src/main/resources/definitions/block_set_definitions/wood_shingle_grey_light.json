@@ -26,17 +26,11 @@
     "options": {
         "stairs": { "unconnect": false, "noUvlock": true }
     },
-    "altTextures": {
-        "solid": ["roofing/shingle/wood_shingle_10_top", "roofing/shingle/wood_shingle_10_top", "roofing/shingle/wood_shingle_10", "roofing/shingle/wood_shingle_10", "roofing/shingle/wood_shingle_10", "roofing/shingle/wood_shingle_10"],
-        "stairs": ["roofing/shingle/wood_shingle_10_top", "roofing/shingle/wood_shingle_10_top", "roofing/shingle/wood_shingle_10"],
-        "slab": ["roofing/shingle/wood_shingle_10_top", "roofing/shingle/wood_shingle_10_top", "roofing/shingle/wood_shingle_10"],
-        "wall": ["roofing/shingle/wood_shingle_10_top", "roofing/shingle/wood_shingle_10_top", "roofing/shingle/wood_shingle_10"],
-        "fence": ["roofing/shingle/wood_shingle_10_top", "roofing/shingle/wood_shingle_10_top", "roofing/shingle/wood_shingle_10"],
-        "tip": ["roofing/shingle/wood_shingle_10", "roofing/shingle/wood_shingle_10_top"],
-        "carpet": ["roofing/shingle/wood_shingle_10", "roofing/shingle/wood_shingle_10_top"]
-    },
     "baseLabel": "Light Grey Wooden Shingle",
     "textures": {
         "all": "roofing/shingle/wood_shingle_10"
+    },
+    "altTextures": {
+        "stairs": ["roofing/shingle/wood_shingle_10_top", "roofing/shingle/wood_shingle_10_top", "roofing/shingle/wood_shingle_10"]
     }
 }

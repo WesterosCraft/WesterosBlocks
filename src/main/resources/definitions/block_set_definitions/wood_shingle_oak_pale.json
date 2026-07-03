@@ -26,17 +26,11 @@
     "options": {
         "stairs": { "unconnect": false, "noUvlock": true }
     },
-    "altTextures": {
-        "solid": ["roofing/shingle/wood_shingle_4_top", "roofing/shingle/wood_shingle_4_top", "roofing/shingle/wood_shingle_4", "roofing/shingle/wood_shingle_4", "roofing/shingle/wood_shingle_4", "roofing/shingle/wood_shingle_4"],
-        "stairs": ["roofing/shingle/wood_shingle_4_top", "roofing/shingle/wood_shingle_4_top", "roofing/shingle/wood_shingle_4"],
-        "slab": ["roofing/shingle/wood_shingle_4_top", "roofing/shingle/wood_shingle_4_top", "roofing/shingle/wood_shingle_4"],
-        "wall": ["roofing/shingle/wood_shingle_4_top", "roofing/shingle/wood_shingle_4_top", "roofing/shingle/wood_shingle_4"],
-        "fence": ["roofing/shingle/wood_shingle_4_top", "roofing/shingle/wood_shingle_4_top", "roofing/shingle/wood_shingle_4"],
-        "tip": ["roofing/shingle/wood_shingle_4", "roofing/shingle/wood_shingle_4_top"],
-        "carpet": ["roofing/shingle/wood_shingle_4", "roofing/shingle/wood_shingle_4_top"]
-    },
     "baseLabel": "Pale Oak Wood Shingle",
     "textures": {
         "all": "roofing/shingle/wood_shingle_4"
+    },
+    "altTextures": {
+        "stairs": ["roofing/shingle/wood_shingle_4_top", "roofing/shingle/wood_shingle_4_top", "roofing/shingle/wood_shingle_4"]
     }
 }

@@ -26,17 +26,11 @@
     "options": {
         "stairs": { "unconnect": false, "noUvlock": true }
     },
-    "altTextures": {
-        "solid": ["roofing/beavertail/oak_deep_top", "roofing/beavertail/oak_deep_top", "roofing/beavertail/oak_deep", "roofing/beavertail/oak_deep", "roofing/beavertail/oak_deep", "roofing/beavertail/oak_deep"],
-        "stairs": ["roofing/beavertail/oak_deep_top", "roofing/beavertail/oak_deep_top", "roofing/beavertail/oak_deep"],
-        "slab": ["roofing/beavertail/oak_deep_top", "roofing/beavertail/oak_deep_top", "roofing/beavertail/oak_deep"],
-        "wall": ["roofing/beavertail/oak_deep_top", "roofing/beavertail/oak_deep_top", "roofing/beavertail/oak_deep"],
-        "fence": ["roofing/beavertail/oak_deep_top", "roofing/beavertail/oak_deep_top", "roofing/beavertail/oak_deep"],
-        "tip": ["roofing/beavertail/oak_deep", "roofing/beavertail/oak_deep_top"],
-        "carpet": ["roofing/beavertail/oak_deep", "roofing/beavertail/oak_deep_top"]
-    },
     "baseLabel": "Deep Oak Beavertail Shingle",
     "textures": {
         "all": "roofing/beavertail/oak_deep"
+    },
+    "altTextures": {
+        "stairs": ["roofing/beavertail/oak_deep_top", "roofing/beavertail/oak_deep_top", "roofing/beavertail/oak_deep"]
     }
 }

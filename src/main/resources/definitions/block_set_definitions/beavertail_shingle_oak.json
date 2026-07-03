@@ -26,17 +26,11 @@
     "options": {
         "stairs": { "unconnect": false, "noUvlock": true }
     },
-    "altTextures": {
-        "solid": ["roofing/beavertail/oak_top", "roofing/beavertail/oak_top", "roofing/beavertail/oak", "roofing/beavertail/oak", "roofing/beavertail/oak", "roofing/beavertail/oak"],
-        "stairs": ["roofing/beavertail/oak_top", "roofing/beavertail/oak_top", "roofing/beavertail/oak"],
-        "slab": ["roofing/beavertail/oak_top", "roofing/beavertail/oak_top", "roofing/beavertail/oak"],
-        "wall": ["roofing/beavertail/oak_top", "roofing/beavertail/oak_top", "roofing/beavertail/oak"],
-        "fence": ["roofing/beavertail/oak_top", "roofing/beavertail/oak_top", "roofing/beavertail/oak"],
-        "tip": ["roofing/beavertail/oak", "roofing/beavertail/oak_top"],
-        "carpet": ["roofing/beavertail/oak", "roofing/beavertail/oak_top"]
-    },
     "baseLabel": "Oak Beavertail Shingle",
     "textures": {
         "all": "roofing/beavertail/oak"
+    },
+    "altTextures": {
+        "stairs": ["roofing/beavertail/oak_top", "roofing/beavertail/oak_top", "roofing/beavertail/oak"]
     }
 }

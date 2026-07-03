@@ -22,21 +22,15 @@
             "level": 1
         }
     ],
-    "creativeTab": "westeros_roofing_tab",
+    "creativeTab": "westeros_roofing_tab",
     "options": {
         "stairs": { "unconnect": false, "noUvlock": true }
-    },
-    "altTextures": {
-        "solid": ["thatch/heather/heather2_top", "thatch/heather/heather2_top", "thatch/heather/heather2", "thatch/heather/heather2", "thatch/heather/heather2", "thatch/heather/heather2"],
-        "stairs": ["thatch/heather/heather2_top", "thatch/heather/heather2_top", "thatch/heather/heather2"],
-        "slab": ["thatch/heather/heather2_top", "thatch/heather/heather2_top", "thatch/heather/heather2"],
-        "wall": ["thatch/heather/heather2_top", "thatch/heather/heather2_top", "thatch/heather/heather2"],
-        "fence": ["thatch/heather/heather2_top", "thatch/heather/heather2_top", "thatch/heather/heather2"],
-        "tip": ["thatch/heather/heather2", "thatch/heather/heather2_top"],
-        "carpet": ["thatch/heather/heather2", "thatch/heather/heather2_top"]
     },
     "baseLabel": "Dark Heather Thatch",
     "textures": {
         "all": "thatch/heather/heather2"
+    },
+    "altTextures": {
+        "stairs": ["thatch/heather/heather2_top", "thatch/heather/heather2_top", "thatch/heather/heather2"]
     }
 }

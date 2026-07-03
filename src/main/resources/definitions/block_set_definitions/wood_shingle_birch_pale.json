@@ -26,17 +26,11 @@
     "options": {
         "stairs": { "unconnect": false, "noUvlock": true }
     },
-    "altTextures": {
-        "solid": ["roofing/shingle/wood_shingle_0_top", "roofing/shingle/wood_shingle_0_top", "roofing/shingle/wood_shingle_0", "roofing/shingle/wood_shingle_0", "roofing/shingle/wood_shingle_0", "roofing/shingle/wood_shingle_0"],
-        "stairs": ["roofing/shingle/wood_shingle_0_top", "roofing/shingle/wood_shingle_0_top", "roofing/shingle/wood_shingle_0"],
-        "slab": ["roofing/shingle/wood_shingle_0_top", "roofing/shingle/wood_shingle_0_top", "roofing/shingle/wood_shingle_0"],
-        "wall": ["roofing/shingle/wood_shingle_0_top", "roofing/shingle/wood_shingle_0_top", "roofing/shingle/wood_shingle_0"],
-        "fence": ["roofing/shingle/wood_shingle_0_top", "roofing/shingle/wood_shingle_0_top", "roofing/shingle/wood_shingle_0"],
-        "tip": ["roofing/shingle/wood_shingle_0", "roofing/shingle/wood_shingle_0_top"],
-        "carpet": ["roofing/shingle/wood_shingle_0", "roofing/shingle/wood_shingle_0_top"]
-    },
     "baseLabel": "Pale Birch Wood Shingle",
     "textures": {
         "all": "roofing/shingle/wood_shingle_0"
+    },
+    "altTextures": {
+        "stairs": ["roofing/shingle/wood_shingle_0_top", "roofing/shingle/wood_shingle_0_top", "roofing/shingle/wood_shingle_0"]
     }
 }
