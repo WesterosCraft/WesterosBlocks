@@ -1,5 +1,11 @@
 # Changelog
 
+## July 2026
+
+### Updated Blocks
+
+- `grass_slab`, `grass_stairs` — set cutout render layer so grass top matches `classic_grass_block` (was mip-blurred on solid layer)
+
 ## June 2026
 
 ### New Blocksets

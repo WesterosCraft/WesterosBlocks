@@ -553,6 +553,7 @@
         "strength": 5,
         "soundGroup": "grass",
         "mapColor": "PALE_GREEN",
+        "renderLayer": "cutout",
         "isTinted": true,
         "creativeTab": "westeros_grass_dirt_tab",
         "label": "Grass Slab",

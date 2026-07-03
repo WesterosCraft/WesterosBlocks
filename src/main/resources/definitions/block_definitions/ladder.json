@@ -1,36 +1,16 @@
 [
     {
-        "blockName": "iron_rungs",
+        "blockName": "wood_ladder",
         "blockType": "ladder",
         "soundGroup": "ladder",
         "mapColor": "TERRACOTTA_GRAY",
-        "creativeTab": "westeros_metal_tab",
-        "label": "Iron Rungs",
+        "creativeTab": "westeros_decor_tab",
+        "label": "Wood Ladder",
         "options": {
             "allowUnsupported": true
         },
         "textures": [
-            "iron_rungs/ladder"
-        ],
-        "renderLayer": "cutout",
-        "isCustomModel": true
-    },
-    {
-        "blockName": "iron_rungs_broken",
-        "blockType": "ladder",
-        "soundGroup": "ladder",
-        "creativeTab": "westeros_metal_tab",
-        "label": "Iron Rungs Broken",
-        "options": {
-            "allowUnsupported": true
-        },
-        "randomTextures": [
-            {},
-            {},
-            {},
-            {},
-            {},
-            {}
+            "wood_ladder/side"
         ],
         "renderLayer": "cutout",
         "isCustomModel": true
@@ -51,11 +31,159 @@
         "renderLayer": "cutout"
     },
     {
+        "blockName": "oak_ladder",
+        "blockType": "oriented_ladder",
+        "soundGroup": "ladder",
+        "mapColor": "OAK_TAN",
+        "creativeTab": "westeros_decor_tab",
+        "label": "Oak Ladder",
+        "options": {
+            "allowUnsupported": true,
+            "toggleOnUse": true
+        },
+        "renderLayer": "cutout",
+        "isCustomModel": true
+    },
+    {
+        "blockName": "steep_oak_ladder",
+        "blockType": "cuboid-nsew",
+        "strength": 5,
+        "soundGroup": "wood",
+        "creativeTab": "westeros_decor_tab",
+        "label": "Steep Oak Ladder",
+        "renderLayer": "cutout",
+        "nonOpaque": true,
+        "isCustomModel": true,
+        "options": { "toggleOnUse": true, "hasClimb": true },
+        "states": [
+            {
+                "stateID": "base",
+                "isCustomModel": true,
+                "cuboids": [
+                    { "xMin": 0.3125, "xMax": 0.5625, "yMin": 0,      "yMax": 0.3333, "zMin": 0, "zMax": 1 },
+                    { "xMin": 0.125,  "xMax": 0.375,  "yMin": 0.3333, "yMax": 0.6667, "zMin": 0, "zMax": 1 },
+                    { "xMin": 0,      "xMax": 0.1875, "yMin": 0.6667, "yMax": 1,      "zMin": 0, "zMax": 1 }
+                ]
+            },
+            {
+                "stateID": "offset",
+                "isCustomModel": true,
+                "cuboids": [
+                    { "xMin": 0.8125, "xMax": 1,      "yMin": 0,      "yMax": 0.3333, "zMin": 0, "zMax": 1 },
+                    { "xMin": 0.625,  "xMax": 0.875,  "yMin": 0.3333, "yMax": 0.6667, "zMin": 0, "zMax": 1 },
+                    { "xMin": 0.5,    "xMax": 0.6875, "yMin": 0.6667, "yMax": 1,      "zMin": 0, "zMax": 1 }
+                ]
+            }
+        ]
+    },
+    {
+        "blockName": "spruce_ladder",
+        "blockType": "oriented_ladder",
+        "soundGroup": "ladder",
+        "mapColor": "SPRUCE_BROWN",
+        "creativeTab": "westeros_decor_tab",
+        "label": "Spruce Ladder",
+        "options": {
+            "allowUnsupported": true,
+            "toggleOnUse": true
+        },
+        "renderLayer": "cutout",
+        "isCustomModel": true
+    },
+    {
+        "blockName": "birch_ladder",
+        "blockType": "oriented_ladder",
+        "soundGroup": "ladder",
+        "mapColor": "SPRUCE_BROWN",
+        "creativeTab": "westeros_decor_tab",
+        "label": "Birch Ladder",
+        "options": {
+            "allowUnsupported": true,
+            "toggleOnUse": true
+        },
+        "renderLayer": "cutout",
+        "isCustomModel": true
+    },
+    {
+        "blockName": "northern_ladder",
+        "blockType": "oriented_ladder",
+        "soundGroup": "ladder",
+        "mapColor": "TERRACOTTA_BROWN",
+        "creativeTab": "westeros_decor_tab",
+        "label": "Northern Ladder",
+        "options": {
+            "allowUnsupported": true,
+            "toggleOnUse": true
+        },
+        "renderLayer": "cutout",
+        "isCustomModel": true
+    },
+    {
+        "blockName": "iron_rungs",
+        "blockType": "ladder",
+        "soundGroup": "ladder",
+        "mapColor": "TERRACOTTA_GRAY",
+        "creativeTab": "westeros_decor_tab",
+        "label": "Iron Rungs",
+        "options": {
+            "allowUnsupported": true
+        },
+        "textures": [
+            "iron_rungs/ladder"
+        ],
+        "renderLayer": "cutout",
+        "isCustomModel": true
+    },
+    {
+        "blockName": "iron_rungs_broken",
+        "blockType": "ladder",
+        "soundGroup": "ladder",
+        "creativeTab": "westeros_decor_tab",
+        "label": "Iron Rungs Broken",
+        "options": {
+            "allowUnsupported": true
+        },
+        "randomTextures": [
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+        ],
+        "renderLayer": "cutout",
+        "isCustomModel": true
+    },
+    {
+        "blockName": "winterfell_stone_ladder",
+        "blockType": "ladder",
+        "soundGroup": "stone",
+        "mapColor": "TERRACOTTA_CYAN",
+        "creativeTab": "westeros_decor_tab",
+        "label": "Winterfell Stone Ladder",
+        "options": {
+            "allowUnsupported": true
+        },
+        "randomTextures": [
+            {
+                "textures": [
+                    "winterfell_stone_ladder/side1"
+                ]
+            },
+            {
+                "textures": [
+                    "winterfell_stone_ladder/side2"
+                ]
+            }
+        ],
+        "renderLayer": "cutout"
+    },
+    {
         "blockName": "vine_jasmine",
         "blockType": "ladder",
         "soundGroup": "ladder",
         "mapColor": "TERRACOTTA_GREEN",
-        "creativeTab": "westeros_foliage_tab",
+        "creativeTab": "westeros_decor_tab",
         "label": "Vine Jasmine (Do Not Use)",
         "options": {
             "allowUnsupported": true
@@ -88,45 +216,5 @@
             }
         ],
         "renderLayer": "cutout"
-    },
-    {
-        "blockName": "winterfell_stone_ladder",
-        "blockType": "ladder",
-        "soundGroup": "stone",
-        "mapColor": "TERRACOTTA_CYAN",
-        "creativeTab": "westeros_misc_tab",
-        "label": "Winterfell Stone Ladder",
-        "options": {
-            "allowUnsupported": true
-        },
-        "randomTextures": [
-            {
-                "textures": [
-                    "winterfell_stone_ladder/side1"
-                ]
-            },
-            {
-                "textures": [
-                    "winterfell_stone_ladder/side2"
-                ]
-            }
-        ],
-        "renderLayer": "cutout"
-    },
-    {
-        "blockName": "wood_ladder",
-        "blockType": "ladder",
-        "soundGroup": "ladder",
-        "mapColor": "TERRACOTTA_GRAY",
-        "creativeTab": "westeros_decor_tab",
-        "label": "Wood Ladder",
-        "options": {
-            "allowUnsupported": true
-        },
-        "textures": [
-            "wood_ladder/side"
-        ],
-        "renderLayer": "cutout",
-        "isCustomModel": true
     }
 ]
