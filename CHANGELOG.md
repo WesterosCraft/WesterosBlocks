@@ -1,16 +1,5 @@
 # Changelog
 
-## July 2026
-
-### Updated Blocks
-
-- `grass_slab`, `grass_stairs` — set cutout render layer so grass top matches `classic_grass_block` (was mip-blurred on solid layer)
-
-### Other
-
-- Walls/fences/panes no longer connect to doors and shutters (`door`, `halfdoor`, `bigdoor`, `bignarrowdoor` types) — connection used to flip with open/closed state; ports 1.18.2 `doorNoConnect` behavior
-- `solid` blocks: restore 1.18.2 shape logic — honor `collisionBoxes` from definitions and stop clipping the camera inside non-opaque solids (`cage`, `coloured_sept_window`, `fish_trap`, `sept_crystal_large` unaffected shape-wise; their boxes are full cubes)
-
 ## June 2026
 
 ### New Blocksets

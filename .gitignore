@@ -32,6 +32,11 @@ bin/
 
 run/
 
+# python
+
+__pycache__/
+*.pyc
+
 # java
 
 hs_err_*.log
