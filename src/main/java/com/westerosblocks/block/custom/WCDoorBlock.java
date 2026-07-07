@@ -8,6 +8,9 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
@@ -42,6 +45,13 @@ public class WCDoorBlock extends DoorBlock implements WCBlockDef {
         } else {
             return super.onUse(state, world, pos, player, hit);
         }
+    }
+
+    // Ports 1.18.2 MixinDoorBlock's doorNoConnect=true behavior: no sturdy faces,
+    // so walls/fences/panes never connect to doors regardless of open state.
+    @Override
+    public VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
+        return VoxelShapes.empty();
     }
 
     @Override

@@ -19,6 +19,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
@@ -82,6 +83,13 @@ public class WCHalfDoorBlock extends Block implements WCBlockDef {
             case WEST -> closed ? WEST_SHAPE : (rightHinge ? SOUTH_SHAPE : NORTH_SHAPE);
             default -> closed ? NORTH_SHAPE : (rightHinge ? WEST_SHAPE : EAST_SHAPE);
         };
+    }
+
+    // Ports 1.18.2 getBlockSupportShape(): no sturdy faces, so walls/fences/panes
+    // never connect to half doors regardless of open state.
+    @Override
+    public VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
+        return VoxelShapes.empty();
     }
 
     @Override

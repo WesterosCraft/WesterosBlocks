@@ -7,12 +7,14 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 
 import java.util.*;
 import java.util.function.UnaryOperator;
 
 /**
- * Represents a block definition loaded from JSON files in definitions/block_definitions directory.
+ * Represents a block definition loaded from the "blocks" section of definitions/WesterosBlocks.json.
  * These definitions are used to automatically register blocks with their properties.
  */
 public class BlockDefinition {
@@ -1048,6 +1050,19 @@ public class BlockDefinition {
 
     public boolean hasCollisionBoxes() {
         return collisionBoxes != null && !collisionBoxes.isEmpty();
+    }
+
+    // Ports 1.18.2 makeCollisionBoxShape(): union of collisionBoxes (0..1 coords),
+    // defaulting to a full cube when none are defined.
+    public VoxelShape makeCollisionBoxShape() {
+        if (collisionBoxes == null || collisionBoxes.isEmpty()) {
+            return VoxelShapes.fullCube();
+        }
+        VoxelShape s = VoxelShapes.empty();
+        for (BoundingBox b : collisionBoxes) {
+            s = VoxelShapes.union(s, VoxelShapes.cuboid(b.xMin, b.yMin, b.zMin, b.xMax, b.yMax, b.zMax));
+        }
+        return s;
     }
 
     public String getRenderLayer() {

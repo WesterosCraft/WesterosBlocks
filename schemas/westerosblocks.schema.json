@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://westerosblocks.com/schemas/westerosblocks.json",
+    "title": "WesterosBlocks Consolidated Block Definitions",
+    "description": "The single consolidated definitions file (definitions/WesterosBlocks.json). The 'blocks' section holds individual block definitions; the 'blockSets' section holds block set definitions that expand into per-variant blocks. Array order is authoritative and drives creative-tab ordering.",
+    "type": "object",
+    "required": ["blocks", "blockSets"],
+    "additionalProperties": false,
+    "properties": {
+        "blocks": {
+            "$ref": "./block-definition.schema.json"
+        },
+        "blockSets": {
+            "type": "array",
+            "items": {
+                "$ref": "./block-set-definition.schema.json"
+            }
+        }
+    }
+}

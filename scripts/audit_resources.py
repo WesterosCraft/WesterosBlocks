@@ -316,23 +316,19 @@ class ReferenceCollector:
 
     # -- Block Definitions --------------------------------------------------
 
+    def _load_consolidated_definitions(self):
+        """Loads definitions/WesterosBlocks.json ({"blocks": [...], "blockSets": [...]})."""
+        fpath = os.path.join(self.defs_dir, "WesterosBlocks.json")
+        try:
+            with open(fpath) as f:
+                return json.load(f)
+        except (json.JSONDecodeError, OSError) as e:
+            print(f"WARNING: {fpath}: {e}", file=sys.stderr)
+            return {}
+
     def _collect_block_definitions(self):
-        defs_path = os.path.join(self.defs_dir, "block_definitions")
-        if not os.path.isdir(defs_path):
-            return
-        for fn in sorted(os.listdir(defs_path)):
-            if not fn.endswith(".json"):
-                continue
-            fpath = os.path.join(defs_path, fn)
-            try:
-                with open(fpath) as f:
-                    data = json.load(f)
-            except (json.JSONDecodeError, OSError) as e:
-                print(f"WARNING: {fpath}: {e}", file=sys.stderr)
-                continue
-            entries = data if isinstance(data, list) else [data]
-            for d in entries:
-                self._process_block_def(d)
+        for d in self._load_consolidated_definitions().get("blocks", []):
+            self._process_block_def(d)
 
     def _process_block_def(self, d):
         if not isinstance(d, dict):
@@ -402,21 +398,9 @@ class ReferenceCollector:
     # -- Block Set Definitions ----------------------------------------------
 
     def _collect_block_set_definitions(self):
-        sets_path = os.path.join(self.defs_dir, "block_set_definitions")
-        if not os.path.isdir(sets_path):
-            return
-        for fn in sorted(os.listdir(sets_path)):
-            if not fn.endswith(".json"):
-                continue
-            fpath = os.path.join(sets_path, fn)
-            try:
-                with open(fpath) as f:
-                    data = json.load(f)
-            except (json.JSONDecodeError, OSError) as e:
-                print(f"WARNING: {fpath}: {e}", file=sys.stderr)
-                continue
-            if isinstance(data, dict):
-                self._process_block_set(data)
+        for bs in self._load_consolidated_definitions().get("blockSets", []):
+            if isinstance(bs, dict):
+                self._process_block_set(bs)
 
     def _process_block_set(self, bs):
         base_name = bs.get("baseBlockName", "")

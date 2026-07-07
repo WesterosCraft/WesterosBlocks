@@ -20,8 +20,8 @@ No test suite exists. Verification is done by building (`./gradlew build`) and r
 ### Data Loading Pipeline
 
 1. `WesterosBlocks.onInitialize()` → `BlockDefinitionRegistry.initialize()`
-2. Registry loads individual definitions from `resources/definitions/block_definitions/` and block set definitions from `resources/definitions/block_set_definitions/`
-3. `BlockSetExpander` expands set templates into individual `BlockDefinition` instances (one JSON → multiple variant blocks like solid, stairs, slab, wall)
+2. `ConsolidatedDefinitionLoader` loads the single `resources/definitions/WesterosBlocks.json` file: the `blocks` array holds individual `BlockDefinition`s, the `blockSets` array holds `BlockSetDefinition`s. **Array order is authoritative** — it drives registration and creative-tab ordering (blocks first, then expanded sets)
+3. `BlockSetExpander` expands set templates into individual `BlockDefinition` instances (one entry → multiple variant blocks like solid, stairs, slab, wall)
 4. All definitions stored in singleton `BlockDefinitionRegistry`
 
 ### Block Registration Pipeline
@@ -40,23 +40,29 @@ Block classes use `protected static temp*` fields (e.g., `tempSTATE`, `tempCONNE
 - `src/main/java/com/westerosblocks/block/custom/` — 48 block classes, each with a nested `Factory` inner class
 - `src/main/java/com/westerosblocks/data/` — `BlockDefinitionRegistry`, `BlockDefinition`, `BlockSetExpander`, JSON loaders
 - `src/main/java/com/westerosblocks/datagen/` — Model/blockstate/lang generation; each block type has an exporter in `custom/`
-- `src/main/resources/definitions/` — JSON block definitions (individual and set-based)
+- `src/main/resources/definitions/WesterosBlocks.json` — all block + block set definitions in one file (`color_maps.json` and `block_tags.json` sit alongside it)
 - `src/main/java/com/westerosblocks/utils/ModProperties.java` — Custom block state properties
 
 ### Block Definition JSON Format
 
-Individual definition (`block_definitions/`):
+`definitions/WesterosBlocks.json` has two sections (validated by `schemas/westerosblocks.schema.json`):
+
 ```json
 {
-  "blockName": "chair_oak",
-  "blockType": "chair",
-  "soundGroup": "wood",
-  "textures": ["bark/oak/side"],
-  "label": "Oak Chair"
+  "blocks": [
+    {
+      "blockName": "chair_oak",
+      "blockType": "chair",
+      "soundGroup": "wood",
+      "textures": ["bark/oak/side"],
+      "label": "Oak Chair"
+    }
+  ],
+  "blockSets": [ ... ]
 }
 ```
 
-Set definition (`block_set_definitions/`): defines `baseBlockName`, `variants` array (e.g., `["solid","stairs","slab","wall"]`), shared textures/properties, and optional `states` for multi-state blocks. `BlockSetExpander` generates one `BlockDefinition` per variant.
+Each `blockSets` entry defines `baseBlockName`, `variants` array (e.g., `["solid","stairs","slab","wall"]`), shared textures/properties, and optional `states` for multi-state blocks. `BlockSetExpander` generates one `BlockDefinition` per variant. Reordering entries only changes creative-tab display order — registry IDs are name-keyed, so world saves are unaffected.
 
 ### Common Patterns
 

@@ -136,6 +136,13 @@ public class WCBigNarrowDoorBlock extends Block implements WCBlockDef {
         return getCollisionShape(state, world, pos, context);
     }
 
+    // Ports 1.18.2's doorNoConnect=true behavior: no sturdy faces, so
+    // walls/fences/panes never connect to doors regardless of open state.
+    @Override
+    public VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
+        return VoxelShapes.empty();
+    }
+
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         Direction facing = state.get(FACING);

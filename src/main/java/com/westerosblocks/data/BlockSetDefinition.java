@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Represents a block set definition loaded from JSON files in definitions/block_set_definitions directory.
+ * Represents a block set definition loaded from the "blockSets" section of definitions/WesterosBlocks.json.
  * Block sets define a base block with multiple variants (solid, stairs, slab, wall, fence, etc.)
  * that share common properties but may have variant-specific overrides.
  *

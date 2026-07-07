@@ -183,6 +183,13 @@ public class WCBigDoorBlock extends Block implements WCBlockDef, BlockEntityProv
         return outer == null ? VoxelShapes.empty() : openLeafSlab(outer, facing);
     }
 
+    // Ports 1.18.2's doorNoConnect=true behavior: no sturdy faces, so
+    // walls/fences/panes never connect to doors regardless of open state.
+    @Override
+    public VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
+        return VoxelShapes.empty();
+    }
+
     /**
      * The hinge (outer) edge a column's open leaf swings about, or {@code null}
      * for the center column (the empty gap between the two leaves). LEFT = west

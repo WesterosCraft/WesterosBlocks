@@ -54,11 +54,8 @@ public class WesterosBlocks implements ModInitializer {
 
     private void initializeBlockDefinitions() {
         try {
-            String blockDefinitionsPath = "definitions/block_definitions";
-            String blockSetDefinitionsPath = "definitions/block_set_definitions";
-
             BlockDefinitionRegistry registry = BlockDefinitionRegistry.getInstance();
-            registry.initialize(blockDefinitionsPath, blockSetDefinitionsPath);
+            registry.initialize("definitions/WesterosBlocks.json");
             registry.printStatistics();
 
             // World-save compatibility guard: fail fast if block names/states regress against the

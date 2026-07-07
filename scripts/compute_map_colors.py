@@ -1,6 +1,7 @@
 """
-Walk every block definition JSON, sample the actual block textures, and write a
-nearest-vanilla MapColor name into the definition's "mapColor" field.
+Walk every block definition in definitions/WesterosBlocks.json, sample the actual
+block textures, and write a nearest-vanilla MapColor name into the definition's
+"mapColor" field.
 
 Run from the repo root:
 
@@ -29,8 +30,7 @@ from PIL import Image
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFINITIONS_DIR = os.path.join(REPO_ROOT, "src", "main", "resources", "definitions")
-BLOCK_DEFS_DIR = os.path.join(DEFINITIONS_DIR, "block_definitions")
-BLOCK_SET_DEFS_DIR = os.path.join(DEFINITIONS_DIR, "block_set_definitions")
+DEFINITIONS_FILE = os.path.join(DEFINITIONS_DIR, "WesterosBlocks.json")
 TEXTURES_ROOT = os.path.join(
     REPO_ROOT, "src", "main", "resources", "assets", "westerosblocks", "textures", "block"
 )
@@ -213,7 +213,7 @@ def _refs_from_random_textures(random_textures):
 
 
 def collect_texture_refs(definition):
-    """Pull the most representative texture refs from a block_definitions or block_set_definitions JSON."""
+    """Pull the most representative texture refs from a block or block set definition."""
     refs = []
 
     textures = definition.get("textures")
@@ -402,57 +402,37 @@ def process_definition(definition, force):
     return "updated", (label, used_refs[:2], avg, name, existing), None
 
 
-def process_directory(directory, force, write):
+def process_section(data, section_key, force):
+    """Processes one section ("blocks" or "blockSets") of the consolidated file in place.
+
+    Returns (updated, skipped_existing, skipped_no_texture, samples, no_texture_reports, changed).
+    """
     updated = 0
     skipped_existing = 0
     skipped_no_texture = 0
     samples = []
     no_texture_reports = []
+    changed = False
 
-    files = sorted(f for f in os.listdir(directory) if f.endswith(".json"))
-    for fname in files:
-        path = os.path.join(directory, fname)
-        try:
-            data = load_json_ordered(path)
-        except json.JSONDecodeError as e:
-            print(f"  [skip] {fname}: invalid JSON ({e})", file=sys.stderr)
+    for entry in data.get(section_key, []):
+        if not isinstance(entry, dict):
             continue
-
-        # Two shapes:
-        #   block_set_definitions/*.json  -> single object
-        #   block_definitions/*.json      -> array of objects
-        if isinstance(data, dict):
-            entries = [data]
-            is_array = False
-        elif isinstance(data, list):
-            entries = data
-            is_array = True
-        else:
+        status, sample, skip_info = process_definition(entry, force)
+        if status == "skipped_existing":
+            skipped_existing += 1
             continue
+        if status == "skipped_no_texture":
+            skipped_no_texture += 1
+            no_texture_reports.append((section_key, skip_info[0], skip_info[1]))
+            continue
+        # updated
+        label, refs, avg, name, existing = sample
+        samples.append((section_key, label, refs, avg, name, existing))
+        insert_map_color(entry, name)
+        changed = True
+        updated += 1
 
-        file_changed = False
-        for entry in entries:
-            if not isinstance(entry, dict):
-                continue
-            status, sample, skip_info = process_definition(entry, force)
-            if status == "skipped_existing":
-                skipped_existing += 1
-                continue
-            if status == "skipped_no_texture":
-                skipped_no_texture += 1
-                no_texture_reports.append((fname, skip_info[0], skip_info[1]))
-                continue
-            # updated
-            label, refs, avg, name, existing = sample
-            samples.append((fname, label, refs, avg, name, existing))
-            insert_map_color(entry, name)
-            file_changed = True
-            updated += 1
-
-        if write and file_changed:
-            save_json_preserve(path, data if is_array else entries[0])
-
-    return updated, skipped_existing, skipped_no_texture, samples, no_texture_reports
+    return updated, skipped_existing, skipped_no_texture, samples, no_texture_reports, changed
 
 
 def main():
@@ -460,29 +440,37 @@ def main():
     parser.add_argument("--write", action="store_true", help="Actually modify JSON files. Without this flag, runs as a preview.")
     parser.add_argument("--force", action="store_true", help="Overwrite existing mapColor values. Default skips them.")
     parser.add_argument("--limit", type=int, default=20, help="How many sample lines to show in the preview output (default 20).")
-    parser.add_argument("--only", choices=["sets", "individual"], help="Only process one of the two definition directories.")
+    parser.add_argument("--only", choices=["sets", "individual"], help="Only process one of the two definition sections.")
     parser.add_argument("--show-skipped", action="store_true", help="Print details of definitions skipped because no texture file resolved.")
     args = parser.parse_args()
 
-    if not os.path.isdir(BLOCK_DEFS_DIR) or not os.path.isdir(BLOCK_SET_DEFS_DIR):
-        print(f"Definition directories not found under {DEFINITIONS_DIR}", file=sys.stderr)
+    if not os.path.isfile(DEFINITIONS_FILE):
+        print(f"Definitions file not found: {DEFINITIONS_FILE}", file=sys.stderr)
+        sys.exit(1)
+
+    try:
+        data = load_json_ordered(DEFINITIONS_FILE)
+    except json.JSONDecodeError as e:
+        print(f"Invalid JSON in {DEFINITIONS_FILE}: {e}", file=sys.stderr)
         sys.exit(1)
 
     targets = []
     if args.only != "individual":
-        targets.append(("block_set_definitions", BLOCK_SET_DEFS_DIR))
+        targets.append("blockSets")
     if args.only != "sets":
-        targets.append(("block_definitions", BLOCK_DEFS_DIR))
+        targets.append("blocks")
 
     grand_updated = 0
     grand_skipped_existing = 0
     grand_skipped_no_texture = 0
+    any_changed = False
 
-    for dir_label, directory in targets:
-        print(f"\n=== {dir_label} ===")
-        updated, skipped_existing, skipped_no_texture, samples, no_texture_reports = process_directory(
-            directory, force=args.force, write=args.write
+    for section_key in targets:
+        print(f"\n=== {section_key} ===")
+        updated, skipped_existing, skipped_no_texture, samples, no_texture_reports, changed = process_section(
+            data, section_key, force=args.force
         )
+        any_changed = any_changed or changed
         grand_updated += updated
         grand_skipped_existing += skipped_existing
         grand_skipped_no_texture += skipped_no_texture
@@ -502,6 +490,9 @@ def main():
                 print(f"  [SKIP    ] {fname:<35} {label:<40} tried=[{refs_str}]")
 
         print(f"  updated={updated}  skipped_existing_mapColor={skipped_existing}  skipped_no_texture_found={skipped_no_texture}")
+
+    if args.write and any_changed:
+        save_json_preserve(DEFINITIONS_FILE, data)
 
     action = "wrote" if args.write else "would write"
     print(f"\nTotal: {action} mapColor for {grand_updated} definitions")

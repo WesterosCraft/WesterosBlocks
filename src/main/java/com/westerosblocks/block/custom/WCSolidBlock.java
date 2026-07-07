@@ -23,6 +23,7 @@ import net.minecraft.world.World;
 
 public class WCSolidBlock extends Block implements WCBlockDef {
     protected BlockDefinition def;
+    protected final VoxelShape collisionBox;
     protected boolean toggleOnUse = false;
 
     protected boolean connectState;
@@ -67,6 +68,7 @@ public class WCSolidBlock extends Block implements WCBlockDef {
             boolean doToggleOnUse, boolean addStates, boolean doSymmetrical) {
         super(settings);
         this.def = def;
+        this.collisionBox = def.makeCollisionBoxShape();
 
         if (doToggleOnUse) {
             toggleOnUse = true;
@@ -129,12 +131,29 @@ public class WCSolidBlock extends Block implements WCBlockDef {
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return VoxelShapes.fullCube();
+        return collisionBox;
     }
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return VoxelShapes.fullCube();
+        return collisionBox;
+    }
+
+    // Ports 1.18.2 getBlockSupportShape(): the sturdy-face shape walls/fences/panes
+    // test for connection. supportBoxes were unused in the 1.18.2 definitions, so
+    // this is always the collision box.
+    @Override
+    public VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
+        return collisionBox;
+    }
+
+    // Ports 1.18.2 getVisualShape(): non-opaque solids don't clip the camera.
+    @Override
+    public VoxelShape getCameraCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        if (def.isNonOpaque()) {
+            return VoxelShapes.empty();
+        }
+        return collisionBox;
     }
 
     public BlockDefinition getDefinition() {

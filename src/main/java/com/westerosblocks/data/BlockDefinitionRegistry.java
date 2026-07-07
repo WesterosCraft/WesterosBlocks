@@ -17,7 +17,7 @@ public class BlockDefinitionRegistry {
 
     private BlockDefinitionRegistry() {
         // LinkedHashMap preserves JSON load order so creative-tab ordering is
-        // deterministic and follows the declaration order of definition files.
+        // deterministic and follows the declaration order in WesterosBlocks.json.
         this.definitions = new LinkedHashMap<>();
         this.definitionsByType = new LinkedHashMap<>();
     }
@@ -29,15 +29,22 @@ public class BlockDefinitionRegistry {
         return instance;
     }
 
-    public void initialize(String blockDefinitionsPath, String blockSetDefinitionsPath) {
+    public void initialize(String definitionsFilePath) {
         if (initialized) {
             WesterosBlocks.LOGGER.warn("BlockDefinitionRegistry is already initialized. Skipping re-initialization.");
             return;
         }
 
+        ConsolidatedDefinitionLoader loader = new ConsolidatedDefinitionLoader(definitionsFilePath);
+        if (!loader.load()) {
+            // The whole mod hangs off this one file; a soft failure here would boot with zero
+            // blocks and let existing worlds resolve every WesterosBlocks block to air.
+            throw new IllegalStateException("Failed to load block definitions from '" + definitionsFilePath
+                + "' - see errors above for the cause (missing file, JSON syntax error, or missing section)");
+        }
+
         // Load individual block definitions
-        BlockDefinitionLoader loader = new BlockDefinitionLoader(blockDefinitionsPath);
-        Map<String, BlockDefinition> loadedDefinitions = loader.loadAllDefinitions();
+        Map<String, BlockDefinition> loadedDefinitions = loader.getBlockDefinitions();
 
         if (loadedDefinitions.isEmpty()) {
             WesterosBlocks.LOGGER.warn("No individual block definitions were loaded!");
@@ -48,32 +55,29 @@ public class BlockDefinitionRegistry {
         duplicateBlockNames.addAll(loader.getDuplicateNames());
 
         // Load block set definitions and expand them
-        if (blockSetDefinitionsPath != null) {
-            BlockSetDefinitionLoader setLoader = new BlockSetDefinitionLoader(blockSetDefinitionsPath);
-            Map<String, BlockSetDefinition> loadedBlockSets = setLoader.loadAllDefinitions();
+        Map<String, BlockSetDefinition> loadedBlockSets = loader.getBlockSetDefinitions();
 
-            if (!loadedBlockSets.isEmpty()) {
-                blockSetDefinitions = new ArrayList<>(loadedBlockSets.values());
-                int expandedCount = 0;
+        if (!loadedBlockSets.isEmpty()) {
+            blockSetDefinitions = new ArrayList<>(loadedBlockSets.values());
+            int expandedCount = 0;
 
-                for (BlockSetDefinition blockSet : loadedBlockSets.values()) {
-                    List<BlockDefinition> expandedDefinitions = BlockSetExpander.expand(blockSet);
-                    for (BlockDefinition def : expandedDefinitions) {
-                        if (definitions.containsKey(def.getBlockName())) {
-                            WesterosBlocks.LOGGER.warn("Block set '{}' generated duplicate block name '{}' - skipping",
-                                blockSet.getBaseBlockName(), def.getBlockName());
-                        } else {
-                            definitions.put(def.getBlockName(), def);
-                            expandedCount++;
-                        }
+            for (BlockSetDefinition blockSet : loadedBlockSets.values()) {
+                List<BlockDefinition> expandedDefinitions = BlockSetExpander.expand(blockSet);
+                for (BlockDefinition def : expandedDefinitions) {
+                    if (definitions.containsKey(def.getBlockName())) {
+                        WesterosBlocks.LOGGER.warn("Block set '{}' generated duplicate block name '{}' - skipping",
+                            blockSet.getBaseBlockName(), def.getBlockName());
+                    } else {
+                        definitions.put(def.getBlockName(), def);
+                        expandedCount++;
                     }
                 }
-
-                WesterosBlocks.LOGGER.info("Expanded block sets into {} additional block definitions", expandedCount);
-                setLoader.validateDefinitions(loadedBlockSets);
-            } else {
-                WesterosBlocks.LOGGER.warn("No block set definitions were loaded!");
             }
+
+            WesterosBlocks.LOGGER.info("Expanded block sets into {} additional block definitions", expandedCount);
+            loader.validateBlockSets(loadedBlockSets);
+        } else {
+            WesterosBlocks.LOGGER.warn("No block set definitions were loaded!");
         }
 
         // Group all definitions by type
