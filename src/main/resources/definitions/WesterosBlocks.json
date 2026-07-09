@@ -38185,7 +38185,6 @@
         {
             "blockName": "blue_bells",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_flowers_tab",
             "mapColor": "GRAY",
             "label": "Blue Bells",
@@ -38200,7 +38199,6 @@
         {
             "blockName": "blue_chicory",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GREEN",
             "creativeTab": "westeros_flowers_tab",
@@ -38243,7 +38241,6 @@
         {
             "blockName": "blue_flax",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_flowers_tab",
             "mapColor": "TERRACOTTA_GRAY",
             "label": "Blue Flax",
@@ -38285,7 +38282,6 @@
         {
             "blockName": "blue_forgetmenots",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_flowers_tab",
             "mapColor": "GRAY",
             "label": "Blue Forget-me-nots",
@@ -38327,7 +38323,6 @@
         {
             "blockName": "blue_hyacinth",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "GRAY",
             "creativeTab": "westeros_flowers_tab",
@@ -38370,7 +38365,6 @@
         {
             "blockName": "blue_orchid",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "GRAY",
             "creativeTab": "westeros_flowers_tab",
@@ -38408,7 +38402,6 @@
         {
             "blockName": "blue_swamp_bells",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GRAY",
             "creativeTab": "westeros_flowers_tab",
@@ -38432,7 +38425,6 @@
         {
             "blockName": "bracken",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GRAY",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -38495,7 +38487,6 @@
         {
             "blockName": "brown_mushroom_1",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "GRAY",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -38519,7 +38510,6 @@
         {
             "blockName": "brown_mushroom_10",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_CYAN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -38543,7 +38533,6 @@
         {
             "blockName": "brown_mushroom_11",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BROWN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -38567,7 +38556,6 @@
         {
             "blockName": "brown_mushroom_12",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "BROWN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -38591,7 +38579,6 @@
         {
             "blockName": "brown_mushroom_13",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_CYAN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -38615,7 +38602,6 @@
         {
             "blockName": "brown_mushroom_2",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_LIGHT_GRAY",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -38639,7 +38625,6 @@
         {
             "blockName": "brown_mushroom_3",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_LIGHT_GRAY",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -38663,7 +38648,6 @@
         {
             "blockName": "brown_mushroom_4",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_LIGHT_GRAY",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -38687,7 +38671,6 @@
         {
             "blockName": "brown_mushroom_5",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_LIGHT_GRAY",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -38711,7 +38694,6 @@
         {
             "blockName": "brown_mushroom_6",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "CYAN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -38735,7 +38717,6 @@
         {
             "blockName": "brown_mushroom_7",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_LIGHT_GRAY",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -38759,7 +38740,6 @@
         {
             "blockName": "brown_mushroom_8",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "GRAY",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -38783,7 +38763,6 @@
         {
             "blockName": "brown_mushroom_9",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "DEEPSLATE_GRAY",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -38807,7 +38786,6 @@
         {
             "blockName": "coral_brain_web",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_water_air_tab",
             "mapColor": "TERRACOTTA_PURPLE",
             "label": "Brain Coral Web",
@@ -38839,7 +38817,6 @@
         {
             "blockName": "coral_bubble_web",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_water_air_tab",
             "mapColor": "CYAN",
             "label": "Bubble Coral Web",
@@ -38871,7 +38848,6 @@
         {
             "blockName": "coral_fire_web",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_water_air_tab",
             "mapColor": "SPRUCE_BROWN",
             "label": "Fire Coral Web",
@@ -38903,7 +38879,6 @@
         {
             "blockName": "coral_horn_web",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_water_air_tab",
             "mapColor": "TERRACOTTA_YELLOW",
             "label": "Horn Coral Web",
@@ -38935,7 +38910,6 @@
         {
             "blockName": "coral_tube_web",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_water_air_tab",
             "mapColor": "TERRACOTTA_BLUE",
             "label": "Tube Coral Web",
@@ -38967,7 +38941,6 @@
         {
             "blockName": "cow_parsely",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "IRON_GRAY",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -39000,7 +38973,6 @@
         {
             "blockName": "cranberry_bush",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BROWN",
             "creativeTab": "westeros_crops_herbs_tab",
@@ -39033,7 +39005,6 @@
         {
             "blockName": "dead_bracken",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BROWN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -39116,7 +39087,6 @@
         {
             "blockName": "dead_bush",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "BROWN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -39155,7 +39125,6 @@
         {
             "blockName": "dead_scrub_grass",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_grasses_shrubs_tab",
             "mapColor": "BROWN",
             "label": "Dead Scrub Grass",
@@ -39231,7 +39200,6 @@
         {
             "blockName": "dock_leaf",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GRAY",
             "creativeTab": "westeros_crops_herbs_tab",
@@ -39264,7 +39232,6 @@
         {
             "blockName": "fireweed",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "DARK_DULL_PINK",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -39307,7 +39274,6 @@
         {
             "blockName": "grass",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "PALE_GREEN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -39379,7 +39345,6 @@
         {
             "blockName": "green_leafy_herb",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_grasses_shrubs_tab",
             "mapColor": "TERRACOTTA_GREEN",
             "label": "Green Leafy Herb",
@@ -39402,7 +39367,6 @@
         {
             "blockName": "green_scrub_grass",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_grasses_shrubs_tab",
             "mapColor": "TERRACOTTA_GREEN",
             "label": "Green Scrub Grass",
@@ -39454,7 +39418,6 @@
         {
             "blockName": "green_spiny_herb",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_grasses_shrubs_tab",
             "mapColor": "TERRACOTTA_GRAY",
             "label": "Green Spiny Herb",
@@ -39501,7 +39464,6 @@
         {
             "blockName": "heather",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BROWN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -39544,7 +39506,6 @@
         {
             "blockName": "kelp",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "SPRUCE_BROWN",
             "creativeTab": "westeros_water_air_tab",
@@ -39569,7 +39530,6 @@
         {
             "blockName": "lady_fern",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GRAY",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -39612,7 +39572,6 @@
         {
             "blockName": "magenta_roses",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "DARK_DULL_PINK",
             "creativeTab": "westeros_flowers_tab",
@@ -39655,7 +39614,6 @@
         {
             "blockName": "meadow_fescue",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GREEN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -39688,7 +39646,6 @@
         {
             "blockName": "nettle",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GRAY",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -39726,7 +39683,6 @@
         {
             "blockName": "orange_bells",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_flowers_tab",
             "mapColor": "TERRACOTTA_GREEN",
             "label": "Orange Bells",
@@ -39749,7 +39705,6 @@
         {
             "blockName": "orange_bog_asphodel",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GREEN",
             "creativeTab": "westeros_flowers_tab",
@@ -39792,7 +39747,6 @@
         {
             "blockName": "orange_marigolds",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_flowers_tab",
             "mapColor": "TERRACOTTA_GREEN",
             "label": "Orange Marigolds",
@@ -39834,7 +39788,6 @@
         {
             "blockName": "orange_sun_star",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BROWN",
             "creativeTab": "westeros_flowers_tab",
@@ -39867,7 +39820,6 @@
         {
             "blockName": "orange_trollius",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_flowers_tab",
             "mapColor": "TERRACOTTA_GREEN",
             "label": "Orange Trollius",
@@ -39899,7 +39851,6 @@
         {
             "blockName": "pink_allium",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "GRAY",
             "creativeTab": "westeros_flowers_tab",
@@ -39942,7 +39893,6 @@
         {
             "blockName": "pink_primrose",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BROWN",
             "creativeTab": "westeros_flowers_tab",
@@ -39975,7 +39925,6 @@
         {
             "blockName": "pink_roses",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_PURPLE",
             "creativeTab": "westeros_flowers_tab",
@@ -40018,7 +39967,6 @@
         {
             "blockName": "pink_sweet_peas",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BROWN",
             "creativeTab": "westeros_flowers_tab",
@@ -40042,7 +39990,6 @@
         {
             "blockName": "pink_thistle",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "GRAY",
             "creativeTab": "westeros_flowers_tab",
@@ -40085,7 +40032,6 @@
         {
             "blockName": "pink_tulips",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GRAY",
             "creativeTab": "westeros_flowers_tab",
@@ -40128,7 +40074,6 @@
         {
             "blockName": "pink_wildflowers",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_flowers_tab",
             "mapColor": "TERRACOTTA_BROWN",
             "label": "Pink Wildflowers",
@@ -40151,7 +40096,6 @@
         {
             "blockName": "purple_alpine_sowthistle",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BROWN",
             "creativeTab": "westeros_flowers_tab",
@@ -40194,7 +40138,6 @@
         {
             "blockName": "purple_foxglove",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BLUE",
             "creativeTab": "westeros_flowers_tab",
@@ -40237,7 +40180,6 @@
         {
             "blockName": "purple_lavender",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "GRAY",
             "creativeTab": "westeros_flowers_tab",
@@ -40275,7 +40217,6 @@
         {
             "blockName": "purple_pansies",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BROWN",
             "creativeTab": "westeros_flowers_tab",
@@ -40318,7 +40259,6 @@
         {
             "blockName": "purple_roses",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "DARK_DULL_PINK",
             "creativeTab": "westeros_flowers_tab",
@@ -40361,7 +40301,6 @@
         {
             "blockName": "purple_violets",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "GRAY",
             "creativeTab": "westeros_flowers_tab",
@@ -40399,7 +40338,6 @@
         {
             "blockName": "red_aster",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BROWN",
             "creativeTab": "westeros_flowers_tab",
@@ -40442,7 +40380,6 @@
         {
             "blockName": "red_carnations",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BROWN",
             "creativeTab": "westeros_flowers_tab",
@@ -40485,7 +40422,6 @@
         {
             "blockName": "red_chrysanthemum",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BROWN",
             "creativeTab": "westeros_flowers_tab",
@@ -40509,7 +40445,6 @@
         {
             "blockName": "red_dark_roses",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GRAY",
             "creativeTab": "westeros_flowers_tab",
@@ -40552,7 +40487,6 @@
         {
             "blockName": "red_fern",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BROWN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -40590,7 +40524,6 @@
         {
             "blockName": "red_flowering_spiny_herb",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GRAY",
             "creativeTab": "westeros_flowers_tab",
@@ -40614,7 +40547,6 @@
         {
             "blockName": "red_mushroom_1",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "DIRT_BROWN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -40638,7 +40570,6 @@
         {
             "blockName": "red_mushroom_2",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "BROWN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -40662,7 +40593,6 @@
         {
             "blockName": "red_mushroom_3",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "GRAY",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -40686,7 +40616,6 @@
         {
             "blockName": "red_mushroom_4",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "SPRUCE_BROWN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -40710,7 +40639,6 @@
         {
             "blockName": "red_mushroom_5",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "SPRUCE_BROWN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -40734,7 +40662,6 @@
         {
             "blockName": "red_mushroom_6",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_PURPLE",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -40758,7 +40685,6 @@
         {
             "blockName": "red_mushroom_7",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_RED",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -40782,7 +40708,6 @@
         {
             "blockName": "red_mushroom_8",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "DIRT_BROWN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -40806,7 +40731,6 @@
         {
             "blockName": "red_mushroom_9",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_PINK",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -40830,7 +40754,6 @@
         {
             "blockName": "red_poppies",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GRAY",
             "creativeTab": "westeros_flowers_tab",
@@ -40863,7 +40786,6 @@
         {
             "blockName": "red_roses",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "DARK_CRIMSON",
             "creativeTab": "westeros_flowers_tab",
@@ -40906,7 +40828,6 @@
         {
             "blockName": "red_sorrel",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BROWN",
             "creativeTab": "westeros_flowers_tab",
@@ -40930,7 +40851,6 @@
         {
             "blockName": "red_sourleaf_bush",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_BLACK",
             "creativeTab": "westeros_crops_herbs_tab",
@@ -40963,7 +40883,6 @@
         {
             "blockName": "red_tulips",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GRAY",
             "creativeTab": "westeros_flowers_tab",
@@ -41006,7 +40925,6 @@
         {
             "blockName": "strawberry_bush",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GREEN",
             "creativeTab": "westeros_crops_herbs_tab",
@@ -41030,7 +40948,6 @@
         {
             "blockName": "thick_grass",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "PALE_GREEN",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -41114,7 +41031,6 @@
         {
             "blockName": "unshaded_grass",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GRAY",
             "creativeTab": "westeros_grasses_shrubs_tab",
@@ -41177,7 +41093,6 @@
         {
             "blockName": "white_chamomile",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_CYAN",
             "creativeTab": "westeros_flowers_tab",
@@ -41215,7 +41130,6 @@
         {
             "blockName": "white_daisies",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_flowers_tab",
             "mapColor": "GRAY",
             "label": "White Daisies",
@@ -41257,7 +41171,6 @@
         {
             "blockName": "white_lilyofthevalley",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "DEEPSLATE_GRAY",
             "creativeTab": "westeros_flowers_tab",
@@ -41281,7 +41194,6 @@
         {
             "blockName": "white_peony",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "DEEPSLATE_GRAY",
             "creativeTab": "westeros_flowers_tab",
@@ -41305,7 +41217,6 @@
         {
             "blockName": "white_roses",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "STONE_GRAY",
             "creativeTab": "westeros_flowers_tab",
@@ -41348,7 +41259,6 @@
         {
             "blockName": "yellow_bedstraw",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_flowers_tab",
             "mapColor": "TERRACOTTA_GREEN",
             "label": "Yellow Bedstraw",
@@ -41385,7 +41295,6 @@
         {
             "blockName": "yellow_bells",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GREEN",
             "creativeTab": "westeros_flowers_tab",
@@ -41409,7 +41318,6 @@
         {
             "blockName": "yellow_buttercups",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GREEN",
             "creativeTab": "westeros_flowers_tab",
@@ -41452,7 +41360,6 @@
         {
             "blockName": "yellow_daffodils",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GREEN",
             "creativeTab": "westeros_flowers_tab",
@@ -41495,7 +41402,6 @@
         {
             "blockName": "yellow_daisies",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_flowers_tab",
             "mapColor": "TERRACOTTA_GREEN",
             "label": "Yellow Daisies",
@@ -41527,7 +41433,6 @@
         {
             "blockName": "yellow_dandelions",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GREEN",
             "creativeTab": "westeros_flowers_tab",
@@ -41565,7 +41470,6 @@
         {
             "blockName": "yellow_hellebore",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GREEN",
             "creativeTab": "westeros_flowers_tab",
@@ -41598,7 +41502,6 @@
         {
             "blockName": "yellow_lupine",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_LIME",
             "creativeTab": "westeros_flowers_tab",
@@ -41641,7 +41544,6 @@
         {
             "blockName": "yellow_roses",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_LIME",
             "creativeTab": "westeros_flowers_tab",
@@ -41684,7 +41586,6 @@
         {
             "blockName": "yellow_rudbeckia",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "TERRACOTTA_GREEN",
             "creativeTab": "westeros_flowers_tab",
@@ -41708,7 +41609,6 @@
         {
             "blockName": "yellow_sunflower",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "soundGroup": "grass",
             "mapColor": "OAK_TAN",
             "creativeTab": "westeros_flowers_tab",
@@ -41746,7 +41646,6 @@
         {
             "blockName": "yellow_tansy",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_flowers_tab",
             "mapColor": "TERRACOTTA_GREEN",
             "label": "Yellow Tansy",
@@ -41769,7 +41668,6 @@
         {
             "blockName": "yellow_wildflowers",
             "blockType": "plant",
-            "doOffsetXZ": true,
             "creativeTab": "westeros_flowers_tab",
             "mapColor": "TERRACOTTA_BROWN",
             "label": "Yellow Wildflowers",
@@ -60097,7 +59995,6 @@
             "mapColor": "TERRACOTTA_LIME",
             "creativeTab": "westeros_grasses_shrubs_tab",
             "label": "Dead Jungle Tall Grass",
-            "doOffsetXZ": true,
             "options": {
                 "noInWeb": true,
                 "layerSensitive": true
@@ -60167,7 +60064,6 @@
                 "noInWeb": true,
                 "layerSensitive": true
             },
-            "doOffsetXZ": true,
             "textures": [
                 "dead_savanna_tall_grass/dead_savanna_tall_grass"
             ],
@@ -60293,7 +60189,6 @@
                 "noInWeb": true,
                 "layerSensitive": true
             },
-            "doOffsetXZ": true,
             "textures": [
                 "jungle_tall_fern/side"
             ],
@@ -60311,7 +60206,6 @@
                 "noInWeb": true,
                 "layerSensitive": true
             },
-            "doOffsetXZ": true,
             "textures": [
                 "jungle_tall_grass/down_side1"
             ],
@@ -60378,7 +60272,6 @@
                 "noInWeb": true,
                 "layerSensitive": true
             },
-            "doOffsetXZ": true,
             "textures": [
                 "savanna_tall_grass/savanna_tall_grass"
             ],
@@ -60388,7 +60281,6 @@
         {
             "blockName": "smoke",
             "blockType": "web",
-            "doOffsetXZ": true,
             "soundGroup": "cloth",
             "mapColor": "STONE_GRAY",
             "creativeTab": "westeros_water_air_tab",
@@ -60516,7 +60408,6 @@
         {
             "blockName": "corn",
             "blockType": "web",
-            "doOffsetXZ": true,
             "soundGroup": "plant",
             "mapColor": "TERRACOTTA_GREEN",
             "creativeTab": "westeros_crops_herbs_tab",

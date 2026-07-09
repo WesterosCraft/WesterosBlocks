@@ -156,12 +156,6 @@ public class BlockDefinition {
     private Boolean noCollision;
 
     /**
-     * Block should have XZ random offset (like plants)
-     */
-    @SerializedName("doOffsetXZ")
-    private Boolean doOffsetXZ;
-
-    /**
      * What block material to connect to (e.g., "material" for webs)
      */
     @SerializedName("connectTo")
@@ -1087,10 +1081,6 @@ public class BlockDefinition {
 
     public boolean hasNoCollision() {
         return Boolean.TRUE.equals(noCollision);
-    }
-
-    public boolean isDoOffsetXZ() {
-        return Boolean.TRUE.equals(doOffsetXZ);
     }
 
     public List<RandomTextureVariant> getRandomTextures() {

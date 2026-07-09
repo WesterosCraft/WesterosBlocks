@@ -1,5 +1,11 @@
 # Changelog
 
+## July 2026
+
+### Other
+
+- Removed `doOffsetXZ` feature — Polytone `xz_offset_blocks.json` no longer generated; flowers/plants (109 blocks) no longer get a random XZ offset.
+
 ## June 2026
 
 ### New Blocksets

@@ -32,7 +32,6 @@ public class ModPolytoneProvider implements DataProvider {
     @Override
     public CompletableFuture<?> run(DataWriter writer) {
         Map<String, List<String>> blocksByColormap = new HashMap<>();
-        List<String> xzOffsetBlocks = new ArrayList<>();
         BlockDefinitionRegistry registry = BlockDefinitionRegistry.getInstance();
 
         if (!registry.isInitialized()) {
@@ -40,7 +39,7 @@ public class ModPolytoneProvider implements DataProvider {
             return CompletableFuture.completedFuture(null);
         }
 
-        // Group blocks by their colorMult value(s) and collect blocks with xz offset
+        // Group blocks by their colorMult value(s)
         for (BlockDefinition definition : registry.getAllDefinitions()) {
             // Skip test blocks (blocks in westeros_test_tab)
             if (WesterosCreativeModeTabs.isTestBlock(definition)) {
@@ -48,11 +47,6 @@ public class ModPolytoneProvider implements DataProvider {
             }
 
             String blockId = WesterosBlocks.MOD_ID + ":" + definition.getBlockName();
-
-            // Collect blocks with xz offset
-            if (definition.isDoOffsetXZ()) {
-                xzOffsetBlocks.add(blockId);
-            }
 
             // Handle single colorMult
             if (definition.hasColorMult()) {
@@ -92,8 +86,8 @@ public class ModPolytoneProvider implements DataProvider {
             WesterosBlocks.LOGGER.info("Added {} vanilla/external blocks from color_maps.json", vanillaBlockCount);
         }
 
-        if (blocksByColormap.isEmpty() && xzOffsetBlocks.isEmpty()) {
-            WesterosBlocks.LOGGER.info("No blocks with colorMult or doOffsetXZ found - skipping Polytone generation");
+        if (blocksByColormap.isEmpty()) {
+            WesterosBlocks.LOGGER.info("No blocks with colorMult found - skipping Polytone generation");
             return CompletableFuture.completedFuture(null);
         }
 
@@ -129,25 +123,8 @@ public class ModPolytoneProvider implements DataProvider {
             futures.add(itemFuture);
         }
 
-        // Generate xz_offset_blocks.json for plant blocks
-        if (!xzOffsetBlocks.isEmpty()) {
-            Collections.sort(xzOffsetBlocks);
-
-            JsonObject xzJson = new JsonObject();
-            JsonArray xzTargets = new JsonArray();
-            xzOffsetBlocks.forEach(xzTargets::add);
-            xzJson.add("targets", xzTargets);
-            xzJson.addProperty("offset_type", "xz");
-
-            Identifier xzFileId = Identifier.of(WesterosBlocks.MOD_ID, "xz_offset_blocks");
-            Path xzOutputPath = blockModifiersPathResolver.resolveJson(xzFileId);
-            futures.add(DataProvider.writeToPath(writer, xzJson, xzOutputPath));
-
-            WesterosBlocks.LOGGER.info("Generated xz_offset_blocks.json with {} blocks", xzOffsetBlocks.size());
-        }
-
         WesterosBlocks.LOGGER.info("Successfully generated {} Polytone modifier files ({} in block_modifiers, {} in item_modifiers)",
-                blocksByColormap.size() * 2 + (xzOffsetBlocks.isEmpty() ? 0 : 1), blocksByColormap.size() + (xzOffsetBlocks.isEmpty() ? 0 : 1), blocksByColormap.size());
+                blocksByColormap.size() * 2, blocksByColormap.size(), blocksByColormap.size());
 
         // Return combined future of all writes
         return CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]));
