@@ -1,0 +1,77 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "#all"
+  },
+  "elements": [
+    {
+      "__comment": "Closed row 2: full-width slice u[0,16] v[0,5.3333] in 0-16 space.",
+      "from": [
+        0,
+        0,
+        13
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            5.3333
+          ],
+          "texture": "#all"
+        },
+        "south": {
+          "uv": [
+            16.0,
+            0.0,
+            0.0,
+            5.3333
+          ],
+          "texture": "#all"
+        },
+        "east": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            5.3333
+          ],
+          "texture": "#all"
+        },
+        "west": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            5.3333
+          ],
+          "texture": "#all"
+        },
+        "up": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            5.3333
+          ],
+          "texture": "#all"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            5.3333
+          ],
+          "texture": "#all"
+        }
+      }
+    }
+  ]
+}

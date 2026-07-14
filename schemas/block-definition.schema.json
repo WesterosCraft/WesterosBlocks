@@ -65,7 +65,7 @@
             "bench",
             "trapdoor",
             "bigdoor",
-            "bignarrowdoor",
+            "talldoor",
             "bunting",
             "mounted_slab",
             "beam_horizontal",
@@ -1083,7 +1083,7 @@
         },
         {
           "if": {
-            "properties": { "blockType": { "const": "bignarrowdoor" } },
+            "properties": { "blockType": { "const": "talldoor" } },
             "required": ["blockType"]
           },
           "then": {

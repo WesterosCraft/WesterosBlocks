@@ -2,6 +2,58 @@
 
 ## July 2026
 
+### New Blocks
+
+- `ambrose_banner`
+- `appleton_banner`
+- `ashford_banner`
+- `ball_banner`
+- `bridges_banner`
+- `bushy_banner`
+- `chester_of_greenshield_banner`
+- `cockshaw_banner`
+- `cordwayner_banner`
+- `dunn_banner`
+- `footly_banner`
+- `graceford_banner`
+- `graves_banner`
+- `grimm_of_greyshield_banner`
+- `hastwyck_banner`
+- `hunt_banner`
+- `hutcheson_banner`
+- `inchfield_banner`
+- `kidwell_banner`
+- `leygood_banner`
+- `lowther_banner`
+- `lyberr_banner`
+- `meadows_banner`
+- `middlebury_banner`
+- `norcross_banner`
+- `norridge_banner`
+- `oldflowers_banner`
+- `orme_banner`
+- `osgrey_of_standfast_banner`
+- `pommingham_banner`
+- `redding_banner`
+- `rhysling_banner`
+- `risley_banner`
+- `roxton_banner`
+- `serry_of_southshield_banner`
+- `shermer_banner`
+- `sloane_banner`
+- `tyrell_of_brightwater_keep_banner`
+- `uffering_banner`
+- `varner_banner`
+- `webber_banner`
+- `westbrook_banner`
+- `willum_banner`
+- `wythers_banner`
+- `yelshire_banner`
+
+### Updated Blocks
+
+- `tall_door` — renamed from `big_narrow_door`; now a 1x3 multiblock (was 2x3)
+
 ### Other
 
 - Removed `doOffsetXZ` feature — Polytone `xz_offset_blocks.json` no longer generated; flowers/plants (109 blocks) no longer get a random XZ offset.
