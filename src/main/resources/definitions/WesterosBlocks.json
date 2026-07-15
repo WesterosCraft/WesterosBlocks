@@ -34050,6 +34050,27 @@
             ]
         },
         {
+            "blockName": "weirwood_fence",
+            "blockType": "fence",
+            "strength": 5,
+            "soundGroup": "wood",
+            "mapColor": "TERRACOTTA_LIGHT_GRAY",
+            "harvestLevel": [
+                {
+                    "tool": "axe",
+                    "level": 1
+                }
+            ],
+            "creativeTab": "westeros_logs_tab",
+            "label": "Weirwood Fence",
+            "options": {
+                "unconnect": false
+            },
+            "textures": [
+                "bark/weirwood/side"
+            ]
+        },
+        {
             "blockName": "locked_birch_bark_fence_gate",
             "blockType": "fencegate",
             "strength": 2,
